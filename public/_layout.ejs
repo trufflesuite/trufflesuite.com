@@ -1,0 +1,12 @@
+<% include _includes/typogr %>
+<!doctype html>
+<html lang="en">
+  <% include _includes/head %>
+  <body>
+    <main>
+      <%- typogr.smartypants(yield) %>
+    </main>
+    <% include _includes/scripts %>
+    <% include _includes/analytics %>
+  </body>
+</html>

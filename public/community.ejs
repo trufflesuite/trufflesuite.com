@@ -1,0 +1,57 @@
+<% include _includes/typogr %>
+<!doctype html>
+<html lang="en">
+  <% include _includes/head %>
+  <body>
+    <section class="Community">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+              <%- include _includes/truffle_logo %>
+            </a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/">Home</a></li>
+              <li><a href="/docs">Documentation</a></li>
+              <li><a class="active" href="/tutorials">Tutorials</a></li>
+              <li><a href="https://github.com/truffleframework">Github</a></li>
+              <li><a href="/community">Community</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+      <section class="MainContent">
+        <div class="container">
+          <h1 class="Uppercase WithDash m-b-4">Community</h1>
+          <ul class="list-unstyled">
+            <li>
+              <h2>The Truffle Gitter</h2>
+              <p>If you're stuck trying to get something to work, have any questions, or suggestions - the best place to get help is in the Truffle Gitter channel. </p>
+            </li>
+            <li>
+              <h2>Github Issues</h2>
+              <p>If something's not working as expected, or you have an idea for a feature or change you'd like to see, please <a href="https://github.com/consensys/truffle">open an Issue on the consensys/truffle</a> repo and start a discussion.</p>
+            </li>
+            <li>
+              <h2>Help improve the Docs</h2>
+              <p>We're only human, and need all the help you can give us to improve the documentation. PRs to clarify or amend documentation are particularly welcome.</p>
+            </li>
+          </ul>
+        </div>
+        <footer class="container m-t-4">
+          <p class="text-center">See a way to make this page better? <a href="<%="https://github.com/" + service.contributing + "/edit/master/_harp/public/" + current.path.join('/') + ".md" %>">Edit here &rarr;</a></p>
+        </footer>
+      </section>
+    </section>
+    <% include _includes/scripts %>
+    <% include _includes/analytics %>
+  </body>
+</html>

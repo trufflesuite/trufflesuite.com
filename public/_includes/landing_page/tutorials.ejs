@@ -1,0 +1,38 @@
+
+<%
+  var slugs = Object.keys(public.tutorials._data);
+  var tutorials = _.map(slugs, function(i) { return { 'slug': i, 'author': public.tutorials._data[i].author, 'title': public.tutorials._data[i].title, 'date': public.tutorials._data[i].date, 'published': public.tutorials._data[i].published}})
+  tutorials = _.sortBy(tutorials, 'date').reverse().slice(0,5)
+%>
+<section class="Tutorials p-t-4 p-b-4" id="tutorials">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3 class="WithDash m-b-4">LATEST TUTORIALS</h3>
+        <ol class="list-unstyled">
+          <% for(var tutorial of tutorials){ %>
+            <% if(!!tutorial.published) { %>
+            <li>
+              <a href="/tutorials/<%= tutorial.slug %>">
+                <h2><%= tutorial.title %></h2>
+                <span>
+                  <date><%= tutorial.date %></date> &bull; <span>BY <%=tutorial.author %></span>
+                </span>
+                <div>Read Tutorial &rarr;</div>
+              </a>
+            </li>
+            <% } %>
+          <% }; %>
+        </ol>
+      </div>
+      <p class="text-center">Can't find what you're looking for? <a href="https://github.com/truffleframework/truffleframework.github.io/issues">Suggest an article.</a></p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <p><a class="btn btn-secondary m-t-2" href="/tutorials">See All Tutorials &rarr;</a></p>
+      </div>
+    </div>
+  </div>
+</section>

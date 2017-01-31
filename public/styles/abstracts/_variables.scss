@@ -1,0 +1,32 @@
+$font-family-sans-serif: "Oswald", Helvetica, Arial, sans-serif !default;
+$font-family-serif:      "Open Sans", "Verdana", Times, serif !default;
+$font-size-base:         16px;
+$body-bg:                $body-background-color;
+$text-color:             $body-text-color;
+$headings-color:         $body-text-color;
+
+$spacer:   1rem !default;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+$spacers: (
+  0: (
+    x: 0,
+    y: 0
+  ),
+  1: (
+    x: $spacer-x,
+    y: $spacer-y
+  ),
+  2: (
+    x: ($spacer-x * 1.5),
+    y: ($spacer-y * 1.5)
+  ),
+  3: (
+    x: ($spacer-x * 3),
+    y: ($spacer-y * 3)
+  ),
+  4: (
+    x: ($spacer-x * 4),
+    y: ($spacer-y * 4)
+  )
+) !default;

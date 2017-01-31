@@ -1,0 +1,172 @@
+.Documentation {
+  @media (min-width: 992px) {
+    .navbar {
+      position: fixed;
+      right: 0;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+  }
+
+  .DocSearchForm {
+    margin-left: 1rem;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    .form-group {
+      display: flex;
+      flex: 1;
+    }
+
+    .btn {
+      height: 54px;
+    }
+
+    input[type='text'] {
+      background: transparent;
+      border: none;
+      border: 1px solid #3FE0C5;
+      padding: 1.6rem;
+      color: #3FE0C5;
+      flex: 1;
+      margin-right: 1rem;
+    }
+  }
+
+  @media (max-width: 1390px) {
+    .DocSearchForm {
+      flex-direction: column;
+      margin-right: 1rem;
+
+      input[type='text'] {
+        margin: 0 0 .2rem 0;
+      }
+    }
+  }
+
+  .navbar {
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  .navbar-brand {
+    height: 100px;
+    width: 102px;
+    margin-left: 0!important;
+  }
+
+  .navbar-nav li a {
+    line-height: 100px;
+    height: 100px;
+    padding-top: 0;
+  }
+
+  @media (min-width: 992px) {
+    .SubNav {
+      position: fixed;
+      top: 100px;
+      left: 0;
+      bottom: 0;
+      z-index: 1000;
+      display: block;
+      background-color: #CCCCCC;
+    }
+  }
+
+  .SubNav {
+    overflow: scroll;
+    background: #5e464d;
+    padding-top: 2rem;
+    padding-right: 0;
+    color: #3fe0c5;
+
+    h2 {
+      text-shadow: none;
+      text-transform: uppercase;
+      color: #3FE0C5;
+      padding-bottom: 1rem;
+    }
+
+    ul {
+      margin-left: 15px;
+
+      li {
+        margin-bottom: .5rem;
+        &.active {
+          background: #F8F5F0;
+          padding: .5rem;
+
+          a {
+            color: #5e464d;
+          }
+        }
+      }
+    }
+
+    a {
+      color: desaturate(#3FE0C5, 30%);
+      transition: all .2s;
+
+      &:hover {
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    ul > li > ul {
+      margin-left: 1rem;
+    }
+  }
+
+  .ContentPage {
+    padding: 2rem 4rem;
+
+    h1,
+    h2,
+    h3,
+    h5
+    {
+      text-transform: uppercase;
+    }
+
+    p {
+
+      margin-bottom: 2rem;
+    }
+
+    pre {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      li {
+        font-weight: normal;
+        font-family: $font-family-serif;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    .ContentPage {
+      margin-top: 100px;
+    }
+  }
+
+  footer {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+
+    p {
+      margin: 0 !important;
+      padding: 0;
+    }
+  }
+}

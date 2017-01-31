@@ -1,0 +1,48 @@
+html {
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
+  text-shadow: 0 1px 0 #fff;
+}
+
+p {
+  font-family: $font-family-serif;
+}
+
+
+.WithDash {
+  &:after {
+    content: '';
+    display: block;
+    margin-top: 1rem;
+    width: 100px;
+    border-bottom: 4px solid $body-text-color;
+  }
+}
+
+
+h4 {
+  text-transform: uppercase;
+}
+
+i {
+  font-family: $font-family-serif;
+}
+
+.Uppercase {
+  text-transform: uppercase;
+}
+
+
+code {
+  // word-break: break-all;
+  word-wrap: break-word;
+}
+

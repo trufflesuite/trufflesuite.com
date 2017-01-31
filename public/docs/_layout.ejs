@@ -1,0 +1,74 @@
+<% include ../_includes/typogr %>
+<!doctype html>
+<html lang="en">
+  <% include ../_includes/head %>
+  <body>
+    <section class="Documentation">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+              <%- include ../_includes/truffle_logo %>
+            </a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/">Home</a></li>
+              <li><a href="/docs">Documentation</a></li>
+              <li><a class="active" href="/tutorials">Tutorials</a></li>
+              <li><a href="https://github.com/truffleframework">Github</a></li>
+              <li><a href="/community">Community</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+      <section class="MainContent">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 col-md-3 SubNav">
+              <form class="DocSearchForm form-inline" action='/docs/search#results' method='get'>
+                <div class="form-group">
+                  <label for="search-box" class="sr-only">Search</label>
+                  <input class="form-control" type="text" id="search-box" name="query" placeholder='search the docs'>
+                </div>
+                <input class="btn btn-primary btn-sm" type="submit" value="search">
+              </form>
+              <% top_level_groups = Object.keys(public.docs._data) %>
+              <% top_level_groups = _.map(top_level_groups, function(group) { return { "title": public.docs._data[group].title, "order": public.docs._data[group].order, "slug":group } }) %>
+
+              <ul class="list-unstyled">
+                <% for( group of top_level_groups) { -%>
+                  <h2><%- group['title'] -%></h2>
+                <% group_data = public.docs[group.slug]._data -%>
+                <% group_data = _.sortBy(_.map(Object.keys(group_data), function(i) { return { "title": group_data[i].title, "order": group_data[i].order, "slug": i} }), "order") -%>
+                <li>
+                  <ul class="list-unstyled">
+                    <% for(article_key of group_data) { -%>
+                      <% active = current.path[1] == group['slug'] && current.path[2] == article_key.slug ? 'active' : '' %>
+                    <li class="<%= active %>"><a href="/docs/<%- group['slug'] %>/<%- article_key.slug %>"><%- article_key.title %></a></li>
+                  <% } -%>
+                  </ul>
+                </li>
+              <% } %>
+              </ul>
+            </div>
+            <div class="col-xs-12 col-md-9 col-md-offset-3 ContentPage">
+              <%- yield %>
+              <footer class="container-fluid">
+                <p class="text-center">See a way to make this page better? <a href="<%="https://github.com/" + service.contributing + "/edit/master/_harp/public/" + current.path.join('/') + ".md" %>">Edit here &rarr;</a></p>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <% include ../_includes/scripts %>
+    <% include ../_includes/analytics %>
+  </body>
+</html>

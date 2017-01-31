@@ -1,0 +1,36 @@
+{
+  "name": "truffle-site",
+  "version": "0.0.1",
+  "description": "The truffle website",
+  "private": true,
+  "main": "public/index.ejs",
+  "author": "John McDowall <john@kantan.io>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.9.8",
+    "csslint-cli": "0.0.3",
+    "imagemin-cli": "^3.0.0",
+    "jshint": "^2.9.1",
+    "recursive-uglifyjs": "^1.0.0",
+    "ejs": "^2.5.5",
+    "marked": "^0.3.6",
+    "metalsmith": "^2.3.0",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-sass": "^1.4.0"
+  },
+  "scripts": {
+    "test": "jshint ./public/**/*.js & csslint-cli ./public/styles",
+    "dev": "metalsmith-start",
+    "uglify": "recursive-uglifyjs ../scripts && recursive-uglifyjs ../deps/scripts",
+    "compile": "node ./compile.js",
+    "postcompile": "npm run uglify && npm run imagemin && cp CNAME ../",
+    "imagemin": "imagemin ./public/images/ ../images/ --optimizationLevel 3 --progressive"
+  },
+  "engines": {
+    "node": "6.5.x",
+    "npm": "3.3.x"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}

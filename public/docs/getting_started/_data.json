@@ -1,0 +1,50 @@
+{
+  "build": {
+    "order": 6,
+    "title": "Building your application"
+  },
+  "client": {
+    "order" : 2,
+    "title": "Choosing an Ethereum client"
+  },
+  "compile": {
+    "order" : 4,
+    "title": "Compiling contracts"
+  },
+  "console": {
+    "order" : 9,
+    "title": "Using the console"
+  },
+  "contact": {
+    "order" : 12,
+    "title": "Contact the developers"
+  },
+  "contracts": {
+    "order" : 8,
+    "title": "Interacting with your contracts"
+  },
+  "installation": {
+    "order" : 1,
+    "title": "Installation"
+  },
+  "migrations": {
+    "order" : 5,
+    "title": "Running migrations"
+  },
+  "project": {
+    "order" : 3,
+    "title": "Creating a project"
+  },
+  "scripts": {
+    "order" : 10,
+    "title": "Writing external scripts"
+  },
+  "testing": {
+    "order" : 8,
+    "title": "Testing your contracts"
+  },
+  "workflow": {
+    "order" : 11,
+    "title": "Improving your workflow"
+  }
+}

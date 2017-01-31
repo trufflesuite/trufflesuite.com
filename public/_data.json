@@ -1,0 +1,11 @@
+{
+  "humans.txt": {
+    "layout": false
+  },
+  "community": {
+    "layout": true
+  },
+  "sitemap.xml": {
+    "layout": false
+  }
+}

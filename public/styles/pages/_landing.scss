@@ -1,0 +1,399 @@
+
+.LandingPage {
+
+  ul,
+  ol {
+    font-family: $font-family-serif;
+    line-height: 1.5rem;
+    margin-left: 0;
+    padding-left: 0;
+
+    li {
+      margin-bottom: 1.2em;
+    }
+  }
+
+  header {
+    background: url('../images/header_bg.jpg') no-repeat;
+    background-size: cover;
+
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    div > iframe:first-of-type {
+      margin-right: 1em;
+    }
+
+		.github-button {
+			display: none;
+		}
+
+    .btn {
+      width: 200px;
+    }
+
+		div > a > img {
+			margin-top: -10px;
+			margin-left: 1em;
+		}
+
+    .InstallInstruction {
+      @extend .m-t-3;
+      @extend .m-b-1;
+      text-align: center;
+
+      .Box {
+        @extend .p-a-1;
+        background-color: #5E464D;
+        border-radius: 2px;
+
+        code {
+          background: transparent;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .BetaSignup {
+    @extend .p-t-4;
+    @extend .p-b-4;
+    background: $body-background-alt1-color;
+    overflow: hidden;
+    position: relative;
+
+    border-top: 1px solid $body-primary-color;
+    border-bottom: 1px solid $body-primary-color;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 219px;
+      height: 541px;
+      background: #e8e5e2;
+      transform: skew(0,-6deg);
+    }
+
+    h2 {
+      @extend .p-b-2;
+    }
+
+    .FormWrapper {
+      background: rgba(255, 255, 255, 0.3);
+      border: 4px solid white;
+      box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.03);
+      display: flex;
+      margin: 50px 0;
+
+      .mc-field-group:first-child {
+        border-right: 4px white solid;
+      }
+
+      .mc-field-group {
+        position: relative;
+        flex: 2;
+      }
+
+      label {
+        position: absolute;
+        z-index: 2;
+        font-size: 12px;
+        left: 10px;
+        top: 5px;
+        color: #8e8e8e;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      input {
+        position: relative;
+        border: 0;
+        background: #E6E4E4;
+        padding: 0;
+        display: block;
+        height: 70px;
+        width: 100%;
+        padding: 0 10px;
+        font-size: 18px;
+      }
+
+      input[type='submit'] {
+        flex: 1;
+        text-transform: uppercase;
+        background: $body-primary-color;
+        color: #fff;
+        padding: 0 15px;
+        display: block;
+        height: 70px;
+        width: 100%;
+        border: 0;
+      }
+    }
+  }
+
+  @media (max-width: 590px) {
+    .BetaSignup {
+      .FormWrapper {
+        display: block;
+
+        .mc-field-group:first-child {
+          border-right: none;
+          border-bottom: 4px solid white;
+        }
+      }
+    }
+  }
+
+  .Features {
+    background: white;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -780px;
+      height: 1070px;
+      background: #fbfbfb;
+      transform: skew(0,-45deg);
+    }
+
+    .FeatureList {
+      li {
+        @extend .m-b-3;
+        counter-increment: step-counter;
+
+        &:before {
+          content: "0" counter(step-counter) ".";
+          margin-left: -26px;
+          margin-top: -1px;
+          font-size: 20px;
+          padding: 0px 12px;
+          position: absolute;
+          left: -10px;
+          line-height: 1.2;
+        }
+
+        h4 {
+          font-weight: bold;
+        }
+
+        .LinkSection {
+          margin-top: 1rem;
+          a {
+            margin-right: 1rem;
+            font-family: $font-family-serif;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 590px) {
+      .FeatureList {
+        li {
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .FeatureCard {
+      background: #FFFFFF;
+      border: 1px solid rgba(212,212,212,0.28);
+      box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.08);
+      border-radius: 4px;
+
+      h6 {
+        @extend .m-b-2;
+      }
+
+
+			.FeatureBody {
+        > p {
+          @extend .m-b-2;
+          line-height: 1.6rem;
+        }
+
+
+				padding: 1rem 1.8rem;
+			}
+
+      footer {
+        text-align:center;
+        background: #f8f7f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        min-height: 60px;
+
+        p {
+          margin: 0;
+          @extend .p-b-2;
+        }
+
+        img {
+          width: 60px;
+          @extend .p-t-2;
+        }
+      }
+    }
+  }
+
+  .Tutorials {
+    background-color: #D8D8D8;
+    position: relative;
+    overflow: hidden;
+
+    .container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1000px;
+      height: 1000px;
+      background: #e2e2e2;
+      transform: skew(0,45deg);
+    }
+
+    li {
+
+      a {
+        display: block;
+        background-color: #94D6E2;
+        text-transform: uppercase;
+        @extend .p-a-3;
+        @extend .m-b-4;
+        transition: all .3s;
+
+        h2 {
+          margin: 0;
+          padding: 0;
+          letter-spacing: 1px;
+          text-shadow: none;
+          font-family: $font-family-sans-serif;
+        }
+
+        div {
+          margin-top: 1.2rem;
+        }
+
+        &:hover {
+          color: white;
+          text-decoration: none;
+          transform: scale(1.02);
+
+          h2 {
+            color: white;
+          }
+        }
+      }
+    }
+
+  }
+
+  .Contributing {
+    background: #3fe0c5;
+
+    ol {
+      margin-left: 1rem;
+    }
+  }
+
+  .NotableUsers {
+    li {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+
+
+    @media (max-width: 590px) {
+      li {
+        margin: 2rem auto;
+        display: block;
+      }
+    }
+  }
+
+  .BuiltWith {
+    background-color: #fff;
+    .Left {
+      background-color: #D8D8D8;
+
+      text-transform: uppercase;
+      text-shadow: none;
+
+      img {
+        border: 4px solid white;
+        border-radius: 50%;
+        margin-left: 2em;
+        margin-right: 2em;
+      }
+
+      @media (max-width: 590px) {
+        img {
+          margin: 0px auto;
+        }
+      }
+    }
+    .Right {
+      background-color: #fff;
+    }
+  }
+
+  .Footer {
+    position: relative;
+    overflow: hidden;
+    background-color: #F7F7F7;
+    padding-bottom: 6rem;
+
+    .Logo {
+      width: 100px;
+      height: 100px;
+    }
+
+    ul {
+      text-transform: uppercase;
+    }
+
+    strong {
+    }
+
+    h5 {
+      margin-top: 0;
+    }
+
+    .BetaSignup {
+      background: transparent;
+      border: 0;
+      margin: 0;
+      padding: 0 !important;
+
+      .FormWrapper {
+        margin: 0;
+      }
+
+      &:before {
+        display: none;
+      }
+    }
+
+   .container > svg {
+      position:absolute;
+      bottom: -115px;
+    }
+  }
+
+}

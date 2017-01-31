@@ -1,0 +1,27 @@
+<a name="results">Search Results</a>
+<p>Here are the following matches for: <span class="queryTerm"></span></p>
+<ul id="search-results"></ul>
+
+<%
+  top_level_groups = Object.keys(public.docs._data)
+  top_level_groups = _.map(top_level_groups, function(group) { return { "title": public.docs._data[group].title, "order": public.docs._data[group].order, "slug":group } })
+  search_data = {}
+  for( group of top_level_groups) {
+    group_data = public.docs[group.slug]._data
+    group_data = _.sortBy(_.map(Object.keys(group_data), function(i) { return { "title": group_data[i].title, "order": group_data[i].order, "slug": i} }), "order")
+    for(article_key of group_data) {
+      search_data[article_key.slug] = {
+        "id": article_key.slug,
+        "title": article_key.title,
+        "path" : group['slug'] + "/" + article_key.slug,
+        "content": partial('./' + group['slug'] + "/" + article_key.slug).replace(/<\/h1>/," ").replace(/<\/?[^>]+(>|$)/g, "")
+      }
+    }
+  }
+%>
+
+<script>
+window.store = <%- JSON.stringify(search_data) %>
+</script>
+<script src="/deps/scripts/lunr.js"></script>
+<script src="/scripts/search.js"></script>

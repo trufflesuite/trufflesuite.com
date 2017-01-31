@@ -1,0 +1,10 @@
+{
+  "getting_started": {
+    "order": 1,
+    "title": "Getting Started"
+  },
+  "advanced": {
+    "order": 2,
+    "title": "Advanced"
+  }
+}

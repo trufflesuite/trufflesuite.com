@@ -1,0 +1,33 @@
+{
+  "name": "Truffle Framework",
+  "title": "TruffleFramework.com",
+  "url": "http://truffleframwork.com",
+  "description": "Your Ethereum Swiss Army Knife",
+  "keywords": "solidity, dapps, contracts, smart contracts",
+  "domain": "truffleframework.com",
+  "authors": {
+    "firstlast": {
+      "name": "John McDowall",
+      "email": "john@kantan.io"
+    }
+  },
+  "service": {
+    "analytics": "UA-83874933-3",
+    "service": "example",
+    "googlefonts": ["Oswald:300,400,700", "Open+Sans:400,700"],
+    "googleverification": null,
+    "facebookid": null,
+    "socialimage": "images/social-image.jpg",
+    "appleid": null,
+    "twitter": "",
+    "disqus": false,
+    "contributing": "truffleframework/truffleframework.github.io",
+    "socialimage": "https://github.com/truffleframework/truffleframework.github.io/raw/master/images/twitter_card.jpg"
+  },
+  "thanks": {
+    "firstlast": {
+     "name": "First Last",
+     "url": "firstlast.com"
+    }
+  }
+}

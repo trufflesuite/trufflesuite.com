@@ -1,0 +1,20 @@
+<%function escapeURI(uri) {
+  return encodeURIComponent(uri);
+}%>
+<%function escapeString(string) {
+  return encodeURI(string);
+}%>
+<%var shareURL = escapeURI(url)%>
+<ul class="share">
+  <li>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=<%-shareURL%>&t=<%-escapeString(title)%>" target="_blank" title="Share on Facebook">Facebook</a>
+  </li>
+  <li>
+    <a href="https://twitter.com/intent/tweet?source=<%-shareURL%>&text=<%-escapeString(title)%>:%20<%-shareURL%>&via=<%-service.twitter%>" target="_blank" title="Tweet">Twitter</a></li>
+  <li>
+    <a href="https://plus.google.com/share?url=<%-shareURL%>" target="_blank" title="Share on Google+">Google+</a>
+  </li>
+  <li>
+    <a href="mailto:?subject=<%-escapeString(title)%>%20by%20<%-escapeString(name)%>&body=<%-escapeString(description)%>:%20<%-shareURL%>" target="_blank" title="Email">Email</a>
+  </li>
+</ul>
