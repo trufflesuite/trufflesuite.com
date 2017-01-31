@@ -10,6 +10,55 @@ h5,
 h6,
 h7 {
   text-shadow: 0 1px 0 #fff;
+  position: relative;
+
+  .anchor {
+    // The padding-top is needed to keep the anchor on screen given the large nav bar.
+    // The rest of this is simply fallout from that; for instance, the anchor is
+    // vertically larger now so we need to make sure it doesn't cover up anchors
+    // that came before it if there's not much spacing or content between headers.
+    padding-top: 200px;
+    position: absolute;
+    height: 100%;
+    width: 40px;
+    left: -40px;
+    bottom: 0;
+    cursor: default;
+
+    .header-link {
+      display: inline-block;
+      position: absolute;
+      width: 40px;
+      bottom: 0;
+      left: 0;
+
+      &:hover {
+        visibility: visible !important;
+        background-image: url(/images/anchor.png);
+        background-size: 20px 20px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+    }
+
+    &:hover {
+      .header-link {
+        visibility: hidden;
+      }
+    }
+  }
+
+  &:hover {
+    .header-link {
+      background-image: url(/images/anchor.png);
+      background-size: 20px 20px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+
+
 }
 
 p {
@@ -45,4 +94,3 @@ code {
   // word-break: break-all;
   word-wrap: break-word;
 }
-

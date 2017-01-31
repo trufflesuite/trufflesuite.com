@@ -2,7 +2,6 @@ var Metalsmith  = require('metalsmith');
 var markdown    = require('metalsmith-markdown');
 var sass        = require('metalsmith-sass');
 var ejs         = require('ejs');
-var marked      = require('marked');
 
 var path = require("path");
 var fs = require("fs");
@@ -18,7 +17,9 @@ var app = Metalsmith(__dirname)
   .use(sass({
     outputStyle: "expanded"
   }))
-  .use(markdown())
+  .use(markdown({
+    renderer: require("./renderers/markdown.js")
+  }))
   .use(function(files, metalsmith, done) {
     var prefills = {
       public: {}
@@ -174,8 +175,6 @@ var app = Metalsmith(__dirname)
     });
 
     done();
-
   });
-
 
 module.exports = app;

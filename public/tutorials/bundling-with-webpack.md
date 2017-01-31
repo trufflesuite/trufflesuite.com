@@ -2,7 +2,7 @@
 
 [Webpack](https://webpack.github.io/) is a powerful module bundler that helps turn your code into static assets you can deploy to the web. With the [Truffle Solidity loader](https://github.com/ConsenSys/truffle-solidity-loader), we'll show you how you can use Webpack with your existing Truffle project.
 
-## Intended Audience
+## Intended Audience 
 
 This tutorial is for Truffle users who are familiar with Webpack already. Since Webpack requires considerable knowledge to use effectively, we recommend checking out the [Webpack documentation](http://webpack.github.io/docs/) as well as the [Truffle + Webpack Demo application](https://github.com/ConsenSys/truffle-webpack-demo) before proceeding.
 
