@@ -9,18 +9,20 @@
   "devDependencies": {
     "browser-sync": "^2.9.8",
     "csslint-cli": "0.0.3",
+    "ejs": "^2.5.5",
     "imagemin-cli": "^3.0.0",
     "jshint": "^2.9.1",
-    "recursive-uglifyjs": "^1.0.0",
-    "ejs": "^2.5.5",
+    "lodash": "^4.17.4",
     "marked": "^0.3.6",
     "metalsmith": "^2.3.0",
+    "metalsmith-browser-sync": "^1.1.1",
     "metalsmith-markdown": "^0.2.1",
-    "metalsmith-sass": "^1.4.0"
+    "metalsmith-sass": "^1.4.0",
+    "recursive-uglifyjs": "^1.0.0"
   },
   "scripts": {
     "test": "jshint ./public/**/*.js & csslint-cli ./public/styles",
-    "dev": "metalsmith-start",
+    "dev": "node ./dev.js",
     "uglify": "recursive-uglifyjs ../scripts && recursive-uglifyjs ../deps/scripts",
     "compile": "node ./compile.js",
     "postcompile": "npm run uglify && npm run imagemin && cp CNAME ../",
@@ -30,7 +32,5 @@
     "node": "6.5.x",
     "npm": "3.3.x"
   },
-  "dependencies": {
-    "lodash": "^4.17.4"
-  }
+  "dependencies": {}
 }
