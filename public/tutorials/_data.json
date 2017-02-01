@@ -64,5 +64,11 @@
     "date": "2016-12-23",
     "author": "David Burela",
     "published": true
+  },
+  "upgrading-from-truffle-2-to-3": {
+    "title": "Upgrading from Truffle 2.0 to 3.0 - a Guide",
+    "date": "2017-02-01",
+    "author": "Tim Coulter",
+    "published": true
   }
 }
