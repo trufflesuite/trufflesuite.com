@@ -40,6 +40,8 @@ This produces the following output:
 $ truffle test
 Compiling ConvertLib.sol...
 Compiling MetaCoin.sol...
+Compiling truffle/Assert.sol
+Compiling truffle/DeployedAddresses.sol
 Compiling ../test/TestMetacoin.sol...
 
   TestMetacoin
@@ -67,7 +69,7 @@ DeployedAddresses.<contract name>();
 
 This will return an address that you can then use to access that contract. See the example test above for usage.
 
-In order to use the deployed contract, you'll have to import the contract code into your test suite. Notice `import "../contracts/MetaCoin.sol";` in the example. This import is relative to the test contract, which exists in the `./test` directory, and it goes outside of the test directory in order to find the MetaCoin contract. It then uses that contract in to cast the address to the `MetaCoin` type.
+In order to use the deployed contract, you'll have to import the contract code into your test suite. Notice `import "../contracts/MetaCoin.sol";` in the example. This import is relative to the test contract, which exists in the `./test` directory, and it goes outside of the test directory in order to find the MetaCoin contract. It then uses that contract to cast the address to the `MetaCoin` type.
 
 ### Test Contract Names
 
