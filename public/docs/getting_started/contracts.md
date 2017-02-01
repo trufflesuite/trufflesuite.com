@@ -1,10 +1,10 @@
-# Background
+# Introduction
 
-The standard method of interacting with the Ethereum network is through the [Web3](https://github.com/ethereum/web3.js) library, created by the Ethereum foundation. Although this library is very useful, its current contract abstraction makes interacting with contracts difficult, especially for those new to Ethereum development. To smooth the learning curve, Truffle uses the [Ether Pudding](https://github.com/ConsenSys/ether-pudding) library, built on top of Web3, which aims to make interacting with contracts much easier.
+If you were writing raw requests to the Ethereum network yourself in order to interact with your contracts, you'd soon realize that writing these requests is clunky and cumbersome. As well, you might find that managing the state each request you've made is _complicated_. Fortunately, Truffle takes care of this complexity for you, to make interacting with your contracts a breeze.
 
 # Reading & Writing Data
 
-The Ethereum network makes a distinction between writing data to the network and reading data from it, and this distinction plays a significant part in how you write your application. In general, writing data is called a **transaction** whereas reading data is called a **call**. Transactions and calls are treated very differently, and have the following characteristics:
+The Ethereum network makes a distinction between writing data to the network and reading data from it, and this distinction plays a significant part in how you write your application. In general, writing data is called a **transaction** whereas reading data is called a **call**. Transactions and calls are treated very differently, and have the following characteristics.
 
 ### Transactions
 
@@ -26,15 +26,24 @@ Calls, on the other hand, are very different. Calls can be used to execute code 
 
 Choosing between a transaction and a call is as simple as deciding whether you want to read data, or write it.
 
-# Abstraction
+# Introducing Abstractions
 
-In order to appreciate the usefulness of a contract abstraction, we first need a contract to talk about. We'll use the MetaCoin contract provided for you by default.
+Contract abstractions are the bread and butter of interacting with Ethereum contracts from Javascript. In short, contract abstractions are wrapper code that makes interaction with your contracts easy, in a way that lets you forget about the many engines and gears executing under the hood. Truffle uses its own contract abstraction via the [truffle-contract](https://github.com/trufflesuite/truffle-contract) module, and its this contract abstraction that's described below.
+
+In order to appreciate the usefulness of a contract abstraction, however, we first need a contract to talk about. We'll use the MetaCoin contract provided for you by default via `truffle init`.
 
 ```javascript
-import "ConvertLib.sol";
+pragma solidity ^0.4.2;
+
+import "./ConvertLib.sol";
+
+// This is just a simple example of a coin-like contract.
+// It is not standards compatible and cannot be expected to talk to other
+// coin/token contracts. If you want to create a standards-compliant
+// token, see: https://github.com/ConsenSys/Tokens. Cheers!
 
 contract MetaCoin {
-  mapping (address => uint) balances;
+	mapping (address => uint) balances;
 
 	event Transfer(address indexed _from, address indexed _to, uint256 _value);
 
@@ -49,22 +58,28 @@ contract MetaCoin {
 		Transfer(msg.sender, receiver, amount);
 		return true;
 	}
+
 	function getBalanceInEth(address addr) returns(uint){
 		return ConvertLib.convert(getBalance(addr),2);
 	}
+
 	function getBalance(address addr) returns(uint) {
 		return balances[addr];
 	}
 }
+
 ```
 
 This contract has three methods aside from the constructor (`sendCoin`, `getBalanceInEth`, and `getBalance`). All three methods can be executed as either a transaction or a call.
 
-Now let's look at the Javascript object called `MetaCoin` provided for us by Truffle and Ether Pudding, made available within our frontend:
+Now let's look at the Javascript object called `MetaCoin` provided for us by Truffle, as made available in the [Truffle console](/docs/getting_started/console):
 
 ```javascript
-// Print the deployed version of MetaCoin
-console.log(MetaCoin.deployed());
+// Print the deployed version of MetaCoin.
+// Note that getting the deployed version requires a promise, hence the .then.
+MetaCoin.deployed().then(function(instance) {
+  console.log(instance);
+});
 
 // outputs:
 //
@@ -74,15 +89,16 @@ console.log(MetaCoin.deployed());
 // - getBalance: ()
 // - getBalanceInEth: ()
 // - sendCoin: ()
+// ...
 ```
 
 Notice that the abstraction contains the exact same functions that exist within our contract. It also contains an address which points to the deployed version of the MetaCoin contract.
 
-### Executing Contract Functions
+## Executing Contract Functions
 
 Using the abstraction you can easily execute contract functions on the Ethereum network.
 
-##### Making a Transaction
+### Making a Transaction
 
 There are three functions on the MetaCoin contract that we can execute. If you analyze each of them, you'll see that `sendCoin` is the only function that aims to make changes to the network. The goal of `sendCoin` is to "send" some Meta coins from one account to the next, and these changes should persist.
 
@@ -92,11 +108,12 @@ When calling `sendCoin`, we'll execute it as a transaction. In the following exa
 var account_one = "0x1234..."; // an address
 var account_two = "0xabcd..."; // another address
 
-var meta = MetaCoin.deployed();
-meta.sendCoin(account_two, 10, {from: account_one}).then(function(tx_id) {
+var meta;
+MetaCoin.deployed().then(function(instance) {
+  meta = instance;
+  return meta.sendCoin(account_two, 10, {from: account_one});
+}).then(function(result) {
   // If this callback is called, the transaction was successfully processed.
-  // Note that Ether Pudding takes care of watching the network and triggering
-  // this callback.
   alert("Transaction successful!")
 }).catch(function(e) {
   // There was an error! Handle it.
@@ -110,15 +127,18 @@ There are a few things interesting about the above code:
 * We passed an object as the third parameter to `sendCoin`. Note that the `sendCoin` function in our Solidity contract doesn't have a third parameter. What you see above is a special object that can always be passed as the last parameter to a function that lets you edit specific details about the transaction. Here, we set the `from` address ensuring this transaction came from `account_one`.
 
 
-##### Making a Call
+### Making a Call
 
 Continuing with MetaCoin, notice the `getBalance` function is a great candidate for reading data from the network. It doesn't need to make any changes, as it just returns the MetaCoin balance of the address passed to it. Let's give it a shot:
 
 ```javascript
 var account_one = "0x1234..."; // an address
 
-var meta = MetaCoin.deployed();
-meta.getBalance.call(account_one, {from: account_one}).then(function(balance) {
+var meta;
+MetaCoin.deployed().then(function(instance) {
+  meta = instance;
+  return meta.getBalance.call(account_one, {from: account_one});
+}).then(function(balance) {
   // If this callback is called, the call was successfully executed.
   // Note that this returns immediately without any waiting.
   // Let's print the return value.
@@ -135,55 +155,60 @@ What's interesting here:
 
 **Warning:** We convert the return value to a number because in this example the numbers are small. However, if you try to convert a BigNumber that's larger than the largest integer supported by Javascript, you'll likely run into errors or unexpected behavior.
 
+### Catching Events
 
-##### Catching Events
-
-Your contracts can fire events that you can catch to gain more insight into what your contracts are doing. The event API is the same as Web3; along with the example below, see the [Web3 documentation](https://github.com/ethereum/wiki/wiki/JavaScript-API#contract-events) for more information.
+Your contracts can fire events that you can catch to gain more insight into what your contracts are doing. The easiest way to handle events is by processing the result object of the transaction that triggered the event, like so:
 
 ```javascript
-var meta = MetaCoin.deployed();
-var transfers = meta.Transfer({fromBlock: "latest"});
-transfers.watch(function(error, result) {
-  // This will catch all Transfer events, regardless of how they originated.
-  if (error == null) {
-    console.log(result.args);
+var account_one = "0x1234..."; // an address
+var account_two = "0xabcd..."; // another address
+
+var meta;
+MetaCoin.deployed().then(function(instance) {
+  meta = instance;  
+  return meta.sendCoin(account_two, 10, {from: account_one});
+}).then(function(result) {
+  // result is an object with the following values:
+  //
+  // result.tx      => transaction hash, string
+  // result.logs    => array of decoded events that were triggered within this transaction
+  // result.receipt => transaction receipt object, which includes gas used
+
+  // We can loop through result.logs to see if we triggered the Transfer event.
+  for (var i = 0; i < result.logs.length; i++) {
+    var log = result.logs[i];
+
+    if (log.event == "Transfer") {
+      // We found the event!
+      break;
+    }
   }
-}
-```
-
-### Method: deployed()
-
-Each contract abstraction has a method called `deployed()`, which you saw used above. Calling this function on the main contract object will give you an instance of the abstraction that represents the contract previously deployed to the network.
-
-```javascript
-var meta = MetaCoin.deployed();
-```
-
-**Warning:** This will only work successfully for contracts that have been deployed using `truffle migrate` and are set to be deployed within your [project configuration](/docs/advanced/configuration). This function will throw an error if your contract does not meet this criteria.
-
-### Method: at()
-
-Similar to `deployed()`, you can get an instance of the abstraction that represents the contract at a specific address. Here, we expect to have an already deployed contract at the address "0x1234...":
-
-```javascript
-var meta = MetaCoin.at("0x1234...")
-```
-
-**Warning:** This function will *not* error if your address is incorrect or your address points to the wrong contract. Instead, contract functions called on the abstraction instance will fail. Ensure you have the correct address when using `at()`.
-
-### Method: new()
-
-You can use this method to deploy a completely new instance of a contract onto the network. Here's how:
-
-```javascript
-MetaCoin.new().then(function(instance) {
-  // `instance` is a new instance of the abstraction.
-  // If this callback is called, the deployment was successful.
-  console.log(instance.address);
-}).catch(function(e) {
+}).catch(function(err) {
   // There was an error! Handle it.
 });
 ```
 
-Note that this *is* a transaction and will change the state of the network.
+### Add a new contract to the network
 
+In all of the above cases, we've been using a contract abstraction that has already been deployed. We can deploy our own version to the network using the `.new()` function:
+
+```javascript
+MetaCoin.new().then(function(instance) {
+  // Print the new address
+  console.log(instance.address);
+}).catch(function(err) {
+  // There was an error! Handle it.
+});
+```
+
+### Use a contract at a specific address
+
+If you already have an address for a contract, you can create a new abstraction to represent the contract at that address.
+
+```javascript
+var instance = MetaCoin.at("0x1234...");
+```
+
+# Further Reading
+
+The contract abstractions provided by Truffle contain a wealth of utilities for making interacting with your contracts easy. Check out the [truffle-contract](https://github.com/trufflesuite/truffle-contract) documentation for tips, tricks and insights.

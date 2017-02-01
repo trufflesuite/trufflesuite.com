@@ -21,8 +21,10 @@
     "appleid": null,
     "twitter": "",
     "disqus": false,
-    "contributing": "truffleframework/truffleframework.github.io",
-    "socialimage": "https://github.com/truffleframework/truffleframework.github.io/raw/master/images/twitter_card.jpg"
+    "github": "https://github.com/trufflesuite",
+    "site_issues": "https://github.com/trufflesuite/trufflesuite.github.io/issues",
+    "contributing": "trufflesuite/trufflesuite.github.io",
+    "socialimage": "https://github.com/trufflesuite/trufflesuite.github.io/raw/master/images/twitter_card.jpg"
   },
   "thanks": {
     "firstlast": {

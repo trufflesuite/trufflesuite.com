@@ -35,21 +35,21 @@
     "order" : 9,
     "title": "Interacting with your contracts"
   },
-  "packages": {
+  "packages-ethpm": {
     "order": 10,
-    "title": "Package management"
+    "title": "Package management via EthPM"
+  },
+  "packages-npm": {
+    "order": 11,
+    "title": "Package management via NPM"
   },
   "console": {
-    "order" : 11,
+    "order" : 12,
     "title": "Using the console"
   },
   "scripts": {
-    "order" : 12,
-    "title": "Writing external scripts"
-  },
-  "workflow": {
     "order" : 13,
-    "title": "Improving your workflow"
+    "title": "Writing external scripts"
   },
   "build": {
     "order": 14,

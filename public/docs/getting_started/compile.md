@@ -36,7 +36,7 @@ You can declare contract dependencies using Solidity's [import](http://solidity.
 import "./AnotherContract.sol";
 ```
 
-You can also use the `import` statement to import dependencies installed via package management. See the [Package Management](/docs/getting_started/packages) for more information.
+You can also use the `import` statement to import dependencies installed via package management. See the Package Management sections for more information.
 
 # Artifacts
 

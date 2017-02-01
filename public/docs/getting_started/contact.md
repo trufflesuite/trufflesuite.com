@@ -20,7 +20,7 @@ Subsribe to our Truffle Users Mailing list for access to news, beta releases and
   #mc_embed_signup input.email{display: inline-block; vertical-align: top; margin-right: 5px; min-height: 33px; color: black;}
 </style>
 <div id="mc_embed_signup">
-<form action="//readthedocs.us14.list-manage.com/subscribe/post?u=563e4b50100f771d2d17cf7a5&amp;id=b754a8ab50" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<form action="//readthedocs.us14.list-manage.com/subscribe/post?u=563e4b50100f771d2d17cf7a5&amp;id=b754a8ab50" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" style="padding-left: 0;" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
 	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
@@ -33,4 +33,3 @@ Subsribe to our Truffle Users Mailing list for access to news, beta releases and
 <!--End mc_embed_signup-->
 
 --------------------------
-
