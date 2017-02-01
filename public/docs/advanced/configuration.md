@@ -79,11 +79,13 @@ mocha: {
 }
 ```
 
-# EthPM Options
+# EthPM Configuration
+
+This configuration applies to the optional `ethpm.json` file that exists alongside your `truffle.js` configuration file.
 
 ### package_name
 
-Used for EthPM package specification. Add this option if you plan to publish your contracts to EthPM.
+Name of the package your publishing. Your package name must be unique to the EthPM registry.
 
 Example:
 ```javascript
@@ -92,7 +94,7 @@ package_name: "adder"
 
 ### version
 
-Used for EthPM package specification. Add this option if you plan to publish your contracts to EthPM.
+Version of this package, using the [semver](http://semver.org/) specification.
 
 Example:
 ```javascript
@@ -101,7 +103,7 @@ version: "0.0.3"
 
 ### description
 
-Used for EthPM package specification. Add this option if you plan to publish your contracts to EthPM.
+A text description of your package for human readers.
 
 Example:
 ```javascript
@@ -110,7 +112,7 @@ description: "Simple contract to add two numbers"
 
 ### authors
 
-Used for EthPM package specification. Add this option if you plan to publish your contracts to EthPM.
+An array of authors. Can have any format, but we recommend the format below.
 
 Example:
 ```javascript
@@ -121,7 +123,7 @@ authors: [
 
 ### keywords
 
-Used for EthPM package specification. Add this option if you plan to publish your contracts to EthPM.
+An array of keywords that tag this package with helpful categories.
 
 Example:
 ```javascript
@@ -133,7 +135,7 @@ keywords: [
 
 ### dependencies
 
-Used for EthPM package specification. Add this option if you plan to publish your contracts to EthPM, and your package relies on other EthPM dependencies.
+A list of EthPM packages your package depends on, using [semver](http://semver.org/) version ranges, like npm.
 
 Example:
 ```javascript
@@ -146,7 +148,7 @@ dependencies: {
 
 ### license
 
-Used for EthPM package specification. Add this option if you plan to publish your contracts to EthPM.
+License to use for this package. Strictly informative. 
 
 Example:
 ```javascript

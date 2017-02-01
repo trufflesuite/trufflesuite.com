@@ -95,40 +95,27 @@ module.exports = {
 
 ### Package configuration
 
-You can set your package's configuration options directly in your Truffle configuration file. For a full list of available options, see the [Configuration](/docs/advanced/configuration) section.
+Like NPM, configuration options for EthPM go in a separate JSON file called `ethpm.json`. This file sits alongside your Truffle configuration and gives Truffle all the information it needs to publish your package. You can see a full list of available options in the [Configuration](/docs/advanced/configuration) section.
 
-File: `truffle.js`
+File: `ethpm.json`
 
 ```javascript
-module.exports = {
+{
   // Package configuration options
-  package_name: "adder",
-  version: "0.0.3",
-  description: "Simple contract to add two numbers",
-  authors: [
+  "package_name": "adder",
+  "version": "0.0.3",
+  "description": "Simple contract to add two numbers",
+  "authors": [
     "Tim Coulter <tim.coulter@consensys.net>"
   ],
-  keywords: [
+  "keywords": [
     "ethereum",
     "addition"
   ],
-  dependencies: {
+  "dependencies": {
     "owned": "^0.0.1"
   },
-  license: "MIT",
-
-  // Truffle configuration options
-  networks: {
-    development: {
-      host: "localhost",
-      port: 8545,
-      network_id: "*" // Match any network id
-    },
-    ropsten: {
-      provider: new HDWalletProvider(mnemonic, "https://ropsten.infura.io/truffle"),
-      network_id: 3
-    }
-  }
+  "license": "MIT"
 };
 ```
 
