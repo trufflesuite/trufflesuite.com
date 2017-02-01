@@ -54,6 +54,52 @@
       text-transform: uppercase;
     }
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    h7 {
+      position: relative;
+
+      .anchor {
+        position: absolute;
+        height: 100%;
+        width: 40px;
+        left: -40px;
+        bottom: 0;
+        cursor: default;
+        text-decoration: none;
+        border: 0;
+
+        .header-link {
+          display: inline-block;
+          position: absolute;
+          width: 40px;
+          bottom: 0;
+          left: 0;
+
+          &:hover {
+            background-image: url(/images/anchor.png);
+            background-size: 20px 20px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+          }
+        }
+      }
+
+      &:hover {
+        .header-link {
+          background-image: url(/images/anchor.png);
+          background-size: 20px 20px;
+          background-position: center center;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+
     p {
       line-height: 1.9rem;
       margin-bottom: 1.9rem;
