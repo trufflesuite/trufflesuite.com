@@ -112,7 +112,7 @@ Like the section above, autolinking was a boon of a very small dependency tree. 
 
 ⚠️ Warning: This change will affect your migrations, your tests, and your application code! ⚠️
 
-In Truffle 2.0, your contract abstractions managed your networks in a naive way, and added constructs like a "default network" that opened up the possibity of using the wrong network artifacts and deployed addresses at the wrong time. This provided a fancy and easy to use syntax -- i.e., `MyContract.deployed().myFunction(...)` -- but it left your code open to errors. Truffle 3.0 changes this syntax, where `.deployed()` is now thennable, like a promise (see example below). Similarly, this makes your contract abstractions seemlessly integrate with [EIP 190](https://github.com/ethereum/EIPs/issues/190), Ethereum's package management standard. All of this is for the better, but it means you'll have some changes to make all across the board.
+In Truffle 2.0, your contract abstractions managed your networks in a naive way, and added constructs like a "default network" that opened up the possibility of using the wrong network artifacts and deployed addresses at the wrong time. This provided a fancy and easy to use syntax -- i.e., `MyContract.deployed().myFunction(...)` -- but it left your code open to errors. Truffle 3.0 changes this syntax, where `.deployed()` is now thennable, like a promise (see example below). Similarly, this makes your contract abstractions seamlessly integrate with [EIP 190](https://github.com/ethereum/EIPs/issues/190), Ethereum's package management standard. All of this is for the better, but it means you'll have some changes to make all across the board.
 
 In the general use case, here is how the new syntax differs from the old:
 
@@ -221,16 +221,16 @@ In Truffle 1.0 and 2.0, things were heavily geared toward building web applicati
 
 Over the last year, Ethereum-enabled applications have only been growing. What started out as solely a platform for web application, now dapps can be written in native languages and run as standalone applications on mobile and the desktop. Truffle has always intended to support these use cases, and so that's why we **removed the default build pipeline** from Truffle. You can still [write your own custom build pipeline]() if you'd like to tightly integrate it with Truffle, but by default Truffle will focus on continuing to be the best tool for smart contracts around. We'll let the better build pipelines -- like [webpack](https://webpack.github.io/), [browserify](http://browserify.org/), [Grunt](http://gruntjs.com/), [Metalsmith](http://www.metalsmith.io/) -- do the job of, well, building.
 
-Now, just because the build pipeline has been removed by default doesn't mean you don't have options. At Truffle, we care about your developer experience and so would never leave you hanging. In general there are two options for you to choose from, but for the latter option what you'll do is heavily dependent on which build tool (i.e., wepback) you choose to use. Let's go over the options below.
+Now, just because the build pipeline has been removed by default doesn't mean you don't have options. At Truffle, we care about your developer experience and so would never leave you hanging. In general there are two options for you to choose from, but for the latter option what you'll do is heavily dependent on which build tool (i.e., webpack) you choose to use. Let's go over the options below.
 
-### Using the old pipeline in Truffle 3.0
+### Use the old pipeline in Truffle 3.0
 
-If you're using the default build pipeline in Truffle 2.0 and would like to upgrade to 3.0, you're not out of luck. We've upgraded the [truffle-default-builder](https://github.com/trufflesuite/truffle-default-builder) so it can work seamlessly with Truffle 3.0. This will be the last time we update the builder though as engineering it for all possible use cases is too complex. So we recommended you eventually find a different build system later down the line.
+If you're using the default build pipeline in Truffle 2.0 and would like to upgrade to 3.0, you're not out of luck. We've upgraded the [truffle-default-builder](https://github.com/trufflesuite/truffle-default-builder) so it can work seamlessly with Truffle 3.0. This will be the last time we update the default builder though as engineering for all possible use cases is too complex. So we recommend you eventually choose a different build system later down the line.
 
 The default builder no longer ships with Truffle by default. So for Truffle 3.0, you first need to make `truffle-default-builder` a dependency of your project by running the following command within your project's folder:
 
 ```
-$ npm install truffle-devault-builder --save
+$ npm install truffle-default-builder --save
 ```
 
 Once installed, you can use the default builder within your `truffle.js` configuration file. Let's have a look at how your configuration file changes from v2.0 to v3.0, using a very simple build configuration:
@@ -280,6 +280,47 @@ module.exports = {
 };
 ```
 
-You'll notice that in verison 3.0 we `require`'d the default builder as a dependency and then passed that object into our configuration. Otherwise, the configuration was the same!
+You'll notice that in version 3.0 we `require`'d the default builder as a dependency and then passed that object into our configuration. Otherwise, the configuration was the same!
 
-Now, be aware that the default builder does use the latest contract abstractions as described above, so you will still need to edit your application to account for those changes.
+Now, be aware that the default builder does use the latest contract abstractions ([truffle-contract](https://github.com/trufflesuite/truffle-contract)), so you will still need to edit your application to account for the breaking changes mentioned above.
+
+### Use a custom build process / build tool
+
+Custom build processes are not hard to write. Instead, what's hard is writing a build process that fits all shapes and sizes. We now recommend you look into the many build tools available to you that best fits your application. We've already mentioned [webpack](https://webpack.github.io/), [browserify](http://browserify.org/), [Grunt](http://gruntjs.com/), and [Metalsmith](http://www.metalsmith.io/), but there are many others, and their features run the gamut based on the context of the application being built and the features that you need.
+
+Whether you're building an application to run in the browser, or a command line tool, a Javascript library or a native mobile application, bootstrapping your contracts is the same, and using your deployed contract artifacts follows the same general process no matter the app you're building.
+
+When configuring your build tool or application, you'll need to perform the following steps;
+
+1. Get all your contract artifacts into your build pipeline / application. This includes all of the `.json` files within the `./build/contracts` directory.
+2. Turn those `.json` contract artifacts into contract abstractions that are easy to use, via [truffle-contract](https://github.com/trufflesuite/truffle-contract).
+3. Provision those contract abstractions with a Web3 provider. In the browser, this provider might come from [Metamask](https://metamask.io/) or [Mist](https://github.com/ethereum/mist), but it could also be a custom provider you've configured to point to [Infura](http://infura.io/) or any other Ethereum client.
+4. Use your contracts!
+
+In Node, this is very easy to do. Let's take a look at an example that shows off the "purest" way of performing the above steps, since it exists outside of any build process or tool.
+
+```javascript
+// Step 1: Get a contract into my application
+var json = require("./build/contracts/MyContract.json");
+
+// Step 2: Turn that contract into an abstraction I can use
+var contract = require("truffle-contract");
+var MyContract = contract(json);
+
+// Step 3: Provision the contract with a web3 provider
+MyContract.setProvider(new Web3.providers.HttpProvider("http://localhost:8545"));
+
+// Step 4: Use the contract!
+MyContract.deployed().then(function(deployed) {
+  return.deployed.someFunction();
+});
+```
+
+All build processes and contract bootstrapping will follow this pattern. The key when setting up your own custom build process is to ensure you're consuming all of your contract artifacts and provisioning your abstractions correctly.
+
+
+## Fin
+
+That's it! That's all you need to know to upgrade from Truffle 2.0 to 3.0. It might require a bit of work, but the changes are surely worth it. If you have questions, Truffle has a [vibrant community available 24/7](https://gitter.im/ConsenSys/truffle) to help you with any issues you may have. Don't hesitate to ask for help, and we wish you a happy 3.0!
+
+-- The Truffle Team
