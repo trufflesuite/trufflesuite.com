@@ -10,51 +10,29 @@ When using the Command Prompt on Windows, the default configuration file name ca
 
 ```javascript
 module.exports = {
-  build: {
-    "index.html": "index.html",
-    "app.js": [
-      "javascripts/app.js"
-    ],
-    "app.css": [
-      "stylesheets/app.css"
-    ],
-    "images/": "images/"
-  },
-  rpc: {
-    host: "localhost",
-    port: 8545
+  networks: {
+    development: {
+      host: "localhost",
+      port: 8545,
+      network_id: "*" // Match any network id
+    }
   }
 };
 ```
 
-The default configuration ships with two options specified: `build` and `rpc`. These options as well as non-default options are detailed below.
+The default configuration ships with configuration for a single development network, running on `localhost:8545`. There are many other configuration options, detailed below.
 
-# Options
+# General Options
 
 ### build
 
-Build configuration of your frontend. By default this configuration invokes the default builder, described in the [Build](/docs/getting_started/build) section, but you can use custom build processes as well. See the [advanced build processes](/advanced/build_processes) section for details.
-
-**Example:**
-
-```javascript
-build: {
-  "index.html": "index.html",
-  "app.js": [
-    "javascripts/app.js"
-  ],
-  "app.css": [
-    "stylesheets/app.css"
-  ],
-  "images/": "images/"
-}
-```
+Build configuration of your application, if your application requires tight integration with Truffle. Most users likely will not need to configure this option. See the [Advanced Build Processes](http://localhost:9000/docs/advanced/build_processes) section for more details.
 
 ### networks
 
-Specifies which networks are available for deployment during migrations. When compiling and running migrations on a specific network, contract artifacts will be saved and recorded for later use. When your contract abstractions detect that your Ethereum client is connected to a specific network, they'll use the contract artifacts associated that network to simplify app deployment. Networks are identified through Ethereum's `net_version` RPC call.
+Specifies which networks are available for deployment during migrations, as well as specific transaction parameters when interacting with each network (such as gas price, from address, etc.). When compiling and running migrations on a specific network, contract artifacts will be saved and recorded for later use. When your contract abstractions detect that your Ethereum client is connected to a specific network, they'll use the contract artifacts associated that network to simplify app deployment. Networks are identified through Ethereum's `net_version` RPC call, as well as blockchain URIs.
 
-The `networks` object, shown below, is keyed by a network name and contains a corresponding object that defines the parameters of the network. The `networks` option is not required, but if specified, each network it defines must specify a corresponding `network_id`. If you'd like a specific network configuration to be associated with every network that *doesn't* match any other network in the list, use a `network_id` of "default". However, there should only be one default network. Traditionally, the default network is used during development, where contract artifacts don't matter long-term and the network id continuously changes, for instance, if the TestRPC is restarted.
+The `networks` object, shown below, is keyed by a network name and contains a corresponding object that defines the parameters of the network. The `networks` option is required, as if you have no network configuration, Truffle will not be able to deploy your contracts. The default network configuration provided by `truffle init` gives you a development network that matches any network it connects to -- this is useful during development, but not suitable for production deployments. To configure Truffle to connect to other networks, simply add more named networks and specify the corresponding network id.
 
 The network name is used for user interface purposes, such as when running your migrations on a specific network:
 
@@ -62,63 +40,115 @@ The network name is used for user interface purposes, such as when running your 
 $ truffle migrate --network live
 ```
 
-You can optionally specify rpc information for each network. Examples below.
-
-**Example:**
+Example:
 
 ```javascript
 networks: {
-  "live": {
-    network_id: 1, // Ethereum public network
+  development: {
+    host: "localhost",
+    port: 8545,
+    network_id: "*" // match any network
+  },
+  live: {
+    host: "178.25.19.88", // Random IP for example purposes (do not use)
+    port: 80,
+    network_id: 1,        // Ethereum public network
     // optional config values
-    // host - defaults to "localhost"
-    // port - defaults to 8545
     // gas
     // gasPrice
     // from - default address to use for any transaction Truffle makes during migrations
-  },
-  "morden": {
-    network_id: 2,        // Official Ethereum test network
-    host: "178.25.19.88", // Random IP for example purposes (do not use)
-    port: 80
-  },
-  "staging": {
-    network_id: 1337 // custom private network
-    // use default rpc settings
-  },
-  "development": {
-    network_id: "default"
   }
 }
 ```
 
-### rpc
+For each network, if unspecified, transaction options will default to the following values:
 
-Details about how to connect to your ethereum client. The `host` and `port` keys are required. However, a few other keys are available:
-
-* `host`: Hostname pointing to the network location of your Ethereum client (usually "localhost" for development).
-* `port`: Port number where your Etheruem client accepts requests. Default is `8545`.
 * `gas`: Gas limit used for deploys. Default is `4712388`.
 * `gasPrice`: Gas price used for deploys. Default is `100000000000` (100 Shannon).
-* `from`: From address used during migrations. If not specified, defaults to the first available account provided by your Ethereum client.
-
-**Example:**
-
-```javascript
-rpc: {
-  host: "localhost",
-  port: 8545
-}
-```
+* `from`: From address used during migrations. Defaults to the first available account provided by your Ethereum client.
 
 ### mocha
 
 Configuration options for the [MochaJS](http://mochajs.org/) testing framework. This configuration expects an object as detailed in Mocha's [documentation](https://github.com/mochajs/mocha/wiki/Using-mocha-programmatically#set-options).
 
-**Example:**
+Example:
 
 ```javascript
 mocha: {
   useColors: true
 }
+```
+
+# EthPM Options
+
+### package_name
+
+Used for EthPM package specification. Add this option if you plan to publish your contracts to EthPM.
+
+Example:
+```javascript
+package_name: "adder"
+```
+
+### version
+
+Used for EthPM package specification. Add this option if you plan to publish your contracts to EthPM.
+
+Example:
+```javascript
+version: "0.0.3"
+```
+
+### description
+
+Used for EthPM package specification. Add this option if you plan to publish your contracts to EthPM.
+
+Example:
+```javascript
+description: "Simple contract to add two numbers"
+```
+
+### authors
+
+Used for EthPM package specification. Add this option if you plan to publish your contracts to EthPM.
+
+Example:
+```javascript
+authors: [
+  "Tim Coulter <tim.coulter@consensys.net>"
+]
+```
+
+### keywords
+
+Used for EthPM package specification. Add this option if you plan to publish your contracts to EthPM.
+
+Example:
+```javascript
+keywords: [
+  "ethereum",
+  "addition"
+],
+```
+
+### dependencies
+
+Used for EthPM package specification. Add this option if you plan to publish your contracts to EthPM, and your package relies on other EthPM dependencies.
+
+Example:
+```javascript
+dependencies: {
+  "owned": "^0.0.1",
+  "erc20-token": "1.0.0"
+}
+```
+
+
+### license
+
+Used for EthPM package specification. Add this option if you plan to publish your contracts to EthPM.
+
+Example:
+```javascript
+license: "MIT",
 ```

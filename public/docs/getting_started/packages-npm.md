@@ -98,6 +98,17 @@ module.exports = function(deployer) {
 };
 ```
 
+### Before publishing
+
+When using a network like the default `development` network that's configured to match any Ethereum client (i.e., the TestRPC), you're bound to have network artifacts laying around that you don't want published. Before publishing your package, consider running the following command to remove any extraneous network artifacts:
+
+```
+$ truffle networks --clean
+```
+
+See the [command reference](/docs/advanced/commands#networks) for more information.
+
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

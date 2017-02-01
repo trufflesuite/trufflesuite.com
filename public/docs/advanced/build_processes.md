@@ -1,6 +1,6 @@
 # Custom Build Processes
 
-Throughout Truffle's history, it's clear that the [default builder](/docs/getting_started/build) is not for everybody. It has some obvious caveats and is less mature than other build systems. With that in mind, Truffle provides you three ways to override the build system in order to get the most out of Truffle while also using your build process of choice.
+In order to provide tight integration with Truffle for those that desire it, Truffle allows you to specify a custom build pipeline meant to bootstrap and configure your application. Truffle provides three methods of integration, described below.
 
 ### Running an External Command
 
@@ -14,7 +14,6 @@ module.exports = {
   // WORKING_DIRECTORY: root location of the project
   // BUILD_DESTINATION_DIRECTORY: expected destination of built assets (important for `truffle serve`)
   // BUILD_CONTRACTS_DIRECTORY: root location of your build contract files (.sol.js)
-  // WEB3_PROVIDER_LOCATION: rpc configuration as a string, as a URL needed for web3's http provider.
   //
   build: "webpack"
 }
@@ -32,9 +31,7 @@ module.exports = {
      // Do something when a build is required. `options` contains these values:
      //
      // working_directory: root location of the project
-     // contracts: metadata about your contract files, code, etc.
      // contracts_directory: root directory of .sol files
-     // rpc: rpc configuration defined in the configuration
      // destination_directory: directory where truffle expects the built assets (important for `truffle serve`)
   }
 }
@@ -53,21 +50,37 @@ module.exports = {
 }
 ```
 
-# Bootstrapping Your Frontend
+# Bootstrapping Your Application
 
-Because you're using a custom build process, Truffle no longer knows how to bootstrap your frontend. You'll need to do this yourself. Here's a list of things your build process and/or application will need to do:
+Whether you're building an application to run in the browser, or a command line tool, a Javascript library or a native mobile application, bootstrapping your contracts is the same, and using your deployed contract artifacts follows the same general process no matter the app you're building.
 
-* Include the [Web3](https://github.com/ethereum/web3.js) library.
-* Initialize a web3 instance and set a provider that points to your desired ethereum client. It's important to detect if the `web3` object already exists, as it might already be available if someone is viewing your application via a wallet-browser like Metamask or Mist. If the `web3` object already exists, you should use that instead of initializing your own. See [this example](https://github.com/ethereum/mist/releases/tag/0.3.6) for more details.
-* `require` or `import` the built `sol.js` files from the `./build/contracts` directory. For each `.sol.js` file, set the provider using the `MyContract.setProvider()` method. This should the same provider your `web3` instance is using. Using `web3.currentProvider` is recommended:
+When configuring your build tool or application, you'll need to perform the following steps:
+
+1) Get all your contract artifacts into your build pipeline / application. This includes all of the `.json` files within the `./build/contracts` directory.
+
+2) Turn those `.json` contract artifacts into contract abstractions that are easy to use, via [truffle-contract](https://github.com/trufflesuite/truffle-contract).
+
+3) Provision those contract abstractions with a Web3 provider. In the browser, this provider might come from [Metamask](https://metamask.io/) or [Mist](https://github.com/ethereum/mist), but it could also be a custom provider you've configured to point to [Infura](http://infura.io/) or any other Ethereum client.
+
+4) Use your contracts!
+
+In Node, this is very easy to do. Let's take a look at an example that shows off the "purest" way of performing the above steps, since it exists outside of any build process or tool.
 
 ```javascript
-var MyContract = require("./build/contracts/MyContract.sol.js");
-MyContract.setProvider(web3.currentProvider);
+// Step 1: Get a contract into my application
+var json = require("./build/contracts/MyContract.json");
+
+// Step 2: Turn that contract into an abstraction I can use
+var contract = require("truffle-contract");
+var MyContract = contract(json);
+
+// Step 3: Provision the contract with a web3 provider
+MyContract.setProvider(new Web3.providers.HttpProvider("http://localhost:8545"));
+
+// Step 4: Use the contract!
+MyContract.deployed().then(function(deployed) {
+  return.deployed.someFunction();
+});
 ```
 
-
-# Using Webpack
-
-We're still working on having tighter integration with Webpack. However, checkout [this example](https://github.com/ConsenSys/truffle/wiki/Using-Truffle-and-Webpack-(beta)) and let us know how it works for you.
-
+All build processes and contract bootstrapping will follow this pattern. The key when setting up your own custom build process is to ensure you're consuming all of your contract artifacts and provisioning your abstractions correctly.

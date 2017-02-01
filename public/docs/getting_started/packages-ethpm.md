@@ -149,3 +149,13 @@ Finding publishable artifacts...
 Uploading sources and publishing to registry...
 + adder@0.0.3
 ```
+
+### Before publishing
+
+When using a network like the default `development` network that's configured to match any Ethereum client (i.e., the TestRPC), you're bound to have network artifacts laying around that you don't want published. Before publishing your package, consider running the following command to remove any extraneous network artifacts:
+
+```
+$ truffle networks --clean
+```
+
+See the [command reference](/docs/advanced/commands#networks) for more information.

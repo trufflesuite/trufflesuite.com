@@ -6,23 +6,19 @@ $ truffle [command] [options]
 
 # Available Commands
 
-##### build
+### build
 
-Build a development version of the app; creates the `./build` directory.
+Execute build pipeline (if configuration present)
 
 ```none
 $ truffle build
 ```
 
-Optional parameters:
-
-* `--dist`: Build a distributable version of the app. Only applicable when using the default builder.
-
 See the [Building your application](/docs/getting_started/build) section for more details.
 
-##### console
+### console
 
-Run a console with your contract objects instantiated and ready to use.
+Run a console with contract abstractions and commands available.
 
 ```none
 $ truffle console
@@ -37,7 +33,7 @@ Optional parameters:
 
 See the [Using the console](/docs/getting_started/console) section for more details.
 
-##### compile
+### compile
 
 Intelligently compile your contracts. This will only compile contracts that have changed since the last compile, unless otherwise specified.
 
@@ -47,42 +43,34 @@ $ truffle compile
 
 Optional parameter:
 
-* `--compile-all`: Compile all contracts instead of intelligently choosing.
+* `--all`: Compile all contracts instead of intelligently choosing.
 * `--network name`: Specify the network to use, saving artifacts specific to that network.
 
-##### create:contract
+### create contract
 
 Helper method to scaffold a new contract. Name must be camel-case.
 
 ```none
-$ truffle create:contract MyContract
+$ truffle create contract MyContract
 ```
 
-##### create:test
+### create migration
+
+Helper method to scaffold a new migration. Name must be camel-case.
+
+```none
+$ truffle create migration MyContract
+```
+
+### create test
 
 Helper method to scaffold a new test for a contract. Name must be camel-case.
 
 ```none
-$ truffle create:test MyTest
+$ truffle create test MyTest
 ```
 
-##### migrate
-
-Run your project's migrations. See the [Migrations](/docs/getting_started/migrations) section for more details.
-
-```none
-$ truffle migrate
-```
-
-Optional parameters:
-
-* `--reset`: Run all migrations from the beginning, instead of running from the last completed migration.
-* `--network name`: Specify the network to use, saving artifacts specific to that network.
-* `--to number`: Migrate from the current migration to the migration specified in `to`.
-* `--compile-all`: Compile all contracts instead of intelligently choosing.
-* `--verbose-rpc`: Log communication between Truffle and the RPC.
-
-##### exec
+### exec
 
 Execute a Javascript file within the Truffle environment. This will include `web3`, set the default provider based on the network specified (if any), and include your contracts as global objects while executing the script. Your script must export a function that Truffle can run. See the [Writing external scripts](/docs/getting_started/scripts) section for more details.
 
@@ -94,7 +82,7 @@ Optional parameter:
 
 * `--network name`: Specify the network to use, using artifacts specific to that network.
 
-##### init
+### init
 
 Create a completely new app within the current working directory. Will add default contracts, tests and frontend configuration.
 
@@ -102,13 +90,55 @@ Create a completely new app within the current working directory. Will add defau
 $ truffle init
 ```
 
-##### list
+### install
 
-List all available commands and exit. Synonymous with `--help`.
+Install a package from the Ethereum Package Registry.
 
 ```none
-$ truffle list
+$ truffle install <package name>@<version>
 ```
+
+The @`version` parameter syntax is optional. See the [Package Management with EthPM](/docs/getting_started/packages-ethpm) section for more details.
+
+### migrate
+
+Run your project's migrations. See the [Migrations](/docs/getting_started/migrations) section for more details.
+
+```none
+$ truffle migrate
+```
+
+Optional parameters:
+
+* `--reset`: Run all migrations from the beginning, instead of running from the last completed migration.
+* `-f number`: Run contracts from a specific migration.
+* `--network name`: Specify the network to use, saving artifacts specific to that network.
+* `--compile-all`: Compile all contracts instead of intelligently choosing.
+* `--verbose-rpc`: Log communication between Truffle and the RPC.
+
+### networks
+
+Show the deployed addresses of all contracts on all networks, and optionally clean extraneous network artifacts.
+
+```none
+$ truffle networks
+```
+
+Use this command before publishing your package to see if there are any extraneous network artifacts you don't want published. With no options specified, this package will simply output the current artifact state.
+
+Optional parameters:
+
+* `--clean`: Remove all network artifacts that aren't associated with a named network.
+
+### publish
+
+Publish a package to the Ethereum Package Registry.
+
+```none
+$ truffle publish
+```
+
+All parameters are pulled from your project's configuration file. See the [Package Management with EthPM](/docs/getting_started/packages-ethpm) section for more details.
 
 ##### serve
 
@@ -152,4 +182,3 @@ Watch for changes to contracts, app and configuration files. When there's a chan
 ```none
 $ truffle watch
 ```
-
