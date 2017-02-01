@@ -108,6 +108,45 @@ Your Javascript tests need the exact same `artifacts.require()` statements in or
 
 Like the section above, autolinking was a boon of a very small dependency tree. With package management, Truffle can no longer autolink your contracts because it can't determine all possible dependencies you might need within your migration. Instead, you need to explicitly link your libraries yourself. Fortunately this is not hard, and you can see the changes we made in the example above.
 
+## Contract Abstractions: All JSON (goodbye .sol.js!)
+
+Truffle had originally saved your contract abstractions on disk in `.sol.js` files. These files were Javascript files that represented specific solidity files in your project, hence the file extension, and they were originally intended to make your contract artifacts really easy to use, everywhere. Well, it turns out we got it wrong. Really wrong. Not only were these files hard to use _within_ Javascript in certain cases, but they were completely unusable if you wanted to use them outside of Javascript. To overcome this limitation and make your contract artifacts available everywhere, Truffle 3.0 now saves all artifacts within the JSON format.
+
+So what should you do if you've been using Truffle 2.0 and have important contract artifacts you'd like to save? Easy. Upgrade them! We built you a handy tool that does just that.
+
+To upgrade your `.sol.js` files, first install `truffle-soljs-updater` globally via npm:
+
+```
+$ npm install -g truffle-soljs-updater
+```
+
+This will provide the `sjsu` command available for your use. Next, navigate to the directory where your `.sol.js` files are stored (usually `./build/contracts`), and run `sjsu`. Your output should look something like this:
+
+```
+$ cd ./build/contracts
+$ sjsu
+Converting ConvertLib.sol.js...
+Converting MetaCoin.sol.js...
+Converting Migrations.sol.js...
+Files converted successfully.
+```
+
+By default `sjsu` only creates newer, `.json` versions of your artifacts and leaves the original `.sol.js` files alone. You'll need to remove the `.sol.js` files from this directory in order for Truffle 3.0 to function properly. Before removing, check to ensure that the converted `.json` files were created properly, and perhaps as a safeguard backup your old `.sol.js` files somewhere else before continuing.
+
+Once you're sure all data was copied correctly and you have a nice backup, you can run `sjsu` with the `-f` parameter. This will tell `sjsu` to delete the existing `.sol.js` files. Your output should look something like this:
+
+```
+$ cd ./build/contracts
+$ sjsu -f
+Converting ConvertLib.sol.js...
+Converting MetaCoin.sol.js...
+Converting Migrations.sol.js...
+Files converted successfully.
+Successfully deleted old .sol.js files.
+```
+
+And that's it! You're now ready to move onto the next step.
+
 ## Contract Abstractions: .deployed() is now thennable
 
 ⚠️ Warning: This change will affect your migrations, your tests, and your application code! ⚠️
