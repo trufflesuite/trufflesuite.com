@@ -5,17 +5,16 @@
 <a class="github-button" href="https://github.com/consensys/truffle" data-icon="octicon-star" data-count-href="/consensys/truffle/stargazers" data-count-api="/repos/consensys/truffle#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star consensys/truffle on GitHub">Star</a>
 <a class="github-button" href="https://github.com/consensys/truffle/fork" data-icon="octicon-repo-forked" data-count-href="/consensys/truffle/network" data-count-api="/repos/consensys/truffle#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork consensys/truffle on GitHub">Fork</a>
 
-Truffle is a development environment, testing framework and asset pipeline for Ethereum, aiming to make life as an Ethereum developer easier. With Truffle, you get:
+Truffle is a world class development environment, testing framework and asset pipeline for Ethereum, aiming to make life as an Ethereum developer easier. With Truffle, you get:
 
 * Built-in smart contract compilation, linking, deployment and binary management.
-* Automated contract testing with Mocha and Chai.
-* Configurable build pipeline with support for custom build processes.
-* Scriptable deployment & migrations framework
-* Network management for deploying to many public & private networks.
-* Interactive console for direct contract communication
-* Instant rebuilding of assets during development.
+* Automated contract testing for rapid development.
+* Scriptable, extensible deployment & migrations framework.
+* Network management for deploying to any number of public & private networks.
+* Package management with EthPM & NPM, using the [ERC190](https://github.com/ethereum/EIPs/issues/190) standard.
+* Interactive console for direct contract communication.
+* Configurable build pipeline with support for tight integration.
 * External script runner that executes scripts within a Truffle environment.
-* Support for JavaScript, SASS, ES6 and JSX built-in.
 
 -------------------------------
 

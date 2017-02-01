@@ -10,7 +10,7 @@ To compile your contracts, simply run:
 $ truffle compile
 ```
 
-Truffle will compile only the contracts that have been changed since the last compile, to reduce any unnecessarily compilation. If you'd like to override this behavior, run the above command with the `--compile-all` option.
+Truffle will compile only the contracts that have been changed since the last compile, to reduce any unnecessarily compilation. If you'd like to override this behavior, run the above command with the `--all` option.
 
 # Convention
 
@@ -30,9 +30,14 @@ Filename matching is case-sensitive, meaning if your filename isn't capitalized,
 
 # Dependencies
 
-You can declare contract dependencies using Solidity's [import](http://solidity.readthedocs.org/en/latest/layout-of-source-files.html#importing-other-source-files) command. Truffle will compile contracts in the correct order and link libraries automatically when necessary.
+You can declare contract dependencies using Solidity's [import](http://solidity.readthedocs.org/en/latest/layout-of-source-files.html#importing-other-source-files) command. Truffle will compile contracts in the correct order and link libraries automatically when necessary. Dependencies must be specified as relative to the current solidity file, beginning with either `./` or `../`, like below:
+
+```
+import "./AnotherContract.sol";
+```
+
+You can also use the `import` statement to import dependencies installed via package management. See the [Package Management](/docs/getting_started/packages) for more information.
 
 # Artifacts
 
-Artifacts of your compilation will be place in the `./build/contracts` directory, relative to your project. This directory will be created if it does not exist. These artifacts are integral to the inner workings of Truffle, and they play and important part to the successful deployment of your application. You should not edit these files by hand as they'll be overwritten by contract compilation and deployment.
-
+Artifacts of your compilation will be placed in the `./build/contracts` directory, relative to your project. This directory will be created if it does not exist. These artifacts are integral to the inner workings of Truffle, and they play and important part to the successful deployment of your application. You should not edit these files by hand as they'll be overwritten by contract compilation and deployment.

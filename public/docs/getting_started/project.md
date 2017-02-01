@@ -17,13 +17,11 @@ $ truffle init
 
 Once completed, you'll now have a project structure with the following items:
 
-* `app/` - directory where your application files go by default. This includes recommended folders for Javascript files and stylesheets, but you have free reign over how this folder is used, if at all.
 * `contracts/` - directory where Truffle expects to find solidity contracts.
 * `migrations/` - directory to place scriptable deployment files.
 * `test/` - location of test files for testing your application and contracts.
 * `truffle.js` - your main Truffle configuration file.
 
-# Default Project: MetaCoin
+# Default Contracts: MetaCoin
 
-By default, `truffle init` gives you a demo application called MetaCoin which acts like an alt-coin built inside Ethereum. You can use this project to learn quickly while navigating through the Getting Started guide, or delete these files and build a project of your own.
-
+By default, `truffle init` gives you a set of example contracts (`MetaCoin` and `ConvertLib`) which act like a simple alt-coin built on top of Ethereum. You can use these contracts to learn quickly while navigating through the Getting Started guide, or delete these files and build a project of your own.

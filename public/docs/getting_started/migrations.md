@@ -8,7 +8,7 @@ To run your migrations, run the following:
 $ truffle migrate
 ```
 
-This will run all migrations located within your project's `migrations` directory. If your migrations were previously run successfully, `truffle migrate` will start execution from the last migration that was ran, running only newly created migrations. If no new migrations exists, `truffle migrate` won't perform any action at all. You can use the `--reset` option to run all your migrations from the beginning. For local testing make sure to have [testrpc](https://github.com/ethereumjs/testrpc) installed and running before running `migrate`.
+This will run all migrations located within your project's `migrations` directory. At their simplest, migrations are simply a set of managed deployment scripts. If your migrations were previously run successfully, `truffle migrate` will start execution from the last migration that was ran, running only newly created migrations. If no new migrations exists, `truffle migrate` won't perform any action at all. You can use the `--reset` option to run all your migrations from the beginning. For local testing make sure to have [TestRPC](https://github.com/ethereumjs/testrpc) installed and running before running `migrate`.
 
 # Migration Files
 
@@ -17,6 +17,8 @@ A simple migration file looks like this:
 Filename: 4_example_migration.js
 
 ```javascript
+var MyContract = artifacts.require("MyContract.sol");
+
 module.exports = function(deployer) {
   // deployment steps
   deployer.deploy(MyContract);
@@ -25,9 +27,9 @@ module.exports = function(deployer) {
 
 Note that the filename is prefixed with a number and is suffixed by a description. The numbered prefix is required in order to record whether the migration ran successfully. The suffix is purely for human readability and comprehension.
 
-The function exported by each migration accepts a `deployer` object as a first parameter. This object aides in deployment by both providing a clear syntax as well as performing some of the more mundane duties of contract deployments, such as saving deployed artifacts for later use. The `deployer` object is your main interface for staging deployment tasks, and its API is described at the bottom of this page.
+At the beginning of the migration, we tell Truffle which contracts we'd like to interact with via the `artifacts.require()` method. This method is similar to Node's `require`, but in our case it specifically returns a contract abstraction that we can use within the rest of our deployment script.
 
-Like all code within Truffle, your [contract abstractions](/docs/getting_started/contracts/) are provided and initialized for you so you can easily interact with the Ethereum network. These abstractions are an integral part of the deployment process, as you'll see below.
+All migrations must export a function via the `module.exports` syntax. The function exported by each migration should accept a `deployer` object as its first parameter. This object aides in deployment by both providing a clear syntax for deploying smart contracts as well as performing some of deployment's more mundane duties, such as saving deployed artifacts for later use. The `deployer` object is your main interface for staging deployment tasks, and its API is described at the bottom of this page.
 
 # Initial Migration
 
@@ -67,6 +69,8 @@ You must deploy this contract inside your first migration in order to take advan
 Filename: migrations/1_initial_migration.js
 
 ```javascript
+var Migrations = artifacts.require("Migrations.sol");
+
 module.exports = function(deployer) {
   // Deploy the Migrations contract as our only task
   deployer.deploy(Migrations);
@@ -104,9 +108,10 @@ To conditionally stage deployment steps, write your migrations so that they acce
 
 ```javascript
 module.exports = function(deployer, network) {
-  // Add demo data if we're not deploying to the live network.
   if (network != "live") {
-    deployer.exec("add_demo_data.js");
+    // Do something specific to the network named "live".
+  } else {
+    // Perform a different step otherwise.
   }
 }
 ```
@@ -115,13 +120,13 @@ module.exports = function(deployer, network) {
 
 The deployer contains many functions available to simplify your migrations.
 
-##### deployer.deploy(contract, args...)
+### deployer.deploy(contract, args..., options)
 
 Deploy a specific contract, specified by the contract object, with optional constructor arguments. This is useful for singleton contracts, such that only one instance of this contract exists for your dapp. This will set the address of the contract after deployment (i.e., `Contract.address` will equal the newly deployed address), and it will override any previous address stored.
 
-You can optionally pass an array of contracts, or an array of arrays, to speed up deployment of multiple contracts.
+You can optionally pass an array of contracts, or an array of arrays, to speed up deployment of multiple contracts. Additionally, the last argument is an optional object that observes a single key, `overwrite`. If `overwrite` is set to `false`, the deployer won't deploy this contract if one has already been deployed. This is useful for certain circumstances where a contract address is provided by an external dependency.
 
-Note that `deploy` will automatically link any required libraries to the contracts that are being deployed, if the addresses for those libraries are available. You *must* deploy your libraries first before deploying a contract that depends on one of those libraries.
+Note that you will need to deploy and link any libraries your contracts depend on first before calling `deploy`. See the `link` function below for more details.
 
 Examples:
 
@@ -134,77 +139,57 @@ deployer.deploy(A, arg1, arg2, ...);
 
 // Deploy multiple contracts, some with arguments and some without.
 // This is quicker than writing three `deployer.deploy()` statements as the deployer
-// can perform the deployment as a batched request.
+// can perform the deployment as a single batched request.
 deployer.deploy([
   [A, arg1, arg2, ...],
   B,
   [C, arg1]
 ]);
+
+// External dependency example:
+//
+// For this example, our dependency provides an address when we're deploying to the
+// live network, but not for any other networks like testing and development.
+// When we're deploying to the live network we want it to use that address, but in
+// testing and development we need to deploy a version of our own. Instead of writing
+// a bunch of conditionals, we can simply use the `overwrite` key.
+deployer.deploy(SomeDependency, {overwrite: false});
 ```
 
-##### deployer.link(library, destinations)
+### deployer.link(library, destinations)
 
 Link an already-deployed library to a contract or multiple contracts. `destinations` can be a single contract or an array of multiple contracts. If any contract within the destination doesn't rely on the library being linked, the deployer will ignore that contract.
-
-This is useful for contracts that you *don't* intend to deploy (i.e. are not singletons) yet will need linking before being used in your dapp.
 
 Example:
 
 ```javascript
-// Deploy library LibA, then link LibA to contract B
+// Deploy library LibA, then link LibA to contract B, then deploy B.
 deployer.deploy(LibA);
 deployer.link(LibA, B);
+deployer.deploy(B);
 
 // Link LibA to many contracts
 deployer.link(LibA, [B, C, D]);
 ```
 
-##### deployer.autolink(contract)
+### deployer.then(function() {...})
 
-Link all libraries that `contract` depends on to that contract. This requires that all libraries `contract` depends on have already been deployed or were queued for deployment in a previous step.
-
-Example:
-
-```javascript
-// Assume A depends on a LibB and LibC
-deployer.deploy([LibB, LibC]);
-deployer.autolink(A);
-```
-
-Alternatively, you can call `autolink()` without a first parameter. This will link all libraries available to the contracts that depend on them. Ensure your libraries are deployed first before calling this function.
+Just like a promise, run an arbitrary deployment step. Use this to call specific contract functions during your migration to add, edit and reorganize contract data.
 
 Example:
 
 ```javascript
-// Link *all* libraries to all available contracts
-deployer.autolink();
-```
-
-##### deployer.then(function() {...})
-
-Just like a promise, run an arbitrary deployment step.
-
-Example:
-
-```javascript
+var a, b;
 deployer.then(function() {
   // Create a new version of A
   return A.new();
 }).then(function(instance) {
-  // Set the new instance of A's address on B.
-  var b = B.deployed();
-  return b.setA(instance.address);
+  a = instance;
+  // Get the deployed instance of B
+  return B.deployed():
+}).then(function(instance) {
+  b = instance;
+  // Set the new instance of A's address on B via B's setA() function.
+  return b.setA(a.address);
 });
 ```
-
-##### deployer.exec(pathToFile)
-
-Execute a file meant to be run with `truffle exec` as part of the deployment. See the [Writing external scripts](/docs/getting_started/scripts/) section for more information.
-
-Example:
-
-```javascript
-// Run the script, relative to the migrations file.
-deployer.exec("../path/to/file/demo_data.js");
-```
-
