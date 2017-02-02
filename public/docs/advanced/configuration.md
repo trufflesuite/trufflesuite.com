@@ -85,7 +85,7 @@ This configuration applies to the optional `ethpm.json` file that exists alongsi
 
 ### package_name
 
-Name of the package your publishing. Your package name must be unique to the EthPM registry.
+Name of the package you're publishing. Your package name must be unique to the EthPM registry.
 
 Example:
 ```javascript
@@ -148,7 +148,7 @@ dependencies: {
 
 ### license
 
-License to use for this package. Strictly informative. 
+License to use for this package. Strictly informative.
 
 Example:
 ```javascript
