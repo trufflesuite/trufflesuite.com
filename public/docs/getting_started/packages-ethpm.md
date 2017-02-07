@@ -116,7 +116,7 @@ File: `ethpm.json`
     "owned": "^0.0.1"
   },
   "license": "MIT"
-};
+}
 ```
 
 ### Command
