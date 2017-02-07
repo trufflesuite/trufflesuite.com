@@ -10,7 +10,7 @@ If you were using Truffle beta 3.0.0-9 or below, **do not immediately upgrade**.
 
 ## Let's look at and example CLI
 My example app [resides here](https://github.com/dougvk/ens-registrar3) as a reference. Now that truffle puts us in control of the build, I added the build step in `package.json` as an `npm` command:
-```
+```json
 ...
 "description": "CLI for ENS deployment",
 "scripts": {
@@ -25,7 +25,7 @@ My example app [resides here](https://github.com/dougvk/ens-registrar3) as a ref
 
 ### Separation of concerns
 At a high level, there's the library in `lib/ens_registrar.js` which wraps [ENS](https://ens.readthedocs.io/en/latest/) ([code here](https://github.com/ethereum/ens)). Let's look at the constructor:
-```
+```javascript
 ...
 constructor (AuctionRegistrar, Deed, registrarAddress, provider, fromAddress) {
   this.web3 = new Web3(provider)
@@ -51,7 +51,7 @@ It's crucial that the library remain ignorant of these variables if we want to t
 #### Concern #1: Truffle
 
 Here's `test/ENS.js` using the library:
-```
+```javascript
 import { default as ENSAuctionLib } from '../lib/ens_registrar'
 const Registrar = artifacts.require('./Registrar.sol')
 const Deed = artifacts.require('./Deed.sol')
@@ -85,7 +85,7 @@ Truffle injects a global `artifacts.require` function, which invokes a bunch of 
 
 #### Concern #2: the CLI
 Here's `index.js` using the library:
-```
+```javascript
 import { default as ENSAuctionLib } from './lib/ens_registrar'
 import { default as Web3 } from 'web3'
 import { default as contract } from 'truffle-contract'
@@ -105,7 +105,7 @@ export default function (host, port, registrarAddress, fromAddress) {
 }
 ```
 Here I'm using the same library, `truffle-contract`, that `artifacts.require` uses under the hood. Because I can't rely on the Truffle framework, I have to include the compiled contract artifacts manually. The rest is passed in through the CLI in `bin/ensa.js`:
-```
+```javascript
 import { default as initializeLib } from '../index'
 ...
 let command = argv._[0]
