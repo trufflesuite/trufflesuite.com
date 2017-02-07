@@ -101,7 +101,6 @@ File: `ethpm.json`
 
 ```javascript
 {
-  // Package configuration options
   "package_name": "adder",
   "version": "0.0.3",
   "description": "Simple contract to add two numbers",
