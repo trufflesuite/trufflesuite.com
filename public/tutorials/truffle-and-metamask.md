@@ -48,14 +48,14 @@ mkdir my-money  # Create a folder for your new dapp
 cd my-money     # Move into that folder
 truffle init    # Initialize a default truffle project in that folder
 truffle build   # Compile the dapp
-truffle deploy  # Publish the dapp on the blockchain
+truffle migrate  # Publish the dapp on the blockchain
 truffle serve   # Host your web interface on port 8080
 ```
 We just deployed a simple alt-coin called `MetaCoin` to our local blockchain, and it's available to our browser on `http://localhost:8080`!
 
 ![MetaCoin default](http://i.imgur.com/Uou5raY.png)
 
-If you visit it, you'll see that by default this new Dapp template signs you in with the first account on your `testrpc` account list, which happens to be the same account that got pre-populated with 10k shiny new Metacoins! That's because when you ran `truffle deploy`, Truffle used your first account as the contract publisher, and the contract says to fund the creator's account with 10k coins.
+If you visit it, you'll see that by default this new Dapp template signs you in with the first account on your `testrpc` account list, which happens to be the same account that got pre-populated with 10k shiny new Metacoins! That's because when you ran `truffle migrate`, Truffle used your first account as the contract publisher, and the contract says to fund the creator's account with 10k coins.
 
 *If you don't see any Metacoin in this account, it may be because you have Metamask already installed. Jump down to "Switching between TestRPC and Metamask accounts" below.*
 
@@ -123,7 +123,7 @@ curl -d '{"jsonrpc":"2.0","method":"eth_sendTransaction","params": [{"from":"0x0
 ```
 
 ### Synchronizing Accounts Between Metamask And Testrpc
-If you want to use testrpc/Metamask combination for development purposes, another route to get the accounts in Metamask to be useful with testrpc is to use the HD wallet generation that both support. If you start testrpc it creates 10 different addresses that can be recovered by the supplied mnemonic. The ``testrpc` output show the 10 inital accounts, the 10 private keys for the accounts and the mnemonic to recreate those accounts. 
+If you want to use testrpc/Metamask combination for development purposes, another route to get the accounts in Metamask to be useful with testrpc is to use the HD wallet generation that both support. If you start testrpc it creates 10 different addresses that can be recovered by the supplied mnemonic. The ``testrpc` output show the 10 inital accounts, the 10 private keys for the accounts and the mnemonic to recreate those accounts.
 
 ```
 Available Accounts
