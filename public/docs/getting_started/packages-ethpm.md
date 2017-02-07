@@ -18,6 +18,16 @@ $ truffle install <package name>@<version>
 
 Like NPM, EthPM versions follow [semver](http://semver.org/). You can find a list of all available packages at [the Ethereum Package Registry](https://www.ethpm.com/registry).
 
+## Installing Dependencies
+
+Your project can define an `ethpm.json` file that among other things can pin your project to specific dependencies and versions. To install all dependencies listed in the `ethpm.json` file, run:
+
+```
+$ truffle install
+```
+
+For more details on the `ethpm.json` file, see the [package configuration](/docs/getting_started/packages-ethpm#package-configuration) below.
+
 ## Consuming Installed Contracts
 
 Installed packages will be placed in the `installed_contracts` directory within your project folder. If no `installed_contracts` directory exists it'll be created for you. You should treat this folder like you treat the `node_modules` folder with NPM -- that is, you shouldn't edit the contents inside unless you know what you're doing. :)
