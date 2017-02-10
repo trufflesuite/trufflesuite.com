@@ -1,0 +1,54 @@
+.Footer {
+  position: relative;
+  overflow: hidden;
+  background-color: #F7F7F7;
+  padding-bottom: 6rem;
+
+  .Logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  ul,
+  ol {
+    font-family: $font-family-serif;
+    line-height: 1.5rem;
+    margin-left: 0;
+    padding-left: 0;
+
+    li {
+      margin-bottom: 1.2em;
+    }
+  }
+
+  ul {
+    text-transform: uppercase;
+  }
+
+  strong {
+  }
+
+  h5 {
+    margin-top: 0;
+  }
+
+  .BetaSignup {
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0 !important;
+
+    .FormWrapper {
+      margin: 0;
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+
+ .container > svg {
+    position:absolute;
+    bottom: -115px;
+  }
+}
