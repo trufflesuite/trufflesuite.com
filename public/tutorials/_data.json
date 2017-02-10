@@ -72,7 +72,7 @@
     "published": true
   },
   "creating-a-cli-with-truffle-3": {
-    "title": "Creating a CLI with Truffle 3.0",
+    "title": "Creating an Ethereum-enabled command line tool with Truffle 3.0",
     "date": "2017-02-09",
     "author": "Doug von Kohorn",
     "published": true
