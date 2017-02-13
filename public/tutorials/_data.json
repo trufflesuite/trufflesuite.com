@@ -76,5 +76,11 @@
     "date": "2017-02-09",
     "author": "Doug von Kohorn",
     "published": true
+  },
+  "testing-for-throws-in-solidity-tests": {
+    "title": "Testing for throws in Solidity Tests",
+    "date": "2017-02-13",
+    "author": "Simon de la Rouviere",
+    "published": true
   }
 }

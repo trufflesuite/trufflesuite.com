@@ -107,3 +107,5 @@ contract TestHooks {
 ```
 
 This test contract also shows that your test functions and hook functions all share the same contract state. You can setup contract data before the test, use that data during the test, and reset it afterward in preparation for the next one. Note that just like your Javascript tests, your next test function will continue from the state of the previous test function that ran.
+
+# Advanced Features
