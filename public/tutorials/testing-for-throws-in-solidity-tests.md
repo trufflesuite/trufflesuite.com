@@ -1,4 +1,4 @@
-# Testing for Throws in Truffle Solidity Testing
+# Testing for Throws in Truffle Solidity Tests
 By guest writer Simon de la Rouviere
 
 Truffle 3 brings forth Solidity unit testing, which means one can now test contracts in Solidity itself. This is a boon to contract developers, as there are several reasons why it's useful to have Solidity tests in addition to Truffle’s Javascript tests. For us at [Ujo](https://ujomusic.com/), one of our biggest concerns is testing how contracts interact with each other, rather than just testing their interaction from a web3 perspective, and Solidity tests allow us to do that.
