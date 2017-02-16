@@ -109,3 +109,39 @@ contract TestHooks {
 This test contract also shows that your test functions and hook functions all share the same contract state. You can setup contract data before the test, use that data during the test, and reset it afterward in preparation for the next one. Note that just like your Javascript tests, your next test function will continue from the state of the previous test function that ran.
 
 # Advanced Features
+
+Solidity tests come with a few advanced features to let you tests specific use cases within Solidity.
+
+### Testing for throws
+
+You can easily test if your contract should and shouldn't `throw` (i.e., for contracts that use `throw` to signify an expected error). This topic was first written about by guest writer Simon de la Rouviere in [his tutorial Testing for Throws in Truffle Solidity Tests](/tutorials/testing-for-throws-in-solidity-tests).
+
+### In Beta: Testing Ether transactions
+
+This is a feature current in Truffle 3.1.9 beta. Please see the [list of releases](https://github.com/ConsenSys/truffle/releases) for more information.
+
+You can also test how your contracts react to receiving Ether, and script that interaction within Solidity. To do so, your Solidity test should have a public function that returns a `uint`, called `initialBalance`. This can be written directly as a function or a public variable, as shown below. When your test contract is deployed to the network, Truffle will send that amount of Ether from your test account to your test contract. Your test contract can then use that Ether to script Ether interactions within your contract under test. Note that `initialBalance` is optional and not required.
+
+```javascript
+import "truffle/Assert.sol";
+import "truffle/DeployedAddresses.sol";
+import "../contracts/MyContract.sol";
+
+contract TestContract {
+  // Truffle will send the TestContract one Ether after deploying the contract.
+  public uint initialBalance = 1 ether;
+
+  function testInitialBalanceUsingDeployedContract() {
+    MyContract myContract = MyContract(DeployedAddresses.MyContract());
+
+    // perform an action which sends value to myContract, then assert.
+    myContract.send(...);
+  }
+
+  function () {
+    // This will NOT be executed when Ether is sent. \o/
+  }
+}
+```
+
+Note that Truffle sends Ether to your test contract in a way that does **not** execute a fallback function, so you can still use the fallback function within your Solidity tests for advanced test cases.

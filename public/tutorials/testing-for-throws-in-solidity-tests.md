@@ -9,17 +9,16 @@ Though Solidity tests can be quite powerful, they do come with some drawbacks. O
 
 In Solidity, when performing a contract call that produces an error, Solidity automatically rethrows, meaning it will bubble that error up to the caller. However, with a _raw_ call, the behavior is different: one can catch the error and decide what to do from there on out. If it throws (fails), it will return `false`. If it succeeds, it will return `true`. Thus, the following calls will produce a different result.
 
+
 ```javascript
+// Returns false
 bool result = address.call(bytes4(bytes32(sha3(“functionThatThrows()”))));
-```
 
-Here, “result” will be `false`.
-
-```javascript
+// Returns true
 bool result = address.call(bytes4(bytes32(sha3(“functionThatDoesNotThrow()”))));
 ```
 
-And here, “result” will be `true`. Even if a sub-call failed, it won’t automatically rethrow.
+When calls are made this way, even if a sub-call fails, it won’t automatically rethrow.
 
 In order to test for throws, one can either write out each call in the format above (which is cumbersome), or use a proxy contract to wrap the contract call to a raw call and return whether it succeeded or not.
 
