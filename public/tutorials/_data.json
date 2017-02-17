@@ -82,5 +82,11 @@
     "date": "2017-02-13",
     "author": "Simon de la Rouviere",
     "published": true
+  },
+  "building-testing-frontend-app-truffle-3": {
+    "title": "Building & Testing a Frontend App with Truffle 3.0",
+    "date": "2017-02-14",
+    "author": "Doug von Kohorn",
+    "published": true
   }
 }
