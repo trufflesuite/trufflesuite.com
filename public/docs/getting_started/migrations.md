@@ -38,6 +38,8 @@ Truffle requires you to have a Migrations contract in order to use the Migration
 Filename: contracts/Migrations.sol
 
 ```
+pragma solidity ^0.4.8;
+
 contract Migrations {
   address public owner;
 
