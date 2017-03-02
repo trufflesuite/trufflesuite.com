@@ -31,6 +31,6 @@ The console provides all the features available in the Truffle command line tool
 * All commands that return a promise will automatically be resolved, and the result printed, removing the need to use `.then()` for simple commands. e.g.,
 
 ```
-truffle(default)> MyContract.deployed().getValue.call(); //
+truffle(default)> MyContract.at("0xabcd...").getValue.call(); 
 5
 ```
