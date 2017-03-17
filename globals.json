@@ -19,9 +19,10 @@
     "facebookid": null,
     "socialimage": "images/social-image.jpg",
     "appleid": null,
-    "twitter": "",
+    "twitter": "https://twitter.com/trufflesuite",
     "disqus": false,
     "github": "https://github.com/trufflesuite",
+    "gitter": "http://gitter.im/Consensys/truffle",
     "site_issues": "https://github.com/trufflesuite/trufflesuite.github.io/issues",
     "contributing": "trufflesuite/trufflesuite.github.io",
     "socialimage": "https://github.com/trufflesuite/trufflesuite.github.io/raw/master/images/twitter_card.jpg"

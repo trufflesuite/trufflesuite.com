@@ -210,7 +210,66 @@
         }
       }
     }
+  }
 
+  .Blog {
+    background-color: #F5F5F5;
+    position: relative;
+    overflow: hidden;
+    border-top: solid 1px #E8E8E8;
+
+    .container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1000px;
+      height: 800px;
+      background: #E8E8E8;
+      transform: skew(0,45deg);
+    }
+
+    li {
+
+      a {
+        display: block;
+        background-color: #FFF;
+        text-transform: uppercase;
+        @extend .p-a-3;
+        @extend .m-b-4;
+        transition: all .3s;
+        border-bottom: solid 1px $body-primary-color;
+        /*border-left: solid 1px $body-primary-color;*/
+
+        h2 {
+          margin: 0;
+          padding: 0;
+          letter-spacing: 1px;
+          text-shadow: none;
+          font-family: $font-family-sans-serif;
+        }
+
+        div {
+          margin-top: 1.2rem;
+        }
+
+        &:hover {
+          color: white;
+          background-color: $body-primary-color;
+          text-decoration: none;
+          transform: scale(1.02);
+
+          h2 {
+            color: white;
+          }
+        }
+      }
+    }
   }
 
   .Contributing {
@@ -225,6 +284,11 @@
     li {
       margin-left: 2rem;
       margin-right: 2rem;
+
+      img {
+        width: 200px;
+        padding-bottom: 2rem;
+      }
     }
 
 
