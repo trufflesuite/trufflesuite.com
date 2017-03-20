@@ -1,9 +1,9 @@
 <img src='img/logo.png' width="100px" />
 
-[![Join the chat at https://gitter.im/consensys/truffle](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/consensys/truffle?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/trufflesuite/truffle](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/trufflesuite/truffle?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-<a class="github-button" href="https://github.com/consensys/truffle" data-icon="octicon-star" data-count-href="/consensys/truffle/stargazers" data-count-api="/repos/consensys/truffle#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star consensys/truffle on GitHub">Star</a>
-<a class="github-button" href="https://github.com/consensys/truffle/fork" data-icon="octicon-repo-forked" data-count-href="/consensys/truffle/network" data-count-api="/repos/consensys/truffle#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork consensys/truffle on GitHub">Fork</a>
+<a class="github-button" href="https://github.com/trufflesuite/truffle" data-icon="octicon-star" data-count-href="/trufflesuite/truffle/stargazers" data-count-api="/repos/trufflesuite/truffle#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star trufflesuite/truffle on GitHub">Star</a>
+<a class="github-button" href="https://github.com/trufflesuite/truffle/fork" data-icon="octicon-repo-forked" data-count-href="/trufflesuite/truffle/network" data-count-api="/repos/trufflesuite/truffle#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork trufflesuite/truffle on GitHub">Fork</a>
 
 Truffle is a world class development environment, testing framework and asset pipeline for Ethereum, aiming to make life as an Ethereum developer easier. With Truffle, you get:
 
