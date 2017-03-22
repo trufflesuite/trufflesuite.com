@@ -12,32 +12,32 @@ $ truffle compile
 
 Truffle will compile only the contracts that have been changed since the last compile, to reduce any unnecessarily compilation. If you'd like to override this behavior, run the above command with the `--all` option.
 
-# Convention
+# Artifacts
 
-Truffle expects your contract files to define contracts that match their filenames *exactly*. For instance, if you have a file called `MyContract.sol`, one of the following should exist within the contract file:
-
-```
-contract MyContract {
-  ...
-}
-// or
-library MyContract {
-  ...
-}
-```
-
-Filename matching is case-sensitive, meaning if your filename isn't capitalized, your contract name shouldn't be capitalized either. We recommend capitalizing every word, however, like above.
+Artifacts of your compilation will be placed in the `./build/contracts` directory, relative to your project. This directory will be created if it does not exist. These artifacts are integral to the inner workings of Truffle, and they play and important part to the successful deployment of your application. You should not edit these files by hand as they'll be overwritten by contract compilation and deployment.
 
 # Dependencies
 
-You can declare contract dependencies using Solidity's [import](http://solidity.readthedocs.org/en/latest/layout-of-source-files.html#importing-other-source-files) command. Truffle will compile contracts in the correct order and link libraries automatically when necessary. Dependencies must be specified as relative to the current solidity file, beginning with either `./` or `../`, like below:
+You can declare contract dependencies using Solidity's [import](http://solidity.readthedocs.org/en/latest/layout-of-source-files.html#importing-other-source-files) command. Truffle will compile contracts in the correct order and ensure all dependencies are sent to the compiler. Dependencies can be specified in two ways:
+
+### Importing dependencies via their file name:
+
+To import contracts from a separate file, simply write the following command, where `AnotherContact.sol` is relative to the current contract being written. This will make all contracts within `AnotherContract.sol` available to the current source file.
 
 ```
 import "./AnotherContract.sol";
 ```
 
-You can also use the `import` statement to import dependencies installed via package management. See the Package Management sections for more information.
+Note that Solidity allows other import syntaxes as well. See their [import documentation](http://solidity.readthedocs.org/en/latest/layout-of-source-files.html#importing-other-source-files) for more information.
 
-# Artifacts
+### Importing contracts from an external package
 
-Artifacts of your compilation will be placed in the `./build/contracts` directory, relative to your project. This directory will be created if it does not exist. These artifacts are integral to the inner workings of Truffle, and they play and important part to the successful deployment of your application. You should not edit these files by hand as they'll be overwritten by contract compilation and deployment.
+Truffle supports dependencies installed via [NPM](./packages-npm) as well as [EthPM](./packages-ethpm). To import contracts from a dependency, use the following syntax, where `somepackage` represents a package installed via NPM or EthPM, and `/SomeContract.sol` represents a path to a Solidity source file provided by that package.
+
+```
+import "somepackage/SomeContract.sol";
+```
+
+Note that Truffle will search installed packages from EthPM first before searching for packages installed from NPM, so in the rare case of a naming conflict the package installed via EthPM will be used.
+
+For more information on how to use Truffle's package management features, please see Truffle's [NPM](./packages-npm) and [EthPM](./packages-ethpm) documentation, respectively.

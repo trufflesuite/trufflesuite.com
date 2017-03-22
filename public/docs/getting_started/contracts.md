@@ -209,6 +209,26 @@ If you already have an address for a contract, you can create a new abstraction 
 var instance = MetaCoin.at("0x1234...");
 ```
 
+### Sending Ether to a contract
+
+You may simply want to send Ether directly to a contract, or trigger a contract's [fallback function](http://solidity.readthedocs.io/en/develop/contracts.html#fallback-function). You can do so using one of the following two options.
+
+Option 1: Send a transaction directly to a contract via `instance.sendTransaction()`. This is promisified like all available contract instance functions, and has the same API as `web3.eth.sendTransaction` but without the callback. The `to` value will be automatically filled in for you if not specified.
+
+```javascript
+instance.sendTransaction({...}).then(function(result) {
+  // Same transaction result object as above.
+});
+```
+
+Option 2: There's also shorthand for just sending Ether directly:
+
+```javascript
+instance.send(web3.toWei(1, "ether")).then(function(result) {
+  // Same result object as above.
+});
+```
+
 # Further Reading
 
 The contract abstractions provided by Truffle contain a wealth of utilities for making interacting with your contracts easy. Check out the [truffle-contract](https://github.com/trufflesuite/truffle-contract) documentation for tips, tricks and insights.

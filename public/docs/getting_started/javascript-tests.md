@@ -19,6 +19,10 @@ Contract abstractions are the basis for making contract interaction possible fro
 
 For more information on using contract abstractions, see the [Interacting With Your Contracts](/docs/getting_started/contracts) section.
 
+### Using artifacts.require()
+
+Using `artifacts.require()` within your tests is the exact same as using it within your migrations. See the [artifacts.require() documentation](./migrations#artifacts-require-) within the Migrations section for detailed usage.
+
 # Example
 
 Here's an example test provided to you by `truffle init`. Note the use of the `contract()` function, the `accounts` array for specifying available Ethereum accounts, and our use of `artifacts.require()` for interacting directly with our contracts.
@@ -26,8 +30,8 @@ Here's an example test provided to you by `truffle init`. Note the use of the `c
 File: `./test/metacoin.js`
 
 ```javascript
-// Specifically request an abstraction for MetaCoin.sol
-var MetaCoin = artifacts.require("./MetaCoin.sol");
+// Specifically request an abstraction for MetaCoin
+var MetaCoin = artifacts.require("MetaCoin");
 
 contract('MetaCoin', function(accounts) {
   it("should put 10000 MetaCoin in the first account", function() {

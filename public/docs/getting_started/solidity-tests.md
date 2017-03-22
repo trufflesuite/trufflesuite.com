@@ -116,9 +116,7 @@ Solidity tests come with a few advanced features to let you tests specific use c
 
 You can easily test if your contract should and shouldn't `throw` (i.e., for contracts that use `throw` to signify an expected error). This topic was first written about by guest writer Simon de la Rouviere in [his tutorial Testing for Throws in Truffle Solidity Tests](/tutorials/testing-for-throws-in-solidity-tests).
 
-### In Beta: Testing Ether transactions
-
-This is a feature current in Truffle 3.1.9 beta. Please see the [list of releases](https://github.com/ConsenSys/truffle/releases) for more information.
+### Testing Ether transactions
 
 You can also test how your contracts react to receiving Ether, and script that interaction within Solidity. To do so, your Solidity test should have a public function that returns a `uint`, called `initialBalance`. This can be written directly as a function or a public variable, as shown below. When your test contract is deployed to the network, Truffle will send that amount of Ether from your test account to your test contract. Your test contract can then use that Ether to script Ether interactions within your contract under test. Note that `initialBalance` is optional and not required.
 

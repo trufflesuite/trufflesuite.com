@@ -17,7 +17,7 @@ A simple migration file looks like this:
 Filename: 4_example_migration.js
 
 ```javascript
-var MyContract = artifacts.require("MyContract.sol");
+var MyContract = artifacts.require("MyContract");
 
 module.exports = function(deployer) {
   // deployment steps
@@ -27,9 +27,34 @@ module.exports = function(deployer) {
 
 Note that the filename is prefixed with a number and is suffixed by a description. The numbered prefix is required in order to record whether the migration ran successfully. The suffix is purely for human readability and comprehension.
 
-At the beginning of the migration, we tell Truffle which contracts we'd like to interact with via the `artifacts.require()` method. This method is similar to Node's `require`, but in our case it specifically returns a contract abstraction that we can use within the rest of our deployment script.
+### artifacts.require()
+
+At the beginning of the migration, we tell Truffle which contracts we'd like to interact with via the `artifacts.require()` method. This method is similar to Node's `require`, but in our case it specifically returns a contract abstraction that we can use within the rest of our deployment script. The name specified *does not* have to match the filename of your contract source files. Instead, it should match the name of the contract definition within that source file. Consider this example where two contracts are specified within the same source file:
+
+Filename: `./contracts/Contracts.sol`
+
+```javascript
+
+contract ContractOne {
+  // ...
+}
+
+contract ContractTwo {
+  // ...
+}
+```
+
+To use only `ContractTwo`, your `artifacts.require()` statement would look like this:
+
+```
+var ContractTwo = artifacts.require("ContractTwo");
+```
+
+### module.exports
 
 All migrations must export a function via the `module.exports` syntax. The function exported by each migration should accept a `deployer` object as its first parameter. This object aides in deployment by both providing a clear syntax for deploying smart contracts as well as performing some of deployment's more mundane duties, such as saving deployed artifacts for later use. The `deployer` object is your main interface for staging deployment tasks, and its API is described at the bottom of this page.
+
+Your migration function can accept other parameters as well. See the examples below.
 
 # Initial Migration
 
@@ -71,7 +96,7 @@ You must deploy this contract inside your first migration in order to take advan
 Filename: migrations/1_initial_migration.js
 
 ```javascript
-var Migrations = artifacts.require("Migrations.sol");
+var Migrations = artifacts.require("Migrations");
 
 module.exports = function(deployer) {
   // Deploy the Migrations contract as our only task
@@ -115,6 +140,16 @@ module.exports = function(deployer, network) {
   } else {
     // Perform a different step otherwise.
   }
+}
+```
+
+# Available Accounts
+
+Migrations are also passed the list of accounts provided to you by your Ethereum client and web3 provider, for you to use during your deployments. This is the exact same list of accounts returned from `web3.eth.getAccounts()`.
+
+```javascript
+module.exports = function(deployer, network, accounts) {
+  // Use the accounts within your migrations.
 }
 ```
 
