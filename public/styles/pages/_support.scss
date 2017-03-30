@@ -1,0 +1,23 @@
+.Support {
+  .MainContent {
+    border-bottom: solid 1px #e7e7e7;
+
+    ul {
+      max-width: 600px;
+
+      li {
+        font-family: $font-family-serif;
+      }
+    }
+  }
+
+  .custom-box {
+    position: relative;
+    max-width: 750px;
+  }
+  .livesaver {
+    width: 120px;
+    float: right;
+
+  }
+}

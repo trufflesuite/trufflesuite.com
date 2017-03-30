@@ -6,6 +6,7 @@
 @import "base/typography";
 @import "layout/page";
 
+@import "components/navbar";
 @import "components/buttons";
 @import "components/betasignup";
 @import "components/footer";
@@ -13,6 +14,7 @@
 @import "pages/landing";
 @import "pages/tutorials";
 @import "pages/community";
+@import "pages/support";
 @import "pages/documentation";
 
 @import "../deps/styles/prism.css";
