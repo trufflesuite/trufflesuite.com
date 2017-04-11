@@ -11,7 +11,7 @@ app.use(browserSync({
     }
   },
   files: [
-    './public/**/*'
+    path.join(__dirname, './**/*')
   ],
   port: 9000,
   open: false
