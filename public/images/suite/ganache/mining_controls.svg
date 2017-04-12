@@ -1,0 +1,19 @@
+<svg width="79px" height="62px" viewBox="0 0 79 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Ganache-Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-994.000000, -2641.000000)">
+            <g id="noun_26388_cc" transform="translate(994.000000, 2641.000000)">
+                <g id="Group-12" fill-rule="nonzero" fill="#826146">
+                    <polygon id="Shape" points="12 17.6213992 14.8008076 14 78 55.8806584 73.0344749 62"></polygon>
+                    <polygon id="Shape" points="9.58683882 12.2380493 26 0 16.4131612 17.761146 0 30"></polygon>
+                    <polygon id="Shape" points="68 17.6213992 65.1975519 14 2 55.8806584 6.96462402 62"></polygon>
+                    <polygon id="Shape" points="69.4134683 12.2380493 53 0 62.5873646 17.761146 79 30"></polygon>
+                </g>
+                <g id="Group-9" transform="translate(31.000000, 7.000000)" stroke="#979797">
+                    <polygon id="Path-2" fill="#D8D8D8" points="0.708007812 9.52148438 0.702636719 0.586425781 6.44824219 4.69482422"></polygon>
+                    <path d="M12,0.5 L12,9.5" id="Line" stroke-width="2" stroke-linecap="square"></path>
+                    <path d="M16,0.5 L16,9.5" id="Line" stroke-width="2" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

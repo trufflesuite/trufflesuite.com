@@ -1,0 +1,137 @@
+.Ganache {
+  background-color: #2a2825;
+  background-image: url('/images/suite/ganache/header_bg.png');
+  background-size: cover;
+  background-repeat: none;
+  font-family: 'Roboto Condensed', sans-serif;
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: white;
+    font-weight: bold;
+  }
+
+  p {
+    color: #a6aaa8;
+  }
+
+  h2 {
+    color: white;
+    line-height: 1.4
+  }
+
+  .Flourish {
+    max-width: 300px;
+    display: block;
+    margin: 0px auto;
+  }
+
+  main {
+    header {
+      height: 90vh;
+
+      .Logo {
+        margin-top: 5.5rem;
+      }
+
+      h1 {
+        font-family: RobotoCondensed-Bold;
+        margin-top: 5.5rem;
+        font-size: 81px;
+        color: #EFF6F4;
+        line-height: 74px;
+      }
+
+      p {
+        text-align: center;
+        color: white;
+      }
+
+      .DownloadVersions {
+        color: #a5a9a7;
+      }
+
+      .Emoji {
+        font-size: 3rem;
+      }
+
+      .DownloadButton {
+        background: #E5A35D;
+        background-image: linear-gradient(-180deg, rgba(255,255,255,0.18) 0%, rgba(0,0,0,0.20) 100%);
+        border-radius: 8px;
+        padding: 2rem;
+        width: 290px;
+        color: #202C2A;
+        cursor: pointer;
+        display: block;
+        margin: 0px auto;
+      }
+    }
+  }
+
+  .Features {
+    text-align: center;
+
+    h2 {
+      color: white;
+    }
+
+    .FeatureList {
+      li {
+        margin-bottom: 5rem;
+        h4 {
+          color: white;
+        }
+        p {
+          color: #a6aaa8;
+        }
+      }
+    }
+  }
+}
+
+.OpenSource {
+  margin: 1rem auto;
+  padding: 4rem;
+  border: 1px dashed #D1A372;
+  border-radius: 8px;
+  margin-bottom: 4rem;
+}
+
+.BuiltWith {
+  background-color: #746f67;
+
+  border-top: 10px;
+  border-bottom: 10px;
+  border-image: url(/images/suite/ganache/jaggy_edge.png);
+
+  img,
+  svg,
+  .Logo {
+    height:180px;
+  }
+}
+
+.Footer {
+  h5 {
+    color: #545452;
+  }
+}
+
+@media (max-width: 768px) {
+  .Ganache {
+    main {
+      header {
+        height: auto;
+
+
+        h1 {
+          font-size: 15vw;
+          line-height: 13vw;
+        }
+      }
+    }
+  }
+}

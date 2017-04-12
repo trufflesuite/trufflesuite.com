@@ -3,7 +3,8 @@
     "layout": false
   },
   "community": {
-    "layout": true
+    "layout": true,
+    "title": "Truffle Community"
   },
   "sitemap.xml": {
     "layout": false

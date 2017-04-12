@@ -1,0 +1,25 @@
+<svg width="81px" height="50px" viewBox="0 0 81 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M59.4683544,0 L81,0 L81,13.1578947 L59.4683544,13.1578947 L59.4683544,0 Z M59.4683544,18.4210526 L81,18.4210526 L81,31.5789474 L59.4683544,31.5789474 L59.4683544,18.4210526 Z M59.4683544,36.8421053 L81,36.8421053 L81,50 L59.4683544,50 L59.4683544,36.8421053 Z" id="REPLpath-1"></path>
+        <rect id="REPLpath-2" x="0" y="0" width="34.8607595" height="25" rx="4"></rect>
+    </defs>
+    <g id="REPLPage-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="REPLArtboard" transform="translate(-147.000000, -134.000000)">
+            <g id="REPLREPL" transform="translate(147.000000, 134.000000)">
+                <g id="REPLCombined-Shape">
+                    <use fill="#826146" fill-rule="evenodd" xlink:href="#REPLpath-1"></use>
+                    <path stroke="#979797" stroke-width="1" d="M59.9683544,0.5 L80.5,0.5 L80.5,12.6578947 L59.9683544,12.6578947 L59.9683544,0.5 Z M59.9683544,18.9210526 L80.5,18.9210526 L80.5,31.0789474 L59.9683544,31.0789474 L59.9683544,18.9210526 Z M59.9683544,37.3421053 L80.5,37.3421053 L80.5,49.5 L59.9683544,49.5 L59.9683544,37.3421053 Z"></path>
+                </g>
+                <path d="M51.0024611,25.1864859 L50.9950752,17.4144005 L57.3704962,25.309082 L50.9950752,33.040302 L51.0024611,25.1864859 Z M38.624274,26 L38.624274,25 L51.0004468,25 L51.0004468,26 L38.624274,26 Z" id="REPLCombined-Shape" stroke="#979797" fill="#979797"></path>
+                <g id="REPLGroup" transform="translate(0.000000, 14.000000)">
+                    <g id="REPLRectangle-5">
+                        <use fill="#826146" fill-rule="evenodd" xlink:href="#REPLpath-2"></use>
+                        <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="33.8607595" height="24" rx="4"></rect>
+                    </g>
+                    <polyline id="REPLPath-3" stroke="#979797" points="5.9491384 14.7685804 8.65806846 17.8939016 5.9491384 21.0192229"></polyline>
+                    <path d="M11.3967868,20.3947368 L18.100779,20.3947368" id="REPLLine" stroke="#979797" stroke-linecap="square"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

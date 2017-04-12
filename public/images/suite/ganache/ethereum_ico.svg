@@ -1,0 +1,22 @@
+
+<svg width="74px" height="120px" viewBox="0 0 74 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Ganache-Landing-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-664.000000, -1971.000000)" fill-rule="nonzero">
+            <g id="Feature-List" transform="translate(478.000000, 1971.000000)">
+                <g id="Group-2" transform="translate(1.000000, 0.000000)">
+                    <g id="Ethereum_logo_2014" transform="translate(185.000000, 0.000000)">
+                        <polygon id="Shape" fill="#674D37" points="36.8122701 0 36 2.74833468 36 82.4986426 36.8122701 83.3057851 74 61.4238337"></polygon>
+                        <polygon id="Shape" fill="#826146" points="37 0 0 61.4236204 37 83.3057851 37 44.597506"></polygon>
+                        <polygon id="Shape" fill="#674D37" points="37.4496077 90.0508187 37 90.5999252 37 118.684146 37.4496077 120 74 68.4297521"></polygon>
+                        <polygon id="Shape" fill="#826146" points="37 120 37 90.0508187 0 68.4297521"></polygon>
+                        <polygon id="Shape" fill="#38302A" points="37 83.3057851 74 61.4411663 37 44.6280992"></polygon>
+                        <polygon id="Shape" fill="#4C4139" points="0 61.4411663 37 83.3057851 37 44.6280992"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
