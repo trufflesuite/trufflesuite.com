@@ -19,7 +19,7 @@
 
   h2 {
     color: white;
-    line-height: 1.4
+    line-height: 1.2;
   }
 
   .Flourish {
@@ -32,7 +32,7 @@
     header {
 
       .Logo {
-        margin-top: 5.5rem;
+        margin-top: 3.5rem;
       }
 
       h1 {
@@ -66,6 +66,7 @@
         cursor: pointer;
         display: block;
         margin: 0px auto;
+        margin-bottom: 4rem;
       }
     }
   }
@@ -96,7 +97,7 @@
   padding: 4rem;
   border: 1px dashed #D1A372;
   border-radius: 8px;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 }
 
 .BuiltWith {
