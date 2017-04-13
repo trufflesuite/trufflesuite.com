@@ -96,7 +96,7 @@ contract('ENS integration', (accounts) => {
     }).then(() => done())
   })
 
-  it('demonstrates that the domain name isn\'t available', (done) => {
+  it('demonstrates that the domain name is available', (done) => {
     auctionRegistrar.available('test')
       .then((isAvailable) => {
         assert.isTrue(isAvailable)
