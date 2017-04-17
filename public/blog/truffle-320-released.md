@@ -4,7 +4,7 @@ Hi all. Great news today.
 
 Following your feedback from the Truffle 3.0 release, we've just released Truffle 3.2.0! This release includes a [number of great new features and bug fixes](https://github.com/trufflesuite/truffle/releases/tag/3.2.0), but we're most excited about the following. I've bolded the good stuff for ya.
 
-1. **We've built infrastructure for providing you boilerplates on demand!** Now with `truffle init` comes `truffle init webpack`, which gives you a boilerplate web application combing the web development capabilities of Webpack with the power of Truffle. More boilerplates to come to make your life easier, so stay tuned!
+1. **We've built infrastructure for providing you boilerplates on demand!** Now with `truffle init` comes `truffle init webpack`, which gives you a boilerplate web application combining the web development capabilities of Webpack with the power of Truffle. More boilerplates to come to make your life easier, so stay tuned!
 
 1. **We've added huge speed improvements to the Truffle command line tool.** Now your commands trigger in milliseconds! Go ahead, try it out. `truffle version`
 
