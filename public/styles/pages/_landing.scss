@@ -1,6 +1,22 @@
 
 .LandingPage {
 
+  .navbar {
+    background: transparent;
+    border-color: transparent;
+    transition: all .25s ease-in-out;
+
+    &.scroll,
+    &.nav-shown {
+      background: #fff;
+      border-color: #e7e7e7;
+
+      .navbar-brand {
+        opacity: 1;
+      }
+    }
+  }
+
   ul,
   ol {
     font-family: $font-family-serif;
@@ -14,8 +30,16 @@
   }
 
   header {
+    min-height: 100vh;
     background: url('../images/header_bg.jpg') no-repeat;
     background-size: cover;
+
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
     h1 {
       text-transform: uppercase;
@@ -40,12 +64,15 @@
 		}
 
     .InstallInstruction {
-      @extend .m-t-3;
+      @extend .m-t-2;
       @extend .m-b-1;
       text-align: center;
 
       .Box {
         @extend .p-a-1;
+
+        margin: 0 auto;
+        max-width: 300px;
         background-color: #5E464D;
         border-radius: 2px;
 
@@ -53,6 +80,22 @@
           background: transparent;
           color: white;
         }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    header {
+      min-height: auto;
+      height: auto;
+      padding: 123px 0 30px 0;
+
+      .container {
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 30px auto;
       }
     }
   }
@@ -182,21 +225,28 @@
       a {
         display: block;
         background-color: #94D6E2;
+        color: #545452;
+        border-bottom: none;
         text-transform: uppercase;
         @extend .p-a-3;
         @extend .m-b-4;
         transition: all .3s;
 
         h2 {
-          margin: 0;
+          margin: 0 0 5px 0;
           padding: 0;
           letter-spacing: 1px;
           text-shadow: none;
-          font-family: $font-family-sans-serif;
         }
 
         div {
           margin-top: 1.2rem;
+          font-weight: bold;
+        }
+
+        h2 {
+          font-family: $font-family-sans-serif;
+          transition: all .3s;
         }
 
         &:hover {
@@ -238,35 +288,45 @@
 
       a {
         display: block;
-        background-color: #FFF;
+        background-color: #fff;
+        color: #545452;
+        border-bottom: solid 2px #3FE0C5;
         text-transform: uppercase;
         @extend .p-a-3;
-        @extend .m-b-4;
         transition: all .3s;
-        border-bottom: solid 1px $body-primary-color;
-        /*border-left: solid 1px $body-primary-color;*/
 
         h2 {
-          margin: 0;
+          margin: 0 0 5px 0;
           padding: 0;
           letter-spacing: 1px;
           text-shadow: none;
-          font-family: $font-family-sans-serif;
         }
 
         div {
           margin-top: 1.2rem;
+          font-weight: bold;
+        }
+
+        h2 {
+          font-family: $font-family-sans-serif;
+          transition: all .3s;
         }
 
         &:hover {
+          background-color: #3FE0C5;
           color: white;
-          background-color: $body-primary-color;
           text-decoration: none;
           transform: scale(1.02);
 
           h2 {
             color: white;
           }
+        }
+      }
+
+      &:not(:last-child) {
+        a {
+          @extend .m-b-4;
         }
       }
     }
@@ -277,6 +337,10 @@
 
     ol {
       margin-left: 1rem;
+    }
+
+    .col-github-logo svg {
+      max-width: 300px;
     }
   }
 
@@ -311,8 +375,8 @@
       img {
         border: 4px solid white;
         border-radius: 50%;
-        margin-left: 2em;
-        margin-right: 2em;
+        margin-left: 1em;
+        margin-right: 1em;
       }
 
       @media (max-width: 590px) {
@@ -326,46 +390,4 @@
     }
   }
 
-  .Footer {
-    position: relative;
-    overflow: hidden;
-    background-color: #F7F7F7;
-    padding-bottom: 6rem;
-
-    .Logo {
-      width: 100px;
-      height: 100px;
-    }
-
-    ul {
-      text-transform: uppercase;
-    }
-
-    strong {
-    }
-
-    h5 {
-      margin-top: 0;
-    }
-
-    .BetaSignup {
-      background: transparent;
-      border: 0;
-      margin: 0;
-      padding: 0 !important;
-
-      .FormWrapper {
-        margin: 0;
-      }
-
-      &:before {
-        display: none;
-      }
-    }
-
-   .container > svg {
-      position:absolute;
-      bottom: -115px;
-    }
-  }
 }

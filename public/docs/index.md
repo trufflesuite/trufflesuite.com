@@ -18,27 +18,32 @@ Truffle is a world class development environment, testing framework and asset pi
 
 -------------------------------
 
-Subscribe to our mailing list for news, beta releases and new features!
+<div class="BetaSignup">
+  <h3>SIGN UP FOR THE TRUFFLE MAILING LIST</h3>
 
-<!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-	#mc_embed_signup{background:#FCFCFC; clear:left; font:14px Helvetica,Arial,sans-serif; }
-  #mc_embed_signup form{padding-left: 0px; padding-top: 0px;}
-  #mc_embed_signup input.email{display: inline-block; vertical-align: top; margin-right: 5px; min-height: 33px; color: black;}
-</style>
-<div id="mc_embed_signup">
-<form action="//readthedocs.us14.list-manage.com/subscribe/post?u=563e4b50100f771d2d17cf7a5&amp;id=b754a8ab50" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" style="padding-left: 0; padding-top: 0;" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_563e4b50100f771d2d17cf7a5_b754a8ab50" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-neutral"></div>
-    </div>
-</form>
+  <p>Get news, beta releases and new features straight to your inbox!</p>
+
+  <div id="mc_embed_signup">
+    <form action="//readthedocs.us14.list-manage.com/subscribe/post?u=563e4b50100f771d2d17cf7a5&amp;id=b754a8ab50" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+        <div class='FormWrapper'>
+          <div class="mc-field-group">
+          <label for="mce-FNAME">First Name </label>
+            <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
+          </div>
+          <div class="mc-field-group">
+            <label for="mce-EMAIL">Your Email Address</label>
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" required>
+          </div>
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_563e4b50100f771d2d17cf7a5_b754a8ab50" tabindex="-1" value=""></div>
+          <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!--End mc_embed_signup-->
 </div>
-
-<!--End mc_embed_signup-->
 
 -------------------------------
 

@@ -1,35 +1,26 @@
-<% include _includes/typogr %>
-<!doctype html>
-<html lang="en">
-  <% include _includes/head %>
-  <body>
-    <section class="Community">
-      <% include _includes/navbar %>
-      <section class="MainContent">
-        <div class="container">
-          <h1 class="Uppercase WithDash m-b-4">Community</h1>
-          <ul class="list-unstyled">
-            <li>
-              <h2>Chat With Us on Gitter</h2>
-              <p>If you're stuck trying to get something to work, have any questions, or suggestions - the best place to get help is in the <a href="http://gitter.im/Consensys/truffle">Truffle Gitter channel</a>. </p>
-            </li>
-            <li>
-              <h2>Submit an Issue on Github</h2>
-              <p>If something's not working as expected, or you have an idea for a feature or change you'd like to see, please <a href="https://github.com/consensys/truffle">open an Issue on the consensys/truffle</a> repo and start a discussion.</p>
-            </li>
-            <li>
-              <h2>Help improve the Docs</h2>
-              <p>We're only human, and need all the help you can give us to improve the documentation. PRs to clarify or amend documentation are particularly welcome.</p>
-            </li>
-          </ul>
-        </div>
-        <footer class="container m-t-4 m-b-4">
-          <p class="text-center">See a way to make this page better? <a href="<%="https://github.com/" + service.contributing + "/edit/master/_site/public/" + current.path.join('/') + ".md" %>">Edit here &rarr;</a></p>
-        </footer>
-      </section>
-    </section>
-    <% include _includes/landing_page/footer %>
-    <% include _includes/scripts %>
-    <% include _includes/analytics %>
-  </body>
-</html>
+<section class="Community">
+  <% include _includes/navbar %>
+  <section class="MainContent">
+    <div class="container">
+      <h1 class="Uppercase WithDash m-b-4">Community</h1>
+      <ul class="list-unstyled">
+        <li>
+          <h2>Chat With Us on Gitter</h2>
+          <p>If you're stuck trying to get something to work, have any questions, or suggestions - the best place to get help is in the <a href="http://gitter.im/Consensys/truffle">Truffle Gitter channel</a>. </p>
+        </li>
+        <li>
+          <h2>Submit an Issue on Github</h2>
+          <p>If something's not working as expected, or you have an idea for a feature or change you'd like to see, please <a href="https://github.com/consensys/truffle">open an Issue on the consensys/truffle</a> repo and start a discussion.</p>
+        </li>
+        <li>
+          <h2>Help improve the Docs</h2>
+          <p>We're only human, and need all the help you can give us to improve the documentation. PRs to clarify or amend documentation are particularly welcome.</p>
+        </li>
+      </ul>
+    </div>
+    <footer class="container m-t-4 m-b-4">
+      <p class="text-center">See a way to make this page better? <a href="<%="https://github.com/" + service.contributing + "/edit/master/_site/public/" + current.path.join('/') + ".md" %>">Edit here &rarr;</a></p>
+    </footer>
+  </section>
+</section>
+<% include _includes/landing_page/footer %>

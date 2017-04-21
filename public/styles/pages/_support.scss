@@ -1,5 +1,6 @@
 .Support {
   .MainContent {
+    padding-top: 123px;
     border-bottom: solid 1px #e7e7e7;
 
     ul {
@@ -15,8 +16,21 @@
     position: relative;
     max-width: 750px;
   }
+
   .livesaver {
     width: 120px;
     float: right;
+  }
+
+  @media screen and (max-width: 767px) {
+    ul {
+      margin-top: 2rem !important;
+    }
+
+    .livesaver {
+      float: none;
+      display: block;
+      margin: 2rem auto;
+    }
   }
 }

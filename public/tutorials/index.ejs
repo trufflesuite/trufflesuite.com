@@ -3,27 +3,30 @@
   var tutorials = _.map(slugs, function(i) { return { 'slug': i, 'author': public.tutorials._data[i].author, 'title': public.tutorials._data[i].title, 'date': public.tutorials._data[i].date, 'published': public.tutorials._data[i].published }})
   tutorials = _.sortBy(tutorials, 'date').reverse()
 %>
-  <div class="container-fluid">
-    <div class="row">
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
       <section class="TutorialIndex">
         <h1>TRUFFLE TUTORIAL INDEX</h1>
-        <ol class="list-unstyled">
-    <% for(var tutorial of tutorials){ %>
-        <% if(!!tutorial.published) { %>
-          <li>
-          <a href="/tutorials/<%= tutorial.slug %>">
-            <h2><%= tutorial.title %></h2>
-            <span>
-              <date><%= tutorial.date %></date> &bull; <span>BY <%=tutorial.author %></span>
-            </span>
-            <div>Read Article &rarr;</div>
-          </a>
-        </li>
-      <% } %>
-    <% }; %>
-    </ol>
-    </section>
+          <ol class="list-unstyled">
+            <% for(var tutorial of tutorials){ %>
+              <% if(!!tutorial.published) { %>
+                <li>
+                <a href="/tutorials/<%= tutorial.slug %>">
+                  <h2><%= tutorial.title %></h2>
 
+                  <span>
+                    <date><%= tutorial.date %></date> &bull; <span>BY <%=tutorial.author %></span>
+                  </span>
 
-    </div>
-  </div>
+                  <div>Read Article &rarr;</div>
+                </a>
+              </li>
+            <% } %>
+          <% }; %>
+        </ol>
+      </section>
+    </div><!--/.col-xs-12-->
+  </div><!--/.row-->
+</div><!--/.container-->

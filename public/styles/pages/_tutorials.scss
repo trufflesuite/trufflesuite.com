@@ -1,5 +1,4 @@
 .Tutorials {
-  background: white;
   .nav {
     a {
       text-transform: uppercase;
@@ -7,34 +6,10 @@
 
   }
 
-  .navbar {
-    min-height: 100px; //* or whatever height you require
-  }
-
-  .navbar-toggle {
-    margin-top: 30px;
-    margin-right: 30px;
-  }
-
-  .navbar-brand {
-    height: 100px;
-    width: 100px;
-    margin-left: 0 !important;
-  }
-
-  .navbar-nav li a {
-    line-height: 100px;
-    height: 100px;
-    padding-top: 0;
-    svg {
-      width: 100px;
-      padding-top: 15px;
-    }
-  }
-
-
   .MainContent {
     @extend .p-b-4;
+
+    padding-top: 123px;
 
     > .container-fluid > .row > h1,
     > .container-fluid > .row > h2,
@@ -48,9 +23,7 @@
     }
 
     h1 {
-      @extend .m-t-3;
-      @extend .m-b-3;
-      width: 90% !important;
+      margin: 1.5rem auto 3rem auto;
       text-transform: uppercase;
     }
 
@@ -130,11 +103,6 @@
 
     ul,
     ol {
-      @extend .col-xs-12;
-      @extend .col-md-6;
-      @extend .col-md-offset-6;
-      @extend .col-md-pull-5;
-
       margin-bottom: 1.9rem;
       font-family: $font-family-serif;
 
@@ -152,15 +120,10 @@
     }
 
     hr {
-      @extend .col-xs-12;
-      @extend .col-md-6;
-      @extend .col-md-offset-6;
-      @extend .col-md-pull-5;
-
       @extend .m-t-1;
       @extend .m-b-3;
       border: none;
-      border-bottom: 1px solid;
+      border-bottom: 1px dotted;
       display: block;
       height: 1px;
     }
@@ -170,6 +133,8 @@
       background: #f7f7f7;
       max-width: 100%;
       word-break: break-word;
+      border-left: none;
+      border-right: none;
 
       @extend .m-t-1;
       @extend .m-b-3;
@@ -198,6 +163,8 @@
 
     footer {
       p {
+        margin-bottom: 0;
+
         &:before {
           content: '';
           display: block;
@@ -213,11 +180,8 @@
 
   .TutorialIndex {
 
-    h1 {
-      @extend .col-xs-12;
-      @extend .col-md-6;
-      @extend .col-md-offset-6;
-      @extend .col-md-pull-5;
+    ol {
+      margin-bottom: 1rem;
     }
 
     li {
@@ -225,13 +189,14 @@
       a {
         display: block;
         background-color: #94D6E2;
+        color: #545452;
+        border-bottom: none;
         text-transform: uppercase;
         @extend .p-a-3;
-        @extend .m-b-4;
         transition: all .3s;
 
         h2 {
-          margin: 0;
+          margin: 0 0 5px 0;
           padding: 0;
           letter-spacing: 1px;
           text-shadow: none;
@@ -239,15 +204,42 @@
 
         div {
           margin-top: 1.2rem;
+          font-weight: bold;
+        }
+
+        h2 {
+          font-family: $font-family-sans-serif;
+          transition: all .3s;
         }
 
         &:hover {
           color: white;
           text-decoration: none;
+          transform: scale(1.02);
 
           h2 {
             color: white;
           }
+        }
+      }
+
+      &:not(:last-child) {
+        a {
+          @extend .m-b-4;
+        }
+      }
+    }
+
+    &.Blog li {
+
+      a {
+        background-color: #fff;
+        color: #545452;
+        border-bottom: solid 2px #3FE0C5;
+
+        &:hover {
+          background-color: #3FE0C5;
+          color: white;
         }
       }
     }

@@ -1,66 +1,33 @@
 .Documentation {
-  @media (min-width: 992px) {
-    .navbar {
-      position: fixed;
-      right: 0;
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
+  .MainContent {
+    padding-top: 100px;
   }
 
   .DocSearchForm {
-    margin-left: 1rem;
-    margin-right: 2rem;
-    display: flex;
-    justify-content: space-between;
-
-    .form-group {
-      display: flex;
-      flex: 1;
-    }
+    margin-left: 0;
+    margin-right: 0;
 
     .btn {
-      height: 54px;
+      height: 53px;
+      border: 1px solid #3FE0C5;
     }
 
     input[type='text'] {
       background: transparent;
-      border: none;
-      border: 1px solid #3FE0C5;
-      padding: 1.6rem;
+      border-color: #3FE0C5;
+      padding: 1.58rem 1rem;
       color: #3FE0C5;
-      flex: 1;
-      margin-right: 1rem;
     }
   }
 
   @media (max-width: 1390px) {
     .DocSearchForm {
-      flex-direction: column;
-      margin-right: 1rem;
+      margin-right: 0;
 
       input[type='text'] {
-        margin: 0 0 .2rem 0;
+        margin: 0;
       }
     }
-  }
-
-  .navbar {
-    margin-bottom: 0;
-    text-transform: uppercase;
-  }
-
-  .navbar-brand {
-    height: 100px;
-    width: 102px;
-    margin-left: 0!important;
-  }
-
-  .navbar-nav li a {
-    line-height: 100px;
-    height: 100px;
-    padding-top: 0;
   }
 
   @media (min-width: 992px) {
@@ -76,24 +43,27 @@
   }
 
   .SubNav {
-    overflow: scroll;
     background: #5e464d;
-    padding-top: 2rem;
-    padding-right: 0;
     color: #3fe0c5;
+    padding: 2rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
 
     h2 {
       text-shadow: none;
       text-transform: uppercase;
       color: #3FE0C5;
-      padding-bottom: 1rem;
+      padding-top: 1rem;
     }
 
     ul {
-      margin-left: 15px;
+      margin: 0;
 
       li {
-        margin-bottom: .5rem;
+        &:not(:last-child) {
+          margin-bottom: .5rem;
+        }
+
         &.active {
           background: #F8F5F0;
           padding: .5rem;
@@ -116,7 +86,7 @@
     }
 
     ul > li > ul {
-      margin-left: 1rem;
+      margin-left: 0;
     }
   }
 
@@ -209,12 +179,6 @@
     }
   }
 
-  @media (min-width: 992px) {
-    .ContentPage {
-      margin-top: 100px;
-    }
-  }
-
   footer {
     margin-top: 3rem;
     padding: 2rem;
@@ -224,6 +188,21 @@
     p {
       margin: 0 !important;
       padding: 0;
+    }
+  }
+
+  .BetaSignup {
+    background: transparent;
+    border: none;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+
+    &::before {
+      display: none;
+    }
+
+    .FormWrapper {
+      margin-bottom: 1rem;
     }
   }
 }

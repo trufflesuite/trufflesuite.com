@@ -25,6 +25,12 @@
     text-transform: uppercase;
   }
 
+  @media screen and (max-width: 991px) {
+    ul {
+      margin-top: 20px;
+    }
+  }
+
   strong {
   }
 
@@ -47,8 +53,26 @@
     }
   }
 
- .container > svg {
-    position:absolute;
-    bottom: -115px;
+  @media screen and (max-width: 991px) {
+    .john-attribution {
+      margin: 0 0 20px 0;
+    }
+  }
+
+  .container {
+    position: relative;
+
+    .footer-wordmark {
+      width: calc(100% - 30px);
+      position:absolute;
+      bottom: -211px;
+      left: 15px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .container .footer-wordmark {
+      bottom: -183px;
+    }
   }
 }

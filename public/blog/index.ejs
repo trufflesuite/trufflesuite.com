@@ -3,27 +3,31 @@
   var blog = _.map(slugs, function(i) { return { 'slug': i, 'author': public.blog._data[i].author, 'title': public.blog._data[i].title, 'date': public.blog._data[i].date, 'published': public.blog._data[i].published }})
   blog = _.sortBy(blog, 'date').reverse()
 %>
-  <div class="container-fluid">
-    <div class="row">
-      <section class="TutorialIndex">
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <section class="TutorialIndex Blog">
         <h1>The Truffle Log</h1>
+
         <ol class="list-unstyled">
-    <% for(var post of blog){ %>
-        <% if(!!post.published) { %>
-          <li>
-          <a href="/blog/<%= post.slug %>">
-            <h2><%= post.title %></h2>
-            <span>
-              <date><%= post.date %></date> &bull; <span>BY <%=post.author %></span>
-            </span>
-            <div>Read Article &rarr;</div>
-          </a>
-        </li>
-      <% } %>
-    <% }; %>
-    </ol>
-    </section>
+          <% for(var post of blog){ %>
+            <% if(!!post.published) { %>
+              <li>
+                <a href="/blog/<%= post.slug %>">
+                  <h2><%= post.title %></h2>
 
+                  <span>
+                    <date><%= post.date %></date> &bull; <span>BY <%=post.author %></span>
+                  </span>
 
-    </div>
-  </div>
+                  <div>Read Article &rarr;</div>
+                </a>
+              </li>
+            <% } %>
+          <% }; %>
+        </ol>
+      </section>
+    </div><!--/.col-xs-12-->
+  </div><!--/.row-->
+</div><!--/.container-->

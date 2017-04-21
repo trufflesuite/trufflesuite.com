@@ -1,23 +1,16 @@
-<% include ../_includes/typogr %>
-<!doctype html>
-<html lang="en">
-  <% include ../_includes/head %>
-  <body>
-    <section class="Tutorials">
-      <% include ../_includes/navbar %>
-      <section class="MainContent">
-        <div class="container-fluid">
-          <div class="row">
-            <%- yield %>
-          </div>
+<section class="Tutorials">
+  <% include ../_includes/navbar %>
+  <section class="MainContent">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+        <%- yield %>
         </div>
-        <footer class="container">
-          <p class="text-center">See a way to make this page better? <a href="<%="https://github.com/" + service.contributing + "/edit/master/_site/public/" + current.path.join('/') + ".md" %>">Edit here &rarr;</a></p>
-        </footer>
-      </section>
-    </section>
-    <% include ../_includes/landing_page/footer %>
-    <% include ../_includes/scripts %>
-    <% include ../_includes/analytics %>
-  </body>
-</html>
+      </div>
+    </div>
+    <footer class="container">
+      <p class="text-center">See a way to make this page better? <a href="<%="https://github.com/" + service.contributing + "/edit/master/_site/public/" + current.path.join('/') + ".md" %>">Edit here &rarr;</a></p>
+    </footer>
+  </section>
+</section>
+<% include ../_includes/landing_page/footer %>
