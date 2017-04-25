@@ -1,4 +1,4 @@
-<section class="Tutorials">
+<section class="Tutorials<%= (current.path[1] === 'index') ? ' TutorialIndexContainer' : ''; %>">
   <% include ../_includes/navbar %>
   <section class="MainContent">
     <div class="container-fluid">
@@ -6,8 +6,9 @@
         <%- yield %>
       </div>
     </div>
+    
     <footer class="container">
-      <p class="text-center">See a way to make this page better? <a href="<%="https://github.com/" + service.contributing + "/edit/master/_site/public/" + current.path.join('/') + ".md" %>">Edit here &rarr;</a></p>
+      <p class="text-center">See a way to make this page better? <br class="visible-xs" /><a href="<%="https://github.com/" + service.contributing + "/edit/master/_site/public/" + current.path.join('/') + ".md" %>">Edit here &rarr;</a></p>
     </footer>
   </section>
 </section>

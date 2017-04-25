@@ -72,7 +72,6 @@
         @extend .p-a-1;
 
         margin: 0 auto;
-        max-width: 300px;
         background-color: #5E464D;
         border-radius: 2px;
 
@@ -84,11 +83,34 @@
     }
   }
 
+  .scroll-down {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    margin: 0 auto;
+    color: #545452;
+
+    svg {
+      display: block;
+      margin: 0 auto;
+      max-width: 50px;
+      height: auto;
+    }
+  }
+
+  @media screen and (max-height: 720px) {
+    .scroll-down {
+      bottom: 40px;
+    }
+  }
+
   @media screen and (max-width: 767px) {
     header {
       min-height: auto;
       height: auto;
-      padding: 123px 0 30px 0;
+      padding: 83px 0 30px 0;
 
       .container {
         position: static;
@@ -97,6 +119,10 @@
         transform: none;
         margin: 30px auto;
       }
+    }
+
+    .scroll-down {
+      display: none;
     }
   }
 

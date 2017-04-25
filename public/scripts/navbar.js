@@ -6,9 +6,8 @@ $(function() {
 
   $(window).scroll(function() {
     var windowScrollPos = $(this).scrollTop();
-    var headerHeight = $('.LandingPage header').height();
 
-    if (windowScrollPos > headerHeight)
+    if (windowScrollPos > 0)
     {
       if (!navbar.hasClass('scroll'))
       {

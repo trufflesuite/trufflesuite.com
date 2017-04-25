@@ -3,6 +3,12 @@
     padding-top: 100px;
   }
 
+  @media screen and (max-width: 767px) {
+    .MainContent {
+      padding-top: 60px;
+    }
+  }
+
   .DocSearchForm {
     margin-left: 0;
     margin-right: 0;
@@ -180,7 +186,7 @@
   }
 
   footer {
-    margin-top: 3rem;
+    margin-top: 2rem;
     padding: 2rem;
     background: white;
     border-radius: 10px;

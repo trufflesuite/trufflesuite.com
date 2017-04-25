@@ -4,30 +4,24 @@
   blog = _.sortBy(blog, 'date').reverse()
 %>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <section class="TutorialIndex Blog">
-        <h1>The Truffle Log</h1>
+<section class="TutorialIndex Blog">
+  <h1>The Truffle Log</h1>
 
-        <ol class="list-unstyled">
-          <% for(var post of blog){ %>
-            <% if(!!post.published) { %>
-              <li>
-                <a href="/blog/<%= post.slug %>">
-                  <h2><%= post.title %></h2>
+  <ol class="list-unstyled">
+    <% for(var post of blog){ %>
+      <% if(!!post.published) { %>
+        <li>
+          <a href="/blog/<%= post.slug %>">
+            <h2><%= post.title %></h2>
 
-                  <span>
-                    <date><%= post.date %></date> &bull; <span>BY <%=post.author %></span>
-                  </span>
+            <span>
+              <date><%= post.date %></date> &bull; <span>BY <%=post.author %></span>
+            </span>
 
-                  <div>Read Article &rarr;</div>
-                </a>
-              </li>
-            <% } %>
-          <% }; %>
-        </ol>
-      </section>
-    </div><!--/.col-xs-12-->
-  </div><!--/.row-->
-</div><!--/.container-->
+            <div>Read Article &rarr;</div>
+          </a>
+        </li>
+      <% } %>
+    <% }; %>
+  </ol>
+</section>

@@ -2,4 +2,10 @@
   .MainContent {
     padding-top: 123px;
   }
+
+  @media screen and (max-width: 767px) {
+    .MainContent {
+      padding-top: 83px;
+    }
+  }
 }

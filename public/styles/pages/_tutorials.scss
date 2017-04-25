@@ -1,4 +1,8 @@
 .Tutorials {
+  &.TutorialIndexContainer {
+    background: #F8F5F0;
+  }
+
   .nav {
     a {
       text-transform: uppercase;
@@ -16,10 +20,7 @@
     > .container-fluid > .row > h3,
     > .container-fluid > .row > h4,
     > .container-fluid > .row > p {
-      @extend .col-xs-12;
-      @extend .col-md-6;
-      @extend .col-md-offset-6;
-      @extend .col-md-pull-5;
+      @extend .container;
     }
 
     h1 {
@@ -76,6 +77,10 @@
     p {
       line-height: 1.9rem;
       margin-bottom: 1.9rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
 
     a {
@@ -103,8 +108,16 @@
 
     ul,
     ol {
+      @extend .container;
+
+      max-width: 100%;
       margin-bottom: 1.9rem;
+      padding-left: 30px;
       font-family: $font-family-serif;
+
+      &.list-unstyled {
+        padding: 0;
+      }
 
       li {
         line-height: 1.9rem;
@@ -120,35 +133,43 @@
     }
 
     hr {
-      @extend .m-t-1;
-      @extend .m-b-3;
+      margin: 3rem auto;
       border: none;
       border-bottom: 1px dotted;
       display: block;
       height: 1px;
+      width: 1140px;
+
+      @media screen and (max-width: 1199px) {
+        width: 940px;
+      }
+
+      @media screen and (max-width: 1023px) {
+        width: 720px;
+      }
+
+      @media screen and (max-width: 767px) {
+        width: calc(100% - 30px);
+      }
     }
 
     pre {
+      margin: 1rem 0 3rem 0;
+      padding: 3rem 0;
       border-radius: 0;
       background: #f7f7f7;
-      max-width: 100%;
+      width: 100%;
       word-break: break-word;
       border-left: none;
       border-right: none;
-
-      @extend .m-t-1;
-      @extend .m-b-3;
-      @extend .p-t-3;
-      @extend .p-b-3;
-      @extend .col-md-12;
-      padding-left: 0;
+      float: left;
 
       code {
-        @extend .col-xs-12;
-        @extend .col-md-6;
-        @extend .col-md-offset-6;
-        @extend .col-md-pull-5;
-        width: 90% important;
+        @extend .container;
+
+        display: block;
+        margin: 0 auto;
+        padding: 0 15px;
       }
 
       &.language-shell {
@@ -170,12 +191,18 @@
           display: block;
           border-top: 1px dotted;
           margin-top: 3rem;
-          padding-top: 2rem;
-          padding-bottom: 2rem;
+          padding-top: 0;
+          padding-bottom: 3rem;
         }
       }
     }
 
+  }
+
+  @media screen and (max-width: 767px) {
+    .MainContent {
+      padding-top: 83px;
+    }
   }
 
   .TutorialIndex {

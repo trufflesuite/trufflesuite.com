@@ -12,6 +12,12 @@
     }
   }
 
+  @media screen and (max-width: 767px) {
+    .MainContent {
+      padding-top: 83px;
+    }
+  }
+
   .custom-box {
     position: relative;
     max-width: 750px;
@@ -28,9 +34,7 @@
     }
 
     .livesaver {
-      float: none;
-      display: block;
-      margin: 2rem auto;
+      display: none;
     }
   }
 }
