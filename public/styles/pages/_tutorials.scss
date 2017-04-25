@@ -26,6 +26,10 @@
     h1 {
       margin: 1.5rem auto 3rem auto;
       text-transform: uppercase;
+
+      &:first-child {
+        @extend .container;
+      }
     }
 
     h1,
@@ -116,7 +120,7 @@
       font-family: $font-family-serif;
 
       &.list-unstyled {
-        padding: 0;
+        padding-left: 15px;
       }
 
       li {

@@ -4,29 +4,24 @@
   tutorials = _.sortBy(tutorials, 'date').reverse()
 %>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <section class="TutorialIndex">
-        <h1>TRUFFLE TUTORIAL INDEX</h1>
-          <ol class="list-unstyled">
-            <% for(var tutorial of tutorials){ %>
-              <% if(!!tutorial.published) { %>
-                <li>
-                <a href="/tutorials/<%= tutorial.slug %>">
-                  <h2><%= tutorial.title %></h2>
+<section class="TutorialIndex">
+  <h1>TRUFFLE TUTORIAL INDEX</h1>
+  
+  <ol class="list-unstyled">
+    <% for(var tutorial of tutorials){ %>
+      <% if(!!tutorial.published) { %>
+        <li>
+          <a href="/tutorials/<%= tutorial.slug %>">
+            <h2><%= tutorial.title %></h2>
 
-                  <span>
-                    <date><%= tutorial.date %></date> &bull; <span>BY <%=tutorial.author %></span>
-                  </span>
+            <span>
+              <date><%= tutorial.date %></date> &bull; <span>BY <%=tutorial.author %></span>
+            </span>
 
-                  <div>Read Article &rarr;</div>
-                </a>
-              </li>
-            <% } %>
-          <% }; %>
-        </ol>
-      </section>
-    </div><!--/.col-xs-12-->
-  </div><!--/.row-->
-</div><!--/.container-->
+            <div>Read Article &rarr;</div>
+          </a>
+        </li>
+      <% } %>
+    <% } %>
+  </ol>
+</section>

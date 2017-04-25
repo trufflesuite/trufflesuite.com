@@ -91,6 +91,12 @@
     display: block;
     margin: 0 auto;
     color: #545452;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+
+    &.scroll {
+      opacity: 0;
+    }
 
     svg {
       display: block;
@@ -106,7 +112,8 @@
     }
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767px),
+  screen and (max-height: 639px) {
     header {
       min-height: auto;
       height: auto;
