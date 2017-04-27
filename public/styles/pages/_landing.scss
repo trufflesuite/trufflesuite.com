@@ -30,13 +30,13 @@
   }
 
   header {
-    min-height: 100vh;
+    height: 80vh;
     background: url('../images/header_bg.jpg') no-repeat;
     background-size: cover;
 
     .container {
       position: absolute;
-      top: 50%;
+      top: 44%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
@@ -113,7 +113,7 @@
   }
 
   @media screen and (max-width: 767px),
-  screen and (max-height: 639px) {
+  screen and (max-height: 739px) {
     header {
       min-height: auto;
       height: auto;
