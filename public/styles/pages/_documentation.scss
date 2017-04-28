@@ -56,6 +56,10 @@
     overflow-x: hidden;
     overflow-y: scroll;
 
+    @media screen and (max-width: 767px) {
+      padding: 2rem 15px;
+    }
+
     h2 {
       text-shadow: none;
       text-transform: uppercase;
@@ -99,6 +103,14 @@
 
   .ContentPage {
     padding: 2rem 4rem;
+
+    @media screen and (max-width: 991px) {
+      padding: 2rem;
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: 2rem 15px;
+    }
 
     h1,
     h2,
@@ -166,7 +178,6 @@
     }
 
     p {
-
       margin-bottom: 2rem;
     }
 
@@ -178,10 +189,15 @@
     ul {
       margin-top: 2rem;
       margin-bottom: 2rem;
+
       li {
         font-weight: normal;
         font-family: $font-family-serif;
         margin-bottom: 1rem;
+      }
+
+      @media screen and (max-width: 767px) {
+        padding-left: 20px;
       }
     }
   }
