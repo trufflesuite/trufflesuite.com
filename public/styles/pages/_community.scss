@@ -3,6 +3,14 @@
     padding-top: 123px;
     background: #F8F5F0;
     overflow: hidden;
+
+    h1 {
+      margin-bottom: 2rem;
+    }
+
+    p, li {
+      line-height: 1.75rem;
+    }
   }
 
   @media screen and (max-width: 767px) {

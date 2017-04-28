@@ -79,7 +79,7 @@
     }
 
     p {
-      line-height: 1.9rem;
+      line-height: 1.75rem;
       margin-bottom: 1.9rem;
 
       &:last-of-type {
@@ -115,16 +115,22 @@
       @extend .container;
 
       max-width: 100%;
-      margin-bottom: 1.9rem;
-      padding-left: 30px;
+      margin: 2rem auto;
+      padding-left: 50px;
       font-family: $font-family-serif;
 
       &.list-unstyled {
         padding-left: 15px;
+
+        li {
+          margin-bottom: 0;
+        }
       }
 
       li {
-        line-height: 1.9rem;
+        margin-bottom: 1rem;
+        line-height: 1.75rem;
+
         pre {
           code {
             @extend .col-xs-12;
@@ -133,6 +139,10 @@
             @extend .col-md-pull-5;
           }
         }
+      }
+
+      @media screen and (max-width: 767px) {
+        padding-left: 30px;
       }
     }
 

@@ -4,10 +4,20 @@
     border-bottom: solid 1px #e7e7e7;
     background: #F8F5F0;
 
+    h1 {
+      margin-bottom: 2rem;
+    }
+
+    p, li {
+      line-height: 1.75rem;
+    }
+
     ul {
-      max-width: 600px;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
 
       li {
+        margin-bottom: 1rem;
         font-family: $font-family-serif;
       }
     }
@@ -16,6 +26,14 @@
   @media screen and (max-width: 767px) {
     .MainContent {
       padding-top: 83px;
+
+      ul {
+        padding-left: 20px;
+      }
+
+      .livesaver {
+        display: none;
+      }
     }
   }
 
@@ -27,15 +45,5 @@
   .livesaver {
     width: 120px;
     float: right;
-  }
-
-  @media screen and (max-width: 767px) {
-    ul {
-      margin-top: 2rem !important;
-    }
-
-    .livesaver {
-      display: none;
-    }
   }
 }

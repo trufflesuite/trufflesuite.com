@@ -179,6 +179,7 @@
 
     p {
       margin-bottom: 2rem;
+      line-height: 1.75rem;
     }
 
     pre {
@@ -194,6 +195,8 @@
         font-weight: normal;
         font-family: $font-family-serif;
         margin-bottom: 1rem;
+        word-wrap: break-word;
+        line-height: 1.75rem;
       }
 
       @media screen and (max-width: 767px) {
