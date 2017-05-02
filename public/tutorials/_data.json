@@ -88,5 +88,17 @@
     "date": "2017-02-14",
     "author": "Doug von Kohorn",
     "published": true
+  },
+  "ethereum-overview": {
+    "title": "Ethereum Overview",
+    "date": "2017-05-02",
+    "author": "Josh Quintal",
+    "published": true
+  },
+  "pet-shop": {
+    "title": "Ethereum Pet Shop",
+    "date": "2017-05-02",
+    "author": "Josh Quintal",
+    "published": true
   }
 }

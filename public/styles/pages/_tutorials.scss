@@ -102,6 +102,13 @@
       max-width: 100%;
     }
 
+    .pet-shop-header img {
+      display: block;
+      height: calc(50vh - 100px);
+      width: auto;
+      margin: 1.5rem auto 3rem auto !important;
+    }
+
     table {
       @extend .table;
       @extend .col-xs-12;
