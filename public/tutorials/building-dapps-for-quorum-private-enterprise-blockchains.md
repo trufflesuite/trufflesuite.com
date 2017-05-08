@@ -10,7 +10,7 @@ Transaction privacy presents a number of useful use cases, especially in the ent
 
 This tutorial expects you to have some knowledge of Truffle, Ethereum, Quorum and Solidity. For more information on these topics, please see the following links:
 
-* [Truffle documentation](http://truffleframework.com/docs/)
+* [Truffle documentation](/docs/)
 * [Etheruem overview](https://ethereum.org/)
 * [Quorum overview](https://www.jpmorgan.com/country/US/EN/Quorum) and [documentation](https://github.com/jpmorganchase/quorum-examples)
 * [Solidity documentation](https://solidity.readthedocs.io/en/develop/)
@@ -102,7 +102,7 @@ $ cd myproject
 $ truffle init bare
 ```
 
-If you look at the contents of the `myproject` directory, you'll notice folders were created for you. See the [Truffle documentation](http://truffleframework.com/docs/getting_started/project) for more information about Truffle's project structure.
+If you look at the contents of the `myproject` directory, you'll notice folders were created for you. See the [Truffle documentation](/docs/getting_started/project) for more information about Truffle's project structure.
 
 Before moving onto code, we need to configure Truffle to point to our running Quorum client. For this example, we'll change our `development` configuration within `truffle.js` to point to the first node available in the 7nodes example.
 
@@ -125,7 +125,7 @@ Now that we have Truffle set up, we can move onto code.
 
 ## 3. Deploying Smart Contracts on Quorum
 
-We won't spend too much time talking about writing or deploying contracts in Truffle since we have [ample documentation](http://truffleframework.com/docs), however we do want to show how deploying contracts applies to Quorum.
+We won't spend too much time talking about writing or deploying contracts in Truffle since we have [ample documentation](/docs), however we do want to show how deploying contracts applies to Quorum.
 
 First, copy the following contract into a new file, called `SimpleStorage.sol`. Place it in your `contracts` directory:
 
@@ -248,4 +248,79 @@ truffle(nodeseven)> SimpleStorage.deployed().then(function(instance) { return in
 
 And as you can see, we get 42! We can now deploy contracts that are only available to our desired parties.
 
-## 4. Making private transactions
+## 4. Interacting With Contracts Privately
+
+So far, we've shown you how to deploy contracts that are private within your migrations. When building a dapp on Quorum, it'd also be helpful to learn how to make all transactions private.
+
+Truffle uses its [truffle-contract](https://github.com/trufflesuite/truffle-contract) contract abstraction wherever contracts are used in Javascript. When you interacted with `SimpleStorage` in the console above, for instance, you were using a `truffle-contract` contract abstraction. These abstractions are also used within your migrations, your Javascript-based unit tests, as well as executing external scripts with Truffle.
+
+Truffle's contract abstraction allow you to make a transaction against any function available on the contract. It does so by evaluating the functions of the contract and making them available to Javascript. To see these transactions in action, we're going to use an advanced feature of Truffle that lets us execute external scripts within our Truffle environment.
+
+Start out by creating a file called `sampletx.js` within the root of your project. Then fill it with this code:
+
+```Javascript
+var SimpleStorage = artifacts.require("SimpleStorage");
+
+module.exports = function(done) {
+  console.log("Getting deployed version of SimpleStorage...")
+  SimpleStorage.deployed().then(function(instance) {
+    console.log("Setting value to 65...");
+    return instance.set(65, {privateFor: ["ROAZBWtSacxXQrOe3FGAqJDyJjFePR5ce4TSIzmJ0Bc="]});
+  }).then(function(result) {
+    console.log("Transaction:", result.tx);
+    console.log("Finished!");
+    done();
+  }).catch(function(e) {
+    console.log(e);
+    done();
+  });
+};
+```
+
+This code does two things: First, it asks Truffle to get our contract abstraction for the SimpleStorage contract. Then, it finds the deployed contract and sets the value managed by SimpleStorage to 65, using the contract's `set()` function. As with the migration we wrote previously, the `privateFor` parameter can be appended within an object at the end of the transaction to tell Quorum that this transaction is private between the sender and the account represented by the given public key.
+
+You can run this code using the commnad `truffle exect sampletx.js`. Your output should have looked something like this:
+
+```shell
+$ truffle exec sampletx.js
+Using network 'development'.
+
+Getting deployed version of SimpleStorage...
+Setting value to 65...
+Transaction: 0x0a7a661e657f5a706b0c39b4f197038ef0c3e77abc9970a623327c6f48ca9aff
+Finished!
+```
+
+We can now use the Truffle console, like before, to check the results of this transaction. Let's see the value as node one:
+
+```shell
+$ truffle console
+truffle(development)> SimpleStorage.deployed().then(function(instance) { return instance.get(); })
+{ [String: '65'] s: 1, e: 1, c: [ 65 ] }
+```
+
+We got 65! Now let's do node four (not privy to the transaction):
+
+```shell
+$ truffle console --network nodefour
+truffle(nodefour)> SimpleStorage.deployed().then(function(instance) { return instance.get(); })
+{ [String: '0'] s: 1, e: 0, c: [ 0 ] }
+```
+
+We got zero, as expected. Now let's try node seven:
+
+```shell
+$ truffle console --network nodeseven
+truffle(nodeseven)> SimpleStorage.deployed().then(function(instance) { return instance.get(); })
+{ [String: '65'] s: 1, e: 1, c: [ 65 ] }
+```
+
+And we got 65 again, as we should expect. We can now use Truffle's contract abstractions to make private transactions with Quorum.
+
+## Is that all Truffle can do?
+
+Absolutely not! What we've shown you today is everything that makes building dapps for Quorum different than building dapps for the public Ethereum network. And what you'll see is it's not different at all: The only difference is adding the `privateFor` parameter for deployments and transactions you'd like to keep private. The rest is the same! In fact, now that you have the basics, you can explore [all our other resources](/docs) for building dapps with Truffle, including [tutorials](/tutorials), [documentation](/documentation), [writing advanced deployment scripts](/docs/getting_started/migrations), [unit testing](/docs/getting_started/javascript-tests) ([with solidity too](/docs/getting_started/solidity-tests)), and much more.
+
+By building with Truffle, you now have access to not only the best development tools and technologies (like Quorum), but you also have access to the largest Ethereum developer community around. Don't hesitate to [drop us a line](https://gitter.im/ConsenSys/truffle) or [get help from the community](https://gitter.im/ConsenSys/truffle). There's always someone available to answer any questions you have.
+
+Cheers, and happy coding!
