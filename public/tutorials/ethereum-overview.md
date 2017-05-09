@@ -12,17 +12,17 @@ In this tutorial we will be covering:
 
 ## What is a Blockchain?
 
-A blockchain, at its heart, is a distributed database. This database is called a ledger. Much like a bank, the ledger keeps track of currency (in this case, cryptocurrency) ownership. Unlike a centralized bank, everyone has a copy of the ledger and can verify each other's accounts. This is the *distributed* (or decentalized) part of the blockchain. Each device with a copy of the ledger that is connected to the network is referred to as a **node**.
+A blockchain, at its heart, is a distributed database. This database is called a ledger. Much like a bank, the ledger keeps track of currency (in this case, cryptocurrency) ownership. Unlike a centralized bank, everyone has a copy of the ledger and can verify each other's accounts. This is the *distributed* (or decentalized) part of the blockchain. Each connected device with a copy of the ledger is called a **node**.
 
-Every interaction in a blockchain network is called a **transaction**. Sometimes these are monetary transactions, such as sending someone Ether; other times they are transmissions of data such as a car's VIN number. Every account on the blockchain has a unique signature, which lets us know which account initiated the transaction.
+Interactions between accounts in a blockchain network are called **transactions**. They can be monetary transactions, such as sending someone **Ether**, Ethereum's cryptocurrency. Other times they are transmissions of data, like a comment or username. Every account on the blockchain has a unique signature, which lets us know which account initiated the transaction.
 
 ### Hashing & Mining: How the Blockchain Stays Secure
 
-Each node in the network can optionally take part in a process called **mining**. Every so often, nodes which have opted to be miners compete to solve difficult math problems. The winner of this competition creates the next block and receives some Ether as a reward. This incentivizes nodes to secure the network and prevents too much power from being in the hands of any single miner. A block contains a bundle of any pending transactions since the creation of the previous block.
+Each node in the network can optionally take part in a process called **mining**. Every so often, nodes which have opted to be miners compete to solve math problems which secure the contents of the block. The winner of this competition creates the next block and receives some cyptocurrency as a reward. This incentivizes nodes to secure the network and prevents too much power from being in the hands of any single miner. A **block** contains a bundle of any pending transactions since the creation of the previous block.
 
-Once a new block is mined, the other nodes are notified and begin verifying and adding this new block to their local copies of the chain. This verification is possible because of something called **cryptographic hashing** (or simply, hashing). A hash function is a special, one-way program which takes in data and gives back a fixed-length string representing that data. The same data will always produce the same hash, therefore unverified data can be hashed with the same hashing function and compared to the original. If they are identical, the data is verified.
+Once a new block is mined, the other miners are notified and begin verifying and adding this new block to their copies of the chain. That math we referred to earlier is called **cryptographic hashing** (or simply, hashing). A hash function is a special, one-way process which takes in data and gives back a fixed-length string representing that data. While the original data can't be reproduced from its hash, the same data will always produce the same hash. Therefore, unverified data can be hashed with the same function and compared to the original. If they are identical, the data is validated.
 
-Once more than half of the Ethereum network has verified the new block, the network has reached **consensus** on the new block and it is part of the chain's permanent history. It's worth notig a hash cannot be used to access the original data, so it is secure.
+Once more than half of the miners have validated the new block, the network has reached **consensus** on the new block and it is part of the chain's permanent history. Now this data can simply be downloaded (synchronized) by non-mining nodes with its validity assured.
 
 Here's the whole process visually:
 
@@ -40,14 +40,14 @@ Here's the whole process visually:
 
   <div class="col-lg-4">
     ![Ethereum Pet Shop](/tutorials/images/chain-step3.png)
-    <p>3. Miners compete to validate the new set of transactions.</p>
+    <p>3. Miners compete to valid block for the new set of transactions.</p>
   </div>
 </div>
 
 <div class="row">
   <div class="col-lg-4 col-lg-offset-2">
     ![Ethereum Pet Shop](/tutorials/images/chain-step4.png)
-    <p>4. The victorious miner validates the transactions, receving their reward and creating a new block.</p>
+    <p>4. The victorious miner creates a new block and receves a reward.</p>
   </div>
 
   <div class="col-lg-4">
@@ -69,7 +69,7 @@ Ethereum's main chain, called Mainnet, is a public blockchain. This means it's v
 
 ### Private/Enterprise Networks
 
-Companies can start their own Ethereum networks by ... . These networks and their data are private. Because they're generally smaller, these networks can also process transactions faster.
+Companies can start their own Ethereum networks by ...  . These networks and their data are private. Because they're generally smaller, these networks can also process transactions faster.
 
 ### Test Networks
 
