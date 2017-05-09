@@ -93,12 +93,12 @@
     "title": "Ethereum Overview",
     "date": "2017-05-02",
     "author": "Josh Quintal",
-    "published": true
+    "published": false
   },
   "pet-shop": {
     "title": "Ethereum Pet Shop",
     "date": "2017-05-02",
     "author": "Josh Quintal",
-    "published": true
+    "published": false
   }
 }
