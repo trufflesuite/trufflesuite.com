@@ -26,7 +26,7 @@ In this tutorial we will be covering:
 
 Truffle initializes in the current directory. So first, create a directory in your development folder of choice. We're calling ours "pet-shop-tutorial".
 
-```javascript
+```shell
 // Create the directory.
 mkdir pet-shop-tutorial
 
@@ -68,7 +68,7 @@ A few key things to notice:
 
 ### Variable Setup
 
-Solidity is a statically-typed language, meaning data types like strings, integers, arrays etc. much be defined. Solidity has a unique datatype called and **address**. Addresses are Ethereum addresses, which are stored as 20 byte values. Every account and smart contract on the Ethereum blockchain has an address and can send/receive Ether from/to this address.
+Solidity is a statically-typed language, meaning data types like strings, integers, arrays etc. must be defined. Solidity has a unique datatype called and **address**. Addresses are Ethereum addresses, which are stored as 20 byte values. Every account and smart contract on the Ethereum blockchain has an address and can send/receive Ether from/to this address.
 
 Setup the following varialbes on the next line after `contract PetShop {`.
 
@@ -107,7 +107,71 @@ function Adopt(uint pet_id) returns(bool adopted) {
 
 TODO: Explanation of this function.
 
+## Compiling and Migrating the Smart Contract
+
+### Compilation
+
+Solidity is a compiled language, meaning we need to compile our Solidity to bytecode for the EVM to execute. Here we'll compile our contracts to bytecode and put that bytecode on the blockchain so we can interact with it.
+
+Truffle comes with two example smart contracts. Let's delete them so we don't compile or migrate more than we need to. The files are ConvertLib.sol and MetaCoin.sol. DO NOT DELETE Migrations.sol, as we will need this for the next step.
+
+Open a new console window and run the command `testrpc`. This starts a new, local blockchain instance powered by EthereumJS TestRPC. Once the TestRPC boots up, you'll see the current TestRPC version, a list of available accounts and private keys, and a section called HD Wallet. We need to copy the words from the Mnemonic section for use later in our browser.
+
+Back in your first console window, run the command `truffle compile`. You should see the following output:
+
+```shell
+Compiling ./contracts/Migrations.sol...
+Compiling ./contracts/PetShop.sol...
+Writing artifacts to ./build/contracts
+```
+
+### Migration
+
+Now that we've successfully compiled out contracts, it's time to migrate them to the blockchain! A **migration** is...
+
+You'll see two JavaScript files already in the migrations directory: 1_initial_migration.js and 2_deploy_contracts.js. These are executed in their enumerated order. All migration files follow the same basic structure:
+
+*   Import the desired contract artifacts from the build folder.
+*   Export a single, anonymous function taking one argument, `deployer`.
+*   Order a deployment of a given contract with `deployer.deploy(<< CONTRACT_NAME >>)`.
+*   If one contract depends on another, link them using: `deployer.link(<< DEPENDENCY_CONTRACT_NAME >>, << DEPENDENT_CONTRACT_NAME >>)`. Then, deploy the dependency contract using the deployer's deploy command as we did in the previous bullet. For this tutorial, we'll only be working with one contract so no linking is required.
+
+We can leave 1_initial_migration alone; it deploys the Migrations.sol contract to keep track of our migrations so we don't double-migrate unchanged contracts in the future.
+
+Edit the file 2_deploy_contracts.js by removing the unused code pertaining to ConvertLib and Metacoin and replacing it with:
+
+```javascript
+var PetShop = artifacts.require("./PetShop.sol");
+
+module.exports = function(deployer) {
+  deployer.deploy(PetShop);
+};
+```
+
+In the same console window we ran the compile command, run `truffle migrate`. You'll see this output:
+
+```shell
+Using network 'development'.
+
+Running migration: 1_initial_migration.js
+  Deploying Migrations...
+  Migrations: 0x75175eb116b36ff5fef15ebd15cbab01b50b50d1
+Saving successful migration to network...
+Saving artifacts...
+Running migration: 2_deploy_contracts.js
+  Deploying PetShop...
+  PetShop: 0xb9f485451a945e65e48d9dd7fc5d759af0a89e21
+Saving successful migration to network...
+Saving artifacts...
+```
+
+You can see the migrations being executed in order, followed by the blockchain address of each deployed contract (NOTE: Your addresses will differ). Congratulations! You've written your first smart contract and deployed it to a locally running test blockchain. It's time to interact with our smart contrat now to make sure it does what we want.
+
 ## Testing the Smart Contract
+
+Truffle is very flexible when it comes to smart contract testing. Tests can be written either in JavaScript or Solidity. Today we'll be writing our tests in Solidity to separate our concerns. Solidity for back-end, JavaScript for front-end.
+
+
 
 ## Creating a UI to Interact with our Smart Contract
 

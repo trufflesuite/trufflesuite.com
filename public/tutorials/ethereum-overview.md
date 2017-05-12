@@ -4,21 +4,45 @@ You may have heard the terms "blockchain" and "smart contract" floating around, 
 
 In this tutorial we will be covering:
 
+*   Why Use a Blockchain?
 *   What is a Blockchain?
+*   How a Blockchain Stays Secure
 *   What is Ethereum?
 *   What is a Smart Contract?
 *   Blockchain Use-Cases
 *   Review
 
+## Why use a Blockchain?
+
+Before we dive in to what a blockchain is, let's first look at some history and why blockchains came about in the first place.
+
+### In the Beginning: Traditional Databases
+
+From creating web applications you may be familiar with a traditional database. The most common flavors are relational databases (such as MySQL or PostgreSQL) and non-relational databases (MongoDB or CouchDB). Regardless of how these store and access their data, they all have a few things in common:
+
+*   ...
+
+### The Need to Share Data
+
+Problems arise when the data from one entity's database needs to be accessed by someone else. Because the creator of a database has complete control over its contents, that person or entity can create, edit and remove data as they please. This present a **problem of trust**.
+
 ## What is a Blockchain?
 
-A blockchain, at its heart, is a distributed database. This database is called a ledger. Much like a bank, the ledger keeps track of currency (in this case, cryptocurrency) ownership. Unlike a centralized bank, everyone has a copy of the ledger and can verify each other's accounts. This is the *distributed* (or decentalized) part of the blockchain. Each connected device with a copy of the ledger is called a **node**.
+### A Shared Database
+
+A blockchain, at its heart, is a shared database. This database is called a ledger. Much like a bank, the ledger keeps track of currency (in this case, cryptocurrency) ownership. Unlike a centralized bank, everyone has a copy of the ledger and can verify each other's accounts. This is the *distributed* (or decentalized) part of the blockchain. Each connected device with a copy of the ledger is called a **node**.
 
 Interactions between accounts in a blockchain network are called **transactions**. They can be monetary transactions, such as sending someone **Ether**, Ethereum's cryptocurrency. Other times they are transmissions of data, like a comment or username. Every account on the blockchain has a unique signature, which lets us know which account initiated the transaction.
 
-### Hashing & Mining: How the Blockchain Stays Secure
+## How a Blockchain Stays Secure
+
+Blockchain security stuff...
+
+### Mining
 
 Each node in the network can optionally take part in a process called **mining**. Every so often, nodes which have opted to be miners compete to solve math problems which secure the contents of the block. The winner of this competition creates the next block and receives some cyptocurrency as a reward. This incentivizes nodes to secure the network and prevents too much power from being in the hands of any single miner. A **block** contains a bundle of any pending transactions since the creation of the previous block.
+
+### Hashing
 
 Once a new block is mined, the other miners are notified and begin verifying and adding this new block to their copies of the chain. That math we referred to earlier is called **cryptographic hashing** (or simply, hashing). A hash function is a special, one-way process which takes in data and gives back a fixed-length string representing that data. While the original data can't be reproduced from its hash, the same data will always produce the same hash. Therefore, unverified data can be hashed with the same function and compared to the original. If they are identical, the data is validated.
 
@@ -69,7 +93,7 @@ Ethereum's main chain, called Mainnet, is a public blockchain. This means it's v
 
 ### Private/Enterprise Networks
 
-Companies can start their own Ethereum networks by ...  . These networks and their data are private. Because they're generally smaller, these networks can also process transactions faster.
+Companies can start their own Ethereum networks by... (TODO: Awaiting word on whether we recommend certain private chains). These networks and their data are private. Because they're generally smaller, these networks can also process transactions faster.
 
 ### Test Networks
 
