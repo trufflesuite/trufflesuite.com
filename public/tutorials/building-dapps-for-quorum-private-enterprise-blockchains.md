@@ -1,6 +1,6 @@
 # Building dapps for Quorum: Private Enterprise Blockchains
 
-Ethereum is perhaps best defined by its public network, a network where every transaction -- and all participants of each transaction -- are publicly available to anyone looking at its transaction history. Truffle got its start building for the public blockchain: at the time of Ethereum's launch, the public blockchain was the only smart contract blockchain around. However, since launch, technology has changed, most notably with JP Morgan's [Quorum](https://www.jpmorgan.com/country/US/EN/Quorum).
+Ethereum is perhaps best defined by its public network, a network where every transaction -- and all participants of each transaction -- are publicly available to anyone looking at its transaction history. Truffle got its start building for the public blockchain: at the time of Ethereum's launch, the public blockchain was the only smart contract blockchain around. However since launch, technology has changed, most notably with [Quorum](https://github.com/jpmorganchase/quorum/wiki), the permissioned blockchain initially developed by JP Morgan.
 
 Quorum is a version of Ethereum that adds new features on top of what Ethereum already provides. Specifically, Quorum adds the ability to create private blockchains between select participants, and more importantly adds transaction privacy on top of your normal everyday Ethereum transactions. Let's use a quick example: Say Bob, Tom and Alice all create a blockchain together, and Alice wants to send 20 TruffleCoin to Bob. But here's the kicker: she doesn't want Tom (or anyone else other than Bob) to know, because she cares about her privacy. Using Quorum, Alice could easily send a transaction where the transaction data is only available to her and Bob.
 
@@ -12,7 +12,7 @@ This tutorial expects you to have some knowledge of Truffle, Ethereum, Quorum an
 
 * [Truffle documentation](/docs/)
 * [Etheruem overview](https://ethereum.org/)
-* [Quorum overview](https://www.jpmorgan.com/country/US/EN/Quorum) and [documentation](https://github.com/jpmorganchase/quorum-examples)
+* [Quorum overview](https://www.jpmorgan.com/country/US/EN/Quorum) and [documentation](https://github.com/jpmorganchase/quorum/wiki)
 * [Solidity documentation](https://solidity.readthedocs.io/en/develop/)
 
 You will primarily be using the command line for this tutorial. Ensure you have basic familiarity with opening and using the command line provided by your operating system. Additionally, you will need the following software. Ensure it is installed before proceeding:
@@ -36,14 +36,14 @@ Also in this tutorial, you'll see that developing for Quorum using Truffle is _e
 
 The Quorum client is a replacement for the Ethereum client. Using the Quorum client, you can set up a private blockchain that's only available to you and the people you allow to participate.
 
-To set up a Quorum client, open the command line and navigate to a folder which you'd like to install the Quorum example. Here, we chose the folder `workspace`:
+In this example, we're going to use a Quorum cluster of seven nodes -- i.e., seven Quorum clients -- already set up and configured for us inside a virtual machine. You _could_ choose to install Quorum yourself by [downloading it directly](https://github.com/jpmorganchase/quorum) and building it from source, but for this example, using the pre-configured cluster is much easier. To set up the cluster, open the command line and navigate to a folder where you'd like it installed. Here, we chose the folder `workspace`:
 
 ```shell
 $ cd workspace
 $ git clone https://github.com/jpmorganchase/quorum-examples
 ```
 
-Next, we'll want to use `vagrant` (you should have installed it along with VirtualBox above) to initialize the Quorum virtual machine. Note that this step could take up to five minutes as it makes the virtual machine ready for use.
+Next, we'll want to use `vagrant` (you should have installed it along with VirtualBox above) to initialize the cluster's virtual machine. Note that this step could take up to five minutes as it makes the virtual machine ready for use.
 
 ```shell
 $ cd quorum-examples
@@ -84,7 +84,7 @@ ubuntu@ubuntu-xenial:~/quorum-examples/7nodes$ init.sh
 ubuntu@ubuntu-xenial:~/quorum-examples/7nodes$ start.sh
 ```
 
-Success! Our Quorum client set up, with seven nodes we can use to represent seven different actors on our private network.
+Success! We now have seven Quorum nodes set up that we can use to represent seven different actors on our private network.
 
 ## 2. Setting up Truffle
 
