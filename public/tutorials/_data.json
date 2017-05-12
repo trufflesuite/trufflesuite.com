@@ -89,6 +89,18 @@
     "author": "Doug von Kohorn",
     "published": true
   },
+  "ethereum-overview": {
+    "title": "Ethereum Overview",
+    "date": "2017-05-02",
+    "author": "Josh Quintal",
+    "published": false
+  },
+  "pet-shop": {
+    "title": "Ethereum Pet Shop",
+    "date": "2017-05-02",
+    "author": "Josh Quintal",
+    "published": false
+  },
   "building-dapps-for-quorum-private-enterprise-blockchains": {
     "title": "Building dapps for Quorum: Private Enterprise Blockchains",
     "date": "2017-05-07",
