@@ -6,6 +6,8 @@ Quorum is a version of Ethereum that adds new features on top of what Ethereum a
 
 Transaction privacy presents a number of useful use cases, especially in the enterprise and banking worlds. For instance, large banks might want to take advantage of blockchain technologies like Ethereum but don't want their transactions to be publicly available to everyone as a matter of doing business. Quorum presents a useful alternative.
 
+This tutorial represents Truffle's official support for Quorum. By the end of this tutorial you'll learn how to use both Truffle and Quorum together to build privacy-enabled dapps.
+
 ## Requirements
 
 This tutorial expects you to have some knowledge of Truffle, Ethereum, Quorum and Solidity. For more information on these topics, please see the following links:
