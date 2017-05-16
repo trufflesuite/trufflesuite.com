@@ -13,7 +13,7 @@ This tutorial represents Truffle's official support for Quorum. By the end of th
 This tutorial expects you to have some knowledge of Truffle, Ethereum, Quorum and Solidity. For more information on these topics, please see the following links:
 
 * [Truffle documentation](/docs/)
-* [Etheruem overview](https://ethereum.org/)
+* [Ethereum overview](https://ethereum.org/)
 * [Quorum overview](https://www.jpmorgan.com/country/US/EN/Quorum) and [documentation](https://github.com/jpmorganchase/quorum/wiki)
 * [Solidity documentation](https://solidity.readthedocs.io/en/develop/)
 

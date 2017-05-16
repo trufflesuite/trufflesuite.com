@@ -9,7 +9,7 @@ Both styles of tests have their advantages and drawbacks. See the next two secti
 
 # Location
 
-All test files should be located in the `./tests` directory. Truffle will only run test files with the following file extensions: `.js`, `.es`, `.es6`, and `.jsx`, and `.sol`. All other files are ignored.
+All test files should be located in the `./test` directory. Truffle will only run test files with the following file extensions: `.js`, `.es`, `.es6`, and `.jsx`, and `.sol`. All other files are ignored.
 
 # Command
 
