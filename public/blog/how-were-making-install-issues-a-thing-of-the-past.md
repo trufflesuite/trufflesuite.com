@@ -39,7 +39,7 @@ Yep. Feel free to party. We did. 🎉
 
 ## So how can you get it?
 
-Bundling Truffle's dependencies means releasing a version of the code where certain dependencies have been either replaced or removed. This not only means releasing structurally new code, but it means releasing code that has differing testability characteristics which our ability to ensure the quality is what both our users and we expect. We need to build infrastructure to help us do that, so in the meantime **we've released the new version of the code in beta.**
+Bundling Truffle's dependencies means releasing a version of the code where certain dependencies have been either replaced or removed. This not only means releasing structurally new code, but it means releasing code that has differing testability characteristics which change our ability to ensure its of the quality you've come to expect. We need to build infrastructure to help us do that, so in the meantime **we've released the new version of the code in beta.**
 
 To get the beta version of Truffle, first uninstall the version you currently have (they'll conflict):
 
