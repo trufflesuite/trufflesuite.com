@@ -18,7 +18,7 @@ Bottom line: In order to install a Javascript project, Truffle users need both C
 
 ## So what can we do?
 
-Most of the issues people were seeing were due to the compilation process mentioned: Either they didn't have the right compilers/interpreters installed for C and Python, or C and Python _itself_ required some dependency that wasn't properly installed. We've had a [tutorial](/tutorials/how-to-install-truffle-and-testrpc-on-windows-for-blockchain-development) written for awhile that shows Windows users how to correctly set up their environment and get everything installed, but this required considerable effort from novice users and didn't take into account the many landmines hiding around every corner, waiting to explode at any moment. So we can't "instruct" our way around this problem. The only way to fix it, then, is to sidestep it completely.
+Most of the issues people were seeing stem from the compilation process mentioned: Either they didn't have the right compilers/interpreters installed for C and Python, or C and Python _itself_ required some dependency that wasn't properly installed. We've had a [tutorial](/tutorials/how-to-install-truffle-and-testrpc-on-windows-for-blockchain-development) written for awhile that shows Windows users how to correctly set up their environment and get everything installed, but this required considerable effort from novice users and didn't take into account the many landmines hiding around every corner, waiting to explode at any moment. So we can't "instruct" our way around this problem. The only way to fix it, then, is to sidestep it completely.
 
 Sidestepping the compilation process means completely excising any compilation out of the installation process. The way we chose to tackle this is two ways:
 
