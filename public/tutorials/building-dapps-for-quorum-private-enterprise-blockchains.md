@@ -281,7 +281,7 @@ module.exports = function(done) {
 
 This code does two things: First, it asks Truffle to get our contract abstraction for the SimpleStorage contract. Then, it finds the deployed contract and sets the value managed by SimpleStorage to 65, using the contract's `set()` function. As with the migration we wrote previously, the `privateFor` parameter can be appended within an object at the end of the transaction to tell Quorum that this transaction is private between the sender and the account represented by the given public key.
 
-You can run this code using the commnad `truffle exect sampletx.js`. Your output should have looked something like this:
+You can run this code using the commnad `truffle exec sampletx.js`. Your output should have looked something like this:
 
 ```shell
 $ truffle exec sampletx.js
