@@ -10,6 +10,7 @@ When developing your Truffle-based application, we recommend using the [Ethereum
 
 * Geth (go-ethereum): [https://github.com/ethereum/go-ethereum](https://github.com/ethereum/go-ethereum)
 * WebThree (cpp-ethereum): [https://github.com/ethereum/webthree-umbrella](https://github.com/ethereum/webthree-umbrella)
+* Parity: [https://github.com/paritytech/parity](https://github.com/paritytech/parity)
 * More: [https://www.ethereum.org/cli](https://www.ethereum.org/cli)
 
 There are many official and unofficial Ethereum clients available for you to use. You should use these clients after you've sufficiently tested your dapp with the EthereumJS TestRPC and you're ready to deploy to your desired Ethereum network. These are full client implementations that include mining, networking, blocks and transaction processing, and Truffle can deploy to these clients without any extra configuration.
