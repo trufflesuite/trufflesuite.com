@@ -1,5 +1,5 @@
 <div class="pet-shop-header">
-  ![Ethereum Pet Shop](/tutorials/images/petshop.png)
+  ![Ethereum Pet Shop](/tutorials/images/pet-shop/petshop.png)
 </div>
 
 # Ethereum Pet Shop

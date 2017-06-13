@@ -40,7 +40,7 @@ Graphically represented, each arrow crossing a boundary of the main server box i
 <div class="container container-steps text-center">
   <div class="row">
     <div class="col-sm-6 col-sm-push-3">
-      ![Ethereum Pet Shop](/tutorials/images/db-server.png)
+      ![Centralized Database](/tutorials/images/ethereum-overview/db-server.png)
     </div>
   </div>
 </div>
@@ -89,29 +89,29 @@ Here's the whole process visually:
 <div class="container container-steps text-center">
 <div class="row">
   <div class="col-lg-4">
-    ![Ethereum Pet Shop](/tutorials/images/chain-step1.png)
+    ![Mining Step 1](/tutorials/images/ethereum-overview/chain-step1.png)
     <p>1. Bob attempts to send Alice 1 ETH.</p>
   </div>
 
   <div class="col-lg-4">
-    ![Ethereum Pet Shop](/tutorials/images/chain-step2.png)
+    ![Mining Step 2](/tutorials/images/ethereum-overview/chain-step2.png)
     <p>2. Bob and Alice's transaction is combined with other transactions that have occured since the last block.</p>
   </div>
 
   <div class="col-lg-4">
-    ![Ethereum Pet Shop](/tutorials/images/chain-step3.png)
+    ![Mining Step 3](/tutorials/images/ethereum-overview/chain-step3.png)
     <p>3. Miners compete to valid block for the new set of transactions.</p>
   </div>
 </div>
 
 <div class="row">
   <div class="col-lg-4 col-lg-offset-2">
-    ![Ethereum Pet Shop](/tutorials/images/chain-step4.png)
+    ![Mining Step 4](/tutorials/images/ethereum-overview/chain-step4.png)
     <p>4. The victorious miner creates a new block and receves a reward.</p>
   </div>
 
   <div class="col-lg-4">
-    ![Ethereum Pet Shop](/tutorials/images/chain-step5.png)
+    ![Mining Step 5](/tutorials/images/ethereum-overview/chain-step5.png)
     <p>5. With the transaction validated, Alice receives 1 ETH.</p>
   </div>
 </div>
@@ -134,17 +134,17 @@ Here's a smart contract example with Bob and Alice again. This time, they're usi
 <div class="container container-steps text-center">
 <div class="row">
   <div class="col-lg-4">
-    ![Ethereum Pet Shop](/tutorials/images/smart-contract-step1.png)
+    ![Smart Contract Step 1](/tutorials/images/ethereum-overview/smart-contract-step1.png)
     <p>1. Alice wants to hire Bob to build her a patio. To keep both parties honest, Alice agrees to store her payment and Bob an equal amount of collateral in an escrow smart contract.</p>
   </div>
 
   <div class="col-lg-4">
-    ![Ethereum Pet Shop](/tutorials/images/smart-contract-step2.png)
+    ![Smart Contract Step 2](/tutorials/images/ethereum-overview/smart-contract-step2.png)
     <p>2. Bob completes the patio and Alice is thrilled! She gives the smart contract permission to release the funds.</p>
   </div>
 
   <div class="col-lg-4">
-    ![Ethereum Pet Shop](/tutorials/images/smart-contract-step3.png)
+    ![Smart Contract Step 3](/tutorials/images/ethereum-overview/smart-contract-step3.png)
     <p>3. Bob receives his collateral of 1 ETH along with Alice's payment of 1 ETH.</p>
   </div>
 </div>
@@ -181,20 +181,14 @@ Private chains, being based on Ethereum, run the EVM and are therefore compatibl
 
 ## Dapps (Distributed Applications)
 
-Applications using smart contracts for most of all of their processing are called **Dapps**, short for distributed applications.
+Applications using smart contracts for most of all of their processing are called **dapps**, short for distributed applications. The user interfaces for these dapps consists of languages you may already know: HTML, CSS and JavaScript. These files can be hosted on a traditional trusted web server or trustlessly on a decentralized file service such as [Swarm](http://swarm-gateways.net/bzz:/theswarm.eth/) or [IPFS](http://ipfs.io/).
 
-### Potential Use-Cases
-
-Blockchains enable sharing of information between people or businesses who may not know each other directly. With that in mind, blockchains are a great fit for many industries, including but not limited to:
+Given the benefits of the Ethereum blockchain, a dapp could be a solution for many industries, including but not limited to:
 
 *   Record Keeping
-*   Currency
+*   Currency (Finance)
 *   Supply Chains
 *   Real-Estate
 *   Marketplaces
-
-## Review
-
-So to review, a blockchain is a distributed database whose integrity is protected and verified by cryptography and consensus. Etherum adds a new layer on top of this, called the Ethereum Virtual Machine (EVM), which allows the blockchain to store and execute arbitrary programs. These programs are called smart contracts.
 
 Ready to build your first distributed application (Dapp)? Check out [our Pet Shop tutorial](/tutorials/pet-shop).
