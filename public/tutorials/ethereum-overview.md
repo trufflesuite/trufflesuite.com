@@ -1,42 +1,78 @@
-# Ethereum Overview
+# Blockchains 101 feat. Ethereum
 
-You may have heard the terms "blockchain" and "smart contract" floating around, but what do they acutually mean? We'll demystify the jargon, show you practical blockchain solutions and give you some direction on how to create them. This is a high level overview, and as such will leave out some things that aren't essential to a general understanding of a blockchain. Links for more in-depth reading are provided in the Review section.
+You may have heard the terms "blockchain" and "smart contract" floating around, but what do they actually mean? We'll demystify the jargon, show you practical blockchain solutions and give you some direction on how to create them. This is a high level overview covering:
 
-In this tutorial we will be covering:
+<div class="container">
+<div class="row">
+<div class="col-sm-6">
+**Blockchain Basics**
+<ul>
+<li>Why Use a Blockchain?</li>
+<li>What is a Blockchain?</li>
+<li>How a Blockchain Works</li>
+</ul>
+</div>
 
-*   Why Use a Blockchain?
-*   What is a Blockchain?
-*   How a Blockchain Stays Secure
-*   What is Ethereum?
-*   What is a Smart Contract?
-*   Blockchain Use-Cases
-*   Review
+<div class="col-sm-6">
+**The Ethereum Blockchain**
+<ul>
+<li>What is Ethereum?</li>
+<li>What is a Smart Contract?</li>
+<li>Ethereum Networks</li>
+<li>Distributed Applications (Dapps)</li>
+</ul>
+</div>
+</div>
+</div>
 
-## Why use a Blockchain?
+## Why Use a Blockchain?
 
-Before we dive in to what a blockchain is, let's first look at some history and why blockchains came about in the first place.
+Blockchains are a great fit for situations where multiple parties need to share data without trusting each other. Before we further define how a blockchain achieves this, let's first look at some history and where the need for blockchains arose.
 
-### In the Beginning: Traditional Databases
+### The First Databases
 
-From creating web applications you may be familiar with a traditional database. The most common flavors are relational databases (such as MySQL or PostgreSQL) and non-relational databases (MongoDB or CouchDB). Regardless of how these store and access their data, they all have a few things in common:
+In the 1960s the first computerized databases emerged. With hardware occupying multiple rooms and the Internet decades away, data naturally existed in central, physical locations. This is a *centralized* approach, meaning the location and accessing of data is controlled by a central authority. Centralized systems can be manipulated, from inside or outside bad actors, so we trust the owners of these systems have sufficient will and resources to keep their data secure and preserve its integrity. Centralized databases are still the most common today, powering most of our online and offline applications.
 
-*   ...
+A self-hosted blog is a common use of a centralized database. The owner could edit posts in hindsight to look better or censor users without recourse. Even with an upstanding owner, a hacker could infiltrate the server and commit malicious acts. If there is no database backup, determining what's changed and reversing the damage might be impossible.
+
+Graphically represented, each arrow crossing a boundary of the main server box is a connection which requires trust.
+
+<div class="container container-steps text-center">
+  <div class="row">
+    <div class="col-sm-6 col-sm-push-3">
+      ![Ethereum Pet Shop](/tutorials/images/db-server.png)
+    </div>
+  </div>
+</div>
 
 ### The Need to Share Data
 
-Problems arise when the data from one entity's database needs to be accessed by someone else. Because the creator of a database has complete control over its contents, that person or entity can create, edit and remove data as they please. This present a **problem of trust**.
+Sharing large amounts of data can be expensive and cumbersome. We can ease this burden by distributing data across parties needing to share. Reading and/or writing are controlled by one or more parties within the group and therefore subject to similar corruptions as centralized databases.
+
+Modern shared databases use techniques to minimize this corruption. Some of these overlap with blockchains. Depending on the shared database system, it may feature:
+
+*   Immutability: Rather than overwriting old data, a new copy is created with the old data retained as a historical record. This record can be access to prove a piece of data existed at a certain time.
+*   Consensus: For a database to be shared, all parties must agree (reach consensus) on its contents. There are various methods of reaching consensus, one of which (Proof of Work) we'll discuss in the context of a blockchain below.
+
+Blockchains use these and take them a step further, completely solving the problem of trust.
 
 ## What is a Blockchain?
 
-### A Shared Database
-
-A blockchain, at its heart, is a shared database. This database is called a ledger. Much like a bank, the ledger keeps track of currency (in this case, cryptocurrency) ownership. Unlike a centralized bank, everyone has a copy of the ledger and can verify each other's accounts. This is the *distributed* (or decentalized) part of the blockchain. Each connected device with a copy of the ledger is called a **node**.
+A blockchain, at its heart, is a shared database. This database is called a ledger. Much like a bank, the ledger keeps track of currency (in this case, cryptocurrency) ownership. Unlike a centralized bank, everyone has a copy of the ledger and can verify each other's accounts. This is the *distributed* (or decentralized) part of the blockchain. Each connected device with a copy of the ledger is called a **node**.
 
 Interactions between accounts in a blockchain network are called **transactions**. They can be monetary transactions, such as sending someone **Ether**, Ethereum's cryptocurrency. Other times they are transmissions of data, like a comment or username. Every account on the blockchain has a unique signature, which lets us know which account initiated the transaction.
 
-## How a Blockchain Stays Secure
+Blockchains eliminate this problem of trust with some key advantages over previous databases:
 
-Blockchain security stuff...
+*   Full Decentralization: Reading/writing to the database is completely decentralized and secure. No single person or group controls a blockchain.
+*   Extreme Fault Tolerance: Fault tolerance is the ability of a system to handle corrupt data. While fault tolerance is not unique to blockchains, they take the concept to its logical extreme by having every person sharing the database validate its changes.
+*   Independent Verification: Transactions can be verified by anyone, without a third party. This is sometimes referred to as disintermediation.
+
+Now that we have some idea of why blockchains are useful, let's dive deeper into how they work.
+
+## How a Blockchain Works
+
+On a public blockchain, anyone can read or write data. Reading data is free, but writing to the public chain costs money. This cost helps discourage spam and pays to secure the network. Any node on the network can take part in securing the network through a process called mining. Since mining requires computing power and therefore electricity cost, miners are compensated for their service.
 
 ### Mining
 
@@ -83,25 +119,9 @@ Here's the whole process visually:
 
 ## What is Ethereum?
 
-Ethereum adds a virtual machine, called the **EVM (Ethereum Virtual Machine)**, on top of the blockchain. The EVM allows code to be verified and executed on the blockchain. This code is called a Smart Contract (more on these below).
+More than a database, Ethereum allows you run programs in a blockchain's trusted environment. Ethereum adds a virtual machine, called the **EVM (Ethereum Virtual Machine)**, on top of the blockchain. The EVM allows code to be verified and executed on the blockchain. This code is contained in Smart Contracts (more on these below).
 
-Rather than just tracking account balances, the Ethereum blockchain uses the same methods to keep the state of the EVM on the blockchain. All nodes process smart contracts to verify the integrity of the contracts themselves their outputs.
-
-Ethereum's main chain, called Mainnet, is a public blockchain. This means it's very secure, as anyone from the public can add a device and begin verifying transactions. A tradeoff to this is that any data you put on the chain, including your account balances and transactions, are public.
-
-*Wait, all the data is public? What if I want it kept private?* Glad you asked! Sounds like you could use an enterprise Ethereum chain.
-
-### Private/Enterprise Networks
-
-Companies can start their own Ethereum networks by... (TODO: Awaiting word on whether we recommend certain private chains). These networks and their data are private. Because they're generally smaller, these networks can also process transactions faster.
-
-### Test Networks
-
-Another special type of chain on the Ethereum network is a test network. These can be local simulations of the blockchain (esentially your local LAMP install vs. a Linux server) or live, public test networks. The two test networks currently running are Ropsten and Kovan.
-
-**Ropsten** is the official public testnet, used for testing Ethereum applications in the wild before finally deploying to Mainnet.
-
-**Kovan** is a testnet that uses a consensus method called "proof of authority". This means its transactions are validated by select members, leading to a consistent 4 second block time. The supply of Ether on this testnet is also controlled to mitigate spam attacks. Information on this chain is public.
+Rather than just tracking account balances, Ethereum uses the same methods to keep the state of the EVM on the blockchain. All nodes process smart contracts to verify the integrity of the contracts themselves their outputs.
 
 ## What is a Smart Contract?
 
@@ -130,7 +150,40 @@ Here's a smart contract example with Bob and Alice again. This time, they're usi
 </div>
 </div>
 
-## Blockchain Use-Cases
+## Ethereum Networks
+
+Up to this point we've been describing the **main network** (or **MainNet**), Ethereum's public blockchain. Anyone can create a node and begin verifying transactions; therefore, it's highly secure. Data on the chain, including account balances and transactions, are public. Ether on this network has a market value and can be exchanged for other cryptocurrency or fiat currencies like US Dollars.
+
+Apart from the MainNet, there are test networks (both local and public), as well as private networks.
+
+### Local Test Networks
+
+The Ethereum blockchain can be simulated locally for development. Local test networks process transactions instantly and Ether can be distributed as desired. An array of Ethereum simulators exist; we recommend our own, [Ganache](https://github.com/trufflesuite/ganache).
+
+### Public Test Networks
+
+These test networks are live and public. Ether on these networks is for testing purposes only and has no monetary value. Because these networks are public and the currency is freely available, developers use them to test Ethereum applications before final deployment to the main network.
+
+**Ropsten**: The official test network, created by [The Ethereum Foundation](https://www.ethereum.org/foundation).
+
+**Kovan**: A public test network that uses a consensus method called "proof of authority". This means its transactions are validated by select members, leading to a consistent 4 second block time. The supply of Ether on this testnet is also controlled to mitigate spam attacks. Information on this chain is public. Kovan was created by [Parity Technologies](https://parity.io/), and requires their Parity Ethereum client.
+
+**Rinkeby**: An official public testnet also using proof of authority. It's accessible by any Ethereum client and created by The Ethereum Foundation.
+
+### Private/Enterprise Networks
+
+Private Ethereum networks allow parties to share data without making it publicly accessible. A private blockchain is a good choice for:
+
+*   Sharing of sensitive data, such as health care records, that isn't allowed or desired to be public.
+*   Groups with a need for massive scale. With a smaller network size, private blockchains can scale to larger sizes and handle heavier read/write throughput than public chains.
+
+Private chains, being based on Ethereum, run the EVM and are therefore compatible with Truffle and other development tools. [JP Morgan's Quorum](https://www.jpmorgan.com/country/US/EN/Quorum) is a great example that works with Truffle. [Check out our blog for more on using Truffle with Quorum](/tutorials/building-dapps-for-quorum-private-enterprise-blockchains).
+
+## Dapps (Distributed Applications)
+
+Applications using smart contracts for most of all of their processing are called **Dapps**, short for distributed applications.
+
+### Potential Use-Cases
 
 Blockchains enable sharing of information between people or businesses who may not know each other directly. With that in mind, blockchains are a great fit for many industries, including but not limited to:
 
