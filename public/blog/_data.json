@@ -16,5 +16,11 @@
     "date": "2017-06-05",
     "author": "Tim Coulter",
     "published": true
+  },
+  "removing-installation-issues-continued-testrpc": {
+    "title": "Removing installation issues, con't: TestRPC",
+    "date": "2017-06-13",
+    "author": "Tim Coulter",
+    "published": false
   }
 }
