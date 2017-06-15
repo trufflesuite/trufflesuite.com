@@ -27,7 +27,7 @@ You may have heard the terms "blockchain" and "smart contract" floating around, 
 
 ## Why Use a Blockchain?
 
-Blockchains are a great fit for situations where multiple parties need to share data without trusting each other. Before we further define how a blockchain achieves this, let's first look at some history and where the need for blockchains arose.
+Blockchains are used when multiple parties, perhaps located across the world, need to share data and transfer value without trusting each other. The financial world describes this trust as the "counterparty risk" -- i.e., what's the risk that the other party won't hold up their end of the bargain? Blockchains completely remove the counterparty risk through a revolutionary system of mathematics, cryptography and peer-to-peer networking. Before we go into detail about how they work, let's first look at some history and how the need for blockchains arose.
 
 ### The First Databases
 
@@ -58,9 +58,9 @@ Blockchains use these and take them a step further, completely solving the probl
 
 ## What is a Blockchain?
 
-A blockchain, at its heart, is a shared database. This database is called a ledger. Much like a bank, the ledger keeps track of currency (in this case, cryptocurrency) ownership. Unlike a centralized bank, everyone has a copy of the ledger and can verify each other's accounts. This is the *distributed* (or decentralized) part of the blockchain. Each connected device with a copy of the ledger is called a **node**.
+A blockchain, at its heart, is a shared database. This database is called a ledger. Much like a bank, the ledgers of simple blockchains keep track of currency (in this case, cryptocurrency) ownership. Unlike a centralized bank, everyone has a copy of the ledger and can verify each other's accounts. This is the *distributed* (or decentralized) part of the blockchain. Each connected device with a copy of the ledger is called a **node**.
 
-Interactions between accounts in a blockchain network are called **transactions**. They can be monetary transactions, such as sending someone **Ether**, Ethereum's cryptocurrency. Other times they are transmissions of data, like a comment or username. Every account on the blockchain has a unique signature, which lets us know which account initiated the transaction.
+Interactions between accounts in a blockchain network are called **transactions**. They can be monetary transactions, such as sending someone **Ether**, Ethereum's cryptocurrency. Other times they are transmissions of data, like a comment or username. Every account on the blockchain has a unique signature, which lets everyone know which account initiated the transaction.
 
 Blockchains eliminate this problem of trust with some key advantages over previous databases:
 
@@ -76,13 +76,13 @@ On a public blockchain, anyone can read or write data. Reading data is free, but
 
 ### Mining
 
-Each node in the network can optionally take part in a process called **mining**. Every so often, nodes which have opted to be miners compete to solve math problems which secure the contents of the block. The winner of this competition creates the next block and receives some cyptocurrency as a reward. This incentivizes nodes to secure the network and prevents too much power from being in the hands of any single miner. A **block** contains a bundle of any pending transactions since the creation of the previous block.
+Each node in the network can optionally take part in a process called **mining**. Every so often, nodes which have opted to be miners compete to solve math problems which secure the contents of a block. A **block** is a bundle of any pending transactions created since the addition of the most recent block in the chain. The winner of the competition creates the next block and receives some cyptocurrency as a reward. This incentivizes nodes to secure the network, preventing too much power from being in the hands of any single miner.
 
 ### Hashing
 
 Once a new block is mined, the other miners are notified and begin verifying and adding this new block to their copies of the chain. That math we referred to earlier is called **cryptographic hashing** (or simply, hashing). A hash function is a special, one-way process which takes in data and gives back a fixed-length string representing that data. While the original data can't be reproduced from its hash, the same data will always produce the same hash. Therefore, unverified data can be hashed with the same function and compared to the original. If they are identical, the data is validated.
 
-Once more than half of the miners have validated the new block, the network has reached **consensus** on the new block and it is part of the chain's permanent history. Now this data can simply be downloaded (synchronized) by non-mining nodes with its validity assured.
+Once more than half of the miners have validated the new block, the network has reached **consensus** on the new block and it becomes part of the chain's permanent history. Now this data can simply be downloaded (synchronized) by non-mining nodes with its validity assured.
 
 Here's the whole process visually:
 
@@ -100,7 +100,7 @@ Here's the whole process visually:
 
   <div class="col-lg-4">
     ![Mining Step 3](/tutorials/images/ethereum-overview/chain-step3.png)
-    <p>3. Miners compete to valid block for the new set of transactions.</p>
+    <p>3. Miners compete to validate the block with the new set of transactions.</p>
   </div>
 </div>
 
@@ -119,23 +119,23 @@ Here's the whole process visually:
 
 ## What is Ethereum?
 
-More than a database, Ethereum allows you run programs in a blockchain's trusted environment. Ethereum adds a virtual machine, called the **EVM (Ethereum Virtual Machine)**, on top of the blockchain. The EVM allows code to be verified and executed on the blockchain. This code is contained in Smart Contracts (more on these below).
+More than a database, Ethereum allows you run programs in a blockchain's trusted environment. Ethereum adds a virtual machine, called the **EVM (Ethereum Virtual Machine)**, on top of the blockchain. The EVM allows code to be verified and executed on the blockchain, providing guarantees that code will be run the same way on everyone's machine. This code is contained in Smart Contracts (more on these below).
 
-Rather than just tracking account balances, Ethereum uses the same methods to keep the state of the EVM on the blockchain. All nodes process smart contracts to verify the integrity of the contracts themselves their outputs.
+Rather than just tracking account balances, Ethereum uses the same methods to keep the state of the EVM on the blockchain. All nodes process smart contracts to verify the integrity of the contracts themselves and their outputs.
 
 ## What is a Smart Contract?
 
 **Smart Contracts** are programs running on the EVM. They most closely resemble classes in other programming languages. Smart Contracts can accept and store Ether, data, or a combination of both. Then, using the logic programmed into the contract, it can distribute that Ether to other accounts or even other smart contracts. You can see how complex systems can develop from this flexibility.
 
-The language smart contracts are written in is called **Solidity**. Solidity is is statically typed, supports inheritance, libraries and complex user-defined types among other features. It's file extension is ".sol". Solidity's syntax is similar to JavaScript's. We'll go over the basics of Solidity in our [our Pet Shop tutorial](/tutorials/pet-shop), but you may also want to dive deeper by checking out [the documentation](https://solidity.readthedocs.io/en/develop/).
+The language smart contracts are written in is called **Solidity**. Solidity is statically typed, supports inheritance, libraries and complex user-defined types among other features. It's file extension is ".sol". Solidity's syntax is similar to JavaScript's. We'll go over the basics of Solidity in future tutorials, but you may also want to dive deeper by checking out [the documentation](https://solidity.readthedocs.io/en/develop/).
 
-Here's a smart contract example with Bob and Alice again. This time, they're using an escrow (a place to store money until a condidtion is fulfilled) to store their Ether before the final transaction.
+Here's a smart contract example with Bob and Alice again. This time, they're using an escrow contract (a place to store money until a condition is fulfilled) to store their Ether before the final transaction.
 
 <div class="container container-steps text-center">
 <div class="row">
   <div class="col-lg-4">
     ![Smart Contract Step 1](/tutorials/images/ethereum-overview/smart-contract-step1.png)
-    <p>1. Alice wants to hire Bob to build her a patio. To keep both parties honest, Alice agrees to store her payment and Bob an equal amount of collateral in an escrow smart contract.</p>
+    <p>1. Alice wants to hire Bob to build her a patio. To keep both parties honest, Alice agrees to store her payment for the patio within the escrow contract, and Bob agrees to deposit an equal amount in the contract as well.</p>
   </div>
 
   <div class="col-lg-4">
@@ -149,6 +149,8 @@ Here's a smart contract example with Bob and Alice again. This time, they're usi
   </div>
 </div>
 </div>
+
+In a more complex escrow contract, if Bob were to fail to build the patio or if he were to perform a poor job, provisions could be written into the contract's code releasing Bob's collateral to Alice instead.
 
 ## Ethereum Networks
 
@@ -164,11 +166,11 @@ The Ethereum blockchain can be simulated locally for development. Local test net
 
 These test networks are live and public. Ether on these networks is for testing purposes only and has no monetary value. Because these networks are public and the currency is freely available, developers use them to test Ethereum applications before final deployment to the main network.
 
-**Ropsten**: The official test network, created by [The Ethereum Foundation](https://www.ethereum.org/foundation).
+- **Ropsten**: The official test network, created by [The Ethereum Foundation](https://www.ethereum.org/foundation).
 
-**Kovan**: A public test network that uses a consensus method called "proof of authority". This means its transactions are validated by select members, leading to a consistent 4 second block time. The supply of Ether on this testnet is also controlled to mitigate spam attacks. Information on this chain is public. Kovan was created by [Parity Technologies](https://parity.io/), and requires their Parity Ethereum client.
+- **Kovan**: A public test network that uses a consensus method called "proof of authority". This means its transactions are validated by select members, leading to a consistent 4 second block time. The supply of Ether on this testnet is also controlled to mitigate spam attacks. Information on this chain is public. Kovan was created by [Parity Technologies](https://parity.io/), and requires their Parity Ethereum client.
 
-**Rinkeby**: An official public testnet also using proof of authority. It's accessible by any Ethereum client and created by The Ethereum Foundation.
+- **Rinkeby**: An official public testnet also using proof of authority. It's accessible by any Ethereum client and created by The Ethereum Foundation.
 
 ### Private/Enterprise Networks
 
@@ -177,11 +179,11 @@ Private Ethereum networks allow parties to share data without making it publicly
 *   Sharing of sensitive data, such as health care records, that isn't allowed or desired to be public.
 *   Groups with a need for massive scale. With a smaller network size, private blockchains can scale to larger sizes and handle heavier read/write throughput than public chains.
 
-Private chains, being based on Ethereum, run the EVM and are therefore compatible with Truffle and other development tools. [JP Morgan's Quorum](https://www.jpmorgan.com/country/US/EN/Quorum) is a great example that works with Truffle. [Check out our blog for more on using Truffle with Quorum](/tutorials/building-dapps-for-quorum-private-enterprise-blockchains).
+Private chains, being based on Ethereum, run the EVM and are therefore compatible with Truffle and other development tools. [Quorum](https://www.jpmorgan.com/country/US/EN/Quorum), originally written by JP Morgan, is a great example that works with Truffle. [Check out our blog for more on using Truffle with Quorum](/tutorials/building-dapps-for-quorum-private-enterprise-blockchains).
 
 ## Dapps (Distributed Applications)
 
-Applications using smart contracts for most of all of their processing are called **dapps**, short for distributed applications. The user interfaces for these dapps consists of languages you may already know: HTML, CSS and JavaScript. These files can be hosted on a traditional trusted web server or trustlessly on a decentralized file service such as [Swarm](http://swarm-gateways.net/bzz:/theswarm.eth/) or [IPFS](http://ipfs.io/).
+Applications using smart contracts for most if not all of their backend processing are called **dapps**, short for distributed applications. The user interfaces for these dapps consists of languages you may already know: HTML, CSS and JavaScript. These files can be hosted on a traditional trusted web server or trustlessly on a decentralized file service such as [Swarm](http://swarm-gateways.net/bzz:/theswarm.eth/) or [IPFS](http://ipfs.io/).
 
 Given the benefits of the Ethereum blockchain, a dapp could be a solution for many industries, including but not limited to:
 
@@ -191,4 +193,4 @@ Given the benefits of the Ethereum blockchain, a dapp could be a solution for ma
 *   Real-Estate
 *   Marketplaces
 
-Ready to build your first distributed application (Dapp)? Check out [our Pet Shop tutorial](/tutorials/pet-shop).
+And the list goes on. We'll be providing detailed examples of how to build your own dapps in the near future, so bookmark this tutorial, and stay tuned.
