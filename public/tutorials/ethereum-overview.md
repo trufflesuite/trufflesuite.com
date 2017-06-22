@@ -1,4 +1,4 @@
-# Blockchains 101 feat. Ethereum
+# Ethereum Overview
 
 You may have heard the terms "blockchain" and "smart contract" floating around, but what do they actually mean? We'll demystify the jargon, show you practical blockchain solutions and give you some direction on how to create them. This is a high level overview covering:
 
@@ -27,7 +27,7 @@ You may have heard the terms "blockchain" and "smart contract" floating around, 
 
 ## Why Use a Blockchain?
 
-Blockchains are used when multiple parties, perhaps located across the world, need to share data and transfer value without trusting each other. The financial world describes this trust as the "counterparty risk" -- i.e., what's the risk that the other party won't hold up their end of the bargain? Blockchains completely remove the counterparty risk through a revolutionary system of mathematics, cryptography and peer-to-peer networking. Before we go into detail about how they work, let's first look at some history and how the need for blockchains arose.
+Blockchains are used when multiple parties, perhaps located across the world, need to share data and transfer value without trusting each other. The financial world describes this trust as the **counterparty risk**, i.e. what's the risk that the other party won't hold up their end of the bargain? Blockchains completely remove the counterparty risk through a revolutionary system of mathematics, cryptography and peer-to-peer networking. Before we go into detail about how they work, let's first look at some history and how the need for blockchains arose.
 
 ### The First Databases
 
@@ -166,11 +166,9 @@ The Ethereum blockchain can be simulated locally for development. Local test net
 
 These test networks are live and public. Ether on these networks is for testing purposes only and has no monetary value. Because these networks are public and the currency is freely available, developers use them to test Ethereum applications before final deployment to the main network.
 
-- **Ropsten**: The official test network, created by [The Ethereum Foundation](https://www.ethereum.org/foundation).
-
-- **Kovan**: A public test network that uses a consensus method called "proof of authority". This means its transactions are validated by select members, leading to a consistent 4 second block time. The supply of Ether on this testnet is also controlled to mitigate spam attacks. Information on this chain is public. Kovan was created by [Parity Technologies](https://parity.io/), and requires their Parity Ethereum client.
-
-- **Rinkeby**: An official public testnet also using proof of authority. It's accessible by any Ethereum client and created by The Ethereum Foundation.
+*   **Ropsten**: The official test network, created by [The Ethereum Foundation](https://www.ethereum.org/foundation).
+*   **Kovan**: A public test network that uses a consensus method called "proof of authority". This means its transactions are validated by select members, leading to a consistent 4 second block time. The supply of Ether on this testnet is also controlled to mitigate spam attacks. Information on this chain is public. Kovan was created by [Parity Technologies](https://parity.io/), and requires their Parity Ethereum client.
+*   **Rinkeby**: An official public testnet also using proof of authority. It's accessible by any Ethereum client and created by The Ethereum Foundation.
 
 ### Private/Enterprise Networks
 
@@ -193,4 +191,4 @@ Given the benefits of the Ethereum blockchain, a dapp could be a solution for ma
 *   Real-Estate
 *   Marketplaces
 
-And the list goes on. We'll be providing detailed examples of how to build your own dapps in the near future, so bookmark this tutorial, and stay tuned.
+...and the list goes on. We'll be providing detailed examples of how to build your own dapps in the near future, so bookmark this tutorial, and stay tuned.
