@@ -1,4 +1,4 @@
-<section class="BallotinSingleContainer">
+<section class="BallotinSingleContainer" data-box="truffle-box-auth" data-user="truffle-box">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
@@ -7,71 +7,18 @@
     </div>
 
     <div class="row">
-      <div class="col-xs-12 col-md-7 BoxMarkdown">
-        <p>This box adds react-router, redux and redux-auth-wrapper for authentication powered by a smart contract. Great for building your own auth system.</p>
-
-        <h2>Configuration</h2>
-        <ol>
-          <li>
-            <p>Install truffle and an ethereum client. For local development, try EthereumJS TestRPC.</p>
-            <div class="highlight highlight-source-js"><pre>npm install <span class="pl-k">-</span>g truffle <span class="pl-c"><span class="pl-c">//</span> Version 3.0.5+ required.</span>
-            npm install <span class="pl-k">-</span>g ethereumjs<span class="pl-k">-</span>testrpc</pre></div>
-          </li>
-          <li>
-            <p>Clone or download the truffle box of your choice.</p>
-            <div class="highlight highlight-source-js"><pre>git clone [repo]</pre></div>
-          </li>
-          <li>
-            <p>Install the node dependencies.</p>
-            <div class="highlight highlight-source-js"><pre>npm install</pre></div>
-          </li>
-          <li>
-            <p>Compile and migrate the contracts.</p>
-            <div class="highlight highlight-source-js"><pre>truffle compile
-            truffle migrate</pre></div>
-          </li>
-          <li>
-            <p>Run the webpack server for front-end hot reloading. For now, smart contract changes must be manually recompiled and migrated.</p>
-            <div class="highlight highlight-source-js"><pre>npm run start</pre></div>
-          </li>
-          <li>
-            <p>Jest is included for testing React components and Truffle's own suite is incldued for smart contracts. Be sure you've compile your contracts before running jest, or you'll receive some file not found errors.</p>
-            <div class="highlight highlight-source-js"><pre><span class="pl-c"><span class="pl-c">//</span> Runs Jest for component tests.</span>
-            npm run test
-
-            <span class="pl-c"><span class="pl-c">//</span> Runs Truffle's test suite for smart contract tests.</span>
-            truffle test</pre></div>
-          </li>
-          <li>
-            <p>To build the application for production, use the build command. A production build will be in the build_webpack folder.</p>
-            <div class="highlight highlight-source-js"><pre>npm run build</pre></div>
-          </li>
-        </ol>
-
-        <h2>FAQ</h2>
-
-        <ul>
-          <li>
-            <p><strong>Why is there both a truffle.js file and a truffle-config.js file?</strong></p>
-            <p>Truffle requires the truffle.js file be named truffle-config on Windows machines. Feel free to delete the file that doesn't correspond to your platform.</p>
-          </li>
-          <li>
-            <p><strong>Where is my production build?</strong></p>
-            <p>The production build will be in the build_webpack folder. This is because Truffle outputs contract compilations to the build folder.</p>
-          </li>
-          <li>
-            <p><strong>Where can I find more documentation?</strong></p>
-            <p>All truffle boxes are a marriage of <a href="http://truffleframework.com/">Truffle</a> and a React setup created with <a href="https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md">create-react-app</a>. Either one would be a great place to start!</p>
-          </li>
-        </ul>
+      <div class="col-xs-12 col-md-7 BoxReadme" id="BoxReadme">
+        <div class="alert alert-info" role="alert">Loading readme...</div>
       </div>
 
       <div class="col-xs-12 col-md-4 col-md-offset-1">
         <div class="row Sidebar">
           <div class="col-xs-12 col-sm-6 col-md-12">
             <section class="FeatureCard">
-              <a href="/ballotin/boxes/truffle-react-auth"><div class="FeatureBody FeatureImage hidden-xs" style="background: url(https://truffle-box.github.io/img/tb-auth.png), #0C1A2B;"></div></a>
-              <a href="/ballotin/boxes/truffle-react-auth"><div class="FeatureBody FeatureImage visible-xs" style="background: url(/images/ballotin/truffle-react-auth-banner.png), #0C1A2B;"></div></a>
+              <div class="FeatureBody withImage">
+                <img class="FeatureImageLg" src="https://github.com/truffle-box/truffle-box-auth/blob/master/box-img-lg.png?raw=true" alt="truffle-box-auth" onerror="javascript:this.src='/images/ballotin/loading-thumb.png'" />
+                <img class="FeatureImageSm" src="https://github.com/truffle-box/truffle-box-auth/blob/master/box-img-sm.png?raw=true" alt="truffle-box-auth" onerror="javascript:this.src='/images/ballotin/loading-banner.png'" />
+              </div>
 
               <footer class="BoxRundown">
                 <ul class="BoxRundownList">
@@ -99,11 +46,11 @@
                     </ul>
                   </li>
                   <li><strong>Created</strong><br/><hr/></li>
-                  <li>3/15/17</li>
+                  <li id="BoxDateCreated">X-X-X</li>
                   <li><strong>Last Updated</strong><br/><hr/></li>
-                  <li>6/7/17</li>
+                  <li id="BoxDateUpdated">X-X-X</li>
                   <li><strong>Stars</strong><br/><hr/></li>
-                  <li><span class="GitHubStarIcon">🟊</span> 17</li>
+                  <li><a class="github-button" href="https://github.com/truffle-box/truffle-box-react" data-icon="octicon-star" data-show-count="true" data-size="large" aria-label="Star truffle-box/truffle-box-react on GitHub">Star</a></li>
                 </ul>
               </footer>
             </section>
@@ -113,13 +60,13 @@
             <section class="FeatureCard">
               <div class="FeatureBody">
                 <h3>Installing</h3>
-                <p>Run this command to create a new truffle project with this box:</p>
-                <p><pre>truffle init truffle-react-auth</pre></p>
+                <p>Run this command to create a new Truffle project with this box:</p>
+                <p><pre>truffle unbox truffle-react-auth</pre></p>
               </div>
 
               <footer>
-                <a class="btn btn-primary m-t-1 m-b-1" href="/support">Download</a>
-                <a class="btn btn-primary m-t-1 m-b-1" href="/support">GitHub</a>
+                <a class="btn btn-primary m-t-1 m-b-1" id="BoxDownloadLink" href="#">Download</a>
+                <a class="btn btn-primary m-t-1 m-b-1" id="BoxGitHubLink" href="#">GitHub</a>
               </footer>
             </section>
           </div>
@@ -128,3 +75,8 @@
     </div>
   </div>
 </section>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/github-api/dist/GitHub.bundle.min.js"></script>
+<script src="https://cdn.rawgit.com/showdownjs/showdown/1.7.1/dist/showdown.min.js"></script>
+<script src="/scripts/ballotin/single-truffle-box.js"></script>

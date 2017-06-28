@@ -42,11 +42,11 @@
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 25%;
+      bottom: 16.5%;
       height: 90%;
       background-color: #fff;
       opacity: .2;
-      transform: skew(0, -20deg);
+      transform: skew(0, -12deg);
     }
 
     ul {
@@ -99,8 +99,11 @@
   }
 
   .GitHubStars {
-    float: right;
-    margin-top: 7px;
+    display: block;
+
+    iframe {
+      margin: 10px 0;
+    }
   }
 
   .GitHubStarIcon {
@@ -156,37 +159,44 @@
       @extend .m-b-2;
     }
 
+    a {
+      color: #545452;
+    }
+
     .FeatureBody {
-      padding: 1rem 1.8rem;
+      position: relative;
+      padding: 2rem;
       border-top-left-radius: 4px;
       border-top-right-radius: 4px;
+      overflow: hidden;
+
+      &.withImage {
+        padding: 0;
+      }
 
       > p {
         @extend .m-b-2;
         line-height: 1.6rem;
       }
 
-      &.FeatureImage {
-        height: 0;
-        padding: 0 0 100% 0;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-        background-position: center center !important;
+      .FeatureImageSm {
+        display: none;
+        height: 100px;
+        padding: 0;
 
         @media screen and (max-width: 767px) {
-          background-size: cover !important;
-        }
-
-        &.visible-xs {
-          height: 100px;
-          padding: 0;
-          background-position: left center !important;
+          display: block;
         }
       }
 
-      &.Status {
-        background-size: cover !important;
-        background-position: left center !important;
+      .FeatureImageLg {
+        display: block;
+        height: auto;
+        width: 100%;
+
+        @media screen and (max-width: 767px) {
+          display: none;
+        }
       }
     }
 
@@ -267,7 +277,7 @@
 
   /* Markdown Area (Documentation) */
 
-  .BoxMarkdown {
+  .BoxReadme {
     h1, h2, h3, h4, h5, h6 {
       @extend .m-t-3;
       @extend .m-b-2;
