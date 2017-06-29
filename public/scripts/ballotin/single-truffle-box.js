@@ -16,7 +16,6 @@ var gh = new GitHub();
 // Get repo based on user/org and repo name above.
 var boxRepo = gh.getRepo(boxUserOrgName, boxRepositoryName);
 
-
 /*
  * Sync Interface
  */
@@ -28,11 +27,9 @@ boxRepo.getDetails(function(error, details) {
 });
 
 // Get readme, render markdown and apply to interface.
-var converter = new showdown.Converter();
-
 boxRepo.getReadme('heads/master', false)
 .then(function(response) {
-  var readmeHtml = converter.makeHtml(atob(response.data.content));
+  var readmeHtml = marked(atob(response.data.content));
 
   // Remove first h1 element, as it's usually the repo name.
   var $readmeHtml = $(readmeHtml).not('h1:first-of-type');
@@ -40,6 +37,8 @@ boxRepo.getReadme('heads/master', false)
   $('#BoxReadme').html($readmeHtml);
 })
 .catch(function(error) {
+  console.error(error);
+
   var errorHtml = '<div class="alert alert-danger" role="alert">Error loading readme. If you keep seeing this error message, <a href="mailto:info@trufflesuite.com">reach out to truffle support at info@trufflesuite.com</a></div>';
 
   $('#BoxReadme').html(errorHtml);
@@ -52,7 +51,9 @@ boxRepo.getReadme('heads/master', false)
 
 // GitHub date formatting helper.
 function formatGitHubDate(date) {
+  var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
   var dateObject = new Date(date);
-  var formattedDate = (dateObject.getMonth()+1) + "-" + dateObject.getDate() + "-" + dateObject.getFullYear();
+  var formattedDate = months[dateObject.getMonth()] + " " + dateObject.getDate() + ", " + dateObject.getFullYear();
   return formattedDate;
 }
