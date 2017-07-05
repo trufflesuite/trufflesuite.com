@@ -22,6 +22,8 @@ var boxRepo = gh.getRepo(boxUserOrgName, boxRepositoryName);
 
 // Get repo details and apply to interface.
 boxRepo.getDetails(function(error, details) {
+  console.log(details);
+
   $('#BoxDateCreated').html(formatGitHubDate(details.created_at));
   $('#BoxDateUpdated').html(formatGitHubDate(details.updated_at));
 });
