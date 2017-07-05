@@ -227,6 +227,12 @@
       }
     }
 
+    .caption {
+      font-size: .9rem;
+      font-style: italic;
+      margin-top: 2rem;
+    }
+
   }
 
   @media screen and (max-width: 767px) {
@@ -298,6 +304,31 @@
           background-color: #3FE0C5;
           color: white;
         }
+      }
+    }
+  }
+
+  /*
+   * Single Tutorial
+   */
+
+  &:not(.TutorialIndexContainer) {
+    .MainContent {
+      > .container-fluid > .row > h1,
+      > .container-fluid > .row > h2,
+      > .container-fluid > .row > h3,
+      > .container-fluid > .row > h4,
+      > .container-fluid > .row > ul,
+      > .container-fluid > .row > ol,
+      > .container-fluid > .row > pre code,
+      > .container-fluid > .row > p {
+        @extend .container;
+        max-width: 600px;
+      }
+
+      > .container-fluid > .row > ul,
+      > .container-fluid > .row > ol {
+        padding-left: 35px;
       }
     }
   }
