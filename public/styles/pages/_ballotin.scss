@@ -1,4 +1,10 @@
 .Ballotin {
+  /* General */
+
+  p {
+    line-height: 1.75rem;
+  }
+
   .row-flex {
     display: flex;
     align-items: center;
@@ -9,6 +15,8 @@
     }
   }
 
+  /* Containers */
+
   .BallotinIndexContainer {
     background: #F8F5F0;
     padding-top: 23px;
@@ -17,6 +25,10 @@
   .BallotinSingleContainer {
     padding-top: 23px;
     padding-bottom: 50px;
+
+    .WithDash {
+      @extend .m-b-2;
+    }
   }
 
   .CommunityBoxes {
@@ -30,11 +42,11 @@
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 25%;
+      bottom: 16.5%;
       height: 90%;
       background-color: #fff;
       opacity: .2;
-      transform: skew(0, -20deg);
+      transform: skew(0, -12deg);
     }
 
     ul {
@@ -64,6 +76,8 @@
     padding-bottom: 50px;
   }
 
+  /* Elements */
+
   .label-truffle {
     display: inline-block;
     background: #f8f7f7;
@@ -84,6 +98,18 @@
     font-size: 1.2rem;
   }
 
+  .GitHubStars {
+    display: block;
+
+    iframe {
+      margin: 10px 0;
+    }
+  }
+
+  .GitHubStarIcon {
+    color: #e4b93e;
+  }
+
   .Sidebar {
     @media screen and (max-width: 991px) {
       margin-top: 2rem;
@@ -100,6 +126,30 @@
     }
   }
 
+  .BoxTagsList {
+    list-style: none;
+    margin: -5px 0 0 0;
+    padding: 0;
+    width: 100%;
+
+    li {
+      display: inline-block;
+      margin-top: 5px;
+
+      a {
+        @extend .label;
+        @extend .label-default;
+
+        display: block;
+        padding: .5em .7em .5em;
+        font-family: "Open Sans", sans-serif;
+        font-weight: normal;
+      }
+    }
+  }
+
+  /* Cards */
+
   .FeatureCard {
     background: #FFFFFF;
     box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.08);
@@ -109,37 +159,44 @@
       @extend .m-b-2;
     }
 
+    a {
+      color: #545452;
+    }
+
     .FeatureBody {
-      padding: 1rem 1.8rem;
+      position: relative;
+      padding: 2rem;
       border-top-left-radius: 4px;
       border-top-right-radius: 4px;
+      overflow: hidden;
+
+      &.withImage {
+        padding: 0;
+      }
 
       > p {
         @extend .m-b-2;
         line-height: 1.6rem;
       }
 
-      &.FeatureImage {
-        height: 0;
-        padding: 0 0 100% 0;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-        background-position: center center !important;
+      .FeatureImageSm {
+        display: none;
+        height: 100px;
+        padding: 0;
 
         @media screen and (max-width: 767px) {
-          background-size: cover !important;
-        }
-
-        &.visible-xs {
-          height: 100px;
-          padding: 0;
-          background-position: left center !important;
+          display: block;
         }
       }
 
-      &.Status {
-        background-size: cover !important;
-        background-position: left center !important;
+      .FeatureImageLg {
+        display: block;
+        height: auto;
+        width: 100%;
+
+        @media screen and (max-width: 767px) {
+          display: none;
+        }
       }
     }
 
@@ -161,7 +218,7 @@
       }
 
       &.BoxRundown {
-        padding: 25px 15px;
+        padding: 2rem;
         text-align: left;
 
         h3 {
@@ -176,6 +233,10 @@
           font-family: "Open Sans", sans-serif;
           font-weight: normal;
 
+          li {
+            margin-bottom: 0;
+          }
+
           hr {
             margin: 5px 0;
           }
@@ -186,7 +247,8 @@
             font-weight: normal;
           }
 
-          .label {
+          > li:nth-child(odd):not(:first-child) {
+            margin-top: 2rem;
           }
         }
       }
@@ -213,23 +275,19 @@
     }
   }
 
-  .BoxTagsList {
-    list-style: none;
-    margin: -5px 0 0 0;
-    padding: 0;
-    width: 100%;
+  /* Markdown Area (Documentation) */
 
-    li {
-      display: inline-block;
-      margin-top: 5px;
+  .BoxReadme {
+    h1, h2, h3, h4, h5, h6 {
+      @extend .m-t-3;
+      @extend .m-b-2;
+    }
 
-      a {
-        @extend .label;
-        @extend .label-default;
-
-        font-family: "Open Sans", sans-serif;
-        font-weight: normal;
-      }
+    ul li,
+    ol li {
+      margin-bottom: 1.5rem;
+      line-height: 1.75rem;
+      font-family: "Open Sans", sans-serif;
     }
   }
 }
