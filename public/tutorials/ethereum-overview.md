@@ -167,7 +167,8 @@ The Ethereum blockchain can be simulated locally for development. Local test net
 These test networks are live and public. Ether on these networks is for testing purposes only and has no monetary value. Because these networks are public and the currency is freely available, developers use them to test Ethereum applications before final deployment to the main network.
 
 *   **Ropsten**: The official test network, created by [The Ethereum Foundation](https://www.ethereum.org/foundation).
-*   **Kovan**: A public test network that uses a consensus method called "proof of authority". This means its transactions are validated by select members, leading to a consistent 4 second block time. The supply of Ether on this testnet is also controlled to mitigate spam attacks. Information on this chain is public. Kovan was created by [Parity Technologies](https://parity.io/), and requires their Parity Ethereum client.
+*   **Kovan**: A public test network that uses a consensus method called "proof of authority". This means its transactions are validated by select members, leading to a consistent 4 second block time. The supply of Ether on this testnet is also controlled to mitigate spam attacks. Information on this chain is public.
+
 *   **Rinkeby**: An official public testnet also using proof of authority. It's accessible by any Ethereum client and created by The Ethereum Foundation.
 
 ### Private/Enterprise Networks
