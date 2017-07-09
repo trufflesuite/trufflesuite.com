@@ -14,7 +14,7 @@ Truffle will compile only the contracts that have been changed since the last co
 
 # Artifacts
 
-Artifacts of your compilation will be placed in the `./build/contracts` directory, relative to your project. This directory will be created if it does not exist. These artifacts are integral to the inner workings of Truffle, and they play and important part to the successful deployment of your application. You should not edit these files by hand as they'll be overwritten by contract compilation and deployment.
+Artifacts of your compilation will be placed in the `./build/contracts` directory, relative to your project. This directory will be created if it does not exist. These artifacts are integral to the inner workings of Truffle, and they play important part in the successful deployment of your application. You should not edit these files by hand as they'll be overwritten by contract compilation and deployment.
 
 # Dependencies
 
