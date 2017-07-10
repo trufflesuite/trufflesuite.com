@@ -320,6 +320,7 @@
       > .container-fluid > .row > h4,
       > .container-fluid > .row > ul,
       > .container-fluid > .row > ol,
+      > .container-fluid > .row > hr,
       > .container-fluid > .row > pre code,
       > .container-fluid > .row > p {
         @extend .container;
@@ -329,6 +330,10 @@
       > .container-fluid > .row > ul,
       > .container-fluid > .row > ol {
         padding-left: 35px;
+      }
+
+      > .container-fluid > .row > hr {
+        max-width: 540px;
       }
     }
   }
