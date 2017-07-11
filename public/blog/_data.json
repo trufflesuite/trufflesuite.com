@@ -29,10 +29,10 @@
     "author": "Tim Coulter",
     "published": true
   },
-  "pet-shop-announcement": {
-    "title": "Pet Shop Announcement",
+  "learn-ethereum-the-fun-way-with-our-pet-shop-tutorial": {
+    "title": "Learn Ethereum The Fun Way with our Pet Shop Tutorial",
     "date": "2017-07-11",
     "author": "Josh Quintal",
-    "published": true
+    "published": false
   }
 }
