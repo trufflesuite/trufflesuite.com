@@ -11,10 +11,9 @@ This tutorial is meant for **Dapp beginners who have knowledge of HTML, CSS and 
 In this tutorial we will be covering:
 
 *   Setting up The Development Environment
-*   Creating a Truffle project
+*   Creating a Truffle Project Using a Truffle Box
 *   Writing and Testing a Smart Contract
 *   Creating a UI to Interact with our Smart Contract
-*   Deploying to the Ropsten TestNet
 
 ## Project Brief
 
@@ -39,9 +38,9 @@ Once we have those installed, we only need two commands to install the TestRPC a
 *   `npm install -g ethereumjs-testrpc@beta`
 *   `npm install -g truffle@beta`
 
-## Creating a Truffle Project
+## Creating a Truffle Project Using a Truffle Box
 
-Truffle initializes in the current directory. So first, create a directory in your development folder of choice. We're calling ours "pet-shop-tutorial". We'll initialize a "bare" Truffle project, meaning there will be no example contracts included.
+Truffle initializes in the current directory. So first, create a directory in your development folder of choice. We're calling ours "pet-shop-tutorial". We'll initialize our project with a [Truffle Box](/boxes). Truffle Boxes are helpful boilerplates that contain additional modules and/or scripts to ease development.
 
 ```shell
 // Create the directory.
@@ -50,9 +49,13 @@ mkdir pet-shop-tutorial
 // Navigate to within the directory.
 cd pet-shop-tutorial
 
-// Initialize Truffle.
-truffle init bare
+// Initialize Truffle with the pet-shop Truffle Box.
+truffle unbox pet-shop
 ```
+</code>
+<p class="alert alert-info" style="margin-top: -2rem; margin-bottom: 3rem;">
+  <strong>NOTE</strong>: Truffle can be initialized a few different ways. Another useful initialization command is `truffle init bare`, which creates an empty Truffle project with no example contracts included.
+</p>
 
 ### Directory Structure
 
@@ -450,13 +453,9 @@ Now that MetaMask is configured, we can start our web server and actually use th
 
 ### Installing and Configuring lite-server
 
-We're going to use the `lite-server` library to serve our static files. Since it's an NPM package, we'll need to initialize NPM in our project.
+We're using the `lite-server` library to serve our static files. This already came with the box, but let's take a look at how it works.
 
-In the project's root directory, run `npm init`. It will ask you some questions about the project, but for now let's accept all the defaults by pressing Enter at each prompt (you can later change them if necessary).
-
-With NPM initialized, run `npm install lite-server --save-dev`. This installs `lite-server` as a development dependency. For production we'll be deploying our Dapp to a real server, so there's no need for `lite-server` in that environment.
-
-Next, create a file called `bs-config.json` in the project's root directory with the following contents:
+Notice the file `bs-config.json` in the project's root directory with the following contents:
 
 ```javascript
 {
@@ -468,7 +467,7 @@ Next, create a file called `bs-config.json` in the project's root directory with
 
 This tells `lite-server` which files to include in our base directory. We add the `./src` directory for our website files and `./build/contracts` directory for the contract artifacts. The dot preceding the slash means "start looking for this in the current directory."
 
-Finally, edit the `scripts` object in the `package.json` file in the project's root directory with the following contents:
+We've also added a dev command to the `scripts` object in the `package.json` file in the project's root directory. The `scripts` object allows us to alias console commands to a single npm command. In this case we're just doing a single command, but it's possible to have more complex configurations. Here's what yours should look like:
 
 ```javascript
 "scripts": {
@@ -486,14 +485,14 @@ Run the command `npm run dev`. The dev server will launch and automatically open
 Now, simply click the adopt button on the pet of your choice. You'll be prompted to approve the transaction by MetaMask. Do so, and you'll see the button change to "Pending..." and become disabled, just as we specified.
 
 <div class="text-center container">
-  ![MetaMask Account](/tutorials/images/pet-shop/adoption-1.jpeg)
+  ![Pet Shop Adoption Step 1](/tutorials/images/pet-shop/adoption1.jpeg)
   <p class="caption">After clicking an Adopt button, MetaMask prompts you to review and accept the transaction.</p>
 </div>
 
 <div class="text-center container">
-  ![MetaMask Account](/tutorials/images/pet-shop/adoption-2.jpeg)
-  <p class="caption">Once the transaction completes, you'll see the button change to Pending...</p>
-  <br/>
+  ![Pet Shop Adoption Step 2](/tutorials/images/pet-shop/adoption2.jpeg)
+  <p class="caption">Once the transaction completes, you'll see the button change to Pending... and a transaction will appear in your MetaMask account.</p>
+  <br/><br/>
 </div>
 
 **CONGRATULATIONS!** You took a huge first step to becoming a full-fledged Dapp developer. For developing locally, you have all the tools you need to start making more advanced Dapps. If you'd like to make your Dapp live for others to use, stay tuned for our next tutorial on deploying to the Ropsten testnet.
