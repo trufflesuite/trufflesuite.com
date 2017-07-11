@@ -14,7 +14,6 @@ In this tutorial we will be covering:
 *   Creating a Truffle project
 *   Writing and Testing a Smart Contract
 *   Creating a UI to Interact with our Smart Contract
-*   Deploying to the Ropsten TestNet
 
 ## Project Brief
 
