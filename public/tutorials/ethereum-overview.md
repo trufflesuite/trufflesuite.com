@@ -2,28 +2,18 @@
 
 You may have heard the terms "blockchain" and "smart contract" floating around, but what do they actually mean? We'll demystify the jargon, show you practical blockchain solutions and give you some direction on how to create them. This is a high level overview covering:
 
-<div class="container">
-<div class="row">
-<div class="col-sm-6">
 **Blockchain Basics**
-<ul>
-<li>Why Use a Blockchain?</li>
-<li>What is a Blockchain?</li>
-<li>How a Blockchain Works</li>
-</ul>
-</div>
 
-<div class="col-sm-6">
+*   Why Use a Blockchain?
+*   What is a Blockchain?
+*   How a Blockchain Works
+
 **The Ethereum Blockchain**
-<ul>
-<li>What is Ethereum?</li>
-<li>What is a Smart Contract?</li>
-<li>Ethereum Networks</li>
-<li>Distributed Applications (Dapps)</li>
-</ul>
-</div>
-</div>
-</div>
+
+*   What is Ethereum?
+*   What is a Smart Contract?
+*   Ethereum Networks
+*   Distributed Applications (Dapps)
 
 ## Why Use a Blockchain?
 
