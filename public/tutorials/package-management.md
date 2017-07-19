@@ -90,7 +90,7 @@ contract MyContract {
 
   // Set the registry if you're the owner.
   function setRegistry(address addr) {
-    if (msg.sender != owner) throw;
+    require(msg.sender == owner);
 
     registry = SimpleNameRegistry(addr);
   }
