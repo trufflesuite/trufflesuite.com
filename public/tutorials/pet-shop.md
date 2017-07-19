@@ -4,7 +4,7 @@
 
 # Ethereum Pet Shop
 
-This series of tutorials will take you through building your first Dapp--a tracking system for a pet shop!
+This series of tutorials will take you through building your first DApp--- a tracking system for a pet shop!
 
 This tutorial is meant for **Dapp beginners who have knowledge of HTML, CSS and JavaScript**, but assumes you have a basic knowledge of what Ethereum and smart contracts are conceptually. You may want to check out the [Ethereum Overview](/tutorials/ethereum-overview) to get some concepts and terms down before proceeding.
 
@@ -100,9 +100,7 @@ Let's allow users to make adoption requests. Add the following function to the s
 
 ```javascript
 function adopt(uint petId) public returns (uint) {
-  if (petId < 0 || petId > 15) {
-    throw;
-  }
+  require(petId < 0 || petId > 15);
 
   adopters[petId] = msg.sender;
 
@@ -112,7 +110,9 @@ function adopt(uint petId) public returns (uint) {
 
 You'll noticed in Solidity the types of both the function's parameters and its output must be specified. In this case we'll be taking in a `petId` (an integer) and returning an integer.
 
-First we check to make sure `petId` is in range of our `adopters` array. Arrays in Solidity are indexed from 0, so the ID value will need to be between 0 and 15. If the ID is out of range, we return an error by calling `throw` (as in "throw" an error).
+First we check to make sure `petId` is in range of our `adopters` array. Arrays in Solidity are
+indexed from 0, so the ID value will need to be between 0 and 15. We use the
+`require()` statement to ensure the the ID is within range.
 
 If the ID is in range, we then add the address that made the call to our `adopters` array. To get the address of the person or smart contract who called this function, we use **msg.sender**.
 
