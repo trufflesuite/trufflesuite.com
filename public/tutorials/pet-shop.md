@@ -34,11 +34,6 @@ Once we have those installed, we only need two commands to install the TestRPC a
 *   `npm install -g ethereumjs-testrpc`
 *   `npm install -g truffle`
 
-**Windows users** should instead install the precompiled beta version:
-
-*   `npm install -g ethereumjs-testrpc@beta`
-*   `npm install -g truffle@beta`
-
 ## Creating a Truffle Project
 
 Truffle initializes in the current directory. So first, create a directory in your development folder of choice. We're calling ours "pet-shop-tutorial". We'll initialize a "bare" Truffle project, meaning there will be no example contracts included.
@@ -208,7 +203,7 @@ contract TestAdoption {
 
 We start the contract off with 3 imports:
 
-*   `Assert.sol`: gives us various assertions to use in our tests. In testing, an **assertion** checks for things like equality, inequality or emptiness to return a pass/fail boolean from our test. [Here's a full list of the assertions included with Truffle](https://github.com/trufflesuite/truffle/blob/beta/lib/testing/Assert.sol).
+*   `Assert.sol`: gives us various assertions to use in our tests. In testing, an **assertion** checks for things like equality, inequality or emptiness to return a pass/fail boolean from our test. [Here's a full list of the assertions included with Truffle](https://github.com/trufflesuite/truffle-core/blob/master/lib/testing/Assert.sol).
 *   `DeployedAddresses.sol`: When running tests, Truffle will deploy a fresh instance of the contract being tested to the TestRPC. This smart contract gets the address of the deployed contract.
 *   The smart contract we want to test (`Adoption.sol`).
 
