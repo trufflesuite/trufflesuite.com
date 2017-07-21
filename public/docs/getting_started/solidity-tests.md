@@ -127,7 +127,7 @@ import "../contracts/MyContract.sol";
 
 contract TestContract {
   // Truffle will send the TestContract one Ether after deploying the contract.
-  public uint initialBalance = 1 ether;
+  uint public initialBalance = 1 ether;
 
   function testInitialBalanceUsingDeployedContract() {
     MyContract myContract = MyContract(DeployedAddresses.MyContract());
