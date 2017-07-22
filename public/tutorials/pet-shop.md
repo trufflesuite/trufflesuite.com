@@ -191,6 +191,8 @@ Truffle is very flexible when it comes to smart contract testing. Tests can be w
 Begin by creating the smart contract TestAdoption.sol in the test directory with the following contents:
 
 ```javascript
+pragma solidity ^0.4.11;
+
 import "truffle/Assert.sol";
 import "truffle/DeployedAddresses.sol";
 import "../contracts/Adoption.sol";
