@@ -26,7 +26,7 @@ The default configuration ships with configuration for a single development netw
 
 ### build
 
-Build configuration of your application, if your application requires tight integration with Truffle. Most users likely will not need to configure this option. See the [Advanced Build Processes](http://localhost:9000/docs/advanced/build_processes) section for more details.
+Build configuration of your application, if your application requires tight integration with Truffle. Most users likely will not need to configure this option. See the [Advanced Build Processes](http://truffleframework.com/docs/advanced/build_processes) section for more details.
 
 ### networks
 
