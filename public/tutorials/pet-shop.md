@@ -141,7 +141,7 @@ Back in your first console window, run the command `truffle compile`. You should
 
 ```shell
 Compiling ./contracts/Migrations.sol...
-Compiling ./contracts/PetShop.sol...
+Compiling ./contracts/Adoption.sol...
 Writing artifacts to ./build/contracts
 ```
 
@@ -193,6 +193,8 @@ Truffle is very flexible when it comes to smart contract testing. Tests can be w
 Begin by creating the smart contract TestAdoption.sol in the test directory with the following contents:
 
 ```javascript
+pragma solidity ^0.4.11;
+
 import "truffle/Assert.sol";
 import "truffle/DeployedAddresses.sol";
 import "../contracts/Adoption.sol";
@@ -321,7 +323,7 @@ If no injected web3 instance is present, we create our web3 object based on the 
 
 Now that we can interact with Ethereum via web3, we need to instantiate our smart contract so web3 knows where to find it and how it works. Truffle has a library to help with this called `truffle-contract`. It keeps information about our contract in sync with your migrations, so you don't need to change the contract's deployed address manually.
 
-Remove the multi-line comment from initWeb3 and replace it with the following:
+Remove the multi-line comment from `initContract` and replace it with the following:
 
 ```javascript
 $.getJSON('Adoption.json', function(data) {
