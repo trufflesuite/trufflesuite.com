@@ -31,7 +31,7 @@ Open a NEW PowerShell prompt as Administrator (to ensure that it reloads), then 
 
 ```
 $ npm install -g npm
-$ npm install -g –production windows-build-tools
+$ npm install -g -production windows-build-tools
 $ npm install -g ethereumjs-testrpc
 $ npm install -g truffle
 ```
