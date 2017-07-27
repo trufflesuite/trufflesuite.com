@@ -1,3 +1,11 @@
+_**Note**: This tutorial is written for versions of Solidity prior to v0.4.13.
+It relies on the deprecated `throw` keyword, now replaced by
+`revert()`, `require()`, and `assert()`. See Solidity documentation for
+[error handling](http://solidity.readthedocs.io/en/develop/control-structures.html?highlight=require#error-handling-assert-require-revert-and-exceptions)
+for more information._
+
+***
+
 # Testing for Throws in Truffle Solidity Tests
 By guest writer Simon de la Rouviere
 
@@ -36,7 +44,7 @@ contract ThrowProxy {
 
   function ThrowProxy(address _target) {
     target = _target;
-  }    
+  }
 
   //prime the data using the fallback function.
   function() {

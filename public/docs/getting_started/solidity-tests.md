@@ -112,9 +112,11 @@ This test contract also shows that your test functions and hook functions all sh
 
 Solidity tests come with a few advanced features to let you tests specific use cases within Solidity.
 
-### Testing for throws
+### Testing for exceptions
 
-You can easily test if your contract should and shouldn't `throw` (i.e., for contracts that use `throw` to signify an expected error). This topic was first written about by guest writer Simon de la Rouviere in [his tutorial Testing for Throws in Truffle Solidity Tests](/tutorials/testing-for-throws-in-solidity-tests).
+You can easily test if your contract should or shouldn't raise an exception (i.e., for `require()`/`assert()`/`revert()` statements; `throw` on previous versions of Solidity).
+
+This topic was first written about by guest writer Simon de la Rouviere in [his tutorial Testing for Throws in Truffle Solidity Tests](/tutorials/testing-for-throws-in-solidity-tests).  N.B. that the tutorial makes heavy use of exceptions via the deprecated keyword `throw`, replaced by `revert()`, `require()`, and `assert()` starting in Solidity v0.4.13.
 
 ### Testing Ether transactions
 
