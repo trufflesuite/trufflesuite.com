@@ -154,6 +154,7 @@
     background: #FFFFFF;
     box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.08);
     border-radius: 4px;
+    margin-bottom: 2rem;
 
     h6 {
       @extend .m-b-2;
@@ -253,6 +254,10 @@
         }
       }
     }
+  }
+
+  .CommunityBoxes .FeatureCard {
+    margin-bottom: 0;
   }
 
   @media screen and (max-width: 991px) {
