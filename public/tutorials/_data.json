@@ -95,16 +95,16 @@
     "author": "Josh Quintal",
     "published": true
   },
-  "pet-shop": {
-    "title": "Ethereum Pet Shop",
-    "date": "2017-05-02",
-    "author": "Josh Quintal",
-    "published": false
-  },
   "building-dapps-for-quorum-private-enterprise-blockchains": {
     "title": "Building dapps for Quorum: Private Enterprise Blockchains",
     "date": "2017-05-15",
     "author": "Tim Coulter",
+    "published": true
+  },
+  "pet-shop": {
+    "title": "Ethereum Pet Shop -- Your First Dapp",
+    "date": "2017-07-20",
+    "author": "Josh Quintal",
     "published": true
   }
 }

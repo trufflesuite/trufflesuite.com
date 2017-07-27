@@ -26,6 +26,7 @@
     "dev": "node ./dev.js",
     "uglify": "recursive-uglifyjs ../scripts && recursive-uglifyjs ../deps/scripts",
     "compile": "node ./compile.js",
+    "build": "npm run compile",
     "postcompile": "npm run uglify && npm run imagemin && cp CNAME ../",
     "imagemin": "imagemin ./public/images/ ../images/ --optimizationLevel 3 --progressive"
   },

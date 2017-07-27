@@ -26,14 +26,6 @@ Once completed, you'll now have a project structure with the following items:
 
 By default, `truffle init` gives you a set of example contracts (`MetaCoin` and `ConvertLib`) which act like a simple alt-coin built on top of Ethereum. You can use these contracts to learn quickly while navigating through the Getting Started guide, or delete these files and build a project of your own.
 
-# Advanced Initialization
+# Truffle Boxes
 
-By default, `truffle init` creates a simple project for you so you can get familiar with writing, compiling and deploying Solidity-based smart contracts. However, if you'd like to tag a stab at building an Ethereum-based web application, we recommend using the following command instead:
-
-```
-$ truffle init webpack
-```
-
-This will download and install a copy of [this project](https://github.com/trufflesuite/truffle-init-webpack) that integrates both Truffle and Webpack, giving you the power of Webpack for web development and Truffle for Ethereum development.
-
-This package is the first of officially-supported boilerplates soon to be released. Keep a look out for more!
+By default, `truffle init` creates a simple project for you so you can get familiar with writing, compiling and deploying Solidity-based smart contracts. However, we have many boilerplates and example applications available to you via the `truffle unbox` command that help you build complex applications quickly. [Check all of our Truffle Boxes to get started](/boxes).
