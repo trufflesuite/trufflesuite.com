@@ -1,7 +1,7 @@
 
 <%
-  var slugs = Object.keys(public.blog._data);
-  var blog = _.map(slugs, function(i) { return { 'slug': i, 'author': public.blog._data[i].author, 'title': public.blog._data[i].title, 'date': public.blog._data[i].date, 'published': public.blog._data[i].published}})
+  var slugs = Object.keys(public.blog._data.posts);
+  var blog = _.map(slugs, function(i) { return { 'slug': i, 'author': public.blog._data.posts[i].author, 'title': public.blog._data.posts[i].title, 'date': public.blog._data.posts[i].date, 'published': public.blog._data.posts[i].published}})
   blog = _.sortBy(blog, 'date').reverse().slice(0,5)
   // only show the latest two posts
   blog = blog.slice(0, 2);

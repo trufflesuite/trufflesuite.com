@@ -8,5 +8,8 @@
   },
   "sitemap.xml": {
     "layout": false
+  },
+  "support": {
+    "title": "Support"
   }
 }

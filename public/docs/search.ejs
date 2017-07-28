@@ -3,8 +3,8 @@
 <ul id="search-results"></ul>
 
 <%
-  top_level_groups = Object.keys(public.docs._data)
-  top_level_groups = _.map(top_level_groups, function(group) { return { "title": public.docs._data[group].title, "order": public.docs._data[group].order, "slug":group } })
+  top_level_groups = Object.keys(public.docs._data.groups)
+  top_level_groups = _.map(top_level_groups, function(group) { return { "title": public.docs._data.groups[group].title, "order": public.docs._data.groups[group].order, "slug":group } })
   search_data = {}
   for( group of top_level_groups) {
     group_data = public.docs[group.slug]._data

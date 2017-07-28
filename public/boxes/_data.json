@@ -1,5 +1,24 @@
 {
-  "ganache": {
-    "bodyclass": "Ballotin"
+  "title": "Truffle Boxes",
+  "index": {
+    "bodyclass": "Ballotin",
+    "title": "Truffle Boxes"
+  },
+  "boxes": {
+    "react": {
+      "title": "react"
+    },
+    "react-auth": {
+      "title": "react-auth"
+    },
+    "react-uport": {
+      "title": "react-uport"
+    },
+    "pet-shop": {
+      "title": "pet-shop"
+    },
+    "status": {
+      "title": "status"
+    }
   }
 }
