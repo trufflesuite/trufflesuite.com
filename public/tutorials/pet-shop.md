@@ -310,12 +310,11 @@ Remove the multi-line comment from initWeb3 and replace it with the following:
 // Initialize web3 and set the provider to the testRPC.
 if (typeof web3 !== 'undefined') {
   App.web3Provider = web3.currentProvider;
-  web3 = new Web3(web3.currentProvider);
 } else {
   // set the provider you want from Web3.providers
   App.web3Provider = new web3.providers.HttpProvider('http://localhost:8545');
-  web3 = new Web3(App.web3Provider);
 }
+web3 = new Web3(App.web3Provider);
 ```
 
 First, we check if there's a web3 instance already active. Ethereum browsers like [Mist](https://github.com/ethereum/mist) or Chrome with the [MetaMask](https://metamask.io/) extension will inject their own web3 instances. If an injected web3 instance is present, we get its provider and use it to create our web3 object.
