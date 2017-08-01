@@ -108,6 +108,12 @@
       "date": "2017-07-20",
       "author": "Josh Quintal",
       "published": true
+    },
+    "robust-smart-contracts-with-openzeppelin": {
+      "title": "Robust Smart Contracts with OpenZeppelin",
+      "date": "2017-08-01",
+      "author": "Josh Quintal",
+      "published": true
     }
   }
 }
