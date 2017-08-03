@@ -35,7 +35,7 @@ Today we'll be focusing on smart contract creation. To that end, we've created t
 
 ```shell
 $ cd oz-workspace
-$ truffle unbox oz-tutorial
+$ truffle unbox tutorialtoken
 ```
 
 Next, we'll install OpenZeppelin. The most recent version of OpenZeppelin can be found as an NPM package.
