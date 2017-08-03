@@ -84,7 +84,7 @@ Using less than 15 lines of hand-coded Solidity, we've created our own ERC-20 to
 In the `/migrations` directory, create the file `2_deploy_contracts.js` with the following contents:
 
 ```javascript
-var Adoption = artifacts.require("./TutorialToken.sol");
+var TutorialToken = artifacts.require("./TutorialToken.sol");
 
 module.exports = function(deployer) {
   deployer.deploy(TutorialToken);
