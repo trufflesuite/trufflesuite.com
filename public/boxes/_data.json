@@ -19,6 +19,9 @@
     },
     "status": {
       "title": "status"
+    },
+    "tutorialtoken": {
+      "title": "tutorialtoken"
     }
   }
 }
