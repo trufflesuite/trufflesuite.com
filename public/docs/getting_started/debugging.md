@@ -1,6 +1,6 @@
 # Debugging
 
-Truffle includes an integrated debugger so that you can debug transactions made agains your contracts. This debugger looks and feels like existing command line debuggers available for traditional development environments.
+Truffle includes an integrated debugger so that you can debug transactions made against your contracts. This debugger looks and feels like existing command line debuggers available for traditional development environments.
 
 ## Overview
 
