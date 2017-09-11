@@ -14,5 +14,9 @@
   "commands": {
     "order": 4,
     "title": "Command Reference"
+  },
+  "truffle-with-metamask": {
+    "order": 5,
+    "title": "Truffle with MetaMask"
   }
 }

@@ -307,12 +307,12 @@ Open the app.js file and have a look around. We set up a global App object to ma
 Remove the multi-line comment from initWeb3 and replace it with the following:
 
 ```javascript
-// Initialize web3 and set the provider to the testRPC.
+// Is there is an injected web3 instance?
 if (typeof web3 !== 'undefined') {
   App.web3Provider = web3.currentProvider;
   web3 = new Web3(web3.currentProvider);
 } else {
-  // set the provider you want from Web3.providers
+  // If no injected web3 instance is detected, fallback to the TestRPC.
   App.web3Provider = new web3.providers.HttpProvider('http://localhost:8545');
   web3 = new Web3(App.web3Provider);
 }
