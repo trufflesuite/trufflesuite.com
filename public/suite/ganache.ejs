@@ -1,99 +1,111 @@
 <header>
+  <% include ../_includes/navbar %>
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
-        <div class="Logo text-center">
+      <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+        <div class="Logo">
           <% include ../images/suite/ganache/ganache_logo.svg %>
         </div>
+        <h1 class="text-center">THE DELICIOUS WAY TO <br /> DEVELOP BLOCKCHAIN SOLUTIONS</h1>
+        <p class="text-muted">Quickly fire up a personal Ethereum blockchain which you can use to run tests, execute commands, and inspect state while controlling how the chain operates.</p>
       </div>
     </div>
   </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="col-md-10 col-md-offset-1">
-          <h1 class="text-center">THE DELICIOUS WAY TO DEVELOP BLOCKCHAIN SOLUTIONS</h1>
+  <div class="container-fluid">
+    <div class="PosRel">
+      <div class="Foil"></div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="col-sm-12 col-md-8 col-md-offset-2 m-t-2 text-center">
+            <p class="DownloadVersions">For macOS, Windows &amp; Linux</p>
+            <a class="DownloadButton" href="https://github.com/trufflesuite/ganache">Download Now</a>
+          </div>
+          <img class="img-responsive m-t-3" src="/images/suite/ganache/ganache_screenshot.png" />
+          <h5 class="text-center text-muted m-b-3">THE BEST CROSS PLATFORM ETHEREUM DEVELOPMENT SERVER. AND IT'S FREE.</h5>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="col-md-8 col-md-offset-2 m-t-3">
-          <p class="lead">Quickly get a local version of the Ethereum blockchain technology running on your own machine, which
-            you can then run scripts, commands and tests against while controlling how the chain operates</p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <img class="img-responsive m-t-3" src="/images/suite/ganache/ganache_screenshot.jpg" />
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12 col-md-8 col-md-offset-2 m-t-4 text-center">
-        <p class="DownloadVersions">For macOS. (Windows &amp; Linux builds coming soon)</p>
-        <a class="DownloadButton" href="https://github.com/trufflesuite/ganache">Download latest version</a>
       </div>
     </div>
   </div>
 </header>
 <section class="Features container">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-md-4 col-md-offset-4">
+      <h2 class="m-t-4 m-b-2">THE SWEET FEATURES AT THE CORE OF GANACHE</h2>
       <span class="Flourish">
         <% include ../images/suite/ganache/header_flourish.svg %>
       </span>
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-12 col-md-4 col-md-offset-4">
-      <h2 class="m-b-4">THE SWEET FEATURES AT THE CORE OF GANACHE</h2>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-12 col-md-4 col-md-offset-4">
-      <ul class="FeatureList list-unstyled">
+    <div class="col-xs-12">
+      <h5>THE MENU</h5>
+      <ol class="FeatureList list-unstyled">
         <li>
-          <% include ../images/suite/ganache/ethereum_ico.svg %>
-          <h4>THE ETHEREUM BLOCKCHAIN ON YOUR DESKTOP</h4>
-          <p>GANACHE ships with an internal Javascript implementation of the Ethereum Blockchain which has additional programmatic capabilities - no local clients need to be installed! </p>
+          <div class="FeatureText">
+            <h4>THE ETHEREUM BLOCKCHAIN ON YOUR DESKTOP</h4>
+            <p>GANACHE ships with an internal Javascript implementation of the Ethereum Blockchain which has additional programmatic capabilities - no local clients need to be installed! </p>
+          </div>
+          <div class="FeatureIcon">
+            <% include ../images/suite/ganache/ethereum_ico.svg %>
+          </div>
         </li>
         <li>
-          <% include ../images/suite/ganache/account_info.svg %>
-          <h4>VISUAL MNEMONIC &amp; ACCOUNT INFO</h4>
-          <p>Quickly see the  current status of the generated accounts, including their  addresses, private keys, nonces and balances.</p>
+          <div class="FeatureText">
+            <h4>VISUAL MNEMONIC &amp; ACCOUNT INFO</h4>
+            <p>Quickly see the  current status of the generated accounts, including their  addresses, private keys, nonces and balances.</p>
+          </div>
+          <div class="FeatureIcon">
+            <% include ../images/suite/ganache/account_info.svg %>
+          </div>
         </li>
         <li>
-          <% include ../images/suite/ganache/log_output.svg %>
-          <h4>BLOCKCHAIN LOG OUTPUT</h4>
-          <p>See the output of web3 calls to the blockchain, along with responses and other vital debugging info.</p>
+          <div class="FeatureText">
+            <h4>BLOCKCHAIN LOG OUTPUT</h4>
+            <p>See the output of web3 calls to the blockchain, along with responses and other vital debugging info.</p>
+          </div>
+          <div class="FeatureIcon">
+            <% include ../images/suite/ganache/log_output.svg %>
+          </div>
         </li>
         <li>
-          <% include ../images/suite/ganache/mining_controls.svg %>
-          <h4>INSTANT MINING CONTROLS</h4>
-          <p>Stop, start, force mine a single block, and take or revet multiple snapshots of the blockchain as and when you chose.</p>
+          <div class="FeatureText">
+            <h4>INSTANT MINING CONTROLS</h4>
+            <p>Stop, start, force mine a single block, and take or revet multiple snapshots of the blockchain as and when you chose.</p>
+          </div>
+          <div class="FeatureIcon">
+            <% include ../images/suite/ganache/mining_controls.svg %>
+          </div>
         </li>
         <li>
-          <% include ../images/suite/ganache/block_explorer.svg %>
-          <h4>BUILT IN BLOCK EXPLORER</h4>
-          <p>Examine specific blocks or transactions at will and see detailed information about the parameters.</p>
+          <div class="FeatureText">
+            <h4>BUILT IN BLOCK EXPLORER</h4>
+            <p>Examine specific blocks or transactions at will and see detailed information about the parameters.</p>
+          </div>
+          <div class="FeatureIcon">
+            <% include ../images/suite/ganache/block_explorer.svg %>
+          </div>
         </li>
         <li>
-          <% include ../images/suite/ganache/repl.svg %>
-          <h4>BLOCKCHAIN CONNECTED REPL</h4>
-          <p>Complete access to a Node.js powered REPL that you can execute commands in, have full access to an initialize web3 object, and many useful commands to make development testing easier.</p>
+          <div class="FeatureText">
+            <h4>BLOCKCHAIN CONNECTED REPL</h4>
+            <p>Complete access to a Node.js powered REPL that you can execute commands in, have full access to an initialize web3 object, and many useful commands to make development testing easier.</p>
+          </div>
+          <div class="FeatureIcon">
+            <% include ../images/suite/ganache/repl.svg %>
+          </div>
         </li>
-      </ul>
+      </ol>
+      <a class="DownloadButton" href="https://github.com/trufflesuite/ganache">Download Now</a>
     </div>
   </div>
 </section>
 <section class="OpenSource container text-center">
   <div class="row">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
-      <span class="Flourish">
+      <h2 class="text-center">LIKE THE TASTE? THE RECIPE IS OPEN SOURCE!</h2>
+      <span class="Flourish m-b-4">
         <% include ../images/suite/ganache/header_flourish.svg %>
       </span>
-      <h2 class="text-center m-b-4">LIKE THE TASTE? THE RECIPE IS OPEN SOURCE!</h2>
       <% include ../images/suite/ganache/gh_logo.svg %>
       <h4>FULL SOURCE CODE ON GITHUB</h4>
       <p>We welcome any and all contributions, and feature suggestions! <a href="https://github.com/trufflesuite/ganache">Please checkout the source code.</a></p>
@@ -109,11 +121,17 @@
         <ol class="list-unstyled list-inline text-center">
           <li><img src="/images/john_face.png"/> <h5>JOHN MCDOWALL</h5></li>
         </ol>
+        <div class="Flourish">
+          <%- include ../images/suite/ganache/flourish_divider.svg %>
+        </div>
       </div>
       <div class="col-xs-12 col-md-4 p-a-4">
         <h3 class="WithDash m-b-4">PART OF THE TRUFFLE SUITE OF DAPP DEVELOPMENT TOOLS</h3>
         <div class="Logo">
           <%- include ../_includes/truffle_logo %>
+        </div>
+        <div class="Flourish">
+          <%- include ../images/suite/ganache/flourish_divider.svg %>
         </div>
       </div>
       <div class="Right col-xs-12 col-md-4 p-a-4">
@@ -311,4 +329,3 @@
 </svg>
   </div>
 </section>
-
