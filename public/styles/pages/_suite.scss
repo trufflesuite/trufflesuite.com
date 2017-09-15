@@ -34,6 +34,7 @@
     margin: 0 auto;
   }
 
+
   main {
     header {
       background-image: url("/images/suite/ganache/header_bg.png");
@@ -193,15 +194,16 @@
 
         &:before {
           position: absolute;
-
-          font-size: 120px;
-          font-weight: bold;
-          letter-spacing: -.5rem;
           z-index: -1;
-          color: #454130;
 
           content: counter(counter, decimal-leading-zero);
           counter-increment: counter;
+          letter-spacing: -.5rem;
+
+          color: #454130;
+
+          font-size: 120px;
+          font-weight: bold;
         }
 
         .FeatureText {
@@ -228,19 +230,25 @@
 
   border: 1px dashed #d1a372;
   border-radius: 8px;
+  background-color: #2f2d2a;
+
+  svg {
+    g {
+      fill: #ab7f50 !important;
+    }
+  }
 }
 
 .BuiltWith {
   border-top: 10px;
   border-bottom: 10px;
   border-image: url(/images/suite/ganache/jaggy_edge.png);
-  background-color: #746f67;
+  background-color: #8e8e8d;
 
   img {
     height: 130px;
   }
 
-  svg,
   .Logo {
     height: 180px;
   }
@@ -249,26 +257,84 @@
     position: absolute;
     top: 40%;
     right: 0;
+    height: 180px;
+  }
+
+  .truffle-wordmark {
+    display: none;
   }
 }
 
 .Footer {
+  padding-bottom: 0;
+
+  border-top: 0;
+  background-color: #2a2825;
+
   h5 {
     color: #545452;
+  }
+
+  .GhostText {
+    margin-bottom: -100px;
+  }
+
+  a {
+    &:hover {
+      color: #48a0ec;
+    }
   }
 }
 
 @media (max-width: 768px) {
   .Ganache {
+    padding-top: 60px;
+
     main {
       header {
         height: auto;
 
         h1 {
-          font-size: 15vw;
-          line-height: 13vw;
+          font-size: 4vw;
+          line-height: 5.2vw;
+        }
+
+        p {
+          font-size: 3vw;
+          line-height: 3.6vw;
         }
       }
+    }
+
+    .Foil {
+      height: 60vw;
+    }
+
+    .Features {
+      .FeatureList {
+        li {
+          position: relative;
+
+          &:before {
+            top: -1.2rem;
+            letter-spacing: 0;
+
+            font-size: 1.2rem;
+          }
+
+          .FeatureText {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+
+    .OpenSource {
+      margin: 1rem;
+    }
+
+    .Flourish {
+      display: none;
     }
   }
 }
