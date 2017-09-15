@@ -16,7 +16,7 @@
       <div class="Foil"></div>
       <div class="row">
         <div class="col-sm-12">
-          <div class="col-sm-12 col-md-8 col-md-offset-2 m-t-2 text-center">
+          <div class="col-sm-12 col-md-8 col-md-offset-2 m-t-2 m-b-1 text-center">
             <p class="DownloadVersions">For macOS, Windows &amp; Linux</p>
             <a class="DownloadButton" href="https://github.com/trufflesuite/ganache/releases">Download Now</a>
           </div>
@@ -61,7 +61,7 @@
         <li>
           <div class="FeatureText">
             <h4>BLOCKCHAIN LOG OUTPUT</h4>
-            <p>See the output of web3 calls to the blockchain, along with responses and other vital debugging info.</p>
+            <p>See the output of web3 calls to the blockchain, along with responses and other vital debugging information.</p>
           </div>
           <div class="FeatureIcon">
             <% include ../images/suite/ganache/log_output.svg %>
@@ -70,7 +70,7 @@
         <li>
           <div class="FeatureText">
             <h4>INSTANT MINING CONTROLS</h4>
-            <p>Stop, start, force mine a single block, and take or revet multiple snapshots of the blockchain as and when you chose.</p>
+            <p>Stop, start, force mine a single block, and take or revert multiple snapshots of the blockchain as and when you chose.</p>
           </div>
           <div class="FeatureIcon">
             <% include ../images/suite/ganache/mining_controls.svg %>
@@ -78,7 +78,7 @@
         </li>
         <li>
           <div class="FeatureText">
-            <h4>BUILT IN BLOCK EXPLORER</h4>
+            <h4>BUILT-IN BLOCK EXPLORER</h4>
             <p>Examine specific blocks or transactions at will and see detailed information about the parameters.</p>
           </div>
           <div class="FeatureIcon">
@@ -87,8 +87,8 @@
         </li>
         <li>
           <div class="FeatureText">
-            <h4>BLOCKCHAIN CONNECTED REPL</h4>
-            <p>Complete access to a Node.js powered REPL that you can execute commands in, have full access to an initialize web3 object, and many useful commands to make development testing easier.</p>
+            <h4>BLOCKCHAIN CONNECTED CONSOLE</h4>
+            <p>Access a Node.js powered Console to execute commands, with a fully initialized instance of web3, and many useful commands to make development and testing easy.</p>
           </div>
           <div class="FeatureIcon">
             <% include ../images/suite/ganache/repl.svg %>
@@ -114,41 +114,63 @@
 </section>
 
 <section class="BuiltWith m-t-4">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="Left col-xs-12 col-md-4 p-a-4">
-        <h3 class="WithDash m-b-4">DESIGNED &amp; BUILT IN THE WILD PACIFIC NORTH WEST BY THIS GUY</h3>
-        <ol class="list-unstyled list-inline text-center">
-          <li><img src="/images/john_face.png"/> <h5>JOHN MCDOWALL</h5></li>
-        </ol>
-        <div class="Flourish hidden-sm hidden-xs">
-          <%- include ../images/suite/ganache/flourish_divider.svg %>
+    <div class="PosRel">
+      <div class="Foil"></div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 col-md-8 col-md-offset-2 p-a-4">
+              <h3 class="WithDash m-b-4">DESIGNED &amp; BUILT IN THE WILD PACIFIC NORTH WEST BY THIS GUY</h3>
+              <ol class="list-unstyled list-inline text-center">
+                <li><img src="/images/john_face.png"/> <h5>JOHN MCDOWALL</h5></li>
+              </ol>
+              <aside>
+                <h6>WITH SUPPORT FROM THE TRUFFLE TEAM</h6>
+                <ol class='TrufflePals list-unstyled'>
+                  <li>
+                    <img src="/images/tim_face.png" />
+                    <p>TIM COULTER</p>
+                  </li>
+                  <li>
+                    <img src="/images/nick_face.png" />
+                    <p>NICK D'ANDREA</p>
+                  </li>
+                  <li>
+                    <img src="/images/josh_face.png" />
+                    <p>JOSH QUINTAL</p>
+                  </li>
+                </ol>
+              </aside>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <hr />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-6 p-a-4">
+              <h3 class="WithDash m-b-4">PART OF THE TRUFFLE SUITE OF DAPP DEVELOPMENT TOOLS</h3>
+              <div class="Logo">
+                <%- include ../_includes/truffle_logo_no_shadow %>
+              </div>
+            </div>
+            <div class="Right col-xs-12 col-md-6 p-a-4">
+              <h3 class="WithDash m-b-4">DEVELOPMENT IS PROUDLY SPONSORED BY CONSENSYS IN NYC</h3>
+              <section class="Logo text-center">
+                <%- include ../_includes/consensys_logo.svg %>
+              </section>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="col-xs-12 col-md-4 p-a-4">
-        <h3 class="WithDash m-b-4">PART OF THE TRUFFLE SUITE OF DAPP DEVELOPMENT TOOLS</h3>
-        <div class="Logo">
-          <%- include ../_includes/truffle_logo %>
-        </div>
-        <div class="Flourish hidden-sm hidden-xs">
-          <%- include ../images/suite/ganache/flourish_divider.svg %>
-        </div>
-      </div>
-      <div class="Right col-xs-12 col-md-4 p-a-4">
-        <h3 class="WithDash m-b-4">DEVELOPMENT IS PROUDLY SPONSORED BY CONSENSYS IN NYC</h3>
-        <section class="Logo text-center">
-          <%- include ../_includes/consensys_logo.svg %>
-        </section>
       </div>
     </div>
-  </div>
 </section>
 <section class="Footer p-t-4 ">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-2">
         <div class="Logo">
-          <%- include ../_includes/truffle_logo %>
+          <%- include ../_includes/truffle_logo_no_shadow %>
         </div>
       </div>
       <div class="col-xs-12 col-md-3">
