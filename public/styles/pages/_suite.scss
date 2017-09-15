@@ -7,6 +7,7 @@
 
   font-family: "Roboto Condensed", sans-serif;
 
+  h1,
   h2,
   h3,
   h4,
@@ -257,6 +258,7 @@
     position: absolute;
     top: 40%;
     right: 0;
+
     height: 180px;
   }
 
@@ -317,9 +319,10 @@
 
           &:before {
             top: -1.2rem;
+
             letter-spacing: 0;
 
-            font-size: 1.2rem;
+            font-size: 1.6rem;
           }
 
           .FeatureText {
@@ -335,6 +338,22 @@
 
     .Flourish {
       display: none;
+    }
+
+    .Footer {
+      text-align: center;
+
+      strong {
+        display: block;
+      }
+
+      .Logo {
+        margin: 1rem auto;
+      }
+
+      .BetaSignup {
+        margin-top: 2rem;
+      }
     }
   }
 }
