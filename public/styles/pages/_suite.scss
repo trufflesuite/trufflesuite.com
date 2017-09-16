@@ -393,17 +393,29 @@
       .FeatureList {
         li {
           position: relative;
+          flex-direction: column;
 
           &:before {
-            top: -1.2rem;
+            top: -2.2rem;
 
             letter-spacing: 0;
 
             font-size: 1.6rem;
+            left: calc(50% - 1rem);
+          }
+
+          .FeatureIcon {
+            order: 1;
           }
 
           .FeatureText {
             padding-left: 0;
+            order: 2;
+
+            text-align:center;
+
+            padding: 0 !important;
+
           }
         }
       }
