@@ -421,6 +421,21 @@
       }
     }
 
+    .BuiltWith {
+
+      h3 {
+        padding: 0 1rem;
+      }
+
+      .p-a-4 {
+        padding: 0 !important;
+      }
+
+      .Logo:last-of-type {
+        margin-bottom: 3rem;
+      }
+    }
+
     .TrufflePals {
       flex-direction: column;
 
@@ -450,6 +465,12 @@
 
       .BetaSignup {
         margin-top: 2rem;
+      }
+
+      .FormWrapper {
+        .mc-field-group {
+          border-radius: 0;
+        }
       }
     }
   }
