@@ -44,13 +44,40 @@
 }
 
 .Ganache {
-  padding-top: 100px;
+  padding-top: 60px;
 
   background-color: #2a2825;
   background-repeat: none;
   background-size: cover;
 
   font-family: "Roboto Condensed", sans-serif;
+
+  .navbar {
+    height: 60px;
+
+    .navbar-brand {
+      height: 60px;
+      line-height: 60px;
+
+      .truffle-logo {
+        width: 40px;
+      }
+
+      .truffle-wordmark {
+        display: none;
+      }
+    }
+
+    .navbar-nav {
+      li {
+        a {
+          height: 60px;
+          line-height: 60px;
+          font-size: .8125rem;
+        }
+      }
+    }
+  }
 
   h1,
   h2,
@@ -59,6 +86,13 @@
   h5 {
     color: white;
     text-shadow: none;
+  }
+
+
+  h2,
+  h5 {
+    font-weight: bold;
+    letter-spacing: 2.5px;
   }
 
   p {
@@ -219,7 +253,11 @@
 
         h4 {
           color: white;
+          font-size: 44px;
+          font-weight: bold;
+          letter-spacing: 2.5px;
         }
+
         p {
           color: #a6aaa8;
         }
@@ -229,8 +267,8 @@
 }
 
 .OpenSource {
-  margin: 1rem auto;
-  margin-bottom: 6rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   padding: 4rem;
 
   border: 1px dashed #d1a372;
@@ -249,14 +287,13 @@
   border-bottom: 10px;
 
   .Foil {
+    width: calc(100% + 15px) !important;
     height: 100% !important;
 
     background-color: #8e8e8d;
     background-image: none;
 
     @include jaggy-edges();
-
-    width: calc(100% + 15px) !important;
   }
 
 
@@ -286,9 +323,10 @@
   }
 
   aside {
+    padding: 1rem;
+
     border-radius: 4px;
     background-color: #989898;
-    padding: 1rem;
   }
 
   .TrufflePals {
@@ -314,6 +352,7 @@
 
     img {
       height: 74px;
+
       border: 2px solid white;
     }
   }
@@ -352,9 +391,9 @@
   }
 
   a {
-    color: #9C9C98;
+    color: #9c9c98;
     &:hover {
-      color: lighten(#9C9C98, 10%);
+      color: lighten(#9c9c98, 10%);
     }
   }
 
@@ -393,15 +432,16 @@
       .FeatureList {
         li {
           position: relative;
+
           flex-direction: column;
 
           &:before {
             top: -2.2rem;
+            left: calc(50% - 1rem);
 
             letter-spacing: 0;
 
             font-size: 1.6rem;
-            left: calc(50% - 1rem);
           }
 
           .FeatureIcon {
@@ -409,20 +449,18 @@
           }
 
           .FeatureText {
-            padding-left: 0;
             order: 2;
 
-            text-align:center;
-
             padding: 0 !important;
+            padding-left: 0;
 
+            text-align: center;
           }
         }
       }
     }
 
     .BuiltWith {
-
       h3 {
         padding: 0 1rem;
       }
