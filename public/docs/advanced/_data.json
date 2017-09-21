@@ -11,12 +11,16 @@
     "order": 3,
     "title": "Build Processes"
   },
-  "commands": {
+  "truffle-boxes": {
     "order": 4,
+    "title": "Truffle Boxes"
+  },
+  "commands": {
+    "order": 5,
     "title": "Command Reference"
   },
   "truffle-with-metamask": {
-    "order": 5,
+    "order": 6,
     "title": "Truffle with MetaMask"
   }
 }
