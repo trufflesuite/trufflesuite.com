@@ -22,6 +22,12 @@
     },
     "tutorialtoken": {
       "title": "tutorialtoken"
+    },
+    "webpack": {
+      "title": "webpack"
+    },
+    "blueprint": {
+      "title": "blueprint"
     }
   }
 }

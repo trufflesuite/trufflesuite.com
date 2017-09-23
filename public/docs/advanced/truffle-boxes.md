@@ -1,12 +1,15 @@
 # Creating a Box
 
-Creating a Truffle Box is as straightforward as adding a config file to your project and adding it to GitHub. There are 3 files unique to each Truffle Box: a configuration file, small and large images. The images are optional, but will help potential users recognize your box more easily. All 3 of these files belong in the top-level directory of your repo.
+To create a Truffle Box you'll need a few things:
+* A GitHub repository
+* A configuration file
+* Optionally, small and large images for the box's listing
 
-With these files in place, and your repo on GitHub, the unbox command will be: `truffle unbox {USER_NAME || ORG_NAME}/{REPO_NAME}`
+The configuration file and images belong in the top-level directory of your repo. With these files in place, and your repo on GitHub, the unbox command will be: `truffle unbox {USER_NAME || ORG_NAME}/{REPO_NAME}`
 
-If you're **starting from scratch**, we've created a blueprint box containing a configuration file with common values, as well as template versions of the small and large images.
+If you're **starting from scratch**, we've created a [blueprint box](/boxes/blueprint) containing a configuration file with common values, as well as template versions of the small and large images.
 
-If you're using **an existing project**, download the files here and extract them into your project.
+If you're using **an existing project**, [download the files here](/files/truffle-box-essentials.zip) and extract them into your project.
 
 # Configuration File
 
