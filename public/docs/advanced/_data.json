@@ -15,8 +15,12 @@
     "order": 4,
     "title": "Command Reference"
   },
-  "truffle-with-metamask": {
+  "truffle-boxes": {
     "order": 5,
+    "title": "Truffle Boxes"
+  },
+  "truffle-with-metamask": {
+    "order": 6,
     "title": "Truffle with MetaMask"
   }
 }

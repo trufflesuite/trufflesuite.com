@@ -28,6 +28,18 @@
     },
     "blueprint": {
       "title": "blueprint"
+    },
+    "angular-truffle-box": {
+      "title": "angular-truffle-box"
+    },
+    "react-dapp-material-ui": {
+      "title": "react-dapp-material-ui"
+    },
+    "svelte-box": {
+      "title": "svelte-box"
+    },
+    "vue-dark-chocolate": {
+      "title": "vue-dark-chocolate"
     }
   }
 }

@@ -68,3 +68,7 @@ If no images are provided in a box, we default to banners containing the Truffle
 ![Default Large Image](/images/ballotin/loading-thumb.png)
 
 ![Default Small Image](/images/ballotin/loading-banner.png)
+
+# Truffle Site Listing
+
+Before being listed on the Truffle website, all boxes undergo a screening process to ensure compatibility with Truffle. To start the pre-screening process, <a href="mailto:info@trufflesuite.com">send us an email</a> with your desired box name and brief description, along with a link to its GitHub repo to: [info@trufflesuite.com](mailto:info@trufflesuite.com).
