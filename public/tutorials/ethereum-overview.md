@@ -75,8 +75,8 @@ Once a new block is mined, the other miners are notified and begin verifying and
 Once more than half of the miners have validated the new block, the network has reached **consensus** on the new block and it becomes part of the chain's permanent history. Now this data can simply be downloaded (synchronized) by non-mining nodes with its validity assured.
 
 Here's the whole process visually:
-
-</div><div class="container container-steps text-center">
+</div>
+<div class="container container-steps text-center">
 <div class="row">
 <div class="col-lg-4">
 ![Mining Step 1](/tutorials/images/ethereum-overview/chain-step1.png)
@@ -85,7 +85,7 @@ Here's the whole process visually:
 
 <div class="col-lg-4">
 ![Mining Step 2](/tutorials/images/ethereum-overview/chain-step2.png)
-<p>2. Bob and Alice's transaction is combined with other transactions that have occured since the last block.</p>
+<p>2. Bob and Alice's transaction is combined with other transactions that have occurred since the last block.</p>
 </div>
 
 <div class="col-lg-4">
@@ -97,7 +97,7 @@ Here's the whole process visually:
 <div class="row">
 <div class="col-lg-4 col-lg-offset-2">
 ![Mining Step 4](/tutorials/images/ethereum-overview/chain-step4.png)
-<p>4. The victorious miner creates a new block and receves a reward.</p>
+<p>4. The victorious miner creates a new block and receives a reward.</p>
 </div>
 
 <div class="col-lg-4">
@@ -105,40 +105,43 @@ Here's the whole process visually:
 <p>5. With the transaction validated, Alice receives 1 ETH.</p>
 </div>
 </div>
-</div><div class="container container-narrow">
-
-## What is Ethereum?
-
-More than a database, Ethereum allows you run programs in a blockchain's trusted environment. Ethereum adds a virtual machine, called the **EVM (Ethereum Virtual Machine)**, on top of the blockchain. The EVM allows code to be verified and executed on the blockchain, providing guarantees that code will be run the same way on everyone's machine. This code is contained in Smart Contracts (more on these below).
-
-Rather than just tracking account balances, Ethereum uses the same methods to keep the state of the EVM on the blockchain. All nodes process smart contracts to verify the integrity of the contracts themselves and their outputs.
-
-## What is a Smart Contract?
-
-**Smart Contracts** are programs running on the EVM. They most closely resemble classes in other programming languages. Smart Contracts can accept and store Ether, data, or a combination of both. Then, using the logic programmed into the contract, it can distribute that Ether to other accounts or even other smart contracts. You can see how complex systems can develop from this flexibility.
-
-The language smart contracts are written in is called **Solidity**. Solidity is statically typed, supports inheritance, libraries and complex user-defined types among other features. It's file extension is ".sol". Solidity's syntax is similar to JavaScript's. We'll go over the basics of Solidity in future tutorials, but you may also want to dive deeper by checking out [the documentation](https://solidity.readthedocs.io/en/develop/).
-
-Here's a smart contract example with Bob and Alice again. This time, they're using an escrow contract (a place to store money until a condition is fulfilled) to store their Ether before the final transaction.
-
-</div><div class="container container-steps text-center">
-<div class="row">
-  <div class="col-lg-4">
-    ![Smart Contract Step 1](/tutorials/images/ethereum-overview/smart-contract-step1.png)
-    <p>1. Alice wants to hire Bob to build her a patio. To keep both parties honest, Alice agrees to store her payment for the patio within the escrow contract, and Bob agrees to deposit an equal amount in the contract as well.</p>
-  </div>
-
-  <div class="col-lg-4">
-    ![Smart Contract Step 2](/tutorials/images/ethereum-overview/smart-contract-step2.png)
-    <p>2. Bob completes the patio and Alice is thrilled! She gives the smart contract permission to release the funds.</p>
-  </div>
-
-  <div class="col-lg-4">
-    ![Smart Contract Step 3](/tutorials/images/ethereum-overview/smart-contract-step3.png)
-    <p>3. Bob receives his collateral of 1 ETH along with Alice's payment of 1 ETH.</p>
-  </div>
 </div>
-</div><div class="container container-narrow">
+<div class="container container-narrow">
+<h3><a name="what-is-ethereum" class="anchor" href="#what-is-ethereum"><span class="header-link" style="z-index: 9999995985">&nbsp;</span></a>What is Ethereum?</h3>
+
+<p>More than a database, Ethereum allows you run programs in a blockchain's trusted environment. Ethereum adds a virtual machine, called the <strong>EVM (Ethereum Virtual Machine)</strong>, on top of the blockchain. The EVM allows code to be verified and executed on the blockchain, providing guarantees that code will be run the same way on everyone's machine. This code is contained in Smart Contracts (more on these below).</p>
+
+<p>Rather than just tracking account balances, Ethereum uses the same methods to keep the state of the EVM on the blockchain. All nodes process smart contracts to verify the integrity of the contracts themselves and their outputs.</p>
+
+<h3><a name="what-is-a-smart-contract" class="anchor" href="#what-is-a-smart-contract"><span class="header-link" style="z-index: 9999995985">&nbsp;</span></a>What is a Smart Contract?</h3>
+
+<p><strong>Smart Contracts</strong> are programs running on the EVM. They most closely resemble classes in other programming languages. Smart Contracts can accept and store Ether, data, or a combination of both. Then, using the logic programmed into the contract, it can distribute that Ether to other accounts or even other smart contracts. You can see how complex systems can develop from this flexibility.</p>
+
+<p>The language smart contracts are written in is called <strong>Solidity</strong>. Solidity is statically typed, supports inheritance, libraries and complex user-defined types among other features. It's file extension is ".sol". Solidity's syntax is similar to JavaScript's. We'll go over the basics of Solidity in future tutorials, but you may also want to dive deeper by checking out <a href="https://solidity.readthedocs.io/en/develop/">the documentation</a>.</p>
+
+<p>Here's a smart contract example with Bob and Alice again. This time, they're using an escrow contract (a place to store money until a condition is fulfilled) to store their Ether before the final transaction.</p>
+
+</div>
+
+<div class="container container-steps text-center">
+<div class="row">
+<div class="col-lg-4">
+![Smart Contract Step 1](/tutorials/images/ethereum-overview/smart-contract-step1.png)
+<p>1. Alice wants to hire Bob to build her a patio. To keep both parties honest, Alice agrees to store her payment for the patio within the escrow contract, and Bob agrees to deposit an equal amount in the contract as well.</p>
+</div>
+
+<div class="col-lg-4">
+![Smart Contract Step 2](/tutorials/images/ethereum-overview/smart-contract-step2.png)
+<p>2. Bob completes the patio and Alice is thrilled! She gives the smart contract permission to release the funds.</p>
+</div>
+
+<div class="col-lg-4">
+![Smart Contract Step 3](/tutorials/images/ethereum-overview/smart-contract-step3.png)
+<p>3. Bob receives his collateral of 1 ETH along with Alice's payment of 1 ETH.</p>
+</div>
+</div>
+</div>
+<div class="container container-narrow">
 
 In a more complex escrow contract, if Bob were to fail to build the patio or if he were to perform a poor job, provisions could be written into the contract's code releasing Bob's collateral to Alice instead.
 
