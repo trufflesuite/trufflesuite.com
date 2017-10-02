@@ -2,10 +2,8 @@
   <% include ../_includes/navbar %>
 
   <section class="MainContent">
-    <div class="container-fluid">
-      <div class="row">
-        <%- yield %>
-      </div>
+    <div class="container<%= (current.path[1] === 'index') ? '' : ' container-narrow'; %>">
+      <%- yield %>
     </div>
 
     <footer class="container">

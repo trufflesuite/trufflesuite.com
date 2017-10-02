@@ -1,6 +1,12 @@
 .Tutorials {
   &.TutorialIndexContainer {
     background: #F8F5F0;
+
+    .MainContent {
+      ol {
+        padding-left: 0;
+      }
+    }
   }
 
   .nav {
@@ -14,22 +20,11 @@
     @extend .p-b-4;
 
     padding-top: 123px;
-
-    > .container-fluid > .row > h1,
-    > .container-fluid > .row > h2,
-    > .container-fluid > .row > h3,
-    > .container-fluid > .row > h4,
-    > .container-fluid > .row > p {
-      @extend .container;
-    }
+    overflow-x: hidden;
 
     h1 {
       margin: 1.5rem auto 3rem auto;
       text-transform: uppercase;
-
-      &:first-child {
-        @extend .container;
-      }
     }
 
     h1,
@@ -37,8 +32,7 @@
     h3,
     h4,
     h5,
-    h6,
-    h7 {
+    h6 {
       position: relative;
 
       .anchor {
@@ -106,7 +100,7 @@
       display: block;
       height: calc(50vh - 100px);
       width: auto;
-      margin: 1.5rem auto 3rem auto !important;
+      margin: 1.5rem auto 1rem auto !important;
     }
 
     table {
@@ -119,16 +113,12 @@
 
     ul,
     ol {
-      @extend .container;
-
       max-width: 100%;
       margin: 2rem auto;
-      padding-left: 50px;
+      padding-left: 20px;
       font-family: $font-family-serif;
 
       &.list-unstyled {
-        padding-left: 15px;
-
         li {
           margin-bottom: 0;
         }
@@ -137,15 +127,6 @@
       li {
         margin-bottom: 1rem;
         line-height: 1.75rem;
-
-        pre {
-          code {
-            @extend .col-xs-12;
-            @extend .col-md-6;
-            @extend .col-md-offset-5;
-            @extend .col-md-pull-5;
-          }
-        }
       }
 
       @media screen and (max-width: 767px) {
@@ -159,22 +140,10 @@
       border-bottom: 1px dotted;
       display: block;
       height: 1px;
-      width: 1140px;
-
-      @media screen and (max-width: 1199px) {
-        width: 940px;
-      }
-
-      @media screen and (max-width: 1023px) {
-        width: 720px;
-      }
-
-      @media screen and (max-width: 767px) {
-        width: calc(100% - 30px);
-      }
     }
 
     pre {
+      position: relative;
       margin: 1rem 0 3rem 0;
       padding: 3rem 0;
       border-radius: 0;
@@ -183,14 +152,33 @@
       word-break: break-word;
       border-left: none;
       border-right: none;
-      float: left;
+      overflow: visible;
 
       code {
-        @extend .container;
-
         display: block;
         margin: 0 auto;
-        padding: 0 15px;
+        padding: 0;
+        width: calc(50vw + 250px);
+        overflow-x: auto;
+
+        @media screen and (max-width: 599px) {
+          width: 100%;
+          min-width: auto;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 200vw;
+        top: -1px;
+        right: auto;
+        bottom: -1px;
+        left: -100vw;
+        z-index: -1;
+        background: #f7f7f7;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
       }
 
       &.language-shell {
@@ -199,6 +187,10 @@
         code {
           color: white;
           text-shadow: none;
+        }
+
+        &::after {
+          background-color: #272727;
         }
       }
     }
@@ -312,7 +304,7 @@
    * Single Tutorial
    */
 
-  &:not(.TutorialIndexContainer) {
+  /*&:not(.TutorialIndexContainer) {
     .MainContent {
       > .container-fluid > .row > h1,
       > .container-fluid > .row > h2,
@@ -336,5 +328,5 @@
         max-width: 540px;
       }
     }
-  }
+  }*/
 }

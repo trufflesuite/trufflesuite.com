@@ -1,6 +1,6 @@
-<div class="text-center container">
+</div><div class="text-center container">
   ![OpenZeppelin](/tutorials/images/open-zeppelin/logo-zeppelin.png)
-</div>
+</div><div class="container container-narrow">
 
 # Robust Smart Contracts with OpenZeppelin
 
@@ -112,19 +112,19 @@ $ npm run dev
 
 A browser window should automatically open with the interface below:
 
-<div class="text-center container">
+</div><div class="text-center container">
   ![TutorialToken Wallet](/tutorials/images/open-zeppelin/tt-wallet.png)
   <p class="caption">The Tutorial Token wallet.</p><br/>
-</div>
+</div><div class="container container-narrow">
 
 Our basic dapp shows the TutorialToken balance of the selected account in MetaMask.
 
 Try transferring some tokens to a different account, here we moved 2000 TT to the second account.
 
-<div class="text-center container">
+</div><div class="text-center container">
   ![TutorialToken Wallet](/tutorials/images/open-zeppelin/tt-wallet-transfer.png)
   <p class="caption">2000TT moved to account 2.</p><br/>
-</div>
+</div><div class="container container-narrow">
 
 ## Truffle + OpenZeppelin = A Superb Development Experience
 

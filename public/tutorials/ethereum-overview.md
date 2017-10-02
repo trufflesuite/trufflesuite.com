@@ -27,13 +27,13 @@ A self-hosted blog is a common use of a centralized database. The owner could ed
 
 Graphically represented, each arrow crossing a boundary of the main server box is a connection which requires trust.
 
-<div class="container container-steps text-center">
+</div><div class="container container-steps text-center">
   <div class="row">
     <div class="col-sm-6 col-sm-push-3">
       ![Centralized Database](/tutorials/images/ethereum-overview/db-server.png)
     </div>
   </div>
-</div>
+</div><div class="container container-narrow">
 
 ### The Need to Share Data
 
@@ -76,36 +76,36 @@ Once more than half of the miners have validated the new block, the network has 
 
 Here's the whole process visually:
 
-<div class="container container-steps text-center">
+</div><div class="container container-steps text-center">
 <div class="row">
-  <div class="col-lg-4">
-    ![Mining Step 1](/tutorials/images/ethereum-overview/chain-step1.png)
-    <p>1. Bob attempts to send Alice 1 ETH.</p>
-  </div>
+<div class="col-lg-4">
+![Mining Step 1](/tutorials/images/ethereum-overview/chain-step1.png)
+<p>1. Bob attempts to send Alice 1 ETH.</p>
+</div>
 
-  <div class="col-lg-4">
-    ![Mining Step 2](/tutorials/images/ethereum-overview/chain-step2.png)
-    <p>2. Bob and Alice's transaction is combined with other transactions that have occured since the last block.</p>
-  </div>
+<div class="col-lg-4">
+![Mining Step 2](/tutorials/images/ethereum-overview/chain-step2.png)
+<p>2. Bob and Alice's transaction is combined with other transactions that have occured since the last block.</p>
+</div>
 
-  <div class="col-lg-4">
-    ![Mining Step 3](/tutorials/images/ethereum-overview/chain-step3.png)
-    <p>3. Miners compete to validate the block with the new set of transactions.</p>
-  </div>
+<div class="col-lg-4">
+![Mining Step 3](/tutorials/images/ethereum-overview/chain-step3.png)
+<p>3. Miners compete to validate the block with the new set of transactions.</p>
+</div>
 </div>
 
 <div class="row">
-  <div class="col-lg-4 col-lg-offset-2">
-    ![Mining Step 4](/tutorials/images/ethereum-overview/chain-step4.png)
-    <p>4. The victorious miner creates a new block and receves a reward.</p>
-  </div>
+<div class="col-lg-4 col-lg-offset-2">
+![Mining Step 4](/tutorials/images/ethereum-overview/chain-step4.png)
+<p>4. The victorious miner creates a new block and receves a reward.</p>
+</div>
 
-  <div class="col-lg-4">
-    ![Mining Step 5](/tutorials/images/ethereum-overview/chain-step5.png)
-    <p>5. With the transaction validated, Alice receives 1 ETH.</p>
-  </div>
+<div class="col-lg-4">
+![Mining Step 5](/tutorials/images/ethereum-overview/chain-step5.png)
+<p>5. With the transaction validated, Alice receives 1 ETH.</p>
 </div>
 </div>
+</div><div class="container container-narrow">
 
 ## What is Ethereum?
 
@@ -121,7 +121,7 @@ The language smart contracts are written in is called **Solidity**. Solidity is 
 
 Here's a smart contract example with Bob and Alice again. This time, they're using an escrow contract (a place to store money until a condition is fulfilled) to store their Ether before the final transaction.
 
-<div class="container container-steps text-center">
+</div><div class="container container-steps text-center">
 <div class="row">
   <div class="col-lg-4">
     ![Smart Contract Step 1](/tutorials/images/ethereum-overview/smart-contract-step1.png)
@@ -138,7 +138,7 @@ Here's a smart contract example with Bob and Alice again. This time, they're usi
     <p>3. Bob receives his collateral of 1 ETH along with Alice's payment of 1 ETH.</p>
   </div>
 </div>
-</div>
+</div><div class="container container-narrow">
 
 In a more complex escrow contract, if Bob were to fail to build the patio or if he were to perform a poor job, provisions could be written into the contract's code releasing Bob's collateral to Alice instead.
 

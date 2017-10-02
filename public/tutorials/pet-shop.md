@@ -1,6 +1,6 @@
-<div class="pet-shop-header">
+</div><div class="pet-shop-header">
   ![Ethereum Pet Shop](/tutorials/images/pet-shop/petshop.png)
-</div>
+</div><div class="container container-narrow">
 
 # Ethereum Pet Shop
 
@@ -358,7 +358,6 @@ Note the **memory** attribute on `adopters`. The memory attribute tells Solidity
 
 
    ```shell
-
    Using network 'development'.
 
    Compiling ./contracts/Adoption.sol...
@@ -372,8 +371,8 @@ Note the **memory** attribute on `adopters`. The memory attribute tells Solidity
        ✓ testGetAdopterAddressByPetIdInArray (89ms)
 
 
-     3 passing (670ms)```
-
+     3 passing (670ms)
+   ```
 
 ## Creating a user interface to interact with the smart contract
 
@@ -453,7 +452,7 @@ Things to notice:
    }).then(function(adopters) {
      for (i = 0; i < adopters.length; i++) {
        if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
-         $('.panel-pet').eq(i).find('button').text('Pending...').attr('disabled', true);
+         $('.panel-pet').eq(i).find('button').text('Success').attr('disabled', true);
        }
      }
    }).catch(function(err) {
@@ -538,7 +537,7 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
 1. In the box marked **Wallet Seed**, enter the mnemonic generated from the TestRPC instance from earlier in this tutorial.
 
-1. Enter a new password, then confirm the new password, then click **OK**. 
+1. Enter a new password, then confirm the new password, then click **OK**.
 
    <div class="text-center">
      ![MetaMask Mnemonic](/tutorials/images/pet-shop/metamask-3.png)
@@ -593,15 +592,15 @@ We can now start a local web server and use the dapp. We're using the `lite-serv
 
 2. To use the dapp, click the **Adopt** button on the pet of your choice. You'll be automatically prompted to approve the transaction by MetaMask. Do so, and you'll see the button change to "Success" and become disabled, just as we specified.
 
-<div class="text-center container">
+</div><div class="text-center container">
   ![Pet Shop Adoption Step 1](/tutorials/images/pet-shop/adoption1.jpeg)
   <p class="caption">After clicking an Adopt button, MetaMask prompts you to review and accept the transaction.</p>
 </div>
 
 <div class="text-center container">
   ![Pet Shop Adoption Step 2](/tutorials/images/pet-shop/adoption2.jpeg)
-  <p class="caption">Once the transaction completes, you'll see the button change to Pending... and a transaction will appear in your MetaMask account.</p>
+  <p class="caption">Once the transaction completes, you'll see the button change to Success and a transaction will appear in your MetaMask account.</p>
   <br/><br/>
-</div>
+</div><div class="container container-narrow">
 
 Congratulations! You have taken a huge step to becoming a full-fledged dapp developer. For developing locally, you have all the tools you need to start making more advanced dapps. If you'd like to make your dapp live for others to use, stay tuned for our next tutorial on deploying to the Ropsten testnet.
