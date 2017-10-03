@@ -102,7 +102,7 @@ $ truffle migrate
 
 ## 4. Interacting with TutorialToken
 
-For this portion of the tutorial, we recommend using the MetaMask Chrome extension. It will allow you to switch between accounts quickly; perfect for testing the ability to transfer our newly created tokens. [Click here if you need help setting up and configuring MetaMask for use with the testrpc](http://localhost:9000/tutorials/pet-shop#using-our-dapp-in-chrome).
+For this portion of the tutorial, we recommend using the MetaMask Chrome extension. It will allow you to switch between accounts quickly; perfect for testing the ability to transfer our newly created tokens. [Click here if you need help setting up and configuring MetaMask for use with the testrpc](/tutorials/pet-shop#using-our-dapp-in-chrome).
 
 We've already installed `lite-server` for you, so getting the front-end up and running is as easy as executing the following command from the root `oz-workspace` directory:
 
