@@ -22,7 +22,7 @@ This is a high-level overview covering:
 
 Blockchains are used when multiple parties, perhaps located across the world, need to share data and transfer value without trusting each other.
 
-The financial world describes this trust as the **counterparty risk**: the risk that the other party won't hold up their end of the bargain. Blockchains completely remove the counterparty risk through a revolutionary system of mathematics, cryptography, and peer-to-peer networking. 
+The financial world describes this trust as the **counterparty risk**: the risk that the other party won't hold up their end of the bargain. Blockchains completely remove the counterparty risk through a revolutionary system of mathematics, cryptography, and peer-to-peer networking.
 
 Before we go into those details, let's first look at some history and how the need for blockchains arose.
 
@@ -34,14 +34,14 @@ Centralized systems can be manipulated, from inside or outside, so we have to tr
 
 A self-hosted blog is a common example of a centralized database. The owner could potentially edit posts in hindsight or censor users without recourse. Alternately, a hacker could infiltrate the server and commit malicious acts. If there is no database backup, reversing the damage might be impossible.
 
-<div class="container container-steps text-center">
+</div><div class="container container-steps text-center">
   <div class="row">
     <div class="col-sm-6 col-sm-push-3">
       ![Centralized Database](/tutorials/images/ethereum-overview/db-server.png)
-      <p>Graphically represented, each arrow crossing a boundary of the main server box is a connection which requires trust</p>
+      <p class="caption">Graphically represented, each arrow crossing a boundary of the main server box is a connection which requires trust</p>
     </div>
   </div>
-</div>
+</div><div class="container container-narrow">
 
 ### The need to share data
 
@@ -89,72 +89,74 @@ While the original data can't be reproduced from its hash, the same data will al
 Once more than half of the miners have validated the new block, the network has "reached consensus" and the block becomes part of the blockchain permanent history. Now this data can be downloaded by all nodes, with its validity assured.
 
 Here's the whole process visually:
+</div>
+<div class="container container-steps text-center">
+<div class="row">
+<div class="col-lg-4">
+![Mining Step 1](/tutorials/images/ethereum-overview/chain-step1.png)
+<p>1. Bob attempts to send Alice 1 ETH</p>
+</div>
+
+<div class="col-lg-4">
+![Mining Step 2](/tutorials/images/ethereum-overview/chain-step2.png)
+<p>2. Bob and Alice's transaction is combined with other transactions that have occurred since the last block</p>
+</div>
+
+<div class="col-lg-4">
+![Mining Step 3](/tutorials/images/ethereum-overview/chain-step3.png)
+<p>3. Miners compete to validate the block with the new set of transactions</p>
+</div>
+</div>
+
+<div class="row">
+<div class="col-lg-4 col-lg-offset-2">
+![Mining Step 4](/tutorials/images/ethereum-overview/chain-step4.png)
+<p>4. The victorious miner creates a new block and receives a reward</p>
+</div>
+
+<div class="col-lg-4">
+![Mining Step 5](/tutorials/images/ethereum-overview/chain-step5.png)
+<p>5. With the transaction validated, Alice receives 1 ETH</p>
+</div>
+</div>
+</div>
+<div class="container container-narrow">
+<h3><a name="what-is-ethereum" class="anchor" href="#what-is-ethereum"><span class="header-link" style="z-index: 9999995985">&nbsp;</span></a>What is Ethereum?</h3>
+
+<p><strong>Ethereum is a blockchain that allows you to run programs in its trusted environment.</strong> This contrasts with the Bitcoin blockchain, which only allows you to manage cryptocurrency.</p>
+
+<p>To this end, Ethereum has a virtual machine, called the Ethereum Virtual Machine (EVM). The EVM allows code to be verified and executed on the blockchain, providing guarantees it will be run the same way on everyone's machine. This code is contained in "smart contracts" (more on these below).</p>
+
+<p>Beyond just tracking account balances, Ethereum maintains the state of the EVM on the blockchain. All nodes process smart contracts to verify the integrity of the contracts and their outputs.</p>
+
+
+<h3><a name="what-is-a-smart-contract" class="anchor" href="#what-is-a-smart-contract"><span class="header-link" style="z-index: 9999995985">&nbsp;</span></a>What is a smart contract?</h3>
+
+<p><strong>A smart contract is code that runs on the EVM.</strong> Smart contracts can accept and store ether, data, or a combination of both. Then, using the logic programmed into the contract, it can distribute that ether to other accounts or even other smart contracts.</p>
+
+<p>Here's a smart contract example with Bob and Alice again. Alice wants to hire Bob to build her a patio, and they are using an escrow contract (a place to store money until a condition is fulfilled) to store their ether before the final transaction.</p>
+
+</div>
 
 <div class="container container-steps text-center">
 <div class="row">
-  <div class="col-lg-4">
-    ![Mining Step 1](/tutorials/images/ethereum-overview/chain-step1.png)
-    <p>1. Bob attempts to send Alice 1 ETH</p>
-  </div>
-
-  <div class="col-lg-4">
-    ![Mining Step 2](/tutorials/images/ethereum-overview/chain-step2.png)
-    <p>2. Bob and Alice's transaction is combined with other transactions that have occurred since the last block</p>
-  </div>
-
-  <div class="col-lg-4">
-    ![Mining Step 3](/tutorials/images/ethereum-overview/chain-step3.png)
-    <p>3. Miners compete to validate the block with the new set of transactions</p>
-  </div>
+<div class="col-lg-4">
+![Smart Contract Step 1](/tutorials/images/ethereum-overview/smart-contract-step1.png)
+<p>1. Alice agrees to store her payment for the patio within the escrow contract, and Bob agrees to deposit an equal amount</p>
 </div>
 
-<div class="row">
-  <div class="col-lg-4 col-lg-offset-2">
-    ![Mining Step 4](/tutorials/images/ethereum-overview/chain-step4.png)
-    <p>4. The victorious miner creates a new block and receives a reward</p>
-  </div>
-
-  <div class="col-lg-4">
-    ![Mining Step 5](/tutorials/images/ethereum-overview/chain-step5.png)
-    <p>5. With the transaction validated, Alice receives 1 ETH</p>
-  </div>
-</div>
+<div class="col-lg-4">
+![Smart Contract Step 2](/tutorials/images/ethereum-overview/smart-contract-step2.png)
+<p>2. Bob completes the patio project and Alice gives the smart contract permission to release the funds</p>
 </div>
 
-
-## What is Ethereum?
-
-**Ethereum is a blockchain that allows you to run programs in its trusted environment.** This contrasts with the Bitcoin blockchain, which only allows you to manage cryptocurrency.
-
-To this end, Ethereum has a virtual machine, called the Ethereum Virtual Machine (EVM). The EVM allows code to be verified and executed on the blockchain, providing guarantees it will be run the same way on everyone's machine. This code is contained in "smart contracts" (more on these below).
-
-Beyond just tracking account balances, Ethereum maintains the state of the EVM on the blockchain. All nodes process smart contracts to verify the integrity of the contracts and their outputs.
-
-
-## What is a smart contract?
-
-**A smart contract is code that runs on the EVM.** (It is analogous to a "class" in other programming languages.) Smart contracts can accept and store ether, data, or a combination of both. Then, using the logic programmed into the contract, it can distribute that ether to other accounts or even other smart contracts.
-
-Here's a smart contract example with Bob and Alice again. Alice wants to hire Bob to build her a patio, and they are using an escrow contract (a place to store money until a condition is fulfilled) to store their ether before the final transaction.
-
-<div class="container container-steps text-center">
-<div class="row">
-  <div class="col-lg-4">
-    ![Smart Contract Step 1](/tutorials/images/ethereum-overview/smart-contract-step1.png)
-    <p>1. Alice agrees to store her payment for the patio within the escrow contract, and Bob agrees to deposit an equal amount</p>
-  </div>
-
-  <div class="col-lg-4">
-    ![Smart Contract Step 2](/tutorials/images/ethereum-overview/smart-contract-step2.png)
-    <p>2. Bob completes the patio project and Alice gives the smart contract permission to release the funds</p>
-  </div>
-
-  <div class="col-lg-4">
-    ![Smart Contract Step 3](/tutorials/images/ethereum-overview/smart-contract-step3.png)
-    <p>3. Bob receives Alice's payment along with his collateral</p>
-  </div>
+<div class="col-lg-4">
+![Smart Contract Step 3](/tutorials/images/ethereum-overview/smart-contract-step3.png)
+<p>3. Bob receives Alice's payment along with his collateral</p>
 </div>
 </div>
+</div>
+<div class="container container-narrow">
 
 (Provisions could be written into the contract code releasing Bob's collateral to Alice if Bob were to fail to build the patio or if he were to perform a poor job.)
 
@@ -173,7 +175,7 @@ The Ethereum blockchain can be simulated locally for development. Local test net
 
 ### Public test networks
 
-Developers use public test networks (or testnets) to test Ethereum applications before final deployment to the main network. Ether on these networks is used for testing purposes only and has no value. 
+Developers use public test networks (or testnets) to test Ethereum applications before final deployment to the main network. Ether on these networks is used for testing purposes only and has no value.
 
 There are three public test networks in wide usage:
 
@@ -181,7 +183,7 @@ There are three public test networks in wide usage:
 
 * **Kovan**: A network that uses a consensus method called "proof-of-authority". This means its transactions are validated by select members, leading to a consistent four second block time. The supply of ether on this testnet is also controlled to mitigate spam attacks.
 
-* **Rinkeby**: An testnet also using proof-of-authority, created by The Ethereum Foundation.
+* **Rinkeby**: A testnet also using proof-of-authority, created by The Ethereum Foundation.
 
 ### Private/enterprise networks
 
