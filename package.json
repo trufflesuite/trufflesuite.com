@@ -8,6 +8,7 @@
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.9.8",
+    "copyfiles": "^1.2.0",
     "csslint-cli": "0.0.3",
     "ejs": "^2.5.5",
     "github": "^9.2.0",
@@ -27,7 +28,7 @@
     "uglify": "recursive-uglifyjs ../scripts && recursive-uglifyjs ../deps/scripts",
     "compile": "node ./compile.js",
     "build": "npm run compile",
-    "postcompile": "npm run uglify && npm run imagemin && cp CNAME ../",
+    "postcompile": "npm run uglify && npm run imagemin && copyfiles CNAME ../",
     "imagemin": "imagemin ./public/images/ ../images/ --optimizationLevel 3 --progressive"
   },
   "engines": {

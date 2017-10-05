@@ -40,6 +40,9 @@
     },
     "vue-dark-chocolate": {
       "title": "vue-dark-chocolate"
+    },
+    "scoreboard": {
+      "title": "scoreboard"
     }
   }
 }

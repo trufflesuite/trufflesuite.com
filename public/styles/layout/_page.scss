@@ -1,0 +1,16 @@
+.container-narrow {
+  max-width: 600px;
+}
+
+.Footer {
+  .copyright {
+    line-height: 40px;
+
+    svg {
+      height: 40px;
+      width: auto;
+      float: left;
+      margin-right: 5px;
+    }
+  }
+}

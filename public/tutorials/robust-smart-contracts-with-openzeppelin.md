@@ -1,6 +1,6 @@
-<div class="text-center container">
+</div><div class="text-center container">
   ![OpenZeppelin](/tutorials/images/open-zeppelin/logo-zeppelin.png)
-</div>
+</div><div class="container container-narrow">
 
 # Robust Smart Contracts with OpenZeppelin
 
@@ -102,7 +102,7 @@ $ truffle migrate
 
 ## 4. Interacting with TutorialToken
 
-For this portion of the tutorial, we recommend using the MetaMask Chrome extension. It will allow you to switch between accounts quickly; perfect for testing the ability to transfer our newly created tokens. [Click here if you need help setting up and configuring MetaMask for use with the testrpc](http://localhost:9000/tutorials/pet-shop#using-our-dapp-in-chrome).
+For this portion of the tutorial, we recommend using the MetaMask Chrome extension. It will allow you to switch between accounts quickly; perfect for testing the ability to transfer our newly created tokens. [Click here if you need help setting up and configuring MetaMask for use with the testrpc](/tutorials/pet-shop#using-our-dapp-in-chrome).
 
 We've already installed `lite-server` for you, so getting the front-end up and running is as easy as executing the following command from the root `oz-workspace` directory:
 
@@ -112,19 +112,19 @@ $ npm run dev
 
 A browser window should automatically open with the interface below:
 
-<div class="text-center container">
+</div><div class="text-center container">
   ![TutorialToken Wallet](/tutorials/images/open-zeppelin/tt-wallet.png)
   <p class="caption">The Tutorial Token wallet.</p><br/>
-</div>
+</div><div class="container container-narrow">
 
 Our basic dapp shows the TutorialToken balance of the selected account in MetaMask.
 
 Try transferring some tokens to a different account, here we moved 2000 TT to the second account.
 
-<div class="text-center container">
+</div><div class="text-center container">
   ![TutorialToken Wallet](/tutorials/images/open-zeppelin/tt-wallet-transfer.png)
   <p class="caption">2000TT moved to account 2.</p><br/>
-</div>
+</div><div class="container container-narrow">
 
 ## Truffle + OpenZeppelin = A Superb Development Experience
 
