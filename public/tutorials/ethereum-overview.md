@@ -153,7 +153,7 @@ Apart from the MainNet, there are test networks (both local and public), as well
 
 ### Local Test Networks
 
-The Ethereum blockchain can be simulated locally for development. Local test networks process transactions instantly and Ether can be distributed as desired. An array of Ethereum simulators exist; we recommend our own, [Ganache](https://github.com/trufflesuite/ganache).
+The Ethereum blockchain can be simulated locally for development. Local test networks process transactions instantly and Ether can be distributed as desired. An array of Ethereum simulators exist; we recommend the [EthereumJS TestRPC](https://github.com/ethereumjs/testrpc).
 
 ### Public Test Networks
 

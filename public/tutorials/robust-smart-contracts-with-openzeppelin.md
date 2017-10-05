@@ -4,11 +4,11 @@
 
 # Building robust smart contracts with OpenZeppelin
 
-Real smart contracts can deal with real money, so having our Solidity code free from errors and highly secure is essential.
+Smart contracts deployed to the live Ethereum mainnet can deal with real money, so having our Solidity code free from errors and highly secure is essential.
 
 [Zeppelin Solutions](https://zeppelin.solutions/), a smart contract auditing service, has recognized this need. Using their experience, they've put together a set of vetted smart contracts called [OpenZeppelin](https://openzeppelin.org/).
 
-We can use and extend these contracts to create more secure dapps in less time. OpenZeppelin comes with a wide array of smart contracts for various important functions ([see them all here](https://github.com/OpenZeppelin/zeppelin-solidity)), but today we'll be focusing on their token contracts. Specifically, we'll be extending their `StandardToken.sol` to create our own [ERC20](https://theethereum.wiki/w/index.php/ERC20_Token_Standard)-compliant token.
+We can use and extend these contracts to create more secure dapps in less time. OpenZeppelin comes with a wide array of smart contracts for various important functions ([see them all here](https://github.com/OpenZeppelin/zeppelin-solidity)), but today we'll be focusing on their token contracts. Specifically, we'll be extending their `StandardToken.sol` contract to create our own [ERC20](https://theethereum.wiki/w/index.php/ERC20_Token_Standard)-compliant token.
 
 
 ## Requirements
@@ -21,7 +21,7 @@ For even more information, please see the following links:
 * [Ethereum](https://ethereum.org/)
 * [Solidity documentation](https://solidity.readthedocs.io/en/develop/)
 
-We will primarily be using the command line for this tutorial, so please ensure you have basic familiarity with the terminal for your operating system.
+We will primarily be using the command line for this tutorial, so please ensure you have basic familiarity with your operating system's terminal.
 
 ## Overview
 
