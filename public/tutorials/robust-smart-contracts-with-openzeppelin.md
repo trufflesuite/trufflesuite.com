@@ -126,7 +126,7 @@ Using less than 15 lines of hand-coded Solidity, we've created our own Ethereum 
    ```
 
    <p class="alert alert-info">
-   <strong>Note</strong>: Recall that on Windows you may need to run the truffle commands with `truffle.cmd`, as in `truffle.cmd compile`. Read more about naming conventions on Windows in the [Configuration section of the documentation](/docs/advanced/configuration).
+   <strong>Note</strong>: If you're on Windows and encountering problems running these commands, please see the documentation on [resolving naming conflicts on Windows](/docs/advanced/configuration#resolving-naming-conflicts-on-windows).
    </p>
 
 

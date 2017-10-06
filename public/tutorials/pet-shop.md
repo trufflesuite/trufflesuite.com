@@ -194,6 +194,10 @@ Solidity is a compiled language, meaning we need to compile our Solidity to byte
    Writing artifacts to ./build/contracts
    ```
 
+   <p class="alert alert-info">
+   <strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on [resolving naming conflicts on Windows](/docs/advanced/configuration#resolving-naming-conflicts-on-windows).
+   </p>
+
 ### Migration
 
 Now that we've successfully compiled our contracts, it's time to migrate them to the blockchain!
