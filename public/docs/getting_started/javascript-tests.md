@@ -23,6 +23,10 @@ For more information on using contract abstractions, see the [Interacting With Y
 
 Using `artifacts.require()` within your tests is the exact same as using it within your migrations. See the [artifacts.require() documentation](./migrations#artifacts-require-) within the Migrations section for detailed usage.
 
+### Using web3
+
+A `web3` instance is available in each test file, configured to the correct provider. So calling `web3.eth.getBalance` just works!
+
 # Example
 
 Here's an example test provided to you by `truffle init`. Note the use of the `contract()` function, the `accounts` array for specifying available Ethereum accounts, and our use of `artifacts.require()` for interacting directly with our contracts.
