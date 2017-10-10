@@ -2,7 +2,10 @@
 <!doctype html>
 <html lang="en">
   <% include _includes/head %>
-  <body>
+  <body class="
+    <%= (current.path[0] === 'docs') ? 'body-docs' : ''; %>
+    <%= (current.path[0] === 'boxes') ? 'Ballotin' : ''; %>
+  ">
     <main>
       <%- typogr.smartypants(yield) %>
     </main>

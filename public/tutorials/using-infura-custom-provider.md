@@ -25,6 +25,7 @@ var ProviderEngine = require("web3-provider-engine");
 var WalletSubprovider = require('web3-provider-engine/subproviders/wallet.js');
 var Web3Subprovider = require("web3-provider-engine/subproviders/web3.js");
 var Web3 = require("web3");
+const FilterSubprovider = require('web3-provider-engine/subproviders/filters.js');
 ```
 
 These dependencies are used for the following things:
@@ -58,6 +59,9 @@ Next, we need to set up the Provider Engine, telling it that we'd like to use ou
 ```javascript
 var providerUrl = "https://testnet.infura.io";
 var engine = new ProviderEngine();
+// filters
+engine.addProvider(new FilterSubprovider());
+
 engine.addProvider(new WalletSubprovider(wallet, {}));
 engine.addProvider(new Web3Subprovider(new Web3.providers.HttpProvider(providerUrl)));
 engine.start(); // Required by the provider engine.
@@ -95,6 +99,7 @@ var ProviderEngine = require("web3-provider-engine");
 var WalletSubprovider = require('web3-provider-engine/subproviders/wallet.js');
 var Web3Subprovider = require("web3-provider-engine/subproviders/web3.js");
 var Web3 = require("web3");
+const FilterSubprovider = require('web3-provider-engine/subproviders/filters.js');
 
 // Get our mnemonic and create an hdwallet
 var mnemonic = "couch solve unique spirit wine fine occur rhythm foot feature glory away";
@@ -107,6 +112,9 @@ var address = "0x" + wallet.getAddress().toString("hex");
 
 var providerUrl = "https://testnet.infura.io";
 var engine = new ProviderEngine();
+// filters
+engine.addProvider(new FilterSubprovider());
+
 engine.addProvider(new WalletSubprovider(wallet, {}));
 engine.addProvider(new Web3Subprovider(new Web3.providers.HttpProvider(providerUrl)));
 engine.start(); // Required by the provider engine.

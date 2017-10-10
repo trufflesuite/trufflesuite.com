@@ -1,5 +1,9 @@
 # Truffle 3.2.0 Released! 🎉
 
+<p class="alert alert-info" style="margin-top: -2rem; margin-bottom: 3rem;">
+  <strong>UPDATE</strong>: We made another minor release after this blog post was written <a href="https://github.com/trufflesuite/truffle/releases/tag/v3.2.1">upgrading web3 to 0.18.2</a> due to request of our users. <a href="https://github.com/trufflesuite/truffle/releases/tag/v3.2.1">Truffle v3.2.1</a> is now the latest release, but it still includes all the awesome stuff below.
+</p>
+
 Hi all. Great news today.
 
 Following your feedback from the Truffle 3.0 release, we've just released Truffle 3.2.0! This release includes a [number of great new features and bug fixes](https://github.com/trufflesuite/truffle/releases/tag/3.2.0), but we're most excited about the following. I've bolded the good stuff for ya.
@@ -34,7 +38,3 @@ If you run into trouble with any of the above, don't hesitate to contact us at o
 Cheers, and happy coding!
 
 -- Tim
-
--------------
-
-**Small update:** We made another minor release after this blog post was written [upgrading web3 to 0.18.2](https://github.com/trufflesuite/truffle/releases/tag/v3.2.1) due to request of our users. Truffle [v3.2.1](https://github.com/trufflesuite/truffle/releases/tag/v3.2.1) is now the latest release, but it still includes all the awesome stuff above.

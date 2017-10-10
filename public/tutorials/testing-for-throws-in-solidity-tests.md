@@ -1,6 +1,10 @@
 # Testing for Throws in Truffle Solidity Tests
 By guest writer Simon de la Rouviere
 
+<br/><p class="alert alert-warning" style="margin-top: -2rem; margin-bottom: 3rem;">
+  <strong>NOTE</strong>: This tutorial is written for versions of Solidity prior to v0.4.13. It relies on the deprecated `throw` keyword, now replaced by `revert()`, `require()`, and `assert()`. See Solidity documentation for <a href="http://solidity.readthedocs.io/en/develop/control-structures.html?highlight=require#error-handling-assert-require-revert-and-exceptions">error handling</a> for more information.
+</p>
+
 Truffle 3 brings forth Solidity unit testing, which means one can now test contracts in Solidity itself. This is a boon to contract developers, as there are several reasons why it's useful to have Solidity tests in addition to Truffle’s Javascript tests. For us at [Ujo](https://ujomusic.com/), one of our biggest concerns is testing how contracts interact with each other, rather than just testing their interaction from a web3 perspective, and Solidity tests allow us to do that.
 
 Though Solidity tests can be quite powerful, they do come with some drawbacks. One of those is testing whether or not a function should `throw` (without breaking the test!), which I'll show you how to do right now.
@@ -36,7 +40,7 @@ contract ThrowProxy {
 
   function ThrowProxy(address _target) {
     target = _target;
-  }    
+  }
 
   //prime the data using the fallback function.
   function() {
