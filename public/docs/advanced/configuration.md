@@ -2,12 +2,6 @@
 
 Your configuration file is called `truffle.js` and is located at the root of your project directory. This file is a Javascript file and can execute any code necessary to create your configuration. It must export an object representing your project configuration like the example below.
 
-### Resolving Naming Conflicts on Windows
-
-When using the Command Prompt on Windows, the default configuration file name can cause a conflict with the `truffle` executable. If this is the case, we recommend using Windows PowerShell or [Git BASH](https://git-for-windows.github.io/) as these shells do not have this conflict. Alternatively, you can rename the configuration file to `truffle-config.js` to avoid this conflict.
-
-# Example
-
 ```javascript
 module.exports = {
   networks: {
@@ -22,11 +16,26 @@ module.exports = {
 
 The default configuration ships with configuration for a single development network, running on `localhost:8545`. There are many other configuration options, detailed below.
 
+
+## Resolving naming conflicts on Windows
+
+When using the Command Prompt on Windows, the default configuration file name can cause a conflict with the `truffle` executable, and so **you may not be able to run Truffle commands properly on existing projects**.
+
+This is because of the way that command precedence works on the Command Prompt. The `truffle.cmd` executable is on the path as part of the npm package, but the `truffle.js` configuration file is in the actual directory where the `truffle` command is run. Because `.js` is an acceptable executable extension by default, `truffle.js` takes precedence over `truffle.cmd`, causing unexpected results.
+
+Any of the following solutions will remedy this issue:
+
+* Call the executable file explicitly using its `.cmd` extension (`truffle.cmd compile`)
+* Edit the system `PATHEXT` environment variable and remove `.JS;` from the list of executable extensions
+* Rename `truffle.js` to something else (`truffle-config.js`)
+* Use [Windows PowerShell](https://docs.microsoft.com/en-us/powershell/) or [Git BASH](https://git-for-windows.github.io/), as these shells do not have this conflict.
+
+
 # General Options
 
 ### build
 
-Build configuration of your application, if your application requires tight integration with Truffle. Most users likely will not need to configure this option. See the [Advanced Build Processes](http://localhost:9000/docs/advanced/build_processes) section for more details.
+Build configuration of your application, if your application requires tight integration with Truffle. Most users likely will not need to configure this option. See the [Advanced Build Processes](http://truffleframework.com/docs/advanced/build_processes) section for more details.
 
 ### networks
 
@@ -79,6 +88,22 @@ Example:
 ```javascript
 mocha: {
   useColors: true
+}
+```
+
+# Solidity Compiler Configuration
+
+Solidity compiler settings. Supports optimizer settings for `solc`.
+
+### solc
+
+Example:
+```javascript
+solc: {
+  optimizer: {
+    enabled: true,
+    runs: 200
+  }
 }
 ```
 

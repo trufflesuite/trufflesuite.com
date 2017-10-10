@@ -57,6 +57,8 @@ Sometimes you want your contracts to interact with the package's previously depl
 Contract: MyContract.sol
 
 ```javascript
+pragma solidity ^0.4.13;
+
 import "example-truffle-library/contracts/SimpleNameRegistry.sol";
 
 contract MyContract {
@@ -74,7 +76,7 @@ contract MyContract {
 
   // Set the registry if you're the owner.
   function setRegistry(address addr) {
-    if (msg.sender != owner) throw;
+    require(msg.sender == owner);
 
     registry = SimpleNameRegistry(addr);
   }

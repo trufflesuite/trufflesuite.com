@@ -79,7 +79,7 @@ MyContract.setProvider(new Web3.providers.HttpProvider("http://localhost:8545"))
 
 // Step 4: Use the contract!
 MyContract.deployed().then(function(deployed) {
-  return.deployed.someFunction();
+  return deployed.someFunction();
 });
 ```
 

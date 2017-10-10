@@ -17,5 +17,10 @@
 @import "pages/support";
 @import "pages/documentation";
 @import "pages/suite";
+@import "pages/ballotin";
 
 @import "../deps/styles/prism.css";
+
+a {
+  cursor: pointer;
+}

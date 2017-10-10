@@ -1,3 +1,7 @@
+.body-docs {
+  background: #F8F5F0;
+}
+
 .Documentation {
   .MainContent {
     background: #F8F5F0;
@@ -202,6 +206,10 @@
       @media screen and (max-width: 767px) {
         padding-left: 20px;
       }
+    }
+
+    img {
+      max-width: 100%;
     }
   }
 

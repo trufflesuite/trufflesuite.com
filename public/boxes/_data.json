@@ -1,0 +1,48 @@
+{
+  "title": "Truffle Boxes",
+  "index": {
+    "bodyclass": "Ballotin",
+    "title": "Truffle Boxes"
+  },
+  "boxes": {
+    "react": {
+      "title": "react"
+    },
+    "react-auth": {
+      "title": "react-auth"
+    },
+    "react-uport": {
+      "title": "react-uport"
+    },
+    "pet-shop": {
+      "title": "pet-shop"
+    },
+    "status": {
+      "title": "status"
+    },
+    "tutorialtoken": {
+      "title": "tutorialtoken"
+    },
+    "webpack": {
+      "title": "webpack"
+    },
+    "blueprint": {
+      "title": "blueprint"
+    },
+    "angular-truffle-box": {
+      "title": "angular-truffle-box"
+    },
+    "react-dapp-material-ui": {
+      "title": "react-dapp-material-ui"
+    },
+    "svelte-box": {
+      "title": "svelte-box"
+    },
+    "vue-dark-chocolate": {
+      "title": "vue-dark-chocolate"
+    },
+    "scoreboard": {
+      "title": "scoreboard"
+    }
+  }
+}

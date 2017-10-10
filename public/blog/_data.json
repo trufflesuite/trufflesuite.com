@@ -1,20 +1,47 @@
 {
-  "github-repository-moved": {
-    "title": "We've moved our github repo!",
-    "date": "2017-03-17",
-    "author": "Tim Coulter",
-    "published": true
-  },
-  "truffle-320-released": {
-    "title": "Truffle 3.2.0 released 🎉",
-    "date": "2017-03-22",
-    "author": "Tim Coulter",
-    "published": true
-  },
-  "how-were-making-installation-issues-a-thing-of-the-past": {
-    "title": "How we're making installation issues a thing of the past",
-    "date": "2017-06-05",
-    "author": "Tim Coulter",
-    "published": true
+  "title": "Blog",
+  "posts": {
+    "github-repository-moved": {
+      "title": "We've moved our github repo!",
+      "date": "2017-03-17",
+      "author": "Tim Coulter",
+      "published": true
+    },
+    "truffle-320-released": {
+      "title": "Truffle 3.2.0 released 🎉",
+      "date": "2017-03-22",
+      "author": "Tim Coulter",
+      "published": true
+    },
+    "how-were-making-installation-issues-a-thing-of-the-past": {
+      "title": "How we're making installation issues a thing of the past",
+      "date": "2017-06-05",
+      "author": "Tim Coulter",
+      "published": true
+    },
+    "removing-installation-issues-continued-testrpc": {
+      "title": "Removing installation issues, con't: TestRPC",
+      "date": "2017-06-13",
+      "author": "Tim Coulter",
+      "published": true
+    },
+    "truffle-boxes-making-life-sweeter": {
+      "title": "Truffle Boxes: Making Life Sweeter",
+      "date": "2017-07-06",
+      "author": "Tim Coulter",
+      "published": true
+    },
+    "learn-ethereum-the-fun-way-with-our-pet-shop-tutorial": {
+      "title": "Learn Ethereum The Fun Way with our Pet Shop Tutorial",
+      "date": "2017-07-12",
+      "author": "Josh Quintal",
+      "published": true
+    },
+    "you-can-now-make-your-own-truffle-box": {
+      "title": "You Can Now Make Your Own Truffle Box",
+      "date": "2017-09-26",
+      "author": "Josh Quintal",
+      "published": true
+    }
   }
 }

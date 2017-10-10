@@ -1,6 +1,6 @@
 # How we're making installation issues a thing of the past
 
-It doesn't matter what operating system you're on -- if you've used Truffle any capacity, you've likely run into an install issue in some form or another. This is especially true for Windows, as Windows doesn't generally ship with the necessary tools to install all of Truffle's important dependencies. And for most users, this sucks: getting hung up on installation is incredibly frustrating when you're usually just one error message or two away from creating your first Ethereum-enabled application. Well, I've got good news. As of the latest Truffle beta release, I'm happy to tell you that this is an issue no longer.
+It doesn't matter what operating system you're on -- if you've used Truffle in any capacity, you've likely run into an install issue in some form or another. This is especially true for Windows, as Windows doesn't generally ship with the necessary tools to install all of Truffle's important dependencies. And for most users, this sucks: getting hung up on installation is incredibly frustrating when you're usually just one error message or two away from creating your first Ethereum-enabled application. Well, I've got good news. As of the latest Truffle beta release, I'm happy to tell you that this is an issue no longer.
 
 That's right: No matter what platform you're on, your install issues should be over. This is big.
 
@@ -59,7 +59,7 @@ You'll notice that the beta version installs almost instantly, and no compilatio
 
 As we gain responses from the community about this new version we'll likely make changes to ensure we've sidestepped all the installation issues that have plagued users in the past. Once that's finished we'll make an official release. As well, we'll be performing this same work for the TestRPC in the coming weeks to ensure the TestRPC has the same hassle-free, instant installation that you'll soon come to expect from Truffle.
 
-If you run into issues with the beta version, don't hesitate to [write up an issue](https://github.com/trufflesuite/truffle/issues) in our issue tracker or reach out to us on [Gitter](gitter.im/ConsenSys/truffle). We're happy to help.
+If you run into issues with the beta version, don't hesitate to [write up an issue](https://github.com/trufflesuite/truffle/issues) in our issue tracker or reach out to us on [Gitter](https://gitter.im/ConsenSys/truffle). We're happy to help.
 
 Cheers, and we appreciate your ongoing support and feedback.
 

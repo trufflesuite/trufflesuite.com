@@ -17,15 +17,14 @@
     "googlefonts": ["Oswald:300,400,700", "Open+Sans:400,700"],
     "googleverification": null,
     "facebookid": null,
-    "socialimage": "images/social-image.jpg",
+    "socialimage": "https://github.com/trufflesuite/trufflesuite.github.io/raw/master/images/truffle-share.png",
     "appleid": null,
     "twitter": "https://twitter.com/trufflesuite",
     "disqus": false,
     "github": "https://github.com/trufflesuite",
     "gitter": "http://gitter.im/Consensys/truffle",
     "site_issues": "https://github.com/trufflesuite/trufflesuite.github.io/issues",
-    "contributing": "trufflesuite/trufflesuite.github.io",
-    "socialimage": "https://github.com/trufflesuite/trufflesuite.github.io/raw/master/images/twitter_card.jpg"
+    "contributing": "trufflesuite/trufflesuite.github.io"
   },
   "thanks": {
     "firstlast": {

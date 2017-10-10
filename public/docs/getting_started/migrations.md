@@ -135,7 +135,7 @@ To conditionally stage deployment steps, write your migrations so that they acce
 
 ```javascript
 module.exports = function(deployer, network) {
-  if (network != "live") {
+  if (network == "live") {
     // Do something specific to the network named "live".
   } else {
     // Perform a different step otherwise.

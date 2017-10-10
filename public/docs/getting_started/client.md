@@ -9,7 +9,7 @@ When developing your Truffle-based application, we recommend using the [Ethereum
 # When Deploying to Live Networks
 
 * Geth (go-ethereum): [https://github.com/ethereum/go-ethereum](https://github.com/ethereum/go-ethereum)
-* WebThree (cpp-ethereum): [https://github.com/ethereum/webthree-umbrella](https://github.com/ethereum/webthree-umbrella)
+* WebThree (cpp-ethereum): [https://github.com/ethereum/cpp-ethereum](https://github.com/ethereum/cpp-ethereum)
 * Parity: [https://github.com/paritytech/parity](https://github.com/paritytech/parity)
 * More: [https://www.ethereum.org/cli](https://www.ethereum.org/cli)
 

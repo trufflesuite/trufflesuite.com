@@ -1,3 +1,71 @@
+  <%
+    function getPageTitle() {
+      // PAGES WITH MARKDOWN CHILDREN
+
+      if (current.path[0] === 'tutorials' && current.path.length > 1)
+      {
+        if (current.path[1] !== 'index')
+        {
+          return public['tutorials']['_data']['tutorials'][current.path[1]]['title'];
+        }
+      }
+
+      if (current.path[0] === 'blog' && current.path.length > 1)
+      {
+        if (current.path[1] !== 'index')
+        {
+          return public['blog']['_data']['posts'][current.path[1]]['title'];
+        }
+      }
+
+      if (current.path[0] === 'boxes' && current.path.length > 1)
+      {
+        if (current.path[1] !== 'index')
+        {
+          return public['boxes']['_data']['boxes'][current.path[1]]['title'] + ' Box';
+        }
+      }
+
+      if (current.path[0] === 'docs' && current.path.length > 2)
+      {
+        if (current.path[1] !== 'index')
+        {
+          return public['docs'][current.path[1]]['_data'][current.path[2]]['title'];
+        }
+      }
+
+      // TOP-LEVEL PAGES
+
+      if (current.path[0] in public)
+      {
+        if (current.path.length > 1)
+        {
+          if (current.path[1] in public[current.path[0]]['_data'])
+          {
+            if ('title' in public[current.path[0]]['_data'][current.path[1]])
+            {
+              return public[current.path[0]]['_data'][current.path[1]]['title'];
+            }
+          }
+        }
+
+        if ('title' in public[current.path[0]]['_data'])
+        {
+          return public[current.path[0]]['_data']['title'];
+        }
+      }
+
+      if (current.path[0] in public['_data'])
+      {
+        return public['_data'][current.path[0]]['title'];
+      }
+
+      // FALLBACK AND HOME
+
+      return "Truffle Framework";
+    }
+  %>
+
   <head>
     <meta charset="utf-8">
   <% var last = service.googlefonts[service.googlefonts.length -1] %>
@@ -42,7 +110,7 @@
     <% if(service.appleid) { %><meta name="apple-itunes-app" content="app-id=<%= service.appleid %>, app-argument=<%= url %>"><% } %>
     <% if(service.googleverification) { %><meta name="google-site-verification" content="<%= service.googleverification %>" /><% } %>
 
-    <title><%= title %> | <%= name %></title>
+    <title><%= title %> | <%- getPageTitle() %></title>
 
     <link rel="author" href="humans.txt" />
 

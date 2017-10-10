@@ -1,12 +1,12 @@
 <%
-  var slugs = Object.keys(public.tutorials._data);
-  var tutorials = _.map(slugs, function(i) { return { 'slug': i, 'author': public.tutorials._data[i].author, 'title': public.tutorials._data[i].title, 'date': public.tutorials._data[i].date, 'published': public.tutorials._data[i].published }})
+  var slugs = Object.keys(public.tutorials._data.tutorials);
+  var tutorials = _.map(slugs, function(i) { return { 'slug': i, 'author': public.tutorials._data.tutorials[i].author, 'title': public.tutorials._data.tutorials[i].title, 'date': public.tutorials._data.tutorials[i].date, 'published': public.tutorials._data.tutorials[i].published }})
   tutorials = _.sortBy(tutorials, 'date').reverse()
 %>
 
 <section class="TutorialIndex">
   <h1>TRUFFLE TUTORIAL INDEX</h1>
-  
+
   <ol class="list-unstyled">
     <% for(var tutorial of tutorials){ %>
       <% if(!!tutorial.published) { %>
