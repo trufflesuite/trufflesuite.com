@@ -91,6 +91,13 @@ Using network 'development'.
   2 passing (113ms)
 ```
 
+You can limit the tests being executed to a specific file as follows:
+
+```
+truffle test ./test/metacoin.js
+```
+
+
 # Advanced
 
 Truffle gives you access to Mocha's configuration so you can change how Mocha behaves. See the [project configuration](/docs/advanced/configuration#mocha) section for more details.
