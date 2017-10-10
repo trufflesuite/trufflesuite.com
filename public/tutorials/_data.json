@@ -23,7 +23,7 @@
       "title": "Truffle and Metamask",
       "date": "2016-07-01",
       "author": "Tim Coulter",
-      "published": true
+      "published": false
     },
     "solidity-unit-tests": {
       "title": "Beta: Solidity Unit Tests",
@@ -106,6 +106,12 @@
     "pet-shop": {
       "title": "Ethereum Pet Shop -- Your First Dapp",
       "date": "2017-07-20",
+      "author": "Josh Quintal",
+      "published": true
+    },
+    "robust-smart-contracts-with-openzeppelin": {
+      "title": "Robust Smart Contracts with OpenZeppelin",
+      "date": "2017-08-03",
       "author": "Josh Quintal",
       "published": true
     }

@@ -11,7 +11,7 @@ var globals = require("./globals.json");
 var source = path.join(__dirname, "public");
 
 var app = Metalsmith(__dirname)
-  .source("./public")
+  .source(path.join("./", "public"))
   .destination('../')
   .clean(false)
   .use(sass({
@@ -21,6 +21,18 @@ var app = Metalsmith(__dirname)
     renderer: require("./renderers/markdown.js")
   }))
   .use(function(files, metalsmith, done) {
+
+    // We get odd paths from metalsmith, with mixed folder separators.
+    // Let's massage them into one.
+    Object.keys(files).forEach(function(file_path) {
+      var new_file_path = file_path.replace(/(\\|\/)/g, path.sep);
+
+      if (new_file_path != file_path) {
+        files[new_file_path] = files[file_path];
+        delete files[file_path];
+      } 
+    });
+
     var prefills = {
       public: {}
     };
@@ -113,6 +125,7 @@ var app = Metalsmith(__dirname)
       } else {
         // TODO: Can we remove this template read?
         var full_path = path.join(source, file_path);
+
         var contents = files[file_path].contents.toString();
         template = ejs.compile(contents, {
           filename: full_path
