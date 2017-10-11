@@ -8,7 +8,7 @@ This article was originally written by Dan Finlay and published as a [github gis
 
 -----------------
 
-If you're interested in building web apps with [the Ethereum blockchain](https://www.ethereum.org/), you may have found [the Truffle web framework](http://truffle.readthedocs.org/en/latest/) to be a nice fit for your needs.
+If you're interested in building web apps with [the Ethereum blockchain](https://www.ethereum.org/), you may have found [the Truffle web framework](/docs) to be a nice fit for your needs.
 
 For many types of Dapps (Distributed Apps), Truffle does everything you could want:  It compiles your blockchain contracts, injects them into your web app, and can even run a test suite against them!
 

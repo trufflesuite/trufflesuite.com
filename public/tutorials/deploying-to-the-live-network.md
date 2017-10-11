@@ -62,4 +62,4 @@ Your [migrations](http://truffleframework.com/docs/getting_started/migrations) a
 
 ## And That's it!
 
-Congrats! You have now deployed your contracts to the live network. For more details on network configuration and deployment, be sure to check out the [Truffle documentation](http://truffle.readthedocs.io).
+Congrats! You have now deployed your contracts to the live network. For more details on network configuration and deployment, be sure to check out the [Truffle documentation](/docs).
