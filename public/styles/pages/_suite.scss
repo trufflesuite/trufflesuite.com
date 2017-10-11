@@ -1,415 +1,278 @@
-/* MIXINS */
-
-@mixin jaggy-edges() {
-  &:before {
-    display: block;
-
-    width: 100%;
-    height: 12px;
-
-    content: "";
-
-    background-image: linear-gradient(
-    135deg,
-    #2a2825 50%, rgba(255,255,255,0) 50%
-    ),
-    linear-gradient(
-    -135deg,
-    #2a2825 50%, rgba(255,255,255,0) 0%
-    );
-    background-position: top center, top center;
-    background-size: .75rem .75rem, .75rem .75rem;
-  }
-
-  &:after {
-    position: absolute;
-    bottom: 0;
-
-    display: block;
-
-    width: 100%;
-    height: 12px;
-
-    content: "";
-
-    background-image: linear-gradient(
-    45deg,
-    #2a2825 50%, rgba(255,255,255,0) 50%
-    ),
-    linear-gradient(
-    -45deg,
-    #2a2825 50%, rgba(255,255,255,0) 0%
-    );
-    background-position: bottom center, bottom center;
-    background-size: .75rem .75rem, .75rem .75rem;
-  }
-}
-
-
-/* PAGE */
-
 .Ganache {
-  padding-top: 60px;
+  background: #34262a;
+  padding-top: 100px;
+  text-shadow: none;
+  color: #fff;
 
-  background-color: #2a2825;
-  background-repeat: none;
-  background-size: cover;
+  /* GENERAL */
 
-  font-family: "Roboto Condensed", sans-serif;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    color: white;
+  h1, h2, h3, h4, h5, h6 {
+    background: #34262a;
     text-shadow: none;
-    margin:0;
-  }
-
-
-  h2,
-  h5 {
-    font-weight: bold;
-    letter-spacing: 2.5px;
-  }
-
-  p {
-    color: #a6aaa8;
-
-    font-weight: 100;
-  }
-
-  h2 {
-    color: white;
-
-    line-height: 1.2;
-  }
-
-  main {
-    header {
-      background-image: url("/images/suite/ganache/header_bg.png");
-      background-size: cover;
-
-      .Logo {
-        margin-top: 2.5rem;
-      }
-
-      h1 {
-        margin-top: 2.5rem;
-
-        letter-spacing: 2.5px;
-
-        color: #eff6f4;
-
-        font-size: 36px;
-        font-weight: bold;
-        line-height: 42px;
-      }
-
-      p {
-        text-align: center;
-
-        color: white;
-
-        &.text-muted {
-          color: #d0d0d0;
-        }
-      }
-
-      .DownloadVersions {
-        letter-spacing: 2.5px;
-        text-transform: uppercase;
-
-        color: #a5a9a7;
-
-        font-size: 12px;
-      }
-
-      .Emoji {
-        font-size: 3rem;
-      }
-    }
+    color: #fff;
   }
 
   .navbar {
-    background-color: transparent;
-    border-bottom-color: transparent;
-    transition: all .25s ease-in-out;
+    background: #34262a;
+    border-color: #5f474e;
 
-    &.scroll {
-      background-color: #ffffff;
-      border-bottom-color: #e7e7e7;
-    }
-  }
+    .navbar-nav > li > a {
+      color: #fff;
+      transition: opacity .125s ease-in-out;
 
-  .Flourish {
-    display: block;
-
-    max-width: 300px;
-    margin: 0 auto;
-  }
-
-  .DownloadButton {
-    display: block;
-
-    width: 290px;
-    margin: 0 auto;
-    margin-bottom: 1rem;
-    padding: 1.2rem;
-
-    cursor: pointer;
-    text-transform: uppercase;
-
-    color: #202c2a;
-    border-radius: 8px;
-    background: #e5a35d;
-    background-image: linear-gradient(
-    -180deg,
-    rgba(255, 255, 255, .18) 0%,
-    rgba(0, 0, 0, .20) 100%
-    );
-
-    font-weight: bold;
-  }
-
-  .PosRel {
-    position: relative;
-  }
-
-  .Foil {
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-
-    width: calc(100% + 30px);
-    height: 430px;
-    margin-left: -15px;
-    padding-bottom: 3rem;
-
-    background: #e9b349;
-    background-image: linear-gradient(-180deg, rgba(255,255,255,.33) 0%, rgba(0,0,0,.17) 100%);
-
-    @include jaggy-edges();
-  }
-
-  .Features {
-    text-align: center;
-
-    h2 {
-      color: white;
+      &:hover {
+        opacity: .6;
+      }
     }
 
-    h5 {
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-
-      color: #4d4c48;
-
-      font-size: 32px;
-      font-weight: bold;
+    .navbar-toggle .icon-bar {
+      background-color: #fff;
     }
 
-    .FeatureList {
-      counter-reset: counter;
-      text-align: left;
-
-      li {
-        display: flex;
-        align-items: center;
-
-        margin-bottom: 5rem;
-
-        &:before {
-          position: absolute;
-          z-index: -1;
-
-          content: counter(counter, decimal-leading-zero);
-          counter-increment: counter;
-          letter-spacing: -.5rem;
-
-          color: #454130;
-
-          font-size: 120px;
-          font-weight: bold;
-        }
-
-        .FeatureText {
-          padding: 0 4rem;
-
-          flex-grow: 1;
-        }
-
-        h4 {
-          color: white;
-          font-size: 44px;
-          font-weight: bold;
-          letter-spacing: 2.5px;
-        }
-
-        p {
-          color: #a6aaa8;
-        }
+    @media screen and (max-width: 767px) {
+      .navbar-collapse {
+        background: #34262a;
       }
     }
   }
 
-  .OpenSource {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding: 4rem;
-
-    border: 1px dashed #d1a372;
-    border-radius: 8px;
-    background-color: #2f2d2a;
-
-    svg {
-      g {
-        fill: #ab7f50 !important;
-      }
-    }
-  }
-
-  .GanacheFooter {
-    padding-bottom: 0;
-
-    border-top: 0;
-    background-color: #2a2825;
-
-    h5 {
-      color: #545452;
-    }
-
-    .GhostText {
-      margin-bottom: -100px;
-    }
-
-    ul {
-      li {
-        margin-bottom: .2rem;
-      }
-    }
+  .Footer {
+    background: #34262a;
+    border-color: #5f474e;
+    color: #fff;
 
     a {
-      color: #9c9c98;
+      color: #27aae1;
+      transition: opacity .125s ease-in-out;
+
       &:hover {
-        color: lighten(#9c9c98, 10%);
+        opacity: .6;
+        text-decoration: none;
       }
     }
 
-    .truffle-wordmark polygon,
-    .truffle-wordmark g,
-    .truffle-wordmark path {
-      fill: white;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .Ganache {
-    padding-top: 60px;
-
-    main {
-      header {
-        height: auto;
-
-        h1 {
-          font-size: 4vw;
-          line-height: 5.2vw;
-        }
-
-        p {
-          font-size: 3vw;
-          line-height: 3.6vw;
-        }
-      }
+    .copyright svg path,
+    .copyright svg ellipse {
+      fill: #fff;
     }
 
-    .Foil {
-      height: 60vw;
-    }
-
-    .Features {
-      .FeatureList {
-        li {
-          position: relative;
-
-          flex-direction: column;
-
-          &:before {
-            top: -2.2rem;
-            left: calc(50% - 1rem);
-
-            letter-spacing: 0;
-
-            font-size: 1.6rem;
-          }
-
-          .FeatureIcon {
-            order: 1;
-          }
-
-          .FeatureText {
-            order: 2;
-
-            padding: 0 !important;
-            padding-left: 0;
-
-            text-align: center;
-          }
-        }
-      }
-    }
-
-    .BuiltWith {
-      h3 {
-        padding: 0 1rem;
-      }
-
-      .p-a-4 {
-        padding: 0 !important;
-      }
-
-      .Logo:last-of-type {
-        margin-bottom: 3rem;
-      }
-    }
-
-    .TrufflePals {
-      flex-direction: column;
-
-      li {
-        margin-bottom: 2rem;
-      }
-    }
-
-    .OpenSource {
-      margin: 1rem;
-    }
-
-    .Flourish {
-      display: none;
-    }
-
-    .GanacheFooter {
-      text-align: center;
-
-      strong {
-        display: block;
-      }
-
-      .Logo {
-        margin: 1rem auto;
-      }
-
-      .BetaSignup {
-        margin-top: 2rem;
+    .BetaSignup {
+      h5 {
+        color: #fff;
       }
 
       .FormWrapper {
-        .mc-field-group {
-          border-radius: 0;
+        border-color: #5f474e;
+      }
+
+      .FormWrapper .mc-field-group:first-child {
+        border-color: #5f474e;
+      }
+
+      .FormWrapper .mc-field-group {
+        border-color: #5f474e;
+      }
+
+      .FormWrapper label {
+        color: #fff;
+      }
+
+      .FormWrapper input[type="text"],
+      .FormWrapper input[type="email"] {
+        background: #34262a;
+      }
+    }
+  }
+
+  /* HELPERS */
+
+  .text-ganache {
+    font-family: "Grand Hotel", cursive;
+  }
+
+  .btn-orange {
+    background-color: #e5a663;
+    color: #5f474e;
+    border: none;
+    text-align: left;
+    padding: 12px 18px;
+    transition: background-color .125s ease-in-out;
+
+    &:hover {
+      background-color: #fff;
+    }
+
+    span {
+      display: block;
+      float: left;
+      margin-right: 60px;
+    }
+
+    img {
+      width: 60px;
+      height: auto;
+      float: right;
+      margin-top: -2.3rem;
+    }
+
+    .oswald {
+      font-size: 1.5rem;
+      margin-top: .3rem;
+    }
+
+    .os {
+      font-family: "Open Sans", Helvetica, Arial, sans-serif;
+      font-size: .8rem;
+    }
+  }
+
+  /* PAGE */
+
+  .ganache-banner {
+    position: relative;
+    height: 290px;
+
+    img {
+      display: block;
+      height: auto;
+      width: 1400px;
+      position: absolute;
+      top: -75px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    h1 {
+      font-family: "Grand Hotel", cursive;
+      font-size: 2.8rem;
+      margin-top: 240px;
+    }
+  }
+
+  .row-tagline {
+    margin: 2rem -15px;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+
+      .pull-right {
+        float: none !important;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .os-dl {
+    font-size: .8rem;
+    margin-top: .5rem;
+    text-align: center;
+
+    a {
+      color: #fff;
+      transition: opacity .125s ease-in-out;
+
+      &:hover {
+        text-decoration: none;
+        opacity: .6;
+      }
+    }
+  }
+
+  .row-features-heading {
+    position: relative;
+
+    h2 {
+      background: transparent;
+      font-size: 5rem;
+      margin-top: 10vw;
+    }
+
+    .ganache-goop {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+    }
+  }
+
+  .row-features {
+    margin: 60px -15px;
+
+    img {
+      max-width: 120px;
+    }
+
+    h3 {
+      background: transparent;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 767px) {
+      [class^="col-"]:last-child {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  .row-features-bottom {
+    margin-bottom: 120px;
+  }
+
+  .row-ganache-pattern {
+    background: url("/images/suite/ganache/ganache-pattern.svg");
+    background-repeat: repeat;
+    background-size: 360px 240px;
+    border-top: solid 3px #e5a663;
+    padding: 200px 0;
+
+    a {
+      text-decoration: none;
+      display: block;
+      max-width: 600px;
+      margin: 0 auto;
+
+      &:hover svg path {
+        fill: #fff;
+      }
+    }
+
+    .well {
+      max-width: 600px;
+      background: #5f474e;
+      color: #fff;
+      border: none;
+      margin: 0 auto;
+      overflow: hidden;
+      padding: 3rem;
+
+      svg {
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto 1rem auto;
+
+        path {
+          fill: #e5a663;
+          transition: fill .125s ease-in-out;
         }
+      }
+
+      h2, h3, p {
+        margin: 0;
+        background: transparent;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      h3 {
+        font-size: 4rem;
       }
     }
   }

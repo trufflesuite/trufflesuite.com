@@ -1,114 +1,112 @@
-<header>
-  <% include ../_includes/navbar %>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
-        <div class="Logo">
-          <img src="/images/suite/ganache/ganache_logo.png" width="120px" />
-        </div>
-        <h1 class="text-center m-b-2">THE DELICIOUS WAY TO <br /> DEVELOP BLOCKCHAIN SOLUTIONS</h1>
-        <p class="text-muted">Quickly fire up a personal Ethereum blockchain which you can use to run tests, execute commands, and inspect state while controlling how the chain operates.</p>
+<div class="container-fluid">
+  <header class="row">
+    <div class="col-xs-12 ganache-banner text-center">
+      <img src="/images/suite/ganache/ganache-banner.png" />
+      <h1>Ganache</h1>
+    </div>
+  </header>
+</div>
+
+<div class="container">
+  <header class="row row-tagline">
+    <div class="col-sm-8">
+      <h2 class="m-t-0">ONE CLICK BLOCKCHAIN</h2>
+      <p>Quickly fire up a personal Ethereum blockchain which you can use to run tests, execute commands, and inspect state while controlling how the chain operates.</p>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="pull-right">
+        <a class="btn btn-orange">
+          <span class="oswald">DOWNLOAD</span></br>
+          <span class="os">(Windows)</span>
+          <img src="/images/suite/ganache/windows-logo.svg" />
+        </a>
+        <p class="os-dl"><a href="https://github.com/trufflesuite/ganache/releases">Need a different OS download?</a></p>
       </div>
     </div>
-  </div>
-  <div class="container-fluid">
-    <div class="PosRel">
-      <div class="Foil"></div>
-      <div class="row">
-        <div class="col-sm-12 col-md-8 col-md-offset-2 m-t-2 m-b-4 text-center">
-          <p class="DownloadVersions">For macOS, Windows &amp; Linux</p>
-          <a class="DownloadButton" href="https://github.com/trufflesuite/ganache/releases">Download Now</a>
-        </div>
-        <img class="img-responsive m-t-3" src="/images/suite/ganache/ganache_screenshot.png" />
-        <h5 class="text-center text-muted m-b-3">THE BEST CROSS PLATFORM ETHEREUM DEVELOPMENT SERVER. AND IT'S FREE.</h5>
-      </div>
-    </div>
-  </div>
-</header>
-<section class="Features container">
-  <div class="row">
-    <div class="col-xs-12 col-md-6 col-md-offset-3">
-      <h2 class="m-t-4 m-b-4">THE SWEET FEATURES AT THE CORE OF GANACHE</h2>
-      <span class="Flourish m-b-4">
-        <% include ../images/suite/ganache/header_flourish.svg %>
-      </span>
-    </div>
-  </div>
+  </header>
+
   <div class="row">
     <div class="col-xs-12">
-      <h5 class="m-b-4">THE MENU</h5>
-      <ol class="FeatureList list-unstyled">
-        <li>
-          <div class="FeatureText">
-            <h4>THE ETHEREUM BLOCKCHAIN</h4>
-            <p>GANACHE ships with an internal Javascript implementation of the Ethereum Blockchain which has additional programmatic capabilities - no local clients need to be installed! </p>
-          </div>
-          <div class="FeatureIcon">
-            <% include ../images/suite/ganache/ethereum_ico.svg %>
-          </div>
-        </li>
-        <li>
-          <div class="FeatureText">
-            <h4>VISUAL MNEMONIC &amp; ACCOUNT INFO</h4>
-            <p>Quickly see the  current status of the generated accounts, including their  addresses, private keys, nonces and balances.</p>
-          </div>
-          <div class="FeatureIcon">
-            <% include ../images/suite/ganache/account_info.svg %>
-          </div>
-        </li>
-        <li>
-          <div class="FeatureText">
-            <h4>BLOCKCHAIN LOG OUTPUT</h4>
-            <p>See the output of web3 calls to the blockchain, along with responses and other vital debugging information.</p>
-          </div>
-          <div class="FeatureIcon">
-            <% include ../images/suite/ganache/log_output.svg %>
-          </div>
-        </li>
-        <li>
-          <div class="FeatureText">
-            <h4>INSTANT MINING CONTROLS</h4>
-            <p>Stop, start, force mine a single block, and take or revert multiple snapshots of the blockchain as and when you chose.</p>
-          </div>
-          <div class="FeatureIcon">
-            <% include ../images/suite/ganache/mining_controls.svg %>
-          </div>
-        </li>
-        <li>
-          <div class="FeatureText">
-            <h4>BUILT-IN BLOCK EXPLORER</h4>
-            <p>Examine specific blocks or transactions at will and see detailed information about the parameters.</p>
-          </div>
-          <div class="FeatureIcon">
-            <% include ../images/suite/ganache/block_explorer.svg %>
-          </div>
-        </li>
-        <li>
-          <div class="FeatureText">
-            <h4>BLOCKCHAIN CONNECTED CONSOLE</h4>
-            <p>Access a Node.js powered Console to execute commands, with a fully initialized instance of web3, and many useful commands to make development and testing easy.</p>
-          </div>
-          <div class="FeatureIcon">
-            <% include ../images/suite/ganache/repl.svg %>
-          </div>
-        </li>
-      </ol>
-      <a class="DownloadButton" href="https://github.com/trufflesuite/ganache/releases">Download Now</a>
+      <img class="img-responsive" src="/images/suite/ganache/ganache-window.png" />
     </div>
   </div>
-</section>
-<section class="container text-center">
-  <div class="row">
-    <div class="OpenSource col-xs-12 col-md-6 col-md-offset-3">
-      <h2 class="text-center">LIKE THE TASTE? THE RECIPE IS OPEN SOURCE!</h2>
-      <span class="Flourish m-b-4">
-        <% include ../images/suite/ganache/header_flourish.svg %>
-      </span>
-      <% include ../images/suite/ganache/gh_logo.svg %>
-      <h4>FULL SOURCE CODE ON GITHUB</h4>
-      <p>We welcome any and all contributions, and feature suggestions! <a href="https://github.com/trufflesuite/ganache">Please checkout the source code.</a></p>
-    </div>
-  </div>
-</section>
+</div>
 
-<% include ../_includes/landing_page/footer %>
+<div class="container-fluid">
+  <section class="row row-features-heading">
+    <img class="ganache-goop" src="/images/suite/ganache/ganache-goop.svg" />
+
+    <div class="col-xs-12">
+      <h2 class="text-center text-ganache">Features</h2>
+    </div>
+  </section>
+</div>
+
+<div class="container">
+  <section class="row row-features">
+    <div class="col-sm-6 text-center">
+      <img src="/images/suite/ganache/ganache-feature-1-icon.svg" />
+      <h3>THE ETHEREUM BLOCKCHAIN</h3>
+      <p>Ganache ships with an internal Javascript implementation of the Ethereum Blockchain which has additional programmatic capabilities - no local clients need to be installed!</p>
+    </div>
+
+    <div class="col-sm-6 text-center">
+      <img src="/images/suite/ganache/ganache-feature-2-icon.svg" />
+      <h3>VISUAL MNEMONIC &amp; ACCOUNT INFO</h3>
+      <p>Quickly see the current status of the generated accounts, including their addresses, private keys, nonces and balances.</p>
+    </div>
+  </section>
+
+  <section class="row row-features">
+    <div class="col-sm-6 text-center">
+      <img src="/images/suite/ganache/ganache-feature-3-icon.svg" />
+      <h3>BLOCKCHAIN LOG OUTPUT</h3>
+      <p>See the output of web3 calls to the blockchain, along with responses and other vital debugging information.</p>
+    </div>
+
+    <div class="col-sm-6 text-center">
+      <img src="/images/suite/ganache/ganache-feature-4-icon.svg" />
+      <h3>INSTANT MINING CONTROLS</h3>
+      <p>Stop, start, force mine a single block, and take or revert multiple snapshots of the blockchain as and when you chose.</p>
+    </div>
+  </section>
+
+  <section class="row row-features">
+    <div class="col-sm-6 text-center">
+      <img src="/images/suite/ganache/ganache-feature-5-icon.svg" />
+      <h3>BUILT-IN BLOCK EXPLORER</h3>
+      <p>Examine specific blocks or transactions at will and see detailed information about the parameters.</p>
+    </div>
+
+    <div class="col-sm-6 text-center">
+      <img src="/images/suite/ganache/ganache-feature-6-icon.svg" />
+      <h3>BLOCKCHAIN CONNECTED CONSOLE</h3>
+      <p>Access a Node.js powered Console to execute commands, with a fully initialized instance of web3, and many useful commands to make development and testing easy.</p>
+    </div>
+  </section>
+
+  <section class="row row-features-bottom">
+    <div class="col-xs-12 text-center">
+      <a class="btn btn-orange">
+        <span class="oswald">DOWNLOAD</span></br>
+        <span class="os">(Windows)</span>
+        <img src="/images/suite/ganache/windows-logo.svg" />
+      </a>
+      <p class="os-dl"><a href="https://github.com/trufflesuite/ganache/releases">Need a different OS download?</a></p>
+    </div>
+  </section>
+</div>
+
+<div class="container-fluid">
+  <section class="row row-ganache-pattern">
+    <a href="https://github.com/trufflesuite/ganache" target="blank">
+      <div class="well text-center">
+        <% include ../_includes/gh_logo.svg %>
+        <h3 class="text-ganache">Like the taste?</h3>
+        <h2>The recipe is open source!</h2>
+        <p>The full source code of Ganache is on GitHub! We welcome any and all contributions, and feature suggestions.</p>
+      </div>
+    </a>
+  </section>
+</div>
