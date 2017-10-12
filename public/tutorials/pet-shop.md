@@ -224,7 +224,7 @@ Now we are ready to create our own migration script.
    };
    ```
 
-1. In the first terminal window (where we ran `truffle compile`, not the testrpc terminal) run `truffle migrate`:
+1. In the first terminal window (where we ran `truffle compile`, not the TestRPC terminal) run `truffle migrate`:
 
    ```shell
    truffle migrate
@@ -317,6 +317,7 @@ Remembering from above that public variables have automatic getter methods, we c
    ```javascript
    // Testing retrieval of a single pet's owner
    function testGetAdopterAddressByPetId() {
+     // Expected owner is this contract
      address expected = this;
 
      address adopter = adoption.adopters(8);
@@ -336,8 +337,10 @@ Since arrays can only return a single value given a single key, we create our ow
    ```javascript
    // Testing retrieval of all pet owners
    function testGetAdopterAddressByPetIdInArray() {
+     // Expected owner is this contract
      address expected = this;
 
+     // Store adopters in memory rather than contract's storage
      address[16] memory adopters = adoption.getAdopters();
 
      Assert.equal(adopters[8], expected, "Owner of pet ID 8 should be recorded.");
@@ -399,7 +402,7 @@ The front-end doesn't use a build system (webpack, grunt, etc.) to be as easy as
    if (typeof web3 !== 'undefined') {
      App.web3Provider = web3.currentProvider;
    } else {
-     // If no injected web3 instance is detected, fallback to the TestRPC.
+     // If no injected web3 instance is detected, fallback to the TestRPC
      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
    }
    web3 = new Web3(App.web3Provider);
@@ -419,14 +422,14 @@ Now that we can interact with Ethereum via web3, we need to instantiate our smar
 
    ```javascript
    $.getJSON('Adoption.json', function(data) {
-     // Get the necessary contract artifact file and instantiate it with truffle-contract.
+     // Get the necessary contract artifact file and instantiate it with truffle-contract
      var AdoptionArtifact = data;
      App.contracts.Adoption = TruffleContract(AdoptionArtifact);
 
-     // Set the provider for our contract.
+     // Set the provider for our contract
      App.contracts.Adoption.setProvider(App.web3Provider);
 
-     // Use our contract to retieve and mark the adopted pets.
+     // Use our contract to retrieve and mark the adopted pets
      return App.markAdopted();
    });
    ```
@@ -494,6 +497,7 @@ Things to notice:
      App.contracts.Adoption.deployed().then(function(instance) {
        adoptionInstance = instance;
 
+       // Execute adopt as a transaction by sending account
        return adoptionInstance.adopt(petId, {from: account});
      }).then(function(result) {
        return App.markAdopted();
@@ -593,7 +597,7 @@ We can now start a local web server and use the dapp. We're using the `lite-serv
 
    The dev server will launch and automatically open a new browser tab containing your dapp.
 
-2. To use the dapp, click the **Adopt** button on the pet of your choice. You'll be automatically prompted to approve the transaction by MetaMask. Do so, and you'll see the button change to "Success" and become disabled, just as we specified.
+1. To use the dapp, click the **Adopt** button on the pet of your choice. You'll be automatically prompted to approve the transaction by MetaMask. Do so, and you'll see the button change to "Success" and become disabled, just as we specified.
 
 </div><div class="text-center container">
   ![Pet Shop Adoption Step 1](/tutorials/images/pet-shop/adoption1.jpeg)
