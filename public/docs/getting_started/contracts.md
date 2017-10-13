@@ -151,7 +151,7 @@ MetaCoin.deployed().then(function(instance) {
 What's interesting here:
 
 * We had to execute the `.call()` function explicitly to let the Ethereum network know we're not intending to persist any changes.
-* We received a return value instead of a transaction id on success. Note that since the Etheruem network can handle very large numbers, we're given a [BigNumber](https://github.com/MikeMcl/bignumber.js/) object which we then convert to a number.
+* We received a return value instead of a transaction id on success. Note that since the Ethereum network can handle very large numbers, we're given a [BigNumber](https://github.com/MikeMcl/bignumber.js/) object which we then convert to a number.
 
 **Warning:** We convert the return value to a number because in this example the numbers are small. However, if you try to convert a BigNumber that's larger than the largest integer supported by Javascript, you'll likely run into errors or unexpected behavior.
 

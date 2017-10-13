@@ -171,7 +171,7 @@ But there are other networks as well. In fact, anyone can create their own Ether
 
 ### Local test networks
 
-The Ethereum blockchain can be simulated locally for development. Local test networks process transactions instantly and ether can be distributed as desired. An array of Ethereum simulators exist; we recommend our own, [Ganache](https://github.com/trufflesuite/ganache).
+The Ethereum blockchain can be simulated locally for development. Local test networks process transactions instantly and Ether can be distributed as desired. An array of Ethereum simulators exist; we recommend the [EthereumJS TestRPC](https://github.com/ethereumjs/testrpc).
 
 ### Public test networks
 
