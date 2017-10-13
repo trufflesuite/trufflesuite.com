@@ -43,6 +43,9 @@
     },
     "scoreboard": {
       "title": "scoreboard"
+    },
+    "truffle-vue": {
+      "title": "truffle-vue"
     }
   }
 }
