@@ -5,7 +5,7 @@ var path = require("path");
 
 app.use(browserSync({
   server : {
-    baseDir: path.join(__dirname, "../"),
+    baseDir: path.join(__dirname, "build"),
     serveStaticOptions: {
         extensions: ['html']
     }

@@ -25,11 +25,11 @@
   "scripts": {
     "test": "jshint ./public/**/*.js & csslint-cli ./public/styles",
     "dev": "node ./dev.js",
-    "uglify": "recursive-uglifyjs ../scripts && recursive-uglifyjs ../deps/scripts",
+    "uglify": "recursive-uglifyjs build/scripts && recursive-uglifyjs build/deps/scripts",
     "compile": "node ./compile.js",
     "build": "npm run compile",
-    "postcompile": "npm run uglify && npm run imagemin && copyfiles CNAME ../",
-    "imagemin": "imagemin ./public/images/ ../images/ --optimizationLevel 3 --progressive"
+    "postcompile": "npm run uglify && npm run imagemin && copyfiles CNAME build/",
+    "imagemin": "imagemin ./public/images/ build/images/ --optimizationLevel 3 --progressive"
   },
   "engines": {
     "node": "6.5.x",
