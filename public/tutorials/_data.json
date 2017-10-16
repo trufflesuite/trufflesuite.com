@@ -23,7 +23,7 @@
       "title": "Truffle and Metamask",
       "date": "2016-07-01",
       "author": "Tim Coulter",
-      "published": true
+      "published": false
     },
     "solidity-unit-tests": {
       "title": "Beta: Solidity Unit Tests",

@@ -33,7 +33,7 @@ The first thing to look at is the build process. Since Truffle now puts us in co
 ...
 ```
 
-I've defined two scripts here: `lint` for linting my Javascript to keep my codebase so fresh and so clean, and `ens` for transpiling my Javascript command line tool (using Babel) and running it. That's it! That's the build process. You can run it via `npm run lint` and `npm run babel`. Now that that's out of the way, let's dig into how and why I structured my app this way.
+I've defined two scripts here: `lint` for linting my Javascript to keep my codebase so fresh and so clean, and `ens` for transpiling my Javascript command line tool (using Babel) and running it. That's it! That's the build process. You can run it via `npm run lint` and `npm run ens`. Now that that's out of the way, let's dig into how and why I structured my app this way.
 
 ## Building our App: Separation of concerns
 
@@ -96,7 +96,7 @@ contract('ENS integration', (accounts) => {
     }).then(() => done())
   })
 
-  it('demonstrates that the domain name isn\'t available', (done) => {
+  it('demonstrates that the domain name is available', (done) => {
     auctionRegistrar.available('test')
       .then((isAvailable) => {
         assert.isTrue(isAvailable)

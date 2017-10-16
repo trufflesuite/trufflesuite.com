@@ -1,10 +1,14 @@
 # Truffle and Metamask
 
+<p class="alert alert-warning" style="margin-top: -2rem; margin-bottom: 3rem;">
+  <strong>NOTICE</strong>: For the most up to date information on using Truffle with MetaMask, <a href="/docs/advanced/truffle-with-metamask">check out our documentation</a>.
+</p>
+
 This article was originally written by Dan Finlay and published as a [github gist](https://gist.github.com/flyswatter/aea93752fb90322bbe11). Dan has kindly allowed us to republish it here!
 
 -----------------
 
-If you're interested in building web apps with [the Ethereum blockchain](https://www.ethereum.org/), you may have found [the Truffle web framework](http://truffle.readthedocs.org/en/latest/) to be a nice fit for your needs.
+If you're interested in building web apps with [the Ethereum blockchain](https://www.ethereum.org/), you may have found [the Truffle web framework](/docs) to be a nice fit for your needs.
 
 For many types of Dapps (Distributed Apps), Truffle does everything you could want:  It compiles your blockchain contracts, injects them into your web app, and can even run a test suite against them!
 

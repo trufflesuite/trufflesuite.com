@@ -11,10 +11,10 @@ Here's a preview of what's covered:
 
 By then end of the tutorial you'll have a shiny new dapp with which you can reserve pets for adoption.
 
-<div class="text-center container">
+</div><div class="text-center container">
   ![The Completed Pet Shop Dapp](/blog/images/learn-ethereum-the-fun-way-with-our-pet-shop-tutorial/pet-shop-preview.jpeg)
   <p class="caption">The completed dapp.</p></br></br>
-</div>
+</div><div class="container container-narrow">
 
 In the future we'll be building on this tutorial with others such as deploying to live testnets and additional, more advanced functionality. We hope you enjoy and thank everyone for your support!
 

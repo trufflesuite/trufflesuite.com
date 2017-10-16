@@ -78,7 +78,7 @@ plugins: [
 You can find more information on webpack concepts on [Webpack's website](https://webpack.js.org/concepts/). Notice we didn't *have* to use webpack here. But Truffle comes with a handy webpack demo that gets us started quickly. We _could_ replace the webpack config with a `Gruntfile`, for instance, and use Grunt instead. Truffle 3 don't care no mo'.
 
 ## The App
-Ater building, run `truffle serve` which will serve the `build/` folder's contents on `localhost:8080`. To see it, navigate to [localhost:8080/index.html](localhost:8080/index.html). You should see:
+After building, run `truffle serve` which will serve the `build/` folder's contents on `localhost:8080`. To see it, navigate to [localhost:8080/index.html](localhost:8080/index.html). You should see:
 
 ![](/tutorials/images/MetaCoin_running.png)
 

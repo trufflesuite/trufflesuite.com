@@ -110,7 +110,7 @@ This test contract also shows that your test functions and hook functions all sh
 
 # Advanced Features
 
-Solidity tests come with a few advanced features to let you tests specific use cases within Solidity.
+Solidity tests come with a few advanced features to let you test specific use cases within Solidity.
 
 ### Testing for exceptions
 
