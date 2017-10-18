@@ -9,9 +9,9 @@
   "devDependencies": {
     "browser-sync": "^2.9.8",
     "copyfiles": "^1.2.0",
-    "csslint-cli": "0.0.3",
+    "csslint-cli": "1.0.5",
     "ejs": "^2.5.5",
-    "github": "^9.2.0",
+    "github": "^11.0.0",
     "imagemin-cli": "^3.0.0",
     "jshint": "^2.9.1",
     "lodash": "^4.17.4",
