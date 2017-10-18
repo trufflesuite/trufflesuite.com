@@ -74,7 +74,7 @@ But first, let's set up our environment.
    truffle init bare
    ```
 
-1. Inside the `/contracts` directory, create a file called `Store.sol` and populate it with the following content:
+1. Inside the `contracts/` directory, create a file called `Store.sol` and populate it with the following content:
 
    ```javascript
    pragma solidity ^0.4.0;
@@ -92,7 +92,7 @@ But first, let's set up our environment.
    }
    ```
 
-1. Inside the `/migrations` directory, create a file called `2_deploy_contracts.js` and populate it with the following content:
+1. Inside the `migrations/` directory, create a file called `2_deploy_contracts.js` and populate it with the following content:
 
    ```javascript
    var SimpleStorage = artifacts.require("SimpleStorage");
@@ -231,13 +231,15 @@ Since gas is priced in Ether, this could have real-world financial implications.
 
 An infinite loop is easy to create.
 
-1. Open the `Store.sol` file in your `/contracts` directory in a text editor.
+1. Open the `Store.sol` file in your `contracts/` directory in a text editor.
 
 1. Replace the `set()` function with the following:
 
-   ```shell
+   ```javascript
    function set(uint x) {
-     while(true){myVariable = x;}
+     while(true) {
+       myVariable = x;
+     }
    }
    ```
 
@@ -245,23 +247,13 @@ An infinite loop is easy to create.
 
 #### Testing the contract
 
-1. Because `truffle develop` cannot migrate the same contract twice, we'll need to close out of the console and reopen it. This can be done by typing `.exit` on the console, or pressing `Ctrl-C` twice.
+The Truffle Develop console has the ability to migrate updated contracts without the need to exit and restart the console. And since the `migrate` command can compile and migrate in one step, we can reset our contract on the blockchain in one step.
 
-1. Reopen the console:
+1. In the Truffle Develop console, update the contract:
 
    ```shell
-   truffle develop
+   migrate --reset
    ```
-
-   <p class="alert alert-info">
-     <strong>Note:</strong> If you see a note saying `Connected to existing Truffle Develop session`, then you may have another console open. Make sure to close all Truffle Develop consoles before continuing.
-   </p>
-
-1. To save time, the console can both `compile` and `migrate` the contract in one step:
-
-   ```shell
-   migrate
-   ``` 
 
    You will see both the compiler output and the migration output.
 
@@ -347,7 +339,7 @@ The Truffle Develop console has a built-in debugger. The command to launch this 
         ^^^^^^^^^^^^^^^^^^^^^
    ```
 
-   Notice that the program has moved to the next instruction, located on line 6. (The carats point to the exact part of the instruction taking place.)
+   Notice that the program has moved to the next instruction, located on line 6. (The carets point to the exact part of the instruction taking place.)
 
 1. Press `Enter` again to step to the next instruction:
 
@@ -356,8 +348,8 @@ The Truffle Develop console has a built-in debugger. The command to launch this 
 
    5:
    6:   function set(uint x) {
-   7:     while(true){myVariable = x;}
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   7:     while(true) {
+          ^^^^^^^^^^^^
    ```
 
 1. Press Enter three more times:
@@ -365,10 +357,19 @@ The Truffle Develop console has a built-in debugger. The command to launch this 
    ```shell
    Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
 
-   5:
    6:   function set(uint x) {
-   7:     while(true){myVariable = x;}
-                      ^^^^^^^^^^
+   7:     while(true) {
+   8:       myVariable = x;
+            ^^^^^^^^^^
+
+   debug(develop:0xe4933407...)>
+
+   Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
+
+   6:   function set(uint x) {
+   7:     while(true) {
+   8:       myVariable = x;
+            ^^^^^^^^^^^^^^
 
    debug(develop:0xe4933407...)>
 
@@ -376,17 +377,8 @@ The Truffle Develop console has a built-in debugger. The command to launch this 
 
    5:
    6:   function set(uint x) {
-   7:     while(true){myVariable = x;}
-                      ^^^^^^^^^^^^^^
-
-   debug(develop:0xe4933407...)>
-
-   Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
-
-   5:
-   6:   function set(uint x) {
-   7:     while(true){myVariable = x;}
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^   
+   7:     while(true) {
+          ^^^^^^^^^^^^
    ```
 
    Notice that the bottom transaction is a repeat. In fact, pressing `Enter` over and over will repeat those last three transactions forever (or at least until the transaction runs out of gas). **This tells you where the problem is.**
@@ -394,7 +386,7 @@ The Truffle Develop console has a built-in debugger. The command to launch this 
 1. Type `q` to exit the debugger and return to the console.
 
 
-###  #2: An invalid error check
+### Issue #2: An invalid error check
 
 Smart contracts can use statements like `assert()` to ensure that certain conditions are met. These can conflict with the state of the contract in ways that are irreconcilable.
 
@@ -406,7 +398,7 @@ Here we will introduce such a condition, and then see how the debugger can find 
 
 1. Replace the `set()` function with the following:
 
-   ```shell
+   ```javascript
    function set(uint x) {
      assert(x == 0);
      myVariable = x;
@@ -417,24 +409,12 @@ Here we will introduce such a condition, and then see how the debugger can find 
 
 #### Testing the contract
 
-Just as before, we'll close and reopen the console and redeploy the contract.
+Just as before, we'll reset the contract on the blockchain.
 
-1. Type `.exit` or press `Ctrl-C` twice in the Truffle Develop console to close it.
-
-1. Press `Ctrl-C` twice in the window showing the logs to close it.
-
-   <p class="alert alert-info">
-   <strong>Note</strong>: Remember that both consoles need to be closed first before starting a new session.
-   </p>
-
-1. In the first window, re-run `truffle develop`.
-
-1. In the second window, re-run `truffle develop --log`.
-
-1. In the first console, compile and migrate the contract:
+1. In the Truffle Develop console, reset the contract:
 
    ```shell
-   migrate
+   migrate --reset
    ```
 
 1. Now we are ready to test the new transaction. Run the same command as above:
@@ -502,7 +482,7 @@ Just as before, we'll close and reopen the console and redeploy the contract.
 
 Sometimes, an error isn't a true error, in that it doesn't cause a problem at runtime, but instead is just doing something that you don't intend it to do.
 
-Take for example an event that would run if our variable was odd and another event that would run if our variable was even. **If you were to accidentally switch this conditional so the wrong function would run, it might not cause an actual error; nevertheless, you would see your transaction acting unexpectedly.**
+Take for example an event that would run if our variable was odd and another event that would run if our variable was even. **If we swapped this conditional so that the opposite functions would run, it wouldn't cause an error; nevertheless, the contract would act unexpectedly.**
 
 Once again, we can use the debugger to see where things went wrong.
 
@@ -512,7 +492,7 @@ Once again, we can use the debugger to see where things went wrong.
 
 1. Replace the `set()` function with the following:
 
-   ```shell
+   ```javascript
    event Odd();
 
    event Even();
@@ -533,19 +513,15 @@ Once again, we can use the debugger to see where things went wrong.
 
 #### Testing the contract
 
-Just as before, we'll close and reopen the console and redeploy the contract.
+Just as before, we'll reset the contract on the blockchain.
 
-1. Press `Ctrl-C` twice in the window showing the logs to close it. (We won't need a second console for this issue, so we don't need to reopen it.)
-
-1. Type `.exit` or press `Ctrl-C` twice in the console to close it as well.
-
-1. In that same window, rerun `truffle develop`.
-
-1. Compile and migrate the contract:
+1. In the Truffle Develop console, update the contract:
 
    ```shell
-   migrate
+   migrate --reset
    ```
+
+   You will see both the compiler output and the migration output.
 
 1. Now we are ready to test the new transaction. Run the same command as above:
 
