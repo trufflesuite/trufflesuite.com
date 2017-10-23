@@ -114,7 +114,7 @@ Using less than 15 lines of hand-coded Solidity, we've created our own Ethereum 
 
    The `import` statement within our `TutorialToken` contract will be automatically handled by the compiler, along with any subsequent imports within `StandardToken`.
 
-1. Now we are ready to compile and migrate to the blockchain. We will do this using Truffle Develop, a development console that includes an in-memory blockchain, similar to the [EthereumJS TestRPC](https://github.com/ethereumjs/testrpc). In your terminal, make sure you are in the root of your project's directory and then launch Truffle Develop:
+1. Now we are ready to compile and deploy your contract to the blockchain. We will do this using Truffle Develop, a development console that includes an in-memory blockchain, similar to the [EthereumJS TestRPC](https://github.com/ethereumjs/testrpc). In your terminal, make sure you are in the root of your project's directory and then launch Truffle Develop:
 
    ```shell
    truffle develop
@@ -130,14 +130,14 @@ Using less than 15 lines of hand-coded Solidity, we've created our own Ethereum 
    compile
    ```
 
-1. Once the compile has completed, migrate the contract to the blockchain:
+1. Once the compile has completed, deploy the contract to the blockchain:
 
    ```shell
    migrate
    ```
 
    <p class="alert alert-info">
-     <strong>Note</strong>: As an alternative to using Truffle Develop, both the `compile` and `migrate` commands can be run directly on the command line with `truffle compile` and `truffle migrate` respectively.
+     <strong>Note</strong>: As an alternative to using Truffle Develop, both the `compile` and `migrate` commands can be run directly on the command line with `truffle compile` and `truffle migrate` respectively. You will need to have some other connection to a blockchain running, such as the TestRPC.
    </p>
 
    You will see output that looks similar to this:
@@ -189,7 +189,7 @@ For this portion of the tutorial, we recommend using the [MetaMask extension for
      <strong>Note</strong>: To review the list of accounts, type `web3.eth.accounts` in Truffle Develop.
    </p>
 
-1. Click "Transfer" to initiate the token transfer. Metamask will intercept the transfer request and display a confirmation. Note that no ether is changing hands, except in the form of gas.
+1. Click "Transfer" to initiate the token transfer. Metamask will intercept the transfer request and display a confirmation. Note that no ether is changing hands, except for the gas used to pay for the transaction.
 
    ![Metamask transaction confirmation](/tutorials/images/open-zeppelin/oz-metamask-transfer.png)
 
