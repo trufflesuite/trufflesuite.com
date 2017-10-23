@@ -2,7 +2,7 @@ env:
   global:
   - GIT_NAME: "'Travis Deployer'"
   - GIT_EMAIL: gnidan@trufflesuite.com
-  - GH_REF: git@github.com:trufflesuite/gh-pages-test.git
+  - GH_REF: git@github.com:trufflesuite/trufflesuite.github.io.git
   - MASTER: "master"
 language: node_js
 node_js:
