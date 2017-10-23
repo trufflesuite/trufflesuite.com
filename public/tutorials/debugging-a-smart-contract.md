@@ -1,19 +1,12 @@
 # Debugging a smart contract
 
 <p class="alert alert-info">
-<strong>TODO</strong>: { [String: '4'] s: 1, e: 0, c: [ 4 ] } ----- What does all this stuff mean?
+<strong>Note</strong>: This tutorial requires Truffle version 4.0 or newer.
 </p>
 
-<p class="alert alert-info">
-<strong>TODO</strong>: How is the gas limit set? When/how does an out of gas error occur?
-</p>
+<!-- TODO: How is the gas limit set? When/how does an out of gas error occur? -->
 
-<p class="alert alert-info">
-<strong>TODO</strong>: Link to docs
-</p>
-
-
-## Background
+<!-- TODO: Link to docs -->
 
 A smart contract in Ethereum is just code. Unlike the "paper" contracts that you find elsewhere, this contract needs to make sense in a very precise manner.
 
@@ -25,19 +18,11 @@ If our contracts are not coded correctly, our transactions may fail, which can r
 
 In this tutorial, we will migrate a basic contract to a test blockchain, introduce some errors into it, and solve each one through the use of the built-in Truffle debugger.
 
-<p class="alert alert-info">
-<strong>Note</strong>: This tutorial requires Truffle version 4.0 or newer.
-</p>
 
 
 ## A basic smart contract
 
 One of the most basic, non-trivial, types of smart contract is a **simple storage contract**. (This example was adapted from the [Solidity documentation](https://solidity.readthedocs.io/en/develop/introduction-to-smart-contracts.html).)
-
-This contract does two things: 
-
-* Allows you to set a variable (`myVariable`) to a particular integer value
-* Allows you to query that variable to get the selected value
 
 ```javascript
 pragma solidity ^0.4.0;
@@ -55,9 +40,14 @@ contract SimpleStorage {
 }
 ```
 
+This contract does two things:
+
+* Allows you to set a variable (`myVariable`) to a particular integer value
+* Allows you to query that variable to get the selected value
+
 This isn't a very interesting contract, but that's not the point here. We want to see what happens when things go wrong.
 
-But first, let's set up our environment.
+First, let's set up our environment.
 
 ## Deploying the basic smart contract
 
@@ -74,7 +64,9 @@ But first, let's set up our environment.
    truffle init bare
    ```
 
-1. Inside the `contracts/` directory, create a file called `Store.sol` and populate it with the following content:
+   This will create directories such as `contracts/` and `migrations/`, and populate them with files we will use when we deploy our contract to the blockchain.
+
+1. Inside the `contracts/` directory, create a file called `Store.sol` with the following content:
 
    ```javascript
    pragma solidity ^0.4.0;
@@ -92,6 +84,8 @@ But first, let's set up our environment.
    }
    ```
 
+   This is the contract that we will be debugging. While the full details of this file are beyond the scope of this tutorial, note that there is a contract named `SimpleStorage` that contains a numeric variable `myVariable` and two functions: `set()` and `get()`. The first function stores a value in that variable and the second queries that value.
+
 1. Inside the `migrations/` directory, create a file called `2_deploy_contracts.js` and populate it with the following content:
 
    ```javascript
@@ -102,27 +96,29 @@ But first, let's set up our environment.
    };
    ```
 
+   This file is the directive that allows us to deploy the `SimpleStorage` contract to the blockchain.
+
 1. On the terminal, compile the smart contract:
 
    ```shell
    truffle compile
    ```
 
-1. Open a second terminal and run `truffle develop`:
+1. Open a second terminal and run `truffle develop` to start an in-memory blockchain environment that we can use to test our contract:
 
    ```shell
    truffle develop
    ```
 
-   The console will display a prompt `truffle(develop)>`. From here on out, unless otherwise specified, all commands will be typed out here.
+   The console will display a prompt `truffle(develop)>`. From here, unless otherwise specified, all commands will be typed on this prompt.
 
-1. With the develop console up and running, we can migrate to the test blockchain right from within it:
+1. With the develop console up and running, we can now deploy our contracts to the blockchain by running our migrations:
 
    ```shell
    migrate
    ```
 
-   The response should look something like below:
+   The response should look something like below, though the specific IDs will differ:
 
    ```shell
     Running migration: 1_initial_migration.js
@@ -154,22 +150,16 @@ We next want to interact with the smart contract to see how it works when workin
 1. In the console where `truffle develop` is running, run the following command:
 
    ```shell
-   SimpleStorage.deployed().then(function(instance){return instance.get.call();});
+   SimpleStorage.deployed().then(function(instance){return instance.get.call();}).then(function(value){return value.toNumber()});
    ```
 
-   This command looks at the SimpleStorage contract, and then calls the `get()` function as defined inside it. It then returns the output:
+   This command looks at the SimpleStorage contract, and then calls the `get()` function as defined inside it. It then returns the output, which is usually rendered as a string, and converts it to a number:
 
    ```shell
-   { [String: '0'] s: 1, e: 0, c: [ 0 ] }
+   0
    ```
 
-   The important information here is the value `0`. Variables with integer types in Solidity are automatically populated with the value of zero, unlike other languages where it might be `NULL` or `undefined`.
-
-   So this shows us that our variable, `myVariable` is set to `0`.
-
-   <p class="alert alert-info">
-   <strong>Note</strong>: Even though the response shows the `0` listed as a type `String`, the value in the variable is an integer as we specified.
-   </p>
+   This shows us that our variable, `myVariable`, is set to `0`, even though we haven't set this variable to any value (yet). This is because **variables with integer types are automatically populated with the value of zero in Solidity**, unlike other languages where it might be `NULL` or `undefined`.
 
 1. Now let's run a transaction on our contract. We'll do this by running the `set()` function, where we can set our variable value to some other integer. Run the following command:
 
@@ -177,7 +167,7 @@ We next want to interact with the smart contract to see how it works when workin
    SimpleStorage.deployed().then(function(instance){return instance.set(4);});
    ```
 
-   This sets the variable to `4`. The output shows some information about the transaction:
+   This sets the variable to `4`. The output shows some information about the transaction, including the transaction ID (hash), transaction receipt,  and any event logs that were triggered during the course of the transaction:
 
    ```shell
     { tx: '0x7f799ad56584199db36bd617b77cc1d825ff18714e80da9d2d5a0a9fff5b4d42',
@@ -193,24 +183,27 @@ We next want to interact with the smart contract to see how it works when workin
       logs: [] }   
    ```
 
-   Most important to us is the transaction ID (listed both as `tx` and as `transactionHash`). We'll need to copy that value when we start to debug.
+   Most important to us is the transaction ID (listed here both as `tx` and as `transactionHash`). We'll need to copy that value when we start to debug.
+
+   <p class="alert alert-info">
+   <strong>Note</strong>: Your transaction IDs will likely be different from what is listed here.
+   </p>
 
 1. To verify that the variable has changed values, run the `get()` function again:
 
    ```shell
-   SimpleStorage.deployed().then(function(instance){return instance.get.call();});
+   SimpleStorage.deployed().then(function(instance){return instance.get.call();}).then(function(value){return value.toNumber()});
    ```
 
    The output should look like this:
 
    ```shell
-   { [String: '4'] s: 1, e: 0, c: [ 4 ] }
+   4
    ```
-
 
 ## Debugging errors
 
-The above shows how the contract *should* work. **Now, we will introduce some small errors to the contract** and redeploy it. We will see how the issues present itself, and also **see how we can use Truffle's built-in debug feature to fix it**.
+The above shows how the contract *should* work. Now, we will introduce some small errors to the contract and redeploy it. We will see how the issues present itself, and also **use Truffle's built-in debug feature to fix the issues**.
 
 We will look at the following issues:
 
@@ -225,13 +218,13 @@ On the Ethereum blockchain, transactions cannot be set to run forever.
 
 A transaction can run up until its gas limit is reached. Once that happens, the transaction will error out, and an "out of gas" error will be returned.
 
-Since gas is priced in Ether, this could have real-world financial implications. So fixing an out-of-gas error is critical.
+Since gas is priced in ether, this could have real-world financial implications. So fixing an out-of-gas error is critical.
 
 #### Introducing the error
 
 An infinite loop is easy to create.
 
-1. Open the `Store.sol` file in your `contracts/` directory in a text editor.
+1. Open `Store.sol` from the `contracts/` directory in a text editor.
 
 1. Replace the `set()` function with the following:
 
@@ -257,7 +250,7 @@ The Truffle Develop console has the ability to migrate updated contracts without
 
    You will see both the compiler output and the migration output.
 
-1. In order to facilitate error hunting, we will open up a second console with logging. This will allow us to, for example, see transaction IDs when a transaction fails. In another terminal window, run the following command:
+1. In order to facilitate error hunting, we will open a second console with logging. This will allow us to, for example, see transaction IDs when a transaction fails. In another terminal window, run the following command:
 
    ```shell
    truffle develop --log
@@ -293,13 +286,18 @@ With our failure and our transaction ID, we can now debug the transaction.
 
 #### Debugging the issue
 
-The Truffle Develop console has a built-in debugger. The command to launch this is `debug <Transaction ID>` from the Truffle Develop console, or `truffle debug <Transaction ID>` from the terminal. Let's launch this now.
+Truffle contains a built-in debugger. The command to launch this is `debug <Transaction ID>` from the Truffle Develop console, or `truffle debug <Transaction ID>` from the terminal. Let's launch this now.
 
 1. In the Truffle Develop console, copy the transaction ID from the logs console and paste it as the argument in the `debug` command:
 
    ```shell
    debug 0xe493340792ab92b95ac40e43dca6bc88fba7fd67191989d59ca30f79320e883f
    ```
+
+   <p class="alert alert-info">
+   <strong>Note</strong>: Again, your transaction ID will be different from what is listed here.
+   </p>
+
 
    You will see the following output:
 
@@ -383,7 +381,7 @@ The Truffle Develop console has a built-in debugger. The command to launch this 
 
    Notice that the bottom transaction is a repeat. In fact, pressing `Enter` over and over will repeat those last three transactions forever (or at least until the transaction runs out of gas). **This tells you where the problem is.**
 
-1. Type `q` to exit the debugger and return to the console.
+1. Type `q` to exit the debugger.
 
 
 ### Issue #2: An invalid error check
@@ -394,7 +392,7 @@ Here we will introduce such a condition, and then see how the debugger can find 
 
 #### Introducing the error
 
-1. Open up the `Store.sol` file again.
+1. Open `Store.sol` again.
 
 1. Replace the `set()` function with the following:
 
@@ -405,13 +403,13 @@ Here we will introduce such a condition, and then see how the debugger can find 
    }
    ```
 
-   This is the same as the original version, but with an `assert()` function added, testing to make sure that `x == 0`. This will be fine until we set that value to something else, and then we will have a problem.
+   This is the same as the original version, but with an `assert()` function added, testing to make sure that `x == 0`. This will be fine until we set that value to something else, and then we'll have a problem.
 
 #### Testing the contract
 
 Just as before, we'll reset the contract on the blockchain.
 
-1. In the Truffle Develop console, reset the contract:
+1. In the Truffle Develop console, reset the contract on the blockchain to its initially deployed state:
 
    ```shell
    migrate --reset
@@ -440,6 +438,11 @@ Just as before, we'll reset the contract on the blockchain.
    ```shell
    debug 0xe493340792ab92b95ac40e43dca6bc88fba7fd67191989d59ca30f79320e883f
    ```
+
+   <p class="alert alert-info">
+   <strong>Note</strong>: Again, your transaction ID will be different from what is listed here.
+   </p>
+
 
    Now we are back in the debugger:
 
@@ -482,13 +485,13 @@ Just as before, we'll reset the contract on the blockchain.
 
 Sometimes, an error isn't a true error, in that it doesn't cause a problem at runtime, but instead is just doing something that you don't intend it to do.
 
-Take for example an event that would run if our variable was odd and another event that would run if our variable was even. **If we swapped this conditional so that the opposite functions would run, it wouldn't cause an error; nevertheless, the contract would act unexpectedly.**
+Take for example an event that would run if our variable was odd and another event that would run if our variable was even. **If we accidentally swapped this conditional so that the opposite function would run, it wouldn't cause an error; nevertheless, the contract would act unexpectedly.**
 
-Once again, we can use the debugger to see where things went wrong.
+Once again, we can use the debugger to see where things go wrong.
 
 #### Introducing the error
 
-1. Open up the `Store.sol` file again.
+1. Open `Store.sol` again.
 
 1. Replace the `set()` function with the following:
 
@@ -564,6 +567,10 @@ Just as before, we'll reset the contract on the blockchain.
    debug 0x7f799ad56584199db36bd617b77cc1d825ff18714e80da9d2d5a0a9fff5b4d42
    ```
 
+   <p class="alert alert-info">
+   <strong>Note</strong>: Again, your transaction ID will be different from what is listed here.
+   </p>
+
    You will enter the debugger as before.
 
 1. Press `Enter` multiple times to cycle through the steps. Eventually you will see that the conditional leads to the `Odd()` event:
@@ -593,5 +600,6 @@ Just as before, we'll reset the contract on the blockchain.
 
 ## Conclusion
 
-With the ability to debug your contracts directly within Truffle, you have even more power at your hands to make your smart contracts rock solid and ready to deploy. Make sure to read more about Truffle Develop console and the debugger in the docs. Happy debugging! 
+With the ability to debug your contracts directly within Truffle, you have even more power at your hands to make your smart contracts rock-solid and ready to deploy. Make sure to read more about Truffle Develop console and the debugger in the docs. If you have any questions, please join our [Gitter channel](https://gitter.im/ConsenSys/truffle) and ask there.
 
+Happy debugging!
