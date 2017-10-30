@@ -12,7 +12,7 @@ var source = path.join(__dirname, "public");
 
 var app = Metalsmith(__dirname)
   .source(path.join("./", "public"))
-  .destination('../')
+  .destination('build/')
   .clean(false)
   .use(sass({
     outputStyle: "expanded"
@@ -30,7 +30,7 @@ var app = Metalsmith(__dirname)
       if (new_file_path != file_path) {
         files[new_file_path] = files[file_path];
         delete files[file_path];
-      } 
+      }
     });
 
     var prefills = {
