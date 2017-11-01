@@ -79,6 +79,51 @@ For each network, if unspecified, transaction options will default to the follow
 * `from`: From address used during migrations. Defaults to the first available account provided by your Ethereum client.
 * `provider`: Default web3 provider using `host` and `port` options: `new Web3.providers.HttpProvider("http://<host>:<port>")`
 
+### build_directory
+
+The default output directory for compiled contracts is `./build/contracts` relative to the project root. This can be changed with the `build_directory` key.
+
+Examples:
+
+To place the built contracts in `/home/username/contract_name/build/contracts`:
+
+```javascript
+module.exports = {
+  build_directory: "/home/username/contract_name/build",
+  networks: {
+    development: {
+      host: "localhost",
+      port: 8545,
+      network_id: "*",
+    }
+  }
+};
+```
+
+To place the built contracts in `C:\Users\Username\Documents\contract_name\build\contracts`:
+
+```javascript
+module.exports = {
+  build_directory: "C:\\Users\\Username\\Documents\\contract_name\\build",
+  networks: {
+    development: {
+      host: "localhost",
+      port: 8545,
+      network_id: "*",
+    }
+  }
+};
+```
+
+Relative paths work as well. For example, either of the following would be valid, assuming the path exists:
+
+```javascript
+build_directory: "../../build",
+```
+```javascript
+build_directory: "..\\..\\build",
+```
+
 ### mocha
 
 Configuration options for the [MochaJS](http://mochajs.org/) testing framework. This configuration expects an object as detailed in Mocha's [documentation](https://github.com/mochajs/mocha/wiki/Using-mocha-programmatically#set-options).
