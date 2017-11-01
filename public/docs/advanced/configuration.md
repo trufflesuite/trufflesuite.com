@@ -79,13 +79,13 @@ For each network, if unspecified, transaction options will default to the follow
 * `from`: From address used during migrations. Defaults to the first available account provided by your Ethereum client.
 * `provider`: Default web3 provider using `host` and `port` options: `new Web3.providers.HttpProvider("http://<host>:<port>")`
 
-### build_directory
+### contracts_build_directory
 
 The default output directory for compiled contracts is `./build/contracts` relative to the project root. This can be changed with the `contracts_build_directory` key.
 
 Examples:
 
-To place the built contracts in `./output/contracts`:
+To place the built contract artifacts in `./output/contracts`:
 
 ```javascript
 module.exports = {
@@ -100,7 +100,7 @@ module.exports = {
 };
 ```
 
-The built contracts do not need to be inside the project root:
+The built contract artifacts do not need to be inside the project root:
 
 ```javascript
 module.exports = {
