@@ -81,15 +81,15 @@ For each network, if unspecified, transaction options will default to the follow
 
 ### build_directory
 
-The default output directory for compiled contracts is `./build/contracts` relative to the project root. This can be changed with the `build_directory` key.
+The default output directory for compiled contracts is `./build/contracts` relative to the project root. This can be changed with the `contracts_build_directory` key.
 
 Examples:
 
-To place the built contracts in `/home/username/contract_name/build/contracts`:
+To place the built contracts in `./output/contracts`:
 
 ```javascript
 module.exports = {
-  build_directory: "/home/username/contract_name/build",
+  contracts_build_directory: "./output",
   networks: {
     development: {
       host: "localhost",
@@ -100,11 +100,11 @@ module.exports = {
 };
 ```
 
-To place the built contracts in `C:\Users\Username\Documents\contract_name\build\contracts`:
+The built contracts do not need to be inside the project root:
 
 ```javascript
 module.exports = {
-  build_directory: "C:\\Users\\Username\\Documents\\contract_name\\build",
+  contracts_build_directory: "../../../output",
   networks: {
     development: {
       host: "localhost",
@@ -115,14 +115,7 @@ module.exports = {
 };
 ```
 
-Relative paths work as well. For example, either of the following would be valid, assuming the path exists:
-
-```javascript
-build_directory: "../../build",
-```
-```javascript
-build_directory: "..\\..\\build",
-```
+Absolute paths will also work. This is not recommended though, as an absolute path may not exist when compiled on another system. If you use absolute paths on Windows, make sure to use double backslashes for paths (example: `C:\\Users\\Username\\output`).
 
 ### mocha
 
