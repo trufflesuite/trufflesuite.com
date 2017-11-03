@@ -14,7 +14,7 @@ This will run all migrations located within your project's `migrations` director
 
 A simple migration file looks like this:
 
-Filename: 4_example_migration.js
+Filename: `4_example_migration.js`
 
 ```javascript
 var MyContract = artifacts.require("MyContract");
@@ -29,7 +29,9 @@ Note that the filename is prefixed with a number and is suffixed by a descriptio
 
 ### artifacts.require()
 
-At the beginning of the migration, we tell Truffle which contracts we'd like to interact with via the `artifacts.require()` method. This method is similar to Node's `require`, but in our case it specifically returns a contract abstraction that we can use within the rest of our deployment script. The name specified *does not* have to match the filename of your contract source files. Instead, it should match the name of the contract definition within that source file. Consider this example where two contracts are specified within the same source file:
+At the beginning of the migration, we tell Truffle which contracts we'd like to interact with via the `artifacts.require()` method. This method is similar to Node's `require`, but in our case it specifically returns a contract abstraction that we can use within the rest of our deployment script. The name specified should match **the name of the contract definition** within that source file. Do not pass the name of the source file, as files can contain more than one contract.
+
+Consider this example where two contracts are specified within the same source file:
 
 Filename: `./contracts/Contracts.sol`
 
@@ -50,6 +52,13 @@ To use only `ContractTwo`, your `artifacts.require()` statement would look like 
 var ContractTwo = artifacts.require("ContractTwo");
 ```
 
+To use both contracts, you will need two `artifacts.require()` statements:
+
+```
+var ContractOne = artifacts.require("ContractOne");
+var ContractTwo = artifacts.require("ContractTwo");
+```
+
 ### module.exports
 
 All migrations must export a function via the `module.exports` syntax. The function exported by each migration should accept a `deployer` object as its first parameter. This object aides in deployment by both providing a clear syntax for deploying smart contracts as well as performing some of deployment's more mundane duties, such as saving deployed artifacts for later use. The `deployer` object is your main interface for staging deployment tasks, and its API is described at the bottom of this page.
@@ -60,7 +69,7 @@ Your migration function can accept other parameters as well. See the examples be
 
 Truffle requires you to have a Migrations contract in order to use the Migrations feature. This contract must contain a specific interface, but you're free to edit this contract at will. For most projects, this contract will be deployed initially as the first migration and won't be updated again. You will also receive this contract by default when creating a new project with `truffle init`.
 
-Filename: contracts/Migrations.sol
+Filename: `contracts/Migrations.sol`
 
 ```
 pragma solidity ^0.4.8;
@@ -93,7 +102,7 @@ contract Migrations {
 
 You must deploy this contract inside your first migration in order to take advantage of the Migrations feature. To do so, create the following migration:
 
-Filename: migrations/1_initial_migration.js
+Filename: `migrations/1_initial_migration.js`
 
 ```javascript
 var Migrations = artifacts.require("Migrations");
