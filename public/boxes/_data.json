@@ -32,6 +32,9 @@
     "angular-truffle-box": {
       "title": "angular-truffle-box"
     },
+    "limelabs-angular-box": {
+      "title": "limelabs-angular-box"
+    },
     "react-dapp-material-ui": {
       "title": "react-dapp-material-ui"
     },
