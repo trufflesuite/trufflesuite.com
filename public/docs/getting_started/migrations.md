@@ -8,7 +8,22 @@ To run your migrations, run the following:
 $ truffle migrate
 ```
 
-This will run all migrations located within your project's `migrations` directory. At their simplest, migrations are simply a set of managed deployment scripts. If your migrations were previously run successfully, `truffle migrate` will start execution from the last migration that was ran, running only newly created migrations. If no new migrations exists, `truffle migrate` won't perform any action at all. You can use the `--reset` option to run all your migrations from the beginning. For local testing make sure to have [TestRPC](https://github.com/ethereumjs/testrpc) installed and running before running `migrate`.
+This will run all migrations located within your project's `migrations` directory. At their simplest, migrations are simply a set of managed deployment scripts. If your migrations were previously run successfully, `truffle migrate` will start execution from the last migration that was ran, running only newly created migrations. If no new migrations exists, `truffle migrate` won't perform any action at all. You can use the `--reset` option to run all your migrations from the beginning. before running `migrate` For local testing make sure to have [TestRPC](https://github.com/ethereumjs/testrpc) installed and running as well as set the client configuration in your main Truffle configuration file `truffle.js` located in the project root.
+
+Initially the file `truffle.js` is empty and here is an example of a development configuration:
+
+```
+module.exports = {
+  networks: {
+    development: {
+      host: "localhost",
+      port: 8545,
+      network_id: "*" // Match any network id
+    }
+  }
+};
+
+```
 
 # Migration Files
 
