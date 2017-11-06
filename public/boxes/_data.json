@@ -17,9 +17,6 @@
     "pet-shop": {
       "title": "pet-shop"
     },
-    "status": {
-      "title": "status"
-    },
     "tutorialtoken": {
       "title": "tutorialtoken"
     },
@@ -29,8 +26,14 @@
     "blueprint": {
       "title": "blueprint"
     },
+    "status": {
+      "title": "status"
+    },
     "angular-truffle-box": {
       "title": "angular-truffle-box"
+    },
+    "eth-vue": {
+      "title": "eth-vue"
     },
     "limelabs-angular-box": {
       "title": "limelabs-angular-box"
@@ -38,17 +41,17 @@
     "react-dapp-material-ui": {
       "title": "react-dapp-material-ui"
     },
-    "svelte-box": {
-      "title": "svelte-box"
-    },
-    "vue-dark-chocolate": {
-      "title": "vue-dark-chocolate"
-    },
     "scoreboard": {
       "title": "scoreboard"
     },
+    "svelte-box": {
+      "title": "svelte-box"
+    },
     "truffle-vue": {
       "title": "truffle-vue"
+    },
+    "vue-dark-chocolate": {
+      "title": "vue-dark-chocolate"
     }
   }
 }
