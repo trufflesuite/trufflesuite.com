@@ -21,7 +21,7 @@ For more information on using contract abstractions, see the [Interacting With Y
 
 ### Using artifacts.require()
 
-Using `artifacts.require()` within your tests is the exact same as using it within your migrations. See the [artifacts.require() documentation](./migrations#artifacts-require-) within the Migrations section for detailed usage.
+Using `artifacts.require()` within your tests works the same way as using it within your migrations; you just need to pass the name of the contract. See the [artifacts.require() documentation](./migrations#artifacts-require-) in the Migrations section for detailed usage.
 
 ### Using web3
 
