@@ -79,22 +79,24 @@ For each network, if unspecified, transaction options will default to the follow
 * `from`: From address used during migrations. Defaults to the first available account provided by your Ethereum client.
 * `provider`: Default web3 provider using `host` and `port` options: `new Web3.providers.HttpProvider("http://<host>:<port>")`
 
-#### Accessing only one of multiple networks
+For each network, you can specify either `host` / `port` or `provider`, but not both. If you need an HTTP provider, we recommend using `host` and `port`, while if you need a custom provider such as `HDWalletProvider`, you must use `provider`.
 
-As seen above, your `truffle.js` file can contain multiple network configurations, but in general you will only work with a single network at a time. While you can issue a command to migrate to a single network (`truffle migrate --network live`), a minimal network connection will nevertheless be opened to every network listed.
+#### Accessing only one of multiple network providers
 
-As a workaround to this, you can wrap your network definition in a function call. This way, the network information is there, but Truffle will ignore it until specifically called.
+As seen above, your `truffle.js` file can contain multiple network configurations, but in general you will only work with a single network at a time. While you can issue a command to migrate to a single network (`truffle migrate --network live`), a minimal network connection will nevertheless be opened to every network defined with a `provider`.
 
-For example, consider the following network list consisting of a local test network and a Infura-hosted Ropsten network:
+As a workaround to this, you can wrap your network's provider definition in a function call. This way, the network information is there, but Truffle will ignore it until specifically called.
+
+For example, consider the following network list consisting of a local test network and a Infura-hosted Ropsten network, both provided by HDWalletProvider:
 
 ```javascript
 networks: {
   ropsten: {
-    provider: new Web3.providers.HttpProvider("https://ropsten.infura.io/"),
+    provider: new HDWalletProvider(mnemonic, "https://ropsten.infura.io/"),
     network_id: '3',
   },
   test: {
-    provider: new Web3.providers.HttpProvider("http://localhost:8545/"),
+    provider: new HDWalletProvider(mnemonic, "http://localhost:8545/"),
     network_id: '*',
   },
 }
@@ -106,18 +108,20 @@ To ensure that only one network is ever connected at a time, modify the `provide
 networks: {
   ropsten: {
     provider: function() {
-      return new Web3.providers.HttpProvider("https://ropsten.infura.io/");
+      return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/");
     },
     network_id: '3',
   },
   test: {
     provider: function() {
-      return new Web3.providers.HttpProvider("http://localhost:8545/");
+      return new HDWalletProvider(mnemonic, "http://localhost:8545/");
     },
     network_id: '*',
   },
 }
 ```
+
+If you specify `host` and `port` instead of `provider`, Truffle will create its own default HTTP provider using that host and port, and no minimal network connection will be opened, so there is no need to do the function wrapping workaround. That said, you wouldn't be able to use a custom provider in this case.
 
 ### contracts_build_directory
 
