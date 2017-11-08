@@ -22,21 +22,11 @@ candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
 
 Once launched, Truffle Develop will provide you with a console you can use to run all available Truffle commands. These commands are input by omitting the `truffle` prefix. So, for example, to compile your smart contracts, instead of typing `truffle compile`, you need to only type `compile`.
 
+To read more about interacting with the console, please see the [Using the Console](/docs/getting_started/console) section.
+
 ### TestRPC
 
 You can also use [EthereumJS TestRPC](https://github.com/ethereumjs/testrpc). It's a separate command-line blockchain you can use for both development and automated testing, and works well with Truffle. Check out its [README](https://github.com/ethereumjs/testrpc/blob/master/README.md) and documentation for more information.
-
-To run the TestRPC, open a new terminal and type:
-
-```shell
-testrpc
-```
-
-The TestRPC will start with a different seed each time (and so a different mnemonic and account list), but you can run the TestRPC with a specific mnemonic in order to regenerate the same accounts:
-
-```shell
-testrpc --mnemonic word1 word2 word3 ...
-```
 
 ## Deploying to live networks
 
