@@ -161,7 +161,7 @@ Since `adopters` is already declared, we can simply return it. Be sure to specif
 
 Now that we have written our smart contract, the next steps are to compile and migrate it.
 
-Truffle has a built-in developer console, which we call Truffle Develop. It generated an in-memory text blockchain that we can use to test deploy contracts. It also has the ability to run truffle commands directly from the console. We will use Truffle Develop to perform most of the actions on our contract in this tutorial.
+Truffle has a built-in developer console, which we call Truffle Develop, which generates a development blockchain that we can use to test deploy contracts. It also has the ability to run Truffle commands directly from the console. We will use Truffle Develop to perform most of the actions on our contract in this tutorial.
 
 ### Compilation
 

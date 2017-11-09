@@ -104,7 +104,7 @@ First, let's set up our environment.
    truffle compile
    ```
 
-1. Open a second terminal and run `truffle develop` to start an in-memory blockchain environment that we can use to test our contract:
+1. Open a second terminal and run `truffle develop` to start a development blockchain built directly into Truffle that we can use to test our contract:
 
    ```shell
    truffle develop
@@ -139,7 +139,7 @@ First, let's set up our environment.
 
 ## Interacting with the basic smart contract
 
-The smart contract is now deployed to a test network via `truffle develop`, which is an in-memory blockchain, similar to the [EthereumJS TestRPC](https://github.com/ethereumjs/testrpc).
+The smart contract is now deployed to a test network via `truffle develop`, which is a development blockchain built directly into Truffle, similar to the [EthereumJS TestRPC](https://github.com/ethereumjs/testrpc).
 
 We next want to interact with the smart contract to see how it works when working correctly. We'll interact using the `truffle develop` console.
 

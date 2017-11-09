@@ -114,7 +114,7 @@ Using less than 15 lines of hand-coded Solidity, we've created our own Ethereum 
 
    The `import` statement within our `TutorialToken` contract will be automatically handled by the compiler, along with any subsequent imports within `StandardToken`.
 
-1. Now we are ready to compile and deploy your contract to the blockchain. We will do this using Truffle Develop, a development console that includes an in-memory blockchain, similar to the [EthereumJS TestRPC](https://github.com/ethereumjs/testrpc). In your terminal, make sure you are in the root of your project's directory and then launch Truffle Develop:
+1. Now we are ready to compile and deploy your contract to the blockchain. We will do this using Truffle Develop, a development console that includes a development blockchain that we can use to test deploy contracts, similar to the [EthereumJS TestRPC](https://github.com/ethereumjs/testrpc). In your terminal, make sure you are in the root of your project's directory and then launch Truffle Develop:
 
    ```shell
    truffle develop
