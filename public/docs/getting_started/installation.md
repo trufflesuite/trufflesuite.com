@@ -4,6 +4,12 @@
 $ npm install -g truffle
 ```
 
+Initialize your working directory (run `truffle help` for a list of commands)
+
+```
+$ truffle init
+```
+
 ## Requirements
 
 * NodeJS 5.0+ recommended.
