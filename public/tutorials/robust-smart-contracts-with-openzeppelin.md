@@ -74,7 +74,7 @@ With our front-end taken care of, we can focus on the `TutorialToken` contract.
    * Beyond the standard smart contract setup, we import the `StandardToken.sol` contract and declare our `TutorialToken`.
    * We use `is` to inherit from the `StandardToken` contract. Our contract will inherit all variables and functions from the `StandardToken` contract. Inherited functions and variables can be overwritten by redeclaring them in the new contract.
 
-1. To set our own parameters for the our token, we'll be declaring our own name, symbol, and other details. Add the following content block to the contract (between the curly braces):
+1. To set our own parameters for the token, we'll be declaring our own name, symbol, and other details. Add the following content block to the contract (between the curly braces):
 
    ```javascript
    string public name = 'TutorialToken';
