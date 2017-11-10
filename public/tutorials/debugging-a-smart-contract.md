@@ -61,7 +61,7 @@ First, let's set up our environment.
 1. Create a bare Truffle project:
 
    ```shell
-   truffle init bare
+   truffle init
    ```
 
    This will create directories such as `contracts/` and `migrations/`, and populate them with files we will use when we deploy our contract to the blockchain.
