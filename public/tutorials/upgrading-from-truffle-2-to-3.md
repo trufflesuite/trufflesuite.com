@@ -75,6 +75,24 @@ What's the difference? First, there's no default network anymore: the `rpc` conf
 
 Additionally, each network needs to have a network id specified, or a `"*"`. This is another security measure used during migrations to ensure that even _if_ Truffle connects to the Ethereum client at the specified host and port, if it's not the network you intend, Truffle will error before attempting any deployments.
 
+## Importing and the Ethereum Package Manager (EthPM)
+
+As Truffle 3.0 uses the new [Ethereum Package Manager (EthPM)](/docs/getting_started/packages-ethpm) we need to tell Truffle when the package manager should be used and when to look in the local directory. If you don't specify the directory to search relative to the `contracts/` directory, it will assume that EthPM will handle this.
+
+So to import a local file:
+
+v2.0:
+```javascript
+import "test.sol"
+```
+
+v3.0:
+```javascript
+import "./test.sol"
+```
+
+The `./` tells Truffle that the contract is in the current directory. See the [Compiling contracts](/docs/getting_started/compile) page for more details.
+
 ## Migrations and Test Dependencies
 
 Before package management, Truffle could assume that all the contracts you wrote yourself were the contracts you wanted to interact with via your migrations and tests. Now that package management is here, this is no longer a safe assumption -- contract dependencies can come from any number of sources, and so you have to explicitly ask for those abstractions yourself. This is all in the name of reducing magic. Let's look at an example migration.
