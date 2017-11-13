@@ -50,6 +50,9 @@
     "svelte-box": {
       "title": "svelte-box"
     },
+    "truffle-next": {
+      "title": "truffle-next"
+    },
     "truffle-vue": {
       "title": "truffle-vue"
     },
