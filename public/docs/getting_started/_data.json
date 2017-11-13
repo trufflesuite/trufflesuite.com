@@ -3,13 +3,13 @@
     "order" : 1,
     "title": "Installation"
   },
-  "client": {
-    "order" : 2,
-    "title": "Choosing an Ethereum client"
-  },
   "project": {
-    "order" : 3,
+    "order" : 2,
     "title": "Creating a project"
+  },
+  "client": {
+    "order" : 3,
+    "title": "Choosing an Ethereum client"
   },
   "compile": {
     "order" : 4,

@@ -1,7 +1,7 @@
 # Installation
 
 ```
-$ npm install -g truffle
+npm install -g truffle
 ```
 
 ## Requirements
@@ -9,7 +9,7 @@ $ npm install -g truffle
 * NodeJS 5.0+ recommended.
 * Windows, Linux or Mac OS X
 
-Truffle also requires that you have a running Ethereum client which supports the standard JSON RPC API (which is nearly all of them). There are many to choose from, and some better than others for development. We'll discuss them in detail in the [next section](/docs/getting_started/client).
+Truffle also requires that you have a running Ethereum client which supports the standard JSON RPC API (which is nearly all of them). There are many to choose from, and some better than others for development. We'll discuss them in detail in the [Choosing an Ethereum client](/docs/getting_started/client) section.
 
 ## Recommendations for Windows
 
