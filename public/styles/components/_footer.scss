@@ -4,26 +4,17 @@
   background-color: #F7F7F7;
   padding-bottom: 6rem;
   border-top: 1px solid #e7e7e7;
-
-  .Logo {
-    width: 100px;
-    height: 100px;
-
-    .truffle-wordmark {
-      position: relative;
-      top: -100px;
-    }
-  }
+  color: #545452;
 
   ul,
   ol {
     font-family: $font-family-serif;
-    line-height: 1.5rem;
     margin-left: 0;
     padding-left: 0;
 
     li {
       margin-bottom: 1.2em;
+      line-height: 1.5rem;
     }
   }
 
@@ -40,8 +31,13 @@
   strong {
   }
 
-  h5 {
-    margin-top: 0;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  }
+
+  .Logo {
+    width: 100px;
+    height: auto;
   }
 
   .BetaSignup {
@@ -50,13 +46,34 @@
     margin: 0;
     padding: 0 !important;
 
-    .FormWrapper {
-      margin: 0;
-    }
-
     &:before {
       display: none;
     }
+
+    h5 {
+      margin: 0 0 11px 0;
+      color: #545452;
+      letter-spacing: 0;
+      font-weight: 500;
+    }
+
+    input[type="submit"] {
+      font-family: 'Oswald', 'Arial Narrow', sans-serif;
+      font-weight: 500;
+    }
+
+    label {
+      font-family: 'Oswald', 'Arial Narrow', sans-serif;
+      font-weight: 700;
+    }
+
+    .FormWrapper {
+      margin: 0;
+    }
+  }
+
+  .copyright {
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
   }
 
   @media screen and (max-width: 991px) {
