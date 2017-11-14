@@ -91,7 +91,7 @@ After making sure your contract is imported, you now need to hook up the `web3` 
 MyContract.setProvider(window.web3.currentProvider);
 ```
 
-Finally, you can use the contract abstraction as described within the [Truffle documentation](http://truffle.readthedocs.io/en/latest/getting_started/contracts/).
+Finally, you can use the contract abstraction as described within the [Truffle documentation](/docs/getting_started/contracts).
 
 You can prevent having to perform this provisioning more than once per contract dependency by either setting your contract abstractions to the global object, like `window`, and provisioning them once when your application loads; or using something like the [ProvidePlugin](https://webpack.github.io/docs/list-of-plugins.html#provideplugin) to ensure your contract abstractions are available to every file within the bundle (recommended).
 

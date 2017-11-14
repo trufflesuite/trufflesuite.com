@@ -10,7 +10,7 @@ To compile your contracts, simply run:
 $ truffle compile
 ```
 
-Truffle will compile only the contracts that have been changed since the last compile, to reduce any unnecessarily compilation. If you'd like to override this behavior, run the above command with the `--all` option.
+Truffle will compile only the contracts that have been changed since the last compile, to reduce any unnecessary compilation. If you'd like to override this behavior, run the above command with the `--all` option.
 
 # Artifacts
 

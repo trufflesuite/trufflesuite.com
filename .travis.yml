@@ -1,0 +1,31 @@
+env:
+  global:
+  - GIT_NAME: "'Travis Deployer'"
+  - GIT_EMAIL: gnidan@trufflesuite.com
+  - GH_REF: git@github.com:trufflesuite/trufflesuite.github.io.git
+  - MASTER: "master"
+language: node_js
+node_js:
+    - "6.9.1"
+
+before_script:
+- openssl aes-256-cbc -K $encrypted_cd76ef53e71c_key -iv $encrypted_cd76ef53e71c_iv -in deploy-key.enc -out deploy-key -d
+- chmod 600 deploy-key
+- eval `ssh-agent -s`
+- ssh-add deploy-key
+- git config user.name "${GIT_NAME}"
+- git config user.email "${GIT_EMAIL}"
+- git clone "${GH_REF}" build
+
+script:
+- npm run build
+
+after_success:
+- >
+  if [ "${TRAVIS_PULL_REQUEST}" = "false" -a "$TRAVIS_BRANCH" = "${MASTER}" ];
+  then
+    cd build
+    git add .
+    git commit -m "Update build artifacts"
+    git push origin master
+  fi

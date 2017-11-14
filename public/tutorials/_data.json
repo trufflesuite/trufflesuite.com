@@ -1,12 +1,6 @@
 {
   "title": "Tutorials",
   "tutorials": {
-    "all-about-truffle-networks": {
-      "title": "All about Truffle Networks",
-      "date": "2018-07-13",
-      "author": "John McDowall",
-      "published": false
-    },
     "chain-forking-exploiting-the-dao": {
       "title": "Chain Forking and Dynamic Analysis: Exploiting The DAO",
       "date": "2016-09-26",
@@ -113,6 +107,12 @@
       "title": "Robust Smart Contracts with OpenZeppelin",
       "date": "2017-08-03",
       "author": "Josh Quintal",
+      "published": true
+    },
+    "debugging-a-smart-contract": {
+      "title": "Debugging a smart contract",
+      "date": "2017-10-23",
+      "author": "Mike Pumphrey",
       "published": true
     }
   }

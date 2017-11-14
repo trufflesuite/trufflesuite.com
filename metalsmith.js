@@ -12,7 +12,7 @@ var source = path.join(__dirname, "public");
 
 var app = Metalsmith(__dirname)
   .source(path.join("./", "public"))
-  .destination('../')
+  .destination('build/')
   .clean(false)
   .use(sass({
     outputStyle: "expanded"
@@ -30,7 +30,7 @@ var app = Metalsmith(__dirname)
       if (new_file_path != file_path) {
         files[new_file_path] = files[file_path];
         delete files[file_path];
-      } 
+      }
     });
 
     var prefills = {
@@ -137,7 +137,7 @@ var app = Metalsmith(__dirname)
 
     // Gather all files to be rendered via layoutable
     Object.keys(files).filter(function(file_path) {
-      return file_path.indexOf("_includes") != 0;
+      return file_path.indexOf("_includes") == -1;
     }).filter(function(file_path) {
       var extname = path.extname(file_path);
       return extname == ".ejs" || extname == ".html";
@@ -182,7 +182,7 @@ var app = Metalsmith(__dirname)
     });
 
     Object.keys(files).filter(function(file_path) {
-      return file_path.indexOf("_includes") == 0;
+      return file_path.indexOf("_includes") != -1;
     }).forEach(function(file_path) {
       delete files[file_path];
     });

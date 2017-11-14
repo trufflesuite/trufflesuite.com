@@ -2,12 +2,6 @@
 
 Your configuration file is called `truffle.js` and is located at the root of your project directory. This file is a Javascript file and can execute any code necessary to create your configuration. It must export an object representing your project configuration like the example below.
 
-### Resolving Naming Conflicts on Windows
-
-When using the Command Prompt on Windows, the default configuration file name can cause a conflict with the `truffle` executable. If this is the case, we recommend using Windows PowerShell or [Git BASH](https://git-for-windows.github.io/) as these shells do not have this conflict. Alternatively, you can rename the configuration file to `truffle-config.js` to avoid this conflict.
-
-# Example
-
 ```javascript
 module.exports = {
   networks: {
@@ -21,6 +15,21 @@ module.exports = {
 ```
 
 The default configuration ships with configuration for a single development network, running on `localhost:8545`. There are many other configuration options, detailed below.
+
+
+## Resolving naming conflicts on Windows
+
+When using the Command Prompt on Windows, the default configuration file name can cause a conflict with the `truffle` executable, and so **you may not be able to run Truffle commands properly on existing projects**.
+
+This is because of the way that command precedence works on the Command Prompt. The `truffle.cmd` executable is on the path as part of the npm package, but the `truffle.js` configuration file is in the actual directory where the `truffle` command is run. Because `.js` is an acceptable executable extension by default, `truffle.js` takes precedence over `truffle.cmd`, causing unexpected results.
+
+Any of the following solutions will remedy this issue:
+
+* Call the executable file explicitly using its `.cmd` extension (`truffle.cmd compile`)
+* Edit the system `PATHEXT` environment variable and remove `.JS;` from the list of executable extensions
+* Rename `truffle.js` to something else (`truffle-config.js`)
+* Use [Windows PowerShell](https://docs.microsoft.com/en-us/powershell/) or [Git BASH](https://git-for-windows.github.io/), as these shells do not have this conflict.
+
 
 # General Options
 
@@ -70,6 +79,88 @@ For each network, if unspecified, transaction options will default to the follow
 * `from`: From address used during migrations. Defaults to the first available account provided by your Ethereum client.
 * `provider`: Default web3 provider using `host` and `port` options: `new Web3.providers.HttpProvider("http://<host>:<port>")`
 
+For each network, you can specify either `host` / `port` or `provider`, but not both. If you need an HTTP provider, we recommend using `host` and `port`, while if you need a custom provider such as `HDWalletProvider`, you must use `provider`.
+
+#### Accessing only one of multiple network providers
+
+As seen above, your `truffle.js` file can contain multiple network configurations, but in general you will only work with a single network at a time. While you can issue a command to migrate to a single network (`truffle migrate --network live`), a minimal network connection will nevertheless be opened to every network defined with a `provider`.
+
+As a workaround to this, you can wrap your network's provider definition in a function call. This way, the network information is there, but Truffle will ignore it until specifically called.
+
+For example, consider the following network list consisting of a local test network and a Infura-hosted Ropsten network, both provided by HDWalletProvider:
+
+```javascript
+networks: {
+  ropsten: {
+    provider: new HDWalletProvider(mnemonic, "https://ropsten.infura.io/"),
+    network_id: '3',
+  },
+  test: {
+    provider: new HDWalletProvider(mnemonic, "http://localhost:8545/"),
+    network_id: '*',
+  },
+}
+```
+
+To ensure that only one network is ever connected at a time, modify the `provider` keys as follows:
+
+```javascript
+networks: {
+  ropsten: {
+    provider: function() {
+      return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/");
+    },
+    network_id: '3',
+  },
+  test: {
+    provider: function() {
+      return new HDWalletProvider(mnemonic, "http://localhost:8545/");
+    },
+    network_id: '*',
+  },
+}
+```
+
+If you specify `host` and `port` instead of `provider`, Truffle will create its own default HTTP provider using that host and port, and no minimal network connection will be opened, so there is no need to do the function wrapping workaround. That said, you wouldn't be able to use a custom provider in this case.
+
+### contracts_build_directory
+
+The default output directory for compiled contracts is `./build/contracts` relative to the project root. This can be changed with the `contracts_build_directory` key.
+
+Examples:
+
+To place the built contract artifacts in `./output/contracts`:
+
+```javascript
+module.exports = {
+  contracts_build_directory: "./output",
+  networks: {
+    development: {
+      host: "localhost",
+      port: 8545,
+      network_id: "*",
+    }
+  }
+};
+```
+
+The built contract artifacts do not need to be inside the project root:
+
+```javascript
+module.exports = {
+  contracts_build_directory: "../../../output",
+  networks: {
+    development: {
+      host: "localhost",
+      port: 8545,
+      network_id: "*",
+    }
+  }
+};
+```
+
+Absolute paths will also work. This is not recommended though, as an absolute path may not exist when compiled on another system. If you use absolute paths on Windows, make sure to use double backslashes for paths (example: `C:\\Users\\Username\\output`).
+
 ### mocha
 
 Configuration options for the [MochaJS](http://mochajs.org/) testing framework. This configuration expects an object as detailed in Mocha's [documentation](https://github.com/mochajs/mocha/wiki/Using-mocha-programmatically#set-options).
@@ -88,7 +179,10 @@ Solidity compiler settings. Supports optimizer settings for `solc`.
 
 ### solc
 
+Configuration options to pass to the Solidity compiler.
+
 Example:
+
 ```javascript
 solc: {
   optimizer: {
@@ -97,6 +191,9 @@ solc: {
   }
 }
 ```
+
+For more information, please see the Solidity documentation on [Compiler Input and Output JSON Description](http://solidity.readthedocs.io/en/develop/using-the-compiler.html#compiler-input-and-output-json-description).
+
 
 # EthPM Configuration
 

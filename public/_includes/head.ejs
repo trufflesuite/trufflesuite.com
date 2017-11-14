@@ -110,7 +110,7 @@
     <% if(service.appleid) { %><meta name="apple-itunes-app" content="app-id=<%= service.appleid %>, app-argument=<%= url %>"><% } %>
     <% if(service.googleverification) { %><meta name="google-site-verification" content="<%= service.googleverification %>" /><% } %>
 
-    <title><%= title %> | <%- getPageTitle() %></title>
+    <title><% if(title) { %><%= title %> | <% } %><%- getPageTitle() %></title>
 
     <link rel="author" href="humans.txt" />
 

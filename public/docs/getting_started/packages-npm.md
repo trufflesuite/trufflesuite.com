@@ -11,7 +11,7 @@ The most important directories in a Truffle package are the following:
 * `/contracts`
 * `/build` (which includes `/build/contracts`, created by Truffle)
 
-The first directory is your contracts directory, which includes your raw Solidity contracts. The second directory is the build directory, and more specifically `/build/contracts`, which holds build artifacts in the form of `.json` files. Including raw contracts in your package will allow others to import those contracts within their own solidity code. Similarly, including your `.json` build artifacts in your package will allow others to seamlessly interact with your contracts from Javascript, which can be used in dapps, scripts and migrations.
+The first directory is your contracts directory, which includes your raw Solidity contracts. The second directory is the build directory, and more specifically `/build/contracts`, which holds build artifacts in the form of `.json` files. Including raw contracts in your package will allow others to import those contracts within their own solidity code. Similarly, including your `.json` build artifacts in your package will allow others to seamlessly interact with your contracts from JavaScript, which can be used in dapps, scripts and migrations.
 
 # Using a Package
 
@@ -30,7 +30,7 @@ Note that the last command above downloads the package and places it in `my_proj
 
 ### Within Your Contracts
 
-To use a package's contracts within your contracts, this can be as simple as Solidity's [import](http://solidity.readthedocs.io/en/develop/layout-of-source-files.html?#importing-other-source-files) statement. When your import path isn't [explicitly relative or absolute](/docs/getting_started/compile/#dependencies), this signifies to Truffle that you're looking for a file from a specific named package. Consider this example using the Example Truffle Library mentioned above:
+To use a package's contracts within your contracts, this can be as simple as Solidity's [import](http://solidity.readthedocs.io/en/develop/layout-of-source-files.html?#importing-other-source-files) statement. When your import path isn't [explicitly relative or absolute](/docs/getting_started/compile#dependencies), this signifies to Truffle that you're looking for a file from a specific named package. Consider this example using the Example Truffle Library mentioned above:
 
 ```
 import "example-truffle-library/contracts/SimpleNameRegistry.sol";
@@ -38,9 +38,9 @@ import "example-truffle-library/contracts/SimpleNameRegistry.sol";
 
 Since the path didn't start with `./`, Truffle knows to look in your project's `node_modules` directory for the `example-truffle-library` folder. From there, it resolves the path to provide you the contract you requested.
 
-### Within Javascript Code
+### Within JavaScript Code
 
-To interact with package's contracts within Javascript code, you simply need to `require` that package's `.json` files, and then use the [truffle-contract](https://github.com/trufflesuite/truffle-contract) module to turn those into usable abstractions:
+To interact with package's contracts within JavaScript code, you simply need to `require` that package's `.json` files, and then use the [truffle-contract](https://github.com/trufflesuite/truffle-contract) module to turn those into usable abstractions:
 
 ```
 var contract = require("truffle-contract");
@@ -54,7 +54,7 @@ To use these abstractions, see the [Interacting With Your Contracts](/docs/getti
 
 Sometimes you want your contracts to interact with the package's previously deployed contracts. Since the deployed addresses exist within the package's `.json` files, you must perform an extra step to get those addresses into your contracts. To do so, make your contract accept the address of the dependency contract, and then use migrations. The following is an example contract that exists within your project as well as an example migration:
 
-Contract: MyContract.sol
+Contract: `MyContract.sol`
 
 ```javascript
 pragma solidity ^0.4.13;
@@ -84,11 +84,11 @@ contract MyContract {
 
 ```
 
-Migration: 3_hook_up_example_library.js
+Migration: `3_hook_up_example_library.js`
 
 ```javascript
 // Note that artifacts.require takes care of creating an abstraction for us.
-var SimpleNameRegistry = artifacts.require("example-truffle-library/contracts/SimpleNameRegistry.sol");
+var SimpleNameRegistry = artifacts.require("example-truffle-library/SimpleNameRegistry");
 
 module.exports = function(deployer) {
   // Deploy our contract, then set the address of the registry.
@@ -102,21 +102,10 @@ module.exports = function(deployer) {
 
 ### Before publishing
 
-When using a network like the default `development` network that's configured to match any Ethereum client (i.e., the TestRPC), you're bound to have network artifacts laying around that you don't want published. Before publishing your package, consider running the following command to remove any extraneous network artifacts:
+When using a network like the default `develop` network that's configured to match any Ethereum client (like Truffle Develop or the TestRPC), you're bound to have network artifacts laying around that you don't want published. Before publishing your package, consider running the following command to remove any extraneous network artifacts:
 
 ```
 $ truffle networks --clean
 ```
 
 See the [command reference](/docs/advanced/commands#networks) for more information.
-
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-83874933-1', 'auto');
-  ga('send', 'pageview');
-</script>

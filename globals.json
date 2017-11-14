@@ -1,14 +1,14 @@
 {
-  "name": "Truffle Framework",
+  "name": "Truffle Suite",
   "title": "TruffleFramework.com",
-  "url": "http://truffleframwork.com",
+  "url": "http://truffleframework.com",
   "description": "Your Ethereum Swiss Army Knife",
   "keywords": "solidity, dapps, contracts, smart contracts",
   "domain": "truffleframework.com",
   "authors": {
     "firstlast": {
-      "name": "John McDowall",
-      "email": "john@kantan.io"
+      "name": "ConsenSys",
+      "email": "noreply@example.com"
     }
   },
   "service": {
@@ -23,8 +23,8 @@
     "disqus": false,
     "github": "https://github.com/trufflesuite",
     "gitter": "http://gitter.im/Consensys/truffle",
-    "site_issues": "https://github.com/trufflesuite/trufflesuite.github.io/issues",
-    "contributing": "trufflesuite/trufflesuite.github.io"
+    "site_issues": "https://github.com/trufflesuite/trufflesuite.com/issues",
+    "contributing": "trufflesuite/trufflesuite.com"
   },
   "thanks": {
     "firstlast": {
