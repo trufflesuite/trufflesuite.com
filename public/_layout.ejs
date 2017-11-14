@@ -5,7 +5,7 @@
   <body class="
     <%= (current.path[0] === 'docs') ? 'body-docs' : ''; %>
     <%= (current.path[0] === 'boxes') ? 'Ballotin' : ''; %>
-    <%= (current.path[0] === 'suite' && current.path[1] === 'ganache') ? 'Ganache' : ''; %>
+    <%= (current.path[0] === 'ganache' && current.path[1] === 'index') ? 'Ganache' : ''; %>
   ">
     <main>
       <%- typogr.smartypants(yield) %>
