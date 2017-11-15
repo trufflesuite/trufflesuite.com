@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function() {
   var isMac = window.navigator.userAgent.indexOf('Mac') != -1;
   var isLinux = window.navigator.userAgent.indexOf('Linux') != -1;
 
+  var href = "https://github.com/trufflesuite/ganache/releases";
+  var os = "All Releases";
+  var image = "";
+
   var request = new XMLHttpRequest();
   request.open('GET', 'https://api.github.com/repos/trufflesuite/ganache/releases/latest', true);
 
@@ -16,10 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
     if (request.status >= 200 && request.status < 400) {
       // Success!
       var data = JSON.parse(request.responseText);
-
-      var href = "https://github.com/trufflesuite/ganache/releases";
-      var os = "All";
-      var image = "";
       
       if (isWindows) {
         image = '/images/suite/ganache/windows-logo.svg'
@@ -62,6 +62,12 @@ document.addEventListener("DOMContentLoaded", function() {
       // We reached our target server, but it returned an error
       console.error("Error getting release list. Status: " + request.status);
       console.error(request.responseText);
+
+      for (i = 0; i < buttonImage.length; i++) {
+        buttonImage[i].setAttribute('src', image);
+        buttonText[i].innerHTML = '(' + os + ')';
+        button[i].setAttribute('href', href);
+      }
     }
   };
 
