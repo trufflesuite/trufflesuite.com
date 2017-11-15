@@ -36,6 +36,11 @@
 
       // TOP-LEVEL PAGES
 
+      if (current.path[0] === 'ganache')
+      {
+        return "Ganache";
+      }
+
       if (current.path[0] in public)
       {
         if (current.path.length > 1)
