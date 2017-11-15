@@ -111,9 +111,12 @@
     <% if(service.googleverification) { %><meta name="google-site-verification" content="<%= service.googleverification %>" /><% } %>
 
     <title>
-    <% if(title) { if(getPageTitle() != "Home") { %><%- getPageTitle() %> | <% } %><%= title %>
-    <% } else { %> - <%= description %><% } } %>
+    <% if(title) { if(getPageTitle() != "Home") { %><%- getPageTitle() %> | <% } %>
+    <%= title %>
+    <% if(getPageTitle() == "Home") { %> - <%= description %><% } } %>
     </title>
+
+
 
     <link rel="author" href="humans.txt" />
 
