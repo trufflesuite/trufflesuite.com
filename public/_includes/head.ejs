@@ -99,7 +99,7 @@
     <% if(service.facebookid) { %><meta property="fb:app_id" content="<%= service.facebookid %>" /><% } %>
     <meta property="og:site_name" content="<%= name %>" />
     <meta property="og:description" content="<%= description %>" />
-    <meta property="og:title" content="<%= title %> - <%= name %>" />
+    <meta property="og:title" content="<% if(title) { if(getPageTitle() != 'Home') { %><%- getPageTitle() %> | <% } %><%= title %><% if(getPageTitle() == 'Home') { %> - <%= description %><% } } %>" />
     <meta property="og:url" content="<%= url %>" />
     <meta property="og:type" content="article" />
     <% if(service.socialimage) { %><meta property="og:image" content="<%= service.socialimage %>" /><% } %>
