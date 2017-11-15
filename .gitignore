@@ -8,3 +8,4 @@ bower_components
 client_id.json
 .tern-port
 build/
+npm-debug.log
