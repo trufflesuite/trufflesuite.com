@@ -2,9 +2,9 @@
 
 To use most Truffle commands, you need to run them against an existing Truffle project. This section will show you how to create a new project.
 
-(For those just getting started, we have many boilerplates and example applications available to you through [Truffle Boxes](/boxes). You can use the `truffle unbox <box-name>` command to download these applications.)
+For those just getting started, we have many boilerplates and example applications available to you through [Truffle Boxes](/boxes). You can use the `truffle unbox <box-name>` command to download these applications.
 
-First, create a project directory and move into it. You can do this through your favorite file explorer or by running the following on the command line:
+If you'd prefer to start from scratch, create a project directory and move into it. You can do this through your favorite file explorer or by running the following on the command line:
 
 ```shell
 mkdir myproject
