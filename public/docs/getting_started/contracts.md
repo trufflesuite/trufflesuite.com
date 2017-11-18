@@ -33,7 +33,7 @@ Contract abstractions are the bread and butter of interacting with Ethereum cont
 In order to appreciate the usefulness of a contract abstraction, however, we first need a contract to talk about. We'll use the MetaCoin contract provided for you by default via `truffle unbox metacoin`.
 
 ```javascript
-pragma solidity ^0.4.2;
+pragma solidity ^0.4.17;
 
 import "./ConvertLib.sol";
 
