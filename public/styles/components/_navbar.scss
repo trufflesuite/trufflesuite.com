@@ -20,6 +20,7 @@
 .navbar .navbar-collapse {
   background: transparent;
   max-height: none;
+  border: none;
 }
 
 .navbar-brand,
@@ -30,27 +31,11 @@
   font-family: $font-family-sans-serif;
 }
 
-.navbar-brand {
-  position: relative;
-  padding: 15px;
-
-  .truffle-logo,
-  .truffle-wordmark {
-    position: absolute;
-    height: auto;
-    width: 70px;
-    float: left;
-  }
-
-  .truffle-logo {
-    top: 15px;
-    left: 15px;
-  }
-
-  .truffle-wordmark {
-    bottom: 15px;
-    left: 15px;
-  }
+.navbar-brand svg {
+  height: auto;
+  width: 70px;
+  float: left;
+  margin-top: 12px;
 }
 
 .navbar-toggle {
@@ -113,15 +98,10 @@
   .navbar-brand {
     height: 60px;
 
-    .truffle-logo {
-      top: 14px;
-      left: 0;
+    svg {
       width: auto;
-      height: 40px;
-    }
-
-    .truffle-wordmark {
-      display: none;
+      height: 32px;
+      margin-top: 14px;
     }
   }
 

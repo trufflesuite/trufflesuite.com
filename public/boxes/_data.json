@@ -23,6 +23,9 @@
     "webpack": {
       "title": "webpack"
     },
+    "metacoin": {
+      "title": "metacoin"
+    },
     "blueprint": {
       "title": "blueprint"
     },
@@ -46,6 +49,9 @@
     },
     "svelte-box": {
       "title": "svelte-box"
+    },
+    "truffle-next": {
+      "title": "truffle-next"
     },
     "truffle-vue": {
       "title": "truffle-vue"

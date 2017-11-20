@@ -179,7 +179,10 @@ Solidity compiler settings. Supports optimizer settings for `solc`.
 
 ### solc
 
+Configuration options to pass to the Solidity compiler.
+
 Example:
+
 ```javascript
 solc: {
   optimizer: {
@@ -188,6 +191,9 @@ solc: {
   }
 }
 ```
+
+For more information, please see the Solidity documentation on [Compiler Input and Output JSON Description](http://solidity.readthedocs.io/en/develop/using-the-compiler.html#compiler-input-and-output-json-description).
+
 
 # EthPM Configuration
 

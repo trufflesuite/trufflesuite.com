@@ -1,6 +1,6 @@
 $(function() {
 
-  var navbar = $('.LandingPage .navbar');
+  var navbar = $('.navbar');
 
   // Landing Page Scrolling Opacity
 

@@ -1,6 +1,6 @@
 {
   "name": "Truffle Suite",
-  "title": "TruffleFramework.com",
+  "title": "Truffle Suite",
   "url": "http://truffleframework.com",
   "description": "Your Ethereum Swiss Army Knife",
   "keywords": "solidity, dapps, contracts, smart contracts",
@@ -14,7 +14,7 @@
   "service": {
     "analytics": "UA-83874933-3",
     "service": "example",
-    "googlefonts": ["Oswald:300,400,700", "Open+Sans:400,700"],
+    "googlefonts": ["Oswald:300,400,700", "Open+Sans:400,700", "Grand+Hotel"],
     "googleverification": null,
     "facebookid": null,
     "socialimage": "https://github.com/trufflesuite/trufflesuite.github.io/raw/master/images/truffle-share.png",

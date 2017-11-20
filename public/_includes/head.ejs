@@ -36,6 +36,11 @@
 
       // TOP-LEVEL PAGES
 
+      if (current.path[0] === 'ganache')
+      {
+        return "Ganache";
+      }
+
       if (current.path[0] in public)
       {
         if (current.path.length > 1)
@@ -62,7 +67,7 @@
 
       // FALLBACK AND HOME
 
-      return "Truffle Framework";
+      return "Home";
     }
   %>
 
@@ -94,14 +99,14 @@
     <% if(service.facebookid) { %><meta property="fb:app_id" content="<%= service.facebookid %>" /><% } %>
     <meta property="og:site_name" content="<%= name %>" />
     <meta property="og:description" content="<%= description %>" />
-    <meta property="og:title" content="<%= title %> - <%= name %>" />
+    <meta property="og:title" content="<% if(title) { if(getPageTitle() != 'Home') { %><%- getPageTitle() %> | <% } %><%= title %><% if(getPageTitle() == 'Home') { %> - <%= description %><% } } %>" />
     <meta property="og:url" content="<%= url %>" />
     <meta property="og:type" content="article" />
     <% if(service.socialimage) { %><meta property="og:image" content="<%= service.socialimage %>" /><% } %>
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="<%= name %>" />
-    <meta name="twitter:title" content="<%= title %> - <%= name %>" />
+    <meta name="twitter:title" content="<% if(title) { if(getPageTitle() != 'Home') { %><%- getPageTitle() %> | <% } %><%= title %><% if(getPageTitle() == 'Home') { %> - <%= description %><% } } %>" />
     <meta name="twitter:description" content="<%= description %>" />
     <meta name="twitter:creator" content="<%= name %>" />
     <meta name="twitter:domain" content="<%= domain %>" />
@@ -110,7 +115,13 @@
     <% if(service.appleid) { %><meta name="apple-itunes-app" content="app-id=<%= service.appleid %>, app-argument=<%= url %>"><% } %>
     <% if(service.googleverification) { %><meta name="google-site-verification" content="<%= service.googleverification %>" /><% } %>
 
-    <title><% if(title) { %><%= title %> | <% } %><%- getPageTitle() %></title>
+    <title>
+    <% if(title) { if(getPageTitle() != "Home") { %><%- getPageTitle() %> | <% } %>
+    <%= title %>
+    <% if(getPageTitle() == "Home") { %> - <%= description %><% } } %>
+    </title>
+
+
 
     <link rel="author" href="humans.txt" />
 
