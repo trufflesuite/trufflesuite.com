@@ -2,9 +2,9 @@
 
 ## Location
 
-All of your contracts are located in your project's `contracts/` directory. As contracts are written in [Solidity](LINK), all files containing contracts will have a file extension of `.sol`. Associated Solidity [libraries](http://solidity.readthedocs.org/en/latest/contracts.html#libraries) will also have a `.sol` extension.
+All of your contracts are located in your project's `contracts/` directory. As contracts are written in [Solidity](https://solidity.readthedocs.io/en/develop/), all files containing contracts will have a file extension of `.sol`. Associated Solidity [libraries](http://solidity.readthedocs.org/en/latest/contracts.html#libraries) will also have a `.sol` extension.
 
-With a bare Truffle [project](./project) (created through `truffle init`), you're given a single `Migrations.sol` file that is responsible for deploying your contracts to the blockchain. If you're using a [Truffle Box](/boxes), you will have multiple files here.
+With a bare Truffle [project](./project) (created through `truffle init`), you're given a single `Migrations.sol`  file that helps in the deployment process. If you're using a [Truffle Box](/boxes), you will have multiple files here.
 
 ## Command
 
@@ -14,7 +14,7 @@ If you are using Truffle Develop, type the following into the Truffle Develop co
 compile
 ```
 
-Otherwise, in a terminal, type the following:
+Otherwise, type the following into a terminal:
 
 ```shell
 truffle compile
@@ -34,13 +34,13 @@ You can declare contract dependencies using Solidity's [import](http://solidity.
 
 ### Importing dependencies via file name
 
-To import contracts from a separate file, simply use the following command:
+To import contracts from a separate file, add the following code to your Solidity source file::
 
 ```
 import "./AnotherContract.sol";
 ```
 
-This will make all contracts within `AnotherContract.sol` available to the current source file. Here, `AnotherContract.sol` is relative to the path of the current contract being written.
+This will make all contracts within `AnotherContract.sol` available. Here, `AnotherContract.sol` is relative to the path of the current contract being written.
 
 Note that Solidity allows other import syntaxes as well. See their [import documentation](http://solidity.readthedocs.org/en/latest/layout-of-source-files.html#importing-other-source-files) for more information.
 
