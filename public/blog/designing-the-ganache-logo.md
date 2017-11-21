@@ -2,8 +2,8 @@
 
 Last week we released [Ganache](/ganache), a personal blockchain for Ethereum development. Many of you commented on the design of the landing page and logo, but just how did the gooey cube come to be? Let's take a trip through the 30+ iterations that led to our newest confection.
 
-<div class="row"><div class="col-xs-10 col-xs-push-1 col-sm-8 col-sm-push-2 m-b-2">
-![Final Ganache Logo](/blog/images/designing-the-ganache-logo/final-logo.png)
+<div class="row"><div class="col-xs-10 col-xs-push-1 col-sm-6 col-sm-push-3 m-b-2">
+![Final Ganache Logomark](/blog/images/designing-the-ganache-logo/final-logomark.png)
 </div></div>
 
 Before setting out on our design journey, we started with some loose guidelines:
@@ -57,8 +57,8 @@ Success! After reconsidering some assumptions and solidifying others, we arrived
 * It's metaphorically grounded in the product it represents--it's a block, after all!
 * The gooey consistency and soft, rounded corners represent the intimidating technical concept of a blockchain in a friendly and approachable way.
 
-<div class="row"><div class="col-xs-10 col-xs-push-1 col-sm-8 col-sm-push-2 m-b-2">
-![Final Ganache Logo](/blog/images/designing-the-ganache-logo/final-logo.png)
+<div class="row"><div class="col-xs-10 col-xs-push-1 col-sm-6 col-sm-push-3 m-b-2">
+![Final Ganache Logo](/blog/images/designing-the-ganache-logo/final-logomark.png)
 </div></div>
 
 We had a blast iterating this logo and Ganache itself. We hoped you learned from our experience and maybe picked up some of your own inspiration along the way. **Happy illustrating!**
