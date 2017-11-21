@@ -10,7 +10,7 @@ Once you've done the above, you're ready to use MetaMask.
 
 ## What is MetaMask?
 
-[MetaMask](https://metamask.io/) is the easiest way to interact with dapps in a browser. It is a Chrome extension that connects to an Ethereum network without running a full node on the browser's machine. It can connect to the main Ethereum network, any of the testnets (Ropsten, Kovan, and Rinkeby), or a local blockchain such as the one created by Truffle Develop or the TestRPC.
+[MetaMask](https://metamask.io/) is the easiest way to interact with dapps in a browser. It is an extension for Chrome or Firefox that connects to an Ethereum network without running a full node on the browser's machine. It can connect to the main Ethereum network, any of the testnets (Ropsten, Kovan, and Rinkeby), or a local blockchain such as the one created by [Ganache](/ganache) or Truffle Develop.
 
 ![MetaMask](/docs/img/metamask.png)
 
@@ -18,10 +18,9 @@ For development with Truffle this means we can use our dapp the same way users w
 
 ## Installing MetaMask
 
-Currently, MetaMask only supports the Chrome browser, but support for Firefox and others is planned for the future.
+* To install MetaMask for Chrome, go to the [Chrome Web Store](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) and click the **Add to Chrome** button.
 
-To install MetaMask, go to the [Chrome Web Store](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) and click the **Add to Chrome** button.
-
+* To install MetaMask for FireFox, go to the [Firefox Add-ons page](https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/) and click the **Add to Firefox** button.
 
 ## Using MetaMask with Truffle Develop
 
