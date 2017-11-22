@@ -8,6 +8,10 @@
     "advanced": {
       "order": 2,
       "title": "Advanced"
+    },
+    "ganache": {
+      "order": 3,
+      "title": "Ganache"
     }
   }
 }
