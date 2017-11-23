@@ -188,6 +188,16 @@ MetaCoin.deployed().then(function(instance) {
 });
 ```
 
+### Processing transaction results
+
+When you make a transaction, you're given a `result` object that gives you a wealth of information about the transaction. Specifically, you get the following:
+
+* `result.tx` *(string)* - Transaction hash 
+* `result.logs` *(array)* - Decoded events (logs)
+* `result.receipt` *(object)* - Transaction receipt
+
+For more information, please see the [README](https://github.com/trufflesuite/truffle-contract) in the `truffle-contract` project.
+
 ### Add a new contract to the network
 
 In all of the above cases, we've been using a contract abstraction that has already been deployed. We can deploy our own version to the network using the `.new()` function:
