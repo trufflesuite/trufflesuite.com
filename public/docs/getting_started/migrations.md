@@ -172,6 +172,16 @@ Deploy a specific contract, specified by the contract object, with optional cons
 
 You can optionally pass an array of contracts, or an array of arrays, to speed up deployment of multiple contracts. Additionally, the last argument is an optional object that observes a single key, `overwrite`. If `overwrite` is set to `false`, the deployer won't deploy this contract if one has already been deployed. This is useful for certain circumstances where a contract address is provided by an external dependency.
 
+```javascript
+deployer.deploy(Migrations, {overwrite: false});
+```
+
+The options can also be used to specify the parameters when sending the transaction:
+
+```javascript
+deployer.deploy(Migrations, {gas: 4612388, from: "0x...."});
+```
+
 Note that you will need to deploy and link any libraries your contracts depend on first before calling `deploy`. See the `link` function below for more details.
 
 Examples:
