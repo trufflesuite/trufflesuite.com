@@ -1,6 +1,6 @@
 # Truffle and MetaMask: Working with smart contracts in a browser
 
-Before you can interact with smart contracts in a browser, make sure they're compiled, deployed, and that you're interacting with them via `web3` in client-side JavaScript. We recommend using the [truffle-contract library](https://github.com/trufflesuite/truffle-contract), as it makes interacting with contracts easier and more robust.
+Before you can interact with smart contracts in a browser, make sure they're compiled, deployed, and that you're interacting with them via `web3` in client-side JavaScript. We recommend using the [truffle-contract](https://github.com/trufflesuite/truffle-contract) library, as it makes interacting with contracts easier and more robust.
 
 <p class="alert alert-info">
 <strong>Note</strong>: For more information on these topics, including using `truffle-contract`, check out our [Pet Shop](/tutorials/pet-shop) or [TutorialToken](/tutorials/robust-smart-contracts-with-openzeppelin) tutorials.
@@ -22,13 +22,15 @@ For development with Truffle this means we can use our dapp the same way users w
 
 * To install MetaMask for FireFox, go to the [Firefox Add-ons page](https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/) and click the **Add to Firefox** button.
 
-## Using MetaMask with Truffle Develop
+With our front-end ready to be used and MetaMask installed, we're ready to see our dapp in all its glory.
 
-Truffle Develop runs an in-memory blockchain that is used for testing purposes. It runs on `localhost:9545`.
+## Using MetaMask with Ganache
 
-With our front-end ready to be used and MetaMask installed, we're ready to see our dapp in all its glory. Before diving in though, we'll need to make sure we're checking for MetaMask's `web3` instance and the extension itself is configured properly with Truffle Develop.
+[Ganache](/ganache) is a graphical application that runs a blockchain that can be used for testing purposes. It runs on `localhost:7545`.
 
 ### Detecting MetaMask's web3 injection
+
+Before diving in, we'll need to make sure the dapp is checking for MetaMask's `web3` instance and that the extension itself is configured properly with Ganache.
 
 MetaMask injects its own `web3` instance, so we'll want to make sure we're checking for that. After the window has loaded perform the following check:
 
@@ -38,53 +40,91 @@ if (typeof web3 !== 'undefined') {
   App.web3Provider = web3.currentProvider;
   web3 = new Web3(web3.currentProvider);
 } else {
-  // If no injected web3 instance is detected, fallback to Truffle Develop.
-  App.web3Provider = new web3.providers.HttpProvider('http://localhost:9545');
+  // If no injected web3 instance is detected, fallback to Ganache.
+  App.web3Provider = new web3.providers.HttpProvider('http://localhost:7545');
   web3 = new Web3(App.web3Provider);
 }
 ```
 
-### Interacting with MetaMask
+### Setting up MetaMask
 
-To use Truffle Develop with MetaMask, click the MetaMask icon in your browser and this screen will appear:
+To use Ganache with MetaMask, click the MetaMask icon in your browser and this screen will appear:
 
 ![MetaMask initial screen](/tutorials/images/pet-shop/metamask-initial.png)
 
 *MetaMask initial screen*
 
-Click **Import Existing DEN**. In the box marked **Wallet Seed**, enter the mnemonic that was displayed when launching Truffle Develop. This can be found on the console (you may need to scroll up). Enter a password below that and click **OK**.
+Click **Import Existing DEN**. In the box marked **Wallet Seed**, enter the mnemonic that was displayed when launching Ganache. While this can be changed in the Settings, the default is:
+
+```shell
+candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
+```
+
+Enter a password below that and click **OK**.
 
 ![MetaMask seed phrase](/tutorials/images/pet-shop/metamask-seed.png)
 
 *MetaMask seed phrase*
 
-Now we need to connect MetaMask to the blockchain created by Truffle Develop. Click the menu that shows "Main Network" and select **Custom RPC**.
+Now we need to connect MetaMask to the blockchain created by Ganache. Click the menu that shows "Main Network" and select **Custom RPC**.
 
 ![MetaMask network menu](/tutorials/images/pet-shop/metamask-networkmenu.png)
 
 *MetaMask network menu*
 
-In the box titled "New RPC URL" enter `http://localhost:9545` and click **Save**. 
+In the box titled "New RPC URL" enter `http://localhost:7545` and click **Save**. 
 
-![MetaMask Custom RPC](/tutorials/images/pet-shop/metamask-customrpc.png)
+<!--Add image from pet shop tutorial when updated for Ganache -->
 
-*MetaMask Custom RPC*
+The network name at the top will switch to say "Private Network". Click the left-pointing arrow next to "Settings" to close out of the page and return to the Accounts page.
 
-The network name at the top will switch to say "Private Network". 
+Now that we've connected MetaMask to Ganache, you'll be take to the accounts screen. Each account created by Ganache is given 100 ether. The first account should have less than the others because that account supplies the gas for smart contract deployment. Since you've deployed your smart contract to the network, this account paid for it.
 
-Click the left-pointing arrow next to "Settings" to close out of the page and return to the Accounts page.
-
-Now that we've connected MetaMask to the TestRPC, you'll be take to the accounts screen. Each account created by the TestRPC is given 100 ether. The first account should have less than the others because that account supplies the gas for smart contract deployment. Since you've deployed your smart contract to the network, this account paid for it.
-
-Click the account icon in the upper-right to create new accounts, the first 10 of which will correspond to the 10 accounts displayed when you launched Truffle Develop.
+Click the account icon in the upper-right to create new accounts, the first 10 of which will correspond to the 10 accounts displayed when you launched Ganache.
 
 ![MetaMask account](/tutorials/images/pet-shop/metamask-account1.png)
 
 *MetaMask account*
 
-## Using MetaMask with the TestRPC
+## Using MetaMask with Truffle Develop
 
-Using MetaMask with the TestRPC is very similar to working with Truffle Develop. There are some important differences:
+Truffle Develop is a command-line application that runs a temporary blockchain that is also used for testing purposes. It runs on `localhost:9545`.
 
-* TestRPC generates a new mnemonic upon every launch, while Truffle Develop uses the same mnemonic each time.
-* TestRPC runs by default on `localhost:8545` instead of Truffle Develop's `localhost:9545`.
+Using MetaMask with Truffle Develop is very similar to that of Ganache. There are only a few notable differences:
+
+* The mnemonic is always `candy maple cake sugar pudding cream honey rich smooth crumble sweet treat` and can't be changed.
+* Truffle Develop runs by default on `localhost:9545`, so you'll want to edit the above web3 code to say:
+
+  ```javascript
+  // Is there is an injected web3 instance?
+  if (typeof web3 !== 'undefined') {
+    App.web3Provider = web3.currentProvider;
+    web3 = new Web3(web3.currentProvider);
+  } else {
+    // If no injected web3 instance is detected, fallback to Truffle Develop.
+    App.web3Provider = new web3.providers.HttpProvider('http://localhost:9545');
+    web3 = new Web3(App.web3Provider);
+  }
+  ```
+
+* In MetaMask, when entering the "New RPC URL", enter `http://localhost:9545`. 
+
+## Using MetaMask with Ganache CLI
+
+Using MetaMask with Ganache CLI is also very similar to that of Ganache. There are only a few notable differences:
+
+* Ganache CLI runs by default on `localhost:8545` so you'll want to edit the above web3 code to say:
+
+  ```javascript
+  // Is there is an injected web3 instance?
+  if (typeof web3 !== 'undefined') {
+    App.web3Provider = web3.currentProvider;
+    web3 = new Web3(web3.currentProvider);
+  } else {
+    // If no injected web3 instance is detected, fallback to Ganache CLI.
+    App.web3Provider = new web3.providers.HttpProvider('http://localhost:8545');
+    web3 = new Web3(App.web3Provider);
+  }
+  ```
+
+* In MetaMask, when entering the "New RPC URL", enter `http://localhost:8545`.
