@@ -1,6 +1,6 @@
 # Deploying to the Live Network
 
-When you're finished developing your contracts and would like others to use them, the next step is to deploy them to the live network. By now you will have been working on a development network like the [TestRPC](https://github.com/ethereumjs/testrpc), and you will have noticed Truffle is set up to support that by default. Deploying to the live network -- or any other network -- will require that you first connect one of the [many Ethereum clients](http://ethdocs.org/en/latest/ethereum-clients/) to your network of choice, as well as configure Truffle correctly.
+When you're finished developing your contracts and would like others to use them, the next step is to deploy them to the live network. By now you will have been working on a development network like [Ganache](/ganache), and you will have noticed Truffle is set up to support that by default. Deploying to the live network -- or any other network -- will require that you first connect one of the [many Ethereum clients](http://ethdocs.org/en/latest/ethereum-clients/) to your network of choice, as well as configure Truffle correctly.
 
 ## Setting Up Your Ethereum client
 

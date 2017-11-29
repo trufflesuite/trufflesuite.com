@@ -1,5 +1,9 @@
 # How to install Truffle & TestRPC on Windows for Blockchain development
 
+<p class="alert alert-warning">
+<strong>Note:</strong>: Since this tutorial was published, we have released [Ganache](/ganache) a personal blockchain and a replacement to the TestRPC. We have kept this tutorial unaltered for historical reasons, but we highly recommend checking out [Ganache](/ganache).
+</p>
+
 This post was originally published by David Burela on his blog [Burela's House-o-blog](https://davidburela.wordpress.com/2016/11/18/how-to-install-truffle-testrpc-on-windows-for-blockchain-development/). Big thanks to David for allowing us publish it here!
 
 -------------------
