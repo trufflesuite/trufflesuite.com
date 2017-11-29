@@ -77,7 +77,7 @@ All test contracts must start with `Test`, using an uppercase `T`. This distingu
 
 ### Test Function Names
 
-Like test contract names, all test functions must start with `test`, lowercase. Each test function is executed as a single transaction, in order of appearance in the test file (like your Javascript tests). Assertion functions provided by `truffle/Assert.sol` trigger events that the test runner evaluates to determine the result of the test. Assertion functions return a boolean representing the outcome of the assertion which you can use to return from the test early to prevent execution errors (i.e, errors that the TestRPC will expose).
+Like test contract names, all test functions must start with `test`, lowercase. Each test function is executed as a single transaction, in order of appearance in the test file (like your Javascript tests). Assertion functions provided by `truffle/Assert.sol` trigger events that the test runner evaluates to determine the result of the test. Assertion functions return a boolean representing the outcome of the assertion which you can use to return from the test early to prevent execution errors (as in, errors that [Ganache](/ganache) or Truffle Develop will expose).
 
 ### before / after hooks
 

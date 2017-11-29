@@ -1,31 +1,27 @@
-# Create a Project Folder
+# Creating a project
 
-First create a project folder. You can do this through your favorite file explorer or by running the following on the command line:
+To use most Truffle commands, you need to run them against an existing Truffle project. This section will show you how to create a new project.
 
-```none
-$ mkdir myproject
+For those just getting started, we have many boilerplates and example applications available to you through [Truffle Boxes](/boxes). You can use the `truffle unbox <box-name>` command to download these applications.
+
+If you'd prefer to start from scratch, create a project directory and move into it. You can do this through your favorite file explorer or by running the following on the command line:
+
+```shell
+mkdir myproject
+cd myproject
 ```
 
-# Initialize Your Project
+Next, initialize your Truffle project by running the following command:
 
-Next, initialize your Truffle project by performing the following in the command line:
-
-```none
-$ cd myproject
-$ truffle init
+```shell
+truffle init
 ```
 
 Once completed, you'll now have a project structure with the following items:
 
-* `contracts/` - directory where Truffle expects to find solidity contracts.
-* `migrations/` - directory to place scriptable deployment files.
-* `test/` - location of test files for testing your application and contracts.
-* `truffle.js` - your main Truffle configuration file.
+* `contracts/`: Directory for [Solidity contracts](./contracts)
+* `migrations/`: Directory for [scriptable deployment files](./migrations#migration-files)
+* `test/`: Directory for test files for [testing your application and contracts](./testing)
+* `truffle.js`: Truffle configuration file
 
-# Default Contracts: MetaCoin
-
-By default, `truffle init` gives you a set of example contracts (`MetaCoin` and `ConvertLib`) which act like a simple alt-coin built on top of Ethereum. You can use these contracts to learn quickly while navigating through the Getting Started guide, or delete these files and build a project of your own.
-
-# Truffle Boxes
-
-By default, `truffle init` creates a simple project for you so you can get familiar with writing, compiling and deploying Solidity-based smart contracts. However, we have many boilerplates and example applications available to you via the `truffle unbox` command that help you build complex applications quickly. [Check all of our Truffle Boxes to get started](/boxes).
+(Looking for the MetaCoin Truffle project that used to be created by running `truffle init`? It's now a [Truffle Box](/boxes/metacoin). You can recreate the same project by running `truffle unbox metacoin`.)

@@ -102,7 +102,7 @@ module.exports = function(deployer) {
 
 ### Before publishing
 
-When using a network like the default `develop` network that's configured to match any Ethereum client (like Truffle Develop or the TestRPC), you're bound to have network artifacts laying around that you don't want published. Before publishing your package, consider running the following command to remove any extraneous network artifacts:
+When using a network like the default `develop` network that's configured to match any Ethereum client (like [Ganache](/ganache) or Truffle Develop), you're bound to have network artifacts lying around that you don't want published. Before publishing your package, consider running the following command to remove any extraneous network artifacts:
 
 ```
 $ truffle networks --clean

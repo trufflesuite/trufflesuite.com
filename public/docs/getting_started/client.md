@@ -4,11 +4,24 @@ There are many Ethereum clients to choose from. We recommend different clients d
 
 ## When developing
 
+### Ganache
+
+We recommend [Ganache](/ganache), a personal blockchain for Ethereum development that runs on your desktop. Part of the Truffle Suite, Ganache simplifies dapp development by placing your contracts and transactions front and center. Using Ganache you can quickly see how your application affects the blockchain, and introspect details like your accounts, balances, contract creations and gas costs. You can also fine tune Ganache's advanced mining controls to better suit your needs. Ganache is available for Windows, Mac and Linux, and you can [download it here](/ganache).
+
+Ganache, when launched runs on `http://localhost:7545`. It will display the first 10 accounts and the mnemonic used to create those accounts. ([Read more about account mnemonics](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki).)
+
+By default, Ganache will use the following mnemonic:
+
+```
+candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
+```
+
+This mnemonic can be changed to be randomly generated, or you can input your own.
+
+
 ### Truffle Develop
 
-We recommend using Truffle Develop, a development blockchain built directly into Truffle. It processes transactions instantly instead of waiting for the default block time -- so you can test that your code works quickly -- and it tells you immediately when your smart contracts run into errors. It also makes a great client for automated testing, and Truffle knows how to use its special features to speed up test runtime by almost 90% compared to other clients.
-
-Because Truffle Develop is built into Truffle, no external installation is required. To run Truffle Develop, type the following into a terminal:
+We also recommend using Truffle Develop, a development blockchain built directly into Truffle. Truffle Develop helps you set up an integrated blockchain environment with a single command, no installation required. Run Truffle Develop by typing the following into a terminal:
 
 ```shell
 truffle develop
@@ -24,9 +37,10 @@ Once launched, Truffle Develop will provide you with a console you can use to ru
 
 To read more about interacting with the console, please see the [Using the Console](/docs/getting_started/console) section.
 
-### TestRPC
+### Ganache CLI
 
-You can also use [EthereumJS TestRPC](https://github.com/ethereumjs/testrpc). It's a separate command-line blockchain you can use for both development and automated testing, and works well with Truffle. Check out its [README](https://github.com/ethereumjs/testrpc/blob/master/README.md) and documentation for more information.
+Ganache also has a command-line interface for those who aren't working from a graphical environment. Great for automated testing and continuous integration environments, Ganache CLI runs headless and can be configured to serve all your development needs. Ganache CLI processes transactions instantly instead of waiting for the default block time, so you can test that your code works quickly. It also tells you immediately when your smart contracts run into errors, and integrates directly with Truffle to reduce test runtime up to 90% compared to other clients. [Learn more about Ganache CLI]((https://github.com/trufflesuite/ganache-cli/).
+
 
 ## Deploying to live networks
 
@@ -37,7 +51,7 @@ There are many official and unofficial Ethereum clients available for you to use
 * Parity: [https://github.com/paritytech/parity](https://github.com/paritytech/parity)
 * More: [https://www.ethereum.org/cli](https://www.ethereum.org/cli)
 
-These are full client implementations that include mining, networking, blocks and transaction processing. You should use these clients after you've sufficiently tested your dapp with Truffle Develop or the TestRPC and you're ready to deploy to your desired Ethereum network. Truffle can deploy to these clients without any extra configuration.
+These are full client implementations that include mining, networking, blocks and transaction processing. You should use these clients after you've sufficiently tested your dapp with Ganache or Truffle Develop and you're ready to deploy to your desired Ethereum network.
 
 ## Deploying to private networks
 

@@ -208,7 +208,7 @@ Now that we've successfully compiled our contracts, it's time to migrate them to
 **A migration is a deployment script meant to alter the state of your application's contracts**, moving it from one state to the next. For the first migration, you might just be deploying new code, but over time, other migrations might move data around or replace a contract with a new one.
 
 <p class="alert alert-info">
-  <strong>Note</strong>: Read more about [migrations](docs/getting_started/migrations) in the Truffle documentation.
+  <strong>Note</strong>: Read more about [migrations](/docs/getting_started/migrations) in the Truffle documentation.
 </p>
 
 You'll see one JavaScript file already in the `migrations/` directory: `1_initial_migration.js`. This handles deploying the `Migrations.sol` contract to observe subsequent smart contract migrations, and ensures we don't double-migrate unchanged contracts in the future.
@@ -563,7 +563,7 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
    *MetaMask network menu*
 
-1. In the box titled "New RPC URL" enter `http://localhost:9545` and click **Save**. 
+1. In the box titled "New RPC URL" enter `http://localhost:9545` and click **Save**.
 
    ![MetaMask Custom RPC](/tutorials/images/pet-shop/metamask-customrpc.png)
 
