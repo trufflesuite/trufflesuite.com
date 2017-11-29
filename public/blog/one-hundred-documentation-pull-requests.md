@@ -21,7 +21,7 @@ And I do mean *minute details*. When one of our tutorials wrote "tag a stab" ins
 
 Make no mistake: this is good thing. I believe in the [Broken Windows theory](https://en.wikipedia.org/wiki/Broken_windows_theory) as it applies to documentation. **We want to fix up the small things now so we can maintain the larger things more easily in the future.**
 
-We have big plans for our content here, just like we have big plans for Truffle. (Check out the new features coming in Truffle 4 (https://github.com/trufflesuite/truffle/releases/tag/v4.0.0-beta.0)!) And note that [we have since separated out the website source code to its own repository](https://github.com/trufflesuite/trufflesuite.com) to make submissions easier for the community.
+We have big plans for our content here, just like we have big plans for Truffle. (Check out the new features coming in Truffle 4 (<https://github.com/trufflesuite/truffle/releases/tag/v4.0.0-beta.0>)!) And note that [we have since separated out the website source code to its own repository](https://github.com/trufflesuite/trufflesuite.com) to make submissions easier for the community.
 
 I'm happy to be part of a community that cares about what we're doing, reducing the bar to developing Ethereum dapps, and making them delicious.
 

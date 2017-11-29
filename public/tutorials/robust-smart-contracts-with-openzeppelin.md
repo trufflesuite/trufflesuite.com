@@ -1,4 +1,4 @@
-![OpenZeppelin](/tutorials/images/open-zeppelin/logo-zeppelin.png)
+![OpenZeppelin](/tutorials/images/open-zeppelin/oz-logo.png)
 
 # Building robust smart contracts with OpenZeppelin
 
@@ -11,7 +11,7 @@ We can use and extend these contracts to create more secure dapps in less time. 
 
 ## Requirements
 
-This tutorial expects you to have some knowledge of Truffle, Ethereum, and Solidity. If you haven't gone through our [Ethereum overview](/tutorial/ethereum-overview) and our [Pet Shop tutorial](/tutorials/pet-shop) yet, those would be great places to start.
+This tutorial expects you to have some knowledge of Truffle, Ethereum, and Solidity. If you haven't gone through our [Ethereum overview](/tutorials/ethereum-overview) and our [Pet Shop tutorial](/tutorials/pet-shop) yet, those would be great places to start.
 
 For even more information, please see the following links:
 
