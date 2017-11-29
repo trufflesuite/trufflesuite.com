@@ -27,8 +27,8 @@ $ truffle test ./path/to/test/file.js
 
 # Clean-room Environment
 
-Truffle provides a clean room environment when running your test files. When running your tests against the [TestRPC](https://github.com/ethereumjs/testrpc), Truffle will use the TestRPC's advanced snapshotting features to ensure your test files don't share state with each other. When running against other Ethereum clients like go-ethereum, Truffle will re-deploy all of your migrations at the beginning of every test file to ensure you have a fresh set of contracts to test against.
+Truffle provides a clean room environment when running your test files. When running your tests against [Ganache](/ganache) or Truffle Develop, Truffle will use advanced snapshotting features to ensure your test files don't share state with each other. When running against other Ethereum clients like [go-ethereum](https://github.com/ethereum/go-ethereum), Truffle will re-deploy all of your migrations at the beginning of every test file to ensure you have a fresh set of contracts to test against.
 
 # Speed & Reliability Considerations
 
-The [EthereumJS TestRPC](https://github.com/ethereumjs/testrpc) is significantly faster than other clients when running automated tests. Moreover, the TestRPC contains special features which Truffle takes advantage of to speed up test runtime by almost 90%. As a general workflow, we recommend you use the TestRPC during normal development and testing, and then run your tests once against go-ethereum or another official Ethereum client when you're gearing up to deploy to live or production networks.
+Both Ganache and Truffle Develop are significantly faster than other clients when running automated tests. Moreover, they contain special features which Truffle takes advantage of to speed up test runtime by almost 90%. As a general workflow, we recommend you use Ganache or Truffle Develop during normal development and testing, and then run your tests once against go-ethereum or another official Ethereum client when you're gearing up to deploy to live or production networks.

@@ -8,7 +8,7 @@ To run your migrations, run the following:
 $ truffle migrate
 ```
 
-This will run all migrations located within your project's `migrations` directory. At their simplest, migrations are simply a set of managed deployment scripts. If your migrations were previously run successfully, `truffle migrate` will start execution from the last migration that was ran, running only newly created migrations. If no new migrations exists, `truffle migrate` won't perform any action at all. You can use the `--reset` option to run all your migrations from the beginning. For local testing make sure to have [TestRPC](https://github.com/ethereumjs/testrpc) installed and running before running `migrate`.
+This will run all migrations located within your project's `migrations` directory. At their simplest, migrations are simply a set of managed deployment scripts. If your migrations were previously run successfully, `truffle migrate` will start execution from the last migration that was ran, running only newly created migrations. If no new migrations exists, `truffle migrate` won't perform any action at all. You can use the `--reset` option to run all your migrations from the beginning. For local testing make sure to have a test blockchain such as [Ganache](/ganache) installed and running before executing `migrate`.
 
 # Migration Files
 
