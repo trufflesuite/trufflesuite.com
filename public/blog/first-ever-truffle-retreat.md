@@ -2,7 +2,7 @@
 
 ![Truffle](/blog/images/first-ever-truffle-retreat/medium-truffle-retreat.jpg)
 
-The Truffle team recently got together late September to define our roles, our mission statement, and our product roadmap - and had some fun in the process.  
+This past summer, the Truffle team got together to together to define our roles, our mission statement, and our product roadmap - and had some fun in the process.  
 
 ----------
 
@@ -10,7 +10,7 @@ The Truffle team is fully remote. This has a lot of advantages in that it allows
 
 I started Truffle in early 2015 as the sole developer, and it stayed that way for nearly a year and half. John McDowell joined in late 2016, and by the time of the retreat we happily brought Nick D’Andrea and Josh Quintal on board. All interviews happened over Skype.
 
-I live in Yakima, Washington. John lives in Victoria BC. Nick lives in Philadelphia, and Josh lives in Detroit. That’s a lot of distance between us. 
+I live in Yakima, Washington. John lives in Victoria, British Columbia. Nick lives in Philadelphia, and Josh lives in Detroit. That’s a lot of distance between us. 
 
 ![Truffle employees in September](/blog/images/first-ever-truffle-retreat/truffle-map-01.jpg)
 
@@ -46,11 +46,11 @@ The Truffle team had already doubled in size in 2017, and right before the retre
 
 Before the retreat, I had met separately with Nick, Josh, and John to evaluate how they felt about their current roles at Truffle. We each talked about what they wanted to do both within the team and professionally, and how I could help them get there. Then we used this time at the retreat to reorganize the work so that it aligns with each team member’s personal goals as well as the group’s goals. We created a new org chart and chain of command, including the new team members we knew were coming on. 
 
-We decided that Josh and John would share design responsibilities for our website, logo design and general aesthetics for all of our products. Ben, who will start in October, would take on the internals of the TestRPC (now [Ganache](http://truffleframework.com/ganache/)) and related products ensuring we stay up to date with the Ethereum ecosystem. And Mike would be coming on board to wrangle all of our documentation and learning content, eventually molding it into tailored courses we’d offer to individuals and businesses. 
+We decided that Josh and John would share design responsibilities for our website, logo design and general aesthetics for all of our products. Ben, who started in October, would take on the internals of the TestRPC (now [Ganache](/ganache/)) and related products ensuring we stay up to date with the Ethereum ecosystem. And Mike would be coming on board to wrangle all of our documentation and learning content, eventually molding it into tailored courses we’d offer to individuals and businesses. 
 
 That just left Nick and I. Though we both knew Nick would work on the internals of Truffle when he was hired, we didn’t know the extent of the work required; in addition to improving Truffle, Nick would be burdened with the arduous task of softly and lovingly ripping my baby from my arms. That is, Truffle’s my baby, and I’ve been nurturing it from day one. In order to build a more functional and growing team, it became clear I’d have to let go of the internal implementation details and focus more on our business and our product, leaving Nick to explore the tool’s technical way forward.
 
-This transition has been a great growing experience already, only a few weeks after the retreat itself. We’ll continue to evaluate this structure over the next six months to see how it works out. 
+This transition has been a great growing experience already, both professionally and personally. We’ll continue to evaluate this structure over the next six months to see how it works out. 
 
 ### Mission Statement
 
