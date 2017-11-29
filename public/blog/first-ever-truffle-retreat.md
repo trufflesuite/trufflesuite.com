@@ -2,7 +2,7 @@
 
 ![Truffle](/blog/images/first-ever-truffle-retreat/medium-truffle-retreat.jpg)
 
-The Truffle team recently got together late September to define our roles, our mission statement, and our product roadmap - and have some fun in the process.  
+The Truffle team recently got together late September to define our roles, our mission statement, and our product roadmap - and had some fun in the process.  
 
 ----------
 
