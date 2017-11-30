@@ -58,7 +58,7 @@ The next step is to edit your `truffle.js` file to use `HDWalletProvider` and pr
        ropsten: {
          provider: function() {
            return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/<INFURA_Access_Token>")
-         }
+         },
          network_id: 3
        }   
      }
