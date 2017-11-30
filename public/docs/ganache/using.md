@@ -1,26 +1,26 @@
 # Working with Ganache
 
-[Ganache](/ganache) is an application that generates a personal blockchain you can use to run tests, execute commands, deploy contracts, and inspect state.
+[Ganache](/ganache) is a personal blockchain for Ethereum development you can use to deploy contracts, develop your applications, and run tests.
 
 ![Ganache logo](/docs/ganache/images/ganache-logo.png)
 
-It is available in both a graphical format and as a terminal application (which was previously known as the TestRPC). Ganache is available for Windows, macOS, and Linux.
+It is available as both a desktop application as well as a command-line tool (formerly known as the TestRPC). Ganache is available for Windows, Mac, and Linux.
 
 ## Installation
 
 ### Ganache
 
-Installation of Ganache is only a few steps. [Download](https://github.com/trufflesuite/ganache/releases) the appropriate version for your OS:
+[Download](https://github.com/trufflesuite/ganache/releases) the appropriate version for your OS:
 
-* Windows: `Ganache-a.b.c.appx`
-* macOS: `Ganache-a.b.c.dmg`
-* Linux: `Ganache-a.b.c.AppImage`
+* Windows: `Ganache-*.appx`
+* Mac: `Ganache-*.dmg`
+* Linux: `Ganache-*.AppImage`
 
-Double click on the downloaded file, follow the prompts, and you're up and running.
+Double-click on the downloaded file, follow the prompts, and you're up and running.
 
 ### Ganache CLI
 
-If you are interested in only the command-line application (previously known as the TestRPC), you can get it through npm.
+If you are interested in the command-line version (formerly known as the TestRPC), you can get it through npm.
 
 ```shell
 npm install -g ganache-cli
@@ -30,21 +30,24 @@ This page will focus only on the graphical interface. Please see the [README](ht
 
 ## Main interface
 
-When you first launch Ganache, the screen will show some details about the server, and also list out a number of accounts. You'll note that each account has been given 100 ether, to make testing of transactions much easier.
+When you launch Ganache, the screen will show some details about the server, and also list out a number of accounts. **Each account is given 100 ether**. Having ether automatically in all accounts allows you to focus on developing your application.
+
+<p class="alert alert-info">
+<strong>Note</strong>: The first time you launch Ganache, you will be asked if you want to allow Google Analytics tracking. While optional, turning this on will help the development team gain more insight into how Ganache is used. This tracking is totally anonymous, and no account data or private keys will ever be shared.
+</p>
 
 ![Ganache](/docs/ganache/images/accounts.png)
 
-*Ganache accounts*
+*Ganache Accounts*
 
 There are four pages available:
 
-* The **Accounts** page shows the accounts generated. This is the default view.
+* The **Accounts** page shows the accounts generated and their balances. This is the default view.
 * The **Blocks** page shows each block as mined on the blockchain, along with gas used and transactions.
 * The **Transactions** page lists all transactions run against the blockchain.
 * The **Logs** page shows the logs for the server, which is useful for debugging. 
 
 Also note that you can search for block numbers or transaction hashes from a search box at the top.
-
 
 
 ## Settings
