@@ -30,10 +30,10 @@ Choosing between a transaction and a call is as simple as deciding whether you w
 
 Contract abstractions are the bread and butter of interacting with Ethereum contracts from Javascript. In short, contract abstractions are wrapper code that makes interaction with your contracts easy, in a way that lets you forget about the many engines and gears executing under the hood. Truffle uses its own contract abstraction via the [truffle-contract](https://github.com/trufflesuite/truffle-contract) module, and it is this contract abstraction that's described below.
 
-In order to appreciate the usefulness of a contract abstraction, however, we first need a contract to talk about. We'll use the MetaCoin contract provided for you by default via `truffle init`.
+In order to appreciate the usefulness of a contract abstraction, however, we first need a contract to talk about. We'll use the MetaCoin contract provided for you by default via `truffle unbox metacoin`.
 
 ```javascript
-pragma solidity ^0.4.2;
+pragma solidity ^0.4.17;
 
 import "./ConvertLib.sol";
 
