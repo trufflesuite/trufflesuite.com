@@ -12,7 +12,11 @@ cd MetaCoin
 truffle unbox metacoin
 ```
 
-See the project structure as shown at the bottom of this page. Our MetaCoin Truffle project used to be created by running `truffle init`, now it is a [Truffle Box](/boxes/metacoin).
+See the project structure as shown at the bottom of this page.
+
+<p class="alert alert-info">
+<strong>Note</strong>: The MetaCoin Truffle project used to be created by running `truffle init`. Now it exists as a [Truffle Box](/boxes/metacoin).
+</p>
 
 You can use the `truffle unbox <box-name>` command to download any of the other applications.
 
