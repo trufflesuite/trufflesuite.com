@@ -1,8 +1,8 @@
-# Custom Build Processes
+# Build processes
 
 In order to provide tight integration with Truffle for those that desire it, Truffle allows you to specify a custom build pipeline meant to bootstrap and configure your application. Truffle provides three methods of integration, described below.
 
-### Running an External Command
+## Running an external command
 
 If you'd like Truffle to run an external command whenever it triggers a build, simply include that option as a string within your project configuration, like so:
 
@@ -21,7 +21,7 @@ module.exports = {
 
 Note that you're given ample environment variables with which to integrate with Truffle, detailed above.
 
-### Providing a Custom Function
+## Providing a custom function
 
 You can also provide a custom build function like the one below. Note you're given a plethora of information about your project which you can use to integrate tightly with Truffle.
 
@@ -37,7 +37,7 @@ module.exports = {
 }
 ```
 
-### Creating a Custom Module
+## Creating a custom module
 
 You could also create a module or object that implements the builder interface (i.e., is an object which contains a `build` function like the one above). This is great for those who want to maintain tighter integration with Truffle and publish a package to make everyone else's lives easier.
 
@@ -50,7 +50,7 @@ module.exports = {
 }
 ```
 
-# Bootstrapping Your Application
+## Bootstrapping your application
 
 Whether you're building an application to run in the browser, or a command line tool, a Javascript library or a native mobile application, bootstrapping your contracts is the same, and using your deployed contract artifacts follows the same general process no matter the app you're building.
 

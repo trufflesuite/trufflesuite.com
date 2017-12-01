@@ -1,6 +1,8 @@
+# Running migrations
+
 Migrations are JavaScript files that help you deploy contracts to the Ethereum network. These files are responsible for staging your deployment tasks, and they're written under the assumption that your deployment needs will change over time. As your project evolves, you'll create new migration scripts to further this evolution on the blockchain. A history of previously run migrations is recorded on-chain through a special `Migrations` contract, detailed below.
 
-# Command
+## Command
 
 To run your migrations, run the following:
 
@@ -10,7 +12,7 @@ $ truffle migrate
 
 This will run all migrations located within your project's `migrations` directory. At their simplest, migrations are simply a set of managed deployment scripts. If your migrations were previously run successfully, `truffle migrate` will start execution from the last migration that was ran, running only newly created migrations. If no new migrations exists, `truffle migrate` won't perform any action at all. You can use the `--reset` option to run all your migrations from the beginning. For local testing make sure to have a test blockchain such as [Ganache](/ganache) installed and running before executing `migrate`.
 
-# Migration Files
+## Migration files
 
 A simple migration file looks like this:
 
@@ -65,7 +67,7 @@ All migrations must export a function via the `module.exports` syntax. The funct
 
 Your migration function can accept other parameters as well. See the examples below.
 
-# Initial Migration
+## Initial migration
 
 Truffle requires you to have a Migrations contract in order to use the Migrations feature. This contract must contain a specific interface, but you're free to edit this contract at will. For most projects, this contract will be deployed initially as the first migration and won't be updated again. You will also receive this contract by default when creating a new project with `truffle init`.
 
@@ -115,7 +117,7 @@ module.exports = function(deployer) {
 
 From here, you can create new migrations with increasing numbered prefixes to deploy other contracts and perform further deployment steps.
 
-# Deployer
+## Deployer
 
 Your migration files will use the deployer to stage deployment tasks. As such, you can write deployment tasks synchronously and they'll be executed in the correct order:
 
@@ -136,7 +138,7 @@ deployer.deploy(A).then(function() {
 
 It is possible to write your deployment as a single promise chain if you find that syntax to be more clear. The deployer API is discussed at the bottom of this page.
 
-# Network Considerations
+## Network considerations
 
 It is possible to run deployment steps conditionally based on the network being deployed to. This is an advanced feature, so see the [Networks](/docs/advanced/networks) section first before continuing.
 
@@ -152,7 +154,7 @@ module.exports = function(deployer, network) {
 }
 ```
 
-# Available Accounts
+## Available accounts
 
 Migrations are also passed the list of accounts provided to you by your Ethereum client and web3 provider, for you to use during your deployments. This is the exact same list of accounts returned from `web3.eth.getAccounts()`.
 
@@ -162,7 +164,7 @@ module.exports = function(deployer, network, accounts) {
 }
 ```
 
-# Deployer API
+## Deployer API
 
 The deployer contains many functions available to simplify your migrations.
 

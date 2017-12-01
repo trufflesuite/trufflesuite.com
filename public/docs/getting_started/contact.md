@@ -1,6 +1,6 @@
-# Contact Us
+# Contact the developers
 
-### Gitter
+## Gitter
 
 The best way to contact us is through Gitter. This allows you to ask questions to both the Truffle developers as well as the community at large.
 

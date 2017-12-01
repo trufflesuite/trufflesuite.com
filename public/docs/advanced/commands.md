@@ -1,10 +1,12 @@
-# Usage
+# Command reference
+
+## Usage
 
 ```none
 $ truffle [command] [options]
 ```
 
-# Available Commands
+## Available commands
 
 ### build
 
@@ -140,7 +142,7 @@ $ truffle publish
 
 All parameters are pulled from your project's configuration file. See the [Package Management with EthPM](/docs/getting_started/packages-ethpm) section for more details.
 
-##### serve
+### serve
 
 Serve the built app from `http://localhost:8080`, rebuilding and redeploying changes as needed. Like `truffle watch`, but with the web server component added.
 
@@ -153,7 +155,7 @@ Optional parameters:
 * `-p port`: Specify the port to serve on. Default is 8080.
 * `--network name`: Specify the network to use, using artifacts specific to that network.
 
-##### test
+### test
 
 Run all tests within the `./test` directory, or optionally run a single test.
 
@@ -167,7 +169,7 @@ Optional parameters:
 * `--verbose-rpc`: Log communication between Truffle and the RPC.
 * `--network name`: Specify the network to use, using artifacts specific to that network.
 
-##### version
+### version
 
 Show version number and exit.
 
@@ -175,7 +177,7 @@ Show version number and exit.
 $ truffle version
 ```
 
-##### watch
+### watch
 
 Watch for changes to contracts, app and configuration files. When there's a change, rebuild the app if necessary.
 

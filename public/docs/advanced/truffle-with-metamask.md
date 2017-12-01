@@ -1,4 +1,4 @@
-# Truffle and MetaMask: Working with smart contracts in a browser
+# Truffle and MetaMask
 
 Before you can interact with smart contracts in a browser, make sure they're compiled, deployed, and that you're interacting with them via `web3` in client-side JavaScript. We recommend using the [truffle-contract](https://github.com/trufflesuite/truffle-contract) library, as it makes interacting with contracts easier and more robust.
 

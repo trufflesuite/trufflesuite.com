@@ -1,4 +1,6 @@
-# Creating a Box
+# Truffle Boxes
+
+## Creating a box
 
 To create a Truffle Box you'll need a few things:
 * A GitHub repository
@@ -11,11 +13,11 @@ If you're **starting from scratch**, we've created a [blueprint box](/boxes/blue
 
 If you're using **an existing project**, [download the files here](/files/truffle-box-essentials.zip) and extract them into your project.
 
-# Configuration File
+## Configuration file
 
 All truffle boxes include a configuration file, `truffle-box.json`. This file has three attributes: `ignore`, `commands`, and `hooks`.
 
-## <span style="text-transform: none;">`ignore`</span> (array)
+### <span style="text-transform: none;">`ignore`</span> (array)
 
 An array of files or relative paths you'd like Truffle to ignore when unboxing. Common files include the `readme.md` or `.gitignore`.
 
@@ -26,7 +28,7 @@ An array of files or relative paths you'd like Truffle to ignore when unboxing. 
 ]
 ```
 
-## <span style="text-transform: none;">`commands`</span> (object)
+### <span style="text-transform: none;">`commands`</span> (object)
 
 An object who's key/value pairs are a descriptor and console command respectively. These pairs will be shown to users once your box is successfully unboxed. Think of these as quick instructions.
 
@@ -43,7 +45,7 @@ For example, consider the object below. We've given our users all they need to c
 }
 ```
 
-## <span style="text-transform: none;">`hooks`</span> (object)
+### <span style="text-transform: none;">`hooks`</span> (object)
 
 An object containing console commands to execute once unboxed. Since we're working in Node.js, most commonly this will contain `npm install`.
 
@@ -53,7 +55,7 @@ An object containing console commands to execute once unboxed. Since we're worki
 }
 ```
 
-# Images
+## Images
 
 The large box image is a 512px square with 32px of padding on each side.
 
@@ -69,6 +71,6 @@ If no images are provided in a box, we default to banners containing the Truffle
 
 ![Default Small Image](/images/ballotin/loading-banner.png)
 
-# Truffle Site Listing
+## Truffle site listing
 
 Before being listed on the Truffle website, all boxes undergo a screening process to ensure compatibility with Truffle. To start the pre-screening process, <a href="mailto:info@trufflesuite.com">send us an email</a> with your desired box name and brief description, along with a link to its GitHub repo to: [info@trufflesuite.com](mailto:info@trufflesuite.com).
