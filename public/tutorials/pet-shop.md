@@ -402,7 +402,7 @@ The front-end doesn't use a build system (webpack, grunt, etc.) to be as easy as
      App.web3Provider = web3.currentProvider;
    } else {
      // If no injected web3 instance is detected, fallback to the TestRPC
-     App.web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
+     App.web3Provider = new Web3.providers.HttpProvider('http://127.0.0.1:8545');
    }
    web3 = new Web3(App.web3Provider);
    ```
@@ -563,7 +563,7 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
    *MetaMask network menu*
 
-1. In the box titled "New RPC URL" enter `http://localhost:9545` and click **Save**.
+1. In the box titled "New RPC URL" enter `http://127.0.0.1:9545` and click **Save**.
 
    ![MetaMask Custom RPC](/tutorials/images/pet-shop/metamask-customrpc.png)
 

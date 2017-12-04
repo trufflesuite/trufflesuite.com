@@ -113,7 +113,7 @@ Before moving onto code, we need to configure Truffle to point to our running Qu
 module.exports = {
   networks: {
     development: {
-      host: "localhost",
+      host: "127.0.0.1",
       port: 22000, // was 8545
       network_id: "*" // Match any network id
     }
@@ -121,7 +121,7 @@ module.exports = {
 };
 ```
 
-Note that the only thing we had to change was the `port` that Truffle connects to (we changed it to `22000`). Because of the magic of VirtualBox and Vagrant, the node running inside the virtual machine is made available to us via local ports, so connecting via `localhost` and `22000` will work just fine.
+Note that the only thing we had to change was the `port` that Truffle connects to (we changed it to `22000`). Because of the magic of VirtualBox and Vagrant, the node running inside the virtual machine is made available to us via local ports, so connecting via `127.0.0.1` and `22000` will work just fine.
 
 Now that we have Truffle set up, we can move onto code.
 
@@ -199,17 +199,17 @@ To add a new network configuration, edit your `truffle.js` file and add another 
 module.exports = {
   networks: {
     development: {
-      host: "localhost",
+      host: "127.0.0.1",
       port: 22000, // was 8545
       network_id: "*" // Match any network id
     },
     nodefour:  {
-      host: "localhost",
+      host: "127.0.0.1",
       port: 22003,
       network_id: "*" // Match any network id
     },
     nodeseven:  {
-      host: "localhost",
+      host: "127.0.0.1",
       port: 22006,
       network_id: "*" // Match any network id
     }

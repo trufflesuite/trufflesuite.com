@@ -7,7 +7,7 @@ When you're finished developing your contracts and would like others to use them
 There are [many Ethereum clients](http://ethdocs.org/en/latest/ethereum-clients/) to choose from. The most popular are [go-ethereum](https://github.com/ethereum/go-ethereum) and [cpp-ethereum](https://github.com/ethereum/cpp-ethereum). This tutorial cannot go into the details of setting up each client for each operating system, but be sure your desired client is installed and configured to perform the following:
 
 * Your client is completely synced with the live network
-* Your client is hosting an RPC server on `localhost` and port `8546` (for this tutorial)
+* Your client is hosting an RPC server on `127.0.0.1` and port `8546` (for this tutorial)
 * Your client has at least one account registered and can sign transactions for that account
 * The registered account contains enough Ether to deploy your contracts
 
@@ -20,25 +20,25 @@ The default Truffle configuration without any bells and whistles looks like this
 ```javascript
 module.exports = {
   rpc: {
-    host: "localhost",
+    host: "127.0.0.1",
     port: 8545
   }
 };
 ```
 
-This tells Truffle that by default it should connect to an Ethereum client at host `localhost` and port `8545`. You **could** keep this configuration and simply stop your development client and run the live network at the same host and port; however, Truffle won't know how to distinguish deployment artifacts on the development network from those same artifacts on the live network (like deployed addresses, for instance). To ensure Truffle knows the network you want to deploy to, we can add a specific configuration for the live network:
+This tells Truffle that by default it should connect to an Ethereum client at host `127.0.0.1` and port `8545`. You **could** keep this configuration and simply stop your development client and run the live network at the same host and port; however, Truffle won't know how to distinguish deployment artifacts on the development network from those same artifacts on the live network (like deployed addresses, for instance). To ensure Truffle knows the network you want to deploy to, we can add a specific configuration for the live network:
 
 ```javascript
 module.exports = {
   networks: {
     "live": {
       network_id: 1,
-      host: "localhost",
+      host: "127.0.0.1",
       port: 8546   // Different than the default below
     }
   },
   rpc: {
-    host: "localhost",
+    host: "127.0.0.1",
     port: 8545
   }
 };
@@ -56,7 +56,7 @@ Now that our configuration is set up, we can now deploy to the live network. Whe
 $ truffle migrate --network live
 ```
 
-Notice that we asked for the `"live"` network, which is the name we defined in the configuration, and Truffle will connect to the specified host and port -- in this case `http://localhost:8546` -- to deploy our contracts.
+Notice that we asked for the `"live"` network, which is the name we defined in the configuration, and Truffle will connect to the specified host and port -- in this case `http://127.0.0.1:8546` -- to deploy our contracts.
 
 Your [migrations](http://truffleframework.com/docs/getting_started/migrations) are run on this network just as they'd run on any other network. If you had previously deployed to the live network before, `truffle migrate --network live` will check which migration was last run and only start deploying from there.
 

@@ -144,7 +144,7 @@ All parameters are pulled from your project's configuration file. See the [Packa
 
 ### serve
 
-Serve the built app from `http://localhost:8080`, rebuilding and redeploying changes as needed. Like `truffle watch`, but with the web server component added.
+Serve the built app from `http://127.0.0.1:8080`, rebuilding and redeploying changes as needed. Like `truffle watch`, but with the web server component added.
 
 ```none
 $ truffle serve
