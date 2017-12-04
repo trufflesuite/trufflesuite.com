@@ -172,9 +172,12 @@ The deployer contains many functions available to simplify your migrations.
 
 Deploy a specific contract, specified by the contract object, with optional constructor arguments. This is useful for singleton contracts, such that only one instance of this contract exists for your dapp. This will set the address of the contract after deployment (i.e., `Contract.address` will equal the newly deployed address), and it will override any previous address stored.
 
-You can optionally pass an array of contracts, or an array of arrays, to speed up deployment of multiple contracts. Additionally, the last argument is an optional object that observes a single key, `overwrite`. If `overwrite` is set to `false`, the deployer won't deploy this contract if one has already been deployed. This is useful for certain circumstances where a contract address is provided by an external dependency.
+You can optionally pass an array of contracts, or an array of arrays, to speed up deployment of multiple contracts. Additionally, the last argument is an optional object that can include the key named `overwrite` as well as other transaction parameters such as `gas` and `from`. If `overwrite` is set to `false`, the deployer won't deploy this contract if one has already been deployed. This is useful for certain circumstances where a contract address is provided by an external dependency.
 
 Note that you will need to deploy and link any libraries your contracts depend on first before calling `deploy`. See the `link` function below for more details.
+
+For more information, please see the [truffle-contract](https://github.com/trufflesuite/truffle-contract) documentation.
+
 
 Examples:
 
@@ -184,6 +187,12 @@ deployer.deploy(A);
 
 // Deploy a single contract with constructor arguments
 deployer.deploy(A, arg1, arg2, ...);
+
+// Don't deploy this contract if it has already been deployed
+deployer.deploy(A, {overwrite: false});
+
+// Set a gas price and from address for the deployment
+deployer.deploy(A, {gas: 4612388, from: "0x...."});
 
 // Deploy multiple contracts, some with arguments and some without.
 // This is quicker than writing three `deployer.deploy()` statements as the deployer
