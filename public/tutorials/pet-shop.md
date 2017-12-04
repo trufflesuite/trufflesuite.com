@@ -35,6 +35,7 @@ There are a few technical requirements before we start. Please install the follo
 
 *   [Node.js v6+ LTS and npm (comes with Node)](https://nodejs.org/en/)
 *   [Git](https://git-scm.com/)
+*   [Ethereum Client] - For the purpose of this demo, we need a test client up and running: npm install -g ethereumjs-testrpc
 
 Once we have those installed, we only need one command to install Truffle:
 
