@@ -82,8 +82,8 @@ ubuntu@ubuntu-xenial:~$ cd quorum-examples/7nodes/
 Our Quorum client is nearly ready to go. We need to run two more commands within the virtual machine. The first one creates seven Quorum nodes we can use to simulate a real Quorum deployment -- you only need to do this once, ever. The second one starts up those seven nodes; you should perform this one anytime you restart the virtual machine:
 
 ```shell
-ubuntu@ubuntu-xenial:~/quorum-examples/7nodes$ init.sh
-ubuntu@ubuntu-xenial:~/quorum-examples/7nodes$ start.sh
+ubuntu@ubuntu-xenial:~/quorum-examples/7nodes$ raft-init.sh
+ubuntu@ubuntu-xenial:~/quorum-examples/7nodes$ raft-start.sh
 ```
 
 Success! We now have seven Quorum nodes set up that we can use to represent seven different actors on our private network.
@@ -101,7 +101,7 @@ Next, navigate to the new directory and initialize the bare Truffle project:
 
 ```shell
 $ cd myproject
-$ truffle init bare
+$ truffle init
 ```
 
 If you look at the contents of the `myproject` directory, you'll notice folders were created for you. See the [Truffle documentation](/docs/getting_started/project) for more information about Truffle's project structure.
@@ -115,7 +115,9 @@ module.exports = {
     development: {
       host: "localhost",
       port: 22000, // was 8545
-      network_id: "*" // Match any network id
+      network_id: "*", // Match any network id
+      gasPrice: 0,
+      gas: 4500000
     }
   }
 };
@@ -206,12 +208,16 @@ module.exports = {
     nodefour:  {
       host: "localhost",
       port: 22003,
-      network_id: "*" // Match any network id
+      network_id: "*", // Match any network id
+      gasPrice: 0,
+      gas: 4500000
     },
     nodeseven:  {
       host: "localhost",
       port: 22006,
-      network_id: "*" // Match any network id
+      network_id: "*", // Match any network id
+      gasPrice: 0,
+      gas: 4500000
     }
   }
 };
