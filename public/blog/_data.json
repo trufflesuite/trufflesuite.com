@@ -60,6 +60,12 @@
       "date": "2017-11-29",
       "author": "Tim Coulter",
       "published": true
+    },
+    "testrpc-is-now-ganache-cli": {
+      "title": "TestRPC is now Ganache CLI",
+      "date": "2017-12-18",
+      "author": "Mike Pumphrey",
+      "published": true
     }
   }
 }
