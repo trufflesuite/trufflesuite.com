@@ -18,6 +18,9 @@ candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
 
 This mnemonic can be changed to be randomly generated, or you can input your own.
 
+<p class="alert alert-danger">
+**Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). If you send ether to any account generated from this mnemonic, you will lose it all!
+</p>
 
 ### Truffle Develop
 
@@ -32,6 +35,10 @@ This will run the client on `http://localhost:9545`. It will display the first 1
 ```
 candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
 ```
+
+<p class="alert alert-danger">
+**Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). If you send ether to any account generated from this mnemonic, you will lose it all!
+</p>
 
 Once launched, Truffle Develop will provide you with a console you can use to run all available Truffle commands. These commands are input by omitting the `truffle` prefix. So, for example, to compile your smart contracts, instead of typing `truffle compile`, you need to only type `compile`.
 

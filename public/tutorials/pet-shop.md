@@ -551,6 +551,10 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
    candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
    ```
 
+   <p class="alert alert-danger">
+   **Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). If you send ether to any account generated from this mnemonic, you will lose it all!
+   </p>
+
    Enter a password below that and click **OK**.
 
    ![MetaMask seed phrase](/tutorials/images/pet-shop/metamask-seed.png)
