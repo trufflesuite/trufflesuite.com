@@ -1,6 +1,6 @@
 # TestRPC is now Ganache CLI
 
-Have you been looking for the TestRPC recently and haven't been able to find anything about it?
+Have you been looking for the TestRPC recently and haven't been able to find it?
 
 Don't worry, it's still here! It's just now known as **Ganache CLI**. You can get it here:
 
@@ -10,16 +10,16 @@ npm install -g ganache-cli
 
 ## A little history
 
-Prior to the existence of the TestRPC, one would have to deploy to a test network like Ropsten in order to see how your contract operates. The TestRPC solved that issue by providing a local blockchain where you could test your smart contracts without even needing to wait for your transactions to be mined into a block. 
+Prior to the existence of the TestRPC, you would have to deploy to private internal test networks to see how your contract code operated (as public test networks like Ropsten didn't yet exist!).
 
-While initially under the auspices of the [EthereumJS project](https://github.com/ethereumjs/), it was designed by the Truffle team from the beginning, and today we remain its primary architect.
+While initially under the auspices of the [EthereumJS project](https://github.com/ethereumjs/), it was originally created by the Truffle team, and today we remain its primary maintainers.
 
-So bringing the TestRPC under the wing of the Truffle project just made sense.
+So simply for maintainability sake, it just made sense to bring the TestRPC under Truffle's wing.
 
-Separately, we have been hard at work on a new, graphical blockchain application called [Ganache](/ganache). This provided many of the same features as the TestRPC, but in a more user-friendly graphical format. In fact, Ganache used the TestRPC under the hood so much that the two tools are really versions of the same thing.
+Additionally, we realized over time that the TestRPC was a poor name. The TestRPC quickly became more powerful than simply a blockchain environment used for testing. To stay with the sweet Truffle brand, we decided to rename it Ganache, as Ganache is (often) the core of your favorite chocolate truffle. It's a much catchier name (and a much tastier one too)
 
-Which explains the name change. With Ganache being a much catchier name (and a much tastier one too), it just made sense to retire the name "TestRPC".
+With this name change, we also released a fully-interactive, graphical version of Ganache which you can [find here](/ganache).
 
-Aside from the name change, not much else has changed. The command line utility is still available via NPM and the [command line flags](https://github.com/trufflesuite/ganache-cli/blob/master/README.md) are the same too. All that's changed is the name of the command.
+The command-line utility is still available via NPM and the [command line flags](https://github.com/trufflesuite/ganache-cli/blob/master/README.md) are the same too. All that's changed is the name of the command.
 
 So if you're looking for a blockchain that's perfect for beginners and anyone who wants a graphical environment, check out [Ganache](/ganache). And if you want the familiar command-line interface, install Ganache CLI. Happy developing!
