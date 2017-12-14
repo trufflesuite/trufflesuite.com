@@ -552,7 +552,7 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
    ```
 
    <p class="alert alert-danger">
-   **Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). If you send ether to any account generated from this mnemonic, you will lose it all!
+   **Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). If you send ETH to any account generated from this mnemonic, you will lose it all!
    </p>
 
    Enter a password below that and click **OK**.
