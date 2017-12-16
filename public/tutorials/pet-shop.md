@@ -397,7 +397,7 @@ The front-end doesn't use a build system (webpack, grunt, etc.) to be as easy as
 1. Remove the multi-line comment from within `initWeb3` and replace it with the following:
 
    ```javascript
-   // Is there is an injected web3 instance?
+   // Is there an injected web3 instance?
    if (typeof web3 !== 'undefined') {
      App.web3Provider = web3.currentProvider;
    } else {
