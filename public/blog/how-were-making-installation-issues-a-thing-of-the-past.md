@@ -1,5 +1,9 @@
 # How we're making installation issues a thing of the past
 
+<p class="alert alert-info">
+**Update**: This blog post mentions TestRPC, which is now known as [Ganache](/ganache). We've left the post unchanged, but those wishing to get more updated information should head to our [Working with Ganache](/docs/ganache/using) page.  
+</p>
+
 It doesn't matter what operating system you're on -- if you've used Truffle in any capacity, you've likely run into an install issue in some form or another. This is especially true for Windows, as Windows doesn't generally ship with the necessary tools to install all of Truffle's important dependencies. And for most users, this sucks: getting hung up on installation is incredibly frustrating when you're usually just one error message or two away from creating your first Ethereum-enabled application. Well, I've got good news. As of the latest Truffle beta release, I'm happy to tell you that this is an issue no longer.
 
 That's right: No matter what platform you're on, your install issues should be over. This is big.
