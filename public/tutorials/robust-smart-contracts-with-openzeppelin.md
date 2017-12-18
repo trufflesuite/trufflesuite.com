@@ -79,7 +79,7 @@ With our front-end taken care of, we can focus on the `TutorialToken` contract.
    ```javascript
    string public name = 'TutorialToken';
    string public symbol = 'TT';
-   uint public decimals = 2;
+   uint8 public decimals = 2;
    uint public INITIAL_SUPPLY = 12000;
    ```
 
