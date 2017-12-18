@@ -397,7 +397,7 @@ The front-end doesn't use a build system (webpack, grunt, etc.) to be as easy as
 1. Remove the multi-line comment from within `initWeb3` and replace it with the following:
 
    ```javascript
-   // Is there is an injected web3 instance?
+   // Is there an injected web3 instance?
    if (typeof web3 !== 'undefined') {
      App.web3Provider = web3.currentProvider;
    } else {
@@ -550,6 +550,10 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
    ```shell
    candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
    ```
+
+   <p class="alert alert-danger">
+   **Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). If you send ETH to any account generated from this mnemonic, you will lose it all!
+   </p>
 
    Enter a password below that and click **OK**.
 

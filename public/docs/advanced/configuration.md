@@ -1,4 +1,6 @@
-# Location
+# Configuration
+
+## Location
 
 Your configuration file is called `truffle.js` and is located at the root of your project directory. This file is a Javascript file and can execute any code necessary to create your configuration. It must export an object representing your project configuration like the example below.
 
@@ -17,7 +19,7 @@ module.exports = {
 The default configuration ships with configuration for a single development network, running on `localhost:8545`. There are many other configuration options, detailed below.
 
 
-## Resolving naming conflicts on Windows
+### Resolving naming conflicts on Windows
 
 When using the Command Prompt on Windows, the default configuration file name can cause a conflict with the `truffle` executable, and so **you may not be able to run Truffle commands properly on existing projects**.
 
@@ -31,7 +33,7 @@ Any of the following solutions will remedy this issue:
 * Use [Windows PowerShell](https://docs.microsoft.com/en-us/powershell/) or [Git BASH](https://git-for-windows.github.io/), as these shells do not have this conflict.
 
 
-# General Options
+## General options
 
 ### build
 
@@ -173,7 +175,7 @@ mocha: {
 }
 ```
 
-# Solidity Compiler Configuration
+## Solidity compiler configuration
 
 Solidity compiler settings. Supports optimizer settings for `solc`.
 
@@ -195,7 +197,7 @@ solc: {
 For more information, please see the Solidity documentation on [Compiler Input and Output JSON Description](http://solidity.readthedocs.io/en/develop/using-the-compiler.html#compiler-input-and-output-json-description).
 
 
-# EthPM Configuration
+## EthPM configuration
 
 This configuration applies to the optional `ethpm.json` file that exists alongside your `truffle.js` configuration file.
 

@@ -1,8 +1,8 @@
-# EthPM
+# Package management via EthPM
 
 EthPM is the new [Package Registry](https://www.ethpm.com/) for Ethereum. It follows the [ERC190 spec](https://github.com/ethereum/EIPs/issues/190) for publishing and consuming smart contract packages, and has gained wide support from many diverse Ethereum development tools. To show our support, we've integrated the Ethereum Package Registry directly into Truffle.
 
-## Installing a Package
+## Installing a package
 
 Installing a package from EthPM is nearly as easy as installing a package via NPM. You can simply run the following command:
 
@@ -28,7 +28,7 @@ $ truffle install
 
 For more details on the `ethpm.json` file, see the [package configuration](/docs/getting_started/packages-ethpm#package-configuration) below.
 
-## Consuming Installed Contracts
+## Consuming installed contracts
 
 Installed packages will be placed in the `installed_contracts` directory within your project folder. If no `installed_contracts` directory exists it'll be created for you. You should treat this folder like you treat the `node_modules` folder with NPM -- that is, you shouldn't edit the contents inside unless you know what you're doing. :)
 
@@ -64,7 +64,7 @@ module.exports = function(deployer) {
 
 Note that in the migration above, we consume the `ens` package and deploy the ENS contract conditionally based on whether or not ENS already has an address set. This is a fancy trick provided to you by the [deployer](/docs/getting_started/migrations#deployer-deploy-contract-args-options-) that makes it much easier to write migrations dependent on the the existence of network artifacts. In this case, if we were running our migrations on the Ropsten network, this migration **wouldn't** deploy the `ENS` contract because (at the time of this writing) Ropsten is where the canonical `ENS` contract exists -- we wouldn't want to deploy our own. But if we were running our migrations against a different network, or a test network perhaps, then we'd want to deploy the `ENS` contract so that we have a dependency contract to work with.
 
-## Publishing Your Own Package
+## Publishing your own package
 
 Publishing your own package is as straightforward as installing, but like NPM, requires a bit more configuration.
 
@@ -148,7 +148,7 @@ Uploading sources and publishing to registry...
 
 ### Before publishing
 
-When using a network like the default `develop` network that's configured to match any Ethereum client (like Truffle Develop or the TestRPC), you're bound to have network artifacts laying around that you don't want published. Before publishing your package, consider running the following command to remove any extraneous network artifacts:
+When using a network like the default `develop` network that's configured to match any Ethereum client (like [Ganache](/ganache) or Truffle Develop), you're bound to have network artifacts lying around that you don't want published. Before publishing your package, consider running the following command to remove any extraneous network artifacts:
 
 ```
 $ truffle networks --clean

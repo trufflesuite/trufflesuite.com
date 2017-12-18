@@ -25,7 +25,7 @@
   },
   "javascript-tests": {
     "order" : 7,
-    "title": "Writing tests in Javascript"
+    "title": "Writing tests in JavaScript"
   },
   "solidity-tests": {
     "order" : 8,

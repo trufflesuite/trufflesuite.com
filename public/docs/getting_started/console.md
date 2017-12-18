@@ -1,8 +1,8 @@
-# Background
+# Using the console
 
 Sometimes it's nice to work with your contracts interactively for testing and debugging purposes, or for executing transactions by hand. Truffle provides you an easy way to do this via an interactive console, with your contracts available and ready to use.
 
-# Command
+## Command
 
 To fire up the console, simply run:
 
@@ -21,7 +21,7 @@ truffle(development)>
 
 This tells you you're running within a Truffle console using the `development` network.
 
-# Features
+## Features
 
 The console provides all the features available in the Truffle command line tool. For instance, you can type `migrate --reset` within the console, and it will be interpreted the same as if you ran `truffle migrate --reset` from outside the console. Truffle's console additionally has the following features:
 

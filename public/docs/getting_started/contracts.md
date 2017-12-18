@@ -1,8 +1,10 @@
-# Introduction
+# Interacting with your contracts
+
+## Introduction
 
 If you were writing raw requests to the Ethereum network yourself in order to interact with your contracts, you'd soon realize that writing these requests is clunky and cumbersome. As well, you might find that managing the state each request you've made is _complicated_. Fortunately, Truffle takes care of this complexity for you, to make interacting with your contracts a breeze.
 
-# Reading & Writing Data
+## Reading and writing data
 
 The Ethereum network makes a distinction between writing data to the network and reading data from it, and this distinction plays a significant part in how you write your application. In general, writing data is called a **transaction** whereas reading data is called a **call**. Transactions and calls are treated very differently, and have the following characteristics.
 
@@ -26,7 +28,7 @@ Calls, on the other hand, are very different. Calls can be used to execute code 
 
 Choosing between a transaction and a call is as simple as deciding whether you want to read data, or write it.
 
-# Introducing Abstractions
+## Introducing abstractions
 
 Contract abstractions are the bread and butter of interacting with Ethereum contracts from Javascript. In short, contract abstractions are wrapper code that makes interaction with your contracts easy, in a way that lets you forget about the many engines and gears executing under the hood. Truffle uses its own contract abstraction via the [truffle-contract](https://github.com/trufflesuite/truffle-contract) module, and it is this contract abstraction that's described below.
 
@@ -94,11 +96,11 @@ MetaCoin.deployed().then(function(instance) {
 
 Notice that the abstraction contains the exact same functions that exist within our contract. It also contains an address which points to the deployed version of the MetaCoin contract.
 
-## Executing Contract Functions
+## Executing contract functions
 
 Using the abstraction you can easily execute contract functions on the Ethereum network.
 
-### Making a Transaction
+### Making a transaction
 
 There are three functions on the MetaCoin contract that we can execute. If you analyze each of them, you'll see that `sendCoin` is the only function that aims to make changes to the network. The goal of `sendCoin` is to "send" some Meta coins from one account to the next, and these changes should persist.
 
@@ -127,7 +129,7 @@ There are a few things interesting about the above code:
 * We passed an object as the third parameter to `sendCoin`. Note that the `sendCoin` function in our Solidity contract doesn't have a third parameter. What you see above is a special object that can always be passed as the last parameter to a function that lets you edit specific details about the transaction. Here, we set the `from` address ensuring this transaction came from `account_one`.
 
 
-### Making a Call
+### Making a call
 
 Continuing with MetaCoin, notice the `getBalance` function is a great candidate for reading data from the network. It doesn't need to make any changes, as it just returns the MetaCoin balance of the address passed to it. Let's give it a shot:
 
@@ -155,7 +157,7 @@ What's interesting here:
 
 **Warning:** We convert the return value to a number because in this example the numbers are small. However, if you try to convert a BigNumber that's larger than the largest integer supported by Javascript, you'll likely run into errors or unexpected behavior.
 
-### Catching Events
+### Catching events
 
 Your contracts can fire events that you can catch to gain more insight into what your contracts are doing. The easiest way to handle events is by processing the result object of the transaction that triggered the event, like so:
 
@@ -219,7 +221,7 @@ If you already have an address for a contract, you can create a new abstraction 
 var instance = MetaCoin.at("0x1234...");
 ```
 
-### Sending Ether to a contract
+### Sending ether to a contract
 
 You may simply want to send Ether directly to a contract, or trigger a contract's [fallback function](http://solidity.readthedocs.io/en/develop/contracts.html#fallback-function). You can do so using one of the following two options.
 
@@ -239,6 +241,6 @@ instance.send(web3.toWei(1, "ether")).then(function(result) {
 });
 ```
 
-# Further Reading
+## Further reading
 
 The contract abstractions provided by Truffle contain a wealth of utilities for making interacting with your contracts easy. Check out the [truffle-contract](https://github.com/trufflesuite/truffle-contract) documentation for tips, tricks and insights.

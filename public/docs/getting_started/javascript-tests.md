@@ -4,7 +4,7 @@ Truffle uses the [Mocha](https://mochajs.org/) testing framework and [Chai](http
 
 Note: If you're unfamiliar with writing unit tests in Mocha, please see [Mocha's documentation](https://mochajs.org/) before continuing.
 
-### Use contract() instead of describe()
+## Use contract() instead of describe()
 
 Structurally, your tests should remain largely unchanged from that of Mocha: Your tests should exist in the `./test` directory, they should end with a `.js` extension, and they should contain code that Mocha will recognize as an automated test. What makes Truffle tests different from that of Mocha is the `contract()` function: This function works exactly like `describe()` except it enables Truffle's [clean-room features](/docs/getting_started/testing#clean-room-environment). It works like this:
 
@@ -13,21 +13,21 @@ Structurally, your tests should remain largely unchanged from that of Mocha: You
 
 Since Truffle uses Mocha under the hood, you can still use `describe()` to run normal Mocha tests whenever Truffle clean-room features are unnecessary.
 
-### Use contract abstractions within your tests
+## Use contract abstractions within your tests
 
 Contract abstractions are the basis for making contract interaction possible from Javascript (they're basically our [flux capacitor](https://www.youtube.com/watch?v=EhU862ONFys)). Because Truffle has no way of detecting which contracts you'll need to interact with within your tests, you'll need to ask for those contracts explicitly. You do this by using the `artifacts.require()` method, a method provided by Truffle that allows you to request a usable contract abstraction for a specific Solidity contract. As you'll see in the example below, you can then use this abstraction to make sure your contracts are working properly.
 
 For more information on using contract abstractions, see the [Interacting With Your Contracts](/docs/getting_started/contracts) section.
 
-### Using artifacts.require()
+## Using artifacts.require()
 
 Using `artifacts.require()` within your tests works the same way as using it within your migrations; you just need to pass the name of the contract. See the [artifacts.require() documentation](./migrations#artifacts-require-) in the Migrations section for detailed usage.
 
-### Using web3
+## Using web3
 
 A `web3` instance is available in each test file, configured to the correct provider. So calling `web3.eth.getBalance` just works!
 
-# Example
+## Example
 
 Here's an example test provided to you by `truffle init`. Note the use of the `contract()` function, the `accounts` array for specifying available Ethereum accounts, and our use of `artifacts.require()` for interacting directly with our contracts.
 
@@ -102,6 +102,6 @@ truffle test ./test/metacoin.js
 ```
 
 
-# Advanced
+## Advanced
 
 Truffle gives you access to Mocha's configuration so you can change how Mocha behaves. See the [project configuration](/docs/advanced/configuration#mocha) section for more details.

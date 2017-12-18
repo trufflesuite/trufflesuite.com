@@ -5,15 +5,15 @@
   },
   "networks": {
     "order": 2,
-    "title": "Networks &amp; App Deployment"
+    "title": "Networks and app deployment"
   },
   "build_processes": {
     "order": 3,
-    "title": "Build Processes"
+    "title": "Build processes"
   },
   "commands": {
     "order": 4,
-    "title": "Command Reference"
+    "title": "Command reference"
   },
   "truffle-boxes": {
     "order": 5,
