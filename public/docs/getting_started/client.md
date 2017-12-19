@@ -10,6 +10,10 @@ We recommend [Ganache](/ganache), a personal blockchain for Ethereum development
 
 Ganache, when launched runs on `http://127.0.0.1:7545`. It will display the first 10 accounts and the mnemonic used to create those accounts. ([Read more about account mnemonics](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki).)
 
+<p class="alert alert-info">
+**Note**: We recommend specifying `127.0.0.1` instead of `localhost` because the address does not require a network connection and so is more suitable for development. Specifying `localhost` when offline will cause connection errors. When a network connection is present, the two are functionally equivalent.
+</p>
+
 By default, Ganache will use the following mnemonic:
 
 ```

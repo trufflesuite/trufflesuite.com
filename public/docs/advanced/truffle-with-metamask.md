@@ -28,6 +28,10 @@ With our front-end ready to be used and MetaMask installed, we're ready to see o
 
 [Ganache](/ganache) is a graphical application that runs a blockchain that can be used for testing purposes. It runs on `127.0.0.1:7545`.
 
+<p class="alert alert-info">
+**Note**: We recommend specifying `127.0.0.1` instead of `localhost` because the address does not require a network connection and so is more suitable for development. Specifying `localhost` when offline will cause connection errors. When a network connection is present, the two are functionally equivalent.
+</p>
+
 ### Detecting MetaMask's web3 injection
 
 Before diving in, we'll need to make sure the dapp is checking for MetaMask's `web3` instance and that the extension itself is configured properly with Ganache.
@@ -89,6 +93,10 @@ Click the account icon in the upper-right to create new accounts, the first 10 o
 ## Using MetaMask with Truffle Develop
 
 Truffle Develop is a command-line application that runs a temporary blockchain that is also used for testing purposes. It runs on `127.0.0.1:9545`.
+
+<p class="alert alert-info">
+**Note**: We recommend specifying `127.0.0.1` instead of `localhost` because the address does not require a network connection and so is more suitable for development. Specifying `localhost` when offline will cause connection errors. When a network connection is present, the two are functionally equivalent.
+</p>
 
 Using MetaMask with Truffle Develop is very similar to that of Ganache. There are only a few notable differences:
 
