@@ -22,6 +22,9 @@ candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
 
 This mnemonic can be changed to be randomly generated, or you can input your own.
 
+<p class="alert alert-danger">
+**Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). If you send ETH to any account generated from this mnemonic, you will lose it all!
+</p>
 
 ### Truffle Develop
 
@@ -37,13 +40,17 @@ This will run the client on `http://127.0.0.1:9545`. It will display the first 1
 candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
 ```
 
+<p class="alert alert-danger">
+**Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). If you send ETH to any account generated from this mnemonic, you will lose it all!
+</p>
+
 Once launched, Truffle Develop will provide you with a console you can use to run all available Truffle commands. These commands are input by omitting the `truffle` prefix. So, for example, to compile your smart contracts, instead of typing `truffle compile`, you need to only type `compile`.
 
 To read more about interacting with the console, please see the [Using the Console](/docs/getting_started/console) section.
 
 ### Ganache CLI
 
-Ganache also has a command-line interface for those who aren't working from a graphical environment. Great for automated testing and continuous integration environments, Ganache CLI runs headless and can be configured to serve all your development needs. Ganache CLI processes transactions instantly instead of waiting for the default block time, so you can test that your code works quickly. It also tells you immediately when your smart contracts run into errors, and integrates directly with Truffle to reduce test runtime up to 90% compared to other clients. [Learn more about Ganache CLI]((https://github.com/trufflesuite/ganache-cli/).
+Ganache also has a command-line interface for those who aren't working from a graphical environment. Great for automated testing and continuous integration environments, Ganache CLI runs headless and can be configured to serve all your development needs. Ganache CLI processes transactions instantly instead of waiting for the default block time, so you can test that your code works quickly. It also tells you immediately when your smart contracts run into errors, and integrates directly with Truffle to reduce test runtime up to 90% compared to other clients. [Learn more about Ganache CLI](https://github.com/trufflesuite/ganache-cli/).
 
 
 ## Deploying to live networks

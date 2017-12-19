@@ -25,16 +25,16 @@ In this tutorial, we will migrate a basic contract to a test blockchain, introdu
 One of the most basic, non-trivial, types of smart contract is a **simple storage contract**. (This example was adapted from the [Solidity documentation](https://solidity.readthedocs.io/en/develop/introduction-to-smart-contracts.html).)
 
 ```javascript
-pragma solidity ^0.4.0;
+pragma solidity ^0.4.17;
 
 contract SimpleStorage {
   uint myVariable;
 
-  function set(uint x) {
+  function set(uint x) public {
     myVariable = x;
   }
 
-  function get() constant returns (uint) {
+  function get() constant public returns (uint) {
     return myVariable;
   }
 }
@@ -69,16 +69,16 @@ First, let's set up our environment.
 1. Inside the `contracts/` directory, create a file called `Store.sol` with the following content:
 
    ```javascript
-   pragma solidity ^0.4.0;
+   pragma solidity ^0.4.17;
 
    contract SimpleStorage {
      uint myVariable;
 
-     function set(uint x) {
+     function set(uint x) public {
        myVariable = x;
      }
 
-     function get() constant returns (uint) {
+     function get() constant public returns (uint) {
        return myVariable;
      }
    }
@@ -139,7 +139,7 @@ First, let's set up our environment.
 
 ## Interacting with the basic smart contract
 
-The smart contract is now deployed to a test network via `truffle develop`, which is a development blockchain built directly into Truffle, similar to the [EthereumJS TestRPC](https://github.com/ethereumjs/testrpc).
+The smart contract is now deployed to a test network via `truffle develop`, which launches a [console](/docs/getting_started/console) against [Ganache](/ganache), a local development blockchain built right into Truffle.
 
 We next want to interact with the smart contract to see how it works when working correctly. We'll interact using the `truffle develop` console.
 
@@ -229,7 +229,7 @@ An infinite loop is easy to create.
 1. Replace the `set()` function with the following:
 
    ```javascript
-   function set(uint x) {
+   function set(uint x) public {
      while(true) {
        myVariable = x;
      }
@@ -314,7 +314,7 @@ Truffle contains a built-in debugger. The command to launch this is `debug <Tran
 
    Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
 
-   1: pragma solidity ^0.4.0;
+   1: pragma solidity ^0.4.17;
    2:
    3: contract SimpleStorage {
       ^^^^^^^^^^^^^^^^^^^^^^^
@@ -333,8 +333,8 @@ Truffle contains a built-in debugger. The command to launch this is `debug <Tran
 
    4:   uint myVariable;
    5:
-   6:   function set(uint x) {
-        ^^^^^^^^^^^^^^^^^^^^^
+   6: function set(uint x) public {
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    ```
 
    Notice that the program has moved to the next instruction, located on line 6. (The carets point to the exact part of the instruction taking place.)
@@ -345,41 +345,68 @@ Truffle contains a built-in debugger. The command to launch this is `debug <Tran
    Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
 
    5:
-   6:   function set(uint x) {
-   7:     while(true) {
-          ^^^^^^^^^^^^
+   6: function set(uint x) public {
+   7:   while(true) {
+        ^^^^^^^^^^^^
    ```
 
-1. Press Enter three more times:
+1. Keep pressing Enter:
 
    ```shell
    Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
 
-   6:   function set(uint x) {
-   7:     while(true) {
-   8:       myVariable = x;
-            ^^^^^^^^^^
-
-   debug(develop:0xe4933407...)>
-
-   Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
-
-   6:   function set(uint x) {
-   7:     while(true) {
-   8:       myVariable = x;
-            ^^^^^^^^^^^^^^
+   5:
+   6: function set(uint x) public {
+   7:   while(true) {
+              ^^^^
 
    debug(develop:0xe4933407...)>
 
    Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
 
    5:
-   6:   function set(uint x) {
-   7:     while(true) {
-          ^^^^^^^^^^^^
+   6: function set(uint x) public {
+   7:   while(true) {
+        ^^^^^^^^^^^^
+
+   debug(develop:0xe4933407...)>
+
+   Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
+
+   6: function set(uint x) public {
+   7:   while(true) {
+   8:     myVariable = x;
+                       ^
+
+   debug(develop:0xe4933407...)>
+
+   Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
+
+   6: function set(uint x) public {
+   7:   while(true) {
+   8:     myVariable = x;
+          ^^^^^^^^^^
+
+   debug(develop:0xe4933407...)>
+
+   Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
+
+   6: function set(uint x) public {
+   7:   while(true) {
+   8:     myVariable = x;
+          ^^^^^^^^^^^^^^
+
+   debug(develop:0xe4933407...)>
+
+   Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
+
+   5:
+   6: function set(uint x) public {
+   7:   while(true) {
+        ^^^^^^^^^^^^
    ```
 
-   Notice that the bottom transaction is a repeat. In fact, pressing `Enter` over and over will repeat those last three transactions forever (or at least until the transaction runs out of gas). **This tells you where the problem is.**
+   Notice that the steps eventually repeat. In fact, pressing `Enter` over and over will repeat those transactions forever (or at least until the transaction runs out of gas). **This tells you where the problem is.**
 
 1. Type `q` to exit the debugger.
 
@@ -397,7 +424,7 @@ Here we will introduce such a condition, and then see how the debugger can find 
 1. Replace the `set()` function with the following:
 
    ```javascript
-   function set(uint x) {
+   function set(uint x) public {
      assert(x == 0);
      myVariable = x;
    }
@@ -449,7 +476,7 @@ Just as before, we'll reset the contract on the blockchain.
    ```shell
    Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
 
-   1: pragma solidity ^0.4.0;
+   1: pragma solidity ^0.4.17;
    2:
    3: contract SimpleStorage {
       ^^^^^^^^^^^^^^^^^^^^^^^
@@ -464,7 +491,7 @@ Just as before, we'll reset the contract on the blockchain.
    Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
 
    5:
-   6:   function set(uint x) {
+   6:   function set(uint x) public {
    7:     assert(x == 0);
           ^^^^^^^^^^^^^^
 
@@ -500,7 +527,7 @@ Once again, we can use the debugger to see where things go wrong.
 
    event Even();
 
-   function set(uint x) {
+   function set(uint x) public {
      myVariable = x;
      if (x % 2 == 0) {
        Odd();
@@ -578,7 +605,7 @@ Just as before, we'll reset the contract on the blockchain.
    ```shell
    Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
 
-   10:   function set(uint x) {
+   10:   function set(uint x) public {
    11:     myVariable = x;
    12:     if (x % 2 == 0) {
            ^^^^^^^^^^^^^^^^
