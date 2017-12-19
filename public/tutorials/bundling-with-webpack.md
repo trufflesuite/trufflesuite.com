@@ -53,7 +53,7 @@ Since you're bundling the frontend yourself and not using Truffle's default buil
 
 ### Detecting Web3
 
-In the past, Truffle bootstrapped applications to look for an open Ethereum node running at `http://127.0.0.1:8545`, but this has proven to be insecure for the user as well as highly unlikely in a real world scenario. Instead, users are most likely to use Metamask or Mist to interact with web applications on the Ethereum network, and you should build your application to support that. Both Metamask and Mist inject a `web3` object when the page is loading so you can hook into their transaction signing processes. Detecting this `web3` object easy:
+In the past, Truffle bootstrapped applications to look for an open Ethereum node running at `http://localhost:8545`, but this has proven to be insecure for the user as well as highly unlikely in a real world scenario. Instead, users are most likely to use Metamask or Mist to interact with web applications on the Ethereum network, and you should build your application to support that. Both Metamask and Mist inject a `web3` object when the page is loading so you can hook into their transaction signing processes. Detecting this `web3` object easy:
 
 ```javascript
 var Web3 = require("web3");
