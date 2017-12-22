@@ -1,7 +1,7 @@
 # Ethereum DevOps with Truffle, TestRPC & Visual Studio Team Services
 
-<p class="alert alert-warning">
-**Update**:: Since this tutorial was published, we have released [Ganache](/ganache) a personal blockchain and a replacement to the TestRPC. We have kept this tutorial unaltered for historical reasons, but we highly recommend checking out [Ganache](/ganache).
+<p class="alert alert-info">
+**Update**: Since this tutorial was published, we have released [Ganache](/ganache) a personal blockchain and a replacement to the TestRPC. We have left this tutorial unaltered, but we highly recommend checking out our [Working with Ganache](/docs/ganache/using) page.
 </p>
 
 This post was originally published by David Burela on his blog [Burela's House-o-blog](https://davidburela.wordpress.com/2016/12/23/ethereum-devops-with-truffle-testrpc-visual-studio-team-services/). Big thanks to David for allowing us publish it here!
