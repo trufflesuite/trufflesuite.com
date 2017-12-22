@@ -573,7 +573,7 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
    *MetaMask seed phrase*
 
-1. Now we need to connect MetaMask to the blockchain created by Truffle Develop. Click the menu that shows "Main Network" and select **Custom RPC**.
+1. Now we need to connect MetaMask to the blockchain created by Ganache. Click the menu that shows "Main Network" and select **Custom RPC**.
 
    ![MetaMask network menu](/tutorials/images/pet-shop/metamask-networkmenu.png)
 

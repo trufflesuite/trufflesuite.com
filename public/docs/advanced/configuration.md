@@ -8,7 +8,7 @@ Your configuration file is called `truffle.js` and is located at the root of you
 module.exports = {
   networks: {
     development: {
-      host: "localhost",
+      host: "127.0.0.1",
       port: 8545,
       network_id: "*" // Match any network id
     }
@@ -16,7 +16,7 @@ module.exports = {
 };
 ```
 
-The default configuration ships with configuration for a single development network, running on `localhost:8545`. There are many other configuration options, detailed below.
+The default configuration ships with configuration for a single development network, running on `127.0.0.1:8545`. There are many other configuration options, detailed below.
 
 
 ### Resolving naming conflicts on Windows
@@ -56,7 +56,7 @@ Example:
 ```javascript
 networks: {
   development: {
-    host: "localhost",
+    host: "127.0.0.1",
     port: 8545,
     network_id: "*" // match any network
   },
@@ -98,7 +98,7 @@ networks: {
     network_id: '3',
   },
   test: {
-    provider: new HDWalletProvider(mnemonic, "http://localhost:8545/"),
+    provider: new HDWalletProvider(mnemonic, "http://127.0.0.1:8545/"),
     network_id: '*',
   },
 }
@@ -116,7 +116,7 @@ networks: {
   },
   test: {
     provider: function() {
-      return new HDWalletProvider(mnemonic, "http://localhost:8545/");
+      return new HDWalletProvider(mnemonic, "http://127.0.0.1:8545/");
     },
     network_id: '*',
   },
@@ -138,7 +138,7 @@ module.exports = {
   contracts_build_directory: "./output",
   networks: {
     development: {
-      host: "localhost",
+      host: "127.0.0.1",
       port: 8545,
       network_id: "*",
     }
@@ -153,7 +153,7 @@ module.exports = {
   contracts_build_directory: "../../../output",
   networks: {
     development: {
-      host: "localhost",
+      host: "127.0.0.1",
       port: 8545,
       network_id: "*",
     }
