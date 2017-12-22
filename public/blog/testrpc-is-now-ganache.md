@@ -4,7 +4,7 @@ Have you been looking for the TestRPC recently and haven't been able to find it?
 
 Don't worry, it's still here! It's just now known as **Ganache**.
 
-It comes in two flavors: A fully-interactive graphical interface, and the more familiar command-line version.
+Ganache comes in two flavors: a fully-interactive development blockchain with a graphical interface, and the more familiar command-line version.
 
 * [Get the graphical version here](/ganache).
 
@@ -18,9 +18,7 @@ It comes in two flavors: A fully-interactive graphical interface, and the more f
 
 Prior to the existence of the TestRPC, you would have to deploy to private internal test networks to see how your contract code operated (as public test networks like Ropsten didn't yet exist!).
 
-While initially under the auspices of the [EthereumJS project](https://github.com/ethereumjs/), it was originally created by the Truffle team, and today we remain its primary maintainers.
-
-So simply for maintainability sake, it just made sense to bring the TestRPC under Truffle's wing.
+While initially under the auspices of the [EthereumJS project](https://github.com/ethereumjs/), it was originally created by the Truffle team, and today we remain its primary maintainers. So simply for maintainability sake, it just made sense to bring the TestRPC under Truffle's wing.
 
 Additionally, we realized over time that the TestRPC was a poor name. The TestRPC quickly became more powerful than simply a blockchain environment used for testing. To stay with the sweet Truffle brand, we decided to rename it Ganache, as Ganache is (often) the core of your favorite chocolate truffle. It's a much catchier name (and a much tastier one too).
 
