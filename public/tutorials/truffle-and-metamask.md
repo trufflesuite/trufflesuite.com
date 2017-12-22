@@ -1,6 +1,6 @@
 # Truffle and Metamask
 
-<p class="alert alert-warning">
+<p class="alert alert-info">
 **Update**: Since this tutorial was published, we have released [Ganache](/ganache) a personal blockchain and a replacement to the TestRPC. We have left this tutorial unaltered, but for the most up-to-date information on using Truffle with Metamask, we highly recommend checking out [our documentation](/docs/advanced/truffle-with-metamask).
 </p>
 
