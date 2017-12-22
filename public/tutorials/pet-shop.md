@@ -127,7 +127,7 @@ Let's allow users to make adoption requests.
 
    ```javascript
    // Adopting a pet
-   function adopt(uint petId) public view returns (uint) {
+   function adopt(uint petId) public returns (uint) {
      require(petId >= 0 && petId <= 15);
 
      adopters[petId] = msg.sender;
@@ -148,6 +148,7 @@ Things to notice:
 
 <!-- ADD SOMETHING ABOUT PUBLIC VIEW? -->
 
+
 ### Your second function: Retrieving the adopters
 
 As mentioned above, array getters return only a single value from a given key. Our UI needs to update all pet adoption statuses, but making 16 API calls is not ideal. So our next step is to write a function to return the entire array.
@@ -156,7 +157,7 @@ As mentioned above, array getters return only a single value from a given key. O
 
    ```javascript
    // Retrieving the adopters
-   function getAdopters() public returns (address[16]) {
+   function getAdopters() public view returns (address[16]) {
      return adopters;
    }
    ```
