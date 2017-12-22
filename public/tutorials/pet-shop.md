@@ -127,7 +127,7 @@ Let's allow users to make adoption requests.
 
    ```javascript
    // Adopting a pet
-   function adopt(uint petId) public view returns (uint) {
+   function adopt(uint petId) public returns (uint) {
      require(petId >= 0 && petId <= 15);
 
      adopters[petId] = msg.sender;
