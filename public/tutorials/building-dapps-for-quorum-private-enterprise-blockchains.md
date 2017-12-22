@@ -276,32 +276,7 @@ We originally configured Truffle to point our development environment to the fir
    { [String: '42'] s: 1, e: 1, c: [ 42 ] }
    ```
 
-<<<<<<< HEAD
-```javascript
-// File: `truffle.js`
-module.exports = {
-  networks: {
-    development: {
-      host: "127.0.0.1",
-      port: 22000, // was 8545
-      network_id: "*" // Match any network id
-    },
-    nodefour:  {
-      host: "127.0.0.1",
-      port: 22003,
-      network_id: "*" // Match any network id
-    },
-    nodeseven:  {
-      host: "127.0.0.1",
-      port: 22006,
-      network_id: "*" // Match any network id
-    }
-  }
-};
-```
-=======
    Note that Truffle's contract abstractions use Promises to interact with Ethereum. This can be a little cumbersome on the console as it requires a few extra key strokes to get things done, but within your application it makes control flow a lot smoother. Additionally, take a look at the output we received: We got `42` back, but as an object. This is because Ethereum can represent larger numbers than those natively represented by JavaScript, and so we need an abstraction in order to interact with them.
->>>>>>> e7d2b4e08b42d85125d36c4519cd67e045d401fe
 
 1. Now let's try accessing the SimpleStorage contract as node four. To do this, quit out of the console (using `Ctrl + C` / `Command + C`), and then launch the console again, but this time specifying the connection to node 4 instead of node 1:
 
