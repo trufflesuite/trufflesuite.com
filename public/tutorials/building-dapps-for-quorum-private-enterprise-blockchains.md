@@ -133,28 +133,11 @@ To set up Truffle, we're going to start by creating a bare Truffle project, with
    };
    ```
 
-<<<<<<< HEAD
-```javascript
-// File: `truffle.js` (edited for 7nodes example)
-module.exports = {
-  networks: {
-    development: {
-      host: "127.0.0.1",
-      port: 22000, // was 8545
-      network_id: "*" // Match any network id
-    }
-  }
-};
-```
-
-Note that the only thing we had to change was the `port` that Truffle connects to (we changed it to `22000`). Because of the magic of VirtualBox and Vagrant, the node running inside the virtual machine is made available to us via local ports, so connecting via `127.0.0.1` and `22000` will work just fine.
-=======
    Note that we changed the port that Truffle normally connects to (we changed it to `22000`). Because of the magic of VirtualBox and Vagrant, the node running inside the virtual machine is made available to us via local ports, so connecting via `127.0.0.1` and `22000` will work just fine.
 
    <p class="alert alert-info">
    **Note**: The seven Quorum clients respond on ports `22000` (node 1) through `22006` (node 7).
    </p>
->>>>>>> e7d2b4e08b42d85125d36c4519cd67e045d401fe
 
 Now that we have Truffle set up, we can move onto code.
 

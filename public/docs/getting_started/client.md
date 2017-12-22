@@ -8,11 +8,7 @@ There are many Ethereum clients to choose from. We recommend different clients d
 
 We recommend [Ganache](/ganache), a personal blockchain for Ethereum development that runs on your desktop. Part of the Truffle Suite, Ganache simplifies dapp development by placing your contracts and transactions front and center. Using Ganache you can quickly see how your application affects the blockchain, and introspect details like your accounts, balances, contract creations and gas costs. You can also fine tune Ganache's advanced mining controls to better suit your needs. Ganache is available for Windows, Mac and Linux, and you can [download it here](/ganache).
 
-Ganache, when launched runs on `http://127.0.0.1:7545`. It will display the first 10 accounts and the mnemonic used to create those accounts. ([Read more about account mnemonics](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki).)
-
-<p class="alert alert-info">
-**Note**: We recommend specifying `127.0.0.1` instead of `localhost` because the address does not require a network connection and so is more suitable for development. Specifying `localhost` when offline will cause connection errors. When a network connection is present, the two are functionally equivalent.
-</p>
+Ganache, when launched, runs on `http://127.0.0.1:7545`. It will display the first 10 accounts and the mnemonic used to create those accounts. ([Read more about account mnemonics](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki).)
 
 By default, Ganache will use the following mnemonic:
 

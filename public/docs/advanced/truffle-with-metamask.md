@@ -29,7 +29,7 @@ With our front-end ready to be used and MetaMask installed, we're ready to see o
 [Ganache](/ganache) is a graphical application that runs a blockchain that can be used for testing purposes. It runs on `127.0.0.1:7545`.
 
 <p class="alert alert-info">
-**Note**: We recommend specifying `127.0.0.1` instead of `localhost` because the address does not require a network connection and so is more suitable for development. Specifying `localhost` when offline will cause connection errors. When a network connection is present, the two are functionally equivalent.
+**Note**: We recommend specifying `127.0.0.1` instead of `localhost` because the address does not require a network connection and so is more suitable for development.
 </p>
 
 ### Detecting MetaMask's web3 injection
@@ -99,7 +99,7 @@ Click the account icon in the upper-right to create new accounts, the first 10 o
 Truffle Develop is a command-line application that runs a temporary blockchain that is also used for testing purposes. It runs on `127.0.0.1:9545`.
 
 <p class="alert alert-info">
-**Note**: We recommend specifying `127.0.0.1` instead of `localhost` because the address does not require a network connection and so is more suitable for development. Specifying `localhost` when offline will cause connection errors. When a network connection is present, the two are functionally equivalent.
+**Note**: We recommend specifying `127.0.0.1` instead of `localhost` because the address does not require a network connection and so is more suitable for development.
 </p>
 
 Using MetaMask with Truffle Develop is very similar to that of Ganache. There are only a few notable differences:
@@ -125,7 +125,7 @@ Using MetaMask with Truffle Develop is very similar to that of Ganache. There ar
 
 Using MetaMask with Ganache CLI is also very similar to that of Ganache. There are only a few notable differences:
 
-* Ganache CLI runs by default on `127.0.0.1:8545` so you'll want to edit the above web3 code to say:
+* Ganache CLI runs by default on `http://127.0.0.1:8545` so you'll want to edit the above web3 code to say:
 
   ```javascript
   // Is there is an injected web3 instance?
