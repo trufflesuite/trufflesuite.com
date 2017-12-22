@@ -1,7 +1,7 @@
 # Truffle and Metamask
 
-<p class="alert alert-warning" style="margin-top: -2rem; margin-bottom: 3rem;">
-  <strong>NOTICE</strong>: For the most up to date information on using Truffle with MetaMask, <a href="/docs/advanced/truffle-with-metamask">check out our documentation</a>.
+<p class="alert alert-info">
+**Update**: Since this tutorial was published, we have released [Ganache](/ganache) a personal blockchain and a replacement to the TestRPC. We have left this tutorial unaltered, but for the most up-to-date information on using Truffle with Metamask, we highly recommend checking out [our documentation](/docs/advanced/truffle-with-metamask).
 </p>
 
 This article was originally written by Dan Finlay and published as a [github gist](https://gist.github.com/flyswatter/aea93752fb90322bbe11). Dan has kindly allowed us to republish it here!
