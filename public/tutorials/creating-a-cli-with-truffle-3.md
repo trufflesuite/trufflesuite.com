@@ -146,7 +146,7 @@ if (command === 'bid') {
 
 ## Usage
 
-You can use the line command tool against any network that has an ENS registrar deployed. First, choose a command:
+You can use the command line tool against any network that has an ENS registrar deployed. First, choose a command:
 
 ```shell
 $ npm run -s ens
