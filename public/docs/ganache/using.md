@@ -65,3 +65,22 @@ You can change some features of the generated blockchain through the **Settings*
 * The **Advanced** page toggles Google Analytics, which is useful for the Ganache team to track usage of the application.
 
 After making changes, you will have to click **Restart** on the application for the changes to take effect.
+
+## Configuring truffle to connect to Ganache
+
+To configure truffle connect to Ganache, edit **truffle.js** to point
+to the Ganache's IP and port, e.g.,
+
+```
+module.exports = {
+  networks: {
+    development: {
+      host: "localhost",
+      port: 7545,
+      network_id: "1234"
+    }
+    // live: { ... }
+  }
+};
+```
+Then you run migration commands like `truffle migrate --network development`.
