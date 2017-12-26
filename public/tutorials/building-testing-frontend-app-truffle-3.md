@@ -13,7 +13,7 @@ Uses webpack to compile the application's frontend code and move the artifacts i
 ### Getting Started
 If you were using Truffle beta 3.0.0-9 or below, **do not immediately upgrade**. Read [these release notes](https://github.com/ConsenSys/truffle/releases/tag/v3.0.2) and the [upgrade guide](http://truffleframework.com/tutorials/upgrading-from-truffle-2-to-3) first.
 
-Once you have Truffle 3 installed, run `truffle init webpack` in an **empty** directory to pull down the webpack example for this tutorial [(repository here)](https://github.com/trufflesuite/truffle-init-webpack). If you're coming from Truffle 2, you'll notice your old friends `Metacoin.sol` and `ConvertLib.sol` are still there. But now, running `truffle build` does this:
+Once you have Truffle 3 installed, run `truffle unbox webpack` in an **empty** directory to pull down the webpack example for this tutorial [(repository here)](https://github.com/trufflesuite/truffle-init-webpack). If you're coming from Truffle 2, you'll notice your old friends `Metacoin.sol` and `ConvertLib.sol` are still there. But now, running `truffle build` does this:
 ```bash
 root@b1c71a2e1a6e:/app# truffle build
 Error building:
@@ -48,7 +48,7 @@ import metacoin_artifacts from '../../build/contracts/MetaCoin.json'
 Next run `truffle migrate`. This will deploy the contracts onto the default network running at `127.0.0.1:8545`.
 
 ### ... (webpack) build
-All that's left is to use webpack to compile the app and place it in the `build/` folder. A simple `npm run build` and we're done!. Relevant configs here:
+All that's left is to use webpack to compile the app and place it in the `build/` folder. A simple `npm run dev` and we're done!. Relevant configs here:
 ```json
 // file: package.json
 ...
