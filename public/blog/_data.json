@@ -60,6 +60,12 @@
       "date": "2017-11-29",
       "author": "Tim Coulter",
       "published": true
+    },
+    "testrpc-is-now-ganache": {
+      "title": "TestRPC is now Ganache",
+      "date": "2017-12-26",
+      "author": "Mike Pumphrey",
+      "published": true
     }
   }
 }
