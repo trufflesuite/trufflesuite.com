@@ -8,19 +8,11 @@ There are many Ethereum clients to choose from. We recommend different clients d
 
 We recommend [Ganache](/ganache), a personal blockchain for Ethereum development that runs on your desktop. Part of the Truffle Suite, Ganache simplifies dapp development by placing your contracts and transactions front and center. Using Ganache you can quickly see how your application affects the blockchain, and introspect details like your accounts, balances, contract creations and gas costs. You can also fine tune Ganache's advanced mining controls to better suit your needs. Ganache is available for Windows, Mac and Linux, and you can [download it here](/ganache).
 
-Ganache, when launched, runs on `http://127.0.0.1:7545`. It will display the first 10 accounts and the mnemonic used to create those accounts. ([Read more about account mnemonics](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki).)
+Ganache, when launched, runs on `http://127.0.0.1:8545`. It will display the first 10 accounts and the mnemonic used to create those accounts. ([Read more about account mnemonics](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki).)
 
-By default, Ganache will use the following mnemonic:
+By default, Ganache will use a random mnemonic.
 
-```
-candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
-```
-
-This mnemonic can be changed to be randomly generated, or you can input your own.
-
-<p class="alert alert-danger">
-**Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). If you send ETH to any account generated from this mnemonic, you will lose it all!
-</p>
+To use a custom mnemonic, Ganache can be run using the -m or --mnemonic flag.
 
 ### Truffle Develop
 
