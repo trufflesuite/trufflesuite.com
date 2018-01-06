@@ -49,7 +49,7 @@
   },
   "console": {
     "order" : 13,
-    "title": "Using the console"
+    "title": "Using Truffle Develop and the console"
   },
   "scripts": {
     "order" : 14,
