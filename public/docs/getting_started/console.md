@@ -2,28 +2,28 @@
 
 Sometimes it's nice to work with your contracts interactively for testing and debugging purposes, or for executing transactions by hand. Truffle provides you two easy ways to do this via an interactive console, with your contracts available and ready to use.
 
-* **Truffle console**: A basic interactive console
+* **Truffle console**: A basic interactive console connecting to any Ethereum client
 * **Truffle Develop**: An interactive console that also spawns a development blockchain
 
 ## Why two different consoles?
 
 Having two different consoles allows you to choose the best tool for your needs.
 
-Reasons to use Truffle console:
+Reasons to use **Truffle console**:
 
 * You have a client you're already using, such as [Ganache](/docs/ganache/using) or geth
 * You want to migrate to a testnet (or the main Ethereum network)
 * You want to use a specific mnemonic or account list
 
-Reasons to use Truffle Develop:
+Reasons to use **Truffle Develop**:
 
 * You are testing your project with no intention of immediately deploying
-* You don't need to work with specific accounts
-* You don't need or want a separate blockchain running
+* You don't need to work with specific accounts (and you're fine with using default development accounts)
+* You don't want to install and manage a separate blockchain client
 
 ## Commands
 
-All commands require that you be in the root of your project folder.
+All commands require that you be in your project folder. You do not need to be at the root.
 
 ### Console
 
