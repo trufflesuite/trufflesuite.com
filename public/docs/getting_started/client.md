@@ -22,9 +22,23 @@ This mnemonic can be changed to be randomly generated, or you can input your own
 **Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). If you send ETH to any account generated from this mnemonic, you will lose it all!
 </p>
 
+To connect to Ganache you will probably need to edit your `truffle.js` configuration to 
+```
+module.exports = {
+  networks: {
+    development: {
+      host: '127.0.0.1',
+      port: 7545,
+      network_id: '*',
+    },
+  },
+};
+```
+See [configuration](http://truffleframework.com/docs/advanced/configuration) for details.
+
 ### Truffle Develop
 
-We also recommend using Truffle Develop, a development blockchain built directly into Truffle. Truffle Develop helps you set up an integrated blockchain environment with a single command, no installation required. Run Truffle Develop by typing the following into a terminal:
+We also recommend using Truffle Develop, a development blockchain built directly into Truffle. Truffle Develop helps you set up an integrated blockchain environment with a single command, no installation (or `truffle.js` configuration) required. Run Truffle Develop by typing the following into a terminal:
 
 ```shell
 truffle develop
