@@ -46,6 +46,12 @@ networks: {
 }
 ```
 
+This is the default setting for [Ganache](/docs/ganache/using), though you can change this to use any connection you'd like.
+
+<p class="alert alert-info">
+**Note**: Read more about [setting up Ganache](/docs/ganache/using). You can also use [Truffle Develop](/docs/getting_started/console), which launches a personal blockchain for testing and is built directly into Truffle, no separate installation required.
+</p>
+
 Let's get the contracts on the network:
 
 First run `truffle compile`. This will compile the `.sol` contracts into `.json` artifacts (specified in the [`truffle-contract`](https://github.com/trufflesuite/truffle-contract) library). They will appear in `build/contracts/*.json`. Now we can include contracts in our app with a simple `import` or `require` statement:
@@ -55,7 +61,7 @@ First run `truffle compile`. This will compile the `.sol` contracts into `.json`
 import metacoin_artifacts from '../../build/contracts/MetaCoin.json'
 ```
 
-Next run `truffle migrate`. This will deploy the contracts onto the default network running at `127.0.0.1:7545`. This is the default setting for [Ganache](/docs/ganache/using), though you can change this to use any connection you'd like. 
+Next, make sure you have a blockchain running, and then run `truffle migrate`. This will deploy the contracts onto the default network running at `127.0.0.1:7545`.
 
 ### ... (webpack) build
 
