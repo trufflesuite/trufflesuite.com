@@ -13,7 +13,7 @@ Uses webpack to compile the application's frontend code and move the artifacts i
 ### Getting Started
 If you were using Truffle beta 3.0.0-9 or below, **do not immediately upgrade**. Read [these release notes](https://github.com/ConsenSys/truffle/releases/tag/v3.0.2) and the [upgrade guide](http://truffleframework.com/tutorials/upgrading-from-truffle-2-to-3) first.
 
-Once you have Truffle 3 installed, run `truffle init webpack` in an **empty** directory to pull down the webpack example for this tutorial [(repository here)](https://github.com/trufflesuite/truffle-init-webpack). If you're coming from Truffle 2, you'll notice your old friends `Metacoin.sol` and `ConvertLib.sol` are still there. But now, running `truffle build` does this:
+Once you have Truffle 3 installed, run `truffle unbox webpack` in an **empty** directory to pull down the webpack example for this tutorial [(repository here)](https://github.com/truffle-box/webpack-box). If you're coming from Truffle 2, you'll notice your old friends `Metacoin.sol` and `ConvertLib.sol` are still there. But now, running `truffle build` does this:
 ```bash
 root@b1c71a2e1a6e:/app# truffle build
 Error building:
@@ -31,7 +31,7 @@ In order to interact with contracts, we need them deployed on a network! The def
 networks: {
   development: {
     host: '127.0.0.1',
-    port: 8545,
+    port: 7545,
     network_id: '*' // Match any network id
   }
 }
@@ -39,13 +39,13 @@ networks: {
 ```
 Let's get the contracts on the network:
 
-First run `truffle compile`. This will compile the `.sol` contracts into `.json` artifacts (specified in the [`truffle-contract`](https://github.com/trufflesuite/truffle-contract) library). They will appear in `build/contracts/*.json`. Now we can include contracts in our app with a simple `import` or `require` statement:
+First run `truffle compile`. This will compile the `.sol` contracts into `.json` artifacts (specified in the [`truffle-contract`](https://github.com/trufflesuite/truffle-contract) library). They will appear in `build/contracts/*.json`. Now we can include contracts in our app with a simple `import` or `require` statement within the `app/javascripts/app.js` file:
 ```javascript
 // Import our contract artifacts and turn them into usable abstractions.
 import metacoin_artifacts from '../../build/contracts/MetaCoin.json'
 ```
 
-Next run `truffle migrate`. This will deploy the contracts onto the default network running at `127.0.0.1:8545`.
+Next run `truffle migrate`. This will deploy the contracts onto the default network running at `127.0.0.1:7545` as defined in `truffle.js`.
 
 ### ... (webpack) build
 All that's left is to use webpack to compile the app and place it in the `build/` folder. A simple `npm run build` and we're done!. Relevant configs here:
@@ -78,7 +78,7 @@ plugins: [
 You can find more information on webpack concepts on [Webpack's website](https://webpack.js.org/concepts/). Notice we didn't *have* to use webpack here. But Truffle comes with a handy webpack demo that gets us started quickly. We _could_ replace the webpack config with a `Gruntfile`, for instance, and use Grunt instead. Truffle 3 don't care no mo'.
 
 ## The App
-After building, run `truffle serve` which will serve the `build/` folder's contents on `127.0.0.1:8080`. To see it, navigate to [127.0.0.1:8080/index.html](127.0.0.1:8080/index.html). You should see:
+After building, run `npm run dev` which will serve the `build/` folder's contents on `127.0.0.1:8080`. To see it, navigate to [127.0.0.1:8080/index.html](127.0.0.1:8080/index.html). You should see:
 
 ![](/tutorials/images/MetaCoin_running.png)
 
