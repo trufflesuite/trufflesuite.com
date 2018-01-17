@@ -8,7 +8,7 @@ Solidity test contracts live alongside Javascript tests as `.sol` files. When `t
 
 ## Example
 
-Let's take a look at an example Solidity test before diving too deeply. Here's the example Solidity test provided for you by `truffle init`:
+Let's take a look at an example Solidity test before diving too deeply. Here's the example Solidity test provided for you by `truffle unbox metacoin`:
 
 ```javascript
 import "truffle/Assert.sol";
