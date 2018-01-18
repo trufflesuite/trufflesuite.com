@@ -69,6 +69,7 @@ networks: {
     // gasPrice
     // from - default address to use for any transaction Truffle makes during migrations
     // provider - web3 provider instance Truffle should use to talk to the Ethereum network.
+    //          - function that returns a web3 provider instance (see below.)
     //          - if specified, host and port are ignored.
   }
 }
@@ -83,7 +84,7 @@ For each network, if unspecified, transaction options will default to the follow
 
 For each network, you can specify either `host` / `port` or `provider`, but not both. If you need an HTTP provider, we recommend using `host` and `port`, while if you need a custom provider such as `HDWalletProvider`, you must use `provider`.
 
-#### Accessing only one of multiple network providers
+#### Managing multiple providers
 
 As seen above, your `truffle.js` file can contain multiple network configurations, but in general you will only work with a single network at a time. While you can issue a command to migrate to a single network (`truffle migrate --network live`), a minimal network connection will nevertheless be opened to every network defined with a `provider`.
 
