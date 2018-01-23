@@ -62,7 +62,7 @@ With our front-end taken care of, we can focus on the `TutorialToken` contract.
    ```javascript
    pragma solidity ^0.4.17;
 
-   import 'zeppelin-solidity/contracts/token/StandardToken.sol';
+   import 'zeppelin-solidity/contracts/token/ERC20/StandardToken.sol';
 
    contract TutorialToken is StandardToken {
 
@@ -93,7 +93,7 @@ With our front-end taken care of, we can focus on the `TutorialToken` contract.
 
    ```javascript
    function TutorialToken() public {
-     totalSupply = INITIAL_SUPPLY;
+     totalSupply_ = INITIAL_SUPPLY;
      balances[msg.sender] = INITIAL_SUPPLY;
    }
    ```
