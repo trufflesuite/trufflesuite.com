@@ -191,7 +191,7 @@ deployer.deploy(A, arg1, arg2, ...);
 // Don't deploy this contract if it has already been deployed
 deployer.deploy(A, {overwrite: false});
 
-// Set a gas price and from address for the deployment
+// Set a maximum amount of gas and `from` address for the deployment
 deployer.deploy(A, {gas: 4612388, from: "0x...."});
 
 // Deploy multiple contracts, some with arguments and some without.
@@ -215,7 +215,7 @@ deployer.deploy(SomeDependency, {overwrite: false});
 
 ### deployer.link(library, destinations)
 
-Link an already-deployed library to a contract or multiple contracts. `destinations` can be a single contract or an array of multiple contracts. If any contract within the destination doesn't rely on the library being linked, the deployer will ignore that contract.
+Link an already-deployed library to a contract or multiple contracts. `destinations` can be a single contract or an array of multiple contracts. If any contract within the destination doesn't rely on the library being linked, the contract will be ignored.
 
 Example:
 
