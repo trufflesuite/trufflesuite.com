@@ -93,7 +93,7 @@ With our front-end taken care of, we can focus on the `TutorialToken` contract.
 
    ```javascript
    function TutorialToken() public {
-     totalSupply = INITIAL_SUPPLY;
+     uint totalSupply = INITIAL_SUPPLY;
      balances[msg.sender] = INITIAL_SUPPLY;
    }
    ```
