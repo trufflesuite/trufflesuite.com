@@ -215,7 +215,7 @@ deployer.deploy(SomeDependency, {overwrite: false});
 
 ### deployer.link(library, destinations)
 
-Link an already-deployed library to a contract or multiple contracts. `destinations` can be a single contract or an array of multiple contracts. If any contract within the destination doesn't rely on the library being linked, the link function of the deployer will ignore that contract.
+Link an already-deployed library to a contract or multiple contracts. `destinations` can be a single contract or an array of multiple contracts. If any contract within the destination doesn't rely on the library being linked, the contract will be ignored.
 
 Example:
 
