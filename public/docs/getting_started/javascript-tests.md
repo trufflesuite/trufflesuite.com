@@ -6,7 +6,7 @@ Note: If you're unfamiliar with writing unit tests in Mocha, please see [Mocha's
 
 ## Use contract() instead of describe()
 
-Structurally, your tests should remain largely unchanged from that of Mocha: Your tests should exist in the `./test` directory, they should end with a `.js` extension, and they should contain code that Mocha will recognize as an automated test. What makes Truffle tests different from that of Mocha is the `contract()` function: This function works exactly like `describe()` except it enables Truffle's [clean-room features](/docs/getting_started/testing#clean-room-environment). It works like this:
+Structurally, your tests should remain largely unchanged from that of Mocha: Your tests should exist in the `./test` directory, they should end with a `.js` extension, and they should contain code that Mocha will recognize as an automated test. What makes Truffle tests different from that of Mocha is the `contract()` function: This function works almost exactly like `describe()` except it enables Truffle's [clean-room features](/docs/getting_started/testing#clean-room-environment). Additionally, the exclusivity and inclusivity modifiers `.only` and `.skip` don't work with `contract()` (but they still do with `it()` as you'd expect.) `contract()` works like this:
 
 * Before each `contract()` function is run, your contracts are redeployed to the running Ethereum client so the tests within it run with a clean contract state.
 * The `contract()` function provides a list of accounts made available by your Ethereum client which you can use to write tests.
