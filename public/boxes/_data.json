@@ -56,8 +56,14 @@
     "svelte-box": {
       "title": "svelte-box"
     },
+    "truffle-create-react-app": {
+      "title": "truffle-create-react-app"
+    },
     "truffle-next": {
       "title": "truffle-next"
+    },
+    "truffle-security": {
+      "title": "truffle-security"
     },
     "truffle-vue": {
       "title": "truffle-vue"
