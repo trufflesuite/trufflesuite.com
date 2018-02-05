@@ -243,7 +243,7 @@ deployer.then(function() {
 }).then(function(instance) {
   a = instance;
   // Get the deployed instance of B
-  return B.deployed():
+  return B.deployed();
 }).then(function(instance) {
   b = instance;
   // Set the new instance of A's address on B via B's setA() function.
