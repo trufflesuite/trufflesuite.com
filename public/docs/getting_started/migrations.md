@@ -10,7 +10,23 @@ To run your migrations, run the following:
 $ truffle migrate
 ```
 
-This will run all migrations located within your project's `migrations` directory. At their simplest, migrations are simply a set of managed deployment scripts. If your migrations were previously run successfully, `truffle migrate` will start execution from the last migration that was ran, running only newly created migrations. If no new migrations exists, `truffle migrate` won't perform any action at all. You can use the `--reset` option to run all your migrations from the beginning. For local testing make sure to have a test blockchain such as [Ganache](/ganache) installed and running before executing `migrate`.
+This will run all migrations located within your project's `migrations` directory. At their simplest, migrations are simply a set of managed deployment scripts. If your migrations were previously run successfully, `truffle migrate` will start execution from the last migration that was ran, running only newly created migrations. If no new migrations exists, `truffle migrate` won't perform any action at all. You can use the `--reset` option to run all your migrations from the beginning. For local testing make sure to have a test blockchain such as [Ganache](/ganache) installed. Follow the below steps for configuring truffle before executing `migrate`.
+1. Make sure test blockchain is up and running.
+2. Edit `truffle.js` file to export networks as follows.
+```javascript
+module.exports = {
+  networks: {
+   development: {
+   host: "localhost",
+   port: 7545, //Port for Ganache. Change the port if your test blockchain runs elsewhere
+   network_id: "*" // Match any network id
+  }
+ }
+};
+
+```
+
+
 
 ## Migration files
 
