@@ -2,7 +2,7 @@
 
 ## Location
 
-Your configuration file is called `truffle.js` and is located at the root of your project directory. This file is a Javascript file and can execute any code necessary to create your configuration. It must export an object representing your project configuration like the example below.
+Your configuration file is called `truffle.js` and is located at the root of your project directory. This file is a Javascript file. You can use any text editor to create this configuration file. It must export an object representing your project configuration like the example below.
 
 ```javascript
 module.exports = {
