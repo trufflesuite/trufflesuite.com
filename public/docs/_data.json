@@ -12,6 +12,10 @@
     "ganache": {
       "order": 3,
       "title": "Ganache"
+    },
+    "drizzle": {
+      "order": 4,
+      "title": "Drizzle"
     }
   }
 }
