@@ -50,7 +50,7 @@ Shown in the video above, this box makes use of all of Drizzle's libraries in a 
 **Help us grow this baby!** What do you want to see from Drizzle? More components? More options? To put it another way: what are you sick of doing on the front-end?
 
 <div class="row"><div class="col-xs-10 col-xs-push-1 col-sm-6 col-sm-push-3 m-b-2">
-![Final Ganache Logomark](/blog/images/drizzle-some-chaindata-on-your-ui/baby.jpg)
+![Drizzle Baby](/blog/images/drizzle-some-chaindata-on-your-ui/baby.jpg)
 </div></div>
 
 We're excited to hear your feedback and can't wait to see what you'll build! 
