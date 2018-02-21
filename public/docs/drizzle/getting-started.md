@@ -7,7 +7,7 @@ Drizzle is a collection of front-end libraries that make writing dapp frontends 
 *   Declarative, so you're not wasting valuable cycles on uneeded data.
 *   Maintains access to underlying functionality. Web3 and your contract's methods are still there, untouched.
 
-## Initialization
+## Installation
 
 Install Drizzle via npm:
 ```
