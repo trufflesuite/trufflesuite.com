@@ -1,4 +1,4 @@
-# Drizzle Some Chaindata<br/>on Your UI
+# Drizzle: Reactive Ethereum Data for Front-Ends
 
 Today we're proud to announce the addition of a new product to the Truffle Suite: Drizzle. Drizzle is a collection of front-end libraries that make writing dapp front-ends easier and more predictable.
 
