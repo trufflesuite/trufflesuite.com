@@ -1,13 +1,17 @@
 # React Integration
 
-Requires React 0.14+
-`npm install --save drizzle-react`
-
 `drizzle-react` is the official way to integrate Drizzle with your React dapp.
 
-Tired of constantly coding contract calls after your state changes? Wish you had a one-liner for knowing when your dapp is ready to use? Ethereum developers have to account for extra considerations that traditional apps don't have to worry about. Drizzle abstracts away the boilerplate of creating a dapp front-end, allowing you to focus on what makes it unique. Drizzle handles instantiating web3 and contracts, fetching accounts, and keeping all of this data in sync with the blockchain.
+Check out the [Drizzle Truffle Box](https://github.com/truffle-box/drizzle-box) for a complete example (also featuring `drizzle-react-components`), or continue reading to create your own setup.
 
-Check out the [Drizzle Truffle Box](https://github.com/truffle-box/drizzle-box) for a complete example, or continue reading to create your own setup.
+## Installation
+
+Install Drizzle React Components via npm:
+```
+npm install --save drizzle-react
+```
+
+**Note**: `drizzle-react` requires Requires React 0.14 or greater. You'll also need the `drizzle` package, if it isn't already installed.
 
 ## Getting Started
 
