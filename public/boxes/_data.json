@@ -5,6 +5,9 @@
     "title": "Truffle Boxes"
   },
   "boxes": {
+    "drizzle": {
+      "title": "drizzle"
+    },
     "react": {
       "title": "react"
     },
