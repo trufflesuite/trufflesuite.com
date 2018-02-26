@@ -38,6 +38,9 @@
     "angular-truffle-box": {
       "title": "angular-truffle-box"
     },
+    "ens-bid-truffle-box": {
+      "title": "ens-bid-truffle-box"
+    },
     "eth-vue": {
       "title": "eth-vue"
     },
