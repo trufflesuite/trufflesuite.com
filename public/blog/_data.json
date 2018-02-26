@@ -72,6 +72,12 @@
       "date": "2018-02-20",
       "author": "Josh Quintal",
       "published": true
+    },
+    "announcing-full-portable-solidity-debugger": {
+      "title": "Announcing our Full, Portable Solidity Debugger",
+      "date": "2018-02-26",
+      "author": "Tim Coulter",
+      "published": true
     }
   }
 }
