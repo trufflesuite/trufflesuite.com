@@ -19,7 +19,7 @@ If you've followed Truffle development, you're familiar with the `truffle debug`
 * Variable inspection (stack, memory _and_ storage)
 * Custom expression evaluation using Solidity variables
 
-On top of that, our new debugger is fully portable, built to integrate with any Javascript project or editor, like VSCode. Lastly, we built it to work with **any Ethereum client**, so you could debug transactions against the main Ethereum network if you so desired. 
+On top of that, our new debugger is fully portable, built to integrate with any Javascript project or editor, like Visual Studio Code. Lastly, we built it to work with **any Ethereum client**, so you could debug transactions against the main Ethereum network if you so desired. 
 
 ### How it Works
 
