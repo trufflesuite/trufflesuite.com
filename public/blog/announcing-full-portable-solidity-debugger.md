@@ -72,7 +72,7 @@ More information about how to use Truffle can be found in [our documentation](/d
 
 ### A Quick Thank You
 
-I'd like to personally thank the whole Truffle team for this effort, and particularly [Nick D'Andrea](https://twitter.com/gnidan) for turning some initial research work into a fully portable, fully featured debugger. The engineering under the hood is amazing, [I urge you to take a look](https://github.com/trufflesuite/truffle-debugger/). I'd also like to thank the community at large: It's a pleasure building the tools that make your lives easier, and your consistent feedback makes the whole endeavor worthwhile.
+I'd like to personally thank the whole Truffle team for this effort, and particularly [Nick D'Andrea](https://github.com/gnidan) for turning some initial research work into a fully portable, fully featured debugger. The engineering under the hood is amazing, [I urge you to take a look](https://github.com/trufflesuite/truffle-debugger/). I'd also like to thank the community at large: It's a pleasure building the tools that make your lives easier, and your consistent feedback makes the whole endeavor worthwhile.
 
 Thanks,
 <br/>-- Tim 
