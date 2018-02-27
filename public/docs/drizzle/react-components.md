@@ -2,6 +2,15 @@
 
 A set of useful components for common UI elements.
 
+## Installation
+
+Install Drizzle React Components via npm:
+```
+npm install --save drizzle-react-components
+```
+
+**Note**: You'll also need the `drizzle-react` package, if it isn't already installed.
+
 ## Components
 
 ### LoadingContainer

@@ -1,10 +1,20 @@
+<img style="max-width: 160px;" src="/images/suite/drizzle/drizzle-logo-choc.svg" alt="Drizzle Logo" />
+
 # Getting Started with Drizzle
 
-`npm install --save drizzle`
+Drizzle is a collection of front-end libraries that make writing dapp front-ends easier and more predictable. The core of Drizzle is based on a Redux store, so you have access to the spectacular development tools around Redux. We take care of synchronizing your contract data, transaction data and more. Things stay fast because you declare what to keep in sync.
+*   Fully reactive contract data, including state, events and transactions.
+*   Declarative, so you're not wasting valuable cycles on unneeded data.
+*   Maintains access to underlying functionality. Web3 and your contract's methods are still there, untouched.
 
-Tired of constantly coding contract calls after your state changes? Wish you had a one-liner for knowing when your dapp is ready to use? Ethereum developers have to account for extra considerations that traditional apps don't have to worry about. Drizzle abstracts away the boilerplate of creating a dapp front-end, allowing you to focus on what makes it unique. Drizzle handles instantiating web3 and contracts, fetching accounts, and keeping all of this data in sync with the blockchain.
+## Installation
 
-**Using React?**: The easiest way to get started with Drizzle is to use our [official `drizzle-react` package](https://github.com/trufflesuite/drizzle-react) and (optionally) its companion [`drizzle-react-components`](https://github.com/trufflesuite/drizzle-react-components).
+Install Drizzle via npm:
+```
+npm install --save drizzle
+```
+
+**Using React?**: The easiest way to get started with Drizzle is to use our [official `drizzle-react` package](https://github.com/trufflesuite/drizzle-react) and (optionally) its [companion `drizzle-react-components`](https://github.com/trufflesuite/drizzle-react-components).
 
 ## Initialization
 
