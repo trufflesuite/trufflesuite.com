@@ -6,7 +6,7 @@ Every one at Truffle is giddy right now.
 
 Since Truffle's inception, it's been our mission to build outstanding development tools for the Ethereum community. The analogy we always used was one of history: Ethereum development practices are years behind the rest of the industry, and it's our job to build tools that modernize our craft. Well today, Truffle's come one step closer to that goal. We're happy to announce the release of our fully featured, fully portable Solidity [debugger](/docs) and [debugging libraries](/docs). 
 
-    image or gif will live here
+![Debugger in Action](https://i.imgur.com/0j5m4KW.gif)
 
 ### What We've Built
 
