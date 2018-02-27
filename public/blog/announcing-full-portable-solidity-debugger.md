@@ -6,7 +6,7 @@ Every one at Truffle is giddy right now.
 
 Since Truffle's inception, it's been our mission to build outstanding development tools for the Ethereum community. The analogy we always used was one of history: Ethereum development practices are years behind the rest of the industry, and it's our job to build tools that modernize our craft. Well today, Truffle's come one step closer to that goal. We're happy to announce the release of our fully featured, fully portable Solidity [debugger](https://github.com/trufflesuite/truffle/releases) and [debugging libraries](https://github.com/trufflesuite/truffle-debugger/). 
 
-![Debugger in Action](https://i.imgur.com/0j5m4KW.gif)
+![Debugger in Action](https://i.imgur.com/7y80aF3.gif)
 
 ### What We've Built
 
@@ -31,7 +31,7 @@ $ truffle debug <tx hash>
 
 This will open up the debugging console which you can use to your heart's content! 
 
-    Insert another picture.
+![Debugger user interface](https://i.imgur.com/0NUTSlM.png)
 
 The above user interface gives you access to the debugger features you need to step through your contracts' code, set breakpoints, evaluate expressions and inspect Solidity variables, providing you a better sense of what your code is doing. Under the hood, our debugger is interacting with your Ethereum client to gather all the data necessary to provide this information to you in a suitable manner. For developers reading this, the debugging library stores all this data in Redux, making the data easy to manage and making the library super portable. 
 
