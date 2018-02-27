@@ -4,7 +4,7 @@ Every one at Truffle is giddy right now.
 
 ----------------
 
-Since Truffle's inception, it's been our mission to build outstanding development tools for the Ethereum community. The analogy we always used was one of history: Ethereum development practices are years behind the rest of the industry, and it's our job to build tools that modernize our craft. Well today, Truffle's come one step closer to that goal. We're happy to announce the release of our fully featured, fully portable Solidity [debugger](/docs) and [debugging libraries](/docs). 
+Since Truffle's inception, it's been our mission to build outstanding development tools for the Ethereum community. The analogy we always used was one of history: Ethereum development practices are years behind the rest of the industry, and it's our job to build tools that modernize our craft. Well today, Truffle's come one step closer to that goal. We're happy to announce the release of our fully featured, fully portable Solidity [debugger](https://github.com/trufflesuite/truffle/releases) and [debugging libraries](https://github.com/trufflesuite/truffle-debugger/). 
 
 ![Debugger in Action](https://i.imgur.com/0j5m4KW.gif)
 
@@ -35,7 +35,9 @@ This will open up the debugging console which you can use to your heart's conten
 
 The above user interface gives you access to the debugger features you need to step through your contracts' code, set breakpoints, evaluate expressions and inspect Solidity variables, providing you a better sense of what your code is doing. Under the hood, our debugger is interacting with your Ethereum client to gather all the data necessary to provide this information to you in a suitable manner. For developers reading this, the debugging library stores all this data in Redux, making the data easy to manage and making the library super portable. 
 
-Most of the work done by the debugger results in some type of mapping. The debugger gathers tons of disparate data, like the bytecode of your contracts, abstract representations of your code, instructions run during your transaction, etc., and combines them to produce information useful to the contract developer. Perhaps the debugger's most valuable property is variable inspection: Using all the data gathered, the debugger can determine which variables exist within your contract, which apply to each section of the code, and what their values are at any point in time. It can even show the values of complex data types, like structs, nested arrays and even mappings of structs. 
+Most of the work done by the debugger results in some type of mapping. The debugger gathers tons of disparate data, like the bytecode of your contracts, abstract representations of your code, instructions run during your transaction, etc., and combines them to produce information useful to the contract developer. Perhaps the debugger's most valuable property is variable inspection: Using all the data gathered, the debugger can determine which variables exist within your contract, which apply to each section of the code, and what their values are at any point in time. It can even show the values of complex data types, like structs with nested arrays. We're still filling out a few data types, but expect those in the next couple weeks.
+
+If you plan on using the `debug` command _today_, we recommend using [Truffle Develop](http://truffleframework.com/docs/getting_started/console). Truffle Develop comes with everything you need "baked in" to fully debug your contracts. Ganache and `ganache-cli` will need to be updated, so stay tuned for that in the coming days. 
 
 ### Where to Next
 
@@ -54,7 +56,8 @@ We encourage the Ethereum community to help build these tools. Our code is open 
 If you already have Truffle installed, simply run the following to get you to the latest version:
 
 ```shell
-$ npm update -g truffle
+$ npm uninstall -g truffle
+$ npm install -g truffle
 ```
 
 If you're new to Truffle, you can try it out using:
