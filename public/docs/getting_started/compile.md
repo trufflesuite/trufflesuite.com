@@ -8,7 +8,7 @@ With a bare Truffle [project](./project) (created through `truffle init`), you'r
 
 ## Command
 
-To compile a Truffle project, change to the root of the directory where the project is located and then type the following into a terminal:
+To compile a Truffle project, change to the project's contracts directory and then type the following into a terminal:
 
 ```shell
 truffle compile
