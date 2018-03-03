@@ -10,7 +10,7 @@ The core is based on a Redux store. We take care of synchronizing your contract 
   </video>
 </div><div class="container container-narrow">
 
-Drizzle's architecture is completely modular. This means you never lose access to the underlying web3 functionality you already know--drizzle as much or as little as you like. We've created two packges for use with React, but the core functionality is contained in the base `drizzle` module itself. If you're familiar with Redux, it's not a stretch to create an Angular library or use it for something other than a webapp.
+Drizzle's architecture is completely modular. This means you never lose access to the underlying web3 functionality you already know--drizzle as much or as little as you like. We've created two packages for use with React, but the core functionality is contained in the base `drizzle` module itself. If you're familiar with Redux, it's not a stretch to create an Angular library or use it for something other than a webapp.
 
 </div><div class="text-center container">
   ![Drizzle Modules](/blog/images/drizzle-some-chaindata-on-your-ui/drizzle-modules.png)
