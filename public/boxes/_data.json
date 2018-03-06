@@ -68,6 +68,9 @@
     "truffle-next": {
       "title": "truffle-next"
     },
+    "truffle-react-dapp": {
+      "title": "truffle-react-dapp"
+    },
     "truffle-react-ts-template": {
       "title": "truffle-react-ts-template"
     },
@@ -76,6 +79,9 @@
     },
     "truffle-vue": {
       "title": "truffle-vue"
+    },
+    "vue-box": {
+      "title": "vue-box"
     },
     "vue-dark-chocolate": {
       "title": "vue-dark-chocolate"

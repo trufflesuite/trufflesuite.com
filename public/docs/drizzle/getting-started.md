@@ -18,7 +18,9 @@ npm install --save drizzle
 
 ## Initialization
 
-**Note**: Since Drizzle uses web3 1.0 and web sockets, be sure your development environment can support these.
+<p class="alert alert-info m-t-2">
+<strong>Note</strong>: Since Drizzle uses web3 1.0 and web sockets, be sure your development environment can support these. If you're using Ganache, use the beta version of <code>ganache-cli</code>, <a href="https://github.com/trufflesuite/ganache-cli/releases/tag/v6.1.0-beta.0">installation instructions can be found here</a>. This also precludes the use of MetaMask (<a href="https://github.com/MetaMask/metamask-extension/issues/2350">see this issue for updates</a>).
+</p>
 
 1. Import the provider.
    ```javascript
