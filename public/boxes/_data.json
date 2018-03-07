@@ -44,6 +44,9 @@
     "eth-vue": {
       "title": "eth-vue"
     },
+    "express-box": {
+      "title": "express-box"
+    },
     "limelabs-angular-box": {
       "title": "limelabs-angular-box"
     },
