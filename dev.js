@@ -1,5 +1,5 @@
 var browserSync = require('metalsmith-browser-sync');
-var app = require("./metalsmith.js")
+var app = require("./metalsmith.js");
 
 var path = require("path");
 
@@ -11,7 +11,8 @@ app.use(browserSync({
     }
   },
   files: [
-    path.join(__dirname, './**/*')
+    path.join(__dirname, './public/**/*'),
+    path.join(__dirname, './renderers/**/*')
   ],
   port: 9000,
   open: false
