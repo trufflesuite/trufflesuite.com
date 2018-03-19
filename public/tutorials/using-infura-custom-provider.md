@@ -25,7 +25,7 @@ npm install truffle-hdwallet-provider
 
 ## Register with Infura
 
-Before you can use Infura, you need to [register for an Infura Access Token](https://infura.io/register.html).
+Before you can use Infura, you need to [register for an Infura Access Token](https://infura.io/signup).
 
 Fill out the form and you will receive your token. Your information will be sent to your email and displayed on the screen. Make sure you save this token and keep it private!
 
