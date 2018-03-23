@@ -41,6 +41,9 @@
     "ens-bid-truffle-box": {
       "title": "ens-bid-truffle-box"
     },
+    "eth-truffle-vue": {
+      "title": "eth-truffle-vue"
+    },
     "eth-vue": {
       "title": "eth-vue"
     },
