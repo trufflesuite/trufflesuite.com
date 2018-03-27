@@ -19,7 +19,7 @@ npm install --save drizzle
 ## Initialization
 
 <p class="alert alert-info m-t-2">
-<strong>Note</strong>: Since Drizzle uses web3 1.0 and web sockets, be sure your development environment can support these. As a development blockchain, you'll need `ganache-cli` v6.1.0+, `geth` or `parity`. This currently precludes the use of MetaMask (<a href="https://github.com/MetaMask/metamask-extension/issues/2350">see this issue for updates</a>).
+<strong>Note</strong>: Since Drizzle uses web3 1.0 and web sockets, be sure your development environment can support these. As a development blockchain, you'll need `ganache-cli` v6.1.0+, `geth` or `parity`.
 </p>
 
 1. Import the provider.
@@ -42,6 +42,10 @@ npm install --save drizzle
    const drizzleStore = generateStore(this.props.options)
    const drizzle = new Drizzle(this.props.options, drizzleStore)
    ```
+
+<p class="alert alert-info m-t-2">
+<strong>Note</strong>: The above assumes you have no existing redux store and generates a new one. To use your existing redux store, see [Using an Existing Redux Store](/docs/drizzle/using-an-existing-redux-store).
+</p>
 
 ## Contract Interaction
 
@@ -117,6 +121,10 @@ drizzle.contracts.SimpleStorage.methods.set(2).send({from: '0x3f...'})
       eventName
     ]
   },
+  polls: {
+    accounts: interval,
+    blocks: interval
+  },
   web3: {
     fallback: {
       type
@@ -130,6 +138,9 @@ An array of contract artifact files.
 
 ### `events` (object)
 An object consisting of contract names each containing an array of strings of the event names we'd like to listen for and sync with the store.
+
+### `polls` (object)
+An object containing key/value pairs denoting what is being polled and the interval (in ms). Possible polls are accounts and blocks. Accounts will poll for addresses and balances, blocks for new blocks. Blocks default to 3000. For example: `polls: { accounts: 1500 }`.
 
 ### `web3` (object)
 Options regarding `web3` instantiation.

@@ -3,6 +3,9 @@
 ```javascript
 {
   accounts,
+  accountBalances: {
+    address
+  }
   contracts: {
     contractName: {
       initialized,
@@ -36,6 +39,9 @@
 
 ## `accounts` (array)
 An array of account addresses from `web3`.
+
+## `accountBalances` (object)
+An object whose keys are account addresses and values are account balances (in Wei).
 
 ## `contracts` (object)
 A series of contract state objects, indexed by the contract name as declared in its ABI.

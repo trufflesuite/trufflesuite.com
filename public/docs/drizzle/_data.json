@@ -7,12 +7,16 @@
     "order": 2,
     "title": "Drizzle State"
   },
-  "react-integration": {
+  "using-an-existing-redux-store": {
     "order": 3,
+    "title": "Using an Existing Redux Store"
+  },
+  "react-integration": {
+    "order": 4,
     "title": "React Integration"
   },
   "react-components": {
-    "order": 4,
+    "order": 5,
     "title": "React Components"
   }
 }
