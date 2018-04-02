@@ -36,7 +36,7 @@ Here's an example test provided in the [MetaCoin Truffle Box](/boxes/metacoin). 
 File: `./test/metacoin.js`
 
 ```javascript
-var MetaCoin = artifacts.require("./MetaCoin.sol");
+var MetaCoin = artifacts.require("MetaCoin");
 
 contract('MetaCoin', function(accounts) {
   it("should put 10000 MetaCoin in the first account", function() {
