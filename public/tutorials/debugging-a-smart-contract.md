@@ -537,7 +537,7 @@ Once again, we can use the debugger to see where things go wrong.
    }
    ```
    
-   This code introduces two dummy events, `Odd()` and `Even()` that are trigged based on a conditional that checks whether `x` is divisible by `2`.
+   This code introduces two dummy events, `Odd()` and `Even()` that are triggered based on a conditional that checks whether `x` is divisible by `2`.
 
    But notice that we have the results flipped. If `x` is divisible by `2`, the `Odd()` event will run.
 
