@@ -212,7 +212,7 @@ Now we are ready to create our own migration script.
 1. Add the following content to the `2_deploy_contracts.js` file:
 
    ```javascript
-   var Adoption = artifacts.require("Adoption");
+   var Adoption = artifacts.require("./Adoption");
 
    module.exports = function(deployer) {
      deployer.deploy(Adoption);
