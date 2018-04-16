@@ -557,11 +557,7 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
    *MetaMask initial screen*
 
-1. In the box marked **Wallet Seed**, enter the mnemonic that is displayed in Ganache:
-
-   ```shell
-   candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
-   ```
+1. In the box marked **Wallet Seed**, enter the mnemonic that is displayed in Ganache.
 
    <p class="alert alert-danger">
    **Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). If you send ETH to any account generated from this mnemonic, you will lose it all!
@@ -571,7 +567,7 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
    ![MetaMask seed phrase](/tutorials/images/pet-shop/metamask-seed.png)
 
-   *MetaMask seed phrase*
+   *MetaMask seed phrase (for illustration purposes only)*
 
 1. Now we need to connect MetaMask to the blockchain created by Ganache. Click the menu that shows "Main Network" and select **Custom RPC**.
 
@@ -589,7 +585,7 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
 1. Click the left-pointing arrow next to "Settings" to close out of the page and return to the Accounts page.
 
-   Each account created by Truffle Develop is given 100 ether. You'll notice it's slightly less on the first account because some gas was used when the contract itself was deployed and when the tests were run.
+   Each account created by Ganache is given 100 ether. You'll notice it's slightly less on the first account because some gas was used when the contract itself was deployed and when the tests were run.
 
    ![MetaMask account configured](/tutorials/images/pet-shop/metamask-account1.png)
 
