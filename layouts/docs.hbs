@@ -42,9 +42,9 @@
 
       <div class="row row-docs-main">
         <aside class="col-md-3 docs-sidebar" id="docsSidebar">
-          <form class="mb-4 mt-4">
+          <form class="mb-4 mt-4" id="searchForm">
             <div class="input-group">
-              <input type="text" class="form-control" id="search" placeholder="Search">
+              <input type="text" class="form-control" id="searchInput" placeholder="Search">
               <div class="input-group-append">
                 <button type="submit" class="btn btn-truffle">SEARCH</button>
               </div>
@@ -125,5 +125,7 @@
     <script src="/js/vendor/prism.js"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script src="/js/docs.js"></script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="/js/docs-search.js"></script>
   </body>
 </html>

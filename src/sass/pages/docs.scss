@@ -212,3 +212,19 @@
     margin-right: .5rem;
   }
 }
+
+.docs-search-results {
+  a {
+    p {
+      color: #33262a;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      h3 {
+        text-decoration: underline;
+      }
+    }
+  }
+}

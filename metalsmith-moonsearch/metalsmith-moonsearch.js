@@ -30,7 +30,7 @@ function metalsmithMoonsearch(options) {
         // then remove all HTML tags.
         contents = contents.toString();
         var excerpt = $(contents).find('p:first').text();
-        docsResults[title].excerpt = excerpt.substring(0, excerpt.length - 1) + '...';
+        docsResults[title].excerpt = excerpt.length ? excerpt.substring(0, excerpt.length - 1) + '...' : excerpt;
         contents = $(contents).find('.docs-content').text().replace(/[\r\n]+/g,'');
     
         // Push data to docs index.
@@ -45,63 +45,67 @@ function metalsmithMoonsearch(options) {
     const fileContents = `
     var docsSearchIndex = ${JSON.stringify(docsSearchIndex)};
     var docsResults = ${JSON.stringify(docsResults)};
-
-    var idx = lunr(function() {
-      this.ref('title', { boost: 10 });
-      this.field('contents');
-
-      docsSearchIndex.forEach(function(doc) {
-        this.add(doc)
-      }, this);
-    });
-
-    var urlParams = new URLSearchParams(window.location.search);
-
-    var resultsHtml = '<div class="row result-row"><div class="col"><h3><i class="fas fa-ban"></i>&nbsp;&nbsp;<strong>No results found!</strong> Please enter a search term.</h3></div></div>';
-
-    if (urlParams.has('query')) {
-      var query = urlParams.get('query');
-      $('#searchQuery').text(query);
-      $('#searchInput').val(query);
-      var results = idx.search(query);
-      resultsHtml = '';
-      console.log(results);
-
-      for (var i = 0; i < results.length; i++) {
-        var rowHtml = \`
-        <div class="row">
-          <div class="col">
-            <a href="\${docsResults[results[i].ref].path.dhref}\${docsResults[results[i].ref].path.name}">
-              <h3>\${results[i].ref}</h3>
-              <p>\${docsResults[results[i].ref].excerpt}</p>
-            </a>
-          </div>
-        </div>
-        \`;
-  
-        resultsHtml += rowHtml;
-      }
-    }
-
-    $('#searchResults').html(resultsHtml);
-  
+    
     jQuery(function($) {
+      var idx = lunr(function() {
+        this.ref('title', { boost: 10 });
+        this.field('contents');
+
+        docsSearchIndex.forEach(function(doc) {
+          this.add(doc)
+        }, this);
+      });
+
+      var urlParams = new URLSearchParams(window.location.search);
+
+      var resultsHtml = '<div class="row result-row"><div class="col"><h3><i class="fas fa-ban"></i>&nbsp;&nbsp;<strong>No results found!</strong> Please enter a search term.</h3></div></div>';
+
+      if (urlParams.has('query')) {
+        var query = urlParams.get('query');
+        $('#searchQuery').text(query);
+        $('#searchInput').val(query);
+        var results = idx.search(query);
+        resultsHtml = '';
+        console.log(results);
+
+        for (var i = 0; i < results.length; i++) {
+          var rowHtml = \`
+          <div class="row">
+            <div class="col">
+              <a href="\${docsResults[results[i].ref].path.dhref}\${docsResults[results[i].ref].path.name}">
+                <h3>\${results[i].ref}</h3>
+                <p>\${docsResults[results[i].ref].excerpt}</p>
+              </a>
+            </div>
+          </div>
+          \`;
+    
+          resultsHtml += rowHtml;
+        }
+      }
+
+      $('#searchResults').html(resultsHtml);
+  
       $('#searchForm').submit((event) => {
         event.preventDefault();
-        window.location.href = window.location.protocol + '//' + window.location.hostname + "/search?query=" + encodeURI($('#searchInput').val());
+
+        var possiblePort = '';
+
+        if (window.location.port) {
+          possiblePort = ':' + window.location.port;
+        }
+
+        window.location.href = window.location.protocol + '//' + window.location.hostname + possiblePort + "/docs/search?query=" + encodeURI($('#searchInput').val());
       });
     });
     `;
 
     const filePath = path.join(__dirname, '..', 'build', 'js', 'docs-search.js');
 
-    fs.writeFile(filePath, fileContents, { flag: 'w' }, function(err) {
-      if (err) {
-        console.error(err);
-      }
+    files['js/docs-search.js'] = {};
+    files['js/docs-search.js'].contents = fileContents;
 
-      done();
-    });
+    done();
   };
 };
 
