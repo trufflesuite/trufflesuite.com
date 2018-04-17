@@ -11,7 +11,7 @@ var path = require('path');
 var paths = require('metalsmith-paths');
 var metadata = require('metalsmith-collections');
 var json_to_files = require('metalsmith-json-to-files');
-var simpleSearch = require("metalsmith-simple-search");
+var moonSearch = require('./metalsmith-moonsearch/metalsmith-moonsearch.js');
 
 // Data
 var blogData = require('./src/blog/data.json');
@@ -63,14 +63,6 @@ var app = Metalsmith(__dirname)
     outputStyle: 'expanded',
     outputDir: 'css/'
   }))
-  .use(simpleSearch({
-    destinationJs: 'js/simple-search.min.js',
-    destinationJson: 'docs/search.json',
-    index: {
-      title: true,
-      contents: "html"
-    },
-    match: "docs/**/*.{htm,html}"
-  }));
+  .use(moonSearch());
 
 module.exports = app;

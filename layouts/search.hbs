@@ -17,10 +17,10 @@
       <div class="row">
         <div class="col">
           <h1>SEARCH</h1>
-          <p>Results for {{ query }}</p>
-          <form class="mt-4">
+          <p>Results for "<span id="searchQuery"></span>"</p>
+          <form id="searchForm" class="mt-4">
             <div class="input-group">
-              <input type="text" class="form-control" id="search" placeholder="Search">
+              <input type="text" class="form-control" id="searchInput" placeholder="Search">
               <div class="input-group-append">
                 <button type="submit" class="btn btn-truffle">SEARCH</button>
               </div>
@@ -31,10 +31,10 @@
     </main>
 
     <main class="banner banner-light-cream pt-5 pb-5" role="main">
-      <div class="container" id="searchResults"></div>
+      <div class="container" id="searchResults">
+        <!-- Search results go here. -->
+      </div>
     </main>
-
-    {{makeGlobal "docs"}}
 
     {{> footer}}
 
@@ -42,6 +42,6 @@
     <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.slim.min.js"><\/script>')</script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/lunr/lunr.js"></script>
-    <script src="/js/search.js"></script>
+    <script src="/js/docs-search.js"></script>
   </body>
 </html>

@@ -12,6 +12,8 @@
   "devDependencies": {
     "bootstrap": "^4.0.0",
     "browser-sync": "^2.23.6",
+    "jquery": "^3.3.1",
+    "jsdom": "^11.8.0",
     "jstransformer-handlebars": "^1.1.0",
     "metalsmith": "^2.3.0",
     "metalsmith-browser-sync": "^1.1.1",
