@@ -1,0 +1,37 @@
+footer {
+  border-top: 2px solid #5e464d;
+  padding: 3rem 0;
+
+  .truffle-logo {
+    width: 5rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+  
+      a {
+        color: #fff;
+      }
+
+      .consensys-logomark {
+        height: 3rem; 
+      }
+    }
+
+  }
+
+  h4 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+  }
+
+  form {
+    text-align: right;
+  }
+}

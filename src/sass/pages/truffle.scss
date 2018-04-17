@@ -1,0 +1,31 @@
+.truffle-heading-row {
+  position: relative;
+  height: calc(100vh - 60px);
+
+  .truffle-banner-image {
+    margin-top: -12rem;
+  }
+
+  .truffle-down-arrow {
+    font-size: 2rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    line-height: .1rem;
+    margin-bottom: 2rem;
+  }  
+}
+
+.truffle-feature-row {
+  h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  img {
+    max-height: 400px;
+  }
+}

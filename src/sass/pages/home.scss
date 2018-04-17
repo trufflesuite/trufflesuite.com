@@ -1,0 +1,44 @@
+.home-heading, .home-subheading {
+  max-width: 30%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.home-subheading {
+  top: 120px;
+}
+
+.home-down-arrow {
+  font-size: 2rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  line-height: .1rem;
+  margin-bottom: 0;
+}
+
+.home-heading-row {
+  height: calc(100vh - 60px);
+  padding: 3rem 0 2rem 0;
+
+  img {
+    max-height: 100%;
+  }
+}
+
+.home-github-row {
+  h1 {
+    margin-bottom: 1rem;
+  }
+  
+  ol {
+    padding-left: 20px;
+  }
+
+  img {
+    max-height: 300px;
+  }
+}

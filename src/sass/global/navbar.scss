@@ -1,0 +1,67 @@
+.navbar {
+  font-family: 'Oswald', sans-serif;
+  background: #33262a;
+  border-bottom: 2px solid #5e464d;
+}
+
+.navbar a, .navbar-expand-md .navbar-nav .nav-link {
+  color: #fff;
+}
+
+// Left Side
+
+.navbar a.navbar-brand {
+  line-height: 2rem;
+
+  img {
+    display: block;
+    float: left;
+  }
+}
+
+.navbar-brand {
+  font-size: 1rem;
+}
+
+.navbar .suite-logo {
+  height: 2rem;
+  margin-right: .75rem;
+}
+
+// Right Side
+
+.navbar .navbar-collapse {
+  flex-grow: 0;
+  margin-left: auto;
+}
+
+// Dropdown
+
+.navbar .dropdown-menu {
+  background: #33262a;
+  border-bottom: 2px solid #5e464d;
+  border-left: 2px solid #5e464d;
+  border-radius: 0 0 .25rem .25rem;
+  border-right: 2px solid #5e464d;
+  border-top: none;
+  margin: 8.5px 0 0 -4px;
+  padding: 1rem;
+
+  a {
+    display: block;
+
+    &:hover {
+      text-decoration: none;
+      opacity: .75;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .suite-logo {
+    height: auto;
+    width: 2rem;
+  }
+}

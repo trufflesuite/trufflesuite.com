@@ -1,0 +1,47 @@
+.ganache-heading-row {
+  position: relative;
+  height: calc(100vh - 60px);
+
+  [class^="col"] {
+    margin-top: 35vh;
+    max-height: calc(50vh - 30px);
+  }
+
+  .ganache-banner-image {
+    position: absolute;
+    left: 50%;
+    top: -6rem;
+    transform: translateX(-50%);
+    max-height: 60vh;
+  }
+  
+  .ganache-down-arrow {
+    font-size: 2rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    line-height: .1rem;
+    margin-bottom: 2rem;
+  }  
+}
+
+
+.ganache-window-rule {
+  border-top: 3px solid #e4a663;
+  margin: 0 0 0 -50%;
+  width: 150vw;
+}
+
+.ganache-other-os {
+  margin-top: .5rem;
+  font-size: .75rem;
+
+  &.first {
+    text-indent: 1rem;
+  }
+}
+
+.ganache-features-h {
+  font-size: 4rem;
+}

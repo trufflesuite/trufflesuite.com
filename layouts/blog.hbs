@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Truffle Suite | Blog</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans|Oswald|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
+  </head>
+  <body>
+    {{> navbar}}
+
+    <main class="container container-heading">
+      <div class="row">
+        <div class="col">
+          <h1>TRUFFLE BLOG</h1>
+        </div>
+      </div>
+    </main>
+
+    <main class="banner banner-light-cream pt-5 pb-5" role="main">
+      <div class="container">
+        {{#each blog as |post slug|}}
+          {{#if post.image}}
+            <div class="row align-items-center post-row">
+              <div class="col-sm-3">
+                <div class="circle-image-container rounded-circle">
+                  <img src="{{ post.image }}" />
+                </div>
+              </div>
+              <div class="col-sm-9">
+                <h2>{{ post.title }}</h2>
+                <p><i class="far fa-calendar-alt"></i> {{ post.date }}&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> {{ post.author }}</p>
+                {{#if post.excerpt}}
+                  <p>{{ post.excerpt }}</p>
+                {{/if}}
+                <a class="btn btn-truffle" href="/blog/{{ slug }}">READ MORE</a>
+              </div>
+            </div>
+          {{else}}
+            <div class="row post-row">
+              <div class="col">
+                <h2>{{ post.title }}</h2>
+                <p><i class="far fa-calendar-alt"></i> {{ post.date }}&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> {{ post.author }}</p>
+                {{#if post.excerpt}}
+                  <p>{{ post.excerpt }}</p>
+                {{/if}}
+                <a class="btn btn-truffle" href="/blog/{{ slug }}">READ MORE</a>
+              </div>
+            </div>
+          {{/if}}
+        {{/each}}
+      </div>
+    </main>
+
+    {{> footer}}
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.slim.min.js"><\/script>')</script>
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>

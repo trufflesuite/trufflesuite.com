@@ -1,0 +1,26 @@
+.drizzle-heading-row {
+  position: relative;
+  height: calc(100vh - 60px);
+
+  .drizzle-banner-image {
+    margin-top: -12rem;
+  }
+
+  .drizzle-down-arrow {
+    font-size: 2rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    line-height: .1rem;
+    margin-bottom: 2rem;
+  }  
+}
+
+.drizzle-libs-list {
+  margin-bottom: 2rem;
+
+  li:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}

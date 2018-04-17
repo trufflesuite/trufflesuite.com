@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    {{#if parent-title}}
+      <title>Truffle Suite | {{ parent-title }} | {{ title }}</title>
+    {{else}}
+      <title>Truffle Suite | {{ title }}</title>
+    {{/if}}
+
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans|Oswald|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
+  </head>
+  <body>
+    {{> navbar}}
+
+    <main class="container container-heading">
+      <div class="row align-items-center">
+        <div class="col-sm">
+          <img src="/img/truffle-boxes-header.svg" alt="Truffle Boxes" title="Truffle Boxes" />
+        </div>
+
+        <div class="col-sm">
+          <h1 class="text-truffle">TRUFFLE BOXES</h1>
+          <h2>THE EASIEST WAY TO GET STARTED</h2>
+          <p>Truffle Boxes are helpful boilerplates that allow you to focus on what makes your dapp unique. In addition to Truffle, Truffle Boxes can contain other helpful modules, Solidity contracts &amp; libraries, front-end views and more; all the way up to complete example dapps.</p>
+          <a href="/docs/truffle/getting-started/truffle-boxes" class="btn btn-truffle">CREATE A BOX</a>
+        </div>
+      </div>
+    </main>
+
+    <main class="banner banner-light-cream pt-5 pb-5">
+      <div class="container" role="main">
+        <div class="row mb-5">
+          <div class="col">
+            <input type="text" class="form-control mb-3" id="boxesSearch" placeholder="Search by name or tag...">
+
+            <div class="box-radios" id="isoSort">
+              <div class="form-check">
+                <input type="radio" class="form-check-input" name="boxFilters" checked>
+                <label class="form-check-label" for="exampleCheck1">All</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" data-filter-group="tags" data-filter="official" class="form-check-input" name="boxFilters">
+                <label class="form-check-label" for="exampleCheck1">Official Only</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" data-filter-group="tags" data-filter="community" class="form-check-input" name="boxFilters">
+                <label class="form-check-label" for="exampleCheck1">Community Only</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" id="isoContainer">
+          {{#each boxes}}
+            {{#if this.official}}
+              <div class="col-4 iso-item official">
+            {{else}}
+              <div class="col-4 iso-item community">
+            {{/if}}
+              {{#if this.official}}
+                <a class="link-card" href="/boxes/{{this.displayName}}">
+              {{else}}
+                <a class="link-card" href="/boxes/{{this.repoName}}">
+              {{/if}}
+                <div class="card box-card" data-userorg="{{this.userOrg}}" data-repo="{{this.repoName}}">
+                  <img class="card-img-top" src="https://github.com/{{this.userOrg}}/{{this.repoName}}/blob/master/box-img-sm.png?raw=true" alt="{{this.slug}}" onerror="javascript:this.src='/img/boxes/loading-banner.png'" />
+
+                  <div class="card-body">
+                    {{#if this.official}}
+                      <h5 class="card-title">{{this.displayName}}</h5>
+                    {{else}}
+                      <h5 class="card-title">{{this.userOrg}}/{{this.repoName}}</h5>
+                    {{/if}}
+                    <p class="box-star-count"></p>
+                    <p class="card-text box-description"></p>
+                    <p class="card-text">
+                      {{#if this.official}}
+                        <i class="fas fa-tags"></i> <span class="box-tags">official</span>
+                      {{else}}
+                        <i class="fas fa-tags"></i> <span class="box-tags">community</span>
+                      {{/if}}
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </main>
+
+    {{> footer}}
+
+    <!--<div class="modal fade" id="createBoxModal" tabindex="-1" role="dialog" aria-labelledby="createBoxModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-6">
+                  <a class="link-card" href="/boxes/blueprint-box">
+                    <div class="card box-card">
+                      <img class="card-img-top" src="https://github.com/truffle-box/blueprint-box/blob/master/box-img-sm.png?raw=true" alt="blueprint-box" onerror="javascript:this.src='/img/boxes/loading-banner.png'" />
+
+                      <div class="card-body">
+                        <h5 class="card-title">blueprint</h5>
+                        <p class="card-text">All you need to get started making your own Truffle Box!</p>
+                        <p class="card-text">
+                          <i class="fas fa-tags"></i> official
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-sm-6">
+                  <h1>CREATE A TRUFFLE BOX</h1>
+                  <p>Anyone can create a truffle box! To get started check out our documentation and unbox the blueprint Truffle Box to have all you need to get started. All boxes undergo a screening process to ensure compatibility with Truffle. To start the pre-screening process, send us an email with your desired box name and brief description, along with a link to its GitHub repo to: <a href="mailto:info@trufflesuite.com">info@trufflesuite.com</a>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.slim.min.js"><\/script>')</script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="/js/vendor/octokit-rest.min.js"></script>
+    <script src="/js/boxes.js"></script>
+  </body>
+</html>

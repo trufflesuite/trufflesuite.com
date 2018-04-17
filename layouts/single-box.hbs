@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Truffle Suite | Boxes | {{ data.displayName }}</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans|Oswald|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
+  </head>
+  <body>
+    {{> navbar}}
+
+    <main class="container container-heading">
+      <div class="row align-items-center">
+        <div class="col-sm">
+          {{#if data.official}}
+            <h1 class="mb-0" id="boxInfo" data-userorg="{{ data.userOrg }}" data-repo="{{ data.repoName }}">{{ data.displayName }}</h1>
+          {{else}}
+            <h1 class="mb-0" id="boxInfo" data-userorg="{{ data.userOrg }}" data-repo="{{ data.repoName }}">{{ data.userOrg }}/{{ data.repoName }}</h1>
+          {{/if}}
+        </div>
+
+        {{#if data.official}}
+          <div class="col-sm text-right">
+            <span class="badge badge-primary badge-official text-truffle">
+              <img src="/img/truffle-logomark.svg" alt="Truffle Logo" /> OFFICIAL
+            </span>
+          </div>
+        {{/if}}
+      </div>
+    </main>
+
+    <main class="banner banner-light-cream">
+      <div role="main" class="container pt-6 pb-6">
+        <div class="row">
+          <div id="boxReadme" class="col-8">
+            <div class="alert alert-info">
+              <strong>Please wait</strong>: Fetching readme...
+            </div>
+          </div>
+
+          <div class="col-4">
+            <div class="card box-single-card mb-3">
+              <img class="card-img-top" src="https://github.com/{{ data.userOrg }}/{{ data.repoName }}/blob/master/box-img-lg.png?raw=true" alt="{{ data.repoName }}" onerror="javascript:this.src='/img/boxes/loading-thumb.png'" />
+
+              <div class="card-body">
+                <h5 class="card-title">TAGS</h5>
+                <p id="boxTags" class="card-text"></p>
+
+                <h5 class="card-title">CREATED</h5>
+                <p id="boxCreatedAt" class="card-text"></p>
+
+                <h5 class="card-title">UPDATED</h5>
+                <p id="boxUpdatedAt" class="card-text"></p>
+
+                <h5 class="card-title">STARS</h5>
+                <p id="boxStarCount" class="card-text"></p>
+
+                <h5 class="card-title">INSTALL</h5>
+                <p class="card-text">
+                  {{#if data.official}}
+                    <code>truffle unbox {{ data.displayName }}</code>
+                  {{else}}
+                    <code>truffle unbox {{ data.userOrg }}/{{ data.repoName }}</code>
+                  {{/if}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    {{> footer}}
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.slim.min.js"><\/script>')</script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/vendor/prism.js"></script>
+    <script src="/js/vendor/octokit-rest.min.js"></script>
+    <script src="/js/single-box.js"></script>
+  </body>
+</html>

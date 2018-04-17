@@ -1,0 +1,29 @@
+.modal {
+  color: #33262a;
+
+  .modal-content {
+    background: #e0dad7;
+
+    .modal-header {
+      border-bottom: none;
+
+      .close {
+        background: #3fe0c5;
+        color: #5e464d;
+        border-radius: .3rem;
+        padding: .45rem .8rem;
+        text-shadow: none;
+        opacity: 1;
+        margin: 0 0 -1rem auto;
+
+        &:hover {
+          background: #fff;
+        }
+      }
+    }
+
+    .modal-body {
+      padding: 1rem 1rem 0 1rem;
+    }
+  }
+}

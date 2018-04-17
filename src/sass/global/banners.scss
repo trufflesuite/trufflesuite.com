@@ -1,0 +1,40 @@
+// Colors
+
+.banner-light-cream {
+  background-color: #f8f5f0;
+  color: #5e464d;
+}
+
+.banner-milk-choc {
+  background-color: #5e464d;
+}
+
+// "Like the Taste"
+
+.banner-taste {
+  position: relative;
+  background-image: url("/img/truffle-accent.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 10rem 0;
+  margin-top: 4rem;
+
+  &.truffle {
+    background-image: url("/img/truffle-accent.svg");
+    background-position: -5% center;
+    background-size: 50%;
+    border-top: 1px solid #3fe0c5;
+  }
+
+  &.ganache {
+    background-image: url("/img/ganache-accent.svg");
+  }
+
+  &.drizzle {
+    background-image: url("/img/drizzle-accent.svg");
+    background-position: -5% center;
+    background-size: 50%;
+    border-top: 1px solid #e911bd;
+  }
+}
