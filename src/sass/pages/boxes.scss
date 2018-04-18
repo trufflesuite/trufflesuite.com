@@ -1,3 +1,9 @@
+.boxes-heading {
+  img {
+    max-height: calc(75vh - 8rem);
+  }
+}
+
 .box-radios .form-check {
   display: inline-block;
 

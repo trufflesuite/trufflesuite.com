@@ -6,7 +6,7 @@ layout: docs.hbs
 Select a member of the **Truffle Suite** to learn more.
 
 <div class="row docs-home">
-  <div class="col-4">
+  <div class="col-sm-4">
     <a class="link-card" href="/docs/truffle/overview">
       <div class="card docs-truffle-card mb-3">
         <div class="card-body">
@@ -17,7 +17,7 @@ Select a member of the **Truffle Suite** to learn more.
     </a>
   </div>
 
-  <div class="col-4">
+  <div class="col-sm-4">
     <a class="link-card" href="/docs/ganache/overview">
       <div class="card docs-ganache-card mb-3">
         <div class="card-body">
@@ -28,7 +28,7 @@ Select a member of the **Truffle Suite** to learn more.
     </a>
   </div>
 
-  <div class="col-4">
+  <div class="col-sm-4">
     <a class="link-card" href="/docs/drizzle/overview">
       <div class="card docs-drizzle-card mb-3">
         <div class="card-body">

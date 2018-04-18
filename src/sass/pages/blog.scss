@@ -1,3 +1,13 @@
-.post-row:not(:last-child) {
-  margin-bottom: 3rem;
+.post-row {
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 767.98px) {
+    .circle-image-container {
+      width: 260px;
+      padding-bottom: 260px;
+      margin: 0 auto 2rem auto;
+    }
+  }
 }

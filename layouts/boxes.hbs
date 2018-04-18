@@ -17,15 +17,15 @@
   <body>
     {{> navbar}}
 
-    <main class="container container-heading">
+    <main class="container container-heading boxes-heading">
       <div class="row align-items-center">
-        <div class="col-sm">
+        <div class="col-sm d-none d-lg-block">
           <img src="/img/truffle-boxes-header.svg" alt="Truffle Boxes" title="Truffle Boxes" />
         </div>
 
         <div class="col-sm">
           <h1 class="text-truffle">TRUFFLE BOXES</h1>
-          <h2>THE EASIEST WAY TO GET STARTED</h2>
+          <h2 class="mb-4">THE EASIEST WAY TO GET STARTED</h2>
           <p>Truffle Boxes are helpful boilerplates that allow you to focus on what makes your dapp unique. In addition to Truffle, Truffle Boxes can contain other helpful modules, Solidity contracts &amp; libraries, front-end views and more; all the way up to complete example dapps.</p>
           <a href="/docs/truffle/getting-started/truffle-boxes" class="btn btn-truffle">CREATE A BOX</a>
         </div>
@@ -58,9 +58,9 @@
         <div class="row" id="isoContainer">
           {{#each boxes}}
             {{#if this.official}}
-              <div class="col-4 iso-item official">
+              <div class="col-xs-12 col-md-6 col-lg-4 iso-item official">
             {{else}}
-              <div class="col-4 iso-item community">
+              <div class="col-xs-12 col-md-6 col-lg-4 iso-item community">
             {{/if}}
               {{#if this.official}}
                 <a class="link-card" href="/boxes/{{this.displayName}}">

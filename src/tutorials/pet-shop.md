@@ -1,6 +1,4 @@
-</div><div class="pet-shop-header">
-  ![Ethereum Pet Shop](/img/tutorials/pet-shop/petshop.png)
-</div><div class="container container-narrow">
+![Ethereum Pet Shop](/img/tutorials/pet-shop/petshop.png)
 
 This tutorial will take you through the process of building your first dapp---an adoption tracking system for a pet shop!
 
@@ -223,9 +221,7 @@ Now we are ready to create our own migration script.
      <strong>Note</strong>: Read more about Ganache in the [Truffle documentation](/docs/ganache/using).
    </p>
 
-   ![Ganache on first launch](/img/tutorials/pet-shop/ganache-initial.png)
-
-   *Ganache on first launch*
+   ![Ganache on first launch](/img/tutorials/pet-shop/ganache-initial.png "Ganache on first launch")
 
 1. Back in our terminal, migrate the contract to the blockchain.
 
@@ -258,9 +254,7 @@ Now we are ready to create our own migration script.
 
 1. In Ganache, note that the state of the blockchain has changed. The blockchain now shows that the current block, previously `0`, is now `4`. In addition, while the first account originally had 100 ether, it is now lower, due to the transaction costs of migration. We'll talk more about transaction costs later.
 
-   ![Ganache after migration](/img/tutorials/pet-shop/ganache-migrated.png)
-
-   *Ganache after migration*
+   ![Ganache after migration](/img/tutorials/pet-shop/ganache-migrated.png "Ganache after migration")
 
 You've now written your first smart contract and deployed it to a locally running blockchain. It's time to interact with our smart contract now to make sure it does what we want.
 
@@ -537,23 +531,17 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
 1. Once installed, you'll see the MetaMask fox icon next to your address bar. Click the icon and you'll see this screen appear:
 
-   ![Privacy Notice](/img/tutorials/pet-shop/metamask-privacy.png )
-
-   *Privacy Notice*
+   ![Privacy Notice](/img/tutorials/pet-shop/metamask-privacy.png "Privacy Notice")
 
 1. Click Accept to accept the Privacy Notice.
 
 1. Then you'll see the Terms of Use. Read them, scrolling to the bottom, and then click **Accept** there too.
 
-   ![Terms](/img/tutorials/pet-shop/metamask-terms.png)
-
-   *Terms of Use*
+   ![Terms](/img/tutorials/pet-shop/metamask-terms.png "Terms of Use")
 
 1. Now you'll see the initial MetaMask screen. Click **Import Existing DEN**.
 
-   ![Initial screen](/img/tutorials/pet-shop/metamask-initial.png)
-
-   *MetaMask initial screen*
+   ![Initial screen](/img/tutorials/pet-shop/metamask-initial.png "MetaMask initial screen")
 
 1. In the box marked **Wallet Seed**, enter the mnemonic that is displayed in Ganache:
 
@@ -567,21 +555,15 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
    Enter a password below that and click **OK**.
 
-   ![MetaMask seed phrase](/img/tutorials/pet-shop/metamask-seed.png)
-
-   *MetaMask seed phrase*
+   ![MetaMask seed phrase](/img/tutorials/pet-shop/metamask-seed.png "MetaMask seed phrase")
 
 1. Now we need to connect MetaMask to the blockchain created by Ganache. Click the menu that shows "Main Network" and select **Custom RPC**.
 
-   ![MetaMask network menu](/img/tutorials/pet-shop/metamask-networkmenu.png)
-
-   *MetaMask network menu*
+   ![MetaMask network menu](/img/tutorials/pet-shop/metamask-networkmenu.png "MetaMask network menu")
 
 1. In the box titled "New RPC URL" enter `http://127.0.0.1:7545` and click **Save**.
 
-   ![MetaMask Custom RPC](/img/tutorials/pet-shop/metamask-customrpc.png)
-
-   *MetaMask Custom RPC*
+   ![MetaMask Custom RPC](/img/tutorials/pet-shop/metamask-customrpc.png "MetaMask Custom RPC")
 
    The network name at the top will switch to say "Private Network".
 
@@ -589,9 +571,7 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
    Each account created by Truffle Develop is given 100 ether. You'll notice it's slightly less on the first account because some gas was used when the contract itself was deployed and when the tests were run.
 
-   ![MetaMask account configured](/img/tutorials/pet-shop/metamask-account1.png)
-
-   *MetaMask account configured*
+   ![MetaMask account configured](/img/tutorials/pet-shop/metamask-account1.png "MetaMask account configured")
 
    Configuration is now complete.
 
@@ -632,23 +612,17 @@ We can now start a local web server and use the dapp. We're using the `lite-serv
 
    The dev server will launch and automatically open a new browser tab containing your dapp.
 
-   ![Pete's Pet Shop](/img/tutorials/pet-shop/dapp.png)
-
-   *Pete's Pet Shop*
+   ![Pete's Pet Shop](/img/tutorials/pet-shop/dapp.png "Pete's Pet Shop")
 
 1. To use the dapp, click the **Adopt** button on the pet of your choice.
 
 1. You'll be automatically prompted to approve the transaction by MetaMask. Click **Submit** to approve the transaction.
 
-   ![Adoption transaction review](/img/tutorials/pet-shop/metamask-transactionconfirm.png)
-
-   *Adoption transaction review*
+   ![Adoption transaction review](/img/tutorials/pet-shop/metamask-transactionconfirm.png "Adoption transaction review")
 
 1. You'll see the button next to the adopted pet change to say "Success" and become disabled, just as we specified, because the pet has now been adopted.
 
-   ![Adoption success](/img/tutorials/pet-shop/dapp-success.png)
-
-   *Adoption success*
+   ![Adoption success](/img/tutorials/pet-shop/dapp-success.png "Adoption success")
 
    <p class="alert alert-info">
    <strong>Note</strong>: If the button doesn't automatically change to say "Success", refreshing the app in the browser should trigger it.
@@ -656,9 +630,7 @@ We can now start a local web server and use the dapp. We're using the `lite-serv
 
    And in MetaMask, you'll see the transaction listed:
 
-   ![MetaMask transaction](/img/tutorials/pet-shop/metamask-transactionsuccess.png)
-
-   *MetaMask transaction*
+   ![MetaMask transaction](/img/tutorials/pet-shop/metamask-transactionsuccess.png "MetaMask transaction")
 
    You'll also see the same transaction listed in Ganache under the "Transactions" section.
 

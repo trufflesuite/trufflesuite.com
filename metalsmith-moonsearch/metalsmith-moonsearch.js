@@ -62,25 +62,28 @@ function metalsmithMoonsearch(options) {
 
       if (urlParams.has('query')) {
         var query = urlParams.get('query');
-        $('#searchQuery').text(query);
-        $('#searchInput').val(query);
-        var results = idx.search(query);
-        resultsHtml = '';
-        console.log(results);
 
-        for (var i = 0; i < results.length; i++) {
-          var rowHtml = \`
-          <div class="row">
-            <div class="col">
-              <a href="\${docsResults[results[i].ref].path.dhref}\${docsResults[results[i].ref].path.name}">
-                <h3>\${results[i].ref}</h3>
-                <p>\${docsResults[results[i].ref].excerpt}</p>
-              </a>
+        if (query) {
+          $('#searchQuery').text(query);
+          $('#searchInput').val(query);
+          var results = idx.search(query);
+          resultsHtml = '';
+          console.log(results);
+  
+          for (var i = 0; i < results.length; i++) {
+            var rowHtml = \`
+            <div class="row">
+              <div class="col">
+                <a href="\${docsResults[results[i].ref].path.dhref}\${docsResults[results[i].ref].path.name}">
+                  <h3>\${results[i].ref}</h3>
+                  <p>\${docsResults[results[i].ref].excerpt}</p>
+                </a>
+              </div>
             </div>
-          </div>
-          \`;
-    
-          resultsHtml += rowHtml;
+            \`;
+      
+            resultsHtml += rowHtml;
+          }
         }
       }
 

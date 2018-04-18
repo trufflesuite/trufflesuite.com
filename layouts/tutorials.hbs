@@ -86,7 +86,7 @@
         <div class="row" id="isoContainer">
           {{#each tutorials as |tutorial slug|}}
             {{#if tutorial.published}}
-              <div class="col-xs-12 col-sm-6 col-md-4 iso-item {{makeSlug tutorial.author}}">
+              <div class="col-xs-12 col-md-6 col-lg-4 iso-item {{makeSlug tutorial.author}}">
                 <a class="link-card" href="/tutorials/{{ slug }}">
                   <div class="card card-tutorial {{listToClasses tutorial.products}}">
                     <div class="card-body">

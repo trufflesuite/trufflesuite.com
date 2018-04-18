@@ -26,12 +26,12 @@
         {{#each blog as |post slug|}}
           {{#if post.image}}
             <div class="row align-items-center post-row">
-              <div class="col-sm-3">
+              <div class="col-md-3">
                 <div class="circle-image-container rounded-circle">
                   <img src="{{ post.image }}" />
                 </div>
               </div>
-              <div class="col-sm-9">
+              <div class="col-md-9">
                 <h2>{{ post.title }}</h2>
                 <p><i class="far fa-calendar-alt"></i> {{ post.date }}&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> {{ post.author }}</p>
                 {{#if post.excerpt}}

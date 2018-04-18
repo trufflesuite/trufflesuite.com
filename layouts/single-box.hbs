@@ -36,15 +36,9 @@
     <main class="banner banner-light-cream">
       <div role="main" class="container pt-6 pb-6">
         <div class="row">
-          <div id="boxReadme" class="col-8">
-            <div class="alert alert-info">
-              <strong>Please wait</strong>: Fetching readme...
-            </div>
-          </div>
-
-          <div class="col-4">
-            <div class="card box-single-card mb-3">
-              <img class="card-img-top" src="https://github.com/{{ data.userOrg }}/{{ data.repoName }}/blob/master/box-img-lg.png?raw=true" alt="{{ data.repoName }}" onerror="javascript:this.src='/img/boxes/loading-thumb.png'" />
+          <div class="col-md-4 order-5">
+            <div class="card box-single-card mt-4 mt-md-0 mb-0">
+              <img class="card-img-top d-none d-md-block" src="https://github.com/{{ data.userOrg }}/{{ data.repoName }}/blob/master/box-img-lg.png?raw=true" alt="{{ data.repoName }}" onerror="javascript:this.src='/img/boxes/loading-thumb.png'" />
 
               <div class="card-body">
                 <h5 class="card-title">TAGS</h5>
@@ -68,6 +62,12 @@
                   {{/if}}
                 </p>
               </div>
+            </div>
+          </div>
+
+          <div id="boxReadme" class="col-md-8 order-1">
+            <div class="alert alert-info">
+              <strong>Please wait</strong>: Fetching readme...
             </div>
           </div>
         </div>
