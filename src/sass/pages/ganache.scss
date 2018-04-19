@@ -23,7 +23,30 @@
     transform: translateX(-50%);
     line-height: .1rem;
     margin-bottom: 2rem;
-  }  
+  }
+
+  @media (max-width: 767.98px) {
+    height: auto;
+
+    [class^="col"] {
+      margin-top: 0;
+      max-height: none;
+    }
+
+    .ganache-banner-image {
+      position: static;
+      left: auto;
+      top: auto;
+      transform: none;
+      max-height: none;
+      width: 100%;
+      margin-top: -15%;
+    }
+
+    .btn {
+      margin-top: 1rem;
+    }
+  }
 }
 
 

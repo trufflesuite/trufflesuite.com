@@ -1,9 +1,12 @@
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #33262a;
   color: #fff;
   padding-top: 60px;
   font-family: 'Open Sans', sans-serif;
-  overflow-x: hidden;
 }
 
 h1, h2, h3 {

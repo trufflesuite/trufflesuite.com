@@ -3,7 +3,15 @@
   height: calc(100vh - 60px);
 
   .truffle-banner-image {
-    margin-top: -12rem;
+    margin-top: -40%;
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      margin-top: 0;
+    }
+
+    @media (max-width: 767.98px) {
+      margin-top: -60%;
+    }
   }
 
   .truffle-down-arrow {
@@ -14,7 +22,12 @@
     transform: translateX(-50%);
     line-height: .1rem;
     margin-bottom: 2rem;
-  }  
+  }
+
+  @media (max-width: 767.98px) {
+    height: auto;
+    margin-bottom: 4rem;
+  }
 }
 
 .truffle-feature-row {
@@ -23,9 +36,15 @@
     font-weight: bold;
     font-size: 1rem;
     letter-spacing: 1px;
+    line-height: 1.5;
   }
 
   img {
     max-height: 400px;
+
+    @media (max-width: 767.98px) {
+      max-height: 260px;
+      margin-bottom: 2rem;
+    }
   }
 }

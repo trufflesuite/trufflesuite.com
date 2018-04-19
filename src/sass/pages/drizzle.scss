@@ -3,7 +3,15 @@
   height: calc(100vh - 60px);
 
   .drizzle-banner-image {
-    margin-top: -12rem;
+    margin-top: -40%;
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      margin-top: 0;
+    }
+
+    @media (max-width: 767.98px) {
+      margin-top: -60%;
+    }
   }
 
   .drizzle-down-arrow {
@@ -14,7 +22,12 @@
     transform: translateX(-50%);
     line-height: .1rem;
     margin-bottom: 2rem;
-  }  
+  }
+
+  @media (max-width: 767.98px) {
+    height: auto;
+    margin-bottom: 5rem;
+  }
 }
 
 .drizzle-libs-list {

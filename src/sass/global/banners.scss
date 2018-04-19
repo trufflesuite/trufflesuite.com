@@ -23,7 +23,7 @@
   &.truffle {
     background-image: url("/img/truffle-accent.svg");
     background-position: -5% center;
-    background-size: 50%;
+    background-size: 100vh;
     border-top: 1px solid #3fe0c5;
   }
 
@@ -34,7 +34,7 @@
   &.drizzle {
     background-image: url("/img/drizzle-accent.svg");
     background-position: -5% center;
-    background-size: 50%;
+    background-size: 80vh;
     border-top: 1px solid #e911bd;
   }
 }

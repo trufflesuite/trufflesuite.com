@@ -4,11 +4,11 @@ layout: layout.hbs
 ---
 <main role="main" class="container">
   <div class="row align-items-center truffle-heading-row">
-    <div class="col-sm">
+    <div class="col-md-6">
       <img class="truffle-banner-image" src="img/truffle-header.svg" alt="Truffle" title="Truffle" />
     </div>
 
-    <div class="col-sm">
+    <div class="col-md-6">
       <h1 class="text-truffle">TRUFFLE</h1>
       <h2>SMART CONTRACTS MADE SWEETER</h2>
       <p>Truffle is the most popular development framework for Ethereum with a mission to make your life a whole lot easier.</p>
@@ -18,7 +18,7 @@ layout: layout.hbs
       <a href="/docs/truffle/overview" class="btn btn-truffle">DOCS</a>
     </div>
 
-    <p class="truffle-down-arrow"><i class="fas fa-chevron-down"></i></p>
+    <p class="truffle-down-arrow d-none d-md-block"><i class="fas fa-chevron-down"></i></p>
   </div>
 
   <div class="row mt-5 mb-6">
@@ -28,11 +28,11 @@ layout: layout.hbs
   </div>
 
   <div class="row align-items-center truffle-feature-row mb-6">
-    <div class="col-sm">
+    <div class="col-md-6">
       <img src="img/truffle-icon-1.svg" alt="Truffle Feature" title="Truffle Feature" />
     </div>
 
-    <div class="col-sm">
+    <div class="col-md-6">
       <h4 class="text-truffle">Built-in smart contract compilation, linking, deployment and binary management</h4>
       <p>Truffle takes care of managing your contract artifacts so you don't have to. Includes support for custom deployments, library linking and complex Ethereum applications.</p>
       <a class="link-truffle" href="/docs/truffle/getting-started/compiling-contracts">Learn More</a>
@@ -44,7 +44,11 @@ layout: layout.hbs
   </div>
 
   <div class="row align-items-center truffle-feature-row mb-6">
-    <div class="col-sm">
+    <div class="col-md-6 order-md-7">
+      <img src="img/truffle-icon-2.svg" alt="Truffle Feature" title="Truffle Feature" />
+    </div>
+        
+    <div class="col-md-6 order-md-1">
       <h4 class="text-truffle">Scriptable deployment &amp; migrations framework</h4>
       <p>Write simple, manageable deployment scripts that acknowledge your application will change over time. Foster your dapp's evolution and ensure you can maintain your contracts far into the future.</p>
       <a class="link-truffle" href="/docs/truffle/getting-started/running-migrations">Learn More</a>
@@ -53,18 +57,14 @@ layout: layout.hbs
       <p>Don't manage network artifacts ever again. Let Truffle do it for you, and put your focus on dapp development where it belongs.</p>
       <a class="link-truffle" href="/docs/truffle/advanced/networks-and-app-deployment">Learn More</a>
     </div>
-
-    <div class="col-sm">
-      <img src="img/truffle-icon-2.svg" alt="Truffle Feature" title="Truffle Feature" />
-    </div>
   </div>
 
   <div class="row align-items-center truffle-feature-row mb-7">
-    <div class="col-sm">
+    <div class="col-md-6">
       <img src="img/truffle-icon-3.svg" alt="Truffle Feature" title="Truffle Feature" />
     </div>
 
-    <div class="col-sm">
+    <div class="col-md-6">
       <h4 class="text-truffle">Interactive console for direct contract communication</h4>
       <p>Use Truffle to save time and talk to your contracts via an interactive console, which includes access to all your built contracts and all available Truffle commands.</p>
       <a class="link-truffle" href="/docs/truffle/getting-started/using-truffle-develop-and-the-console">Learn More</a>
@@ -77,11 +77,13 @@ layout: layout.hbs
 </main>
 
 <div class="banner-taste truffle">
-  <div class="row">
-    <div class="col text-center">
-      <h1 class="text-truffle">Like the taste?</h1>
-      <h2>The recipe is open source!</h2>
-      <p>The full source code of Truffle is on GitHub! We welcome all contributions and feature suggestions.</p>
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <h1 class="text-truffle">Like the taste?</h1>
+        <h2>The recipe is open source!</h2>
+        <p>The full source code of Truffle is on GitHub! We welcome all contributions and feature suggestions.</p>
+      </div>
     </div>
   </div>
 </div>
