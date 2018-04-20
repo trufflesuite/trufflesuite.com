@@ -114,6 +114,12 @@
       "date": "2017-10-23",
       "author": "Mike Pumphrey",
       "published": true
+    },
+    "debugger-variable-level-inspection": {
+      "title": "Variable-level inspection: Going deeper with the Truffle Solidity debugger",
+      "date": "2018-05-01",
+      "author": "Mike Pumphrey",
+      "published": true
     }
   }
 }
