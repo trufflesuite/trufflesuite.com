@@ -7,3 +7,15 @@
     box-shadow: 0 0 0 0.2rem rgba(63, 224, 197, 0.5);
   }
 }
+
+.bd-dark-cream {
+  .form-control {
+    background-color: #f8f5f0;
+    border: none;
+  
+    &:focus {
+      border-color: #3fe0c5;
+      box-shadow: 0 0 0 0.2rem rgba(63, 224, 197, 0.5);
+    }
+  }
+}

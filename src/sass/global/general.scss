@@ -46,9 +46,14 @@ code {
       color: #5e464d;
       text-decoration: none;
 
-      i {
+      a {
         opacity: 1;
       }
+    }
+
+    a {
+      transition: opacity .125s ease-in-out;
+      opacity: 0;
     }
 
     i {
@@ -63,9 +68,16 @@ code {
       color: #5e464d;
       border-radius: 1em;
       font-size: .33em;
-      transition: opacity .125s ease-in-out;
-      opacity: 0;
     }
+  }
+}
+
+.home-down-arrow,
+.truffle-down-arrow,
+.ganache-down-arrow,
+.drizzle-down-arrow {
+  &:hover {
+    cursor: pointer;
   }
 }
 

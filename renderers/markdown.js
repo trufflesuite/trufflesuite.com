@@ -5,10 +5,9 @@ renderer.heading = function (text, level) {
   var escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
 
   return `
-    <h${level}>
-      <a class="link-markdown" href="#${escapedText}" name="${escapedText}">
-        <i class="fas fa-link"></i> ${text}
-      </a>
+    <h${level} class="link-markdown">
+      <a href="#${escapedText}" name="${escapedText}"><i class="fas fa-link"></i></a>
+      ${text}
     </h${level}>
   `;
 };

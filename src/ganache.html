@@ -24,10 +24,10 @@ layout: layout.hbs
       <p class="ganache-other-os first"><a href="https://github.com/trufflesuite/ganache/releases">Need another OS download?</a></p>
     </div>
 
-    <p class="ganache-down-arrow d-none d-md-block"><i class="fas fa-chevron-down"></i></p>
+    <p class="ganache-down-arrow d-none d-md-block" id="headerArrow"><i class="fas fa-chevron-down"></i></p>
   </div>
 
-  <div class="row row-ganache-window">
+  <div class="row row-ganache-window" id="contentBegins">
     <div class="col text-center">
       <h1 class="text-ganache ganache-features-h mb-5 mt-5 mt-md-7">Features</h1>
       <img class="img-fluid" src="img/ganache-window.png" alt="Ganache" title="Ganache" />
@@ -96,4 +96,5 @@ layout: layout.hbs
   crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-slim.min.js"><\/script>')</script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/scroll-arrow.js"></script>
 <script src="js/os-detector.js"></script>
