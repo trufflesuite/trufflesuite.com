@@ -86,6 +86,9 @@
     "truffle-security": {
       "title": "truffle-security"
     },
+    "truffle-starter": {
+      "title": "truffle-starter"
+    },
     "truffle-vue": {
       "title": "truffle-vue"
     },
