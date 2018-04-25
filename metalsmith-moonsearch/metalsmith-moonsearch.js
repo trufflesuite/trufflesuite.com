@@ -56,33 +56,36 @@ function metalsmithMoonsearch(options) {
         }, this);
       });
 
-      var urlParams = new URLSearchParams(window.location.search);
+      var urlParams = window.location.search;
 
-      var resultsHtml = '<div class="row result-row"><div class="col"><h3><i class="fas fa-ban"></i>&nbsp;&nbsp;<strong>No results found!</strong> Please enter a search term.</h3></div></div>';
+      var resultsHtml = '<div class="row result-row"><div class="col"><h3><i class="fas fa-ban"></i>&nbsp;&nbsp;<strong>No results found!</strong> Please try another search.</h3></div></div>';
 
-      if (urlParams.has('query')) {
-        var query = urlParams.get('query');
+      if (urlParams.length) {
+        var queryStringElements = urlParams.split('=');
+        var query = queryStringElements[queryStringElements.length - 1];
 
         if (query) {
           $('#searchQuery').text(query);
           $('#searchInput').val(query);
           var results = idx.search(query);
-          resultsHtml = '';
-          console.log(results);
+
+          if (results.length) {
+            resultsHtml = '';
   
-          for (var i = 0; i < results.length; i++) {
-            var rowHtml = \`
-            <div class="row">
-              <div class="col">
-                <a href="\${docsResults[results[i].ref].path.dhref}\${docsResults[results[i].ref].path.name}">
-                  <h3>\${results[i].ref}</h3>
-                  <p>\${docsResults[results[i].ref].excerpt}</p>
-                </a>
+            for (var i = 0; i < results.length; i++) {
+              var rowHtml = \`
+              <div class="row">
+                <div class="col">
+                  <a href="\${docsResults[results[i].ref].path.dhref}\${docsResults[results[i].ref].path.name}">
+                    <h3>\${results[i].ref}</h3>
+                    <p>\${docsResults[results[i].ref].excerpt}</p>
+                  </a>
+                </div>
               </div>
-            </div>
-            \`;
-      
-            resultsHtml += rowHtml;
+              \`;
+        
+              resultsHtml += rowHtml;
+            }
           }
         }
       }

@@ -37,6 +37,7 @@
 .home-heading-row {
   height: calc(100vh - 60px);
   padding: 3rem 0 2rem 0;
+  flex-wrap: nowrap;
 
   img {
     max-height: 100%;

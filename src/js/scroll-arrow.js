@@ -1,9 +1,9 @@
 $(function() {
-  $('#headerArrow').click(function(event) {
-    window.scroll({
-      top: $('#contentBegins').offset().top - 60,
-      left: 0, 
-      behavior: 'smooth' 
+  $(document).on('click', '#headerArrow', function(event) {
+    console.log('edge still sucks ass, just like IE!');
+
+    $('html,body').animate({
+      scrollTop: $('#contentBegins').offset().top - 60
     });
   });
 });
