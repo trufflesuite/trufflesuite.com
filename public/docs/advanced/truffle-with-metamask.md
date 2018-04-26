@@ -58,14 +58,10 @@ To use Ganache with MetaMask, click the MetaMask icon in your browser and this s
 
 *MetaMask initial screen*
 
-Click **Import Existing DEN**. In the box marked **Wallet Seed**, enter the mnemonic that was displayed when launching Ganache. While this can be changed in the Settings, the default is:
-
-```shell
-candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
-```
+Click **Import Existing DEN**. In the box marked **Wallet Seed**, enter the mnemonic that was displayed when launching Ganache.
 
 <p class="alert alert-danger">
-**Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). If you send ETH to any account generated from this mnemonic, you will lose it all!
+**Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). Make sure that you set the network to "Private Network" (use the "Custom RPC" setting). See below for details.
 </p>
 
 Enter a password below that and click **OK**.
@@ -86,7 +82,7 @@ In the box titled "New RPC URL" enter `http://127.0.0.1:7545` and click **Save**
 
 The network name at the top will switch to say "Private Network". Click the left-pointing arrow next to "Settings" to close out of the page and return to the Accounts page.
 
-Now that we've connected MetaMask to Ganache, you'll be take to the accounts screen. Each account created by Ganache is given 100 ether. The first account should have less than the others because that account supplies the gas for smart contract deployment. Since you've deployed your smart contract to the network, this account paid for it.
+Now that we've connected MetaMask to Ganache, you'll be taken to the accounts screen. Each account created by Ganache is given 100 ether. The first account should have less than the others because that account supplies the gas for smart contract deployment. Since you've deployed your smart contract to the network, this account paid for it.
 
 Click the account icon in the upper-right to create new accounts, the first 10 of which will correspond to the 10 accounts displayed when you launched Ganache.
 
@@ -102,10 +98,7 @@ Truffle Develop is a command-line application that runs a temporary blockchain t
 **Note**: We recommend specifying `127.0.0.1` instead of `localhost` because the address does not require a network connection and so is more suitable for development.
 </p>
 
-Using MetaMask with Truffle Develop is very similar to that of Ganache. There are only a few notable differences:
-
-* The mnemonic is always `candy maple cake sugar pudding cream honey rich smooth crumble sweet treat` and can't be changed.
-* Truffle Develop runs by default on `127.0.0.1:9545`, so you'll want to edit the above web3 code to say:
+Using MetaMask with Truffle Develop is very similar to that of Ganache. The only difference is that Truffle Develop runs by default on `127.0.0.1:9545`, so you'll want to edit the above web3 code to say:
 
   ```javascript
   // Is there is an injected web3 instance?
@@ -119,13 +112,11 @@ Using MetaMask with Truffle Develop is very similar to that of Ganache. There ar
   }
   ```
 
-* In MetaMask, when entering the "New RPC URL", enter `http://127.0.0.1:9545`.
+In MetaMask, when entering the "New RPC URL", enter `http://127.0.0.1:9545`.
 
 ## Using MetaMask with Ganache CLI
 
-Using MetaMask with Ganache CLI is also very similar to that of Ganache. There are only a few notable differences:
-
-* Ganache CLI runs by default on `http://127.0.0.1:8545` so you'll want to edit the above web3 code to say:
+Using MetaMask with Ganache CLI is also very similar to that of Ganache. The only difference is that Ganache CLI runs by default on `http://127.0.0.1:8545` so you'll want to edit the above web3 code to say:
 
   ```javascript
   // Is there is an injected web3 instance?
@@ -139,4 +130,4 @@ Using MetaMask with Ganache CLI is also very similar to that of Ganache. There a
   }
   ```
 
-* In MetaMask, when entering the "New RPC URL", enter `http://127.0.0.1:8545`.
+In MetaMask, when entering the "New RPC URL", enter `http://127.0.0.1:8545`.
