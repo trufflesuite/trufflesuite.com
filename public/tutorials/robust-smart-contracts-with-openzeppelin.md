@@ -6,7 +6,7 @@ Smart contracts deployed to the Ethereum mainnet can deal with real money, so ha
 
 [Zeppelin Solutions](https://zeppelin.solutions/), a smart contract auditing service, has recognized this need. Using their experience, they've put together a set of vetted smart contracts called [OpenZeppelin](https://openzeppelin.org/).
 
-We can use and extend these contracts to create more secure dapps in less time. OpenZeppelin comes with a wide array of smart contracts for various important functions ([see them all here](https://github.com/OpenZeppelin/zeppelin-solidity)), but today we'll be focusing on their token contracts. Specifically, we'll be extending their `StandardToken.sol` contract to create our own [ERC20](https://theethereum.wiki/w/index.php/ERC20_Token_Standard)-compliant token.
+We can use and extend these contracts to create more secure dapps in less time. OpenZeppelin comes with a wide array of smart contracts for various important functions ([see them all here](https://github.com/OpenZeppelin/openzeppelin-solidity)), but today we'll be focusing on their token contracts. Specifically, we'll be extending their `StandardToken.sol` contract to create our own [ERC20](https://theethereum.wiki/w/index.php/ERC20_Token_Standard)-compliant token.
 
 
 ## Requirements
@@ -50,7 +50,7 @@ In this tutorial, we are focusing on smart contract creation. To that end, we've
 1. Next, we'll install OpenZeppelin. The most recent version of OpenZeppelin can be found as an npm package.
 
    ```shell
-   npm install zeppelin-solidity
+   npm install openzeppelin-solidity
    ```
 
 ## Creating the "TutorialToken" smart contract
@@ -62,7 +62,7 @@ With our front-end taken care of, we can focus on the `TutorialToken` contract.
    ```javascript
    pragma solidity ^0.4.17;
 
-   import 'zeppelin-solidity/contracts/token/ERC20/StandardToken.sol';
+   import 'openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol';
 
    contract TutorialToken is StandardToken {
 
