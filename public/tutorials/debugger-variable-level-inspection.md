@@ -1,12 +1,12 @@
 # Variable-level inspection: Going deeper with the Truffle Solidity debugger
 
 <p class="alert alert-info">
-  <strong>Note</strong>: This tutorial requires Truffle version 4.1 or newer.
+  <strong>Note</strong>: This tutorial requires Truffle version 4.1.8 or newer.
 </p>
 
 The integrated Solidity debugger in Truffle is a powerful tool for inspecting your contracts. 
 
-When initially released, the debugger had the ability to inspect the current THING, but could not get more granular than that. VERIFY THIS.
+When initially released, the debugger had the ability to to step through solidity code, but that was it.
 
 But development has continued apace, and new functionality has been added to make your contract inspection more powerful. Specifically, **you now have the ability to do variable-level inspection on your contracts**. With this, you can know exactly the state of your variables at every given point in the instruction list, giving you a much greater ability to truly inhabit the current state of your contracts, and making debugging a breeze.
 
@@ -22,9 +22,11 @@ The Fibonacci sequence is an integer sequence where each successive number in th
 
 With the first two numbers set to 1, you can determine every number in the sequence through iteration.
 
-The Fibonacci sequence is found in certain areas of nature, such as governing the the arrangement of leaves on branches. It's related to the "golden ratio", which shows up IN ALL SORTS OF PLACES.
+The Fibonacci sequence is related to the "golden ratio", which is found in certain areas of nature, such as governing the the arrangement of leaves on branches and petals on flowers.
 
-IMAGE
+![Golden ratio](/tutorials/images/debugger-variable/flower-golden-ratio.jpg)
+
+*The golden ratio in nature: flower petals. (Source: [Flickr](https://flic.kr/p/ybkmLC))*
 
 Generating the Fibonacci sequence with a smart contract can show off the debugger and its variable-level inspection without getting too bogged down in details. Let's do it.
 
@@ -73,7 +75,7 @@ Generating the Fibonacci sequence with a smart contract can show off the debugge
    * The contract name is called `Fibonacci`.
    * We're defining an array of integers called `fibseries`. This will house our Fibonacci series. Note that the variable declaration is happening *outside* of any function, and therefore the array will be saved in storage (instead of memory), provoking a transaction to occur when the contract is run.
    * The function is called `generateFib` and takes a single argument, which is the number of integers in the sequence to generate.
-   * The next two commands add an element each to the array via the `.push()` METHOD. DETAILS ABOUT WHY PUSH. This starts the sequence with the number 1 twice.
+   * The next two commands add an element each to the array via the `.push()` method. As we our `fibseries` array is defined in storage, but isn't size isn't known until runtime, the `.push()` method is used to add entries to (the end of) our array. This starts the sequence with the number 1 twice.
    * The for loop iterates through the rest of the array (as determined by the integer `n`) filling each entry with the appropriate value.
 
 1. Inside the `migrations/` directory of your project, create a file called `2_deploy_contracts.js` and populate it with the following content:
@@ -90,7 +92,9 @@ Generating the Fibonacci sequence with a smart contract can show off the debugge
 
 1. Now launch [Ganache](/ganache). This will be the personal blockchain we'll use to deploy our contract.
 
-   IMAGE
+   ![Ganache](/tutorials/images/debugger-variable/debugvar-ganache-initial.png)
+
+   *Ganache*
 
    <p class="alert alert-info">
      <strong>Note</strong>: You can also run this tutorial with `truffle develop` and the results will be the same.
@@ -176,7 +180,9 @@ Generating the Fibonacci sequence with a smart contract can show off the debugge
 
 Our contract is now on the blockchain. Ganache has automatically mined the transactions that came from the contract call and creation, as you can see by clicking the "Transactions" button in Ganache:
 
-IMAGE
+![Ganache transactions](/tutorials/images/debugger-variable/debugvar-ganache-transactions.png)
+
+*Ganache transactions*
 
 Now it's time to interact with the contract. First we'll check to make sure that it's working correctly.
 
@@ -358,16 +364,14 @@ You can debug a transaction in the Truffle console by typing `debug <transaction
 1. You can also watch expressions, not just variables. Run the following expression to make our output a little more compact.
 
    ```shell
-   +:'i='+i+', fibseries=['+fibseries+']'
+   +:{ i, fibseries }
    ```
 
    This will output as follows:
 
    ```
-   'i=0, fibseries=[]'
+   { i: 0, fibseries: [] }
    ```
-
-   CAN WE NAME THIS SOME OTHER VARIABLE?
 
 1. Since we have all we need in this one expression, we can unwatch the individual variables. The syntax to watch a variable is `-:<variable>`.
 
@@ -381,20 +385,32 @@ You can debug a transaction in the Truffle console by typing `debug <transaction
 1. Press `Enter` to move to the next instruction and see the output:
 
    ```
-   SOME OUTPUT
-   ```
+   Fibonacci.sol:
 
-1. Because the debugger steps through each instruction one at a time, it's going to take a long time to see results if we don't pick 
-up our pace. Luckily, the debugger can "step over", thus skipping SOME STEPS, and making progress much more quickly. So type `o` to step over the current instruction set. The output will be:
-
-   ```
-   10:     //set 1st and 2nd entries
+   10:     // set 1st and 2nd entries to 1
    11:     fibseries.push(1);
    12:     fibseries.push(1);
            ^^^^^^^^^
 
-   :'i='+i+', fibseries=['+fibseries+']'
-     'i=0, fibseries=[1]'
+   :{ i, fibseries }
+     { i: 0, fibseries: [ 1 ] }
+
+   debug(development:0xf47f01da...)>
+   ```
+
+1. Because the debugger steps through each instruction one at a time, it's going to take a long time to see results if we don't pick 
+up our pace. Luckily, the debugger can "step over", which steps over the current line, moving to the next line, as long as it's at the same function depth. This will allow us to make progress much more quickly. So type `o` to step over the current instruction set. The output will be:
+
+   ```
+   Fibonacci.sol:
+
+   13:
+   14:     // generate subsequent entries
+   15:     for (uint i=2; i < n ; i++) {
+                       ^
+
+   :{ i, fibseries }
+     { i: 0, fibseries: [ 1, 1 ] }
    ```
 
    Here we see that we have populated the first entry in the sequence.
@@ -402,13 +418,15 @@ up our pace. Luckily, the debugger can "step over", thus skipping SOME STEPS, an
 1. Since `Enter` will replay the previous command, press `Enter` now to step over again:
 
    ```
-   13:
-   14:     //iterate i from 2 to n-1, set array[i] = array[i-1] + array [i-2]
-   15:     for (uint i=2; i < n ; i++) {
-                       ^
+   Fibonacci.sol:
 
-   :'i='+i+', fibseries=['+fibseries+']'
-     'i=0, fibseries=[1,1]'
+   14:     // generate subsequent entries
+   15:     for (uint i=2; i < n ; i++) {
+   16:       fibseries.push(fibseries[i-1] + fibseries[i-2]);
+             ^^^^^^^^^
+
+   :{ i, fibseries }
+     { i: 2, fibseries: [ 1, 1 ] }
    ```
 
    Now we have two entries in our sequence, and we're ready to move on to our for loop.
@@ -429,20 +447,20 @@ Our contract as we have created it is working as expected. That's great, but we 
 It's amazing what switching a plus sign for a minus sign can do. Instead of the Fibonacci sequence:
 
 ```
-F1 = 1
-F2 = 1
-Fn = Fn-1 + Fn-2
+F[1] = 1
+F[2] = 1
+F[n] = F[n-1] + F[n-2]
 ```
 
 Let's switch the plus for a minus sign:
 
 ```
-F1 = 1
-F2 = 1
-Fn = Fn-1 - Fn-2
+F[1] = 1
+F[2] = 1
+F[n] = F[n-1] - F[n-2]
 ```
 
-(I don't know if this series has a name, so we'll just call it the Trufflenacci sequence.)
+(I don't know if this series has a name, so we'll just call it the "Trufflenacci" sequence.)
 
 Let's edit our contract and see what happens.
 
@@ -596,18 +614,22 @@ So we're going to introduce a small error, a misnumbering in our for loop that w
 
 1. Go back in Ganache and click the "Logs" link at the top:
 
-   IMAGE
+   ![Ganache logs button](/tutorials/images/debugger-variable/debugvar-ganache-logsbutton.png)
+
+   *Click this button to open the logs*
 
 1. At the very bottom of the logs displayed, you will see a transaction ID listed near an error saying `invalid opcode`. This is the one we need. Copy this transaction ID.
 
-   IMAGE
+   ![Ganache logs](/tutorials/images/debugger-variable/debugvar-ganache-logs.png)
+
+   *Ganache logs*
 
 1. Back in the console, type `debug` and paste in the transaction ID. This will enter the debugger again.
 
 1. Let's watch the same compacted expression as before, showing both the value of `i` and the value of `fibseries`.
 
    ```shell
-   +:'i='+i+', fibseries=['+fibseries+']'
+   +:{ i, fibseries }
    ```
 
 1. Continually step next. You will eventually reach a state where the debugger will error out.
@@ -619,9 +641,8 @@ So we're going to introduce a small error, a misnumbering in our for loop that w
    16:     for (uint i=1; i < n ; i++) {
    17:       fibseries.push(fibseries[i-1] + fibseries[i-2]);
                                              ^^^^^^^^^^^^^^
-
-   :'i='+i+', fibseries=['+fibseries+']'
-     'i=1, fibseries=[1,1]'
+   :{ i, fibseries }
+     { i: 1, fibseries: [ 1, 1 ] }
 
    debug(development:0x11804603...)> v
 
@@ -636,6 +657,6 @@ So we're going to introduce a small error, a misnumbering in our for loop that w
    This is likely due to an intentional halting expression, like assert(), require() or revert(). It can also be due to out-of-gas exceptions. Please inspect your transaction parameters and contract code to determine the meaning of this error.
    ```
 
-   Note that the contract is failing at the point where it tries to determine the value of `fibseries[i-2]` But in our debugger, wo know that the current value of `i` is `1`, so `i-2` is going to be `-1` (or `255` as we saw on in the previous example). Since either one of those values are invalid (you can't have a negative index, and the value at index 255 is clearly not defined), the contract halts with an error.
+   Note that the contract is failing at the point where it tries to determine the value of `fibseries[i-2]` But in our debugger, wo know that the current value of `i` is `1`, so `i-2` is going to be `-1` (or actually 2^256 - 1, due to the buffer underflow issue we talked about above, and with `i` being defined as a uint). Since either one of those values are invalid (you can't have a negative index, and the value at index 2^256-1 is clearly not defined), the contract halts with an error.
 
 These are just some of the ways that you can use variable-level inspection to debug your contracts. We're constantly adding to the functionality of the debugger, so please [raise an issue on our Github page](https://github.com/trufflesuite/truffle) or ask in our [Gitter channel](https://gitter.im/ConsenSys/truffle). Happy debugging!
