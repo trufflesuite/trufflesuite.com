@@ -3,7 +3,7 @@
     "order" : 1,
     "title": "Installation"
   },
-  "project": {
+  "quickstart": {
     "order" : 2,
     "title": "Quickstart"
   },
