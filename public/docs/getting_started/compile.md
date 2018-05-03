@@ -28,7 +28,7 @@ You can declare contract dependencies using Solidity's [import](http://solidity.
 
 ### Importing dependencies via file name
 
-To import contracts from a separate file, add the following code to your Solidity source file::
+To import contracts from a separate file, add the following code to your Solidity source file:
 
 ```
 import "./AnotherContract.sol";
