@@ -6,7 +6,7 @@ This page will take you through the basics of creating a Truffle project and dep
 
 To use most Truffle commands, you need to run them against an existing Truffle project. So the first step is to create a Truffle project.
 
-You can create a bare project template, but for those just getting started, you can use [Truffle Boxes](/boxes), which are example applications and project templates. We'll use the [MetaCoin box](/boxes/metacoin), which creates a token that can be transferred between accounts:
+You can create a bare project template, but for those just getting started, you can use [Truffle Boxes](/boxes), which are example applications and project templates. We'll use the [MetaCoin box](/boxes/metacoin), which creates an [ERC20-style token](https://en.wikipedia.org/wiki/ERC20):
 
 1. Create a new directory for your Truffle project:
 
