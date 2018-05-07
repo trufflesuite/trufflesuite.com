@@ -2,6 +2,10 @@
 
 This page will take you through the basics of creating a Truffle project and deploying a smart contract to a blockchain.
 
+<p class="alert alert-info">
+<strong>Note</strong>: Before you begin, make sure that you read our [Ethereum Overview](/tutorials/ethereum-overview) page.
+</p>
+
 ## Creating a project
 
 To use most Truffle commands, you need to run them against an existing Truffle project. So the first step is to create a Truffle project.
