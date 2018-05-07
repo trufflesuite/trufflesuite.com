@@ -6,6 +6,17 @@ This page will take you through the basics of creating a Truffle project and dep
 <strong>Note</strong>: Before you begin, make sure that you read our [Ethereum Overview](/tutorials/ethereum-overview) page.
 </p>
 
+## Table of Contents
+
+1. [Creating a project](#creating-a-project)
+1. [Exploring the project](#exploring-the-project)
+1. [Testing](#testing)
+1. [Compiling](#compiling)
+1. [Migrating with Truffle Develop](#migrating-with-truffle-develop)
+1. [Alternative: Migrating with Ganache](#alternative-migrating-with-ganache)
+1. [Interacting with the contract](#interacting-with-the-contract)
+
+
 ## Creating a project
 
 To use most Truffle commands, you need to run them against an existing Truffle project. So the first step is to create a Truffle project.
