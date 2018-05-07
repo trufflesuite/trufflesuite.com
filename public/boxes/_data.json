@@ -89,6 +89,9 @@
     "truffle-starter": {
       "title": "truffle-starter"
     },
+    "truffle-ts-percel-box": {
+      "title": "truffle-ts-percel-box"
+    },
     "truffle-vue": {
       "title": "truffle-vue"
     },
