@@ -81,13 +81,12 @@ Once this operation is completed, you'll now have a project structure with the f
 
    You will see the following output
 
-   ```
-     Contract: MetaCoin
-       √ should put 10000 MetaCoin in the first account
-       √ should call a function that depends on a linked library (40ms)
-       √ should send coin correctly (129ms)
+    ```
+     TestMetacoin
+       √ testInitialBalanceUsingDeployedContract (71ms)
+       √ testInitialBalanceWithNewMetaCoin (59ms)
 
-     3 passing (255ms)
+     2 passing (794ms)
    ```
 
    <p class="alert alert-info">
@@ -105,11 +104,12 @@ Once this operation is completed, you'll now have a project structure with the f
    You will see the following output
 
    ```
-     TestMetacoin
-       √ testInitialBalanceUsingDeployedContract (71ms)
-       √ testInitialBalanceWithNewMetaCoin (59ms)
+     Contract: MetaCoin
+       √ should put 10000 MetaCoin in the first account
+       √ should call a function that depends on a linked library (40ms)
+       √ should send coin correctly (129ms)
 
-     2 passing (794ms)
+     3 passing (255ms)
    ```
 
 ## Compiling
