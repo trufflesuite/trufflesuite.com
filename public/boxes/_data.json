@@ -41,6 +41,9 @@
     "ens-bid-truffle-box": {
       "title": "ens-bid-truffle-box"
     },
+    "etherplate": {
+      "title": "etherplate"
+    },
     "eth-truffle-vue": {
       "title": "eth-truffle-vue"
     },
@@ -79,6 +82,9 @@
     },
     "truffle-react-dapp": {
       "title": "truffle-react-dapp"
+    },
+    "truffle-react-redux": {
+      "title": "truffle-react-redux"
     },
     "truffle-react-ts-template": {
       "title": "truffle-react-ts-template"
