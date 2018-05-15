@@ -59,6 +59,10 @@
     color: #fff;
     transition: all .125s ease-in-out;
 
+    .groovy-logo {
+      display: none;
+    }
+    
     &.groovy {
       background: radial-gradient(#3fe0c5, #e4a663, #e911bd);
       background-size: 600%;
@@ -83,6 +87,14 @@
       @keyframes GroovyGradient { 
         0%{background-size:600%}
         100%{background-size:100%}
+      }
+
+      .groovy-logo {
+        display: inline-block;
+      }
+
+      #LetsGetGroovy {
+        display: none;
       }
 
       h1 {
