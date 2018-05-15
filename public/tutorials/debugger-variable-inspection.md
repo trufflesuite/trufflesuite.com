@@ -75,7 +75,7 @@ Generating the Fibonacci sequence with a smart contract can show off the debugge
    * The contract name is called `Fibonacci`.
    * We're defining an array of integers called `fibseries`. This will house our Fibonacci series. Note that the variable declaration is happening *outside* of any function, and therefore the array will be saved in storage (instead of memory), provoking a transaction to occur when the contract is run.
    * The function is called `generateFib` and takes a single argument, which is the number of integers in the sequence to generate.
-   * The next two commands add an element each to the array via the `.push()` method. As we our `fibseries` array is defined in storage, but isn't size isn't known until runtime, the `.push()` method is used to add entries to (the end of) our array. This starts the sequence with the number 1 twice.
+   * The next two commands add an element each to the array via the `.push()` method. As we know our `fibseries` array is defined in storage, but size isn't known until runtime, the `.push()` method is used to add entries to (the end of) our array. This starts the sequence with the number 1 twice.
    * The for loop iterates through the rest of the array (as determined by the integer `n`) filling each entry with the appropriate value.
 
 1. Inside the `migrations/` directory of your project, create a file called `2_deploy_contracts.js` and populate it with the following content:
@@ -393,7 +393,7 @@ You can debug a transaction in the Truffle console by typing `debug <transaction
      { i: 0, fibseries: [ 1 ] }
    ```
 
-   Notices that we have now populated the first entry in the sequence.
+   Notice that we have now populated the first entry in the sequence.
 
 1. Because the debugger steps through each instruction one at a time, it's going to take a long time to see results if we don't pick 
 up our pace. Luckily, the debugger can "step over", which steps over the current line, moving to the next line, as long as it's at the same function depth. This will allow us to make progress much more quickly. So type `o` to step over the current instruction set. The output will be:
@@ -555,7 +555,7 @@ Let's edit our contract and see what happens.
 
 Something seems off here. Obviously, if you were expecting the Fibonacci series, by this point you would realize that you had veered far off course.
 
-But the jump from `0` to `255` should be suspicious too. And in fact, what we're seeing is a **buffer underflow**, a situation where we have an [unsigned integer](https://en.wikipedia.org/wiki/Integer_(computer_science)), which can hold only positive values, being set to less than zero. Specifically, that fourth value is defined as the difference between the previous two elements, so `0 - 1 = -1`. Our type is `uint8[]` which mean that each integer in the array is defined by 8 bits, so its maximum value is 2^8 - 1 = 255. Subtract one from zero, and the value "wraps around" to its maximum value.
+But the jump from `0` to `255` should be suspicious too. And in fact, what we're seeing is a **buffer underflow**, a situation where we have an [unsigned integer](https://en.wikipedia.org/wiki/Integer_(computer_science)), which can hold only positive values, being set to less than zero. Specifically, that fourth value is defined as the difference between the previous two elements, so `0 - 1 = -1`. Our type is `uint8[]` which means that each integer in the array is defined by 8 bits, so its maximum value is 2^8 - 1 = 255. Subtract one from zero, and the value "wraps around" to its maximum value.
 
 Assuming this was the series we wanted (and that our minus sign was correct), the way to change this is to change the definition of our `fibseries` array from `uint8[]` to `int8[]`. That would make values "signed integers" and able to accept negative values, giving you an array that would look like this instead:
 
