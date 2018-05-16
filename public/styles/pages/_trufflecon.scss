@@ -117,7 +117,6 @@
       transform: translate(-50%, -50%);
       max-width: 734px;
       width: 100%;
-      text-align: center;
     }
 
     h1, h3, p {
@@ -128,6 +127,7 @@
     h1 {
       font-size: 4rem;
       letter-spacing: .25em;
+      text-align: center;
 
       img {
         height: 1em;
@@ -149,6 +149,7 @@
     h3 {
       margin-bottom: 2.5rem;
       letter-spacing: .06em;
+      text-align: center;
     }
 
     p {
@@ -201,5 +202,18 @@
       height: calc(100vh - 60px);
       margin-top: 60px;
     }
+  }
+}
+
+.text-truffle {
+  color: #3FE0C5;
+}
+
+.link-truffle {
+  color: #3FE0C5;
+
+  &:hover {
+    color: #3FE0C5;
+    opacity: .6;
   }
 }
