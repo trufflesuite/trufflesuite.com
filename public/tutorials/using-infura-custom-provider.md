@@ -40,7 +40,7 @@ The next step is to edit your `truffle.js` file to use `HDWalletProvider` and pr
    var HDWalletProvider = require("truffle-hdwallet-provider");
    ```
 
-2. Next, provide a reference to your mnemonic that generates your accounts.
+2. Next, provide a reference to your mnemonic that generates your accounts. If you don't have a mnemonic, you can generate one using an [online mnemonic generator](https://iancoleman.io/bip39) or a hardware wallet such as a product from [Ledger](https://www.ledgerwallet.com).
 
    ```javascript
    var mnemonic = "orange apple banana ... ";
