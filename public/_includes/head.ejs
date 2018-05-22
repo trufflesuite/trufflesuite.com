@@ -80,12 +80,7 @@
     var currentPath = current.path;
     var finalPath = currentPath.filter(pathChunk => pathChunk !== 'index');
 
-    if (finalPath.length)
-    {
-      return basePath + finalPath.join('/');
-    }
-
-    return basePath;
+    return basePath + finalPath.join('/');
   }
 %>
 
