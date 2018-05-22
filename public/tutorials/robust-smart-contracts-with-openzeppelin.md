@@ -92,7 +92,7 @@ With our front-end taken care of, we can focus on the `TutorialToken` contract.
 1. To finish up our contract, we'll create a constructor function to set the `totalSupply` equal to our declared `INITIAL_SUPPLY` and give the entire supply to the deploying account's address. Add this block below the content added in the previous step:
 
    ```javascript
-   function TutorialToken() public {
+   constructor() public {
      totalSupply_ = INITIAL_SUPPLY;
      balances[msg.sender] = INITIAL_SUPPLY;
    }
