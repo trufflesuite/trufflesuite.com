@@ -73,10 +73,10 @@ Once this operation is completed, you'll now have a project structure with the f
 
 ## Testing
 
-1. On a terminal, run the Solidity test:
+1. On a terminal, run the Solidity test from the root of your project:
 
    ```shell
-   truffle test TestMetacoin.sol
+   truffle test test/TestMetacoin.sol
    ```
 
    You will see the following output
@@ -98,7 +98,7 @@ Once this operation is completed, you'll now have a project structure with the f
 1. Run the JavaScript test:
 
    ```shell
-   truffle test metacoin.js
+   truffle test test/metacoin.js
    ```
 
    You will see the following output
