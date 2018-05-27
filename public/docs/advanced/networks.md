@@ -1,6 +1,6 @@
 # Networks and app deployment
 
-Even the smallest project will interact with at the very least two blockchains: One on the developer's machine, like [Ganache](/ganache) or Truffle Develop, and the other representing the network where the developer will eventually deploy their application (such as the main public Ethereum network or a private consortium network, for instance). Truffle provides a system for managing the compilation and deployment artifacts for each network, and does so in a way that simplifies final application deployment.
+Even the smallest project will interact with at the very least two blockchain nodes: One on the developer's machine, like [Ganache](/ganache) or Truffle Develop, and the other representing the network where the developer will eventually deploy their application (such as the main public Ethereum network or a private consortium network, for instance). Truffle provides a system for managing the compilation and deployment artifacts for each network, and does so in a way that simplifies final application deployment.
 
 ## Configuration
 
