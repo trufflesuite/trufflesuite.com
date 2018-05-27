@@ -98,7 +98,7 @@ Once this operation is completed, you'll now have a project structure with the f
 1. Run the JavaScript test:
 
    ```shell
-   truffle test metacoin.js
+   truffle test ./test/metacoin.js
    ```
 
    You will see the following output
