@@ -84,28 +84,9 @@ For each network, if unspecified, transaction options will default to the follow
 
 For each network, you can specify either `host` / `port` or `provider`, but not both. If you need an HTTP provider, we recommend using `host` and `port`, while if you need a custom provider such as `HDWalletProvider`, you must use `provider`.
 
-#### Managing multiple providers
+#### Providers
 
-As seen above, your `truffle.js` file can contain multiple network configurations, but in general you will only work with a single network at a time. While you can issue a command to migrate to a single network (`truffle migrate --network live`), a minimal network connection will nevertheless be opened to every network defined with a `provider`.
-
-As a workaround to this, you can wrap your network's provider definition in a function call. This way, the network information is there, but Truffle will ignore it until specifically called.
-
-For example, consider the following network list consisting of a local test network and a Infura-hosted Ropsten network, both provided by HDWalletProvider:
-
-```javascript
-networks: {
-  ropsten: {
-    provider: new HDWalletProvider(mnemonic, "https://ropsten.infura.io/"),
-    network_id: '3',
-  },
-  test: {
-    provider: new HDWalletProvider(mnemonic, "http://127.0.0.1:8545/"),
-    network_id: '*',
-  },
-}
-```
-
-To ensure that only one network is ever connected at a time, modify the `provider` keys as follows:
+The following network list consists of a local test network and an Infura-hosted Ropsten network, both provided by HDWalletProvider. Make sure you wrap `truffle-hdwallet` providers in a function closure as shown below to ensure that only one network is ever connected at a time. 
 
 ```javascript
 networks: {

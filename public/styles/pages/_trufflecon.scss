@@ -117,6 +117,14 @@
       transform: translate(-50%, -50%);
       max-width: 734px;
       width: 100%;
+
+      @media screen and (max-width: 767px),
+      screen and (max-height: 600px) {
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+      }
     }
 
     h1, h3, p {
@@ -125,6 +133,7 @@
     }
 
     h1 {
+      margin-top: 0;
       font-size: 4rem;
       letter-spacing: .25em;
       text-align: center;
@@ -198,9 +207,15 @@
       }
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 997px) {
       height: calc(100vh - 60px);
       margin-top: 60px;
+    }
+
+    @media screen and (max-width: 767px),
+    screen and (max-height: 600px) {
+      height: auto;
+      padding: 2rem 0;
     }
   }
 }
@@ -216,4 +231,14 @@
     color: #3FE0C5;
     opacity: .6;
   }
+}
+
+// SHARING BUTTONS
+
+#st-2 .st-btn[data-network='sharethis'] {
+  background-color: #3fe0c5 !important;
+}
+
+#st-2 .st-toggle {
+  background: #5f474e !important;
 }

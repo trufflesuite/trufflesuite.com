@@ -38,8 +38,8 @@
     "angular-truffle-box": {
       "title": "angular-truffle-box"
     },
-    "ens-bid-truffle-box": {
-      "title": "ens-bid-truffle-box"
+    "cita-truffle-box": {
+      "title": "cita-truffle-box"
     },
     "etherplate": {
       "title": "etherplate"
@@ -73,6 +73,9 @@
     },
     "svelte-box": {
       "title": "svelte-box"
+    },
+    "truffle-ci-box": {
+      "title": "truffle-ci-box"
     },
     "truffle-create-react-app": {
       "title": "truffle-create-react-app"

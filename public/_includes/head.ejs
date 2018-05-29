@@ -1,156 +1,167 @@
-  <%
-    function getPageTitle() {
-      // PAGES WITH MARKDOWN CHILDREN
+<%
+  function getPageTitle() {
+    // PAGES WITH MARKDOWN CHILDREN
 
-      if (current.path[0] === 'tutorials' && current.path.length > 1)
+    if (current.path[0] === 'tutorials' && current.path.length > 1)
+    {
+      if (current.path[1] !== 'index')
       {
-        if (current.path[1] !== 'index')
-        {
-          return public['tutorials']['_data']['tutorials'][current.path[1]]['title'];
-        }
+        return public['tutorials']['_data']['tutorials'][current.path[1]]['title'];
       }
+    }
 
-      if (current.path[0] === 'blog' && current.path.length > 1)
+    if (current.path[0] === 'blog' && current.path.length > 1)
+    {
+      if (current.path[1] !== 'index')
       {
-        if (current.path[1] !== 'index')
-        {
-          return public['blog']['_data']['posts'][current.path[1]]['title'];
-        }
+        return public['blog']['_data']['posts'][current.path[1]]['title'];
       }
+    }
 
-      if (current.path[0] === 'boxes' && current.path.length > 1)
+    if (current.path[0] === 'boxes' && current.path.length > 1)
+    {
+      if (current.path[1] !== 'index')
       {
-        if (current.path[1] !== 'index')
-        {
-          return public['boxes']['_data']['boxes'][current.path[1]]['title'] + ' Box';
-        }
+        return public['boxes']['_data']['boxes'][current.path[1]]['title'] + ' Box';
       }
+    }
 
-      if (current.path[0] === 'docs' && current.path.length > 2)
+    if (current.path[0] === 'docs' && current.path.length > 2)
+    {
+      if (current.path[1] !== 'index')
       {
-        if (current.path[1] !== 'index')
-        {
-          return public['docs'][current.path[1]]['_data'][current.path[2]]['title'];
-        }
+        return public['docs'][current.path[1]]['_data'][current.path[2]]['title'];
       }
+    }
 
-      // TOP-LEVEL PAGES
+    // TOP-LEVEL PAGES
 
-      if (current.path[0] === 'ganache')
+    if (current.path[0] === 'ganache')
+    {
+      return "Ganache";
+    }
+
+    if (current.path[0] === 'trufflecon2018')
+    {
+      return "TruffleCon 2018";
+    }
+
+    if (current.path[0] in public)
+    {
+      if (current.path.length > 1)
       {
-        return "Ganache";
-      }
-
-      if (current.path[0] in public)
-      {
-        if (current.path.length > 1)
+        if (current.path[1] in public[current.path[0]]['_data'])
         {
-          if (current.path[1] in public[current.path[0]]['_data'])
+          if ('title' in public[current.path[0]]['_data'][current.path[1]])
           {
-            if ('title' in public[current.path[0]]['_data'][current.path[1]])
-            {
-              return public[current.path[0]]['_data'][current.path[1]]['title'];
-            }
+            return public[current.path[0]]['_data'][current.path[1]]['title'];
           }
         }
-
-        if ('title' in public[current.path[0]]['_data'])
-        {
-          return public[current.path[0]]['_data']['title'];
-        }
       }
 
-      if (current.path[0] in public['_data'])
+      if ('title' in public[current.path[0]]['_data'])
       {
-        return public['_data'][current.path[0]]['title'];
+        return public[current.path[0]]['_data']['title'];
       }
-
-      // FALLBACK AND HOME
-
-      return "Home";
     }
-  %>
 
-  <head>
-    <meta charset="utf-8">
+    if (current.path[0] in public['_data'])
+    {
+      return public['_data'][current.path[0]]['title'];
+    }
+
+    // FALLBACK AND HOME
+
+    return "Home";
+  }
+
+  function getPageUrl() {
+    var basePath = 'http://truffleframework.com/';
+    var currentPath = current.path;
+    var finalPath = currentPath.filter(pathChunk => pathChunk !== 'index');
+
+    return basePath + finalPath.join('/');
+  }
+%>
+
+<head>
+  <meta charset="utf-8">
   <% var last = service.googlefonts[service.googlefonts.length -1] %>
   <% if(service.googlefonts) { %>
-    <!-- Fallback for Font family below in noscript [*] -->
-    <script type="text/javascript">
-      WebFontConfig = {
-        google: { families: [ <% for(var i=0; i < service.googlefonts.length; i++) { %>'<%- service.googlefonts[i] %>'<% if(service.googlefonts[i] !== last) { %>, <% } %> <% } %>] }
-      };
-      (function() {
-        var wf = document.createElement('script');
-        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-      })(); </script>
-    <% } %>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="<%= description %>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="news_keywords" content="<%= keywords %>" />
-    <meta name="standout" content="<%= url %>" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <% if(service.facebookid) { %><meta property="fb:app_id" content="<%= service.facebookid %>" /><% } %>
-    <meta property="og:site_name" content="<%= name %>" />
-    <meta property="og:description" content="<%= description %>" />
-    <meta property="og:title" content="<% if(title) { if(getPageTitle() != 'Home') { %><%- getPageTitle() %> | <% } %><%= title %><% if(getPageTitle() == 'Home') { %> - <%= description %><% } } %>" />
-    <meta property="og:url" content="<%= url %>" />
-    <meta property="og:type" content="article" />
-    <% if(service.socialimage) { %><meta property="og:image" content="<%= service.socialimage %>" /><% } %>
+  <!-- Fallback for Font family below in noscript [*] -->
+  <script type="text/javascript">
+    WebFontConfig = {
+      google: { families: [ <% for(var i=0; i < service.googlefonts.length; i++) { %>'<%- service.googlefonts[i] %>'<% if(service.googlefonts[i] !== last) { %>, <% } %> <% } %>] }
+    };
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })(); </script>
+  <% } %>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="<%= description %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="news_keywords" content="<%= keywords %>" />
+  <meta name="standout" content="<%= url %>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <% if(service.facebookid) { %><meta property="fb:app_id" content="<%= service.facebookid %>" /><% } %>
+  <meta property="og:site_name" content="<%= name %>" />
+  <meta property="og:description" content="<%= description %>" />
+  <meta property="og:title" content="<% if(title) { if(getPageTitle() != 'Home') { %><%- getPageTitle() %> | <% } %><%= title %><% if(getPageTitle() == 'Home') { %> - <%= description %><% } } %>" />
+  <meta property="og:url" content="<%- getPageUrl() %>" />
+  <meta property="og:type" content="article" />
+  <% if(service.socialimage) { %><meta property="og:image" content="<%= service.socialimage %>" /><% } %>
 
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="<%= name %>" />
-    <meta name="twitter:title" content="<% if(title) { if(getPageTitle() != 'Home') { %><%- getPageTitle() %> | <% } %><%= title %><% if(getPageTitle() == 'Home') { %> - <%= description %><% } } %>" />
-    <meta name="twitter:description" content="<%= description %>" />
-    <meta name="twitter:creator" content="<%= name %>" />
-    <meta name="twitter:domain" content="<%= domain %>" />
-    <% if(service.socialimage) { %><meta name="twitter:image:src" content="<%= service.socialimage %>" /><% } %>
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="<%= name %>" />
+  <meta name="twitter:title" content="<% if(title) { if(getPageTitle() != 'Home') { %><%- getPageTitle() %> | <% } %><%= title %><% if(getPageTitle() == 'Home') { %> - <%= description %><% } } %>" />
+  <meta name="twitter:description" content="<%= description %>" />
+  <meta name="twitter:creator" content="<%= name %>" />
+  <meta name="twitter:domain" content="<%= domain %>" />
+  <% if(service.socialimage) { %><meta name="twitter:image:src" content="<%= service.socialimage %>" /><% } %>
 
-    <% if(service.appleid) { %><meta name="apple-itunes-app" content="app-id=<%= service.appleid %>, app-argument=<%= url %>"><% } %>
-    <% if(service.googleverification) { %><meta name="google-site-verification" content="<%= service.googleverification %>" /><% } %>
+  <% if(service.appleid) { %><meta name="apple-itunes-app" content="app-id=<%= service.appleid %>, app-argument=<%= url %>"><% } %>
+  <% if(service.googleverification) { %><meta name="google-site-verification" content="<%= service.googleverification %>" /><% } %>
 
-    <title>
-    <% if(title) { if(getPageTitle() != "Home") { %><%- getPageTitle() %> | <% } %>
-    <%= title %>
-    <% if(getPageTitle() == "Home") { %> - <%= description %><% } } %>
-    </title>
+  <title>
+  <% if(title) { if(getPageTitle() != "Home") { %><%- getPageTitle() %> | <% } %>
+  <%= title %>
+  <% if(getPageTitle() == "Home") { %> - <%= description %><% } } %>
+  </title>
+  
+  <link rel="author" href="/humans.txt" />
 
+  <link rel="icon" href="/images/touch/favicon.ico">
 
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="<%= name %>">
+  <link rel="icon" sizes="192x192" href="/images/touch/chrome-touch-icon-192x192.png">
 
-    <link rel="author" href="/humans.txt" />
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+  <link rel="apple-touch-icon" href="/images/touch/apple-touch-icon.png">
 
-    <link rel="icon" href="/images/touch/favicon.ico">
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#3372DF">
 
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="<%= name %>">
-    <link rel="icon" sizes="192x192" href="/images/touch/chrome-touch-icon-192x192.png">
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
-    <link rel="apple-touch-icon" href="/images/touch/apple-touch-icon.png">
+  <% if(service.googlefonts) { %>
+    <noscript>
+      <!-- [*] Web fonts for no-js -->
+      <link href='http://fonts.googleapis.com/css?family=<% for(var i=0; i < service.googlefonts.length; i++) { %><%- service.googlefonts[i] %><% if(service.googlefonts[i] !== last) { %>%7C<% } %><% } %>' rel='stylesheet' type='text/css'>
+    </noscript>
+  <% } %>
 
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#3372DF">
-
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
-    <% if(service.googlefonts) { %>
-      <noscript>
-        <!-- [*] Web fonts for no-js -->
-        <link href='http://fonts.googleapis.com/css?family=<% for(var i=0; i < service.googlefonts.length; i++) { %><%- service.googlefonts[i] %><% if(service.googlefonts[i] !== last) { %>%7C<% } %><% } %>' rel='stylesheet' type='text/css'>
-      </noscript>
-    <% } %>
-
-    <meta name="google-site-verification" content="BSgPkMHzw7IxJTpEElNfD8ZZYPzXgOQiTVPzAxAG8-o" />
-  </head>
+  <meta name="google-site-verification" content="BSgPkMHzw7IxJTpEElNfD8ZZYPzXgOQiTVPzAxAG8-o" />
+</head>
