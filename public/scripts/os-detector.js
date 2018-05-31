@@ -9,6 +9,26 @@ document.addEventListener("DOMContentLoaded", function() {
   var isMac = window.navigator.userAgent.indexOf('Mac') != -1;
   var isLinux = window.navigator.userAgent.indexOf('Linux') != -1;
 
+  var supportsAppx = false; // Give Windows users the EXE by default
+  if (isWindows) {
+    var expr = /Windows NT ([0-9]+).([0-9]+)/g
+    var match;
+    if ("oscpu" in window.navigator) {
+      match = expr.exec(window.navigator.oscpu);
+    }
+    else {
+      match = expr.exec(window.navigator.userAgent)
+    }
+    if (match.length >= 3) {
+      var majorVersion = parseInt(match[1]);
+      var minorVersion = parseInt(match[2]);
+      if (majorVersion > 6 || (majorVersion === 6 && minorVersion > 1)) {
+        // if we're windows 8 (6.2) or higher (windows 10 is 10.0), then we support Appx files
+        supportsAppx = true;
+      }
+    }
+  }
+
   var href = "https://github.com/trufflesuite/ganache/releases";
   var os = "All Releases";
   var image = "";
@@ -26,8 +46,15 @@ document.addEventListener("DOMContentLoaded", function() {
         os = "Windows"
 
         data.assets.forEach(function(asset) {
-          if (asset.browser_download_url.indexOf(".appx") >= 0) {
-            href = asset.browser_download_url;
+          if (supportsAppx) {
+            if (asset.browser_download_url.indexOf(".appx") >= 0) {
+              href = asset.browser_download_url;
+            }
+          }
+          else {
+            if (asset.browser_download_url.indexOf(".exe") >= 0) {
+              href = asset.browser_download_url;
+            }
           }
         })
       }
