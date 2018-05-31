@@ -138,7 +138,11 @@ Drizzle has a number of configuration options so it only keeps track of exactly 
   contracts,
   events: {
     contractName: [
-      eventName
+      eventName,
+      {
+        eventName,
+        eventOptions
+      }
     ]
   },
   polls: {
