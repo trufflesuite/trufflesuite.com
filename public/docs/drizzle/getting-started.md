@@ -111,6 +111,24 @@ The contract instance has all of its standard web3 properties and methods. For e
 drizzle.contracts.SimpleStorage.methods.set(2).send({from: '0x3f...'})
 ```
 
+## Adding contracts dynamically
+
+You can programmatically add contracts to Drizzle using either `drizzle.addContract()` or the `ADD_CONTRACT` action.
+
+```javascript
+var contractConfig = {
+  contractName: "0x066408929e8d5Ed161e9cAA1876b60e1fBB5DB75",
+  web3Contract: new web3.eth.Contract(/* ... */)
+}
+events = ['Mint']
+
+// Using an action
+dispatch({type: 'ADD_CONTRACT', drizzle, contractConfig, events, web3})
+
+// Or using the Drizzle context object
+this.context.drizzle.addContract({contractConfig, events})
+```
+
 ## Options
 
 Drizzle has a number of configuration options so it only keeps track of exactly the data you need. Here's the full list of options along with their default values.
@@ -127,6 +145,7 @@ Drizzle has a number of configuration options so it only keeps track of exactly 
     accounts: interval,
     blocks: interval
   },
+  syncAlways,
   web3: {
     fallback: {
       type
@@ -137,13 +156,28 @@ Drizzle has a number of configuration options so it only keeps track of exactly 
 ```
 
 ### `contracts` (array)
-An array of contract artifact files.
+An array of either contract artifact files or Web3 contract objects. The objects have a `contractName` and `web3Contract` key.
+
+i.e.
+
+```
+contracts: [
+  truffleArtifact, // A regular Truffle contract artifact
+  {
+    contractName: 'RegisteredContract',
+    web3Contract: new web3.eth.Contract(abi, address, {data: 'deployedBytecode' }) // An instance of a Web3 contract
+  }
+]
+```
 
 ### `events` (object)
-An object consisting of contract names each containing an array of strings of the event names we'd like to listen for and sync with the store.
+An object consisting of contract names each containing an array of strings of the event names we'd like to listen for and sync with the store. Furthermore, event names may be replaced with an object containing both `eventName` and `eventOptions`, where `eventOptions` field corresponds to the [web3 Contract.events options](https://web3js.readthedocs.io/en/1.0/web3-eth-contract.html#contract-events).
 
 ### `polls` (object)
 An object containing key/value pairs denoting what is being polled and the interval (in ms). Possible polls are accounts and blocks. Accounts will poll for addresses and balances, blocks for new blocks. **Default**: `{ blocks: 3000 }`
+
+### `syncAlways` (boolean)
+If `true`, will replay all contract calls at every block. This is useful if your dapp uses a proxy contract which obfuscates your primary contract's address. By default Drizzle checks blocks to see if a transaction interacting with your contracts has occured. If so, it syncs that contract. **Default**: `false`
 
 ### `web3` (object)
 Options regarding `web3` instantiation.
