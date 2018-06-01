@@ -10,7 +10,7 @@ If you find a bug or want to recommend a new feature, the best way to reach us i
 
 ## Twitter
 
-Finally, if you just want to reach out to give us some feedback you can always [tweet at us](https://twitter.com/trufflesuite)!
+If you want to reach out to give us some feedback you can always [tweet at us](https://twitter.com/trufflesuite)!
 
 --------------------------
 
