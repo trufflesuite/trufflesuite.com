@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
   var button = document.querySelectorAll('.btn-orange');
   var buttonImage = document.querySelectorAll('.btn-orange img');
   var buttonText = document.querySelectorAll('.btn-orange .os');
-  var allReleasesLink = document.querySelectorAll('.os-dl a');
 
   var isWindows = window.navigator.userAgent.indexOf('Windows') != -1;
   var isMac = window.navigator.userAgent.indexOf('Mac') != -1;
@@ -84,13 +83,6 @@ document.addEventListener("DOMContentLoaded", function() {
         buttonImage[i].setAttribute('src', image);
         buttonText[i].innerHTML = '(' + os + ')';
         button[i].setAttribute('href', href);
-
-        if (isWindows && supportsAppx) {
-          allReleasesLink[i].innerHTML = 'Need a different OS download (or .exe)?';
-        }
-        else {
-          allReleasesLink[i].innerHTML = 'Need a different OS download?';
-        }
       }
 
     } else {
@@ -102,13 +94,6 @@ document.addEventListener("DOMContentLoaded", function() {
         buttonImage[i].setAttribute('src', image);
         buttonText[i].innerHTML = '(' + os + ')';
         button[i].setAttribute('href', href);
-
-        if (isWindows && supportsAppx) {
-          allReleasesLink[i].innerHTML = 'Need a different OS download (or .exe)?';
-        }
-        else {
-          allReleasesLink[i].innerHTML = 'Need a different OS download?';
-        }
       }
     }
   };
