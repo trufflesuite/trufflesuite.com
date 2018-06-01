@@ -216,7 +216,7 @@ You can create this blockchain and interact with it using [Truffle Develop](LINK
    Saving artifacts...
    ```
 
-   This shows the transaction IDs and addressed of your deployed contracts.
+   This shows the transaction IDs and addresses of your deployed contracts.
 
    <p class="alert alert-info">
      <strong>Note</strong>: Your transaction IDs and contract addresses will be different from the above.
@@ -289,7 +289,7 @@ The only extra step, aside from running Ganache, is that it requires editing the
    Saving artifacts...
    ```
 
-   This shows the transaction IDs and addressed of your deployed contracts.
+   This shows the transaction IDs and addresses of your deployed contracts.
 
    <p class="alert alert-info">
      <strong>Note</strong>: Your transaction IDs and contract addresses will be different from the above.
