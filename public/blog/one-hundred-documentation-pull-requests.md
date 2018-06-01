@@ -27,6 +27,8 @@ I'm happy to be part of a community that cares about what we're doing, reducing 
 
 As for your suggestions on how we can serve you even better? Please keep them coming. Submit a pull request to our documentation, reach out on [Twitter](https://twitter.com/trufflesuite), or let us know if there's something we can improve by raising a [GitHub issue](https://github.com/trufflesuite/trufflesuite.com/issues).
 
+Need help with something? Reach out on our [community Gitter channel](https://github.com/ConsenSys/truffle), where hundreds of your fellow Trufflers congregate to answer your questions. 
+
 -- Mike & the Truffle team
 
 -----
