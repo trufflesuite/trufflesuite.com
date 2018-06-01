@@ -68,7 +68,7 @@ $ npm install -g truffle
 
 You may have to use `sudo` with the above commands if you're running Linux.
 
-More information about how to use Truffle can be found in [our documentation](/docs). Feel free to reach out on [Gitter](https://gitter.im/consensys/truffle) with any questions.
+More information about how to use Truffle can be found in [our documentation](/docs), and feel free to reach out on [Gitter](https://gitter.im/consensys/truffle) for community help from fellow Trufflers.
 
 ### A Quick Thank You
 

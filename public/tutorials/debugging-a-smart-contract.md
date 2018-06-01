@@ -627,6 +627,6 @@ Just as before, we'll reset the contract on the blockchain.
 
 ## Conclusion
 
-With the ability to debug your contracts directly within Truffle, you have even more power at your hands to make your smart contracts rock-solid and ready to deploy. Make sure to read more about Truffle Develop console and the debugger in the docs. If you have any questions, please join our [Gitter channel](https://gitter.im/ConsenSys/truffle) and ask there.
+With the ability to debug your contracts directly within Truffle, you have even more power at your hands to make your smart contracts rock-solid and ready to deploy. Make sure to read more about Truffle Develop console and the debugger in the docs. If you have any questions, please join our [community Gitter channel](https://gitter.im/ConsenSys/truffle) where hundreds of fellow Trufflers congregate to answer your questions!
 
 Happy debugging!

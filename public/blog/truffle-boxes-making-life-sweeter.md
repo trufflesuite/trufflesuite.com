@@ -27,7 +27,7 @@ We've released four boxes out of the gate to get you started, but this isn't jus
 
 There's always one more thing. Fair warning, this one's techy. Right now, all the boxes you're seeing are static pages showing off what we and the Status team have built. Soon, however, we'll be taking on the ultimate challenge and will be creating a Truffle box registry, built on top of Ethereum, to help market and promote our community-supported boxes. Of course we'll be using Truffle, which adds a whole new layer of sweetness. Stay tuned for more details about the registry and how you can use the Ethereum blockchain to become a Truffle contributor.
 
-As always, we thank everyone for your support, and would love to hear from you. Don't hesitate to contact us at the [Truffle Gitter](http://gitter.im/Consensys/truffle) and let us know how these boxes work for you.
+As always, we thank everyone for your support, and would love to hear from you. Don't hesitate to reach out to your fellow Trufflers for community help in our [Gitter channel](http://gitter.im/ConsenSys/truffle) where hundreds of people congregate to answer your question.
 
 Cheers!
 

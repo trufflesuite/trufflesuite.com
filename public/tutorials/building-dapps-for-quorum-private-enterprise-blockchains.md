@@ -434,6 +434,6 @@ Absolutely not! What we've shown you today is everything that makes building dap
 
 In fact, now that you have the basics, you can explore [all our other resources](/docs) for building dapps with Truffle, including [tutorials](/tutorials), [writing advanced deployment scripts](/docs/getting_started/migrations), [unit testing](/docs/getting_started/javascript-tests) ([with Solidity too](/docs/getting_started/solidity-tests)), and much more.
 
-By building with Truffle, you now have access to not only the best development tools and technologies (like Quorum), but you also have access to the largest Ethereum developer community around. Don't hesitate to [drop us a line](https://gitter.im/ConsenSys/truffle) or [get help from the community](https://gitter.im/ConsenSys/truffle). There's always someone available to answer any questions you have.
+By building with Truffle, you now have access to not only the best development tools and technologies (like Quorum), but you also have access to the largest Ethereum developer community around. Don't hesitate to [drop us a line on Twitter](https://twitter.com/trufflesuite) or [get help from fellow Trufflers in our community Gitter channel](https://gitter.im/ConsenSys/truffle). There's always someone available to answer any questions you have.
 
 Cheers, and happy coding!

@@ -2,9 +2,11 @@
 
 ## Gitter
 
-The best way to contact us is through Gitter. This allows you to ask questions to both the Truffle developers as well as the community at large.
+The best way to get help fast is from other Trufflers in our community [Gitter channel](https://github.com/ConsenSys/truffle), where hundreds of people congregate to answer your question.
 
-[![Join the chat at https://gitter.im/consensys/truffle](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/consensys/truffle?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+If you find a bug or want to recommend a new feature, the best way to reach us is by raising an issue on the GitHub project pages for [Truffle](https://github.com/trufflesuite/truffle), [Ganache](https://github.com/trufflesuite/ganache), or [Drizzle](https://github.com/trufflesuite/drizzle). If you're using another one of our tools or libraries, you may want to check out our [full list of GitHub projects](https://github.com/trufflesuite) to be sure you're raising your issue in the best place.
+
+Finally, if you just want to reach out to give us some feedback you can always [tweet at us](https://twitter.com/trufflesuite)!
 
 --------------------------
 

@@ -25,7 +25,7 @@ We have big plans for our content here, just like we have big plans for Truffle.
 
 I'm happy to be part of a community that cares about what we're doing, reducing the bar to developing Ethereum dapps, and making them delicious.
 
-As for your suggestions on how we can serve you even better? Please keep them coming. Submit a pull request to our documentation, or talk to us in our [Gitter channel](http://gitter.im/Consensys/truffle).
+As for your suggestions on how we can serve you even better? Please keep them coming. Submit a pull request to our documentation, reach out on [Twitter](https://twitter.com/trufflesuite), or let us know if there's something we can improve by raising a [GitHub issue](https://github.com/trufflesuite/trufflesuite.com/issues).
 
 -- Mike & the Truffle team
 
