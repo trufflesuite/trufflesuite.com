@@ -2,9 +2,13 @@
 
 ## Gitter
 
-The fastest way to get help is from other Trufflers in our community [Gitter channel](https://github.com/ConsenSys/truffle), where hundreds of people congregate to answer your question.
+The fastest way to get help is to reach out on our [community Gitter channel](https://github.com/ConsenSys/truffle), where hundreds of your fellow Trufflers congregate to answer your questions.
+
+## Issue Tracker
 
 If you find a bug or want to recommend a new feature, the best way to reach us is by raising an issue on the GitHub project pages for [Truffle](https://github.com/trufflesuite/truffle), [Ganache](https://github.com/trufflesuite/ganache), or [Drizzle](https://github.com/trufflesuite/drizzle). If you're using another one of our tools or libraries, you may want to check out our [full list of GitHub projects](https://github.com/trufflesuite) to be sure you're raising your issue in the best place.
+
+## Twitter
 
 Finally, if you just want to reach out to give us some feedback you can always [tweet at us](https://twitter.com/trufflesuite)!
 
