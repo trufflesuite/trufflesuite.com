@@ -18,7 +18,7 @@ By then end of the tutorial you'll have a shiny new dapp with which you can rese
 
 In the future we'll be building on this tutorial with others such as deploying to live testnets and additional, more advanced functionality. We hope you enjoy and thank everyone for your support!
 
-Got stuck? Get help fast from our [community Gitter channel](https://github.com/ConsenSys/truffle), where hundreds of your fellow Trufflers congregate to answer your questions. 
+Got stuck? The fastest way to get help is from our [community Gitter channel](https://github.com/ConsenSys/truffle), where hundreds of your fellow Trufflers congregate to answer your questions. 
 
 Love it? Send us your feedback on [Twitter](https://twitter.com/trufflesuite).
 
