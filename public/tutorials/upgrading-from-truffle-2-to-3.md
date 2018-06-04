@@ -378,6 +378,6 @@ All build processes and contract bootstrapping will follow this pattern. The key
 
 ## Fin
 
-That's it! That's all you need to know to upgrade from Truffle 2.0 to 3.0. It might require a bit of work, but the changes are surely worth it. If you have questions, Truffle has a [vibrant community available 24/7](https://gitter.im/ConsenSys/truffle) to help you with any issues you may have. Don't hesitate to ask for help, and we wish you a happy 3.0!
+That's it! That's all you need to know to upgrade from Truffle 2.0 to 3.0. It might require a bit of work, but the changes are surely worth it. If you have questions, Truffle has a [vibrant community of Trufflers available 24/7](https://gitter.im/ConsenSys/truffle) to help you with any issues you may have. Don't hesitate to ask for help, and we wish you a happy 3.0!
 
 -- The Truffle Team
