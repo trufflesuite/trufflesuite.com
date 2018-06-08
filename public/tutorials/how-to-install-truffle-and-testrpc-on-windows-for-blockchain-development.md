@@ -22,9 +22,9 @@ Install Chocolatey via [https://chocolatey.org/](https://chocolatey.org/)
 Open a PowerShell prompt as an Administrator and run the following commands (last command optional):
 
 ```
-$ choco install nodejs.install –y
-$ choco install git –y
-$ choco install VisualStudioCode -y  
+$ choco install nodejs.install
+$ choco install git
+$ choco install VisualStudioCode
 ```
 
 [Read more about configuring Visual Studio code for Blockchain development](/tutorials/configuring-visual-studio-code).
