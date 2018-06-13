@@ -207,6 +207,6 @@ An object consisting of the type and url of a fallback web3 provider. This is us
 
    ![Drizzle Sync Step 3](https://github.com/trufflesuite/drizzle/blob/master/readme/drizzle-sync3.png?raw=true)
 
-1. If they did, we replay the calls already in the store to refresh any potentially altered data. If they didn't we continue with the store data.
+1. If they did, we replay the calls not already in the store to refresh any potentially altered data. If they didn't we continue with the store data.
 
    ![Drizzle Sync Step 4](https://github.com/trufflesuite/drizzle/blob/master/readme/drizzle-sync4.png?raw=true)
