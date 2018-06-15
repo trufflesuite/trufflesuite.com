@@ -314,7 +314,7 @@ To test the `adopt()` function, recall that upon success it returns the given `p
      uint expected = 8;
 
      Assert.equal(returnedId, expected, "Adoption of pet ID 8 should be recorded.");
-   }
+ 
    ```
 
 Things to notice:
@@ -360,6 +360,7 @@ Since arrays can only return a single value given a single key, we create our ow
 
      Assert.equal(adopters[8], expected, "Owner of pet ID 8 should be recorded.");
    }
+     }
    ```
 
 Note the **memory** attribute on `adopters`. The memory attribute tells Solidity to temporarily store the value in memory, rather than saving it to the contract's storage. Since `adopters` is an array, and we know from the first adoption test that we adopted pet `8`, we compare the testing contracts address with location `8` in the array.
