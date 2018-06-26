@@ -78,6 +78,13 @@ npm install --save drizzle-react
    ```javascript
    this.contracts.SimpleStorage.methods.set(this.state.storageAmount).send()
    ```
+   
+   **Note:** If you are using React older than v16.3 (in which the new context api was introduced), be sure to define `contextTypes` (which is a must in the [legacy context api](https://reactjs.org/docs/legacy-context.html)) like so:
+   ```javascript
+   Home.contextTypes = {
+      drizzle: PropTypes.any
+   }
+   ```
 
 ## Recipe: Loading Component
 
