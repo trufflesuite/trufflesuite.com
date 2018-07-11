@@ -1,4 +1,4 @@
-# Why we're organizing TruffleCon
+# Why we're organizing TruffleCon 2018
 
 As you have hopefully heard by now, [TruffleCon](http://truffleframework.com/trufflecon2018), Truffle's first-ever user conference, will be on [October 5-7, 2018 in Portland, Oregon, U.S.A](http://truffleframework.com/trufflecon2018).
 
