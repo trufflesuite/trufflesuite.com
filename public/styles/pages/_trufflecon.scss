@@ -233,6 +233,33 @@
   }
 }
 
+.link-eventbrite {
+  color: #f6682F;
+
+  &:hover {
+    color: #f6682F;
+    opacity: .6;
+  }
+}
+
+.btn-eventbrite {
+  background: #f6682F;
+  color: #fff;
+  text-shadow: none;
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  text-transform: uppercase;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 266px;
+
+  &:hover {
+    color: #fff;
+    opacity: .8;
+  }
+}
+
 // SHARING BUTTONS
 
 #st-2 .st-btn[data-network='sharethis'] {
