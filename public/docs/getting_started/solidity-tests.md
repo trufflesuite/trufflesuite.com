@@ -145,3 +145,41 @@ contract TestContract {
 ```
 
 Note that Truffle sends Ether to your test contract in a way that does **not** execute a fallback function, so you can still use the fallback function within your Solidity tests for advanced test cases.
+
+Below is another example with ether transactions and parameters. Imagine a crowdfunding campaign contract on which contributors could attach a message to their contribution. Here is an extract of the contract to be tested:
+
+```javascript
+contract Campaign {
+
+    // code of campaign smart contract 
+    ... 
+    
+    function contribute(string _message) public payable {
+        amountRaised += msg.value;
+        // todo store contribution _message in the contributions array
+        ...
+    }
+}
+```
+Here is the code to test the `payable` function `contribute` with a `string _message` in parameter
+
+```javascript
+import "truffle/Assert.sol";
+import "truffle/DeployedAddresses.sol";
+import "../contracts/Campaign.sol";
+
+contract TestCampaign {
+    // Truffle will send the TestContract 5 Ether after deploying the contract.
+    uint public initialBalance = 5 ether;
+    Campaign campaign = Campaign(DeployedAddresses.Campaign());
+    
+    // Testing the contribute() function
+    function testContribute() public {
+        // Expected contribute increase amountRaised
+        uint256 expected = 5 ether;
+        campaign.contribute.value(5 ether) ("my test message");
+        uint256 amountRaised = campaign.amountRaised();
+        Assert.equal(amountRaised, expected, "amountRaised of contract should be equal 5.");
+    }
+}
+```
