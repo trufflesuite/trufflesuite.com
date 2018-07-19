@@ -32,11 +32,11 @@
     "blueprint": {
       "title": "blueprint"
     },
-    "status": {
-      "title": "status"
-    },
     "angular-truffle-box": {
       "title": "angular-truffle-box"
+    },
+    "cheshire": {
+      "title": "cheshire"
     },
     "cita-truffle-box": {
       "title": "cita-truffle-box"
@@ -59,8 +59,14 @@
     "macroverse-truffle-box": {
       "title": "macroverse-truffle-box"
     },
+    "nuxt-box": {
+      "title": "nuxt-box"
+    },
     "peerai-api": {
       "title": "peerai-api"
+    },
+    "rapid-box": {
+      "title": "rapid-box"
     },
     "react-box-web3-todo": {
       "title": "react-box-web3-todo"
@@ -70,6 +76,9 @@
     },
     "scoreboard": {
       "title": "scoreboard"
+    },
+    "status": {
+      "title": "status"
     },
     "svelte-box": {
       "title": "svelte-box"
@@ -94,6 +103,9 @@
     },
     "truffle-security": {
       "title": "truffle-security"
+    },
+    "truffle-shavings": {
+      "title": "truffle-shavings"
     },
     "truffle-starter": {
       "title": "truffle-starter"

@@ -155,7 +155,7 @@ We won't spend too much time talking about writing or deploying contracts in Tru
    contract SimpleStorage {
      uint public storedData;
 
-     function SimpleStorage(uint initVal) public {
+     constructor(uint initVal) public {
        storedData = initVal;
      }
 
@@ -163,7 +163,7 @@ We won't spend too much time talking about writing or deploying contracts in Tru
        storedData = x;
      }
 
-     function get() constant public returns (uint retVal) {
+     function get() view public returns (uint retVal) {
        return storedData;
      }
    }

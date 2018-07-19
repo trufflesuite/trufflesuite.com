@@ -60,9 +60,9 @@ With our front-end taken care of, we can focus on the `TutorialToken` contract.
 1. In the `contracts/` directory of your Truffle Box, create the file `TutorialToken.sol` and add the following contents:
 
    ```javascript
-   pragma solidity ^0.4.17;
+   pragma solidity ^0.4.24;
 
-   import 'openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol';
+   import "openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
 
    contract TutorialToken is StandardToken {
 
@@ -77,8 +77,8 @@ With our front-end taken care of, we can focus on the `TutorialToken` contract.
 1. To set our own parameters for the token, we'll be declaring our own name, symbol, and other details. Add the following content block to the contract (between the curly braces):
 
    ```javascript
-   string public name = 'TutorialToken';
-   string public symbol = 'TT';
+   string public name = "TutorialToken";
+   string public symbol = "TT";
    uint8 public decimals = 2;
    uint public INITIAL_SUPPLY = 12000;
    ```
