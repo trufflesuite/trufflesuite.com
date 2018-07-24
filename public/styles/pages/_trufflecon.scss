@@ -51,8 +51,8 @@
 
   .MainContent {
     position: relative;
-    height: calc(100vh - 100px);
     margin-top: 100px;
+    padding: 4rem 0;
     background: url("/images/trufflecon18/portland-skyline-recolor.jpg");
     background-position: center center;
     background-size: cover;
@@ -111,20 +111,8 @@
     }
 
     .container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       max-width: 734px;
       width: 100%;
-
-      @media screen and (max-width: 767px),
-      screen and (max-height: 600px) {
-        position: static;
-        top: auto;
-        left: auto;
-        transform: none;
-      }
     }
 
     h1, h3, p {
