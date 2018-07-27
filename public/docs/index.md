@@ -1,4 +1,4 @@
-<img src='img/logo.png' width="100px" />
+<img src='/docs/img/logo.png' width="100px" />
 
 [![Join the community chat at https://gitter.im/consensys/truffle](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/consensys/truffle?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
