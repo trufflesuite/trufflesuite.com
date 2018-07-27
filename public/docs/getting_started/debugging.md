@@ -71,3 +71,34 @@ Print the list of available commands.
 ### (q) quit
 
 Quit the debugger.
+
+### (b) toggle breakpoint
+
+`b` adds a breakpoint at the current line. This might be useful inside a loop.
+
+`b <line num>` adds a breakpoint at the specified line. 
+### (c) continue until breakpoint
+
+Once a breakpoint is added, one may want to skip the execution of rest of the code line-by-line. This is when `c` is used.
+
+### (+) add watch expression 
+
+`+:<expr>`
+
+### (-) remove watch expression 
+`-:<expr>`
+
+### (?) list existing watch expressions
+
+### (v) print variables and values
+
+This command prints the variables in the current scope and their values.
+
+### (:) evaluate expression - see `v`
+
+The command can be used to evaluate an expression. e.g. To see value of specific attribute inside a `struct`, one can use something like : 
+
+```
+debug(development:0x432e528f...)> :myStruct.attrib
+10000
+```
