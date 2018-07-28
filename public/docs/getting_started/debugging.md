@@ -64,6 +64,14 @@ This command allows you to step through each individual instruction evaluated by
 
 This commands prints the current instruction and stack data, but does not step to the next instruction. Use this when you'd like to see the current instruction and stack data after navigating through the transaction with the logical commands described above.
 
+### (v) print variables and values
+
+This command steps prints the variables currently in scope.
+
+### (:) evaluate
+
+This command steps evaluates the expression after the ':'.
+
 ### (h) print this help
 
 Print the list of available commands.
