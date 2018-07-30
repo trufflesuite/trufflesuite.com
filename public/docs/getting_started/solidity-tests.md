@@ -11,6 +11,8 @@ Solidity test contracts live alongside Javascript tests as `.sol` files. When `t
 Let's take a look at an example Solidity test before diving too deeply. Here's the example Solidity test provided for you by `truffle unbox metacoin`:
 
 ```javascript
+pragma solidity ^0.4.24;
+
 import "truffle/Assert.sol";
 import "truffle/DeployedAddresses.sol";
 import "../contracts/MetaCoin.sol";
@@ -84,6 +86,8 @@ Like test contract names, all test functions must start with `test`, lowercase. 
 You are provided many test hooks, shown in the example below. These hooks are `beforeAll`, `beforeEach`, `afterAll` and `afterEach`, which are the same hooks provided by Mocha in your Javascript tests. You can use these hooks to perform setup and teardown actions before and after each test, or before and after each suite is run. Like test functions, each hook is executed as a single transaction. Note that some complex tests will need to perform a significant amount of setup that might overflow the gas limit of a single transaction; you can get around this limitation by creating many hooks with different suffixes, like in the example below:
 
 ```solidity
+pragma solidity ^0.4.24;
+
 import "truffle/Assert.sol";
 
 contract TestHooks {
@@ -123,6 +127,8 @@ This topic was first written about by guest writer Simon de la Rouviere in [his 
 You can also test how your contracts react to receiving Ether, and script that interaction within Solidity. To do so, your Solidity test should have a public function that returns a `uint`, called `initialBalance`. This can be written directly as a function or a public variable, as shown below. When your test contract is deployed to the network, Truffle will send that amount of Ether from your test account to your test contract. Your test contract can then use that Ether to script Ether interactions within your contract under test. Note that `initialBalance` is optional and not required.
 
 ```javascript
+pragma solidity ^0.4.24;
+
 import "truffle/Assert.sol";
 import "truffle/DeployedAddresses.sol";
 import "../contracts/MyContract.sol";
