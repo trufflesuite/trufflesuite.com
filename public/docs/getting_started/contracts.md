@@ -2,7 +2,7 @@
 
 ## Introduction
 
-If you were writing raw requests to the Ethereum network yourself in order to interact with your contracts, you'd soon realize that writing these requests is clunky and cumbersome. As well, you might find that managing the state each request you've made is _complicated_. Fortunately, Truffle takes care of this complexity for you, to make interacting with your contracts a breeze.
+If you were writing raw requests to the Ethereum network yourself in order to interact with your contracts, you'd soon realize that writing these requests is clunky and cumbersome. As well, you might find that managing the state for each request you've made is _complicated_. Fortunately, Truffle takes care of this complexity for you, to make interacting with your contracts a breeze.
 
 ## Reading and writing data
 
