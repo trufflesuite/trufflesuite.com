@@ -78,6 +78,21 @@ code {
   }
 }
 
+.contribute-link {
+  margin-top: 3rem;
+  padding: 3rem 0 0 0;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.docs-content .contribute-link {
+  padding: 3rem 0 0 0;
+
+  @media (max-width: 991.98px) {
+    margin-bottom: 60px;
+  }
+}
+
 // Containers
 
 .container-heading {
