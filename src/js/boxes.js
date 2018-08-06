@@ -1,10 +1,10 @@
 const octokit = new Octokit();
 
-octokit.authenticate({
+/*octokit.authenticate({
   type: 'basic',
-  username: 'discriskandbisque',
-  password: 'baSbh4ts'
-});
+  username: '',
+  password: ''
+});*/
 
 $(window).on('load', function() {
   // Get Tags

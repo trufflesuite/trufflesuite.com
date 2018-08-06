@@ -36,6 +36,20 @@
   margin-right: .75rem;
 }
 
+.navbar .trufflecon-link {
+  letter-spacing: .125em;
+
+  span {
+    display: none;
+  }
+
+  img {
+    height: 1em;
+    margin-top: -.25em;
+    margin-right: .125em;
+  }
+}
+
 // Right Side
 
 .navbar .navbar-collapse {

@@ -64,9 +64,7 @@
           {{#if post.image}}
             <div class="row align-items-center post-row">
               <div class="col-md-3">
-                <div class="circle-image-container rounded-circle">
-                  <img src="{{ post.image }}" />
-                </div>
+                <img src="{{ post.image }}" class="rounded-circle img-fluid post-thumbnail" />
               </div>
               <div class="col-md-9">
                 <h2>{{ post.title }}</h2>

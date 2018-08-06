@@ -46,13 +46,8 @@
     }
   }
 
-  i {
-    display: block;
-    float: left;
-    margin-left: .25rem;
-    margin-right: 1rem;
-    font-size: 2.125rem;
-    line-height: .75em;
+  form {
+    margin-top: 1.5rem;
   }
 
   .suite-logo {
@@ -72,6 +67,15 @@
   .suite-link {
     margin-top: 2rem;
     margin-bottom: 1.625rem;
+
+    i {
+      display: block;
+      float: left;
+      margin-left: .25rem;
+      margin-right: 1rem;
+      font-size: 2.125rem;
+      line-height: .75em;
+    }
   }
 
   .truffle {
@@ -123,6 +127,20 @@
       max-height: 100vh;
       border-top: none;
       overflow: scroll;
+    }
+
+    > h2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 58px;
+      width: 100vw;
+      padding-top: 1rem;
+      cursor: pointer;
+    }
+
+    form {
+      margin-top: 3.5rem;
     }
   }
 }

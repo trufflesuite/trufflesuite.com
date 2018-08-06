@@ -19,7 +19,7 @@
     "author": "Josh Quintal",
     "published": true,
     "excerpt": "Today we're proud to announce the addition of a new product to the Truffle Suite: Drizzle. Drizzle is a collection of front-end libraries that make writing dapp front-ends easier and more predictable.",
-    "image": "/img/blog/drizzle-some-chaindata-on-your-ui/drizzle-modules.png"
+    "image": "/img/blog/thumbnails/drizzle-some-chaindata-on-your-ui.jpg"
   },
   "testrpc-is-now-ganache": {
     "title": "TestRPC is now Ganache",
@@ -34,7 +34,7 @@
     "author": "Tim Coulter",
     "published": true,
     "excerpt": "We recently released Truffle 3.0 in February to much fanfare. As part of that release we separated our codebase into multiple different modules to make integrating with Truffle easier. Those modules now live in the github repository http://github.com/trufflesuite, which hints at our broader mission of providing a comprehensive suite of tools for Ethereum development.",
-    "image": "/img/blog/first-ever-truffle-retreat/dock.jpg"
+    "image": "/img/blog/thumbnails/first-ever-truffle-retreat.jpg"
   },
   "designing-the-ganache-logo": {
     "title": "Designing the Ganache Logo",
@@ -42,7 +42,7 @@
     "author": "Josh Quintal",
     "published": true,
     "excerpt": "Last week we released Ganache, a personal blockchain for Ethereum development. Many of you commented on the design of the landing page and logo, but just how did the gooey cube come to be? Let's take a trip through the 30+ iterations that led to our newest confection.",
-    "image": "/img/blog/designing-the-ganache-logo/core-cutaways.png"
+    "image": "/img/blog/thumbnails/designing-the-ganache-logo.jpg"
   },
   "one-hundred-documentation-pull-requests": {
     "title": "One hundred documentation pull requests? Yes please.",
@@ -50,7 +50,7 @@
     "author": "Mike Pumphrey",
     "published": true,
     "excerpt": "Greetings! The Truffle team has been growing over the course of the last year. From a single developer, we are now a team of five (soon to be even more), which means that we can spread the work around. As a new full-time member of the team, I've first taken to looking at our existing materials to ensure that everything is up-to-date and working well. For example, our website, a public GitHub repository, had been receiving pull requests (PRs) for the better part of a year, and they had been languishing for want of someone to go through them.",
-    "image": "/img/blog/one-hundred-documentation-pull-requests/take-a-stab.png"
+    "image": "/img/blog/thumbnails/one-hundred-documentation-pull-requests.jpg"
   },
   "you-can-now-make-your-own-truffle-box": {
     "title": "You Can Now Make Your Own Truffle Box",
@@ -65,7 +65,7 @@
     "author": "Josh Quintal",
     "published": true,
     "excerpt": "Here at Truffle we want to make Ethereum development accessible to developers of all stripes. To that end, today we're releasing a new tutorial called Pet Shop. It covers the entire local development process, start to finish. For added fun, we've tied the whole thing together within the narrative of creating a pet adoption dapp for a local pet shop owner.",
-    "image": "/img/blog/learn-ethereum-the-fun-way-with-our-pet-shop-tutorial/pet-shop-preview.jpeg"
+    "image": "/img/blog/thumbnails/learn-ethereum-the-fun-way-with-our-pet-shop-tutorial.jpg"
   },
   "truffle-boxes-making-life-sweeter": {
     "title": "Truffle Boxes: Making Life Sweeter",
