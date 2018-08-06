@@ -47,7 +47,7 @@
       <title>Truffle Suite | {{ title }}</title>
     {{/if}}
 
-    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans|Oswald|Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans|Oswald|Varela+Round|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/index.css">
   </head>
@@ -76,17 +76,17 @@
             <input type="text" class="form-control mb-3" id="boxesSearch" placeholder="Search by name or tag...">
 
             <div class="box-radios" id="isoSort">
-              <div class="form-check">
-                <input type="radio" class="form-check-input" name="boxFilters" checked>
-                <label class="form-check-label" for="exampleCheck1">All</label>
+              <div class="form-check form-check-inline">
+                <input id="allBoxes" type="radio" class="form-check-input" name="boxFilters" checked>
+                <label class="form-check-label" for="allBoxes">All</label>
               </div>
-              <div class="form-check">
-                <input type="radio" data-filter-group="tags" data-filter="official" class="form-check-input" name="boxFilters">
-                <label class="form-check-label" for="exampleCheck1">Official Only</label>
+              <div class="form-check form-check-inline">
+                <input id="officialBoxes" type="radio" data-filter-group="tags" data-filter="official" class="form-check-input" name="boxFilters">
+                <label class="form-check-label" for="officialBoxes">Official Only</label>
               </div>
-              <div class="form-check">
-                <input type="radio" data-filter-group="tags" data-filter="community" class="form-check-input" name="boxFilters">
-                <label class="form-check-label" for="exampleCheck1">Community Only</label>
+              <div class="form-check form-check-inline">
+                <input id="communityBoxes" type="radio" data-filter-group="tags" data-filter="community" class="form-check-input" name="boxFilters">
+                <label class="form-check-label" for="communityBoxes">Community Only</label>
               </div>
             </div>
           </div>

@@ -10,6 +10,7 @@
     position: initial;
     left: auto;
     top: auto;
+    width: 100%;
     transform: none;
     max-width: none;
     margin-bottom: 2rem;
@@ -39,7 +40,7 @@
   padding: 3rem 0 2rem 0;
   flex-wrap: nowrap;
 
-  img {
+  img, svg {
     max-height: 100%;
   }
   

@@ -5,6 +5,16 @@
   text-transform: uppercase;
 }
 
+.text-truffle-alt {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 600;
+  letter-spacing: .125em;
+
+  .narrow {
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+}
+
 .text-ganache {
   font-family: 'Grand Hotel', serif;
   text-transform: none;

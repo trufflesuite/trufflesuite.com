@@ -3,7 +3,7 @@
   <title>Truffle Dashboard</title>
   <meta name="viewport" content="width=device-width">
   <link href="/dashboard/dashboard.css" rel="stylesheet" type="text/css">
-  <script src="/dashboard/dashboard.js"></script>
+  <link rel="stylesheet" href="/css/index.css">
 
   <link rel="apple-touch-icon" sizes="76x76" href="/dashboard/images/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" href="/dashboard/images/favicons/android-chrome-96x96.png" sizes="96x96">
@@ -27,6 +27,14 @@
   </script>
 </head>
 <body>
+  {{> navbar}}
+
   {{{ contents }}}
+
+  {{> footer}}
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.slim.min.js"><\/script>')</script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/dashboard/dashboard.js"></script>
 </body>
 </html>
