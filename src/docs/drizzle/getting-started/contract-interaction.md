@@ -65,3 +65,21 @@ The contract instance has all of its standard web3 properties and methods. For e
 ```javascript
 drizzle.contracts.SimpleStorage.methods.set(2).send({from: '0x3f...'})
 ```
+
+## Adding Contracts Dynamically
+
+You can programmatically add contracts to Drizzle using either `drizzle.addContract()` or the `ADD_CONTRACT` action.
+
+```javascript
+var contractConfig = {
+  contractName: "0x066408929e8d5Ed161e9cAA1876b60e1fBB5DB75",
+  web3Contract: new web3.eth.Contract(/* ... */)
+}
+events = ['Mint']
+
+// Using an action
+dispatch({type: 'ADD_CONTRACT', drizzle, contractConfig, events, web3})
+
+// Or using the Drizzle context object
+this.context.drizzle.addContract({contractConfig, events})
+```

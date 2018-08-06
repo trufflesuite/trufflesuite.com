@@ -1,5 +1,5 @@
 module.exports = function() {
-  var blogo = arguments[0];
+  var thingToLog = arguments[0];
 
-  return console.log(blogo);
+  return console.log(thingToLog);
 };

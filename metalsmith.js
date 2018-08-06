@@ -16,6 +16,7 @@ var moonSearch = require('./metalsmith-moonsearch/metalsmith-moonsearch.js');
 // Data
 var blogData = require('./src/blog/data.json');
 var boxesData = require('./src/boxes/data.json');
+var careersData = require('./src/careers/data.json');
 var docsData = require('./src/docs/data.json');
 var tutorialsData = require('./src/tutorials/data.json');
 
@@ -26,6 +27,7 @@ var app = Metalsmith(__dirname)
   .metadata({
     blog: blogData,
     boxes: boxesData,
+    careers: careersData,
     docs: docsData,
     tutorials: tutorialsData
   })
@@ -53,6 +55,10 @@ var app = Metalsmith(__dirname)
   .use(layouts({
     "default": "single-post.hbs",
     "pattern": "blog/*.html"
+  }))
+  .use(layouts({
+    "default": "single-career.hbs",
+    "pattern": "careers/*.html"
   }))
   .use(layouts({
     "default": "single-tutorial.hbs",

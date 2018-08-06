@@ -10,7 +10,7 @@ Note: If you're unfamiliar with writing unit tests in Mocha, please see [Mocha's
 
 ## Use contract() instead of describe()
 
-Structurally, your tests should remain largely unchanged from that of Mocha: Your tests should exist in the `./test` directory, they should end with a `.js` extension, and they should contain code that Mocha will recognize as an automated test. What makes Truffle tests different from that of Mocha is the `contract()` function: This function works exactly like `describe()` except it enables Truffle's [clean-room features](/docs/getting_started/testing#clean-room-environment). It works like this:
+Structurally, your tests should remain largely unchanged from that of Mocha: Your tests should exist in the `./test` directory, they should end with a `.js` extension, and they should contain code that Mocha will recognize as an automated test. What makes Truffle tests different from that of Mocha is the `contract()` function: This function works exactly like `describe()` except it enables Truffle's [clean-room features](/docs/truffle/testing/testing-your-contracts#clean-room-environment). It works like this:
 
 * Before each `contract()` function is run, your contracts are redeployed to the running Ethereum client so the tests within it run with a clean contract state.
 * The `contract()` function provides a list of accounts made available by your Ethereum client which you can use to write tests.
@@ -21,11 +21,11 @@ Since Truffle uses Mocha under the hood, you can still use `describe()` to run n
 
 Contract abstractions are the basis for making contract interaction possible from JavaScript (they're basically our [flux capacitor](https://www.youtube.com/watch?v=EhU862ONFys)). Because Truffle has no way of detecting which contracts you'll need to interact with within your tests, you'll need to ask for those contracts explicitly. You do this by using the `artifacts.require()` method, a method provided by Truffle that allows you to request a usable contract abstraction for a specific Solidity contract. As you'll see in the example below, you can then use this abstraction to make sure your contracts are working properly.
 
-For more information on using contract abstractions, see the [Interacting With Your Contracts](/docs/getting_started/contracts) section.
+For more information on using contract abstractions, see the [Interacting With Your Contracts](/docs/truffle/getting-started/interacting-with-your-contracts) section.
 
 ## Using artifacts.require()
 
-Using `artifacts.require()` within your tests works the same way as using it within your migrations; you just need to pass the name of the contract. See the [artifacts.require() documentation](./migrations#artifacts-require-) in the Migrations section for detailed usage.
+Using `artifacts.require()` within your tests works the same way as using it within your migrations; you just need to pass the name of the contract. See the [artifacts.require() documentation](/docs/truffle/getting-started/running-migrations#artifacts-require-) in the Migrations section for detailed usage.
 
 ## Using web3
 
@@ -40,7 +40,7 @@ Here's an example test provided in the [MetaCoin Truffle Box](/boxes/metacoin). 
 File: `./test/metacoin.js`
 
 ```javascript
-var MetaCoin = artifacts.require("./MetaCoin.sol");
+var MetaCoin = artifacts.require("MetaCoin");
 
 contract('MetaCoin', function(accounts) {
   it("should put 10000 MetaCoin in the first account", function() {
@@ -185,7 +185,7 @@ You can limit the tests being executed to a specific file as follows:
 truffle test ./test/metacoin.js
 ```
 
-See the full [command reference](/docs/advanced/commands#test) for more information.
+See the full [command reference](/docs/truffle/reference/truffle-commands#test) for more information.
 
 ## Advanced
 

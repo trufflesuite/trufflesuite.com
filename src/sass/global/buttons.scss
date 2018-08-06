@@ -1,9 +1,13 @@
 .btn {
   border: none;
   font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
 }
 
-.btn-truffle:hover, .btn-ganache:hover, .btn-drizzle:hover {
+.btn-truffle:hover,
+.btn-ganache:hover,
+.btn-drizzle:hover,
+.btn-eventbrite:hover {
   background: #fff;
   color: #5e464d;
 }
@@ -42,5 +46,10 @@
 
 .btn-drizzle {
   background: #e911bd;
+  color: #fff;
+}
+
+.btn-eventbrite {
+  background: #f6682F;
   color: #fff;
 }

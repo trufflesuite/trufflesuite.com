@@ -1,4 +1,14 @@
 {
+  "debugger-variable-inspection": {
+    "title": "Variable Inpsection: Going Deeper with the Truffle Solidity Debugger",
+    "date": "2018-05-07",
+    "author": "Mike Pumphrey",
+    "published": true,
+    "products": [
+      "truffle",
+      "ganache"
+    ]
+  },
   "debugging-a-smart-contract": {
     "title": "Debugging a smart contract",
     "date": "2017-10-23",

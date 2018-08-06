@@ -54,33 +54,39 @@
     "official": true
   },
   {
-    "userOrg": "status-im",
-    "displayName": "status-box",
-    "repoName": "status-box",
-    "official": false
-  },
-  {
     "userOrg": "Quintor",
     "displayName": "angular-truffle-box",
     "repoName": "angular-truffle-box",
     "official": false
   },
   {
-    "userOrg": "ens-bid",
-    "displayName": "ens-bid-truffle-box",
-    "repoName": "ens-bid-truffle-box",
+    "userOrg": "endless-nameless-inc",
+    "displayName": "cheshire",
+    "repoName": "cheshire",
     "official": false
   },
   {
-    "userOrg": "DOkwufulueze",
-    "displayName": "eth-vue",
-    "repoName": "eth-vue",
+    "userOrg": "CITA-Toys",
+    "displayName": "cita-truffle-box",
+    "repoName": "cita-truffle-box",
+    "official": false
+  },
+  {
+    "userOrg": "chuckbergeron",
+    "displayName": "etherplate",
+    "repoName": "etherplate",
     "official": false
   },
   {
     "userOrg": "blockchangers",
     "displayName": "eth-truffle-vue",
     "repoName": "eth-truffle-vue",
+    "official": false
+  },
+  {
+    "userOrg": "DOkwufulueze",
+    "displayName": "eth-vue",
+    "repoName": "eth-vue",
     "official": false
   },
   {
@@ -102,9 +108,21 @@
     "official": false
   },
   {
+    "userOrg": "Paperchain",
+    "displayName": "nuxt-box",
+    "repoName": "nuxt-box",
+    "official": false
+  },
+  {
     "userOrg": "peerism",
     "displayName": "peerai-api",
     "repoName": "peerai-api",
+    "official": false
+  },
+  {
+    "userOrg": "hexeight",
+    "displayName": "rapid-box",
+    "repoName": "rapid-box",
     "official": false
   },
   {
@@ -126,9 +144,21 @@
     "official": false
   },
   {
+    "userOrg": "status-im",
+    "displayName": "status-box",
+    "repoName": "status-box",
+    "official": false
+  },
+  {
     "userOrg": "antony",
     "displayName": "svelte-box",
     "repoName": "svelte-box",
+    "official": false
+  },
+  {
+    "userOrg": "NFhbar",
+    "displayName": "truffle-ci-box",
+    "repoName": "truffle-ci-box",
     "official": false
   },
   {
@@ -150,6 +180,12 @@
     "official": false
   },
   {
+    "userOrg": "gasolin",
+    "displayName": "truffle-react-redux",
+    "repoName": "truffle-react-redux",
+    "official": false
+  },
+  {
     "userOrg": "LibertyLocked",
     "displayName": "truffle-react-ts-template",
     "repoName": "truffle-react-ts-template",
@@ -159,6 +195,24 @@
     "userOrg": "UtkarshGupta-CS",
     "displayName": "truffle-security",
     "repoName": "truffle-security",
+    "official": false
+  },
+  {
+    "userOrg": "okwme",
+    "displayName": "truffle-shavings",
+    "repoName": "truffle-shavings",
+    "official": false
+  },
+  {
+    "userOrg": "CasterIO",
+    "displayName": "truffle-starter",
+    "repoName": "truffle-starter",
+    "official": false
+  },
+  {
+    "userOrg": "YuichiNukiyama",
+    "displayName": "truffle-ts-percel-box",
+    "repoName": "truffle-ts-percel-box",
     "official": false
   },
   {

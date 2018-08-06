@@ -2,7 +2,7 @@
 title: Truffle | Interacting with Your Contracts
 layout: docs.hbs
 ---
-# Interacting with Your Contracts
+# Interacting with your contracts
 
 ## Introduction
 
@@ -78,7 +78,7 @@ contract MetaCoin {
 
 This contract has three methods aside from the constructor (`sendCoin`, `getBalanceInEth`, and `getBalance`). All three methods can be executed as either a transaction or a call.
 
-Now let's look at the Javascript object called `MetaCoin` provided for us by Truffle, as made available in the [Truffle console](/docs/getting_started/console):
+Now let's look at the Javascript object called `MetaCoin` provided for us by Truffle, as made available in the [Truffle console](/docs/truffle/getting-started/using-truffle-develop-and-the-console):
 
 ```javascript
 // Print the deployed version of MetaCoin.

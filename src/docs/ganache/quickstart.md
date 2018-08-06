@@ -38,7 +38,7 @@ When you launch Ganache, the screen will show some details about the server, and
 <strong>Note</strong>: The first time you launch Ganache, you will be asked if you want to allow Google Analytics tracking. While optional, turning this on will help the development team gain more insight into how Ganache is used. This tracking is totally anonymous, and no account data or private keys will ever be shared.
 </p>
 
-![Ganache](/img/docs/ganache/accounts.png)
+![Ganache](/img/docs/ganache/quickstart/accounts.png)
 
 *Ganache Accounts*
 
@@ -56,7 +56,7 @@ Also note that you can search for block numbers or transaction hashes from a sea
 
 You can change some features of the generated blockchain through the **Settings** pages, accessed by the gear icon in the top right corner.
 
-![Ganache Settings](/img/docs/ganache/settings.png)
+![Ganache Settings](/img/docs/ganache/quickstart/settings.png)
 
 *Ganache Settings*
 

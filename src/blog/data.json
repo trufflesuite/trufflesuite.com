@@ -1,4 +1,11 @@
 {
+  "why-were-organizing-trufflecon-2018": {
+    "title": "Why We're Organizing TruffleCon 2018",
+    "date": "2018-07-16",
+    "author": "Mike Pumphrey",
+    "published": true,
+    "excerpt": "As you have hopefully heard by now, TruffleCon, Truffle's first-ever user conference, will be on October 5-7, 2018 in Portland, Oregon, U.S.A."
+  },
   "announcing-full-portable-solidity-debugger": {
     "title": "Announcing our Fully Featured, Portable Solidity Debugger",
     "date": "2018-02-26",

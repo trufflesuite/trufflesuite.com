@@ -89,6 +89,9 @@ An object containing information about the status of Drizzle.
 *   Account addresses are stored in state
 *   All contracts are instantiated
 
+### `initialized` (boolean)
+`false` by default, becomes true once a `web3` instance is found and the accounts and contracts are fetched.
+
 ## `web3` (object)
 
 `status` (string): `initializing`, `initialized` and `failed` are possible options. Useful for triggering warnings if `web3` fails to instantiate.

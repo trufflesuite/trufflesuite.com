@@ -2,13 +2,13 @@
 title: Truffle | Compiling Contracts
 layout: docs.hbs
 ---
-# Compiling Contracts
+# Compiling contracts
 
 ## Location
 
 All of your contracts are located in your project's `contracts/` directory. As contracts are written in [Solidity](https://solidity.readthedocs.io/en/develop/), all files containing contracts will have a file extension of `.sol`. Associated Solidity [libraries](http://solidity.readthedocs.org/en/latest/contracts.html#libraries) will also have a `.sol` extension.
 
-With a bare Truffle [project](./project) (created through `truffle init`), you're given a single `Migrations.sol` file that helps in the deployment process. If you're using a [Truffle Box](/boxes), you will have multiple files here.
+With a bare Truffle [project](/docs/truffle/quickstart) (created through `truffle init`), you're given a single `Migrations.sol` file that helps in the deployment process. If you're using a [Truffle Box](/boxes), you will have multiple files here.
 
 ## Command
 
@@ -32,7 +32,7 @@ You can declare contract dependencies using Solidity's [import](http://solidity.
 
 ### Importing dependencies via file name
 
-To import contracts from a separate file, add the following code to your Solidity source file::
+To import contracts from a separate file, add the following code to your Solidity source file:
 
 ```
 import "./AnotherContract.sol";
@@ -44,7 +44,7 @@ Note that Solidity allows other import syntaxes as well. See the Solidity [impor
 
 ### Importing contracts from an external package
 
-Truffle supports dependencies installed via both [EthPM](./packages-ethpm) and [NPM](./packages-npm). To import contracts from a dependency, use the following syntax
+Truffle supports dependencies installed via both [EthPM](/docs/truffle/getting-started/package-management-via-ethpm) and [NPM](/docs/truffle/getting-started/package-management-via-npm). To import contracts from a dependency, use the following syntax
 
 ```
 import "somepackage/SomeContract.sol";
@@ -54,4 +54,4 @@ Here, `somepackage` represents a package installed via EthPM or NPM, and `SomeCo
 
 Note that Truffle will search installed packages from EthPM first before searching for packages installed from NPM, so in the rare case of a naming conflict the package installed via EthPM will be used.
 
-For more information on how to use Truffle's package management features, please see the Truffle [EthPM](./packages-ethpm) and [NPM](./packages-npm) documentation.
+For more information on how to use Truffle's package management features, please see the Truffle [EthPM](/docs/truffle/getting-started/package-management-via-ethpm) and [NPM](/docs/truffle/getting-started/package-management-via-npm) documentation.

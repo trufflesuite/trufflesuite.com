@@ -4,6 +4,43 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
+    <!-- Favicon -->
+    <link rel="icon" href="/img/favicons/favicon.ico">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Truffle Suite">
+    <link rel="icon" sizes="192x192" href="/img/favicons/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Truffle Suite">
+    <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8/10 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="img/favicons/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <!-- Facebook OpenGraph -->
+    <meta property="og:site_name" content="Truffle Suite" />
+    <meta property="og:description" content="The Truffle suite of tools make dapp development easier and more consistent." />
+    <meta property="og:title" content="Truffle Suite | Documentation | Search Results" />
+    <meta property="og:url" content="{{getPageUrl path}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://trufflesuite.com/img/favicons/truffle-share.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="Truffle Suite" />
+    <meta name="twitter:title" content="Truffle Suite | Documentation | Search Results" />
+    <meta name="twitter:description" content="The Truffle suite of tools make dapp development easier and more consistent." />
+    <meta name="twitter:creator" content="Truffle Suite" />
+    <meta name="twitter:domain" content="trufflesuite.com" />
+    <meta name="twitter:image:src" content="https://trufflesuite.com/img/favicons/truffle-share.png" />
+    
+    <meta name="google-site-verification" content="BSgPkMHzw7IxJTpEElNfD8ZZYPzXgOQiTVPzAxAG8-o" />
+
     <title>Truffle Suite | Documentation | Search Results</title>
 
     <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans|Oswald|Varela+Round" rel="stylesheet">
@@ -37,79 +74,7 @@
       </div>-->
 
       <div class="row row-docs-main">
-        <aside class="col-lg-3 docs-sidebar" id="docsSidebar">
-          <h2 class="space-icon d-lg-none text-center" id="docsSidebarToggle"><i class="fas fa-book"></i> SEARCH &amp; CONTENTS</h2>
-
-          <form class="mb-4 mt-4" id="searchForm">
-            <div class="input-group">
-              <input type="text" class="form-control" id="searchInput" placeholder="Search">
-              <div class="input-group-append">
-                <button type="submit" class="btn btn-truffle">SEARCH</button>
-              </div>
-            </div>
-          </form>
-
-          <a class="suite-link" href="/docs">
-            <img class="suite-logo" src="/img/suite-logo-light.svg" alt="Truffle Suite Logo" /><h2>HOME</h2>
-          </a>
-
-          <a class="toggle-truffle" href="#truffleDocs" data-toggle="collapse">
-            <img class="suite-logo" src="/img/truffle-logomark.svg" alt="Truffle Logo" /><h2 class="text-truffle">TRUFFLE</h2>
-          </a>
-
-          <div class="collapse truffle" id="truffleDocs" data-parent="#docsSidebar">
-            <ul>
-              <a href="/docs/truffle/overview"><li>Overview</li></a>
-              <a href="/docs/truffle/quickstart"><li>Quickstart</li></a>
-            </ul>
-            {{#each docs.truffle as |categoryDocs category|}}
-              <h3>{{ category }}</h3>
-              <ul>
-                {{#each categoryDocs}}
-                  <a href="/docs/truffle/{{makeSlug category}}/{{makeSlug this}}"><li>{{ this }}</li></a>
-                {{/each}}
-              </ul>
-            {{/each}}
-          </div>
-
-          <a class="toggle-ganache" href="#ganacheDocs" data-toggle="collapse">
-            <img class="suite-logo" src="/img/ganache-logomark.svg" alt="Ganache Logo" /><h2 class="text-ganache">Ganache</h2>
-          </a>
-          
-          <div class="collapse ganache" id="ganacheDocs" data-parent="#docsSidebar">
-            <ul>
-              <a href="/docs/ganache/overview"><li>Overview</li></a>
-              <a href="/docs/ganache/quickstart"><li>Quickstart</li></a>
-            </ul>
-            {{#each docs.ganache as |categoryDocs category|}}
-              <h3>{{ category }}</h3>
-              <ul>
-                {{#each categoryDocs}}
-                  <a href="/docs/ganache/{{makeSlug category}}/{{makeSlug this}}"><li>{{ this }}</li></a>
-                {{/each}}
-              </ul>
-            {{/each}}
-          </div>
-
-          <a class="toggle-drizzle" href="#drizzleDocs" data-toggle="collapse">
-            <img class="suite-logo" src="/img/drizzle-logomark.svg" alt="Drizzle Logo" /><h2 class="text-drizzle">dri<span class="drizzle-z-skew-1">z</span><span class="drizzle-z-skew-2">z</span>le</h2>
-          </a>
-          
-          <div class="collapse drizzle" id="drizzleDocs" data-parent="#docsSidebar">
-            <ul>
-              <a href="/docs/drizzle/overview"><li>Overview</li></a>
-              <a href="/docs/drizzle/quickstart"><li>Quickstart</li></a>
-            </ul>
-            {{#each docs.drizzle as |categoryDocs category|}}
-              <h3>{{ category }}</h3>
-              <ul>
-                {{#each categoryDocs}}
-                  <a href="/docs/drizzle/{{makeSlug category}}/{{makeSlug this}}"><li>{{ this }}</li></a>
-                {{/each}}
-              </ul>
-            {{/each}}
-          </div>
-        </aside>
+        {{> docs-sidebar}}
 
         <div class="col-lg-9 bd-light-cream docs-content">
           <h1>SEARCH RESULTS</h1>

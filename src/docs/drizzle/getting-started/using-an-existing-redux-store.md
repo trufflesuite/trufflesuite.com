@@ -36,7 +36,7 @@ export default function* root() {
 }
 ```
 
-Now we can use the reducers and sagas as we normally would in our store. Note that we must also generate an initial state for our contracts. Drizzle takes care of this for you with the `generateContractsInitialState()` function.
+Now we can use the reducers and sagas as we normally would in our store. Note that we must also generate an initial state for our contracts. Drizzle takes care of this for you with the `` function.
 
 ```javascript
 // ...
