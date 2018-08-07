@@ -1,6 +1,6 @@
 .truffle-heading-row {
   position: relative;
-  height: calc(100vh - 60px);
+  max-height: calc(100vh - 60px);
 
   .truffle-banner-image {
     margin-top: -40%;

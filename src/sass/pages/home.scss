@@ -6,6 +6,12 @@
   top: 0;
   transform: translateX(-50%);
 
+  @media (max-height: 676px) {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
   @media (max-width: 767.98px) {
     position: initial;
     left: auto;
@@ -36,7 +42,7 @@
 }
 
 .home-heading-row {
-  height: calc(100vh - 60px);
+  max-height: calc(100vh - 60px);
   padding: 3rem 0 2rem 0;
   flex-wrap: nowrap;
 

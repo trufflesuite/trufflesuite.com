@@ -28,7 +28,8 @@
   }
 
   &.ganache {
-    background-image: url("/img/ganache-accent.svg");
+    background-image: url("/img/ganache-accent.png");
+    background-repeat: repeat-x;
   }
 
   &.drizzle {

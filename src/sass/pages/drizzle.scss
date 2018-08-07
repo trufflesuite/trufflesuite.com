@@ -1,6 +1,6 @@
 .drizzle-heading-row {
   position: relative;
-  height: calc(100vh - 60px);
+  max-height: calc(100vh - 60px);
 
   .drizzle-banner-image {
     margin-top: -40%;
