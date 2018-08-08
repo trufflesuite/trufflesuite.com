@@ -142,7 +142,7 @@ Once this operation is completed, you'll now have a project structure with the f
 
 To deploy our smart contracts, we're going to need to connect to a blockchain. Truffle has a built-in personal blockchain that can be used for testing. This blockchain is local to your system and does not interact with the main Ethereum network.
 
-You can create this blockchain and interact with it using [Truffle Develop](LINK).
+You can create this blockchain and interact with it using [Truffle Develop](/docs/truffle/getting-started/using-truffle-develop-and-the-console#truffle-develop).
 
 1. Run Truffle Develop:
 

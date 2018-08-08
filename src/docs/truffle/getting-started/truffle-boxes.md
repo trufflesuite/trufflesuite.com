@@ -63,17 +63,17 @@ An object containing console commands to execute once unboxed. Since we're worki
 
 The large box image is a 512px square with 32px of padding on each side.
 
-![Large Box Image Template](/images/ballotin/box-img-lg-template.png)
+![Large Box Image Template](/img/boxes/box-img-lg-template.png)
 
 The small box image is 735px x 100px. There is 32px of padding on the left side of the banner, and it's minimum size (described in the template as "Min Banner Width") is 290px, including the left padding. The banners are fixed to the left side and crop off the right side as the window narrows.
 
-![Small Box Image Template](/images/ballotin/box-img-sm-template.png)
+![Small Box Image Template](/img/boxes/box-img-sm-template.png)
 
 If no images are provided in a box, we default to banners containing the Truffle logo:
 
-![Default Large Image](/images/ballotin/loading-thumb.png)
+![Default Large Image](/img/boxes/loading-thumb.png)
 
-![Default Small Image](/images/ballotin/loading-banner.png)
+![Default Small Image](/img/boxes/loading-banner.png)
 
 ## Truffle site listing
 

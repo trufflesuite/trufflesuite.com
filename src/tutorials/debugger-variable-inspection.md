@@ -555,7 +555,7 @@ Let's edit our contract and see what happens.
 
 Something seems off here. Obviously, if you were expecting the Fibonacci series, by this point you would realize that you had veered far off course.
 
-But the jump from `0` to `255` should be suspicious too. And in fact, what we're seeing is a **buffer underflow**, a situation where we have an [unsigned integer](https://en.wikipedia.org/wiki/Integer_(computer_science)), which can hold only positive values, being set to less than zero. Specifically, that fourth value is defined as the difference between the previous two elements, so `0 - 1 = -1`. Our type is `uint8[]` which means that each integer in the array is defined by 8 bits, so its maximum value is 2^8 - 1 = 255. Subtract one from zero, and the value "wraps around" to its maximum value.
+But the jump from `0` to `255` should be suspicious too. And in fact, what we're seeing is a **buffer underflow**, a situation where we have an [unsigned integer][1], which can hold only positive values, being set to less than zero. Specifically, that fourth value is defined as the difference between the previous two elements, so `0 - 1 = -1`. Our type is `uint8[]` which means that each integer in the array is defined by 8 bits, so its maximum value is 2^8 - 1 = 255. Subtract one from zero, and the value "wraps around" to its maximum value.
 
 Assuming this was the series we wanted (and that our minus sign was correct), the way to change this is to change the definition of our `fibseries` array from `uint8[]` to `int8[]`. That would make values "signed integers" and able to accept negative values, giving you an array that would look like this instead:
 
@@ -649,3 +649,5 @@ So we're going to introduce a small error, a misnumbering in our for loop that w
    Note that the contract is failing at the point where it tries to determine the value of `fibseries[i-2]` But in our debugger, we know that the current value of `i` is `1`, so `i-2` is going to be `-1` (or actually `2^256 - 1`, due to the buffer underflow issue we talked about above, and with `i` defined as a `uint`). Since either one of those values are invalid (you can't have a negative index, and the value at index `2^256 - 1` is clearly not defined), the contract halts with an error.
 
 These are just some of the ways that you can use variable inspection to debug your contracts. We're constantly adding functionality of the debugger, so please [raise an issue on our Github page](https://github.com/trufflesuite/truffle) or ask a fellow Truffler in our [community Gitter channel](https://gitter.im/ConsenSys/truffle). Happy debugging!
+
+[1]: https://en.wikipedia.org/wiki/Integer_(computer_science)

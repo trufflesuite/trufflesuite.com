@@ -8,7 +8,7 @@ Even the smallest project will interact with at the very least two blockchain no
 
 ## Configuration
 
-See the [Configuration](/docs/truffle/advanced/configuration#networks) section for more information.
+See the [Configuration](/docs/truffle/reference/configuration#networks) section for more information.
 
 ## Specifying a network
 
