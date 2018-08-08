@@ -2,13 +2,13 @@
 
 We welcome all contributions, typo corrections, and general feedback.
 
-You can find the markdown source code inside the `public/` subdirectory.
+You can find the markdown source code inside the `src/` subdirectory.
 
-For example: 
+For example:
 
-* For [tutorials](http://truffleframework.com/tutorials) see [public/tutorials](https://github.com/trufflesuite/trufflesuite.com/tree/master/public/tutorials).
+* For [tutorials](http://truffleframework.com/tutorials) see [src/tutorials](https://github.com/trufflesuite/trufflesuite.com/tree/master/src/tutorials).
 
-* For [docs](http://truffleframework.com/docs) see [public/docs](https://github.com/trufflesuite/trufflesuite.com/tree/master/public/docs).
+* For [docs](http://truffleframework.com/docs) see [src/docs](https://github.com/trufflesuite/trufflesuite.com/tree/master/src/docs).
 
 Commits to master (and PRs accepted) will trigger updates to the live site. Thank you!
 

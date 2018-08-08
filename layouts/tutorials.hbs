@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+    <!-- Favicon -->
+    <link rel="icon" href="/img/favicons/favicon.ico">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Truffle Suite">
+    <link rel="icon" sizes="192x192" href="/img/favicons/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Truffle Suite">
+    <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8/10 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="img/favicons/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <!-- Facebook OpenGraph -->
+    <meta property="og:site_name" content="Truffle Suite" />
+    <meta property="og:description" content="The Truffle suite of tools make dapp development easier and more consistent." />
+    <meta property="og:title" content="Truffle Suite | Tutorials" />
+    <meta property="og:url" content="{{getPageUrl path}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="https://trufflesuite.com/img/favicons/truffle-share.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="Truffle Suite" />
+    <meta name="twitter:title" content="Truffle Suite | Tutorials" />
+    <meta name="twitter:description" content="The Truffle suite of tools make dapp development easier and more consistent." />
+    <meta name="twitter:creator" content="Truffle Suite" />
+    <meta name="twitter:domain" content="trufflesuite.com" />
+    <meta name="twitter:image:src" content="https://trufflesuite.com/img/favicons/truffle-share.png" />
+    
+    <meta name="google-site-verification" content="BSgPkMHzw7IxJTpEElNfD8ZZYPzXgOQiTVPzAxAG8-o" />
+      
+    <title>Truffle Suite | Tutorials</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans|Oswald|Varela+Round|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/index.css">
+  </head>
+  <body>
+    {{> navbar}}
+
+    <main class="container container-heading">
+      <div class="row">
+        <div class="col">
+          <h1>TUTORIALS</h1>
+        </div>
+      </div>
+    </main>
+
+    <main class="banner banner-light-cream pt-5 pb-5" role="main">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col">
+            <form>
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" id="tutorialsSearch" placeholder="Search by name or author...">
+                </div>
+              </div>
+
+              <!--<div class="row mt-3 mb-3">
+                <div class="col form-inline">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Truffle</label>
+                  </div>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Ganache</label>
+                  </div>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Drizzle</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row" id="isoSort">
+                <div class="col">
+                  <select id="inputState" class="form-control">
+                    <option selected>Version</option>
+                    <option>4.1</option>
+                    <option>4.0.6</option>
+                    <option>4.0.5</option>
+                  </select>
+                </div>
+
+                <div class="col">
+                  <select id="inputState" class="form-control">
+                    <option selected>Tag</option>
+                    <option>smart-contracts</option>
+                    <option>front-end</option>
+                    <option>debugging</option>
+                  </select>
+                </div>
+
+                <div class="col">
+                  <select id="inputState" class="form-control" data-filter-group="author">
+                    <option selected>Author</option>
+                    <option data-filter="tim-coulter">Tim Coulter</option>
+                    <option data-filter="mike-pumphrey">Mike Pumphrey</option>
+                    <option data-filter="josh-quintal">Josh Quintal</option>
+                  </select>
+                </div>
+              </div>-->
+            </form>
+          </div>
+        </div>
+
+        <div class="row" id="isoContainer">
+          {{#each tutorials as |tutorial slug|}}
+            {{#if tutorial.published}}
+              <div class="col-xs-12 col-md-6 col-lg-4 iso-item {{makeSlug tutorial.author}}">
+                <a class="link-card" href="/tutorials/{{ slug }}">
+                  <div class="card card-tutorial {{listToClasses tutorial.products}}">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ tutorial.title }}</h5>
+                      <p class="card-text space-icon"><i class="far fa-calendar-alt"></i> {{ tutorial.date }}</p>
+                      <p class="card-text space-icon"><i class="far fa-user"></i> {{ tutorial.author }}</p>
+                      <!--<p class="card-text"><i class="fas fa-code-branch"></i> 4.0+</p>
+                      <p class="card-text"><i class="fas fa-tags"></i> tags</p>-->
+                    </div>
+                  </div>
+                </a>
+              </div>
+            {{/if}}
+          {{/each}}
+        </div>
+      </div>
+    </main>
+
+    {{> footer}}
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.slim.min.js"><\/script>')</script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="/js/tutorials.js"></script>
+
+    {{> ga-tag}}
+  </body>
+</html>

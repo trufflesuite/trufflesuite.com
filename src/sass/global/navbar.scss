@@ -1,0 +1,158 @@
+.navbar {
+  font-family: 'Oswald', sans-serif;
+  background: #33262a;
+  border-bottom: 2px solid #5e464d;
+}
+
+.navbar a, .navbar-expand-md .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-nav {
+  @media (max-width: 767.98px) {
+   padding-top: 1rem;
+  }
+}
+
+// Left Side
+
+.navbar a.navbar-brand {
+  line-height: 2rem;
+
+  img {
+    display: block;
+    float: left;
+  }
+}
+
+.navbar-brand {
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+.navbar .suite-logo {
+  height: 2rem;
+  margin-right: .75rem;
+}
+
+.navbar .trufflecon-link {
+  letter-spacing: .14em;
+
+  span {
+    display: none;
+  }
+
+  img {
+    height: 1em;
+    margin-top: -.25em;
+    margin-right: .14em;
+  }
+}
+
+// Right Side
+
+.navbar .navbar-collapse {
+  flex-grow: 0;
+  margin-left: auto;
+}
+
+// Dropdown
+
+.navbar .dropdown-menu {
+  background: #33262a;
+  border-bottom: 2px solid #5e464d;
+  border-left: 2px solid #5e464d;
+  border-radius: 0 0 .25rem .25rem;
+  border-right: 2px solid #5e464d;
+  border-top: none;
+  margin: 8.5px 0 0 -4px;
+  padding: 1rem;
+
+  a {
+    display: block;
+
+    &:hover {
+      text-decoration: none;
+      opacity: .75;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .suite-logo {
+    height: auto;
+    width: 2rem;
+  }
+
+  .text-ganache {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 767.98px) {
+    margin: 0;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+// Hamburger Button
+
+.navbar-toggler {
+  position: relative;
+  height: 32px;
+  width: 42px;
+  border: none;
+  
+  &:focus {
+    outline-color: transparent;
+  }
+
+  .icon-bar {
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    transition: all .25s ease-in-out;
+    background: #fff;
+    transform: none;
+  }
+}
+
+.icon-bar:nth-of-type(1) {
+  top: 7px;
+  left: 10px;
+}
+
+.icon-bar:nth-of-type(2) {
+  top: 15px;
+  left: 10px;
+}
+
+.icon-bar:nth-of-type(3) {
+  bottom: 6px;
+  left: 10px;
+}
+
+.navbar-toggler[aria-expanded="true"] {
+  &:hover {
+    opacity: 1;
+  }
+
+  .icon-bar:nth-of-type(1) {
+    top: calc(50% - 2px);
+    left: 11px;
+    transform: rotate(45deg);
+  }
+
+  .icon-bar:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .icon-bar:nth-of-type(3) {
+    bottom: calc(50% - 1px);
+    transform: rotate(-45deg);
+  }
+}

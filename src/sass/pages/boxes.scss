@@ -1,0 +1,51 @@
+.boxes-heading {
+  img {
+    max-height: calc(75vh - 8rem);
+  }
+}
+
+.box-radios .form-group {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+.box-card {
+  overflow: hidden;
+  margin-bottom: 2rem;
+
+  .card-img-top {
+    height: 100px;
+    width: 738px;
+  }
+}
+
+.box-single-card {
+  .card-body {
+    padding: 1.5rem 1.25rem;
+  }
+
+  h5 {
+    font-family: 'Oswald', sans-serif;
+
+    &:not(:first-child) {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+.badge-official {
+  background: #e0dad7;
+  color: #5e464d;
+  padding: .25rem .5rem;
+  font-size: 1rem;
+  line-height: 1.75rem;
+
+  img {
+    height: 1.5rem;
+    margin-right: .125rem;
+    margin-top: -.125rem;
+  }
+}

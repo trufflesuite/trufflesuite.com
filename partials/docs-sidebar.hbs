@@ -1,0 +1,73 @@
+<aside class="col-lg-3 docs-sidebar" id="docsSidebar">
+  <h2 class="space-icon d-lg-none text-center" id="docsSidebarToggle"><i class="fas fa-book"></i> SEARCH &amp; CONTENTS</h2>
+
+  <form class="mb-4" id="searchForm">
+    <div class="input-group">
+      <input type="text" class="form-control" id="searchInput" placeholder="Search">
+      <div class="input-group-append">
+        <button type="submit" class="btn btn-truffle">SEARCH</button>
+      </div>
+    </div>
+  </form>
+
+  <a class="suite-link" href="/docs">
+    <h2><i class="fas fa-book"></i> HOME</h2>
+  </a>
+
+  <a class="toggle-truffle" href="#truffleDocs" data-toggle="collapse">
+    <img class="suite-logo" src="/img/truffle-logomark.svg" alt="Truffle Logo" /><h2 class="text-truffle"><span class="narrow">T</span>RUFFLE</h2>
+  </a>
+
+  <div class="collapse truffle" id="truffleDocs" data-parent="#docsSidebar">
+    <ul>
+      <a href="/docs/truffle/overview"><li>Overview</li></a>
+      <a href="/docs/truffle/quickstart"><li>Quickstart</li></a>
+    </ul>
+    {{#each docs.truffle as |categoryDocs category|}}
+      <h3>{{ category }}</h3>
+      <ul>
+        {{#each categoryDocs}}
+          <a href="/docs/truffle/{{makeSlug category}}/{{makeSlug this}}"><li>{{ this }}</li></a>
+        {{/each}}
+      </ul>
+    {{/each}}
+  </div>
+
+  <a class="toggle-ganache" href="#ganacheDocs" data-toggle="collapse">
+    <img class="suite-logo" src="/img/ganache-logomark.svg" alt="Ganache Logo" /><h2 class="text-ganache">Ganache</h2>
+  </a>
+  
+  <div class="collapse ganache" id="ganacheDocs" data-parent="#docsSidebar">
+    <ul>
+      <a href="/docs/ganache/overview"><li>Overview</li></a>
+      <a href="/docs/ganache/quickstart"><li>Quickstart</li></a>
+    </ul>
+    {{#each docs.ganache as |categoryDocs category|}}
+      <h3>{{ category }}</h3>
+      <ul>
+        {{#each categoryDocs}}
+          <a href="/docs/ganache/{{makeSlug category}}/{{makeSlug this}}"><li>{{ this }}</li></a>
+        {{/each}}
+      </ul>
+    {{/each}}
+  </div>
+
+  <a class="toggle-drizzle" href="#drizzleDocs" data-toggle="collapse">
+    <img class="suite-logo" src="/img/drizzle-logomark.svg" alt="Drizzle Logo" /><h2 class="text-drizzle">dri<span class="drizzle-z-skew-1">z</span><span class="drizzle-z-skew-2">z</span>le</h2>
+  </a>
+  
+  <div class="collapse drizzle" id="drizzleDocs" data-parent="#docsSidebar">
+    <ul>
+      <a href="/docs/drizzle/overview"><li>Overview</li></a>
+      <a href="/docs/drizzle/quickstart"><li>Quickstart</li></a>
+    </ul>
+    {{#each docs.drizzle as |categoryDocs category|}}
+      <h3>{{ category }}</h3>
+      <ul>
+        {{#each categoryDocs}}
+          <a href="/docs/drizzle/{{makeSlug category}}/{{makeSlug this}}"><li>{{ this }}</li></a>
+        {{/each}}
+      </ul>
+    {{/each}}
+  </div>
+</aside>

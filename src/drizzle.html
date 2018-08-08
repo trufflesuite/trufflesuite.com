@@ -1,0 +1,91 @@
+---
+title: Drizzle
+layout: layout.hbs
+---
+<main role="main" class="container">
+  <div class="row align-items-center drizzle-heading-row">
+    <div class="col-md-6">
+      <img class="drizzle-banner-image" src="img/drizzle-header.svg" alt="Drizzle" title="Drizzle" />
+    </div>
+
+    <div class="col-md-6">
+      <h1 class="text-drizzle">dri<span class="drizzle-z-skew-1">z</span><span class="drizzle-z-skew-2">z</span>le</h1>
+      <h2>FRESH CHAIN-DATA FOR FRONT-ENDS</h2>
+      <p>A collection of front-end libraries that make writing dapp user interfaces easier and more predictable.</p>
+      <pre class="bd-milk-chocolate"><code>npm install drizzle --save</code></pre>
+      <br/>
+      <a href="https://github.com/trufflesuite/drizzle" class="btn btn-drizzle">GITHUB REPO</a>
+      <a href="/docs/drizzle/overview" class="btn btn-drizzle">DOCS</a>
+    </div>
+
+    <!--<p class="drizzle-down-arrow d-none d-md-block" id="headerArrow"><i class="fas fa-chevron-down"></i></p>-->
+  </div>
+
+  <div class="row mb-6 mt-5" id="contentBegins">
+    <div class="col text-center">
+      <h1 class="text-drizzle">FEATURES</h1>
+    </div>
+  </div>
+
+  <div class="row text-center mb-5">
+    <div class="col-md-6 mb-5 mb-md-0">
+      <img class="feature-icon-md mb-4" src="img/drizzle-feature-1-icon.svg" alt="Drizzle" title="Drizzle" />
+      <h2>REACTIVE ETHEREUM DATASTORE</h2>
+      <p>The core of Drizzle is based on a Redux store. We take care of synchronizing your contract data, transaction data and more.</p>
+      <a class="link-drizzle" href="/docs/drizzle/reference/drizzle-state">Learn More</a>
+    </div>
+
+    <div class="col-md-6">
+      <img class="feature-icon-md mb-4" src="img/drizzle-feature-2-icon.svg" alt="Drizzle" title="Drizzle" />
+      <h2>MAINTAINS UNDERLYING FUNCTIONS</h2>
+      <p>Drizzle extends web3 1.0's contracts, so you have access to all properties &amp; methods described in their documentation.</p>
+      <a class="link-drizzle" href="/docs/drizzle/getting-started/contract-interaction">Learn More</a>
+    </div>
+  </div>
+
+  <div class="row text-center mb-7">
+    <div class="col-md-6 mb-5 mb-md-0">
+      <img class="feature-icon-md mb-4" src="img/drizzle-feature-3-icon.svg" alt="Drizzle" title="Drizzle" />
+      <h2>USE AN EXISTING STORE</h2>
+      <p>Drizzle can generate its own store or use your existing store. Simply import its reducers &amp; sagas and you're good to go.</p>
+      <a class="link-drizzle" href="/docs/drizzle/getting-started/using-an-existing-redux-store">Learn More</a>
+    </div>
+
+    <div class="col-md-6">
+      <img class="feature-icon-md mb-4" src="img/drizzle-feature-4-icon.svg" alt="Drizzle" title="Drizzle" />
+      <h2>COMPONENT LIBRARY</h2>
+      <p>We maintain a library of React components for commonly used dapp functions. For example, generating input forms for contracts.</p>
+      <a class="link-drizzle" href="/docs/drizzle/react/react-components">Learn More</a>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h1 class="text-drizzle text-center mb-3">modular, not magic</h1>
+      <p class="mb-4">Drizzle's architecture is completely modular--drizzle as much or as little as you like. We've created two packages for use with React, but the core functionality is contained in the base <code class="dark">drizzle</code> module itself. If you're familiar with Redux, it's not a stretch to create an Angular library or use it for something other than a webapp.</p>
+      <ul class="drizzle-libs-list">
+        <li><code class="dark">drizzle</code>: The core library responsible for web3, account and contract instantiation; wiring up the necessary synchronizations and providing additional contract functionality.</li>
+        <li><code class="dark">drizzle-react</code>: Provides a DrizzleProvider component and drizzleConnect helper method to make it easier to connect Drizzle with your React app.</li>
+        <li><code class="dark">drizzle-react-components</code>: A library of useful components for common dapp functions. Currently includes ContractData, ContractForm and LoadingContainer.</li>
+      </ul>
+      <img class="img-fluid" src="img/drizzle-modules.svg" alt="Drizzle Modules" title="Drizzle Modules" />
+    </div>
+  </div>
+</main>
+
+<div class="banner-taste drizzle">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <h1 class="text-drizzle">Like the taste?</h1>
+        <h2>The recipe is open source!</h2>
+        <p>The full source code of Drizzle is on GitHub! We welcome all contributions and feature suggestions.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scroll-arrow.js"></script>

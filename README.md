@@ -14,24 +14,24 @@ To run a local server to view the site (available on `localhost:9000`), in the r
 npm run dev
 ```
 
-To compile the site, in the root directory, run:
+To build the site, in the root directory, run:
 
 ```
-npm run compile
+npm run build
 ```
 
-Running the compile step will build the site and place it in the `build/` directory.
+Running the build step will build the site and place it in the `build/` directory.
 
 ## Contributing
 
 We welcome all contributions, typo corrections, and general feedback.
 
-You can find the markdown source code inside the `public/` subdirectory.
+You can find the markdown source code inside the `src/` subdirectory.
 
 For example: 
 
-* For [tutorials](http://truffleframework.com/tutorials) see `public/tutorials`.
+* For [tutorials](http://truffleframework.com/tutorials) see `src/tutorials`.
 
-* For [docs](http://truffleframework.com/docs) see `public/docs`.
+* For [docs](http://truffleframework.com/docs) see `src/docs`.
 
 Commits to master (and PRs accepted) will trigger updates to the live site. Thank you!

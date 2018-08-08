@@ -1,0 +1,111 @@
+.trufflecon-heading {
+  h1 {
+    font-size: 4rem;
+    letter-spacing: .35em;
+
+    span {
+      display: none;
+    }
+
+    img {
+      height: 1em;
+      margin-top: -.25em;
+      margin-right: .35em;
+    }
+
+    @media (max-width: 991.98px) {
+      font-size: 2.75rem;
+      letter-spacing: .2em;
+    }
+  }
+}
+
+.faq {
+  list-style: none;
+  padding-left: 0;
+
+  li:nth-child(odd) {
+    font-weight: bold;
+  }
+
+  li:nth-child(even):not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.trufflecon-heading-bd {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url(/img/trufflecon/trufflecon-banner.jpg);
+  background-size: cover;
+  background-position: center center;
+  opacity: .3;
+  z-index: -1;
+}
+
+.trufflecon-speakers {
+  .circle-image-container {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto 1.5rem auto;
+    padding-bottom: 0;
+    border: 4px solid #3fe0c5;
+    overflow: hidden;
+
+    @media (max-width: 991.98px) {
+      width: 200px;
+      height: 200px;
+
+      img {
+        width: 200px;
+      }
+    }
+  }
+}
+
+.trufflecon-buy {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 70px;
+  right: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  z-index: 2;
+  padding: .5rem 1rem;
+  transition: all .125s ease-in-out;
+  -ms-transition: all .125s ease-in-out;
+  -moz-transition: all .125s ease-in-out;
+  -webkit-transition: all .125s ease-in-out;
+
+  &.scroll {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (max-width: 767.98px) {
+    padding: .375rem .75rem;
+  }
+}
+
+// SHARING BUTTONS
+
+#st-2 {
+  top: 105px !important;
+
+  @media (max-width: 980px) {
+    top: auto !important;
+  }
+}
+
+#st-2 .st-btn[data-network='sharethis'] {
+  background-color: #3fe0c5 !important;
+}
+
+#st-2 .st-toggle {
+  background: #5f474e !important;
+}
