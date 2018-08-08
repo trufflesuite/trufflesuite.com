@@ -18,7 +18,7 @@ Most Truffle commands will behave differently based on the network specified, an
 $ truffle migrate --network live
 ```
 
-In this example, Truffle will run your migrations on the "live" network, which -- if configured like [the example](/docs/truffle/advanced/configuration#networks) -- is associated with the public Ethereum blockchain.
+In this example, Truffle will run your migrations on the "live" network, which -- if configured like [the example](/docs/truffle/reference/configuration#networks) -- is associated with the public Ethereum blockchain.
 
 ## Build artifacts
 
