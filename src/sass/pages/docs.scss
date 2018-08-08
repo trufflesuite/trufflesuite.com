@@ -1,6 +1,7 @@
 .docs-sidebar, .docs-content {
   height: calc(100vh - 60px);
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .docs-sidebar {
@@ -124,9 +125,10 @@
     overflow: hidden;
 
     &.open {
-      max-height: 100vh;
+      max-height: calc(100vh - 60px);
       border-top: none;
       overflow: scroll;
+      -webkit-overflow-scrolling: touch;
     }
 
     > h2 {

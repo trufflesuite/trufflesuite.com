@@ -2,7 +2,7 @@ var browserSync = require('metalsmith-browser-sync');
 var app = require("./../metalsmith.js");
 var path = require("path");
 
-app.use(browserSync({
+app(false).use(browserSync({
   server : {
     baseDir: path.join(__dirname, "../build"),
     serveStaticOptions: {

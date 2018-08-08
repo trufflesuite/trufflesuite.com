@@ -20,10 +20,11 @@ var careersData = require('./src/careers/data.json');
 var docsData = require('./src/docs/data.json');
 var tutorialsData = require('./src/tutorials/data.json');
 
-var app = Metalsmith(__dirname)
+function app(clean) {
+  return Metalsmith(__dirname)
   .source(path.join('./', 'src'))
   .destination('build/')
-  .clean(true)
+  .clean(clean)
   .metadata({
     blog: blogData,
     boxes: boxesData,
@@ -70,5 +71,6 @@ var app = Metalsmith(__dirname)
     outputDir: 'css/'
   }))
   .use(moonSearch());
+}
 
 module.exports = app;
