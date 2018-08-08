@@ -11,7 +11,7 @@ Select a member of the **Truffle Suite** to learn more.
       <div class="card docs-truffle-card mb-3">
         <div class="card-body">
           <img class="card-img-top" src="/img/truffle-logomark.svg" alt="Truffle Logo">
-          <h5 class="card-title text-center text-truffle">TRUFFLE</h5>
+          <h5 class="card-title text-center text-truffle"><span class="narrow">T</span>RUFFLE</h5>
         </div>
       </div>
     </a>
