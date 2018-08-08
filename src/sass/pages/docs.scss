@@ -119,16 +119,27 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    max-height: 60px;
+    height: 60px;
     border-top: 2px solid #5e464d;
     transition: all .125s ease-in-out;
     overflow: hidden;
 
     &.open {
-      max-height: calc(100vh - 60px);
+      height: 100%;
+      padding-top: 60px;
       border-top: none;
       overflow: scroll;
       -webkit-overflow-scrolling: touch;
+
+      > h2 {
+        position: static;
+        width: auto;
+        margin: 0 auto;
+      }
+
+      form {
+        margin-top: 1rem;
+      }
     }
 
     > h2 {
