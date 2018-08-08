@@ -144,12 +144,6 @@
     "official": false
   },
   {
-    "userOrg": "status-im",
-    "displayName": "status-box",
-    "repoName": "status-box",
-    "official": false
-  },
-  {
     "userOrg": "antony",
     "displayName": "svelte-box",
     "repoName": "svelte-box",

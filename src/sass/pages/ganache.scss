@@ -48,8 +48,9 @@
 
 .ganache-window-rule {
   border-top: 3px solid #e4a663;
-  margin: 0 0 0 -50%;
-  width: 150vw;
+  margin: 0;
+  width: 9999px;
+  transform: translateX(-50%);
 }
 
 .ganache-other-os {

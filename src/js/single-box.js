@@ -29,7 +29,22 @@ octokit.repos.get({owner: boxUserOrgName, repo: boxRepoName})
   console.error(error);
 });
 
+
 // Tags
+$.getJSON('/data/boxes.json', function(data, textStatus, xhr) {
+  if (textStatus === 'error') {
+    return console.error(xhr.responseText);
+  }
+
+  const ghTags = data[boxRepoName]['tags'].join(', ');
+  const currentTags = $(cardElement).find('.box-tags').text();
+  
+  var newTags = data[boxRepoName]['tags'].length > 0 ? currentTags + ', ' + ghTags : currentTags;
+
+  $('#boxTags').html(newTags);
+});
+
+/*
 octokit.repos.getTopics({owner: boxUserOrgName, repo: boxRepoName})
 .then(function(result) {
   const boxTags = result.data.names.join(', ');
@@ -39,6 +54,7 @@ octokit.repos.getTopics({owner: boxUserOrgName, repo: boxRepoName})
 .catch(function(error) {
   console.error(error);
 });
+*/
 
 // Readme
 octokit.repos.getReadme({owner: boxUserOrgName, repo: boxRepoName})
