@@ -53,7 +53,7 @@ Once this operation is completed, you'll now have a project structure with the f
 * `contracts/`: Directory for [Solidity contracts](/docs/truffle/getting-started/interacting-with-your-contracts)
 * `migrations/`: Directory for [scriptable deployment files](/docs/truffle/getting-started/running-migrations#migration-files)
 * `test/`: Directory for test files for [testing your application and contracts](/docs/truffle/testing/testing-your-contracts)
-* `truffle.js`: Truffle [configuration file](/docs/truffle/advanced/configuration)
+* `truffle.js`: Truffle [configuration file](/docs/truffle/reference/configuration)
 
 ## Exploring the project
 
@@ -73,7 +73,7 @@ Once this operation is completed, you'll now have a project structure with the f
 
 1. Open the `test/metacoin.js` file. This is a [test file written in JavaScript](/docs/truffle/testing/writing-tests-in-javascript) which performs a similar function to the Solidity test above.
 
-1. Open the `truffle.js` file. This is the Truffle [configuration file](/docs/truffle/advanced/configuration), for setting network information and other project-related settings. The file is blank, but this is okay, as we'll be using a Truffle command that has some defaults built-in.
+1. Open the `truffle.js` file. This is the Truffle [configuration file](/docs/truffle/reference/configuration), for setting network information and other project-related settings. The file is blank, but this is okay, as we'll be using a Truffle command that has some defaults built-in.
 
 ## Testing
 
@@ -94,7 +94,7 @@ Once this operation is completed, you'll now have a project structure with the f
    ```
 
    <p class="alert alert-info">
-   <strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on [resolving naming conflicts on Windows](/docs/truffle/advanced/configuration#resolving-naming-conflicts-on-windows).
+   <strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on [resolving naming conflicts on Windows](/docs/truffle/reference/configuration#resolving-naming-conflicts-on-windows).
    </p>
 
    These tree tests were run against the contract, with descriptions displayed on what the tests are supposed to do.
