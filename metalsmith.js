@@ -23,7 +23,7 @@ var tutorialsData = require('./src/tutorials/data.json');
 var app = Metalsmith(__dirname)
   .source(path.join('./', 'src'))
   .destination('build/')
-  .clean(false)
+  .clean(true)
   .metadata({
     blog: blogData,
     boxes: boxesData,
