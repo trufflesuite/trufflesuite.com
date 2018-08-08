@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node ./scripts/dev.js",
     "uglify": "recursive-uglifyjs build/js && recursive-uglifyjs build/dashboard",
-    "compile": "node ./compile.js",
-    "build": "npm run compile",
+    "build": "node ./scripts/compile.js",
     "postcompile": "npm run uglify && npm run imagemin",
     "imagemin": "imagemin ./src/img/ build/img/ --optimizationLevel 3 --progressive && imagemin ./src/dashboard/images build/dashboard/images --optimizationLevel 3 --progressive"
   },
