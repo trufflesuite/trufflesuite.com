@@ -186,7 +186,7 @@ We won't spend too much time talking about writing or deploying contracts in Tru
    };
    ```
 
-   If you guessed the difference was `privateFor`, you got it! `privateFor` is an extra transaction parameter added to Quorum that specifies that **the transaction you're making** -- in this case a contract deployment -- **is private for a specific account, identified by the given public key**. For this transaction, the public key we chose represents node 7. Since we previously configured Truffle to connect to node 1, this transaction will deploy a contract from node 1, making the transaction private between node 1 and node 7.
+   If you guessed the difference was `privateFor`, you got it! `privateFor` is an extra transaction parameter added to Quorum that specifies that **the transaction you're making** -- in this case a contract deployment -- **is private for a specific account, identified by the given public key**. For this transaction, the public key we chose represents node 7 and was obtained from the `7nodes/keys/tm7.pub` file. Since we previously configured Truffle to connect to node 1, this transaction will deploy a contract from node 1, making the transaction private between node 1 and node 7.
 
 1. Now it's time to deploy your contracts. Run the `truffle migrate` command and watch your contracts be successfully deployed:
 
