@@ -70,10 +70,10 @@
   opacity: 0;
   visibility: hidden;
   position: fixed;
-  top: 70px;
+  top: 60px;
   right: 0;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+  width: 100%;
+  border-radius: 0;
   z-index: 2;
   padding: .5rem 1rem;
   transition: all .125s ease-in-out;
@@ -90,22 +90,4 @@
   @media (max-width: 767.98px) {
     padding: .375rem .75rem;
   }
-}
-
-// SHARING BUTTONS
-
-#st-2 {
-  top: 105px !important;
-
-  @media (max-width: 980px) {
-    top: auto !important;
-  }
-}
-
-#st-2 .st-btn[data-network='sharethis'] {
-  background-color: #3fe0c5 !important;
-}
-
-#st-2 .st-toggle {
-  background: #5f474e !important;
 }
