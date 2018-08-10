@@ -36,7 +36,7 @@ In order to interact with contracts, we need them deployed on a network! The def
 
 ```javascript
 networks: {
-  development: {
+  ganache: {
     host: '127.0.0.1',
     port: 7545,
     network_id: '*' // Match any network id
