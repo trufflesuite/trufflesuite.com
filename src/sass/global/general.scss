@@ -37,35 +37,33 @@ code {
   }
 }
 
-.container-post, .docs-content {
-  .link-markdown {
-    position: relative;
+.link-markdown {
+  position: relative;
+  color: #5e464d;
+
+  &:hover {
     color: #5e464d;
-  
-    &:hover {
-      color: #5e464d;
-      text-decoration: none;
+    text-decoration: none;
 
-      a i {
-        opacity: 1;
-      }
+    a i {
+      opacity: 1;
     }
+  }
 
-    i {
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: -2.5em;
-      margin-top: 2px;
-      padding: .5em;
-      transform: translateY(-50%);
-      background: #3fe0c5;
-      color: #5e464d;
-      border-radius: 1em;
-      font-size: .33em;
-      transition: opacity .125s ease-in-out;
-      opacity: 0;
-    }
+  i {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -2.5em;
+    margin-top: 2px;
+    padding: .5em;
+    transform: translateY(-50%);
+    background: #3fe0c5;
+    color: #5e464d;
+    border-radius: 1em;
+    font-size: .33em;
+    transition: opacity .125s ease-in-out;
+    opacity: 0;
   }
 }
 

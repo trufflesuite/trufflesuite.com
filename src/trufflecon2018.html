@@ -4,7 +4,7 @@ layout: layout.hbs
 ---
 <a href="https://trufflecon2018.eventbrite.com/" class="btn btn-eventbrite trufflecon-buy">BUY TICKETS</a>
 
-<main role="main" style="position: relative;">
+<main role="main" class="trufflecon-content" style="position: relative;">
   <div class="trufflecon-heading-bd"></div>
 
   <div class="container-heading trufflecon-heading">
@@ -22,6 +22,27 @@ layout: layout.hbs
         <a href="https://goo.gl/forms/wNvTbdOZz8Yn5qHz1" class="btn btn-truffle">VOLUNTEER</a>
       </div>
     </div>
+
+    <div class="row justify-content-center text-center mt-5">
+      <div class="col">
+        <p><i class="fas fa-lg fa-envelope color-truffle"></i>&nbsp;&nbsp;<strong>For announcements on tickets, schedule, and more: sign up for our mailing list!</strong></p>
+        <div id="mc_embed_signup">
+          <form action="https://consensys.us11.list-manage.com/subscribe/post?u=947c9b18fc27e0b00fc2ad055&id=a6051053da" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline justify-content-center mt-4 mb-4 home-ml-form" target="_blank" novalidate>
+            <div class="mc-field-group form-group">
+              <label class="sr-only" for="mce-EMAIL">Email</label>
+              <input type="email" value="" name="EMAIL" class="form-control mr-sm-2 email" placeholder="Email Address" id="mce-EMAIL" required>
+            </div>
+            <div class="mc-field-group form-group">
+              <label class="sr-only" for="mce-FNAME">First Name</label>
+              <input type="text" value="" name="FNAME" class="form-control mr-sm-2" placeholder="First Name" id="mce-FNAME">
+            </div>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_947c9b18fc27e0b00fc2ad055_97cfd4251b" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="SUBSCRIBE" name="subscribe" id="mc-embedded-subscribe" class="btn btn-truffle"></div>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </main>
 
@@ -29,7 +50,7 @@ layout: layout.hbs
   <div class="container">
     <!--<div class="row mb-5">
       <div class="col">
-        <h1 class="mb-4">DEDICATED ENTERPRISE SUPPORT</h1>
+        <h1 class="link-markdown mb-4">DEDICATED ENTERPRISE SUPPORT</h1>
         <ul>
           <li>Dedicated support staff for your developers, focused on your issues</li>
           <li>Private communication channels, with non-disclosure agreements</li>
@@ -48,7 +69,7 @@ layout: layout.hbs
         <p>Join people from around the world as we meet to build community and foster connections in the Ethereum developer space; share tips and tricks, challenges and successes.</p>
         <p>Our goal is to inspire you to build your dapps and smart contracts to bring your ideas to the world! And we'll have some fun too while we're at it. And maybe chocolate too.</p>
         
-        <h1 class="mb-4">PLAN YOUR TIME</h1>
+        <h1 class="link-markdown mb-4 mt-4"><a href="#plan-your-time" name="plan-your-time"><i class="fas fa-link"></i></a>PLAN YOUR TIME</h1>
         <p>
           <strong>Friday, October 5</strong>: Hands-on workshops (bring your laptop!)<br/>
           <strong>Saturday, October 6</strong>: Main event + breakout sessions<br/>
@@ -57,14 +78,14 @@ layout: layout.hbs
         <p>More detailed schedule, including social events, coming soon!</p>
         <p><em>(Note: The workshops on Friday, October 5 are capacity controlled and are covered under a separate ticket. <strong>If you wish to reserve a space for yourself in the workshops, please purchase the "Workshop add-on" ticket as well.</strong> The sign up process for specific workshops will happen at a later time.)</em></p>
       
-        <h1 class="mb-4">SPEAKERS</h1>
+        <h1 class="link-markdown mb-4 mt-4"><a href="#speakers" name="speakers"><i class="fas fa-link"></i></a>SPEAKERS</h1>
       </div>
     </div>
 
     <div class="row trufflecon-speakers">
       <div class="col-xs-12 col-sm-6 col-md-4 text-center">
         <div class="circle-image-container rounded-circle">
-          <img src="/img/trufflecon/joe.png" alt="Joe Lubin" />
+          <img src="/img/trufflecon/joe.jpg" alt="Joe Lubin" />
         </div>
         <h3>Joe Lubin</h3>
         <p>ConsenSys, Founder</p>
@@ -72,7 +93,7 @@ layout: layout.hbs
 
       <div class="col-xs-12 col-sm-6 col-md-4 text-center">
         <div class="circle-image-container rounded-circle">
-          <img src="/img/trufflecon/tim.png" alt="Tim Coulter" />
+          <img src="/img/trufflecon/tim.jpg" alt="Tim Coulter" />
         </div>
         <h3>Tim Coulter</h3>
         <p>Truffle, Founder</p>
@@ -80,7 +101,7 @@ layout: layout.hbs
       
       <div class="col-xs-12 col-sm-6 col-md-4 text-center">
         <div class="circle-image-container rounded-circle">
-          <img src="/img/trufflecon/elena.png" alt="Elena Dimitrova" />
+          <img src="/img/trufflecon/elena.jpg" alt="Elena Dimitrova" />
         </div>
         <h3>Elena Dimitrova</h3>
         <p>Colony</p>
@@ -88,7 +109,7 @@ layout: layout.hbs
       
       <div class="col-xs-12 col-sm-6 col-md-4 text-center">
         <div class="circle-image-container rounded-circle">
-          <img src="/img/trufflecon/david.png" alt="David Burela" />
+          <img src="/img/trufflecon/david.jpg" alt="David Burela" />
         </div>
         <h3>David Burela</h3>
         <p>Microsoft</p>
@@ -96,7 +117,7 @@ layout: layout.hbs
       
       <div class="col-xs-12 col-sm-6 col-md-4 text-center">
         <div class="circle-image-container rounded-circle">
-          <img src="/img/trufflecon/alex.png" alt="Alex Beregszaszi" />
+          <img src="/img/trufflecon/alex.jpg" alt="Alex Beregszaszi" />
         </div>
         <h3>Alex Beregszaszi</h3>
         <p>Ethereum Foundation</p>
@@ -104,20 +125,82 @@ layout: layout.hbs
       
       <div class="col-xs-12 col-sm-6 col-md-4 text-center">
         <div class="circle-image-container rounded-circle">
-          <img src="/img/trufflecon/more.png" alt="and more!" />
+          <img src="/img/trufflecon/angello.jpg" alt="Angello Pozo" />
+        </div>
+        <h3>Angello Pozo</h3>
+        <p>HelloSugoi, Co-Founder</p>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+        <div class="circle-image-container rounded-circle">
+          <img src="/img/trufflecon/bernhard.jpg" alt="Bernhard Mueller" />
+        </div>
+        <h3>Bernhard Mueller</h3>
+        <p>Mythril, Creator</p>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+        <div class="circle-image-container rounded-circle">
+          <img src="/img/trufflecon/michael.jpg" alt="Michael Lewellen" />
+        </div>
+        <h3>Michael Lewellen</h3>
+        <p>Cryptocurrency Consulting, Developer</p>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+        <div class="circle-image-container rounded-circle">
+          <img src="/img/trufflecon/mick.jpg" alt="Mick Ayzenberg" />
+        </div>
+        <h3>Mick Ayzenberg</h3>
+        <p>Security Innovation, Senior Security Engineer</p>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+        <div class="circle-image-container rounded-circle">
+          <img src="/img/trufflecon/roman.jpg" alt="Roman Storm" />
+        </div>
+        <h3>Roman Storm</h3>
+        <p>POA Network, Developer</p>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+        <div class="circle-image-container rounded-circle">
+          <img src="/img/trufflecon/tom.jpg" alt="Tom Lindeman" />
+        </div>
+        <h3>Tom Lindeman</h3>
+        <p>ConsenSys Diligence</p>
+      </div>
+      
+      <div class="col-xs-12 col-sm-6 col-md-4 text-center">
+        <div class="circle-image-container rounded-circle">
+          <img src="/img/trufflecon/more.jpg" alt="and more!" />
         </div>
         <h3>...and more!</h3>
       </div>
     </div>
 
+    <div class="row mt-3">
+      <div class="col">
+        <h3>SPEAKERS NOT PICTURED</h3>
+        <ul>
+          <li><strong>Trevor Clarke</strong> - Amberdata</li>
+          <li><strong>Josselin Feist</strong> - Trail of Bits</li>
+          <li><strong>Joseph Schiarizzi</strong> - Fourth Wave</li>
+          <li><strong>Austin Fatheree</strong> - Catallax</li>
+          <li><strong>Matias Seijas</strong> - Tanooki Labs</li>
+          <li><strong>Christian Ruink</strong> - Modus Create</li>
+        </ul>
+      </div>
+    </div>
+
     <div class="row">
       <div class="col">
-        <h1 class="mb-4">LOCATION</h1>
+        <h1 class="link-markdown mb-4 mt-4"><a href="#location" name="location"><i class="fas fa-link"></i></a>LOCATION</h1>
         <p>TruffleCon 2018 will be at the <a href="http://portland.hilton.com/">Hilton Portland Downtown</a> hotel, right in the heart of downtown Portland, Oregon. Easily accessible from the airport and steps from many of Portland's most famous landmarks and dozens of food carts, the Hilton provides an excellent backdrop for TruffleCon 2018.</p>
         <p>We have negotiated a special rate for TruffleCon attendees. <strong>Use the Group Code: CON</strong> (not Promotion/Offer Code!) <strong>when booking to receive your special rate.</strong> These rooms are limited, so please don't delay. <strong>You must book by September 6, 2018.</strong></p>
         <p>Workshops on October 5 will be at a different location, the <a href="https://www.pcc.edu/climb/">PCC CLIMB Center</a>, a short distance away from the Hilton.</p>
 
-        <h1 class="mb-4">FAQ</h1>
+        <h1 class="link-markdown mb-4 mt-4"><a href="#faq" name="faq"><i class="fas fa-link"></i></a>FAQ</h1>
         <ul class="faq">
           <li>Who is TruffleCon for?</li>
           <li>TruffleCon is a software developer-focused conference, with a focus on the Truffle suite of tools. So if you are familiar with Ethereum development, you would be a good fit for the conference. You don't need to be an expert though; we welcome all experience levels!</li>
@@ -153,14 +236,14 @@ layout: layout.hbs
           <li>You can email us at <a href="mailto:trufflecon@trufflesuite.com">trufflecon@trufflesuite.com</a>, or tweet at us at <a href="https://twitter.com/trufflesuite">@truffesuite</a>.</li>
         </ul>
 
-        <h1 class="mb-4">CODE OF CONDUCT</h1>
+        <h1 class="link-markdown mb-4 mt-4"><a href="#code-of-conduct" name="code-of-conduct"><i class="fas fa-link"></i></a>CODE OF CONDUCT</h1>
         <p><em>TruffleCon 2018 is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices. We do not tolerate harassment of conference participants in any form. Sexual language and imagery is not appropriate for any conference venue, including talks, workshops, parties, Twitter, and other online media. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organizers. (Adapted from <a href="http://confcodeofconduct.com">http://confcodeofconduct.com</a>)</em></p>
 
-        <h1 class="mb-4">SPECIAL NEEDS</h1>
+        <h1 class="link-markdown mb-4 mt-4"><a href="#special-needs" name="special-needs"><i class="fas fa-link"></i></a>SPECIAL NEEDS</h1>
         <p><em>TruffleCon 2018 will provide reasonable accommodations to individuals with disabilities who request such accommodations in order to participate in this event. In order to ensure facilities, individuals should send requests to the event host at least one month prior to the start date of the event.</em></p>
         <p><em>If you have any concerns about this conference and any of its policies, participants, or venues, please email <a href="mailto:trufflecon@trufflesuite.com">trufflecon@trufflesuite.com</a>.</em></p>
         
-        <h1 class="mb-4">WE HOPE TO SEE YOU THERE!</h1>
+        <h1 class="link-markdown mb-4 mt-4"><a href="#we-hope-to-see-you-there" name="we-hope-to-see-you-there"><i class="fas fa-link"></i></a>WE HOPE TO SEE YOU THERE!</h1>
         <p>TruffleCon 2018 is nothing without you! Whether you're a ticket holder, workshop attendee, sponsor, speaker or volunteer, we thank you for making the Truffle community one of Ethereum's best.</p>
         <p class="text-center"><a href="https://trufflecon2018.eventbrite.com/" class="btn btn-lg btn-eventbrite">BUY TICKETS</a></p>
       </div>
