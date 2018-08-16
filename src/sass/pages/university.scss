@@ -13,10 +13,14 @@
 
   .form-col {
     height: 2000px;
+    position: relative;
+    top: -7rem;
+    z-index: 0;
   } 
 
   .description {
     font-size: 1.3rem;
+    z-index: 1;
   }
 
   .callout {
