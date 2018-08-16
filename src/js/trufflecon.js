@@ -2,7 +2,7 @@ $(window).scroll(function() {
   var buyButton = $('.trufflecon-buy');
   var windowScrollPos = $(this).scrollTop();
 
-  if (windowScrollPos > 100)
+  if (windowScrollPos > 300)
   {
     if (!buyButton.hasClass('scroll'))
     {

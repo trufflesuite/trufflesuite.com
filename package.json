@@ -15,7 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "bootstrap": "^4.0.0",
-    "browser-sync": "^2.23.6",
+    "browser-sync": "^2.24.6",
     "imagemin-cli": "^3.0.0",
     "jquery": "^3.3.1",
     "jsdom": "^11.8.0",
