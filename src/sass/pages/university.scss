@@ -1,0 +1,30 @@
+.university {
+
+  background-color: #3fe0c5;
+
+  h1 {
+    font-size: 4rem;
+    // text-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  }
+
+  .university-logo {
+    width: 6rem;
+  }
+
+  .form-col {
+    height: 2000px;
+  } 
+
+  .description {
+    font-size: 1.3rem;
+  }
+
+  .callout {
+    // color: #5e464d;
+    // color: #e0dad7; 
+    // text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+}
