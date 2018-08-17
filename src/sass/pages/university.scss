@@ -1,0 +1,59 @@
+.university {
+
+  background-color: #3fe0c5;
+
+  h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .university-header-text {
+    width: 20.8rem;
+  }
+
+  .text-truffle {
+    font-size: 4.2rem;
+    border-bottom: dotted 2px white;
+    margin-bottom: 0;
+    padding-bottom: 0.4rem;
+    width: 20.8rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+    
+  .university-logo-text {
+    font-family: 'Cinzel', serif; 
+    font-size: 2rem;
+    letter-spacing: 16px;
+    margin-top: 0.8rem;
+    margin-bottom: 4rem;
+    width: 20.8rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .university-logo {
+    width: 6rem;
+  }
+
+  .form-col {
+    height: 50rem;
+    position: relative;
+    top: -7rem;
+    z-index: 0;
+  } 
+
+  .description {
+    font-size: 1.3rem;
+    z-index: 1;
+  }
+
+  .callout {
+    // color: #5e464d;
+    // color: #e0dad7; 
+    // text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+}
