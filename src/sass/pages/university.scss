@@ -7,12 +7,20 @@
     // text-shadow: 0px 0px 10px rgba(0,0,0,0.5);
   }
 
+  .university-logo-text {
+    font-family: 'Fredericka the Great', serif;
+
+    .university-logo-space {
+      font-size: 2.5rem;
+    }
+  }
+
   .university-logo {
     width: 6rem;
   }
 
   .form-col {
-    height: 2000px;
+    height: 50rem;
     position: relative;
     top: -7rem;
     z-index: 0;
