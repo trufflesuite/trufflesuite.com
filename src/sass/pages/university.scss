@@ -3,23 +3,23 @@
   background-color: #3fe0c5;
 
   h1 {
-    font-size: 4rem;
-    // text-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    width: 100%;
+    text-align: center;
   }
 
+  .text-truffle {
+    font-size: 4.2rem;
+    border-bottom: dotted 2px white;
+    margin-bottom: 0;
+    padding-bottom: 0.4rem;
+  }
+    
   .university-logo-text {
-    font-family: 'Fredericka the Great', serif; 
-    font-size: 4rem;
-  }
-
-  .university-logo-space {
-    font-family: 'Fredericka the Great', serif; 
-    font-size: 3.5rem;
-  }
-
-  .university-logo-separator {
-    font-family: 'Roboto', serif; 
-    font-size: 6rem;
+    font-family: 'Cinzel', serif; 
+    font-size: 2rem;
+    letter-spacing: 16px;
+    margin-top: 0.8rem;
+    margin-bottom: 4rem;
   }
 
   .university-logo {
