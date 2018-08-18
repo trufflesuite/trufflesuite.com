@@ -1,4 +1,15 @@
 {
+  "getting-started-with-drizzle-and-react": {
+    "title": "Getting Started with Drizzle and React",
+    "date": "2018-08-15",
+    "author": "Adrian Li",
+    "published": true,
+    "products": [
+      "truffle",
+      "ganache",
+      "drizzle"
+    ]
+  },
   "debugger-variable-inspection": {
     "title": "Variable Inpsection: Going Deeper with the Truffle Solidity Debugger",
     "date": "2018-05-07",
