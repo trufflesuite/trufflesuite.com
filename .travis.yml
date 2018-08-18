@@ -22,9 +22,15 @@ before_script:
    fi
 
 script:
-- mv build/.git .git-backup
-- npm run build
-- mv .git-backup build/.git
+- >
+  if [ "${TRAVIS_PULL_REQUEST}" = "false" -a "$TRAVIS_BRANCH" = "${MASTER}" ];
+  then
+    mv build/.git .git-backup
+    npm run build
+    mv .git-backup build/.git
+  else
+    npm run build
+  fi
 
 after_success:
 - >
