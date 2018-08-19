@@ -65,15 +65,13 @@ npm install -g create-react-app
    cd drizzle-react-tutorial
    ```
 
-2. Now we're ready to spawn our empty Truffle project by running the the following command:
+2. Now we're ready to spawn our empty Truffle project by running the following command:
 
    ```shell
    truffle init
    ```
 
-<p class="alert alert-info">
-  <strong>Note</strong>: Truffle can be initialized a few different ways. Another useful initialization command is `truffle init`, which creates an empty Truffle project with no example contracts included. For more information, please see the documentation on [Creating a project](/docs/getting_started/project).
-</p>
+Let's take a brief look at the directory structure that was just generated.
 
 ### Directory structure
 
@@ -185,7 +183,7 @@ To create our own migration script.
      deployer.deploy(MyStringStore);
    };
    ```
-   
+
 3. Back in our terminal, migrate the contract to the blockchain.
 
    ```shell
@@ -251,7 +249,6 @@ Before we proceed, we should write a couple tests to ensure that our contract wo
 
 1. If all the tests pass, you'll see console output similar to this:
 
-
    ```shell
    Using network 'development'.
 
@@ -277,7 +274,7 @@ npx create-react-app client
 create-react-app client
 ```
 
-This should create a `client` directory in your Truffle project and bootstrap a barebones React.js project for you to start building your front-end with. 
+This should create a `client` directory in your Truffle project and bootstrap a barebones React.js project for you to start building your front-end with.
 
 ## Setting up the front-end client
 
@@ -285,7 +282,7 @@ Now that we have a front-end client located inside the `client` directory, chang
 
 ### Link up our build artifacts
 
-Since Create-React-App's default behavior disallows importing files from outside of the `src` folder, we need to bring the contracts in our `build` folder inside `src`. We can copy and paste them every time we compile or contracts, but a better way is to create a symlink.
+Since Create-React-App's default behavior disallows importing files from outside of the `src` folder, we need to bring the contracts in our `build` folder inside `src`. We can copy and paste them every time we compile our contracts, but a better way is to create a symlink.
 
 If you haven't created a symlink before, think of it as a magical portal in the file system that allows you act as if the file or folder is actually there.
 
@@ -335,11 +332,14 @@ If the default Create-React-App page loaded without any issues, you may proceed.
 The first thing we need to do is to setup and instantiate the Drizzle store. We are going add the following 5 lines to `client/src/index.js`:
 
 ```js
+// import drizzle functions and contract artifact
 import { Drizzle, generateStore } from "drizzle";
 import MyStringStore from "./contracts/MyStringStore.json";
 
+// let drizzle know what contracts we want
 const options = { contracts: [MyStringStore] };
 
+// setup the drizzle store and drizzle
 const drizzleStore = generateStore(options);
 const drizzle = new Drizzle(options, drizzleStore);
 ```
@@ -359,15 +359,18 @@ import "./index.css";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 
-// Setup Drizzle
+// import drizzle functions and contract artifact
 import { Drizzle, generateStore } from "drizzle";
 import MyStringStore from "./contracts/MyStringStore.json";
 
+// let drizzle know what contracts we want
 const options = { contracts: [MyStringStore] };
 
+// setup the drizzle store and drizzle
 const drizzleStore = generateStore(options);
 const drizzle = new Drizzle(options, drizzleStore);
 
+// pass in the drizzle instance
 ReactDOM.render(<App drizzle={drizzle} />, document.getElementById("root"));
 registerServiceWorker();
 ```
@@ -399,9 +402,13 @@ Next we will add in our `componentDidMount` method into the component class so t
 componentDidMount() {
   const { drizzle } = this.props;
 
-  // subscribe to changes in the store, keep state up-to-date
+  // subscribe to changes in the store
   this.unsubscribe = drizzle.store.subscribe(() => {
+
+    // every time the store updates, grab the state from drizzle
     const drizzleState = drizzle.store.getState();
+
+    // check to see if it's ready, if so, update local component state
     if (drizzleState.drizzleStatus.initialized) {
       this.setState({ loading: false, drizzleState });
     }
@@ -423,7 +430,7 @@ Note that we assign the return value of the `subscribe()` to a class variable `t
 compomentWillUnmount() {
   this.unsubscribe();
 }
-``` 
+```
 
 This will safely unsubscribe when the App component un-mounts so we can prevent any memory leaks.
 
@@ -451,9 +458,13 @@ class App extends Component {
   componentDidMount() {
     const { drizzle } = this.props;
 
-    // subscribe to changes in the store, keep state up-to-date
+    // subscribe to changes in the store
     this.unsubscribe = drizzle.store.subscribe(() => {
+
+      // every time the store updates, grab the state from drizzle
       const drizzleState = drizzle.store.getState();
+
+      // check to see if it's ready, if so, update local component state
       if (drizzleState.drizzleStatus.initialized) {
         this.setState({ loading: false, drizzleState });
       }
@@ -537,14 +548,21 @@ class ReadString extends React.Component {
     const { drizzle } = this.props;
     const contract = drizzle.contracts.MyStringStore;
 
-    // get and save the key for the variable we are interested in
+    // let drizzle know we want to watch the `myString` method
     const dataKey = contract.methods["myString"].cacheCall();
+
+    // save the `dataKey` to local component state for later reference
     this.setState({ dataKey });
   }
 
   render() {
+    // get the contract state from drizzleState
     const { MyStringStore } = this.props.drizzleState.contracts;
+
+    // using the saved `dataKey`, get the variable we're interested in
     const myString = MyStringStore.myString[this.state.dataKey];
+
+    // if it exists, then we display its value
     return <p>My stored string: {myString && myString.value}</p>;
   }
 }
@@ -561,8 +579,10 @@ componentDidMount() {
   const { drizzle } = this.props;
   const contract = drizzle.contracts.MyStringStore;
 
-  // get and save the key for the variable we are interested in
+  // let drizzle know we want to watch the `myString` method
   const dataKey = contract.methods["myString"].cacheCall();
+
+  // save the `dataKey` to local component state for later reference
   this.setState({ dataKey });
 }
 ```
@@ -577,8 +597,13 @@ What we get in return is a `dataKey` that allows us to reference this variable. 
 
 ```js
 render() {
+  // get the contract state from drizzleState
   const { MyStringStore } = this.props.drizzleState.contracts;
+
+  // using the saved `dataKey`, get the variable we're interested in
   const myString = MyStringStore.myString[this.state.dataKey];
+
+  // if it exists, then we display its value
   return <p>My stored string: {myString && myString.value}</p>;
 }
 ```
@@ -607,6 +632,7 @@ class SetString extends React.Component {
   state = { stackId: null };
 
   handleKeyDown = e => {
+    // if the enter key is pressed, set the value with the string
     if (e.keyCode === 13) {
       this.setValue(e.target.value);
     }
@@ -616,20 +642,26 @@ class SetString extends React.Component {
     const { drizzle, drizzleState } = this.props;
     const contract = drizzle.contracts.MyStringStore;
 
+    // let drizzle know we want to call the `set` method with `value`
     const stackId = contract.methods["set"].cacheSend(value, {
       from: drizzleState.accounts[0]
     });
 
+    // save the `stackId` for later reference
     this.setState({ stackId });
   };
 
   getTxStatus = () => {
-    const { stackId } = this.state;
+    // get the transaction states from the drizzle state
     const { transactions, transactionStack } = this.props.drizzleState;
 
-    const txHash = transactionStack[stackId];
+    // get the transaction hash using our saved `stackId`
+    const txHash = transactionStack[this.state.stackId];
 
+    // if transaction hash does not exist, don't display anything
     if (!txHash) return null;
+
+    // otherwise, return the transaction status
     return `Transaction status: ${transactions[txHash].status}`;
   };
 
@@ -683,6 +715,7 @@ class SetString extends React.Component {
   state = { stackId: null };
 
   handleKeyDown = e => {
+    // if the enter key is pressed, set the value with the string
     if (e.keyCode === 13) {
       this.setValue(e.target.value);
     }
@@ -714,10 +747,12 @@ setValue = value => {
   const { drizzle, drizzleState } = this.props;
   const contract = drizzle.contracts.MyStringStore;
 
+  // let drizzle know we want to call the `set` method with `value`
   const stackId = contract.methods["set"].cacheSend(value, {
     from: drizzleState.accounts[0]
   });
 
+  // save the `stackId` for later reference
   this.setState({ stackId });
 };
 ```
@@ -730,12 +765,16 @@ What we get in return is a `stackId`, which is a reference to the transaction th
 
 ```js
 getTxStatus = () => {
-  const { stackId } = this.state;
+  // get the transaction states from the drizzle state
   const { transactions, transactionStack } = this.props.drizzleState;
 
-  const txHash = transactionStack[stackId];
+  // get the transaction hash using our saved `stackId`
+  const txHash = transactionStack[this.state.stackId];
 
+  // if transaction hash does not exist, don't display anything
   if (!txHash) return null;
+
+  // otherwise, return the transaction status
   return `Transaction status: ${transactions[txHash].status}`;
 };
 ```
