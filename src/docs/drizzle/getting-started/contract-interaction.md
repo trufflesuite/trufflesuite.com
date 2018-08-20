@@ -8,7 +8,7 @@ Drizzle provides helpful methods on top of the default web3.Contract methods to 
 
 ## `cacheCall()`
 
-Gets contract data. Calling the `cacheCall()` function on a contract will execute the desired call and return a corresponding key so the data can be retrieved from the store. When a new block is received, Drizzle will refresh the store automatically _if_ any transactions in the block touched our contract. For more information on how this works, see [How Data Stays Fresh](#how-data-stays-fresh).
+Gets contract data. Calling the `cacheCall()` function on a contract will execute the desired call and return a corresponding key so the data can be retrieved from the store. When a new block is received, Drizzle will refresh the store automatically _if_ any transactions in the block touched our contract. For more information on how this works, see [How Data Stays Fresh](https://truffleframework.com/docs/drizzle/reference/how-data-stays-fresh).
 
 **Note:** We have to check that Drizzle is initialized before fetching data. A simple if statement such as below is fine for displaying a few pieces of data, but a better approach for larger dapps is to use a [loading component](https://github.com/trufflesuite/drizzle-react#recipe-loading-component). We've already built one for you in our [`drizzle-react-components` library](https://github.com/trufflesuite/drizzle-react-components) as well.
 ```javascript
@@ -35,7 +35,7 @@ drizzle.contracts.SimpleStorage.methods.storedData().call()
 
 ## `cacheSend()`
 
-Sends a contract transaction. Calling the `cacheSend()` function on a contract will send the desired transaction and return a corresponding transaction hash so the status can be retrieved from the store. The last argument can optionally be an options object with the typical from, gas and gasPrice keys. Drizzle will update the transaction's state in the store (pending, success, error) and store the transaction receipt. For more information on how this works, see [How Data Stays Fresh](#how-data-stays-fresh).
+Sends a contract transaction. Calling the `cacheSend()` function on a contract will send the desired transaction and return a corresponding transaction hash so the status can be retrieved from the store. The last argument can optionally be an options object with the typical from, gas and gasPrice keys. Drizzle will update the transaction's state in the store (pending, success, error) and store the transaction receipt. For more information on how this works, see [How Data Stays Fresh](https://truffleframework.com/docs/drizzle/reference/how-data-stays-fresh).
 
 **Note:** We have to check that Drizzle is initialized before fetching data. A simple if statement such as below is fine for displaying a few pieces of data, but a better approach for larger dapps is to use a [loading component](https://github.com/trufflesuite/drizzle-react#recipe-loading-component). We've already built one for you in our [`drizzle-react-components` library](https://github.com/trufflesuite/drizzle-react-components) as well.
 ```javascript
@@ -59,7 +59,7 @@ if (state.drizzleStatus.initialized) {
 return 'Loading...'
 ```
 
-For more information on what's contained in transaction state, see [Drizzle State](#drizzle-state).
+For more information on what's contained in transaction state, see [Drizzle State](https://truffleframework.com/docs/drizzle/reference/drizzle-state).
 
 The contract instance has all of its standard web3 properties and methods. For example, you could still send as normal if you don't want a tx in the store:
 ```javascript
