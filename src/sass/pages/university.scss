@@ -1,10 +1,15 @@
 .university {
 
   background-color: #3fe0c5;
+  border-bottom: solid 1px #e0dad7;
 
   h1 {
     width: 100%;
     text-align: center;
+  }
+
+  h2 {
+    text-transform: uppercase;
   }
 
   .university-header-text {
@@ -23,7 +28,8 @@
     
   .university-logo-text {
     font-family: 'Cinzel', serif; 
-    font-size: 2rem;
+    font-size: 1.925rem;
+    font-weight: bold;
     letter-spacing: 16px;
     margin-top: 0.8rem;
     margin-bottom: 4rem;
@@ -37,10 +43,7 @@
   }
 
   .form-col {
-    height: 50rem;
-    position: relative;
-    top: -7rem;
-    z-index: 0;
+    
   } 
 
   .description {
@@ -56,4 +59,110 @@
     text-decoration: underline;
   }
 
+  .spacer {
+    border-top: solid 1px rgba(255,255,255,0.8);
+  }
+
+  .btn-lg {
+    line-height: 2.5rem;
+    font-size: 1.3rem;
+  }
+
+}
+
+.university-details {
+  background-color: #f8f5f0;
+  color: #5e464d;
+
+  
+
+  h2 {
+    color: #5e464d;
+    text-transform: uppercase; 
+  }
+
+  h3 {
+    color: #5e464d;
+    // border-bottom: dotted 2px #5e464d;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+
+    .number {
+      font-weight: normal;
+      text-align: center;
+      line-height: 2rem;
+      font-size: 1.1rem;
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      vertical-align: bottom;
+      margin-right: 0.8rem;
+      color: white;
+      background-color: #3fe0c5;
+      border-radius: 50%;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    // color: #5e464d;
+    margin-bottom: 5rem; 
+    padding-left: 2.9rem;
+    padding-right: 2.9rem;
+
+    a {
+      color: #3fe0c5;
+      text-decoration: underline;
+  
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .btn-lg {
+    line-height: 2.5rem;
+    font-size: 1.3rem;
+  }
+}
+
+.university-catch {
+  background-color: white;
+
+  h2 {
+    color: #5e464d;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: #5e464d;
+
+    a {
+      color: #3fe0c5;
+      text-decoration: underline;
+  
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.university-partner {
+  background-color: #3fe0c5;
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  a {
+    font-weight: bold;
+    color: white;
+    text-decoration: underline;
+
+    &:hover {
+      color: #5e464d;
+    }
+  }
 }
