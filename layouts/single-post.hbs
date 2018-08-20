@@ -24,7 +24,7 @@
 
     <!-- Facebook OpenGraph -->
     <meta property="og:site_name" content="Truffle Suite" />
-    <meta property="og:description" content="The Truffle suite of tools make dapp development easier and more consistent." />
+    <meta property="og:description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}" />
     <meta property="og:title" content="Truffle Suite | Blog | {{getMetadata "blog" path.name "title"}}" />
     <meta property="og:url" content="{{getPageUrl path}}" />
     <meta property="og:type" content="article" />
@@ -34,7 +34,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="Truffle Suite" />
     <meta name="twitter:title" content="Truffle Suite | Blog | {{getMetadata "blog" path.name "title"}}" />
-    <meta name="twitter:description" content="The Truffle suite of tools make dapp development easier and more consistent." />
+    <meta name="twitter:description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}" />
     <meta name="twitter:creator" content="Truffle Suite" />
     <meta name="twitter:domain" content="trufflesuite.com" />
     <meta name="twitter:image:src" content="https://trufflesuite.com/img/favicons/truffle-share.png" />
