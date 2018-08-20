@@ -151,3 +151,21 @@
     }
   }
 }
+
+.university-partner {
+  background-color: #3fe0c5;
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  a {
+    font-weight: bold;
+    color: white;
+    text-decoration: underline;
+
+    &:hover {
+      color: #5e464d;
+    }
+  }
+}
