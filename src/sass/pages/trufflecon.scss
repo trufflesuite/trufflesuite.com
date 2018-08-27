@@ -18,6 +18,21 @@
       letter-spacing: .2em;
     }
   }
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  .btn-block {
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 767.98px) {
+    padding: 3rem 15px;
+    max-height: none;
+  }
 }
 
 .faq {
@@ -48,9 +63,7 @@
 
 .trufflecon-speakers {
   .circle-image-container {
-    width: 300px;
-    height: 300px;
-    margin: 0 auto 1.5rem auto;
+    margin: 0 auto .5rem auto;
     padding-bottom: 0;
     border: 4px solid #3fe0c5;
     overflow: hidden;
