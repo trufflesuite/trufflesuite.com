@@ -45,12 +45,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
         data.assets.forEach(function(asset) {
           if (supportsAppx) {
-            if (asset.browser_download_url.indexOf(".appx") >= 0) {
+            if (/\.appx$/i.test(asset.browser_download_url)) {
               href = asset.browser_download_url;
             }
           }
           else {
-            if (asset.browser_download_url.indexOf(".exe") >= 0) {
+            if (/\.exe$/i.test(asset.browser_download_url)) {
               href = asset.browser_download_url;
             }
           }
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
         image = '/img/ganache/apple-logo.svg';
         os = "MacOS";
         data.assets.forEach(function(asset) {
-          if (asset.browser_download_url.indexOf(".dmg") >= 0) {
+          if (/\.dmg$/i.test(asset.browser_download_url)) {
             href = asset.browser_download_url;
           }
         })
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
         image = '/img/ganache/linux-tux-logo.svg';
         os = "Linux";
         data.assets.forEach(function(asset) {
-          if (asset.browser_download_url.indexOf(".AppImage") >= 0) {
+          if (/\.AppImage$/i.test(asset.browser_download_url)) {
             href = asset.browser_download_url;
           }
         })
