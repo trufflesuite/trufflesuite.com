@@ -2,9 +2,5 @@
   "software-engineer-front-end": {
     "title": "Software Engineer (Front-end)",
     "excerpt": "Your primary role as a Software Engineer (Front-end) would be to build, maintain, and/or provide support for our various front-end projects' UI/UX. You'll work with a diverse array of impactful, user-facing code including Drizzle, Ganache, our website and Truffle Boxes."
-  },
-  "ui-ux-director": {
-    "title": "UI/UX Director",
-    "excerpt": "Your primary role as a UI/UX Specialist would be to iterate the UI/UX of various Truffle projects in response to user feedback. The UI/UX Director is responsible for the entire UI/UX process, from feedback to mockups and user testing."
   }
 }
