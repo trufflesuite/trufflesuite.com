@@ -321,9 +321,11 @@ Before we go further, let's start our React app by running the follow command in
 npm start
 ```
 
-This will serve  the front-end under `localhost:3000`, so make sure to open that up in your browser. If you already have MetaMask installed in your browser, considering disabling it or using an incognito window for now.
+This will serve the front-end under `localhost:3000`, so open that up in your browser.
 
-The reason is because if MetaMask is detected, the app will try to use the network that you have selected through MetaMask rather than the development network that we started with Ganache-CLI under `localhost:8545`.
+<p class="alert alert-info">
+<strong>Note</strong>: Make sure to use an incognito window if you already have MetaMask installed (or disable MetaMask for now). Otherwise, the app will try to use the network specified in MetaMask rather than the development network under `localhost:8545`.
+</p>
 
 If the default Create-React-App page loaded without any issues, you may proceed.
 
