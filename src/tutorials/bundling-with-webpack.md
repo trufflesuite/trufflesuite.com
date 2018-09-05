@@ -93,7 +93,7 @@ Finally, you can use the contract abstraction as described within the [Truffle d
 
 You can prevent having to perform this provisioning more than once per contract dependency by either setting your contract abstractions to the global object, like `window`, and provisioning them once when your application loads; or using something like the [ProvidePlugin](https://webpack.github.io/docs/list-of-plugins.html#provideplugin) to ensure your contract abstractions are available to every file within the bundle (recommended).
 
-## Running Wepback
+## Running Webpack
 
 From here you can run webpack like normal, via the normal `webpack` command or the `webpack-dev-server`, if you have those installed globally on your machine:
 
