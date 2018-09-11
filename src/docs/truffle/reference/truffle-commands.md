@@ -135,16 +135,16 @@ See the [Using the console](/docs/getting_started/console) section for more deta
 Execute a JS module within the Truffle environment.
 
 ```shell
-truffle exec <script.js> [--network <name>] 
+truffle exec <script.js> [--network <name>]
 ```
 
-This will include `web3`, set the default provider based on the network specified (if any), and include your contracts as global objects while executing the script. Your script must export a function that Truffle can run. 
+This will include `web3`, set the default provider based on the network specified (if any), and include your contracts as global objects while executing the script. Your script must export a function that Truffle can run.
 
 See the [Writing external scripts](/docs/getting_started/scripts) section for more details.
 
 Parameters:
 
-* `<script.js>` JavaScript file to be executed. Can include path information if the script does not exist in the current directory.
+* `<script.js>`: JavaScript file to be executed. Can include path information if the script does not exist in the current directory.
 
 Optional parameters:
 
@@ -303,7 +303,7 @@ Downloads a [Truffle Box](/boxes) to the current working directory. See the [lis
 
 Parameters:
 
-* `box_name`: Name of the Truffle Box.
+* `<box_name>`: Name of the Truffle Box.
 
 
 ### version
