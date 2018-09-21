@@ -161,14 +161,18 @@ truffle help
 Initialize new and empty Ethereum project
 
 ```shell
-truffle init
+truffle init [--force]
 ```
 
-Creates a new and empty Truffle project within the current working directory. Takes no arguments.
+Creates a new and empty Truffle project within the current working directory. The current working directory must be empty unless the `--force` option is specified.
 
 <p class="alert alert-warning">
 **Alert**: Older versions of Truffle used `truffle init bare` to create an empty project. This usage has been deprecated. Those looking for the MetaCoin example that used to be available through `truffle init` should use `truffle unbox MetaCoin` instead.
 </p>
+
+Option:
+
+* `--force`: Initialize project regardless of current working directory's state. Be careful, this could overwrite existing files that have name conflicts.
 
 
 ### install
@@ -176,19 +180,15 @@ Creates a new and empty Truffle project within the current working directory. Ta
 Install a package from the Ethereum Package Registry.
 
 ```shell
-truffle install [package_name]<@version>
+truffle install <package_name>[@version]
 ```
 
-Parameters:
+Options:
 
-* `package_name`: Name of the package as listed in the Ethereum Package Registry.
-
-Optional parameters:
-
-* `<@version>`: When specified, will install a specific version of the package, otherwise will install the latest version.
+* `<package_name>`: Name of the package as listed in the Ethereum Package Registry. (required)
+* `@version`: When specified, will install a specific version of the package, otherwise will install the latest version.
 
 See the [Package Management with EthPM](/docs/getting_started/packages-ethpm) section for more details.
-
 
 
 ### migrate
@@ -196,18 +196,19 @@ See the [Package Management with EthPM](/docs/getting_started/packages-ethpm) se
 Run migrations to deploy contracts.
 
 ```shell
-truffle migrate [--reset] [-f <number>] [--network <name>] [--compile-all] [--verbose-rpc]
+truffle migrate [--reset] [-f <number>] [--network <name>] [--compile-all] [--verbose-rpc] [--interactive]
 ```
 
 Unless specified, this will run from the last completed migration. See the [Migrations](/docs/getting_started/migrations) section for more details.
 
-Optional parameters:
+Options:
 
 * `--reset`: Run all migrations from the beginning, instead of running from the last completed migration.
 * `-f <number>`: Run contracts from a specific migration. The number refers to the prefix of the migration file.
 * `--network <name>`: Specify the network to use, saving artifacts specific to that network. Network name must exist in the configuration.
 * `--compile-all`: Compile all contracts instead of intelligently choosing which contracts need to be compiled.
 * `--verbose-rpc`: Log communication between Truffle and the Ethereum client.
+* `--interactive`: Prompt to confirm that the user wants to proceed after the dry run.
 
 
 ### networks
@@ -220,7 +221,7 @@ truffle networks [--clean]
 
 Use this command before publishing your package to see if there are any extraneous network artifacts you don't want published. With no options specified, this package will simply output the current artifact state.
 
-Optional parameters:
+Option:
 
 * `--clean`: Remove all network artifacts that aren't associated with a named network.
 
@@ -233,9 +234,9 @@ Print the compiled opcodes for a given contract.
 truffle opcode <contract_name>
 ```
 
-Parameters:
+Options:
 
-* `<contract_name>`: Name of the contract to print opcodes for. Must be a contract name, not a file name.
+* `<contract_name>`: Name of the contract to print opcodes for. Must be a contract name, not a file name. (required)
 
 
 ### publish
@@ -277,12 +278,9 @@ truffle test <test_file> [--compile-all] [--network <name>] [--verbose-rpc]
 
 Runs some or all tests within the `test/` directory as specified. See the section on [Testing your contracts](/docs/getting_started/testing) for more information.
 
-Parameters:
+Options:
 
-* `<test_file>`: Name of the test file to be run. Can include path information if the file does not exist in the current directory.
-
-Optional parameters:
-
+* `<test_file>`: Name of the test file to be run. Can include path information if the file does not exist in the current directory. (required)
 * `--compile-all`: Compile all contracts instead of intelligently choosing which contracts need to be compiled.
 * `--network <name>`: Specify the network to use, using artifacts specific to that network. Network name must exist in the configuration.
 * `--verbose-rpc`: Log communication between Truffle and the Ethereum client.
@@ -297,9 +295,9 @@ truffle unbox <box_name>
 
 Downloads a [Truffle Box](/boxes) to the current working directory. See the [list of available boxes](/boxes).
 
-Parameters:
+Options:
 
-* `<box_name>`: Name of the Truffle Box.
+* `<box_name>`: Name of the Truffle Box. (required)
 
 
 ### version
