@@ -12,7 +12,7 @@ This section will describe every command available in the Truffle application.
 All commands are in the following form:
 
 ```shell
-truffle [command] [options]
+truffle <command> [options]
 ```
 
 Passing no arguments is equivalent to `truffle help`, which will display a list of all commands and then exit.
@@ -48,7 +48,7 @@ This will only compile contracts that have changed since the last compile, unles
 
 Options:
 
-* `--list <filter>`: List all recent stable releases from solc-bin. If filter is specified then it will display only that type of release or docker tags.  The filter parameter must be one of the following: prereleases, release, latestRelease or docker.
+* `--list <filter>`: List all recent stable releases from solc-bin. If filter is specified then it will display only that type of release or docker tags.  The filter parameter must be one of the following: prereleases, releases, latestRelease or docker.
 * `--all`: Compile all contracts instead of only the contracts changed since last compile.
 * `--network <name>`: Specify the network to use, saving artifacts specific to that network. Network name must exist in the configuration.
 
@@ -78,12 +78,12 @@ Options:
 Helper to create new contracts, migrations and tests.
 
 ```shell
-truffle create <artifact> <ArtifactName>
+truffle create <artifact_type> <ArtifactName>
 ```
 
 Options:
 
-* `<artifact>`: Create a new artifact where artifact is one of the following: contract, migration or test. The new artifact is created along with one of the following files: `contracts/ArtifactName.sol`, `migrations/####_artifact_name.js` or `tests/artifact_name.js`. (required)
+* `<artifact_type>`: Create a new artifact where artifact_type is one of the following: contract, migration or test. The new artifact is created along with one of the following files: `contracts/ArtifactName.sol`, `migrations/####_artifact_name.js` or `tests/artifact_name.js`. (required)
 * `<ArtifactName>`: Name of new artifact. (required)
 
 Camel case names of artifacts will be converted to underscore-separated file names for the migrations and tests. Number prefixes for migrations are automatically generated.
@@ -149,12 +149,15 @@ Options:
 
 ### help
 
-Display a list of all commands and then exit.
+Display a list of all commands or information about a specific command.
 
 ```shell
-truffle help
+truffle help [<command>]
 ```
 
+Option:
+
+* `<command>`: Display usage information about the specified command.
 
 ### init
 
@@ -172,7 +175,7 @@ Creates a new and empty Truffle project within the current working directory. Th
 
 Option:
 
-* `--force`: Initialize project regardless of current working directory's state. Be careful, this could overwrite existing files that have name conflicts.
+* `--force`: Initialize project regardless of the current working directory's state. Be careful, this could overwrite existing files that have name conflicts.
 
 
 ### install
@@ -180,13 +183,13 @@ Option:
 Install a package from the Ethereum Package Registry.
 
 ```shell
-truffle install <package_name>[@version]
+truffle install <package_name>[@<version>]
 ```
 
 Options:
 
 * `<package_name>`: Name of the package as listed in the Ethereum Package Registry. (required)
-* `@version`: When specified, will install a specific version of the package, otherwise will install the latest version.
+* `@<version>`: When specified, will install a specific version of the package, otherwise will install the latest version.
 
 See the [Package Management with EthPM](/docs/getting_started/packages-ethpm) section for more details.
 
@@ -258,7 +261,7 @@ Serve the built app from `http://127.0.0.1:8080`, rebuilding and redeploying cha
 truffle serve [-p <port>] [--network <name>]
 ```
 
-Optional parameters:
+Options:
 
 * `-p <port>`: Specify the port to serve on. Default is 8080.
 * `--network <name>`: Specify the network to use, using artifacts specific to that network. Network name must exist in the configuration.
@@ -273,14 +276,14 @@ Optional parameters:
 Run JavaScript and Solidity tests.
 
 ```shell
-truffle test <test_file> [--compile-all] [--network <name>] [--verbose-rpc]
+truffle test [<test_file>] [--compile-all] [--network <name>] [--verbose-rpc]
 ```
 
 Runs some or all tests within the `test/` directory as specified. See the section on [Testing your contracts](/docs/getting_started/testing) for more information.
 
 Options:
 
-* `<test_file>`: Name of the test file to be run. Can include path information if the file does not exist in the current directory. (required)
+* `<test_file>`: Name of the test file to be run. Can include path information if the file does not exist in the current directory.
 * `--compile-all`: Compile all contracts instead of intelligently choosing which contracts need to be compiled.
 * `--network <name>`: Specify the network to use, using artifacts specific to that network. Network name must exist in the configuration.
 * `--verbose-rpc`: Log communication between Truffle and the Ethereum client.
