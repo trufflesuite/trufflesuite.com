@@ -3,14 +3,17 @@ var app = require("./../metalsmith.js");
 var path = require("path");
 
 app(false).use(browserSync({
-  server : {
+  server: {
     baseDir: path.join(__dirname, "../build"),
     serveStaticOptions: {
       extensions: ['html']
     }
   },
   files: [
-    path.join(__dirname, '../**/*')
+    path.join(__dirname, '../helpers/**/*'),
+    path.join(__dirname, '../layouts/**/*'),
+    path.join(__dirname, '../partials/**/*'),
+    path.join(__dirname, '../src/**/*')
   ],
   port: 9000,
   open: false
