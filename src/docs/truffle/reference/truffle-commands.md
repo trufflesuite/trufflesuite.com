@@ -41,13 +41,14 @@ Requires the `build` key to be present in the configuration. See the [Building y
 Compile contract source files.
 
 ```shell
-truffle compile [--all] [--network <name>]
+truffle compile [--list <filter>] [--all] [--network <name>]
 ```
 
 This will only compile contracts that have changed since the last compile, unless otherwise specified.
 
-Optional parameters:
+Options:
 
+* `--list <filter>`: List all recent stable releases from solc-bin. If filter is specified then it will display only that type of release or docker tags.  The filter parameter must be one of the following: prereleases, release, latestRelease or docker.
 * `--all`: Compile all contracts instead of only the contracts changed since last compile.
 * `--network <name>`: Specify the network to use, saving artifacts specific to that network. Network name must exist in the configuration.
 
@@ -66,7 +67,7 @@ Requires an external Ethereum client, such as [Ganache](/docs/ganache/using) or 
 
 See the [Using the console](/docs/getting_started/console) section for more details.
 
-Optional parameters:
+Options:
 
 * `--network <name>`: Specify the network to use. Network name must exist in the configuration.
 * `--verbose-rpc`: Log communication between Truffle and the Ethereum client.
@@ -77,15 +78,13 @@ Optional parameters:
 Helper to create new contracts, migrations and tests.
 
 ```shell
-truffle create (contract|migration|test) <ArtifactName>
+truffle create <artifact> <ArtifactName>
 ```
 
-Parameters:
+Options:
 
-* `contract`: Create a new contract definition and file `contracts/ArtifactName.sol`.
-* `migration`: Create a new migration and file `migrations/###########_artifact_name.js`.
-* `test`: Create a new test and file `tests/artifact_name.js`.
-* `<ArtifactName>`: Name of new artifact.
+* `<artifact>`: Create a new artifact where artifact is one of the following: contract, migration or test. The new artifact is created along with one of the following files: `contracts/ArtifactName.sol`, `migrations/####_artifact_name.js` or `tests/artifact_name.js`. (required)
+* `<ArtifactName>`: Name of new artifact. (required)
 
 Camel case names of artifacts will be converted to underscore-separated file names for the migrations and tests. Number prefixes for migrations are automatically generated.
 
@@ -105,9 +104,9 @@ Will start an interactive debugging session on a particular transaction. Allows 
 </p>
 
 
-Parameters:
+Option:
 
-* `<transaction_hash>`: Transaction ID to use for debugging.
+* `<transaction_hash>`: Transaction ID to use for debugging. (required)
 
 
 ### deploy
@@ -142,12 +141,9 @@ This will include `web3`, set the default provider based on the network specifie
 
 See the [Writing external scripts](/docs/getting_started/scripts) section for more details.
 
-Parameters:
+Options:
 
-* `<script.js>`: JavaScript file to be executed. Can include path information if the script does not exist in the current directory.
-
-Optional parameters:
-
+* `<script.js>`: JavaScript file to be executed. Can include path information if the script does not exist in the current directory. (required)
 * `--network <name>`: Specify the network to use, using artifacts specific to that network. Network name must exist in the configuration.
 
 
