@@ -2,7 +2,15 @@
 title: TruffleCon 2018
 layout: layout.hbs
 ---
-<a href="https://trufflecon2018.eventbrite.com/" class="btn btn-eventbrite trufflecon-buy">BUY TICKETS</a>
+<!--<a href="https://trufflecon2018.eventbrite.com/" class="btn btn-eventbrite trufflecon-buy">BUY TICKETS</a>-->
+
+<nav class="nav trufflecon-nav justify-content-right">
+  <a href="https://trufflecon2018.eventbrite.com/" class="nav-link btn btn-eventbrite">BUY TICKETS</a>
+  <a class="nav-link scroll-link" href="#speakers">Speakers</a>
+  <a class="nav-link scroll-link" href="#location">Location</a>
+  <a class="nav-link scroll-link" href="#schedule">Schedule</a>
+  <a class="nav-link scroll-link" href="#faq">FAQ</a>
+</nav>
 
 <main role="main" class="trufflecon-content" style="position: relative;">
   <div class="trufflecon-heading-bd"></div>
@@ -63,10 +71,54 @@ layout: layout.hbs
   <div class="container">
     
     <div class="row">
-      <div class="col">
-        <p>Join people from around the world as we meet to build community and foster connections in the Ethereum developer space; share tips and tricks, challenges and successes.</p>
+      <div class="col-12">
+        <p class="trufflecon-opening">Join people from around the world as we meet to build community and foster connections in the Ethereum developer space; share tips and tricks, challenges and successes.</p>
         
-        <h1 class="link-markdown mb-4 mt-4"><a href="#speakers" name="speakers"><i class="fas fa-link"></i></a>SPEAKERS</h1>
+        <!--<h1 class="link-markdown mb-4 mt-4"><a href="#speakers" name="speakers"><i class="fas fa-link"></i></a>SPONSORS</h1>
+
+        <img class="img-fluid" src="/img/trufflecon/sponsors/microsoft-logo-gray.png" alt="Microsoft Logo" />-->
+      </div>
+    </div>
+
+    <!--<div class="row align-items-center justify-content-between mt-5 mb-5">
+      <div class="col-xs-6 col-sm-4">
+        <img class="img-fluid" src="/img/trufflecon/sponsors/colony-logo-color.png" alt="Colony Logo" />
+      </div>
+
+      <div class="col-xs-6 col-sm-3">
+        <img class="img-fluid" src="/img/trufflecon/sponsors/rsk-logo.png" alt="RSK Logo" />
+      </div>
+
+      <div class="col-xs-6 col-sm-3">
+        <img class="img-fluid" src="/img/trufflecon/sponsors/consensys-diligence-logo.png" alt="ConsenSys Diligence Logo" />
+      </div>
+    </div>
+
+    <div class="row align-items-center justify-content-between mb-5">
+      <div class="col-xs-4 col-sm">
+        <img class="img-fluid" src="/img/trufflecon/sponsors/consensys-community-logo.png" alt="ConsenSys Community Logo" />
+      </div>
+
+      <div class="col-xs-4 col-sm">
+        <img class="img-fluid" style="padding: 0 1rem;" src="/img/trufflecon/sponsors/wetrust-logo.png" alt="WeTrust Logo" />
+      </div>
+
+      <div class="col-xs-4 col-sm">
+        <img class="img-fluid" style="padding: 0 1rem;" src="/img/trufflecon/sponsors/oraclize-logo.png" alt="Oraclize Logo" />
+      </div>
+
+      <div class="col-xs-4 col-sm">
+        <img class="img-fluid" src="/img/trufflecon/sponsors/trail-of-bits-logo.png" alt="Trail of Bits Logo" />
+      </div>
+
+      <div class="col-xs-4 col-sm">
+        <img class="img-fluid" src="/img/trufflecon/sponsors/amberdata-logo.png" alt="Amberdata Logo" />
+      </div>
+    </div>-->
+
+    <div class="row">
+      <div class="col">
+        <h1 id="speakers" class="link-markdown mb-4 mt-4"><a href="#speakers" name="speakers"><i class="fas fa-link"></i></a>SPEAKERS</h1>
       </div>
     </div>
 
@@ -364,7 +416,7 @@ layout: layout.hbs
 
     <div class="row">
       <div class="col">
-        <h1 class="link-markdown mb-4 mt-4"><a href="#location" name="location"><i class="fas fa-link"></i></a>LOCATION</h1>
+        <h1 id="location" class="link-markdown mb-4 mt-4"><a href="#location" name="location"><i class="fas fa-link"></i></a>LOCATION</h1>
         <p>TruffleCon 2018 will be at the <a href="http://portland.hilton.com/">Hilton Portland Downtown</a> hotel, right in the heart of downtown Portland, Oregon. Easily accessible from the airport and steps from many of Portland's most famous landmarks and dozens of food carts, the Hilton provides an excellent backdrop for TruffleCon 2018.</p>
 
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.6222822464706!2d-122.68155083376658!3d45.51768173789306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950a0516efe13b%3A0x4806192199eb9892!2sHilton+Portland+Downtown!5e0!3m2!1sen!2sus!4v1534441385850" class="w-100 mb-1" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -372,7 +424,7 @@ layout: layout.hbs
         <p>We have negotiated a special rate for TruffleCon attendees. <strong>Use the Group Code: CON</strong> (not Promotion/Offer Code!) <strong>when booking to receive your special rate.</strong> These rooms are limited, so please don't delay. <strong>You must book by September 6, 2018.</strong></p>
         <p>Workshops on October 5 will be at a different location, the <a href="https://www.pcc.edu/climb/">PCC CLIMB Center</a>, a short distance away from the Hilton.</p>
 
-        <h1 class="link-markdown mb-4 mt-4"><a href="#plan-your-time" name="plan-your-time"><i class="fas fa-link"></i></a>SCHEDULE</h1>
+        <h1 id="schedule" class="link-markdown mb-4 mt-4"><a href="#plan-your-time" name="plan-your-time"><i class="fas fa-link"></i></a>SCHEDULE</h1>
         
         <h2>Overview</h2>
         <p>
@@ -380,7 +432,6 @@ layout: layout.hbs
           <strong>Saturday, October 6</strong>: Main event + breakout sessions<br/>
           <strong>Sunday, October 7</strong>: Breakout sessions + unconference
         </p>
-        <p>Full speaker schedule coming soon!</p>
         <p><em>(Note: The workshops on Friday, October 5 are capacity controlled and are covered under a separate ticket. <strong>If you wish to reserve a space for yourself in the workshops, please purchase the "Workshop add-on" ticket as well.</strong> The sign up process for specific workshops will happen at a later time.)</em></p>
         
         <h2 class="mt-4">Friday, October 5</h2>
@@ -972,7 +1023,7 @@ layout: layout.hbs
           </div>
         </div>
 
-        <h1 class="link-markdown mb-4 mt-4"><a href="#faq" name="faq"><i class="fas fa-link"></i></a>FAQ</h1>
+        <h1 id="faq" class="link-markdown mb-4 mt-4"><a href="#faq" name="faq"><i class="fas fa-link"></i></a>FAQ</h1>
         <ul class="faq">
           <li>Who is TruffleCon for?</li>
           <li>TruffleCon is a software developer-focused conference, with a focus on the Truffle suite of tools. So if you are familiar with Ethereum development, you would be a good fit for the conference. You don't need to be an expert though; we welcome all experience levels!</li>
@@ -1026,8 +1077,7 @@ layout: layout.hbs
   </div>
 </main>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-  crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/trufflecon.js"></script>
