@@ -1,5 +1,6 @@
 .trufflecon-heading {
   max-height: none;
+  padding-top: 6rem;
 
   h1 {
     font-size: 4rem;
@@ -32,7 +33,7 @@
   }
 
   @media (max-width: 767.98px) {
-    padding: 3rem 15px;
+    padding: 4rem 15px 3rem 15px;
     max-height: none;
   }
 }
@@ -63,6 +64,58 @@
   z-index: -1;
 }
 
+.trufflecon-nav {
+  position: fixed;
+  top: 58px;
+  width: 100%;
+  padding: .5rem 1rem .5rem 0;
+  background: transparent;
+  z-index: 2;
+  transition: all .125s ease-in-out;
+  -ms-transition: all .125s ease-in-out;
+  -moz-transition: all .125s ease-in-out;
+  -webkit-transition: all .125s ease-in-out;
+
+  a {
+    color: #fff;
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
+    text-transform: uppercase;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  .btn-eventbrite {
+    flex-grow: 1;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-right: 1rem;
+    opacity: 0;
+    visibility: hidden;  
+  }
+
+  &.scroll {
+    background: #5e464d; 
+
+    .btn-eventbrite {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .nav-link {
+      padding: .5rem;
+      font-size: .8rem;
+    }
+
+    .btn-eventbrite {
+      margin-right: .5rem;
+    }
+  }
+}
+
 .trufflecon-opening {
   font-size: 1.5rem;
   font-style: italic;
@@ -86,31 +139,5 @@
         width: 200px;
       }
     }
-  }
-}
-
-.trufflecon-buy {
-  opacity: 0;
-  visibility: hidden;
-  position: fixed;
-  top: 60px;
-  right: 0;
-  width: 100%;
-  border-radius: 0;
-  z-index: 2;
-  padding: .5rem 1rem;
-  transition: all .125s ease-in-out;
-  -ms-transition: all .125s ease-in-out;
-  -moz-transition: all .125s ease-in-out;
-  -webkit-transition: all .125s ease-in-out;
-
-  &.scroll {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-  }
-
-  @media (max-width: 767.98px) {
-    padding: .375rem .75rem;
   }
 }

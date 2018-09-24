@@ -2,7 +2,14 @@
 title: TruffleCon 2018
 layout: layout.hbs
 ---
-<a href="https://trufflecon2018.eventbrite.com/" class="btn btn-eventbrite trufflecon-buy">BUY TICKETS</a>
+
+<nav class="nav trufflecon-nav justify-content-right">
+  <a href="https://trufflecon2018.eventbrite.com/" class="nav-link btn btn-eventbrite">BUY TICKETS</a>
+  <a class="nav-link scroll-link" href="#speakers">Speakers</a>
+  <a class="nav-link scroll-link" href="#location">Location</a>
+  <a class="nav-link scroll-link" href="#schedule">Schedule</a>
+  <a class="nav-link scroll-link" href="#faq">FAQ</a>
+</nav>
 
 <main role="main" class="trufflecon-content" style="position: relative;">
   <div class="trufflecon-heading-bd"></div>
@@ -116,7 +123,7 @@ layout: layout.hbs
 
     <div class="row">
       <div class="col">
-        <h1 class="link-markdown mb-4 mt-4"><a href="#speakers" name="speakers"><i class="fas fa-link"></i></a>SPEAKERS</h1>
+        <h1 id="speakers" class="link-markdown mb-4 mt-4"><a href="#speakers" name="speakers"><i class="fas fa-link"></i></a>SPEAKERS</h1>
       </div>
     </div>
 
@@ -414,14 +421,14 @@ layout: layout.hbs
 
     <div class="row">
       <div class="col">
-        <h1 class="link-markdown mb-4 mt-4"><a href="#location" name="location"><i class="fas fa-link"></i></a>LOCATION</h1>
+        <h1 id="location" class="link-markdown mb-4 mt-4"><a href="#location" name="location"><i class="fas fa-link"></i></a>LOCATION</h1>
         <p>TruffleCon 2018 will be held at the <a href="http://portland.hilton.com/">Hilton Portland Downtown</a> hotel, right in the heart of downtown Portland, Oregon. Easily accessible from the airport and steps from many of Portland's most famous landmarks and dozens of food carts, the Hilton provides an excellent backdrop for TruffleCon 2018.</p>
 
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.6222822464706!2d-122.68155083376658!3d45.51768173789306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950a0516efe13b%3A0x4806192199eb9892!2sHilton+Portland+Downtown!5e0!3m2!1sen!2sus!4v1534441385850" class="w-100 mb-1" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
 
         <p>Workshops on Friday, October 5 will be at a different location, the <a href="https://www.pcc.edu/climb/">PCC CLIMB Center</a>, a short distance away from the Hilton.</p>
 
-        <h1 class="link-markdown mb-4 mt-4"><a href="#plan-your-time" name="plan-your-time"><i class="fas fa-link"></i></a>SCHEDULE</h1>
+        <h1 id="schedule" class="link-markdown mb-4 mt-4"><a href="#plan-your-time" name="plan-your-time"><i class="fas fa-link"></i></a>SCHEDULE</h1>
         
         <h2>Overview</h2>
         <p>
@@ -1020,7 +1027,7 @@ layout: layout.hbs
           </div>
         </div>
 
-        <h1 class="link-markdown mb-4 mt-4"><a href="#faq" name="faq"><i class="fas fa-link"></i></a>FAQ</h1>
+        <h1 id="faq" class="link-markdown mb-4 mt-4"><a href="#faq" name="faq"><i class="fas fa-link"></i></a>FAQ</h1>
         <ul class="faq">
           <li>Who is TruffleCon for?</li>
           <li>TruffleCon is a software developer-focused conference, with a focus on the Truffle suite of tools. So, if you are familiar with Ethereum development, you would be a good fit for the conference. You don't need to be an expert though; we welcome all experience levels!</li>
@@ -1074,8 +1081,7 @@ layout: layout.hbs
   </div>
 </main>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-  crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/trufflecon.js"></script>
