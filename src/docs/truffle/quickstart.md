@@ -77,7 +77,13 @@ Once this operation is completed, you'll now have a project structure with the f
 
 ## Testing
 
-1. On a terminal, run the Solidity test:
+1. On a terminal, start a test Ethereum network via [Ganache](/ganache)
+
+   ```shell
+   ganache-cli
+   ```
+
+1. Run the Solidity test:
 
    ```shell
    truffle test ./test/TestMetacoin.sol

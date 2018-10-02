@@ -25,6 +25,11 @@ To run all tests, simply run:
 $ truffle test
 ```
 
+Note that `test` command will automatically start a test network locally if you have nothing defined in the [networks](/docs/truffle/reference/configuration#networks) or if you override the network by supplying a non-existent network as an argument to the command, e.g.
+```
+$ truffle test --network test
+````
+
 Alternatively, you can specify a path to a specific file you want to run, e.g.,
 
 ```none
