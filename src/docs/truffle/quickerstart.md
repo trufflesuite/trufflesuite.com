@@ -5,7 +5,7 @@ layout: docs.hbs
 # Truffle Quickerstart
 
 This page will take you very briefly through the basics of creating a Truffle project and 
-debugging it on a local blockchain.  For more details and alternative blockchains, see 
+debugging a test execution on Truffle’s built-in blockchain.  For more details, debugging migrations, and alternative blockchains, see 
 the [Quickstart](/docs/truffle/quickstart)
 
 ## Creating a project
@@ -60,6 +60,6 @@ Search for “Transaction:”; copy the long hex number after the colon.
    debug 0xf6867abd2f69584671b39338387293bfc1983c37177a13f14254ab19b42972da
    ```
    
-1. Use the usual command-line debugger commands (o, i, u, n, ;, q etc.) to step through 
+1. Use command-line debugger commands (o, i, u, n, ;, q etc.) to step through 
    source; see [Debugging Your Contracts](/docs/truffle/getting-started/debugging-your-contracts) 
    for details.
