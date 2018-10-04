@@ -96,6 +96,12 @@
     "official": false
   },
   {
+    "userOrg": "caleteeter",
+    "displayName": "hello-blockchain",
+    "repoName": "hello-blockchain",
+    "official": false
+  },
+  {
     "userOrg": "LimelabsTech",
     "displayName": "limelabs-angular-box",
     "repoName": "limelabs-angular-box",

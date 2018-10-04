@@ -79,6 +79,11 @@
     "stars": 22,
     "tags": ["community", "truffle-box", "truffle", "nodejs", "ethereum-blockchain", "ganache-cli", "solidity"]
   },
+  "hello-blockchain": {
+    "description": "Azure Samples - Hello Blockchain",
+    "stars": 1,
+    "tags": ["community"]
+  },
   "limelabs-angular-box": {
     "description": "Truffle Box for Angular is a quick-and-easy way to get your Dapp on the road with Truffle and Angular",
     "stars": 6,
