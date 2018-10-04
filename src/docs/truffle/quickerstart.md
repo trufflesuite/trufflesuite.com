@@ -60,6 +60,6 @@ Search for “Transaction:”; copy the long hex number after the colon.
    debug 0xf6867abd2f69584671b39338387293bfc1983c37177a13f14254ab19b42972da
    ```
    
-1. Use command-line debugger commands (o, i, u, n, ;, q etc.) to step through 
+1. Use command-line debugger commands (`o`, `i`, `u`, `n`, `;`, `q`, etc.) to step through 
    source; see [Debugging Your Contracts](/docs/truffle/getting-started/debugging-your-contracts) 
    for details.
