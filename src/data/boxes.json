@@ -189,42 +189,42 @@
     "stars": 12,
     "tags": ["community", "blockchain", "truffle-box", "solidity-contracts", "vue", "vue-bootstrap", "webpack-boilerplate"]
   },
-  "asset-transfer": {
+  "azure-asset-transfer": {
     "description": "Azure Samples - Asset Transfer",
     "stars": 0,
     "tags": ["community"]
   },
-  "basic-provenance": {
+  "azure-basic-provenance": {
     "description": "Azure Samples - Basic Provenance",
     "stars": 0,
     "tags": ["community"]
   },
-  "bazaar-item-listing": {
+  "azure-bazaar-item-listing": {
     "description": "Azure Samples - Bazaar Item Listing",
     "stars": 0,
     "tags": ["community"]
   },
-  "digital-locker": {
+  "azure-digital-locker": {
     "description": "Azure Samples - Digital Locker",
     "stars": 0,
     "tags": ["community"]
   },
-  "hello-blockchain": {
+  "azure-hello-blockchain": {
     "description": "Azure Samples - Hello Blockchain",
     "stars": 1,
     "tags": ["community"]
   },
-  "refrigerated-transportation": {
+  "azure-refrigerated-transportation": {
     "description": "Azure Samples - Refrigerated Transportation",
     "stars": 0,
     "tags": ["community"]
   },
-  "room-thermostat": {
+  "azure-room-thermostat": {
     "description": "Azure Samples - Room Thermostat",
     "stars": 0,
     "tags": ["community"]
   },
-  "simple-marketplace": {
+  "azure-simple-marketplace": {
     "description": "Azure Samples - Simple Marketplace",
     "stars": 0,
     "tags": ["community"]
