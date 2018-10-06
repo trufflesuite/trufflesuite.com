@@ -79,11 +79,6 @@
     "stars": 22,
     "tags": ["community", "truffle-box", "truffle", "nodejs", "ethereum-blockchain", "ganache-cli", "solidity"]
   },
-  "hello-blockchain": {
-    "description": "Azure Samples - Hello Blockchain",
-    "stars": 1,
-    "tags": ["community"]
-  },
   "limelabs-angular-box": {
     "description": "Truffle Box for Angular is a quick-and-easy way to get your Dapp on the road with Truffle and Angular",
     "stars": 6,
@@ -193,5 +188,45 @@
     "description": "A truffle box that comes with everything you need to start using smart contracts from a Vue App, with Bootstrap styling and components. Supporting frameworks include Vuex, Vue-Router, Bootstrap 4 (via Bootstrap-Vue), and webpack. The sample uses webpack-dev-server for hot-reloading or you can build and serve from Express.",
     "stars": 12,
     "tags": ["community", "blockchain", "truffle-box", "solidity-contracts", "vue", "vue-bootstrap", "webpack-boilerplate"]
+  },
+  "asset-transfer": {
+    "description": "Azure Samples - Asset Transfer",
+    "stars": 0,
+    "tags": ["community"]
+  },
+  "basic-provenance": {
+    "description": "Azure Samples - Basic Provenance",
+    "stars": 0,
+    "tags": ["community"]
+  },
+  "bazaar-item-listing": {
+    "description": "Azure Samples - Bazaar Item Listing",
+    "stars": 0,
+    "tags": ["community"]
+  },
+  "digital-locker": {
+    "description": "Azure Samples - Digital Locker",
+    "stars": 0,
+    "tags": ["community"]
+  },
+  "hello-blockchain": {
+    "description": "Azure Samples - Hello Blockchain",
+    "stars": 1,
+    "tags": ["community"]
+  },
+  "refrigerated-transportation": {
+    "description": "Azure Samples - Refrigerated Transportation",
+    "stars": 0,
+    "tags": ["community"]
+  },
+  "room-thermostat": {
+    "description": "Azure Samples - Room Thermostat",
+    "stars": 0,
+    "tags": ["community"]
+  },
+  "simple-marketplace": {
+    "description": "Azure Samples - Simple Marketplace",
+    "stars": 0,
+    "tags": ["community"]
   }
 }
