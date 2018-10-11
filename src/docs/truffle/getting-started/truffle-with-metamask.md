@@ -4,7 +4,7 @@ layout: docs.hbs
 ---
 # Truffle and MetaMask
 
-Before you can interact with smart contracts in a browser, make sure they're compiled, deployed, and that you're interacting with them via `web3` in client-side JavaScript. We recommend using the [truffle-contract](https://github.com/trufflesuite/truffle-contract) library, as it makes interacting with contracts easier and more robust.
+Before you can interact with smart contracts in a browser, make sure they're compiled, deployed, and that you're interacting with them via `web3` in client-side JavaScript. We recommend using the [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/truffle-contract) library, as it makes interacting with contracts easier and more robust.
 
 <p class="alert alert-info">
 <strong>Note</strong>: For more information on these topics, including using `truffle-contract`, check out our [Pet Shop](/tutorials/pet-shop) or [TutorialToken](/tutorials/robust-smart-contracts-with-openzeppelin) tutorials.
