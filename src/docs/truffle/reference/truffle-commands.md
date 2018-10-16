@@ -134,7 +134,7 @@ See the [Using the console](/docs/getting_started/console) section for more deta
 Execute a JS module within the Truffle environment.
 
 ```shell
-truffle exec <script.js> [--network <name>]
+truffle exec <script.js> [--network <name>] [--compile]
 ```
 
 This will include `web3`, set the default provider based on the network specified (if any), and include your contracts as global objects while executing the script. Your script must export a function that Truffle can run.
@@ -145,6 +145,7 @@ Options:
 
 * `<script.js>`: JavaScript file to be executed. Can include path information if the script does not exist in the current directory. (required)
 * `--network <name>`: Specify the network to use, using artifacts specific to that network. Network name must exist in the configuration.
+* `--compile`: Compile contracts before executing the script.
 
 
 ### help
@@ -199,7 +200,7 @@ See the [Package Management with EthPM](/docs/getting_started/packages-ethpm) se
 Run migrations to deploy contracts.
 
 ```shell
-truffle migrate [--reset] [-f <number>] [--network <name>] [--compile-all] [--verbose-rpc] [--interactive]
+truffle migrate [--reset] [-f <number>] [--network <name>] [--compile-all] [--verbose-rpc] [--dry-run] [--interactive]
 ```
 
 Unless specified, this will run from the last completed migration. See the [Migrations](/docs/getting_started/migrations) section for more details.
@@ -211,6 +212,7 @@ Options:
 * `--network <name>`: Specify the network to use, saving artifacts specific to that network. Network name must exist in the configuration.
 * `--compile-all`: Compile all contracts instead of intelligently choosing which contracts need to be compiled.
 * `--verbose-rpc`: Log communication between Truffle and the Ethereum client.
+* `--dry-run`: Fork the network specified and only perform a test migration.
 * `--interactive`: Prompt to confirm that the user wants to proceed after the dry run.
 
 
