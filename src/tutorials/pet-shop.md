@@ -275,7 +275,14 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
    import "../contracts/Adoption.sol";
 
    contract TestAdoption {
-     Adoption adoption = Adoption(DeployedAddresses.Adoption());
+     // The address of the adoption contract to be tested
+    Adoption adoption = Adoption(DeployedAddresses.Adoption());
+
+    // The id of the pet that will be used for testing
+    uint expectedPetId = 8;
+
+    //The expected owner of adopted pet is this contract
+    address expectedAdopter = this;
 
    }
    ```
@@ -290,7 +297,10 @@ We start the contract off with 3 imports:
   <strong>Note</strong>: The first two imports are referring to global Truffle files, not a `truffle` directory. You should not see a `truffle` directory inside your `test/` directory.
 </p>
 
-Then we define a contract-wide variable containing the smart contract to be tested, calling the `DeployedAddresses` smart contract to get its address.
+Then we define three contract-wide variables:
+* First, one containing the smart contract to be tested, calling the `DeployedAddresses` smart contract to get its address.
+* Second, the id of the pet that will be used to test the adoption functions.
+* Third, since the TestAdoption contract will be sending the transaction, we set the expected adopter address to **this**, a contract-wide variable that gets the current contract's address.
 
 ### Testing the adopt() function
 
@@ -301,39 +311,33 @@ To test the `adopt()` function, recall that upon success it returns the given `p
    ```javascript
    // Testing the adopt() function
    function testUserCanAdoptPet() public {
-     uint returnedId = adoption.adopt(8);
+     uint returnedId = adoption.adopt(expectedPetId);
 
-     uint expected = 8;
-
-     Assert.equal(returnedId, expected, "Adoption of pet ID 8 should be recorded.");
+     Assert.equal(returnedId, expectedPetId, "Adoption of the expected pet should match what is returned.");
    }
    ```
 
 Things to notice:
 
-* We call the smart contract we declared earlier with the ID of `8`.
-* We then declare an expected value of `8` as well.
+* We call the smart contract we declared earlier with the ID of `expectedPetId`.
 * Finally, we pass the actual value, the expected value and a failure message (which gets printed to the console if the test does not pass) to `Assert.equal()`.
 
 ### Testing retrieval of a single pet's owner
 
-Remembering from above that public variables have automatic getter methods, we can retrieve the address stored by our adoption test above. Stored data will persist for the duration of our tests, so our adoption of pet `8` above can be retrieved by other tests.
+Remembering from above that public variables have automatic getter methods, we can retrieve the address stored by our adoption test above. Stored data will persist for the duration of our tests, so our adoption of pet `expectedPetId` above can be retrieved by other tests.
 
 1. Add this function below the previously added function in `TestAdoption.sol`.
 
    ```javascript
    // Testing retrieval of a single pet's owner
    function testGetAdopterAddressByPetId() public {
-     // Expected owner is this contract
-     address expected = this;
+     address adopter = adoption.adopters(expectedPetId);
 
-     address adopter = adoption.adopters(8);
-
-     Assert.equal(adopter, expected, "Owner of pet ID 8 should be recorded.");
+     Assert.equal(adopter, expectedAdopter, "Owner of the expected pet should be this contract");
    }
    ```
 
-Since the TestAdoption contract will be sending the transaction, we set the expected value to **this**, a contract-wide variable that gets the current contract's address. From there we assert equality as we did above.
+After getting the adopter address stored by the adoption contract, we assert equality as we did above.
 
 ### Testing retrieval of all pet owners
 
@@ -344,17 +348,14 @@ Since arrays can only return a single value given a single key, we create our ow
    ```javascript
    // Testing retrieval of all pet owners
    function testGetAdopterAddressByPetIdInArray() public {
-     // Expected owner is this contract
-     address expected = this;
-
      // Store adopters in memory rather than contract's storage
      address[16] memory adopters = adoption.getAdopters();
 
-     Assert.equal(adopters[8], expected, "Owner of pet ID 8 should be recorded.");
+     Assert.equal(adopters[expectedPetId], expectedAdopter, "Owner of the expected pet should be this contract");
    }
    ```
 
-Note the **memory** attribute on `adopters`. The memory attribute tells Solidity to temporarily store the value in memory, rather than saving it to the contract's storage. Since `adopters` is an array, and we know from the first adoption test that we adopted pet `8`, we compare the testing contracts address with location `8` in the array.
+Note the **memory** attribute on `adopters`. The memory attribute tells Solidity to temporarily store the value in memory, rather than saving it to the contract's storage. Since `adopters` is an array, and we know from the first adoption test that we adopted pet `expectedPetId`, we compare the testing contracts address with location `expectedPetId` in the array.
 
 ### Running the tests
 
