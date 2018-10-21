@@ -157,8 +157,11 @@ As mentioned above, array getters return only a single value from a given key. O
      return adopters;
    }
    ```
+Things to notice:
 
-Since `adopters` is already declared, we can simply return it. Be sure to specify the return type (in this case, the type for `adopters`) as `address[16]`.
+* Since `adopters` is already declared, we can simply return it. Be sure to specify the return type (in this case, the type for `adopters`) as `address[16]`.
+
+* The `view` keyword in the function declaration means that the function will not modify the state of the contract. Further information about the exact limits imposed by view is available [here](https://solidity.readthedocs.io/en/latest/contracts.html#view-functions).
 
 
 ## Compiling and migrating the smart contract
