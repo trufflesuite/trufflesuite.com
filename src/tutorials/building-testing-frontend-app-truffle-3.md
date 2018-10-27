@@ -18,7 +18,7 @@ Uses [webpack](https://webpack.js.org/) to compile the application's frontend co
 
 ## Getting started
 
-Once you have Truffle installed, run `truffle unbox webpack` in an **empty** directory to pull down the [Truffle Box for this tutorial](/boxes/webpack) for this tutorial. If you're familiar with the [MetaCoin Truffle Box](/boxes/metacoin)), you'll notice your old friends `Metacoin.sol` and `ConvertLib.sol` are there. But now, running `truffle build` does this:
+Once you have Truffle installed, run `truffle unbox webpack` in an **empty** directory to pull down the [Truffle Box](/boxes/webpack) for this tutorial. If you're familiar with the [MetaCoin Truffle Box](/boxes/metacoin)), you'll notice your old friends `Metacoin.sol` and `ConvertLib.sol` are there. But now, running `truffle build` does this:
 
 ```shell
 Error building:
