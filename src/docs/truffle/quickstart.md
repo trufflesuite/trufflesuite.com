@@ -198,32 +198,78 @@ You can create this blockchain and interact with it using [Truffle Develop](/doc
    You will see the following output:
 
    ```
-   Using network 'develop'.
+   Starting migrations...
+   ======================
+   > Network name:    'develop'
+   > Network id:      4447
+   > Block gas limit: 6721975
 
-   Running migration: 1_initial_migration.js
-     Deploying Migrations...
-     ... 0x63b393bd50251ec5aa3e159070609ee7c61da55531ff5dea5b869e762263cb90
-     Migrations: 0x8cdaf0cd259887258bc13a92c0a6da92698644c0
-   Saving successful migration to network...
-     ... 0xd7bc86d31bee32fa3988f1c1eabce403a1b5d570340a3a9cdba53a472ee8c956
-   Saving artifacts...
-   Running migration: 2_deploy_contracts.js
-     Deploying ConvertLib...
-     ... 0xa59221bc26a24f1a2ee7838c36abdf3231a2954b96d28dd7def7b98bbb8a7f35
-     ConvertLib: 0x345ca3e014aaf5dca488057592ee47305d9b3e10
-     Linking ConvertLib to MetaCoin
-     Deploying MetaCoin...
-     ... 0x1cd9e2a790f4795fa40205ef58dbb061065ca235bee8979a705814f1bc141fd5
-     MetaCoin: 0xf25186b5081ff5ce73482ad761db0eb0d25abfbf
-   Saving successful migration to network...
-     ... 0x059cf1bbc372b9348ce487de910358801bbbd1c89182853439bec0afaee6c7db
-   Saving artifacts...
+   1_initial_migration.js
+   ======================
+
+      Deploying 'Migrations'
+      ----------------------
+      > transaction hash:    0x3fd222279dad48583a3320decd0a2d12e82e728ba9a0f19bdaaff98c72a030a2
+      > Blocks: 0            Seconds: 0
+      > contract address:    0xa0AdaB6E829C818d50c75F17CFCc2e15bfd55a63
+      > account:             0x8128880DC48cde7e471EF6b99d3877357bb93f01
+      > balance:             99.99445076
+      > gas used:            277462
+      > gas price:           20 gwei
+      > value sent:          0 ETH
+      > total cost:          0.00554924 ETH   
+
+      > Saving migration to chain.
+      > Saving artifacts
+      -------------------------------------
+      > Total cost:          0.00554924 ETH
+
+   2_deploy_contracts.js
+   =====================
+
+      Deploying 'ConvertLib'
+      ----------------------
+      > transaction hash:    0x97e8168f1c05fc40dd8ffc529b9a2bf45cc7c55b07b6b9a5a22173235ee247b6
+      > Blocks: 0            Seconds: 0
+      > contract address:    0xfb39FeaeF3ac3fd46e2123768e559BCe6bD638d6
+      > account:             0x8128880DC48cde7e471EF6b99d3877357bb93f01
+      > balance:             99.9914458
+      > gas used:            108240
+      > gas price:           20 gwei
+      > value sent:          0 ETH
+      > total cost:          0.0021648 ETH
+
+      Linking
+      -------
+      * Contract: MetaCoin <--> Library: ConvertLib (at address: 0xfb39FeaeF3ac3fd46e2123768e559BCe6bD638d6)
+
+      Deploying 'MetaCoin'
+      --------------------
+      > transaction hash:    0xee4994097c10e7314cc83adf899d67f51f22e08b920e95b6d3f75c5eb498bde4
+      > Blocks: 0            Seconds: 0
+      > contract address:    0x6891Ac4E2EF3dA9bc88C96fEDbC9eA4d6D88F768
+      > account:             0x8128880DC48cde7e471EF6b99d3877357bb93f01
+      > balance:             99.98449716
+      > gas used:            347432
+      > gas price:           20 gwei
+      > value sent:          0 ETH
+      > total cost:          0.00694864 ETH
+
+      > Saving migration to chain.
+      > Saving artifacts
+      -------------------------------------
+      > Total cost:          0.00911344 ETH
+
+   Summary
+   =======
+   > Total deployments:   3
+   > Final cost:          0.01466268 ETH
    ```
 
-   This shows the transaction IDs and addresses of your deployed contracts.
+   This shows the transaction IDs and addresses of your deployed contracts. It also includes a cost summary and real-time status updates.   
 
    <p class="alert alert-info">
-     <strong>Note</strong>: Your transaction IDs and contract addresses will be different from the above.
+     <strong>Note</strong>: Your transaction hashes, contract addresses, and accounts will be different from the above.
    </p>
 
 <p class="alert alert-info">
