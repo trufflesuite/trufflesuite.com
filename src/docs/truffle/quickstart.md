@@ -444,6 +444,16 @@ Interact with the contract using the console in the following ways:
   MetaCoin.deployed().then(instance => web3.eth.getAccounts().then(accounts => instance.getBalance(accounts[0]).then(value => value.toNumber())));
   ```
 
+As of Truffle v5, the console now supports async/await functions, enabling interactions such as the following:
+
+  ```
+  truffle(development)> let instance = await MetaCoin.deployed()
+  truffle(development)> let accounts = await web3.eth.getAccounts()
+  truffle(development)> let balance = await instance.getBalanceInEth(accounts[0])
+  truffle(development)> balance.toNumber()
+  20000
+  ```
+
 ## Continue learning
 
 This quickstart showed you the basics of the Truffle project lifecycle, but there is much more to learn. Please continue on with the rest of our [documentation](/docs) and especially our [tutorials](/tutorials) to learn more.
