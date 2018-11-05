@@ -220,7 +220,7 @@ Optional parameters:
 * `--network <name>`: Specify the network to use, saving artifacts specific to that network. Network name must exist in the configuration.
 * `--compile-all`: Compile all contracts instead of intelligently choosing which contracts need to be compiled.
 * `--verbose-rpc`: Log communication between Truffle and the Ethereum client.
-
+* `--interactive`: Prompt to confirm that the user wants to proceed after the dry run.
 
 ### networks
 
@@ -247,7 +247,7 @@ truffle opcode <contract_name>
 
 Parameters:
 
-* `<contract_name>`: Name of the contract to print opcodes for. Must be a contract name, not a file name.
+* `<contract_name>`: Name of the contract to print opcodes for. Must be a contract name, not a file name. (required)
 
 
 ### publish
@@ -312,6 +312,10 @@ Downloads a [Truffle Box](/boxes) to the current working directory. See the [lis
 Parameters:
 
 * `<box_name>`: Name of the Truffle Box.
+
+Optional parameters:
+
+* `--force`: Unbox project in the current directory regardless of its state. Be careful, this will potentially overwrite files that exist in the directory.
 
 
 ### version
