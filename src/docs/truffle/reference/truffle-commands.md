@@ -160,7 +160,29 @@ Display a list of all commands and then exit.
 truffle help [command]
 ```
 
-Just run truffle help <command> to see a description and the available options for that command.
+Optionally add a `<command>` to see a description and the available options for that command.
+
+For instance:
+
+```
+$ truffle help migrate
+  Usage:        truffle migrate [--reset] [-f <number>] [--network <name>] [--compile-all] [--verbose-rpc] [--interactive]
+  Description:  Run migrations to deploy contracts
+  Options:
+                --reset
+                    Run all migrations from the beginning, instead of running from the last completed migration.
+                -f <number>
+                    Run contracts from a specific migration. The number refers to the prefix of the migration file.
+                --network <name>
+                    Specify the network to use, saving artifacts specific to that network. Network name must exist
+                    in the configuration.
+                --compile-all
+                    Compile all contracts instead of intelligently choosing which contracts need to be compiled.
+                --verbose-rpc
+                    Log communication between Truffle and the Ethereum client.
+                --interactive
+                    Prompt to confirm that the user wants to proceed after the dry run.
+```                    
 
 ### init
 
