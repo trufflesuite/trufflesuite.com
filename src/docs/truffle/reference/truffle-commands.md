@@ -50,6 +50,7 @@ Optional parameters:
 
 * `--all`: Compile all contracts instead of only the contracts changed since last compile.
 * `--network <name>`: Specify the network to use, saving artifacts specific to that network. Network name must exist in the configuration.
+* `--list <filter>`: List all recent stable releases from solc-bin.  If filter is specified then it will display only that type of release or docker tags. The filter parameter must be one of the following: prereleases, releases, latestRelease or docker.
 
 
 ### console
@@ -107,7 +108,7 @@ Will start an interactive debugging session on a particular transaction. Allows 
 
 Parameters:
 
-* `<transaction_hash>`: Transaction ID to use for debugging.
+* `<transaction_hash>`: Transaction ID to use for debugging. (required)
 
 
 ### deploy
@@ -156,9 +157,10 @@ Optional parameters:
 Display a list of all commands and then exit.
 
 ```shell
-truffle help
+truffle help [command]
 ```
 
+Just run truffle help <command> to see a description and the available options for that command.
 
 ### init
 
