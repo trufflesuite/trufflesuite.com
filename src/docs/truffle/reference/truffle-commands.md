@@ -157,42 +157,26 @@ Optional parameters:
 Display a list of all commands and then exit.
 
 ```shell
-truffle help [command]
+truffle help [<command_name>]
 ```
 
-Optionally add a `<command>` to see a description and the available options for that command.
+Optional parameters:
 
-For instance:
-
-```
-$ truffle help migrate
-  Usage:        truffle migrate [--reset] [-f <number>] [--network <name>] [--compile-all] [--verbose-rpc] [--interactive]
-  Description:  Run migrations to deploy contracts
-  Options:
-                --reset
-                    Run all migrations from the beginning, instead of running from the last completed migration.
-                -f <number>
-                    Run contracts from a specific migration. The number refers to the prefix of the migration file.
-                --network <name>
-                    Specify the network to use, saving artifacts specific to that network. Network name must exist
-                    in the configuration.
-                --compile-all
-                    Compile all contracts instead of intelligently choosing which contracts need to be compiled.
-                --verbose-rpc
-                    Log communication between Truffle and the Ethereum client.
-                --interactive
-                    Prompt to confirm that the user wants to proceed after the dry run.
-```                    
+Add a `<command_name>` to see a description and the available options for that command.
 
 ### init
 
 Initialize new and empty Ethereum project
 
 ```shell
-truffle init
+truffle init [--force]
 ```
 
-Creates a new and empty Truffle project within the current working directory. Takes no arguments.
+Creates a new and empty Truffle project within the current working directory.
+
+Optional parameters:
+
+* `--force`: Initialize project in the current directory regardless of its state. Be careful, this will potentially overwrite files that exist in the directory.
 
 <p class="alert alert-warning">
 **Alert**: Older versions of Truffle used `truffle init bare` to create an empty project. This usage has been deprecated. Those looking for the MetaCoin example that used to be available through `truffle init` should use `truffle unbox MetaCoin` instead.
