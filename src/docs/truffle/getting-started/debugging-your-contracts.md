@@ -75,3 +75,35 @@ Print the list of available commands.
 ### (q) quit
 
 Quit the debugger.
+
+
+### (b) set a breakpoint
+
+This command allows you to set breakpoints for any line in any of your source files (see examples below).
+
+### (B) remove a breakpoint
+
+This command allows you to remove any of your existing breakpoints (see example below).
+
+## Adding and removing breakpoints
+
+Below are some examples of adding and removing breakpoints. Note the difference in case between adding (a lowercase 'b') and removing (an uppercase 'B').
+
+
+```
+MagicSquare.sol:
+
+11:   event Generated(uint n);
+12:
+13:   function generateMagicSquare(uint n)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+debug(develop:0x91c817a1...)> b SquareLib:5
+Breakpoint added at line 5 in SquareLib.sol.
+
+debug(develop:0x91c817a1...)> b +10
+Breakpoint added at line 23.
+
+debug(develop:0x91c817a1...)> B +10
+Breakpoint removed at line 23.
+```
