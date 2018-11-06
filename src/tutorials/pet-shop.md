@@ -405,11 +405,23 @@ The front-end doesn't use a build system (webpack, grunt, etc.) to be as easy as
 1. Remove the multi-line comment from within `initWeb3` and replace it with the following:
 
    ```javascript
-   // Is there an injected web3 instance?
-   if (typeof web3 !== 'undefined') {
-     App.web3Provider = web3.currentProvider;
-   } else {
-     // If no injected web3 instance is detected, fall back to Ganache
+   // Modern dapp browsers...
+   if (window.ethereum) {
+     App.web3Provider = window.ethereum;
+     try {
+       // Request account access
+       await window.ethereum.enable();
+     } catch (error) {
+       // User denied account access...
+       console.error("User denied account access")
+     }
+   }
+   // Legacy dapp browsers...
+   else if (window.web3) {
+     App.web3Provider = window.web3.currentProvider;
+   }
+   // If no injected web3 instance is detected, fall back to Ganache
+   else {
      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
    }
    web3 = new Web3(App.web3Provider);
@@ -417,7 +429,9 @@ The front-end doesn't use a build system (webpack, grunt, etc.) to be as easy as
 
 Things to notice:
 
-* First, we check if there's a web3 instance already active. (Ethereum browsers like [Mist](https://github.com/ethereum/mist) or Chrome with the [MetaMask](https://metamask.io/) extension will inject their own web3 instances.) If an injected web3 instance is present, we get its provider and use it to create our web3 object.
+* First, we check if we are using modern dapp browsers or the more recent versions of [MetaMask](https://github.com/MetaMask) where an `ethereum` provider is injected into the `window` object. If so, we use it to create our web3 object, but we also need to explicitly request access to the accounts with `ethereum.enable()`.
+
+* If the `ethereum` object does not exist, we then check for an injected `web3` instance. If it exists, this indicates that we are using an older dapp browser (like [Mist](https://github.com/ethereum/mist) or an older version of MetaMask). If so, we get its provider and use it to create our web3 object.
 
 * If no injected web3 instance is present, we create our web3 object based on our local provider. (This fallback is fine for development environments, but insecure and not suitable for production.)
 
