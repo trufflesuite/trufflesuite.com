@@ -76,7 +76,6 @@ Print the list of available commands.
 
 Quit the debugger.
 
-
 ### (b) set a breakpoint
 
 This command allows you to set breakpoints for any line in any of your source files (see examples below).
@@ -84,6 +83,10 @@ This command allows you to set breakpoints for any line in any of your source fi
 ### (B) remove a breakpoint
 
 This command allows you to remove any of your existing breakpoints (see example below).
+
+### (c) continue until breakpoint
+
+This command will cause execution of the code to continue until the next breakpoint is reached or the last line is executed.
 
 ## Adding and removing breakpoints
 
