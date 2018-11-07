@@ -31,9 +31,9 @@ Centralized systems can be manipulated, from inside or outside, so we have to tr
 
 A self-hosted blog is a common example of a centralized database. The owner could potentially edit posts in hindsight or censor users without recourse. Alternately, a hacker could infiltrate the server and commit malicious acts. If there is no database backup, reversing the damage might be impossible.
 
-{{#> breakout maxWidth=430 }}
-  ![Centralized Database](/img/tutorials/ethereum-overview/db-server.png "Graphically represented, each arrow crossing a boundary of the main server box is a connection which requires trust")
-{{/breakout}}
+<div class="centralized-db-image">
+![Centralized Database](/img/tutorials/ethereum-overview/db-server.png "Graphically represented, each arrow crossing a boundary of the main server box is a connection which requires trust")
+</div>
 
 ### The need to share data
 
