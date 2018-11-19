@@ -78,15 +78,27 @@ Quit the debugger.
 
 ### (b) set a breakpoint
 
-This command allows you to set breakpoints for any line in any of your source files (see examples below).
+This command allows you to set breakpoints for any line in any of your source files (see [examples](#-c-continue-until-breakpoint) below).
 
 ### (B) remove a breakpoint
 
-This command allows you to remove any of your existing breakpoints (see example below).
+This command allows you to remove any of your existing breakpoints (see [example](#-c-continue-until-breakpoint) below).
 
 ### (c) continue until breakpoint
 
 This command will cause execution of the code to continue until the next breakpoint is reached or the last line is executed.
+
+### (+) add watch expression
+
+This command will add a watch on a provided expression, based on the following syntax: `+:<expression>`.
+
+### (-) remove watch expression
+
+This command will remove a watch expression, based on the following syntax: `-:<expression>`.
+
+### (?) list existing watch expressions
+
+This command will display a list all the current watch expressions.
 
 ## Adding and removing breakpoints
 
