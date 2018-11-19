@@ -3,7 +3,6 @@
     "Getting Started": [
       "Installation",
       "Creating a Project",
-      "Truffle Boxes",
       "Compiling Contracts",
       "Running Migrations",
       "Interacting with Your Contracts",
@@ -22,7 +21,8 @@
     ],
     "Advanced": [
       "Networks and App Deployment",
-      "Build Processes"
+      "Build Processes",
+      "Creating a Truffle Box"      
     ],
     "Reference": [
       "Choosing an Ethereum Client",
