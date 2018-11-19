@@ -2,7 +2,7 @@
 title: Truffle | Truffle Boxes
 layout: docs.hbs
 ---
-# Truffle Boxes
+# Creating a Truffle Box
 
 ## Creating a box
 
