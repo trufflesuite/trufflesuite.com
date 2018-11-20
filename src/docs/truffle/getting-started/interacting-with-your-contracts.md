@@ -130,7 +130,14 @@ There are a few things interesting about the above code:
 
 * We called the abstraction's `sendCoin` function directly. This will result in a transaction by default (i.e, writing data) instead of call.
 * When the transaction is successful, the callback function isn't fired until the transaction is processed. This makes life easy and means you don't have to check the status of the transaction yourself.
-* We passed an object as the third parameter to `sendCoin`. Note that the `sendCoin` function in our Solidity contract doesn't have a third parameter. What you see above is a special object that can always be passed as the last parameter to a function that lets you edit specific details about the transaction. Here, we set the `from` address ensuring this transaction came from `account_one`.
+* We passed an object as the third parameter to `sendCoin`. Note that the `sendCoin` function in our Solidity contract doesn't have a third parameter. What you see above is a special object that can always be passed as the last parameter to a function that lets you edit specific details about the transaction ("transaction params"). Here, we set the `from` address ensuring this transaction came from `account_one`.  The transaction params that you can set correspond to the fields in an Ethereum transaction:
+    * `from`
+    * `to`
+    * `gas`
+    * `gasPrice`
+    * `value`
+    * `data`
+    * `nonce`
 
 
 ### Making a call
