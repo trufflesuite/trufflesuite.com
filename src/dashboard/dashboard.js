@@ -22177,8 +22177,24 @@
 	        total: 0
 	      };
 
-	      downloads.forEach(function (item) {
+	      var previousGoodDaysDownloads = 0;
+
+	      downloads.forEach(function (item, index) {
 	        var month = self.getMonth(item.day);
+	        var todaysDownloads = item.downloads;
+
+	        // NPM loses a lot of data, and reports days with zero downloads, sometimes
+	        // showing multiple sequential days of outages. For those days, let's create 
+	        // a more realistic download count by assuming the total downloads for that day 
+	        // is the same amount of downloads as the previous good day (i.e., no zero).
+	        // Obviously this is a guesstimation, but it's better than nothing. 
+	        // Days that are overestimated should be evened out by days that are underestimated,
+	        // assuming NPMs outtages are randomly distributed.
+	        if (todaysDownloads == 0) {
+	          todaysDownloads = parseInt(previousGoodDaysDownloads);
+	        } else {
+	          previousGoodDaysDownloads = todaysDownloads;
+	        }
 
 	        if (month != startDate.label) {
 	          // Update the labels.
@@ -22191,8 +22207,8 @@
 	          startDate = { label: month, total: 0 };
 	        }
 
-	        startDate.total += item.downloads;
-	        total += item.downloads;
+	        startDate.total += todaysDownloads;
+	        total += todaysDownloads;
 	      });
 
 	      // Don't add the last month for now (that's why this is commented out).
