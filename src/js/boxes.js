@@ -105,11 +105,8 @@ function fetchStarsAndTags(boxUserOrgName, boxRepoName, cardElement) {
     $(cardElement).find('.box-description').html(data[boxRepoName]['description']);
     
     const ghTags = data[boxRepoName]['tags'].join(', ');
-    const currentTags = $(cardElement).find('.box-tags').text();
     
-    var newTags = data[boxRepoName]['tags'].length > 0 ? currentTags + ', ' + ghTags : currentTags;
-
-    $(cardElement).find('.box-tags').text(newTags);
+    $(cardElement).find('.box-tags').text(ghTags);
 
     $('#isoContainer').isotope('arrange');
   });

@@ -12,6 +12,7 @@ var paths = require('metalsmith-paths');
 var metadata = require('metalsmith-collections');
 var json_to_files = require('metalsmith-json-to-files');
 var moonSearch = require('./metalsmith-moonsearch/metalsmith-moonsearch.js');
+var siteMap = require('metalsmith-sitemap');
 
 // Data
 var blogData = require('./src/blog/data.json');
@@ -70,7 +71,10 @@ function app(clean) {
     outputStyle: 'expanded',
     outputDir: 'css/'
   }))
-  .use(moonSearch());
+  .use(moonSearch())
+  .use(siteMap({
+    hostname: "https://www.truffleframework.com"
+  }));
 }
 
 module.exports = app;
