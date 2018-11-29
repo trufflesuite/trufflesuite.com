@@ -54,7 +54,7 @@ Partials can also contain child content and take arguments, for example the `bre
 
 ### Helpers
 
-Helpers are utility functions for use in [templates](#templates) and [partials](#partials). Arguments are separated by spaces.
+Helpers are utility functions for use in [layouts](#layouts) and [partials](#partials). Arguments are separated by spaces.
 
 **NOTE**: You'll see references to the `path` variable throughout our layouts and helpers. This is an object provided via the [`metalsmith-paths` plugin](https://github.com/ahmadnassri/metalsmith-paths).
 
