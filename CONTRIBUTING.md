@@ -2,8 +2,6 @@
 
 We welcome all contributions, typo corrections, and general feedback.
 
-We place handy "See a way to make this page better?" links wherever we can to provide a GitHub link to the relevant file.
-
 ## Contents
 
 * [Build Process & Directory Structure](#build-process--directory-structure)
