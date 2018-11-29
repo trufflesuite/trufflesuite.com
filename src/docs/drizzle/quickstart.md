@@ -19,12 +19,14 @@ npm install --save drizzle
 <strong>Note</strong>: Since Drizzle uses web3 1.0 and web sockets, be sure your development environment can support these. As a development blockchain, you'll need `ganache-cli` v6.1.0+, `geth` or `parity`.
 </p>
 
-1. Import the provider.
+1. Create a `client` folder in your project, and a new `index.js` file inside it.
+
+2. Import the provider.
    ```javascript
    import { Drizzle, generateStore } from 'drizzle'
    ```
 
-1. Create an `options` object and pass in the desired contract artifacts for Drizzle to instantiate. Other options are available, see [the Options section](./reference/drizzle-options).
+3. Create an `options` object and pass in the desired contract artifacts for Drizzle to instantiate. Other options are available, see [the Options section](./reference/drizzle-options).
    ```javascript
    // Import contracts
    import SimpleStorage from './../build/contracts/SimpleStorage.json'
