@@ -22222,8 +22222,6 @@
 	      var lastThreeMonths = maindataset[maindataset.length - 1] + maindataset[maindataset.length - 2] + maindataset[maindataset.length - 3];
 	      var prevThreeMonths = maindataset[maindataset.length - 4] + maindataset[maindataset.length - 5] + maindataset[maindataset.length - 6];
 
-	      console.log(lastThreeMonths, prevThreeMonths);
-
 	      var totalGrowthInDownloads = lastThreeMonths - prevThreeMonths;
 	      var growth = Math.round(Math.abs(totalGrowthInDownloads) / prevThreeMonths * 100);
 	      var direction = totalGrowthInDownloads < 0 ? "down" : "up";
