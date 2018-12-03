@@ -22222,9 +22222,11 @@
 	      var lastThreeMonths = maindataset[maindataset.length - 1] + maindataset[maindataset.length - 2] + maindataset[maindataset.length - 3];
 	      var prevThreeMonths = maindataset[maindataset.length - 4] + maindataset[maindataset.length - 5] + maindataset[maindataset.length - 6];
 
-	      var growth = lastThreeMonths / prevThreeMonths - 1;
-	      var direction = growth < 0 ? "down" : "up";
-	      growth = Math.floor(Math.abs(growth * 100));
+	      console.log(lastThreeMonths, prevThreeMonths);
+
+	      var totalGrowthInDownloads = lastThreeMonths - prevThreeMonths;
+	      var growth = Math.round(Math.abs(totalGrowthInDownloads) / prevThreeMonths * 100);
+	      var direction = totalGrowthInDownloads < 0 ? "down" : "up";
 
 	      // Make sure the projected dataset has the last two points.
 	      // Then op off the last data point on the main dataset so the
