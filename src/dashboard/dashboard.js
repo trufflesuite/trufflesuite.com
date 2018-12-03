@@ -22131,8 +22131,7 @@
 	    }, function (err, downloads) {
 
 	      var total = 0;
-	      var showCurrent = window.location.hash.toLowerCase().indexOf("current") >= 0;
-
+	      var showCurrent = window.location.search.toLowerCase().indexOf("current") >= 0;
 	      var data = {
 	        labels: [],
 	        datasets: [{
@@ -22213,11 +22212,11 @@
 
 	      // Don't add the last month for now (that's why this is commented out).
 
-	      // if (data.labels[data.labels.length - 1] != startDate.label) {
-	      //   data.labels.push(startDate.label);
-	      //   maindataset.push(startDate.total);
-	      //   actualdataset.push(null);
-	      // }
+	      if (showCurrent == true && data.labels[data.labels.length - 1] != startDate.label) {
+	        data.labels.push(startDate.label);
+	        maindataset.push(startDate.total);
+	        actualdataset.push(null);
+	      }
 
 	      var lastThreeMonths = maindataset[maindataset.length - 1] + maindataset[maindataset.length - 2] + maindataset[maindataset.length - 3];
 	      var prevThreeMonths = maindataset[maindataset.length - 4] + maindataset[maindataset.length - 5] + maindataset[maindataset.length - 6];
@@ -22225,23 +22224,6 @@
 	      var totalGrowthInDownloads = lastThreeMonths - prevThreeMonths;
 	      var growth = Math.round(Math.abs(totalGrowthInDownloads) / prevThreeMonths * 100);
 	      var direction = totalGrowthInDownloads < 0 ? "down" : "up";
-
-	      // Make sure the projected dataset has the last two points.
-	      // Then op off the last data point on the main dataset so the
-	      // projected dataset shows through.
-	      // var startDateDownloads = maindataset[maindataset.length - 1];
-	      // var lastMonthDownloads = maindataset[maindataset.length - 2];
-	      // var projectedstartDateDownloads = parseInt(lastMonthDownloads * .9);
-	      //
-	      // var showProjected = projectedstartDateDownloads > startDateDownloads;
-	      //
-	      // if (showProjected) {
-	      //   maindataset.pop();
-	      //   maindataset.push(projectedstartDateDownloads)
-	      //
-	      //   actualdataset.pop();
-	      //   actualdataset.push(startDateDownloads);
-	      // }
 
 	      self.setState({
 	        data: data,
