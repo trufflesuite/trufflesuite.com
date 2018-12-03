@@ -97,8 +97,8 @@
   },
   {
     "userOrg": "truffle-box",
-    "displayName": "azure-sample-marketplace",
-    "repoName": "azure-sample-marketplace-box",
+    "displayName": "azure-simple-marketplace",
+    "repoName": "azure-simple-marketplace-box",
     "official": true
   },
   {
