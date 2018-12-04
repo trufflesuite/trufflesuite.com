@@ -11,7 +11,7 @@
     ]
   },
   "debugger-variable-inspection": {
-    "title": "Variable Inpsection: Going Deeper with the Truffle Solidity Debugger",
+    "title": "Variable Inspection: Going Deeper with the Truffle Solidity Debugger",
     "date": "2018-05-07",
     "author": "Mike Pumphrey",
     "published": true,
