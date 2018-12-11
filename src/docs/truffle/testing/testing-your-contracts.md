@@ -8,14 +8,14 @@ layout: docs.hbs
 
 Truffle comes standard with an automated testing framework to make testing your contracts a breeze. This framework lets you write simple and manageable tests in two different ways:
 
-* In [Javascript](/docs/getting_started/javascript-tests), for exercising your contracts from the outside world, just like your application.
+* In [Javascript](/docs/getting_started/javascript-tests) and [Typescript](/docs/getting_started/javascript-tests#typescript-support), for exercising your contracts from the outside world, just like your application.
 * In [Solidity](/docs/getting_started/solidity-tests), for exercising your contracts in advanced, bare-to-the-metal scenarios.
 
 Both styles of tests have their advantages and drawbacks. See the next two sections for a discussion of each one.
 
 ## Location
 
-All test files should be located in the `./test` directory. Truffle will only run test files with the following file extensions: `.js`, `.es`, `.es6`, and `.jsx`, and `.sol`. All other files are ignored.
+All test files should be located in the `./test` directory. Truffle will only run test files with the following file extensions: `.js`, `.ts`, `.es`, `.es6`, and `.jsx`, and `.sol`. All other files are ignored.
 
 ## Command
 
