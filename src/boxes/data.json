@@ -126,12 +126,6 @@
     "official": false
   },
   {
-    "userOrg": "blockchangers",
-    "displayName": "eth-truffle-vue",
-    "repoName": "eth-truffle-vue",
-    "official": false
-  },
-  {
     "userOrg": "DOkwufulueze",
     "displayName": "eth-vue",
     "repoName": "eth-vue",
