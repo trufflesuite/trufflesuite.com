@@ -75,3 +75,50 @@ Print the list of available commands.
 ### (q) quit
 
 Quit the debugger.
+
+### (b) set a breakpoint
+
+This command allows you to set breakpoints for any line in any of your source files (see [examples](#-c-continue-until-breakpoint) below).
+
+### (B) remove a breakpoint
+
+This command allows you to remove any of your existing breakpoints (see [example](#-c-continue-until-breakpoint) below).
+
+### (c) continue until breakpoint
+
+This command will cause execution of the code to continue until the next breakpoint is reached or the last line is executed.
+
+### (+) add watch expression
+
+This command will add a watch on a provided expression, based on the following syntax: `+:<expression>`.
+
+### (-) remove watch expression
+
+This command will remove a watch expression, based on the following syntax: `-:<expression>`.
+
+### (?) list existing watch expressions
+
+This command will display a list all the current watch expressions.
+
+## Adding and removing breakpoints
+
+Below are some examples of adding and removing breakpoints. Note the difference in case between adding (a lowercase 'b') and removing (an uppercase 'B').
+
+
+```
+MagicSquare.sol:
+
+11:   event Generated(uint n);
+12:
+13:   function generateMagicSquare(uint n)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+debug(develop:0x91c817a1...)> b SquareLib:5
+Breakpoint added at line 5 in SquareLib.sol.
+
+debug(develop:0x91c817a1...)> b +10
+Breakpoint added at line 23.
+
+debug(develop:0x91c817a1...)> B +10
+Breakpoint removed at line 23.
+```

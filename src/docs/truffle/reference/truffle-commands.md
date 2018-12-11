@@ -50,6 +50,7 @@ Optional parameters:
 
 * `--all`: Compile all contracts instead of only the contracts changed since last compile.
 * `--network <name>`: Specify the network to use, saving artifacts specific to that network. Network name must exist in the configuration.
+* `--list <filter>`: List all recent stable releases from solc-bin.  If filter is specified then it will display only that type of release or docker tags. The filter parameter must be one of the following: prereleases, releases, latestRelease or docker.
 
 
 ### console
@@ -107,7 +108,7 @@ Will start an interactive debugging session on a particular transaction. Allows 
 
 Parameters:
 
-* `<transaction_hash>`: Transaction ID to use for debugging.
+* `<transaction_hash>`: Transaction ID to use for debugging. (required)
 
 
 ### deploy
@@ -156,19 +157,26 @@ Optional parameters:
 Display a list of all commands and then exit.
 
 ```shell
-truffle help
+truffle help [<command_name>]
 ```
 
+Optional parameters:
+
+Add a `<command_name>` to see a description and the available options for that command.
 
 ### init
 
 Initialize new and empty Ethereum project
 
 ```shell
-truffle init
+truffle init [--force]
 ```
 
-Creates a new and empty Truffle project within the current working directory. Takes no arguments.
+Creates a new and empty Truffle project within the current working directory.
+
+Optional parameters:
+
+* `--force`: Initialize project in the current directory regardless of its state. Be careful, this will potentially overwrite files that exist in the directory.
 
 <p class="alert alert-warning">
 **Alert**: Older versions of Truffle used `truffle init bare` to create an empty project. This usage has been deprecated. Those looking for the MetaCoin example that used to be available through `truffle init` should use `truffle unbox MetaCoin` instead.
@@ -212,7 +220,7 @@ Optional parameters:
 * `--network <name>`: Specify the network to use, saving artifacts specific to that network. Network name must exist in the configuration.
 * `--compile-all`: Compile all contracts instead of intelligently choosing which contracts need to be compiled.
 * `--verbose-rpc`: Log communication between Truffle and the Ethereum client.
-
+* `--interactive`: Prompt to confirm that the user wants to proceed after the dry run.
 
 ### networks
 
@@ -239,7 +247,7 @@ truffle opcode <contract_name>
 
 Parameters:
 
-* `<contract_name>`: Name of the contract to print opcodes for. Must be a contract name, not a file name.
+* `<contract_name>`: Name of the contract to print opcodes for. Must be a contract name, not a file name. (required)
 
 
 ### publish
@@ -304,6 +312,10 @@ Downloads a [Truffle Box](/boxes) to the current working directory. See the [lis
 Parameters:
 
 * `<box_name>`: Name of the Truffle Box.
+
+Optional parameters:
+
+* `--force`: Unbox project in the current directory regardless of its state. Be careful, this will potentially overwrite files that exist in the directory.
 
 
 ### version

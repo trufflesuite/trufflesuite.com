@@ -3,7 +3,6 @@
     "Getting Started": [
       "Installation",
       "Creating a Project",
-      "Truffle Boxes",
       "Compiling Contracts",
       "Running Migrations",
       "Interacting with Your Contracts",
@@ -12,8 +11,7 @@
       "Package Management via NPM",
       "Debugging Your Contracts",
       "Using Truffle Develop and The Console",
-      "Writing External Scripts",
-      "Using The Build Pipeline"
+      "Writing External Scripts"
     ],
     "Testing": [
       "Testing Your Contracts",
@@ -22,7 +20,8 @@
     ],
     "Advanced": [
       "Networks and App Deployment",
-      "Build Processes"
+      "Build Processes",
+      "Creating a Truffle Box"
     ],
     "Reference": [
       "Choosing an Ethereum Client",

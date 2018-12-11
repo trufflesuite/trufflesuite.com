@@ -6,7 +6,7 @@ layout: docs.hbs
 
 ## Location
 
-Your configuration file is called `truffle.js` and is located at the root of your project directory. This file is a Javascript file and can execute any code necessary to create your configuration. It must export an object representing your project configuration like the example below.
+Your configuration file is called `truffle-config.js` and is located at the root of your project directory. This file is a Javascript file and can execute any code necessary to create your configuration. It must export an object representing your project configuration like the example below.
 
 ```javascript
 module.exports = {
@@ -24,6 +24,11 @@ The default configuration ships with configuration for a single development netw
 
 
 ### Resolving naming conflicts on Windows
+
+<p class="alert alert-warning">
+**Note**: This only applies to Truffle version 4 and below.
+</p>
+
 
 When using the Command Prompt on Windows, the default configuration file name can cause a conflict with the `truffle` executable, and so **you may not be able to run Truffle commands properly on existing projects**.
 
