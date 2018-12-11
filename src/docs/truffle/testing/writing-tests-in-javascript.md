@@ -218,3 +218,7 @@ See the full [command reference](/docs/truffle/reference/truffle-commands#test) 
 ## Advanced
 
 Truffle gives you access to Mocha's configuration so you can change how Mocha behaves. See the [project configuration](/docs/advanced/configuration#mocha) section for more details.
+
+## TypeScript File Support
+
+Truffle now supports tests saved as a `.ts` [TypeScript](https://www.typescriptlang.org/) file. Please see the [Writing Tests in JavaScript](#writing-tests-in-javascript) guide for more information.
