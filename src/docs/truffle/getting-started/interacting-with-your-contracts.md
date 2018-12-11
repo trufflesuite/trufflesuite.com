@@ -80,7 +80,7 @@ This contract has three methods aside from the constructor (`sendCoin`, `getBala
 
 Now let's look at the Javascript object called `MetaCoin` provided for us by Truffle, as made available in the [Truffle console](/docs/truffle/getting-started/using-truffle-develop-and-the-console):
 
-```shell
+```javascript
 truffle(develop)> let instance = await MetaCoin.deployed()
 truffle(develop)> instance
 
@@ -107,7 +107,7 @@ There are three functions on the MetaCoin contract that we can execute. If you a
 
 When calling `sendCoin`, we'll execute it as a transaction. In the following example, we'll send 10 Meta coin from one account to another, in a way that persists changes on the network:
 
-```shell
+```javascript
 truffle(develop)> let accounts = await web3.eth.getAccounts()
 truffle(develop)> instance.sendCoin(accounts[1], 10, {from: accounts[0]})
 ```
@@ -122,7 +122,7 @@ There are a few things interesting about the above code:
 
 Continuing with MetaCoin, notice the `getBalance` function is a great candidate for reading data from the network. It doesn't need to make any changes, as it just returns the MetaCoin balance of the address passed to it. Let's give it a shot:
 
-```shell
+```javascript
 truffle(develop)> let balance = await instance.getBalance(accounts[0])
 truffle(develop)> balance.toNumber()
 ```
@@ -137,9 +137,9 @@ What's interesting here:
 
 ### Processing transaction results
 
-When you make a transaction, you're given a `result` object that gives you a wealth of information about the transaction. 
+When you make a transaction, you're given a `result` object that gives you a wealth of information about the transaction.
 
-```shell
+```javascript
 truffle(develop)> let result = await contract.sendCoin(accounts[1], 10, {from: accounts[0]})
 truffle(develop)> result
 ```
@@ -158,7 +158,7 @@ Your contracts can fire events that you can catch to gain more insight into what
 
 If we explicitly output the first log entry we can see the details of the event that was emitted as part of the `sendCoin` call (`Transfer(msg.sender, receiver, amount);`).
 
-```shell
+```javascript
 truffle(develop)> result.logs[0]
 { logIndex: 0,
   transactionIndex: 0,
@@ -184,7 +184,7 @@ truffle(develop)> result.logs[0]
 
 In all of the above cases, we've been using a contract abstraction that has already been deployed. We can deploy our own version to the network using the `.new()` function:
 
-```shell
+```javascript
 truffle(develop)> let newInstance = await MetaCoin.new()
 truffle(develop)> newInstance.address
 '0x64307b67314b584b1E3Be606255bd683C835A876'
