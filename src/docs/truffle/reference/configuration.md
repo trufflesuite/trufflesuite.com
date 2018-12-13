@@ -187,9 +187,11 @@ module.exports = {
   compilers: {
     solc: {
       version: <string>,     // A version or constraint - Ex. "^0.5.0"
-      optimizer: {
-        enabled: <boolean>,
-        runs: <number>       // Optimize for how many times you intend to run the code
+      settings: {
+        optimizer: {
+          enabled: <boolean>,
+          runs: <number>       // Optimize for how many times you intend to run the code
+        }
       }
     }
   }
@@ -237,7 +239,7 @@ module.exports = {
 }
 ```
 
-Truffle will expand the glob (*) and find all .json files in the listed path and copy those over as artifacts in the build/contracts/ directory.
+Truffle will execute your script, then expand the glob (*) and find all .json files in the listed path and copy those over as artifacts in the build/contracts/ directory.
 
 + Your compilation command outputs individual parts of an artifact, and you want Truffle to generate the artifacts for you.
 The above use case might not be sufficient for all use cases. You can configure your target to run an arbitrary post-processing command:
