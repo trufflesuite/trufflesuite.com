@@ -86,7 +86,7 @@ This command allows you to set breakpoints for any line in any of your source fi
 
 ### (B) remove a breakpoint
 
-This command allows you to remove any of your existing breakpoints, with the same syntax as for adding them (see [example](#adding-and-removing-breakpoints) below).  Type "B all" to remove all breakpoints.
+This command allows you to remove any of your existing breakpoints, with the same syntax as for adding them (see [example](#adding-and-removing-breakpoints) below).  Type `B all` to remove all breakpoints.
 
 ### (c) continue until breakpoint
 
