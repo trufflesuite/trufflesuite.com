@@ -76,13 +76,17 @@ Print the list of available commands.
 
 Quit the debugger.
 
+### (r) reset
+
+Reset the debugger to the beginning of the transaction.
+
 ### (b) set a breakpoint
 
-This command allows you to set breakpoints for any line in any of your source files (see [examples](#-c-continue-until-breakpoint) below).
+This command allows you to set breakpoints for any line in any of your source files (see [examples](#adding-and-removing-breakpoints) below).  These can be given by line number; by relative line number; by line number in a specified source file; or one may simply add a breakpoint at the current point in the code.
 
 ### (B) remove a breakpoint
 
-This command allows you to remove any of your existing breakpoints (see [example](#-c-continue-until-breakpoint) below).
+This command allows you to remove any of your existing breakpoints, with the same syntax as for adding them (see [example](#adding-and-removing-breakpoints) below).  Type "B all" to remove all breakpoints.
 
 ### (c) continue until breakpoint
 
@@ -100,6 +104,10 @@ This command will remove a watch expression, based on the following syntax: `-:<
 
 This command will display a list all the current watch expressions.
 
+### (v) display variables
+
+This command will display the current variables and their values.  Not all types of data are supported yet.
+
 ## Adding and removing breakpoints
 
 Below are some examples of adding and removing breakpoints. Note the difference in case between adding (a lowercase 'b') and removing (an uppercase 'B').
@@ -113,12 +121,21 @@ MagicSquare.sol:
 13:   function generateMagicSquare(uint n)
       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+debug(develop:0x91c817a1...)> b 23
+Breakpoint added at line 23.
+
+debug(develop:0x91c817a1...)> B 23
+Breakpoint removed at line 23.
+
 debug(develop:0x91c817a1...)> b SquareLib:5
 Breakpoint added at line 5 in SquareLib.sol.
 
 debug(develop:0x91c817a1...)> b +10
 Breakpoint added at line 23.
 
-debug(develop:0x91c817a1...)> B +10
-Breakpoint removed at line 23.
+debug(develop:0x91c817a1...)> b
+Breakpoint added at this point in line 13.
+
+debug(develop:0x91c817a1...)> B all
+Removed all breakpoints.
 ```
