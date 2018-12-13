@@ -202,9 +202,8 @@ For more information, please see the Solidity documentation on [Compiler Input a
 
 ### external compilers
 
-For more advanced use cases, let's say your smart contract development workflow involves more than just compiling Solidity contracts. Maybe you're writing eWASM precompiles or making a two-dimensional delegatecall proxy. Or maybe you would just rather use @pubkey's solidity-cli instead of Truffle's solc configuration.
-
-This is now supported by adding a `compilers.external` object to your Truffle config:
+For more advanced use cases with artifact creation you can use the external compilers configuration.
+You can use this feature by adding a `compilers.external` object to your Truffle config:
 
 ```javascript
 module.exports = {
