@@ -147,7 +147,24 @@ Setting a default `from` address, for instance, is useful when you have a contra
 Clone a contract abstraction to get another object that manages the same contract artifacts, but using a different `network_id`. This is useful if you'd like to manage the same contract but on a different network. When using this function, don't forget to set the correct provider afterward.
 
 ```javascript
-var MyOtherContract = MyContract.clone(1337);
+const MyOtherContract = MyContract.clone(1337);
+```
+
+#### `MyContract.timeout(block_timeout)`
+This method allows you to set the block timeout for transactions.  Contract instances created from this abstraction will have the specified transaction block timeout.  This means that if a transaction does not immediately get mined, it will retry for the specified number of blocks.
+
+#### `MyContract.autoGas(<boolean>)`
+If this is set to true, instances created from this abstraction will use `web3.eth.estimateGas` and then apply a gas multiplier to determine the amount of gas to include with the transaction.  The default value for this is `true`.  See [gasMultiplier](/docs/truffle/reference/contract-abstractions#-code-mycontract-gasmultiplier-gas_multiplier-code-).
+
+#### `MyContract.gasMultiplier(gas_multiplier)`
+This is the value used when `autoGas` is enabled to determine the amount of gas to include with transactions.  The gas is computed by using `web3.eth.estimateGas` and multiplying it by the gas multiplier.  The default value is `1.25`.
+
+#### `MyContract.numberFormat(number_type)`
+You can use this method to set the number format that abstraction methods return.  The default behavior is to return BN.
+```javascript
+// Choices are:  `["BigNumber", "BN", "String"].
+const Example = artifacts.require('Example');
+Example.numberFormat = 'BigNumber';
 ```
 
 ### Contract Instance API
