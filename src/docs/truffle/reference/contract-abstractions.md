@@ -153,7 +153,7 @@ const MyOtherContract = MyContract.clone(1337);
 #### `MyContract.timeout(block_timeout)`
 This method allows you to set the block timeout for transactions.  Contract instances created from this abstraction will have the specified transaction block timeout.  This means that if a transaction does not immediately get mined, it will retry for the specified number of blocks.
 
-#### `MyContract.autoGas(<boolean>)`
+#### `MyContract.autoGas = <boolean>`
 If this is set to true, instances created from this abstraction will use `web3.eth.estimateGas` and then apply a gas multiplier to determine the amount of gas to include with the transaction.  The default value for this is `true`.  See [gasMultiplier](/docs/truffle/reference/contract-abstractions#-code-mycontract-gasmultiplier-gas_multiplier-code-).
 
 #### `MyContract.gasMultiplier(gas_multiplier)`
