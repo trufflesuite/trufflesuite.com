@@ -147,8 +147,11 @@ Setting a default `from` address, for instance, is useful when you have a contra
 Clone a contract abstraction to get another object that manages the same contract artifacts, but using a different `network_id`. This is useful if you'd like to manage the same contract but on a different network. When using this function, don't forget to set the correct provider afterward.
 
 ```javascript
-var MyOtherContract = MyContract.clone(1337);
+const MyOtherContract = MyContract.clone(1337);
 ```
+
+#### `MyContract.timeout(block_timeout)`
+This method allows you to set the block timeout for transactions.  Contract instances created from this abstraction will have the specified transaction block timeout.  This means that if a transaction does not immediately get mined, it will retry for the specified number of blocks.
 
 ### Contract Instance API
 
