@@ -67,7 +67,8 @@ networks: {
   development: {
     host: "127.0.0.1",
     port: 8545,
-    network_id: "*" // match any network
+    network_id: "*", // match any network
+    websockets: true
   },
   live: {
     host: "178.25.19.88", // Random IP for example purposes (do not use)
@@ -90,6 +91,7 @@ For each network, if unspecified, transaction options will default to the follow
 * `gasPrice`: Gas price used for deploys. Default is `100000000000` (100 Shannon).
 * `from`: From address used during migrations. Defaults to the first available account provided by your Ethereum client.
 * `provider`: Default web3 provider using `host` and `port` options: `new Web3.providers.HttpProvider("http://<host>:<port>")`
+* `websockets`: You will need this enabled to use the `confirmations` listener or to hear Events using `.on` or `.once`.  Default is `false`.
 
 For each network, you can specify either `host` / `port` or `provider`, but not both. If you need an HTTP provider, we recommend using `host` and `port`, while if you need a custom provider such as `HDWalletProvider`, you must use `provider`.
 
