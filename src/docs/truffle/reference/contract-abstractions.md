@@ -150,6 +150,14 @@ Clone a contract abstraction to get another object that manages the same contrac
 const MyOtherContract = MyContract.clone(1337);
 ```
 
+#### `MyContract.numberFormat = number_type`
+You can set this property to choose the number format that abstraction methods return.  The default behavior is to return BN.
+```javascript
+// Choices are:  `["BigNumber", "BN", "String"].
+const Example = artifacts.require('Example');
+Example.numberFormat = 'BigNumber';
+```
+
 #### `MyContract.timeout(block_timeout)`
 This method allows you to set the block timeout for transactions.  Contract instances created from this abstraction will have the specified transaction block timeout.  This means that if a transaction does not immediately get mined, it will retry for the specified number of blocks.
 
