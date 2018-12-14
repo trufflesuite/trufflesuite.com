@@ -167,6 +167,9 @@ const Example = artifacts.require('Example');
 Example.numberFormat = 'BigNumber';
 ```
 
+#### `MyContract.timeout(block_timeout)`
+This method allows you to set the block timeout for transactions.  Contract instances created from this abstraction will have the specified transaction block timeout.  This means that if a transaction does not immediately get mined, it will retry for the specified number of blocks.
+
 ### Contract Instance API
 
 Each contract instance is different based on the source Solidity contract, and the API is created dynamically. For the purposes of this documentation, let's use the following Solidity source code below:
