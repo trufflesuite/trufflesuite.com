@@ -309,6 +309,8 @@ truffle unbox <box_name>
 
 Downloads a [Truffle Box](/boxes) to the current working directory. See the [list of available boxes](/boxes).
 
+You can also design and create your own boxes!  See the section on [Truffle boxes](docs/truffle/getting-started/truffle-boxes) for more information.
+
 Parameters:
 
 * `<box_name>`: Name of the Truffle Box.
