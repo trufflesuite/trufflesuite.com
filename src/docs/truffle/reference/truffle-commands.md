@@ -284,7 +284,7 @@ Optional parameters:
 Run JavaScript and Solidity tests.
 
 ```shell
-truffle test <test_file> [--compile-all] [--network <name>] [--verbose-rpc]
+truffle test <test_file> [--compile-all] [--network <name>] [--verbose-rpc] [--show-events]
 ```
 
 Runs some or all tests within the `test/` directory as specified. See the section on [Testing your contracts](/docs/getting_started/testing) for more information.
@@ -298,6 +298,7 @@ Optional parameters:
 * `--compile-all`: Compile all contracts instead of intelligently choosing which contracts need to be compiled.
 * `--network <name>`: Specify the network to use, using artifacts specific to that network. Network name must exist in the configuration.
 * `--verbose-rpc`: Log communication between Truffle and the Ethereum client.
+* `--show-events`: Log all contract events.
 
 ### unbox
 
