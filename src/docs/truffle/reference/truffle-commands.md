@@ -260,6 +260,26 @@ truffle publish
 
 All parameters are pulled from your project's configuration file. Takes no arguments. See the [Package Management with EthPM](/docs/getting_started/packages-ethpm) section for more details.
 
+### run
+
+<p class="alert alert-warning">
+**Note**: This feature is new and still in a barebones state. Please let us
+know how we can improve it!
+</p>
+
+Run a third-party plugin command
+
+```shell
+truffle run <command>
+```
+
+Parameters:
+
+* `<command>`: Name of a command defined by an installed plugin.
+
+Install plugins as NPM package dependencies and [configure Truffle](/docs/truffle/reference/configuration#plugins)
+to recognize the plugin. For more information, see [Third-Party Plugin Commands](/docs/truffle/getting-started/writing-external-scripts#third-party-plugin-commands).
+
 
 ### serve
 
