@@ -287,6 +287,21 @@ module.exports = {
 ```
 Specify `properties` and/or `fileProperties`, and Truffle will look for those values when building the artifacts.
 
+## plugins
+
+<p class="alert alert-warning">
+**Note**: This feature is new and still in a barebones state. Please let us
+know how we can improve it!
+</p>
+
+Provides Truffle with a list of installed third-party extensions installed as
+NPM package dependencies.
+
+Truffle plugin support is currently limited to plugins that define custom
+workflow commands. For more information, see [Third-Party Plugin Commands](/docs/truffle/getting-started/writing-external-scripts#third-party-plugin-commands).
+
+
+
 ## EthPM configuration
 
 This configuration applies to the optional `ethpm.json` file that exists alongside your `truffle.js` configuration file.
