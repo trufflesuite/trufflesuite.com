@@ -102,6 +102,30 @@ This shows you the addresses, private keys, and mnemonic for this particular blo
 </p>
 
 
+#### Configuring Truffle Develop
+
+You can configure `truffle develop` to use any of the available 
+[ganache-core](https://github.com/trufflesuite/ganache-core#usage) options.
+
+For example:
+
+```javascript
+module.exports = {
+  /* ... rest of config */
+
+  networks: {
+    /* ... other networks */
+
+    "develop": {
+      accounts: 5,
+      defaultEtherBalance: 500,
+      blockTime: 3
+    }
+  }
+};
+```
+
+
 ## Features
 
 Both Truffle Develop and the console provide most of the features available in the Truffle command line tool. For instance, you can type `migrate --reset` within the console, and it will be interpreted the same as if you ran `truffle migrate --reset` on the command line.
