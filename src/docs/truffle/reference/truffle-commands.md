@@ -52,6 +52,18 @@ Options:
 * `--all`: Compile all contracts instead of only the contracts changed since last compile.
 * `--network <name>`: Specify the network to use, saving artifacts specific to that network. Network name must exist in the configuration.
 
+### config
+
+Display whether analytics are enabled or disabled and prompt whether to toggle the setting.
+
+```shell
+truffle config [--enable-analytics|--disable-analytics]
+```
+
+Options:
+
+* `--enable-analytics|--disable-analytics`: Enable or disable analytics.
+
 
 ### console
 
