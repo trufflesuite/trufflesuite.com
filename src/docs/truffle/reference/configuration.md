@@ -190,12 +190,16 @@ Truffle config example:
 module.exports = {
   compilers: {
     solc: {
-      version: <string>,     // A version or constraint - Ex. "^0.5.0"
+      version: <string>,   // A version or constraint - Ex. "^0.5.0"
       settings: {
         optimizer: {
           enabled: <boolean>,
-          runs: <number>       // Optimize for how many times you intend to run the code
+          runs: <number>   // Optimize for how many times you intend to run the code
         }
+        docker: <boolean>, // Use a version obtained through docker
+                           // Note: Truffle does not automatically pull Docker images automatically.
+                           // Make sure you manually pull down the specified version (run 'docker pull ...') before enabling this.
+        evmVersion: <string> // Default: "byzantium"
       }
     }
   }
