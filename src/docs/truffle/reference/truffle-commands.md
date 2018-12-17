@@ -12,7 +12,7 @@ This section will describe every command available in the Truffle application.
 All commands are in the following form:
 
 ```shell
-truffle [command] [options]
+truffle <command> [options]
 ```
 
 Passing no arguments is equivalent to `truffle help`, which will display a list of all commands and then exit.
@@ -41,16 +41,16 @@ Requires the `build` key to be present in the configuration. See the [Building y
 Compile contract source files.
 
 ```shell
-truffle compile [--all] [--network <name>]
+truffle compile [--list <filter>] [--all] [--network <name>]
 ```
 
 This will only compile contracts that have changed since the last compile, unless otherwise specified.
 
-Optional parameters:
+Options:
 
+* `--list <filter>`: List all recent stable releases from solc-bin. If filter is specified then it will display only that type of release or docker tags.  The filter parameter must be one of the following: prereleases, releases, latestRelease or docker.
 * `--all`: Compile all contracts instead of only the contracts changed since last compile.
 * `--network <name>`: Specify the network to use, saving artifacts specific to that network. Network name must exist in the configuration.
-* `--list <filter>`: List all recent stable releases from solc-bin.  If filter is specified then it will display only that type of release or docker tags. The filter parameter must be one of the following: prereleases, releases, latestRelease or docker.
 
 
 ### console
@@ -67,7 +67,7 @@ Requires an external Ethereum client, such as [Ganache](/docs/ganache/using) or 
 
 See the [Using the console](/docs/getting_started/console) section for more details.
 
-Optional parameters:
+Options:
 
 * `--network <name>`: Specify the network to use. Network name must exist in the configuration.
 * `--verbose-rpc`: Log communication between Truffle and the Ethereum client.
@@ -78,15 +78,13 @@ Optional parameters:
 Helper to create new contracts, migrations and tests.
 
 ```shell
-truffle create (contract|migration|test) <ArtifactName>
+truffle create <artifact_type> <ArtifactName>
 ```
 
-Parameters:
+Options:
 
-* `contract`: Create a new contract definition and file `contracts/ArtifactName.sol`.
-* `migration`: Create a new migration and file `migrations/###########_artifact_name.js`.
-* `test`: Create a new test and file `tests/artifact_name.js`.
-* `<ArtifactName>`: Name of new artifact.
+* `<artifact_type>`: Create a new artifact where artifact_type is one of the following: contract, migration or test. The new artifact is created along with one of the following files: `contracts/ArtifactName.sol`, `migrations/####_artifact_name.js` or `tests/artifact_name.js`. (required)
+* `<ArtifactName>`: Name of new artifact. (required)
 
 Camel case names of artifacts will be converted to underscore-separated file names for the migrations and tests. Number prefixes for migrations are automatically generated.
 
@@ -106,14 +104,14 @@ Will start an interactive debugging session on a particular transaction. Allows 
 </p>
 
 
-Parameters:
+Option:
 
 * `<transaction_hash>`: Transaction ID to use for debugging. (required)
 
 
 ### deploy
 
-Alias for `migrate`. See `migrate` for details.
+Alias for `migrate`. See [migrate](/docs/truffle/reference/truffle-commands#migrate) for details.
 
 
 ### develop
@@ -136,33 +134,32 @@ See the [Using the console](/docs/getting_started/console) section for more deta
 Execute a JS module within the Truffle environment.
 
 ```shell
-truffle exec <script.js> [--network <name>]
+truffle exec <script.js> [--network <name>] [--compile]
 ```
 
 This will include `web3`, set the default provider based on the network specified (if any), and include your contracts as global objects while executing the script. Your script must export a function that Truffle can run.
 
 See the [Writing external scripts](/docs/getting_started/scripts) section for more details.
 
-Parameters:
+Options:
 
-* `<script.js>`: JavaScript file to be executed. Can include path information if the script does not exist in the current directory.
-
-Optional parameters:
-
+* `<script.js>`: JavaScript file to be executed. Can include path information if the script does not exist in the current directory. (required)
 * `--network <name>`: Specify the network to use, using artifacts specific to that network. Network name must exist in the configuration.
+* `--compile`: Compile contracts before executing the script.
 
 
 ### help
 
-Display a list of all commands and then exit.
+Display a list of all commands or information about a specific command.
 
 ```shell
-truffle help [<command_name>]
+truffle help [<command>]
 ```
 
-Optional parameters:
+Option:
 
-Add a `<command_name>` to see a description and the available options for that command.
+* `<command>`: Display usage information about the specified command.
+
 
 ### init
 
@@ -174,13 +171,13 @@ truffle init [--force]
 
 Creates a new and empty Truffle project within the current working directory.
 
-Optional parameters:
-
-* `--force`: Initialize project in the current directory regardless of its state. Be careful, this will potentially overwrite files that exist in the directory.
-
 <p class="alert alert-warning">
 **Alert**: Older versions of Truffle used `truffle init bare` to create an empty project. This usage has been deprecated. Those looking for the MetaCoin example that used to be available through `truffle init` should use `truffle unbox MetaCoin` instead.
 </p>
+
+Option:
+
+* `--force`: Initialize project regardless of the current working directory's state. Be careful, this could overwrite existing files that have name conflicts.
 
 
 ### install
@@ -188,19 +185,15 @@ Optional parameters:
 Install a package from the Ethereum Package Registry.
 
 ```shell
-truffle install [package_name]<@version>
+truffle install <package_name>[@<version>]
 ```
 
-Parameters:
+Options:
 
-* `package_name`: Name of the package as listed in the Ethereum Package Registry.
-
-Optional parameters:
-
-* `<@version>`: When specified, will install a specific version of the package, otherwise will install the latest version.
+* `<package_name>`: Name of the package as listed in the Ethereum Package Registry. (required)
+* `@<version>`: When specified, will install a specific version of the package, otherwise will install the latest version.
 
 See the [Package Management with EthPM](/docs/getting_started/packages-ethpm) section for more details.
-
 
 
 ### migrate
@@ -208,19 +201,21 @@ See the [Package Management with EthPM](/docs/getting_started/packages-ethpm) se
 Run migrations to deploy contracts.
 
 ```shell
-truffle migrate [--reset] [-f <number>] [--network <name>] [--compile-all] [--verbose-rpc]
+truffle migrate [--reset] [-f <number>] [--network <name>] [--compile-all] [--verbose-rpc] [--dry-run] [--interactive]
 ```
 
 Unless specified, this will run from the last completed migration. See the [Migrations](/docs/getting_started/migrations) section for more details.
 
-Optional parameters:
+Options:
 
 * `--reset`: Run all migrations from the beginning, instead of running from the last completed migration.
 * `-f <number>`: Run contracts from a specific migration. The number refers to the prefix of the migration file.
 * `--network <name>`: Specify the network to use, saving artifacts specific to that network. Network name must exist in the configuration.
 * `--compile-all`: Compile all contracts instead of intelligently choosing which contracts need to be compiled.
 * `--verbose-rpc`: Log communication between Truffle and the Ethereum client.
+* `--dry-run`: Fork the network specified and only perform a test migration.
 * `--interactive`: Prompt to confirm that the user wants to proceed after the dry run.
+
 
 ### networks
 
@@ -232,7 +227,7 @@ truffle networks [--clean]
 
 Use this command before publishing your package to see if there are any extraneous network artifacts you don't want published. With no options specified, this package will simply output the current artifact state.
 
-Optional parameters:
+Option:
 
 * `--clean`: Remove all network artifacts that aren't associated with a named network.
 
@@ -245,7 +240,7 @@ Print the compiled opcodes for a given contract.
 truffle opcode <contract_name>
 ```
 
-Parameters:
+Option:
 
 * `<contract_name>`: Name of the contract to print opcodes for. Must be a contract name, not a file name. (required)
 
@@ -273,9 +268,9 @@ Run a third-party plugin command
 truffle run <command>
 ```
 
-Parameters:
+Option:
 
-* `<command>`: Name of a command defined by an installed plugin.
+* `<command>`: Name of a command defined by an installed plugin. (required)
 
 Install plugins as NPM package dependencies and [configure Truffle](/docs/truffle/reference/configuration#plugins)
 to recognize the plugin. For more information, see [Third-Party Plugin Commands](/docs/truffle/getting-started/writing-external-scripts#third-party-plugin-commands).
@@ -289,7 +284,7 @@ Serve the built app from `http://127.0.0.1:8080`, rebuilding and redeploying cha
 truffle serve [-p <port>] [--network <name>]
 ```
 
-Optional parameters:
+Options:
 
 * `-p <port>`: Specify the port to serve on. Default is 8080.
 * `--network <name>`: Specify the network to use, using artifacts specific to that network. Network name must exist in the configuration.
@@ -304,21 +299,19 @@ Optional parameters:
 Run JavaScript and Solidity tests.
 
 ```shell
-truffle test <test_file> [--compile-all] [--network <name>] [--verbose-rpc] [--show-events]
+truffle test [<test_file>] [--compile-all] [--network <name>] [--verbose-rpc] [--show-events]
 ```
 
 Runs some or all tests within the `test/` directory as specified. See the section on [Testing your contracts](/docs/getting_started/testing) for more information.
 
-Parameters:
+Options:
 
 * `<test_file>`: Name of the test file to be run. Can include path information if the file does not exist in the current directory.
-
-Optional parameters:
-
 * `--compile-all`: Compile all contracts instead of intelligently choosing which contracts need to be compiled.
 * `--network <name>`: Specify the network to use, using artifacts specific to that network. Network name must exist in the configuration.
 * `--verbose-rpc`: Log communication between Truffle and the Ethereum client.
 * `--show-events`: Log all contract events.
+
 
 ### unbox
 
@@ -332,12 +325,9 @@ Downloads a [Truffle Box](/boxes) to the current working directory. See the [lis
 
 You can also design and create your own boxes!  See the section on [Truffle boxes](docs/truffle/getting-started/truffle-boxes) for more information.
 
-Parameters:
+Options:
 
-* `<box_name>`: Name of the Truffle Box.
-
-Optional parameters:
-
+* `<box_name>`: Name of the Truffle Box. (required)
 * `--force`: Unbox project in the current directory regardless of its state. Be careful, this will potentially overwrite files that exist in the directory.
 
 
@@ -357,7 +347,7 @@ Watch filesystem for changes and rebuild the project automatically.
 truffle watch
 ```
 
-This command will initiate a watch for changes to contracts, application, and configuration files. When there's a change, it will rebuild the app as necessary. Similar to `truffle serve`, but without the web server component.
+This command will initiate a watch for changes to contracts, application, and configuration files. When there's a change, it will rebuild the app as necessary.
 
 <p class="alert alert-warning">
 **Alert**: This command is deprecated. Please use external tools to watch for filesystem changes and rerun tests.
