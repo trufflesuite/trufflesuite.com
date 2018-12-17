@@ -1,4 +1,11 @@
 {
+  "ganache-2-beta-1": {
+    "title": "New Ganache Beta 2.0.0beta.1",
+    "date": "2018-12-17",
+    "author": "Brittany Alexander",
+    "published": false,
+    "excerpt": "Ganache 2.0.0 is a more well rounded tool in the life cycle of Truffle’s contract management ecosystem."
+  },
   "why-were-organizing-trufflecon-2018": {
     "title": "Why We're Organizing TruffleCon 2018",
     "date": "2018-07-16",
