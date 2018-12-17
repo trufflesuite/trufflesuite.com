@@ -24,7 +24,7 @@ npm install --save drizzle
    import { Drizzle, generateStore } from 'drizzle'
    ```
 
-1. Create an `options` object and pass in the desired contract artifacts for Drizzle to instantiate. Other options are available, see [the Options section](#options) below.
+1. Create an `options` object and pass in the desired contract artifacts for Drizzle to instantiate. Other options are available, see [the Options section](./reference/drizzle-options).
    ```javascript
    // Import contracts
    import SimpleStorage from './../build/contracts/SimpleStorage.json'

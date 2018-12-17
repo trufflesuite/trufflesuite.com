@@ -18,7 +18,7 @@ Uses [webpack](https://webpack.js.org/) to compile the application's frontend co
 
 ## Getting started
 
-Once you have Truffle installed, run `truffle unbox webpack` in an **empty** directory to pull down the [Truffle Box for this tutorial](/boxes/webpack) for this tutorial. If you're familiar with the [MetaCoin Truffle Box](/boxes/metacoin)), you'll notice your old friends `Metacoin.sol` and `ConvertLib.sol` are there. But now, running `truffle build` does this:
+Once you have Truffle installed, run `truffle unbox webpack` in an **empty** directory to pull down the [Truffle Box](/boxes/webpack) for this tutorial. If you're familiar with the [MetaCoin Truffle Box](/boxes/metacoin)), you'll notice your old friends `Metacoin.sol` and `ConvertLib.sol` are there. But now, running `truffle build` does this:
 
 ```shell
 Error building:
@@ -52,7 +52,7 @@ This is the default setting for [Ganache](/docs/ganache/using), though you can c
 
 Let's get the contracts on the network:
 
-First run `truffle compile`. This will compile the `.sol` contracts into `.json` artifacts (specified in the [`truffle-contract`](https://github.com/trufflesuite/truffle-contract) library). They will appear in `build/contracts/*.json`. Now we can include contracts in our app with a simple `import` or `require` statement:
+First run `truffle compile`. This will compile the `.sol` contracts into `.json` artifacts (specified in the [`truffle-contract`](https://github.com/trufflesuite/truffle/tree/master/packages/truffle-contract) library). They will appear in `build/contracts/*.json`. Now we can include contracts in our app with a simple `import` or `require` statement:
 
 ```javascript
 // Import our contract artifacts and turn them into usable abstractions.

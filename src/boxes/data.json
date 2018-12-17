@@ -54,6 +54,54 @@
     "official": true
   },
   {
+    "userOrg": "truffle-box",
+    "displayName": "azure-asset-transfer",
+    "repoName": "azure-asset-transfer-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "azure-basic-provenance",
+    "repoName": "azure-basic-provenance-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "bazaar-item-listing",
+    "repoName": "azure-bazaar-item-listing-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "azure-digital-locker",
+    "repoName": "azure-digital-locker-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "azure-hello-blockchain",
+    "repoName": "azure-hello-blockchain-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "azure-refrigerated-transportation",
+    "repoName": "azure-refrigerated-transportation-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "azure-room-thermostat",
+    "repoName": "azure-room-thermostat-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "azure-sample-marketplace",
+    "repoName": "azure-sample-marketplace-box",
+    "official": true
+  },
+  {
     "userOrg": "Quintor",
     "displayName": "angular-truffle-box",
     "repoName": "angular-truffle-box",

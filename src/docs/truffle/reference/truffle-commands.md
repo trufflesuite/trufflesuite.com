@@ -111,7 +111,7 @@ Option:
 
 ### deploy
 
-Alias for `migrate`. See `migrate` for details.
+Alias for `migrate`. See [migrate](/docs/truffle/reference/truffle-commands#migrate) for details.
 
 
 ### develop
@@ -160,6 +160,7 @@ Option:
 
 * `<command>`: Display usage information about the specified command.
 
+
 ### init
 
 Initialize new and empty Ethereum project
@@ -168,7 +169,7 @@ Initialize new and empty Ethereum project
 truffle init [--force]
 ```
 
-Creates a new and empty Truffle project within the current working directory. The current working directory must be empty unless the `--force` option is specified.
+Creates a new and empty Truffle project within the current working directory.
 
 <p class="alert alert-warning">
 **Alert**: Older versions of Truffle used `truffle init bare` to create an empty project. This usage has been deprecated. Those looking for the MetaCoin example that used to be available through `truffle init` should use `truffle unbox MetaCoin` instead.
@@ -239,7 +240,7 @@ Print the compiled opcodes for a given contract.
 truffle opcode <contract_name>
 ```
 
-Options:
+Option:
 
 * `<contract_name>`: Name of the contract to print opcodes for. Must be a contract name, not a file name. (required)
 
@@ -253,6 +254,26 @@ truffle publish
 ```
 
 All parameters are pulled from your project's configuration file. Takes no arguments. See the [Package Management with EthPM](/docs/getting_started/packages-ethpm) section for more details.
+
+### run
+
+<p class="alert alert-warning">
+**Note**: This feature is new and still in a barebones state. Please let us
+know how we can improve it!
+</p>
+
+Run a third-party plugin command
+
+```shell
+truffle run <command>
+```
+
+Option:
+
+* `<command>`: Name of a command defined by an installed plugin. (required)
+
+Install plugins as NPM package dependencies and [configure Truffle](/docs/truffle/reference/configuration#plugins)
+to recognize the plugin. For more information, see [Third-Party Plugin Commands](/docs/truffle/getting-started/writing-external-scripts#third-party-plugin-commands).
 
 
 ### serve
@@ -278,7 +299,7 @@ Options:
 Run JavaScript and Solidity tests.
 
 ```shell
-truffle test [<test_file>] [--compile-all] [--network <name>] [--verbose-rpc]
+truffle test [<test_file>] [--compile-all] [--network <name>] [--verbose-rpc] [--show-events]
 ```
 
 Runs some or all tests within the `test/` directory as specified. See the section on [Testing your contracts](/docs/getting_started/testing) for more information.
@@ -289,6 +310,8 @@ Options:
 * `--compile-all`: Compile all contracts instead of intelligently choosing which contracts need to be compiled.
 * `--network <name>`: Specify the network to use, using artifacts specific to that network. Network name must exist in the configuration.
 * `--verbose-rpc`: Log communication between Truffle and the Ethereum client.
+* `--show-events`: Log all contract events.
+
 
 ### unbox
 
@@ -300,9 +323,12 @@ truffle unbox <box_name>
 
 Downloads a [Truffle Box](/boxes) to the current working directory. See the [list of available boxes](/boxes).
 
+You can also design and create your own boxes!  See the section on [Truffle boxes](docs/truffle/getting-started/truffle-boxes) for more information.
+
 Options:
 
 * `<box_name>`: Name of the Truffle Box. (required)
+* `--force`: Unbox project in the current directory regardless of its state. Be careful, this will potentially overwrite files that exist in the directory.
 
 
 ### version
@@ -321,7 +347,7 @@ Watch filesystem for changes and rebuild the project automatically.
 truffle watch
 ```
 
-This command will initiate a watch for changes to contracts, application, and configuration files. When there's a change, it will rebuild the app as necessary. Similar to `truffle serve`, but without the web server component.
+This command will initiate a watch for changes to contracts, application, and configuration files. When there's a change, it will rebuild the app as necessary.
 
 <p class="alert alert-warning">
 **Alert**: This command is deprecated. Please use external tools to watch for filesystem changes and rerun tests.

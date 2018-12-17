@@ -81,5 +81,5 @@ events = ['Mint']
 dispatch({type: 'ADD_CONTRACT', drizzle, contractConfig, events, web3})
 
 // Or using the Drizzle context object
-this.context.drizzle.addContract({contractConfig, events})
+this.context.drizzle.addContract(contractConfig, events)
 ```

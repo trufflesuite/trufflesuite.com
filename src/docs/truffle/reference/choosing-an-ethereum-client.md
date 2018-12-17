@@ -26,11 +26,7 @@ We also recommend using Truffle Develop, a development blockchain built directly
 truffle develop
 ```
 
-This will run the client on `http://127.0.0.1:9545`. It will display the first 10 accounts and the mnemonic used to create those accounts. ([Read more about account mnemonics](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki).) Truffle Develop uses the same mnemonic every time:
-
-```
-candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
-```
+This will run the client on `http://127.0.0.1:9545`. It will display the first 10 accounts and the mnemonic used to create those accounts. ([Read more about account mnemonics](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki).) When you run `truffle develop` for the first time it will generate a random mnemonic that will persist for you and you alone.
 
 <p class="alert alert-danger">
 **Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). If you send ETH to any account generated from this mnemonic, you will lose it all!

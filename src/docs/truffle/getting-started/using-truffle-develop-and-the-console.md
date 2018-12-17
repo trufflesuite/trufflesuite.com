@@ -92,12 +92,38 @@ Mnemonic: candy maple cake sugar pudding cream honey rich smooth crumble sweet t
 This shows you the addresses, private keys, and mnemonic for this particular blockchain.
 
 <p class="alert alert-info">
-**Note**: The mnemonic and addresses cannot be changed. If you want to use a different mnemonic or set of addresses, we recommend using [Ganache](/docs/ganache/using).
+**Note**: When you run `truffle develop` for the first time, Truffle will generate a random mnemonic that will persist for you and you alone. If you want to use a different mnemonic or set of addresses, we recommend using [Ganache](/docs/ganache/using).
 </p>
+
+
 
 <p class="alert alert-danger">
 **Warning**: Remember to never use any of these addresses or the mnemonic on the mainnet. This is for development only.
 </p>
+
+
+#### Configuring Truffle Develop
+
+You can configure `truffle develop` to use any of the available 
+[ganache-core](https://github.com/trufflesuite/ganache-core#usage) options.
+
+For example:
+
+```javascript
+module.exports = {
+  /* ... rest of config */
+
+  networks: {
+    /* ... other networks */
+
+    "develop": {
+      accounts: 5,
+      defaultEtherBalance: 500,
+      blockTime: 3
+    }
+  }
+};
+```
 
 
 ## Features

@@ -26,7 +26,6 @@ In this tutorial we will be covering:
 There are a few technical requirements before we start. Please install the following:
 
 *   [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
-*   [Git](https://git-scm.com/)
 
 ### Truffle
 
@@ -298,14 +297,14 @@ ln -s ../../build/contracts contracts
 // Using a Command Prompt as Admin
 
 cd src
-mklink \D contracts ..\..\build\contracts
+mklink /D contracts ..\..\build\contracts
 ```
 
 In effect, this should create what looks like a `contracts` folder within `src`, but it actually points to the files inside the `build/contracts` folder of our Truffle project.
 
 ### Install Drizzle
 
-This is the most delicious part, we install Drizzle:
+This is the most delicious part, we install Drizzle. Change back into the `client` directory with the command `cd ..` and then run the following:
 
 ```shell
 npm install drizzle
@@ -393,7 +392,7 @@ state = { loading: true, drizzleState: null };
 
 We are going to be using two state variables here:
 
-1. `loading` — Indicates if if Drizzle has finished initializing and the app is ready. The initialization process includes instantiating `web3` and our smart contracts, fetching any available Ethereum accounts and listening (or, in cases where subscriptions are not supported: polling) for new blocks.
+1. `loading` — Indicates if Drizzle has finished initializing and the app is ready. The initialization process includes instantiating `web3` and our smart contracts, fetching any available Ethereum accounts and listening (or, in cases where subscriptions are not supported: polling) for new blocks.
 2. `drizzleState` — This is where we will store the state of the Drizzle store in our top-level component. If we can keep this state variable up-to-date, then we can simply use simple `props` and `state` to work with Drizzle (i.e. you don't have to use any Redux or advanced React patterns).
 
 #### Adding some initialization logic
@@ -534,7 +533,7 @@ What this tells us is that the `drizzleState` we get in this component will alwa
 
 ### `drizzle` instance and `drizzleState`
 
-For the most part, `drizzleState` is there for you to read information from (i.e. contract state variables, return values, transaction status, account data, etc.), where as the `drizzle` instance is what you will use to actually get stuff done (i.e. call contract methods, the Web3 instance, etc.).
+For the most part, `drizzleState` is there for you to read information from (i.e. contract state variables, return values, transaction status, account data, etc.), whereas the `drizzle` instance is what you will use to actually get stuff done (i.e. call contract methods, the Web3 instance, etc.).
 
 ### Wiring up the `ReadString` component
 

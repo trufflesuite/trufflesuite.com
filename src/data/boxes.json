@@ -188,5 +188,45 @@
     "description": "A truffle box that comes with everything you need to start using smart contracts from a Vue App, with Bootstrap styling and components. Supporting frameworks include Vuex, Vue-Router, Bootstrap 4 (via Bootstrap-Vue), and webpack. The sample uses webpack-dev-server for hot-reloading or you can build and serve from Express.",
     "stars": 12,
     "tags": ["community", "blockchain", "truffle-box", "solidity-contracts", "vue", "vue-bootstrap", "webpack-boilerplate"]
+  },
+  "azure-asset-transfer": {
+    "description": "Azure Samples - Asset Transfer",
+    "stars": 0,
+    "tags": ["community"]
+  },
+  "azure-basic-provenance": {
+    "description": "Azure Samples - Basic Provenance",
+    "stars": 0,
+    "tags": ["community"]
+  },
+  "azure-bazaar-item-listing": {
+    "description": "Azure Samples - Bazaar Item Listing",
+    "stars": 0,
+    "tags": ["community"]
+  },
+  "azure-digital-locker": {
+    "description": "Azure Samples - Digital Locker",
+    "stars": 0,
+    "tags": ["community"]
+  },
+  "azure-hello-blockchain": {
+    "description": "Azure Samples - Hello Blockchain",
+    "stars": 1,
+    "tags": ["community"]
+  },
+  "azure-refrigerated-transportation": {
+    "description": "Azure Samples - Refrigerated Transportation",
+    "stars": 0,
+    "tags": ["community"]
+  },
+  "azure-room-thermostat": {
+    "description": "Azure Samples - Room Thermostat",
+    "stars": 0,
+    "tags": ["community"]
+  },
+  "azure-simple-marketplace": {
+    "description": "Azure Samples - Simple Marketplace",
+    "stars": 0,
+    "tags": ["community"]
   }
 }

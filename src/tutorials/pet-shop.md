@@ -157,8 +157,11 @@ As mentioned above, array getters return only a single value from a given key. O
      return adopters;
    }
    ```
+Things to notice:
 
-Since `adopters` is already declared, we can simply return it. Be sure to specify the return type (in this case, the type for `adopters`) as `address[16]`.
+* Since `adopters` is already declared, we can simply return it. Be sure to specify the return type (in this case, the type for `adopters`) as `address[16]`.
+
+* The `view` keyword in the function declaration means that the function will not modify the state of the contract. Further information about the exact limits imposed by view is available [here](https://solidity.readthedocs.io/en/latest/contracts.html#view-functions).
 
 
 ## Compiling and migrating the smart contract
@@ -275,14 +278,21 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
    import "../contracts/Adoption.sol";
 
    contract TestAdoption {
-     Adoption adoption = Adoption(DeployedAddresses.Adoption());
+     // The address of the adoption contract to be tested
+    Adoption adoption = Adoption(DeployedAddresses.Adoption());
+
+    // The id of the pet that will be used for testing
+    uint expectedPetId = 8;
+
+    //The expected owner of adopted pet is this contract
+    address expectedAdopter = this;
 
    }
    ```
 
 We start the contract off with 3 imports:
 
-* `Assert.sol`: Gives us various assertions to use in our tests. In testing, **an assertion checks for things like equality, inequality or emptiness to return a pass/fail** from our test. [Here's a full list of the assertions included with Truffle](https://github.com/trufflesuite/truffle-core/blob/master/lib/testing/Assert.sol).
+* `Assert.sol`: Gives us various assertions to use in our tests. In testing, **an assertion checks for things like equality, inequality or emptiness to return a pass/fail** from our test. [Here's a full list of the assertions included with Truffle](https://github.com/trufflesuite/truffle/tree/master/packages/truffle-core/lib/testing/Assert.sol).
 * `DeployedAddresses.sol`: When running tests, Truffle will deploy a fresh instance of the contract being tested to the blockchain. This smart contract gets the address of the deployed contract.
 * `Adoption.sol`: The smart contract we want to test.
 
@@ -290,7 +300,10 @@ We start the contract off with 3 imports:
   <strong>Note</strong>: The first two imports are referring to global Truffle files, not a `truffle` directory. You should not see a `truffle` directory inside your `test/` directory.
 </p>
 
-Then we define a contract-wide variable containing the smart contract to be tested, calling the `DeployedAddresses` smart contract to get its address.
+Then we define three contract-wide variables:
+* First, one containing the smart contract to be tested, calling the `DeployedAddresses` smart contract to get its address.
+* Second, the id of the pet that will be used to test the adoption functions.
+* Third, since the TestAdoption contract will be sending the transaction, we set the expected adopter address to **this**, a contract-wide variable that gets the current contract's address.
 
 ### Testing the adopt() function
 
@@ -301,39 +314,33 @@ To test the `adopt()` function, recall that upon success it returns the given `p
    ```javascript
    // Testing the adopt() function
    function testUserCanAdoptPet() public {
-     uint returnedId = adoption.adopt(8);
+     uint returnedId = adoption.adopt(expectedPetId);
 
-     uint expected = 8;
-
-     Assert.equal(returnedId, expected, "Adoption of pet ID 8 should be recorded.");
+     Assert.equal(returnedId, expectedPetId, "Adoption of the expected pet should match what is returned.");
    }
    ```
 
 Things to notice:
 
-* We call the smart contract we declared earlier with the ID of `8`.
-* We then declare an expected value of `8` as well.
+* We call the smart contract we declared earlier with the ID of `expectedPetId`.
 * Finally, we pass the actual value, the expected value and a failure message (which gets printed to the console if the test does not pass) to `Assert.equal()`.
 
 ### Testing retrieval of a single pet's owner
 
-Remembering from above that public variables have automatic getter methods, we can retrieve the address stored by our adoption test above. Stored data will persist for the duration of our tests, so our adoption of pet `8` above can be retrieved by other tests.
+Remembering from above that public variables have automatic getter methods, we can retrieve the address stored by our adoption test above. Stored data will persist for the duration of our tests, so our adoption of pet `expectedPetId` above can be retrieved by other tests.
 
 1. Add this function below the previously added function in `TestAdoption.sol`.
 
    ```javascript
    // Testing retrieval of a single pet's owner
    function testGetAdopterAddressByPetId() public {
-     // Expected owner is this contract
-     address expected = this;
+     address adopter = adoption.adopters(expectedPetId);
 
-     address adopter = adoption.adopters(8);
-
-     Assert.equal(adopter, expected, "Owner of pet ID 8 should be recorded.");
+     Assert.equal(adopter, expectedAdopter, "Owner of the expected pet should be this contract");
    }
    ```
 
-Since the TestAdoption contract will be sending the transaction, we set the expected value to **this**, a contract-wide variable that gets the current contract's address. From there we assert equality as we did above.
+After getting the adopter address stored by the adoption contract, we assert equality as we did above.
 
 ### Testing retrieval of all pet owners
 
@@ -344,17 +351,14 @@ Since arrays can only return a single value given a single key, we create our ow
    ```javascript
    // Testing retrieval of all pet owners
    function testGetAdopterAddressByPetIdInArray() public {
-     // Expected owner is this contract
-     address expected = this;
-
      // Store adopters in memory rather than contract's storage
      address[16] memory adopters = adoption.getAdopters();
 
-     Assert.equal(adopters[8], expected, "Owner of pet ID 8 should be recorded.");
+     Assert.equal(adopters[expectedPetId], expectedAdopter, "Owner of the expected pet should be this contract");
    }
    ```
 
-Note the **memory** attribute on `adopters`. The memory attribute tells Solidity to temporarily store the value in memory, rather than saving it to the contract's storage. Since `adopters` is an array, and we know from the first adoption test that we adopted pet `8`, we compare the testing contracts address with location `8` in the array.
+Note the **memory** attribute on `adopters`. The memory attribute tells Solidity to temporarily store the value in memory, rather than saving it to the contract's storage. Since `adopters` is an array, and we know from the first adoption test that we adopted pet `expectedPetId`, we compare the testing contracts address with location `expectedPetId` in the array.
 
 ### Running the tests
 
@@ -401,11 +405,23 @@ The front-end doesn't use a build system (webpack, grunt, etc.) to be as easy as
 1. Remove the multi-line comment from within `initWeb3` and replace it with the following:
 
    ```javascript
-   // Is there an injected web3 instance?
-   if (typeof web3 !== 'undefined') {
-     App.web3Provider = web3.currentProvider;
-   } else {
-     // If no injected web3 instance is detected, fall back to Ganache
+   // Modern dapp browsers...
+   if (window.ethereum) {
+     App.web3Provider = window.ethereum;
+     try {
+       // Request account access
+       await window.ethereum.enable();
+     } catch (error) {
+       // User denied account access...
+       console.error("User denied account access")
+     }
+   }
+   // Legacy dapp browsers...
+   else if (window.web3) {
+     App.web3Provider = window.web3.currentProvider;
+   }
+   // If no injected web3 instance is detected, fall back to Ganache
+   else {
      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
    }
    web3 = new Web3(App.web3Provider);
@@ -413,7 +429,9 @@ The front-end doesn't use a build system (webpack, grunt, etc.) to be as easy as
 
 Things to notice:
 
-* First, we check if there's a web3 instance already active. (Ethereum browsers like [Mist](https://github.com/ethereum/mist) or Chrome with the [MetaMask](https://metamask.io/) extension will inject their own web3 instances.) If an injected web3 instance is present, we get its provider and use it to create our web3 object.
+* First, we check if we are using modern dapp browsers or the more recent versions of [MetaMask](https://github.com/MetaMask) where an `ethereum` provider is injected into the `window` object. If so, we use it to create our web3 object, but we also need to explicitly request access to the accounts with `ethereum.enable()`.
+
+* If the `ethereum` object does not exist, we then check for an injected `web3` instance. If it exists, this indicates that we are using an older dapp browser (like [Mist](https://github.com/ethereum/mist) or an older version of MetaMask). If so, we get its provider and use it to create our web3 object.
 
 * If no injected web3 instance is present, we create our web3 object based on our local provider. (This fallback is fine for development environments, but insecure and not suitable for production.)
 

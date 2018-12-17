@@ -337,7 +337,7 @@ module.exports = {
 
 You'll notice that in version 3.0 we `require`'d the default builder as a dependency and then passed that object into our configuration. Otherwise, the configuration was the same!
 
-Now, be aware that the default builder does use the latest contract abstractions ([truffle-contract](https://github.com/trufflesuite/truffle-contract)), so you will still need to edit your application to account for the breaking changes mentioned above.
+Now, be aware that the default builder does use the latest contract abstractions ([truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/truffle-contract)), so you will still need to edit your application to account for the breaking changes mentioned above.
 
 ### Use a custom build process / build tool
 
@@ -348,7 +348,7 @@ Whether you're building an application to run in the browser, or a command line 
 When configuring your build tool or application, you'll need to perform the following steps;
 
 1. Get all your contract artifacts into your build pipeline / application. This includes all of the `.json` files within the `./build/contracts` directory.
-2. Turn those `.json` contract artifacts into contract abstractions that are easy to use, via [truffle-contract](https://github.com/trufflesuite/truffle-contract).
+2. Turn those `.json` contract artifacts into contract abstractions that are easy to use, via [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/truffle-contract).
 3. Provision those contract abstractions with a Web3 provider. In the browser, this provider might come from [Metamask](https://metamask.io/) or [Mist](https://github.com/ethereum/mist), but it could also be a custom provider you've configured to point to [Infura](http://infura.io/) or any other Ethereum client.
 4. Use your contracts!
 
