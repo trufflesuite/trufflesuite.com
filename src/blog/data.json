@@ -1,4 +1,11 @@
 {
+  "truffle-v5-has-arrived": {
+    "title": "Truffle v5 has arrived!",
+    "date": "2018-12-17",
+    "author": "Brittany Alexander",
+    "published": false,
+    "excerpt": "We have released the most awaited version of Truffle just in time for the new year. There are SO many exciting things to mention that will make your Truffle experience a rich one."
+  },
   "why-were-organizing-trufflecon-2018": {
     "title": "Why We're Organizing TruffleCon 2018",
     "date": "2018-07-16",
