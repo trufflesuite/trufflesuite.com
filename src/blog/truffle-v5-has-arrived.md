@@ -5,7 +5,7 @@ exciting things Truffle has to offer.
 
 [Download Truffle v5!](https://truffleframework.com/truffle)
 
-- **Bring your own compiler!!!!** You can now choose any solc-js version
+- **Bring your own compiler!** You can now choose any solc-js version
   available at solc-bin. Just tell Truffle which version you want to use and it
   will automatically fetch it for you! This feature also includes the ability to
   use Docker and native binaries in an advanced way.
@@ -13,21 +13,23 @@ exciting things Truffle has to offer.
 - **Web3 1.0** - The truffle-contract package is now using Web3.js 1.0! This
   will greatly improve error handling!
 
-- **New migrations command** - In v5, the migrate command has been completely
-  rewritten. We have included better error messages, when a deployment fails
+- **New migrations command** - In v5, the `migrate` command has been completely
+  rewritten. We have included better error messages: e.g., when a deployment fails
   Truffle will notify you and give you an idea of possible fixes. Truffle will
   now also give you more information about what is going on when you deploy a
   contract. This includes cost summaries and real time status updates about the
   amount of time a transaction has been pending.
+
   Dry run simulations also now run automatically if you are deploying to a known
-  public network and using the ‘— interactive’ flag on the command line will give
+  public network and using the `--interactive` flag on the command line will give
   you a prompt between dry runs and real deployments.
+
   Another improvement is the ability to configure the amount of block confirmations
   in between deployments. This allows the user to specify the number of blocks to
   wait before transactions time out.
 
-- **User analytics** - User analytics have been added and users can opt-in by
-  running ‘truffle config --enable-analytics’. We think this feature will be a
+- **Usage analytics** - Usage analytics have been added and users can opt-in by
+  running `truffle config --enable-analytics`. We think this feature will be a
   vital tool that will help us to make informed decisions about the future of Truffle
   and to determine what is most valuable to our users. When enabled, Truffle will
   collect information about your version number, the commands you run, and
@@ -48,7 +50,7 @@ exciting things Truffle has to offer.
 
   (Make sure you have [Vyper](https://vyper.readthedocs.io/en/latest/installing-vyper.html) installed.)
 
-- **Solidity v0.5.0** - Truffle also now ships with solidity v0.5.0 by default.
+- **Solidity v0.5.0** - Truffle also now ships with Solidity v0.5.0 by default.
   Solidity v0.4.xx is still supported and can be used by specifying the version
   you wish to use in your Truffle config.
 
@@ -73,9 +75,9 @@ exciting things Truffle has to offer.
   This allows you to see all the available options for the command as well as a
   description of what it does.
 
-- **Unique truffle mnemonics** - Truffle will now generate random mnemonics
+- **Unique `truffle develop` mnemonics** - Truffle will now generate random mnemonics
   that will persist only for you. Use caution with crypto security when working
-  with mnemonics and private keys!!!!!
+  with mnemonics and private keys!
 
 - **Debugger improvements** - v5 includes debugger breakpoints! Add breakpoints
   using the ’b’ command and remove them using the ‘B’ command. Additionally we
@@ -94,9 +96,7 @@ Looking towards the future we intend to add third-party plugins and
 hope through our fancy, improved analaytics to provide features the community
 needs most!
 
-{{#> breakout}}
-  ![V5 Breaking Changes](/img/blog/truffle-v5-blog-media/breaking-changes-photo-v5.png)
-{{/breakout}}
+![V5 Breaking Changes](/img/blog/truffle-v5-blog-media/breaking-changes-photo-v5.png)
 
 **Thank you to all who have helped make this release of Truffle possible! We
 hope you enjoy this new Truffle release and ask that you let us know if you have
