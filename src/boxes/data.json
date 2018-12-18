@@ -97,8 +97,8 @@
   },
   {
     "userOrg": "truffle-box",
-    "displayName": "azure-sample-marketplace",
-    "repoName": "azure-sample-marketplace-box",
+    "displayName": "azure-simple-marketplace",
+    "repoName": "azure-simple-marketplace-box",
     "official": true
   },
   {
@@ -123,12 +123,6 @@
     "userOrg": "chuckbergeron",
     "displayName": "etherplate",
     "repoName": "etherplate",
-    "official": false
-  },
-  {
-    "userOrg": "blockchangers",
-    "displayName": "eth-truffle-vue",
-    "repoName": "eth-truffle-vue",
     "official": false
   },
   {

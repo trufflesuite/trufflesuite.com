@@ -22131,8 +22131,7 @@
 	    }, function (err, downloads) {
 
 	      var total = 0;
-	      var showCurrent = window.location.hash.toLowerCase().indexOf("current") >= 0;
-
+	      var showCurrent = window.location.search.toLowerCase().indexOf("current") >= 0;
 	      var data = {
 	        labels: [],
 	        datasets: [{
@@ -22177,8 +22176,24 @@
 	        total: 0
 	      };
 
-	      downloads.forEach(function (item) {
+	      var previousGoodDaysDownloads = 0;
+
+	      downloads.forEach(function (item, index) {
 	        var month = self.getMonth(item.day);
+	        var todaysDownloads = item.downloads;
+
+	        // NPM loses a lot of data, and reports days with zero downloads, sometimes
+	        // showing multiple sequential days of outages. For those days, let's create 
+	        // a more realistic download count by assuming the total downloads for that day 
+	        // is the same amount of downloads as the previous good day (i.e., no zero).
+	        // Obviously this is a guesstimation, but it's better than nothing. 
+	        // Days that are overestimated should be evened out by days that are underestimated,
+	        // assuming NPMs outtages are randomly distributed.
+	        if (todaysDownloads == 0) {
+	          todaysDownloads = parseInt(previousGoodDaysDownloads);
+	        } else {
+	          previousGoodDaysDownloads = todaysDownloads;
+	        }
 
 	        if (month != startDate.label) {
 	          // Update the labels.
@@ -22191,41 +22206,24 @@
 	          startDate = { label: month, total: 0 };
 	        }
 
-	        startDate.total += item.downloads;
-	        total += item.downloads;
+	        startDate.total += todaysDownloads;
+	        total += todaysDownloads;
 	      });
 
 	      // Don't add the last month for now (that's why this is commented out).
 
-	      // if (data.labels[data.labels.length - 1] != startDate.label) {
-	      //   data.labels.push(startDate.label);
-	      //   maindataset.push(startDate.total);
-	      //   actualdataset.push(null);
-	      // }
+	      if (showCurrent == true && data.labels[data.labels.length - 1] != startDate.label) {
+	        data.labels.push(startDate.label);
+	        maindataset.push(startDate.total);
+	        actualdataset.push(null);
+	      }
 
 	      var lastThreeMonths = maindataset[maindataset.length - 1] + maindataset[maindataset.length - 2] + maindataset[maindataset.length - 3];
 	      var prevThreeMonths = maindataset[maindataset.length - 4] + maindataset[maindataset.length - 5] + maindataset[maindataset.length - 6];
 
-	      var growth = lastThreeMonths / prevThreeMonths - 1;
-	      var direction = growth < 0 ? "down" : "up";
-	      growth = Math.floor(Math.abs(growth * 100));
-
-	      // Make sure the projected dataset has the last two points.
-	      // Then op off the last data point on the main dataset so the
-	      // projected dataset shows through.
-	      // var startDateDownloads = maindataset[maindataset.length - 1];
-	      // var lastMonthDownloads = maindataset[maindataset.length - 2];
-	      // var projectedstartDateDownloads = parseInt(lastMonthDownloads * .9);
-	      //
-	      // var showProjected = projectedstartDateDownloads > startDateDownloads;
-	      //
-	      // if (showProjected) {
-	      //   maindataset.pop();
-	      //   maindataset.push(projectedstartDateDownloads)
-	      //
-	      //   actualdataset.pop();
-	      //   actualdataset.push(startDateDownloads);
-	      // }
+	      var totalGrowthInDownloads = lastThreeMonths - prevThreeMonths;
+	      var growth = Math.round(Math.abs(totalGrowthInDownloads) / prevThreeMonths * 100);
+	      var direction = totalGrowthInDownloads < 0 ? "down" : "up";
 
 	      self.setState({
 	        data: data,
