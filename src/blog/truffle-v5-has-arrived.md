@@ -1,45 +1,46 @@
-We have released the most awaited version of Truffle just in time for the
-holidays! There are SO many exciting things to mention that will make your
-Truffle experience a rich one. Highlighted below are the new exciting things
-Truffle has to offer.
+We have just released the most awaited version of Truffle just in time for the
+holidays! There are SO many exciting things that we would like to mention that
+will make your Truffle experience a rich one. Highlighted below are the new
+exciting things Truffle has to offer.
 
 [Download Truffle v5!](https://truffleframework.com/truffle)
 
 - **Bring your own compiler!!!!** You can now choose any solc-js version
-  available at solc-bin just tell Truffle which one you want and it will get
-  it. This includes the ability to use docker and native binary in an advanced
-  way.
+  available at solc-bin. Just tell Truffle which version you want to use and it
+  will automatically fetch it for you! This feature also includes the ability to
+  use Docker and native binaries in an advanced way.
 
-- **Web3 1.0** - the truffle-contract command is now using web3.js 1.0! This
-  will be great for error handling!
+- **Web3 1.0** - The truffle-contract package is now using Web3.js 1.0! This
+  will greatly improve error handling!
 
-- **New Migrations Command** - in v5 this command has been completely
+- **New migrations command** - In v5, the migrate command has been completely
   rewritten. We have included better error messages, when a deployment fails
-  Truffle will tell you and give you an idea of possible fixes. Truffle will
-  now also give your more information about what is going on when you deploy a
-  contract, cost summaries and real time status updates about the amount of a
-  time a transaction has been pending. Dry run simulations now run
-  automatically if you deploy to a known public network. Using the
-  ‘— interactive’ flag on the command line will give you a prompt between dry
-  runs and real deployments. The ability to configure the amount of block
-  confirmations in between deployments. Allowing user to specify the amount of
-  blocks to wait before timing out. Web3 has this value hardcoded at 50 blocks,
-  which can pose a problem when deploying large contracts at the lower end of
-  gas price range. 
+  Truffle will notify you and give you an idea of possible fixes. Truffle will
+  now also give you more information about what is going on when you deploy a
+  contract. This includes cost summaries and real time status updates about the
+  amount of time a transaction has been pending.
+  Dry run simulations also now run automatically if you are deploying to a known
+  public network and using the ‘— interactive’ flag on the command line will give
+  you a prompt between dry runs and real deployments.
+  Another improvement is the ability to configure the amount of block confirmations
+  in between deployments. This allows the user to specify the number of blocks to
+  wait before transactions time out.
 
-- **User Analytics** - have been added and users can opt-in by running
-  ‘truffle config --enable-analytics’. This is vital in making informed
-  decisions about future of Truffle and deciding what is most valuable to our
-  users. When enabled Truffle will collect information about your version
-  number, the commands you run, and whether commands succeed or fail, all
-  annoyomously.
+- **User analytics** - User analytics have been added and users can opt-in by
+  running ‘truffle config --enable-analytics’. We think this feature will be a
+  vital tool that will help us to make informed decisions about the future of Truffle
+  and to determine what is most valuable to our users. When enabled, Truffle will
+  collect information about your version number, the commands you run, and
+  whether commands succeed or fail. And of course, it will do so in an anonymous
+  fashion.
 
 - **`truffle run <command>`** -  Truffle now gives users the ability to create
-  custom command plugins.
+  custom command plugins. This feature is still in its infancy so let us know
+  what you think!
 
-- **Vyper support** - Truffle will now compile `*.vy` contracts. We have
-  published a Truffle Box to help you get started with Vyper you can access it
-  by running:  
+- **Vyper support** - Another added feature is that Truffle will now compile
+  `*.vy` contracts. We have published a Truffle Box to help you get started
+  with Vyper. You can access it by running:  
 
   ```
   $ truffle unbox vyper-example
@@ -47,22 +48,22 @@ Truffle has to offer.
 
   (Make sure you have [Vyper](https://vyper.readthedocs.io/en/latest/installing-vyper.html) installed.)
 
-- **Solidity v0.5.0** - Truffle now uses solidity v0.5.0 by default.
+- **Solidity v0.5.0** - Truffle also now ships with solidity v0.5.0 by default.
   Solidity v0.4.xx is still supported and can be used by specifying the version
-  in your Truffle config.
+  you wish to use in your Truffle config.
 
 -  **Structured function parameters** - Truffle has been upgraded to use
-   the latest Web3.js v1.0, it includes support for passing/returning ‘struct’s
-   in Solidity functions. To use this you need to specify it at the top of your
-   contracts using:
+   Web3.js v1.0. This has allowed us to include support for passing/returning
+   ‘struct’s in Solidity functions. To use this ability, you need to specify the
+   following at the top of your contracts:
 
   ```
   $ pragma experimental ABIEncoderV2
   ```
 
   This feature allows you to use complex function arguments and have the values
-  returned in Solidity and interact with the resulting contracts via
-  truffle-contract’s JS interface.
+  returned so that they can interact with other contracts via truffle-contract’s
+  JS interface.
 
 - **Help system** - Now access Truffle’s built in help system by running:
   ```
@@ -76,18 +77,21 @@ Truffle has to offer.
   that will persist only for you. Use caution with crypto security when working
   with mnemonics and private keys!!!!!
 
-- **Debugger Improvements** - v5 includes debugger breakpoints! Add breakpoints
+- **Debugger improvements** - v5 includes debugger breakpoints! Add breakpoints
   using the ’b’ command and remove them using the ‘B’ command. Additionally we
   have added mapping support for the debugger!
 
-- **`truffle init` / `truffle unbox`** - These commands have been improved you
-  are now asked if you want to overwrite files. A force command has also been
-  added to overwrite the files automatically.
+- **`truffle init` / `truffle unbox`** - These commands have been improved and
+  you are now asked if you want to overwrite files in the case of name conflicts
+  in the target directory. A force option (--force) has also been added in the
+  case where you wish to overwrite the files automatically and avoid the
+  prompt.
 
-- **`async`/`await`** - now supported in Truffle consoles.
+- **`async`/`await`** - Support for async/await syntax in the Truffle console
+  is also now available!
 
-Looking towards the future we are hoping to add third-party plugins, and we
-hope through our fancy improved analaytics to provide features the community
+Looking towards the future we intend to add third-party plugins and
+hope through our fancy, improved analaytics to provide features the community
 needs most!
 
 {{#> breakout}}
@@ -95,8 +99,8 @@ needs most!
 {{/breakout}}
 
 **Thank you to all who have helped make this release of Truffle possible! We
-hope you enjoy this new Truffle release! Let us know if you have any
-suggestions or problems on our community Gitter channel or on our GitHub
+hope you enjoy this new Truffle release and ask that you let us know if you have
+any suggestions or problems on our community Gitter channel or on our GitHub
 page!**
 
 [Download Truffle v5!](https://truffleframework.com/truffle)
