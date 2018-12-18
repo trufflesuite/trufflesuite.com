@@ -3,7 +3,8 @@ holidays! There are SO many exciting things that we would like to mention that
 will make your Truffle experience a rich one. Highlighted below are the new
 exciting things Truffle has to offer.
 
-[Download Truffle v5!](https://truffleframework.com/truffle)
+[Download Truffle v5](https://truffleframework.com/truffle) or check out the
+full [Release Notes](https://github.com/trufflesuite/truffle/releases/tag/v5.0.0).
 
 - **Bring your own compiler!** You can now choose any solc-js version
   available at solc-bin. Just tell Truffle which version you want to use and it
@@ -103,4 +104,4 @@ hope you enjoy this new Truffle release and ask that you let us know if you have
 any suggestions or problems on our community Gitter channel or on our GitHub
 page!**
 
-[Download Truffle v5!](https://truffleframework.com/truffle)
+[Get started with Truffle v5 today!](https://truffleframework.com/truffle)
