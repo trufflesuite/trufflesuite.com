@@ -1,15 +1,21 @@
-Starting with Drizzle v1.x.x, we are very happy to announce official support for React Native (v0.57.7+)!
+Starting with Drizzle v1.3, we are very happy to announce official support for React Native (^0.57.7)!
 
-This tutorial will guide you through how to get Drizzle running on your React Native dapps. This tutorial assumes some prior knowledge about Truffle and React Native, so if you haven't already, go over the following tutorials first to set up your development environment: 
+This tutorial will guide you through how to get Drizzle and Truffle running on your React Native dapps. This tutorial assumes some prior knowledge about Truffle, Drizzle, and React Native, so if you haven't already, go over the following tutorials first to set up your development environment: 
 
 1. [Getting started with Drizzle and React](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react)
 1. [React Native](https://facebook.github.io/react-native/docs/getting-started.html)
 
 This tutorial will cover the following:
 
-1. [Setting up the folder structure](#setting-up-the-folder-structure)
-1. [Shimming web and node libraries on React Native](#Shimming-web-and-node-libraries-on-React-Native)
-1. [Setting up some sanity tests](#Setting-up-some-sanity-tests)
+1. Setting up the folder structure
+1. Shimming web and node libraries on React Native
+1. Setting up the smart contract
+1. Connecting your app to your Ganache testnet
+1. Setting up Drizzle
+1. Wiring up the app component
+1. Wiring up the React app with Drizzle
+1. Writing a component to read from Drizzle
+1. Writing a component to write to the smart contract
 
 ## Setting up the folder structure
 
@@ -219,29 +225,36 @@ React Native is missing some of the global objects that are available on other p
 
 We're finally done with replacing all the global objects and functions that Drizzle was expecting.
 
-## Writing and migrating the smart contract
+## Setting up the smart contract
 
-To add smart contracts we'll just follow the previous tutorial on Drizzle and React.
+To add our smart contract we'll just follow the previous tutorial on Drizzle and React.
 
-Do the steps from [Writing our smart contract](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react#writing-our-smart-contract) to (and including) [Migration](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react#migration).
+Do the steps from [Writing our smart contract](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react#writing-our-smart-contract) up to (and including) [Migration](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react#migration).
 
 
-## Running the app
+## Connecting your app to your Ganache testnet
+
+Working with React Native and mobile devices means that they don't always see the Ganache server the same. The sections below detail how to connect to the Ganache testnet with whichever method you are using to run the app.
+
+### Running the app
 
 1. Start React Native Metro bundler: `react-native start`
 1. Start your emulator/plug in your device
 
-## Connecting your app to your Ganache testnet
+### Android (Emulator/Physical Device)
 
-### Android
+The main thing for Android devices is that we have to reverse the ports so that we can point to `localhost` on the Android device to the Ganache server.
 
 1. Start `ganache-cli`: `ganache-cli -b 3`
-1. Compile and migrate contracts: `yarn run setup`
+1. Compile and migrate contracts: `truffle compile && truffle migrate`
+1. Reverse ports: `adb reverse tcp:8545 tcp:8545`
 1. Install app: `react-native run-android`
 
 ### iOS
 
 #### Simulator
+
+The iOS simulator will see servers on `localhost` just fine.
 
 1. Start `ganache-cli`: `ganache-cli -b 3`
 1. Compile and migrate contracts: `truffle compile && truffle migrate`
@@ -249,12 +262,14 @@ Do the steps from [Writing our smart contract](https://www.truffleframework.com/
 
 #### Physical device
 
+iOS physical devices are the most manual. You have to look up the local IP address of your machine and manually handle it every time it changes.
+
 1. Find your `LOCAL_MACHINE_IP` by checking your network settings on your Mac where Ganache is running
 1. Start `ganache-cli`: `ganache-cli -b 3 -h LOCAL_MACHINE_IP`
-1. In `./truffle.js` for `development`, point Truffle to `LOCAL_MACHINE_IP` 
+1. In `truffle.js` for `development`, point Truffle to `LOCAL_MACHINE_IP` 
 1. Compile and migrate contracts: `truffle compile && truffle migrate`
-1. In `./app/core/Core.js`, point Drizzle to `LOCAL_MACHINE_IP`
-    ```
+1. In `index.js`, point Drizzle to `LOCAL_MACHINE_IP`
+    ```js
     const options = {
       ...
       web3: {
@@ -267,15 +282,15 @@ Do the steps from [Writing our smart contract](https://www.truffleframework.com/
     ```
 1. Install: Do it through Xcode
 
-## Install Drizzle
+## Setting up Drizzle
+
+Install Drizzle
 
 ```shell
 yarn add drizzle
 ```
 
-## Setup the Drizzle store
-
-In `index.js`
+Set up the Drizzle store by adding the following code to `index.js`
 
 ```js
 import React from "react";
@@ -314,7 +329,7 @@ AppRegistry.registerComponent(appName, () => () => <App drizzle={drizzle} />);
 
 ```
 
-## Wire up the App component
+## Wiring up the App component
 
 This is pretty much the same as [the web tutorial](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react#wire-up-the-app-component), but with React Native components instead of web ones. Refer to the web tutorial for a more in-depth explanation of what's going on.
 
@@ -377,9 +392,13 @@ const styles = StyleSheet.create({
 });
 ```
 
-## Write a component to read from Drizzle
+Run the app, and you should see the string `Loading Drizzle...` while you wait for Drizzle to initialize. Once initialization is complete, the string `Drizzle is ready` should be visible.
 
-[web tutorial](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react#write-a-component-to-read-from-drizzle)
+## Writing a component to read from Drizzle
+
+Once again, this is very similar to the [web tutorial](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react#write-a-component-to-read-from-drizzle), just with React Native components.
+
+Add `ReadString.js` to the root of your project.
 
 ```js
 import React from "react";
@@ -414,16 +433,36 @@ class ReadString extends React.Component {
 export default ReadString;
 ```
 
-Add it to `App.js`
+Add it to `App.js` by modifying the `render` method:
 
 ```js
+import ReadString from "./ReadString";
+// ...
+render() {
+  return (
+    <View style={styles.container}>
+      {this.state.loading ? (
+        <Text>Loading...</Text>
+      ) : (
+        <View>
+          <ReadString
+            drizzle={this.props.drizzle}
+            drizzleState={this.state.drizzleState}
+          />
+        </View>
+      )}
+    </View>
+  );
+}
 ```
 
-Test it out
+You should now see the string `Hello World` being rendered after Drizzle has finished loading.
 
-## Write a component to write to the smart contract
+## Writing a component to write to the smart contract
 
-[web tutorial](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react#write-a-component-to-write-to-the-smart-contract)
+
+Once again, this is very similar to the [web tutorial](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react#write-a-component-to-write-to-the-smart-contract), just with React Native components.
+
 
 ```js
 import React from "react";
@@ -481,13 +520,37 @@ class SetString extends React.Component {
 export default SetString;
 ```
 
-Add it to `App.js`
+Add it to `App.js` by modifying the `render` function
 
 ```js
+
+import ReadString from "./ReadString";
+import SetString from "./SetString";
+// ...
+render() {
+  return (
+    <View style={styles.container}>
+      {this.state.loading ? (
+        <Text>Loading...</Text>
+      ) : (
+        <View>
+          <ReadString
+            drizzle={this.props.drizzle}
+            drizzleState={this.state.drizzleState}
+          />
+         <SetString
+            drizzle={this.props.drizzle}
+            drizzleState={this.state.drizzleState}
+          />
+        </View>
+      )}
+    </View>
+  );
+}
 ```
 
-Test it out
+Run the app, enter a new string, and press the Submit button. A transaction status of `pending` will show and change to `success` on completion. This string will persist through reloads of the app since it is connected to your Ganache testnet.
 
 # The Finish Line
 
-You've just successfully integrated the full suite of Drizzle, Truffle, and Ganache tooling with your React Native app!
+Congratulations, you've just successfully integrated the full suite of Drizzle, Truffle, and Ganache tooling into your React Native dapp!
