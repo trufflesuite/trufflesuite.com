@@ -195,6 +195,8 @@ React Native is missing some of the global objects that are available on other p
     };
     ```
 
+We're finally done with getting the app ready to be run!
+
 ## Running the app
 
 1. Start React Native Metro bundler: `react-native start`
@@ -229,7 +231,7 @@ React Native is missing some of the global objects that are available on other p
       web3: {
         fallback: {
           type: "ws",
-          url: "ws://192.168.0.107:8545"
+          url: "ws://LOCAL_MACHINE_IP:8545"
         }
       }
     };
