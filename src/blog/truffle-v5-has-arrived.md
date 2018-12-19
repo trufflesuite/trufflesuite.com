@@ -61,7 +61,7 @@ full [Release Notes](https://github.com/trufflesuite/truffle/releases/tag/v5.0.0
    following at the top of your contracts:
 
   ```
-  $ pragma experimental ABIEncoderV2
+  pragma experimental ABIEncoderV2
   ```
 
   This feature allows you to use complex function arguments and have the values
