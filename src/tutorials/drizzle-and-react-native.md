@@ -13,7 +13,6 @@ This tutorial will cover the following:
 1. Connecting your app to your Ganache testnet
 1. Setting up Drizzle
 1. Wiring up the app component
-1. Wiring up the React app with Drizzle
 1. Writing a component to read from Drizzle
 1. Writing a component to write to the smart contract
 
