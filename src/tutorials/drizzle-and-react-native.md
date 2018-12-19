@@ -39,7 +39,7 @@ You should have the following inside the project folder:
 
 ### React Native
 
-1. Initialize your React Native project in its own folder, separate from your Truffle project `truffle-temp`.
+1. Initialize your React Native project in its own folder, separate from your Truffle project `truffle-temp`:
 
     ```shell
     react-native init DrizzleReactNativeTutorial
@@ -68,7 +68,7 @@ You should have the following inside the project folder:
 
 React Native is missing some of the global objects that are available on other platforms such as the web or Node. We will have to provide our own (i.e. a shim) through imported libraries or in some cases our own code.
 
-1. Install `node-libs-react-native`
+1. Install `node-libs-react-native`:
 
     ```shell
     yarn add node-libs-react-native
@@ -116,7 +116,7 @@ React Native is missing some of the global objects that are available on other p
     yarn add Base64
     ```
 
-   and add it to our shims at `shims.js`
+   and add it to our shims at `shims.js`:
     ```js
     import "node-libs-react-native/globals";
     import { btoa } from "Base64";
@@ -124,7 +124,7 @@ React Native is missing some of the global objects that are available on other p
     global.btoa = btoa;
     ```
 
-1. Install and link `react-native-randombytes`
+1. Install and link `react-native-randombytes`:
 
     ```shell
     yarn add react-native-randombytes
@@ -146,9 +146,7 @@ React Native is missing some of the global objects that are available on other p
     }
     ```
 
-1. Shim `Object.assign` as React Native's own polyfill has some [non-spec compliant issues on React Native development builds](https://github.com/facebook/react-native/issues/16814). 
-
-    In `shims.js`
+1. Shim `Object.assign` as React Native's own polyfill has some [non-spec compliant issues on React Native development builds](https://github.com/facebook/react-native/issues/16814). In `shims.js`:
 
     ```js
     import "node-libs-react-native/globals";
@@ -245,6 +243,8 @@ Working with React Native and mobile devices means that they don't always see th
 
 The main thing for Android devices is that we have to reverse the ports so that we can point to `localhost` on the Android device to the Ganache server.
 
+Make sure you've setup the [Android Debug Bridge (adb)](https://developer.android.com/studio/command-line/adb) before doing these steps.
+
 1. Start `ganache-cli`: `ganache-cli -b 3`
 1. Compile and migrate contracts: `truffle compile && truffle migrate`
 1. Reverse ports: `adb reverse tcp:8545 tcp:8545`
@@ -284,13 +284,13 @@ iOS physical devices are the most manual. You have to look up the local IP addre
 
 ## Setting up Drizzle
 
-Install Drizzle
+Install Drizzle:
 
 ```shell
 yarn add drizzle
 ```
 
-Set up the Drizzle store by adding the following code to `index.js`
+Set up the Drizzle store by adding the following code to `index.js`:
 
 ```js
 import React from "react";
