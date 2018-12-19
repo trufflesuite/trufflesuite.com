@@ -72,7 +72,7 @@ know how we can improve it!
     * @param {Config} config - A truffle-config object.
     * Has attributes like `truffle_directory`, `working_directory`, etc.
     */
-   module.exports = (config, done) => {
+    module.exports = async (config) => {
      // config._ has the command arguments.
      // config_[0] is the command name, e.g. "hello" here.
      // config_[1] starts remaining parameters.
