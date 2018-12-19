@@ -159,6 +159,14 @@ React Native is missing some of the global objects that are available on other p
         }
     }
 
+    /**
+    * From https://github.com/facebook/react-native/blob/1151c096dab17e5d9a6ac05b61aacecd4305f3db/Libraries/polyfills/Object.es6.js
+    * This on RN's master branch as of Sep 11, 2018, however it has not made it into a release yet.
+    *
+    * The only modification made in Truffle's polyfill was to remove the check for an existing implementation.
+    * RN 0.57.7 (and below I assume) uses the non-spec compliant Object.assign that breaks in dev RN builds
+    * https://github.com/facebook/react-native/issues/16814
+    */
     Object.defineProperty(Object, 'assign', {
       value: function assign(target, varArgs) {
         'use strict';
