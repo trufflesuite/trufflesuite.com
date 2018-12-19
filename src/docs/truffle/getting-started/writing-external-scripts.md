@@ -84,7 +84,6 @@ know how we can improve it!
 
      let name = config._.length > 1 ? config._[1] : 'World!';
      console.log(`Hello, ${name}`);
-     done(null, [], []);
    }
    ```
 
