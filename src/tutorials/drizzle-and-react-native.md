@@ -132,7 +132,7 @@ React Native is missing some of the global objects that are available on other p
     }); 
     ```
 
-1. Create a new file `rn-cli-config.js` in the root folder with the following code:
+1. Create a new file `rn-cli.config.js` in the root folder with the following code:
 
     ```js
     const nodeLibs = require("node-libs-react-native");
