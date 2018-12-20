@@ -87,7 +87,7 @@ We'll start our dapp by writing the smart contract that acts as the back-end log
 1. Add the following content to the file:
 
    ```javascript
-   pragma solidity ^0.4.17;
+   pragma solidity ^0.5.0;
 
    contract Adoption {
 
@@ -96,7 +96,7 @@ We'll start our dapp by writing the smart contract that acts as the back-end log
 
 Things to notice:
 
-* The minimum version of Solidity required is noted at the top of the contract: `pragma solidity ^0.4.17;`. The `pragma` command means "*additional information that only the compiler cares about*", while the caret symbol (^) means "*the version indicated or higher*".
+* The minimum version of Solidity required is noted at the top of the contract: `pragma solidity ^0.5.0;`. The `pragma` command means "*additional information that only the compiler cares about*", while the caret symbol (^) means "*the version indicated or higher*".
 * Like JavaScript or PHP, statements are terminated with semicolons.
 
 ### Variable setup
@@ -271,7 +271,7 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 1. Add the following content to the `TestAdoption.sol` file:
 
    ```javascript
-   pragma solidity ^0.4.17;
+   pragma solidity ^0.5.0;
 
    import "truffle/Assert.sol";
    import "truffle/DeployedAddresses.sol";
