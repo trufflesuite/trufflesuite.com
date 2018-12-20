@@ -38,7 +38,7 @@ You should have the following inside the project folder:
 
 ### React Native
 
-1. Initialize your React Native project in its own folder, separate from your Truffle project `truffle-temp`:
+1. Initialize your React Native project in its own folder, as a sibling folder of your Truffle project `truffle-temp`:
 
     ```shell
     react-native init DrizzleReactNativeTutorial
