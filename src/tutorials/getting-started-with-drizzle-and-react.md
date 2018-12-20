@@ -428,7 +428,7 @@ By doing this, `drizzleState` will always be up-to-date and we also know exactly
 Note that we assign the return value of the `subscribe()` to a class variable `this.unsubscribe`. This is because it is always good practice to unsubscribe from any subscriptions you have when the component un-mounts. In order to do this, we save a reference to that subscription (i.e. `this.unsubscribe`), and inside `componentWillUnmount`, we have the following:
 
 ```js
-compomentWillUnmount() {
+componentWillUnmount() {
   this.unsubscribe();
 }
 ```
@@ -472,7 +472,7 @@ class App extends Component {
     });
   }
 
-  compomentWillUnmount() {
+  componentWillUnmount() {
     this.unsubscribe();
   }
 
