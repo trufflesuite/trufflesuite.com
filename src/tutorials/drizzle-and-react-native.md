@@ -167,7 +167,7 @@ React Native is missing some of the global objects that are available on other p
     import "./shims"
     ```
 
-We're finally done with replacing all the global objects and functions that Drizzle was expecting.
+We're now done with replacing all the global objects and functions that Drizzle was expecting.
 
 ## Setting up the smart contract
 
@@ -208,7 +208,7 @@ The iOS simulator will see servers on `localhost` just fine.
 
 #### Physical device
 
-iOS physical devices are the most manual. You have to look up the local IP address of your machine and manually handle it every time it changes.
+iOS physical devices involve the most manual work relative to other devices. You have to look up the local IP address of your machine and manually handle it every time it changes.
 
 1. Find your `LOCAL_MACHINE_IP` by checking your network settings on your Mac where Ganache is running
 1. Start `ganache-cli`: `ganache-cli -b 3 -h LOCAL_MACHINE_IP`
