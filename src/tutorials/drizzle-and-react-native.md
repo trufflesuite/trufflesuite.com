@@ -4,6 +4,7 @@ This tutorial will guide you through how to get Drizzle and Truffle running on y
 
 1. [Getting started with Drizzle and React](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react)
 1. [React Native](https://facebook.github.io/react-native/docs/getting-started.html)
+    - Make sure to select `Building Projects with Native Code` since we will be leveraging some native code.
 
 This tutorial will cover the following:
 
@@ -30,11 +31,12 @@ truffle init
 
 You should have the following inside the project folder:
 
-1. `contracts/`
-1. `migrations/`
-1. `test/`
-1. `truffle-config.js`
-1. `truffle.js`
+```sh
+├── contracts
+├── migrations
+├── test
+└── truffle-config.js
+```
 
 ### React Native
 
@@ -48,19 +50,21 @@ You should have the following inside the project folder:
 
     Copy all the files in `truffle-temp` into the root folder of your React Native project. Your folder should look like this in the end:
 
-    1. `android/`
-    1. `contracts/`
-    1. `ios/`
-    1. `migrations/`
-    1. `node_modules/`
-    1. `test/`
-    1. `yarn.lock`
-    1. `App.js`
-    1. `index.js`
-    1. `truffle-config.js`
-    1. `truffle.js`
-    1. `app.json`
-    1. `package.json`
+    ```sh
+    ├── android
+    ├── contracts
+    ├── ios
+    ├── migrations
+    ├── node_modules
+    ├── test
+    ├── App.js
+    ├── app.json
+    ├── index.js
+    ├── package.json
+    ├── truffle-config.js
+    ├── truffle.js
+    └── yarn.lock
+    ```
 
 
 ## Shimming web and node libraries on React Native
@@ -72,7 +76,7 @@ React Native is missing some of the global objects that are available on other p
     ```shell
     yarn add node-libs-react-native
     ```
-1. Create a new file at `rn-cli.config.js` with the following code:
+1. Create a new file `rn-cli.config.js` in the root folder with the following code:
 
     ```js
     module.exports = {
