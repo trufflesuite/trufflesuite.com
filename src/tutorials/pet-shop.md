@@ -283,25 +283,25 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 
 1. Add the following content to the `TestAdoption.sol` file:
 
-   ```javascript
-   pragma solidity ^0.5.0;
+  ```javascript
+  pragma solidity ^0.5.0;
 
-   import "truffle/Assert.sol";
-   import "truffle/DeployedAddresses.sol";
-   import "../contracts/Adoption.sol";
+  import "truffle/Assert.sol";
+  import "truffle/DeployedAddresses.sol";
+  import "../contracts/Adoption.sol";
 
-   contract TestAdoption {
-     // The address of the adoption contract to be tested
+  contract TestAdoption {
+    // The address of the adoption contract to be tested
     Adoption adoption = Adoption(DeployedAddresses.Adoption());
 
     // The id of the pet that will be used for testing
     uint expectedPetId = 8;
 
     //The expected owner of adopted pet is this contract
-    address expectedAdopter = this;
+    address expectedAdopter = address(this);
 
-   }
-   ```
+  }
+  ```
 
 We start the contract off with 3 imports:
 
