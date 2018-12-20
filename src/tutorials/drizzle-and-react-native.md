@@ -88,7 +88,7 @@ React Native is missing some of the global objects that are available on other p
 
     This file overrides some of the defaults used by React Native's Metro bundler. We will be coming back to it soon. You can learn more [here](https://facebook.github.io/react-native/docs/understanding-cli#cli-configs).
 
-1. Create a new file at `shims.js` with the following code:
+1. Create a new file `shims.js` in the root folder with the following code:
 
     ```js
     import "node-libs-react-native/globals";
@@ -474,6 +474,7 @@ You should now see the string `Hello World` being rendered after Drizzle has fin
 
 Once again, this is very similar to the [web tutorial](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react#write-a-component-to-write-to-the-smart-contract), just with React Native components.
 
+Add `SetString.js` to the root of your project.
 
 ```js
 import React from "react";
