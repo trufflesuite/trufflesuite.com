@@ -71,85 +71,19 @@ You should have the following inside the project folder:
 
 React Native is missing some of the global objects that are available on other platforms such as the web or Node. We will have to provide our own (i.e. a shim) through imported libraries or in some cases our own code.
 
-1. Install `node-libs-react-native`:
+1. Install `node-libs-react-native`, `vm-browserify`, `Base64`, and `react-native-randombytes`:
 
     ```shell
-    yarn add node-libs-react-native
-    ```
-1. Create a new file `rn-cli.config.js` in the root folder with the following code:
-
-    ```js
-    module.exports = {
-      resolver: {
-        extraNodeModules: require("node-libs-react-native")
-      }
-    };
+    yarn add node-libs-react-native vm-browserify Base64 react-native-randombytes
     ```
 
-    This file overrides some of the defaults used by React Native's Metro bundler. We will be coming back to it soon. You can learn more [here](https://facebook.github.io/react-native/docs/understanding-cli#cli-configs).
-
-1. Create a new file `shims.js` in the root folder with the following code:
-
-    ```js
-    import "node-libs-react-native/globals";
-    ```
-
-1. Install `vm-browserify`:
+1. Link the native libraries in `react-native-randombytes`:
 
     ```shell
-    yarn add vm-browserify
-    ```
-
-    and add it to `rn-cli-config.js`. The end result should look like the following:
-
-    ```js
-    const nodeLibs = require("node-libs-react-native");
-    nodeLibs.vm = require.resolve("vm-browserify");
-
-    module.exports = {
-      resolver: {
-        extraNodeModules: nodeLibs
-      }
-    };
-    ```
-
-1. Install `Base64`:
-
-    ```shell
-    yarn add Base64
-    ```
-
-   and add it to our shims at `shims.js`:
-    ```js
-    import "node-libs-react-native/globals";
-    import { btoa } from "Base64";
-
-    global.btoa = btoa;
-    ```
-
-1. Install and link `react-native-randombytes`:
-
-    ```shell
-    yarn add react-native-randombytes
     react-native link react-native-randombytes
     ```
 
-1. Shim `URL` using Node's `url` lib that we got from `node-libs-react-native` in `shims.js`. This is what our file should look like at the end:
-
-    ```js
-    import "node-libs-react-native/globals";
-    import { btoa } from "Base64";
-    import nodeUrl from 'url';
-
-    global.btoa = btoa;
-    global.URL = class URL {
-        constructor(url) {
-            return nodeUrl.parse(url)
-        }
-    }
-    ```
-
-1. Shim `Object.assign` as React Native's own polyfill has some [non-spec compliant issues on React Native development builds](https://github.com/facebook/react-native/issues/16814). In `shims.js`:
+1. Create a new file `shims.js` in the root folder with the following code:
 
     ```js
     import "node-libs-react-native/globals";
@@ -198,7 +132,7 @@ React Native is missing some of the global objects that are available on other p
     }); 
     ```
 
-    and drop React Native's own polyfill using `rn-cli.config.js`
+1. Create a new file `rn-cli-config.js` in the root folder with the following code:
 
     ```js
     const nodeLibs = require("node-libs-react-native");
@@ -212,9 +146,9 @@ React Native is missing some of the global objects that are available on other p
         // From https://github.com/facebook/react-native/blob/v0.57.7/rn-get-polyfills.js
         getPolyfills: () => [
           /**
-           * We omit RN's Object.assign polyfill
-           * If we don't, then node_modules will be using RN's polyfill rather than ours.
-           */
+          * We omit RN's Object.assign polyfill
+          * If we don't, then node_modules will be using RN's polyfill rather than ours.
+          */
           // require.resolve('react-native/Libraries/polyfills/Object.es6.js'),
           require.resolve('react-native/Libraries/polyfills/console.js'),
           require.resolve('react-native/Libraries/polyfills/error-guard.js'),
@@ -227,6 +161,7 @@ React Native is missing some of the global objects that are available on other p
       }
     };
     ```
+
 1. Finally let's import our shims in `index.js`. The very first line should be the following:
     ```js
     import "./shims"
