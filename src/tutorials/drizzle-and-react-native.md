@@ -162,6 +162,8 @@ React Native is missing some of the global objects that are available on other p
     };
     ```
 
+    If you're wondering why we did all that in `rn-cli.config.js`, refer to [this Gist](https://gist.github.com/parshap/e3063d9bf6058041b34b26b7166fd6bd) for a great explanation.
+
 1. Finally let's import our shims in `index.js`. The very first line should be the following:
     ```js
     import "./shims"
