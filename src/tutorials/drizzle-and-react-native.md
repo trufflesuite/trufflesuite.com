@@ -311,7 +311,7 @@ export default class App extends Component<Props> {
     });
   }
 
-  compomentWillUnmount() {
+  componentWillUnmount() {
     this.unsubscribe();
   }
 
