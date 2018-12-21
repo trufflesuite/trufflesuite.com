@@ -213,7 +213,7 @@ instance.sendTransaction({...}).then(function(result) {
 Option 2: There's also shorthand for just sending Ether directly:
 
 ```javascript
-instance.send(web3.toWei(1, "ether")).then(function(result) {
+instance.send(web3.utils.toWei(1, "ether")).then(function(result) {
   // Same result object as above.
 });
 ```
