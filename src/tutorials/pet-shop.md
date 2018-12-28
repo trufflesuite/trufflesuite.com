@@ -87,7 +87,7 @@ We'll start our dapp by writing the smart contract that acts as the back-end log
 1. Add the following content to the file:
 
    ```javascript
-   pragma solidity ^0.4.17;
+   pragma solidity ^0.5.0;
 
    contract Adoption {
 
@@ -96,7 +96,7 @@ We'll start our dapp by writing the smart contract that acts as the back-end log
 
 Things to notice:
 
-* The minimum version of Solidity required is noted at the top of the contract: `pragma solidity ^0.4.17;`. The `pragma` command means "*additional information that only the compiler cares about*", while the caret symbol (^) means "*the version indicated or higher*".
+* The minimum version of Solidity required is noted at the top of the contract: `pragma solidity ^0.5.0;`. The `pragma` command means "*additional information that only the compiler cares about*", while the caret symbol (^) means "*the version indicated or higher*".
 * Like JavaScript or PHP, statements are terminated with semicolons.
 
 ### Variable setup
@@ -153,13 +153,13 @@ As mentioned above, array getters return only a single value from a given key. O
 
    ```javascript
    // Retrieving the adopters
-   function getAdopters() public view returns (address[16]) {
+   function getAdopters() public view returns (address[16] memory) {
      return adopters;
    }
    ```
 Things to notice:
 
-* Since `adopters` is already declared, we can simply return it. Be sure to specify the return type (in this case, the type for `adopters`) as `address[16]`.
+* Since `adopters` is already declared, we can simply return it. Be sure to specify the return type (in this case, the type for `adopters`) as `address[16] memory`. `memory` gives the data location for the variable.
 
 * The `view` keyword in the function declaration means that the function will not modify the state of the contract. Further information about the exact limits imposed by view is available [here](https://solidity.readthedocs.io/en/latest/contracts.html#view-functions).
 
@@ -234,26 +234,39 @@ Now we are ready to create our own migration script.
 
    You should see output similar to the following:
 
-   ```shell
-   Using network 'development'.
 
-   Running migration: 1_initial_migration.js
-     Deploying Migrations...
-     ... 0xcc1a5aea7c0a8257ba3ae366b83af2d257d73a5772e84393b0576065bf24aedf
-     Migrations: 0x8cdaf0cd259887258bc13a92c0a6da92698644c0
-   Saving successful migration to network...
-     ... 0xd7bc86d31bee32fa3988f1c1eabce403a1b5d570340a3a9cdba53a472ee8c956
-   Saving artifacts...
-   Running migration: 2_deploy_contracts.js
-     Deploying Adoption...
-     ... 0x43b6a6888c90c38568d4f9ea494b9e2a22f55e506a8197938fb1bb6e5eaa5d34
-     Adoption: 0x345ca3e014aaf5dca488057592ee47305d9b3e10
-   Saving successful migration to network...
-     ... 0xf36163615f41ef7ed8f4a8f192149a0bf633fe1a2398ce001bf44c43dc7bdda0
-   Saving artifacts...
-   ```
+  ```shell
+  1_initial_migration.js
+  ======================
 
-   You can see the migrations being executed in order, followed by the blockchain address of each deployed contract. (Your addresses will differ.)
+     Deploying 'Migrations'
+     ----------------------
+     > transaction hash:    0x3b558e9cdf1231d8ffb3445cb2f9fb01de9d0363e0b97a17f9517da318c2e5af
+     > Blocks: 0            Seconds: 0
+     > contract address:    0x5ccb4dc04600cffA8a67197d5b644ae71856aEE4
+     > account:             0x8d9606F90B6CA5D856A9f0867a82a645e2DfFf37
+     > balance:             99.99430184
+     > gas used:            284908
+     > gas price:           20 gwei
+     > value sent:          0 ETH
+     > total cost:          0.00569816 ETH
+
+
+     > Saving migration to chain.
+     > Saving artifacts
+     -------------------------------------
+     > Total cost:          0.00569816 ETH
+
+
+  2_deploy_contracts.js
+  =====================
+
+     Deploying 'Adoption'
+     .............................
+     .............................
+  ```
+
+   You can see the migrations being executed in order, followed by some information related to each migration. (Your information will differ.)
 
 1. In Ganache, note that the state of the blockchain has changed. The blockchain now shows that the current block, previously `0`, is now `4`. In addition, while the first account originally had 100 ether, it is now lower, due to the transaction costs of migration. We'll talk more about transaction costs later.
 
@@ -270,25 +283,25 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 
 1. Add the following content to the `TestAdoption.sol` file:
 
-   ```javascript
-   pragma solidity ^0.4.17;
+  ```javascript
+  pragma solidity ^0.5.0;
 
-   import "truffle/Assert.sol";
-   import "truffle/DeployedAddresses.sol";
-   import "../contracts/Adoption.sol";
+  import "truffle/Assert.sol";
+  import "truffle/DeployedAddresses.sol";
+  import "../contracts/Adoption.sol";
 
-   contract TestAdoption {
-     // The address of the adoption contract to be tested
+  contract TestAdoption {
+    // The address of the adoption contract to be tested
     Adoption adoption = Adoption(DeployedAddresses.Adoption());
 
     // The id of the pet that will be used for testing
     uint expectedPetId = 8;
 
     //The expected owner of adopted pet is this contract
-    address expectedAdopter = this;
+    address expectedAdopter = address(this);
 
-   }
-   ```
+  }
+  ```
 
 We start the contract off with 3 imports:
 
