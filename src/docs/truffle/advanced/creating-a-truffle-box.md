@@ -23,7 +23,7 @@ All truffle boxes include a configuration file, `truffle-box.json`. This file ha
 
 ### <span style="text-transform: none;">`ignore`</span> (array)
 
-An array of files or relative paths you'd like Truffle to ignore when unboxing. Common files include the `readme.md` or `.gitignore`.
+An array of files or relative paths you'd like Truffle to ignore when unboxing. Common files include the `readme.md` or `.gitignore`. These files will not be copied over from the box's repo when you unbox.
 
 ```javascript
 "ignore": [
