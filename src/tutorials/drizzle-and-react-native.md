@@ -415,7 +415,7 @@ Add `SetString.js` to the root of your project.
 
 ```js
 import React from "react";
-import { Text, View, Button, TextInput } from "react-native";
+import { Text, View, Button, TextInput, StyleSheet } from "react-native";
 
 class SetString extends React.Component {
   state = { stackId: null, text: "" };
@@ -455,7 +455,7 @@ class SetString extends React.Component {
     return (
       <View>
         <TextInput
-          style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
+          style={styles.input}
           onChangeText={text => this.setState({ text })}
           value={this.state.text}
           placeholder="Enter some text"
@@ -466,6 +466,16 @@ class SetString extends React.Component {
     );
   }
 }
+
+
+const styles = StyleSheet.create({
+  input: {
+    height: 40,
+    borderColor: "gray",
+    borderWidth: 1
+  }
+});
+
 export default SetString;
 ```
 
