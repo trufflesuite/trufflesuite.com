@@ -206,7 +206,7 @@ The iOS simulator will see servers on `localhost` just fine.
 
 1. Start `ganache-cli`: `ganache-cli -b 3`
 1. Compile and migrate contracts: `truffle compile && truffle migrate`
-1. Install app: Do it through Xcode
+1. Install app: `react-native run-ios` (you can also do this through Xcode)
 
 #### Physical device
 
