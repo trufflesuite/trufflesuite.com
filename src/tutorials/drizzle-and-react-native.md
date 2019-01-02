@@ -180,7 +180,7 @@ Do the steps from [Writing our smart contract](https://www.truffleframework.com/
 
 ## Connecting your app to your Ganache testnet
 
-Working with React Native and mobile devices means that they don't always see the Ganache server the same. The sections below detail how to connect to the Ganache testnet with whichever method you are using to run the app.
+When we're Working with React Native and mobile apps, accessing the Ganache server that's running on your machine takes a bit more work than when we are building web apps. The sections below detail how to connect to the Ganache testnet with your mobile device/emulator.
 
 ### Running the app
 
