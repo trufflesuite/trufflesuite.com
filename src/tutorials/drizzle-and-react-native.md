@@ -260,7 +260,7 @@ Your `index.js` should look like this in the end:
 /** @format */
 import "./shims";
 import { AppRegistry } from "react-native";
-import App from "./App";
+import App from "./app/App";
 import { name as appName } from "./app.json";
 
 import React from "react";
@@ -281,7 +281,9 @@ AppRegistry.registerComponent(appName, () => () => <App drizzle={drizzle} />);
 
 This is pretty much the same as [the web tutorial](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react#wire-up-the-app-component), but with React Native components instead of web ones. Refer to the web tutorial for a more in-depth explanation of what's going on.
 
-In `App.js`, your code should look like this in the end:
+Let's create a folder called `app` in the root of the project. Add a file called `App.js` to it.
+
+In `app/App.js`, your code should look like this in the end:
 
 ```js
 /**
@@ -346,7 +348,7 @@ Run the app, and you should see the string `Loading Drizzle...` while you wait f
 
 Once again, this is very similar to the [web tutorial](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react#write-a-component-to-read-from-drizzle), just with React Native components.
 
-Add `ReadString.js` to the root of your project.
+Add `ReadString.js` to the folder `app`. `app/ReadString.js` should look like this:
 
 ```js
 import React from "react";
@@ -411,7 +413,7 @@ You should now see the string `Hello World` being rendered after Drizzle has fin
 
 Once again, this is very similar to the [web tutorial](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react#write-a-component-to-write-to-the-smart-contract), just with React Native components.
 
-Add `SetString.js` to the root of your project.
+Add `SetString.js` to the folder `app`. `app/SetString.js` should look like this:
 
 ```js
 import React from "react";
