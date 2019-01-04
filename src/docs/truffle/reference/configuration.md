@@ -126,7 +126,7 @@ The default directory for uncompiled contracts is `./contracts` relative to the 
 
 Example:
 
-To have Truffle search recursively downward for contracts in `./allMyStuff/someStuff/theContractFolder` at compile time:
+To have Truffle find contracts in `./allMyStuff/someStuff/theContractFolder` (recursively) at compile time:
 
 ```javascript
 module.exports = {
