@@ -120,6 +120,27 @@ networks: {
 
 If you specify `host` and `port` instead of `provider`, Truffle will create its own default HTTP provider using that host and port, and no minimal network connection will be opened, so there is no need to do the function wrapping workaround. That said, you wouldn't be able to use a custom provider in this case.
 
+### contracts_directory
+
+The default directory for uncompiled contracts is `./contracts` relative to the project root. If you wish to keep your contracts in a different directory you may specify a `contracts_directory` property.
+
+Example:
+
+To have Truffle search recursively downward for contracts in `./allMyStuff/someStuff/theContractFolder` at compile time:
+
+```javascript
+module.exports = {
+  contracts_directory: "./allMyStuff/someStuff/theContractFolder",
+  networks: {
+    development: {
+      host: "127.0.0.1",
+      port: 8545,
+      network_id: "*",
+    }
+  }
+};
+```
+
 ### contracts_build_directory
 
 The default output directory for compiled contracts is `./build/contracts` relative to the project root. This can be changed with the `contracts_build_directory` key.
