@@ -141,6 +141,10 @@ module.exports = {
 };
 ```
 
+<p class="alert alert-warning">
+**Note**: In addition to specifying a relative path, you can also use globs/regular expressions to selectively compile contracts.
+</p>
+
 ### contracts_build_directory
 
 The default output directory for compiled contracts is `./build/contracts` relative to the project root. This can be changed with the `contracts_build_directory` key.
