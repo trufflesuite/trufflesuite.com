@@ -141,9 +141,7 @@ module.exports = {
 };
 ```
 
-<p class="alert alert-warning">
 **Note**: In addition to specifying a relative path, you can also use globs/regular expressions to selectively compile contracts.
-</p>
 
 ### contracts_build_directory
 
