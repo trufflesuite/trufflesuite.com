@@ -91,7 +91,7 @@ We'll add a simple smart contract called MyStringStore.
 2. Add the following content to the file:
 
    ```javascript
-   pragma solidity ^0.4.24;
+   pragma solidity ^0.5.0;
 
    contract MyStringStore {
      string public myString = "Hello World";
