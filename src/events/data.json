@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Truffle Elevate: Dublin",
+    "start": "Tue, Mar 26, 2019, 9:30 AM",
+    "end": "Thu, Mar 28, 2019, 1:00 PM GMT",
+    "excerpt": "Truffle Elevate is our three-day blockchain development workshop and community event. Elevate is designed to upskill both traditional and blockchain developers plus help them learn how to use Truffle's Ethereum Blockchain Development suite better than ever before to build enterprise-level applications!",
+    "eventbrite": "https://www.eventbrite.com/e/truffle-elevate-dublin-2019-tickets-53831596755",
+    "status": "open",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F55021865%2F258066844538%2F1%2Foriginal.20190112-011100?w=800&auto=compress&rect=113%2C0%2C2444%2C1222&s=2a621f9ad4cabf7304c7e8b5a2c3eee5"
+  },
+  {
+    "title": "TruffleCon 2018",
+    "start": "Friday, October 5, 2018 at 8:00 AM",
+    "end": "Sunday, October 7, 2018 at 5:00 PM PDT",
+    "excerpt": "Join people from around the world as we meet to build community and foster connections in the Ethereum developer space; share tips and tricks, challenges and successes.",
+    "eventbrite": "https://www.eventbrite.com/e/trufflecon-2018-a-conference-for-dapp-developers-tickets-46425829907",
+    "status": "past",
+    "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F47156600%2F258066844538%2F1%2Foriginal.jpg?w=800&auto=compress&rect=0%2C0%2C5184%2C2592&s=fa1f91a4c21a4affebb8bd94e00afd74"
+  }
+]

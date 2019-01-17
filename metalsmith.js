@@ -19,6 +19,7 @@ var blogData = require('./src/blog/data.json');
 var boxesData = require('./src/boxes/data.json');
 var careersData = require('./src/careers/data.json');
 var docsData = require('./src/docs/data.json');
+var eventsData = require('./src/events/data.json');
 var tutorialsData = require('./src/tutorials/data.json');
 
 function app(clean) {
@@ -31,6 +32,7 @@ function app(clean) {
     boxes: boxesData,
     careers: careersData,
     docs: docsData,
+    events: eventsData,
     tutorials: tutorialsData
   })
   .use(discoverHelpers({
