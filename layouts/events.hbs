@@ -33,7 +33,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="Truffle Suite" />
-    <meta name="twitter:title" content="Truffle Suite | Blog" />
+    <meta name="twitter:title" content="Truffle Suite | Events" />
     <meta name="twitter:description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}" />
     <meta name="twitter:creator" content="Truffle Suite" />
     <meta name="twitter:domain" content="trufflesuite.com" />
@@ -44,7 +44,7 @@
     <title>Truffle Suite | Blog</title>
 
     <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans|Oswald|Varela+Round|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/index.css">
   </head>
   <body>
@@ -59,16 +59,19 @@
     </main>
 
     <main class="banner banner-light-cream pt-5 pb-5" role="main">
-      <div class="container">
+      <div class="container events-container">
         {{#each events}}
           {{#if this.image}}
-            <div class="row align-items-center this-row">
+            <div class="row align-items-center post-row">
               <div class="col-md-3">
-                <img src="{{ this.image }}" class="rounded-circle img-fluid this-thumbnail" />
+                <img src="{{ this.image }}" class="img-fluid post-thumbnail" />
               </div>
               <div class="col-md-9">
                 <h2>{{ this.title }}</h2>
-                <p><i class="far fa-calendar-alt"></i> {{ this.start }} - {{ this.end }}</p>
+                <p class="mb-1"><i class="far fa-calendar-alt"></i> {{ this.start }} - {{ this.end }}</p>
+                {{#if this.location}}
+                  <p><i class="fas fa-map-marker-alt"></i> {{ this.location }}</p>
+                {{/if}}
                 {{#if this.excerpt}}
                   <p>{{ this.excerpt }}</p>
                 {{/if}}
@@ -76,10 +79,13 @@
               </div>
             </div>
           {{else}}
-            <div class="row this-row">
+            <div class="row post-row">
               <div class="col">
                 <h2>{{ this.title }}</h2>
-                <p><i class="far fa-calendar-alt"></i> {{ this.start }} - {{ this.end }}</p>
+                <p class="mb-1"><i class="far fa-calendar-alt"></i> {{ this.start }} - {{ this.end }}</p>
+                {{#if this.location}}
+                  <p><i class="fas fa-map-marker-alt"></i> {{ this.location }}</p>
+                {{/if}}
                 {{#if this.excerpt}}
                   <p>{{ this.excerpt }}</p>
                 {{/if}}
