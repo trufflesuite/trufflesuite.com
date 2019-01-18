@@ -55,7 +55,7 @@ To launch Truffle Develop:
 truffle develop
 ```
 
-This will spawn a development blockchain locally on port `9545`, regardless of what your `truffle.js` configuration file calls for.
+This will spawn a development blockchain locally on port `9545`, regardless of what your `truffle-config.js` configuration file calls for. If you already have a `truffe develop` session running, it will instead connect to that development blockchain.
 
 When you load Truffle Develop, you will see the following:
 
@@ -104,7 +104,7 @@ This shows you the addresses, private keys, and mnemonic for this particular blo
 
 #### Configuring Truffle Develop
 
-You can configure `truffle develop` to use any of the available 
+You can configure `truffle develop` to use any of the available
 [ganache-core](https://github.com/trufflesuite/ganache-core#usage) options.
 
 For example:
@@ -116,7 +116,7 @@ module.exports = {
   networks: {
     /* ... other networks */
 
-    "develop": {
+    develop: {
       accounts: 5,
       defaultEtherBalance: 500,
       blockTime: 3
@@ -130,22 +130,11 @@ module.exports = {
 
 Both Truffle Develop and the console provide most of the features available in the Truffle command line tool. For instance, you can type `migrate --reset` within the console, and it will be interpreted the same as if you ran `truffle migrate --reset` on the command line.
 
-Additionally, both Truffle Develop and the console additionally have the following features:
+Additionally, both Truffle Develop and the console have the following features:
 
 * All of your compiled contracts are available and ready for use.
 * After each command (such as `migrate --reset`) your contracts are reprovisioned so you can start using the newly assigned addresses and binaries immediately.
 * The `web3` library is made available and is set to connect to your Ethereum client.
-* All commands that return a promise will automatically be resolved, and the result printed, removing the need to use `.then()` for simple commands. For example, the following command:
-
-  ```shell
-  MyContract.at("0xabcd...").getValue.call();
-  ```
-
-  Will return something like:
-
-  ```shell
-  5
-  ```
 
 ### Commands available
 
@@ -153,12 +142,15 @@ Additionally, both Truffle Develop and the console additionally have the followi
 * `compile`
 * `create`
 * `debug`
+* `deploy`
 * `exec`
+* `help`
 * `install`
 * `migrate`
 * `networks`
 * `opcode`
 * `publish`
+* `run`
 * `test`
 * `version`
 

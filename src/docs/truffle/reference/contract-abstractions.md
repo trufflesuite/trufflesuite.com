@@ -177,7 +177,7 @@ contract MyContract {
   event ValueSet(uint val);
   function setValue(uint val) {
     value = val;
-    ValueSet(value);
+    emit ValueSet(value);
   }
   function getValue() constant returns (uint) {
     return value;
