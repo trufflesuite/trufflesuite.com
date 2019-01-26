@@ -96,7 +96,7 @@ We'll add a simple smart contract called MyStringStore.
    contract MyStringStore {
      string public myString = "Hello World";
 
-     function set(string x) public {
+     function set(string memory x) public {
        myString = x;
      }
    }
