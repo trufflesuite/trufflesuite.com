@@ -41,7 +41,7 @@ Requires the `build` key to be present in the configuration. See the [Building y
 Compile contract source files.
 
 ```shell
-truffle compile [--list <filter>] [--all] [--network <name>]
+truffle compile [--list <filter>] [--all] [--network <name>] [--quiet]
 ```
 
 This will only compile contracts that have changed since the last compile, unless otherwise specified.
@@ -51,6 +51,7 @@ Options:
 * `--list <filter>`: List all recent stable releases from solc-bin. If filter is specified then it will display only that type of release or docker tags.  The filter parameter must be one of the following: prereleases, releases, latestRelease or docker.
 * `--all`: Compile all contracts instead of only the contracts changed since last compile.
 * `--network <name>`: Specify the network to use, saving artifacts specific to that network. Network name must exist in the configuration.
+* `--quiet`: Suppress all compilation output.
 
 ### config
 
