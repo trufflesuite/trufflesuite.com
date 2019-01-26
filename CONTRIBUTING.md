@@ -1,6 +1,12 @@
 # Contributing
 
-We welcome all contributions, typo corrections, and general feedback.
+We welcome all contributions, typo corrections, and general feedback. Pull requests should be made against the `master` branch.
+
+This repo uses short-lived, prefixed branches. For example, a new blog post would live a branch named something like: `content/cool-truffle-news`. This helps multiple teams touch the site if necessary, while mitigating potential collisions. These are the currently used prefixes:
+
+`content`: edits applying to site content.
+`feature`: new features for the website, including new data structures (e.g. blog posts or events).
+`fix`: fixes an error in existing code.
 
 ## Contents
 
