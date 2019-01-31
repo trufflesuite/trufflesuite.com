@@ -4,6 +4,11 @@
     "stars": 161,
     "tags": ["official", "drizzle", "react", "redux"]
   },
+  "drizzle-react-native-box": {
+    "description": "This box is to help get you started with building dapps with Drizzle on React Native.",
+    "stars": 1,
+    "tags": ["official", "drizzle", "react-native"]
+  },
   "react-box": {
     "description": "Truffle, Webpack and React boilerplate.",
     "stars": 379,
