@@ -1,9 +1,9 @@
 {
   "drizzle-and-react-native": {
     "title": "Drizzle and React Native",
-    "date": "2019-01-02",
+    "date": "2019-01-31",
     "author": "Heyse Li",
-    "published": false,
+    "published": true,
     "products": ["truffle", "ganache", "drizzle"]
   },
   "getting-started-with-drizzle-and-react": {
