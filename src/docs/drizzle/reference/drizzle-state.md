@@ -94,7 +94,7 @@ A series of transaction objects, indexed by transaction hash.
 For more in-depth information on the Ethereum transaction lifecycle, [check out this great blog post](https://medium.com/blockchannel/life-cycle-of-an-ethereum-transaction-e5c66bae0f6e).
 
 ## `transactionStack` (array)
-In some cases, a transaction may be malformed and not even make it to being broadcasted. To keep track of this, an empty string will be added to this array and replaced with the transaction hash once broascasted. The `cacheSend()` method will return a `stackId`, which will allow you to observe this process for your own transaction status indicator UI.
+In cases where a user cancels a transaction or the transaction is malformed and unable to be broadcasted, it won't receive a hash. To keep track of these cases, a temporary ID will be added to this array and replaced with the transaction hash once broadcasted. The `cacheSend()` method will return a `stackId`, which will allow you get the temporary ID to observe this process for your own transaction status indicator UI.
 
 ## `web3` (object)
 
