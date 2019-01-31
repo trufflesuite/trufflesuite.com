@@ -23,6 +23,10 @@ layout: docs.hbs
       }
     }
   },
+  currentBlock,
+  drizzleStatus: {
+    initialized
+  },
   transactions: {
     txHash: {
       confirmations,
@@ -31,10 +35,7 @@ layout: docs.hbs
       status
     }
   },
-  transactionStack
-  drizzleStatus: {
-    initialized
-  }
+  transactionStack,
   web3: {
     status
   }
@@ -62,6 +63,20 @@ The contract's state also includes the state of each constant function called on
 `args` (array): Arguments passed to function call.
 `value` (mixed): Value returned from function call.
 
+### `currentBlock` (object)
+An object the latest block as an object resulting from [`web3.getBlock()`](https://web3js.readthedocs.io/en/1.0/web3-eth.html#getblock). This is updated once the block is received from a subscription or fetched via polling, but before any processing takes place.
+
+## `drizzleStatus` (object)
+An object containing information about the status of Drizzle.
+
+`initialized` (boolean): `true` once:
+*   `web3` is found or instantiated
+*   Account addresses are stored in state
+*   All contracts are instantiated
+
+### `initialized` (boolean)
+`false` by default, becomes true once a `web3` instance is found and the accounts and contracts are fetched.
+
 ## `transactions` (object)
 A series of transaction objects, indexed by transaction hash.
 
@@ -80,17 +95,6 @@ For more in-depth information on the Ethereum transaction lifecycle, [check out 
 
 ## `transactionStack` (array)
 In some cases, a transaction may be malformed and not even make it to being broadcasted. To keep track of this, an empty string will be added to this array and replaced with the transaction hash once broascasted. The `cacheSend()` method will return a `stackId`, which will allow you to observe this process for your own transaction status indicator UI.
-
-## `drizzleStatus` (object)
-An object containing information about the status of Drizzle.
-
-`initialized` (boolean): `true` once:
-*   `web3` is found or instantiated
-*   Account addresses are stored in state
-*   All contracts are instantiated
-
-### `initialized` (boolean)
-`false` by default, becomes true once a `web3` instance is found and the accounts and contracts are fetched.
 
 ## `web3` (object)
 
