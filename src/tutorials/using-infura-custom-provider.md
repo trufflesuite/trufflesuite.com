@@ -158,3 +158,7 @@ We are now ready to deploy to Ropsten!
    You should see details about the transaction, including the block number where the transaction was secured.
 
 Congratulations! You've deployed your contract to Ropsten using the combined power of Infura and Truffle.
+
+## Using a Private Key Instead of a Mnemonic
+
+If you have a private key instead of a mnemonic (i.e. your MetaMask account), you can follow a very similar procedure to this by using [this package](https://github.com/rhlsthrm/truffle-hdwallet-provider-privkey) instead.
