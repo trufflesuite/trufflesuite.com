@@ -39,3 +39,27 @@
     border-top: 1px solid #e911bd;
   }
 }
+
+// Truffle Elevate
+
+.banner-elevate {
+  background: #f8f5f0;
+  padding: 3rem 0;
+
+  .elevate-body {
+    font-size: 1.15rem;
+  }
+
+  .elevate-hashtag .color-ganache {
+    font-size: 1.333333333333333rem;
+    font-weight: 800;
+  }
+
+  .elevate-hashtag .btn-drizzle:hover {
+    color: #e911bd;
+  }
+
+  @media (max-width: 991.98px) {
+    
+  }
+}
