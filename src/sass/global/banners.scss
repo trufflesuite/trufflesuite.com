@@ -1,3 +1,23 @@
+// Global
+
+.banner {
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-close {
+  color: #5e464d;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 // Colors
 
 .banner-light-cream {
@@ -48,6 +68,16 @@
 
   .elevate-body {
     font-size: 1.15rem;
+
+    p:first-of-type {
+      font-size: 1.5rem;
+    }
+
+    .text-date {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 900;
+    }
   }
 
   .elevate-hashtag .color-ganache {
