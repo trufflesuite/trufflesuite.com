@@ -22396,8 +22396,20 @@
 	    } else {
 	      chart = _react2.default.createElement(_reactChartjs.Line, { ref: "downloads", data: self.state.data, options: {
 	          legend: { display: false },
-	          title: { display: true, text: "Monthly Downloads (until last month)" },
+	          title: { display: true, text: "Monthly Downloads (until last month)", fontColor: "#383838" },
 	          animation: false,
+	          scales: {
+	            xAxes: [{
+	              ticks: {
+	                fontColor: "#383838"
+	              }
+	            }],
+	            yAxes: [{
+	              ticks: {
+	                fontColor: "#383838"
+	              }
+	            }]
+	          },
 	          tooltips: {
 	            displayColors: false,
 	            callbacks: {
@@ -61112,7 +61124,7 @@
 	    var chart;
 
 	    // Colors from here: http://bulma.io/documentation/overview/variables/
-	    var colors = ["#3fe0c5", "#e4a663", "#e911bd", "#b86bff"];
+	    var colors = ["#3fe0c5", "#e4a663", "#f069d6", "#b86bff"];
 
 	    if (this.state.data == null) {
 	      chart = _react2.default.createElement("div", null);
