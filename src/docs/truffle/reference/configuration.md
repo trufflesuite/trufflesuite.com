@@ -227,7 +227,7 @@ module.exports = {
   }
 }
 ```
-*Note*: Truffle does not automatically pull Docker images automatically. Make sure you manually pull down the specified version (run 'docker pull ...') before setting the `docker` property to `true`.
+*Note*: Truffle does not pull Docker images automatically. Make sure you manually pull down the specified version (run 'docker pull ...') before setting the `docker` property to `true`.
 
 For more information, please see the Solidity documentation on [Compiler Input and Output JSON Description](http://solidity.readthedocs.io/en/develop/using-the-compiler.html#compiler-input-and-output-json-description).
 
