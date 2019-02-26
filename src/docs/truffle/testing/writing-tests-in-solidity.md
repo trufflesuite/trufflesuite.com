@@ -122,6 +122,36 @@ You can easily test if your contract should or shouldn't raise an exception (i.e
 
 This topic was first written about by guest writer Simon de la Rouviere in [his tutorial Testing for Throws in Truffle Solidity Tests](/tutorials/testing-for-throws-in-solidity-tests).  N.B. that the tutorial makes heavy use of exceptions via the deprecated keyword `throw`, replaced by `revert()`, `require()`, and `assert()` starting in Solidity v0.4.13.
 
+Also, since Solidity v0.4.17, a function type member was added to enable you to access a function selector (e.g.: `this.f.selector`), and so, testing for throws with external calls has been made much easier:
+```
+pragma solidity ^0.5.0;
+
+import "truffle/Assert.sol";
+
+contract TestBytesLib2 {
+    function testThrowFunctions() public {
+        bool r;
+
+        // We're basically calling our contract externally with a raw call, forwarding all available gas, with 
+        // msg.data equal to the throwing function selector that we want to be sure throws and using only the boolean
+        // value associated with the message call's success
+        (r, ) = address(this).call(abi.encodePacked(this.IThrow1.selector));
+        Assert.isFalse(r, "If this is true, something is broken!");
+
+        (r, ) = address(this).call(abi.encodePacked(this.IThrow2.selector));
+        Assert.isFalse(r, "What?! 1 is equal to 10?");
+    }
+
+    function IThrow1() public pure {
+        revert("I will throw");
+    }
+
+    function IThrow2() public pure {
+        require(1 == 10, "I will throw, too!");
+    }
+}
+```
+
 ### Testing ether transactions
 
 You can also test how your contracts react to receiving Ether, and script that interaction within Solidity. To do so, your Solidity test should have a public function that returns a `uint`, called `initialBalance`. This can be written directly as a function or a public variable, as shown below. When your test contract is deployed to the network, Truffle will send that amount of Ether from your test account to your test contract. Your test contract can then use that Ether to script Ether interactions within your contract under test. Note that `initialBalance` is optional and not required.
