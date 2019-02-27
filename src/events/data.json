@@ -1,5 +1,15 @@
 [
   {
+    "title": "Rice Blockchain and Truffle: Build Your First Decentralized App",
+    "start": "Thurs, Mar 21, 2019, 5:00",
+    "end": "8:00 PM CST",
+    "location": "Liu Idea Lab | Cambridge Building | Rice University | Houston | TX | United States",
+    "excerpt": "Join Rice Blockchain and Truffle's Kevin Bluer for an evening building a decentralized application. We'll dive into all the core aspects of building a DApp: tooling, workflow, testing, debugging, and deployment. No prior experience with blockchain development is required.",
+    "eventbrite": "http://bit.ly/dappworkshop",
+    "status": "open",
+    "image": "/img/rice-university.jpg"
+  },
+  {
     "title": "Building Blockchain Solutions for the Enterprise with Truffle",
     "start": "Tues, Mar 12, 2019, 4:00",
     "end": "4:45 PM GMT",
