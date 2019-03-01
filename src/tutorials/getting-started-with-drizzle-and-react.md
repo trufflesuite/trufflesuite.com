@@ -231,8 +231,6 @@ This should create a `client` directory in your Truffle project and bootstrap a 
 
 Now that we have a front-end client located inside the `client` directory, change into that directory with the command `cd client` and continue with the following steps to set it up.
 
-### Link up our build artifacts
-
 Since Create-React-App's default behavior disallows importing files from outside of the `src` folder, we need to bring the contracts in our `build` folder inside `src`. We can copy and paste them every time we compile our contracts, but a better way is to simply configure Truffle to put the files there.
 
 In the `truffle-config.js` file, replace the contents with the following:
@@ -251,7 +249,7 @@ From there, make sure you run the `compile` and `migrate` commands again so that
 
 ### Install Drizzle
 
-This is the most delicious part, we install Drizzle. Change back into the `client` directory with the command `cd ..` and then run the following:
+This is the most delicious part, we install Drizzle. Make sure you are in the `client` directory and then run the following:
 
 ```shell
 npm install drizzle
@@ -270,7 +268,7 @@ npm start
 This will serve the front-end under `localhost:3000`, so open that up in your browser.
 
 <p class="alert alert-info">
-<strong>Note</strong>: Make sure to use an incognito window if you already have MetaMask installed (or disable MetaMask for now). Otherwise, the app will try to use the network specified in MetaMask rather than the development network under `localhost:8545`.
+<strong>Note</strong>: Make sure to use an incognito window if you already have MetaMask installed (or disable MetaMask for now). Otherwise, the app will try to use the network specified in MetaMask rather than the develop network under `localhost:9545`.
 </p>
 
 If the default Create-React-App page loaded without any issues, you may proceed.
@@ -299,7 +297,7 @@ const options = {
 const drizzle = new Drizzle(options);
 ```
 
-First, we imported the tools from Drizzle as well as the contract definition through the linked build artifacts directory (see [Link up our build artifacts](#link-up-our-build-artifacts) above).
+First, we imported the tools from Drizzle as well as the contract definition.
 
 We then built our options object for Drizzle, which in this case is just specifying the specific contract we want to be loaded by passing in the JSON build artifact.
 
