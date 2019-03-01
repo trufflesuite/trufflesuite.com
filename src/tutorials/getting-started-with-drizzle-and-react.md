@@ -229,8 +229,6 @@ This should create a `client` directory in your Truffle project and bootstrap a 
 
 ## Wiring up the front-end client
 
-Now that we have a front-end client located inside the `client` directory, change into that directory with the command `cd client` and continue with the following steps to set it up.
-
 Since Create-React-App's default behavior disallows importing files from outside of the `src` folder, we need to bring the contracts in our `build` folder inside `src`. We can copy and paste them every time we compile our contracts, but a better way is to simply configure Truffle to put the files there.
 
 In the `truffle-config.js` file, replace the contents with the following:
