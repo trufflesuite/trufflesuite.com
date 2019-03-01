@@ -16,7 +16,7 @@ In this tutorial we will be covering:
 4. Compiling and migrating the smart contract
 5. Testing the smart contract
 6. Creating our React.js project
-7. Setting up the front-end client
+7. Wiring up the front-end client
 8. Wire up the React app with Drizzle
 9. Write a component to read from Drizzle
 10. Write a component to write to the smart contract
@@ -227,7 +227,7 @@ create-react-app client
 
 This should create a `client` directory in your Truffle project and bootstrap a barebones React.js project for you to start building your front-end with.
 
-## Setting up the front-end client
+## Wiring up the front-end client
 
 Now that we have a front-end client located inside the `client` directory, change into that directory with the command `cd client` and continue with the following steps to set it up.
 
