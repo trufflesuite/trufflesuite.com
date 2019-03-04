@@ -6,7 +6,7 @@ layout: event-single.hbs
 <div class="row">
   <div class="col-sm-6 mt-4">
     <h3 class="mb-3">Overview</h3>
-    <p>Join Truffle's Ben Burns, Head of Blockchain Services, and Kevin Bluer, Head of Content & Training, in this complimentary webinar on building blockchain solutions for the enterprise. In the session, we'll explore the components of Truffle Suite itself, the range of enterprise services and integrations you can leverage, and how to train your both yourself and your development teams on succeeding with this disruptive technology.</p>
+    <p>Join Truffle's Ben Burns, Head of Blockchain Services, and Kevin Bluer, Head of Content & Training, in this complimentary webinar on building blockchain solutions for the enterprise. In the session, we'll explore the components of Truffle Suite itself, the range of enterprise services and integrations you can leverage, and how to train both yourself and your development teams on succeeding with this disruptive technology.</p>
     <h3 class="mt-3 mb-3">Details</h3>
     <p class="mb-0"><strong>Date: </strong> March 12th, 2019</p>
     <p class="mt-0"><strong>Time: </strong> 4:00-4:45 PM GMT</p>
