@@ -204,7 +204,7 @@ Solidity compiler settings. Supports optimizer settings for `solc`.
 You may specify...
 + any solc-js version listed at [solc-bin](http://solc-bin.ethereum.org/bin/list.json). Specify the one you want and Truffle will get it for you.
 + a natively compiled solc binary (you'll need to install this yourself, links to help below).
-+ a dockerized solc from one of images published [here](https://hub.docker.com/r/ethereum/solc/tags/). (You'll also need to pull down the docker image yourself but it's really easy.)
++ a dockerized solc from one of images published [here](https://hub.docker.com/r/ethereum/solc/tags/).
 + a path to a locally available solc
 
 Truffle config example:
