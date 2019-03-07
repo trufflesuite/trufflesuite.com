@@ -52,7 +52,7 @@ If you have additional packages in the tree, you can also remove them.
 
 #### Remove node
 
-If you installed node with a the package manager of your Linux distro you can delete the package and skip Remove node and Remove npm. If you installed it manually you have to delete it manually.
+If you installed node with a package manager of your Linux distro you can delete the package and skip Remove node and Remove npm. If you installed it manually you have to delete it manually.
 
 We have to find out where node is installed before we can delete it.
 
@@ -80,7 +80,7 @@ We have to find out where npm is installed before we can delete it.
 $ sudo whereis npm
 ```
 
-in my case I get the follwing output:
+In my case, I get the follwing output:
 
 ```bash
 npm: /usr/bin/npm /usr/share/man/man1/npm.1.gz /usr/share/man/man1/npm.1
@@ -107,7 +107,7 @@ See: https://github.com/creationix/nvm
 $ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 ```
 
-In order to load the new environment you have to close your console and open a new one.
+In order to load the new environment, you have to close your console and open a new one.
 
 #### Install node.js with nvm
 
