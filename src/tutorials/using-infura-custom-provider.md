@@ -91,19 +91,15 @@ The next step is to edit your `truffle.js` file to use `HDWalletProvider` and pr
 
 ## Use an ether faucet
 
-Make sure you have enough ether in your account to do the deployment. You can acquire ether on the Ropsten network through a service known as a faucet. While there are multiple faucet sites out there, one service we recommend is hosted on [EthTools](https://ethtools.com/).
+Make sure you have enough ether in your account to do the deployment. You can acquire ether on the Ropsten network through a service known as a faucet. While there are multiple faucet sites out there, one service we recommend is hosted by [MetaMask](https://metamask.io/).
 
-1. Navigate to the [EthTools Ether Faucet](https://ethtools.com/ropsten/tools/faucet/).
+1. Navigate to [MetaMask's Test Ether Faucet](https://faucet.metamask.io/).
 
-1. Enter your mnemonic, and select how much ether you would like (maximum of 5).
+1. Connect to the Ropsten Test Network using [MetaMask](https://metamask.io/).
 
-1. The faucet will link to your first account. Click "Request Ether" to submit your request.
+1. The faucet will link to your first account. Click "Request 1 Ether From Faucet" to submit your request.
 
 1. Within a short period of time, your account will be populated with the requested ether.
-
-   <p class="alert alert-info">
-   <strong>Note</strong>: You can also request Ether through [MetaMask](https://metamask.io). Connect to your account on Ropsten, and click the "Buy" button, which will give you a link to MetaMask's Ropsten Test Faucet, which works similarly to above.
-   </p>
 
 We are now ready to deploy to Ropsten!
 
