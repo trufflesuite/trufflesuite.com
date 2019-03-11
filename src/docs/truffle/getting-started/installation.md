@@ -21,7 +21,7 @@ If you're running Truffle on Windows, you may encounter some naming conflicts th
 
 ## Recommendations for Linux
 
-I you're running Truffle on Linux or MacOS X, you should not install it with sudo, otherwise you might encounter some permission issues. It is recommended to install truffle as a normal user. Before we can install truffle as a normal user we have to cleanup the system. It is also recommended to install nodejs and npm with nvm (node version manager). An advantage of nvm is that you can run different node versions on the same machine.
+If you're running Truffle on Linux or macOS, you should not install it with `sudo`, otherwise you might encounter some permission issues. It is recommended to install Truffle as a normal user. Before we can install Truffle as a normal user, we have to clean-up the system. It is also recommended to install Node.js and NPM with [NVM (Node Version Manager)](https://github.com/creationix/nvm]. An advantage of NVM is that you can run different Node versions on the same machine.
 
 ### Cleanup node and npm
 #### Remove all packages which have been installed with `sudo npm install -g`
