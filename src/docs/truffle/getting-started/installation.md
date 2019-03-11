@@ -130,7 +130,7 @@ $ npm config delete prefix
 $ npm config set prefix $NVM_DIR/versions/node/v11.10.0
 ```
 
-### Install truffle and other packages as a normal user
+### Install Truffle and other packages as a normal user
 
 ```bash
 $ npm install -g truffle
