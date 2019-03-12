@@ -49,6 +49,11 @@
     "stars": 13,
     "tags": ["official"]
   },
+  "vyper-example-box": {
+    "description": "A box containing all you need to get started with Vyper development on Truffle.",
+    "stars": 3,
+    "tags": ["official"]
+  },
   "azure-asset-transfer-box": {
     "description": "Azure Samples - Asset Transfer",
     "stars": 0,
