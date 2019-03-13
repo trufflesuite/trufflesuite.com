@@ -1,7 +1,15 @@
 Reacting to Contract Events with Drizzle
 ========================================
 
-This tutorial demonstrates how to modify a Drizzle box to subscribe to Contract events.
+This tutorial demonstrates how to modify a Drizzle box to subscribe to Contract
+events.  [Here's what the finished app looks like](https://youtu.be/jGIY_l8oWTQ)
+
+We'll use [react-toaster]() to alert the user whenever a SimpleStorage contract
+event is emitted. We have to declare a <ToastContainer /> component and invoke
+`toast.success()` when an event is detected. We'll touch `MyComponent` and the
+event reducer respectively.
+
+TL;DR; A Complete example is available at the following [repo](https://github.com/cds-consensys/drizzle-event-demo)
 
 **Prerequisite**: You should be familiar with Truffle, Ganache, Drizzle, React and
 Redux. If you need an introduction please consult the following resources:
@@ -13,18 +21,14 @@ Redux. If you need an introduction please consult the following resources:
 1. [Redux basic tutorial](https://redux.js.org/basics/basic-tutorial)
 
 
-Lets create a front end DApp that can listen to contract events.  [Here's what
-the finished app looks like](https://youtu.be/jGIY_l8oWTQ) We'll use
-[react-toaster]() to alert the user whenever a SimpleStorage contract event is
-emitted. We have to declare a <ToastContainer /> component and invoke
-`toast.success()` when an event is detected. We'll touch `MyComponent` and the
-event reducer respectively.
+Unbox drizzle
+-------------
 
-Lets use `truffle unbox` to bootstrap a project and then wire up a contract
+Let's use `truffle unbox` to bootstrap a project and then wire up a contract
 event to a display component by creating a reducer and hook it up to drizzle's
 `EVENT_FIRED` action.
 
-First we fire up our ganache test chain, and unbox, compile and deploy the
+First fire up our ganache test chain, and unbox, compile and deploy the
 contracts to ganache.
 
 ```bash
@@ -35,31 +39,37 @@ $ truffle compile && truffle compile deploy
 Tap into events
 ---------------
 
-For the sake of brevity, we will put our modification in one file,
-`./app/reducers/index.js` but feel free
-to separate this out.
+The front end code is located under the `app` folder. Lets add the
+notification library `react-toastify` to make a nice display.
+```sh
+$ npm install react-toastify
+```
 
-The front end code is located under the `app` folder.
-
-Import the EventActions as well as the generateStore function from Drizzle.
+For the sake of simplicity, we will work in one file, `./app/reducers/index.js`.
+Import the `EventActions` and `generateStore` functions from Drizzle.
 
 ```js
+// ./app/reducers/index.js
 import { generateStore, EventActions } from 'drizzle'
 ```
 
-EventActions.FIRE_EVENT is fired whenever a contract event is detected on Block.
-To be notified when this occurs, we register a reducer, to handle our state
-transition. In this code, we will extract the underlying information from the
-event and invoke our toast component to display an alert.
+`EventActions.FIRE_EVENT` is emitted whenever a contract event is detected on a
+Block. We will gain access to it by registering a reducer with the Redux store.
+As you know, a every reducer is called whenever an `action` is dispatched.
+N.B. Set the initial value of the state as the default argument.
+
+All we have to do is filter for the specified event, and act. In this case we
+will display a toast.
 
 ```js
 const events = (state = {}, action) => {
   if (action.type === EventActions.EVENT_FIRED) {
 
-    // build the alert message
+    // extract and construct the alert message
     const contract = action.name
+    const contractEvent = action.event.event
     const message = action.event.returnValues._message
-    const display = `${contract}: ${message}`
+    const display = `${contract}(${contractEvent}): ${message}`
 
     // present the alert message
     toast.success(display, { position: toast.POSITION.TOP_RIGHT })
@@ -72,14 +82,12 @@ const events = (state = {}, action) => {
 }
 ```
 
-Now we have to register with the Drizzle's redux state manager.
+The last step is to register with the reducer with Drizzle. `generateStore` will
+return a Redux store that you can use anywhere you can use a store.
 
 ```js
 // Register app reducers to be incorporated into drizzle's redux store.
 const appReducers = { events }
-
-// Set app initial state
-const initialAppState = { events: {} }
 
 export default generateStore(
   drizzleOptions,
@@ -89,3 +97,20 @@ export default generateStore(
 )
 ```
 
+Hook up Display
+---------------
+
+Modify `MyComponent.js` to set up the ToastContainer
+
+```js
+...
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+...
+
+export default ({ chuckNorrisLore, fetchTodo }) => (
+  <div className="App">
+    <ToastContainer />
+  ...
+  </div>
+```
