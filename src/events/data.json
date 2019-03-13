@@ -1,19 +1,9 @@
 [
   {
-    "title": "Building Blockchain Solutions for the Enterprise with Truffle",
-    "start": "Tues, Mar 12, 2019, 4:00",
-    "end": "4:45 PM GMT",
-    "location": "Webinar",
-    "excerpt": "Join Truffle's Ben Burns, Head of Blockchain Services, and Kevin Bluer, Head of Content & Training, in this complimentary webinar on building blockchain solutions for the enterprise. In the session, we'll explore the components of Truffle Suite itself, the range of enterprise services and integrations you can leverage, and how to train both yourself and your development teams on succeeding with this disruptive technology.",
-    "eventbrite": "/events/webinar-enterprise-solutions",
-    "status": "open",
-    "image": "/img/truffle-webinar-1.jpeg"
-  },
-  {
     "title": "Rice Blockchain and Truffle: Build Your First Decentralized App",
     "start": "Thurs, Mar 21, 2019, 5:00",
     "end": "8:00 PM CST",
-    "location": "Liu Idea Lab | Cambridge Building | Rice University | Houston | TX | United States",
+    "location": "Room 314 of McNair Hall of the Jones Business School | Rice University | Houston | TX | United States",
     "excerpt": "Join Rice Blockchain and Truffle's Kevin Bluer for an evening building a decentralized application. We'll dive into all the core aspects of building a DApp: tooling, workflow, testing, debugging, and deployment. No prior experience with blockchain development is required.",
     "eventbrite": "http://bit.ly/dappworkshop",
     "status": "open",
