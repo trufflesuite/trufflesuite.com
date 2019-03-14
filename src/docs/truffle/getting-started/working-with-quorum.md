@@ -32,4 +32,7 @@ module.exports = {
 ## Using Privacy Features
 Unfortunately, the privacy features are still not working in version `5` of Truffle. However, they still work in version `4`.
 
-Please refer to the [Quorum tutorial](/tutorials/building-dapps-for-quorum-private-enterprise-blockchains) to learn more about how to use the privacy features within Quorum. Specifically [deploying contracts privately](/tutorials/building-dapps-for-quorum-private-enterprise-blockchains#deploying-smart-contracts-on-quorum), [making transactions private](/tutorials/building-dapps-for-quorum-private-enterprise-blockchains#using-quorum-39-s-privacy-features-to-make-transactions-private), and [interacting with your contracts privately](/tutorials/building-dapps-for-quorum-private-enterprise-blockchains#interacting-with-contracts-privately).
+Please refer to the [Quorum tutorial](/tutorials/building-dapps-for-quorum-private-enterprise-blockchains) to learn more about how to use the privacy features within Quorum. Here are some quick references for privacy within the tutorial:
+- [Deploying contracts privately](/tutorials/building-dapps-for-quorum-private-enterprise-blockchains#deploying-smart-contracts-on-quorum)
+- [Making transactions private](/tutorials/building-dapps-for-quorum-private-enterprise-blockchains#using-quorum-39-s-privacy-features-to-make-transactions-private)
+- [Interacting with your contracts privately](/tutorials/building-dapps-for-quorum-private-enterprise-blockchains#interacting-with-contracts-privately).
