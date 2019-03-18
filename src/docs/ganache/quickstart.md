@@ -8,9 +8,7 @@ layout: docs.hbs
 
 It is available as both a desktop application as well as a command-line tool (formerly known as the TestRPC). Ganache is available for Windows, Mac, and Linux.
 
-## Installation
-
-### Ganache
+## 1. Install Ganache
 
 [Download](https://github.com/trufflesuite/ganache/releases) the appropriate version for your OS:
 
@@ -20,19 +18,15 @@ It is available as both a desktop application as well as a command-line tool (fo
 
 Double-click on the downloaded file, follow the prompts, and you're up and running.
 
-### Ganache CLI
+## 2. Create a Workspace
 
-If you are interested in the command-line version (formerly known as the TestRPC), you can get it through npm.
+When you open Ganache for the first time, you'll see the home screen. On this screen you're prompted to load an existing workspace (_if_ any exist), create a new custom workspace, or quickstart a one-click blockchain with [default options](#ganache-turns-2-workspaces-one-ganache-multiple-blockchains-workspace-default-configuration). For now, let's go with the Quickstart workspace.
 
-```shell
-npm install -g ganache-cli
-```
+![Empty Home Screen](https://truffleframework.com/img/docs/ganache/v2-shared-seese/home-empty.png)
 
-This page will focus only on the graphical interface. Please see the [README](https://github.com/trufflesuite/ganache-cli/blob/master/README.md) for more information on Ganache CLI.
+### Main interface
 
-## Main interface
-
-When you launch Ganache, the screen will show some details about the server, and also list out a number of accounts. **Each account is given 100 ether**. Having ether automatically in all accounts allows you to focus on developing your application.
+Once you've created a workspace, the screen will show some details about the server, and also list out a number of accounts. **Each account is given 100 ether**. Having ether automatically in all accounts allows you to focus on developing your application.
 
 <p class="alert alert-info">
 <strong>Note</strong>: The first time you launch Ganache, you will be asked if you want to allow Google Analytics tracking. While optional, turning this on will help the development team gain more insight into how Ganache is used. This tracking is totally anonymous, and no account data or private keys will ever be shared.
@@ -51,6 +45,9 @@ There are four pages available:
 
 Also note that you can search for block numbers or transaction hashes from a search box at the top.
 
+## 3. Link a Truffle Project
+
+...
 
 ## Settings
 
@@ -67,3 +64,13 @@ You can change some features of the generated blockchain through the **Settings*
 * The **Advanced** page toggles Google Analytics, which is useful for the Ganache team to track usage of the application.
 
 After making changes, you will have to click **Restart** on the application for the changes to take effect.
+
+## Ganache CLI
+
+If you are interested in the command-line version (formerly known as the TestRPC), you can get it through npm.
+
+```shell
+npm install -g ganache-cli
+```
+
+This page will focus only on the graphical interface. Please see the [README](https://github.com/trufflesuite/ganache-cli/blob/master/README.md) for more information on Ganache CLI.

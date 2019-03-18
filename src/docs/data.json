@@ -32,6 +32,23 @@
     ]
   },
   "ganache": {
+    "Workspaces": [
+      "The Quickstart Workspace",
+      "Creating Workspaces",
+      "Loading Existing Workspaces",
+      "Switching Workspaces",
+      "Deleting Workspaces"
+    ],
+    "Truffle Projects": [
+      "Linking a Truffle Project",
+      "Unlinking a Truffle Project",
+      "Contracts Page",
+      "Events Page",
+      "Decoded Transactions"
+    ],
+    "Reference": [
+      "Workspace Default Configuration"
+    ]
   },
   "drizzle": {
     "Getting Started": [
