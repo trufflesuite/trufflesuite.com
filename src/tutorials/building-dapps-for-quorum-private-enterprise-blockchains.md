@@ -142,7 +142,7 @@ Now that we have Truffle set up, we can move onto code.
 
 ## Deploying smart contracts on Quorum
 
-We won't spend too much time talking about writing or deploying contracts in Truffle since we have [sample documentation](/docs), however we do want to show how deploying contracts applies to Quorum.
+We won't spend too much time talking about writing or deploying contracts in Truffle since we have [ample documentation](/docs), however we do want to show how deploying contracts applies to Quorum.
 
 1. First, copy the following contract into a new file, called `SimpleStorage.sol`. Place it in your `contracts/` directory:
 
