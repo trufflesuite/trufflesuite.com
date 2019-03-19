@@ -144,12 +144,14 @@ export default ({ accounts }) => (
 
 Test it out!
 ------------
+  * Fire up the app and change SimpleStorage's `stored Value`.
+    ```
+    $ npm run start
+    ```
 
-Fire up the app and change SimpleStorage's `stored Value`. You should see a
-toast notification when the transaction is completed.
 
-```
-$ npm run start
-```
+  * You'll be rewarded with a toast notification when the transaction is completed.
+![Toast](/img/tutorials/drizzle-and-contract-events/alert-toast.png "A successful
+Toast!")
 
 
