@@ -33,7 +33,7 @@ contracts to ganache.
 
 ```bash
 $ truffle unbox drizzle
-$ truffle compile && truffle compile deploy
+$ truffle deploy
 ```
 
 Tap into events
@@ -42,15 +42,26 @@ Tap into events
 The front end code is located under the `app` folder. Lets add the
 notification library `react-toastify` to make a nice display.
 ```sh
+$ cd app
 $ npm install react-toastify
 ```
 
-For the sake of simplicity, we will work in one file, `./app/reducers/index.js`.
-Import the `EventActions` and `generateStore` functions from Drizzle.
+For the sake of simplicity, we will work in one file, `./app/src/reducers/index.js`.
+
+```
+$ mkdir ./src/reducers
+$ touch ./src./src//reducers/index.js
+```
+
+Import `EventActions` and `generateStore` from Drizzle as well as
+toast from `react-toastify`, and drizzleOptions.
 
 ```js
 // ./app/reducers/index.js
 import { generateStore, EventActions } from 'drizzle'
+import drizzleOptions from '../drizzleOptions'
+import { toast } from 'react-toastify'
+
 ```
 
 `EventActions.FIRE_EVENT` is emitted whenever a contract event is detected on a
@@ -58,11 +69,11 @@ Block. We will gain access to it by registering a reducer with the Redux store.
 As you know, a every reducer is called whenever an `action` is dispatched.
 N.B. Set the initial value of the state as the default argument.
 
-All we have to do is filter for the specified event, and act. In this case we
-will display a toast.
+Now we filter actions for the specified event and act. In this case we will
+display a toast.
 
 ```js
-const events = (state = {}, action) => {
+const eventsReducer = (state = {}, action) => {
   if (action.type === EventActions.EVENT_FIRED) {
 
     // extract and construct the alert message
@@ -87,20 +98,35 @@ return a Redux store that you can use anywhere you can use a store.
 
 ```js
 // Register app reducers to be incorporated into drizzle's redux store.
-const appReducers = { events }
+const appReducers = { events: eventsReducer }
 
-export default generateStore(
+const options = {
   drizzleOptions,
-  appReducers,
-  initialAppState,
-  disableReduxDevTools: false  // use reduxDevTools extension
-)
+  appReducers
+}
+
+export default generateStore(options)
+```
+
+Connect the store
+-----------------
+
+Send the store as a prop to DrizzleProvider
+
+```js
+// App.js
+...
+import store from './reducers'
+...
+<DrizzleProvider store={store} options={drizzleOptions} />
+...
+
 ```
 
 Hook up Display
 ---------------
 
-Modify `MyComponent.js` to set up the ToastContainer
+Modify `MyComponent.js` to import ReactToastify.css and configure ToastContainer
 
 ```js
 ...
@@ -108,9 +134,22 @@ import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 ...
 
-export default ({ chuckNorrisLore, fetchTodo }) => (
+export default ({ accounts }) => (
   <div className="App">
     <ToastContainer />
   ...
   </div>
 ```
+
+
+Test it out!
+------------
+
+Fire up the app and change SimpleStorage's `stored Value`. You should see a
+toast notification when the transaction is completed.
+
+```
+$ npm run start
+```
+
+
