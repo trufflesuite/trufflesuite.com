@@ -22,7 +22,7 @@ Redux. If you need an introduction please consult the following resources:
 
 
 Unbox drizzle
--------------
+=============
 
 Let's use `truffle unbox` to bootstrap a project and then wire up a contract
 event to a display component by creating a reducer and hook it up to drizzle's
@@ -35,6 +35,12 @@ contracts to ganache.
 $ truffle unbox drizzle
 $ truffle deploy
 ```
+
+Consuming drizzle Contract events
+=================================
+
+This next will focus on connecting the parts in order to consume and act upon
+contract events. In this example we will simply display a toast message.
 
 Tap into events
 ---------------
@@ -142,16 +148,164 @@ export default ({ accounts }) => (
 ```
 
 
-Test it out!
+A quick test
 ------------
-  * Fire up the app and change SimpleStorage's `stored Value`.
+  * Fire up the app.
     ```
     $ npm run start
     ```
+  * Change SimpleStorage's `stored Value`
 
 
-  * You'll be rewarded with a toast notification when the transaction is completed.
-![Toast](/img/tutorials/drizzle-and-contract-events/alert-toast.png "A successful
-Toast!")
+You'll be rewarded with a toast notification when the transaction is completed.
+![Toast](/img/tutorials/drizzle-and-contract-events/alert-toast.png "A
+successful Toast!")
+
+The DApp is now a consumer of drizzle's `EVENT_FIRED`
+action item and invoke appropriate business logic.
+
+Adding your App Sagas to drizzle's store.
+=========================================
+
+Drizzle currently allows you to [use your own store](https://www.truffleframework.com/docs/drizzle/getting-started/using-an-existing-redux-store) for complete control of the store. We now offer the ability to add your sagas, and reducers to drizzle's own store.
+
+This section will show how to connect your Sagas to drizzle's store and connect
+them to the UI by implementing a feature where a user clicks on a button in
+order to kick off an async web request. Specifically, a user will click a button
+and want to be rewarded with their next `todo`.
+
+We'll need
+
+  1. A saga to listen for and dispatch `LOOKUP_TODO` actions.
+  1. A handler to fetch the `todo` and dispatch result to Redux store. This we will
+     implement as a generator.
+  1. A reducer to modify state when the `todo` is resolved.
+  1. Add Saga and reducer to Redux.
+  1. UI glue.
+
+Create the Saga
+---------------
+
+Include put and takaeEvery from redux-saga/efects in order to listen to
+dispatched actions for #1 above.
+
+Your `reducers/index.js` include section should now look like:
+
+```
+// reducers/index.js
+
+import { toast } from 'react-toastify'
+import { generateStore, EventActions } from 'drizzle'
+import drizzleOptions from '../drizzleOptions'
+
+import { put, takeEvery } from 'redux-saga/effects'
+
+```
+
+1. Create a 'saga' that listens for `LOOKUP_TODO`. When this saga is added to the
+redux middleware, whenever a 'LOOKUP_TODO' action is observed, it will invoke
+the `fetchTodo` function with no arguments.
+
+    ```
+    function* appSaga() {
+      yield takeEvery('LOOKUP_TODO', fetchTodo)
+    }
+
+    ```
+
+1. Create the handler to actually retrieve the resource.
+
+    ```
+    function* fetchTodo() {
+      const tid = Math.floor(Math.random() * 9 + 1)
+      const url = `https://jsonplaceholder.typicode.com/todos/${tid}`
+
+      const todo = yield fetch(url)
+        .then(response => response.json())
+        .then(json => json)
+
+      yield put({ type: 'TODO', todo })
+    }
+
+    ```
+
+1. Reducer to handle `TODO` action item
+
+    ```
+    const todoReducer = (state = {}, action) => {
+      if (action.type === 'TODO') {
+        toast.success(action.todo.title, { position: toast.POSITION.TOP_CENTER })
+        return action.todo
+      }
+      return state
+    }
+    ```
+
+1. Let Redux know about this new saga, and reducer
+
+Update the `appReducers` object, consolidate DApp Sagas and pass the addtions to
+`generateStore`.
+
+    ```
+    const appReducers = {
+      events: eventsReducer,
+      todo: todoReducer
+      }
+
+    const appSagas = [appSaga]
+
+    const options = {
+      drizzleOptions,
+      appReducers,
+      appSagas
+    }
+
+    export default generateStore(options)
+    ```
+
+1. Connect the UI with mapDispatchToProps, and hook up a button to initiate the
+   action.
 
 
+    ```
+    // MyContainer.js
+
+    const mapDispatchToProps = dispatch => ({
+      fetchTodo: () => dispatch({type: 'LOOKUP_TODO'})
+    })
+
+    const MyContainer = drizzleConnect(MyComponent, mapStateToProps, mapDispatchToProps);
+    ```
+
+1. Hook up a button to initiate the action.
+
+    ```
+    // MyComponent.js
+
+    <div className="section">
+      <h2>Dispatch a web request</h2>
+      <button onClick={() => fetchTodo() }>Get Todo!</button>
+    </div>
+
+    ```
+
+Test the Saga
+-------------
+
+Make sure the app serve is still running.
+
+```
+$ npm run start
+
+```
+
+You should see the new section on the web page.
+![Todo Section](/img/tutorials/drizzle-and-contract-events/todo-control.png "Click to
+to get a todo")
+
+Click it and you will see a toast appear when the todo is resolved. Yo've just
+registered a saga to retrieve data from a web endpoint with drizzle's saga
+middleware. Pretty neat!
+
+![Todo resolved!](/img/tutorials/drizzle-and-contract-events/todo-toast.png "Yay!
+it worked!")
