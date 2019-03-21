@@ -1,5 +1,5 @@
-Reacting to Contract Events with Drizzle
-========================================
+React to Contract Events
+========================
 
 This tutorial demonstrates how to modify a Drizzle box to subscribe to Contract
 events.  [Here's what the finished app looks like](https://youtu.be/jGIY_l8oWTQ)
@@ -37,8 +37,8 @@ $ truffle unbox drizzle
 $ truffle deploy
 ```
 
-Consuming drizzle Contract events
-=================================
+Listen for Contract events
+==========================
 
 This next will focus on connecting the parts in order to consume and act upon
 contract events. In this example we will simply display a toast message.
@@ -176,8 +176,8 @@ A quick test
 The DApp is now a consumer of drizzle's `EVENT_FIRED`
 action item and invoke appropriate business logic.
 
-Adding your App Sagas to drizzle's store.
-=========================================
+Add Application Sagas to drizzle's store
+========================================
 
 Drizzle currently allows you to [use your own
 store](https://www.truffleframework.com/docs/drizzle/getting-started/using-an-existing-redux-store)
