@@ -9,7 +9,7 @@ event is emitted. We have to declare a <ToastContainer /> component and invoke
 `toast.success()` when an event is detected. We'll touch `MyComponent` and the
 event reducer respectively.
 
-TL;DR; A Complete example is available at the following [repo](https://github.com/cds-consensys/drizzle-event-demo)
+TL;DR; A Complete example is available at the following [repo](https://github.com/trufflesuite/drizzle-event-demo)
 
 **Prerequisite**: You should be familiar with Truffle, Ganache, Drizzle, React and
 Redux. If you need an introduction please consult the following resources:
