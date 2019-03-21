@@ -19,6 +19,7 @@ Redux. If you need an introduction please consult the following resources:
 1. [Getting started with Drizzle and React](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react)
 1. [Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html)
 1. [Redux basic tutorial](https://redux.js.org/basics/basic-tutorial)
+1. [Redux Saga](https://redux-saga.js.org/)
 
 
 Unbox drizzle
@@ -150,11 +151,22 @@ export default ({ accounts }) => (
 
 A quick test
 ------------
+  * Things often go south during development so a pretest check is in order.
+    1. MetaMask should NOT be on Main net! Do not run this if you're on main
+       net!
+    1. Is ganache running on port 7545? This is the default. If your development
+       environment is different, make sure `truffle-config` points to the
+       correct port.
+    1. Is MetaMask listening on the correct port defined above? Metamask should
+       have ETH funds. Something is amiss if it doesn't.
+    1. Are the smart contracts deployed from the correct directory?
+
   * Fire up the app.
     ```
     $ npm run start
     ```
   * Change SimpleStorage's `stored Value`
+    ![Change SimpleStorage value!](/img/tutorials/drizzle-and-contract-events/stored-value.gif)
 
 
 You'll be rewarded with a toast notification when the transaction is completed.
@@ -167,21 +179,25 @@ action item and invoke appropriate business logic.
 Adding your App Sagas to drizzle's store.
 =========================================
 
-Drizzle currently allows you to [use your own store](https://www.truffleframework.com/docs/drizzle/getting-started/using-an-existing-redux-store) for complete control of the store. We now offer the ability to add your sagas, and reducers to drizzle's own store.
+Drizzle currently allows you to [use your own
+store](https://www.truffleframework.com/docs/drizzle/getting-started/using-an-existing-redux-store)
+for complete control of the store. We now offer the ability to add your sagas,
+and reducers to drizzle's own store.
 
 This section will show how to connect your Sagas to drizzle's store and connect
 them to the UI by implementing a feature where a user clicks on a button in
 order to kick off an async web request. Specifically, a user will click a button
 and want to be rewarded with their next `todo`.
 
-We'll need
+The Plan
+--------
 
-  1. A saga to listen for and dispatch `LOOKUP_TODO` actions.
-  1. A handler to fetch the `todo` and dispatch result to Redux store. This we will
-     implement as a generator.
-  1. A reducer to modify state when the `todo` is resolved.
-  1. Add Saga and reducer to Redux.
-  1. UI glue.
+  1. Create a saga to listen for and dispatch `LOOKUP_TODO` actions.
+  1. implement a handler to fetch the `todo` and dispatch result to Redux store.
+     This we will implement as a generator.
+  1. Write a reducer to modify state when the `todo` is resolved.
+  1. Add the Saga and reducer to Redux.
+  1. Connect the UI to the Redux store.
 
 Create the Saga
 ---------------
@@ -213,7 +229,7 @@ the `fetchTodo` function with no arguments.
 
     ```
 
-1. Create the handler to actually retrieve the resource.
+1. Create the handler to retrieve the resource.
 
     ```
     function* fetchTodo() {
@@ -243,8 +259,8 @@ the `fetchTodo` function with no arguments.
 
 1. Let Redux know about this new saga, and reducer
 
-Update the `appReducers` object, consolidate DApp Sagas and pass the addtions to
-`generateStore`.
+   Update the `appReducers` object, consolidate DApp Sagas and pass the
+   addtions to `generateStore`.
 
     ```
     const appReducers = {
