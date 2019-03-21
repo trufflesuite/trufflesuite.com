@@ -169,9 +169,9 @@ A quick test
     ![Change SimpleStorage value!](/img/tutorials/drizzle-and-contract-events/stored-value.gif)
 
 
-You'll be rewarded with a toast notification when the transaction is completed.
-![Toast](/img/tutorials/drizzle-and-contract-events/alert-toast.png "A
-successful Toast!")
+  * You'll be rewarded with a toast notification when the transaction is completed.
+    ![Toast](/img/tutorials/drizzle-and-contract-events/alert-toast.png "A
+    successful Toast!")
 
 The DApp is now a consumer of drizzle's `EVENT_FIRED`
 action item and invoke appropriate business logic.
