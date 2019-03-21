@@ -11,7 +11,8 @@
       "Package Management via NPM",
       "Debugging Your Contracts",
       "Using Truffle Develop and The Console",
-      "Writing External Scripts"
+      "Writing External Scripts",
+      "Working With Quorum"
     ],
     "Testing": [
       "Testing Your Contracts",

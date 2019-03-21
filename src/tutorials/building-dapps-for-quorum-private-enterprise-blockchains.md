@@ -114,10 +114,10 @@ To set up Truffle, we're going to start by creating a bare Truffle project, with
 
    If you look at the contents of the `myproject` directory, you'll notice directories were created for you. See the [Truffle documentation](/docs/getting_started/project) for more information about Truffle's project structure.
 
-1. Before moving onto code, we need to configure Truffle to point to our running Quorum client. For this example, we'll edit our `development` network configuration within `truffle.js` to point to the first node available in the 7nodes example:
+1. Before moving onto code, we need to configure Truffle to point to our running Quorum client. For this example, we'll edit our `development` network configuration within `truffle-config.js` to point to the first node available in the 7nodes example:
 
    ```javascript
-   // File: `truffle.js` (edited for 7nodes example)
+   // File: `truffle-config.js` (edited for 7nodes example)
    module.exports = {
      networks: {
        development: {
@@ -125,7 +125,8 @@ To set up Truffle, we're going to start by creating a bare Truffle project, with
          port: 22000, // was 8545
          network_id: "*", // Match any network id
          gasPrice: 0,
-         gas: 4500000
+         gas: 4500000,
+         type: "quorum" // needed for Truffle to support Quorum
        }
      }
    };
@@ -217,10 +218,10 @@ Now that the contract's deployed, it's off to the races.
 
 We originally configured Truffle to point our development environment to the first of the seven nodes provided by the example. You can think of the first node as "us", as if we were developing a dapp for a private network that's used by multiple other parties. Since the 7nodes example provides us seven nodes to work with, we can tell Truffle about the other nodes so we can "be" someone else, and ensure the contract we deployed was private.
 
-1. To add a new network configuration, edit your `truffle.js` file again and add additional network configuration, choosing a network name that best describes the network connection you're adding. In this case, we're going to add a connection to node 4 (`nodefour`) and node 7 (`nodeseven`):
+1. To add a new network configuration, edit your `truffle-config.js` file again and add additional network configuration, choosing a network name that best describes the network connection you're adding. In this case, we're going to add a connection to node 4 (`nodefour`) and node 7 (`nodeseven`):
 
    ```javascript
-   // File: `truffle.js`
+   // File: `truffle-config.js`
    module.exports = {
      networks: {
        development: {
@@ -228,21 +229,24 @@ We originally configured Truffle to point our development environment to the fir
          port: 22000, // was 8545
          network_id: "*", // Match any network id
          gasPrice: 0,
-         gas: 4500000
+         gas: 4500000,
+         type: "quorum" // needed for Truffle to support Quorum
        },
        nodefour:  {
          host: "127.0.0.1",
          port: 22003,
          network_id: "*", // Match any network id
          gasPrice: 0,
-         gas: 4500000
+         gas: 4500000,
+         type: "quorum" // needed for Truffle to support Quorum
        },
        nodeseven:  {
          host: "127.0.0.1",
          port: 22006,
          network_id: "*", // Match any network id
          gasPrice: 0,
-         gas: 4500000
+         gas: 4500000,
+         type: "quorum" // needed for Truffle to support Quorum
        }
      }
    };
@@ -336,7 +340,7 @@ Truffle uses its [truffle-contract](https://github.com/trufflesuite/truffle/tree
 
 Truffle's contract abstraction allow you to make a transaction against any function available on the contract. It does so by evaluating the functions of the contract and making them available to JavaScript. To see these transactions in action, we're going to use an advanced feature of Truffle that lets us execute external scripts within our Truffle environment.
 
-1. Creating a file called `sampletx.js` and save it in the root of your project (the same directory as your `truffle.js` file). Then fill it with this code:
+1. Creating a file called `sampletx.js` and save it in the root of your project (the same directory as your `truffle-config.js` file). Then fill it with this code:
 
    ```javascript
    var SimpleStorage = artifacts.require("SimpleStorage");
