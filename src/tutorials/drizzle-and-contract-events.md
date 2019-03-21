@@ -57,7 +57,7 @@ For the sake of simplicity, we will work in one file, `./app/src/reducers/index.
 
 ```
 $ mkdir ./src/reducers
-$ touch ./src./src//reducers/index.js
+$ touch ./src./src/reducers/index.js
 ```
 
 Import `EventActions` and `generateStore` from Drizzle as well as
