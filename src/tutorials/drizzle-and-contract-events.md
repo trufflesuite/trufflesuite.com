@@ -238,7 +238,6 @@ the `fetchTodo` function with no arguments.
 
       const todo = yield fetch(url)
         .then(response => response.json())
-        .then(json => json)
 
       yield put({ type: 'TODO', todo })
     }
