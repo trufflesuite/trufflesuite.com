@@ -89,11 +89,16 @@ const eventsReducer = (state = {}, action) => {
     const message = action.event.returnValues._message
     const display = `${contract}(${contractEvent}): ${message}`
 
-    // present the alert message
+    // NOTE: Side-effects in a reducer is an anti-pattern and is used
+    // to show the contract event is available and left as an exercise
+    // to the reader to implement.
+    //
     toast.success(display, { position: toast.POSITION.TOP_RIGHT })
+    console.log('action', action)
+    console.log('extracted info', display)
 
-    // if your app needs to modify it's state on this event,
-    // you would put it here...and don't forget to return the new state
+    // Shape your piece of state here
+    // ...and don't forget to return it
   }
 
   return state
