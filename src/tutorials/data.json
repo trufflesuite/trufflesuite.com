@@ -1,4 +1,11 @@
 {
+  "drizzle-and-contract-events": {
+    "title": "Drizzle and contract events",
+    "date": "2019-03-18",
+    "author": "Amal Sudama",
+    "published": true,
+    "products": ["truffle", "ganache", "drizzle"]
+  },
   "drizzle-and-react-native": {
     "title": "Drizzle and React Native",
     "date": "2019-01-31",
