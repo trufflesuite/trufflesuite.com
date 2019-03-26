@@ -114,6 +114,12 @@
     "official": true
   },
   {
+    "userOrg": "ng-es",
+    "displayName": "AngularTruffleDapp",
+    "repoName": "AngularTruffleDapp",
+    "official": false
+  },
+  {
     "userOrg": "Quintor",
     "displayName": "angular-truffle-box",
     "repoName": "angular-truffle-box",
@@ -279,6 +285,12 @@
     "userOrg": "kierenh",
     "displayName": "vue-dark-chocolate",
     "repoName": "vue-dark-chocolate",
+    "official": false
+  },
+  {
+    "userOrg": "saga-foundation",
+    "displayName": "vueport-box",
+    "repoName": "vueport-box",
     "official": false
   }
 ]
