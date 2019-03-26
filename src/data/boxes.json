@@ -94,7 +94,7 @@
     "stars": 1,
     "tags": ["partner"]
   },
-  "AngularTruffleDapp": {
+  "angulartruffledapp": {
     "description": "This Trufflebox provides a base for Truffle Framework and Angular ÐAPP. and you can make transactions between accounts",
     "stars": 0,
     "tags": ["community"]
