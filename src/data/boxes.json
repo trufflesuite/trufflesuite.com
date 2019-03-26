@@ -233,5 +233,10 @@
     "description": "A truffle box that comes with everything you need to start using smart contracts from a Vue App, with Bootstrap styling and components. Supporting frameworks include Vuex, Vue-Router, Bootstrap 4 (via Bootstrap-Vue), and webpack. The sample uses webpack-dev-server for hot-reloading or you can build and serve from Express.",
     "stars": 13,
     "tags": ["community", "blockchain", "truffle-box", "solidity-contracts", "vue", "vue-bootstrap", "webpack-boilerplate"]
+  },
+  "vueport-box": {
+    "description": "Truffle box with built in uPort self-sovereign identity authentication and contract interaction using VueJS. Inspired by https://github.com/truffle-box/react-uport-box",
+    "stars": 4,
+    "tags": ["community"]
   }
 }

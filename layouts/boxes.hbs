@@ -113,10 +113,10 @@
                     {{else}}
                       <h5 class="card-title">{{this.userOrg}}/{{this.repoName}}</h5>
                     {{/if}}
-                    <p class="box-star-count"></p>
-                    <p class="card-text box-description"></p>
+                    <p class="box-star-count">{{getMetadata "boxMeta" this.repoName "stars"}}</p>
+                    <p class="card-text box-description">{{getMetadata "boxMeta" this.repoName "description"}}</p>
                     <p class="card-text">
-                      <i class="fas fa-tags"></i> <span class="box-tags"></span>
+                      <i class="fas fa-tags"></i> <span class="box-tags">{{getBoxTags this.repoName}}</span>
                     </p>
                   </div>
                 </div>

@@ -280,5 +280,11 @@
     "displayName": "vue-dark-chocolate",
     "repoName": "vue-dark-chocolate",
     "official": false
+  },
+  {
+    "userOrg": "saga-foundation",
+    "displayName": "vueport-box",
+    "repoName": "vueport-box",
+    "official": false
   }
 ]
