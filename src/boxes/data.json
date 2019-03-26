@@ -114,6 +114,12 @@
     "official": true
   },
   {
+    "userOrg": "ng-es",
+    "displayName": "AngularTruffleDapp",
+    "repoName": "AngularTruffleDapp",
+    "official": false
+  },
+  {
     "userOrg": "Quintor",
     "displayName": "angular-truffle-box",
     "repoName": "angular-truffle-box",

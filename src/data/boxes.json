@@ -94,6 +94,11 @@
     "stars": 1,
     "tags": ["partner"]
   },
+  "AngularTruffleDapp": {
+    "description": "This Trufflebox provides a base for Truffle Framework and Angular ÐAPP. and you can make transactions between accounts",
+    "stars": 0,
+    "tags": ["community"]
+  },
   "angular-truffle-box": {
     "description": "Truffle Box for Angular is a quick-and-easy way to get your Dapp on the road with Truffle and Angular",
     "stars": 49,
