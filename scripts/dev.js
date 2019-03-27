@@ -10,10 +10,10 @@ app(false).use(browserSync({
     }
   },
   files: [
-    path.join(__dirname, '../helpers/**/*'),
-    path.join(__dirname, '../layouts/**/*'),
-    path.join(__dirname, '../partials/**/*'),
-    path.join(__dirname, '../src/**/*')
+    'helpers/**/*',
+    'layouts/**/*',
+    'partials/**/*',
+    'src/**/*'
   ],
   port: 9000,
   open: false
