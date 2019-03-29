@@ -40,8 +40,8 @@
 
 .btn-green {
   color: #58484E;
-  background-color: #87E0C5;
-  border-color: #87E0C5;
+  background-color: #39DCB9;
+  border-color: #39DCB9;
   text-transform: capitalize;
   padding: 10px 20px 10px 20px;
   width: 33.3%;
@@ -89,6 +89,18 @@
   z-index: -1;
 }
 
+.trufflecon-segment-pink {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  background-image: url(/img/trufflecon/pink-angle.png);
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+}
+
 .trufflecon-nav-inline {
   z-index: 2;
   transition: all .125s ease-in-out;
@@ -96,7 +108,7 @@
   -moz-transition: all .125s ease-in-out;
   -webkit-transition: all .125s ease-in-out;
   a {
-    color: #87E0C5;
+    color: #39DCB9;
     font-family: 'Oswald', 'Arial Narrow', sans-serif;
     text-transform: uppercase;
 
