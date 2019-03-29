@@ -1,0 +1,88 @@
+.tt-hero-banner {
+  background: #a359ea;
+  color: #fff;
+  border-bottom: 3px solid #33262a;
+
+  .tt-screenshot {
+    transform: translateY(8rem);
+  }
+
+  .btn-truffle {
+    color: #33262a !important;
+  }
+}
+
+.tt-logo {
+  font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+  font-weight: 700;
+  letter-spacing: .125em;
+
+  img {
+    height: 1.8em;
+    margin-right: .5em;
+  }
+}
+
+.tt-features i {
+  background: #a359ea;
+  padding: 1rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.tt-pricing {
+  ul {
+    padding-left: 20px;
+
+    li:not(:last-child) {
+      margin-bottom: .5rem;
+    }
+  }
+
+  .card {
+    border: none;
+
+    &.free {
+      background: #e0dad7;
+    }
+
+    &.premium {
+      background: #a359ea;
+      color: #fff;
+  
+      .btn {
+        background: #a359ea;
+        color: #fff;
+        border: 1px solid #fff;
+
+        &:hover {
+          background: #fff;
+          color: #a359ea;
+        }
+      }
+    }
+
+    .card-footer {
+      border-top: none;
+      background: none;
+    }
+  }
+}
+
+.tt-social-proof {
+  .stat {
+    font-size: 2rem;
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+}
+
+.tt-steps {
+  .number {
+    background: #a359ea;
+    border-radius: .25rem;
+    padding: 0 .25rem;
+    color: #fff;
+  }
+}
