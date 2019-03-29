@@ -11,12 +11,12 @@ layout: layout.hbs
 </nav>
 
 <main role="main" class="trufflecon-content" style="position: relative;">
-  <div class="trufflecon-heading-bd"></div>
+  <div class="trufflecon-heading-funky"></div>
   <div class="container-heading trufflecon-heading">
     <div class="row align-items-center">
       <div class="col text-center">
-        <h1>TRUFFLEC<img src="/img/truffle-logomark.svg" alt="Truffle Logo" /><span>O</span>N</h1>
-        <br><br>
+        <h1 class="mt-4">TRUFFLEC<img src="/img/truffle-logomark.svg" alt="Truffle Logo" /><span>O</span>N</h1>
+        <div class="mt-4"></div>
         <h2 class="mb-0">AUGUST 2-4, 2019</h2>
         <h3>MICROSOFT CAMPUS &vert; REDMOND, WA</h3>
       </div>
@@ -24,7 +24,7 @@ layout: layout.hbs
   </div>
 </main>
 
-<main class="banner banner-white-choc pt-5 pb-5">
+<main class="banner banner-white-choc pb-5">
   <div class="container">
     <div class="row">
       <div class="col">
@@ -35,6 +35,7 @@ layout: layout.hbs
             <a class="nav-link scroll-link" href="#schedule">Schedule</a>
           </nav>
           <h3 class="mt-4 mb-4 mx-auto text-center" style="width: 60%; letter-spacing: 1px;">A conference for those who want to build world-changing applications powered by decentralized technologies.</h3>
+          <div class="mt-4 mb-4"></div>
           <div class="text-center">
             <a class="btn btn-green btn-lg" href="https://eventbrite.com" target="_blank">Secure Your Spot</a>
           </div>
@@ -47,33 +48,37 @@ layout: layout.hbs
   <div class="container">
     <div class="row">
       <div class="col">
-        <h3>What is TruffleCon?</h3>
-        <p><strong>Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas sed diam eget risus varius blandit sit amet non magna.</strong></p>
-        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+        <h2>What is TruffleCon?</h2>
+        <div class="mt-4 mb-4"></div>
+        <p><strong>TruffleCon is a gathering for Truffle users, fans, developers, and those who want to build world-changing applications powered by decentralized technologies.</strong></p>
+        <p>Join people from around the world as we meet August 2-4 in Redmond, WA to build community and foster connections in the blockchain developer space, share tips and tricks, challenges and successes.</p>
+        <p>Our goal is to inspire you to build your DApps and smart contracts to bring your ideas to the world! And we'll have some fun too while we're at it. And maybe chocolate too.</p>
       </div>
     </div>
   </div>
 </main>
 
 <main class="banner banner-bright-pink trufflecon-segment-pink pt-5 pb-5">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          ...
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        &nbsp;
       </div>
     </div>
-  </main>
+  </div>
+</main>
 
 <main class="banner banner-white-choc pt-5 pb-5">
   <div class="container">
     <div class="row">
       <div class="col">
-        <h4 class="text-center">Sponsored by these great companies...</h4>
+        <h4 id="sponsors" class="text-center">Sponsored by these great companies...</h4>
+        <div class="mt-4 mb-4"></div>
         <div class="text-center mb-4">
           <div class="row">
             <div class="col">
-              <img src="/img/trufflecon/sponsors/microsoft-logo-gray-bw.png" class="img-responsive">
+              <div class="mt-4 mb-4"></div>
+              <img src="/img/trufflecon/sponsors/microsoft-logo-gray-bw.png" class="img-responsive" style="width: 180px;">
             </div>
           </div>
         </div>
@@ -82,13 +87,17 @@ layout: layout.hbs
   </div>
 </main>
 
-<main class="banner banner-bright-pink trufflecon-heading-x pt-5 pb-5">
+<main class="banner banner-bright-pink trufflecon-heading-stage pt-5 pb-5">
   <div class="container">
     <div class="row">
       <div class="col">
         <h3 id="why" class="mb-4">Why Attend?</h3>
         <blockquote><em>"TruffleCon was really well executed, front to back."</em></blockquote>
         <blockquote><em>"TruffleCon was big enough to meet many people in the space but small enough that everyone was accessible."</em></blockquote>
+        <blockquote><em>"The Truffle community was great, so many fantastic conversations..."</em></blockquote>
+        <blockquote><em>"The people I met were really wonderful, and I was able to connect with them in a meaningful way in such a short time."</em></blockquote>
+        <blockquote><em>"I enjoyed meeting other people with similar experience levels and curiosities."</em></blockquote>
+        <blockquote><em>"Truffle cares more about what you are building versus what you can be sold."</em></blockquote>
       </div>
     </div>
   </div>
@@ -103,106 +112,200 @@ layout: layout.hbs
       </div>
     </div>
 
+    <div class="mt-4 mb-4"></div>
+
     <div class="row trufflecon-speakers">
-      <div class="col-xs-4 col-sm-6 col-md-4 col-lg-3">
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
           <div class="circle-image-container rounded-circle">
             <img class="img-fluid" src="/img/trufflecon/tim.jpg" alt="Tim Coulter" />
           </div>
       </div>
+      <div class="col-xs-12 col-sm-3 col-md-1 col-lg-1">&nbsp;</div>
       <div class="col-xs-12 col-sm-6 col-md-8 col-lg-9">
         <h3>Tim Coulter</h3>
-        <p>Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+        <p>Tim Coulter is the Founder and CEO of Truffle. Before blockchain, Tim built a career specializing in software testing and developer support, which became extremely valuable in the early days of blockchain development. He's now surrounded by an amazing team building the next generation of blockchain development tools, and can't wait to tell you about what's to come.</p>
       </div>
     </div>
 
+    <div class="mt-4 mb-4"></div>
+
     <div class="row trufflecon-speakers">
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
           <div class="circle-image-container rounded-circle">
             <img class="img-fluid" src="/img/trufflecon/ben-burns.jpg" alt="Ben Burns" />
           </div>
         </div>
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="col-xs-12 col-sm-3 col-md-1 col-lg-1">&nbsp;</div>
+      <div class="col-xs-12 col-sm-6 col-md-8 col-lg-9">
         <h3>Ben Burns</h3>
+        <p>Ben Burns currently serves as the Lead of Blockchain Services at Truffle. Since joining Truffle he’s taken over testrpc (now ganache-cli) development to improve the stability. He’s also overseen Truffle’s transition from being the Ethereum development tool of choice to the blockchain development tool of choice. He loves building simple, effective, and inexpensive solutions to very complex problems.</p>
       </div>
     </div>
 
+    <div class="mt-4 mb-4"></div>
+
     <div class="row trufflecon-speakers">
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
           <div class="circle-image-container rounded-circle">
             <img class="img-fluid" src="/img/trufflecon/josh-quintal.jpg" alt="Josh Quintal" />
           </div>
         </div>
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="col-xs-12 col-sm-3 col-md-1 col-lg-1">&nbsp;</div>
+      <div class="col-xs-12 col-sm-6 col-md-8 col-lg-9">
         <h3>Josh Quintal</h3>
+        <p>Josh Quintal currently serves as the Lead of Front-End & Design at Truffle. Josh is passionate about where the user meets the tech; this led to the creation of two products, Truffle Boxes and Drizzle. He also created "Pet Shop", one of Ethereum's most used beginner tutorials. Fun fact, Josh is the most stylish member of the Truffle team.</p>
       </div>
     </div>
 
+    <div class="mt-4 mb-4"></div>
+
     <div class="row trufflecon-speakers">
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
           <div class="circle-image-container rounded-circle">
             <img class="img-fluid" src="/img/trufflecon/mike-seese.jpg" alt="Mike Seese" />
           </div>
         </div>
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="col-xs-12 col-sm-3 col-md-1 col-lg-1">&nbsp;</div>
+      <div class="col-xs-12 col-sm-6 col-md-8 col-lg-9">
         <h3>Mike Seese</h3>
+        <p>Although you’ll often find him wearing several hats, Mike Seese is a Core Developer on the Enterprise Products team. In addition to integrating the Truffle Suite to other ledgers and frameworks, he strives to bring the modern development experience to the blockchain community. A prototyper by trade, he loves piecing together cool, new projects.</p>
       </div>
     </div>
 
+    <div class="mt-4 mb-4"></div>
+
     <div class="row trufflecon-speakers">
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
           <div class="circle-image-container rounded-circle">
             <img class="img-fluid" src="/img/trufflecon/nick-dandrea.jpg" alt="Nick D'Andrea" />
           </div>
         </div>
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        <h3>Nick D'Andrea</h3>
+      <div class="col-xs-12 col-sm-3 col-md-1 col-lg-1">&nbsp;</div>
+      <div class="col-xs-12 col-sm-6 col-md-8 col-lg-9">
+        <h3>G. Nicholas D'Andrea</h3>
+        <p>G. Nicholas D'Andrea currently serves as Engineering Lead for Truffle and the Truffle Debugger. Ever since 2016, he has been obsessed with the decentralized future and working towards building core software components for the blockchain ecosystem. Besides his work on Truffle, he is a core contributor to the EthPM package management system and author of EIP-1123.</p>
       </div>
     </div>
     
+    <div class="mt-4 mb-4"></div>
+
     <div class="row trufflecon-speakers">
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
           <div class="circle-image-container rounded-circle">
-            <img class="img-fluid" src="/img/trufflecon/nick-dandrea.jpg" alt="Kevin Bluer" />
+            <img class="img-fluid" src="/img/trufflecon/kevin-bluer.jpg" alt="Kevin Bluer" />
           </div>
         </div>
-      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="col-xs-12 col-sm-3 col-md-1 col-lg-1">&nbsp;</div>
+      <div class="col-xs-12 col-sm-6 col-md-8 col-lg-9">
         <h3>Kevin Bluer</h3>
+        <p>Hailing from the UK, Kevin is Truffle’s Lead Enterprise Trainer. He’s building our world class training program from the ground up to train existing software developers to become Truffle-certified blockchain engineers. Outside of his work with Truffle, he has trained and mentored developers in cities around the globe including New York, Austin, London, Hong Kong, Shenzhen, and Kuala Lumpur.</p>
       </div>
     </div>    
 
   </div>
 </main>
  
-<main class="banner banner-burnt-orange pt-5 pb-5">
-    <div class="container">
-  
-      <div class="row">
-        <div class="offset-md-2 col-md-10">
-          <h3 id="schedule">Schedule</h3>
-          <h4 class="mb-0">Friday, Aug 2, 2019: Hands-On Workshops</h4>
-          <small class="mt-0 mb-4">Microsoft Building 33 &vert; 16070 NE 36th Way, Redmond, WA 98052</small>
-          <div class="row">
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">9:00am - 12:30pm</div>
-            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Morning Workshops</div>
-          </div>
-          <div class="row">
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">12:30pm - 1:30pm</div>
-            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Break for Lunch</div>
-          </div>
-          <div class="row">
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">1:00pm - 4:00pm</div>
-            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Afternoon Workshops</div>
-          </div>
-          <div class="row">
-            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">4:00pm - 6:00pm</div>
-          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Office hours with workshop presenters</div>
-          </div>
-          <a class="btn btn-green btn-lg mt-4" href="https://eventbrite.com" target="_blank">Secure Your Spot</a>
-        </div>
+<main class="banner trufflecon-segment-orange pt-5 pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        &nbsp;
       </div>
     </div>
-  
-  </main>
+  </div>
+</main>
+
+<main class="banner banner-burnt-orange pt-5 pb-5">
+  <div class="container">
+
+    <div class="row">
+      <div class="offset-md-2 col-md-10">
+        <h2 id="schedule">Schedule</h2>
+        
+        <div class="mt-4 mb-4"></div>
+        <h3 class="mb-0">Friday, Aug 2, 2019: Hands-On Workshops</h3>
+        <small class="mt-0 mb-4 choc">Microsoft Building 33 &vert; 16070 NE 36th Way, Redmond, WA 98052</small>
+        <div class="mt-4 mb-4"></div>
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">9:00am - 12:30pm</div>
+          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Morning Workshops</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">12:30pm - 1:30pm</div>
+          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Break for Lunch</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">1:30pm - 4:00pm</div>
+          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Afternoon Workshops</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">4:00pm - 6:00pm</div>
+        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Office hours with workshop presenters</div>
+        </div>
+
+        <div class="mt-4 mb-4"></div>
+        <h3 class="mb-0">Saturday, Aug 3, 2019: Plenary Session & Breakout Sessions</h3>
+        <small class="mt-0 mb-4 choc">Microsoft Building 33 &vert; 16070 NE 36th Way, Redmond, WA 98052</small>
+        <div class="mt-4 mb-4"></div>
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">9:00am - 12:30pm</div>
+          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Plenary Session & Hackathon Announced</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">12:30pm - 1:30pm</div>
+          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Break for Lunch</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">1:30pm - 4:00pm</div>
+          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Breakout Sessions, Lightning Talks, Panel Discussions, and Community Connections</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">4:00pm - 5:00pm</div>
+          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Closing Keynote</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">7:00pm - 9:00pm</div>
+            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Evening Event</div>
+          </div>
+
+        <div class="mt-4 mb-4"></div>
+        <h3 class="mb-0">Sunday, Aug 4, 2019: Breakouts, Unconference, Meet the Truffle Team</h3>
+        <small class="mt-0 mb-4 choc">Microsoft Building 33 &vert; 16070 NE 36th Way, Redmond, WA 98052</small>
+        <div class="mt-4 mb-4"></div>
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">9:00am - 12:30pm</div>
+          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Morning Breakout Sessions</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">9:30am - 12:30pm</div>
+          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Unconference including board games with the Truffle team (We ❤ board games)</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">12:30pm - 1:30pm</div>
+          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Break for Lunch</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">1:30pm - 3:30pm</div>
+          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Hackathon Presentations</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">5:00pm</div>
+          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Hackathon Winners Announced</div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">5:30pm</div>
+          <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">Closing Remarks</div>
+        </div>
+        
+        <div class="mt-4 mb-4"></div>
+        <a class="btn btn-green btn-lg mt-4" href="https://eventbrite.com" target="_blank">Secure Your Spot</a>
+        <div class="mt-4 mb-4"></div>
+
+      </div>
+    </div>
+  </div>
+
+</main>
 
 <main class="banner banner-white-choc pt-5 pb-5">
   <div class="container">
@@ -226,6 +329,16 @@ layout: layout.hbs
               formId: "9f9228a7-e2c8-4151-99ed-e1c11a0fc1cd"
           });
           </script></p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<main class="banner trufflecon-segment-footer pt-5 pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div style="min-height: 120px;">&nbsp;</div>
       </div>
     </div>
   </div>
