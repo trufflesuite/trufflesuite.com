@@ -27,7 +27,7 @@ layout: layout.hbs
 <main class="banner banner-white-choc pb-5">
   <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col-md-12">
           <nav class="nav trufflecon-nav-inline justify-content-center">
             <a class="nav-link scroll-link" href="#why">Why Attend?</a>
             <a class="nav-link scroll-link" href="#speakers">Speakers</a>
@@ -47,9 +47,10 @@ layout: layout.hbs
 <main class="banner banner-bright-pink pt-5 pb-5">
   <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col-md-4">
         <h2>What is TruffleCon?</h2>
-        <div class="mt-4 mb-4"></div>
+      </div>
+      <div class="col-md-8">
         <p><strong>TruffleCon is a gathering for Truffle users, fans, developers, and those who want to build world-changing applications powered by decentralized technologies.</strong></p>
         <p>Join people from around the world as we meet August 2-4 in Redmond, WA to build community and foster connections in the blockchain developer space, share tips and tricks, challenges and successes.</p>
         <p>Our goal is to inspire you to build your DApps and smart contracts to bring your ideas to the world! And we'll have some fun too while we're at it. And maybe chocolate too.</p>
@@ -61,7 +62,7 @@ layout: layout.hbs
 <main class="banner banner-bright-pink trufflecon-segment-pink pt-5 pb-5">
   <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col-md-12">
         &nbsp;
       </div>
     </div>
@@ -71,12 +72,12 @@ layout: layout.hbs
 <main class="banner banner-white-choc pt-5 pb-5">
   <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col-md-12">
         <h4 id="sponsors" class="text-center">Sponsored by these great companies...</h4>
         <div class="mt-4 mb-4"></div>
         <div class="text-center mb-4">
           <div class="row">
-            <div class="col">
+            <div class="col-md-12">
               <div class="mt-4 mb-4"></div>
               <img src="/img/trufflecon/sponsors/microsoft-logo-gray-bw.png" class="img-responsive" style="width: 180px;">
             </div>
@@ -90,8 +91,10 @@ layout: layout.hbs
 <main class="banner banner-bright-pink trufflecon-heading-stage pt-5 pb-5">
   <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col-md-4">
         <h3 id="why" class="mb-4">Why Attend?</h3>
+      </div>
+      <div class="col-md-8">
         <blockquote><em>"TruffleCon was really well executed, front to back."</em></blockquote>
         <blockquote><em>"TruffleCon was big enough to meet many people in the space but small enough that everyone was accessible."</em></blockquote>
         <blockquote><em>"The Truffle community was great, so many fantastic conversations..."</em></blockquote>
@@ -107,7 +110,7 @@ layout: layout.hbs
   <div class="container">
 
     <div class="row">
-      <div class="col">
+      <div class="col-md-12">
         <h1 id="speakers" class="link-markdown mb-4 mt-4 text-center"><a href="#speakers18" name="speakers18"><i class="fas fa-link"></i></a>TruffleCon Speakers, Presenters, and Experts</h1>
       </div>
     </div>
@@ -208,7 +211,7 @@ layout: layout.hbs
 <main class="banner trufflecon-segment-orange pt-5 pb-5">
   <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col-md-12">
         &nbsp;
       </div>
     </div>
@@ -219,102 +222,108 @@ layout: layout.hbs
   <div class="container">
 
     <div class="row">
-      <div class="offset-md-2 col-md-10">
-        <h2 id="schedule">Schedule</h2>
-        
-        <div class="mt-4 mb-4"></div>
-        <h3 class="mb-0">Friday, Aug 2, 2019: Hands-On Workshops</h3>
-        <small class="mt-0 mb-4 choc">Microsoft Building 33 &vert; 16070 NE 36th Way, Redmond, WA 98052</small>
-        <div class="mt-4 mb-4"></div>
+      <div class="col-md-4">
+          <h2 id="schedule">Schedule</h2>        
+      </div>
+      <div class="col-md-8">
         <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">9:00am - 12:30pm</div>
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Morning Workshops</div>
+          <div class="col-md-10">
+            <h3 class="mb-0">Friday, Aug 2, 2019: Hands-On Workshops</h3>
+            <small class="mt-0 mb-4 choc">Microsoft Building 33 &vert; 16070 NE 36th Way, Redmond, WA 98052</small>
+            <div class="mt-4 mb-4"></div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">9:00am - 12:30pm</div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Morning Workshops</div>
+            </div>
+            <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">12:30pm - 1:30pm</div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Break for Lunch</div>
+            </div>
+            <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">1:30pm - 4:00pm</div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Afternoon Workshops</div>
+            </div>
+            <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">4:00pm - 6:00pm</div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Office hours with workshop presenters</div>
+            </div>
+    
+            <div class="mt-4 mb-4"></div>
+            <h3 class="mb-0">Saturday, Aug 3, 2019: Plenary Session & Breakout Sessions</h3>
+            <small class="mt-0 mb-4 choc">Microsoft Building 33 &vert; 16070 NE 36th Way, Redmond, WA 98052</small>
+            <div class="mt-4 mb-4"></div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">9:00am - 12:30pm</div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Plenary Session & Hackathon Announced</div>
+            </div>
+            <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">12:30pm - 1:30pm</div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Break for Lunch</div>
+            </div>
+            <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">1:30pm - 4:00pm</div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Breakout Sessions, Lightning Talks, Panel Discussions, and Community Connections</div>
+            </div>
+            <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">4:00pm - 5:00pm</div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Closing Keynote</div>
+            </div>
+            <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">7:00pm - 9:00pm</div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Evening Event</div>
+            </div>
+    
+            <div class="mt-4 mb-4"></div>
+            <h3 class="mb-0">Sunday, Aug 4, 2019: Breakouts, Unconference, Meet the Truffle Team</h3>
+            <small class="mt-0 mb-4 choc">Microsoft Building 33 &vert; 16070 NE 36th Way, Redmond, WA 98052</small>
+            <div class="mt-4 mb-4"></div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">9:00am - 12:30pm</div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Morning Breakout Sessions</div>
+            </div>
+            <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">9:30am - 12:30pm</div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Unconference including board games with the Truffle team (We ❤ board games)</div>
+            </div>
+            <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">12:30pm - 1:30pm</div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Break for Lunch</div>
+            </div>
+            <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">1:30pm - 3:30pm</div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Hackathon Presentations</div>
+            </div>
+            <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">5:00pm</div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Hackathon Winners Announced</div>
+            </div>
+            <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">5:30pm</div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Closing Remarks</div>
+            </div>
+            
+            <div class="mt-4 mb-4"></div>
+            <a class="btn btn-green btn-lg mt-4" href="https://www.eventbrite.com/e/trufflecon-2019-tickets-58020862963?aff=TruffleCon2019" target="_blank">Secure Your Spot</a>
+            <div class="mt-4 mb-4"></div>
+    
+          </div>
         </div>
-        <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
-        <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">12:30pm - 1:30pm</div>
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Break for Lunch</div>
-        </div>
-        <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
-        <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">1:30pm - 4:00pm</div>
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Afternoon Workshops</div>
-        </div>
-        <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
-        <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">4:00pm - 6:00pm</div>
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Office hours with workshop presenters</div>
-        </div>
-
-        <div class="mt-4 mb-4"></div>
-        <h3 class="mb-0">Saturday, Aug 3, 2019: Plenary Session & Breakout Sessions</h3>
-        <small class="mt-0 mb-4 choc">Microsoft Building 33 &vert; 16070 NE 36th Way, Redmond, WA 98052</small>
-        <div class="mt-4 mb-4"></div>
-        <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">9:00am - 12:30pm</div>
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Plenary Session & Hackathon Announced</div>
-        </div>
-        <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
-        <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">12:30pm - 1:30pm</div>
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Break for Lunch</div>
-        </div>
-        <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
-        <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">1:30pm - 4:00pm</div>
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Breakout Sessions, Lightning Talks, Panel Discussions, and Community Connections</div>
-        </div>
-        <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
-        <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">4:00pm - 5:00pm</div>
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Closing Keynote</div>
-        </div>
-        <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
-        <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">7:00pm - 9:00pm</div>
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Evening Event</div>
-        </div>
-
-        <div class="mt-4 mb-4"></div>
-        <h3 class="mb-0">Sunday, Aug 4, 2019: Breakouts, Unconference, Meet the Truffle Team</h3>
-        <small class="mt-0 mb-4 choc">Microsoft Building 33 &vert; 16070 NE 36th Way, Redmond, WA 98052</small>
-        <div class="mt-4 mb-4"></div>
-        <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">9:00am - 12:30pm</div>
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Morning Breakout Sessions</div>
-        </div>
-        <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
-        <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">9:30am - 12:30pm</div>
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Unconference including board games with the Truffle team (We ❤ board games)</div>
-        </div>
-        <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
-        <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">12:30pm - 1:30pm</div>
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Break for Lunch</div>
-        </div>
-        <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
-        <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">1:30pm - 3:30pm</div>
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Hackathon Presentations</div>
-        </div>
-        <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
-        <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">5:00pm</div>
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Hackathon Winners Announced</div>
-        </div>
-        <div class="mt-4 mb-4 d-sm-none d-xs-none"></div>
-        <div class="row">
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">5:30pm</div>
-          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-9">Closing Remarks</div>
-        </div>
-        
-        <div class="mt-4 mb-4"></div>
-        <a class="btn btn-green btn-lg mt-4" href="https://www.eventbrite.com/e/trufflecon-2019-tickets-58020862963?aff=TruffleCon2019" target="_blank">Secure Your Spot</a>
-        <div class="mt-4 mb-4"></div>
-
       </div>
     </div>
+
+    
   </div>
 
 </main>
@@ -322,7 +331,7 @@ layout: layout.hbs
 <main class="banner banner-white-choc pt-5 pb-5">
   <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col-md-12">
         <h1 id="speakers" class="link-markdown mb-4 mt-4"><a href="#speakers" name="speakers"><i class="fas fa-link"></i></a><a href="#form"><span style="color:#60C4B4;">SPEAK AT TRUFFLECON</span></a></h1>        
         <p>We are now accepting submissions for 15-minute lightning talks, 1-hour talks, and 4-hour workshops. Submissions close April 30, 2019. We will announce speakers by July 1, 2019. All speakers will receive free admission to all three days of TruffleCon. Email <a href="mailto:events@trufflesuite.com" target="_blank">events@trufflesuite.com</a> with any questions. Thank you!
             <br/><br/>
@@ -343,7 +352,7 @@ layout: layout.hbs
 <main class="banner trufflecon-segment-footer pt-5 pb-5">
   <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col-md-12">
         <div style="min-height: 120px;">&nbsp;</div>
       </div>
     </div>
