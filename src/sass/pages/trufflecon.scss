@@ -44,6 +44,15 @@
   @media (max-width: 767.98px) {
     padding: 4rem 15px 3rem 15px;
     max-height: none;
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+    }
+    h3 {
+      font-size: 1rem;
+    }
   }
 }
 
@@ -67,7 +76,11 @@
 blockquote {
   font-size: 1.4rem;
   margin-bottom: 24px;
-}
+
+  @media (max-width: 767.98px) {
+    font-size: 1rem;
+  }
+} 
 
 .faq {
   list-style: none;
@@ -173,6 +186,16 @@ blockquote {
       opacity: .8;
     }
   }
+  @media (max-width: 767.98px) {
+    .nav-link {
+      padding: .5rem;
+      font-size: .8rem;
+    }
+
+    .btn-eventbrite {
+      margin-right: .5rem;
+    }
+  }
 }
 
 .trufflecon-nav {
@@ -224,6 +247,10 @@ blockquote {
     .btn-eventbrite {
       margin-right: .5rem;
     }
+  }
+
+  @media (max-width: 400px) {
+    display: none;
   }
 }
 
