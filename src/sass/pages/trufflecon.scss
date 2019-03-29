@@ -38,6 +38,18 @@
   }
 }
 
+.btn-green {
+  color: #58484E;
+  background-color: #87E0C5;
+  border-color: #87E0C5;
+  text-transform: capitalize;
+  padding: 10px 20px 10px 20px;
+  width: 33.3%;
+  min-width: 180px;
+  border-radius: 14px;
+  letter-spacing: 1px;
+}
+
 .faq {
   list-style: none;
   padding-left: 0;
@@ -63,6 +75,35 @@
   background-position: center center;
   opacity: .3;
   z-index: -1;
+}
+
+.trufflecon-heading-x {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  background-image: url(/img/trufflecon/trufflecon-banner-hdr-2019a.jpg);
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+}
+
+.trufflecon-nav-inline {
+  z-index: 2;
+  transition: all .125s ease-in-out;
+  -ms-transition: all .125s ease-in-out;
+  -moz-transition: all .125s ease-in-out;
+  -webkit-transition: all .125s ease-in-out;
+  a {
+    color: #87E0C5;
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
+    text-transform: uppercase;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
 }
 
 .trufflecon-nav {
