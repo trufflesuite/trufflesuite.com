@@ -1,5 +1,6 @@
 .tt-hero-banner {
-  background: #a359ea;
+  background: url(/img/truffle-teams/landing-background.png);
+  background-size: cover;
   color: #fff;
   border-bottom: 3px solid #33262a;
 
@@ -9,6 +10,16 @@
 
   .btn-truffle {
     color: #33262a !important;
+  }
+
+  .sign-in-link {
+    color: #fff;
+    display: block;
+    margin-top: .5rem;
+
+    &:hover {
+      color: #fff;
+    }
   }
 }
 
@@ -23,8 +34,8 @@
   }
 }
 
-.tt-features i {
-  background: #a359ea;
+.tt-feature i {
+  background: #8731e8;
   padding: 1rem;
   border-radius: 50%;
   font-size: 2rem;
@@ -42,23 +53,32 @@
 
   .card {
     border: none;
+    padding: 1.5rem;
 
     &.free {
       background: #e0dad7;
+
+      ul {
+        list-style-image: url('/img/truffle-teams/checkmark-dark.png');
+      }
     }
 
     &.premium {
-      background: #a359ea;
+      background: #e86591;
       color: #fff;
+
+      ul {
+        list-style-image: url('/img/truffle-teams/checkmark-light.png');
+      }
   
       .btn {
-        background: #a359ea;
-        color: #fff;
+        background: #fff;
+        color: #e86591;
         border: 1px solid #fff;
 
         &:hover {
-          background: #fff;
-          color: #a359ea;
+          background: #e86591;
+          color: #fff;
         }
       }
     }
@@ -71,6 +91,22 @@
 }
 
 .tt-social-proof {
+  position: relative;
+
+  >.col-8 {
+    z-index: 1;
+  }
+
+  .truffle-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 150%;
+    opacity: .1;
+    z-index: 0;
+  }
+  
   .stat {
     font-size: 2rem;
     margin-bottom: 0;
@@ -79,10 +115,20 @@
 }
 
 .tt-steps {
-  .number {
-    background: #a359ea;
-    border-radius: .25rem;
-    padding: 0 .25rem;
+  .number-circle {
+    display: inline-block;
+    border-radius:50%;
+    background: #8731e8;
     color: #fff;
+    display:inline-block;
+    font-size: 2rem;
+    line-height:0px;
+    padding: 1rem;
+    
+    .number {
+      display: inline-block;
+      padding-top:50%;
+      padding-bottom:50%;
+    }
   }
 }
