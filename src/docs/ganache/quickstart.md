@@ -53,4 +53,4 @@ Also note that you can search for block numbers or transaction hashes from a sea
 
 ## You're Up and Running!
 
-This guide got you started with a zero-config personal development blockchain. If you have an existing Truffle project who's contracts and events you'd like tracked in this workspace, check out the [Linking a Truffle Project docuemntation](/docs/ganache/truffle-projects/linking-a-truffle-project). If you just need to customize some options and save this workspace for later, check out the [Creating Workspaces documentation](/docs/ganache/workspaces/creating-workspaces#saving-the-current-quickstart-blockchain-as-a-new-workspace).
+This guide got you started with a zero-config personal development blockchain. If you have an existing Truffle project who's contracts and events you'd like tracked in this workspace, check out the [Linking a Truffle Project documentation](/docs/ganache/truffle-projects/linking-a-truffle-project). If you just need to customize some options and save this workspace for later, check out the [Creating Workspaces documentation](/docs/ganache/workspaces/creating-workspaces#saving-the-current-quickstart-blockchain-as-a-new-workspace).
