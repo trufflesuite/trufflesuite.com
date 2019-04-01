@@ -115,6 +115,15 @@
 }
 
 .tt-steps {
+  .enjoy-link {
+    color: inherit;
+
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+  
   .number-circle {
     display: inline-block;
     border-radius:50%;
