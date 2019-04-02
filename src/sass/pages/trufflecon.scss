@@ -103,8 +103,8 @@ blockquote {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #000;
-  background-image: url(/img/trufflecon/header-2019.png);
+  background-color: #fff;
+  background-image: url(/img/trufflecon/header-2019.svg);
   background-size: cover;
   background-position: center center;
   z-index: -1;
@@ -140,25 +140,13 @@ blockquote {
   border-color: transparent transparent #f7a34e transparent;
 }
 
-.trufflecon-segment-orange {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: #f8f5f0;
-  background-image: url(/img/trufflecon/segment-orange.png);
-  background-size: cover;
-  background-position: center center;
-  z-index: -1;
-}
-
 .trufflecon-segment-footer {
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   background-color: #fff;
-  background-image: url(/img/trufflecon/segment-footer.png);
+  background-image: url(/img/trufflecon/segment-footer.svg);
   background-size: cover;
   background-position: center center;
   z-index: -1;
