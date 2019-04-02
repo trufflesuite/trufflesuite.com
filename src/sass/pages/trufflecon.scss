@@ -122,16 +122,22 @@ blockquote {
   z-index: -1;
 }
 
-.trufflecon-segment-pink {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: #fff;
-  background-image: url(/img/trufflecon/segment-pink.png);
-  background-size: cover;
-  background-position: center center;
-  z-index: -1;
+.triangle-tr {
+  background: #fff;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 100vw 50px 0;
+  border-color: transparent #ca37af transparent transparent;
+}
+
+.triangle-br {
+  background: #f8f5f0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 50px 100vw;
+  border-color: transparent transparent #f7a34e transparent;
 }
 
 .trufflecon-segment-orange {
