@@ -2,6 +2,12 @@
 title: Truffle Teams
 layout: layout.hbs
 ---
+<nav class="nav subnav justify-content-end">
+  <a class="nav-link scroll-link" href="#features">Features</a>
+  <a class="nav-link scroll-link" href="#pricing">Pricing</a>
+  <a class="nav-link scroll-link" href="#support">Support</a>
+</nav>
+
 <div class="banner tt-hero-banner pt-3 pb-3">
   <header role="main" class="container">
     <div class="row align-items-center">
@@ -26,7 +32,7 @@ layout: layout.hbs
   <main class="container pt-7 pb-7">
     <div class="row text-center mb-4">
       <div class="col-12">
-        <h2 class="text-truffle">Features</h2>
+        <h2 id="features" class="text-truffle">Features</h2>
       </div>
     </div>
 
@@ -75,7 +81,7 @@ layout: layout.hbs
 
     <div class="row text-center mb-4">
       <div class="col-12">
-        <h2 class="text-truffle">Premium Features for Larger Teams</h2>
+        <h2 id="pricing" class="text-truffle">Premium Features for Larger Teams</h2>
       </div>
     </div>
 
@@ -168,10 +174,29 @@ layout: layout.hbs
         <a class="btn btn-lg btn-truffle">SIGN UP WITH GITHUB</a>
       </div>
     </div>
+
+    <div class="row text-center mt-7 mb-4">
+      <div class="col-12">
+        <h2 id="support" class="text-truffle">Need Support?</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <h3>Chat on Spectrum</h3>
+        <p>Truffle is on Spectrum! We have channels for all of our products and Truffle Teams is no exception. <a href="https://spectrum.chat/trufflesuite/truffle-teams">Check out the Truffle Teams Spectrum chat</a>.</p>
+      </div>
+
+      <div class="col-6">
+        <h3>Open a GitHub Issue</h3>
+        <p>Truffle Teams has <a href="https://github.com/trufflesuite/truffle-teams">a repository for tracking issues here</a>. If you have a longstanding issue that you suspect will need long-term commitment, we encourage you to <a href="https://github.com/trufflesuite/truffle-teams/issues">open an issue</a>.</p>
+      </div>
+    </div>
   </main>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/scroll-arrow.js"></script>
+<script src="js/subnav.js"></script>
+<script src="https://embed.small.chat/TB3UH2TUPGHLKTAY23.js" async></script>
