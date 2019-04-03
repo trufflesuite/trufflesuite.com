@@ -3,13 +3,10 @@
   background-size: cover;
   color: #fff;
   border-bottom: 3px solid #33262a;
+  text-align: center;
 
-  .tt-screenshot {
-    transform: translateY(8rem);
-  }
-
-  .btn-truffle {
-    color: #33262a !important;
+  h2 {
+    font-size: 1.75rem;
   }
 
   .sign-in-link {
@@ -21,25 +18,81 @@
       color: #fff;
     }
   }
+
+  .tt-screenshot {
+    margin: 0;
+    transform: translateY(8rem);
+  }
+
+  @media (max-width: 991.98px) {
+    padding: 2.5rem 0;
+
+    .tt-screenshot {
+      transform: translateY(5rem);
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    text-align: center;
+
+    .tt-screenshot {
+      margin: 2rem 0 -18rem 0;
+      transform: translateY(0);
+    }
+  }
 }
 
 .tt-logo {
   font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+  font-size: 1.9rem;
   font-weight: 700;
   letter-spacing: .125em;
+  position: relative;
+  margin: 0 auto 2rem auto;
 
   img {
     height: 1.8em;
     margin-right: .5em;
   }
+
+  .badge-container {
+    position: relative;
+
+    .badge {
+      background: #33262a;
+      color: #fff;
+      position: absolute;
+      top: 3.75em;
+      right: .333em;
+      font-size: .333em;
+      padding-right: .125rem;
+    }
+  }
+
+  @media (min-width: 992px) {
+    font-size: 2.5rem;
+  }
 }
 
-.tt-feature i {
-  background: #8731e8;
-  padding: 1rem;
-  border-radius: 50%;
-  font-size: 2rem;
-  color: #fff;
+.tt-feature {
+  text-align: center;
+
+  i {
+    background: #8731e8;
+    padding: 1rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: .5rem;
+  }
+
+  @media (min-width: 768px) {
+    text-align: left;
+
+    i {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .tt-pricing {
@@ -53,6 +106,7 @@
 
   .card {
     border: none;
+    min-width: unset;
     padding: 1.5rem;
 
     &.free {
@@ -87,6 +141,10 @@
       border-top: none;
       background: none;
     }
+
+    @media (min-width: 768px) {
+      min-width: 0;
+    }
   }
 }
 
@@ -115,6 +173,10 @@
 }
 
 .tt-steps {
+  > div {
+    margin-bottom: 1rem;
+  }
+
   .enjoy-link {
     color: inherit;
 
