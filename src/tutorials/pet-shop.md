@@ -185,9 +185,13 @@ Solidity is a compiled language, meaning we need to compile our Solidity to byte
    You should see output similar to the following:
 
    ```shell
-   Compiling ./contracts/Migrations.sol...
-   Compiling ./contracts/Adoption.sol...
-   Writing artifacts to ./build/contracts
+   Compiling your contracts...
+   ===========================
+   > Compiling ./contracts/Adoption.sol
+   > Compiling ./contracts/Migrations.sol
+   > Artifacts written to /Users/cruzmolina/Code/truffle-projects/metacoin/build/contracts
+   > Compiled successfully using:
+      - solc: 0.5.0+commit.1d4f565a.Emscripten.clang
    ```
 
 ### Migration
