@@ -54,8 +54,7 @@
   },
   "drizzle": {
     "Getting Started": [
-      "Using an Existing Redux Store",
-      "Use Drizzles Redux Store",
+      "Using Drizzle's Redux Store",
       "Contract Interaction"
     ],
     "React": [
