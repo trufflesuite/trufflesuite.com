@@ -203,5 +203,5 @@ A Quick Test
     ![Toast](/img/tutorials/drizzle-and-contract-events/alert-toast.png "A
     successful Toast!")
 
-The DApp is now a consumer of Drizzle's `EVENT_FIRED` action item and can
+The dapp is now a consumer of Drizzle's `EVENT_FIRED` action item and can
 coordinate with other services to implement its business logic.
