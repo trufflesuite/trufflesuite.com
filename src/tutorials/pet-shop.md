@@ -572,6 +572,10 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
    ![Initial screen](/img/tutorials/pet-shop/metamask-initial.png "MetaMask initial screen")
    
+1. Next, you should see a screen requesting anonymous analytics. Choose to decline or agree.
+
+   ![Improve MetaMask](/img/tutorials/pet-shop/metamask-analytics.png "Improve MetaMask")
+   
 1. In the box marked **Wallet Seed**, enter the mnemonic that is displayed in Ganache.
 
    <p class="alert alert-danger">
