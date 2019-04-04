@@ -564,15 +564,9 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
 1. Install MetaMask in your browser.
 
-1. Once installed, you'll see the MetaMask fox icon next to your address bar. Click the icon and you'll see this screen appear:
+1. Once installed, a tab in your browser should open displaying the following:
 
-   ![Privacy Notice](/img/tutorials/pet-shop/metamask-privacy.png "Privacy Notice")
-
-1. Click Accept to accept the Privacy Notice.
-
-1. Then you'll see the Terms of Use. Read them, scrolling to the bottom, and then click **Accept** there too.
-
-   ![Terms](/img/tutorials/pet-shop/metamask-terms.png "Terms of Use")
+   ![Welcome to MetaMask](/img/tutorials/pet-shop/metamask-welcome.png "Welcome to MetaMask")
 
 1. Now you'll see the initial MetaMask screen. Click **Import Existing DEN**.
 
