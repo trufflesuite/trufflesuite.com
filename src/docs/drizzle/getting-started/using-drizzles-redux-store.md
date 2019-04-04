@@ -1,21 +1,20 @@
 ---
-title: Drizzle | Use Drizzle's Redux Store
+title: Drizzle | Using Drizzle's Redux Store
 layout: docs.hbs
 ---
-# Use Drizzle's Redux Store
+# Using Drizzle's Redux Store
 
-For those times when you don't want to manage your own Redux store, drizzle has
+For those times when you don't want to manage your own Redux store, Drizzle has
 you covered. You can pass your Redux sagas, reducers, middleware and
 drizzleOptions to `generateStore` and drizzle will incorporate them in its own
 Redux Store.
-
 
 For an example use case see the [Drizzle and Contract
 Events](/tutorials/drizzle-and-contract-events) tutorial.
 
 
-Add middleware to drizzle's redux
---------------------------------------
+Add Middleware to the Store
+---------------------------
 
 Drizzle allows you to add redux middleware to it's redux instance. This gives
 you the ability to react to specific events in a meaningful way, outside of data
@@ -60,8 +59,8 @@ whenever a contract event occurs.
   })
   ```
 
-Add reducers and sagas to Redux
-------------------------------------
+Add Reducers and Sagas to the Store
+-----------------------------------
 
 Drizzle gives you the option to add your reducers to it's redux store if you
 choose to use one redux store for your project.
@@ -123,4 +122,3 @@ const store = generateStore({
 
 export default store
 ```
-
