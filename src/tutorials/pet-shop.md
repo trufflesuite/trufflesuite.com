@@ -389,10 +389,12 @@ Note the **memory** attribute on `adopters`. The memory attribute tells Solidity
    ```shell
    Using network 'development'.
 
-   Compiling ./contracts/Adoption.sol...
-   Compiling ./test/TestAdoption.sol...
-   Compiling truffle/Assert.sol...
-   Compiling truffle/DeployedAddresses.sol...
+   Compiling your contracts...
+   ===========================
+   > Compiling ./test/TestAdoption.sol
+   > Artifacts written to /var/folders/z3/v0sd04ys11q2sh8tq38mz30c0000gn/T/test-11934-19747-g49sra.0ncrr
+   > Compiled successfully using:
+      - solc: 0.5.0+commit.1d4f565a.Emscripten.clang
 
      TestAdoption
        ✓ testUserCanAdoptPet (91ms)
