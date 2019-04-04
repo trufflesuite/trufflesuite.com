@@ -585,6 +585,10 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
    Enter a password below that and click **OK**.
 
    ![MetaMask seed phrase](/img/tutorials/pet-shop/metamask-seed.png "MetaMask seed phrase")
+   
+1. If all goes well, MetaMask should display the following screen. Click **All Done**.
+
+   ![Congratulations](/img/tutorials/pet-shop/metamask-congratulations.png "Congratulations")
 
 1. Now we need to connect MetaMask to the blockchain created by Ganache. Click the menu that shows "Main Network" and select **Custom RPC**.
 
