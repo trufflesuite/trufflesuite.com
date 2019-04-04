@@ -594,11 +594,11 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
    ![MetaMask network menu](/img/tutorials/pet-shop/metamask-networkmenu.png "MetaMask network menu")
 
-1. In the box titled "New RPC URL" enter `http://127.0.0.1:7545` and click **Save**.
+1. In the box titled "New Network" enter `http://127.0.0.1:7545` and click **Save**.
 
    ![MetaMask Custom RPC](/img/tutorials/pet-shop/metamask-customrpc.png "MetaMask Custom RPC")
 
-   The network name at the top will switch to say "Private Network".
+   The network name at the top will switch to say `http://127.0.0.1:7545`.
 
 1. Click the left-pointing arrow next to "Settings" to close out of the page and return to the Accounts page.
 
