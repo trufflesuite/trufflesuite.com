@@ -568,10 +568,10 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
    ![Welcome to MetaMask](/img/tutorials/pet-shop/metamask-welcome.png "Welcome to MetaMask")
 
-1. Now you'll see the initial MetaMask screen. Click **Import Existing DEN**.
+1. After clicking **Getting Started**, you should see the initial MetaMask screen. Click **Import Wallet**.
 
    ![Initial screen](/img/tutorials/pet-shop/metamask-initial.png "MetaMask initial screen")
-
+   
 1. In the box marked **Wallet Seed**, enter the mnemonic that is displayed in Ganache.
 
    <p class="alert alert-danger">
