@@ -156,3 +156,58 @@
     transform: rotate(-45deg);
   }
 }
+
+// Subnav
+
+.subnav {
+  position: fixed;
+  top: 58px;
+  width: 100%;
+  padding: .5rem 1rem .5rem 0;
+  background: transparent;
+  z-index: 2;
+  transition: all .125s ease-in-out;
+  -ms-transition: all .125s ease-in-out;
+  -moz-transition: all .125s ease-in-out;
+  -webkit-transition: all .125s ease-in-out;
+
+  a {
+    color: #fff;
+    font-family: 'Oswald', 'Arial Narrow', sans-serif;
+    text-transform: uppercase;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  .btn {
+    flex-grow: 1;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin-right: 1rem;
+    opacity: 0;
+    visibility: hidden;  
+  }
+
+  &.scroll {
+    background: #5e464d;
+    padding: 0 .5rem 0 0;
+
+    .btn {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .nav-link {
+      padding: .5rem;
+      font-size: .8rem;
+    }
+
+    .btn-eventbrite {
+      margin-right: .5rem;
+    }
+  }
+}
