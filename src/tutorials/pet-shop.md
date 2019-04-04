@@ -600,7 +600,7 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
    The network name at the top will switch to say `http://127.0.0.1:7545`.
 
-1. Click the left-pointing arrow next to "Settings" to close out of the page and return to the Accounts page.
+1. Click the top-right X to close out of Settings and return to the Accounts page.
 
    Each account created by Ganache is given 100 ether. You'll notice it's slightly less on the first account because some gas was used when the contract itself was deployed and when the tests were run.
 
