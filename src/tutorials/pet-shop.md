@@ -646,6 +646,10 @@ We can now start a local web server and use the dapp. We're using the `lite-serv
    The dev server will launch and automatically open a new browser tab containing your dapp.
 
    ![Pete's Pet Shop](/img/tutorials/pet-shop/dapp.png "Pete's Pet Shop")
+   
+1. A MetaMask pop-up should appear requesting your approval to allow Pete's Pet Shop to connect to your MetaMask wallet. Without explicit approval, you will be unable to interact with the dapp. Click **Connect**.
+
+   ![MetaMask approval request](/img/tutorials/pet-shop/metamask-transactionconfirm.png "MetaMask approval request")
 
 1. To use the dapp, click the **Adopt** button on the pet of your choice.
 
