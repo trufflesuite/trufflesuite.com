@@ -1,57 +1,87 @@
-React to Contract Events
-========================
+Drizzle is ideal for synchronizing contract state with a user interface, but as
+dapps grow in complexity we foresee growing demand for coordination with
+off-chain services.
 
-This tutorial demonstrates how to modify a Drizzle box to subscribe to Contract
-events.  [Here's what the finished app looks like.](https://youtu.be/jGIY_l8oWTQ)
+The code in this section may be small, but it opens up a powerful mechanism to
+enable that coordination. Imagine your dapp needs to send a message whenever a
+contract event is generated. Lets see how to make this happen.
 
-We'll use [react-toaster]() to alert the user whenever a SimpleStorage contract
+This tutorial demonstrates how to use Drizzle to subscribe to smart contract
+events.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jGIY_l8oWTQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p class="font-italic text-center">The finished dapp.</p>
+
+We'll use [react-toaster](https://github.com/fkhadra/react-toastify) to alert the user whenever a SimpleStorage contract
 event is emitted. We have to declare a <ToastContainer /> component and invoke
 `toast.success()` when an event is detected. We'll touch `MyComponent` and the
 event reducer respectively.
 
-TL;DR; A Complete example is available at the following [repo](https://github.com/trufflesuite/drizzle-event-demo)
+**A Complete example is available at the following [repo](https://github.com/trufflesuite/drizzle-event-demo).**
 
-**Prerequisite**: You should be familiar with Truffle, Ganache, Drizzle, React and
-Redux. If you need an introduction please consult the following resources:
+<div class="alert alert-info">
+  <strong>Prerequisite</strong>: You should be familiar with Truffle, Ganache, Drizzle, React and Redux. If you need an introduction please consult the following resources:
 
-1. [Truffle quickstart](https://truffleframework.com/docs/truffle/quickstart)
-1. [Ganache quickstart](https://truffleframework.com/docs/ganache/quickstart)
-1. [Getting started with Drizzle and React](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react)
-1. [Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html)
-1. [Redux basic tutorial](https://redux.js.org/basics/basic-tutorial)
-1. [Redux Saga](https://redux-saga.js.org/)
-1. [Redux Middleware](https://redux.js.org/advanced/middleware#middleware)
+  <br/><br/>
+
+  <ol>
+    <li>[Truffle Quickstart](https://truffleframework.com/docs/truffle/quickstart)</li>
+    <li>[Ganache Quickstart](https://truffleframework.com/docs/ganache/quickstart)</li>
+    <li>[Getting Started with Drizzle and React](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react)</li>
+    <li>[Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html)</li>
+    <li>[Redux Basic Tutorial](https://redux.js.org/basics/basic-tutorial)</li>
+    <li>[Redux Saga](https://redux-saga.js.org/)</li>
+    <li>[Redux Middleware](https://redux.js.org/advanced/middleware#middleware)</li>
+  </ol>
+</div>
 
 
-Unbox drizzle
+Unbox Drizzle
 =============
 
 Let's use `truffle unbox` to bootstrap a project and then wire up a contract
-event to a display component by creating a reducer and hook it up to drizzle's
+event to a display component by creating a reducer and hook it up to Drizzle's
 `EVENT_FIRED` action.
 
-First start the `ganache` test chain, then unbox, compile and deploy the
-contracts to the test chain.
+First start the `ganache-cli` test chain and `unbox` Drizzle.
 
 ```bash
+// In a separate console window run the test chain.
+$ ganache-cli
+
+// In the project directory...
 $ truffle unbox drizzle
-$ truffle deploy
 ```
 
-Listen for Contract events
+We'll then have to modify the default `truffle-config.js` file to point to the network parameters used by `ganache-cli`.
+
+```js
+module.exports = {
+  networks: {
+    development: {
+      host: '127.0.0.1',
+      port: 8545,
+      network_id: '*' // Match any network id
+    }
+  }
+};
+```
+
+Finally, let's compile and migrate our smart contracts.
+
+```bash
+$ truffle compile
+$ truffle migrate
+```
+
+Now that we have a test chain running and our smart contracts deployed, let's add a toast notification to the UI.
+
+
+Listen for Contract Events
 ==========================
 
-
-Drizzle is ideal for synchronizing contract state with a user interface, but as
-DApps grow in complexity we foresee growing demand for coordination with
-off-chain services.
-
-The code in this section may be small, but it opens up a powerful mechanism to
-enable that coordination. Imagine your DApp needs to send a message whenever a
-contract event is generated. Lets see how to make this happen.
-
-Tap into events
----------------
+We want to listen for the `SimpleStorage` contract's `StorageSet` event and show a toast notification once it fires.
 
 The front end code is located under the `app` folder. Lets add the notification
 library `react-toastify` to simulate an external interaction.
@@ -102,7 +132,7 @@ const contractEventNotifier = store => next => action => {
 
 Now lets register this middleware with Drizzle. `generateStore` will return a
 Redux store that you can use anywhere you can use a store. We will export it to
-be used by DrizzleProvider.
+be used by `DrizzleProvider`.
 
 ```js
 const appMiddlewares = [ contractEventNotifier, contractErrorNotifier ]
@@ -115,10 +145,10 @@ export default generateStore({
 
 ```
 
-Connect the store
+Connect the Store
 -----------------
 
-Send the store as a prop to DrizzleProvider
+Send the `store` as a prop to `DrizzleProvider`
 
 ```js
 // App.js
@@ -133,7 +163,7 @@ import store from './middleware'
 Hook up Display
 ---------------
 
-Modify `MyComponent.js` to import ReactToastify.css and configure ToastContainer
+Modify `MyComponent.js` to import `ReactToastify.css` and configure `ToastContainer`
 
 ```js
 ...
@@ -149,7 +179,7 @@ export default ({ accounts }) => (
 ```
 
 
-A quick test
+A Quick Test
 ------------
   * Things often go south during development so a pretest check is in order.
     1. MetaMask should NOT be on Main net! Do not run this if you're on main
@@ -173,7 +203,5 @@ A quick test
     ![Toast](/img/tutorials/drizzle-and-contract-events/alert-toast.png "A
     successful Toast!")
 
-The DApp is now a consumer of drizzle's `EVENT_FIRED` action item and can
+The DApp is now a consumer of Drizzle's `EVENT_FIRED` action item and can
 coordinate with other services to implement its business logic.
-
-
