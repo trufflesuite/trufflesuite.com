@@ -13,7 +13,7 @@ events.
 
 <p class="font-italic text-center">The finished dapp.</p>
 
-We'll use [react-toaster](https://github.com/fkhadra/react-toastify) to alert the user whenever a SimpleStorage contract
+We'll use [react-toastify](https://github.com/fkhadra/react-toastify) to alert the user whenever a SimpleStorage contract
 event is emitted. We have to declare a <ToastContainer /> component and invoke
 `toast.success()` when an event is detected. We'll touch `MyComponent` and the
 event reducer respectively.
