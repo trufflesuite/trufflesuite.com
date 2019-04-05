@@ -1,7 +1,7 @@
 {
   "drizzle-and-contract-events": {
     "title": "Drizzle and Contract Events",
-    "date": "2019-04-04",
+    "date": "2019-04-05",
     "author": "Amal Sudama",
     "published": true,
     "products": ["truffle", "ganache", "drizzle"]
