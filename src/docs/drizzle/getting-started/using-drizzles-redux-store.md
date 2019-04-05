@@ -29,7 +29,7 @@ whenever a contract event occurs.
   import drizzleOptions from '../drizzleOptions'
   ```
 
-1. Create a custom middleware. See [Redux documentation](https://redux.js.org/advanced/middleware)
+1. Create a custom middleware. For more information on creating middleware for Redux, see [the Redux middleware documentation](https://redux.js.org/advanced/middleware).
 
   ```javascript
   const contractEventNotifier = store => next => action => {
@@ -62,10 +62,7 @@ whenever a contract event occurs.
 Add Reducers and Sagas to the Store
 -----------------------------------
 
-Drizzle gives you the option to add your reducers to it's redux store if you
-choose to use one redux store for your project.
-
-This snippet shows how to add your reducers,
+Drizzle gives you the option to add your reducers to its Redux store if you choose to use one `store` for your project.
 
 1. Import the drizzle dependencies.
 
@@ -77,7 +74,7 @@ This snippet shows how to add your reducers,
 
 1. Define actions, reducers and sagas
 
-```javascript
+  ```javascript
   // actions
   const TODOS_FETCH = 'MY_APP/TODOS_FETCH'
   const TODOS_RECEIVED = 'MY_APP/TODOS_RECEIVED'
@@ -91,7 +88,6 @@ This snippet shows how to add your reducers,
     return state
   }
 
-
   // fetch data from service using sagas
   function *fetchTodos() {
     const todos = yield fetch('https://jsonplaceholder.typicode.com/todos')
@@ -99,26 +95,26 @@ This snippet shows how to add your reducers,
     yield put({ type: TODOS_RECEIVED, todos })
   }
 
-
   // Combine all your redux concerns
 
   // app root saga
   function *appRootSaga() {
     yield takeEvery(TODOS_FETCH, fetchTodos)
   }
-```
-1. Create the store passing with reducers and sagas
+  ```
 
-```javascript
-// app Reducers and Sagas
-const appReducers = { todos: todosReducer }
-const appSagas = [appRootSaga]
+1. Create the store passing in reducers and sagas
 
-const store = generateStore({
-  drizzleOptions,
-  appReducers,
-  appSagas
-})
+  ```javascript
+  // app Reducers and Sagas
+  const appReducers = { todos: todosReducer }
+  const appSagas = [appRootSaga]
 
-export default store
-```
+  const store = generateStore({
+    drizzleOptions,
+    appReducers,
+    appSagas
+  })
+
+  export default store
+  ```
