@@ -16,7 +16,7 @@ $(document).ready(function() {
     return subnav.removeClass('scroll');
   });
 
-  $('.subnav .scroll-link').click(function(event) {
+  $('.scroll-link').click(function(event) {
     event.preventDefault();
 
     const target = $(this.hash);
