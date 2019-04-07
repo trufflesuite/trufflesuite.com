@@ -135,7 +135,7 @@ Redux store that you can use anywhere you can use a store. We will export it to
 be used by `DrizzleProvider`.
 
 ```js
-const appMiddlewares = [ contractEventNotifier, contractErrorNotifier ]
+const appMiddlewares = [ contractEventNotifier ]
 
 export default generateStore({
   drizzleOptions,
