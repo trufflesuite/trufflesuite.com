@@ -29,7 +29,7 @@ The website structure and styling will be supplied. **Our job is to write the sm
 
 There are a few technical requirements before we start. Please install the following:
 
-*   [Node.js v6+ LTS and npm](https://nodejs.org/en/) (comes with Node)
+*   [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
 *   [Git](https://git-scm.com/)
 
 Once we have those installed, we only need one command to install Truffle:
@@ -73,7 +73,7 @@ The default Truffle directory structure contains the following:
 * `contracts/`: Contains the [Solidity](https://solidity.readthedocs.io/) source files for our smart contracts. There is an important contract in here called `Migrations.sol`, which we'll talk about later.
 * `migrations/`: Truffle uses a migration system to handle smart contract deployments. A migration is an additional special smart contract that keeps track of changes.
 * `test/`: Contains both JavaScript and Solidity tests for our smart contracts
-* `truffle.js`: Truffle configuration file
+* `truffle-config.js`: Truffle configuration file
 
 The `pet-shop` Truffle Box has extra files and folders in it, but we won't worry about those just yet.
 
@@ -168,8 +168,6 @@ Things to notice:
 
 Now that we have written our smart contract, the next steps are to compile and migrate it.
 
-Truffle has a built-in developer console, which we call Truffle Develop, which generates a development blockchain that we can use to test deploy contracts. It also has the ability to run Truffle commands directly from the console. We will use Truffle Develop to perform most of the actions on our contract in this tutorial.
-
 ### Compilation
 
 Solidity is a compiled language, meaning we need to compile our Solidity to bytecode for the Ethereum Virtual Machine (EVM) to execute. Think of it as translating our human-readable Solidity into something the EVM understands.
@@ -187,9 +185,13 @@ Solidity is a compiled language, meaning we need to compile our Solidity to byte
    You should see output similar to the following:
 
    ```shell
-   Compiling ./contracts/Migrations.sol...
-   Compiling ./contracts/Adoption.sol...
-   Writing artifacts to ./build/contracts
+   Compiling your contracts...
+   ===========================
+   > Compiling ./contracts/Adoption.sol
+   > Compiling ./contracts/Migrations.sol
+   > Artifacts written to /Users/cruzmolina/Code/truffle-projects/metacoin/build/contracts
+   > Compiled successfully using:
+      - solc: 0.5.0+commit.1d4f565a.Emscripten.clang
    ```
 
 ### Migration
@@ -387,10 +389,12 @@ Note the **memory** attribute on `adopters`. The memory attribute tells Solidity
    ```shell
    Using network 'development'.
 
-   Compiling ./contracts/Adoption.sol...
-   Compiling ./test/TestAdoption.sol...
-   Compiling truffle/Assert.sol...
-   Compiling truffle/DeployedAddresses.sol...
+   Compiling your contracts...
+   ===========================
+   > Compiling ./test/TestAdoption.sol
+   > Artifacts written to /var/folders/z3/v0sd04ys11q2sh8tq38mz30c0000gn/T/test-11934-19747-g49sra.0ncrr
+   > Compiled successfully using:
+      - solc: 0.5.0+commit.1d4f565a.Emscripten.clang
 
      TestAdoption
        ✓ testUserCanAdoptPet (91ms)
@@ -560,20 +564,18 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
 1. Install MetaMask in your browser.
 
-1. Once installed, you'll see the MetaMask fox icon next to your address bar. Click the icon and you'll see this screen appear:
+1. Once installed, a tab in your browser should open displaying the following:
 
-   ![Privacy Notice](/img/tutorials/pet-shop/metamask-privacy.png "Privacy Notice")
+   ![Welcome to MetaMask](/img/tutorials/pet-shop/metamask-welcome.png "Welcome to MetaMask")
 
-1. Click Accept to accept the Privacy Notice.
-
-1. Then you'll see the Terms of Use. Read them, scrolling to the bottom, and then click **Accept** there too.
-
-   ![Terms](/img/tutorials/pet-shop/metamask-terms.png "Terms of Use")
-
-1. Now you'll see the initial MetaMask screen. Click **Import Existing DEN**.
+1. After clicking **Getting Started**, you should see the initial MetaMask screen. Click **Import Wallet**.
 
    ![Initial screen](/img/tutorials/pet-shop/metamask-initial.png "MetaMask initial screen")
+   
+1. Next, you should see a screen requesting anonymous analytics. Choose to decline or agree.
 
+   ![Improve MetaMask](/img/tutorials/pet-shop/metamask-analytics.png "Improve MetaMask")
+   
 1. In the box marked **Wallet Seed**, enter the mnemonic that is displayed in Ganache.
 
    <p class="alert alert-danger">
@@ -583,18 +585,22 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
    Enter a password below that and click **OK**.
 
    ![MetaMask seed phrase](/img/tutorials/pet-shop/metamask-seed.png "MetaMask seed phrase")
+   
+1. If all goes well, MetaMask should display the following screen. Click **All Done**.
+
+   ![Congratulations](/img/tutorials/pet-shop/metamask-congratulations.png "Congratulations")
 
 1. Now we need to connect MetaMask to the blockchain created by Ganache. Click the menu that shows "Main Network" and select **Custom RPC**.
 
    ![MetaMask network menu](/img/tutorials/pet-shop/metamask-networkmenu.png "MetaMask network menu")
 
-1. In the box titled "New RPC URL" enter `http://127.0.0.1:7545` and click **Save**.
+1. In the box titled "New Network" enter `http://127.0.0.1:7545` and click **Save**.
 
    ![MetaMask Custom RPC](/img/tutorials/pet-shop/metamask-customrpc.png "MetaMask Custom RPC")
 
-   The network name at the top will switch to say "Private Network".
+   The network name at the top will switch to say `http://127.0.0.1:7545`.
 
-1. Click the left-pointing arrow next to "Settings" to close out of the page and return to the Accounts page.
+1. Click the top-right X to close out of Settings and return to the Accounts page.
 
    Each account created by Ganache is given 100 ether. You'll notice it's slightly less on the first account because some gas was used when the contract itself was deployed and when the tests were run.
 
@@ -640,6 +646,10 @@ We can now start a local web server and use the dapp. We're using the `lite-serv
    The dev server will launch and automatically open a new browser tab containing your dapp.
 
    ![Pete's Pet Shop](/img/tutorials/pet-shop/dapp.png "Pete's Pet Shop")
+   
+1. A MetaMask pop-up should appear requesting your approval to allow Pete's Pet Shop to connect to your MetaMask wallet. Without explicit approval, you will be unable to interact with the dapp. Click **Connect**.
+
+   ![MetaMask approval request](/img/tutorials/pet-shop/metamask-transactionconfirm.png "MetaMask approval request")
 
 1. To use the dapp, click the **Adopt** button on the pet of your choice.
 
