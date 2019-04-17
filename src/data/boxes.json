@@ -89,6 +89,16 @@
     "stars": 1,
     "tags": ["partner"]
   },
+  "drizzle-kaleido-box": {
+    "description": "Truffle box to get up and running quickly with Drizzle & Truffle on a Kaleido chain.",
+    "stars": 0,
+    "tags": ["partner", "drizzle", "kaleido", "react", "truffle", "truffle-box"]
+  },
+  "truffle-kaleido-box": {
+    "description": "Truffle Box that comes ready to go with appropriate versions and config to connect to Kaleido chains.",
+    "stars": 0,
+    "tags": ["partner", "kaleido", "truffle", "truffle-box"]
+  },
   "angulartruffledapp": {
     "description": "This Trufflebox provides a base for Truffle Framework and Angular ÐAPP. and you can make transactions between accounts",
     "stars": 0,
@@ -108,11 +118,6 @@
     "description": "",
     "stars": 10,
     "tags": ["community"]
-  },
-  "drizzle-kaleido-box": {
-    "description": "Truffle box to get up and running quickly with Drizzle & Truffle on a Kaleido chain.",
-    "stars": 0,
-    "tags": ["community", "drizzle", "kaleido", "react", "truffle", "truffle-box"]
   },
   "etherplate": {
     "description": " 🔗 Use this to make your next Ethereum DApp w/ React (&amp; Router), Redux, Bulma &amp; OpenZeppelin ERC721",
@@ -178,11 +183,6 @@
     "description": "Truffle box for quick integration with Travis CI and Coveralls",
     "stars": 2,
     "tags": ["community", "truffle-box", "solidity", "travis-ci", "coveralls", "solidity-coverage"]
-  },
-  "truffle-kaleido-box": {
-    "description": "Truffle Box that comes ready to go with appropriate versions and config to connect to Kaleido chains.",
-    "stars": 0,
-    "tags": ["community", "kaleido", "truffle", "truffle-box"]
   },
   "truffle-create-react-app": {
     "description": "Basic integration of truffle and React front-end based on the create-react-app without resorting to the 'reject' mode.",
