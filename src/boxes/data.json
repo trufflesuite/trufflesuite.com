@@ -19,12 +19,6 @@
   },
   {
     "userOrg": "truffle-box",
-    "displayName": "react-auth",
-    "repoName": "react-auth-box",
-    "official": true
-  },
-  {
-    "userOrg": "truffle-box",
     "displayName": "react-uport",
     "repoName": "react-uport-box",
     "official": true
@@ -138,6 +132,12 @@
     "official": false
   },
   {
+    "userOrg": "kaleido-io",
+    "displayName": "drizzle-kaleido-box",
+    "repoName": "drizzle-kaleido-box",
+    "official": false
+  },
+  {
     "userOrg": "chuckbergeron",
     "displayName": "etherplate",
     "repoName": "etherplate",
@@ -219,6 +219,12 @@
     "userOrg": "Charterhouse",
     "displayName": "truffle-create-react-app",
     "repoName": "truffle-create-react-app",
+    "official": false
+  },
+  {
+    "userOrg": "kaleido-io",
+    "displayName": "truffle-kaleido-box",
+    "repoName": "truffle-kaleido-box",
     "official": false
   },
   {
