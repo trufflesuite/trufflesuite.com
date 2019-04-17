@@ -42,6 +42,10 @@
   background-color: #F7A34E;
 }
 
+.banner-green {
+  background-color: #3fe0c5;
+}
+
 // "Like the Taste"
 
 .banner-taste {
@@ -105,5 +109,21 @@
 
   @media (max-width: 991.98px) {
     
+  }
+}
+
+.banner-trufflecon {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+
+  a {
+    text-decoration: none;
+    color: #58484e;
+
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
   }
 }
