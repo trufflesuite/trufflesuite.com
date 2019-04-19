@@ -137,10 +137,11 @@
       display: none;
     }
   }
+  
   img:last-of-type {
     position: absolute;
     right: 0px;
-    top: -30px;
+    top: -30 px;
     height: 100px; 
      
     @media (max-width:1085px) {
