@@ -126,4 +126,25 @@
       text-decoration: none;
     }
   }
+
+  img:first-of-type {
+    position: absolute;
+    left: 0px;
+    top: -35px;
+    height: 100px;
+    
+    @media (max-width:1085px) {
+      display: none;
+    }
+  }
+  img:last-of-type {
+    position: absolute;
+    right: 0px;
+    top: -30px;
+    height: 100px; 
+     
+    @media (max-width:1085px) {
+      display: none;
+    }
+  }
 }
