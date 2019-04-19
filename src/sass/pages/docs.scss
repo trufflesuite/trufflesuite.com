@@ -152,6 +152,20 @@
   padding: 2rem 4rem;
   z-index: 199;
 
+  .banner-trufflecon {
+    margin: -2rem -4rem 2rem -4rem;
+
+    img:first-of-type {
+      top: -67px;
+      left: -100px; 
+    }
+
+    img:last-of-type {
+      top: -79px;
+      right: -70px;
+    }
+  }
+
   h1, h2, h3, h4, h5, h6 {
     margin-top: 2rem;
     margin-bottom: 1rem;
