@@ -10,8 +10,8 @@ It is highly recommended you read our [tutorial on building a dapp on Quorum](/t
 Both the tutorial and this page have been updated for *at least* version `5.0.9` of `truffle`.
 
 ## Known Issues
-- Quorum support was completely broken in version `5.0.0`, and basic support was restored in `5.0.9`. Make sure you atleast have `5.0.9`
-- The privacy support (via `privateFor`) is still broken in version `5` of Truffle. You must use version `4` (`npm i -g truffle@v4`).
+- Quorum support was completely broken in version `5.0.0`, and basic support was restored in `5.0.9`. Make sure you have at least `5.0.9`.
+- Privacy support (via `privateFor`) has been restored in `5.0.14`. You must use at least `5.0.14` or `v4` (`npm i -g truffle@v4`) to use privacy features.
 
 ## Configuration
 To use Quorum, you must modify your network in `truffle-config.js` to include a parameter `type` set to `"quorum"`. See the example below.
@@ -30,7 +30,7 @@ module.exports = {
 ```
 
 ## Using Privacy Features
-Unfortunately, the privacy features are still not working in version `5` of Truffle. However, they still work in version `4`.
+Privacy features have been restored in Truffle `5.0.14`. They are also available in `v4`.
 
 Please refer to the [Quorum tutorial](/tutorials/building-dapps-for-quorum-private-enterprise-blockchains) to learn more about how to use the privacy features within Quorum. Here are some quick references for privacy within the tutorial:
 - [Deploying contracts privately](/tutorials/building-dapps-for-quorum-private-enterprise-blockchains#deploying-smart-contracts-on-quorum)
