@@ -1,4 +1,11 @@
 {
+  "how-to-get-your-boss-to-send-you-to-trufflecon": {
+    "title": "How to get your boss to send you to TruffleCon",
+    "date": "2019-5-6",
+    "author": "Liz Daldalian",
+    "published": true,
+    "excerpt": "Last year Truffle Suite launched TruffleCon, an event designed for the Truffle community and those interested in building world-changing applications powered by decentralized technologies. The event was received with an overwhelmingly positive response."
+  },
   "truffle-v5-has-arrived": {
     "title": "Truffle v5 has arrived!",
     "date": "2018-12-18",
