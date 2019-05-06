@@ -314,6 +314,26 @@ module.exports = {
 ```
 Specify `properties` and/or `fileProperties`, and Truffle will look for those values when building the artifacts.
 
+To override the working directory for all specified paths and running commands, use the `workingDirectory` option.
+For instance, the following will run `./proj/compile-contracts` and read `./proj/output/contract.abi`:
+```javascript
+module.exports = {
+  compilers: {
+    external: {
+      command: "./compile-contracts",
+      workingDirectory: "./proj",
+      targets: [{
+        fileProperties: {
+          abi: "./output/contract.abi",
+          bytecode: "./output/contract.bytecode",
+        }
+      }]
+    }
+  }
+}
+```
+
+
 ## plugins
 
 <p class="alert alert-warning">
