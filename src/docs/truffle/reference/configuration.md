@@ -105,7 +105,7 @@ The following network list consists of a local test network and an Infura-hosted
 networks: {
   ropsten: {
     provider: function() {
-      return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/");
+      return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/YOUR-PROJECT-ID");
     },
     network_id: '3',
   },
