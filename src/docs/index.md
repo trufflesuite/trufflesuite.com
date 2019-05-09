@@ -1,5 +1,6 @@
 ---
 layout: docs.hbs
+social-description: Guides to using Truffle, Ganache and Drizzle including quickstart guides, testing instructions, platform commands, deployment and more.
 ---
 # Documentation
 

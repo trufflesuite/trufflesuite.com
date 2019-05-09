@@ -2,10 +2,12 @@
 <html>
 <head>
   {{> ga-tag-head}}
-
+  
   <meta charset="utf-8">
+  <meta name="description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}">
+  {{#if keywords}}<meta name="keywords" content="{{ keywords }}">{{/if}}
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+  
   <!-- Favicon -->
   <link rel="icon" href="/img/favicons/favicon.ico">
 
@@ -27,7 +29,7 @@
   <!-- Facebook OpenGraph -->
   <meta property="og:site_name" content="Truffle Suite" />
   <meta property="og:description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}" />
-  <meta property="og:title" content="Truffle Suite | Blog | {{getMetadata "blog" path.name "title"}}" />
+  <meta property="og:title" content="Truffle Suite | Tutorials | {{getMetadata "tutorials" path.name "title"}}" />
   <meta property="og:url" content="{{getPageUrl path}}" />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="https://truffleframework.com/img/favicons/truffle-share.png" />
@@ -35,7 +37,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="Truffle Suite" />
-  <meta name="twitter:title" content="Truffle Suite | Blog | {{getMetadata "blog" path.name "title"}}" />
+  <meta name="twitter:title" content="Truffle Suite | Tutorials | {{getMetadata "tutorials" path.name "title"}}" />
   <meta name="twitter:description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}" />
   <meta name="twitter:creator" content="Truffle Suite" />
   <meta name="twitter:domain" content="trufflesuite.com" />
@@ -43,7 +45,7 @@
   
   <meta name="google-site-verification" content="BSgPkMHzw7IxJTpEElNfD8ZZYPzXgOQiTVPzAxAG8-o" />
     
-  <title>Truffle Suite | Blog | {{getMetadata "blog" path.name "title"}}</title>
+  <title>Truffle Suite | Tutorials | {{getMetadata "tutorials" path.name "title"}}</title>
 
   <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans|Oswald|Varela+Round|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
@@ -57,10 +59,10 @@
   <main class="container container-heading container-narrow">
     <div class="row">
       <div class="col">
-        <h1>{{getMetadata "blog" path.name "title"}}</h1>
+        <h1>{{getMetadata "tutorials" path.name "title"}}</h1>
         <ul class="list-sm-stacker space-icon mb-0">
-          <li><i class="far fa-calendar-alt"></i> {{getMetadata "blog" path.name "date"}}&nbsp;&nbsp;&nbsp;</li>
-          <li><i class="far fa-user"></i> {{getMetadata "blog" path.name "author"}}</li>
+          <li><i class="far fa-calendar-alt"></i> {{getMetadata "tutorials" path.name "date"}}&nbsp;&nbsp;&nbsp;</li>
+          <li><i class="far fa-user"></i> {{getMetadata "tutorials" path.name "author"}}</li>
         </ul>
       </div>
     </div>

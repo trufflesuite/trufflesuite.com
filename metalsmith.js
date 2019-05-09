@@ -59,15 +59,15 @@ function app(clean) {
     renderer: require('./renderers/markdown.js')
   }))
   .use(layouts({
-    "default": "single-post.hbs",
+    "default": "blog-post-single.hbs",
     "pattern": "blog/*.html"
   }))
   .use(layouts({
-    "default": "single-career.hbs",
+    "default": "career-single.hbs",
     "pattern": "careers/*.html"
   }))
   .use(layouts({
-    "default": "single-tutorial.hbs",
+    "default": "tutorial-single.hbs",
     "pattern": "tutorials/*.html"
   }))
   .use(layouts())
