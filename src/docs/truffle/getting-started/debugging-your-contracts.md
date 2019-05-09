@@ -112,9 +112,9 @@ This command will add a watch on a provided expression, based on the following s
 
 This command will remove a watch expression, based on the following syntax: `-:<expression>`.
 
-### (?) list existing watch expressions
+### (?) list existing watch expressions and breakpoints
 
-This command will display a list all the current watch expressions.
+This command will display a list of all the current watch expressions and breakpoints.
 
 ### (v) display variables
 
