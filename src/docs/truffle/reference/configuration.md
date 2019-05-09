@@ -181,6 +181,25 @@ module.exports = {
 
 Absolute paths will also work. This is not recommended though, as an absolute path may not exist when compiled on another system. If you use absolute paths on Windows, make sure to use double backslashes for paths (example: `C:\\Users\\Username\\output`).
 
+### migrations_directory
+The default migrations directory is `./migrations` relative to the project root. This can be changed with the `migrations_directory` key.
+
+ Example:
+
+```javascript
+module.exports = {
+  migrations_directory: "./allMyStuff/someStuff/theMigrationsFolder",
+  networks: {
+    development: {
+      host: "127.0.0.1",
+      port: 8545,
+      network_id: "*",
+    }
+  }
+};
+```
+
+
 ### mocha
 
 Configuration options for the [MochaJS](http://mochajs.org/) testing framework. This configuration expects an object as detailed in Mocha's [documentation](https://github.com/mochajs/mocha/wiki/Using-mocha-programmatically#set-options).
