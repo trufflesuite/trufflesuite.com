@@ -34,6 +34,14 @@ $ truffle debug 0x8e5dadfb921ddddfa8f53af1f9bd8beeac6838d52d7e0c2fe5085b42a4f3ca
 
 This will launch the debugging interface described below.
 
+If you simply want to open the debugger to get it ready, so that you can debug a transaction later, you can also simply run:
+
+```
+$ truffle debug
+```
+
+Regardless of how you start the debugger, once it is running you are not limited to debugging only the transaction you launched it with; it is possible to unload the current transaction and load a new one, as described below.
+
 ## Debugging interface
 
 Starting the debugger will open an interface familiar to those that have debugged other types of applications. When it starts, you'll see the following:
@@ -64,6 +72,8 @@ This command steps to the next logical statement or expression in the source cod
 
 This command allows you to step through each individual instruction evaluated by the virtual machine. This is useful if you're interested in understanding the low level bytecode created by the Solidity source code. When you use this command, the debugger will also print out the stack data at the time the instruction was evaluated.
 
+You can also use this command with a numerical argument, to step that many times.
+
 ### (p) print instruction
 
 This commands prints the current instruction and stack data, but does not step to the next instruction. Use this when you'd like to see the current instruction and stack data after navigating through the transaction with the logical commands described above.
@@ -84,6 +94,8 @@ Reset the debugger to the beginning of the transaction.
 
 This command allows you to set breakpoints for any line in any of your source files (see [examples](#adding-and-removing-breakpoints) below).  These can be given by line number; by relative line number; by line number in a specified source file; or one may simply add a breakpoint at the current point in the code.
 
+You don't need a transaction loaded to set breakpoints, although in that case you will have to specify which source file you mean to set it in.
+
 ### (B) remove a breakpoint
 
 This command allows you to remove any of your existing breakpoints, with the same syntax as for adding them (see [example](#adding-and-removing-breakpoints) below).  Type `B all` to remove all breakpoints.
@@ -100,13 +112,21 @@ This command will add a watch on a provided expression, based on the following s
 
 This command will remove a watch expression, based on the following syntax: `-:<expression>`.
 
-### (?) list existing watch expressions
+### (?) list existing watch expressions and breakpoints
 
-This command will display a list all the current watch expressions.
+This command will display a list of all the current watch expressions and breakpoints.
 
 ### (v) display variables
 
-This command will display the current variables and their values.  Not all types of data are supported yet.
+This command will display the current variables and their values.
+
+### (T) unload transaction
+
+This command unloads the current transaction so you can load a new one.
+
+### (t) load transaction
+
+This command loads a new transaction (given by its transaction hash).  Note that if you already have a transaction loaded, you must first explicitly unload it before you can load a new one.
 
 ## Adding and removing breakpoints
 
