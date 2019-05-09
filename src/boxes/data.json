@@ -19,12 +19,6 @@
   },
   {
     "userOrg": "truffle-box",
-    "displayName": "react-uport",
-    "repoName": "react-uport-box",
-    "official": true
-  },
-  {
-    "userOrg": "truffle-box",
     "displayName": "pet-shop",
     "repoName": "pet-shop-box",
     "official": true
@@ -201,6 +195,12 @@
     "userOrg": "hackingbeauty",
     "displayName": "react-dapp-boilerplate",
     "repoName": "react-dapp-boilerplate",
+    "official": false
+  },
+  {
+    "userOrg": "uport-project",
+    "displayName": "react-uport-box",
+    "repoName": "react-uport-box",
     "official": false
   },
   {

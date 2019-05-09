@@ -72,7 +72,7 @@ The next step is to edit your `truffle-config.js` file to use `HDWalletProvider`
 
    * The `HDWalletProvider` takes as arguments a mnemonic and the desired network. A list of Infura-supported networks is available on the [Infura homepage](https://infura.io/).
 
-   * Make sure to replace `<INFURA_Access_Token>` with the Infura Access Token you were granted above.
+   * Make sure to replace `<INFURA_PROJECT_ID>` with your Infura Project ID.
 
    * The `provider` value is wrapped in a function, which ensures that it won't get initialized until it's needed. This is especially important if connecting to multiple networks. (See the [Networks configuration](http://truffleframework.com/docs/advanced/configuration#networks) section of the documentation for more on this topic.)
 
