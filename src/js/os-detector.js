@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
-  var button = document.querySelectorAll('.btn-ganache');
-  var buttonImage = document.querySelectorAll('.btn-ganache img');
-  var buttonText = document.querySelectorAll('.btn-ganache .os');
+  var button = document.querySelectorAll('.dl-ganache');
+  var buttonImage = document.querySelectorAll('.dl-ganache img');
+  var buttonText = document.querySelectorAll('.dl-ganache .os');
 
   var isWindows = window.navigator.userAgent.indexOf('Windows') != -1;
   var isMac = window.navigator.userAgent.indexOf('Mac') != -1;
