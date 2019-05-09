@@ -1,22 +1,12 @@
 [
   {
-    "title": "Building Blockchain Solutions for the Enterprise with Truffle",
-    "start": "Tues, Mar 12, 2019, 4:00",
-    "end": "4:45 PM GMT",
-    "location": "Webinar",
-    "excerpt": "Join Truffle's Ben Burns, Head of Blockchain Services, and Kevin Bluer, Head of Content & Training, in this complimentary webinar on building blockchain solutions for the enterprise. In the session, we'll explore the components of Truffle Suite itself, the range of enterprise services and integrations you can leverage, and how to train both yourself and your development teams on succeeding with this disruptive technology.",
-    "eventbrite": "/events/webinar-enterprise-solutions",
+    "title": "TruffleCon 2019",
+    "start": "Friday, Aug 2, 2019, 9:00 AM PST",
+    "end": "Sunday, Aug 4, 2019, 6:00 PM PST",
+    "location": "Microsoft Building 33 | 16070 NE 36th Way, Redmond, WA 98052",
+    "excerpt": "TruffleCon is a gathering for Truffle users, fans, developers, and those who want to build world-changing applications powered by decentralized technologies. Join people from around the world as we meet August 2-4 in Redmond, WA to build community and foster connections in the blockchain developer space, share tips and tricks, challenges and successes.",
+    "eventbrite": "/trufflecon2019",
     "status": "open",
-    "image": "/img/truffle-webinar-1.jpeg"
-  },
-  {
-    "title": "Rice Blockchain and Truffle: Build Your First Decentralized App",
-    "start": "Thurs, Mar 21, 2019, 5:00",
-    "end": "8:00 PM CST",
-    "location": "Liu Idea Lab | Cambridge Building | Rice University | Houston | TX | United States",
-    "excerpt": "Join Rice Blockchain and Truffle's Kevin Bluer for an evening building a decentralized application. We'll dive into all the core aspects of building a DApp: tooling, workflow, testing, debugging, and deployment. No prior experience with blockchain development is required.",
-    "eventbrite": "http://bit.ly/dappworkshop",
-    "status": "open",
-    "image": "/img/rice-university.jpg"
+    "image": "/img/trufflecon.jpg"
   }
 ]

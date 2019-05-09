@@ -14,16 +14,6 @@
     "stars": 379,
     "tags": ["official", "ethereum", "ethereumjs", "truffle", "webpack", "react", "solidity"]
   },
-  "react-auth-box": {
-    "description": "Truffle, Webpack, React, Redux boilerplate with routing and authentication via a smart contract.",
-    "stars": 171,
-    "tags": ["official", "ethereum", "ethereumjs", "react", "redux", "webpack", "truffle", "solidity"]
-  },
-  "react-uport-box": {
-    "description": "Truffle, Webpack, React, Redux boilerplate with routing and authentication via a UPort.",
-    "stars": 98,
-    "tags": ["official", "react", "redux", "truffle", "webpack", "solidity", "ethereum", "ethereumjs", "uport-identity"]
-  },
   "pet-shop-box": {
     "description": "A box containing all you need to get started with our Pet Shop tutorial.",
     "stars": 108,
@@ -94,6 +84,21 @@
     "stars": 1,
     "tags": ["partner"]
   },
+  "drizzle-kaleido-box": {
+    "description": "Truffle box to get up and running quickly with Drizzle & Truffle on a Kaleido chain.",
+    "stars": 0,
+    "tags": ["partner", "drizzle", "kaleido", "react", "truffle", "truffle-box"]
+  },
+  "truffle-kaleido-box": {
+    "description": "Truffle Box that comes ready to go with appropriate versions and config to connect to Kaleido chains.",
+    "stars": 0,
+    "tags": ["partner", "kaleido", "truffle", "truffle-box"]
+  },
+  "angulartruffledapp": {
+    "description": "This Trufflebox provides a base for Truffle Framework and Angular ÐAPP. and you can make transactions between accounts",
+    "stars": 0,
+    "tags": ["community"]
+  },
   "angular-truffle-box": {
     "description": "Truffle Box for Angular is a quick-and-easy way to get your Dapp on the road with Truffle and Angular",
     "stars": 49,
@@ -158,6 +163,11 @@
     "description": "A superior UI setup for Ethereum Smart Contracts.  Check out www.reactdapps.com!",
     "stars": 24,
     "tags": ["community"]
+  },
+  "react-uport-box": {
+    "description": "Truffle and React/Redux boilerplate with uPort Connect",
+    "stars": 4,
+    "tags": ["community", "identity", "react", "uport"]
   },
   "scoreboard": {
     "description": "",
@@ -233,5 +243,10 @@
     "description": "A truffle box that comes with everything you need to start using smart contracts from a Vue App, with Bootstrap styling and components. Supporting frameworks include Vuex, Vue-Router, Bootstrap 4 (via Bootstrap-Vue), and webpack. The sample uses webpack-dev-server for hot-reloading or you can build and serve from Express.",
     "stars": 13,
     "tags": ["community", "blockchain", "truffle-box", "solidity-contracts", "vue", "vue-bootstrap", "webpack-boilerplate"]
+  },
+  "vueport-box": {
+    "description": "Truffle box with built in uPort self-sovereign identity authentication and contract interaction using VueJS. Inspired by https://github.com/truffle-box/react-uport-box",
+    "stars": 4,
+    "tags": ["community"]
   }
 }

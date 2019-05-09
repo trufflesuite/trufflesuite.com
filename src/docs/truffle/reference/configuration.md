@@ -105,7 +105,7 @@ The following network list consists of a local test network and an Infura-hosted
 networks: {
   ropsten: {
     provider: function() {
-      return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/");
+      return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/YOUR-PROJECT-ID");
     },
     network_id: '3',
   },
@@ -180,6 +180,25 @@ module.exports = {
 ```
 
 Absolute paths will also work. This is not recommended though, as an absolute path may not exist when compiled on another system. If you use absolute paths on Windows, make sure to use double backslashes for paths (example: `C:\\Users\\Username\\output`).
+
+### migrations_directory
+The default migrations directory is `./migrations` relative to the project root. This can be changed with the `migrations_directory` key.
+
+ Example:
+
+```javascript
+module.exports = {
+  migrations_directory: "./allMyStuff/someStuff/theMigrationsFolder",
+  networks: {
+    development: {
+      host: "127.0.0.1",
+      port: 8545,
+      network_id: "*",
+    }
+  }
+};
+```
+
 
 ### mocha
 
@@ -313,6 +332,26 @@ module.exports = {
 }
 ```
 Specify `properties` and/or `fileProperties`, and Truffle will look for those values when building the artifacts.
+
+To override the working directory for all specified paths and running commands, use the `workingDirectory` option.
+For instance, the following will run `./proj/compile-contracts` and read `./proj/output/contract.abi`:
+```javascript
+module.exports = {
+  compilers: {
+    external: {
+      command: "./compile-contracts",
+      workingDirectory: "./proj",
+      targets: [{
+        fileProperties: {
+          abi: "./output/contract.abi",
+          bytecode: "./output/contract.bytecode",
+        }
+      }]
+    }
+  }
+}
+```
+
 
 ## plugins
 

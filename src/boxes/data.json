@@ -19,18 +19,6 @@
   },
   {
     "userOrg": "truffle-box",
-    "displayName": "react-auth",
-    "repoName": "react-auth-box",
-    "official": true
-  },
-  {
-    "userOrg": "truffle-box",
-    "displayName": "react-uport",
-    "repoName": "react-uport-box",
-    "official": true
-  },
-  {
-    "userOrg": "truffle-box",
     "displayName": "pet-shop",
     "repoName": "pet-shop-box",
     "official": true
@@ -114,6 +102,24 @@
     "official": true
   },
   {
+    "userOrg": "kaleido-io",
+    "displayName": "drizzle-kaleido-box",
+    "repoName": "drizzle-kaleido-box",
+    "official": false
+  },
+  {
+    "userOrg": "kaleido-io",
+    "displayName": "truffle-kaleido-box",
+    "repoName": "truffle-kaleido-box",
+    "official": false
+  },
+  {
+    "userOrg": "ng-es",
+    "displayName": "AngularTruffleDapp",
+    "repoName": "angulartruffledapp",
+    "official": false
+  },
+  {
     "userOrg": "Quintor",
     "displayName": "angular-truffle-box",
     "repoName": "angular-truffle-box",
@@ -189,6 +195,12 @@
     "userOrg": "hackingbeauty",
     "displayName": "react-dapp-boilerplate",
     "repoName": "react-dapp-boilerplate",
+    "official": false
+  },
+  {
+    "userOrg": "uport-project",
+    "displayName": "react-uport-box",
+    "repoName": "react-uport-box",
     "official": false
   },
   {
@@ -279,6 +291,12 @@
     "userOrg": "kierenh",
     "displayName": "vue-dark-chocolate",
     "repoName": "vue-dark-chocolate",
+    "official": false
+  },
+  {
+    "userOrg": "saga-foundation",
+    "displayName": "vueport-box",
+    "repoName": "vueport-box",
     "official": false
   }
 ]

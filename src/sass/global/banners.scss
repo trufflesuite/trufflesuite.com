@@ -25,8 +25,25 @@
   color: #5e464d;
 }
 
+.banner-white-choc {
+  color: #5e464d;
+  background-color: #fff;
+}
+
 .banner-milk-choc {
   background-color: #5e464d;
+}
+
+.banner-bright-pink {
+  background-color: #CA37AE;
+}
+
+.banner-burnt-orange {
+  background-color: #F7A34E;
+}
+
+.banner-green {
+  background-color: #3fe0c5;
 }
 
 // "Like the Taste"
@@ -92,5 +109,43 @@
 
   @media (max-width: 991.98px) {
     
+  }
+}
+
+.banner-trufflecon {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+
+  a {
+    text-decoration: none;
+    color: #58484e;
+
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  img:first-of-type {
+    position: absolute;
+    left: 0px;
+    top: -35px;
+    height: 100px;
+    
+    @media (max-width:1085px) {
+      display: none;
+    }
+  }
+
+  img:last-of-type {
+    position: absolute;
+    right: 0px;
+    top: -30px;
+    height: 100px; 
+     
+    @media (max-width:1085px) {
+      display: none;
+    }
   }
 }

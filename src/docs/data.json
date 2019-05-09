@@ -11,7 +11,8 @@
       "Package Management via NPM",
       "Debugging Your Contracts",
       "Using Truffle Develop and The Console",
-      "Writing External Scripts"
+      "Writing External Scripts",
+      "Working With Quorum"
     ],
     "Testing": [
       "Testing Your Contracts",
@@ -32,10 +33,28 @@
     ]
   },
   "ganache": {
+    "Workspaces": [
+      "The Quickstart Workspace",
+      "Creating Workspaces",
+      "Loading Existing Workspaces",
+      "Switching Workspaces",
+      "Deleting Workspaces"
+    ],
+    "Truffle Projects": [
+      "Linking a Truffle Project",
+      "Unlinking a Truffle Project",
+      "Contracts Page",
+      "Events Page",
+      "Decoded Transactions"
+    ],
+    "Reference": [
+      "Ganache Settings",
+      "Workspace Default Configuration"
+    ]
   },
   "drizzle": {
     "Getting Started": [
-      "Using an Existing Redux Store",
+      "Using Drizzle's Redux Store",
       "Contract Interaction"
     ],
     "React": [

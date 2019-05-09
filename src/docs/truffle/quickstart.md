@@ -73,7 +73,7 @@ Once this operation is completed, you'll now have a project structure with the f
 
 1. Open the `test/metacoin.js` file. This is a [test file written in JavaScript](/docs/truffle/testing/writing-tests-in-javascript) which performs a similar function to the Solidity test above.
 
-1. Open the `truffle.js` file. This is the Truffle [configuration file](/docs/truffle/reference/configuration), for setting network information and other project-related settings. The file is blank, but this is okay, as we'll be using a Truffle command that has some defaults built-in.
+1. Open the `truffle-config.js` file. This is the Truffle [configuration file](/docs/truffle/reference/configuration), for setting network information and other project-related settings. The file is blank, but this is okay, as we'll be using a Truffle command that has some defaults built-in.
 
 ## Testing
 

@@ -273,11 +273,11 @@ If the default Create-React-App page loaded without any issues, you may proceed.
 
 ### Setup the store
 
-The first thing we need to do is to setup and instantiate the Drizzle store. We are going add the following 4 lines to `client/src/index.js`:
+The first thing we need to do is to setup and instantiate the Drizzle store. We are going add the following code to `client/src/index.js`:
 
 ```js
 // import drizzle functions and contract artifact
-import { Drizzle, generateStore } from "drizzle";
+import { Drizzle } from "drizzle";
 import MyStringStore from "./contracts/MyStringStore.json";
 
 // let drizzle know what contracts we want and how to access our test blockchain

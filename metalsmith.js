@@ -17,6 +17,7 @@ var siteMap = require('metalsmith-sitemap');
 // Data
 var blogData = require('./src/blog/data.json');
 var boxesData = require('./src/boxes/data.json');
+var boxesMetadata = require('./src/data/boxes.json');
 var careersData = require('./src/careers/data.json');
 var docsData = require('./src/docs/data.json');
 var eventsData = require('./src/events/data.json');
@@ -30,6 +31,7 @@ function app(clean) {
   .metadata({
     blog: blogData,
     boxes: boxesData,
+    boxMeta: boxesMetadata,
     careers: careersData,
     docs: docsData,
     events: eventsData,
