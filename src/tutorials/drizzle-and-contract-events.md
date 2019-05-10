@@ -109,7 +109,7 @@ import { toast } from 'react-toastify'
 
 ```
 
-The action `EventActions.FIRE_EVENT` is emitted whenever a contract event is
+The action `EventActions.EVENT_FIRED` is emitted whenever a contract event is
 detected in a Block. We will gain access to it by registering a custom
 middleware with the Redux store. As you know, Redux middleware comprises a set
 of functions executed in a sequence that processes each dispatched actions
