@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{> ga-tag-head}}
+  
+  <meta charset="utf-8">
+  <meta name="description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}">
+  {{#if keywords}}<meta name="keywords" content="{{ keywords }}">{{/if}}
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+  <!-- Favicon -->
+  <link rel="icon" href="/img/favicons/favicon.ico">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Truffle Suite">
+  <link rel="icon" sizes="192x192" href="/img/favicons/chrome-touch-icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Truffle Suite">
+  <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
+
+  <!-- Tile icon for Win8/10 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="img/favicons/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#3372DF">
+
+  <!-- Facebook OpenGraph -->
+  <meta property="og:site_name" content="Truffle Suite" />
+  <meta property="og:description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}" />
+  <meta property="og:title" content="Truffle Suite | Press Releases | {{getMetadata "pressReleases" path.name "title"}}" />
+  <meta property="og:url" content="{{getPageUrl path}}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://truffleframework.com/img/favicons/truffle-share.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="Truffle Suite" />
+  <meta name="twitter:title" content="Truffle Suite | Press Releases | {{getMetadata "pressReleases" path.name "title"}}" />
+  <meta name="twitter:description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}" />
+  <meta name="twitter:creator" content="Truffle Suite" />
+  <meta name="twitter:domain" content="trufflesuite.com" />
+  <meta name="twitter:image:src" content="https://truffleframework.com/img/favicons/truffle-share.png" />
+  
+  <meta name="google-site-verification" content="BSgPkMHzw7IxJTpEElNfD8ZZYPzXgOQiTVPzAxAG8-o" />
+    
+  <title>Truffle Suite | Press Releases | {{getMetadata "pressReleases" path.name "title"}}</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans|Oswald|Varela+Round|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+  {{> ga-tag-body}}
+  
+  {{> navbar}}
+
+  <main class="container container-heading container-narrow">
+    <div class="row">
+      <div class="col">
+        <h1>{{getMetadata "pressReleases" path.name "title"}}</h1>
+        <ul class="list-sm-stacker space-icon mb-0">
+          <li><i class="far fa-calendar-alt"></i> {{getMetadata "pressReleases" path.name "date"}}&nbsp;&nbsp;&nbsp;</li>
+          <li><i class="far fa-user"></i> {{getMetadata "pressReleases" path.name "author"}}</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <main class="banner banner-light-cream pt-5 pb-5" role="main">
+    <div class="container container-post">
+      <div class="row justify-content-center">
+        <div class="col">
+          {{{ contents }}}
+
+          {{> contrib-link}}
+        </div>
+      </div>
+    </div>
+  </main>
+
+  {{> footer}}
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.slim.min.js"><\/script>')</script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/vendor/prism.js"></script>
+  <script src="/js/markdown-cleanup.js"></script>
+</body>
+</html>

@@ -21,6 +21,7 @@ var boxesMetadata = require('./src/data/boxes.json');
 var careersData = require('./src/careers/data.json');
 var docsData = require('./src/docs/data.json');
 var eventsData = require('./src/events/data.json');
+var pressReleasesData = require('./src/press-releases/data.json');
 var tutorialsData = require('./src/tutorials/data.json');
 
 function app(clean) {
@@ -35,6 +36,7 @@ function app(clean) {
     careers: careersData,
     docs: docsData,
     events: eventsData,
+    pressReleases: pressReleasesData,
     tutorials: tutorialsData
   })
   .use(discoverHelpers({
@@ -60,7 +62,11 @@ function app(clean) {
   }))
   .use(layouts({
     "default": "blog-post-single.hbs",
-    "pattern": "blog/*.html"
+    "pattern": ["blog/*.html"]
+  }))
+  .use(layouts({
+    "default": "pr-single.hbs",
+    "pattern": ["press-releases/*.html"]
   }))
   .use(layouts({
     "default": "career-single.hbs",

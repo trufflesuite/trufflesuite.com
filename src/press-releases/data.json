@@ -1,0 +1,9 @@
+{
+  "example-press-release": {
+    "title": "We're in the Press!",
+    "date": "2019-05-10",
+    "author": "Tim Coulter",
+    "published": true,
+    "excerpt": "We recently released Truffle 3.0 in February to much fanfare. As part of that release we separated our codebase into multiple different modules to make integrating with Truffle easier. Those modules now live in the github repository http://github.com/trufflesuite, which hints at our broader mission of providing a comprehensive suite of tools for Ethereum development."
+  }
+}
