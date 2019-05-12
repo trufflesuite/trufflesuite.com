@@ -23,6 +23,10 @@
     transform: translateY(8rem);
   }
 
+  .link-truffle {
+    color: #3fe0c5;
+  }
+
   .triangle-br {
     position: absolute;
     background: transparent;
@@ -259,7 +263,8 @@
   border-color: transparent transparent transparent #7f9dd1;
 
   &.white {
-    border-color: transparent transparent transparent #fff;
+    border-width: 0 0 50px 100vw;
+    border-color: transparent transparent #fff transparent;
   }
 }
 
@@ -272,32 +277,33 @@
   border-color: #7f9dd1 transparent transparent transparent;
 
   &.white {
-    border-color: #fff transparent transparent transparent;
+    border-width: 0 100vw 50px 0;
+    border-color: transparent #fff transparent transparent;
   }
 }
 
 // SHADOWS
 
 .shadow-dark-chocolate {
-  -webkit-box-shadow: 7px 7px 0px 4px rgba(51,38,42,1);
-  -moz-box-shadow: 7px 7px 0px 4px rgba(51,38,42,1);
-  box-shadow: 7px 7px 0px 4px rgba(51,38,42,1);
+  -webkit-box-shadow: 12px 12px 0px 0px rgba(51,38,42,1);
+  -moz-box-shadow: 12px 12px 0px 0px rgba(51,38,42,1);
+  box-shadow: 12px 12px 0px 0px rgba(51,38,42,1);
 }
 
 .shadow-mint {
-  -webkit-box-shadow: 7px 7px 0px 4px rgba(63,224,197,1);
-  -moz-box-shadow: 7px 7px 0px 4px rgba(63,224,197,1);
-  box-shadow: 7px 7px 0px 4px rgba(63,224,197,1);
+  -webkit-box-shadow: 12px 12px 0px 0px rgba(63,224,197,1);
+  -moz-box-shadow: 12px 12px 0px 0px rgba(63,224,197,1);
+  box-shadow: 12px 12px 0px 0px rgba(63,224,197,1);
 }
 
 .shadow-periwinkle {
-  -webkit-box-shadow: 7px 7px 0px 4px rgba(127,157,209,1);
-  -moz-box-shadow: 7px 7px 0px 4px rgba(127,157,209,1);
-  box-shadow: 7px 7px 0px 4px rgba(127,157,209,1);
+  -webkit-box-shadow: 12px 12px 0px 0px rgba(127,157,209,1);
+  -moz-box-shadow: 12px 12px 0px 0px rgba(127,157,209,1);
+  box-shadow: 12px 12px 0px 0px rgba(127,157,209,1);
 }
 
 .shadow-purple {
-  -webkit-box-shadow: 7px 7px 0px 4px rgba(135,49,232,1);
-  -moz-box-shadow: 7px 7px 0px 4px rgba(135,49,232,1);
-  box-shadow: 7px 7px 0px 4px rgba(135,49,232,1);
+  -webkit-box-shadow: 12px 12px 0px 0px rgba(135,49,232,1);
+  -moz-box-shadow: 12px 12px 0px 0px rgba(135,49,232,1);
+  box-shadow: 12px 12px 0px 0px rgba(135,49,232,1);
 }
