@@ -12,9 +12,11 @@
     color: #fff;
     display: block;
     margin-top: .5rem;
+    text-decoration: underline;
 
     &:hover {
       color: #fff;
+      opacity: .8;
     }
   }
 
@@ -91,7 +93,7 @@
 
 .tt-bowtie-top, .tt-bowtie-bottom {
   margin: 0;
-  width: 100vw;
+  width: 101vw;
 }
 
 .tt-bowtie-top {
@@ -141,18 +143,30 @@
 
     &.free {
       background: #e0dad7;
+      border-radius: 0;
+      transform: skew(-2deg, -1deg);
 
       ul {
         list-style-image: url('/img/truffle-teams/checkmark-dark.png');
+      }
+
+      .card-body, .card-footer {
+        transform: skew(2deg, 1deg);
       }
     }
 
     &.premium {
       background: #e86591;
       color: #fff;
+      border-radius: 0;
+      transform: skew(0, 2deg);
 
       ul {
         list-style-image: url('/img/truffle-teams/checkmark-light.png');
+      }
+
+      .card-body, .card-footer {
+        transform: skew(0, -2deg);
       }
   
       .btn {
@@ -174,26 +188,6 @@
 
     @media (min-width: 768px) {
       min-width: 0;
-    }
-  }
-
-  &.alt {
-    .card.free {
-      border-radius: 0;
-      transform: skew(-2deg, -1deg);
-
-      .card-body, .card-footer {
-        transform: skew(2deg, 1deg);
-      }
-    }
-
-    .card.premium {
-      border-radius: 0;
-      transform: skew(0, 2deg);
-
-      .card-body, .card-footer {
-        transform: skew(0, -2deg);
-      }
     }
   }
 }

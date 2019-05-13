@@ -59,3 +59,14 @@
   background: #f6682F;
   color: #fff;
 }
+
+.btn-outline-white {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+
+  &:hover {
+    background: #fff;
+    color: #5e464d;
+  }
+}
