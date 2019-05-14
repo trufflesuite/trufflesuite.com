@@ -1,5 +1,15 @@
 [
   {
+    "title": "The Future of Blockchain Solution Development",
+    "start": "Weds, May 22, 2019, 3:00 PM ET",
+    "end": "3:45 PM ET",
+    "location": "Webinar",
+    "excerpt": "In this upcoming webinar Tim Coulter and Kevin Bluer explore the blockchain solution development landscape, specifically looking at the tools, development workflows / lifecycles, and emerging best practices. They will also review a number of the upcoming features in the Truffle Suite itself, all designed to make your development experience all the sweeter (and efficient). Note that this session assumes some pre-existing development knowledge and prior experience with Truffle.",
+    "eventbrite": "/events/webinar-truffle-future",
+    "status": "open",
+    "image": "/img/truffle-webinar-future.jpg"
+  },
+  {
     "title": "TruffleCon 2019",
     "start": "Friday, Aug 2, 2019, 9:00 AM PST",
     "end": "Sunday, Aug 4, 2019, 6:00 PM PST",
