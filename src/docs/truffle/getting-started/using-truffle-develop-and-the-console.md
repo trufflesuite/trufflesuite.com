@@ -55,7 +55,7 @@ To launch Truffle Develop:
 truffle develop
 ```
 
-This will spawn a development blockchain locally on port `9545`, regardless of what your `truffle-config.js` configuration file calls for. If you already have a `truffe develop` session running, it will instead connect to that development blockchain.
+This will spawn a development blockchain locally on port `9545`, regardless of what your `truffle-config.js` configuration file calls for. If you already have a `truffle develop` session running, it will instead connect to that development blockchain.
 
 When you load Truffle Develop, you will see the following:
 
