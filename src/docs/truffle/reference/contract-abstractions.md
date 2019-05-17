@@ -207,19 +207,26 @@ The result object that gets returned looks like this:
     // See https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethgettransactionreceipt
   },
   logs: [
-    {
-      address: "0x13274fe19c0178208bcbee397af8167a7be27f6f",
-      args: {
-        val: BigNumber(5),
-      },
-      blockHash: "0x2f0700b5d039c6ea7cdcca4309a175f97826322beb49aca891bf6ea82ce019e6",
-      blockNumber: 40,
-      event: "ValueSet",
-      logIndex: 0,
-      transactionHash: "0x6cb0bbb6466b342ed7bc4a9816f1da8b92db1ccf197c3f91914fc2c721072ebd",
+    { logIndex: 0,
       transactionIndex: 0,
-      type:"mined",
-    },
+      transactionHash: '0x728b4d1983cd00d93ae00b7adf76f78c1b32d922de636ead42e93f70cf58cdc9',
+      blockHash: '0xdce5e6c580267c9bf1d82bf0a167fa60509ef9fc520b8619d8183a8373a42035',
+      blockNumber: 19,
+      address: '0x035b8A9e427d93D178E2D22d600B779717696831',
+      type: 'mined',
+      id: 'log_70be22b0',
+      event: 'Transfer',
+      args:
+        Result {
+          '0': '0x7FEb9FAA5aED0FD547Ccc70f00C19dDe95ea54d4',
+          '1': '0x7FEb9FAA5aED0FD547Ccc70f00C19dDe95ea54d4',
+          '2': <BN: 1>,
+          __length__: 3,
+          _from: '0x7FEb9FAA5aED0FD547Ccc70f00C19dDe95ea54d4',
+          _to: '0x7FEb9FAA5aED0FD547Ccc70f00C19dDe95ea54d4',
+          _value: <BN: 1>
+        }
+    }
   ],
 }
 ```
