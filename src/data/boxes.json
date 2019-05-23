@@ -14,11 +14,6 @@
     "stars": 379,
     "tags": ["official", "ethereum", "ethereumjs", "truffle", "webpack", "react", "solidity"]
   },
-  "react-uport-box": {
-    "description": "Truffle, Webpack, React, Redux boilerplate with routing and authentication via a UPort.",
-    "stars": 98,
-    "tags": ["official", "react", "redux", "truffle", "webpack", "solidity", "ethereum", "ethereumjs", "uport-identity"]
-  },
   "pet-shop-box": {
     "description": "A box containing all you need to get started with our Pet Shop tutorial.",
     "stars": 108,
@@ -168,6 +163,11 @@
     "description": "A superior UI setup for Ethereum Smart Contracts.  Check out www.reactdapps.com!",
     "stars": 24,
     "tags": ["community"]
+  },
+  "react-uport-box": {
+    "description": "Truffle and React/Redux boilerplate with uPort Connect",
+    "stars": 4,
+    "tags": ["community", "identity", "react", "uport"]
   },
   "scoreboard": {
     "description": "",

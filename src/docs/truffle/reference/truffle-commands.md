@@ -290,24 +290,6 @@ Install plugins as NPM package dependencies and [configure Truffle](/docs/truffl
 to recognize the plugin. For more information, see [Third-Party Plugin Commands](/docs/truffle/getting-started/writing-external-scripts#third-party-plugin-commands).
 
 
-### serve
-
-Serve the built app from `http://127.0.0.1:8080`, rebuilding and redeploying changes as needed. Similar to `truffle watch`, but with the web server component added.
-
-```shell
-truffle serve [-p <port>] [--network <name>]
-```
-
-Options:
-
-* `-p <port>`: Specify the port to serve on. Default is 8080.
-* `--network <name>`: Specify the network to use, using artifacts specific to that network. Network name must exist in the configuration.
-
-<p class="alert alert-warning">
-**Alert**: This command is deprecated. Please use third-party development servers like [webpack-dev-server](https://github.com/webpack/webpack-dev-server) instead. See our [Webpack Truffle Box](/boxes/webpack) for an example.
-</p>
-
-
 ### test
 
 Run JavaScript and Solidity tests.

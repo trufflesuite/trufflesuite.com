@@ -1,102 +1,119 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    {{> ga-tag}}
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="/img/favicons/favicon.ico">
+<head>
+  {{> ga-tag-head}}
+  
+  <meta charset="utf-8">
+  <meta name="description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}">
+  {{#if keywords}}<meta name="keywords" content="{{ keywords }}">{{/if}}
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/img/favicons/favicon.ico">
 
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Truffle Suite">
-    <link rel="icon" sizes="192x192" href="/img/favicons/chrome-touch-icon-192x192.png">
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Truffle Suite">
+  <link rel="icon" sizes="192x192" href="/img/favicons/chrome-touch-icon-192x192.png">
 
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Truffle Suite">
-    <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Truffle Suite">
+  <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
 
-    <!-- Tile icon for Win8/10 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="img/favicons/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#3372DF">
+  <!-- Tile icon for Win8/10 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="img/favicons/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#3372DF">
 
-    <!-- Facebook OpenGraph -->
-    <meta property="og:site_name" content="Truffle Suite" />
-    <meta property="og:description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}" />
-    <meta property="og:title" content="Truffle Suite | Documentation{{#if title}} | {{ title }}{{/if}}" />
-    <meta property="og:url" content="{{getPageUrl path}}" />
-    <meta property="og:type" content="article" />
-    <meta property="og:image" content="https://truffleframework.com/img/favicons/truffle-share.png" />
+  <!-- Facebook OpenGraph -->
+  <meta property="og:site_name" content="Truffle Suite" />
+  <meta property="og:description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}" />
+  <meta property="og:title" content="Truffle Suite | Documentation{{#if title}} | {{ title }}{{/if}}" />
+  <meta property="og:url" content="{{getPageUrl path}}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://truffleframework.com/img/favicons/truffle-share.png" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="Truffle Suite" />
-    <meta name="twitter:title" content="Truffle Suite | Documentation{{#if title}} | {{ title }}{{/if}}" />
-    <meta name="twitter:description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}" />
-    <meta name="twitter:creator" content="Truffle Suite" />
-    <meta name="twitter:domain" content="trufflesuite.com" />
-    <meta name="twitter:image:src" content="https://truffleframework.com/img/favicons/truffle-share.png" />
-    
-    <meta name="google-site-verification" content="BSgPkMHzw7IxJTpEElNfD8ZZYPzXgOQiTVPzAxAG8-o" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="Truffle Suite" />
+  <meta name="twitter:title" content="Truffle Suite | Documentation{{#if title}} | {{ title }}{{/if}}" />
+  <meta name="twitter:description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}" />
+  <meta name="twitter:creator" content="Truffle Suite" />
+  <meta name="twitter:domain" content="trufflesuite.com" />
+  <meta name="twitter:image:src" content="https://truffleframework.com/img/favicons/truffle-share.png" />
+  
+  <meta name="google-site-verification" content="BSgPkMHzw7IxJTpEElNfD8ZZYPzXgOQiTVPzAxAG8-o" />
 
-    {{#if title}}
-      <title>Truffle Suite | Documentation | {{ title }}</title>
-    {{else}}
-      <title>Truffle Suite | Documentation</title>
-    {{/if}}
+  {{#if title}}
+    <title>Truffle Suite | Documentation | {{ title }}</title>
+  {{else}}
+    <title>Truffle Suite | Documentation</title>
+  {{/if}}
 
-    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans|Oswald|Varela+Round|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/index.css">
-  </head>
-  <body>
-    {{> navbar}}
-    
-    <main role="main" class="container-fluid">
-      <!--<div class="row pt-4 pb-4">
-        <div class="col">
-          <form>
-            <div class="row">
-              <div class="col">
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="🔍 Search">
-              </div>
-              <div class="col">
-                <select id="inputState" class="form-control">
-                  <option selected>4.1</option>
-                  <option>4.0.6</option>
-                  <option>4.0.5</option>
-                </select>
-              </div>
-              <div class="col">
-                <button type="submit" class="btn btn-truffle">SEARCH</button>
-              </div>
+  <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans|Oswald|Varela+Round|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+  {{> ga-tag-body}}
+
+  {{> navbar}}
+  
+  <main role="main" class="container-fluid">
+    <!--<div class="row pt-4 pb-4">
+      <div class="col">
+        <form>
+          <div class="row">
+            <div class="col">
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="🔍 Search">
             </div>
-          </form>
-        </div>
-      </div>-->
-
-      <div class="row row-docs-main">
-        {{> docs-sidebar}}
-
-        <div class="col-lg-9 bd-light-cream docs-content">
-          {{{ contents }}}
-
-          {{> contrib-link}}
-        </div>
+            <div class="col">
+              <select id="inputState" class="form-control">
+                <option selected>4.1</option>
+                <option>4.0.6</option>
+                <option>4.0.5</option>
+              </select>
+            </div>
+            <div class="col">
+              <button type="submit" class="btn btn-truffle">SEARCH</button>
+            </div>
+          </div>
+        </form>
       </div>
-    </main>
+    </div>-->
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.slim.min.js"><\/script>')</script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/vendor/prism.js"></script>
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script src="/js/docs.js"></script>
-    <script src="https://unpkg.com/lunr/lunr.js"></script>
-    <script src="/js/docs-search.js"></script>
-  </body>
+    
+
+    <div class="row row-docs-main">
+      {{> docs-sidebar}}
+
+      <div class="col-lg-9 bd-light-cream docs-content">
+
+        <div class="banner banner-green banner-trufflecon pt-2 pb-2">
+          <a href="/trufflecon2019">
+            <div class="container text-center">
+              Join us <strong>August 2 - 4</strong> for TruffleCon 2019 @ Microsoft in <u>Redmond, WA</u>!
+            </div>
+          </a>
+          <img src="/img/trufflecon/left-drizzle.svg"/>
+          <img src="/img/trufflecon/right-ganache.svg"/>
+        </div>
+
+        {{{ contents }}}
+
+        {{> contrib-link}}
+      </div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.slim.min.js"><\/script>')</script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/vendor/prism.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="/js/docs.js"></script>
+  <script src="https://unpkg.com/lunr/lunr.js"></script>
+  <script src="/js/docs-search.js"></script>
+</body>
 </html>

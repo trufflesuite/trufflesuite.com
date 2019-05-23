@@ -2,7 +2,6 @@
   background: url(/img/truffle-teams/landing-background.png);
   background-size: cover;
   color: #fff;
-  border-bottom: 3px solid #33262a;
   text-align: center;
 
   h2 {
@@ -13,15 +12,29 @@
     color: #fff;
     display: block;
     margin-top: .5rem;
+    text-decoration: underline;
 
     &:hover {
       color: #fff;
+      opacity: .8;
     }
   }
 
   .tt-screenshot {
     margin: 0;
     transform: translateY(8rem);
+  }
+
+  .link-truffle {
+    color: #3fe0c5;
+  }
+
+  .triangle-br {
+    position: absolute;
+    background: transparent;
+    border-width: 0 0 50px 100vw;
+    bottom: 0;
+    border-color: transparent transparent #f8f5f0 transparent;
   }
 
   @media (max-width: 991.98px) {
@@ -74,24 +87,31 @@
   }
 }
 
-.tt-feature {
-  text-align: center;
+.tt-bowtie-container {
+  margin: -80px auto 0 auto;
 
-  i {
-    background: #8731e8;
-    padding: 1rem;
-    border-radius: 50%;
-    font-size: 2rem;
-    color: #fff;
-    margin-bottom: .5rem;
+  @media (min-width: 992px) {
+    margin: -145px auto 0 auto;
   }
+}
 
-  @media (min-width: 768px) {
-    text-align: left;
+.tt-bowtie-top, .tt-bowtie-bottom {
+  margin: 0 -5px;
+}
 
-    i {
-      margin-bottom: 0;
-    }
+.tt-bowtie-top {
+  position: relative;
+}
+
+.tt-bowtie {
+  background: #8731e8;
+  color: #fff;
+  margin: -1px 0;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 991.98px) {
+    padding: 1.5rem 0;
   }
 }
 
@@ -100,7 +120,7 @@
     padding-left: 20px;
 
     li:not(:last-child) {
-      margin-bottom: .5rem;
+      margin-bottom: .75rem;
     }
   }
 
@@ -111,19 +131,31 @@
 
     &.free {
       background: #e0dad7;
+      //border-radius: 0;
+      //transform: skew(-2deg, -1deg);
 
       ul {
         list-style-image: url('/img/truffle-teams/checkmark-dark.png');
       }
+
+      /*.card-body, .card-footer {
+        transform: skew(2deg, 1deg);
+      }*/
     }
 
     &.premium {
       background: #e86591;
       color: #fff;
+      //border-radius: 0;
+      //transform: skew(0, 2deg);
 
       ul {
         list-style-image: url('/img/truffle-teams/checkmark-light.png');
       }
+
+      /*.card-body, .card-footer {
+        transform: skew(0, -2deg);
+      }*/
   
       .btn {
         background: #fff;
@@ -202,4 +234,58 @@
       padding-bottom:50%;
     }
   }
+}
+
+.tt-container .triangle-tr {
+  background: #f8f5f0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 0 0 100vw;
+  border-color: transparent transparent transparent #7f9dd1;
+
+  &.white {
+    border-width: 0 0 50px 100vw;
+    border-color: transparent transparent #fff transparent;
+  }
+}
+
+.tt-container .triangle-br {
+  background: #f8f5f0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 100vw 0 0;
+  border-color: #7f9dd1 transparent transparent transparent;
+
+  &.white {
+    border-width: 0 100vw 50px 0;
+    border-color: transparent #fff transparent transparent;
+  }
+}
+
+// SHADOWS
+
+.shadow-dark-chocolate {
+  -webkit-box-shadow: 12px 12px 0px 0px rgba(51,38,42,1);
+  -moz-box-shadow: 12px 12px 0px 0px rgba(51,38,42,1);
+  box-shadow: 12px 12px 0px 0px rgba(51,38,42,1);
+}
+
+.shadow-mint {
+  -webkit-box-shadow: 12px 12px 0px 0px rgba(63,224,197,1);
+  -moz-box-shadow: 12px 12px 0px 0px rgba(63,224,197,1);
+  box-shadow: 12px 12px 0px 0px rgba(63,224,197,1);
+}
+
+.shadow-periwinkle {
+  -webkit-box-shadow: 12px 12px 0px 0px rgba(127,157,209,1);
+  -moz-box-shadow: 12px 12px 0px 0px rgba(127,157,209,1);
+  box-shadow: 12px 12px 0px 0px rgba(127,157,209,1);
+}
+
+.shadow-purple {
+  -webkit-box-shadow: 12px 12px 0px 0px rgba(135,49,232,1);
+  -moz-box-shadow: 12px 12px 0px 0px rgba(135,49,232,1);
+  box-shadow: 12px 12px 0px 0px rgba(135,49,232,1);
 }

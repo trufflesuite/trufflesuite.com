@@ -42,6 +42,18 @@
   background-color: #F7A34E;
 }
 
+.banner-green {
+  background-color: #3fe0c5;
+}
+
+.banner-periwinkle {
+  background-color: #7f9dd1;
+}
+
+.banner-white {
+  background-color: #fff;
+}
+
 // "Like the Taste"
 
 .banner-taste {
@@ -105,5 +117,43 @@
 
   @media (max-width: 991.98px) {
     
+  }
+}
+
+.banner-trufflecon {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+
+  a {
+    text-decoration: none;
+    color: #58484e;
+
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  img:first-of-type {
+    position: absolute;
+    left: 0px;
+    top: -35px;
+    height: 100px;
+    
+    @media (max-width:1085px) {
+      display: none;
+    }
+  }
+
+  img:last-of-type {
+    position: absolute;
+    right: 0px;
+    top: -30px;
+    height: 100px; 
+     
+    @media (max-width:1085px) {
+      display: none;
+    }
   }
 }

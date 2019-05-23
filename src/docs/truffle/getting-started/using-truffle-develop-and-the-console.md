@@ -6,14 +6,14 @@ layout: docs.hbs
 
 Sometimes it's nice to work with your contracts interactively for testing and debugging purposes, or for executing transactions by hand. Truffle provides you two easy ways to do this via an interactive console, with your contracts available and ready to use.
 
-* **Truffle console**: A basic interactive console connecting to any Ethereum client
+* **Truffle Console**: A basic interactive console connecting to any Ethereum client
 * **Truffle Develop**: An interactive console that also spawns a development blockchain
 
 ## Why two different consoles?
 
 Having two different consoles allows you to choose the best tool for your needs.
 
-Reasons to use **Truffle console**:
+Reasons to use **Truffle Console**:
 
 * You have a client you're already using, such as [Ganache](/docs/ganache/using) or geth
 * You want to migrate to a testnet (or the main Ethereum network)
@@ -37,7 +37,7 @@ To launch the console:
 truffle console
 ```
 
-This will look for a network definition called `development` in the configuration, and connect to it, if available. You can override this using the `--network <name>` option. See more details in the [Networks](/docs/advanced/networks) section as well as the [command reference](/docs/advanced/commands).
+This will look for a network definition called `development` in the configuration, and connect to it, if available. You can override this using the `--network <name>` option or [customize](/docs/truffle/reference/configuration#networks) the `development` network settings. See more details in the [Networks](/docs/advanced/networks) section as well as the [command reference](/docs/advanced/commands).
 
 When you load the console, you'll immediately see the following prompt:
 
@@ -55,7 +55,7 @@ To launch Truffle Develop:
 truffle develop
 ```
 
-This will spawn a development blockchain locally on port `9545`, regardless of what your `truffle-config.js` configuration file calls for. If you already have a `truffe develop` session running, it will instead connect to that development blockchain.
+This will spawn a development blockchain locally on port `9545` by default. If you already have a `truffle develop` session running, it will instead connect to that development blockchain.
 
 When you load Truffle Develop, you will see the following:
 
@@ -105,7 +105,7 @@ This shows you the addresses, private keys, and mnemonic for this particular blo
 #### Configuring Truffle Develop
 
 You can configure `truffle develop` to use any of the available
-[ganache-core](https://github.com/trufflesuite/ganache-core#usage) options.
+[ganache-core](https://github.com/trufflesuite/ganache-core#usage) options and [configurable](/docs/truffle/reference/configuration#networks) network settings.
 
 For example:
 
@@ -117,6 +117,8 @@ module.exports = {
     /* ... other networks */
 
     develop: {
+      port: 8545,
+      network_id: 20,
       accounts: 5,
       defaultEtherBalance: 500,
       blockTime: 3

@@ -39,7 +39,7 @@ Contract abstractions are the bread and butter of interacting with Ethereum cont
 In order to appreciate the usefulness of a contract abstraction, however, we first need a contract to talk about. We'll use the MetaCoin contract available to you through Truffle Boxes via `truffle unbox metacoin`.
 
 ```javascript
-pragma solidity ^0.4.2;
+pragma solidity >=0.4.25 <0.6.0;
 
 import "./ConvertLib.sol";
 
@@ -53,23 +53,23 @@ contract MetaCoin {
 
 	event Transfer(address indexed _from, address indexed _to, uint256 _value);
 
-	function MetaCoin() {
+	constructor() public {
 		balances[tx.origin] = 10000;
 	}
 
-	function sendCoin(address receiver, uint amount) returns(bool sufficient) {
+	function sendCoin(address receiver, uint amount) public returns(bool sufficient) {
 		if (balances[msg.sender] < amount) return false;
 		balances[msg.sender] -= amount;
 		balances[receiver] += amount;
-		Transfer(msg.sender, receiver, amount);
+		emit Transfer(msg.sender, receiver, amount);
 		return true;
 	}
 
-	function getBalanceInEth(address addr) returns(uint){
+	function getBalanceInEth(address addr) public view returns(uint){
 		return ConvertLib.convert(getBalance(addr),2);
 	}
 
-	function getBalance(address addr) returns(uint) {
+	function getBalance(address addr) public view returns(uint) {
 		return balances[addr];
 	}
 }
@@ -129,10 +129,10 @@ truffle(develop)> balance.toNumber()
 
 What's interesting here:
 
-* We received a return value. Note that since the Ethereum network can handle very large numbers, we're given a [BigNumber](https://github.com/MikeMcl/bignumber.js/) object which we then convert to a number.
+* We received a return value. Note that since the Ethereum network can handle very large numbers, we're given a [BN](https://github.com/indutny/bn.js/) object which we then convert to a number.
 
 <p class="alert alert-warning">
-**Warning**: We convert the return value to a number because in this example the numbers are small. However, if you try to convert a BigNumber that's larger than the largest integer supported by Javascript, you'll likely run into errors or unexpected behavior.
+**Warning**: We convert the return value to a number because in this example the numbers are small. However, if you try to convert a BN that's larger than the largest integer supported by Javascript, you'll likely run into errors or unexpected behavior.
 </p>
 
 ### Processing transaction results

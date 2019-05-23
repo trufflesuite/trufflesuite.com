@@ -2,6 +2,10 @@
   font-family: 'Oswald', sans-serif;
   background: #33262a;
   border-bottom: 2px solid #5e464d;
+
+  .dropdown-menu {
+    min-width: 14.5rem;
+  }
 }
 
 .navbar a, .navbar-expand-md .navbar-nav .nav-link {
