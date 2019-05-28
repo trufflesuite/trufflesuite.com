@@ -21,6 +21,7 @@ var boxesMetadata = require('./src/data/boxes.json');
 var careersData = require('./src/careers/data.json');
 var docsData = require('./src/docs/data.json');
 var eventsData = require('./src/events/data.json');
+var staffData = require('./src/staff/data.json');
 var tutorialsData = require('./src/tutorials/data.json');
 
 function app(clean) {
@@ -35,6 +36,7 @@ function app(clean) {
     careers: careersData,
     docs: docsData,
     events: eventsData,
+    staff: staffData,
     tutorials: tutorialsData
   })
   .use(discoverHelpers({
