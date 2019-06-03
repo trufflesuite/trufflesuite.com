@@ -73,13 +73,40 @@
       <div class="row mb-5">
         {{#each staff}}
           <div class="col-xs-12 col-md-6 col-lg-3 iso-item official">
-            <div class="circle-image-container rounded-circle">
-              <img class="img-fluid" src="{{this.headshot}}" alt="{{this.name}}" />
+            <div class="flipcardbox">
+              <div class="flipcard flipcard-staff mb-2">
+                <div class="front">
+                  <div class="circle-image-container rounded-circle">
+                    <img class="img-fluid" src="{{this.headshot}}" alt="{{this.name}}" />
+                  </div>
+                </div>
+                <div class="back">
+                  <div class="circle-image-container rounded-circle">
+                    <img class="img-fluid" src="{{this.headshot2}}" alt="{{this.name}}" />
+                  </div>
+                </div>
+              </div>
             </div>
             <h3>{{this.name}}</h3>
             <p>{{this.position}}</p>
-            <p><a href="https://twitter.com/{{this.twitter}}"><i class="fab fa-twitter-square"></i>&nbsp;&nbsp;@{{this.twitter}}</a></p>
-            <p><a href="mailto:{{this.email}}@trufflesuite.com"><i class="fas fa-envelope"></i>&nbsp;&nbsp;{{this.email}}@trufflesuite.com</a></p>
+            {{#if this.twitter}}
+              <p class="mb-0"><a href="https://twitter.com/{{this.twitter}}"><i class="fab fa-twitter-square"></i>&nbsp;&nbsp;@{{this.twitter}}</a></p>
+            {{/if}}
+            {{#if this.linkedin}}
+              <p class="mb-0"><a href="https://linkedin.com/in/{{this.linkedin}}"><i class="fab fa-linkedin"></i>&nbsp;&nbsp;{{this.linkedin}}</a></p>
+            {{/if}}
+            {{#if this.github}}
+              <p class="mb-0"><a href="https://github.com/{{this.github}}"><i class="fab fa-github"></i>&nbsp;&nbsp;{{this.github}}</a></p>
+            {{/if}}
+            {{#if this.fb}}
+              <p class="mb-0"><a href="https://facebook.com/{{this.fb}}"><i class="fab fa-facebook-square"></i>&nbsp;&nbsp;{{this.fb}}</a></p>
+            {{/if}}
+            {{#if this.ig}}
+              <p class="mb-0"><a href="https://instagram.com/{{this.ig}}"><i class="fab fa-instagram"></i>&nbsp;&nbsp;{{this.ig}}</a></p>
+            {{/if}}
+            {{#if this.email}}
+              <p class="mb-5"><a href="mailto:{{this.email}}@trufflesuite.com" class="text-break"><i class="fas fa-envelope d-inline"></i>&nbsp;&nbsp;{{this.email}}@trufflesuite.com</a></p>
+            {{/if}}
           </div>
         {{/each}}
       </div>
