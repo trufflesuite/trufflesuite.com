@@ -1,0 +1,8 @@
+.flipcard-staff {
+  height: 0;
+  padding-bottom: 100%;
+  @media (max-width: 991.98px) {
+    height: 200px;
+    padding-bottom: 0;
+  }
+}
