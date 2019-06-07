@@ -22,6 +22,7 @@ var careersData = require('./src/careers/data.json');
 var docsData = require('./src/docs/data.json');
 var eventsData = require('./src/events/data.json');
 var pressReleasesData = require('./src/press-releases/data.json');
+var staffData = require('./src/staff/data.json');
 var tutorialsData = require('./src/tutorials/data.json');
 
 function app(clean) {
@@ -37,6 +38,7 @@ function app(clean) {
     docs: docsData,
     events: eventsData,
     pressReleases: pressReleasesData,
+    staff: staffData,
     tutorials: tutorialsData
   })
   .use(discoverHelpers({

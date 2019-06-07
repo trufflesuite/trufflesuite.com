@@ -6,6 +6,7 @@
 
 .btn-truffle:hover,
 .btn-ganache:hover,
+.btn-watermelon:hover,
 .btn-drizzle:hover,
 .btn-eventbrite:hover {
   background: #fff;
@@ -49,7 +50,27 @@
   color: #fff;
 }
 
+.btn-watermelon {
+  background: #e86591;
+  color: #fff;
+}
+
 .btn-eventbrite {
   background: #f6682F;
   color: #fff;
+}
+
+.btn-outline-white {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+
+  &:hover {
+    background: #fff;
+    color: #5e464d;
+  }
+}
+
+.btn-wrap {
+  white-space: normal;
 }
