@@ -58,7 +58,7 @@ With our front-end taken care of, we can focus on the `TutorialToken` contract.
 1. In the `contracts/` directory of your Truffle Box, create the file `TutorialToken.sol` and add the following contents:
 
    ```javascript
-   pragma solidity ^0.4.24;
+   pragma solidity ^0.5.0;
 
    import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 
@@ -166,6 +166,8 @@ For this portion of the tutorial, we recommend using [MetaMask](http://metamask.
 
 You will want to enter the mnemonic displayed in Ganache into MetaMask, and make sure that MetaMask is listening to the Custom RPC `http://127.0.0.1:7545`.
 
+Also in app.js, the HttpProvider is http://127.0.0.1:7545.
+
 <p class="alert alert-danger">
 **Warning**: Do not use the Main Network in MetaMask. If you send ether to any account generated from Ganache's default mnemonic, you will lose it all!
 </p>
@@ -180,7 +182,7 @@ You will want to enter the mnemonic displayed in Ganache into MetaMask, and make
 
    ![TutorialToken Wallet](/img/tutorials/open-zeppelin/oz-tutorialtoken-initial.png "TutorialToken wallet")
 
-   Our basic dapp shows the TutorialToken balance of the selected account in MetaMask.
+   Our basic dapp shows the TutorialToken balance of the selected account in MetaMask. If the balance is zero, try disabling Metamask and refreshing the page. 
 
 1. Now we'll transfer some TutorialToken tokens to a different account. Ganache, when launched, lists 10 accounts. The first account has the token balance. Pick one of the other accounts (we recommend the second account) and enter it in the "Address" box, and also enter `2000` in the "Amount" field.
 
@@ -206,4 +208,4 @@ You will want to enter the mnemonic displayed in Ganache into MetaMask, and make
 
 We at Truffle are excited to see companies like Zeppelin Solutions contributing to the standardization and increased security of smart contracts. With OpenZeppelin's contracts and Truffle's tools, you have everything you need to start creating industry-standard distributed applications.
 
-Happy coding!
+Happy coding
