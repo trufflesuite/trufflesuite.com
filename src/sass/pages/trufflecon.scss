@@ -276,6 +276,25 @@ blockquote {
     height: 48px;
     z-index: 1;
     pointer-events: none;
+    display: flex;
+    align-items: center;
+    .fas {
+      font-size: 1.3rem;
+      &:hover {
+      cursor: pointer;
+      }
+    }
+    .fa-bars {
+      margin-left: 25px;
+    }
+    .fa-share-alt, .fa-external-link-alt {
+      margin-right: 25px;
+    }
+    .unclickable {
+      flex-grow: 1;
+      align-self: stretch;
+      pointer-events: initial;
+    }
   }
 
   iframe {
