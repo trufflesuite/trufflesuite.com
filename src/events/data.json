@@ -1,5 +1,15 @@
 [
   {
+    "title": "How to Use Provable + Truffle Suite Together",
+    "start": "Thursday, July 11, 2019, 11:00 AM PDT",
+    "end": "11:45 AM PDT",
+    "location": "Webinar",
+    "excerpt": "In this upcoming webinar Nick D'Andrea and Greg Kapka looking at the tools, development workflows / lifecycles, and emerging best practices. They will also review a number of the upcoming features in the Truffle Suite itself, all designed to make your development experience all the sweeter (and efficient). Note that this session assumes some pre-existing development knowledge and prior experience with Truffle.",
+    "eventbrite": "/events/webinar-truffle-future",
+    "status": "open",
+    "image": "/img/truffle-webinar-future.jpg"
+  },
+  {
     "title": "TruffleCon 2019",
     "start": "Friday, Aug 2, 2019, 9:00 AM PST",
     "end": "Sunday, Aug 4, 2019, 6:00 PM PST",
