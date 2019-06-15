@@ -37,9 +37,9 @@ know how we can improve it!
 ## Plugin installation / usage
 
 1. Install the plugin from NPM.
-  ```
-  npm install --save-dev truffle-plugin-hello
-  ```
+   ```
+   npm install --save-dev truffle-plugin-hello
+   ```
 
 2. Add a <code>plugins</code> section to your Truffle config.
    ```javascript
@@ -53,10 +53,10 @@ know how we can improve it!
    ```
 
 3. Run the command
-  ```
-  $ truffle run hello
-  Hello, World!
-  ```
+   ```
+   $ truffle run hello
+   Hello, World!
+   ```
 
 
 ## Creating a custom command plugin
@@ -72,14 +72,14 @@ know how we can improve it!
     * @param {Config} config - A truffle-config object.
     * Has attributes like `truffle_directory`, `working_directory`, etc.
     */
-    module.exports = async (config) => {
+   module.exports = async (config) => {
      // config._ has the command arguments.
      // config_[0] is the command name, e.g. "hello" here.
      // config_[1] starts remaining parameters.
      if (config.help) {
-	console.log(`Usage: truffle run hello [name]`);
-        done(null, [], []);	
-	return;
+       console.log(`Usage: truffle run hello [name]`);
+       done(null, [], []);	
+       return;
      }
 
      let name = config._.length > 1 ? config._[1] : 'World!';
@@ -93,7 +93,7 @@ know how we can improve it!
     ```json
     {
       "commands": {
-	"hello": "hello.js"
+        "hello": "hello.js"
       }
     }
     ```
@@ -103,4 +103,3 @@ know how we can improve it!
     ```
     npm publish
     ```
-

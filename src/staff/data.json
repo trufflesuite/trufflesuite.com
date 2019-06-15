@@ -79,7 +79,7 @@
     "email" : "faina"
   },
   {
-    "name": "Gnidan (Nick D'Andrea)",
+    "name": "gnidan (Nick D'Andrea)",
     "position": "Head of Engineering",
     "headshot": "/img/staff/gnidan-truffle-bg.svg",
     "headshot2": "/img/staff/flip-image/gnidan-original.png",
@@ -97,7 +97,7 @@
   },
   {
     "name": "Heyse Li",
-    "position": "Front-end Engineer",
+    "position": "Blockchain Tools Engineer",
     "headshot": "/img/staff/heyse-truffle-bg.svg",
     "headshot2": "/img/staff/flip-image/heyse-original.png",
     "github": "honestbonsai",
