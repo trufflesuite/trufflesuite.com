@@ -254,13 +254,19 @@ blockquote {
   }
 }
 
+.trufflecon-map-heading {
+  font-size: 1.3em;
+  line-height: 48px;
+  padding-left: 1rem;
+}
+
 .trufflecon-map {
   padding: 0;
   background: #3fe0c5;
 
   .map-toolbar {
     position: absolute;
-    top: 3rem;
+    top: 0;
     left: 0;
     width: 100%;
     z-index: 2;
@@ -270,10 +276,10 @@ blockquote {
   .map-toolbar-nested {
     background: #3fe0c5;
     position: relative;
-    top: -2px;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 48px;
+    height: 49px;
     z-index: 1;
     pointer-events: none;
     display: flex;
