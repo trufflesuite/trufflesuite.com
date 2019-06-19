@@ -2,8 +2,13 @@
   "truffle-anncounces-microsoft-as-preferred-cloud-and-services-partner": {
     "title": "Truffle Announces Microsoft as Preferred Cloud and Services Partner",
     "date": "2019-06-07",
-    "author": "Tim Coulter",
     "published": true,
-    "excerpt": "Truffle’s suite of popular developer tools and Microsoft Azure integrate to enhance the developer experience and DevOps of Enterprise Ethereum"
+    "excerpt": "Truffle’s suite of popular developer tools and Microsoft Azure integrate to enhance the developer experience and DevOps of Enterprise Ethereum."
+  },
+  "truffle-announces-2nd-annual-trufflecon": {
+    "title": "Truffle Announces 2nd Annual TruffleCon",
+    "date": "2019-06-02",
+    "published": true,
+    "excerpt": "Truffle is pleased to announce TruffleCon 2019, a conference for the users of Truffle, a suite of tools for software developers, fans, and enthusiasts building decentralized applications powered by blockchain technologies."
   }
 }
