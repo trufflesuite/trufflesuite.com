@@ -1,19 +1,22 @@
 var marked = require('marked');
 var renderer = new marked.Renderer();
 
-var current_z = 10000000000;
-
 renderer.heading = function (text, level) {
   var escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
 
-  current_z -= 1;
+  return `
+    <h${level} class="link-markdown">
+      <a href="#${escapedText}" name="${escapedText}"><i class="fas fa-link"></i></a>
+      ${text}
+    </h${level}>
+  `;
+};
 
-  return '<h' + level + '>' +
-    '<a name="' + escapedText + '" class="anchor" href="#' + escapedText + '">' +
-    '<span class="header-link" style="z-index: ' + current_z + '">&nbsp;</span>' +
-    '</a>' +
-    text +
-    '</h' + level + '>';
+renderer.image = function(href, title, text) {
+  return `
+    <img class="img-fluid" src="${href}" title="${text}" alt="${text}" />
+    ${title ? `<p class="img-caption">${title}</p>` : ""}
+  `;
 };
 
 module.exports = renderer;

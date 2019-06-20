@@ -1,0 +1,302 @@
+[
+  {
+    "userOrg": "truffle-box",
+    "displayName": "drizzle",
+    "repoName": "drizzle-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "drizzle-react-native",
+    "repoName": "drizzle-react-native-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "react",
+    "repoName": "react-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "pet-shop",
+    "repoName": "pet-shop-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "tutorialtoken",
+    "repoName": "tutorialtoken-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "webpack",
+    "repoName": "webpack-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "metacoin",
+    "repoName": "metacoin-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "blueprint",
+    "repoName": "blueprint-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "vyper-example",
+    "repoName": "vyper-example-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "azure-asset-transfer",
+    "repoName": "azure-asset-transfer-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "azure-basic-provenance",
+    "repoName": "azure-basic-provenance-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "bazaar-item-listing",
+    "repoName": "azure-bazaar-item-listing-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "azure-digital-locker",
+    "repoName": "azure-digital-locker-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "azure-hello-blockchain",
+    "repoName": "azure-hello-blockchain-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "azure-refrigerated-transportation",
+    "repoName": "azure-refrigerated-transportation-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "azure-room-thermostat",
+    "repoName": "azure-room-thermostat-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "azure-simple-marketplace",
+    "repoName": "azure-simple-marketplace-box",
+    "official": true
+  },
+  {
+    "userOrg": "kaleido-io",
+    "displayName": "drizzle-kaleido-box",
+    "repoName": "drizzle-kaleido-box",
+    "official": false
+  },
+  {
+    "userOrg": "kaleido-io",
+    "displayName": "truffle-kaleido-box",
+    "repoName": "truffle-kaleido-box",
+    "official": false
+  },
+  {
+    "userOrg": "ng-es",
+    "displayName": "AngularTruffleDapp",
+    "repoName": "angulartruffledapp",
+    "official": false
+  },
+  {
+    "userOrg": "Quintor",
+    "displayName": "angular-truffle-box",
+    "repoName": "angular-truffle-box",
+    "official": false
+  },
+  {
+    "userOrg": "endless-nameless-inc",
+    "displayName": "cheshire",
+    "repoName": "cheshire",
+    "official": false
+  },
+  {
+    "userOrg": "CITA-Toys",
+    "displayName": "cita-truffle-box",
+    "repoName": "cita-truffle-box",
+    "official": false
+  },
+  {
+    "userOrg": "chuckbergeron",
+    "displayName": "etherplate",
+    "repoName": "etherplate",
+    "official": false
+  },
+  {
+    "userOrg": "DOkwufulueze",
+    "displayName": "eth-vue",
+    "repoName": "eth-vue",
+    "official": false
+  },
+  {
+    "userOrg": "arvindkalra",
+    "displayName": "express-box",
+    "repoName": "express-box",
+    "official": false
+  },
+  {
+    "userOrg": "LimelabsTech",
+    "displayName": "limelabs-angular-box",
+    "repoName": "limelabs-angular-box",
+    "official": false
+  },
+  {
+    "userOrg": "NovakDistributed",
+    "displayName": "macroverse-truffle-box",
+    "repoName": "macroverse-truffle-box",
+    "official": false
+  },
+  {
+    "userOrg": "Paperchain",
+    "displayName": "nuxt-box",
+    "repoName": "nuxt-box",
+    "official": false
+  },
+  {
+    "userOrg": "peerism",
+    "displayName": "peerai-api",
+    "repoName": "peerai-api",
+    "official": false
+  },
+  {
+    "userOrg": "hexeight",
+    "displayName": "rapid-box",
+    "repoName": "rapid-box",
+    "official": false
+  },
+  {
+    "userOrg": "shanejonas",
+    "displayName": "react-box-web3-todo",
+    "repoName": "react-box-web3-todo",
+    "official": false
+  },
+  {
+    "userOrg": "hackingbeauty",
+    "displayName": "react-dapp-boilerplate",
+    "repoName": "react-dapp-boilerplate",
+    "official": false
+  },
+  {
+    "userOrg": "uport-project",
+    "displayName": "react-uport-box",
+    "repoName": "react-uport-box",
+    "official": false
+  },
+  {
+    "userOrg": "3of5of7",
+    "displayName": "scoreboard",
+    "repoName": "scoreboard",
+    "official": false
+  },
+  {
+    "userOrg": "antony",
+    "displayName": "svelte-box",
+    "repoName": "svelte-box",
+    "official": false
+  },
+  {
+    "userOrg": "NFhbar",
+    "displayName": "truffle-ci-box",
+    "repoName": "truffle-ci-box",
+    "official": false
+  },
+  {
+    "userOrg": "Charterhouse",
+    "displayName": "truffle-create-react-app",
+    "repoName": "truffle-create-react-app",
+    "official": false
+  },
+  {
+    "userOrg": "adrianmcli",
+    "displayName": "truffle-next",
+    "repoName": "truffle-next",
+    "official": false
+  },
+  {
+    "userOrg": "tpai",
+    "displayName": "truffle-react-dapp",
+    "repoName": "truffle-react-dapp",
+    "official": false
+  },
+  {
+    "userOrg": "gasolin",
+    "displayName": "truffle-react-redux",
+    "repoName": "truffle-react-redux",
+    "official": false
+  },
+  {
+    "userOrg": "LibertyLocked",
+    "displayName": "truffle-react-ts-template",
+    "repoName": "truffle-react-ts-template",
+    "official": false
+  },
+  {
+    "userOrg": "UtkarshGupta-CS",
+    "displayName": "truffle-security",
+    "repoName": "truffle-security",
+    "official": false
+  },
+  {
+    "userOrg": "okwme",
+    "displayName": "truffle-shavings",
+    "repoName": "truffle-shavings",
+    "official": false
+  },
+  {
+    "userOrg": "CasterIO",
+    "displayName": "truffle-starter",
+    "repoName": "truffle-starter",
+    "official": false
+  },
+  {
+    "userOrg": "YuichiNukiyama",
+    "displayName": "truffle-ts-percel-box",
+    "repoName": "truffle-ts-percel-box",
+    "official": false
+  },
+  {
+    "userOrg": "wespr",
+    "displayName": "truffle-vue",
+    "repoName": "truffle-vue",
+    "official": false
+  },
+  {
+    "userOrg": "standup75",
+    "displayName": "vue-box",
+    "repoName": "vue-box",
+    "official": false
+  },
+  {
+    "userOrg": "kierenh",
+    "displayName": "vue-dark-chocolate",
+    "repoName": "vue-dark-chocolate",
+    "official": false
+  },
+  {
+    "userOrg": "saga-foundation",
+    "displayName": "vueport-box",
+    "repoName": "vueport-box",
+    "official": false
+  }
+]

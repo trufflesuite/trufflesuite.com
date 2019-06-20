@@ -1,0 +1,306 @@
+.docs-sidebar, .docs-content {
+  height: calc(100vh - 60px);
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.docs-sidebar {
+  padding: 1rem 2rem;
+  z-index: 200;
+  background: #33262a;
+
+  > a {
+    &:hover {
+      opacity: .75;
+      text-decoration: none;
+    }
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .toggle-truffle h2 {
+    line-height: 2.5rem;
+  }
+
+  .toggle-ganache h2 {
+    line-height: 2.8rem;
+  }
+
+  .toggle-drizzle h2 {
+    line-height: 2.3rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+
+    li:not(:last-child) {
+      margin-bottom: .25rem;
+    }
+  }
+
+  form {
+    margin-top: 1.5rem;
+  }
+
+  .suite-logo {
+    display: block;
+    float: left;
+    height: auto;
+    margin-right: .75rem;
+    width: 2.5rem;
+  }
+
+  .toggle-truffle, .suite-link {
+    color: #fff;
+    display: block;
+    margin-bottom: 1.25rem;
+  }
+
+  a:first-of-type {
+    margin-top: 2rem;
+  }
+
+  .truffle {
+    color: #3fe0c5;
+
+    a {
+      color: #3fe0c5;
+    }
+  }
+
+  .toggle-ganache {
+    color: #fff;
+    display: block;
+    margin-bottom: 1.25rem;
+  }
+
+  .ganache {
+    color: #e4a663;
+
+    a {
+      color: #e4a663;
+    }
+  }
+
+  .toggle-drizzle {
+    color: #fff;
+    display: block;
+    margin-bottom: 1.25rem;
+  }
+
+  .drizzle {
+    color: #e911bd;
+
+    a {
+      color: #e911bd;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    border-top: 2px solid #5e464d;
+    transition: all .125s ease-in-out;
+    overflow: hidden;
+
+    &.open {
+      height: 100%;
+      padding-top: 60px;
+      border-top: none;
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
+
+      > h2 {
+        position: static;
+        width: auto;
+        margin: 0 auto;
+      }
+
+      form {
+        margin-top: 1rem;
+      }
+    }
+
+    > h2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 58px;
+      width: 100vw;
+      padding-top: 1rem;
+      cursor: pointer;
+    }
+
+    form {
+      margin-top: 3.5rem;
+    }
+  }
+}
+
+.docs-content {
+  padding: 2rem 4rem;
+  z-index: 199;
+
+  .banner-trufflecon {
+    margin: -2rem -4rem 2rem -4rem;
+
+    img:first-of-type {
+      top: -67px;
+      left: -100px; 
+    }
+
+    img:last-of-type {
+      top: -79px;
+      right: -70px;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  h1:first-child,
+  p:first-child h1,
+  p:first-child img {
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  ol li:not(:last-child), ul li:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  pre {
+    margin: 1rem 0;
+  }
+
+  img {
+    display: block;
+    margin: 2rem auto;
+  }
+
+  .img-caption {
+    margin-bottom: 2rem;
+    font-style: italic;
+    text-align: center;
+  }
+  
+  video {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 2rem auto;
+  }
+
+  @media (max-width: 991.98px) {
+    padding: 2rem 4rem 5rem 4rem;
+  }
+
+  @media (max-width: 767.98px) {
+    padding: 2rem 15px 5rem 15px;
+  }
+}
+
+// Pages
+
+.docs-home {
+  .card {
+    text-align: center;
+
+    .card-title {
+      color: #5e464d;
+      margin-bottom: 0;
+    }
+
+    .card-text {
+      text-align: left;
+    }
+
+    &.docs-truffle-card {
+      .card-img-top {
+        display: inline;
+        max-height: 120px;
+        margin: 0;
+      }
+
+      .card-title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 1.25rem;
+      }
+    }
+
+    &.docs-ganache-card {
+      .card-img-top {
+        max-height: 120px;
+        margin: 0;
+      }
+
+      .card-title {
+        font-size: 2.25rem;
+        margin-top: 1rem;
+      }
+    }
+
+    &.docs-drizzle-card {
+      .card-img-top {
+        margin: 20px 0 0 0;
+        max-height: 100px;
+      }
+
+      .card-title {
+        font-size: 2.25rem;
+        margin: 1rem 0 0 0;
+      }
+    }
+  }
+}
+
+.docs-badges {
+  a {
+    display: inline-block;
+    height: auto;
+    transform: translateY(-5px);
+    margin-right: .5rem;
+  }
+
+  img {
+    margin: 0;
+    display: inline-block;
+  }
+
+  iframe:not(:last-child) {
+    margin-right: .5rem;
+  }
+}
+
+.docs-search-results {
+  a {
+    p {
+      color: #33262a;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      h3 {
+        text-decoration: underline;
+      }
+    }
+  }
+}

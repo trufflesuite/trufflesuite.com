@@ -1,0 +1,51 @@
+.card-tutorial {
+  position: relative;
+  border: none;
+  margin-bottom: 2rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    border-radius: .25rem 0 0 .25rem;
+    background: #5e464d;
+  }
+}
+
+.card-tutorial.truffle::before {
+  background: #3fe0c5;
+}
+
+.card-tutorial.ganache::before {
+  background: #e4a663;
+}
+
+.card-tutorial.drizzle::before {
+  background: #e911bd;
+}
+
+.card-tutorial.truffle.ganache::before {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3fe0c5+0,e4a663+100 */
+  background: rgb(63,224,197); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(63,224,197,1) 0%, rgba(228,166,99,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(63,224,197,1) 0%,rgba(228,166,99,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(63,224,197,1) 0%,rgba(228,166,99,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3fe0c5', endColorstr='#e4a663',GradientType=0 ); /* IE6-9 */
+}
+
+.card-tutorial.truffle.ganache.drizzle::before {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3fe0c5+0,e4a663+50,e911bd+100 */
+  background: rgb(63,224,197); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(63,224,197,1) 0%, rgba(228,166,99,1) 50%, rgba(233,17,189,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(63,224,197,1) 0%,rgba(228,166,99,1) 50%,rgba(233,17,189,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(63,224,197,1) 0%,rgba(228,166,99,1) 50%,rgba(233,17,189,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3fe0c5', endColorstr='#e911bd',GradientType=0 ); /* IE6-9 */
+}
+
+.centralized-db-image {
+  margin: 0 auto;
+  max-width: 430px;
+}

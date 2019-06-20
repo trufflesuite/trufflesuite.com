@@ -22,14 +22,22 @@ before_script:
    fi
 
 script:
-- npm run build
+- >
+  if [ "${TRAVIS_PULL_REQUEST}" = "false" -a "$TRAVIS_BRANCH" = "${MASTER}" ];
+  then
+    mv build/.git .git-backup
+    npm run build
+    mv .git-backup build/.git
+  else
+    npm run build
+  fi
 
 after_success:
 - >
   if [ "${TRAVIS_PULL_REQUEST}" = "false" -a "$TRAVIS_BRANCH" = "${MASTER}" ];
   then
     cd build
-    git add .
+    git add -A
     git commit -m "Update build artifacts"
     git push origin master
   fi

@@ -1,0 +1,145 @@
+.text-truffle {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 600;
+  letter-spacing: .125em;
+  text-transform: uppercase;
+
+  .narrow {
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+}
+
+.text-ganache {
+  font-family: 'Grand Hotel', serif;
+  text-transform: none;
+}
+
+.text-drizzle {
+  font-family: 'Varela Round', sans-serif;
+  text-transform: lowercase;
+}
+
+.text-muted {
+  color: #e0dad7 !important;
+  text-shadow: none;
+}
+
+.banner-light-cream .text-muted {
+  color: #5e464d !important;
+}
+
+.color-truffle {
+  color: #3fe0c5;
+}
+
+.color-ganache {
+  color: #e4a663;
+}
+
+.color-drizzle {
+  color: #e911bd;
+}
+
+.link-truffle {
+  color: #3fe0c5;
+
+  &:hover {
+    color: #3fe0c5;
+    opacity: .8;
+  }
+}
+
+.link-ganache {
+  color: #e4a663;
+
+  &:hover {
+    color: #e4a663;
+    opacity: .8;
+  }
+}
+
+.link-watermelon {
+  color: #e86591;
+
+  &:hover {
+    color: #e86591;
+    opacity: .8;
+  }
+}
+
+.link-drizzle {
+  color: #e911bd;
+
+  &:hover {
+    color: #e911bd;
+    opacity: .8;
+  }
+}
+
+.link-white {
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+    opacity: .8;
+  }
+}
+
+.link-card {
+  color: initial;
+
+  .card {
+    transition: all .125s ease-in-out;
+  }
+
+  &:hover {
+    color: initial;
+    text-decoration: none;
+
+    .card {
+      box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.15);
+      transform: scale(1.05);
+    }
+  }
+}
+
+.bd-milk-chocolate {
+  background-color: #5e464d;
+  color: #fff;
+}
+
+.bd-light-cream {
+  background-color: #f8f5f0;
+  color: #5e464d;
+}
+
+.bd-dark-cream {
+  background-color: #e0dad7;
+  color: #5e464d;
+}
+
+.bd-white {
+  background-color: #ffffff;
+}
+
+.space-icon i {
+  margin-right: .25rem;
+}
+
+// Spacers - Margins
+
+.mt-6 {
+  margin-top: 4rem;
+}
+
+.mb-6 {
+  margin-bottom: 4rem;
+}
+
+.mt-7 {
+  margin-top: 6rem;
+}
+
+.mb-7 {
+  margin-bottom: 6rem;
+}
