@@ -216,6 +216,12 @@
     "official": false
   },
   {
+    "userOrg": "thundercore",
+    "displayName": "thunder-box",
+    "repoName": "thunder-box",
+    "official": false
+  },
+  {
     "userOrg": "NFhbar",
     "displayName": "truffle-ci-box",
     "repoName": "truffle-ci-box",
@@ -297,6 +303,12 @@
     "userOrg": "saga-foundation",
     "displayName": "vueport-box",
     "repoName": "vueport-box",
+    "official": false
+  },
+  {
+    "userOrg": "zeppelinos",
+    "displayName": "zepkit",
+    "repoName": "zepkit",
     "official": false
   }
 ]

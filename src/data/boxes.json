@@ -179,6 +179,11 @@
     "stars": 9,
     "tags": ["community", "truffle", "truffle-framework", "truffle-box", "truffle-boilerplates", "svelte", "sveltejs", "svelte-components", "ethereum", "ethereum-dapp", "dapp", "seed", "blockchain", "parcel", "parcel-bundler", "parceljs"]
   },
+  "thunder-box": {
+    "description": "Truffle Dapp boilerplate for ThunderCore",
+    "stars": 0,
+    "tags": ["community", "thundercore"]
+  },
   "truffle-ci-box": {
     "description": "Truffle box for quick integration with Travis CI and Coveralls",
     "stars": 2,
@@ -248,5 +253,10 @@
     "description": "Truffle box with built in uPort self-sovereign identity authentication and contract interaction using VueJS. Inspired by https://github.com/truffle-box/react-uport-box",
     "stars": 4,
     "tags": ["community"]
+  },
+  "zepkit": {
+    "description": "A truffle box containing React, ZeppelinOS & OpenZeppelin",
+    "stars": 40,
+    "tags": ["community", "openzeppelin", "zeppelinos"]
   }
 }
