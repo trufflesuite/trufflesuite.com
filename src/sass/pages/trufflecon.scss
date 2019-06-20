@@ -146,6 +146,10 @@ blockquote {
   border-style: solid;
   border-width: 0 100vw 50px 0;
   border-color: transparent #ca37af transparent transparent;
+    
+  &.cream {
+    background: #f8f5f0;
+  }
 }
 
 .triangle-br {
@@ -231,6 +235,16 @@ blockquote {
   h3 {
     text-transform: uppercase;
     color: #3fe0c5;
+  }
+
+  &.featured {
+    img {
+      border-color: #fff;
+    }
+
+    h3{
+      color: #5e464d
+    }
   }
 }
 
