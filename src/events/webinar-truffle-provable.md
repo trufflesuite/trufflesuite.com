@@ -1,5 +1,5 @@
 ---
-title: The Future of Blockchain Solution Development
+title: How to Use Provable + Truffle Suite Together
 layout: event-single.hbs
 ---
 <div class="row">
