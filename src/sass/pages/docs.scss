@@ -63,7 +63,7 @@
     width: 2.5rem;
   }
 
-  .toggle-truffle, .suite-link {
+  .suite-link {
     color: #fff;
     display: block;
     margin-bottom: 1.25rem;
@@ -81,24 +81,12 @@
     }
   }
 
-  .toggle-ganache {
-    color: #fff;
-    display: block;
-    margin-bottom: 1.25rem;
-  }
-
   .ganache {
     color: #e4a663;
 
     a {
       color: #e4a663;
     }
-  }
-
-  .toggle-drizzle {
-    color: #fff;
-    display: block;
-    margin-bottom: 1.25rem;
   }
 
   .drizzle {
