@@ -114,6 +114,11 @@
     "stars": 10,
     "tags": ["community"]
   },
+  "drizzle-truffle-ganache-docker-box": {
+    "description": "",
+    "stars": 0,
+    "tags": ["community", "docker", "drizzle"]
+  },
   "etherplate": {
     "description": " 🔗 Use this to make your next Ethereum DApp w/ React (&amp; Router), Redux, Bulma &amp; OpenZeppelin ERC721",
     "stars": 39,
