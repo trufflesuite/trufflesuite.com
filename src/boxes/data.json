@@ -138,6 +138,12 @@
     "official": false
   },
   {
+    "userOrg": "lzhou1110",
+    "displayName": "drizzle-truffle-ganache-docker-box",
+    "repoName": "drizzle-truffle-ganache-docker-box",
+    "official": false
+  },
+  {
     "userOrg": "chuckbergeron",
     "displayName": "etherplate",
     "repoName": "etherplate",
