@@ -321,3 +321,26 @@ blockquote {
     width: 100%
   }
 }
+
+.map-overlay {
+  background: rgba(0,0,0,.6);
+  position: absolute;
+  top: 49px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  
+  &:hover {
+    cursor: pointer;
+  }
+
+  p {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    width: 100%;
+  }
+}
