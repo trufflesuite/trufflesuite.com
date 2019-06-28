@@ -1,9 +1,7 @@
 ---
+title: How to Use Provable + Truffle Suite Together
 layout: event-single.hbs
 ---
-# THE FUTURE OF BLOCKCHAIN SOLUTION DEVELOPMENT
-
-
 <div class="row">
   <div class="col-sm-6 mt-4">
     <h3 class="mb-3">Overview</h3>

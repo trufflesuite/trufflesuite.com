@@ -64,6 +64,7 @@
     "Reference": [
       "Drizzle Options",
       "Drizzle State",
+      "Drizzle Actions",
       "How Data Stays Fresh"
     ]
   }

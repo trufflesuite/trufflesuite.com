@@ -138,6 +138,12 @@
     "official": false
   },
   {
+    "userOrg": "lzhou1110",
+    "displayName": "drizzle-truffle-ganache-docker-box",
+    "repoName": "drizzle-truffle-ganache-docker-box",
+    "official": false
+  },
+  {
     "userOrg": "chuckbergeron",
     "displayName": "etherplate",
     "repoName": "etherplate",
@@ -213,6 +219,12 @@
     "userOrg": "antony",
     "displayName": "svelte-box",
     "repoName": "svelte-box",
+    "official": false
+  },
+  {
+    "userOrg": "thundercore",
+    "displayName": "thunder-box",
+    "repoName": "thunder-box",
     "official": false
   },
   {
@@ -297,6 +309,12 @@
     "userOrg": "saga-foundation",
     "displayName": "vueport-box",
     "repoName": "vueport-box",
+    "official": false
+  },
+  {
+    "userOrg": "zeppelinos",
+    "displayName": "zepkit",
+    "repoName": "zepkit",
     "official": false
   }
 ]

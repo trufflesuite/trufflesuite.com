@@ -1,4 +1,11 @@
 {
+  "ethereum-gas-exactimation": {
+    "title": "Ethereum Gas Exactimation",
+    "date": "2019-6-21",
+    "author": "Nicholas Paterno & Cruz Molina",
+    "published": true,
+    "excerpt": "At Truffle, we decided such an approach was an unnecessarily CPU-intensive solution to the problem and set out to find a (theoretically) more performant and perfectly accurate way of estimating gas. The result? Gas exactimation."
+  },
   "how-to-get-your-boss-to-send-you-to-trufflecon": {
     "title": "How to get your boss to send you to TruffleCon",
     "date": "2019-5-6",

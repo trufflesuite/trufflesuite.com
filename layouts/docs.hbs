@@ -29,7 +29,7 @@
   <!-- Facebook OpenGraph -->
   <meta property="og:site_name" content="Truffle Suite" />
   <meta property="og:description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}" />
-  <meta property="og:title" content="Truffle Suite | Documentation{{#if title}} | {{ title }}{{/if}}" />
+  <meta property="og:title" content="{{#if title}}{{ title }} | {{/if}}Documentation | Truffle Suite" />
   <meta property="og:url" content="{{getPageUrl path}}" />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="https://truffleframework.com/img/favicons/truffle-share.png" />
@@ -37,7 +37,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="Truffle Suite" />
-  <meta name="twitter:title" content="Truffle Suite | Documentation{{#if title}} | {{ title }}{{/if}}" />
+  <meta name="twitter:title" content="{{#if title}}{{ title }} | {{/if}}Documentation | Truffle Suite" />
   <meta name="twitter:description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}" />
   <meta name="twitter:creator" content="Truffle Suite" />
   <meta name="twitter:domain" content="trufflesuite.com" />
@@ -45,11 +45,7 @@
   
   <meta name="google-site-verification" content="BSgPkMHzw7IxJTpEElNfD8ZZYPzXgOQiTVPzAxAG8-o" />
 
-  {{#if title}}
-    <title>Truffle Suite | Documentation | {{ title }}</title>
-  {{else}}
-    <title>Truffle Suite | Documentation</title>
-  {{/if}}
+  <title>{{#if title}}{{ title }} | {{/if}}Documentation | Truffle Suite</title>
 
   <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans|Oswald|Varela+Round|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
@@ -93,6 +89,7 @@
         <div class="banner banner-green banner-trufflecon pt-2 pb-2">
           <a href="/trufflecon2019">
             <div class="container text-center">
+              <span class="h5">Thanks to our sponsors tickets are now $99!</span><br/>
               Join us <strong>August 2 - 4</strong> for TruffleCon 2019 @ Microsoft in <u>Redmond, WA</u>!
             </div>
           </a>
