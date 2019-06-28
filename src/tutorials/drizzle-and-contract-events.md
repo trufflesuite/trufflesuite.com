@@ -44,6 +44,10 @@ Let's use `truffle unbox` to bootstrap a project and then wire up a contract
 event to a display component by creating a reducer and hook it up to Drizzle's
 `EVENT_FIRED` action.
 
+<p class="alert alert-info">
+  <strong>Note</strong>: More Drizzle actions are listed in our [Drizzle Actions documentation](/docs/drizzle/reference/drizzle-actions).
+</p>
+
 First start the `ganache-cli` test chain and `unbox` Drizzle.
 
 ```bash
@@ -205,3 +209,5 @@ A Quick Test
 
 The dapp is now a consumer of Drizzle's `EVENT_FIRED` action item and can
 coordinate with other services to implement its business logic.
+
+More Drizzle actions are listed in our [Drizzle Actions documentation](/docs/drizzle/reference/drizzle-actions).

@@ -10,53 +10,81 @@ The main categories of actions pertain to:
 * [Accounts](#accounts)
 * [Blocks](#blocks)
 * [Drizzle](#drizzle)
-* [Contracts](#contracts)
 * [Contract Events](#contract-events)
 * [Transactions](#transactions)
 
 ## Accounts
 
 ### `ACCOUNTS_FETCHING`
-A sentence about the event, such as: conditions under which it fires, what it contains, etc.
+Fired when Drizzle begins fetching accounts.
 
 ### `ACCOUNTS_FETCHED`
-A sentence about the event, such as: conditions under which it fires, what it contains, etc.
+Fired once Drizzle has successfully fetched accounts.
+```
+{
+  accounts
+}
+```
+**`accounts` (array)**: An array of account addresses.
 
+<!--
 ### `ACCOUNTS_FAILED`
 A sentence about the event, such as: conditions under which it fires, what it contains, etc.
+```
+{
+  error
+}
+```
+`error` (object): An error object.
+-->
+
+### `ACCOUNT_BALANCE_FETCHED`
+Fired when an account balance has been successfully fetched. 
+```
+{
+  address: balance
+}
+```
+**`balance` (int)**: The account balance, indexed by account `address` (string) in gwei.
 
 ### `ACCOUNTS_POLLING`
-A sentence about the event, such as: conditions under which it fires, what it contains, etc.
+Fired when Drizzle begins polling for account changes.
 
 ## Blocks
 
-### `BLOCK_RECEIVED`
+<!--### `BLOCK_RECEIVED`
 A sentence about the event, such as: conditions under which it fires, what it contains, etc.
 
 ### `BLOCKS_FAILED`
 A sentence about the event, such as: conditions under which it fires, what it contains, etc.
 
 ### `BLOCK_FOUND`
-A sentence about the event, such as: conditions under which it fires, what it contains, etc.
+A sentence about the event, such as: conditions under which it fires, what it contains, etc.-->
 
 ### `BLOCK_PROCESSING`
 A sentence about the event, such as: conditions under which it fires, what it contains, etc.
+```
+{
+  block
+}
+```
+**`block` (object)**: The block object returned by web3. See the [web3 getBlock documentation](https://web3js.readthedocs.io/en/1.0/web3-eth.html?highlight=getBlock#id45) for the block object's structure.
 
-### `BLOCKS_LISTENING`
+<!--### `BLOCKS_LISTENING`
 A sentence about the event, such as: conditions under which it fires, what it contains, etc.
 
 ### `BLOCKS_POLLING`
-A sentence about the event, such as: conditions under which it fires, what it contains, etc.
+A sentence about the event, such as: conditions under which it fires, what it contains, etc.-->
 
 ## Drizzle
 
-### `DRIZZLE_INITIALIZING`
-A sentence about the event, such as: conditions under which it fires, what it contains, etc.
+<!--### `DRIZZLE_INITIALIZING`
+A sentence about the event, such as: conditions under which it fires, what it contains, etc.-->
 
 ### `DRIZZLE_INITIALIZED`
-A sentence about the event, such as: conditions under which it fires, what it contains, etc.
+Fire when drizzle has finished initializing. Once this has fired, web3 and accounts have been intialized.
 
-### `DRIZZLE_FAILED`
+<!--### `DRIZZLE_FAILED`
 A sentence about the event, such as: conditions under which it fires, what it contains, etc.
 
 ## Contracts
@@ -95,38 +123,80 @@ A sentence about the event, such as: conditions under which it fires, what it co
 A sentence about the event, such as: conditions under which it fires, what it contains, etc.
 
 ### `CONTRACT_INITIALIZED`
-A sentence about the event, such as: conditions under which it fires, what it contains, etc.
+A sentence about the event, such as: conditions under which it fires, what it contains, etc.-->
 
 ## Contract Events
 
-### `LISTEN_FOR_EVENT`
-A sentence about the event, such as: conditions under which it fires, what it contains, etc.
+<!--### `LISTEN_FOR_EVENT`
+A sentence about the event, such as: conditions under which it fires, what it contains, etc.-->
 
 ### `EVENT_FIRED`
-A sentence about the event, such as: conditions under which it fires, what it contains, etc.
+Fired when a contract event has been fired.
+```
+{
+  name,
+  event
+}
+```
+**`name` (string)**: The name of the event.
 
-### `EVENT_CHANGED`
+**`event` (object)**: The event object returned by web3. See the [web3 Contract Event documentation](https://web3js.readthedocs.io/en/1.0/web3-eth-contract.html#contract-events-return) for the event object's structure.
+
+<!--### `EVENT_CHANGED`
 A sentence about the event, such as: conditions under which it fires, what it contains, etc.
 
 ### `EVENT_ERROR`
-A sentence about the event, such as: conditions under which it fires, what it contains, etc.
+A sentence about the event, such as: conditions under which it fires, what it contains, etc.-->
 
 ## Transactions
 
+<!--### `PUSH_TO_TXSTACK`
+A sentence about the event, such as: conditions under which it fires, what it contains, etc.-->
+
 ### `TX_BROADCASTED`
 A sentence about the event, such as: conditions under which it fires, what it contains, etc.
+```
+{
+  txHash,
+  stackId
+}
+```
+**`txHash` (string)**: The transaction hash.
+
+**`stackId` (int)**: An integer representing an index in the `transactionStack`.
 
 ### `TX_CONFIRMAITON`
 A sentence about the event, such as: conditions under which it fires, what it contains, etc.
+```
+{
+  confirmationReceipt,
+  txHash
+}
+```
+**`confirmationReceipt` (object)**: The confirmation receipt returned by web3. See the [web3 getTransactionReceipt documentation](https://web3js.readthedocs.io/en/1.0/web3-eth.html?highlight=confirmation#eth-gettransactionreceipt-return) for the receipt object's structure.
+
+**`txHash` (string)**: The transaction hash.
 
 ### `TX_SUCCESSFUL`
 A sentence about the event, such as: conditions under which it fires, what it contains, etc.
+```
+{
+  receipt,
+  txHash
+}
+```
+**`receipt` (object)**: The transaction receipt returned by web3. See the [web3 getTransactionReceipt documentation](https://web3js.readthedocs.io/en/1.0/web3-eth.html?highlight=confirmation#eth-gettransactionreceipt-return) for the receipt object's structure.
+
+**`txHash` (string)**: The transaction hash.
 
 ### `TX_ERROR`
 A sentence about the event, such as: conditions under which it fires, what it contains, etc.
+```
+{
+  error,
+  stackTempKey
+}
+```
+**`error` (object)**: An error object, containig a `message`, if provided. Empty object if the transaction failed as a result of user rejection via their wallet.
 
-### `PUSH_TO_TXSTACK`
-A sentence about the event, such as: conditions under which it fires, what it contains, etc.
-
-### `POP_FROM_TXSTACK`
-A sentence about the event, such as: conditions under which it fires, what it contains, etc.
+**`stackTempKey` (string)**: If the transaction experienced an erorr before broadcasting (such as a rejection), this key will be filled on the `transactionStack` rather than a transaction hash to prevent stack index collisions.
