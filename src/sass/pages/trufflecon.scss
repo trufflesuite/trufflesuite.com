@@ -216,20 +216,10 @@ blockquote {
 .trufflecon-speakers {
   img {
     border: 4px solid #3fe0c5;
-  }
-  .circle-image-container {
-    margin: 0 auto .5rem auto;
-    padding-bottom: 0;
-    overflow: hidden;
-
-    @media (max-width: 991.98px) {
-      width: 200px;
-      height: 200px;
-
-      img {
-        width: 200px;
-      }
-    }
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
 
   h3 {
@@ -244,6 +234,13 @@ blockquote {
 
     h3{
       color: #5e464d
+    }
+  }
+
+  &.trufflecon-team {
+    img {
+      max-width: 240px;
+      width: 100%;
     }
   }
 }
@@ -320,4 +317,15 @@ blockquote {
   iframe {
     width: 100%
   }
+}
+
+.speaker-icon {
+  position:absolute;
+  top: 180px;
+  left: 50px;
+  z-index: 2;
+}
+
+.countdown-align {
+  object-position: center;
 }
