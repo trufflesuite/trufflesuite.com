@@ -179,7 +179,7 @@ contract MyContract {
     value = val;
     emit ValueSet(value);
   }
-  function getValue() constant returns (uint) {
+  function getValue() view returns (uint) {
     return value;
   }
 }
@@ -255,7 +255,7 @@ const value = await instance.getValue.call();
 // since the contract returns that value.
 ```
 
-Even more helpful, however is we *don't even need* to use `.call` when a function is marked as `constant`, because `truffle-contract` will automatically know that that function can only be interacted with via a call:
+Even more helpful, however is we *don't even need* to use `.call` when a function is marked as `view` or `pure` (or the deprecated `constant`), because `truffle-contract` will automatically know that that function can only be interacted with via a call:
 
 ```javascript
 const value = await instance.getValue();
