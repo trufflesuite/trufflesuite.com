@@ -36,7 +36,7 @@ social-description: For Truffle users, blockchain developers and those building 
             <a class="nav-link scroll-link" href="#schedule">Schedule</a>
           </nav>
           <h3 class="mt-4 mb-4 mx-auto text-center" style="width: 60%; letter-spacing: 1px;">A conference for those who want to build world-changing applications powered by decentralized technologies.</h3>
-          <div class="mt-4 mb-4"></div>
+          <h1 class="tcon-countdown color-drizzle text-center mb-4 text-lowercase"></h1>
           <div class="text-center">
            <!-- <a class="btn btn-truffle btn-lg" href="https://www.eventbrite.com/e/trufflecon-2019-tickets-58020862963?aff=TruffleCon2019" target="_blank">Buy Tickets</a> -->
                                       <!-- Noscript content for added SEO -->
@@ -62,7 +62,8 @@ social-description: For Truffle users, blockchain developers and those building 
                             </script>
             <a class="btn btn-ganache btn-lg speak-at-cta" href="mailto:inquiry@trufflesuite.com">Sponsor TruffleCon</a>
           </div>
-          <div class="mt-4 mb-4 mx-auto" style="text-align: center;">
+
+          <div class="mt-6 mb-4 mx-auto" style="text-align: center;">
             <div class="embed-responsive embed-responsive-16by9">
               <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/m_VLN5Or_w8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
@@ -71,13 +72,7 @@ social-description: For Truffle users, blockchain developers and those building 
     </div>
   </div>
 </main>
-<!--
-<main style="background-color: #ffffff">
-    <div class="nav trufflecon-nav-inline justify-content-center">
-      <div class="tcon-countdown"></div>
-    </div>
-</main>
--->
+
 <main class="banner banner-bright-pink pt-5 pb-5">
   <div class="container">
     <div class="row">
@@ -209,8 +204,10 @@ social-description: For Truffle users, blockchain developers and those building 
 
     <div class="row trufflecon-speakers trufflecon-team">
       <div class="col-6 col-md-4">
-        <img class="img-fluid rounded-circle mb-3" src="/img/trufflecon/tim-still.jpg" alt="Tim Coulter" />
-        <img src="/img/trufflecon/2019speakers/truffle-icon1.svg" class="speaker-icon" style="max-width: 40px; border: 0;">
+        <div class="position-relative">
+          <img class="img-fluid rounded-circle mb-3" src="/img/trufflecon/tim-still.jpg" alt="Tim Coulter" />
+          <img src="/img/trufflecon/2019speakers/truffle-icon1.svg" class="speaker-icon" style="max-width: 60px; border: 0;">
+        </div>
         <h3>Tim Coulter</h3>
         <p>Tim Coulter is the Founder and CEO of Truffle. Before blockchain, Tim built a career specializing in software testing and developer support, which became extremely valuable in the early days of blockchain development. He's now surrounded by an amazing team building the next generation of blockchain development tools, and can't wait to tell you about what's to come.</p>
       </div>
@@ -744,14 +741,4 @@ social-description: For Truffle users, blockchain developers and those building 
 <script src="js/subnav.js"></script>
 <script src="https://embed.small.chat/TB3UH2TUPGHLKTAY23.js" async></script>
 <script type="text/javascript" src="//trufflecon2019.sched.com/js/embed.js"></script>
-<script src="js/flipclock.min.js"></script>
-<script>
-    var date = new Date(2019, 7, 2);
-    var now = new Date();
-    var diff = (date.getTime()/1000) - (now.getTime()/1000);
-
-    var clock = $('.tcon-countdown').FlipClock(diff,{
-        clockFace: 'DailyCounter',
-        countdown: true
-    });  
-</script>
+<script src="js/flipclock.js"></script>

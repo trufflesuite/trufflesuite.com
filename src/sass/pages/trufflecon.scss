@@ -321,11 +321,15 @@ blockquote {
 
 .speaker-icon {
   position:absolute;
-  top: 180px;
+  bottom: 0;
   left: 50px;
   z-index: 2;
 }
 
 .countdown-align {
   object-position: center;
+}
+
+.tcon-countdown {
+  margin: 0 auto;
 }
