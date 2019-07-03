@@ -1,5 +1,22 @@
-.post-row:not(:last-child) {
-  margin-bottom: 3rem;
+.post-row-link {
+  color: inherit;
+  display: block;
+  transition: all .125s ease-in-out;
+
+  &:hover {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+
+    .btn-truffle {
+      background: #fff;
+      color: #5e464d;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
 }
 
 .post-thumbnail {
