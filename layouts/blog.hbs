@@ -68,30 +68,34 @@
     <div class="container">
       {{#each blog as |post slug|}}
         {{#if post.image}}
-          <div class="row align-items-center post-row">
-            <div class="col-md-3">
-              <img src="{{ post.image }}" class="rounded-circle img-fluid post-thumbnail" />
+          <a class="post-row-link" href="/blog/{{ slug }}">
+            <div class="row align-items-center post-row">
+              <div class="col-md-3">
+                <img src="{{ post.image }}" class="rounded-circle img-fluid post-thumbnail" />
+              </div>
+              <div class="col-md-9">
+                <h2>{{ post.title }}</h2>
+                <p><i class="far fa-calendar-alt"></i> {{ post.date }}&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> {{ post.author }}</p>
+                {{#if post.excerpt}}
+                  <p>{{ post.excerpt }}</p>
+                {{/if}}
+                <span class="btn btn-truffle">READ MORE</span>
+              </div>
             </div>
-            <div class="col-md-9">
-              <h2>{{ post.title }}</h2>
-              <p><i class="far fa-calendar-alt"></i> {{ post.date }}&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> {{ post.author }}</p>
-              {{#if post.excerpt}}
-                <p>{{ post.excerpt }}</p>
-              {{/if}}
-              <a class="btn btn-truffle" href="/blog/{{ slug }}">READ MORE</a>
-            </div>
-          </div>
+          </a>
         {{else}}
-          <div class="row post-row">
-            <div class="col">
-              <h2>{{ post.title }}</h2>
-              <p><i class="far fa-calendar-alt"></i> {{ post.date }}&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> {{ post.author }}</p>
-              {{#if post.excerpt}}
-                <p>{{ post.excerpt }}</p>
-              {{/if}}
-              <a class="btn btn-truffle" href="/blog/{{ slug }}">READ MORE</a>
+          <a class="post-row-link" href="/blog/{{ slug }}">
+            <div class="row post-row">
+              <div class="col">
+                <h2>{{ post.title }}</h2>
+                <p><i class="far fa-calendar-alt"></i> {{ post.date }}&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> {{ post.author }}</p>
+                {{#if post.excerpt}}
+                  <p>{{ post.excerpt }}</p>
+                {{/if}}
+                <span class="btn btn-truffle">READ MORE</span>
+              </div>
             </div>
-          </div>
+          </a>
         {{/if}}
       {{/each}}
     </div>
