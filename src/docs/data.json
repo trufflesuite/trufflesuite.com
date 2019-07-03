@@ -1,6 +1,16 @@
 {
   "teams": {
-    
+    "Getting Started": [
+      "Creating an Account",
+      "Navigating the UI",
+      "Linking Repositories"
+    ],
+    "Testing": [
+      "Starting Builds"
+    ],
+    "Contracts": [
+      "Monitoring Contracts"
+    ]
   },
   "truffle": {
     "Getting Started": [
