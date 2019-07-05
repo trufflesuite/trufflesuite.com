@@ -1,3 +1,9 @@
+TruffleCon 2019 is happening August 2-4, 2019 at Microsoft's Redmond campus on the Eastside of Seattle. There are still 30 days left (from the date of publishing) to buy tickets!
+
+<div class="text-center">
+  <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
+</div>
+
 ![tapestry of Truffle team headshots](/img/blog/10-things-we-dont-do-that-make-working-at-truffle-awesome/layer-1.jpg)
 
 At Truffle we have an extremely tight-knit team. You'll see that at this year's TruffleCon, a conference for hundreds of attendees organized by only a handful of people. We often have more work than we can handle, yet we take it on because we love the work we're doing and we love the people we work with. In my history of hopping startups – I'm currently on number nine – I haven't seen this anywhere else, so I wanted to take the time to highlight some things that set Truffle apart from the rest. Here's a list of what we don't do that makes working at Truffle awesome:
@@ -19,5 +25,9 @@ At Truffle we have an extremely tight-knit team. You'll see that at this year's 
 1. **See #9.**
 
 Working at Truffle has been an amazing journey. It's incredibly humbling to see a project I started from necessity turn into a company run by the heart and soul of a close, tight-knit group of professionals. Truffle would be nothing without this team, and without Truffle I'd likely not be excited to go to work every morning (I commute downstairs in my pajamas, but still). Thank you, Truffle team, for making this company awesome.
+
+<div class="text-center">
+  <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
+</div>
 
 ![Truffle team members preparing for TruffleCon 2019](/img/blog/10-things-we-dont-do-that-make-working-at-truffle-awesome/layer-7.jpg)
