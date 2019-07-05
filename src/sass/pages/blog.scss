@@ -3,6 +3,10 @@
   display: block;
   transition: all .125s ease-in-out;
 
+  h2 {
+    text-transform: uppercase;
+  }
+
   &:hover {
     color: inherit;
     display: block;
