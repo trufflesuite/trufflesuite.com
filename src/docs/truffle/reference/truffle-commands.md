@@ -298,7 +298,13 @@ Run JavaScript and Solidity tests.
 truffle test [<test_file>] [--compile-all] [--network <name>] [--verbose-rpc] [--show-events]
 ```
 
-Runs some or all tests within the `test/` directory as specified. See the section on [Testing your contracts](/docs/getting_started/testing) for more information.
+Runs some or all tests within the `test/` directory as specified.
+
+See the section on [Testing your contracts](/docs/getting_started/testing) for more information.
+
+Exit status:
+
+* Per mocha's [source code](https://github.com/mochajs/mocha/blob/5d4dd98747637d0e7ed3007328ec9627dd7eda41/lib/cli/run-helpers.js#L35): typically, the exit status is the number of failed tests or 255 if there has been more than 255 failed tests.
 
 Options:
 
