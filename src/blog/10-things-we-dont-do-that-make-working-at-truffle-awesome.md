@@ -1,7 +1,9 @@
-TruffleCon 2019 is happening August 2-4, 2019 at Microsoft's Redmond campus on the Eastside of Seattle. There are still 30 days left (from the date of publishing) to buy tickets!
+<div class="post-trufflecon-box mb-5">
+  **[TruffleCon 2019](https://www.trufflesuite.com/trufflecon2019)** is happening August 2-4 on Microsoft’s campus in Redmond, WA. This year’s event will include 60+ speakers from the blockchain ecosystem, along with hands-on workshops geared toward novice users and expert builders alike. The Truffle team is ramping up for TruffleCon 2019 by writing a daily blog post about everything that’s on our minds. We hope you enjoy and we’ll see you in Redmond!
 
-<div class="text-center">
-  <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
+  <div class="text-center">
+    <a class="btn btn-truffle mt-3" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
+  </div>
 </div>
 
 ![tapestry of Truffle team headshots](/img/blog/10-things-we-dont-do-that-make-working-at-truffle-awesome/layer-1.jpg)
@@ -26,8 +28,12 @@ At Truffle we have an extremely tight-knit team. You'll see that at this year's 
 
 Working at Truffle has been an amazing journey. It's incredibly humbling to see a project I started from necessity turn into a company run by the heart and soul of a close, tight-knit group of professionals. Truffle would be nothing without this team, and without Truffle I'd likely not be excited to go to work every morning (I commute downstairs in my pajamas, but still). Thank you, Truffle team, for making this company awesome.
 
-<div class="text-center">
-  <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-</div>
-
 ![Truffle team members preparing for TruffleCon 2019](/img/blog/10-things-we-dont-do-that-make-working-at-truffle-awesome/layer-7.jpg)
+
+<div class="post-trufflecon-box mt-5 text-center">
+  Get your ticket for TruffleCon 2019 Today
+
+  <div class="mt-3">
+    <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
+  </div>
+</div>
