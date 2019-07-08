@@ -304,3 +304,20 @@
     }
   }
 }
+
+.inline-button {
+  color: rgb(94, 70, 77);
+  background: rgb(63, 224, 197);
+  padding: .125em .33em;
+  border-radius: .25em;
+}
+
+.inline-menu-item {
+  color: #ffffff;
+  background: #33262a;
+  padding: .125em .33em;
+  
+  i {
+    margin-right: .25em;
+  }
+}
