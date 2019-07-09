@@ -306,16 +306,19 @@
 }
 
 .inline-button {
-  color: rgb(94, 70, 77);
-  background: rgb(63, 224, 197);
-  padding: .125em .33em;
+  color: #33262a;
+  background: #3fe0c5;
+  padding: .25em .5em;
   border-radius: .25em;
+  font-size: .9em;
+  line-height: 2em;
 }
 
 .inline-menu-item {
   color: #ffffff;
   background: #33262a;
   padding: .125em .33em;
+  line-height: 2em;
   
   i {
     margin-right: .25em;

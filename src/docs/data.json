@@ -2,7 +2,6 @@
   "teams": {
     "Getting Started": [
       "Creating an Account",
-      "Navigating the UI",
       "Linking Repositories"
     ],
     "Testing": [
@@ -10,6 +9,10 @@
     ],
     "Contracts": [
       "Monitoring Contracts"
+    ],
+    "Reference": [
+      "Navigating the UI",
+      "Permissions Disclosure"
     ]
   },
   "truffle": {
