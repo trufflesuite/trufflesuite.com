@@ -13,7 +13,7 @@ Select a member of the **Truffle Suite** to learn more.
         <div class="card-body">
           <h5 class="card-title mt-0 text-truffle"><img class="card-img-top" src="/img/tt-logomark.svg" alt="Truffle Teams Logo">TRUFFLE TEAMS</h5>
           <hr />
-          <p class="mb-0">Lorem ipsum dolor sit amet...</p>
+          <p class="mb-0"><strong>DEVOPS FOR DAPPS</strong> Test efficiently with hosted continuous integration. Monitoring deployed contract balances, txs, and events.</p>
         </div>
       </div>
     </a>
@@ -25,7 +25,7 @@ Select a member of the **Truffle Suite** to learn more.
         <div class="card-body">
           <h5 class="card-title mt-0 text-truffle"><img class="card-img-top" src="/img/truffle-logomark.svg" alt="Truffle Logo"><span class="narrow">T</span>RUFFLE</h5>
           <hr />
-          <p class="mb-0">Lorem ipsum dolor sit amet...</p>
+          <p class="mb-0"><strong>SMART CONTRACTS MADE SWEETER</strong> Compile, test, debug and deploy with the most popular smart contract development tool.</p>
         </div>
       </div>
     </a>
@@ -37,7 +37,7 @@ Select a member of the **Truffle Suite** to learn more.
         <div class="card-body">
           <h5 class="card-title mt-0 text-ganache"><img class="card-img-top" src="/img/ganache-logomark.svg" alt="Ganache Logo">Ganache</h5>
           <hr />
-          <p class="mb-0">Lorem ipsum dolor sit amet...</p>
+          <p class="mb-0"><strong>ONE CLICK BLOCKCHAIN</strong> Fast, easy, local development blockchain in UI and CLI flavors. Introspection of contract data and events.</p>
         </div>
       </div>
     </a>
@@ -49,7 +49,7 @@ Select a member of the **Truffle Suite** to learn more.
         <div class="card-body">
           <h5 class="card-title mt-0 text-drizzle"><img class="card-img-top" src="/img/drizzle-logomark.svg" alt="Drizzle Logo">dri<span class="drizzle-z-skew-1">z</span><span class="drizzle-z-skew-2">z</span>le</h5>
           <hr />
-          <p class="mb-0">Lorem ipsum dolor sit amet...</p>
+          <p class="mb-0"><strong>FRESH CHAIN-DATA FOR FRONT-ENDS</strong> Standards-compliant wallet connection, account and contract state management. Turn-key React component library.</p>
         </div>
       </div>
     </a>
