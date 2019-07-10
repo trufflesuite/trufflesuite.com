@@ -2,13 +2,13 @@
   "teams": {
     "Getting Started": [
       "Creating an Account",
-      "Linking Repositories"
+      "Adding Repositories"
     ],
     "Testing": [
       "Starting Builds"
     ],
     "Contracts": [
-      "Monitoring Contracts"
+      "Contract Monitoring"
     ],
     "Reference": [
       "Navigating the UI",

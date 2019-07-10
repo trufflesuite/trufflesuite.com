@@ -15,7 +15,7 @@ If you are a member of any organizations other than your personal account, you'l
 Next you'll be asked for permission to link Truffle Teams to one or more of your GitHub repositories. Select the repositories you wish to add and click continue. Select either `All repositories` to add all repos in this account/org to teams or `Only select repositories` to select individual repos from the dropdown.
 
 <p class="alert alert-info">
-<strong>Note</strong>: We can always add a repo later if necessary. See the [Linking Repositories](/docs/teams/getting-started/linking-repositories) documentation for more informaiton.
+<strong>Note</strong>: We can always add a repo later if necessary. See the [Adding Repositories](/docs/teams/getting-started/adding-repositories) documentation for more informaiton.
 </p>
 
 Finally, click the `Install` button to install Truffle Teams on the selected repos and be redirected to the `BUILDS` page.

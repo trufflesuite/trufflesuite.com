@@ -1,8 +1,8 @@
 ---
-title: Teams | Linking Repositories
+title: Teams | Adding Repositories
 layout: docs.hbs
 ---
-# Linking Repositories
+# Adding Repositories
 
 The first time you sign in to Truffle Teams, GitHub will prompt you to install it on one or more repositories. In some cases you may want to add a repository after intial installation. For example, if it's been created after siging up for Truffle Teams.
 
