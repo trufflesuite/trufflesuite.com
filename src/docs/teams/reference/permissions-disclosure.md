@@ -10,10 +10,18 @@ During installation Truffle Teams asks for various permissions. We respect your 
 
 ### **Write** access to code
 
+...
+
 ### **Read** access to administration, issues, and metadata
 
+...
+
 ### **Read** access to checks, commit statuses, and pull requests
+
+Reading these allows Truffle Teams to trigger builds automatically on commits and pull requests.
 
 ## User Permissions
 
 ### **Read** access to emails
+
+...
