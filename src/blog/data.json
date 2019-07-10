@@ -1,4 +1,11 @@
 {
+  "the-blockchain-problem-that-ens-solves": {
+    "title": "The Blockchain UI Problem that ENS Solves",
+    "date": "2019-7-9",
+    "author": "Brantly Millegan, guest blogger from Ethereum Name Service",
+    "published": true,
+    "excerpt": "The blockchain world has a UI problem. The computer-generated address system works great for computers but isn’t user-friendly. That’s where the Ethereum Name Service (ENS) comes in. ENS provides the same basic functionality of DNS (look up the records for “example.tld,” retrieve information), but replaces the hierarchical DNS server system with a few smart contracts on Ethereum."
+  },
   "the-best-ways-to-contribute-to-truffle": {
     "title": "The Best Ways to Contribute to Truffle",
     "date": "2019-7-8",
