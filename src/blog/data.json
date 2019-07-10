@@ -1,4 +1,11 @@
 {
+  "introducing-truffle-db": {
+    "title": "Introducing Truffle DB, part 1: Artifact archeology",
+    "date": "2019-7-10",
+    "author": "gnidan (Nick D'Andrea)",
+    "published": true,
+    "excerpt": "The Truffle DeBugger works hard to give you insight to what's going on in your smart contracts. Find out how it works."
+  },
   "the-blockchain-problem-that-ens-solves": {
     "title": "The Blockchain UI Problem that ENS Solves",
     "date": "2019-7-9",
