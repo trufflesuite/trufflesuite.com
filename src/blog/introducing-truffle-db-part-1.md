@@ -6,7 +6,7 @@
   </div>
 </div>
 
-## Introducing Truffle DeBugger, part 1: Artifact archeology
+## Introducing Truffle DB, part 1: Artifact archeology
 Truffle is not a small utility: it compiles your contracts, deploys them to multiple networks, runs your automated tests, provides an interactive debugger for when things go wrong, offers a library for interacting with your contracts on the frontend, … (*the list goes on.*) With just over 20,000 lines of code and close to thirty discrete software packages, Truffle has a lot going on.
 
 Truffle is “not small” on purpose. The tool oversees the development lifecycle in human developer terms. It keeps track of familiar concepts and hides unnecessary, low-level specifics. That’s a big goal.
