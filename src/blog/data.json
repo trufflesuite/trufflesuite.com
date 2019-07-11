@@ -1,4 +1,11 @@
 {
+  "introducing-truffle-db-part-1": {
+    "title": "Introducing Truffle DB, Part 1: Artifact archeology",
+    "date": "2019-7-10",
+    "author": "gnidan (Nick D'Andrea)",
+    "published": true,
+    "excerpt": "In the first of this two-part blog post, learn about how Truffle manages to make sense of your project and some of the current limitations we hope to solve with our upcoming Truffle DB."
+  },
   "the-blockchain-problem-that-ens-solves": {
     "title": "The Blockchain UI Problem that ENS Solves",
     "date": "2019-7-9",
