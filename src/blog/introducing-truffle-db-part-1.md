@@ -6,7 +6,7 @@
   </div>
 </div>
 
-## Introducing Truffle DeBugger, part 1: Artifact archeology
+## Introducing Truffle DB, part 1: Artifact archeology
 Truffle is not a small utility: it compiles your contracts, deploys them to multiple networks, runs your automated tests, provides an interactive debugger for when things go wrong, offers a library for interacting with your contracts on the frontend, … (*the list goes on.*) With just over 20,000 lines of code and close to thirty discrete software packages, Truffle has a lot going on.
 
 Truffle is “not small” on purpose. The tool oversees the development lifecycle in human developer terms. It keeps track of familiar concepts and hides unnecessary, low-level specifics. That’s a big goal.
@@ -29,11 +29,6 @@ For starters: artifact files are huge! Too huge! In addition to Truffle reading 
   *for the curious: the AST is the reason your code works whether you wrote it all on a single line or not. Source gets parsed, and the AST is the result. Truffle and other tools rely on the AST for things like debugging, code coverage, and linting.
 </figcaption>
 </figure>
-
-![Example of Truffle DB](/img/blog/introducing-truffle-db/example-truffle-db.png)
-###### **For example:** Truffle stores the same abstract syntax tree* (AST) in two different formats, in every single artifact! Most applications do not need this. 
-###### *For the curious: the AST is the reason your code works whether you wrote it all on a single line or not. Source gets parsed, and the AST is the result. Truffle and other tools rely on the AST for things like debugging, code coverage, and linting.
-
 
 By the byte, almost all of the information in each contract artifact is for internal use or for some specific purpose. **Only a small subset of the data in each artifact is necessary for your frontend or for you to think about directly.** Thus far, users who have struggled with these large files needed to use a tool like [jq](https://stedolan.github.io/jq/) or write a custom solution. 
 
