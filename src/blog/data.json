@@ -2,7 +2,7 @@
   "introducing-truffle-db-part-2": {
     "title": "Introducing Truffle DB, part 2: 'Weight and Switch'",
     "date": "2019-7-11",
-    "author": "Faina Shalts",
+    "author": "gnidan (Nick D'Andrea) and Faina Shalts",
     "published": true,
     "excerpt": "In the second of this two-part blog post, we go over Truffle DB's data model, interface, and our roadmap to release."
   },
