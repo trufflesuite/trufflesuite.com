@@ -134,6 +134,11 @@
     "stars": 29,
     "tags": ["community", "truffle-box", "truffle", "nodejs", "ethereum-blockchain", "ganache-cli", "solidity"]
   },
+  "HelloWorldBox": {
+    "description": "This truffle box could used for Dapp & ICO development with deployment. Ready to migrate with infura or local developement.",
+    "stars": 0,
+    "tags": ["community"]
+  },
   "limelabs-angular-box": {
     "description": "Truffle Box for Angular is a quick-and-easy way to get your Dapp on the road with Truffle and Angular",
     "stars": 7,
