@@ -134,6 +134,11 @@
     "stars": 29,
     "tags": ["community", "truffle-box", "truffle", "nodejs", "ethereum-blockchain", "ganache-cli", "solidity"]
   },
+  "fluidity-truffle-box": {
+    "description": "Truffle box to give a skeleton for how Fluidity set up truffle and add-ons",
+    "stars": 2,
+    "tags": ["community", "circle-ci", "eth-gas-reporter", "mythril", "slither", "solhint"]
+  },
   "HelloWorldBox": {
     "description": "This truffle box could used for Dapp & ICO development with deployment. Ready to migrate with infura or local developement.",
     "stars": 0,
