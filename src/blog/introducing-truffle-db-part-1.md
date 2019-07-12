@@ -26,14 +26,8 @@ For starters: artifact files are huge! Too huge! In addition to Truffle reading 
   <img src="/img/blog/introducing-truffle-db/example-truffle-db.png" alt="Example of Truffle DB" style="width:100%">
   <figcaption>**For example:** Truffle stores the same abstract syntax tree* (AST) in two different formats, in every single artifact! Most applications do not need this.
 
-  *for the curious: the AST is the reason your code works whether you wrote it all on a single line or not. Source gets parsed, and the AST is the result. Truffle and other tools rely on the AST for things like debugging, code coverage, and linting.
-</figcaption>
+  *for the curious: the AST is the reason your code works whether you wrote it all on a single line or not. Source gets parsed, and the AST is the result. Truffle and other tools rely on the AST for things like debugging, code coverage, and linting.</figcaption>
 </figure>
-
-![Example of Truffle DB](/img/blog/introducing-truffle-db/example-truffle-db.png)
-###### **For example:** Truffle stores the same abstract syntax tree* (AST) in two different formats, in every single artifact! Most applications do not need this. 
-###### *For the curious: the AST is the reason your code works whether you wrote it all on a single line or not. Source gets parsed, and the AST is the result. Truffle and other tools rely on the AST for things like debugging, code coverage, and linting.
-
 
 By the byte, almost all of the information in each contract artifact is for internal use or for some specific purpose. **Only a small subset of the data in each artifact is necessary for your frontend or for you to think about directly.** Thus far, users who have struggled with these large files needed to use a tool like [jq](https://stedolan.github.io/jq/) or write a custom solution. 
 

@@ -6,6 +6,13 @@
     "published": true,
     "excerpt": "Fluidity has a pretty awesome truffle-box with lots of goodies to build secure, well-tested smart contracts. With two simple commands, you’ll be set up for development using these testing and security tools preconfigured."
   },
+  "introducing-truffle-db-part-2": {
+    "title": "Introducing Truffle DB, part 2: 'Weight and Switch'",
+    "date": "2019-7-11",
+    "author": "gnidan (Nick D'Andrea) and Faina Shalts",
+    "published": true,
+    "excerpt": "In the second of this two-part blog post, we go over Truffle DB's data model, interface, and our roadmap to release."
+  },
   "introducing-truffle-db-part-1": {
     "title": "Introducing Truffle DB, Part 1: Artifact archeology",
     "date": "2019-7-10",
