@@ -1,4 +1,11 @@
 {
+  "develop-using-fluidity-truffle-box": {
+    "title": "Develop using Fluidity Truffle Box",
+    "date": "2019-7-12",
+    "author": "Deepa Sathaye, Guest Blogger from Fluidity",
+    "published": true,
+    "excerpt": "Fluidity has a pretty awesome truffle-box with lots of goodies to build secure, well-tested smart contracts. With two simple commands, you’ll be set up for development using these testing and security tools preconfigured."
+  },
   "introducing-truffle-db-part-1": {
     "title": "Introducing Truffle DB, Part 1: Artifact archeology",
     "date": "2019-7-10",
