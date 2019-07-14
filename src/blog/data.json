@@ -1,4 +1,11 @@
 {
+  "an-easier-way-to-deploy-your-smart-contracts": {
+    "title": "An Easier Way to Deploy Your Smart Contracts",
+    "date": "2019-7-17",
+    "author": "Mike Seese",
+    "published": true,
+    "excerpt": "TBD"
+  },
   "why-i-love-trufflecon": {
     "title": "Why I love TruffleCon",
     "date": "2019-7-18",
@@ -27,7 +34,7 @@
     "published": true,
     "excerpt": "In this article we explore 5 trends impacting the developer-experience (or DX) when it comes to building blockchain-based solutions. Specifically, applications and services that leverage a blockchain or distributed ledger or as part of their overall architecture."
   },
-   "develop-using-fluidity-truffle-box": {
+  "develop-using-fluidity-truffle-box": {
     "title": "Develop using Fluidity Truffle Box",
     "date": "2019-7-12",
     "author": "Deepa Sathaye, Guest Blogger from Fluidity",
