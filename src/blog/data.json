@@ -1,5 +1,12 @@
 {
-  "develop-using-fluidity-truffle-box": {
+  "5-trends-impacting-the-blockchain-developer-experience": {
+    "title": "5 Trends Impacting the Blockchain Developer Experience",
+    "date": "2019-7-15",
+    "author": "Kevin Bluer",
+    "published": true,
+    "excerpt": "In this article we explore 5 trends impacting the developer-experience (or DX) when it comes to building blockchain-based solutions. Specifically, applications and services that leverage a blockchain or distributed ledger or as part of their overall architecture."
+  },
+   "develop-using-fluidity-truffle-box": {
     "title": "Develop using Fluidity Truffle Box",
     "date": "2019-7-12",
     "author": "Deepa Sathaye, Guest Blogger from Fluidity",
