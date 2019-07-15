@@ -7,7 +7,7 @@ social-description: Guides to using Truffle, Ganache and Drizzle including quick
 Select a member of the **Truffle Suite** to learn more.
 
 <div class="row docs-home">
-  <div class="col-sm-6">
+  <div class="col-md-6">
     <a class="link-card" href="/docs/teams/overview">
       <div class="card docs-teams-card mb-3">
         <div class="card-body">
@@ -19,7 +19,7 @@ Select a member of the **Truffle Suite** to learn more.
     </a>
   </div>
 
-  <div class="col-sm-6">
+  <div class="col-md-6">
     <a class="link-card" href="/docs/truffle/overview">
       <div class="card docs-truffle-card mb-3">
         <div class="card-body">
@@ -31,7 +31,7 @@ Select a member of the **Truffle Suite** to learn more.
     </a>
   </div>
 
-  <div class="col-sm-6">
+  <div class="col-md-6">
     <a class="link-card" href="/docs/ganache/overview">
       <div class="card docs-ganache-card mb-3">
         <div class="card-body">
@@ -43,7 +43,7 @@ Select a member of the **Truffle Suite** to learn more.
     </a>
   </div>
 
-  <div class="col-sm-6">
+  <div class="col-md-6">
     <a class="link-card" href="/docs/drizzle/overview">
       <div class="card docs-drizzle-card mb-3">
         <div class="card-body">
