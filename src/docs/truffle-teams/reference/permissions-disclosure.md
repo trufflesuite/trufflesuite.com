@@ -1,5 +1,5 @@
 ---
-title: Teams | Truffle Teams Permissions Disclosure
+title: Truffle Teams | Truffle Teams Permissions Disclosure
 layout: docs.hbs
 ---
 # Truffle Teams Permissions Disclosure

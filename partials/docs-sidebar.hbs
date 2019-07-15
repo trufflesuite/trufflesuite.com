@@ -16,14 +16,14 @@
 
   <div class="collapse teams {{showDocsCategory path "teams"}}" id="teamsDocs" data-parent="#docsSidebar">
     <ul>
-      <a href="/docs/teams/overview"><li>Overview</li></a>
-      <a href="/docs/teams/quickstart"><li>Quickstart</li></a>
+      <a href="/docs/truffle-teams/overview"><li>Overview</li></a>
+      <a href="/docs/truffle-teams/quickstart"><li>Quickstart</li></a>
     </ul>
-    {{#each docs.teams as |categoryDocs category|}}
+    {{#each docs.truffle-teams as |categoryDocs category|}}
       <h3>{{ category }}</h3>
       <ul>
         {{#each categoryDocs}}
-          <a href="/docs/teams/{{makeSlug category}}/{{makeSlug this}}"><li>{{ this }}</li></a>
+          <a href="/docs/truffle-teams/{{makeSlug category}}/{{makeSlug this}}"><li>{{ this }}</li></a>
         {{/each}}
       </ul>
     {{/each}}

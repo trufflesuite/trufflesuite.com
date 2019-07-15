@@ -8,7 +8,7 @@ Select a member of the **Truffle Suite** to learn more.
 
 <div class="row docs-home">
   <div class="col-md-6">
-    <a class="link-card" href="/docs/teams/overview">
+    <a class="link-card" href="/docs/truffle-teams/overview">
       <div class="card docs-teams-card mb-3">
         <div class="card-body">
           <h5 class="card-title mt-0 text-truffle"><img class="card-img-top" src="/img/tt-logomark.svg" alt="Truffle Teams Logo">TRUFFLE TEAMS</h5>
