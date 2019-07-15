@@ -20,6 +20,10 @@
     font-size: 1.25rem;
   }
 
+  .toggle-teams h2 {
+    line-height: 2.5rem;
+  }
+
   .toggle-truffle h2 {
     line-height: 2.5rem;
   }
@@ -59,7 +63,7 @@
     width: 2.5rem;
   }
 
-  .toggle-truffle, .suite-link {
+  .suite-link {
     color: #fff;
     display: block;
     margin-bottom: 1.25rem;
@@ -67,6 +71,14 @@
 
   a:first-of-type {
     margin-top: 2rem;
+  }
+
+  .teams {
+    color: #ffffff;
+
+    a {
+      color: #ffffff;
+    }
   }
 
   .truffle {
@@ -77,24 +89,12 @@
     }
   }
 
-  .toggle-ganache {
-    color: #fff;
-    display: block;
-    margin-bottom: 1.25rem;
-  }
-
   .ganache {
     color: #e4a663;
 
     a {
       color: #e4a663;
     }
-  }
-
-  .toggle-drizzle {
-    color: #fff;
-    display: block;
-    margin-bottom: 1.25rem;
   }
 
   .drizzle {
@@ -220,52 +220,40 @@
 
 .docs-home {
   .card {
-    text-align: center;
-
     .card-title {
       color: #5e464d;
       margin-bottom: 0;
     }
 
-    .card-text {
-      text-align: left;
+    .card-img-top {
+      display: inline-block;
+      margin: 0 .5em 0 0;
+      width: 2.5rem;
+    }
+
+    &.docs-teams-card {
+      .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
     }
 
     &.docs-truffle-card {
-      .card-img-top {
-        display: inline;
-        max-height: 120px;
-        margin: 0;
-      }
-
       .card-title {
         font-size: 2rem;
         font-weight: bold;
-        margin-top: 1.25rem;
       }
     }
 
     &.docs-ganache-card {
-      .card-img-top {
-        max-height: 120px;
-        margin: 0;
-      }
-
       .card-title {
-        font-size: 2.25rem;
-        margin-top: 1rem;
+        font-size: 2rem;
       }
     }
 
     &.docs-drizzle-card {
-      .card-img-top {
-        margin: 20px 0 0 0;
-        max-height: 100px;
-      }
-
       .card-title {
-        font-size: 2.25rem;
-        margin: 1rem 0 0 0;
+        font-size: 2rem;
       }
     }
   }
@@ -302,5 +290,25 @@
         text-decoration: underline;
       }
     }
+  }
+}
+
+.inline-button {
+  color: #33262a;
+  background: #3fe0c5;
+  padding: .25em .5em;
+  border-radius: .25em;
+  font-size: .9em;
+  line-height: 2em;
+}
+
+.inline-menu-item {
+  color: #ffffff;
+  background: #33262a;
+  padding: .125em .33em;
+  line-height: 2em;
+  
+  i {
+    margin-right: .25em;
   }
 }

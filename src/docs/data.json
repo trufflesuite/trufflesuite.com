@@ -1,4 +1,19 @@
 {
+  "teams": {
+    "Getting Started": [
+      "Creating an Account",
+      "Adding Repositories"
+    ],
+    "Testing": [
+      "Starting Builds"
+    ],
+    "Contracts": [
+      "Contract Monitoring"
+    ],
+    "Reference": [
+      "Permissions Disclosure"
+    ]
+  },
   "truffle": {
     "Getting Started": [
       "Installation",
