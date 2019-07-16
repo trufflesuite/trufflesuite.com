@@ -10,21 +10,32 @@
 
 ---
 
-You've finished implementing your `\<insert_correct_capitalization_for_dapp>,` you've tested it on [Ganache](https://trufflesuite.com/ganache), and you're ready to push it to a testnet or Mainnet! Congratula—oh wait.
+You've finished implementing your dApp, you've tested it on [Ganache](https://trufflesuite.com/ganache), and you're ready to push it to a testnet or Mainnet! Congratula—oh wait.
 
-## TODO: IMAGE
+![One Does Not Simply Deploy to Mainnet](https://i.imgflip.com/35r219.jpg)
 
 It's not that easy.
 
 There are a handful of solutions, and none have _really_ made it painlessly easy. Even our own `truffle migrate` (aka `truffle deploy`) is still sub-optimal.
 
-Well it's about to get a whole lot easier with Truffle Teams. **TODO: add link to skip to the good stuff**
+Well it's about to get a whole lot easier with Truffle Teams. [Skip to the good stuff.](#truffle-teams)
 
-## The Many Not-So-Easy Ways to Deploy Your Smart Contracts
+## The Not-So-Easy Ways to Deploy Your Smart Contracts
 
-So what's wrong with what's already made? Why make _yet another_ tool? I hear you. I'm all for not reinventing the wheel. However, let's take a look at what **is** available.
+So what's wrong with what's already made? Why make _yet another_ tool? I hear you. Let's take a look at what **is** available, and if you're still meh, I'd love to talk to you at [TruffleCon](https://trufflesuite.com/trufflecon2019)!
 
-### Remix
+<h3 class="link-markdown">
+  <a href="#remix" name="remix">
+    <i class="fas fa-link">
+    </i>
+  </a>
+  <div>
+    <span>Remix</span>
+    <img style="margin: 0 !important; display: inline-block !important;" src="/img/blog/an-easier-way-to-deploy-your-smart-contracts/remix-logo.svg"  width="40px" title="Remix" alt="Remix">
+  </div>
+</h3>
+
+![Remix IDE](/img/blog/an-easier-way-to-deploy-your-smart-contracts/remix.png)
 
 Oh [Remix](https://remix.ethereum.org), we all have fond memories of you. And many people still use Remix for all sorts of use cases! Remix gives you an in-browser Ethereum IDE, letting you develop, compile, test, debug, and deploy smart contracts for Ethereum. And it's probably the least amount of work needed to throw a single smart contract (i.e. only 1 `.sol` file) onto a testnet or Mainnet.
 
@@ -32,15 +43,28 @@ Remix (apparently they just released a new layout of the app; I'm basing this on
 
 Great, right?
 
-Well, Remix gets harder to use as you add more contracts, import 3rd party contracts, etc. It's definitely flexible and able to handle these, but it's not my personal preference to develop large, complex `\<insert_correct_capitalization_for_dapps>`.
+Well, Remix gets harder to use as you add more contracts, import 3rd party contracts, etc. It's definitely flexible and able to handle these, but it's not my personal preference to develop large, complex dApps.
 
-### Truffle CLI
+<h3 class="link-markdown">
+  <a href="#truffle-cli" name="truffle-cli">
+    <i class="fas fa-link">
+    </i>
+  </a>
+  <div>
+    <span>Truffle CLI</span>
+    <img style="margin: 0 !important; display: inline-block !important;" src="/img/truffle-logo-light.svg"  width="50px" title="Truffle" alt="Truffle">
+  </div>
+</h3>
 
-Enter [Truffle](https://trufflesuite.com/truffle). It's a fantastic (not to toot our own horns) framework that lets you develop in a flexible and extensible way. It provides structure (sure, you can call this opinionated) to keep a sane way to manage this chaotic world of Web 3.0.
+Enter [Truffle](https://trufflesuite.com/truffle).
+
+It's a fantastic (not to toot our own horns) framework that lets you develop in a flexible and extensible way. It provides structure (sure, you can call this opinionated) to keep a sane way to manage this chaotic world of Web 3.0.
 
 It even gives you a mechanism to define what deploying (or what Truffle calls: migrating) means for your application. You can specify what contracts get deployed in which order, with whatever arguments (maybe they depend on the deployment of a past contract).
 
 **And it's as easy as running `truffle migrate`!**
+
+![Running `truffle migrate`](/img/blog/an-easier-way-to-deploy-your-smart-contracts/truffle.png)
 
 And if you were deploying to [Ganache](https://trufflesuite.com/ganache), that'd be entirely true, with very minimal amount of configuration.
 
@@ -50,9 +74,11 @@ The **easiest** way to deploy to an external network is by using [Truffle's HD W
 
 This isn't that bad, but it's also a bit too much config for me. I'd much rather use MetaMask directly to authenticate.
 
-### A Self-Made Management Web Interface
+### Custom Management Web Interface
 
 Some devs will create a small front-end web interface which uses `web3` JS calls to deploy their smart contracts. I have done this personally in my [Game of Thrones Death Pool](https://seesemichaelj.github.io/game-of-thrones-death-pool) project, and I chalked it up to "well I can put this on a website and others can deploy their own versions."
+
+![Custom Management Web Interface for GoT Death Pool](/img/blog/an-easier-way-to-deploy-your-smart-contracts/got-death-pool.png)
 
 Sometimes this is necessary, but it's more work if it's not absolutely needed for your application.
 
@@ -60,17 +86,39 @@ Sometimes this is necessary, but it's more work if it's not absolutely needed fo
 
 In an ideal world, I'd like these features in a deployment interface:
 
-- Let's you use MetaMask directly for signing transactions
-  - Remix ✔️ | Truffle CLI ❌ | Custom Webapp ✔️
-  - A bonus win here is support for Ledger and Trezor wallets!
-- I can use a framework/toolset/etc. that lets me build complex apps and supports complexe deployment processes
-  - Remix ❌ | Truffle CLI ✔️ | Custom Webapp ✔️
-- I don't need to do a lot of work to go from finishing development to deploying
-  - Remix ✔️ | Truffle CLI ✔️ | Custom Webapp ❌
+<ul>
+  <li>Let's you use MetaMask directly for signing transactions
+    <ul>
+      <li style="margin-bottom: 0 !important;">Remix ✔️ | Truffle CLI ❌ | Custom Webapp ✔️</li>
+      <li>A bonus win here is support for Ledger and Trezor wallets!</li>
+    </ul>
+  </li>
+  <li>I can use a framework/toolset/etc. that lets me build complex apps and supports complex deployment processes
+    <ul>
+      <li>Remix ❌ | Truffle CLI ✔️ | Custom Webapp ✔️</li>
+    </ul>
+  </li>
+  <li>I don't need to do a lot of work to go from finishing development to deploying
+    <ul>
+      <li>Remix ✔️ | Truffle CLI ✔️ | Custom Webapp ❌</li>
+    </ul>
+  </li>
+</ul>
 
-## Introducing: Truffle Teams Deployments
+<h3 class="link-markdown">
+  <a href="#truffle-teams" name="truffle-teams">
+    <i class="fas fa-link">
+    </i>
+  </a>
+  <div>
+    <span>Introducing: Truffle Teams Deployments</span>
+    <img style="margin: 0 !important; display: inline-block !important;" src="/img/tt-logomark.svg"  width="50px" title="Truffle Teams" alt="Truffle Teams">
+  </div>
+</h3>
 
 If you haven't heard about our latest tool, [Truffle Teams](https://trufflesuite.com/teams), you really should check it out. Truffle Teams gives you zero-config Continuous Integration (CI) for your Truffle projects, and it also lets you monitor your deployed contracts. Truffle Teams is our solution to taking the power our other tools provide and meshing them into a cohesive application that enables collaboration within teams (even teams of 1!).
+
+!["Truffle Teams Builds"](/img/blog/an-easier-way-to-deploy-your-smart-contracts/teams-build.png)
 
 The next big feature we're working on is Deployments. We already compile your contracts from your Truffle project for you when you make a commit to GitHub; why can't we migrate/deploy them as well? Further, Truffle Teams is a web application, allowing for easy integration with [MetaMask](https://metamask.io).
 
@@ -96,9 +144,7 @@ Welp. That was easy.
 
 Head over to https://my.truffleteams.com and click on the `BUILDS` tab if you're not there already. You can see a build has been queued, or has started to process. You can click on the repository name in the card to see more details. You can also get to this page by clicking on the yellow dot in GitHub next to your commit and pressing `Details`.
 
-TODO: [https://www.trufflesuite.com/img/docs/teams/starting-builds-comp.png]
-
-TODO: build output image
+!["Teams Builds More Details"](/img/docs/teams/starting-builds-comp.png)
 
 ### All Your Tests Pass, Let's Deploy! (but just to a testnet to save money)
 
