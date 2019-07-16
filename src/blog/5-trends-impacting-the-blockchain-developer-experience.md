@@ -40,9 +40,11 @@ It’s almost too easy. Seriously though, this evolution of developer experience
 
 While veteran projects like [OpenZeppelin](https://openzeppelin.org/) continue to blossom, we’ve started to witness larger organizations embrace FOSS and other pluggable modules for contracts.
 
-Some great examples of this include Ernst & Young’s [Nightfall](https://github.com/EYBlockchain/nightfall), Samsung’s [Blockchain SDK](https://developer.samsung.com/blockchain), Microsoft’s [Confidential Consortium Framework](https://github.com/microsoft/CCF), and the continued evolution of the JPMorgan-backed [Quorum](https://github.com/jpmorganchase/quorum). We’re equally pumped by the launch of Cloudflare’s [Ethereum gateway](https://blog.cloudflare.com/cloudflare-ethereum-gateway/) too!
+Some great examples of this include Ernst & Young’s [Nightfall](https://github.com/EYBlockchain/nightfall), Samsung’s [Blockchain SDK](https://developer.samsung.com/blockchain), Microsoft’s [Confidential Consortium Framework](https://github.com/microsoft/CCF), and the continued evolution of the JPMorgan-backed [Quorum](https://github.com/jpmorganchase/quorum). We’re equally pumped by the launch of Cloudflare’s [Ethereum gateway](https://blog.cloudflare.com/cloudflare-ethereum-gateway/) too! 
 
-It’s exciting to see the paradigm being embraced in ways that we can all benefit. Also if you’re interested in checking out [Nightfall](https://github.com/EYBlockchain/nightfall), did you know “[We call it NightTruffle](https://github.com/trufflesuite/nightfall-box)"?
+<!-- 
+It’s exciting to see the paradigm being embraced in ways that we can all benefit. Also if you’re interested in checking out [Nightfall](https://github.com/EYBlockchain/nightfall), did you know “[We call it NightTruffle](https://github.com/trufflesuite/nightfall-box)"? 
+-->
 
 ## #5 Industries are becoming increasingly programmable, led by DeFi
 
