@@ -60,10 +60,13 @@ Sometimes this is necessary, but it's more work if it's not absolutely needed fo
 
 In an ideal world, I'd like these features in a deployment interface:
 
-- Let's you use MetaMask directly for signing transactions (Remix ✔️ | Truffle ❌ | Custom Webapp ✔️)
+- Let's you use MetaMask directly for signing transactions
+  - Remix ✔️ | Truffle CLI ❌ | Custom Webapp ✔️
   - A bonus win here is support for Ledger and Trezor wallets!
-- I can use a framework/toolset/etc. that lets me build complex apps and supports complexe deployment processes (Remix ❌ | Truffle ✔️ | Custom Webapp ✔️)
-- I don't need to do a lot of work to go from finishing development to deploying (Remix ✔️ | Truffle ✔️ | Custom Webapp ❌)
+- I can use a framework/toolset/etc. that lets me build complex apps and supports complexe deployment processes
+  - Remix ❌ | Truffle CLI ✔️ | Custom Webapp ✔️
+- I don't need to do a lot of work to go from finishing development to deploying
+  - Remix ✔️ | Truffle CLI ✔️ | Custom Webapp ❌
 
 ## Introducing: Truffle Teams Deployments
 
@@ -71,20 +74,59 @@ If you haven't heard about our latest tool, [Truffle Teams](https://trufflesuite
 
 The next big feature we're working on is Deployments. We already compile your contracts from your Truffle project for you when you make a commit to GitHub; why can't we migrate/deploy them as well? Further, Truffle Teams is a web application, allowing for easy integration with [MetaMask](https://metamask.io).
 
+We've looked at this from a [DevOps](https://en.wikipedia.org/wiki/DevOps) perspective, and we're trying to create an extensible system that will support projects and teams of **any size**.
+
+### Connect Your GitHub Repository to Truffle Teams
+
+Unfortunately, we only support GitHub repositories (if you want support for something else, please add your preference [here](https://github.com/trufflesuite/truffle-teams/issues/3)).
+
+This is a simple step, and we have instructions on how to do this [here](https://www.trufflesuite.com/docs/teams/quickstart).
+
 ### Setup Your Migrations Scripts
+
+If you haven't built a Truffle project, you should really give it a try; the [Pet Shop Tutorial](https://www.trufflesuite.com/tutorials/pet-shop) is a great place to start as it gives a good survey of the different facets of using Truffle, including the `migrations` scripts. These scripts let you define the behavior of deploying your smart contracts. In the tutorial, you simply just deploy the single contract, but I hope you can see the flexibility to do so much more (i.e. you can deploy one contract, get its address, and use that in the constructor of deploying another contract).
+
+Setting up these scripts is part of the development lifecycle of creating a Truffle project, so I won't cover that here. But that's great! You already should be done with this step!!
 
 ### Commit to GitHub
 
+Welp. That was easy.
+
 ### Monitor the Status of Your Build
+
+Head over to https://my.truffleteams.com and click on the `BUILDS` tab if you're not there already. You can see a build has been queued, or has started to process. You can click on the repository name in the card to see more details. You can also get to this page by clicking on the yellow dot in GitHub next to your commit and pressing `Details`.
+
+TODO: [https://www.trufflesuite.com/img/docs/teams/starting-builds-comp.png]
+
+TODO: build output image
 
 ### All Your Tests Pass, Let's Deploy! (but just to a testnet to save money)
 
-### Happy With a Released Version? Promote it to Production (aka deploy to mainnet)
+> NOTE: This is just a sneak peek unfortunately as we haven't released Deployments yet! You won't be able to follow along (yet!).
 
-All you need to do is setup your `migrations` scripts (which you should have done already if you were testing locally with [Ganache](https://trufflesuite.com/ganache)), commit to [GitHub](https://github.com), wait for Truffle Teams to finish building your commit, and select the network of your chosing to deploy your build! Truffle Teams will handle the network configuration in `truffle-config.js` for you, and will provide transactions for you to **sign with MetaMask directly. You can even sign with a Ledger or Trezor hardware wallet!**.
+Great, your builds are passing, and you're ready to deploy to a testnet (i.e. Ropsten) to see if everything works.
+
+Now head over to the `DEPLOYMENTS` tab and select your repository.
+
+TODO: You'll now see a screen that shows a list of commits on the left. Press the dohickey, enter the stuff, and badabing.
+
+Truffle Teams will then start the migration/deployment process. Each transaction is sent to the web application and MetaMask will prompt you to sign transactions.
+
+And that's it! Pretty easy if you ask me.
+
+### Happy With a Released Version? Promote it to Production (aka deploy to Mainnet)
+
+But we're not done yet! You've finished your testing to Ropsten, and you're now ready to deploy to Mainnet. You're happy with this one specific build that is on Ropsten. You can select that deployment and promote it to production (aka Mainnet).
 
 ## 🎉 Be The First to Try it With Me at My TruffleCon 2019 Workshop! 🎉
 
+I really hope you're going to TruffleCon; it's going to be awesome. Even more so because you can **be the first to try Truffle Teams Deployments in my workshop!** In my `TODO: make a catchier name for my workshop` (9AM-12PM on Friday, Aug, 2nd) workshop, we'll cover this entire lifecycle: hooking up your repository, making your first build, seeing a build fail, fixing the bug, getting a passing build, deploying your contract to Ropsten, testing your deployed contract, and then finally checking the monitoring side of Truffle Teams to see your transaction (we didn't talk about this here; check out the [docs](https://www.trufflesuite.com/docs/teams/contracts/contract-monitoring) for more details on contract monitoring).
+
+Hopefully there will be time for me to answer any questions individually, and maybe even help get your own Truffle project hooked up with Truffle Teams! If not, I will be available during the office hours at 5PM on Friday! I'm also always happy to chat anytime throughout the conference!
+
+**You can reserve your spot in my workshop [here](https://trufflecon2019.sched.com/event/RFHD/hook-your-truffle-project-up-to-truffle-teams)!**
+
+Haven't bought your ticket to TruffleCon yet, and really want to get your hands on this cool feature?? It's not too late! Hope to see you there 👇
 
 <div class="post-trufflecon-box mt-5 text-center">
   Get your ticket for TruffleCon 2019 Today
