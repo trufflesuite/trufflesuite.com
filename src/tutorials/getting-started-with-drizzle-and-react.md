@@ -213,7 +213,7 @@ Awesome! Now we know that the contract actually works.
 
 ## Creating our React.js project
 
-Now that we are done with the smart contract, we can write our front-end client with React.js! In order to do this, simply run this command (if you have NPM version 5.2 or above) in another terminal:
+Now that we are done with the smart contract, we can write our front-end client with React.js! In order to do this, open another terminal, navigate to your project directory, and simply run this command (if you have NPM version 5.2 or above):
 
 ```shell
 npx create-react-app client
