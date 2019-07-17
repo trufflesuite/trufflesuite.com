@@ -12,7 +12,7 @@
 
 You've finished implementing your dApp, you've tested it on [Ganache](https://trufflesuite.com/ganache), and you're ready to push it to a testnet or Mainnet! Congratula—oh wait.
 
-![One Does Not Simply Deploy to Mainnet](https://i.imgflip.com/35r219.jpg)
+![One Does Not Simply Deploy to Mainnet](/img/blog/an-easier-way-to-deploy-your-smart-contracts/got-deploy-mainnet.jpg)
 
 It's not that easy.
 
@@ -43,7 +43,7 @@ Remix (apparently they just released a new layout of the app; I'm basing this on
 
 Great, right?
 
-Well, Remix gets harder to use as you add more contracts, import 3rd party contracts, etc. It's definitely flexible and able to handle these, but it's not my personal preference to develop large, complex dApps.
+Well, Remix gets harder to use as you add more contracts, import 3rd party contracts, etc. It's definitely flexible and able to handle these, but it's not my personal preference for developing large, complex dApps.
 
 <h3 class="link-markdown">
   <a href="#truffle-cli" name="truffle-cli">
@@ -118,7 +118,7 @@ In an ideal world, I'd like these features in a deployment interface:
 
 If you haven't heard about our latest tool, [Truffle Teams](https://trufflesuite.com/teams), you really should check it out. Truffle Teams gives you zero-config Continuous Integration (CI) for your Truffle projects, and it also lets you monitor your deployed contracts. Truffle Teams is our solution to taking the power our other tools provide and meshing them into a cohesive application that enables collaboration within teams (even teams of 1!).
 
-!["Truffle Teams Builds"](/img/blog/an-easier-way-to-deploy-your-smart-contracts/teams-build.png)
+![Truffle Teams Builds](/img/blog/an-easier-way-to-deploy-your-smart-contracts/teams-build.png)
 
 The next big feature we're working on is Deployments. We already compile your contracts from your Truffle project for you when you make a commit to GitHub; why can't we migrate/deploy them as well? Further, Truffle Teams is a web application, allowing for easy integration with [MetaMask](https://metamask.io).
 
@@ -138,15 +138,15 @@ Setting up these scripts is part of the development lifecycle of creating a Truf
 
 ### Commit to GitHub
 
-Welp. That was easy.
+Welp. That was easy. 😅
 
 ### Monitor the Status of Your Build
 
 Head over to https://my.truffleteams.com and click on the `BUILDS` tab if you're not there already. You can see a build has been queued, or has started to process. You can click on the repository name in the card to see more details. You can also get to this page by clicking on the yellow dot in GitHub next to your commit and pressing `Details`.
 
-!["Teams Builds More Details"](/img/docs/teams/starting-builds-comp.png)
+![Teams Builds More Details](/img/docs/teams/starting-builds-comp.png)
 
-### All Your Tests Pass, Let's Deploy! (but just to a testnet to save money)
+### All Your Tests Pass, Let's Deploy! (but only to a testnet just to be sure)
 
 > NOTE: This is just a sneak peek unfortunately as we haven't released Deployments yet! You won't be able to follow along (yet!).
 
@@ -154,17 +154,29 @@ Great, your builds are passing, and you're ready to deploy to a testnet (i.e. Ro
 
 Now head over to the `DEPLOYMENTS` tab and select your repository.
 
-TODO: You'll now see a screen that shows a list of commits on the left. Press the dohickey, enter the stuff, and badabing.
+You'll now see a screen that shows a list of builds for your commits on the left.
 
-Truffle Teams will then start the migration/deployment process. Each transaction is sent to the web application and MetaMask will prompt you to sign transactions.
+![Deployments Empty](/img/blog/an-easier-way-to-deploy-your-smart-contracts/deployments-empty.png)
 
-And that's it! Pretty easy if you ask me.
+Deploying a build is as simple as hovering over the commit, pressing a button, and selecting which network you'd like to deploy to.
+
+![Deployment Wizard Select](/img/blog/an-easier-way-to-deploy-your-smart-contracts/deployment-wizard-select.png)
+
+Truffle Teams will then start the migration/deployment process. Each transaction is sent to the web application and MetaMask will prompt you to sign transactions. By leveraging MetaMask signing, we can give you **[Ledger](https://www.ledger.com) and [Trezor](https://trezor.io) hardware wallet support too! 🔒**
+
+![MetaMask Sign](/img/blog/an-easier-way-to-deploy-your-smart-contracts/metamask-sign.png)
 
 ### Happy With a Released Version? Promote it to Production (aka deploy to Mainnet)
 
-But we're not done yet! You've finished your testing to Ropsten, and you're now ready to deploy to Mainnet. You're happy with this one specific build that is on Ropsten. You can select that deployment and promote it to production (aka Mainnet).
+But we're not done yet! You've finished your testing to Ropsten, and you're now ready to deploy to Mainnet. You're happy with this one specific build that is on Ropsten. You can select that deployment and promote it to production (aka Mainnet) with just a couple of clicks.
 
-## 🎉 Be The First to Try it With Me at My TruffleCon 2019 Workshop! 🎉
+![Deployments Complete](/img/blog/an-easier-way-to-deploy-your-smart-contracts/deployments-complete.png)
+
+## And that's it! Pretty easy if you ask me.
+
+![Fry, Easy or Too Easy](/img/blog/an-easier-way-to-deploy-your-smart-contracts/fry-easy.jpg)
+
+## 🎉 Don't Believe Me? Be The First to Try it With Me at My TruffleCon 2019 Workshop! 🎉
 
 I really hope you're going to TruffleCon; it's going to be awesome. Even more so because you can **be the first to try Truffle Teams Deployments in my workshop!** In my `TODO: make a catchier name for my workshop` (9AM-12PM on Friday, Aug, 2nd) workshop, we'll cover this entire lifecycle: hooking up your repository, making your first build, seeing a build fail, fixing the bug, getting a passing build, deploying your contract to Ropsten, testing your deployed contract, and then finally checking the monitoring side of Truffle Teams to see your transaction (we didn't talk about this here; check out the [docs](https://www.trufflesuite.com/docs/teams/contracts/contract-monitoring) for more details on contract monitoring).
 
