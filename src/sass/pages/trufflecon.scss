@@ -361,3 +361,11 @@ blockquote {
   font-size: 1.5rem;
   min-width: 17rem;
 }
+
+.container {
+  &.keynotes {
+    @media (min-width: 1200px) {
+      max-width: 1500px;
+    }
+  }
+} 
