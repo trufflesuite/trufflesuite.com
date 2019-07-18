@@ -70,9 +70,9 @@ And if you were deploying to [Ganache](https://trufflesuite.com/ganache), that'd
 
 But that's not the case when we start talking about testnets or Mainnet.
 
-The **easiest** way to deploy to an external network is by using [Truffle's HD Wallet Provider](https://www.trufflesuite.com/docs/truffle/reference/configuration#providers). However, this requires you to somehow get your mnemonic or private key into the `truffle-config.js` config file, **without committing it to your provider source control provider (PLEASE don't do this). To use an account you created with MetaMask, you'd need to go to MetaMask, export your private key (or your mnemonic 😱), and creating the boilerplate code to read in the key from the environment variable.
+The **easiest** way to deploy to an external network is by using [Truffle's HD Wallet Provider](https://www.trufflesuite.com/docs/truffle/reference/configuration#providers). However, this requires you to somehow get your mnemonic or private key into the `truffle-config.js` config file, **without committing it to your provider source control provider (PLEASE don't do this).** To use an account you created with MetaMask, you'd need to go to MetaMask, export your private key (or your mnemonic 😱), and create the boilerplate code to read in the key from an environment variable (to prevent committing it anyway).
 
-This isn't that bad, but it's also a bit too much config for me. I'd much rather use MetaMask directly to authenticate.
+In all truthfulness, this isn't too bad, but it's also a bit too much config for me. I'd much rather use MetaMask directly to authenticate.
 
 ### Custom Management Web Interface
 
