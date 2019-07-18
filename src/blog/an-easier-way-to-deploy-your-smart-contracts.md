@@ -162,7 +162,7 @@ Deploying a build is as simple as hovering over the commit, pressing a button, a
 
 Truffle Teams will then start the migration/deployment process. Each transaction is sent to the web application and MetaMask will prompt you to confirm transactions. By leveraging MetaMask, we can give you **[Ledger](https://www.ledger.com) and [Trezor](https://trezor.io) hardware wallet support too! 🔒**
 
-![MetaMask Sign](/img/blog/an-easier-way-to-deploy-your-smart-contracts/metamask-sign.png) TODO:
+![MetaMask Transaction](/img/blog/an-easier-way-to-deploy-your-smart-contracts/metamask-tx.png)
 
 ### Happy With a Released Version? Promote it to Production (aka deploy to Mainnet)
 
