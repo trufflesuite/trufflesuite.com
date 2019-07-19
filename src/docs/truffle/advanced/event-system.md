@@ -98,11 +98,11 @@ This section lists all events currently implemented in Truffle. They are organiz
 ### `truffle compile`
 
 "compile:start"
-  - beginning of compilation
+  - start of command flow
    no data available
 
 "compile:succeed"
-  - end of compilation
+  - end of command flow
   {
     contractBuildDirectory: <string: directory where artifacts were saved>,
     compilersInfo: {
@@ -114,7 +114,7 @@ This section lists all events currently implemented in Truffle. They are organiz
   }
 
 "compile:sourcesToCompile"
-  - right before the actual compilation of sources
+  - before the actual compilation of sources
   {
     sourceFileNames: [
       <string: filenames of sources to compile>,
@@ -132,30 +132,94 @@ This section lists all events currently implemented in Truffle. They are organiz
   }
 
 "compile:nothingToCompile"
-  - right after attempted compilation if no compilation was needed
+  - after attempted compilation if no compilation was needed
   no data
 
 ### `truffle obtain`
 
 "obtain:start"
+  - start of command flow
+  no data available
+
 "obtain:succeed"
+  - end of command flow
+  {
+    compiler: {
+      name: <string: name of compiler obtained>,
+      version: <string: version of compiler obtained>
+    }
+  }
+
 "obtain:fail"
+  - emitted in case the obtain command fails
+  no data available
+
 "downloadCompiler:start"
+  - before attempting to download a compiler
+  {
+    attemptNumber: <number: what number attempt at downloading the compiler>
+  }
+
 "downloadCompiler:succeed"
+  - after successfully downloading a compiler
+  no data available
+
 "fetchSolcList:start"
+  - before fetching the list of available versions of the Solidity compiler
+  no data available
+
 "fetchSolcList:succeed"
+  - after fetching the list of available versions of the Solidity compiler
+  no data available
+
 "fetchSolcList:fail"
+  - emitted if downloading the list of Solidity compiler versions fails
+  no data available
 
 ### `truffle unbox`
 
 "unbox:start"
-"unbox:preparingToDownload:start"
-"unbox:preparingToDownload:succeed"
-"unbox:downloadingBox:start"
-"unbox:downloadingBox:succeed"
-"unbox:cleaningTempFiles:start"
-"unbox:cleaningTempFiles:succeed"
-"unbox:settingUpBox:start"
-"unbox:settingUpBox:succeed"
+  - start of command flow
+  no data available
+
 "unbox:succeed"
+  - end of command flow
+  {
+    boxConfig: <object: contents of the `truffle-box.json` for the given box>
+  }
+
 "unbox:fail"
+  - emitted if the unbox fails
+  no data available
+
+"unbox:preparingToDownload:start"
+  - before setting up a temporary directory for the downloaded contents
+  no data available
+
+"unbox:preparingToDownload:succeed"
+  - after creating the temporary directory for the downloaded contents
+  no data available
+
+"unbox:downloadingBox:start"
+  - before attempting to download the box contents
+  no data available
+
+"unbox:downloadingBox:succeed"
+  - after downloading the box contents
+  no data available
+
+"unbox:cleaningTempFiles:start"
+  - before removing the temporary files
+  no data available
+
+"unbox:cleaningTempFiles:succeed"
+  - after removing the temporary files
+  no data available
+
+"unbox:settingUpBox:start"
+  - before installing box dependencies
+  no data available
+
+"unbox:settingUpBox:succeed"
+  - after installing box dependencies
+  no data available
