@@ -91,4 +91,71 @@ module.exports = {
 This would make it log the source file names in rainbow colors whenever the "compile:compiledSources" event is emitted. Remember, some events (not all) provide data to your handlers at the time of execution. The "compile:compiledSources" provides an array of all source file names to this particular handler. You will need to check the chart below to see which events are provided with what data.
 NOTE: The `this` in your Subscriber files refers to the Subscriber class that is instantiated from the file you create and not the `this` in the file. So you will not have direct access to the `colors` library imported above unless you create a reference to it in the `initialization` function.
 
-*** Currently supported events
+## Currently supported events
+
+This section lists all events currently implemented in Truffle. They are organized by command and contain three pieces of information: the event name, where it is emitted, and the specific data, if any, that is passed along to the handlers.
+
+### `truffle compile`
+
+"compile:start"
+  - beginning of compilation
+   no data available
+
+"compile:succeed"
+  - end of compilation
+  {
+    contractBuildDirectory: <string: directory where artifacts were saved>,
+    compilersInfo: {
+      <compilerName>: {
+        version: <string: version of compiler>,
+      },
+      ...one entry per compiler used
+    }
+  }
+
+"compile:sourcesToCompile"
+  - right before the actual compilation of sources
+  {
+    sourceFileNames: [
+      <string: filenames of sources to compile>,
+      ...one for each file
+    ]
+  }
+
+"compile:warnings"
+  - after compilation of sources
+  {
+    warnings: [
+      <string: warnings created by the compiler during compilation>,
+      ...one for each warning
+    ]
+  }
+
+"compile:nothingToCompile"
+  - right after attempted compilation if no compilation was needed
+  no data
+
+### `truffle obtain`
+
+"obtain:start"
+"obtain:succeed"
+"obtain:fail"
+"downloadCompiler:start"
+"downloadCompiler:succeed"
+"fetchSolcList:start"
+"fetchSolcList:succeed"
+"fetchSolcList:fail"
+
+### `truffle unbox`
+
+"unbox:start"
+"unbox:preparingToDownload:start"
+"unbox:preparingToDownload:succeed"
+"unbox:downloadingBox:start"
+"unbox:downloadingBox:succeed"
+"unbox:cleaningTempFiles:start"
+"unbox:cleaningTempFiles:succeed"
+"unbox:settingUpBox:start"
+"unbox:settingUpBox:succeed"
+"unbox:succeed"
+"unbox:fail"
