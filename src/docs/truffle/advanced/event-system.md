@@ -25,7 +25,7 @@ In order to react to events, you must create a javascript file that will be used
 `initialization` should be a function. This function gets run when the subscriber is first instantiated at the beginning of all command flows. This function is optional and should execute whatever setup you wish to have.
 NOTE: In this function you will have access to the Subscriber itself through the `this` variable. This allows you to create references that will be available in your handlers and to access the Subscriber class methods.
 
- - `handlers` should be an object. This is the place where you will describe what functions to run when certain events are fired. We will describe how to construct these in the following section.
+`handlers` should be an object. This is the place where you will describe what functions to run when certain events are fired. We will describe how to construct these in the following section.
 
 ## How to define your event handlers
 
@@ -97,129 +97,189 @@ This section lists all events currently implemented in Truffle. They are organiz
 
 ### `truffle compile`
 
-"compile:start"
-  - start of command flow
-   no data available
+- "compile:start"
 
-"compile:succeed"
-  - end of command flow
+    emitted at the start of the command flow
+
+    no data available for this event
+
+- "compile:succeed"
+
+    emitted at the end of the command flow
+
+  ```
   {
-    contractBuildDirectory: <string: directory where artifacts were saved>,
-    compilersInfo: {
-      <compilerName>: {
-        version: <string: version of compiler>,
-      },
-      ...one entry per compiler used
-    }
+      contractBuildDirectory: <string: directory where artifacts were saved>,
+      compilersInfo: {
+        <compilerName>: {
+          version: <string: version of compiler>,
+        },
+        ...one entry per compiler used
+      }
   }
+  ```
 
-"compile:sourcesToCompile"
-  - before the actual compilation of sources
+- "compile:sourcesToCompile"
+
+    emitted before sources are compiled
+
+  ```
   {
-    sourceFileNames: [
-      <string: filenames of sources to compile>,
-      ...one for each file
-    ]
+      sourceFileNames: [
+        <string: filenames of sources to compile>,
+        ...one string entry for each file
+      ]
   }
+  ```
 
-"compile:warnings"
-  - after compilation of sources
+- "compile:warnings"
+
+    emitted after sources are compiled
+
+  ```
   {
-    warnings: [
-      <string: warnings created by the compiler during compilation>,
-      ...one for each warning
-    ]
+      warnings: [
+        <string: warnings created by the compiler during compilation>,
+        ...one string entry for each warning
+      ]
   }
+  ```
 
-"compile:nothingToCompile"
-  - after attempted compilation if no compilation was needed
-  no data
+- "compile:nothingToCompile"
+
+    emitted after attempted compilation if no compilation was needed
+
+    no data available for this event
 
 ### `truffle obtain`
 
-"obtain:start"
-  - start of command flow
-  no data available
+- "obtain:start"
 
-"obtain:succeed"
-  - end of command flow
+    emitted at the start of the command flow
+
+    no data available for this event
+
+- "obtain:succeed"
+
+    emitted at the end of the command flow
+
+  ```
   {
-    compiler: {
-      name: <string: name of compiler obtained>,
-      version: <string: version of compiler obtained>
-    }
+      compiler: {
+        name: <string: name of compiler obtained>,
+        version: <string: version of compiler obtained>
+      }
   }
+  ```
 
-"obtain:fail"
-  - emitted in case the obtain command fails
-  no data available
+- "obtain:fail"
 
-"downloadCompiler:start"
-  - before attempting to download a compiler
+    emitted in case the obtain command fails
+
+    no data available
+
+- "downloadCompiler:start"
+
+    before attempting to download a compiler
+
+  ```
   {
     attemptNumber: <number: what number attempt at downloading the compiler>
   }
+  ```
 
-"downloadCompiler:succeed"
-  - after successfully downloading a compiler
-  no data available
+- "downloadCompiler:succeed"
 
-"fetchSolcList:start"
-  - before fetching the list of available versions of the Solidity compiler
-  no data available
+    after successfully downloading a compiler
 
-"fetchSolcList:succeed"
-  - after fetching the list of available versions of the Solidity compiler
-  no data available
+    no data available for this event
 
-"fetchSolcList:fail"
-  - emitted if downloading the list of Solidity compiler versions fails
-  no data available
+- "fetchSolcList:start"
+
+    before fetching the list of available versions of the Solidity compiler
+
+    no data available for this event
+
+- "fetchSolcList:succeed"
+
+    after fetching the list of available versions of the Solidity compiler
+
+    no data available for this event
+
+- "fetchSolcList:fail"
+
+    emitted if downloading the list of Solidity compiler versions fails
+
+    no data available for this event
 
 ### `truffle unbox`
 
-"unbox:start"
-  - start of command flow
-  no data available
+- "unbox:start"
 
-"unbox:succeed"
-  - end of command flow
+    start of command flow
+
+    no data available for this event
+
+- "unbox:succeed"
+
+    end of command flow
+
+  ```
   {
-    boxConfig: <object: contents of the `truffle-box.json` for the given box>
+      boxConfig: <object: contents of the `truffle-box.json` for the given box>
   }
+  ```
 
-"unbox:fail"
-  - emitted if the unbox fails
-  no data available
+- "unbox:fail"
 
-"unbox:preparingToDownload:start"
-  - before setting up a temporary directory for the downloaded contents
-  no data available
+    emitted if the unbox fails
 
-"unbox:preparingToDownload:succeed"
-  - after creating the temporary directory for the downloaded contents
-  no data available
+    no data available for this event
 
-"unbox:downloadingBox:start"
-  - before attempting to download the box contents
-  no data available
+- "unbox:preparingToDownload:start"
 
-"unbox:downloadingBox:succeed"
-  - after downloading the box contents
-  no data available
+    before setting up a temporary directory for the downloaded contents
 
-"unbox:cleaningTempFiles:start"
-  - before removing the temporary files
-  no data available
+    no data available for this event
 
-"unbox:cleaningTempFiles:succeed"
-  - after removing the temporary files
-  no data available
+- "unbox:preparingToDownload:succeed"
 
-"unbox:settingUpBox:start"
-  - before installing box dependencies
-  no data available
+    after creating the temporary directory for the downloaded contents
 
-"unbox:settingUpBox:succeed"
-  - after installing box dependencies
-  no data available
+    no data available for this event
+
+- "unbox:downloadingBox:start"
+
+    before attempting to download the box contents
+
+    no data available for this event
+
+- "unbox:downloadingBox:succeed"
+
+    after downloading the box contents
+
+    no data available for this event
+
+- "unbox:cleaningTempFiles:start"
+
+    before removing the temporary files
+
+    no data available for this event
+
+- "unbox:cleaningTempFiles:succeed"
+
+    after removing the temporary files
+
+    no data available for this event
+
+- "unbox:settingUpBox:start"
+
+    before installing box dependencies
+
+    no data available for this event
+
+- "unbox:settingUpBox:succeed"
+
+    after installing box dependencies
+
+    no data available for this event
