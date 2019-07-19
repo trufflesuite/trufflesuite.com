@@ -6,7 +6,7 @@
   </div>
 </div>
 
-**TL;DR** - Deploying your smart contracts shouldn't be difficult, and the process should be flexible. I give a sneak peek at the next feature we're building: an **easy to use interface to deploy your Truffle projects with [Truffle Teams](/teams)**! It's going to be awesome, and **you can be the first to use it**! I'll be giving a **hands-on workshop from 9AM-12PM on Friday, August 2nd, at [TruffleCon 2019](/trufflecon2019)** walking you through through the entire Truffle Teams lifecycle, including the **never-before-used Deployments interface**! See you there!
+**TL;DR** - Deploying your smart contracts shouldn't be difficult, and the process should be flexible. I give a sneak peek at the next feature we're building: an **easy to use interface to deploy your Truffle projects with [Truffle Teams](/teams)**! It's going to be awesome, and **you can be the first to use it**! I'll be giving a **hands-on workshop from 9AM-12PM on Friday, August 2nd, at [TruffleCon 2019](/trufflecon2019)** that will walk you through through the entire Truffle Teams lifecycle, including the **never-before-used Deployments interface**! See you there!
 
 ---
 
@@ -16,7 +16,7 @@ So! You've finished implementing your dApp, you've tested it on [Ganache](/ganac
 
 It's not that easy.
 
-There are a handful of solutions, and none have _really_ made it painlessly easy. Even our own `truffle migrate` (aka `truffle deploy`) has more to be desired.
+There are a handful of solutions, and none have _really_ made it painlessly easy. Even our own `truffle migrate` (aka `truffle deploy`) has left much to be desired.
 
 Well it's about to get a whole lot easier with Truffle Teams. [Skip to the good stuff.](#truffle-teams)
 
@@ -60,11 +60,11 @@ Enter [Truffle](/truffle).
 
 It's a fantastic framework (not to toot our own horns) that lets you develop your dApp in a flexible and extensible way. It provides structure to keep you sane in this chaotic world of Web 3.0.
 
-It even gives you a mechanism to define what deploying (aka: "migrating") means for your application. You can specify what contracts get deployed in which order, with whatever arguments you require. For instance, your smart contracts may depend on the deployment of a past contract, which you can easily code in migration scripts.
+It even gives you a mechanism to define what deploying (aka: "migrating") means for your application. You can specify what contracts get deployed in which order with whatever arguments you require. For instance, your smart contracts may depend on the deployment of a past contract, which you can easily code in migration scripts.
 
 **And it's as easy as running `truffle migrate`!**
 
-And if you were deploying directly to [Ganache](/ganache), that'd be entirely true, requiring very minimal amount of configuration.
+...and if you were deploying directly to [Ganache](/ganache), that'd be entirely true.
 
 ![Running `truffle migrate`](/img/blog/an-easier-way-to-deploy-your-smart-contracts/truffle.png)
 
@@ -87,7 +87,7 @@ Sometimes this is necessary, but it's more work if it's not absolutely needed fo
 In an ideal world, I'd like these features in a deployment interface:
 
 <ul>
-  <li>Let's you use MetaMask directly for signing transactions
+  <li>Lets me use MetaMask directly for signing transactions
     <ul>
       <li style="margin-bottom: 0 !important;">Remix ✔️ | Truffle CLI ❌ | Custom Webapp ✔️</li>
       <li>A bonus win here is support for Ledger and Trezor wallets!</li>
@@ -140,7 +140,7 @@ Welp. That was easy. 😅
 
 ### Monitor the Status of Your Build
 
-Head over to https://my.truffleteams.com and click on the `BUILDS` tab if you're not there already. You can see a build has been queued, or has started to process. You can click on the repository name in the card to see more details. You can also get to this page by clicking on the yellow dot in GitHub next to your commit and pressing `Details`.
+Head over to https://my.truffleteams.com and click on the `BUILDS` tab if you're not there already. You can see a build has been queued or has started to process. You can click on the repository name in the card to see more details. You can also get to this page by clicking on the yellow dot in GitHub next to your commit and pressing `Details`.
 
 ![Teams Builds More Details](/img/docs/teams/starting-builds-comp.png)
 
@@ -148,7 +148,7 @@ Head over to https://my.truffleteams.com and click on the `BUILDS` tab if you're
 
 > NOTE: This is just a sneak peek of features to come! You won't be able to follow along (yet, but [stay tuned](https://share.hsforms.com/1OaTglVhGTdWk7spR6nE_AA34pbp)!).
 
-Great, your builds are passing, and you're ready to deploy to a testnet (i.e. Ropsten) to see if everything works.
+Great! Your builds are passing, and you're ready to deploy to a testnet (i.e. Ropsten) to see if everything works.
 
 Now head over to the `DEPLOYMENTS` tab and select your repository.
 
