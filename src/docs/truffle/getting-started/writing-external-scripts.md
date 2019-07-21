@@ -14,6 +14,8 @@ To run an external script, perform the following:
 $ truffle exec <path/to/file.js>
 ```
 
+Refer to [Truffle Commands Reference](/docs/truffle/reference/truffle-commands#exec) for more information about this command, such as what options it accepts.
+
 ## File structure
 
 In order for external scripts to be run correctly, Truffle expects them to export a function that takes a single parameter as a callback:
