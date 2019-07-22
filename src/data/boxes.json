@@ -44,6 +44,11 @@
     "stars": 3,
     "tags": ["official"]
   },
+  "nightfall-box": {
+    "description": "A box to help get you started building dapps with Nightfall!",
+    "stars": 4,
+    "tags": ["official", "nightfall"]
+  },
   "azure-asset-transfer-box": {
     "description": "Azure Samples - Asset Transfer",
     "stars": 0,
