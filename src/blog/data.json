@@ -1,4 +1,11 @@
 {
+  "drizzle-vue-a-truffle-story": {
+    "title": "Drizzle Vue: A Truffle Story",
+    "date": "2019-7-22",
+    "author": "Amal Sudama",
+    "published": true,
+    "excerpt": "I felt this was an important problem to solve in order to improve the dapp developer experience.  It was important to get Drizzle working for Vue. Unfortunately, I knew nothing about Vue. In previous organizations I was a part of, I would have shied away from pursuing this project. However, at Truffle it felt comfortable and empowered to champion the idea."
+  },
   "an-easier-way-to-deploy-your-smart-contracts": {
     "title": "An Easier Way to Deploy Your Smart Contracts",
     "date": "2019-7-19",
