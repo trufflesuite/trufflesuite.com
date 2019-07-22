@@ -37,7 +37,8 @@
     "Advanced": [
       "Networks and App Deployment",
       "Build Processes",
-      "Creating a Truffle Box"
+      "Creating a Truffle Box",
+      "Ethereum Name Service"
     ],
     "Reference": [
       "Choosing an Ethereum Client",
