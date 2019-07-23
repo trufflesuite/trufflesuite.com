@@ -21,7 +21,7 @@ if (state.drizzleStatus.initialized) {
     const dataKey = drizzle.contracts.SimpleStorage.methods.storedData.cacheCall()
 
     // Use the dataKey to display data from the store.
-    return state.contracts.SimpleStorage.methods.storedData[dataKey].value
+    return state.contracts.SimpleStorage.storedData[dataKey].value
 }
 
 // If Drizzle isn't initialized, display some loading indication.
@@ -81,5 +81,19 @@ events = ['Mint']
 dispatch({type: 'ADD_CONTRACT', drizzle, contractConfig, events, web3})
 
 // Or using the Drizzle context object
-this.context.drizzle.addContract({contractConfig, events})
+this.context.drizzle.addContract(contractConfig, events)
+```
+
+## Removing Contracts Dynamically
+
+You can also delete contracts using either `drizzle.deleteContract()` or the `DELETE_CONTRACT` action.
+
+```javascript
+const contractName = "MyContract"
+
+// Using an action
+dispatch({type: 'DELETE_CONTRACT', drizzle, contractName})
+
+// Or using the Drizzle context object
+this.context.drizzle.deleteContract(contractName)
 ```

@@ -14,7 +14,7 @@ To run your migrations, run the following:
 $ truffle migrate
 ```
 
-This will run all migrations located within your project's `migrations` directory. At their simplest, migrations are simply a set of managed deployment scripts. If your migrations were previously run successfully, `truffle migrate` will start execution from the last migration that was ran, running only newly created migrations. If no new migrations exists, `truffle migrate` won't perform any action at all. You can use the `--reset` option to run all your migrations from the beginning. For local testing make sure to have a test blockchain such as [Ganache](/ganache) installed and running before executing `migrate`.
+This will run all migrations located within your project's `migrations` directory. At their simplest, migrations are simply a set of managed deployment scripts. If your migrations were previously run successfully, `truffle migrate` will start execution from the last migration that was run, running only newly created migrations. If no new migrations exists, `truffle migrate` won't perform any action at all. You can use the `--reset` option to run all your migrations from the beginning. For local testing make sure to have a test blockchain such as [Ganache](/ganache) installed and running before executing `migrate`.
 
 ## Migration files
 
@@ -180,7 +180,7 @@ You can optionally pass an array of contracts, or an array of arrays, to speed u
 
 Note that you will need to deploy and link any libraries your contracts depend on first before calling `deploy`. See the `link` function below for more details.
 
-For more information, please see the [truffle-contract](https://github.com/trufflesuite/truffle-contract) documentation.
+For more information, please see the [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/truffle-contract) documentation.
 
 
 Examples:

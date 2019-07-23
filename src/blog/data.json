@@ -1,4 +1,116 @@
 {
+  "drizzle-vue-a-truffle-story": {
+    "title": "Drizzle Vue: A Truffle Story",
+    "date": "2019-7-22",
+    "author": "Amal Sudama",
+    "published": true,
+    "excerpt": "I felt this was an important problem to solve in order to improve the dapp developer experience.  It was important to get Drizzle working for Vue. Unfortunately, I knew nothing about Vue. In previous organizations I was a part of, I would have shied away from pursuing this project. However, at Truffle I felt comfortable and empowered to champion the idea."
+  },
+  "an-easier-way-to-deploy-your-smart-contracts": {
+    "title": "An Easier Way to Deploy Your Smart Contracts",
+    "date": "2019-7-19",
+    "author": "Mike Seese",
+    "published": true,
+    "excerpt": "Deploying your smart contracts shouldn't be difficult, and the process should be flexible. I give a sneak peek at the next feature we're building: an easy to use interface to deploy your Truffle projects with Truffle Teams! Be the first to use it at my TruffleCon 2019 workshop!"
+  },
+  "why-i-love-trufflecon": {
+    "title": "Why I love TruffleCon",
+    "date": "2019-7-18",
+    "author": "Josh Quintal",
+    "published": true,
+    "excerpt": "TruffleCon is a conference, sure, but it's more than that: it's the feeling of excitement when learning a new technology; the eureka we felt when first discovering this new frontier. It's connections made in minutes that can last a lifetime."
+  },
+  "how-the-arrival-of-web-3-0-is-transforming-traditional-business-models": {
+    "title": "How the Arrival of Web 3.0 is Transforming Traditional Business Models",
+    "date": "2019-7-17",
+    "author": "Kevin Owocki, Guest Blogger, Founder at GitCoin",
+    "published": true,
+    "excerpt": "Although the Internet continues to drive digital transformation, the technology operates far beyond its original parameters. Since its inception over two decades ago, the web has been subject to increasing levels of centralization and mass surveillance. See how web 3.0 is transforming us today."
+  },
+  "how-ethical-advertising-will-transform-the-blockchain-industry": {
+    "title": "How Ethical Advertising Will Transform the Blockchain Industry",
+    "date": "2019-7-16",
+    "author": "Eric Berry, Guest Blogger, Founder at CodeFund",
+    "published": true,
+    "excerpt": "Introducing CodeFund for Blockchain"
+  },
+  "5-trends-impacting-the-blockchain-developer-experience": {
+    "title": "5 Trends Impacting the Blockchain Developer Experience",
+    "date": "2019-7-15",
+    "author": "Kevin Bluer",
+    "published": true,
+    "excerpt": "In this article we explore 5 trends impacting the developer-experience (or DX) when it comes to building blockchain-based solutions. Specifically, applications and services that leverage a blockchain or distributed ledger or as part of their overall architecture."
+  },
+  "develop-using-fluidity-truffle-box": {
+    "title": "Develop using Fluidity Truffle Box",
+    "date": "2019-7-12",
+    "author": "Deepa Sathaye, Guest Blogger from Fluidity",
+    "published": true,
+    "excerpt": "Fluidity has a pretty awesome truffle-box with lots of goodies to build secure, well-tested smart contracts. With two simple commands, you’ll be set up for development using these testing and security tools preconfigured."
+  },
+  "introducing-truffle-db-part-2": {
+    "title": "Introducing Truffle DB, part 2: 'Weight and Switch'",
+    "date": "2019-7-11",
+    "author": "gnidan (Nick D'Andrea) and Faina Shalts",
+    "published": true,
+    "excerpt": "In the second of this two-part blog post, we go over Truffle DB's data model, interface, and our roadmap to release."
+  },
+  "introducing-truffle-db-part-1": {
+    "title": "Introducing Truffle DB, Part 1: Artifact archeology",
+    "date": "2019-7-10",
+    "author": "gnidan (Nick D'Andrea)",
+    "published": true,
+    "excerpt": "In the first of this two-part blog post, learn about how Truffle manages to make sense of your project and some of the current limitations we hope to solve with our upcoming Truffle DB."
+  },
+  "the-blockchain-problem-that-ens-solves": {
+    "title": "The Blockchain UI Problem that ENS Solves",
+    "date": "2019-7-9",
+    "author": "Brantly Millegan, guest blogger from Ethereum Name Service",
+    "published": true,
+    "excerpt": "The blockchain world has a UI problem. The computer-generated address system works great for computers but isn’t user-friendly. That’s where the Ethereum Name Service (ENS) comes in. ENS provides the same basic functionality of DNS (look up the records for “example.tld,” retrieve information), but replaces the hierarchical DNS server system with a few smart contracts on Ethereum."
+  },
+  "the-best-ways-to-contribute-to-truffle": {
+    "title": "The Best Ways to Contribute to Truffle",
+    "date": "2019-7-8",
+    "author": "Tyler Feickert",
+    "published": true,
+    "excerpt": "Truffle is the amazing framework it is today because of developers like you. Find out how you can make Truffle even better!"
+  },
+  "10-things-we-dont-do-that-make-working-at-truffle-awesome": {
+    "title": "10 Things We Don't Do That Make Working at Truffle Awesome",
+    "date": "2019-7-5",
+    "author": "Tim Coulter",
+    "published": true,
+    "excerpt": "At Truffle we have an extremely tight-knit team. You'll see that at this year's TruffleCon, a conference for hundreds of attendees organized by only a handful of people. We often have more work than we can handle, yet we take it on because we love the work we're doing and we love the people we work with."
+  },
+  "the-best-things-to-do-in-seattle-during-trufflecon": {
+    "title": "The Best Things to do in Seattle During TruffleCon",
+    "date": "2019-7-3",
+    "author": "Liz Daldalian",
+    "published": true,
+    "excerpt": "TruffleCon 2019 is happening August 2-4, 2019 at Microsoft’s Redmond campus on the Eastside of Seattle. Five Trufflers call the Seattle area home and we compiled a list of our favorite things to do in the area!"
+  },
+  "ethereum-gas-exactimation": {
+    "title": "Ethereum Gas Exactimation",
+    "date": "2019-6-21",
+    "author": "Nicholas Paterno & Cruz Molina",
+    "published": true,
+    "excerpt": "At Truffle, we decided such an approach was an unnecessarily CPU-intensive solution to the problem and set out to find a (theoretically) more performant and perfectly accurate way of estimating gas. The result? Gas exactimation."
+  },
+  "how-to-get-your-boss-to-send-you-to-trufflecon": {
+    "title": "How to get your boss to send you to TruffleCon",
+    "date": "2019-5-6",
+    "author": "Liz Daldalian",
+    "published": true,
+    "excerpt": "Last year Truffle Suite launched TruffleCon, an event designed for the Truffle community and those interested in building world-changing applications powered by decentralized technologies. The event was received with an overwhelmingly positive response."
+  },
+  "truffle-v5-has-arrived": {
+    "title": "Truffle v5 has arrived!",
+    "date": "2018-12-18",
+    "author": "Brittany Alexander",
+    "published": true,
+    "excerpt": "We have released the most awaited version of Truffle just in time for the holidays! There are SO many exciting things to mention that will make your Truffle experience a rich one."
+  },
   "why-were-organizing-trufflecon-2018": {
     "title": "Why We're Organizing TruffleCon 2018",
     "date": "2018-07-16",
@@ -8,14 +120,14 @@
   },
   "announcing-full-portable-solidity-debugger": {
     "title": "Announcing our Fully Featured, Portable Solidity Debugger",
-    "date": "2018-02-26",
+    "date": "2018-2-26",
     "author": "Tim Coulter",
     "published": true,
     "excerpt": "Since Truffle's inception, it's been our mission to build outstanding development tools for the Ethereum community. The analogy we always used was one of history: Ethereum development practices are years behind the rest of the industry, and it's our job to build tools that modernize our craft. Well today, Truffle's come one step closer to that goal. We're happy to announce the release of our fully featured, fully portable Solidity debugger and debugging libraries."
   },
   "drizzle-reactive-ethereum-data-for-front-ends": {
     "title": "Drizzle: Reactive Ethereum Data for Front-ends",
-    "date": "2018-02-20",
+    "date": "2018-2-20",
     "author": "Josh Quintal",
     "published": true,
     "excerpt": "Today we're proud to announce the addition of a new product to the Truffle Suite: Drizzle. Drizzle is a collection of front-end libraries that make writing dapp front-ends easier and more predictable.",
@@ -54,14 +166,14 @@
   },
   "you-can-now-make-your-own-truffle-box": {
     "title": "You Can Now Make Your Own Truffle Box",
-    "date": "2017-09-26",
+    "date": "2017-9-26",
     "author": "Josh Quintal",
     "published": true,
     "excerpt": "Two months ago we unveiled official integration with Truffle Boxes, example Ethereum applications and/or boilerplates that put complimentary tools and libraries into sweet, easily-downloadable packages. In addition to rolling out some official boxes, Status.im released the first community-supported box. Today we're happy to announce anyone can now make their very own Truffle Box!"
   },
   "learn-ethereum-the-fun-way-with-our-pet-shop-tutorial": {
     "title": "Learn Ethereum The Fun Way with our Pet Shop Tutorial",
-    "date": "2017-07-12",
+    "date": "2017-7-12",
     "author": "Josh Quintal",
     "published": true,
     "excerpt": "Here at Truffle we want to make Ethereum development accessible to developers of all stripes. To that end, today we're releasing a new tutorial called Pet Shop. It covers the entire local development process, start to finish. For added fun, we've tied the whole thing together within the narrative of creating a pet adoption dapp for a local pet shop owner.",
@@ -69,35 +181,35 @@
   },
   "truffle-boxes-making-life-sweeter": {
     "title": "Truffle Boxes: Making Life Sweeter",
-    "date": "2017-07-06",
+    "date": "2017-7-6",
     "author": "Tim Coulter",
     "published": true,
     "excerpt": "When users begin developing on Ethereum, the first question they ask is, \"Where do I start?\". In the past, there hasn't been an easy answer: the answer generally consisted of many flavors of \"it depends\", and usually led to an investigation of what the user was trying to build, a general overview of their development skills, their knowledge of Ethereum, and the libraries and tools they're already most comfortable with. When determining how the Truffle team can help in this process, it quickly became apparent that what our users needed were examples. Many of them. So, being the upstanding community members we are, we set out to create those example, and today, we're happy to show you what we've accomplished."
   },
   "removing-installation-issues-continued-testrpc": {
     "title": "Removing installation issues, con't: TestRPC",
-    "date": "2017-06-13",
+    "date": "2017-6-13",
     "author": "Tim Coulter",
     "published": true,
     "excerpt": "Update: Since this blog post was published, we have released Ganache a personal blockchain and a replacement to the TestRPC. We have left this post unaltered, but we highly recommend checking out our Working with Ganache page."
   },
   "how-were-making-installation-issues-a-thing-of-the-past": {
     "title": "How we're making installation issues a thing of the past",
-    "date": "2017-06-05",
+    "date": "2017-6-5",
     "author": "Tim Coulter",
     "published": true,
     "excerpt": "Update: Since this blog post was published, we have released Ganache a personal blockchain and a replacement to the TestRPC. We have left this post unaltered, but we highly recommend checking out our Working with Ganache page."
   },
   "truffle-320-released": {
     "title": "Truffle 3.2.0 released 🎉",
-    "date": "2017-03-22",
+    "date": "2017-3-22",
     "author": "Tim Coulter",
     "published": true,
     "excerpt": "Hi all. Great news today. Following your feedback from the Truffle 3.0 release, we've just released Truffle 3.2.0! This release includes a number of great new features and bug fixes, but we're most excited about the following. I've bolded the good stuff for ya."
   },
   "github-repository-moved": {
     "title": "We've moved our github repo!",
-    "date": "2017-03-17",
+    "date": "2017-3-17",
     "author": "Tim Coulter",
     "published": true,
     "excerpt": "We recently released Truffle 3.0 in February to much fanfare. As part of that release we separated our codebase into multiple different modules to make integrating with Truffle easier. Those modules now live in the github repository http://github.com/trufflesuite, which hints at our broader mission of providing a comprehensive suite of tools for Ethereum development."

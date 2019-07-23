@@ -10,11 +10,30 @@
     </div>
   </form>
 
-  <a class="toggle-truffle" href="#truffleDocs" data-toggle="collapse">
+  <a class="toggle-teams suite-link" href="#teamsDocs" data-toggle="collapse">
+    <img class="suite-logo" src="/img/tt-logomark.svg" alt="Truffle Teams Logo" /><h2 class="text-truffle">TRUFFLE TEAMS</h2>
+  </a>
+
+  <div class="collapse teams {{showDocsCategory path "teams"}}" id="teamsDocs" data-parent="#docsSidebar">
+    <ul>
+      <a href="/docs/teams/overview"><li>Overview</li></a>
+      <a href="/docs/teams/quickstart"><li>Quickstart</li></a>
+    </ul>
+    {{#each docs.teams as |categoryDocs category|}}
+      <h3>{{ category }}</h3>
+      <ul>
+        {{#each categoryDocs}}
+          <a href="/docs/teams/{{makeSlug category}}/{{makeSlug this}}"><li>{{ this }}</li></a>
+        {{/each}}
+      </ul>
+    {{/each}}
+  </div>
+
+  <a class="toggle-truffle suite-link" href="#truffleDocs" data-toggle="collapse">
     <img class="suite-logo" src="/img/truffle-logomark.svg" alt="Truffle Logo" /><h2 class="text-truffle"><span class="narrow">T</span>RUFFLE</h2>
   </a>
 
-  <div class="collapse truffle" id="truffleDocs" data-parent="#docsSidebar">
+  <div class="collapse truffle {{showDocsCategory path "truffle"}}" id="truffleDocs" data-parent="#docsSidebar">
     <ul>
       <a href="/docs/truffle/overview"><li>Overview</li></a>
       <a href="/docs/truffle/quickstart"><li>Quickstart</li></a>
@@ -29,11 +48,11 @@
     {{/each}}
   </div>
 
-  <a class="toggle-ganache" href="#ganacheDocs" data-toggle="collapse">
+  <a class="toggle-ganache suite-link" href="#ganacheDocs" data-toggle="collapse">
     <img class="suite-logo" src="/img/ganache-logomark.svg" alt="Ganache Logo" /><h2 class="text-ganache">Ganache</h2>
   </a>
   
-  <div class="collapse ganache" id="ganacheDocs" data-parent="#docsSidebar">
+  <div class="collapse ganache {{showDocsCategory path "ganache"}}" id="ganacheDocs" data-parent="#docsSidebar">
     <ul>
       <a href="/docs/ganache/overview"><li>Overview</li></a>
       <a href="/docs/ganache/quickstart"><li>Quickstart</li></a>
@@ -48,11 +67,11 @@
     {{/each}}
   </div>
 
-  <a class="toggle-drizzle" href="#drizzleDocs" data-toggle="collapse">
+  <a class="toggle-drizzle suite-link" href="#drizzleDocs" data-toggle="collapse">
     <img class="suite-logo" src="/img/drizzle-logomark.svg" alt="Drizzle Logo" /><h2 class="text-drizzle">dri<span class="drizzle-z-skew-1">z</span><span class="drizzle-z-skew-2">z</span>le</h2>
   </a>
   
-  <div class="collapse drizzle" id="drizzleDocs" data-parent="#docsSidebar">
+  <div class="collapse drizzle {{showDocsCategory path "drizzle"}}" id="drizzleDocs" data-parent="#docsSidebar">
     <ul>
       <a href="/docs/drizzle/overview"><li>Overview</li></a>
       <a href="/docs/drizzle/quickstart"><li>Quickstart</li></a>

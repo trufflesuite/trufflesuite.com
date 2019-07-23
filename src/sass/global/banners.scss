@@ -1,3 +1,23 @@
+// Global
+
+.banner {
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-close {
+  color: #5e464d;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 // Colors
 
 .banner-light-cream {
@@ -5,8 +25,33 @@
   color: #5e464d;
 }
 
+.banner-white-choc {
+  color: #5e464d;
+  background-color: #fff;
+}
+
 .banner-milk-choc {
   background-color: #5e464d;
+}
+
+.banner-bright-pink {
+  background-color: #CA37AE;
+}
+
+.banner-burnt-orange {
+  background-color: #F7A34E;
+}
+
+.banner-green {
+  background-color: #3fe0c5;
+}
+
+.banner-periwinkle {
+  background-color: #7f9dd1;
+}
+
+.banner-white {
+  background-color: #fff;
 }
 
 // "Like the Taste"
@@ -37,5 +82,78 @@
     background-position: -5% center;
     background-size: 80vh;
     border-top: 1px solid #e911bd;
+  }
+}
+
+// Truffle Elevate
+
+.banner-elevate {
+  background: #f8f5f0;
+  padding: 3rem 0;
+
+  .elevate-body {
+    font-size: 1.15rem;
+
+    p:first-of-type {
+      font-size: 1.5rem;
+    }
+
+    .text-date {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 900;
+    }
+  }
+
+  .elevate-hashtag .color-ganache {
+    font-size: 1.333333333333333rem;
+    font-weight: 800;
+    margin-bottom: .5rem;
+  }
+
+  .elevate-hashtag .btn-drizzle:hover {
+    color: #e911bd;
+  }
+
+  @media (max-width: 991.98px) {
+    
+  }
+}
+
+.banner-trufflecon {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+
+  a {
+    text-decoration: none;
+    color: #58484e;
+
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  img:first-of-type {
+    position: absolute;
+    left: 0px;
+    top: -25px;
+    height: 100px;
+    
+    @media (max-width:1185px) {
+      display: none;
+    }
+  }
+
+  img:last-of-type {
+    position: absolute;
+    right: 0px;
+    top: -30px;
+    height: 100px; 
+     
+    @media (max-width:1185px) {
+      display: none;
+    }
   }
 }

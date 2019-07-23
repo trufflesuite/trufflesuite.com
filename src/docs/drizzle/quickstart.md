@@ -21,10 +21,10 @@ npm install --save drizzle
 
 1. Import the provider.
    ```javascript
-   import { Drizzle, generateStore } from 'drizzle'
+   import { Drizzle } from 'drizzle'
    ```
 
-1. Create an `options` object and pass in the desired contract artifacts for Drizzle to instantiate. Other options are available, see [the Options section](#options) below.
+1. Create an `options` object and pass in the desired contract artifacts for Drizzle to instantiate. Other options are available, see [the Options section](./reference/drizzle-options).
    ```javascript
    // Import contracts
    import SimpleStorage from './../build/contracts/SimpleStorage.json'
@@ -36,10 +36,9 @@ npm install --save drizzle
      ]
    }
 
-   const drizzleStore = generateStore(this.props.options)
-   const drizzle = new Drizzle(this.props.options, drizzleStore)
+   const drizzle = new Drizzle(options)
    ```
 
 <p class="alert alert-info m-t-2">
-<strong>Note</strong>: The above assumes you have no existing redux store and generates a new one. To use your existing redux store, see [Using an Existing Redux Store](/docs/drizzle/using-an-existing-redux-store).
+<strong>Note</strong>: The above assumes you have no existing redux store and generates a new one. To use your existing redux store, see [Using an Existing Redux Store](/docs/drizzle/using-drizzles-redux-store).
 </p>

@@ -60,9 +60,9 @@ With our front-end taken care of, we can focus on the `TutorialToken` contract.
    ```javascript
    pragma solidity ^0.4.24;
 
-   import "openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
+   import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 
-   contract TutorialToken is StandardToken {
+   contract TutorialToken is ERC20 {
 
    }
    ```
@@ -87,12 +87,11 @@ With our front-end taken care of, we can focus on the `TutorialToken` contract.
    * The `decimals` variable determines the degree to which this token can be subdivided. For our example we went with 2 decimal places, similar to dollars and cents.
    * The `INITIAL_SUPPLY` variable determines the number of tokens created when this contract is deployed. In this case, the number is arbitrary.
 
-1. To finish up our contract, we'll create a constructor function to set the `totalSupply` equal to our declared `INITIAL_SUPPLY` and give the entire supply to the deploying account's address. Add this block below the content added in the previous step:
+1. To finish up our contract, we'll create a constructor function to mint with the `totalSupply` equal to our declared `INITIAL_SUPPLY` and give the entire supply to the deploying account's address. Add this block below the content added in the previous step:
 
    ```javascript
    constructor() public {
-     totalSupply_ = INITIAL_SUPPLY;
-     balances[msg.sender] = INITIAL_SUPPLY;
+     _mint(msg.sender, INITIAL_SUPPLY);
    }
    ```
 

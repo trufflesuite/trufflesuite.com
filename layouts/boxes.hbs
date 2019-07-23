@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+    {{> ga-tag-head}}
+
     <meta charset="utf-8">
+    <meta name="description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}">
+    {{#if keywords}}<meta name="keywords" content="{{ keywords }}">{{/if}}
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <!-- Favicon -->
     <link rel="icon" href="/img/favicons/favicon.ico">
 
@@ -25,7 +29,7 @@
     <!-- Facebook OpenGraph -->
     <meta property="og:site_name" content="Truffle Suite" />
     <meta property="og:description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}" />
-    <meta property="og:title" content="Truffle Suite | {{#if parent-title}}{{ parent-title }} | {{ title }}{{else}}{{ title }}{{/if}}" />
+    <meta property="og:title" content="Boxes | Truffle Suite" />
     <meta property="og:url" content="{{getPageUrl path}}" />
     <meta property="og:type" content="article" />
     <meta property="og:image" content="https://truffleframework.com/img/favicons/truffle-share.png" />
@@ -33,25 +37,23 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="Truffle Suite" />
-    <meta name="twitter:title" content="Truffle Suite | {{#if parent-title}}{{ parent-title }} | {{ title }}{{else}}{{ title }}{{/if}}" />
+    <meta name="twitter:title" content="Boxes | Truffle Suite" />
     <meta name="twitter:description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}" />
     <meta name="twitter:creator" content="Truffle Suite" />
     <meta name="twitter:domain" content="trufflesuite.com" />
     <meta name="twitter:image:src" content="https://truffleframework.com/img/favicons/truffle-share.png" />
-    
+
     <meta name="google-site-verification" content="BSgPkMHzw7IxJTpEElNfD8ZZYPzXgOQiTVPzAxAG8-o" />
-    
-    {{#if parent-title}}
-      <title>Truffle Suite | {{ parent-title }} | {{ title }}</title>
-    {{else}}
-      <title>Truffle Suite | {{ title }}</title>
-    {{/if}}
+
+    <title>Boxes | Truffle Suite</title>
 
     <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans|Oswald|Varela+Round|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/index.css">
   </head>
   <body>
+    {{> ga-tag-body}}
+    
     {{> navbar}}
 
     <main class="container container-heading boxes-heading">
@@ -60,88 +62,82 @@
           <img src="/img/truffle-boxes-header.svg" alt="Truffle Boxes" title="Truffle Boxes" />
         </div>
 
-        <div class="col-sm">
-          <h1 class="text-truffle"><span class="narrow">T</span>RUFFLE BOXES</h1>
-          <h2 class="mb-4">THE EASIEST WAY TO GET STARTED</h2>
-          <p>Truffle Boxes are helpful boilerplates that allow you to focus on what makes your dapp unique. In addition to Truffle, Truffle Boxes can contain other helpful modules, Solidity contracts &amp; libraries, front-end views and more; all the way up to complete example dapps.</p>
-          <a href="/docs/truffle/getting-started/truffle-boxes" class="btn btn-truffle">CREATE A BOX</a>
-        </div>
+      <div class="col-sm">
+        <h1 class="text-truffle"><span class="narrow">T</span>RUFFLE BOXES</h1>
+        <h2 class="mb-4">THE EASIEST WAY TO GET STARTED</h2>
+        <p>Truffle Boxes are helpful boilerplates that allow you to focus on what makes your dapp unique. In addition to Truffle, Truffle Boxes can contain other helpful modules, Solidity contracts &amp; libraries, front-end views and more; all the way up to complete example dapps.</p>
+        <a href="docs/truffle/advanced/creating-a-truffle-box" class="btn btn-truffle">CREATE A BOX</a>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <main class="banner banner-light-cream pt-5 pb-5">
-      <div class="container" role="main">
-        <div class="row mb-5">
-          <div class="col">
-            <input type="text" class="form-control mb-3" id="boxesSearch" placeholder="Search by name or tag...">
+  <main class="banner banner-light-cream pt-5 pb-5">
+    <div class="container" role="main">
+      <div class="row mb-5">
+        <div class="col">
+          <input type="text" class="form-control mb-3" id="boxesSearch" placeholder="Search by name or tag...">
 
-            <div class="box-radios" id="isoSort">
-              <div class="form-check form-check-inline">
-                <input id="allBoxes" type="radio" class="form-check-input" name="boxFilters" checked>
-                <label class="form-check-label" for="allBoxes">All</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input id="officialBoxes" type="radio" data-filter-group="tags" data-filter="official" class="form-check-input" name="boxFilters">
-                <label class="form-check-label" for="officialBoxes">Official Only</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input id="communityBoxes" type="radio" data-filter-group="tags" data-filter="community" class="form-check-input" name="boxFilters">
-                <label class="form-check-label" for="communityBoxes">Community Only</label>
-              </div>
+          <div class="box-radios" id="isoSort">
+            <div class="form-check form-check-inline">
+              <input id="allBoxes" type="radio" class="form-check-input" name="boxFilters" checked>
+              <label class="form-check-label" for="allBoxes">All</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="officialBoxes" type="radio" data-filter-group="tags" data-filter="official" class="form-check-input" name="boxFilters">
+              <label class="form-check-label" for="officialBoxes">Official Only</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input id="communityBoxes" type="radio" data-filter-group="tags" data-filter="community" class="form-check-input" name="boxFilters">
+              <label class="form-check-label" for="communityBoxes">Community Only</label>
             </div>
           </div>
         </div>
-
-        <div class="row" id="isoContainer">
-          {{#each boxes}}
-            {{#if this.official}}
-              <div class="col-xs-12 col-md-6 col-lg-4 iso-item official">
-            {{else}}
-              <div class="col-xs-12 col-md-6 col-lg-4 iso-item community">
-            {{/if}}
-              {{#if this.official}}
-                <a class="link-card" href="/boxes/{{this.displayName}}">
-              {{else}}
-                <a class="link-card" href="/boxes/{{this.repoName}}">
-              {{/if}}
-                <div class="card box-card" data-userorg="{{this.userOrg}}" data-repo="{{this.repoName}}">
-                  <img class="card-img-top" src="https://github.com/{{this.userOrg}}/{{this.repoName}}/blob/master/box-img-sm.png?raw=true" alt="{{this.slug}}" onerror="javascript:this.src='/img/boxes/loading-banner.png'" />
-
-                  <div class="card-body">
-                    {{#if this.official}}
-                      <h5 class="card-title">{{this.displayName}}</h5>
-                    {{else}}
-                      <h5 class="card-title">{{this.userOrg}}/{{this.repoName}}</h5>
-                    {{/if}}
-                    <p class="box-star-count"></p>
-                    <p class="card-text box-description"></p>
-                    <p class="card-text">
-                      {{#if this.official}}
-                        <i class="fas fa-tags"></i> <span class="box-tags">official</span>
-                      {{else}}
-                        <i class="fas fa-tags"></i> <span class="box-tags">community</span>
-                      {{/if}}
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          {{/each}}
-        </div>
       </div>
-    </main>
 
-    {{> footer}}
+      <div class="row" id="isoContainer">
+        {{#each boxes}}
+          {{#if this.official}}
+            <div class="col-xs-12 col-md-6 col-lg-4 iso-item official">
+          {{else}}
+            <div class="col-xs-12 col-md-6 col-lg-4 iso-item community">
+          {{/if}}
+            {{#if this.official}}
+              <a class="link-card" href="/boxes/{{this.displayName}}">
+            {{else}}
+              <a class="link-card" href="/boxes/{{this.repoName}}">
+            {{/if}}
+              <div class="card box-card" data-userorg="{{this.userOrg}}" data-repo="{{this.repoName}}">
+                <img class="card-img-top" src="https://github.com/{{this.userOrg}}/{{this.repoName}}/blob/master/box-img-sm.png?raw=true" alt="{{this.slug}}" onerror="javascript:this.src='/img/boxes/loading-banner.png'" />
 
-    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.slim.min.js"><\/script>')</script>-->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-    <script src="/js/vendor/octokit-rest.min.js"></script>
-    <script src="/js/boxes.js"></script>
+                <div class="card-body">
+                  {{#if this.official}}
+                    <h5 class="card-title">{{this.displayName}}</h5>
+                  {{else}}
+                    <h5 class="card-title">{{this.userOrg}}/{{this.repoName}}</h5>
+                  {{/if}}
+                  <p class="box-star-count"><i class="fas fa-star"></i> {{getMetadata "boxMeta" this.repoName "stars"}}</p>
+                  <p class="card-text box-description">{{getMetadata "boxMeta" this.repoName "description"}}</p>
+                  <p class="card-text">
+                    <i class="fas fa-tags"></i> <span class="box-tags">{{getBoxTags this.repoName}}</span>
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </main>
 
-    {{> ga-tag}}
-  </body>
+  {{> footer}}
+
+  <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.slim.min.js"><\/script>')</script>-->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="/js/vendor/octokit-rest.min.js"></script>
+  <script src="/js/boxes.js"></script>
+</body>
 </html>

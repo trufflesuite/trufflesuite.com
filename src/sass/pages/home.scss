@@ -86,3 +86,15 @@
     }
   }
 }
+
+.home-container {
+  .github-button-wrapper {
+    margin-left: 1rem;
+    display: inline-block;
+    vertical-align: middle
+  }
+
+  h5 {
+    display: inline-block;
+  }
+}
