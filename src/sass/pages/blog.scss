@@ -5,6 +5,13 @@
 
   h2 {
     text-transform: uppercase;
+    .anchor-target {
+      position:relative;
+      top: -2em;
+      display: block;
+      height: 0;
+      width: 0;
+    }
   }
 
   &:hover {
