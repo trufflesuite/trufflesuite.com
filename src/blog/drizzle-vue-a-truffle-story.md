@@ -28,7 +28,7 @@ The problem is that we didn't offer an easy solution for Vue or Angular and our 
 
 ## A Vue Plugin Side Project
 
-I felt this was an important problem to solve in order to improve the dapp developer experience.  It was important to get Drizzle working for Vue. Unfortunately, I knew nothing about Vue. In previous organizations I was a part of, I would have shied away from pursuing this project. However, at Truffle it felt comfortable and empowered to champion the idea. Josh encouraged me to spend the time needed to study Vue and experiment with the concepts.
+I felt this was an important problem to solve in order to improve the dapp developer experience.  It was important to get Drizzle working for Vue. Unfortunately, I knew nothing about Vue. In previous organizations I was a part of, I would have shied away from pursuing this project. However, at Truffle I felt comfortable and empowered to champion the idea. Josh encouraged me to spend the time needed to study Vue and experiment with the concepts.
 
 The basic plan was to:
 - Use Vuex, Vue's popular State management plugin
