@@ -6,6 +6,8 @@
   </div>
 </div>
 
+![Drizzle + Vue = <3](/img/blog/drizzle-vue-a-truffle-story/title-image.png)
+
 Truffle is an organization that maintains a balance of transparency, mentorship, encouragement, inclusivity and humor that I'm thankful for everyday. While much could be written about Truffle's management culture, I want to share my experience of working on a side project here.
 
 Our remote work setup and the openness of our team contributes to a healthy and productive environment. The ability to schedule zoom sessions to brainstorm and discuss ideas fits well with our schedule. Every member contributes to this culture being generous with their time and knowledge. I'm happy and inspired to see team members grow as developers through the subtle mentorship as a result of our culture. 
