@@ -19,7 +19,8 @@
     "date": "2019-7-19",
     "author": "Mike Seese",
     "published": true,
-    "excerpt": "Deploying your smart contracts shouldn't be difficult, and the process should be flexible. I give a sneak peek at the next feature we're building: an easy to use interface to deploy your Truffle projects with Truffle Teams! Be the first to use it at my TruffleCon 2019 workshop!"
+    "excerpt": "Deploying your smart contracts shouldn't be difficult, and the process should be flexible. I give a sneak peek at the next feature we're building: an easy to use interface to deploy your Truffle projects with Truffle Teams! Be the first to use it at my TruffleCon 2019 workshop!",
+    "image": "/img/blog/thumbnails/truffle-teams.png"
   },
   "why-i-love-trufflecon": {
     "title": "Why I love TruffleCon",
