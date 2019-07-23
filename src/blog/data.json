@@ -1,4 +1,27 @@
 {
+  "blockchain-will-cure-cancer": {
+    "title": "Blockchain Will Cure Cancer",
+    "date": "2019-7-23",
+    "author": "Faina Shalts",
+    "published": true,
+    "excerpt": "Physicians and scientists will be the actual agents behind a cure for cancer. But in their potential to disrupt the very nature of medical research and treatment, blockchain-based solutions are extremely likely to light the way. It is important when examining any new technology to consider the ways in which it may change the world. Join me here as we briefly look at how blockchain can help lead us to a world without cancer."
+  },
+  "drizzle-vue-a-truffle-story": {
+    "title": "Drizzle Vue: A Truffle Story",
+    "date": "2019-7-22",
+    "author": "Amal Sudama",
+    "published": true,
+    "excerpt": "I felt this was an important problem to solve in order to improve the dapp developer experience.  It was important to get Drizzle working for Vue. Unfortunately, I knew nothing about Vue. In previous organizations I was a part of, I would have shied away from pursuing this project. However, at Truffle I felt comfortable and empowered to champion the idea.",
+    "image": "/img/blog/thumbnails/drizzle-vue.png"
+  },
+  "an-easier-way-to-deploy-your-smart-contracts": {
+    "title": "An Easier Way to Deploy Your Smart Contracts",
+    "date": "2019-7-19",
+    "author": "Mike Seese",
+    "published": true,
+    "excerpt": "Deploying your smart contracts shouldn't be difficult, and the process should be flexible. I give a sneak peek at the next feature we're building: an easy to use interface to deploy your Truffle projects with Truffle Teams! Be the first to use it at my TruffleCon 2019 workshop!",
+    "image": "/img/blog/thumbnails/truffle-teams.png"
+  },
   "why-i-love-trufflecon": {
     "title": "Why I love TruffleCon",
     "date": "2019-7-18",
@@ -27,7 +50,7 @@
     "published": true,
     "excerpt": "In this article we explore 5 trends impacting the developer-experience (or DX) when it comes to building blockchain-based solutions. Specifically, applications and services that leverage a blockchain or distributed ledger or as part of their overall architecture."
   },
-   "develop-using-fluidity-truffle-box": {
+  "develop-using-fluidity-truffle-box": {
     "title": "Develop using Fluidity Truffle Box",
     "date": "2019-7-12",
     "author": "Deepa Sathaye, Guest Blogger from Fluidity",

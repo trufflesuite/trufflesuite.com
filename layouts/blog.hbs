@@ -67,35 +67,37 @@
   <main class="banner banner-light-cream pt-5 pb-5" role="main">
     <div class="container">
       {{#each blog as |post slug|}}
-        {{#if post.image}}
-          <a class="post-row-link" href="/blog/{{ slug }}">
-            <div class="row align-items-center post-row">
-              <div class="col-md-3">
-                <img src="{{ post.image }}" class="rounded-circle img-fluid post-thumbnail" />
+        {{#if post.published}}
+          {{#if post.image}}
+            <a class="post-row-link" href="/blog/{{ slug }}">
+              <div class="row align-items-center post-row">
+                <div class="col-md-3">
+                  <img src="{{ post.image }}" class="rounded-circle img-fluid post-thumbnail" />
+                </div>
+                <div class="col-md-9">
+                  <h2>{{ post.title }}</h2>
+                  <p><i class="far fa-calendar-alt"></i> {{ post.date }}&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> {{ post.author }}</p>
+                  {{#if post.excerpt}}
+                    <p>{{ post.excerpt }}</p>
+                  {{/if}}
+                  <span class="btn btn-truffle">READ MORE</span>
+                </div>
               </div>
-              <div class="col-md-9">
-                <h2>{{ post.title }}</h2>
-                <p><i class="far fa-calendar-alt"></i> {{ post.date }}&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> {{ post.author }}</p>
-                {{#if post.excerpt}}
-                  <p>{{ post.excerpt }}</p>
-                {{/if}}
-                <span class="btn btn-truffle">READ MORE</span>
+            </a>
+          {{else}}
+            <a class="post-row-link" href="/blog/{{ slug }}">
+              <div class="row post-row">
+                <div class="col">
+                  <h2>{{ post.title }}</h2>
+                  <p><i class="far fa-calendar-alt"></i> {{ post.date }}&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> {{ post.author }}</p>
+                  {{#if post.excerpt}}
+                    <p>{{ post.excerpt }}</p>
+                  {{/if}}
+                  <span class="btn btn-truffle">READ MORE</span>
+                </div>
               </div>
-            </div>
-          </a>
-        {{else}}
-          <a class="post-row-link" href="/blog/{{ slug }}">
-            <div class="row post-row">
-              <div class="col">
-                <h2>{{ post.title }}</h2>
-                <p><i class="far fa-calendar-alt"></i> {{ post.date }}&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> {{ post.author }}</p>
-                {{#if post.excerpt}}
-                  <p>{{ post.excerpt }}</p>
-                {{/if}}
-                <span class="btn btn-truffle">READ MORE</span>
-              </div>
-            </div>
-          </a>
+            </a>
+          {{/if}}
         {{/if}}
       {{/each}}
     </div>
