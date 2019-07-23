@@ -6,7 +6,8 @@ renderer.heading = function (text, level) {
 
   return `
     <h${level} class="link-markdown">
-      <a href="#${escapedText}" name="${escapedText}"><i class="fas fa-link"></i></a>
+      <a class="anchor-target" name="${escapedText}"></a>
+      <a href="#${escapedText}"><i class="fas fa-link"></i></a>
       ${text}
     </h${level}>
   `;
