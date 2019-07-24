@@ -1,4 +1,18 @@
 {
+  "open-call-for-contributions-truffle-pegasys-eea-private-transactions": {
+    "title": "Open call for contributions by Truffle + PegaSys: EEA private transactions",
+    "date": "2019-7-24",
+    "author": "Felipe Faraggi, Guest Blogger, Developer Evangelist from PegaSys",
+    "published": true,
+    "excerpt": "In its current state, Truffle doesn't support EEA private transactions. Support for the web3js-eea library is needed for this to work and PegaSys has recently made an implementation of the v4.0 EEA specification. PegaSys and Truffle have teamed up to make a single open call for contributions. Help out and get some 😎 PegaSys swag and personally thanked on stage at TruffleCon!"
+  },
+  "best-methods-to-understand-blockchain-if-youre-not-a-developer": {
+    "title": "The Best Methods to Understand Blockchain Technology if You’re Not A Developer",
+    "date": "2019-7-24",
+    "author": "Scott Olson",
+    "published": true,
+    "excerpt": "As a non-technical person, it feels like it takes 1.21 gigawatts to keep up with the speed of technology - even Doc Brown himself couldn’t have predicted all of the technological advancements with his flux capacitor. Not only are we trying to keep up with technologies like blockchain, machine learning, and AI, but we have an overwhelming amount of information on the web all at the click of a mouse."
+  },
   "blockchain-will-cure-cancer": {
     "title": "Blockchain Will Cure Cancer",
     "date": "2019-7-23",
