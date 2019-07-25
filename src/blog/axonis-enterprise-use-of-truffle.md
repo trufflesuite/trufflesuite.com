@@ -6,6 +6,8 @@
   </div>
 </div>
 
+![Truffle + Axoni](/img/blog/axonis-enterprise-use-of-truffle/truffle-axoni.png)
+
 ## Axoni Background
 
 At Axoni, our mission is to make shared information more trusted and reliable. We do this through distributed technology that we call "Ethereum-inspired", which has both a broad and a specific meaning. In the broad sense, the core technology plays a role for its users analogous to the public blockchain, presenting a powerful and extensible capacity to side-step undesired intermediaries (yes, these exist for banks too...). In a more precise technical sense, our platform borrows certain concepts from Ethereum (e.g. accounts, contracts, gas...) and, importantly, we make efforts to comply with Ethereum-world interfaces (e.g. evm bytecode, web3 JSON-rpc).
