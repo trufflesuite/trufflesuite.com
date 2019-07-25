@@ -1,4 +1,11 @@
 {
+  "axonis-enterprise-use-of-truffle": {
+    "title": "Axoni's Enterprise Use of Truffle",
+    "date": "2019-7-25",
+    "author": "Jonathan Leslie, Guest Blogger, a Lead Software Engineer from Axoni",
+    "published": false,
+    "excerpt": "At Axoni, our mission is to make shared information more trusted and reliable. We do this through distributed technology that we call \"Ethereum-inspired\"...given our compliance with the web3 JSON-RPC spec, Truffle basically works \"out-of-the-box\". However `truffle migrate` was less extensible, so we built a Truffle-based deployment tool."
+  },
   "open-call-for-contributions-truffle-pegasys-eea-private-transactions": {
     "title": "Open call for contributions by Truffle + PegaSys: EEA private transactions",
     "date": "2019-7-24",
