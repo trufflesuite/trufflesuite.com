@@ -4,13 +4,22 @@ layout: docs.hbs
 ---
 # Ethereum Name Service
 
-Truffle has a built-in Ethereum Name Service (ENS) integration. ENS is a mechanism that allows for the mapping of human readable names to Ethereum addresses or other resources. With ENS enabled, Truffle allows you to use ENS names when interacting with your contracts and it will resolve them for you. Wherever you can use an address in your transaction parameters, you can use an ENS name as long as you are able to connect successfully to an ENS registry.
+Truffle has a built-in Ethereum Name Service (ENS) integration. ENS is a
+mechanism that allows for the mapping of human readable names to Ethereum
+addresses or other resources. With ENS enabled, Truffle allows you to use ENS
+names when interacting with your contracts and it will resolve them for you.
+Wherever you can use an address in your transaction parameters, you can use an
+ENS name as long as you are able to connect successfully to an ENS registry.
 
-For more information on the Ethereum Name Service, see the [ENS website](https:\/\/ens.domains).
+For more information on the Ethereum Name Service, see the [ENS website]
+(https:\/\/ens.domains).
 
 ## Configuration
 
-In order to use ENS features in your project, you must first enable it in your Truffle config (`truffle-config.js`). In the config, you must specify an `ens` property and set `ens.enabled` to `true`. The simplest configuration you would have is the following in your Truffle config:
+In order to use ENS features in your project, you must first enable it in your
+Truffle config (`truffle-config.js`). In the config, you must specify an `ens`
+property and set `ens.enabled` to `true`. The simplest configuration you would
+have is the following in your Truffle config:
 
 ```javascript
 module.exports = {
@@ -20,43 +29,71 @@ module.exports = {
 }
 ```
 
-With the above config, you would be able to resolve names on Mainnet, Ropsten, Rinkeby, and Goerli. Truffle connects to the "official" ENS-deployed registries if the provider is connected to one of these four networks; that is, unless a different registry address is specified in the config. If you need to specify a different registry, you can enter it in your config for the `ens.registryAddress` property. This would look like:
+With the above config, you would be able to resolve names on Mainnet, Ropsten,
+Rinkeby, and Goerli. Truffle connects to the "official" ENS-deployed registries
+if the provider is connected to one of these four networks; that is, unless a
+different registry address is specified in the config. If you need to specify
+a different registry, you can enter it in your config for the
+`<networkName>.ens.registry.address` property. If your network name were
+`myNetwork` then this might look like:
 
 ```javascript
 module.exports = {
+  networks: {
+    myNetwork: {
+      host: "localhost",
+      port: 8000,
+      network_id: "*",
+      registry: {
+        address: "0x1234567890123456789012345678901234567890"
+      }
+    }
+  },
   ens: {
-    enabled: true,
-    registryAddress: "0x1234567890123456789012345678901234567890"
+    enabled: true
   }
 }
 ```
 
-It must be noted that the registry address you supply needs to agree with whatever provider is present otherwise ENS resolution will not work. In other words, if you supply a provider for Kovan, you must also supply a registry address for an ENS registry on the Kovan network. As was stated above, however, you do not need to supply a registry address for the above networks unless you want to use a custom ENS registry.
+It must be noted that the registry address you supply needs to agree with
+whatever provider is present otherwise ENS resolution will not work. In
+other words, if you supply a provider for Kovan, you must also supply a
+registry address for an ENS registry on the Kovan network. As was stated
+above, however, you do not need to supply a registry address for the above
+networks unless you want to use a custom ENS registry.
 
 ## deployer.ens.setAddress()
 
-As part of this ENS integration, a new `ens` module is available on the deployer object available during migration functions. Currently there is a single method on this module named `setAddress`. If you own a domain name, you can use this method to deploy a resolver and set its address. If the resolver already exists, it will set the address that the resolver references if it is not the same as the input address.
+As part of this ENS integration, a new `ens` module is available on the
+deployer object available during migration functions. Currently there is a
+single method on this module named `setAddress`. If you own a domain name,
+you can use this method to deploy a resolver and set its address. If the
+resolver already exists, it will set the address that the resolver references
+if it is not the same as the input address.
 
-The signature for this method is `setAddress(<string: name>, <string|truffle contract instance: addressOrContract>, <string: from)`. A quick explanation of these parameters follows:
+The signature for this method is
+`setAddress(<name: string>, <addressOrContract: string|truffle contract instance>, <from: string)`.
+A quick explanation of these parameters follows:
 
-  - The `name` parameter describes the name for which to set the resolver address. This name will look something like "myName.eth".
+  - The `name` parameter describes the name for which to set the resolver
+  address. This name will look something like "myName.eth".
 
-  - The `addressOrContract` parameter must either be a string or a Truffle contract object that has an address property. If it is a string it must be an Ethereum address. If a Truffle contract has been deployed on the network you are using, then you can use that object as an argument. It will use that contract's address to set the resolver target.
+  - The `addressOrContract` parameter must either be a string or a Truffle
+  contract object that has an address property. If it is a string it must
+  be an Ethereum address. If a Truffle contract has been deployed on
+  the network you are using, then you can use that object as an argument.
+  It will use that contract's address to set the resolver target.
 
-  - The `from` parameter is the address that you want to send the transaction from. This must be the address that owns the domain in question. If this address does not own the domain then the transaction will fail.
+  - The `from` parameter is the address that you want to send the transaction
+  from. This must be the address that owns the domain in question. If this
+  address does not own the domain then the transaction will fail.
 
-## Dev mode
+## Automatic registry deployment
 
-Another feature of this integration is the ability to deploy an ENS registry on a network. This would be useful when developing locally and testing. If Truffle cannot connect to an ENS registry on the network you are using, it will check to see if you have "dev mode" enabled. If you do, it will attempt to deploy a new registry on the network you are running a migration on. It will also set ownership for the names used in calls to `setAddress` such that those calls will be successful. Currently this feature only supports domain names with one "label" like "test" or "truffle".
-
-To enable "dev mode", you must configure it in your Truffle config. This is as simple as setting `ens.devMode` to true. An example is as follows:
-
-
-```javascript
-module.exports = {
-  ens: {
-    enabled: true,
-    devMode: true
-  }
-}
-```
+Another feature of this integration is the ability to deploy an ENS registry on
+a network. This would be useful when developing locally and testing. If
+Truffle cannot connect to an ENS registry on the network you are using, it
+will check to see if you have "dev mode" enabled. If you do, it will attempt
+to deploy a new registry on the network you are running a migration on. It
+will also set ownership for the names used in calls to `setAddress` such
+that those calls will be successful.
