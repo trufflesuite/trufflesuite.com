@@ -1,6 +1,9 @@
 $(document).ready(function() {
+
+  // 2018 Buy Button
+
   $(window).scroll(function() {
-    var buyButton = $('.trufflecon-nav');
+    var buyButton = $('.trufflecon-nav, .trufflecon-nav-inline');
     var windowScrollPos = $(this).scrollTop();
   
     if (windowScrollPos > 300)
@@ -16,7 +19,9 @@ $(document).ready(function() {
     return buyButton.removeClass('scroll');
   });
 
-  $('.trufflecon-nav .scroll-link').click(function(event) {
+  // Hero Nav
+
+  $('.trufflecon-nav .scroll-link, .trufflecon-nav-inline .scroll-link').click(function(event) {
     event.preventDefault();
 
     var target = $(this.hash);

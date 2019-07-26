@@ -1,9 +1,23 @@
 {
+  "teams": {
+    "Getting Started": [
+      "Creating an Account",
+      "Adding Repositories"
+    ],
+    "Testing": [
+      "Starting Builds"
+    ],
+    "Contracts": [
+      "Contract Monitoring"
+    ],
+    "Reference": [
+      "Permissions Disclosure"
+    ]
+  },
   "truffle": {
     "Getting Started": [
       "Installation",
       "Creating a Project",
-      "Truffle Boxes",
       "Compiling Contracts",
       "Running Migrations",
       "Interacting with Your Contracts",
@@ -13,7 +27,8 @@
       "Debugging Your Contracts",
       "Using Truffle Develop and The Console",
       "Writing External Scripts",
-      "Using The Build Pipeline"
+      "Working With Quorum",
+      "Working With Hyperledger EVM"
     ],
     "Testing": [
       "Testing Your Contracts",
@@ -22,20 +37,40 @@
     ],
     "Advanced": [
       "Networks and App Deployment",
-      "Build Processes"
+      "Build Processes",
+      "Creating a Truffle Box"
     ],
     "Reference": [
       "Choosing an Ethereum Client",
       "Configuration",
+      "Contract Abstractions",
       "Truffle Commands",
       "Contact The Developers"
     ]
   },
   "ganache": {
+    "Workspaces": [
+      "The Quickstart Workspace",
+      "Creating Workspaces",
+      "Loading Existing Workspaces",
+      "Switching Workspaces",
+      "Deleting Workspaces"
+    ],
+    "Truffle Projects": [
+      "Linking a Truffle Project",
+      "Unlinking a Truffle Project",
+      "Contracts Page",
+      "Events Page",
+      "Decoded Transactions"
+    ],
+    "Reference": [
+      "Ganache Settings",
+      "Workspace Default Configuration"
+    ]
   },
   "drizzle": {
     "Getting Started": [
-      "Using an Existing Redux Store",
+      "Using Drizzle's Redux Store",
       "Contract Interaction"
     ],
     "React": [
@@ -45,6 +80,7 @@
     "Reference": [
       "Drizzle Options",
       "Drizzle State",
+      "Drizzle Actions",
       "How Data Stays Fresh"
     ]
   }

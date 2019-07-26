@@ -6,7 +6,7 @@ layout: docs.hbs
 
 ## Gitter
 
-The fastest way to get help is to reach out on our [community Gitter channel](https://github.com/ConsenSys/truffle), where hundreds of your fellow Trufflers congregate to answer your questions.
+The fastest way to get help is to reach out on our [community Gitter channel](https://gitter.im/ConsenSys/truffle), where hundreds of your fellow Trufflers congregate to answer your questions.
 
 ## Issue Tracker
 

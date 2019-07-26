@@ -37,6 +37,11 @@ code {
   }
 }
 
+blockquote {
+  border-left: 3px solid #33262a;
+  padding-left: 1rem;
+}
+
 .table .thead-dark th {
   background: #e0dad7;
   border-color: #e0dad7;
@@ -237,4 +242,99 @@ code {
     width: calc(100% - 80px);
     float: right;
   }
+}
+
+// Images
+
+.circle-image-container {
+  margin: 0 auto .5rem auto;
+  padding-bottom: 0;
+  border: 4px solid #3fe0c5;
+  overflow: hidden;
+
+  @media (max-width: 991.98px) {
+    width: 200px;
+    height: 200px;
+
+    img {
+      width: 200px;
+    }
+  }
+}
+
+//flipcard
+
+.flipcardbox {
+  float: left;
+  font-size: 1.2em;
+  margin: 1% 0 0 1%;
+  perspective: 800px;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+}
+
+.flipcardbox:hover .flipcard {
+  transform: rotateY( 180deg);
+}
+
+.flipcard {
+  cursor: default;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease 0s;
+  width: 100%;
+  -webkit-animation: giro 1s 1;
+  animation: giro 1s 1;
+}
+
+.flipcard p {
+  margin-bottom: 1.8em;
+}
+
+.flipcard .front,
+.flipcard .back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-size: 1.2em;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.flipcard .front strong {
+  background: #fff;
+  border-radius: 100%;
+  color: #222;
+  font-size: 1.5em;
+  line-height: 30px;
+  padding: 0 7px 4px 6px;
+}
+
+.flipcard .back {
+  transform: rotateY( 180deg);
+}
+
+.flipcard .back a {
+  padding: 0.3em 0.5em;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 1px;
+  font-size: 0.9em;
+  transition: all 0.2s ease 0s;
+}
+
+.flipcard .back a:hover {
+  background: #fff;
+  color: #333;
+  text-shadow: 0 0 1px #333;
+}
+
+.flipcardbox .flipcard {
+  -webkit-animation: giro 1.5s 1;
+  animation: giro 1.5s 1;
 }

@@ -16,7 +16,7 @@ In this tutorial we will be covering:
 4. Compiling and migrating the smart contract
 5. Testing the smart contract
 6. Creating our React.js project
-7. Setting up the front-end client
+7. Wiring up the front-end client
 8. Wire up the React app with Drizzle
 9. Write a component to read from Drizzle
 10. Write a component to write to the smart contract
@@ -26,7 +26,6 @@ In this tutorial we will be covering:
 There are a few technical requirements before we start. Please install the following:
 
 *   [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
-*   [Git](https://git-scm.com/)
 
 ### Truffle
 
@@ -37,14 +36,6 @@ npm install -g truffle
 ```
 
 To verify that Truffle is installed properly, type `truffle version` on a terminal. If you see an error, make sure that your npm modules are added to your path.
-
-### Ganache-CLI
-
-We also will be using [Ganache-CLI](https://github.com/trufflesuite/ganache-cli), a personal blockchain for Ethereum development you can use to deploy contracts, develop applications, and run tests on. You can install it globally with this command:
-
-```shell
-npm install -g ganache-cli
-```
 
 ### Create-React-App
 
@@ -79,9 +70,8 @@ The default Truffle directory structure contains the following:
 
 * `contracts/`: Contains the [Solidity](https://solidity.readthedocs.io/) source files for our smart contracts. There is an important contract in here called `Migrations.sol`, which we'll talk about later.
 * `migrations/`: Truffle uses a migration system to handle smart contract deployments. A migration is an additional special smart contract that keeps track of changes.
-* `test/`: Contains both JavaScript and Solidity tests for our smart contracts
-* `truffle-config.js`: Truffle configuration file
-* `truffle.js`: Another Truffle configuration file (soon to be deprecated)
+* `test/`: Contains both JavaScript and Solidity tests for our smart contracts.
+* `truffle-config.js`: Truffle configuration file.
 
 ## Writing our smart contract
 
@@ -92,12 +82,12 @@ We'll add a simple smart contract called MyStringStore.
 2. Add the following content to the file:
 
    ```javascript
-   pragma solidity ^0.4.24;
+   pragma solidity ^0.5.0;
 
    contract MyStringStore {
      string public myString = "Hello World";
 
-     function set(string x) public {
+     function set(string memory x) public {
        myString = x;
      }
    }
@@ -108,35 +98,17 @@ Since this isn't a Solidity tutorial, all you need to know about this is:
 * We've created a public string variable named `myString` and initialized it to "Hello World". This automatically creates a getter (since it's a public variable) so we don't have to write one ourselves.
 * We've created a setter method that simply sets the `myString` variable with whatever string is passed in.
 
-## Launching a test blockchain
+## Launching a test blockchain with Truffle Develop
 
-Before we move ahead, let's first launch our test blockchain with Ganache-CLI. 
+Before we move ahead, let's first launch our test blockchain with the Truffle Develop console. 
 
-Open up a new terminal and run the following command:
+Open up a new terminal, navigate to the project directory, and run the following command:
 
 ```shell
-ganache-cli -b 3
+truffle develop
 ```
 
-This will spawn a new blockchain that listens on `127.0.0.1:8545` by default and will mine every 3 seconds. If we didn't specify this, Ganache would mine instantly and we won't be able to simulate the delay it takes for the real blockchain to mine.
-
-Leave the terminal window open, you can observe what happens as you interact with it later on.
-
-### Specify the network
-
-We need to let our Truffle project know how to connect to this blockchain. To do that, we need to put the following inside `truffle.js` (or `truffle-config.js` if you are on Windows):
-
-```javascript
-module.exports = {
-  networks: {
-    development: {
-      host: "localhost",
-      port: 8545,
-      network_id: "*" // Match any network id
-    }
-  }
-};
-```
+This will spawn a new blockchain that listens on `127.0.0.1:9545` by default.
 
 ## Compiling and migrating the smart contract
 
@@ -144,23 +116,23 @@ Now we are ready to compile and migrate our contract.
 
 ### Compilation
 
-1. In a terminal, make sure you are in the root of the project directory and type:
+In the Truffle Develop console, type the following command:
 
-   ```shell
-   truffle compile
-   ```
+```shell
+compile
+```
 
-   <p class="alert alert-info">
-   <strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on [resolving naming conflicts on Windows](/docs/advanced/configuration#resolving-naming-conflicts-on-windows).
-   </p>
+<p class="alert alert-info">
+<strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on [resolving naming conflicts on Windows](/docs/advanced/configuration#resolving-naming-conflicts-on-windows).
+</p>
 
-   You should see output similar to the following:
+You should see output similar to the following:
 
-   ```shell
-   Compiling ./contracts/Migrations.sol...
-   Compiling ./contracts/MyStringStore.sol...
-   Writing artifacts to ./build/contracts
-   ```
+```shell
+Compiling ./contracts/Migrations.sol...
+Compiling ./contracts/MyStringStore.sol...
+Writing artifacts to ./build/contracts
+```
 
 ### Migration
 
@@ -184,34 +156,13 @@ To create our own migration script.
    };
    ```
 
-3. Back in our terminal, migrate the contract to the blockchain.
+3. Back in our Truffle Develop console, migrate the contract to the blockchain.
 
    ```shell
-   truffle migrate
+   migrate
    ```
 
-   You should see output similar to the following:
-
-   ```shell
-   Using network 'development'.
-
-   Running migration: 1_initial_migration.js
-     Deploying Migrations...
-     ... 0xcc1a5aea7c0a8257ba3ae366b83af2d257d73a5772e84393b0576065bf24aedf
-     Migrations: 0x8cdaf0cd259887258bc13a92c0a6da92698644c0
-   Saving successful migration to network...
-     ... 0xd7bc86d31bee32fa3988f1c1eabce403a1b5d570340a3a9cdba53a472ee8c956
-   Saving artifacts...
-   Running migration: 2_deploy_contracts.js
-     Deploying MyStringStore...
-     ... 0x43b6a6888c90c38568d4f9ea494b9e2a22f55e506a8197938fb1bb6e5eaa5d34
-     MyStringStore: 0x345ca3e014aaf5dca488057592ee47305d9b3e10
-   Saving successful migration to network...
-     ... 0xf36163615f41ef7ed8f4a8f192149a0bf633fe1a2398ce001bf44c43dc7bdda0
-   Saving artifacts...
-   ```
-
-   You can see the migrations being executed in order, followed by the blockchain address of each deployed contract (your addresses will differ).
+   You should see the migrations being executed in order, with the details of each migration listed.
 
 ## Testing the smart contract
 
@@ -241,28 +192,28 @@ Before we proceed, we should write a couple tests to ensure that our contract wo
 
 ### Running the tests
 
-1. Back in the terminal, run the tests:
+1. Back in the Truffle Develop console, run the tests:
 
    ```shell
-   truffle test
+   test
    ```
 
 1. If all the tests pass, you'll see console output similar to this:
 
    ```shell
-   Using network 'development'.
+   Using network 'develop'.
 
-     Contract: MyStringStore
-       ✓ should store the value 'Hey there!' (3085ms)
+   Contract: MyStringStore
+     ✓ should store the string 'Hey there!' (98ms)
 
-     1 passing (3s)
+   1 passing (116ms)
    ```
 
 Awesome! Now we know that the contract actually works.
 
 ## Creating our React.js project
 
-Now that we are done with the smart contract, we can write our front-end client with React.js! In order to do this, simply run this command (if you have NPM version 5.2 or above):
+Now that we are done with the smart contract, we can write our front-end client with React.js! In order to do this, open another terminal, navigate to your project directory, and simply run this command (if you have NPM version 5.2 or above):
 
 ```shell
 npx create-react-app client
@@ -276,36 +227,27 @@ create-react-app client
 
 This should create a `client` directory in your Truffle project and bootstrap a barebones React.js project for you to start building your front-end with.
 
-## Setting up the front-end client
+## Wiring up the front-end client
 
-Now that we have a front-end client located inside the `client` directory, change into that directory with the command `cd client` and continue with the following steps to set it up.
+Since Create-React-App's default behavior disallows importing files from outside of the `src` folder, we need to bring the contracts in our `build` folder inside `src`. We can copy and paste them every time we compile our contracts, but a better way is to simply configure Truffle to put the files there.
 
-### Link up our build artifacts
+In the `truffle-config.js` file, replace the contents with the following:
 
-Since Create-React-App's default behavior disallows importing files from outside of the `src` folder, we need to bring the contracts in our `build` folder inside `src`. We can copy and paste them every time we compile our contracts, but a better way is to create a symlink.
+```
+const path = require("path");
 
-If you haven't created a symlink before, think of it as a magical portal in the file system that allows you act as if the file or folder is actually there.
-
-Let's change into the `src` directory and then create our symlinked folder:
-
-```shell
-// For MacOS and Linux
-
-cd src
-ln -s ../../build/contracts contracts
-
-// For Windows 7, 8 and 10
-// Using a Command Prompt as Admin
-
-cd src
-mklink \D contracts ..\..\build\contracts
+module.exports = {
+  contracts_build_directory: path.join(__dirname, "client/src/contracts")
+};
 ```
 
-In effect, this should create what looks like a `contracts` folder within `src`, but it actually points to the files inside the `build/contracts` folder of our Truffle project.
+This will make sure to output the contract build artifacts directory inside your React project. But this also means we'll have to restart our Truffle Develop console. Press `CTRL + C` to exit out of the Truffle Develop console and then start it again with `truffle develop`.
+
+From there, make sure you run the `compile` and `migrate` commands again so that the new build artifacts will be output into the new folder. If you are encountering issues, try `migrate --reset` for a clean migration from scratch.
 
 ### Install Drizzle
 
-This is the most delicious part, we install Drizzle:
+This is the most delicious part, we install Drizzle. Make sure you are in the `client` directory and then run the following:
 
 ```shell
 npm install drizzle
@@ -324,29 +266,36 @@ npm start
 This will serve the front-end under `localhost:3000`, so open that up in your browser.
 
 <p class="alert alert-info">
-<strong>Note</strong>: Make sure to use an incognito window if you already have MetaMask installed (or disable MetaMask for now). Otherwise, the app will try to use the network specified in MetaMask rather than the development network under `localhost:8545`.
+<strong>Note</strong>: Make sure to use an incognito window if you already have MetaMask installed (or disable MetaMask for now). Otherwise, the app will try to use the network specified in MetaMask rather than the develop network under `localhost:9545`.
 </p>
 
 If the default Create-React-App page loaded without any issues, you may proceed.
 
 ### Setup the store
 
-The first thing we need to do is to setup and instantiate the Drizzle store. We are going add the following 5 lines to `client/src/index.js`:
+The first thing we need to do is to setup and instantiate the Drizzle store. We are going add the following code to `client/src/index.js`:
 
 ```js
 // import drizzle functions and contract artifact
-import { Drizzle, generateStore } from "drizzle";
+import { Drizzle } from "drizzle";
 import MyStringStore from "./contracts/MyStringStore.json";
 
-// let drizzle know what contracts we want
-const options = { contracts: [MyStringStore] };
+// let drizzle know what contracts we want and how to access our test blockchain
+const options = {
+  contracts: [MyStringStore],
+  web3: {
+    fallback: {
+      type: "ws",
+      url: "ws://127.0.0.1:9545",
+    },
+  },
+};
 
-// setup the drizzle store and drizzle
-const drizzleStore = generateStore(options);
-const drizzle = new Drizzle(options, drizzleStore);
+// setup drizzle
+const drizzle = new Drizzle(options);
 ```
 
-First, we imported the tools from Drizzle as well as the contract definition through the linked build artifacts directory (see [Link up our build artifacts](#link-up-our-build-artifacts) above).
+First, we imported the tools from Drizzle as well as the contract definition.
 
 We then built our options object for Drizzle, which in this case is just specifying the specific contract we want to be loaded by passing in the JSON build artifact.
 
@@ -355,26 +304,31 @@ And finally, we created the `drizzleStore` and used that to create our `drizzle`
 Once that is complete, your `index.js` should look something like this:
 
 ```js
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import registerServiceWorker from "./registerServiceWorker";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
 // import drizzle functions and contract artifact
 import { Drizzle, generateStore } from "drizzle";
 import MyStringStore from "./contracts/MyStringStore.json";
 
-// let drizzle know what contracts we want
-const options = { contracts: [MyStringStore] };
+// let drizzle know what contracts we want and how to access our test blockchain
+const options = {
+  contracts: [MyStringStore],
+  web3: {
+    fallback: {
+      type: "ws",
+      url: "ws://127.0.0.1:9545",
+    },
+  },
+};
 
 // setup the drizzle store and drizzle
-const drizzleStore = generateStore(options);
-const drizzle = new Drizzle(options, drizzleStore);
+const drizzle = new Drizzle(options);
 
-// pass in the drizzle instance
-ReactDOM.render(<App drizzle={drizzle} />, document.getElementById("root"));
-registerServiceWorker();
+ReactDOM.render(<App drizzle={drizzle} />, document.getElementById('root'));
 ```
 
 Note again that the `drizzle` instance is passed into the `App` component as props.
@@ -393,7 +347,7 @@ state = { loading: true, drizzleState: null };
 
 We are going to be using two state variables here:
 
-1. `loading` — Indicates if if Drizzle has finished initializing and the app is ready. The initialization process includes instantiating `web3` and our smart contracts, fetching any available Ethereum accounts and listening (or, in cases where subscriptions are not supported: polling) for new blocks.
+1. `loading` — Indicates if Drizzle has finished initializing and the app is ready. The initialization process includes instantiating `web3` and our smart contracts, fetching any available Ethereum accounts and listening (or, in cases where subscriptions are not supported: polling) for new blocks.
 2. `drizzleState` — This is where we will store the state of the Drizzle store in our top-level component. If we can keep this state variable up-to-date, then we can simply use simple `props` and `state` to work with Drizzle (i.e. you don't have to use any Redux or advanced React patterns).
 
 #### Adding some initialization logic
@@ -429,7 +383,7 @@ By doing this, `drizzleState` will always be up-to-date and we also know exactly
 Note that we assign the return value of the `subscribe()` to a class variable `this.unsubscribe`. This is because it is always good practice to unsubscribe from any subscriptions you have when the component un-mounts. In order to do this, we save a reference to that subscription (i.e. `this.unsubscribe`), and inside `componentWillUnmount`, we have the following:
 
 ```js
-compomentWillUnmount() {
+componentWillUnmount() {
   this.unsubscribe();
 }
 ```
@@ -473,7 +427,7 @@ class App extends Component {
     });
   }
 
-  compomentWillUnmount() {
+  componentWillUnmount() {
     this.unsubscribe();
   }
 
@@ -534,7 +488,7 @@ What this tells us is that the `drizzleState` we get in this component will alwa
 
 ### `drizzle` instance and `drizzleState`
 
-For the most part, `drizzleState` is there for you to read information from (i.e. contract state variables, return values, transaction status, account data, etc.), where as the `drizzle` instance is what you will use to actually get stuff done (i.e. call contract methods, the Web3 instance, etc.).
+For the most part, `drizzleState` is there for you to read information from (i.e. contract state variables, return values, transaction status, account data, etc.), whereas the `drizzle` instance is what you will use to actually get stuff done (i.e. call contract methods, the Web3 instance, etc.).
 
 ### Wiring up the `ReadString` component
 
@@ -664,7 +618,7 @@ class SetString extends React.Component {
     if (!txHash) return null;
 
     // otherwise, return the transaction status
-    return `Transaction status: ${transactions[txHash].status}`;
+    return `Transaction status: ${transactions[txHash] && transactions[txHash].status}`;
   };
 
   render() {
@@ -777,7 +731,7 @@ getTxStatus = () => {
   if (!txHash) return null;
 
   // otherwise, return the transaction status
-  return `Transaction status: ${transactions[txHash].status}`;
+  return `Transaction status: ${transactions[txHash] && transactions[txHash].status}`;
 };
 ```
 

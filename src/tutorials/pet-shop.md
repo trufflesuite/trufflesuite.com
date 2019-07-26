@@ -29,7 +29,7 @@ The website structure and styling will be supplied. **Our job is to write the sm
 
 There are a few technical requirements before we start. Please install the following:
 
-*   [Node.js v6+ LTS and npm](https://nodejs.org/en/) (comes with Node)
+*   [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
 *   [Git](https://git-scm.com/)
 
 Once we have those installed, we only need one command to install Truffle:
@@ -73,7 +73,7 @@ The default Truffle directory structure contains the following:
 * `contracts/`: Contains the [Solidity](https://solidity.readthedocs.io/) source files for our smart contracts. There is an important contract in here called `Migrations.sol`, which we'll talk about later.
 * `migrations/`: Truffle uses a migration system to handle smart contract deployments. A migration is an additional special smart contract that keeps track of changes.
 * `test/`: Contains both JavaScript and Solidity tests for our smart contracts
-* `truffle.js`: Truffle configuration file
+* `truffle-config.js`: Truffle configuration file
 
 The `pet-shop` Truffle Box has extra files and folders in it, but we won't worry about those just yet.
 
@@ -87,7 +87,7 @@ We'll start our dapp by writing the smart contract that acts as the back-end log
 1. Add the following content to the file:
 
    ```javascript
-   pragma solidity ^0.4.17;
+   pragma solidity ^0.5.0;
 
    contract Adoption {
 
@@ -96,7 +96,7 @@ We'll start our dapp by writing the smart contract that acts as the back-end log
 
 Things to notice:
 
-* The minimum version of Solidity required is noted at the top of the contract: `pragma solidity ^0.4.17;`. The `pragma` command means "*additional information that only the compiler cares about*", while the caret symbol (^) means "*the version indicated or higher*".
+* The minimum version of Solidity required is noted at the top of the contract: `pragma solidity ^0.5.0;`. The `pragma` command means "*additional information that only the compiler cares about*", while the caret symbol (^) means "*the version indicated or higher*".
 * Like JavaScript or PHP, statements are terminated with semicolons.
 
 ### Variable setup
@@ -153,19 +153,20 @@ As mentioned above, array getters return only a single value from a given key. O
 
    ```javascript
    // Retrieving the adopters
-   function getAdopters() public view returns (address[16]) {
+   function getAdopters() public view returns (address[16] memory) {
      return adopters;
    }
    ```
+Things to notice:
 
-Since `adopters` is already declared, we can simply return it. Be sure to specify the return type (in this case, the type for `adopters`) as `address[16]`.
+* Since `adopters` is already declared, we can simply return it. Be sure to specify the return type (in this case, the type for `adopters`) as `address[16] memory`. `memory` gives the data location for the variable.
+
+* The `view` keyword in the function declaration means that the function will not modify the state of the contract. Further information about the exact limits imposed by view is available [here](https://solidity.readthedocs.io/en/latest/contracts.html#view-functions).
 
 
 ## Compiling and migrating the smart contract
 
 Now that we have written our smart contract, the next steps are to compile and migrate it.
-
-Truffle has a built-in developer console, which we call Truffle Develop, which generates a development blockchain that we can use to test deploy contracts. It also has the ability to run Truffle commands directly from the console. We will use Truffle Develop to perform most of the actions on our contract in this tutorial.
 
 ### Compilation
 
@@ -184,9 +185,13 @@ Solidity is a compiled language, meaning we need to compile our Solidity to byte
    You should see output similar to the following:
 
    ```shell
-   Compiling ./contracts/Migrations.sol...
-   Compiling ./contracts/Adoption.sol...
-   Writing artifacts to ./build/contracts
+   Compiling your contracts...
+   ===========================
+   > Compiling ./contracts/Adoption.sol
+   > Compiling ./contracts/Migrations.sol
+   > Artifacts written to /Users/cruzmolina/Code/truffle-projects/metacoin/build/contracts
+   > Compiled successfully using:
+      - solc: 0.5.0+commit.1d4f565a.Emscripten.clang
    ```
 
 ### Migration
@@ -231,26 +236,39 @@ Now we are ready to create our own migration script.
 
    You should see output similar to the following:
 
-   ```shell
-   Using network 'development'.
 
-   Running migration: 1_initial_migration.js
-     Deploying Migrations...
-     ... 0xcc1a5aea7c0a8257ba3ae366b83af2d257d73a5772e84393b0576065bf24aedf
-     Migrations: 0x8cdaf0cd259887258bc13a92c0a6da92698644c0
-   Saving successful migration to network...
-     ... 0xd7bc86d31bee32fa3988f1c1eabce403a1b5d570340a3a9cdba53a472ee8c956
-   Saving artifacts...
-   Running migration: 2_deploy_contracts.js
-     Deploying Adoption...
-     ... 0x43b6a6888c90c38568d4f9ea494b9e2a22f55e506a8197938fb1bb6e5eaa5d34
-     Adoption: 0x345ca3e014aaf5dca488057592ee47305d9b3e10
-   Saving successful migration to network...
-     ... 0xf36163615f41ef7ed8f4a8f192149a0bf633fe1a2398ce001bf44c43dc7bdda0
-   Saving artifacts...
-   ```
+  ```shell
+  1_initial_migration.js
+  ======================
 
-   You can see the migrations being executed in order, followed by the blockchain address of each deployed contract. (Your addresses will differ.)
+     Deploying 'Migrations'
+     ----------------------
+     > transaction hash:    0x3b558e9cdf1231d8ffb3445cb2f9fb01de9d0363e0b97a17f9517da318c2e5af
+     > Blocks: 0            Seconds: 0
+     > contract address:    0x5ccb4dc04600cffA8a67197d5b644ae71856aEE4
+     > account:             0x8d9606F90B6CA5D856A9f0867a82a645e2DfFf37
+     > balance:             99.99430184
+     > gas used:            284908
+     > gas price:           20 gwei
+     > value sent:          0 ETH
+     > total cost:          0.00569816 ETH
+
+
+     > Saving migration to chain.
+     > Saving artifacts
+     -------------------------------------
+     > Total cost:          0.00569816 ETH
+
+
+  2_deploy_contracts.js
+  =====================
+
+     Deploying 'Adoption'
+     .............................
+     .............................
+  ```
+
+   You can see the migrations being executed in order, followed by some information related to each migration. (Your information will differ.)
 
 1. In Ganache, note that the state of the blockchain has changed. The blockchain now shows that the current block, previously `0`, is now `4`. In addition, while the first account originally had 100 ether, it is now lower, due to the transaction costs of migration. We'll talk more about transaction costs later.
 
@@ -267,22 +285,29 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 
 1. Add the following content to the `TestAdoption.sol` file:
 
-   ```javascript
-   pragma solidity ^0.4.17;
+  ```javascript
+  pragma solidity ^0.5.0;
 
-   import "truffle/Assert.sol";
-   import "truffle/DeployedAddresses.sol";
-   import "../contracts/Adoption.sol";
+  import "truffle/Assert.sol";
+  import "truffle/DeployedAddresses.sol";
+  import "../contracts/Adoption.sol";
 
-   contract TestAdoption {
-     Adoption adoption = Adoption(DeployedAddresses.Adoption());
+  contract TestAdoption {
+    // The address of the adoption contract to be tested
+    Adoption adoption = Adoption(DeployedAddresses.Adoption());
 
-   }
-   ```
+    // The id of the pet that will be used for testing
+    uint expectedPetId = 8;
+
+    //The expected owner of adopted pet is this contract
+    address expectedAdopter = address(this);
+
+  }
+  ```
 
 We start the contract off with 3 imports:
 
-* `Assert.sol`: Gives us various assertions to use in our tests. In testing, **an assertion checks for things like equality, inequality or emptiness to return a pass/fail** from our test. [Here's a full list of the assertions included with Truffle](https://github.com/trufflesuite/truffle-core/blob/master/lib/testing/Assert.sol).
+* `Assert.sol`: Gives us various assertions to use in our tests. In testing, **an assertion checks for things like equality, inequality or emptiness to return a pass/fail** from our test. [Here's a full list of the assertions included with Truffle](https://github.com/trufflesuite/truffle/blob/master/packages/truffle-core/lib/testing/Assert.sol).
 * `DeployedAddresses.sol`: When running tests, Truffle will deploy a fresh instance of the contract being tested to the blockchain. This smart contract gets the address of the deployed contract.
 * `Adoption.sol`: The smart contract we want to test.
 
@@ -290,7 +315,10 @@ We start the contract off with 3 imports:
   <strong>Note</strong>: The first two imports are referring to global Truffle files, not a `truffle` directory. You should not see a `truffle` directory inside your `test/` directory.
 </p>
 
-Then we define a contract-wide variable containing the smart contract to be tested, calling the `DeployedAddresses` smart contract to get its address.
+Then we define three contract-wide variables:
+* First, one containing the smart contract to be tested, calling the `DeployedAddresses` smart contract to get its address.
+* Second, the id of the pet that will be used to test the adoption functions.
+* Third, since the TestAdoption contract will be sending the transaction, we set the expected adopter address to **this**, a contract-wide variable that gets the current contract's address.
 
 ### Testing the adopt() function
 
@@ -301,39 +329,33 @@ To test the `adopt()` function, recall that upon success it returns the given `p
    ```javascript
    // Testing the adopt() function
    function testUserCanAdoptPet() public {
-     uint returnedId = adoption.adopt(8);
+     uint returnedId = adoption.adopt(expectedPetId);
 
-     uint expected = 8;
-
-     Assert.equal(returnedId, expected, "Adoption of pet ID 8 should be recorded.");
+     Assert.equal(returnedId, expectedPetId, "Adoption of the expected pet should match what is returned.");
    }
    ```
 
 Things to notice:
 
-* We call the smart contract we declared earlier with the ID of `8`.
-* We then declare an expected value of `8` as well.
+* We call the smart contract we declared earlier with the ID of `expectedPetId`.
 * Finally, we pass the actual value, the expected value and a failure message (which gets printed to the console if the test does not pass) to `Assert.equal()`.
 
 ### Testing retrieval of a single pet's owner
 
-Remembering from above that public variables have automatic getter methods, we can retrieve the address stored by our adoption test above. Stored data will persist for the duration of our tests, so our adoption of pet `8` above can be retrieved by other tests.
+Remembering from above that public variables have automatic getter methods, we can retrieve the address stored by our adoption test above. Stored data will persist for the duration of our tests, so our adoption of pet `expectedPetId` above can be retrieved by other tests.
 
 1. Add this function below the previously added function in `TestAdoption.sol`.
 
    ```javascript
    // Testing retrieval of a single pet's owner
    function testGetAdopterAddressByPetId() public {
-     // Expected owner is this contract
-     address expected = this;
+     address adopter = adoption.adopters(expectedPetId);
 
-     address adopter = adoption.adopters(8);
-
-     Assert.equal(adopter, expected, "Owner of pet ID 8 should be recorded.");
+     Assert.equal(adopter, expectedAdopter, "Owner of the expected pet should be this contract");
    }
    ```
 
-Since the TestAdoption contract will be sending the transaction, we set the expected value to **this**, a contract-wide variable that gets the current contract's address. From there we assert equality as we did above.
+After getting the adopter address stored by the adoption contract, we assert equality as we did above.
 
 ### Testing retrieval of all pet owners
 
@@ -344,17 +366,14 @@ Since arrays can only return a single value given a single key, we create our ow
    ```javascript
    // Testing retrieval of all pet owners
    function testGetAdopterAddressByPetIdInArray() public {
-     // Expected owner is this contract
-     address expected = this;
-
      // Store adopters in memory rather than contract's storage
      address[16] memory adopters = adoption.getAdopters();
 
-     Assert.equal(adopters[8], expected, "Owner of pet ID 8 should be recorded.");
+     Assert.equal(adopters[expectedPetId], expectedAdopter, "Owner of the expected pet should be this contract");
    }
    ```
 
-Note the **memory** attribute on `adopters`. The memory attribute tells Solidity to temporarily store the value in memory, rather than saving it to the contract's storage. Since `adopters` is an array, and we know from the first adoption test that we adopted pet `8`, we compare the testing contracts address with location `8` in the array.
+Note the **memory** attribute on `adopters`. The memory attribute tells Solidity to temporarily store the value in memory, rather than saving it to the contract's storage. Since `adopters` is an array, and we know from the first adoption test that we adopted pet `expectedPetId`, we compare the testing contracts address with location `expectedPetId` in the array.
 
 ### Running the tests
 
@@ -370,10 +389,12 @@ Note the **memory** attribute on `adopters`. The memory attribute tells Solidity
    ```shell
    Using network 'development'.
 
-   Compiling ./contracts/Adoption.sol...
-   Compiling ./test/TestAdoption.sol...
-   Compiling truffle/Assert.sol...
-   Compiling truffle/DeployedAddresses.sol...
+   Compiling your contracts...
+   ===========================
+   > Compiling ./test/TestAdoption.sol
+   > Artifacts written to /var/folders/z3/v0sd04ys11q2sh8tq38mz30c0000gn/T/test-11934-19747-g49sra.0ncrr
+   > Compiled successfully using:
+      - solc: 0.5.0+commit.1d4f565a.Emscripten.clang
 
      TestAdoption
        ✓ testUserCanAdoptPet (91ms)
@@ -401,11 +422,23 @@ The front-end doesn't use a build system (webpack, grunt, etc.) to be as easy as
 1. Remove the multi-line comment from within `initWeb3` and replace it with the following:
 
    ```javascript
-   // Is there an injected web3 instance?
-   if (typeof web3 !== 'undefined') {
-     App.web3Provider = web3.currentProvider;
-   } else {
-     // If no injected web3 instance is detected, fall back to Ganache
+   // Modern dapp browsers...
+   if (window.ethereum) {
+     App.web3Provider = window.ethereum;
+     try {
+       // Request account access
+       await window.ethereum.enable();
+     } catch (error) {
+       // User denied account access...
+       console.error("User denied account access")
+     }
+   }
+   // Legacy dapp browsers...
+   else if (window.web3) {
+     App.web3Provider = window.web3.currentProvider;
+   }
+   // If no injected web3 instance is detected, fall back to Ganache
+   else {
      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
    }
    web3 = new Web3(App.web3Provider);
@@ -413,7 +446,9 @@ The front-end doesn't use a build system (webpack, grunt, etc.) to be as easy as
 
 Things to notice:
 
-* First, we check if there's a web3 instance already active. (Ethereum browsers like [Mist](https://github.com/ethereum/mist) or Chrome with the [MetaMask](https://metamask.io/) extension will inject their own web3 instances.) If an injected web3 instance is present, we get its provider and use it to create our web3 object.
+* First, we check if we are using modern dapp browsers or the more recent versions of [MetaMask](https://github.com/MetaMask) where an `ethereum` provider is injected into the `window` object. If so, we use it to create our web3 object, but we also need to explicitly request access to the accounts with `ethereum.enable()`.
+
+* If the `ethereum` object does not exist, we then check for an injected `web3` instance. If it exists, this indicates that we are using an older dapp browser (like [Mist](https://github.com/ethereum/mist) or an older version of MetaMask). If so, we get its provider and use it to create our web3 object.
 
 * If no injected web3 instance is present, we create our web3 object based on our local provider. (This fallback is fine for development environments, but insecure and not suitable for production.)
 
@@ -529,20 +564,18 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
 1. Install MetaMask in your browser.
 
-1. Once installed, you'll see the MetaMask fox icon next to your address bar. Click the icon and you'll see this screen appear:
+1. Once installed, a tab in your browser should open displaying the following:
 
-   ![Privacy Notice](/img/tutorials/pet-shop/metamask-privacy.png "Privacy Notice")
+   ![Welcome to MetaMask](/img/tutorials/pet-shop/metamask-welcome.png "Welcome to MetaMask")
 
-1. Click Accept to accept the Privacy Notice.
-
-1. Then you'll see the Terms of Use. Read them, scrolling to the bottom, and then click **Accept** there too.
-
-   ![Terms](/img/tutorials/pet-shop/metamask-terms.png "Terms of Use")
-
-1. Now you'll see the initial MetaMask screen. Click **Import Existing DEN**.
+1. After clicking **Getting Started**, you should see the initial MetaMask screen. Click **Import Wallet**.
 
    ![Initial screen](/img/tutorials/pet-shop/metamask-initial.png "MetaMask initial screen")
+   
+1. Next, you should see a screen requesting anonymous analytics. Choose to decline or agree.
 
+   ![Improve MetaMask](/img/tutorials/pet-shop/metamask-analytics.png "Improve MetaMask")
+   
 1. In the box marked **Wallet Seed**, enter the mnemonic that is displayed in Ganache.
 
    <p class="alert alert-danger">
@@ -552,18 +585,22 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
    Enter a password below that and click **OK**.
 
    ![MetaMask seed phrase](/img/tutorials/pet-shop/metamask-seed.png "MetaMask seed phrase")
+   
+1. If all goes well, MetaMask should display the following screen. Click **All Done**.
+
+   ![Congratulations](/img/tutorials/pet-shop/metamask-congratulations.png "Congratulations")
 
 1. Now we need to connect MetaMask to the blockchain created by Ganache. Click the menu that shows "Main Network" and select **Custom RPC**.
 
    ![MetaMask network menu](/img/tutorials/pet-shop/metamask-networkmenu.png "MetaMask network menu")
 
-1. In the box titled "New RPC URL" enter `http://127.0.0.1:7545` and click **Save**.
+1. In the box titled "New Network" enter `http://127.0.0.1:7545` and click **Save**.
 
    ![MetaMask Custom RPC](/img/tutorials/pet-shop/metamask-customrpc.png "MetaMask Custom RPC")
 
-   The network name at the top will switch to say "Private Network".
+   The network name at the top will switch to say `http://127.0.0.1:7545`.
 
-1. Click the left-pointing arrow next to "Settings" to close out of the page and return to the Accounts page.
+1. Click the top-right X to close out of Settings and return to the Accounts page.
 
    Each account created by Ganache is given 100 ether. You'll notice it's slightly less on the first account because some gas was used when the contract itself was deployed and when the tests were run.
 
@@ -609,6 +646,10 @@ We can now start a local web server and use the dapp. We're using the `lite-serv
    The dev server will launch and automatically open a new browser tab containing your dapp.
 
    ![Pete's Pet Shop](/img/tutorials/pet-shop/dapp.png "Pete's Pet Shop")
+   
+1. A MetaMask pop-up should appear requesting your approval to allow Pete's Pet Shop to connect to your MetaMask wallet. Without explicit approval, you will be unable to interact with the dapp. Click **Connect**.
+
+   ![MetaMask approval request](/img/tutorials/pet-shop/metamask-transactionconfirm.png "MetaMask approval request")
 
 1. To use the dapp, click the **Adopt** button on the pet of your choice.
 

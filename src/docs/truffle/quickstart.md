@@ -65,7 +65,7 @@ Once this operation is completed, you'll now have a project structure with the f
 
 1. Open the `contracts/Migrations.sol` file. This is a separate Solidity file that manages and updates [the status of your deployed smart contract](/docs/truffle/getting-started/running-migrations). This file comes with every Truffle project, and is usually not edited. 
 
-1. Open the `migrations/1_initial_deployment.js` file. This file is the migration (deployment) script for the `Migrations` contract found in the `Migrations.sol` file.
+1. Open the `migrations/1_initial_migration.js` file. This file is the migration (deployment) script for the `Migrations` contract found in the `Migrations.sol` file.
 
 1. Open the `migrations/2_deploy_contracts.js` file. This file is the migration script for the `MetaCoin` contract. (Migration scripts are run in order, so the file beginning with `2` will be run after the file beginning with `1`.)
 
@@ -73,7 +73,7 @@ Once this operation is completed, you'll now have a project structure with the f
 
 1. Open the `test/metacoin.js` file. This is a [test file written in JavaScript](/docs/truffle/testing/writing-tests-in-javascript) which performs a similar function to the Solidity test above.
 
-1. Open the `truffle.js` file. This is the Truffle [configuration file](/docs/truffle/reference/configuration), for setting network information and other project-related settings. The file is blank, but this is okay, as we'll be using a Truffle command that has some defaults built-in.
+1. Open the `truffle-config.js` file. This is the Truffle [configuration file](/docs/truffle/reference/configuration), for setting network information and other project-related settings. The file is blank, but this is okay, as we'll be using a Truffle command that has some defaults built-in.
 
 ## Testing
 
@@ -198,32 +198,78 @@ You can create this blockchain and interact with it using [Truffle Develop](/doc
    You will see the following output:
 
    ```
-   Using network 'develop'.
+   Starting migrations...
+   ======================
+   > Network name:    'develop'
+   > Network id:      4447
+   > Block gas limit: 6721975
 
-   Running migration: 1_initial_migration.js
-     Deploying Migrations...
-     ... 0x63b393bd50251ec5aa3e159070609ee7c61da55531ff5dea5b869e762263cb90
-     Migrations: 0x8cdaf0cd259887258bc13a92c0a6da92698644c0
-   Saving successful migration to network...
-     ... 0xd7bc86d31bee32fa3988f1c1eabce403a1b5d570340a3a9cdba53a472ee8c956
-   Saving artifacts...
-   Running migration: 2_deploy_contracts.js
-     Deploying ConvertLib...
-     ... 0xa59221bc26a24f1a2ee7838c36abdf3231a2954b96d28dd7def7b98bbb8a7f35
-     ConvertLib: 0x345ca3e014aaf5dca488057592ee47305d9b3e10
-     Linking ConvertLib to MetaCoin
-     Deploying MetaCoin...
-     ... 0x1cd9e2a790f4795fa40205ef58dbb061065ca235bee8979a705814f1bc141fd5
-     MetaCoin: 0xf25186b5081ff5ce73482ad761db0eb0d25abfbf
-   Saving successful migration to network...
-     ... 0x059cf1bbc372b9348ce487de910358801bbbd1c89182853439bec0afaee6c7db
-   Saving artifacts...
+   1_initial_migration.js
+   ======================
+
+      Deploying 'Migrations'
+      ----------------------
+      > transaction hash:    0x3fd222279dad48583a3320decd0a2d12e82e728ba9a0f19bdaaff98c72a030a2
+      > Blocks: 0            Seconds: 0
+      > contract address:    0xa0AdaB6E829C818d50c75F17CFCc2e15bfd55a63
+      > account:             0x627306090abab3a6e1400e9345bc60c78a8bef57
+      > balance:             99.99445076
+      > gas used:            277462
+      > gas price:           20 gwei
+      > value sent:          0 ETH
+      > total cost:          0.00554924 ETH   
+
+      > Saving migration to chain.
+      > Saving artifacts
+      -------------------------------------
+      > Total cost:          0.00554924 ETH
+
+   2_deploy_contracts.js
+   =====================
+
+      Deploying 'ConvertLib'
+      ----------------------
+      > transaction hash:    0x97e8168f1c05fc40dd8ffc529b9a2bf45cc7c55b07b6b9a5a22173235ee247b6
+      > Blocks: 0            Seconds: 0
+      > contract address:    0xfb39FeaeF3ac3fd46e2123768e559BCe6bD638d6
+      > account:             0x627306090abab3a6e1400e9345bc60c78a8bef57
+      > balance:             99.9914458
+      > gas used:            108240
+      > gas price:           20 gwei
+      > value sent:          0 ETH
+      > total cost:          0.0021648 ETH
+
+      Linking
+      -------
+      * Contract: MetaCoin <--> Library: ConvertLib (at address: 0xfb39FeaeF3ac3fd46e2123768e559BCe6bD638d6)
+
+      Deploying 'MetaCoin'
+      --------------------
+      > transaction hash:    0xee4994097c10e7314cc83adf899d67f51f22e08b920e95b6d3f75c5eb498bde4
+      > Blocks: 0            Seconds: 0
+      > contract address:    0x6891Ac4E2EF3dA9bc88C96fEDbC9eA4d6D88F768
+      > account:             0x627306090abab3a6e1400e9345bc60c78a8bef57
+      > balance:             99.98449716
+      > gas used:            347432
+      > gas price:           20 gwei
+      > value sent:          0 ETH
+      > total cost:          0.00694864 ETH
+
+      > Saving migration to chain.
+      > Saving artifacts
+      -------------------------------------
+      > Total cost:          0.00911344 ETH
+
+   Summary
+   =======
+   > Total deployments:   3
+   > Final cost:          0.01466268 ETH
    ```
 
-   This shows the transaction IDs and addresses of your deployed contracts.
+   This shows the transaction IDs and addresses of your deployed contracts. It also includes a cost summary and real-time status updates.
 
    <p class="alert alert-info">
-     <strong>Note</strong>: Your transaction IDs and contract addresses will be different from the above.
+     <strong>Note</strong>: Your transaction hashes, contract addresses, and accounts will be different from the above.
    </p>
 
 <p class="alert alert-info">
@@ -272,28 +318,75 @@ The only extra step, aside from running Ganache, is that it requires editing the
    You will see the following output
 
    ```
-   Using network 'development'.
+   Starting migrations...
+   ======================
+   > Network name:    'develop'
+   > Network id:      4447
+   > Block gas limit: 6721975
 
-   Running migration: 1_initial_migration.js
-     Replacing Migrations...
-     ... 0x63b393bd50251ec5aa3e159070609ee7c61da55531ff5dea5b869e762263cb90
-     Migrations: 0xd6d1ea53b3a7dae2424a0525d6b1754045a0df9f
-   Saving successful migration to network...
-     ... 0xe463b4cb6a3bbba06ab36ac4d7ce04e2a220abd186c8d2bde092c3d5b2217ed6
-   Saving artifacts...
-   Running migration: 2_deploy_contracts.js
-     Replacing ConvertLib...
-     ... 0xa59221bc26a24f1a2ee7838c36abdf3231a2954b96d28dd7def7b98bbb8a7f35
-     ConvertLib: 0x33b217190208f7b8d2b14d7a30ec3de7bd722ac6
-     Replacing MetaCoin...
-     ... 0x5d51f5dc05e5d926323d580559354ad39035f16db268b91b6db5c7baddef5de5
-     MetaCoin: 0xcd2c65cc0b498cb7a3835cfb1e283ccd25862086
-   Saving successful migration to network...
-     ... 0xeca6515f3fb47a477df99c3389d3452a48dfe507980bfd29a3c57837d6ef55c5
-   Saving artifacts...
+   1_initial_migration.js
+   ======================
+
+      Deploying 'Migrations'
+      ----------------------
+      > transaction hash:    0x3fd222279dad48583a3320decd0a2d12e82e728ba9a0f19bdaaff98c72a030a2
+      > Blocks: 0            Seconds: 0
+      > contract address:    0xa0AdaB6E829C818d50c75F17CFCc2e15bfd55a63
+      > account:             0x627306090abab3a6e1400e9345bc60c78a8bef57
+      > balance:             99.99445076
+      > gas used:            277462
+      > gas price:           20 gwei
+      > value sent:          0 ETH
+      > total cost:          0.00554924 ETH   
+
+      > Saving migration to chain.
+      > Saving artifacts
+      -------------------------------------
+      > Total cost:          0.00554924 ETH
+
+   2_deploy_contracts.js
+   =====================
+
+      Deploying 'ConvertLib'
+      ----------------------
+      > transaction hash:    0x97e8168f1c05fc40dd8ffc529b9a2bf45cc7c55b07b6b9a5a22173235ee247b6
+      > Blocks: 0            Seconds: 0
+      > contract address:    0xfb39FeaeF3ac3fd46e2123768e559BCe6bD638d6
+      > account:             0x627306090abab3a6e1400e9345bc60c78a8bef57
+      > balance:             99.9914458
+      > gas used:            108240
+      > gas price:           20 gwei
+      > value sent:          0 ETH
+      > total cost:          0.0021648 ETH
+
+      Linking
+      -------
+      * Contract: MetaCoin <--> Library: ConvertLib (at address: 0xfb39FeaeF3ac3fd46e2123768e559BCe6bD638d6)
+
+      Deploying 'MetaCoin'
+      --------------------
+      > transaction hash:    0xee4994097c10e7314cc83adf899d67f51f22e08b920e95b6d3f75c5eb498bde4
+      > Blocks: 0            Seconds: 0
+      > contract address:    0x6891Ac4E2EF3dA9bc88C96fEDbC9eA4d6D88F768
+      > account:             0x627306090abab3a6e1400e9345bc60c78a8bef57
+      > balance:             99.98449716
+      > gas used:            347432
+      > gas price:           20 gwei
+      > value sent:          0 ETH
+      > total cost:          0.00694864 ETH
+
+      > Saving migration to chain.
+      > Saving artifacts
+      -------------------------------------
+      > Total cost:          0.00911344 ETH
+
+   Summary
+   =======
+   > Total deployments:   3
+   > Final cost:          0.01466268 ETH
    ```
 
-   This shows the transaction IDs and addresses of your deployed contracts.
+   This shows the transaction IDs and addresses of your deployed contracts. It also includes a cost summary and real-time status updates.
 
    <p class="alert alert-info">
      <strong>Note</strong>: Your transaction IDs and contract addresses will be different from the above.
@@ -318,37 +411,50 @@ The only extra step, aside from running Ganache, is that it requires editing the
 Interact with the contract using the console in the following ways:
 
 <p class="alert alert-info">
-<strong>Note</strong>: We're using `web3.eth.accounts[]` in these examples, which is an array of all the accounts generated by the mnemonic. So, given the addresses generated by our mnemonic above, specifying `web3.eth.accounts[0]` is equivalent to the address `0x627306090abab3a6e1400e9345bc60c78a8bef57`.
+<strong>Note</strong>: We're using `web3.eth.getAccounts()` in these examples, which returns a promise which resolves to an array of all the accounts generated by the mnemonic. So, given the addresses generated by our mnemonic above, specifying `(await web3.eth.getAccounts())[0]` is equivalent to the address `0x627306090abab3a6e1400e9345bc60c78a8bef57`.
 </p>
+
+As of Truffle v5, the console supports async/await functions, enabling much simpler interactions with the contract.
+
+* Begin by establishing both the deployed MetaCoin contract instance and the accounts created by either Truffle's built-in blockchain or Ganache:
+
+  ```shell
+  truffle(development)> let instance = await MetaCoin.deployed()
+  truffle(development)> let accounts = await web3.eth.getAccounts()
+  ```
 
 * Check the metacoin balance of the account that deployed the contract:
 
   ```shell
-  MetaCoin.deployed().then(function(instance){return instance.getBalance(web3.eth.accounts[0]);}).then(function(value){return value.toNumber()});
+  truffle(development)> let balance = await instance.getBalance(accounts[0])
+  truffle(development)> balance.toNumber()
   ```
 
 * See how much ether that balance is worth (and note that the contract defines a metacoin to be worth 2 ether):
 
   ```shell
-  MetaCoin.deployed().then(function(instance){return instance.getBalanceInEth(web3.eth.accounts[0]);}).then(function(value){return value.toNumber()});
+  truffle(development)> let ether = await instance.getBalanceInEth(accounts[0])
+  truffle(development)> ether.toNumber()
   ```
 
 * Transfer some metacoin from one account to another:
 
   ```shell
-  MetaCoin.deployed().then(function(instance){return instance.sendCoin(web3.eth.accounts[1], 500);});
+  truffle(development)> instance.sendCoin(accounts[1], 500)
   ```
 
 * Check the balance of the account that *received* the metacoin:
 
   ```shell
-  MetaCoin.deployed().then(function(instance){return instance.getBalance(web3.eth.accounts[1]);}).then(function(value){return value.toNumber()});
+  truffle(development)> let received = await instance.getBalance(accounts[1])
+  truffle(development)> received.toNumber()
   ```
 
 * Check the balance of the account that *sent* the metacoin:
 
   ```shell
-  MetaCoin.deployed().then(function(instance){return instance.getBalance(web3.eth.accounts[0]);}).then(function(value){return value.toNumber()});
+  truffle(development)> let newBalance = await instance.getBalance(accounts[0])
+  truffle(development)> newBalance.toNumber()
   ```
 
 ## Continue learning

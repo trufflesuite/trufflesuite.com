@@ -7,6 +7,7 @@ const octokit = new Octokit();
 });*/
 
 $(window).on('load', function() {
+  /*
   // Get Tags
   var boxCards = $('.box-card');
 
@@ -16,6 +17,7 @@ $(window).on('load', function() {
 
     fetchStarsAndTags(boxUserOrgName, boxRepoName, this);
   });
+  */
 
 
   // Initialization
@@ -93,28 +95,6 @@ $(window).on('load', function() {
 // Functions
 
 function fetchStarsAndTags(boxUserOrgName, boxRepoName, cardElement) {
-  $.getJSON('/data/boxes.json', function(data, textStatus) {
-    if (textStatus === 'error') {
-      return console.error(xhr.responseText);
-    }
-  
-    // Stars
-    $(cardElement).find('.box-star-count').html('<i class="fas fa-star text-warning"></i> ' + data[boxRepoName]['stars']);
-
-    // Description
-    $(cardElement).find('.box-description').html(data[boxRepoName]['description']);
-    
-    const ghTags = data[boxRepoName]['tags'].join(', ');
-    const currentTags = $(cardElement).find('.box-tags').text();
-    
-    var newTags = data[boxRepoName]['tags'].length > 0 ? currentTags + ', ' + ghTags : currentTags;
-
-    $(cardElement).find('.box-tags').text(newTags);
-
-    $('#isoContainer').isotope('arrange');
-  });
-
-  /*
   // General Info
   octokit.repos.get({owner: boxUserOrgName, repo: boxRepoName})
   .then(function(result) {
@@ -145,5 +125,4 @@ function fetchStarsAndTags(boxUserOrgName, boxRepoName, cardElement) {
   .catch(function(error) {
     console.error(error);
   });
-  */
 }

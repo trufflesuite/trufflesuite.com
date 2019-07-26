@@ -12,12 +12,17 @@ var paths = require('metalsmith-paths');
 var metadata = require('metalsmith-collections');
 var json_to_files = require('metalsmith-json-to-files');
 var moonSearch = require('./metalsmith-moonsearch/metalsmith-moonsearch.js');
+var siteMap = require('metalsmith-sitemap');
 
 // Data
 var blogData = require('./src/blog/data.json');
 var boxesData = require('./src/boxes/data.json');
+var boxesMetadata = require('./src/data/boxes.json');
 var careersData = require('./src/careers/data.json');
 var docsData = require('./src/docs/data.json');
+var eventsData = require('./src/events/data.json');
+var pressReleasesData = require('./src/press-releases/data.json');
+var staffData = require('./src/staff/data.json');
 var tutorialsData = require('./src/tutorials/data.json');
 
 function app(clean) {
@@ -28,8 +33,12 @@ function app(clean) {
   .metadata({
     blog: blogData,
     boxes: boxesData,
+    boxMeta: boxesMetadata,
     careers: careersData,
     docs: docsData,
+    events: eventsData,
+    pressReleases: pressReleasesData,
+    staff: staffData,
     tutorials: tutorialsData
   })
   .use(discoverHelpers({
@@ -54,15 +63,19 @@ function app(clean) {
     renderer: require('./renderers/markdown.js')
   }))
   .use(layouts({
-    "default": "single-post.hbs",
-    "pattern": "blog/*.html"
+    "default": "blog-post-single.hbs",
+    "pattern": ["blog/*.html"]
   }))
   .use(layouts({
-    "default": "single-career.hbs",
+    "default": "pr-single.hbs",
+    "pattern": ["press-releases/*.html"]
+  }))
+  .use(layouts({
+    "default": "career-single.hbs",
     "pattern": "careers/*.html"
   }))
   .use(layouts({
-    "default": "single-tutorial.hbs",
+    "default": "tutorial-single.hbs",
     "pattern": "tutorials/*.html"
   }))
   .use(layouts())
@@ -70,7 +83,10 @@ function app(clean) {
     outputStyle: 'expanded',
     outputDir: 'css/'
   }))
-  .use(moonSearch());
+  .use(moonSearch())
+  .use(siteMap({
+    hostname: "https://www.truffleframework.com"
+  }));
 }
 
 module.exports = app;

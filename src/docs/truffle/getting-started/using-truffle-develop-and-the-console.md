@@ -6,14 +6,14 @@ layout: docs.hbs
 
 Sometimes it's nice to work with your contracts interactively for testing and debugging purposes, or for executing transactions by hand. Truffle provides you two easy ways to do this via an interactive console, with your contracts available and ready to use.
 
-* **Truffle console**: A basic interactive console connecting to any Ethereum client
+* **Truffle Console**: A basic interactive console connecting to any Ethereum client
 * **Truffle Develop**: An interactive console that also spawns a development blockchain
 
 ## Why two different consoles?
 
 Having two different consoles allows you to choose the best tool for your needs.
 
-Reasons to use **Truffle console**:
+Reasons to use **Truffle Console**:
 
 * You have a client you're already using, such as [Ganache](/docs/ganache/using) or geth
 * You want to migrate to a testnet (or the main Ethereum network)
@@ -37,7 +37,7 @@ To launch the console:
 truffle console
 ```
 
-This will look for a network definition called `development` in the configuration, and connect to it, if available. You can override this using the `--network <name>` option. See more details in the [Networks](/docs/advanced/networks) section as well as the [command reference](/docs/advanced/commands).
+This will look for a network definition called `development` in the configuration, and connect to it, if available. You can override this using the `--network <name>` option or [customize](/docs/truffle/reference/configuration#networks) the `development` network settings. See more details in the [Networks](/docs/advanced/networks) section as well as the [command reference](/docs/advanced/commands).
 
 When you load the console, you'll immediately see the following prompt:
 
@@ -55,7 +55,7 @@ To launch Truffle Develop:
 truffle develop
 ```
 
-This will spawn a development blockchain locally on port `9545`, regardless of what your `truffle.js` configuration file calls for.
+This will spawn a development blockchain locally on port `9545` by default. If you already have a `truffle develop` session running, it will instead connect to that development blockchain.
 
 When you load Truffle Develop, you will see the following:
 
@@ -92,34 +92,51 @@ Mnemonic: candy maple cake sugar pudding cream honey rich smooth crumble sweet t
 This shows you the addresses, private keys, and mnemonic for this particular blockchain.
 
 <p class="alert alert-info">
-**Note**: The mnemonic and addresses cannot be changed. If you want to use a different mnemonic or set of addresses, we recommend using [Ganache](/docs/ganache/using).
+**Note**: When you run `truffle develop` for the first time, Truffle will generate a random mnemonic that will persist for you and you alone. If you want to use a different mnemonic or set of addresses, we recommend using [Ganache](/docs/ganache/using).
 </p>
+
+
 
 <p class="alert alert-danger">
 **Warning**: Remember to never use any of these addresses or the mnemonic on the mainnet. This is for development only.
 </p>
 
 
+#### Configuring Truffle Develop
+
+You can configure `truffle develop` to use any of the available
+[ganache-core](https://github.com/trufflesuite/ganache-core#usage) options and [configurable](/docs/truffle/reference/configuration#networks) network settings.
+
+For example:
+
+```javascript
+module.exports = {
+  /* ... rest of config */
+
+  networks: {
+    /* ... other networks */
+
+    develop: {
+      port: 8545,
+      network_id: 20,
+      accounts: 5,
+      defaultEtherBalance: 500,
+      blockTime: 3
+    }
+  }
+};
+```
+
+
 ## Features
 
 Both Truffle Develop and the console provide most of the features available in the Truffle command line tool. For instance, you can type `migrate --reset` within the console, and it will be interpreted the same as if you ran `truffle migrate --reset` on the command line.
 
-Additionally, both Truffle Develop and the console additionally have the following features:
+Additionally, both Truffle Develop and the console have the following features:
 
 * All of your compiled contracts are available and ready for use.
 * After each command (such as `migrate --reset`) your contracts are reprovisioned so you can start using the newly assigned addresses and binaries immediately.
 * The `web3` library is made available and is set to connect to your Ethereum client.
-* All commands that return a promise will automatically be resolved, and the result printed, removing the need to use `.then()` for simple commands. For example, the following command:
-
-  ```shell
-  MyContract.at("0xabcd...").getValue.call();
-  ```
-
-  Will return something like:
-
-  ```shell
-  5
-  ```
 
 ### Commands available
 
@@ -127,12 +144,15 @@ Additionally, both Truffle Develop and the console additionally have the followi
 * `compile`
 * `create`
 * `debug`
+* `deploy`
 * `exec`
+* `help`
 * `install`
 * `migrate`
 * `networks`
 * `opcode`
 * `publish`
+* `run`
 * `test`
 * `version`
 

@@ -20,7 +20,7 @@ You can also install a package at a specific version:
 $ truffle install <package name>@<version>
 ```
 
-Like NPM, EthPM versions follow [semver](http://semver.org/). You can find a list of all available packages at [the Ethereum Package Registry](https://www.ethpm.com/registry).
+Like NPM, EthPM versions follow [semver](http://semver.org/). You can find a list of all available packages at [the Ethereum Package Registry](http://explorer.ethpm.com/).
 
 ## Installing Dependencies
 
@@ -100,7 +100,8 @@ module.exports = {
       network_id: "*" // Match any network id
     },
     ropsten: {
-      provider: new HDWalletProvider(mnemonic, "https://ropsten.infura.io/"),
+      provider: () =>
+        new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/YOUR-PROJECT-ID"),
       network_id: 3 // official id of the ropsten network
     }
   }
