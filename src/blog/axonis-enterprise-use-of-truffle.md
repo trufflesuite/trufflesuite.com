@@ -93,7 +93,7 @@ In the meantime, we hope the above at least provides a high-level example of an 
 The Axoni team and I look forward to discussing this topic and much more (such as [Axlang, our Scala-based Solidity-alternative](https://axoni.com/axlang/)) at Trufflecon.
 
 <div class="post-trufflecon-box mt-5 text-center">
-  Get your ticket for TruffleCon 2019 Today
+  Join Jonathan along with 60+ speakers at TruffleCon 2019 in Redmond, WA August 2-4!
 
   <div class="mt-3">
     <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
