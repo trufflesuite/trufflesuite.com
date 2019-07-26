@@ -1,4 +1,33 @@
 {
+  "token-taxonomy-framework": {
+    "title": "Token Taxonomy Framework",
+    "date": "2019-7-26",
+    "author": "Marley Gray, Guest Blogger, Microsoft, Principal Architect - Azure Blockchain",
+    "published": true,
+    "excerpt": "To some, the sudden rise of Tokens in the blockchain dialog comes as a surprise. However, tokens have always been the bedrock of the blockchain movement. The introduction of SmartContract by Ethereum quickly overshadowed them, particularly in enterprise contexts. The capabilities of Smart Contracts and the broad acceptance of them, thanks to companies like Truffle, blazed a trail forward and we all went along. It wasn’t until we got halfway up the trail that someone turned around and asked, “did we pack any trail mix?”"
+  },
+  "axonis-enterprise-use-of-truffle": {
+    "title": "Axoni's Enterprise Use of Truffle",
+    "date": "2019-7-25",
+    "author": "Jonathan Leslie, Guest Blogger, a Lead Software Engineer from Axoni",
+    "published": true,
+    "excerpt": "At Axoni, our mission is to make shared information more trusted and reliable. We do this through distributed technology that we call \"Ethereum-inspired\"...given our compliance with the web3 JSON-RPC spec, Truffle basically works \"out-of-the-box\". However `truffle migrate` was less extensible, so we built a Truffle-based deployment tool.",
+    "image": "/img/blog/thumbnails/truffle-axoni.png"
+  },
+  "open-call-for-contributions-truffle-pegasys-eea-private-transactions": {
+    "title": "Open call for contributions by Truffle + PegaSys: EEA private transactions",
+    "date": "2019-7-24",
+    "author": "Felipe Faraggi, Guest Blogger, Developer Evangelist from PegaSys",
+    "published": true,
+    "excerpt": "In its current state, Truffle doesn't support EEA private transactions. Support for the web3js-eea library is needed for this to work and PegaSys has recently made an implementation of the v4.0 EEA specification. PegaSys and Truffle have teamed up to make a single open call for contributions. Help out and get some 😎 PegaSys swag and personally thanked on stage at TruffleCon!"
+  },
+  "best-methods-to-understand-blockchain-if-youre-not-a-developer": {
+    "title": "The Best Methods to Understand Blockchain Technology if You’re Not A Developer",
+    "date": "2019-7-24",
+    "author": "Scott Olson",
+    "published": true,
+    "excerpt": "As a non-technical person, it feels like it takes 1.21 gigawatts to keep up with the speed of technology - even Doc Brown himself couldn’t have predicted all of the technological advancements with his flux capacitor. Not only are we trying to keep up with technologies like blockchain, machine learning, and AI, but we have an overwhelming amount of information on the web all at the click of a mouse."
+  },
   "blockchain-will-cure-cancer": {
     "title": "Blockchain Will Cure Cancer",
     "date": "2019-7-23",
