@@ -4,41 +4,42 @@ layout: docs.hbs
 ---
 # Truffle Event System
 
-One new addition to Truffle in version 5.1.0 is an event system. This is a system of hooks implemented in several of the command flows. At several stages in the flow of these commands, events fire and provide handlers with data related to what is happening in the code at that time. So this might be, for example, names of contracts that are being compiled or just the fact that data is being fetched.
-
-So far, events have been implemented for the following command flows: compile, unbox, and obtain. In the future, we plan to integrate this system with the rest of the code in Truffle, as well as make the currently supported commands more robust.
+A new addition to Truffle in version 5.1.0 is the Event System. This is a system of hooks implemented in several of the command flows. Truffle commands now emit events for specific tasks, passing data relevant to the task. For example, during compilation an event will be emitted that contains the names of contracts that are being compiled.
+th
+Events have been implemented for the following Truffle command flows: compile, unbox, and obtain. We will be integrating the event system into the rest of Truffle's command flows in future versions.
 
 ## How it works
 
-Events that are emitted have a string name representation and are namespaced with semicolons. We will refer to an entire name as an "event name". A simple example of an event name that exists in the compile command flow is "compile:start". We will refer to the individual components of event names as "labels". So the event name "compile:start" has two labels: "compile" and "start". This particular event is emitted near the very start of the code that runs during compilation. Another example of a slightly more complicated name from the unbox command flow is "unbox:downloadingBox:succeed". This event name has three labels: "unbox", "downloadingBox", and "succeed". This event, as you can probably guess, is emitted when your Truffle box has successfully finished downloading during the unbox command flow.
+All emitted events are named after the task that emits them. What makes Truffle's event system different then an eventemitter is that the names of events are "namespaced", each part of the name is separated by a colon. The entire name, in whole, is called the "event name". A simple example of an event name in the `compile` command flow is `"compile:start"`. Individual components of event names are "labels". The event name `"compile:start"` has two labels: `"compile"` and `"start"`. This particular event is emitted near the very start of the code that runs during compilation. A slightly more complicated name from the `unbox` command flow is `"unbox:downloadingBox:succeed"`. This event name has three labels: `"unbox"`, `"downloadingBox"`, and `"succeed"`. This event, as you can probably guess, is emitted when a Truffle box has successfully finished downloading during the `unbox` command flow.
 
-One thing to note about these events, is that it is a common theme to have a group of event names refer to the beginning and end of a process. You will very often see two event names: one that has "start" as its last label and one that has "succeed". These denote the start and successful finish of a certain event. Another label, "fail", is used to indicate a failure of a certain event. So the when the event "compile:start" is emitted, it means that compilation has started. "compile:succeed" lets us know that compilation has completed and "compile:fail" tells us that compilation has failed.
+Events are often grouped into sub-labels that mark the beginning and end of a process. Paired of event names are common, e.g., an event name ends with `":start"` and another that ends with `":succeed"`. These denote the start and successful finish of a certain event. Another common label, `"fail"`, is used to indicate a failure of a certain event. When the event `"compile:start"` is emitted, it means that compilation has started. `"compile:succeed"` lets us know that compilation has completed and `"compile:fail"` tells us that compilation has failed.
 
-For all events that get emitted in the code, you are able to provide handlers that will be run when certain events that match are fired. Below in the "Subscribers" section you will find a description of how to attach handlers that will run when events are emitted.
+You are able to provide handlers for all events that are emitted. These handlers will be executed when matching events are emitted. In the [Subscribers](#subscribers) section you will find a description of how to attach handlers to events.
 
-Certain events that are emitted also provide the handlers with data when that particular event is emitted. This could be useful for collecting statistics or perhaps to make your own formatted output during development. So as an example of such an event, "compile:compiledSources" provides data about what source files were used during compilation. This data comes in the form of an array of the source file names that you can log to the console, save in a file, or use however you please.
+Some events also provide data to the handlers when emitted. This could be useful for collecting statistics or perhaps to make your own formatted output during development. `"compile:compiledSources"` is an example of an event that provides data about what source files were used during compilation. This data comes in the form of an array of source filenames that you can log to the console, save to a file, or use however you please.
 
-Below in the "Currently supported events" section you will find a chart of all currently available event names, where they are emitted in the command flow, and what data is available in the handlers for that event.
+In the [Currently supported events](#currently-supported-events) section you will find a chart of all currently available event names, where they are emitted in the command flow, and what data is available in the handlers for that event.
 
 ## Subscribers
 
-In order to react to events, you must create a JavaScript file that will be used to create a "Subscriber". The Subscriber is a class that deals with managing a group of event handlers. This JavaScript file will basically describe and indicate what to do when events are emitted. The file itself should be a module with two named exports: `initialization` and `handlers`.
+In order to react to events you must create a JavaScript file that will be used to create a "Subscriber". A Subscriber is a class that manages a group of event handlers. This file is used internally by a Subscriber to indicate what to do when events are emitted. The Subscriber checks two exported fields: `initialization` and `handlers`.
 
-`initialization` should be a function. This function gets run when the Subscriber is first instantiated at the beginning of all command flows. This function is optional and should execute whatever setup you wish to have.
+`initialization` must be a function. This function is executed when the Subscriber is instantiated at the beginning of all command flows. This function is optional.
 
-*NOTE: In this function you will have access to the Subscriber itself through the `this` variable. This allows you to create references that will be available in your handlers and to access the Subscriber class methods.*
+*NOTE: In this function you will have access to the Subscriber itself through the `this` keyword when you functions are described using the `function` syntax, i.e., `function(data){`, not `(data) => {`. This makes it easy to attach properties and helper methods to the Subscriber that will then be available in your handlers.*
 
-`handlers` should be an object. This is the place where you will describe what functions to run when certain events are fired. We will describe how to construct these in the following section.
+`handlers` should be an object whose keys are event names and values are an array of event handler functions. This is where you will describe what functions to run when certain events are fired. The following section describes how to construct event handlers.
+
 
 ## How to define your event handlers
 
-To create your event handlers, you will need to populate the `handlers` object. In order to describe which handlers correspond to which events, you must create at least one "event matcher". An event matcher is a string that will be used to match against events that are emitted. An event matcher could be an exact event name like "compile:start". In addition, you may use wildcard characters ("*" and "**") to match one or more events.
+To create your event handlers you will need to populate the `handlers` object. In order to describe which handlers correspond to which events, you must create at least one "event matcher". An event matcher is a string that will be used to match against events that are emitted. An event matcher could be the exact event name, like `"compile:start"`, or you may use wildcard characters (`"*"` and `"**"`) to match multiple events.
 
-A single asterisk is used to match a single label in an event name. So the event matcher "unbox:*" would match any event name that has exactly two labels and starts with "unbox". This means it would match "unbox:start" and "unbox:succeed" but not "unbox:downloadingBox:start" since that has three labels. Nor would it match "compile:start" since the first word does not match "unbox".
+A single asterisk (`"*"`) is used to match a single label within an event name. The event matcher `"unbox:*"` would match any event name that has exactly two labels and starts with `"unbox"`. `"unbox:*"` would match `"unbox:start"` and `"unbox:succeed"` but _not_ `"unbox:downloadingBox:start"` since that has three labels. Nor would it match `"compile:start"` since the first word does not match `"unbox"`.
 
-A double asterisk is used to match one or more labels in an event name. So the event matcher "unbox:\**" would match any event name that starts with "unbox" regardless of how many other labels the event name has. This means that it would match "unbox:start" as well as "unbox:preparingToDownload:succeed". The matcher "**:succeed" would match "fetchSolcList:succeed" and "unbox:preparingToDownload:succeed". In this way you are able to write handlers that match against batches of events.
+A double asterisk is used to match one or more labels in an event name. So the event matcher `"unbox:\**"` would match any event name that starts with "`unbox"` regardless of how many other labels the event name has. This means that it would match `"unbox:start"` as well as `"unbox:preparingToDownload:succeed"`. The matcher `"**:succeed"` would match `"fetchSolcList:succeed"` and `"unbox:preparingToDownload:succeed"`. In this way you are able to write handlers that match against batches of events.
 
-After you have created your event matcher, you will add it as a key in the `handlers` object. The value for this key will be an array of functions that will be executed when that event matcher matches an emitted event. Every time that an event matcher matches an emitted event, each function in that array will be run. Here is one simple hello world example:
+The event matcher string must be a key in the `handlers` object whose value must be an array of functions. These functions will be executed when that event matcher matches an emitted event. Every time an event matcher matches an emitted event, each of its functions will be executed. Here is a simple "hello world" example:
 
 ```javascript
 module.exports = {
@@ -49,17 +50,18 @@ module.exports = {
       }
     ]
   }
+};
 ```
 
-In the above example, every time the "compile:start" event gets emitted, "hello world!" will get logged to the console.
+In the above example, every time the `"compile:start"` event is emitted, `"hello world!"` will be logged to the console.
 
-*NOTE: Currently you must use "function" syntax when creating the handler functions in order to have the appropriate `this` value. You can use arrow functions in your handler functions, but you will lose the `this` reference to the Subscriber if you do so.*
+*NOTE: Currently you must use `function` syntax when creating the handler functions in order to have the appropriate `this` value. You can use arrow functions in your handler functions, but you will lose the `this` reference to the Subscriber if you do so.*
 
 ## More on subscribers
 
 When you are creating your handlers, you will have access to Subscriber class methods. Most of these shouldn't be used directly except for the `removeListener` method. If at some point you need to remove a listener that was added, you can call `this.removeListener(<eventMatcher>)` to "detach" the handlers listed under that specific event matcher.
 
-You will also have access to everything that you made references to in the initialization function. So for example, if I wanted to use an external library, perhaps one for colorful output, I would require it in my JavaScript and create a reference to it in the initialization like so:
+You will also have access to everything that you made references to in the initialization function. For example: if I wanted to use an external library, perhaps one for colorful logging, I would require it in my JavaScript and create a reference to it in the initialization like so:
 
 ```javascript
 const colors = require("colors");
@@ -68,8 +70,8 @@ module.exports = {
   initialization: function() {
     this.colors = colors;
   },
-  .......
-
+  // ......
+};
 ```
 
 I would then be able to access `this.colors` in my handlers property! So extending the example above could yield the following code:
@@ -90,144 +92,146 @@ module.exports = {
       }
     ]
   }
-}
+};
 ```
 
-This would make it log the source file names in rainbow colors whenever the "compile:compiledSources" event is emitted. Remember, some events (not all) provide data to your handlers at the time of execution. The "compile:compiledSources" provides an array of all source file names to this particular handler. You will need to check the chart below to see which events are provided with what data.
-NOTE: The `this` in your Subscriber files refers to the Subscriber class that is instantiated from the file you create and not the `this` in the file. So you will not have direct access to the `colors` library imported above unless you create a reference to it in the `initialization` function.
+This would log the source filenames in rainbow colors whenever the `"compile:compiledSources"` event is emitted. Remember, some events (not all) provide data to your handlers at the time of execution. The `"compile:compiledSources"` provides an array of all source filenames to this particular handler. Check the chart below to see which events are provided with what data.
+
+*Reminder: The `this` in your Subscriber files refers to the Subscriber class that is instantiated from the file you create and not the `this` in the file.*
 
 ## Currently supported events
 
-This section lists all events currently implemented in Truffle. They are organized by command and contain three pieces of information: the event name, where it is emitted, and the specific data, if any, that is passed along to the handlers.
+This section lists all events currently implemented in Truffle. They are organized by command and contain three pieces of information: the event name, when it is emitted, and the specific data, if any, that is passed along to the handlers.
 
 ### `truffle compile`
 
-- "compile:start"
 
-    emitted at the start of the command flow
+#### `"compile:start"`
 
-    no data available for this event
+Emitted at the start of the command flow.
 
-- "compile:succeed"
+*No data available for this event.*
 
-    emitted at the end of the command flow
+#### `"compile:succeed"`
 
-  ```
-  {
-      contractBuildDirectory: <string: directory where artifacts were saved>,
-      compilersInfo: {
-        <compilerName>: {
-          version: <string: version of compiler>,
-        },
-        ...one entry per compiler used
-      }
-  }
-  ```
+Emitted at the end of the command flow.
 
-- "compile:sourcesToCompile"
+```
+{
+    contractBuildDirectory: <string: directory where artifacts were saved>,
+    compilersInfo: {
+      <compilerName>: {
+        version: <string: version of compiler>,
+      },
+      ...one entry per compiler used
+    }
+}
+```
 
-    emitted before sources are compiled
+#### `"compile:sourcesToCompile"`
 
-  ```
-  {
-      sourceFileNames: [
-        <string: filenames of sources to compile>,
-        ...one string entry for each file
-      ]
-  }
-  ```
+Emitted before sources are compiled.
 
-- "compile:warnings"
+```
+{
+    sourceFileNames: [
+      <string: filenames of sources to compile>,
+      ...one string entry for each file
+    ]
+}
+```
 
-    emitted after sources are compiled
+#### `"compile:warnings"`
 
-  ```
-  {
-      warnings: [
-        <string: warnings created by the compiler during compilation>,
-        ...one string entry for each warning
-      ]
-  }
-  ```
+Emitted after sources are compiled.
 
-- "compile:nothingToCompile"
+```
+{
+    warnings: [
+      <string: warnings created by the compiler during compilation>,
+      ...one string entry for each warning
+    ]
+}
+```
 
-    emitted after attempted compilation if no compilation was needed
+#### `"compile:nothingToCompile"`
 
-    no data available for this event
+Emitted after attempted compilation if no compilation was needed
+
+*No data available for this event.*
 
 ### `truffle obtain`
 
-- "obtain:start"
+#### `"obtain:start"`
 
-    emitted at the start of the command flow
+Emitted at the start of the command flow.
 
-    no data available for this event
+*No data available for this event.*
 
-- "obtain:succeed"
+#### `"obtain:succeed"`
 
-    emitted at the end of the command flow
+Emitted at the end of the command flow.
 
-  ```
-  {
-      compiler: {
-        name: <string: name of compiler obtained>,
-        version: <string: version of compiler obtained>
-      }
-  }
-  ```
+```
+{
+    compiler: {
+      name: <string: name of compiler obtained>,
+      version: <string: version of compiler obtained>
+    }
+}
+```
 
-- "obtain:fail"
+#### `"obtain:fail"`
 
-    emitted in case the obtain command fails
+Emitted in case the obtain command fails.
 
-    no data available
+*No data available for this event.*
 
-- "downloadCompiler:start"
+#### `"downloadCompiler:start"`
 
-    before attempting to download a compiler
+Emitted before attempting to download a compiler.
 
-  ```
-  {
-    attemptNumber: <number: what number attempt at downloading the compiler>
-  }
-  ```
+```
+{
+  attemptNumber: <number: what number attempt at downloading the compiler>
+}
+```
 
-- "downloadCompiler:succeed"
+#### `"downloadCompiler:succeed"`
 
-    after successfully downloading a compiler
+Emitted after successfully downloading a compiler
 
-    no data available for this event
+*No data available for this event.*
 
-- "fetchSolcList:start"
+#### `"fetchSolcList:start"`
 
-    before fetching the list of available versions of the Solidity compiler
+Emitted before fetching the list of available versions of the Solidity compiler
 
-    no data available for this event
+*No data available for this event.*
 
-- "fetchSolcList:succeed"
+#### `"fetchSolcList:succeed"`
 
-    after fetching the list of available versions of the Solidity compiler
+Emitted after fetching the list of available versions of the Solidity compiler
 
-    no data available for this event
+*No data available for this event.*
 
-- "fetchSolcList:fail"
+#### `"fetchSolcList:fail"`
 
-    emitted if downloading the list of Solidity compiler versions fails
+Emitted emitted if downloading the list of Solidity compiler versions fails
 
-    no data available for this event
+*No data available for this event.*
 
 ### `truffle unbox`
 
-- "unbox:start"
+#### `"unbox:start"`
 
-    start of command flow
+Emitted at the start of command flow.
 
-    no data available for this event
+*No data available for this event.*
 
-- "unbox:succeed"
+#### `"unbox:succeed"`
 
-    end of command flow
+Emitted at the end of command flow.
 
   ```
   {
@@ -235,56 +239,56 @@ This section lists all events currently implemented in Truffle. They are organiz
   }
   ```
 
-- "unbox:fail"
+#### `"unbox:fail"`
 
-    emitted if the unbox fails
+Emitted if the unbox fails.
 
-    no data available for this event
+*No data available for this event.*
 
-- "unbox:preparingToDownload:start"
+#### `"unbox:preparingToDownload:start"`
 
-    before setting up a temporary directory for the downloaded contents
+Emitted before setting up a temporary directory for the downloaded contents.
 
-    no data available for this event
+*No data available for this event.*
 
-- "unbox:preparingToDownload:succeed"
+#### `"unbox:preparingToDownload:succeed"`
 
-    after creating the temporary directory for the downloaded contents
+Emitted after creating the temporary directory for the downloaded contents.
 
-    no data available for this event
+*No data available for this event.*
 
-- "unbox:downloadingBox:start"
+#### `"unbox:downloadingBox:start"`
 
-    before attempting to download the box contents
+Emitted before attempting to download the box contents.
 
-    no data available for this event
+*No data available for this event.*
 
-- "unbox:downloadingBox:succeed"
+#### `"unbox:downloadingBox:succeed"`
 
-    after downloading the box contents
+Emitted after downloading the box contents.
 
-    no data available for this event
+*No data available for this event.*
 
-- "unbox:cleaningTempFiles:start"
+#### `"unbox:cleaningTempFiles:start"`
 
-    before removing the temporary files
+Emitted before removing the temporary files.
 
-    no data available for this event
+*No data available for this event.*
 
-- "unbox:cleaningTempFiles:succeed"
+#### `"unbox:cleaningTempFiles:succeed"`
 
-    after removing the temporary files
+Emitted after removing the temporary files.
 
-    no data available for this event
+*No data available for this event.*
 
-- "unbox:settingUpBox:start"
+#### `"unbox:settingUpBox:start"`
 
-    before installing box dependencies
+Emitted before installing box dependencies.
 
-    no data available for this event
+*No data available for this event.*
 
-- "unbox:settingUpBox:succeed"
+#### `"unbox:settingUpBox:succeed"`
 
-    after installing box dependencies
+Emitted after installing box dependencies.
 
-    no data available for this event
+*No data available for this event.*
