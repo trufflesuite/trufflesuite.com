@@ -30,6 +30,19 @@ In order to react to events you must create a JavaScript file that will be used 
 
 `handlers` should be an object whose keys are event names and values are an array of event handler functions. This is where you will describe what functions to run when certain events are fired. The following section describes how to construct event handlers.
 
+In order to use this file as a Subscriber you must `require()` it in your [`truffle-config.js`](/docs/truffle/reference/configuration) under the `"subscribers"` object:
+
+```javascript
+modules.exports = {
+  networks: {
+    // ... 
+  },
+  subscribers: {
+    mySubscriberName: require("../my-subscriber-config.js"),
+    myOtherSubscriberName: require("../my-other-subscriber-config.js")
+  }
+}
+```
 
 ## How to define your event handlers
 
