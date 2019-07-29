@@ -1,4 +1,11 @@
 {
+  "upcoming-improvements-to-encoding-and-decoding": {
+    "title": "Upcoming improvements to encoding and decoding",
+    "date": "2019-7-29",
+    "author": "Harry Altman",
+    "published": true,
+    "excerpt": "When you’re writing, running, or debugging your smart contract, you don’t want to have to deal with raw binary data. Truffle––and Ganache and Drizzle––already contain a number of encoding and decoding features to help you interact with your contract and understand what you’re seeing. But luckily, encoding and decoding are about to become even more robust, informative, and usable."
+  },
   "token-taxonomy-framework": {
     "title": "Token Taxonomy Framework",
     "date": "2019-7-26",
