@@ -12,7 +12,7 @@ Wherever you can use an address in your transaction parameters, you can use an
 ENS name as long as you are able to connect successfully to an ENS registry.
 
 For more information on the Ethereum Name Service, see the
-[ENS website](https:\/\/ens.domains).
+[ENS website](https://ens.domains).
 
 ## Configuration
 
@@ -88,7 +88,8 @@ resolver already exists, it will set the address that the resolver references
 if it is not the same as the input address.
 
 The signature for this method is
-`setAddress(name: string, addressOrContract: string|truffle contract instance, from: string)`.
+`setAddress(name: string, addressOrContract: string | TruffleContractInstance>, from: string)`.
+
 A quick explanation of these parameters follows:
 
   - The `name` parameter describes the name for which to set the resolver
