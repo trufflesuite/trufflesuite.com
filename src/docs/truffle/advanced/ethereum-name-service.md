@@ -72,7 +72,7 @@ resolver already exists, it will set the address that the resolver references
 if it is not the same as the input address.
 
 The signature for this method is
-`setAddress(<name: string>, <addressOrContract: string|truffle contract instance>, <from: string)`.
+`setAddress(name: string, addressOrContract: string | TruffleContractInstance>, from: string)`.
 A quick explanation of these parameters follows:
 
   - The `name` parameter describes the name for which to set the resolver
