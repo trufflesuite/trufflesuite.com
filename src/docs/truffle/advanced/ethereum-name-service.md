@@ -11,8 +11,8 @@ names when interacting with your contracts and it will resolve them for you.
 Wherever you can use an address in your transaction parameters, you can use an
 ENS name as long as you are able to connect successfully to an ENS registry.
 
-For more information on the Ethereum Name Service, see the [ENS website]
-(https:\/\/ens.domains).
+For more information on the Ethereum Name Service, see the
+[ENS website](https:\/\/ens.domains).
 
 ## Configuration
 
@@ -29,11 +29,21 @@ module.exports = {
 }
 ```
 
-With the above config, you would be able to resolve names on Mainnet, Ropsten,
-Rinkeby, and Goerli. Truffle connects to the "official" ENS-deployed registries
-if the provider is connected to one of these four networks; that is, unless a
-different registry address is specified in the config. If you need to specify
-a different registry, you can enter it in your config for the
+By default, Truffle connects to the official, ENS-deployed registries.
+These four registries can be found on:
+
+  - Mainnet
+
+  - Ropsten
+
+  - Rinkeby
+
+  - Goerli
+
+If a valid provider is supplied for one of these four networks, Truffle will
+connect and use the official registry for that particular network; that is,
+unless a different registry address is specified in the config. If you need
+to specify a different registry, you can enter it in your config for the
 `<networkName>.ens.registry.address` property. If your network name were
 `myNetwork` then this might look like:
 
@@ -55,12 +65,18 @@ module.exports = {
 }
 ```
 
+If you are not connected to one of the above four networks and do not supply
+a registry address. Truffle will attempt to deploy a registry for you to
+use. See the section below on
+[automatic registry deployment](#automatic-registry-deployment) for more information.
+
 It must be noted that the registry address you supply needs to agree with
 whatever provider is present otherwise ENS resolution will not work. In
 other words, if you supply a provider for Kovan, you must also supply a
-registry address for an ENS registry on the Kovan network. As was stated
-above, however, you do not need to supply a registry address for the above
-networks unless you want to use a custom ENS registry.
+registry address for an ENS registry on the Kovan network (since Kovan
+does not have an official ENS registry deployment). As was stated
+above, however, you do not need to supply a registry address for the [above
+networks](#configuration) unless you want to use a custom ENS registry.
 
 ## deployer.ens.setAddress()
 
@@ -72,7 +88,7 @@ resolver already exists, it will set the address that the resolver references
 if it is not the same as the input address.
 
 The signature for this method is
-`setAddress(<name: string>, <addressOrContract: string|truffle contract instance>, <from: string)`.
+`setAddress(name: string, addressOrContract: string|truffle contract instance, from: string)`.
 A quick explanation of these parameters follows:
 
   - The `name` parameter describes the name for which to set the resolver
