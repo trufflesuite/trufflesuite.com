@@ -1,4 +1,11 @@
 {
+  "crytic-continuous-assurance-for-smart-contracts": {
+    "title": "Crytic: Continuous Assurance for Smart Contracts",
+    "date": "2019-7-30",
+    "author": "Josselin Feist, Guest Blogger, Senior Security Engineer from Trail of Bits",
+    "published": true,
+    "excerpt": "We at Trail of Bits are proud to announce our new Smart contract security product: https://crytic.io/. Crytic provides continuous assurance for smart contracts. The platform reports build status on every commit and runs a suite of security analyses for immediate feedback."
+  },
   "upcoming-improvements-to-encoding-and-decoding": {
     "title": "Upcoming improvements to encoding and decoding",
     "date": "2019-7-29",
