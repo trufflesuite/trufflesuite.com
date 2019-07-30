@@ -213,9 +213,9 @@ Now we are ready to create our own migration script.
 1. Add the following content to the `2_deploy_contracts.js` file:
 
    ```javascript
-   var Adoption = artifacts.require("Adoption");
+   const Adoption = artifacts.require("Adoption");
 
-   module.exports = function(deployer) {
+   module.exports = (deployer) => {
      deployer.deploy(Adoption);
    };
    ```
@@ -459,9 +459,11 @@ Now that we can interact with Ethereum via web3, we need to instantiate our smar
 1. Still in `/src/js/app.js`, remove the multi-line comment from within `initContract` and replace it with the following:
 
    ```javascript
-   $.getJSON('Adoption.json', function(data) {
+   fetch('Adoption.json')
+  .then(response => response.json())
+  .then(data => {
      // Get the necessary contract artifact file and instantiate it with truffle-contract
-     var AdoptionArtifact = data;
+     const AdoptionArtifact = data;
      App.contracts.Adoption = TruffleContract(AdoptionArtifact);
 
      // Set the provider for our contract
@@ -469,7 +471,8 @@ Now that we can interact with Ethereum via web3, we need to instantiate our smar
 
      // Use our contract to retrieve and mark the adopted pets
      return App.markAdopted();
-   });
+   })
+   .catch(err => console.error(err));
    ```
 
 Things to notice:
@@ -487,19 +490,24 @@ Things to notice:
 1. Still in `/src/js/app.js`, remove the multi-line comment from `markAdopted` and replace it with the following:
 
    ```javascript
-   var adoptionInstance;
+   let adoptionInstance;
 
-   App.contracts.Adoption.deployed().then(function(instance) {
+   App.contracts.Adoption.deployed()
+   .then(instance => {
      adoptionInstance = instance;
 
      return adoptionInstance.getAdopters.call();
-   }).then(function(adopters) {
+   })
+   .then(adopters => {
      for (i = 0; i < adopters.length; i++) {
        if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
-         $('.panel-pet').eq(i).find('button').text('Success').attr('disabled', true);
+         const pets = document.querySelectorAll('.panel-pet');
+         pets[i].querySelector('.btn-default').textContent = 'Success'
+        pets[i].querySelector('.btn-default').setAttribute('disabled', true);
        }
      }
-   }).catch(function(err) {
+   })
+   .catch(err => {
      console.log(err.message);
    });
    ```
@@ -523,23 +531,24 @@ Things to notice:
 1. Still in `/src/js/app.js`, remove the multi-line comment from `handleAdopt` and replace it with the following:
 
    ```javascript
-   var adoptionInstance;
+   let adoptionInstance;
 
-   web3.eth.getAccounts(function(error, accounts) {
-     if (error) {
-       console.log(error);
+   web3.eth.getAccounts((err, accounts) => {
+     if (err) {
+       console.log(err);
      }
 
-     var account = accounts[0];
+     const account = accounts[0];
 
-     App.contracts.Adoption.deployed().then(function(instance) {
+     App.contracts.Adoption.deployed()
+     .then(instance => {
        adoptionInstance = instance;
 
        // Execute adopt as a transaction by sending account
        return adoptionInstance.adopt(petId, {from: account});
-     }).then(function(result) {
+     }).then(result => {
        return App.markAdopted();
-     }).catch(function(err) {
+     }).catch(err => {
        console.log(err.message);
      });
    });
@@ -571,11 +580,11 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 1. After clicking **Getting Started**, you should see the initial MetaMask screen. Click **Import Wallet**.
 
    ![Initial screen](/img/tutorials/pet-shop/metamask-initial.png "MetaMask initial screen")
-   
+
 1. Next, you should see a screen requesting anonymous analytics. Choose to decline or agree.
 
    ![Improve MetaMask](/img/tutorials/pet-shop/metamask-analytics.png "Improve MetaMask")
-   
+
 1. In the box marked **Wallet Seed**, enter the mnemonic that is displayed in Ganache.
 
    <p class="alert alert-danger">
@@ -585,7 +594,7 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
    Enter a password below that and click **OK**.
 
    ![MetaMask seed phrase](/img/tutorials/pet-shop/metamask-seed.png "MetaMask seed phrase")
-   
+
 1. If all goes well, MetaMask should display the following screen. Click **All Done**.
 
    ![Congratulations](/img/tutorials/pet-shop/metamask-congratulations.png "Congratulations")
@@ -646,7 +655,7 @@ We can now start a local web server and use the dapp. We're using the `lite-serv
    The dev server will launch and automatically open a new browser tab containing your dapp.
 
    ![Pete's Pet Shop](/img/tutorials/pet-shop/dapp.png "Pete's Pet Shop")
-   
+
 1. A MetaMask pop-up should appear requesting your approval to allow Pete's Pet Shop to connect to your MetaMask wallet. Without explicit approval, you will be unable to interact with the dapp. Click **Connect**.
 
    ![MetaMask approval request](/img/tutorials/pet-shop/metamask-transactionconfirm.png "MetaMask approval request")
