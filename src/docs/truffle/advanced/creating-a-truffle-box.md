@@ -61,11 +61,11 @@ An object containing console commands to execute once unboxed. Since we're worki
 
 ## Images
 
-The large box image is a 512px square with 32px of padding on each side.
+The large box image is a 348px square with 20px of padding on each side.
 
 ![Large Box Image Template](/img/boxes/box-img-lg-template.png)
 
-The small box image is 735px x 100px. There is 32px of padding on the left side of the banner, and it's minimum size (described in the template as "Min Banner Width") is 290px, including the left padding. The banners are fixed to the left side and crop off the right side as the window narrows.
+The small box image is 510px x 100px. There is 20px of padding on the left side of the banner and it's minimum size (described in the template as "Min-Width") is 330px, including the left padding. The banners are fixed to the left side and crop off the right side as the window narrows.
 
 ![Small Box Image Template](/img/boxes/box-img-sm-template.png)
 
