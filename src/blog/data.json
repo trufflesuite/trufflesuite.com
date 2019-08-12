@@ -1,4 +1,54 @@
 {
+  "3-ways-enterprises-are-addressing-blockchain-privacy-concerns": {
+    "title": "3 Ways Enterprises Are Addressing Blockchain Privacy Concerns",
+    "date": "2019-7-31",
+    "author": "Danny Pan, Guest Blogger, West Monroe Partners",
+    "published": true,
+    "excerpt": "This year has seen numerous announcements of single and multi-party blockchain pilots by the Fortune 500 such as… Starbucks and MetLife. Data privacy issues haven’t stopped them and the enterprise blockchain world has taken these steps to shift their thinking."
+  },
+  "crytic-continuous-assurance-for-smart-contracts": {
+    "title": "Crytic: Continuous Assurance for Smart Contracts",
+    "date": "2019-7-30",
+    "author": "Josselin Feist, Guest Blogger, Senior Security Engineer from Trail of Bits",
+    "published": true,
+    "excerpt": "We at Trail of Bits are proud to announce our new Smart contract security product: https://crytic.io/. Crytic provides continuous assurance for smart contracts. The platform reports build status on every commit and runs a suite of security analyses for immediate feedback."
+  },
+  "upcoming-improvements-to-encoding-and-decoding": {
+    "title": "Upcoming improvements to encoding and decoding",
+    "date": "2019-7-29",
+    "author": "Harry Altman",
+    "published": true,
+    "excerpt": "When you’re writing, running, or debugging your smart contract, you don’t want to have to deal with raw binary data. Truffle––and Ganache and Drizzle––already contain a number of encoding and decoding features to help you interact with your contract and understand what you’re seeing. But luckily, encoding and decoding are about to become even more robust, informative, and usable."
+  },
+  "token-taxonomy-framework": {
+    "title": "Token Taxonomy Framework",
+    "date": "2019-7-26",
+    "author": "Marley Gray, Guest Blogger, Microsoft, Principal Architect - Azure Blockchain",
+    "published": true,
+    "excerpt": "To some, the sudden rise of Tokens in the blockchain dialog comes as a surprise. However, tokens have always been the bedrock of the blockchain movement. The introduction of SmartContract by Ethereum quickly overshadowed them, particularly in enterprise contexts. The capabilities of Smart Contracts and the broad acceptance of them, thanks to companies like Truffle, blazed a trail forward and we all went along. It wasn’t until we got halfway up the trail that someone turned around and asked, “did we pack any trail mix?”"
+  },
+  "axonis-enterprise-use-of-truffle": {
+    "title": "Axoni's Enterprise Use of Truffle",
+    "date": "2019-7-25",
+    "author": "Jonathan Leslie, Guest Blogger, a Lead Software Engineer from Axoni",
+    "published": true,
+    "excerpt": "At Axoni, our mission is to make shared information more trusted and reliable. We do this through distributed technology that we call \"Ethereum-inspired\"...given our compliance with the web3 JSON-RPC spec, Truffle basically works \"out-of-the-box\". However `truffle migrate` was less extensible, so we built a Truffle-based deployment tool.",
+    "image": "/img/blog/thumbnails/truffle-axoni.png"
+  },
+  "open-call-for-contributions-truffle-pegasys-eea-private-transactions": {
+    "title": "Open call for contributions by Truffle + PegaSys: EEA private transactions",
+    "date": "2019-7-24",
+    "author": "Felipe Faraggi, Guest Blogger, Developer Evangelist from PegaSys",
+    "published": true,
+    "excerpt": "In its current state, Truffle doesn't support EEA private transactions. Support for the web3js-eea library is needed for this to work and PegaSys has recently made an implementation of the v4.0 EEA specification. PegaSys and Truffle have teamed up to make a single open call for contributions. Help out and get some 😎 PegaSys swag and personally thanked on stage at TruffleCon!"
+  },
+  "best-methods-to-understand-blockchain-if-youre-not-a-developer": {
+    "title": "The Best Methods to Understand Blockchain Technology if You’re Not A Developer",
+    "date": "2019-7-24",
+    "author": "Scott Olson",
+    "published": true,
+    "excerpt": "As a non-technical person, it feels like it takes 1.21 gigawatts to keep up with the speed of technology - even Doc Brown himself couldn’t have predicted all of the technological advancements with his flux capacitor. Not only are we trying to keep up with technologies like blockchain, machine learning, and AI, but we have an overwhelming amount of information on the web all at the click of a mouse."
+  },
   "blockchain-will-cure-cancer": {
     "title": "Blockchain Will Cure Cancer",
     "date": "2019-7-23",

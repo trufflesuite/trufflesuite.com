@@ -198,14 +198,14 @@ deployer.deploy(A, {overwrite: false});
 // Set a maximum amount of gas and `from` address for the deployment
 deployer.deploy(A, {gas: 4612388, from: "0x...."});
 
-// Deploy multiple contracts, some with arguments and some without.
-// This is quicker than writing three `deployer.deploy()` statements as the deployer
+// Deploying multiple contracts as an array is now deprecated.
+// This used to be quicker than writing three `deployer.deploy()` statements as the deployer
 // can perform the deployment as a single batched request.
-deployer.deploy([
-  [A, arg1, arg2, ...],
-  B,
-  [C, arg1]
-]);
+// deployer.deploy([
+//   [A, arg1, arg2, ...],
+//   B,
+//   [C, arg1]
+// ]);
 
 // External dependency example:
 //
