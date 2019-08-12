@@ -78,7 +78,13 @@ does not have an official ENS registry deployment). As was stated
 above, however, you do not need to supply a registry address for the [above
 networks](#configuration) unless you want to use a custom ENS registry.
 
-## deployer.ens.setAddress()
+## ens module methods and properties
+
+- deployer.ens.registryAddress
+
+This property returns the address of the registry that Truffle is connected to.
+
+- deployer.ens.setAddress()
 
 As part of this ENS integration, a new `ens` module is available on the
 deployer object available during migration functions. Currently there is a
@@ -92,16 +98,16 @@ The signature for this method is
 
 A quick explanation of these parameters follows:
 
-  - The `name` parameter describes the name for which to set the resolver
+  1. The `name` parameter describes the name for which to set the resolver
   address. This name will look something like "myName.eth".
 
-  - The `addressOrContract` parameter must either be a string or a Truffle
+  2. The `addressOrContract` parameter must either be a string or a Truffle
   contract object that has an address property. If it is a string it must
   be an Ethereum address. If a Truffle contract has been deployed on
   the network you are using, then you can use that object as an argument.
   It will use that contract's address to set the resolver target.
 
-  - The `from` parameter is the address that you want to send the transaction
+  3. The `from` parameter is the address that you want to send the transaction
   from. This must be the address that owns the domain in question. If this
   address does not own the domain then the transaction will fail.
 
