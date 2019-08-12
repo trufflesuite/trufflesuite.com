@@ -102,6 +102,12 @@
     "official": true
   },
   {
+    "userOrg": "truffle-box",
+    "displayName": "nightfall",
+    "repoName": "nightfall-box",
+    "official": true
+  },
+  {
     "userOrg": "kaleido-io",
     "displayName": "drizzle-kaleido-box",
     "repoName": "drizzle-kaleido-box",

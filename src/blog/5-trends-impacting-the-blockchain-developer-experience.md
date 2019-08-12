@@ -14,17 +14,17 @@ This is, of course, is by no means a definitive list. As with everything in the 
 
 Obviously we’re a little biased, but in this case, we’re talking about tools and utilities that are not [chocolate-themed](https://www.trufflesuite.com/). It’s literally every day we collectively come across something new that makes our lives as developers (or users, auditors, admins, etc) easier.
 
-This is a big deal for the longer-term success of the wider ecosystem because happy and productive developers obviously strongly correlates with increased experimentation, enhances the volume of shipped services, and expedites the process of onboarding new people (developers or otherwise) into the blockchain space.
+This is a big deal for the long-term success of the wider ecosystem because happy and productive developers obviously strongly correlates with increased experimentation, the volume of shipped products and services, and expedites the process of on-boarding new people (developers or otherwise) into the blockchain space. 
 
 At Truffle, we’re also pushing harder than ever to make the DX as sweet as possible. Like, raspberry truffle sweet. This includes new features and enhancements to the existing suite (such as integration with [Hyperledger Fabric's chaincode EVM](https://github.com/trufflesuite/truffle/releases/tag/v5.0.27)), as well as the upcoming [Truffle DB](https://www.trufflesuite.com/blog/introducing-truffle-db-part-1) and [Truffle Teams](https://www.trufflesuite.com/teams).
 
 ## #2 Managed Blockchain Services are here
 
-Managed Blockchain Services (MBS) are evolving rapidly even though we’re still not quite sure what to call them. MBS? Blockchain as a Service (BaaS)? We’ll get back to you on the acronym. In the first half of 2019 alone we’ve seen the launch of new services from heavyweights such as [Microsoft](https://azure.microsoft.com/en-us/services/blockchain-service/) and [Amazon](https://aws.amazon.com/managed-blockchain/), and players such as [Kaleido](http://kaleido.io/) evolving their stack with dizzying speed.
+Managed Blockchain Services (MBS) are evolving rapidly. In the first half of 2019 alone we’ve seen the launch of new services from heavyweights such as [Microsoft](https://azure.microsoft.com/en-us/services/blockchain-service/) and [Amazon](https://aws.amazon.com/managed-blockchain/), and players such as [Kaleido](http://kaleido.io/) evolving their stack with dizzying speed.
 
-These enterprise players, of course, do all the heavy lifting when it comes to spinning up private or consortium networks which has streamlined the onboarding process of larger and medium-size companies. Excitingly, the maturation of these services is coinciding with an increased understanding of the use-cases for permissioned ledgers and accordingly, we’re seeing major projects move beyond proof of concepts.
+These services, of course, do all the heavy lifting when it comes to spinning up private or consortium networks, something that was historically cumbersome from a DevOps perspective. Excitingly, the maturation of these services is coinciding with an increased understanding of the use-cases for permissioned ledgers and accordingly, we’re seeing major projects and initiatives begin to roll out.
 
-The managed nature of these services has enabled rapid evolution and experimentation, particularly when it comes to DX. Which leads us to the next trend...
+The managed nature of these services has allowed the teams behind them to really focus on streamlining the developer experience Which leads us to the next trend...
 
 ## #3 We’re seeing glimpses of the DX of the future
 
@@ -36,15 +36,13 @@ Our favorite example of a DX from the future is [Kaleido’s Marketplace](https:
 
 It’s almost too easy. Seriously though, this evolution of developer experiences paves the way for how “delightful” things might one-day be when building equivalent services for public networks.
 
-## #4 Major corporations are pushing some seriously awesome blockchain FOSS (Fun On State Systems)
+## #4 Major corporations are pushing some seriously awesome open-source software
 
-While veteran projects like [OpenZeppelin](https://openzeppelin.org/) continue to blossom, we’ve started to witness larger organizations embrace FOSS and other pluggable modules for contracts.
+While veteran projects like [OpenZeppelin](https://openzeppelin.org/) continue to blossom, one interesting trend we’ve seen is larger organizations’ increasing embrace of open-source with the recent release of some exciting new projects.
 
 Some great examples of this include Ernst & Young’s [Nightfall](https://github.com/EYBlockchain/nightfall), Samsung’s [Blockchain SDK](https://developer.samsung.com/blockchain), Microsoft’s [Confidential Consortium Framework](https://github.com/microsoft/CCF), and the continued evolution of the JPMorgan-backed [Quorum](https://github.com/jpmorganchase/quorum). We’re equally pumped by the launch of Cloudflare’s [Ethereum gateway](https://blog.cloudflare.com/cloudflare-ethereum-gateway/) too! 
 
-<!-- 
-It’s exciting to see the paradigm being embraced in ways that we can all benefit. Also if you’re interested in checking out [Nightfall](https://github.com/EYBlockchain/nightfall), did you know “[We call it NightTruffle](https://github.com/trufflesuite/nightfall-box)"? 
--->
+It’s exciting to see companies of all shapes and sizes embracing the paradigm in ways that we can all benefit.
 
 ## #5 Industries are becoming increasingly programmable, led by DeFi
 

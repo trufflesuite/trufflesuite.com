@@ -27,7 +27,8 @@
       "Debugging Your Contracts",
       "Using Truffle Develop and The Console",
       "Writing External Scripts",
-      "Working With Quorum"
+      "Working With Quorum",
+      "Working With Hyperledger EVM"
     ],
     "Testing": [
       "Testing Your Contracts",

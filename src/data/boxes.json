@@ -6,7 +6,7 @@
   },
   "drizzle-react-native-box": {
     "description": "This box is to help get you started with building dapps with Drizzle on React Native.",
-    "stars": 1,
+    "stars": 6,
     "tags": ["official", "drizzle", "react-native"]
   },
   "react-box": {
@@ -43,6 +43,11 @@
     "description": "A box containing all you need to get started with Vyper development on Truffle.",
     "stars": 3,
     "tags": ["official"]
+  },
+  "nightfall-box": {
+    "description": "A box to help get you started building dapps with Nightfall!",
+    "stars": 4,
+    "tags": ["official", "nightfall"]
   },
   "azure-asset-transfer-box": {
     "description": "Azure Samples - Asset Transfer",
