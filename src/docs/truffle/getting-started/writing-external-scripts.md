@@ -129,7 +129,7 @@ The Truffle library lets you do this without making the user add configuration o
 :warning: **Important Note** :warning:
 
 Truffle does not guarantee its internal APIs will follow semver. You should be prepared for your user
-to run any Truffle version and handle mismatches gracefully. By using the library **you are entering into a gentleperson's agreement** to manage API volatility and other contingencies on your user's behalf. Some tips:
+to run any Truffle version and handle mismatches gracefully. By using the library **you are entering into a gentleperson's agreement** to manage API volatility and other contingencies on your users' behalf. Some tips:
 
 + Always `require` Truffle in a try/catch block
 + At runtime, verify the API components you need are actually exposed
