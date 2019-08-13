@@ -108,16 +108,17 @@ If you wish to see information regarding RPC activity during your Truffle
 develop session, you can use the `--log` option.
 
 When you run `truffle develop --log`, Truffle will start up a new develop
-session and output the addresses and keys as illustrated in the previous section.
-However, in this terminal window you will not be able to interact through the
-console as it will only output the RPC activity occurring on the network. If
+session and output the addresses and keys as described in the previous section.
+However, in this terminal window you will not be able to interact with the
+console like you would in a normal Truffle develop session. Instead it will
+only output the RPC activity occurring on the network. If
 you want to interact with the console, you will have to open a new terminal
-window and connect to the already running Truffle develop session.
+window and connect to the current session by running `truffle develop`.
 
 If you already have a Truffle develop session running and want to log all
-RPC activity occurring on it, you can also run `truffle develop --log` in a
-separate terminal window and it will connect to the currently-running session.
-It will then act the same way as described above.
+RPC activity occurring on it, you can run `truffle develop --log` in a
+separate terminal window. It will then connect to that session
+and act the same way as described above.
 
 
 #### Configuring Truffle Develop
