@@ -80,7 +80,6 @@ know how we can improve it!
      // config_[1] starts remaining parameters.
      if (config.help) {
        console.log(`Usage: truffle run hello [name]`);
-       done(null, [], []);
        return;
      }
 
