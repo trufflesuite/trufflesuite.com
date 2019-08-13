@@ -47,8 +47,9 @@ There are many official and unofficial Ethereum clients available for you to use
 
 * Geth (go-ethereum): [https://github.com/ethereum/go-ethereum](https://github.com/ethereum/go-ethereum)
 * WebThree (cpp-ethereum): [https://github.com/ethereum/cpp-ethereum](https://github.com/ethereum/cpp-ethereum)
+* Pantheon (java): [https://github.com/PegaSysEng/pantheon](https://github.com/PegaSysEng/pantheon)
 * Parity: [https://github.com/paritytech/parity](https://github.com/paritytech/parity)
-* More: [https://www.ethereum.org/cli](https://www.ethereum.org/cli)
+* More: [https://www.ethereum.org/developers/#clients-running-your-own-node](https://www.ethereum.org/developers/#clients-running-your-own-node)
 
 These are full client implementations that include mining, networking, blocks and transaction processing. You should use these clients after you've sufficiently tested your dapp with Ganache or Truffle Develop and you're ready to deploy to your desired Ethereum network.
 
