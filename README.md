@@ -39,9 +39,9 @@ In terminal run:
 ```
 npm run dev
 ```
-Navigate to **localhost:9000**/port specified in your terminal
+Navigate to **[localhost:9000](http://localhost:9000)**/port specified in your terminal
 
-To view Browsersync settings navigate to **localhost:3001**
+To view Browsersync settings navigate to **[localhost:3001](http://localhost:3001)**
 
 ## Compile to a production build
 
