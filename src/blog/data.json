@@ -1,4 +1,11 @@
 {
+  "using-truffle-to-interact-with-chainlink-smart-contracts": {
+    "title": "Using Truffle to interact with Chainlink Smart Contracts",
+    "date": "2019-8-20",
+    "author": "Guest Blogger, Chainlink",
+    "published": true,
+    "excerpt": "Chainlink is one of the leading blockchain projects building the very first decentralized oracle network that provides external data to smart contracts. Truffle helps smart contract developers by providing a powerful framework to create, test, and deploy smart contracts."
+  },
   "3-ways-enterprises-are-addressing-blockchain-privacy-concerns": {
     "title": "3 Ways Enterprises Are Addressing Blockchain Privacy Concerns",
     "date": "2019-7-31",
