@@ -89,7 +89,7 @@ networks: {
 
 For each network, if unspecified, transaction options will default to the following values:
 
-* `gas`: Gas limit used for deploys. Default is `4712388`.
+* `gas`: Gas limit used for deploys. Default is `6721975`.
 * `gasPrice`: Gas price used for deploys. Default is `100000000000` (100 Shannon).
 * `from`: From address used during migrations. Defaults to the first available account provided by your Ethereum client.
 * `provider`: Default web3 provider using `host` and `port` options: `new Web3.providers.HttpProvider("http://<host>:<port>")`
