@@ -15,11 +15,13 @@ Solidity test contracts live alongside Javascript tests as `.sol` files. When `t
 Let's take a look at an example Solidity test before diving too deeply. Here's the example Solidity test provided for you by `truffle unbox metacoin`:
 
 ```javascript
+pragma solidity >=0.4.25 <0.6.0;
+
 import "truffle/Assert.sol";
 import "truffle/DeployedAddresses.sol";
 import "../contracts/MetaCoin.sol";
 
-contract TestMetacoin {
+contract TestMetaCoin {
   function testInitialBalanceUsingDeployedContract() {
     MetaCoin meta = MetaCoin(DeployedAddresses.MetaCoin());
 
@@ -42,18 +44,33 @@ This produces the following output:
 
 ```
 $ truffle test
-Compiling ConvertLib.sol...
-Compiling MetaCoin.sol...
-Compiling truffle/Assert.sol
-Compiling truffle/DeployedAddresses.sol
-Compiling ../test/TestMetacoin.sol...
 
-  TestMetacoin
-    ✓ testInitialBalanceUsingDeployedContract (61ms)
-    ✓ testInitialBalanceWithNewMetaCoin (69ms)
+Compiling your contracts...
+===========================
+> Compiling ./contracts/ConvertLib.sol
+> Compiling ./contracts/MetaCoin.sol
+> Compiling ./contracts/Migrations.sol
+> Compiling ./test/TestMetaCoin.sol
 
-  2 passing (3s)
+
+
+  TestMetaCoin
+    ✓ testInitialBalanceUsingDeployedContract (79ms)
+    ✓ testInitialBalanceWithNewMetaCoin (65ms)
+
+  Contract: MetaCoin
+    ✓ should put 10000 MetaCoin in the first account (38ms)
+    ✓ should call a function that depends on a linked library (42ms)
+    ✓ should send coin correctly (120ms)
+
+
+  5 passing (7s)
 ```
+
+From the output, you can see reports from two different test files: one
+JavaScript (Contract: MetaCoin above) and one Solidity (TestMetaCoin above).
+In this document we will be concerning ourselves exclusively with the
+Solidity test.
 
 ## Test structure
 
@@ -132,7 +149,7 @@ contract TestBytesLib2 {
     function testThrowFunctions() public {
         bool r;
 
-        // We're basically calling our contract externally with a raw call, forwarding all available gas, with 
+        // We're basically calling our contract externally with a raw call, forwarding all available gas, with
         // msg.data equal to the throwing function selector that we want to be sure throws and using only the boolean
         // value associated with the message call's success
         (r, ) = address(this).call(abi.encodePacked(this.IThrow1.selector));
