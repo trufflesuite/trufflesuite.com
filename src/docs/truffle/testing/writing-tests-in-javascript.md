@@ -221,4 +221,4 @@ Truffle gives you access to Mocha's configuration so you can change how Mocha be
 
 ## TypeScript File Support
 
-Truffle now supports tests saved as a `.ts` [TypeScript](https://www.typescriptlang.org/) file. Please see the [Writing Tests in JavaScript](#writing-tests-in-javascript) guide for more information.
+Truffle supports tests saved as a `.ts` [TypeScript](https://www.typescriptlang.org/) file. Please see the [Writing Tests in JavaScript](#writing-tests-in-javascript) guide for more information.
