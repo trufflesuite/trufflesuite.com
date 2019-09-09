@@ -52,7 +52,7 @@ This is the default setting for [Ganache](/docs/ganache/using), though you can c
 
 Let's get the contracts on the network:
 
-First run `truffle compile`. This will compile the `.sol` contracts into `.json` artifacts (specified in the [`truffle-contract`](https://github.com/trufflesuite/truffle/tree/master/packages/truffle-contract) library). They will appear in `build/contracts/*.json`. Now we can include contracts in our app with a simple `import` or `require` statement:
+First run `truffle compile`. This will compile the `.sol` contracts into `.json` artifacts (specified in the [`truffle-contract`](https://github.com/trufflesuite/truffle/tree/master/packages/contract) library). They will appear in `build/contracts/*.json`. Now we can include contracts in our app with a simple `import` or `require` statement:
 
 ```javascript
 // Import our contract artifacts and turn them into usable abstractions.
