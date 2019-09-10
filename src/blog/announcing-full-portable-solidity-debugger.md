@@ -2,7 +2,7 @@ Every one at Truffle is giddy right now.
 
 ----------------
 
-Since Truffle's inception, it's been our mission to build outstanding development tools for the Ethereum community. The analogy we always used was one of history: Ethereum development practices are years behind the rest of the industry, and it's our job to build tools that modernize our craft. Well today, Truffle's come one step closer to that goal. We're happy to announce the release of our fully featured, fully portable Solidity [debugger](https://github.com/trufflesuite/truffle/releases) and [debugging libraries](https://github.com/trufflesuite/truffle/tree/master/packages/truffle-debugger).
+Since Truffle's inception, it's been our mission to build outstanding development tools for the Ethereum community. The analogy we always used was one of history: Ethereum development practices are years behind the rest of the industry, and it's our job to build tools that modernize our craft. Well today, Truffle's come one step closer to that goal. We're happy to announce the release of our fully featured, fully portable Solidity [debugger](https://github.com/trufflesuite/truffle/releases) and [debugging libraries](https://github.com/trufflesuite/truffle/tree/master/packages/debugger).
 
 ![Debugger in Action](https://i.imgur.com/7y80aF3.gif)
 
@@ -70,7 +70,7 @@ More information about how to use Truffle can be found in [our documentation](/d
 
 ### A Quick Thank You
 
-I'd like to personally thank the whole Truffle team for this effort, and particularly [Nick D'Andrea](https://github.com/gnidan) for turning some initial research work into a fully portable, fully featured debugger. The engineering under the hood is amazing, [I urge you to take a look](https://github.com/trufflesuite/truffle/tree/master/packages/truffle-debugger). I'd also like to thank the community at large: It's a pleasure building the tools that make your lives easier, and your consistent feedback makes the whole endeavor worthwhile.
+I'd like to personally thank the whole Truffle team for this effort, and particularly [Nick D'Andrea](https://github.com/gnidan) for turning some initial research work into a fully portable, fully featured debugger. The engineering under the hood is amazing, [I urge you to take a look](https://github.com/trufflesuite/truffle/tree/master/packages/debugger). I'd also like to thank the community at large: It's a pleasure building the tools that make your lives easier, and your consistent feedback makes the whole endeavor worthwhile.
 
 Thanks,
 <br/>-- Tim 

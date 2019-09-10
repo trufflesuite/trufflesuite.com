@@ -26,7 +26,7 @@ PegaSys and Truffle have teamed up to make a single open call for contributions.
 The solution involves using a Delegation pattern to help make that work.
 
 The location of the files to be modified can be found here:
-[truffle/packages/truffle-interface-adapter/lib](https://github.com/trufflesuite/truffle/tree/develop/packages/truffle-interface-adapter/lib)
+[truffle/packages/interface-adapter/lib](https://github.com/trufflesuite/truffle/tree/develop/packages/interface-adapter/lib)
 
 In short, when Truffle receives a transaction, it should determine if its a `privateFor` transaction. If so, it would delegate the rest of the business logic to the EEA library. If not, it should just continue processing the transaction with the original web3 methods.
 
