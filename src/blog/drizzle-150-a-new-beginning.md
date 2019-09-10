@@ -52,7 +52,7 @@ Perhaps the biggest thing that the changes above allow us to do is more frequent
 
 In the past year, we often had to deal with delaying the publishing of a new change because it required testing and updating other repos. Our publishing process was essentially being blocked by having to synchronize changes amongst multiple repos.
 
-With a monorepo that all changes, it means that you can look forward to more regular releases and a faster turnaround time for getting issues fixed. With each release, better changelogs are also coming, as we move towards adopting [conventional commits](https://www.conventionalcommits.org) for each PR that gets merged.
+With a monorepo, that all changes, which means that you can look forward to more regular releases and a faster turnaround time for getting issues fixed. Better changelogs are also coming as we move toward adopting [conventional commits](https://www.conventionalcommits.org) for each PR that gets merged.
 
 ## Going forward
 
