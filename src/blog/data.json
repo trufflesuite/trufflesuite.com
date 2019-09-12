@@ -1,4 +1,11 @@
 {
+  "drizzle-150-a-new-beginning": {
+    "title": "Drizzle 1.5.0: A new beginning",
+    "date": "2019-9-10",
+    "author": "Adrian Li",
+    "published": true,
+    "excerpt": "Drizzle gets migrated to a monorepo with a focus on regular releases and a better contributor experience."
+  },
   "using-truffle-to-interact-with-chainlink-smart-contracts": {
     "title": "Using Truffle to interact with Chainlink Smart Contracts",
     "date": "2019-8-20",
