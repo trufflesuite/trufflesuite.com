@@ -6,7 +6,7 @@ env:
   - MASTER: "master"
 language: node_js
 node_js:
-    - "6.9.1"
+    - "lts/*"
 
 before_script:
 - >
