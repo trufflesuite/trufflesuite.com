@@ -124,11 +124,11 @@ Let's allow users to make adoption requests.
    ```javascript
    // Adopting a pet
    function adopt(uint petId) public returns (uint) {
-     require(petId >= 0 && petId <= 15);
+     require(petId >= 0 && petId <= 15,"pet id is out of range");
 
      adopters[petId] = msg.sender;
 
-     return petId;
+     return int(petId);
    }
    ```
 
@@ -329,7 +329,7 @@ To test the `adopt()` function, recall that upon success it returns the given `p
    ```javascript
    // Testing the adopt() function
    function testUserCanAdoptPet() public {
-     uint returnedId = adoption.adopt(expectedPetId);
+     uint returnedId = uint(adoption.adopt(expectedPetId));
 
      Assert.equal(returnedId, expectedPetId, "Adoption of the expected pet should match what is returned.");
    }
