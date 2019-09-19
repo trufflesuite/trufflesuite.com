@@ -119,6 +119,11 @@
     "stars": 10,
     "tags": ["community"]
   },
+  "drizzle-tutorial-with-react-hooks": {
+    "description": "Drizzle tutorial. Drizzle is a reactive Ethereum datastore for dapp UIs.",
+    "stars": 1,
+    "tags": ["community", "drizzle", "ethereum", "hooks", "react", "redux"]
+  },
   "drizzle-truffle-ganache-docker-box": {
     "description": "",
     "stars": 0,
@@ -146,6 +151,11 @@
   },
   "HelloWorldBox": {
     "description": "This truffle box could used for Dapp & ICO development with deployment. Ready to migrate with infura or local developement.",
+    "stars": 0,
+    "tags": ["community"]
+  },
+  "koa-trufflebox": {
+    "description": "Truffle box to get up and running quickly with Koa",
     "stars": 0,
     "tags": ["community"]
   },
@@ -184,6 +194,11 @@
     "stars": 24,
     "tags": ["community"]
   },
+  "react_hooks_box": {
+    "description": "",
+    "stars": 2,
+    "tags": ["community"]
+  },
   "react-uport-box": {
     "description": "Truffle and React/Redux boilerplate with uPort Connect",
     "stars": 4,
@@ -194,6 +209,11 @@
     "stars": 15,
     "tags": ["community"]
   },
+  "skaledapp": {
+    "description": "",
+    "stars": 3,
+    "tags": ["community", "skale", "skale-network", "angular8", "angular-material", "ethereum", "solidity"]
+  },
   "svelte-box": {
     "description": "A truffle box for svelte",
     "stars": 9,
@@ -203,6 +223,11 @@
     "description": "Truffle Dapp boilerplate for ThunderCore",
     "stars": 0,
     "tags": ["community", "thundercore"]
+  },
+  "tomochain-box": {
+    "description": "🍫 TomoChain starter truffle box",
+    "stars": 6,
+    "tags": ["community", "tomochain", "truffle", "truffle-box", "smart-contracts"]
   },
   "truffle-ci-box": {
     "description": "Truffle box for quick integration with Travis CI and Coveralls",
