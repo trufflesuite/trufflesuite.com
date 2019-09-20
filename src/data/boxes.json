@@ -155,7 +155,7 @@
     "tags": ["community"]
   },
   "koa-trufflebox": {
-    "description": "Truffle box to get up and running quickly with Koa",
+    "description": "- Production grade lightweight JSON based logging utility\n- configurable env's based on current NODE_ENV\n- Error handling middlewares\n- Easily pluggable controllers and routers\n- The project structure is highly modular and can be directly used or extended for production purpose",
     "stars": 0,
     "tags": ["community"]
   },

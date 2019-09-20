@@ -116,7 +116,7 @@
                     <h5 class="card-title">{{this.userOrg}}/{{this.repoName}}</h5>
                   {{/if}}
                   <p class="box-star-count"><i class="fas fa-star"></i> {{getMetadata "boxMeta" this.repoName "stars"}}</p>
-                  <p class="card-text box-description">{{getMetadata "boxMeta" this.repoName "description"}}</p>
+                  <p class="card-text box-description">{{{breaklines (getMetadata "boxMeta" this.repoName "description")}}}</p>
                   <p class="card-text">
                     <i class="fas fa-tags"></i> <span class="box-tags">{{getBoxTags this.repoName}}</span>
                   </p>
