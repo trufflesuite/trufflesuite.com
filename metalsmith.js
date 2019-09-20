@@ -91,7 +91,7 @@ function app(clean) {
   .use(redirect({
     redirections: {
       "/docs/truffle/getting-started/working-with-quorum": "/docs/truffle/distributed-ledger-support/working-with-quorum",
-      "/docs/truffle/getting-started/hyperledger-evem": "/docs/truffle/distributed-ledger-support/working-with-hyperledger-evem",
+      "/docs/truffle/getting-started/working-with-hyperledger-evm": "/docs/truffle/distributed-ledger-support/working-with-hyperledger-evm",
     }
   }));
 }
