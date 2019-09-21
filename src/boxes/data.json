@@ -108,6 +108,12 @@
     "official": true
   },
   {
+    "userOrg": "truffle-box",
+    "displayName": "drizzle-vue-box",
+    "repoName": "vue-box",
+    "official": true
+  },
+  {
     "userOrg": "kaleido-io",
     "displayName": "drizzle-kaleido-box",
     "repoName": "drizzle-kaleido-box",

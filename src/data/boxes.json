@@ -9,6 +9,11 @@
     "stars": 6,
     "tags": ["official", "drizzle", "react-native"]
   },
+  "drizzle-vue-box": {
+    "description": "Starter box to begin your Drizzle Vue dapp.",
+    "stars": 6,
+    "tags": ["official", "drizzle", "vue-plugin", "Vue"]
+  },
   "react-box": {
     "description": "Truffle, Webpack and React boilerplate.",
     "stars": 379,
