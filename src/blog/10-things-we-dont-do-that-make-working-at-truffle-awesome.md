@@ -1,11 +1,3 @@
-<div class="post-trufflecon-box mb-5">
-  **[TruffleCon 2019](https://www.trufflesuite.com/trufflecon2019)** is happening August 2-4 on Microsoft’s campus in Redmond, WA. This year’s event will include 60+ speakers from the blockchain ecosystem, along with hands-on workshops geared toward novice users and expert builders alike. The Truffle team is ramping up for TruffleCon 2019 by writing a daily blog post about everything that’s on our minds. We hope you enjoy and we’ll see you in Redmond!
-
-  <div class="text-center">
-    <a class="btn btn-truffle mt-3" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>
-
 ![tapestry of Truffle team headshots](/img/blog/10-things-we-dont-do-that-make-working-at-truffle-awesome/layer-1.jpg)
 
 At Truffle we have an extremely tight-knit team. You'll see that at this year's TruffleCon, a conference for hundreds of attendees organized by only a handful of people. We often have more work than we can handle, yet we take it on because we love the work we're doing and we love the people we work with. In my history of hopping startups – I'm currently on number nine – I haven't seen this anywhere else, so I wanted to take the time to highlight some things that set Truffle apart from the rest. Here's a list of what we don't do that makes working at Truffle awesome:
@@ -30,10 +22,3 @@ Working at Truffle has been an amazing journey. It's incredibly humbling to see 
 
 ![Truffle team members preparing for TruffleCon 2019](/img/blog/10-things-we-dont-do-that-make-working-at-truffle-awesome/layer-7.jpg)
 
-<div class="post-trufflecon-box mt-5 text-center">
-  Get your ticket for TruffleCon 2019 Today
-
-  <div class="mt-3">
-    <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>

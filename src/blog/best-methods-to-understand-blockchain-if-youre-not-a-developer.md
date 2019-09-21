@@ -1,11 +1,3 @@
-<div class="post-trufflecon-box mb-5">
-  **[TruffleCon 2019](/trufflecon2019)** is happening August 2-4 on Microsoft's campus in Redmond, WA. This year's event will include 60+ speakers from the blockchain ecosystem, along with hands-on workshops geared toward novice users and expert builders alike. The Truffle team is ramping up for TruffleCon 2019 by writing a daily blog post about everything that's on our minds. We hope you enjoy and we'll see you in Redmond!
-
-  <div class="text-center">
-    <a class="btn btn-truffle mt-3" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>
-
 As a non-technical person, it feels like it takes 1.21 gigawatts to keep up with the speed of technology - even Doc Brown himself couldn't have predicted all of the technological advancements with his flux capacitor. Not only are we trying to keep up with technologies like blockchain, machine learning, and AI, but we have an overwhelming amount of information on the web all at the click of a mouse. It's overwhelming to the point that it's difficult to even know where to begin. However, online blockchain educational materials have started to ramp up. As I write this, I'm confident I'll start seeing “ Blockchain for dummies” online course advertisements on my browser (Opt-in, of course, because I'm using Brave). Mind-blowing! Let me help you begin by slowing down in order to speed up effectively.
 
 So you're someone who's not technical that wants to learn blockchain - great! Whether you're technical or non-technical isn't necessarily contingent on understanding an emerging technology like blockchain. Rather it's how you position yourself in the marketplace where you'll start to see the fruits of your labor.
@@ -41,11 +33,3 @@ Listening to a [Podcast](https://player.fm/podcasts/Blockchain) is great. Especi
 </h3>
 
 Finally, and I may be a little bias, but if you really want to increase the pace at which you can comprehend blockchain then go to TruffleCon! Come say hi to all of us at Truffle. Come say hello to all of the speakers and blockchain company representatives. Ask us questions. Let us help you understand blockchain better. Let's network. Let's have a relationship that will enable amicability. Or better yet, let's interop with each other to leverage the power of blockchain for careers, security, and better transparency in an ever-growing technological world, one node at a time.
-
-<div class="post-trufflecon-box mt-5 text-center">
-  Get your ticket for TruffleCon 2019 Today
-
-  <div class="mt-3">
-    <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>

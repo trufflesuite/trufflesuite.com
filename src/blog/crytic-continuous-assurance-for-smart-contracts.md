@@ -1,12 +1,4 @@
-<div class="post-trufflecon-box mb-5">
-  **[TruffleCon 2019](https://www.trufflesuite.com/trufflecon2019)** is happening August 2-4 on Microsoft’s campus in Redmond, WA. This year’s event will include 60+ speakers from the blockchain ecosystem, along with hands-on workshops geared toward novice users and expert builders alike. The Truffle team is ramping up for TruffleCon 2019 by writing a daily blog post about everything that’s on our minds. We hope you enjoy and we’ll see you in Redmond!
-
-  <div class="text-center">
-    <a class="btn btn-truffle mt-3" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>
-
-We are proud to announce our new Smart contract security product: [https://crytic.io/](https://crytic.io/). Crytic provides continuous assurance for smart contracts. The platform reports build status on every commit and runs a suite of security analyses for immediate feedback. 
+We are proud to announce our new Smart contract security product: [https://crytic.io/](https://crytic.io/). Crytic provides continuous assurance for smart contracts. The platform reports build status on every commit and runs a suite of security analyses for immediate feedback.
 
 The beta access will be open soon. Follow us [on twitter](https://twitter.com/CryticCI) to be notified and benefit from the service as soon as possible! The first three months are free.
 
@@ -80,11 +72,3 @@ We are constantly improving Crytic. Expect to see new bug detectors and new feat
 Questions? Bring them to TruffleCon, and pose them to us at our booth or at our Friday workshop [on automated vulnerability detection tools](https://trufflecon2019.sched.com/event/RFQL/how-to-build-secure-smart-contracts-a-deep-dive-into-automated-tools?iframe=no&w=100%&sidebar=yes&bg=no)!
 
 Whether or not you can make it to TruffleCon, join our [slack channel](https://empireslacking.herokuapp.com/) (#crytic) for support, and watch [@CryticCI](https://twitter.com/CryticCI) to find out as soon as our beta is open.
-
-<div class="post-trufflecon-box mt-5 text-center">
-  Get your ticket for TruffleCon 2019 Today
-
-  <div class="mt-3">
-    <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>

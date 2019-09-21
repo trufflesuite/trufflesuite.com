@@ -1,11 +1,3 @@
-<div class="post-trufflecon-box mb-5">
-  **[TruffleCon 2019](https://www.trufflesuite.com/trufflecon2019)** is happening August 2-4 on Microsoft’s campus in Redmond, WA. This year’s event will include 60+ speakers from the blockchain ecosystem, along with hands-on workshops geared toward novice users and expert builders alike. The Truffle team is ramping up for TruffleCon 2019 by writing a daily blog post about everything that’s on our minds. We hope you enjoy and we’ll see you in Redmond!
-
-  <div class="text-center">
-    <a class="btn btn-truffle mt-3" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>
-
 ## Introducing Truffle DB, part 1: Artifact archeology
 Truffle is not a small utility: it compiles your contracts, deploys them to multiple networks, runs your automated tests, provides an interactive debugger for when things go wrong, offers a library for interacting with your contracts on the frontend, … (*the list goes on.*) With just over 20,000 lines of code and close to thirty discrete software packages, Truffle has a lot going on.
 
@@ -29,7 +21,7 @@ For starters: artifact files are huge! Too huge! In addition to Truffle reading 
   *for the curious: the AST is the reason your code works whether you wrote it all on a single line or not. Source gets parsed, and the AST is the result. Truffle and other tools rely on the AST for things like debugging, code coverage, and linting.</figcaption>
 </figure>
 
-By the byte, almost all of the information in each contract artifact is for internal use or for some specific purpose. **Only a small subset of the data in each artifact is necessary for your frontend or for you to think about directly.** Thus far, users who have struggled with these large files needed to use a tool like [jq](https://stedolan.github.io/jq/) or write a custom solution. 
+By the byte, almost all of the information in each contract artifact is for internal use or for some specific purpose. **Only a small subset of the data in each artifact is necessary for your frontend or for you to think about directly.** Thus far, users who have struggled with these large files needed to use a tool like [jq](https://stedolan.github.io/jq/) or write a custom solution.
 
 In addition to these files being too large, the information is grouped purely by the idea of “contract name”. What if you want to have two contracts with the same name? You can’t. What if you want to debug an old version of your contract, deployed to a testnet? I hope you backed up your old artifacts directory somehow.
 
@@ -55,11 +47,3 @@ We’ll get into it more in the next post, but Truffle DB aims to provide two th
 
 In doing this, we’re taking a data-first approach, organizing your project’s information through immutable records and a clean separation of concerns. Stay tuned for the next post, where we’ll talk about this more and outline our release plan for Truffle DB: what we’ll be releasing first, what work still needs to be done, and how we plan to handle backwards compatibility over time.
 
-
-<div class="post-trufflecon-box mt-5 text-center">
-  Get your ticket for TruffleCon 2019 Today
-
-  <div class="mt-3">
-    <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>

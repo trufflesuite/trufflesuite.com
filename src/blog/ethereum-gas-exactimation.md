@@ -161,7 +161,6 @@ Error: Returned error: VM Exception while processing transaction: revert
 
 Exactimation confirmed 🚀.
 
-#### For a deeper dive into gas exactimation, join us for [TruffleCon 2019](https://www.trufflesuite.com/trufflecon2019?utm_source=medium&utm_medium=banner&utm_campaign=medium) August 2–4 at Microsoft’s campus in Redmond, WA! [Get Tickets](https://www.eventbrite.com/e/trufflecon-2019-blockchain-developer-conference-tickets-58020862963?aff=Medium&utm_source=medium&utm_medium=banner&utm_campaign=medium)
 
 Note: Since the initial release of gas exactimation, an even more performant iteration of the algorithm is currently in review here.
 
