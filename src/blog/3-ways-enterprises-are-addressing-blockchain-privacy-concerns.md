@@ -1,11 +1,3 @@
-<div class="post-trufflecon-box mb-5">
-  **[TruffleCon 2019](https://www.trufflesuite.com/trufflecon2019)** is happening August 2-4 on Microsoft’s campus in Redmond, WA. This year’s event will include 60+ speakers from the blockchain ecosystem, along with hands-on workshops geared toward novice users and expert builders alike. The Truffle team is ramping up for TruffleCon 2019 by writing a daily blog post about everything that’s on our minds. We hope you enjoy and we’ll see you in Redmond!
-
-  <div class="text-center">
-    <a class="btn btn-truffle mt-3" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>
-
 [Blockchain has been touted as the great connector to integrate businesses under consortium networks](https://www.forbes.com/sites/andrewarnold/2019/02/21/why-2019-may-become-the-year-of-enterprise-blockchain/#66c9e516427e). It’s ability to verify data using smart contracts and provide transparency across network participants through immutable shared data has people talking about a technical revolution. However, this benefit has been a double-edged sword because the enterprise world is skeptical about sharing sensitive data on a ledger where the information cannot be deleted. The good news is, this year has seen numerous announcements of single and multi-party blockchain pilots by the Fortune 500 such as… [Starbucks](https://news.microsoft.com/transform/starbucks-turns-to-technology-to-brew-up-a-more-personal-connection-with-its-customers/) and [MetLife](https://www.forbes.com/sites/stevenehrlich/2019/06/19/metlife-plans-to-disrupt-2-7-trillion-life-insurance-industry-using-ethereum-blockchain/#3e9a87277022). Data privacy issues haven’t stopped them and the enterprise blockchain world has taken these steps to shift their thinking.
 
 ## 1. Store references to data on the blockchain
@@ -26,11 +18,3 @@ Finally, with all the hype on blockchain’s potential in the last years, we hav
 West Monroe is a national business and technology consulting firm that partners with dynamic organizations to reimagine, build, and operate their businesses at peak performance. Our team of more than 1,400 professionals across nine offices is comprised of an uncommon blend of business consultants and deep technologists. I am one of those consultants and I am one of the leaders of our blockchain center of excellence. I’ll be presenting on Sunday morning (8/4) about one of our blockchain projects that looks to [incentivize electric vehicle owners to charge with cleaner energy](https://trufflecon2019.sched.com/event/RHIR/driving-renewable-energy-usage-with-blockchain-and-electric-vehicles). Check us out at our [website](https://www.westmonroepartners.com/) and read more about our [blockchain perspectives](https://blog.westmonroepartners.com/?s=blockchain) on our blog!
 
 Danny Pan is a consultant with West Monroe Partner’s Seattle Technology Practice. He focuses on providing value in adopting blockchain, distributed technologies, and robust SDLC practices. Contact Danny at [dpan@wmp.com](mailto:dpan@wmp.com)
-
-<div class="post-trufflecon-box mt-5 text-center">
-  Join Danny along with 60+ speakers at TruffleCon 2019 in Redmond, WA August 2-4!
-
-  <div class="mt-3">
-    <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>

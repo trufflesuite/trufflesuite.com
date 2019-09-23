@@ -1,11 +1,3 @@
-<div class="post-trufflecon-box mb-5">
-  **[TruffleCon 2019](https://www.trufflesuite.com/trufflecon2019)** is happening August 2-4 on Microsoft’s campus in Redmond, WA. This year’s event will include 60+ speakers from the blockchain ecosystem, along with hands-on workshops geared toward novice users and expert builders alike. The Truffle team is ramping up for TruffleCon 2019 by writing a daily blog post about everything that’s on our minds. We hope you enjoy and we’ll see you in Redmond!
-
-  <div class="text-center">
-    <a class="btn btn-truffle mt-3" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>
-
 **By Josh Quintal, Head of Product & Marketing**
 
 The blockchain space is hitting a plateau.
@@ -20,7 +12,7 @@ This year we have over 60 speakers across 60 sessions including: Thomas Hodges o
 
 TruffleCon is a conference, sure, but it's more than that: it's the feeling of excitement when learning a new technology; the eureka we felt when first discovering this new frontier. It's connections made in minutes that can last a lifetime.
 
-It's the culmination of everything we've worked for since the founding of this company. 
+It's the culmination of everything we've worked for since the founding of this company.
 
 I hope to not only see you there but to have a chat about what we do well and how we can improve (you'll also get a hat). Together we're building the community that will take us from this plateau onward to the next meteoric growth spurt.
 
@@ -31,11 +23,3 @@ Sincerely,
 </p>
 
 Josh Quintal
-
-<div class="post-trufflecon-box mt-5 text-center">
-  Get your ticket for TruffleCon 2019 Today
-
-  <div class="mt-3">
-    <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>

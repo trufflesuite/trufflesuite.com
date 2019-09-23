@@ -1,11 +1,3 @@
-<div class="post-trufflecon-box mb-5">
-  **[TruffleCon 2019](/trufflecon2019)** is happening August 2-4 on Microsoft's campus in Redmond, WA. This year's event will include 60+ speakers from the blockchain ecosystem, along with hands-on workshops geared toward novice users and expert builders alike. The Truffle team is ramping up for TruffleCon 2019 by writing a daily blog post about everything that's on our minds. We hope you enjoy and we'll see you in Redmond!
-
-  <div class="text-center">
-    <a class="btn btn-truffle mt-3" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>
-
 ![Truffle + Axoni](/img/blog/axonis-enterprise-use-of-truffle/truffle-axoni.png)
 
 ## Axoni Background
@@ -59,17 +51,17 @@ In terms of implementation, a truffle exec script reads this configuration file,
 const run = async (done) => {
     let jobParams = args;
 
-        // Configure specific variables for a PROD-like environment: 
+        // Configure specific variables for a PROD-like environment:
     if (process.env.ENV === 'PROD') {
         jobParams = Object.assign(args, handleProd());
     }
 
        //hoisting injected vars to global scope:
-    global.web3 = web3; 
-    global.artifacts = artifacts; 
+    global.web3 = web3;
+    global.artifacts = artifacts;
 
         // Create instance of job based on type
-    const jobInstance = new Job(jobParams.job, jobParams); 
+    const jobInstance = new Job(jobParams.job, jobParams);
 
         //Run job by deploying and invoking an initialization method on each contract
     await jobInstance.run().catch(e => done(e));
@@ -92,10 +84,3 @@ In the meantime, we hope the above at least provides a high-level example of an 
 
 The Axoni team and I look forward to discussing this topic and much more (such as [Axlang, our Scala-based Solidity-alternative](https://axoni.com/axlang/)) at Trufflecon.
 
-<div class="post-trufflecon-box mt-5 text-center">
-  Join Jonathan along with 60+ speakers at TruffleCon 2019 in Redmond, WA August 2-4!
-
-  <div class="mt-3">
-    <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>
