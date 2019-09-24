@@ -9,10 +9,10 @@
     "stars": 6,
     "tags": ["official", "drizzle", "react-native"]
   },
-  "drizzle-vue-box": {
+  "vue-box": {
     "description": "Starter box to begin your Drizzle Vue dapp.",
     "stars": 6,
-    "tags": ["official", "drizzle", "vue-plugin", "Vue"]
+    "tags": ["official", "drizzle", "vue-plugin", "vue"]
   },
   "react-box": {
     "description": "Truffle, Webpack and React boilerplate.",
@@ -288,11 +288,6 @@
     "description": "A truffle box to serve as the foundation of any Truffle and Vue.js dApp. Comes with Vue.js, vue-router and Vuex.",
     "stars": 62,
     "tags": ["community", "ethereum", "truffle", "webpack", "vuejs", "vue-router", "vuex", "javascript", "solidity"]
-  },
-  "vue-box": {
-    "description": "",
-    "stars": 15,
-    "tags": ["community"]
   },
   "vue-dark-chocolate": {
     "description": "A truffle box that comes with everything you need to start using smart contracts from a Vue App, with Bootstrap styling and components. Supporting frameworks include Vuex, Vue-Router, Bootstrap 4 (via Bootstrap-Vue), and webpack. The sample uses webpack-dev-server for hot-reloading or you can build and serve from Express.",
