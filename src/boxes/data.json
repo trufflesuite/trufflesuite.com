@@ -13,6 +13,12 @@
   },
   {
     "userOrg": "truffle-box",
+    "displayName": "drizzle-vue-box",
+    "repoName": "vue-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
     "displayName": "react",
     "repoName": "react-box",
     "official": true
