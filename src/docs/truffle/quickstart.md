@@ -80,7 +80,7 @@ Once this operation is completed, you'll now have a project structure with the f
 1. On a terminal, run the Solidity test:
 
    ```shell
-   truffle test ./test/TestMetacoin.sol
+   truffle test ./test/TestMetaCoin.sol
    ```
 
    You will see the following output
