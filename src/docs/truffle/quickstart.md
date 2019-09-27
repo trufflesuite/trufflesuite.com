@@ -285,7 +285,7 @@ The only extra step, aside from running Ganache, is that it requires editing the
 
 1. Download and install [Ganache](/ganache).
 
-1. Open `truffle.js` in a text editor. Replace the content with the following:
+1. Open `truffle-config.js` or `truffle.js` in a text editor. Replace the content with the following:
 
    ```javascript
    module.exports = {
