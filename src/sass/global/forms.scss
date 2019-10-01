@@ -106,6 +106,12 @@
     list-style-type: none;
     padding-left: 0;
   }
+
+  @media screen and (max-width: 767.98px) {
+    .hs-form-field {
+      display: block;
+    }
+  }
 }
 
 .hs-form-docs {
