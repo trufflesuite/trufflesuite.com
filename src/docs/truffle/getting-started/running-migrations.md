@@ -180,7 +180,7 @@ You can optionally pass an array of contracts, or an array of arrays, to speed u
 
 Note that you will need to deploy and link any libraries your contracts depend on first before calling `deploy`. See the `link` function below for more details.
 
-For more information, please see the [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/truffle-contract) documentation.
+For more information, please see the [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) documentation.
 
 
 Examples:

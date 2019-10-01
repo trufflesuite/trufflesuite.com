@@ -1,11 +1,3 @@
-<div class="post-trufflecon-box mb-5">
-  **[TruffleCon 2019](https://www.trufflesuite.com/trufflecon2019)** is happening August 2-4 on Microsoft’s campus in Redmond, WA. This year’s event will include 60+ speakers from the blockchain ecosystem, along with hands-on workshops geared toward novice users and expert builders alike. The Truffle team is ramping up for TruffleCon 2019 by writing a daily blog post about everything that’s on our minds. We hope you enjoy and we’ll see you in Redmond!
-
-  <div class="text-center">
-    <a class="btn btn-truffle mt-3" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>
-
 The blockchain world has a UI problem. This is what an Ethereum receiving address looks like:
 
 **0xfB6916095ca1df60bB79Ce92cE3Ea74c37c5d359**
@@ -24,7 +16,7 @@ ENS launched in 2017 with the native TLD.ETH, but we’ve been experimenting wit
 
 We want to make it as easy as possible for dapp developers to take advantage of the big UI gains that ENS provides, which is why we’re working with Truffle. We are excited to be announcing several useful ENS integrations built into TruffleSuite at TruffleCon, so stay tuned!
 
-[Register your domain name](https://ens.domains/) using ENS today! 
+[Register your domain name](https://ens.domains/) using ENS today!
 
 Helpful Links:
 * Website: [https://ens.domains/](https://ens.domains/)
@@ -33,10 +25,3 @@ Helpful Links:
 * Gitter: [https://gitter.im/ethereum/go-ethereum/name-registry](https://gitter.im/ethereum/go-ethereum/name-registry)
 * Forum: [https://discuss.ens.domains/](https://discuss.ens.domains/)
 
-<div class="post-trufflecon-box mt-5 text-center">
-  Join Brantly and 60+ other speakers from Microsoft, RSK, Quorum, GitCoin, Security Innovation, Trail of Bits, Core Scientific, and more!
-
-  <div class="mt-3">
-    <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>

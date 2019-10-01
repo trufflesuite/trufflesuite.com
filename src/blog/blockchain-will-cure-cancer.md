@@ -1,11 +1,3 @@
-<div class="post-trufflecon-box mb-5">
-  **[TruffleCon 2019](/trufflecon2019)** is happening August 2-4 on Microsoft's campus in Redmond, WA. This year's event will include 60+ speakers from the blockchain ecosystem, along with hands-on workshops geared toward novice users and expert builders alike. The Truffle team is ramping up for TruffleCon 2019 by writing a daily blog post about everything that's on our minds. We hope you enjoy and we'll see you in Redmond!
-
-  <div class="text-center">
-    <a class="btn btn-truffle mt-3" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>
-
 <p style="width: 40%; float: left; margin-right: 1rem;">
   <img style="margin-top: 0.3rem; margin-bottom: 0;" class="img-fluid" src="/img/blog/blockchain-will-cure-cancer/laptop.jpg" title="Laptop" alt="Laptop">
 </p>
@@ -48,10 +40,3 @@ While it does not appear that cancer fundraising has made its way onto a blockch
 
 Blockchain technology is still in early stages, and it may be too soon to know precisely in which ways it may change our world. Developments in the medical applications of blockchain technology are very encouraging. Cancer has evaded a cure for many years, and the advent of new ways for scientists and physicians to learn, collaborate, and experiment may be just what the medical community needs.
 
-<div class="post-trufflecon-box mt-5 text-center">
-  Get your ticket for TruffleCon 2019 Today
-
-  <div class="mt-3">
-    <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>

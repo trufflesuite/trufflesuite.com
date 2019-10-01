@@ -111,7 +111,7 @@ know how we can improve it!
 const truffle = require("truffle");
 ```
 
-Beginning with `v5.0.30`, Truffle exports the methods listed in [truffle-core/index.js](https://github.com/trufflesuite/truffle/blob/develop/packages/truffle-core/index.js). This means
+Beginning with `v5.0.30`, Truffle exports the methods listed in [core/index.js](https://github.com/trufflesuite/truffle/blob/develop/packages/core/index.js). This means
 your plugin can consume the user's Truffle instance as a library and access a subset of its internal command APIs.
 
 These are useful if you need to touch several Truffle commands in succession. For example, imagine a plugin that evaluated how a contract system performed at different levels of solc optimization. Its workflow might look like:

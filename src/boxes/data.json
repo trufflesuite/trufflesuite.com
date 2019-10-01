@@ -13,6 +13,12 @@
   },
   {
     "userOrg": "truffle-box",
+    "displayName": "drizzle-vue-box",
+    "repoName": "vue-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
     "displayName": "react",
     "repoName": "react-box",
     "official": true
@@ -144,6 +150,12 @@
     "official": false
   },
   {
+    "userOrg": "atkinsonholly",
+    "displayName": "drizzle-tutorial-with-react-hooks",
+    "repoName": "drizzle-tutorial-with-react-hooks",
+    "official": false
+  },
+  {
     "userOrg": "lzhou1110",
     "displayName": "drizzle-truffle-ganache-docker-box",
     "repoName": "drizzle-truffle-ganache-docker-box",
@@ -177,6 +189,12 @@
     "userOrg": "yehia67",
     "displayName": "helloworldbox",
     "repoName": "HelloWorldBox",
+    "official": false
+  },
+  {
+    "userOrg": "manjeet-thadani",
+    "displayName": "koa-trufflebox",
+    "repoName": "koa-trufflebox",
     "official": false
   },
   {
@@ -222,6 +240,13 @@
     "official": false
   },
   {
+    "userOrg": "brannanc",
+    "displayName": "react_hooks_box",
+    "repoName": "react_hooks_box",
+    "slug": "react-hooks-box",
+    "official": false
+  },
+  {
     "userOrg": "uport-project",
     "displayName": "react-uport-box",
     "repoName": "react-uport-box",
@@ -234,6 +259,12 @@
     "official": false
   },
   {
+    "userOrg": "antoniocardenas",
+    "displayName": "skaledapp",
+    "repoName": "skaledapp",
+    "official": false
+  },
+  {
     "userOrg": "antony",
     "displayName": "svelte-box",
     "repoName": "svelte-box",
@@ -243,6 +274,12 @@
     "userOrg": "thundercore",
     "displayName": "thunder-box",
     "repoName": "thunder-box",
+    "official": false
+  },
+  {
+    "userOrg": "etienne-napoleone",
+    "displayName": "tomochain-box",
+    "repoName": "tomochain-box",
     "official": false
   },
   {

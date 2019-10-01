@@ -1,11 +1,3 @@
-<div class="post-trufflecon-box mb-5">
-  **[TruffleCon 2019](https://www.trufflesuite.com/trufflecon2019)** is happening August 2-4 on Microsoft’s campus in Redmond, WA. This year’s event will include 60+ speakers from the blockchain ecosystem, along with hands-on workshops geared toward novice users and expert builders alike. The Truffle team is ramping up for TruffleCon 2019 by writing a daily blog post about everything that’s on our minds. We hope you enjoy and we’ll see you in Redmond!
-
-  <div class="text-center">
-    <a class="btn btn-truffle mt-3" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>
-
 In this article we explore 5 trends impacting the developer-experience (or DX) when it comes to building blockchain-based solutions. Specifically, applications and services that leverage a blockchain or distributed ledger or as part of their overall architecture.
 
 This is, of course, is by no means a definitive list. As with everything in the industry, change is happening fast and as such, this is more of a selection of trends that are on the team’s radar. If there’s anything we’ve missed or should know about, we’d love to hear from you (or speak in person at [TruffleCon 2019](https://www.trufflesuite.com/trufflecon2019)).
@@ -14,7 +6,7 @@ This is, of course, is by no means a definitive list. As with everything in the 
 
 Obviously we’re a little biased, but in this case, we’re talking about tools and utilities that are not [chocolate-themed](https://www.trufflesuite.com/). It’s literally every day we collectively come across something new that makes our lives as developers (or users, auditors, admins, etc) easier.
 
-This is a big deal for the long-term success of the wider ecosystem because happy and productive developers obviously strongly correlates with increased experimentation, the volume of shipped products and services, and expedites the process of on-boarding new people (developers or otherwise) into the blockchain space. 
+This is a big deal for the long-term success of the wider ecosystem because happy and productive developers obviously strongly correlates with increased experimentation, the volume of shipped products and services, and expedites the process of on-boarding new people (developers or otherwise) into the blockchain space.
 
 At Truffle, we’re also pushing harder than ever to make the DX as sweet as possible. Like, raspberry truffle sweet. This includes new features and enhancements to the existing suite (such as integration with [Hyperledger Fabric's chaincode EVM](https://github.com/trufflesuite/truffle/releases/tag/v5.0.27)), as well as the upcoming [Truffle DB](https://www.trufflesuite.com/blog/introducing-truffle-db-part-1) and [Truffle Teams](https://www.trufflesuite.com/teams).
 
@@ -40,7 +32,7 @@ It’s almost too easy. Seriously though, this evolution of developer experience
 
 While veteran projects like [OpenZeppelin](https://openzeppelin.org/) continue to blossom, one interesting trend we’ve seen is larger organizations’ increasing embrace of open-source with the recent release of some exciting new projects.
 
-Some great examples of this include Ernst & Young’s [Nightfall](https://github.com/EYBlockchain/nightfall), Samsung’s [Blockchain SDK](https://developer.samsung.com/blockchain), Microsoft’s [Confidential Consortium Framework](https://github.com/microsoft/CCF), and the continued evolution of the JPMorgan-backed [Quorum](https://github.com/jpmorganchase/quorum). We’re equally pumped by the launch of Cloudflare’s [Ethereum gateway](https://blog.cloudflare.com/cloudflare-ethereum-gateway/) too! 
+Some great examples of this include Ernst & Young’s [Nightfall](https://github.com/EYBlockchain/nightfall), Samsung’s [Blockchain SDK](https://developer.samsung.com/blockchain), Microsoft’s [Confidential Consortium Framework](https://github.com/microsoft/CCF), and the continued evolution of the JPMorgan-backed [Quorum](https://github.com/jpmorganchase/quorum). We’re equally pumped by the launch of Cloudflare’s [Ethereum gateway](https://blog.cloudflare.com/cloudflare-ethereum-gateway/) too!
 
 It’s exciting to see companies of all shapes and sizes embracing the paradigm in ways that we can all benefit.
 
@@ -53,11 +45,3 @@ We’re rapidly seeing the decentralized equivalent of swaths of traditional fin
 And of course it goes far beyond finance. Everything from supply chains to in-game assets are steadily turning Ethereum into the “[global platform for every asset](https://twitter.com/MuteDialog/status/1149047398532075526)”.
 
 **It’s never been a better time to building on Ethereum. From tooling to infrastructure to a world-class open-source ecosystem, the developer-experience continues to blossom.**
-
-<div class="post-trufflecon-box mt-5 text-center">
-  Get your ticket for TruffleCon 2019 Today
-
-  <div class="mt-3">
-    <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>

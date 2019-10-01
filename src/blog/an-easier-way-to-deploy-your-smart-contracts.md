@@ -1,11 +1,3 @@
-<div class="post-trufflecon-box mb-5">
-  **[TruffleCon 2019](/trufflecon2019)** is happening August 2-4 on Microsoft's campus in Redmond, WA. This year's event will include 60+ speakers from the blockchain ecosystem, along with hands-on workshops geared toward novice users and expert builders alike. The Truffle team is ramping up for TruffleCon 2019 by writing a daily blog post about everything that's on our minds. We hope you enjoy and we'll see you in Redmond!
-
-  <div class="text-center">
-    <a class="btn btn-truffle mt-3" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>
-
 **TL;DR** - Deploying your smart contracts shouldn't be difficult, and the process should be flexible. I give a sneak peek at the next feature we're building: an **easy to use interface to deploy your Truffle projects with [Truffle Teams](/teams)**! It's going to be awesome, and **you can be the first to use it**! I'll be giving a **hands-on workshop from 9AM-12PM on Friday, August 2nd, at [TruffleCon 2019](/trufflecon2019)** that will walk you through through the entire Truffle Teams lifecycle, including the **never-before-used Deployments interface**! See you there!
 
 ---
@@ -179,15 +171,3 @@ But we're not done yet! You've finished your testing on Ropsten, and you're now 
 I really hope you're going to TruffleCon; it's going to be awesome. Even more so because you can **be the first to try Truffle Teams Deployments in my workshop!** In my `Push It! Push It Real Good: Truffle Teams Intro & Deployments` (9AM-12PM on Friday, Aug, 2nd) workshop, we'll cover this entire lifecycle: hooking up your repository, getting your first build to pass, deploying to Ropsten, and finally monitoring transactions made against your contracts (we didn't talk about this here; check out the [docs](/docs/teams/contracts/contract-monitoring) for more details on contract monitoring).
 
 Hopefully there will be time for me to answer any questions you have, and maybe even help get your own Truffle project hooked up with Truffle Teams! If not, I will be available during the office hours at 5PM on Friday! I'm also always happy to chat anytime throughout the conference!
-
-**You can reserve your spot in my workshop [here](https://trufflecon2019.sched.com/event/RFHD/push-it-push-it-real-good-truffle-teams-intro-deployments)!**
-
-Haven't bought your ticket to TruffleCon yet, and really want to get your hands on this cool feature?? It's not too late! Hope to see you there 👇
-
-<div class="post-trufflecon-box mt-5 text-center">
-  Get your ticket for TruffleCon 2019 Today
-
-  <div class="mt-3">
-    <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>

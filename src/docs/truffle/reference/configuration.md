@@ -240,7 +240,7 @@ module.exports = {
           enabled: <boolean>,
           runs: <number>   // Optimize for how many times you intend to run the code
         },
-        evmVersion: <string> // Default: "byzantium"
+        evmVersion: <string> // Default: "petersburg"
       }
     }
   }

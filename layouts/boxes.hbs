@@ -101,10 +101,10 @@
           {{else}}
             <div class="col-xs-12 col-md-6 col-lg-4 iso-item community">
           {{/if}}
-            {{#if this.official}}
-              <a class="link-card" href="/boxes/{{this.displayName}}">
+            {{#if this.slug}}
+              <a class="link-card" href="/boxes/{{this.slug}}">
             {{else}}
-              <a class="link-card" href="/boxes/{{this.repoName}}">
+              <a class="link-card" href="/boxes/{{this.displayName}}">
             {{/if}}
               <div class="card box-card" data-userorg="{{this.userOrg}}" data-repo="{{this.repoName}}">
                 <img class="card-img-top" src="https://github.com/{{this.userOrg}}/{{this.repoName}}/blob/master/box-img-sm.png?raw=true" alt="{{this.slug}}" onerror="javascript:this.src='/img/boxes/loading-banner.png'" />
@@ -116,7 +116,7 @@
                     <h5 class="card-title">{{this.userOrg}}/{{this.repoName}}</h5>
                   {{/if}}
                   <p class="box-star-count"><i class="fas fa-star"></i> {{getMetadata "boxMeta" this.repoName "stars"}}</p>
-                  <p class="card-text box-description">{{getMetadata "boxMeta" this.repoName "description"}}</p>
+                  <p class="card-text box-description">{{{breaklines (getMetadata "boxMeta" this.repoName "description")}}}</p>
                   <p class="card-text">
                     <i class="fas fa-tags"></i> <span class="box-tags">{{getBoxTags this.repoName}}</span>
                   </p>

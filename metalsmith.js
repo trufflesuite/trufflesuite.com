@@ -13,6 +13,7 @@ var metadata = require('metalsmith-collections');
 var json_to_files = require('metalsmith-json-to-files');
 var moonSearch = require('./metalsmith-moonsearch/metalsmith-moonsearch.js');
 var siteMap = require('metalsmith-sitemap');
+var redirect = require('metalsmith-redirect');
 
 // Data
 var blogData = require('./src/blog/data.json');
@@ -86,6 +87,12 @@ function app(clean) {
   .use(moonSearch())
   .use(siteMap({
     hostname: "https://www.truffleframework.com"
+  }))
+  .use(redirect({
+    redirections: {
+      "/docs/truffle/getting-started/working-with-quorum": "/docs/truffle/distributed-ledger-support/working-with-quorum",
+      "/docs/truffle/getting-started/working-with-hyperledger-evm": "/docs/truffle/distributed-ledger-support/working-with-hyperledger-evm",
+    }
   }));
 }
 

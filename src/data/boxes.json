@@ -9,6 +9,11 @@
     "stars": 6,
     "tags": ["official", "drizzle", "react-native"]
   },
+  "vue-box": {
+    "description": "Starter box to begin your Drizzle Vue dapp.",
+    "stars": 6,
+    "tags": ["official", "drizzle", "vue-plugin", "vue"]
+  },
   "react-box": {
     "description": "Truffle, Webpack and React boilerplate.",
     "stars": 379,
@@ -119,6 +124,11 @@
     "stars": 10,
     "tags": ["community"]
   },
+  "drizzle-tutorial-with-react-hooks": {
+    "description": "Drizzle tutorial. Drizzle is a reactive Ethereum datastore for dapp UIs.",
+    "stars": 1,
+    "tags": ["community", "drizzle", "ethereum", "hooks", "react", "redux"]
+  },
   "drizzle-truffle-ganache-docker-box": {
     "description": "",
     "stars": 0,
@@ -146,6 +156,11 @@
   },
   "HelloWorldBox": {
     "description": "This truffle box could used for Dapp & ICO development with deployment. Ready to migrate with infura or local developement.",
+    "stars": 0,
+    "tags": ["community"]
+  },
+  "koa-trufflebox": {
+    "description": "- Production grade lightweight JSON based logging utility\n- configurable env's based on current NODE_ENV\n- Error handling middlewares\n- Easily pluggable controllers and routers\n- The project structure is highly modular and can be directly used or extended for production purpose",
     "stars": 0,
     "tags": ["community"]
   },
@@ -184,6 +199,11 @@
     "stars": 24,
     "tags": ["community"]
   },
+  "react_hooks_box": {
+    "description": "",
+    "stars": 2,
+    "tags": ["community"]
+  },
   "react-uport-box": {
     "description": "Truffle and React/Redux boilerplate with uPort Connect",
     "stars": 4,
@@ -194,6 +214,11 @@
     "stars": 15,
     "tags": ["community"]
   },
+  "skaledapp": {
+    "description": "",
+    "stars": 3,
+    "tags": ["community", "skale", "skale-network", "angular8", "angular-material", "ethereum", "solidity"]
+  },
   "svelte-box": {
     "description": "A truffle box for svelte",
     "stars": 9,
@@ -203,6 +228,11 @@
     "description": "Truffle Dapp boilerplate for ThunderCore",
     "stars": 0,
     "tags": ["community", "thundercore"]
+  },
+  "tomochain-box": {
+    "description": "🍫 TomoChain starter truffle box",
+    "stars": 6,
+    "tags": ["community", "tomochain", "truffle", "truffle-box", "smart-contracts"]
   },
   "truffle-ci-box": {
     "description": "Truffle box for quick integration with Travis CI and Coveralls",
@@ -258,11 +288,6 @@
     "description": "A truffle box to serve as the foundation of any Truffle and Vue.js dApp. Comes with Vue.js, vue-router and Vuex.",
     "stars": 62,
     "tags": ["community", "ethereum", "truffle", "webpack", "vuejs", "vue-router", "vuex", "javascript", "solidity"]
-  },
-  "vue-box": {
-    "description": "",
-    "stars": 15,
-    "tags": ["community"]
   },
   "vue-dark-chocolate": {
     "description": "A truffle box that comes with everything you need to start using smart contracts from a Vue App, with Bootstrap styling and components. Supporting frameworks include Vuex, Vue-Router, Bootstrap 4 (via Bootstrap-Vue), and webpack. The sample uses webpack-dev-server for hot-reloading or you can build and serve from Express.",

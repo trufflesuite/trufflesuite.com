@@ -80,7 +80,7 @@ Once this operation is completed, you'll now have a project structure with the f
 1. On a terminal, run the Solidity test:
 
    ```shell
-   truffle test ./test/TestMetacoin.sol
+   truffle test ./test/TestMetaCoin.sol
    ```
 
    You will see the following output
@@ -285,7 +285,7 @@ The only extra step, aside from running Ganache, is that it requires editing the
 
 1. Download and install [Ganache](/ganache).
 
-1. Open `truffle.js` in a text editor. Replace the content with the following:
+1. Open `truffle-config.js` in a text editor. Replace the content with the following:
 
    ```javascript
    module.exports = {
