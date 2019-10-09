@@ -1,0 +1,3 @@
+[submodule "src/devcon5"]
+	path = src/devcon5
+	url = https://github.com/trufflesuite/devcon5-pentesting-ethereum-contracts-with-ganache.git
