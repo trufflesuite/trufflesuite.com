@@ -22,8 +22,6 @@ before_script:
    fi
 
 script:
-- git submodule init
-- git submodule update
 - >
   if [ "${TRAVIS_PULL_REQUEST}" = "false" -a "$TRAVIS_BRANCH" = "${MASTER}" ];
   then
