@@ -1,0 +1,26 @@
+#types-of-honeypots{
+    
+}
+#types-of-honeypots .types-table{
+    background:rgba(255,255,255,.05);
+    border-radius: 50%/5%;
+    overflow: hidden;
+    border: solid var(--dark-porsche);
+    border-width: 0 .5vw;
+    width: 100%;
+    margin:2em 0;
+    font-weight: bold;
+    box-shadow: 0 -5px 1px var(--dark-porsche), 0 5px 1px var(--dark-porsche);
+}
+#types-of-honeypots table {
+    width: 100%;
+}
+#types-of-honeypots thead {
+    background:rgba(255,255,255,.2);
+    color:var(--dark-chocolate);
+}
+#types-of-honeypots td, #types-of-honeypots th {
+    vertical-align: middle;
+    padding:.5em;
+    border: solid 2px var(--dark-porsche);
+}
