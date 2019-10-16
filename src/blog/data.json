@@ -1,4 +1,12 @@
 {
+  "truffle-teams-now-supports-private-repositories": {
+    "title": "Truffle Teams Now Supports Private Repositories",
+    "date": "2019-10-16",
+    "author": "Josh Quintal and Mike Seese",
+    "published": true,
+    "excerpt": "We're excited to announce that you can now integrate private repositories with Truffle Teams! This will eventually be a premium feature, but we're releasing it for free while the product is still in beta.",
+    "image": "/img/blog/thumbnails/truffle-teams-private.png"
+  },
   "drizzle-150-a-new-beginning": {
     "title": "Drizzle 1.5.0: A new beginning",
     "date": "2019-9-10",
