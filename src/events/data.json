@@ -1,22 +1,12 @@
 [
   {
-    "title": "How to Use Provable + Truffle Suite Together",
-    "start": "Thursday, July 11, 2019, 11:00",
-    "end": "11:45 AM PT",
+    "title": "All about drizzle 1.5",
+    "start": "Wednesday, October 30th, 2019, 6:00",
+    "end": "6:45 PM PDT",
     "location": "Webinar",
-    "excerpt": "In this upcoming webinar Nick and Greg will showcase the Provable Truffle Box and demonstrate leveraging Provable within the Truffle framework.",
-    "eventbrite": "/events/webinar-truffle-provable",
+    "excerpt": "Join Adrian Li, Software Development Lead, on October 30th at 6:00 PDT for an evening with Drizzle. Adrian will discuss the newest features in Drizzle.",
+    "eventbrite": "https://share.hsforms.com/1E9AS0paWR4OwfyncFnwJ6Q34pbp",
     "status": "open",
-    "image": "/img/webinar-7-11-19.png"
-  },
-  {
-    "title": "TruffleCon 2019",
-    "start": "Friday, Aug 2, 2019, 9:00 AM PT",
-    "end": "Sunday, Aug 4, 2019, 6:00 PM PT",
-    "location": "Microsoft Building 33 | 16070 NE 36th Way, Redmond, WA 98052",
-    "excerpt": "TruffleCon is a gathering for Truffle users, fans, developers, and those who want to build world-changing applications powered by decentralized technologies. Join people from around the world as we meet August 2-4 in Redmond, WA to build community and foster connections in the blockchain developer space, share tips and tricks, challenges and successes.",
-    "eventbrite": "/trufflecon2019",
-    "status": "open",
-    "image": "/img/trufflecon.jpg"
+    "image": "/img/drizzle-webinar-10-2019.png"
   }
 ]
