@@ -94,7 +94,7 @@ resolver already exists, it will set the address that the resolver references
 if it is not the same as the input address.
 
 The signature for this method is
-`setAddress(name: string, addressOrContract: string | TruffleContractInstance>, from: string)`.
+`setAddress(name: string, addressOrContract: string | TruffleContractInstance>, txParams: object)`.
 
 A quick explanation of these parameters follows:
 
@@ -107,9 +107,10 @@ A quick explanation of these parameters follows:
   the network you are using, then you can use that object as an argument.
   It will use that contract's address to set the resolver target.
 
-  3. The `from` parameter is the address that you want to send the transaction
-  from. This must be the address that owns the domain in question. If this
-  address does not own the domain then the transaction will fail.
+  3. The `txParams` parameter is an object that must contain a `from` property
+  that specifies the address to send the transaction from. This must be the
+  address that owns the domain in question. If this address does not own
+  the domain then the transaction will fail.
 
 ## Automatic registry deployment
 
