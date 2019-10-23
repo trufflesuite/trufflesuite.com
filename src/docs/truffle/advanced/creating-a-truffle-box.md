@@ -77,4 +77,4 @@ If no images are provided in a box, we default to banners containing the Truffle
 
 ## Truffle site listing
 
-Before being listed on the Truffle website, all boxes undergo a screening process to ensure compatibility with Truffle. To start the pre-screening process, <a href="mailto:info@trufflesuite.com">send us an email</a> with your desired box name and brief description, along with a link to its GitHub repo to: [info@trufflesuite.com](mailto:info@trufflesuite.com).
+Before being listed on the Truffle website, all boxes undergo a screening process to ensure compatibility with Truffle. To start the pre-screening process, <a href="mailto:boxes@trufflesuite.com?subject=Truffle%20box%20review">send us an email</a> with your desired box name and brief description, along with a link to its GitHub repo to: [boxes@trufflesuite.com](mailto:boxes@trufflesuite.com?subject=Truffle%20box%20review).
