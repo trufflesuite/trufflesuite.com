@@ -24,7 +24,7 @@ Truffle Teams will then verify that the contracts exist on the given network at 
 
 ![Truffle Teams DATA view](/img/docs/teams/add-contract-04.png)
 
-Once the upload is successful and monitoring has begun, you'll be redirected to the `DATA` page. From there you can click and individual contract to see more details including successful transactions, failed transactions, and events live.
+Once the upload is successful and monitoring has begun, you'll be redirected to the `DATA` page. From there you can click an individual contract to see more details including successful transactions, failed transactions, and events live.
 
 <p class="alert alert-info">
 <strong>Note</strong>: Monitoring begins once the contract is added to Truffle Teams and does not currently include historical data from before that point.
@@ -32,4 +32,4 @@ Once the upload is successful and monitoring has begun, you'll be redirected to 
 
 ![Truffle Teams DATA view](/img/docs/teams/add-contract-06.png)
 
-![Truffle Teams DATA view](/img/docs/teams/add-contract-07.png "Montoring detail page showing details, transactions, and evevents.")
+![Truffle Teams DATA view](/img/docs/teams/add-contract-07.png "Monitoring detail page showing details, transactions, and events.")
