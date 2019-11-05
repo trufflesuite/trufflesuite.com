@@ -373,3 +373,13 @@ blockquote {
 .media-image {
   max-width: 150px; 
 }
+
+.alert-slides {
+  border-color: #fff;
+  color: #58484E;
+  background: rgba(255,255,255,.8);
+
+  a {
+    color: #58484E;
+  }
+}
