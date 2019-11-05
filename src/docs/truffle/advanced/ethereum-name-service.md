@@ -54,8 +54,10 @@ module.exports = {
       host: "localhost",
       port: 8000,
       network_id: "*",
-      registry: {
-        address: "0x1234567890123456789012345678901234567890"
+      ens: {
+        registry: {
+          address: "0x1234567890123456789012345678901234567890"
+        }
       }
     }
   },
