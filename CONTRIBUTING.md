@@ -29,9 +29,9 @@ This repo uses short-lived, prefixed branches. For example, a new blog post woul
 
 1. As mentioned above, your contribution will be a branch based off of `develop`
 1. Once it's ready for review, please create a new [Pull Request](https://github.com/trufflesuite/trufflesuite.com/compare) to be merged into (aka base branch) `develop`
-1. PRs from Truffle employee require at least one review approval, PRs from external contributors are recommended (though not required) to have >1 review
-1. PRs that passes all automatic check **and** meets the approval criteria above may be merged by anyone (though give the author time to merge it themselves as they deserve the satisfaction of pushing the button)
-  - After a PR has been merge, **please delete the original branch**
+1. PRs from Truffle employee require at least one review approval; PRs from external contributors are recommended (though not required) to have >1 review
+1. PRs that pass all automatic checks **and** meet the approval criteria above may be merged by anyone (though give the author time to merge it themselves, as they deserve the satisfaction of pushing the button)
+  - After a PR has been merged, **please delete the original branch**
 1. When preparing to publish to master, anyone may merge `develop` into `master` **after** successfully testing in the staging environment.
 
 ## Build Process & Directory Structure
