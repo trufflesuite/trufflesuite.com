@@ -171,7 +171,7 @@ This is the value used when `autoGas` is enabled to determine the amount of gas 
 
 Each contract instance is different based on the source Solidity contract, and the API is created dynamically. For the purposes of this documentation, let's use the following Solidity source code below:
 
-```javascript
+```solidity
 contract MyContract {
   uint public value;
   event ValueSet(uint val);

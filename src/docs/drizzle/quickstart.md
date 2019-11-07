@@ -7,7 +7,7 @@ layout: docs.hbs
 ## Installation
 
 Install Drizzle via npm:
-```
+```shell
 npm install --save drizzle
 ```
 

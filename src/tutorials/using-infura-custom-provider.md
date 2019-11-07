@@ -59,7 +59,7 @@ The next step is to edit your `truffle-config.js` file to use `HDWalletProvider`
            return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/<INFURA_PROJECT_ID>")
          },
          network_id: 3
-       }   
+       }
      }
    };
    ```
@@ -119,7 +119,7 @@ We are now ready to deploy to Ropsten!
 
    If all goes well, you should see a response that looks similar to the following:
 
-   ```shell
+   ```
    Starting migrations...
    ======================
    > Network name:    'ropsten'
@@ -148,7 +148,7 @@ We are now ready to deploy to Ropsten!
 
 1. If you want to verify that your contract was deployed successfully, you can check this on the [Ropsten section of Etherscan](https://ropsten.etherscan.io/). In the search field, type in the transaction ID for your contract. In the above example, the transaction ID is:
 
-   ```shell
+   ```
    0x166c1791caa73cca6a75fe4258866bd1f2d1bcf2cd4c3a2a1e03fab29c42829d
    ```
 

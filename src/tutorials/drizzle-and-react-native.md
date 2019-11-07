@@ -1,6 +1,6 @@
 Starting with Drizzle v1.3, we are very happy to announce official support for React Native (^0.57.7)!
 
-This tutorial will guide you through how to get Drizzle and Truffle running on your React Native dapps. This tutorial assumes some prior knowledge about Truffle, Drizzle, and React Native, so if you haven't already, go over the following tutorials first to set up your development environment: 
+This tutorial will guide you through how to get Drizzle and Truffle running on your React Native dapps. This tutorial assumes some prior knowledge about Truffle, Drizzle, and React Native, so if you haven't already, go over the following tutorials first to set up your development environment:
 
 1. [Getting started with Drizzle and React](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react)
 1. [React Native](https://facebook.github.io/react-native/docs/getting-started.html)
@@ -31,7 +31,7 @@ truffle init
 
 You should have the following inside the project folder:
 
-```sh
+```
 ├── contracts
 ├── migrations
 ├── test
@@ -50,7 +50,7 @@ You should have the following inside the project folder:
 
     Copy all the files in `truffle-temp` into the root folder of your React Native project. Your folder should look like this in the end:
 
-    ```sh
+    ```
     ├── android
     ├── contracts
     ├── ios
@@ -85,7 +85,7 @@ React Native is missing some of the global objects that are available on other p
 
 1. Create a new file `shims.js` in the root folder with the following code:
 
-    ```js
+    ```javascript
     import "node-libs-react-native/globals";
     import { btoa } from "Base64";
     import nodeUrl from 'url';
@@ -129,12 +129,12 @@ React Native is missing some of the global objects that are available on other p
       },
       writable: true,
       configurable: true,
-    }); 
+    });
     ```
 
 1. Create a new file `rn-cli.config.js` in the root folder with the following code:
 
-    ```js
+    ```javascript
     const nodeLibs = require("node-libs-react-native");
     nodeLibs.vm = require.resolve("vm-browserify");
 
@@ -165,7 +165,7 @@ React Native is missing some of the global objects that are available on other p
     If you're wondering why we did all that in `rn-cli.config.js`, refer to [this Gist](https://gist.github.com/parshap/e3063d9bf6058041b34b26b7166fd6bd) for a great explanation.
 
 1. Finally let's import our shims in `index.js`. The very first line should be the following:
-    ```js
+    ```javascript
     import "./shims"
     ```
 
@@ -214,10 +214,10 @@ iOS physical devices involve the most manual work relative to other devices. You
 
 1. Find your `LOCAL_MACHINE_IP` by checking your network settings on your Mac where Ganache is running
 1. Start `ganache-cli`: `ganache-cli -b 3 -h LOCAL_MACHINE_IP`
-1. In `truffle.js` for `development`, point Truffle to `LOCAL_MACHINE_IP` 
+1. In `truffle.js` for `development`, point Truffle to `LOCAL_MACHINE_IP`
 1. Compile and migrate contracts: `truffle compile && truffle migrate`
 1. In `index.js`, point Drizzle to `LOCAL_MACHINE_IP`
-    ```js
+    ```javascript
     const options = {
       ...
       web3: {
@@ -240,7 +240,7 @@ yarn add drizzle
 
 Set up the Drizzle store by adding the following code to `index.js`:
 
-```js
+```javascript
 import React from "react";
 import { Drizzle, generateStore } from "@drizzle/store";
 import MyStringStore from "./build/contracts/MyStringStore.json";
@@ -254,9 +254,9 @@ const drizzle = new Drizzle(options, drizzleStore);
 AppRegistry.registerComponent(appName, () => () => <App drizzle={drizzle} />);
 ```
 
-Your `index.js` should look like this in the end: 
+Your `index.js` should look like this in the end:
 
-```js
+```javascript
 /** @format */
 import "./shims";
 import { AppRegistry } from "react-native";
@@ -274,7 +274,6 @@ const drizzleStore = generateStore(options);
 const drizzle = new Drizzle(options, drizzleStore);
 
 AppRegistry.registerComponent(appName, () => () => <App drizzle={drizzle} />);
-
 ```
 
 ## Wiring up the App component
@@ -285,7 +284,7 @@ Let's create a folder called `app` in the root of the project. Add a file called
 
 In `app/App.js`, your code should look like this in the end:
 
-```js
+```javascript
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -350,7 +349,7 @@ Once again, this is very similar to the [web tutorial](https://www.truffleframew
 
 Add `ReadString.js` to the folder `app`. `app/ReadString.js` should look like this:
 
-```js
+```javascript
 import React from "react";
 import { Text } from "react-native";
 
@@ -385,7 +384,7 @@ export default ReadString;
 
 Add it to `App.js` by modifying the `render` method:
 
-```js
+```javascript
 import ReadString from "./ReadString";
 // ...
 render() {
@@ -415,7 +414,7 @@ Once again, this is very similar to the [web tutorial](https://www.truffleframew
 
 Add `SetString.js` to the folder `app`. `app/SetString.js` should look like this:
 
-```js
+```javascript
 import React from "react";
 import { Text, View, Button, TextInput, StyleSheet } from "react-native";
 
@@ -452,7 +451,7 @@ class SetString extends React.Component {
     // otherwise, return the transaction status
     if (transactions[txHash] && transactions[txHash].status)
       return `Transaction status: ${transactions[txHash].status}`;
-    
+
     return null;
   };
 
@@ -486,8 +485,7 @@ export default SetString;
 
 Add it to `App.js` by modifying the `render` function
 
-```js
-
+```javascript
 import ReadString from "./ReadString";
 import SetString from "./SetString";
 // ...

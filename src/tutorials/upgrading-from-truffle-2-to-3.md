@@ -80,12 +80,12 @@ As Truffle 3.0 uses the new [Ethereum Package Manager (EthPM)](/docs/getting_sta
 So to import a local file:
 
 v2.0:
-```javascript
+```solidity
 import "test.sol"
 ```
 
 v3.0:
-```javascript
+```solidity
 import "./test.sol"
 ```
 
@@ -132,13 +132,13 @@ So what should you do if you've been using Truffle 2.0 and have important contra
 
 To upgrade your `.sol.js` files, first install `truffle-soljs-updater` globally via npm:
 
-```
+```shell
 $ npm install -g truffle-soljs-updater
 ```
 
 This will provide the `sjsu` command available for your use. Next, navigate to the directory where your `.sol.js` files are stored (usually `./build/contracts`), and run `sjsu`. Your output should look something like this:
 
-```
+```shell
 $ cd ./build/contracts
 $ sjsu
 Converting ConvertLib.sol.js...
@@ -151,7 +151,7 @@ By default `sjsu` only creates newer, `.json` versions of your artifacts and lea
 
 Once you're sure all data was copied correctly and you have a nice backup, you can run `sjsu` with the `-f` parameter. This will tell `sjsu` to delete the existing `.sol.js` files. Your output should look something like this:
 
-```
+```shell
 $ cd ./build/contracts
 $ sjsu -f
 Converting ConvertLib.sol.js...
@@ -182,7 +182,7 @@ MyContract.deployed().someFunction().then(function(tx) {
 v3.0
 ```javascript
 MyContract.setProvider(someWeb3Provider);
-MyContract.deployed().then(function(instance) {  
+MyContract.deployed().then(function(instance) {
   return instance.someFunction();
 }).then(function(result) {
   // Do something after the someFunction() transaction executed
@@ -199,7 +199,7 @@ MyContract.setProvider(someWeb3Provider);
 var deployed;
 
 MyContract.deployed().then(function(instance) {
-  deployed = instance;  
+  deployed = instance;
   return deployed.someFunction();
 }).then(function(result) {
   return deployed.anotherFunction();
@@ -224,7 +224,7 @@ MyContract.deployed().someFunction().then(function(tx) {
 v3.0
 ```javascript
 MyContract.deployed().then(function(instance) {
-  deployed = instance;  
+  deployed = instance;
   return deployed.someFunction();
 }).then(function(result) {
   // result is an object with the following values:
@@ -284,7 +284,7 @@ If you're using the default build pipeline in Truffle 2.0 and would like to upgr
 
 The default builder no longer ships with Truffle by default. So for Truffle 3.0, you first need to make `truffle-default-builder` a dependency of your project by running the following command within your project's folder:
 
-```
+```shell
 $ npm install truffle-default-builder --save
 ```
 

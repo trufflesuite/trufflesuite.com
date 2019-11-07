@@ -14,7 +14,7 @@ See the [Configuration](/docs/truffle/reference/configuration#networks) section 
 
 Most Truffle commands will behave differently based on the network specified, and will use that network's contracts and configuration. You can specify a network using the `--network` option, like below:
 
-```bash
+```shell
 $ truffle migrate --network live
 ```
 

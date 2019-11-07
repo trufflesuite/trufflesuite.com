@@ -81,7 +81,7 @@ We'll add a simple smart contract called MyStringStore.
 
 2. Add the following content to the file:
 
-   ```javascript
+   ```solidity
    pragma solidity ^0.5.0;
 
    contract MyStringStore {
@@ -100,7 +100,7 @@ Since this isn't a Solidity tutorial, all you need to know about this is:
 
 ## Launching a test blockchain with Truffle Develop
 
-Before we move ahead, let's first launch our test blockchain with the Truffle Develop console. 
+Before we move ahead, let's first launch our test blockchain with the Truffle Develop console.
 
 Open up a new terminal, navigate to the project directory, and run the following command:
 
@@ -128,7 +128,7 @@ compile
 
 You should see output similar to the following:
 
-```shell
+```
 Compiling ./contracts/Migrations.sol...
 Compiling ./contracts/MyStringStore.sol...
 Writing artifacts to ./build/contracts
@@ -200,7 +200,7 @@ Before we proceed, we should write a couple tests to ensure that our contract wo
 
 1. If all the tests pass, you'll see console output similar to this:
 
-   ```shell
+   ```
    Using network 'develop'.
 
    Contract: MyStringStore
@@ -233,7 +233,7 @@ Since Create-React-App's default behavior disallows importing files from outside
 
 In the `truffle-config.js` file, replace the contents with the following:
 
-```
+```javascript
 const path = require("path");
 
 module.exports = {
@@ -275,7 +275,7 @@ If the default Create-React-App page loaded without any issues, you may proceed.
 
 The first thing we need to do is to setup and instantiate the Drizzle store. We are going add the following code to `client/src/index.js`:
 
-```js
+```javascript
 // import drizzle functions and contract artifact
 import { Drizzle } from "@drizzle/store";
 import MyStringStore from "./contracts/MyStringStore.json";
@@ -303,7 +303,7 @@ And finally, we created the `drizzleStore` and used that to create our `drizzle`
 
 Once that is complete, your `index.js` should look something like this:
 
-```js
+```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -341,7 +341,7 @@ Now that we have a `drizzle` instance to play around with, we can go into `clien
 
 First thing we will do is to add the following line inside our App component:
 
-```js
+```javascript
 state = { loading: true, drizzleState: null };
 ```
 
@@ -354,7 +354,7 @@ We are going to be using two state variables here:
 
 Next we will add in our `componentDidMount` method into the component class so that we can run some initialization logic.
 
-```js
+```javascript
 componentDidMount() {
   const { drizzle } = this.props;
 
@@ -382,7 +382,7 @@ By doing this, `drizzleState` will always be up-to-date and we also know exactly
 
 Note that we assign the return value of the `subscribe()` to a class variable `this.unsubscribe`. This is because it is always good practice to unsubscribe from any subscriptions you have when the component un-mounts. In order to do this, we save a reference to that subscription (i.e. `this.unsubscribe`), and inside `componentWillUnmount`, we have the following:
 
-```js
+```javascript
 componentWillUnmount() {
   this.unsubscribe();
 }
@@ -394,7 +394,7 @@ This will safely unsubscribe when the App component un-mounts so we can prevent 
 
 Finally, we can replace the boilerplate render method with something that applies to us better:
 
-```js
+```javascript
 render() {
   if (this.state.loading) return "Loading Drizzle...";
   return <div className="App">Drizzle is ready</div>;
@@ -407,7 +407,7 @@ In the next section, we will replace "Drizzle is ready" with an actual component
 
 When you are done this section, your `App` component should look like the following:
 
-```js
+```javascript
 class App extends Component {
   state = { loading: true, drizzleState: null };
 
@@ -442,7 +442,7 @@ class App extends Component {
 
 First, let's create a new file at `client/src/ReadString.js` and paste in the following:
 
-```js
+```javascript
 import React from "react";
 
 class ReadString extends React.Component {
@@ -462,13 +462,13 @@ export default ReadString;
 
 And then inside `App.js`, import the new component with this statement:
 
-```js
+```javascript
 import ReadString from "./ReadString";
 ```
 
 Now modify your `App.js` render method so that we pass in the `drizzle` instance from props as well as the `drizzleState` from the component state:
 
-```js
+```javascript
 render() {
   if (this.state.loading) return "Loading Drizzle...";
   return (
@@ -494,7 +494,7 @@ For the most part, `drizzleState` is there for you to read information from (i.e
 
 Now that we have access to our `drizzle` instance and the `drizzleState`, we can put in the logic that allows us read the smart contract variable we are interested in. Here is what the full code of `ReadString.js` should look like:
 
-```js
+```javascript
 import React from "react";
 
 class ReadString extends React.Component {
@@ -530,7 +530,7 @@ If everything is working, your app should display "Hello World". But first, let'
 
 #### When the component mounts
 
-```js
+```javascript
 componentDidMount() {
   const { drizzle } = this.props;
   const contract = drizzle.contracts.MyStringStore;
@@ -551,7 +551,7 @@ What we get in return is a `dataKey` that allows us to reference this variable. 
 
 #### The `render` method
 
-```js
+```javascript
 render() {
   // get the contract state from drizzleState
   const { MyStringStore } = this.props.drizzleState.contracts;
@@ -581,7 +581,7 @@ Of course, simply reading a pre-initialized variable is no fun at all; we want s
 
 First, let's create a new file `client/src/SetString.js` and paste in the following:
 
-```js
+```javascript
 import React from "react";
 
 class SetString extends React.Component {
@@ -636,7 +636,7 @@ export default SetString;
 
 At this point, import and include it inside `App.js` just like you did with the `ReadString` component:
 
-```js
+```javascript
 import SetString from "./SetString";
 
 // ...
@@ -666,7 +666,7 @@ Next, let's go through `SetString.js` step-by-step.
 
 First let's take a look at the general React.js boilerplate that we need.
 
-```js
+```javascript
 class SetString extends React.Component {
   state = { stackId: null };
 
@@ -698,7 +698,7 @@ Also, we will display the status of the transaction. The `getTxStatus` method wi
 
 ### Submitting the transaction
 
-```js
+```javascript
 setValue = value => {
   const { drizzle, drizzleState } = this.props;
   const contract = drizzle.contracts.MyStringStore;
@@ -719,7 +719,7 @@ What we get in return is a `stackId`, which is a reference to the transaction th
 
 ### Tracking transaction status
 
-```js
+```javascript
 getTxStatus = () => {
   // get the transaction states from the drizzle state
   const { transactions, transactionStack } = this.props.drizzleState;

@@ -56,7 +56,7 @@ The `networks` object, shown below, is keyed by a network name and contains a co
 
 The network name is used for user interface purposes, such as when running your migrations on a specific network:
 
-```bash
+```shell
 $ truffle migrate --network live
 ```
 

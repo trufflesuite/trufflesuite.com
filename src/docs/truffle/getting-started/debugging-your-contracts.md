@@ -22,13 +22,13 @@ Note that it's okay if your desired transaction resulted in an exception or if i
 
 To use the debugger, gather the transaction you'd like to debug then run the following:
 
-```
+```shell
 $ truffle debug <transaction hash>
 ```
 
 Using a transaction starting with `0x8e5dadfb921dd...` as an example, the command would look as follows:
 
-```
+```shell
 $ truffle debug 0x8e5dadfb921ddddfa8f53af1f9bd8beeac6838d52d7e0c2fe5085b42a4f3ca76
 ```
 
@@ -36,7 +36,7 @@ This will launch the debugging interface described below.
 
 If you simply want to open the debugger to get it ready, so that you can debug a transaction later, you can also simply run:
 
-```
+```shell
 $ truffle debug
 ```
 
@@ -131,7 +131,6 @@ This command loads a new transaction (given by its transaction hash).  Note that
 ## Adding and removing breakpoints
 
 Below are some examples of adding and removing breakpoints. Note the difference in case between adding (a lowercase 'b') and removing (an uppercase 'B').
-
 
 ```
 MagicSquare.sol:

@@ -65,7 +65,7 @@ Partials are snippets of HTML used repeatedly throughout the site, such as the n
 
 Partials can also contain child content and take arguments, for example the `breakout` partial for full-container-width, centered breakouts in markdown content:
 
-```
+```hbs
 {{#> breakout}}
   ![The Completed Pet Shop Dapp](/img/blog/learn-ethereum-the-fun-way-with-our-pet-shop-tutorial/pet-shop-preview.jpeg "The completed dapp.")
 {{/breakout}}

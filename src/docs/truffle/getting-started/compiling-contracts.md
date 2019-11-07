@@ -34,7 +34,7 @@ You can declare contract dependencies using Solidity's [import](http://solidity.
 
 To import contracts from a separate file, add the following code to your Solidity source file:
 
-```
+```solidity
 import "./AnotherContract.sol";
 ```
 
@@ -46,7 +46,7 @@ Note that Solidity allows other import syntaxes as well. See the Solidity [impor
 
 Truffle supports dependencies installed via both [EthPM](/docs/truffle/getting-started/package-management-via-ethpm) and [NPM](/docs/truffle/getting-started/package-management-via-npm). To import contracts from a dependency, use the following syntax
 
-```
+```solidity
 import "somepackage/SomeContract.sol";
 ```
 

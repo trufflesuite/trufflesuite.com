@@ -21,13 +21,13 @@ All test files should be located in the `./test` directory. Truffle will only ru
 
 To run all tests, simply run:
 
-```
+```shell
 $ truffle test
 ```
 
 Alternatively, you can specify a path to a specific file you want to run, e.g.,
 
-```none
+```shell
 $ truffle test ./path/to/test/file.js
 ```
 

@@ -16,7 +16,7 @@ Truffle can be configured for tight integration with any build system. To config
 
 To build your application when a build system is configured, run:
 
-```none
+```shell
 $ truffle build
 ```
 
