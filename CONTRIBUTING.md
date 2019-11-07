@@ -1,15 +1,11 @@
 # Contributing
 
-We welcome all contributions, typo corrections, and general feedback. Pull requests should be made against the `master` branch.
-
-This repo uses short-lived, prefixed branches. For example, a new blog post would live a branch named something like: `content/cool-truffle-news`. This helps multiple teams touch the site if necessary, while mitigating potential collisions. These are the currently used prefixes:
-
-`content`: edits applying to site content.
-`feature`: new features for the website, including new data structures (e.g. blog posts or events).
-`fix`: fixes an error in existing code.
+We welcome all contributions, typo corrections, and general feedback.
 
 ## Contents
 
+* [Branching Processes](#branching-processes)
+* [Merging Processes](#merging-processes)
 * [Build Process & Directory Structure](#build-process--directory-structure)
 * [Layouts](#layouts)
 * [Partials](#partials)
@@ -18,6 +14,25 @@ This repo uses short-lived, prefixed branches. For example, a new blog post woul
 * [Static Files](#static-files)
 * [Search](#search)
 * [Translating](#translating)
+
+## Branching Processes
+
+Pull requests should be made against the `develop` branch.
+
+This repo uses short-lived, prefixed branches. For example, a new blog post would live a branch named something like: `content/cool-truffle-news`. This helps multiple teams touch the site if necessary, while mitigating potential collisions. These are the currently used prefixes:
+
+`content`: edits applying to site content.
+`feature`: new features for the website, including new data structures (e.g. blog posts or events).
+`fix`: fixes an error in existing code.
+
+## Merging Processes
+
+1. As mentioned above, your contribution will be a branch based off of `develop`
+1. Once it's ready for review, please create a new [Pull Request](https://github.com/trufflesuite/trufflesuite.com/compare) to be merged into (aka base branch) `develop`
+1. PRs from Truffle employee require at least one review approval; PRs from external contributors are recommended (though not required) to have >1 review
+1. PRs that pass all automatic checks **and** meet the approval criteria above may be merged by anyone (though give the author time to merge it themselves, as they deserve the satisfaction of pushing the button)
+  - After a PR has been merged, **please delete the original branch**
+1. When preparing to publish to master, anyone may merge `develop` into `master` **after** successfully testing in the staging environment.
 
 ## Build Process & Directory Structure
 
