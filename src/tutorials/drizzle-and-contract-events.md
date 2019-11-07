@@ -107,7 +107,7 @@ toast from `react-toastify`, and `drizzleOptions`.
 
 ```js
 // ./app/middleware/index.js
-import { generateStore, EventActions } from 'drizzle'
+import { generateStore, EventActions } from '@drizzle/store'
 import drizzleOptions from '../drizzleOptions'
 import { toast } from 'react-toastify'
 
