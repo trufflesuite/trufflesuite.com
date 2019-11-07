@@ -242,7 +242,7 @@ Set up the Drizzle store by adding the following code to `index.js`:
 
 ```js
 import React from "react";
-import { Drizzle, generateStore } from "drizzle";
+import { Drizzle, generateStore } from "@drizzle/store";
 import MyStringStore from "./build/contracts/MyStringStore.json";
 
 const options = {
@@ -264,7 +264,7 @@ import App from "./app/App";
 import { name as appName } from "./app.json";
 
 import React from "react";
-import { Drizzle, generateStore } from "drizzle";
+import { Drizzle, generateStore } from "@drizzle/store";
 import MyStringStore from "./build/contracts/MyStringStore.json";
 
 const options = {
