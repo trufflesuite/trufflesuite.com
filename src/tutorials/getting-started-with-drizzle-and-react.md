@@ -277,7 +277,7 @@ The first thing we need to do is to setup and instantiate the Drizzle store. We 
 
 ```js
 // import drizzle functions and contract artifact
-import { Drizzle } from "drizzle";
+import { Drizzle } from "@drizzle/store";
 import MyStringStore from "./contracts/MyStringStore.json";
 
 // let drizzle know what contracts we want and how to access our test blockchain
@@ -311,7 +311,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 // import drizzle functions and contract artifact
-import { Drizzle, generateStore } from "drizzle";
+import { Drizzle, generateStore } from "@drizzle/store";
 import MyStringStore from "./contracts/MyStringStore.json";
 
 // let drizzle know what contracts we want and how to access our test blockchain
