@@ -21,13 +21,12 @@ event reducer respectively.
 **A Complete example is available at the following [repo](https://github.com/trufflesuite/drizzle-event-demo).**
 
 <div class="alert alert-info">
-  <strong>Prerequisite</strong>: You should be familiar with Truffle, Ganache, Drizzle, React and Redux. If you need an introduction please consult the following resources:
+  <strong>Prerequisite</strong>: You should be familiar with Truffle, Drizzle, React and Redux. If you need an introduction please consult the following resources:
 
   <br/><br/>
 
   <ol>
     <li>[Truffle Quickstart](https://truffleframework.com/docs/truffle/quickstart)</li>
-    <li>[Ganache Quickstart](https://truffleframework.com/docs/ganache/quickstart)</li>
     <li>[Getting Started with Drizzle and React](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react)</li>
     <li>[Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html)</li>
     <li>[Redux Basic Tutorial](https://redux.js.org/basics/basic-tutorial)</li>
@@ -48,35 +47,27 @@ event to a display component by creating a reducer and hook it up to Drizzle's
   <strong>Note</strong>: More Drizzle actions are listed in our [Drizzle Actions documentation](/docs/drizzle/reference/drizzle-actions).
 </p>
 
-First start the `ganache-cli` test chain and `unbox` Drizzle.
+First create an empty directory, navigate to it, and `unbox` Drizzle.
 
 ```bash
-// In a separate console window run the test chain.
-$ ganache-cli
-
 // In the project directory...
 $ truffle unbox drizzle
 ```
 
-We'll then have to modify the default `truffle-config.js` file to point to the network parameters used by `ganache-cli`.
+Now let's start the `truffle develop` console (which runs a Ganache test blockchain in the background):
 
-```js
-module.exports = {
-  networks: {
-    development: {
-      host: '127.0.0.1',
-      port: 8545,
-      network_id: '*' // Match any network id
-    }
-  }
-};
+```
+$ truffle develop
 ```
 
-Finally, let's compile and migrate our smart contracts.
+Finally, in our Truffle develop console, let's compile and migrate our smart contracts.
 
 ```bash
-$ truffle compile
-$ truffle migrate
+truffle(develop)> compile
+
+# some output here...
+
+truffle(develop)> migrate
 ```
 
 Now that we have a test chain running and our smart contracts deployed, let's add a toast notification to the UI.
@@ -188,9 +179,6 @@ A Quick Test
   * Things often go south during development so a pretest check is in order.
     1. MetaMask should NOT be on Main net! Do not run this if you're on main
        net!
-    1. Is ganache running on port 7545? This is the default. If your development
-       environment is different, make sure `truffle-config` points to the
-       correct port.
     1. Is MetaMask listening on the correct port defined above? Metamask should
        have ETH funds. Something is amiss if it doesn't.
     1. Are the smart contracts deployed from the correct directory?
