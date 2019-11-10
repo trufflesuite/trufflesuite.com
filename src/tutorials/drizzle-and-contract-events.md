@@ -62,7 +62,7 @@ $ truffle develop
 
 Finally, in our Truffle develop console, let's compile and migrate our smart contracts.
 
-```bash
+```shell
 truffle(develop)> compile
 
 # some output here...
@@ -81,14 +81,14 @@ We want to listen for the `SimpleStorage` contract's `StorageSet` event and show
 The front end code is located under the `app` folder. Lets add the notification
 library `react-toastify` to simulate an external interaction.
 
-```sh
+```shell
 $ cd app
 $ npm install react-toastify
 ```
 
 For the sake of simplicity, we will work in one file, `./app/src/middleware/index.js`.
 
-```
+```shell
 $ mkdir ./src/middleware
 $ touch ./src/middleware/index.js
 ```
@@ -96,12 +96,11 @@ $ touch ./src/middleware/index.js
 Import `EventActions` and `generateStore` from Drizzle as well as
 toast from `react-toastify`, and `drizzleOptions`.
 
-```js
+```javascript
 // ./app/middleware/index.js
 import { generateStore, EventActions } from '@drizzle/store'
 import drizzleOptions from '../drizzleOptions'
 import { toast } from 'react-toastify'
-
 ```
 
 The action `EventActions.EVENT_FIRED` is emitted whenever a contract event is
@@ -111,7 +110,7 @@ of functions executed in a sequence that processes each dispatched actions
 before passing them to Reducers.
 
 
-```js
+```javascript
 const contractEventNotifier = store => next => action => {
   if (action.type === EventActions.EVENT_FIRED) {
     const contract = action.name
@@ -129,7 +128,7 @@ Now lets register this middleware with Drizzle. `generateStore` will return a
 Redux store that you can use anywhere you can use a store. We will export it to
 be used by `DrizzleProvider`.
 
-```js
+```javascript
 const appMiddlewares = [ contractEventNotifier ]
 
 export default generateStore({
@@ -137,7 +136,6 @@ export default generateStore({
   appMiddlewares,
   disableReduxDevTools: false  // enable ReduxDevTools!
 })
-
 ```
 
 Connect the Store
@@ -145,14 +143,13 @@ Connect the Store
 
 Send the `store` as a prop to `DrizzleProvider`
 
-```js
+```javascript
 // App.js
 ...
 import store from './middleware'
 ...
 <DrizzleProvider store={store} options={drizzleOptions}>
 ...
-
 ```
 
 Hook up Display
@@ -160,7 +157,7 @@ Hook up Display
 
 Modify `MyComponent.js` to import `ReactToastify.css` and configure `ToastContainer`
 
-```js
+```javascript
 ...
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -184,7 +181,7 @@ A Quick Test
     1. Are the smart contracts deployed from the correct directory?
 
   * Fire up the app.
-    ```
+    ```shell
     $ npm run start
     ```
   * Change SimpleStorage's `stored Value`

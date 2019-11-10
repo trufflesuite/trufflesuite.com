@@ -11,7 +11,7 @@ Though Solidity tests can be quite powerful, they do come with some drawbacks. O
 In Solidity, when performing a contract call that produces an error, Solidity automatically rethrows, meaning it will bubble that error up to the caller. However, with a _raw_ call, the behavior is different: one can catch the error and decide what to do from there on out. If it throws (fails), it will return `false`. If it succeeds, it will return `true`. Thus, the following calls will produce a different result.
 
 
-```javascript
+```solidity
 // Returns false
 bool result = address.call(bytes4(bytes32(sha3(“functionThatThrows()”))));
 
@@ -27,7 +27,7 @@ For our purposes, let's look at the example below, similar to a method I saw use
 
 The code is as follows:
 
-```javascript
+```solidity
 import "truffle/Assert.sol";
 
 // Proxy contract for testing throws
@@ -76,12 +76,11 @@ contract TestThrower {
     Assert.isFalse(r, “Should be false, as it should throw”);
   }
 }
-
 ```
 
 Perhaps the most interesting line is the following:
 
-```javascript
+```solidity
 Thrower(address(throwProxy)).doThrow();
 ```
 
@@ -95,7 +94,7 @@ With this proxy, one can still effectively write the interactions as contracts c
 
 An important caveat here is to recognize the contract caller, `msg.sender`. If you add a proxy in between, then `msg.sender` will be the proxy, which could break authorization and permissioning algorithms. If your authorization system allows you to change the owner, you can get around this constraint by setting the proxy to be the contract owner. For example:
 
-```javascript
+```solidity
 // Assume our contract under test has a changeOwner() function
 thrower.changeOwner(address(throwProxy));
 
@@ -109,7 +108,7 @@ throwProxy.execute();
 
 It’s also important to know that this only tests `throw`'s at this particular level. For instance, if your contract call structure looked like the following:
 
-```shell
+```
 Test -> Proxy -> ContractToTest -> SomeOtherContract -> AnotherContractThatThrows
 ```
 

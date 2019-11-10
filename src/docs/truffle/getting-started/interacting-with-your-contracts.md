@@ -38,7 +38,7 @@ Contract abstractions are the bread and butter of interacting with Ethereum cont
 
 In order to appreciate the usefulness of a contract abstraction, however, we first need a contract to talk about. We'll use the MetaCoin contract available to you through Truffle Boxes via `truffle unbox metacoin`.
 
-```javascript
+```solidity
 pragma solidity >=0.4.25 <0.6.0;
 
 import "./ConvertLib.sol";
@@ -73,7 +73,6 @@ contract MetaCoin {
 		return balances[addr];
 	}
 }
-
 ```
 
 This contract has three methods aside from the constructor (`sendCoin`, `getBalanceInEth`, and `getBalance`). All three methods can be executed as either a transaction or a call.

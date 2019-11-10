@@ -4,13 +4,13 @@ This is a beta document and refers to the `beta` version of Truffle. The followi
 
 As this feature is in beta, you must first get the beta version of Truffle. To make sure the beta version doesn't conflict with the released version, first remove the Truffle version you have currently installed:
 
-```
+```shell
 $ npm uninstall -g truffle
 ```
 
 And then install the beta version:
 
-```
+```shell
 $ npm install -g truffle@beta
 ```
 
@@ -44,7 +44,7 @@ contract TestMetacoin {
 
 And when running the test:
 
-```
+```shell
 $ truffle test
 Compiling ConvertLib.sol...
 Compiling MetaCoin.sol...

@@ -10,7 +10,7 @@ Often you may want to run external scripts that interact with your contracts. Tr
 
 To run an external script, perform the following:
 
-```
+```shell
 $ truffle exec <path/to/file.js>
 ```
 
@@ -39,7 +39,7 @@ know how we can improve it!
 ## Plugin installation / usage
 
 1. Install the plugin from NPM.
-   ```
+   ```shell
    npm install --save-dev truffle-plugin-hello
    ```
 
@@ -55,7 +55,7 @@ know how we can improve it!
    ```
 
 3. Run the command
-   ```
+   ```shell
    $ truffle run hello
    Hello, World!
    ```
@@ -101,7 +101,7 @@ know how we can improve it!
 
 3.  Publish to NPM
 
-    ```
+    ```shell
     npm publish
     ```
 

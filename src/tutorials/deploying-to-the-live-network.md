@@ -50,7 +50,7 @@ One important configuration option to pay attention to is `network_id`. Here, we
 
 Now that our configuration is set up, we can now deploy to the live network. When deploying, we must specifically ask for the live network or else Truffle will fall back to the default configuration. To do so, we can deploy with the following command:
 
-```
+```shell
 $ truffle migrate --network live
 ```
 
