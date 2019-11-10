@@ -8,6 +8,15 @@ Truffle includes an integrated debugger so that you can debug transactions made 
 
 ## Overview
 
+<p class="alert alert-info m-t-2">
+<strong>
+New in Truffle v5.1: `truffle test --debug`.
+</strong>
+Set breakpoints in your JavaScript tests with the new `debug()` global!
+[See below](#in-test-debugging).
+</p>
+
+
 Debugging a transaction on the blockchain is different than debugging traditional applications (for instance, applications written in C++ or Javascript). When debugging a transaction on the blockchain, you're not running the code in real-time; instead, you're stepping over the historical execution of that transaction, and mapping that execution onto its associated code. This gives us many liberties in debugging, in that we can debug any transaction, any time, so long as we have the code and artifacts for the contracts the transaction interacted with. Think of these code and artifacts as akin to the debugging symbols needed by traditional debuggers.
 
 In order to debug transactions, you'll need the following:
@@ -17,6 +26,49 @@ In order to debug transactions, you'll need the following:
 * The source code and artifacts the transaction encounters.
 
 Note that it's okay if your desired transaction resulted in an exception or if it ran out of gas. The transaction still exists on chain, and so you can still debug it!
+
+## In-test debugging
+
+Truffle v5.1 and above provides the `truffle test --debug` flag and associated
+`debug()` global function, allowing you to interrupt tests to debug specific
+operations.
+
+Instead of capturing the transaction hash as described below, simply wrap
+any contract operation with `debug()`, like so:
+
+```javascript
+it("should succeed", async function() {
+  // wrap what you want to debug with `debug()`:
+  await debug( myContract.myFunction(accounts[1], { from: accounts[0] }) );
+  //           ^^^^^^^^^^^^^^^^^^ wrap contract operation ^^^^^^^^^^^^^^
+});
+```
+
+Then, run `truffle test --debug`. Truffle will compile your sources and run
+your tests as normal until reaching the operation in question. At this point,
+Truffle will interrupt the normal test flow and start the debugger, allowing
+you to set breakpoints, inspect Solidity variables, etc.
+
+See [Writing tests in JavaScript](/docs/truffle/writing-tests-in-javascript)
+for more information on `truffle test`, and see
+[Interacting with your contracts](/docs/truffle/getting-started/interacting-with-your-contracts)
+to learn about contract operations.
+
+### Debugging read-only calls
+
+Running the debugger from inside your JS tests allow additional functionality
+beyond which `truffle debug <txHash>` can provide.
+
+Beyond just debugging transactions, in-test debugging allows you to debug
+read-only calls as well.
+
+```javascript
+it("should get latest result", async function() {
+  // wrap what you want to debug with `debug()`:
+  const result = await debug( myContract.getResult("latest") );
+  //                          ^^^^^ read-only function ^^^^^
+});
+```
 
 ## Command
 
