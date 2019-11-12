@@ -303,5 +303,10 @@
     "description": "A truffle box containing React, ZeppelinOS & OpenZeppelin",
     "stars": 40,
     "tags": ["community", "openzeppelin", "zeppelinos"]
+  },
+  "upgradable-proxy-box": {
+    "description": "A truffle box starter to build upgradable-proxy contracts with included React frontend to demonstrate the process.",
+    "stars": "0",
+    "tags": ["community"]
   }
 }
