@@ -1,3 +1,5 @@
+**By Tyler Feickert, Blockchain Tools Engineer at Truffle**
+
 Among the new features released with Truffle 5.1 is support for Ethereum Name Service
 (ENS) name resolution and setting the resolver address for owned names!
 
