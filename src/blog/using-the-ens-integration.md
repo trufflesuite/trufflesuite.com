@@ -102,6 +102,8 @@ await deployer.ens.setAddress(
 In that case, "arnold.hagenchop.eth" will be set to the address at which
 `myContract` is deployed!
 
+For more thorough information about this feature, see the
+[docs](https://www.trufflesuite.com/docs/truffle/advanced/ethereum-name-service).
 We have also created an
 [example Truffle box](https://github.com/truffle-box/v5.1-example-box#v51-example-box)
 that has some examples of using this new ENS integration alongside other new
