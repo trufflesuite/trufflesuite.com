@@ -175,7 +175,6 @@ A sentence about the event, such as: conditions under which it fires, what it co
 **`txHash` (string)**: The transaction hash.
 
 ### `TX_SUCCESSFUL`
-A sentence about the event, such as: conditions under which it fires, what it contains, etc.
 ```
 {
   receipt,
