@@ -19,12 +19,6 @@ Install `yarn` if you haven't already:
 npm install -g yarn
 ```
 
-You'll also need to ignore the engine check in yarn due to a [grossly outdated npm package](https://travis-ci.org/trufflesuite/trufflesuite.com/builds/607415891#L214). Optionally you can do `yarn --ignore-engines` during the install step.
-
-```
-yarn config set ignore-engines true
-```
-
 ## Getting Started
 Download zip file or git clone repo:
 
@@ -60,4 +54,4 @@ yarn build
 
 Navigate to ./build folder for the compiled files.
 
- 
+
