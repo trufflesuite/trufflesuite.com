@@ -62,7 +62,6 @@ A sentence about the event, such as: conditions under which it fires, what it co
 A sentence about the event, such as: conditions under which it fires, what it contains, etc.-->
 
 ### `BLOCK_PROCESSING`
-A sentence about the event, such as: conditions under which it fires, what it contains, etc.
 ```
 {
   block
@@ -154,7 +153,6 @@ A sentence about the event, such as: conditions under which it fires, what it co
 A sentence about the event, such as: conditions under which it fires, what it contains, etc.-->
 
 ### `TX_BROADCASTED`
-A sentence about the event, such as: conditions under which it fires, what it contains, etc.
 ```
 {
   txHash,
@@ -166,7 +164,6 @@ A sentence about the event, such as: conditions under which it fires, what it co
 **`stackId` (int)**: An integer representing an index in the `transactionStack`.
 
 ### `TX_CONFIRMAITON`
-A sentence about the event, such as: conditions under which it fires, what it contains, etc.
 ```
 {
   confirmationReceipt,
@@ -190,7 +187,6 @@ A sentence about the event, such as: conditions under which it fires, what it co
 **`txHash` (string)**: The transaction hash.
 
 ### `TX_ERROR`
-A sentence about the event, such as: conditions under which it fires, what it contains, etc.
 ```
 {
   error,
