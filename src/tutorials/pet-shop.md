@@ -442,6 +442,7 @@ The front-end doesn't use a build system (webpack, grunt, etc.) to be as easy as
      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
    }
    web3 = new Web3(App.web3Provider);
+   return App.initContract();
    ```
 
 Things to notice:
