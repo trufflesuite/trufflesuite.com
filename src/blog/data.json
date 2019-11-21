@@ -1,10 +1,10 @@
 {
   "using-the-ens-integration": {
-    "title": "Using the ENS Integration",
-    "date": "2019-11-13",
+    "title": "Using Truffle's ENS Integration",
+    "date": "2019-11-21",
     "author": "Tyler Feickert",
     "published": true,
-    "excerpt": "The Truffle ENS integration allows you to use ENS names in your migrations! You can also set addresses for ENS names that you own."
+    "excerpt": "Truffle's ENS integration allows you to use ENS names in your migrations! You can also set addresses for ENS names that you own."
   },
   "truffle-teams-now-supports-private-repositories": {
     "title": "Truffle Teams Now Supports Private Repositories",
