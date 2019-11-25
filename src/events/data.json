@@ -1,12 +1,12 @@
 [
   {
-    "title": "All about drizzle 1.5",
-    "start": "Wednesday, October 30th, 2019, 6:00",
-    "end": "6:45 PM PDT",
+    "title": "Truffle Teams Overview",
+    "start": "Wednesday, December 11th, 2019, 12:00",
+    "end": "12:45 PM PST",
     "location": "Webinar",
-    "excerpt": "Join Adrian Li, Software Development Lead, on October 30th at 6:00 PDT for an evening with Drizzle. Adrian will discuss the newest features in Drizzle.",
-    "eventbrite": "https://share.hsforms.com/1E9AS0paWR4OwfyncFnwJ6Q34pbp",
+    "excerpt": "We are hosting our last webinar of the year on Wednesday, December 11th at 12 PM PST. Join Mike Seese to learn how Truffle Teams helps you with blockchain DevOps and smart contract management. Mike will walk you through the entire Truffle Teams life-cycle: from set-up and testing to public deployment and transaction monitoring. Don’t miss this webinar choc-ablock with sneak peeks of what’s next in the sweet suite!",
+    "eventbrite": "https://share.hsforms.com/1AUIyy2W7TPCBQNTifIua7g34pbp",
     "status": "open",
-    "image": "/img/drizzle-webinar-10-2019.png"
+    "image": "/img/webinar-12-11-19-seese-teams16x9a.png"
   }
 ]
