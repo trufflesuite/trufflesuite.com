@@ -225,6 +225,7 @@ You may specify...
 + a natively compiled solc binary (you'll need to install this yourself, links to help below).
 + a dockerized solc from one of images published [here](https://hub.docker.com/r/ethereum/solc/tags/).
 + a path to a locally available solc
++ a solc-js parser for faster docker and native compilations
 
 Truffle config example:
 
@@ -235,6 +236,7 @@ module.exports = {
       version: <string>, // A version or constraint - Ex. "^0.5.0"
                          // Can also be set to "native" to use a native solc
       docker: <boolean>, // Use a version obtained through docker
+      parser: "solcjs",  // Leverages solc-js purely for speedy parsing
       settings: {
         optimizer: {
           enabled: <boolean>,
