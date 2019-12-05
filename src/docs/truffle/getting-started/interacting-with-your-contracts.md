@@ -223,6 +223,40 @@ instance.send(web3.utils.toWei(1, "ether")).then(function(result) {
 });
 ```
 
+### Special methods on Truffle contract objects
+
+There are a couple of special methods that you can find on Truffle contract objects:
+- `sendTransaction`
+- `estimateGas`
+
+In general, if you execute a contract method, Truffle will intelligently figure out
+whether it needs to make a transaction or a call. There may be some scenarios where
+you want to force a transaction instead of making a call. In these cases, you can
+use the `sendTransaction` method found on the method itself. This would look something
+like `instance.<myMethod>.sendTransaction()`. For example, suppose
+I have a contract instance with the method `getTokenValue`. I could do the following
+to force a transaction to take place while executing `getTokenValue`:
+
+```javascript
+const instance = await MyContract.deployed();
+const result = await instance.sendTokens.sendTransaction(4, myAccount);
+```
+
+The `result` variable above will be the same kind of result you would get from
+executing any normal transaction. It will contain the transaction hash from the
+transaction, the logs, etc.
+
+The other special method mentioned above is the `estimateGas` method. This, as you
+probably can guess, estimates the amount of gas that a transaction will require.
+It is used in exactly the same way as `sendTransaction`, and if we wanted to
+estimate the gas for the transaction we wanted to execute above, we would do the
+following:
+
+```javascript
+const instance = await MyContract.deployed();
+const result = await instance.sendTokens.estimateGas(4, myAccount);
+```
+
 ## Further reading
 
 The contract abstractions provided by Truffle contain a wealth of utilities for making interacting with your contracts easy. Check out the [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) documentation for tips, tricks and insights.
