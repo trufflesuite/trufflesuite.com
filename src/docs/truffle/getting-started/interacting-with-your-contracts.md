@@ -225,25 +225,33 @@ instance.send(web3.utils.toWei(1, "ether")).then(function(result) {
 
 ### Special methods on Truffle contract objects
 
-There are a couple of special methods that you can find on Truffle contract objects:
+There are a couple of special functions that you can find on the actual contract
+methods of your contract abstractions:
 - `sendTransaction`
 - `estimateGas`
 
 In general, if you execute a contract method, Truffle will intelligently figure out
-whether it needs to make a transaction or a call. There may be some scenarios where
-you want to force a transaction instead of making a call. In these cases, you can
-use the `sendTransaction` method found on the method itself. This would look something
-like `instance.<myMethod>.sendTransaction()`. For example, suppose
-I have a contract instance with the method `getTokenValue`. I could do the following
-to force a transaction to take place while executing `getTokenValue`:
+whether it needs to make a transaction or a call. If your function can be executed
+as a call, then Truffle will do so and you will be able to avoid gas costs.
+
+There may be some scenarios, however, where you want to force a transaction
+instead of making a call. In these cases, you can use the `sendTransaction`
+method found on the method itself. This would look something
+like `instance.<myMethod>.sendTransaction()`.
+
+For example, suppose I have a contract instance with the method
+`getTokenValue`. I could do the following to force a transaction to take
+place while executing `getTokenValue`:
 
 ```javascript
 const instance = await MyContract.deployed();
 const result = await instance.sendTokens.sendTransaction(4, myAccount);
 ```
 
-The `result` variable above will be the same kind of result you would get from
-executing any normal transaction. It will contain the transaction hash from the
+Note that the arguments above (`4` and `myAccount`) correspond to whatever the
+signature of the contract method happens to be. The `result` variable above
+will be the same kind of result you would get from executing any normal
+transaction in Truffle. It will contain the transaction hash from the
 transaction, the logs, etc.
 
 The other special method mentioned above is the `estimateGas` method. This, as you
@@ -254,7 +262,7 @@ following:
 
 ```javascript
 const instance = await MyContract.deployed();
-const result = await instance.sendTokens.estimateGas(4, myAccount);
+const amountOfGas = await instance.sendTokens.estimateGas(4, myAccount);
 ```
 
 ## Further reading
