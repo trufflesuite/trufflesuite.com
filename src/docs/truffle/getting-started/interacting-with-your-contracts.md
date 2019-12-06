@@ -240,8 +240,8 @@ method found on the method itself. This would look something
 like `instance.<myMethod>.sendTransaction()`.
 
 For example, suppose I have a contract instance with the method
-`getTokenValue`. I could do the following to force a transaction to take
-place while executing `getTokenValue`:
+`sendTokens`. I could do the following to force a transaction to take
+place while executing `sendTokens`:
 
 ```javascript
 const instance = await MyContract.deployed();
