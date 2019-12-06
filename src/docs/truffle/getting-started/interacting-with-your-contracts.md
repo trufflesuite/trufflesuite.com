@@ -227,6 +227,8 @@ instance.send(web3.utils.toWei(1, "ether")).then(function(result) {
 
 There are a couple of special functions that you can find on the actual contract
 methods of your contract abstractions:
+
+- `call`
 - `sendTransaction`
 - `estimateGas`
 
@@ -234,21 +236,25 @@ In general, if you execute a contract method, Truffle will intelligently figure 
 whether it needs to make a transaction or a call. If your function can be executed
 as a call, then Truffle will do so and you will be able to avoid gas costs.
 
-There may be some scenarios, however, where you want to force a transaction
-instead of making a call. In these cases, you can use the `sendTransaction`
+If you want to explicitly make a call, you can use the `call` method found on
+your contract abstraction's method. So you would write something that looks like
+`const result = await instance.myMethod.call()`.
+
+There also may be some scenarios, however, where you want to force Truffle to
+make a transaction. In these cases, you can use the `sendTransaction`
 method found on the method itself. This would look something
-like `instance.<myMethod>.sendTransaction()`.
+like `instance.myMethod.sendTransaction()`.
 
 For example, suppose I have a contract instance with the method
-`sendTokens`. I could do the following to force a transaction to take
-place while executing `sendTokens`:
+`getTokenBalance`. I could do the following to force a transaction to take
+place while executing `getTokenBalance`:
 
 ```javascript
 const instance = await MyContract.deployed();
-const result = await instance.sendTokens.sendTransaction(4, myAccount);
+const result = await instance.getTokenBalance.sendTransaction(myAccount);
 ```
 
-Note that the arguments above (`4` and `myAccount`) correspond to whatever the
+Note that the argument above (`myAccount`) corresponds to whatever the
 signature of the contract method happens to be. The `result` variable above
 will be the same kind of result you would get from executing any normal
 transaction in Truffle. It will contain the transaction hash from the
@@ -257,8 +263,7 @@ transaction, the logs, etc.
 The other special method mentioned above is the `estimateGas` method. This, as you
 probably can guess, estimates the amount of gas that a transaction will require.
 It is used in exactly the same way as `sendTransaction`, and if we wanted to
-estimate the gas for the transaction we wanted to execute above, we would do the
-following:
+estimate the gas for a transaction, we would do something like the following:
 
 ```javascript
 const instance = await MyContract.deployed();
