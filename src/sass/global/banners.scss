@@ -157,3 +157,26 @@
     }
   }
 }
+
+// HubSpot GDPR Banner
+
+div#hs-eu-cookie-confirmation {
+  position: fixed !important;
+  top: 60px !important;
+}
+
+div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner div#hs-en-cookie-confirmation-buttons-area a#hs-eu-confirmation-button {
+  background-color: #3fe0c5 !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #5e464d !important;
+  font-family: 'Oswald', sans-serif !important;
+  text-shadow: none !important;
+  text-transform: uppercase !important;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+
+div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner div#hs-en-cookie-confirmation-buttons-area a#hs-eu-confirmation-button:hover {
+  background-color: #fff !important;
+  background-image: none !important;
+}
