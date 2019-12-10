@@ -165,15 +165,16 @@ div#hs-eu-cookie-confirmation {
   top: 60px !important;
 }
 
-div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a#hs-eu-confirmation-button {
+div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner div#hs-en-cookie-confirmation-buttons-area a#hs-eu-confirmation-button {
   background-color: #3fe0c5 !important;
   border: none !important;
   box-shadow: none !important;
   color: #5e464d !important;
   font-family: 'Oswald', sans-serif !important;
+  text-shadow: none !important;
   text-transform: uppercase !important;
 }
 
-div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a#hs-eu-confirmation-button:hover {
+div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner div#hs-en-cookie-confirmation-buttons-area a#hs-eu-confirmation-button:hover {
   background-image: none !important;
 }
