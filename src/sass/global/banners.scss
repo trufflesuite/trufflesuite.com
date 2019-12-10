@@ -157,3 +157,23 @@
     }
   }
 }
+
+// HubSpot GDPR Banner
+
+div#hs-eu-cookie-confirmation {
+  position: fixed;
+  top: 60px;
+}
+
+div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a#hs-eu-confirmation-button {
+  background-color: #3fe0c5 !important;
+  border: none !important;
+  box-shadow: none;
+  color: #5e464d !important;
+  font-family: 'Oswald', sans-serif !important;
+  text-transform: uppercase;
+}
+
+div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner a#hs-eu-confirmation-button:hover {
+  background-image: none;
+}
