@@ -122,13 +122,17 @@ This command steps to the next logical statement or expression in the source cod
 
 ### (;) step instruction
 
-This command allows you to step through each individual instruction evaluated by the virtual machine. This is useful if you're interested in understanding the low level bytecode created by the Solidity source code. When you use this command, the debugger will also print out the stack data at the time the instruction was evaluated.
+This command allows you to step through each individual instruction evaluated by the virtual machine. This is useful if you're interested in understanding the low level bytecode created by the Solidity source code. When you use this command, the debugger will also print out the stack data at the time the instruction was evaluated.  (If additional data displays have been turned on with the `p` command, those will be shown too.)
 
 You can also use this command with a numerical argument, to step that many times.
 
 ### (p) print instruction
 
 This commands prints the current instruction and stack data, but does not step to the next instruction. Use this when you'd like to see the current instruction and stack data after navigating through the transaction with the logical commands described above.
+
+This command can also print locations other than the stack, if you want to view memory, storage, or calldata.  Simply type `p memory` to show memory along with the other information, `p storage` for storage, or `p calldata` for calldata.  Each of these can also be abbreviated, e.g. `p mem`; they can also be combined, e.g. `p mem sto`.
+
+You can also add these extra locations to the default display with `+`; e.g., `p +mem` will make it so that memory will always be displayed when you enter `p` or `;`, and `p -mem` will turn this off.  You can even turn off the stack display with `p -sta`, or force it to display with `p sta`.  All of these options can again be combined.
 
 ### (h) print this help
 
