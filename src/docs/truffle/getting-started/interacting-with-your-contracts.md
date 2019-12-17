@@ -223,6 +223,64 @@ instance.send(web3.utils.toWei(1, "ether")).then(function(result) {
 });
 ```
 
+### Special methods on Truffle contract objects
+
+There are a couple of special functions that you can find on the actual contract
+methods of your contract abstractions:
+
+- `estimateGas`
+- `sendTransaction`
+- `call`
+
+The first special method mentioned above is the `estimateGas` method. This, as you
+probably can guess, estimates the amount of gas that a transaction will require.
+If we wanted to estimate the gas for a transaction, we would call it on the
+contract method itself. It would look something like the following:
+
+```javascript
+const instance = await MyContract.deployed();
+const amountOfGas = await instance.sendTokens.estimateGas(4, myAccount);
+```
+
+This will give us an estimate of how much gas it will take to run the
+transaction specified.
+
+Note that the arguments above (`4` and `myAccount`) correspond to whatever the
+signature of the contract method happens to be.
+
+Another useful thing to note is that you can also call this on a contract's
+new method to see how much gas it will take to deploy. So you would do
+`Contract.new.estimateGas()` to get the gas estimate for the contract's deployment.
+
+The next mentioned method is `sendTransaction`. In general, if you execute a
+contract method, Truffle will intelligently figure out whether it needs
+to make a transaction or a call. If your function can be executed
+as a call, then Truffle will do so and you will be able to avoid gas costs.
+
+There may be some scenarios, however, where you want to force Truffle to
+make a transaction. In these cases, you can use the `sendTransaction`
+method found on the method itself. This would look something
+like `instance.myMethod.sendTransaction()`.
+
+For example, suppose I have a contract instance with the method
+`getTokenBalance`. I could do the following to force a transaction to take
+place while executing `getTokenBalance`:
+
+```javascript
+const instance = await MyContract.deployed();
+const result = await instance.getTokenBalance.sendTransaction(myAccount);
+```
+
+The `result` variable above will be the same kind of result you would get
+from executing any normal transaction in Truffle. It will contain the
+transaction hash, the logs, etc.
+
+The last method is `call` and the syntax is exactly the same as for
+`sendTransaction`. If you want to explicitly make a call, you can
+use the `call` method found on your contract abstraction's method. So you
+would write something that looks like
+`const result = await instance.myMethod.call()`.
+
 ## Further reading
 
 The contract abstractions provided by Truffle contain a wealth of utilities for making interacting with your contracts easy. Check out the [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) documentation for tips, tricks and insights.
