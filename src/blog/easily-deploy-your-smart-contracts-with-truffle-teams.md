@@ -8,7 +8,7 @@ Well it's finally here, and on behalf of the whole team I'm proud to announce De
 
 ## Bridging the Gap Between Local Ganache Testing and Public Testnet/Mainnet Deployments
 
-The interaction between Truffle and Ganache provides an awesome testing experience to iteratively test and fix contracts on a personal Ethereum blockchain. However, it can be a little tricky when you're ready to publish your application to the rest of the world. That's where Truffle Teams Deployments comes in. We give you an easy to use deployment interface which links with MetaMask so you never need to export your private keys.
+The interaction between Truffle and Ganache provides an awesome testing experience to iteratively test and fix contracts on a personal Ethereum blockchain. However, it can be a little tricky when you're ready to publish your application to the rest of the world. That's where Truffle Teams Deployments comes in. We give you a **dead-simple deployment experience** which links with MetaMask so you never need to export your private keys.
 
 ## Benefits of Deploying with Truffle Teams
 
