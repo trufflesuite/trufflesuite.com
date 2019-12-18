@@ -1,4 +1,11 @@
 {
+  "easily-deploy-your-smart-contracts-with-truffle-teams": {
+    "title": "Easily Deploy Your Smart Contracts with Truffle Teams",
+    "date": "2019-12-18",
+    "author": "Mike Seese",
+    "published": true,
+    "excerpt": "Truffle Teams now gives you a dead-simple deployment experience. You push a couple of buttons, send transactions with MetaMask, and badabing, your contracts are on a public Ethereum network."
+  },
   "using-the-ens-integration": {
     "title": "Using Truffle's ENS Integration",
     "date": "2019-11-21",
