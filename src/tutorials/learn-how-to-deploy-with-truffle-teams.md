@@ -13,7 +13,7 @@ This tutorial assumes you've already done the following:
 
 Head over to [Truffle Teams](https://my.truffleteams.com).
 
-On the left navigation bar, click the item near the top labelled `DEPLOYMENTS` next to a parachute icon.
+On the left navigation bar, click the item near the top labelled **DEPLOYMENTS** next to a parachute icon.
 
 ![Deployments Navbar](/img/tutorials/learn-how-to-deploy-with-truffle-teams/deployments-navbar.png)
 
@@ -21,17 +21,17 @@ Here you'll see a list of your repositories. Click on the one you'd like to depl
 
 ![Repo List](/img/tutorials/learn-how-to-deploy-with-truffle-teams/repo-list.png)
 
-Here is the deployments page. You'll notice there are three columns: `Commits`, `Staging`, and `Production`.
+Here is the deployments page. You'll notice there are three columns: **Commits**, **Staging**, and **Production**.
 
-### `Commits` Column
+### Commits Column
 
-`Commits` is a list of all the commits that Truffle Teams is processing or has processed as a build. You'll see each will have a status icon to show if the build is in progress, failed, or successful. Commits with a successful icon (a green box with a checkmark as pictured) will be able to be deployed; you'll also notice the parachute icon in the top right of the commit that indicates this.
+**Commits** is a list of all the commits that Truffle Teams is processing or has processed as a build. You'll see each will have a status icon to show if the build is in progress, failed, or successful. Commits with a successful icon (a green box with a checkmark as pictured) will be able to be deployed; you'll also notice the parachute icon in the top right of the commit that indicates this.
 
 ![Commit Card](/img/tutorials/learn-how-to-deploy-with-truffle-teams/commit-card.png)
 
-### `Staging` and `Production` Columns
+### Staging and Production Columns
 
-`Staging` contains a list of all testnet (i.e. Ropsten, Rinkeby, Kovan, and Görli) deployments. `Production` contains a list of Mainnet deployments. We'll see more how these work later in the tutorial.
+**Staging** contains a list of all testnet (i.e. Ropsten, Rinkeby, Kovan, and Görli) deployments. **Production** contains a list of Mainnet deployments. We'll see more how these work later in the tutorial.
 
 ## Your First Deployment
 
@@ -43,7 +43,7 @@ Press the parachute icon on the commit you'd like to deploy.
 
 ![Parachute Callout](/img/tutorials/learn-how-to-deploy-with-truffle-teams/parachute-callout.png)
 
-A wizard will popup; under Destination Network select Ropsten. Then press `Connect Wallet`.
+A wizard will popup; under Destination Network select Ropsten. Then press **Connect Wallet**.
 
 ![Deployment Wizard Ropsten Select](/img/tutorials/learn-how-to-deploy-with-truffle-teams/deployment-wizard-ropsten-select.png)
 
@@ -59,7 +59,7 @@ Before moving on, make sure you have the correct account selected in MetaMask.
 
 ![MetaMask Account](/img/tutorials/learn-how-to-deploy-with-truffle-teams/metamask-account.png)
 
-Now you should see the wizard prompting for a `Deployment Context`. Leave it set to `Create a New Deployment`. We'll cover what this is later in the tutorial. Press the `OK, START DEPLOYING` button!
+Now you should see the wizard prompting for a **Deployment Context**. Leave it set to **Create a New Deployment**. We'll cover what this is later in the tutorial. Press the **OK, START DEPLOYING** button!
 
 ![Deployment Wizard Ready](/img/tutorials/learn-how-to-deploy-with-truffle-teams/deployment-wizard-ready.png)
 
@@ -75,25 +75,25 @@ Once the preparation steps are complete, you'll see a screen with the list of yo
 
 ![First Transaction](/img/tutorials/learn-how-to-deploy-with-truffle-teams/first-transaction.png)
 
-You'll notice that interface for MetaMask is like sending a transaction to any other dapp. It's your account that is sending this transaction, and you have complete control of it. We highly recommend you change the `GAS FEE` to be higher so that your transactions run quicker. For testnets like Ropsten, it's affordable to always select the `Fast` option.
+You'll notice that interface for MetaMask is like sending a transaction to any other dapp. It's your account that is sending this transaction, and you have complete control of it. We highly recommend you change the **GAS FEE** to be higher so that your transactions run quicker. For testnets like Ropsten, it's affordable to always select the **Fast** option.
 
 ![MetaMask Gas](/img/tutorials/learn-how-to-deploy-with-truffle-teams/metamask-gas.png)
 
-Once you're happy with the transaction gas fee, press the `Confirm` button to send your transaction. Once the transaction is confirmed (it may be slightly different from when MetaMask confirms it and when Truffle Teams confirms it), you'll receive the next transaction. Repeat this process until you see a message that your deployment is being finalized.
+Once you're happy with the transaction gas fee, press the **Confirm** button to send your transaction. Once the transaction is confirmed (it may be slightly different from when MetaMask confirms it and when Truffle Teams confirms it), you'll receive the next transaction. Repeat this process until you see a message that your deployment is being finalized.
 
 After a short wait, you'll see a window with your deployment results:
 
 ![Deployment Results](/img/tutorials/learn-how-to-deploy-with-truffle-teams/deployment-results.png)
 
-Go ahead and push the button or the `X` in the wizard. You'll now see a new card in the `Staging` column with the results of your deployment:
+Go ahead and push the button or the **X** in the wizard. You'll now see a new card in the **Staging** column with the results of your deployment:
 
 ![Deployment Card](/img/tutorials/learn-how-to-deploy-with-truffle-teams/deployment-card.png)
 
-You can click on the `+ Contracts` bar on the bottom of the card to see a list of your deployed contracts and their addresses:
+You can click on the **+ Contracts** bar on the bottom of the card to see a list of your deployed contracts and their addresses:
 
 ![Deployment Card Instance Details](/img/tutorials/learn-how-to-deploy-with-truffle-teams/deployment-card-instance-details.png)
 
-You can also click the vertical 3 dots in the top right of the card to find a menu. In this menu you can download a ZIP file of your Truffle `.json` artifacts used in your frontend webapp, graduate a deployment to production, or archive the deployment. **Note:** Be careful of the archive feature; we haven't implemented a way to unarchive deployments yet.
+You can also click the vertical 3 dots in the top right of the card to find a menu. In this menu you can download a ZIP file of your Truffle **.json** artifacts used in your frontend webapp, graduate a deployment to production, or archive the deployment. **Note:** Be careful of the archive feature; we haven't implemented a way to unarchive deployments yet.
 
 ![Deployment Card Menu](/img/tutorials/learn-how-to-deploy-with-truffle-teams/deployment-card-menu.png)
 
@@ -109,7 +109,7 @@ This option will let you select an existing deployment on the same network you'd
 sdss
 ## Graduating Deployments
 
-Happy with a particular deployment in `Staging`? You can select the `Graduate` option from the menu to use the same build as the basis of your deployment into Mainnet. Other than selecting a different network in MetaMask, the steps are the same! After you're done you'll see a new deployment in the production section.
+Happy with a particular deployment in **Staging**? You can select the **Graduate** option from the menu to use the same build as the basis of your deployment into Mainnet. Other than selecting a different network in MetaMask, the steps are the same! After you're done you'll see a new deployment in the production section.
 
 ![Mainnet Deployment](/img/tutorials/learn-how-to-deploy-with-truffle-teams/mainnet-deployment.pnge)
 
