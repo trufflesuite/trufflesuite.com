@@ -1,4 +1,12 @@
 {
+  "take-control-of-your-deployments-with-truffle-teams": {
+    "title": "Take Control of Your Deployments with Truffle Teams",
+    "date": "2019-12-18",
+    "author": "Mike Seese",
+    "published": true,
+    "excerpt": "Truffle Teams now gives you a dead-simple deployment experience. You push a couple of buttons, send transactions with MetaMask, and badabing, your contracts are on a public Ethereum network.",
+    "image": "/img/blog/thumbnails/truffle-teams-deployments.png"
+  },
   "using-the-ens-integration": {
     "title": "Using Truffle's ENS Integration",
     "date": "2019-11-21",

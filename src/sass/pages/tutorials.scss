@@ -27,6 +27,10 @@
   background: #e911bd;
 }
 
+.card-tutorial.teams::before {
+  background: #8731e8;
+}
+
 .card-tutorial.truffle.ganache::before {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3fe0c5+0,e4a663+100 */
   background: rgb(63,224,197); /* Old browsers */
