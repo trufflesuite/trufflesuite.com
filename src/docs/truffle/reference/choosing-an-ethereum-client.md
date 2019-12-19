@@ -47,7 +47,7 @@ There are many official and unofficial Ethereum clients available for you to use
 
 * Geth (go-ethereum): [https://github.com/ethereum/go-ethereum](https://github.com/ethereum/go-ethereum)
 * WebThree (cpp-ethereum): [https://github.com/ethereum/cpp-ethereum](https://github.com/ethereum/cpp-ethereum)
-* Pantheon (java): [https://github.com/PegaSysEng/pantheon](https://github.com/PegaSysEng/pantheon)
+* Hyperledger Besu (java): [https://github.com/hyperledger/besu](https://github.com/hyperledger/besu)
 * Parity: [https://github.com/paritytech/parity](https://github.com/paritytech/parity)
 * More: [https://ethereum.org/developers/#clients--running-your-own-node](https://ethereum.org/developers/#clients--running-your-own-node)
 
