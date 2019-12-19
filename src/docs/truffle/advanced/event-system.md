@@ -2,54 +2,69 @@
 title: Truffle | Truffle Event System
 layout: docs.hbs
 ---
+
+ℹ️ The Truffle Event System is currently an experimental feature and we
+anticipate that it will be developing and changing in the near future.
+Please keep this in mind when using this feature as we cannot promise that its
+architecture or the API will remain the same until we declare it as stable.
+Please enjoy and if you discover any issues or bugs, we would love it if you
+created an issue on the
+[Truffle GitHub page](https://github.com/trufflesuite/truffle/issues).
+Thank you!
+
 # Truffle Event System
 
-A new addition to Truffle in version 5.1.0 is the Event System. This is a
-system of hooks implemented in several of the command flows. Truffle commands
-now emit events for specific tasks, passing data relevant to the task. For
-example, during compilation an event will be emitted that contains the names
-of contracts that are being compiled.
+The Truffle Event System is a system of hooks implemented in several of the
+command flows. Truffle commands emit events for specific tasks, passing
+data relevant to the task. For example, during compilation an event is
+emitted that contains the names of contracts that are being compiled.
 
-Events have been implemented for the following Truffle command flows: compile,
-unbox, and obtain. We will be integrating the event system into the rest of
-Truffle's command flows in future versions.
+Events are currently implemented for the following Truffle command flows:
+  - compile
+  - unbox
+  - obtain
+
+We plan to integrate the event system into the rest of Truffle's command
+flows in future versions of Truffle.
 
 ## How it works
 
 All emitted events are named after the task that emits them. What makes
-Truffle's event system different then an event emitter is that the names of
-events are "namespaced", each part of the name is separated by a colon. The
+Truffle's event system different than an event emitter is that the names of
+events are "namespaced", each part of the name being separated by a colon. The
 entire name, in whole, is called the "event name". A simple example of an
 event name in the `compile` command flow is `"compile:start"`. Individual
 components of event names are "labels". The event name `"compile:start"` has
 two labels: `"compile"` and `"start"`. This particular event is emitted near
-the very start of the code that runs during compilation. A slightly more
-complicated name from the `unbox` command flow is
+the very start of the code that runs during compilation.
+
+A slightly more complicated name from the `unbox` command flow is
 `"unbox:downloadingBox:succeed"`. This event name has three labels:
 `"unbox"`, `"downloadingBox"`, and `"succeed"`. This event, as you can
 probably guess, is emitted when a Truffle box has successfully finished
 downloading during the `unbox` command flow.
 
 Events are often grouped into sub-labels that mark the beginning and end of a
-process. Paired of event names are common, e.g., an event name ends with
+process. Paired event names are common, e.g., an event name ends with
 `":start"` and another that ends with `":succeed"`. These denote the start
 and successful finish of a certain event. Another common label, `"fail"`, is
-used to indicate a failure of a certain event. When the event `"compile:start"`
+used to indicate the failure of a certain event. When the event `"compile:start"`
 is emitted, it means that compilation has started. `"compile:succeed"` lets
 us know that compilation has completed and `"compile:fail"` tells us that
 compilation has failed.
 
-You are able to provide handlers for all events that are emitted. These
-handlers will be executed when matching events are emitted. In the
-[Subscribers](#subscribers) section you will find a description of how to
-attach handlers to events.
+In order to make use of this system, you are able to provide handlers for
+any emitted event. These handlers will be executed when matching
+events are emitted. In the [Subscribers](#subscribers) section you will
+find a description of how to attach handlers to events.
 
-Some events also provide data to the handlers when emitted. This could be
-useful for collecting statistics or perhaps to make your own formatted output
-during development. `"compile:compiledSources"` is an example of an event that
-provides data about what source files were used during compilation. This data
-comes in the form of an array of source filenames that you can log to the
-console, save to a file, or use however you please.
+As was mentioned briefly, some events also provide data to the handlers
+when emitted. This could be useful for collecting statistics or perhaps to
+make your own formatted output during development. `"compile:compiledSources"`
+is an example of an event that provides data about what source files were
+used during compilation. This data comes in the form of an array of source
+filenames that you can log to the console, save to a file, or use
+however you please.
 
 In the [Currently supported events](#currently-supported-events) section you
 will find a chart of all currently available event names, where they are
@@ -69,7 +84,7 @@ Subscriber is instantiated at the beginning of all command flows. This
 function is optional.
 
 *NOTE: In this function you will have access to the Subscriber itself through
-the `this` keyword when you functions are described using the `function`
+the `this` keyword when your functions are described using `function`
 syntax, i.e., `function(data){`, not `(data) => {`. This makes it easy to
 attach properties and helper methods to the Subscriber that will then be
 available in your handlers.*
