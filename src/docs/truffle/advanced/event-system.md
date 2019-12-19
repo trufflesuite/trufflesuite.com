@@ -112,6 +112,10 @@ modules.exports = {
 
 ## How to define your event handlers
 
+This section will describe how to create your event handlers. When you are
+ready to see a couple of examples, see the
+[default subscribers](https://github.com/trufflesuite/truffle/tree/develop/packages/events/defaultSubscribers) for Truffle.
+
 To create your event handlers you will need to populate the `handlers` object.
 In order to describe which handlers correspond to which events, you must
 create at least one "event matcher". An event matcher is a string that will
