@@ -65,7 +65,7 @@ Now you should see the wizard prompting for a **Deployment Context**. Leave it s
 
 From here on, it's important that you don't close the tab, refresh the page, or lose network connection. We're working on a more robust experience that will enable you to pick up unfinished deployments, but for now our current version requires the tab to stay open and connected.
 
-Truffle Teams can only process so many deployments at the same time, so you may see that your deployment has been queued. You'll have to wait (without closing/refreshing the tab) for your deployment to get to the front of the list. However, we're working diligently to make this experience more seamless going forward.
+Truffle Teams will only process so many deployments at the same time, so you may see that your deployment has been queued. You'll have to wait (without closing/refreshing the tab) for your deployment to get to the front of the list. However, we're working diligently to make this experience more seamless going forward.
 
 Once your deployment has started processing, you'll see a list of steps Truffle Teams is doing to prepare for your deployment.
 
@@ -85,7 +85,7 @@ After a short wait, you'll see a window with your deployment results:
 
 ![Deployment Results](/img/tutorials/learn-how-to-deploy-with-truffle-teams/deployment-results.png)
 
-Your contracts are deployed! That was easy. Go ahead and push the **Great! Go Back to Workflo** button or the **X** in the wizard. You'll now see a new card in the **Staging** column with the results of your deployment:
+Your contracts are deployed! That was easy. Go ahead and push the **Great! Go Back to Workflow** button or the **X** in the wizard. You'll now see a new card in the **Staging** column with the results of your deployment:
 
 ![Deployment Card](/img/tutorials/learn-how-to-deploy-with-truffle-teams/deployment-card.png)
 

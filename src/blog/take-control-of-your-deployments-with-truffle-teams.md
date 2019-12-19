@@ -1,6 +1,6 @@
 ![Truffle Teams Deployments Banner](/img/blog/easily-deploy-your-smart-contracts-with-truffle-teams/truffle-teams-deployments-banner.png)
 
-If you read out [blog post back in July](/blog/an-easier-way-to-deploy-your-smart-contracts), attended my TruffleCon workshop **Push It! Push It Real Good: Truffle Teams Intro & Deployments** back in August, or tuned in last week to our **Truffle Teams Overview** webinar, you've known something awesome has been in the works for Truffle Teams.
+If you read our [blog post back in July](/blog/an-easier-way-to-deploy-your-smart-contracts), attended my TruffleCon workshop **Push It! Push It Real Good: Truffle Teams Intro & Deployments** back in August, or tuned in last week to our **Truffle Teams Overview** webinar, you've known something awesome has been in the works for Truffle Teams.
 
 Well it's finally here! On behalf of the whole team, I'm excited to announce Deployments within Truffle Teams!
 
