@@ -371,5 +371,11 @@
     "displayName": "zepkit",
     "repoName": "zepkit",
     "official": false
+  },
+  {
+    "userOrg": "pranav-singhal",
+    "displayName": "upgradable-proxy-box",
+    "repoName": "upgradable-proxy-box",
+    "official": false
   }
 ]
