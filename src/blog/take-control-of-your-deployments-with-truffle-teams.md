@@ -13,13 +13,13 @@ The interaction between Truffle and Ganache provides an awesome testing experien
 ## Benefits of Deploying with Truffle Teams
 
 - **Easily deploy to public Ethereum networks** (Mainnet, Ropsten, and Rinkeby initially supported; Görli and Kovan shortly following)
-- **Works with your existing migration scripts** in your Truffle project; Truffle Teams use `truffle migrate` under the hood
+- **Works with your existing migration scripts** in your Truffle project; Truffle Teams uses `truffle migrate` under the hood
 - **No need to export/import private keys** — use [MetaMask](https://metamask.io/) to deploy like you would with any other dapp
 - **Deploy with [Ledger](https://www.ledger.com/) or [Trezor](https://trezor.io/) hardware wallets** within MetaMask
 
 ## Learn More in Our Tutorial or Try It Now!
 
-We put together a step-by-step [tutorial](/tutorials/learn-how-to-deploy-with-truffle-teams) to guide you through your first Truffle Teams deployment. While we do highly recommend you follow the tutorial as there will be some extra information to answer some FAQ, we do believe the deployment experience is simple enough for you to just give it a shot! 👇
+We put together a step-by-step [tutorial](/tutorials/learn-how-to-deploy-with-truffle-teams) to guide you through your first Truffle Teams deployment. While we recommend you follow the tutorial, as it answers some FAQs, the deployment experience is simple enough for you to just give it a shot! 👇
 
 <div class="post-trufflecon-box mt-5 text-center">
   Get started today with Truffle Teams, and see deployments for yourself!
