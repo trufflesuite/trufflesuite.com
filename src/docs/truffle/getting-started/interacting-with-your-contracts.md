@@ -145,7 +145,7 @@ What's interesting here:
 When you make a transaction, you're given a `result` object that gives you a wealth of information about the transaction.
 
 ```javascript
-truffle(develop)> let result = await contract.sendCoin(accounts[1], 10, {from: accounts[0]})
+truffle(develop)> let result = await instance.sendCoin(accounts[1], 10, {from: accounts[0]})
 truffle(develop)> result
 ```
 
