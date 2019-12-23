@@ -23,9 +23,11 @@ As always, Truffle's tools come standard on Windows, macOS, and Linux.
 
 We are excited to share this with the Corda community and **we also need to your help!** Since this is a Beta release, we know it's not perfect. If you find a bug, do us a favor and file an issue [here](https://github.com/trufflesuite/ganache/issues/new).
 
-<a href="https://share.hsforms.com/1jbMAfLzGSj6HWx_-na9Bew34pbp"><i class="fas fa-envelope"></i> Sign up for the Corda Flavored Ganache mailing list here</a> to get the latest updates on all things Ganache + Corda.
+<a href="https://share.hsforms.com/1jbMAfLzGSj6HWx_-na9Bew34pbp">✉️ Sign up for the Corda Flavored Ganache mailing list here</a> to get the latest updates on all things Ganache + Corda.
 
 If you don't hear from us immediately, know that our team is taking some much needed time off starting today. We'll be back January 6th, 2020 ready to dive into your feedback! 
+
+If you see them around the net, make sure to give a _**HUGE thank you**_ to [David Murdoch and Nick Paterno](/staff). Their hard work made this all possible and we're a very fortunate organization to have them aboard! 💖
 
 <div class="post-trufflecon-box mt-5 text-center">
   Try the Corda Flavored Ganache beta and let us know what you think!

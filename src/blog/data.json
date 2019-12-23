@@ -2,7 +2,7 @@
   "unwrap-the-corda-flavored-ganache-beta": {
     "title": "Unwrap the Corda Flavored Ganache Beta",
     "date": "2019-12-23",
-    "author": "Liz Daldalian",
+    "author": "Josh Quintal",
     "published": true,
     "excerpt": "Earlier this year at TruffleCon we announced our partnership with Corda to develop a Corda Flavored Ganache. Then, at CordaCon in London we shared more details around the integration. Today, we are proud to share with you the Beta release is live!",
     "image": "/img/blog/thumbnails/corda-ganache-beta-blog-thumb.png"
