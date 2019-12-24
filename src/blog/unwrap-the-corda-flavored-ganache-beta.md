@@ -2,7 +2,7 @@
 
 Earlier this year at TruffleCon [we announced our partnership with Corda to develop a Corda Flavored Ganache](https://youtu.be/MtOaXVt1yOE?t=697). Then, at CordaCon in London [we shared more details around the integration](https://www.r3.com/videos/truffle-and-corda/).
 
-**Today, we are proud to share with you [the beta release is live](https://github.com/trufflesuite/ganache/releases)!**
+**Today, we are proud to share with you [the beta release is live](https://github.com/trufflesuite/ganache/releases/tag/v2.3.0-beta.1)!**
 
 As a quick refresher: Ganache is Truffle's "one click blockchain" that allows you to run a test network for local development. You don't need an internet connection and because it's all on the same machine, Ganache allows users to see the status of the network in greater detail than on a live network.
 
@@ -33,6 +33,6 @@ If you see them around the net, make sure to give a _**HUGE thank you**_ to [Dav
   Try the Corda Flavored Ganache beta and let us know what you think!
 
   <div class="mt-3">
-    <a class="btn btn-truffle" href="https://github.com/trufflesuite/ganache/releases">Download Corda Flavored Ganache</a>
+    <a class="btn btn-truffle" href="https://github.com/trufflesuite/ganache/releases/tag/v2.3.0-beta.1">Download Corda Flavored Ganache</a>
   </div>
 </div>
