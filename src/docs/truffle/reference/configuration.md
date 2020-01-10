@@ -56,7 +56,7 @@ The `networks` object, shown below, is keyed by a network name and contains a co
 
 The network name is used for user interface purposes, such as when running your migrations on a specific network:
 
-```bash
+```shell
 $ truffle migrate --network live
 ```
 
@@ -89,7 +89,7 @@ networks: {
 
 For each network, if unspecified, transaction options will default to the following values:
 
-* `gas`: Gas limit used for deploys. Default is `4712388`.
+* `gas`: Gas limit used for deploys. Default is `6721975`.
 * `gasPrice`: Gas price used for deploys. Default is `100000000000` (100 Shannon).
 * `from`: From address used during migrations. Defaults to the first available account provided by your Ethereum client.
 * `provider`: Default web3 provider using `host` and `port` options: `new Web3.providers.HttpProvider("http://<host>:<port>")`
@@ -225,6 +225,7 @@ You may specify...
 + a natively compiled solc binary (you'll need to install this yourself, links to help below).
 + a dockerized solc from one of images published [here](https://hub.docker.com/r/ethereum/solc/tags/).
 + a path to a locally available solc
++ a solc-js parser for faster docker and native compilations
 
 Truffle config example:
 
@@ -235,12 +236,13 @@ module.exports = {
       version: <string>, // A version or constraint - Ex. "^0.5.0"
                          // Can also be set to "native" to use a native solc
       docker: <boolean>, // Use a version obtained through docker
+      parser: "solcjs",  // Leverages solc-js purely for speedy parsing
       settings: {
         optimizer: {
           enabled: <boolean>,
           runs: <number>   // Optimize for how many times you intend to run the code
         },
-        evmVersion: <string> // Default: "byzantium"
+        evmVersion: <string> // Default: "petersburg"
       }
     }
   }

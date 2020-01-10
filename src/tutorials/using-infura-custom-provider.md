@@ -6,7 +6,7 @@ You may not be familiar with Infura by name, but if you've used [MetaMask](https
 
 For security reasons, Infura does not manage your private keys, which means Infura cannot sign transactions on your behalf.
 
-However, Truffle can sign transactions through the use of its `HDWalletProvider`. This provider can handle the transaction signing as well as the connection to the Ethereum network. ([Read more about HDWalletProvider](https://github.com/trufflesuite/truffle-hdwallet-provider).)
+However, Truffle can sign transactions through the use of its `HDWalletProvider`. This provider can handle the transaction signing as well as the connection to the Ethereum network. ([Read more about HDWalletProvider](https://github.com/trufflesuite/truffle/tree/develop/packages/hdwallet-provider).)
 
 This tutorial will show you how to use Infura to migrate an existing dapp to an Ethereum network supported by Infura. In this specific instance, we'll migrate to Ropsten. We'll assume that you already have a dapp to migrate. If you want a test dapp, feel free to use our [Pet Shop](/tutorials/pet-shop) tutorial dapp.
 
@@ -15,7 +15,7 @@ This tutorial will show you how to use Infura to migrate an existing dapp to an 
 Truffle's `HDWalletProvider` is a separate npm package:
 
 ```shell
-npm install truffle-hdwallet-provider
+npm install @truffle/hdwallet-provider
 ```
 
 <p class="alert alert-info">
@@ -36,13 +36,13 @@ The next step is to edit your `truffle-config.js` file to use `HDWalletProvider`
 1. First, define the `HDWalletProvider` object in your configuration file. Add this line at the top of your `truffle-config.js` file:
 
    ```javascript
-   var HDWalletProvider = require("truffle-hdwallet-provider");
+   const HDWalletProvider = require("@truffle/hdwallet-provider");
    ```
 
 2. Next, provide a reference to your mnemonic that generates your accounts. If you don't have a mnemonic, you can generate one using an [online mnemonic generator](https://iancoleman.io/bip39) or a hardware wallet such as a product from [Ledger](https://www.ledgerwallet.com).
 
    ```javascript
-   var mnemonic = "orange apple banana ... ";
+   const mnemonic = "orange apple banana ... ";
    ```
 
    <p class="alert alert-danger">
@@ -59,7 +59,7 @@ The next step is to edit your `truffle-config.js` file to use `HDWalletProvider`
            return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/<INFURA_PROJECT_ID>")
          },
          network_id: 3
-       }   
+       }
      }
    };
    ```
@@ -74,7 +74,7 @@ The next step is to edit your `truffle-config.js` file to use `HDWalletProvider`
 
    * Make sure to replace `<INFURA_PROJECT_ID>` with your Infura Project ID.
 
-   * The `provider` value is wrapped in a function, which ensures that it won't get initialized until it's needed. This is especially important if connecting to multiple networks. (See the [Networks configuration](http://truffleframework.com/docs/advanced/configuration#networks) section of the documentation for more on this topic.)
+   * The `provider` value is wrapped in a function, which ensures that it won't get initialized until it's needed. This is especially important if connecting to multiple networks. (See the [Networks configuration](http://trufflesuite.com/docs/advanced/configuration#networks) section of the documentation for more on this topic.)
 
      <p class="alert alert-info">
        <strong>Note</strong>: If you encounter issues with this construction, you can skip the function wrapper and use this instead:<br />
@@ -119,26 +119,27 @@ We are now ready to deploy to Ropsten!
 
    If all goes well, you should see a response that looks similar to the following:
 
-   ```shell
-   Using network 'ropsten'.
+   ```
+   Starting migrations...
+   ======================
+   > Network name:    'ropsten'
+   > Network id:      3
+   > Block gas limit: 0x6691b7
 
-   Running migration: 1_initial_migration.js
-     Deploying Migrations...
-     ... 0xd79bc3c5a7d338a7f85db9f86febbee738ebdec9494f49bda8f9f4c90b649db7
-     Migrations: 0x0c6c4fc8831755595eda4b5724a61ff989e2f8b9
-   Saving successful migration to network...
-     ... 0xc37320561d0004dc149ea42d839375c3fc53752bae5776e4e7543ad16c1b06f0
-   Saving artifacts...
-   Running migration: 2_deploy_contracts.js
-     Deploying MyContract...
-     ... 0x7efbb3e4f028aa8834d0078293e0db7ff8aff88e72f33960fc806a618a6ce4d3
-     MyContract: 0xda05d7bfa5b6af7feab7bd156e812b4e564ef2b1
-   Saving successful migration to network...
-     ... 0x6257dd237eb8b120c8038b066e257baee03b9c447c3ba43f843d1856de1fe132
-   Saving artifacts...
+
+   1_initial_migration.js
+   ======================
+
+      Deploying 'Migrations'
+      ----------------------
+      > transaction hash:    0x166c1791caa73cca6a75fe4258866bd1f2d1bcf2cd4c3a2a1e03fab29c42829d
+      > Blocks: 0            Seconds: 0
+      > contract address:    0x5ccb4dc04600cffA8a67197d5b644ae71856aEE4
+      ......
+      ......
    ```
 
-   Note that your transaction IDs will be different from the ones above.
+   Note that your transaction hash and contract address will be different from the ones above.
 
    <p class="alert alert-info">
    <strong>Note</strong>: If you receive an error `Error: Exceeds block gas limit
@@ -147,8 +148,8 @@ We are now ready to deploy to Ropsten!
 
 1. If you want to verify that your contract was deployed successfully, you can check this on the [Ropsten section of Etherscan](https://ropsten.etherscan.io/). In the search field, type in the transaction ID for your contract. In the above example, the transaction ID is:
 
-   ```shell
-   0x7efbb3e4f028aa8834d0078293e0db7ff8aff88e72f33960fc806a618a6ce4d3
+   ```
+   0x166c1791caa73cca6a75fe4258866bd1f2d1bcf2cd4c3a2a1e03fab29c42829d
    ```
 
    You should see details about the transaction, including the block number where the transaction was secured.

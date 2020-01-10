@@ -1,11 +1,3 @@
-<div class="post-trufflecon-box mb-5">
-  **[TruffleCon 2019](https://www.trufflesuite.com/trufflecon2019)** is happening August 2-4 on Microsoft’s campus in Redmond, WA. This year’s event will include 60+ speakers from the blockchain ecosystem, along with hands-on workshops geared toward novice users and expert builders alike. The Truffle team is ramping up for TruffleCon 2019 by writing a daily blog post about everything that’s on our minds. We hope you enjoy and we’ll see you in Redmond!
-
-  <div class="text-center">
-    <a class="btn btn-truffle mt-3" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>
-
 ![river view at Marymoor Park](/img/blog/the-best-things-to-do-in-seattle-during-trufflecon/layer-1.jpg)
 
 ## [Marymoor Park](https://www.kingcounty.gov/services/parks-recreation/parks/parks-and-natural-lands/popular-parks/marymoor.aspx)
@@ -14,11 +6,11 @@ Marymoor Park, located on the north end of Lake Sammamish in Redmond, Washington
 
 ## [Sammamish River Trail](https://www.alltrails.com/trail/us/washington/sammamish-river)
 
-The Sammamish River Trail is a beautiful 19-mile bike path and recreational trail in King County, Washington that runs along the Sammamish River from Blythe Park in Bothell to Marymoor Park in Redmond. There are several places along the trail you can enter. It's perfect for biking, running, or just enjoying a nice walk in the beautiful outdoors! 
+The Sammamish River Trail is a beautiful 19-mile bike path and recreational trail in King County, Washington that runs along the Sammamish River from Blythe Park in Bothell to Marymoor Park in Redmond. There are several places along the trail you can enter. It's perfect for biking, running, or just enjoying a nice walk in the beautiful outdoors!
 
 ## [Idylwood Beach Park](https://experienceredmond.com/activities-and-attractions/idylwood-beach-park/)
 
-August can reach temperatures of up to 80 degrees, which is quite hot for Seattleites. Idylwood Beach Park is one of the best places to cool off. It's a waterfront park on Lake Sammamish with a beach, boat ramp, playground & canoe rentals. 
+August can reach temperatures of up to 80 degrees, which is quite hot for Seattleites. Idylwood Beach Park is one of the best places to cool off. It's a waterfront park on Lake Sammamish with a beach, boat ramp, playground & canoe rentals.
 
 ## [Microsoft Visitor Center](https://experienceredmond.com/activities-and-attractions/microsoft-visitors-center/)
 
@@ -33,10 +25,10 @@ Nestled in the beautiful Sammamish River Valley just 30 minutes northeast of Sea
 From the historic and beautiful grounds of Chateau Ste. Michelle to the quaint boutique wineries where you are likely to have the winemaker themselves pour you a glass of his or her finest blend, a wonderful variety of wine tasting experiences awaits you!
 
 ![winery building in the Sammamish River Valley](/img/blog/the-best-things-to-do-in-seattle-during-trufflecon/layer-3.jpg)
- 
+
 ## [Black Raven Brewing Company](http://www.blackravenbrewing.com/)
 
-Black Raven is a neighborhood brewery with a friendly retail taproom, The Raven's Nest, with locations in both Redmond and Woodinville. The Raven's Nest is not a traditional brewpub; it's more like our brewery's living room. Open 7 days a week and a seating capacity of about 100, it's home to local beer lovers who want to be a part of a community that enjoy great beer and great friends. 
+Black Raven is a neighborhood brewery with a friendly retail taproom, The Raven's Nest, with locations in both Redmond and Woodinville. The Raven's Nest is not a traditional brewpub; it's more like our brewery's living room. Open 7 days a week and a seating capacity of about 100, it's home to local beer lovers who want to be a part of a community that enjoy great beer and great friends.
 
 ## [Mac & Jack's Brewing](https://www.macandjacks.com/)
 
@@ -77,15 +69,8 @@ People will protect the places they love to hike. WTA rallies hikers to raise ou
 ![beautful views of the mountains on the hiking trail](/img/blog/the-best-things-to-do-in-seattle-during-trufflecon/layer-8.jpg)
 
 ## [Mountain Biking](https://seattlemountainbiketours.com/)
- 
+
 Your all-inclusive mountain biking tour in Seattle includes pickup from Downtown Seattle or Bellevue and shuttle transportation to our favorite trails for intermediate and experienced cyclists. At the trailhead, you get your high-quality mountain bike, a helmet, gloves, and any other safety gear needed for our ride. Don't worry, we have plenty of water and snacks for our mountain biking adventure!
 
 ![mountain biker rounding the bend in Seattle](/img/blog/the-best-things-to-do-in-seattle-during-trufflecon/layer-9.jpg)
 
-<div class="post-trufflecon-box mt-5 text-center">
-  Get your ticket for TruffleCon 2019 Today
-
-  <div class="mt-3">
-    <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>

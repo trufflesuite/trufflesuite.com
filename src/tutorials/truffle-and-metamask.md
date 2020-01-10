@@ -45,7 +45,7 @@ When you open a normal Truffle Dapp, it takes advantage of your local authentica
 Next, let's generate a basic Truffle dapp. The default result of `truffle init` is a simple example currency.
 
 To get it up and running, run these commands:
-```
+```shell
 mkdir my-money  # Create a folder for your new dapp
 cd my-money     # Move into that folder
 truffle init    # Initialize a default truffle project in that folder
@@ -120,7 +120,7 @@ Here's a simple shell command to tell your `testrpc` to send 1 ether to your Met
 
 `1e18` is equal to 1 ether, which will be more than enough for our purposes.
 
-```
+```shell
 curl -d '{"jsonrpc":"2.0","method":"eth_sendTransaction","params": [{"from":"0x0f91747e3a5df28d81ab30b2d8216c93263c0cf3", "to":"0xbbd220f66e989a493c4d48531ea1e283abc385de", "value": 1e18}], "id":1}' -X POST http://127.0.0.1:8545/
 ```
 

@@ -27,6 +27,10 @@ a:hover {
 
 ol, ul {
   padding-left: 15px;
+
+  ol, ul {
+    margin-top: 1rem;
+  }
 }
 
 code {
@@ -135,6 +139,13 @@ blockquote {
   h1, h2, h3, h4, h5, h6 {
     margin-top: 2rem;
     margin-bottom: 1rem;
+    .anchor-target {
+      position:relative;
+      top: -4rem;
+      display: block;
+      height: 0;
+      width: 0;
+    }
   }
 
   p {

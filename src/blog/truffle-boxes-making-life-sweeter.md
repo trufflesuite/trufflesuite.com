@@ -19,7 +19,7 @@ Perhaps the most exciting part of this release -- our _pièce de résistance_ --
 
 ## Get Involved: Make Your Own Box
 
-We've released four boxes out of the gate to get you started, but this isn't just our candy store. **We want you to contribute** to the boxes on our site. If you have boilerplate code, an example dapp, a helpful integration or an exciting dapp stack (say, an Ethereum-enabled iOS app built with Truffle), send us an email at [info@trufflesuite.com](mailto:info@trufflesuite.com) and we'll look it over. If it's awesome, we'll list it on our site with your name front and center. If it's better than awesome, we'll help contribute and maintain it and make it an officially-supported Truffle box. With Truffle, you can share your code with others and help build the community, one box at a time.
+We've released four boxes out of the gate to get you started, but this isn't just our candy store. **We want you to contribute** to the boxes on our site. If you have boilerplate code, an example dapp, a helpful integration or an exciting dapp stack (say, an Ethereum-enabled iOS app built with Truffle), send us an email at [boxes@trufflesuite.com](mailto:boxes@trufflesuite.com?subject=Truffle%20box%20review) and we'll look it over. If it's awesome, we'll list it on our site with your name front and center. If it's better than awesome, we'll help contribute and maintain it and make it an officially-supported Truffle box. With Truffle, you can share your code with others and help build the community, one box at a time.
 
 ## One More thing...
 

@@ -22,7 +22,7 @@ In this tutorial, we will migrate a basic contract to a test blockchain, introdu
 
 One of the most basic, non-trivial, types of smart contract is a **simple storage contract**. (This example was adapted from the [Solidity documentation](https://solidity.readthedocs.io/en/develop/introduction-to-smart-contracts.html).)
 
-```javascript
+```solidity
 pragma solidity ^0.4.17;
 
 contract SimpleStorage {
@@ -66,7 +66,7 @@ First, let's set up our environment.
 
 1. Inside the `contracts/` directory, create a file called `Store.sol` with the following content:
 
-   ```javascript
+   ```solidity
    pragma solidity ^0.4.17;
 
    contract SimpleStorage {
@@ -132,7 +132,7 @@ First, let's set up our environment.
       SimpleStorage: 0x377bbcae5327695b32a1784e0e13bedc8e078c9c
     Saving successful migration to network...
       ... 0x6e25158c01a403d33079db641cb4d46b6245fd2e9196093d9e5984e45d64a866
-    Saving artifacts... 
+    Saving artifacts...
    ```
 
 ## Interacting with the basic smart contract
@@ -147,13 +147,13 @@ We next want to interact with the smart contract to see how it works when workin
 
 1. In the console where `truffle develop` is running, run the following command:
 
-   ```shell
+   ```javascript
    SimpleStorage.deployed().then(function(instance){return instance.get.call();}).then(function(value){return value.toNumber()});
    ```
 
    This command looks at the SimpleStorage contract, and then calls the `get()` function as defined inside it. It then returns the output, which is usually rendered as a string, and converts it to a number:
 
-   ```shell
+   ```javascript
    0
    ```
 
@@ -161,13 +161,13 @@ We next want to interact with the smart contract to see how it works when workin
 
 1. Now let's run a transaction on our contract. We'll do this by running the `set()` function, where we can set our variable value to some other integer. Run the following command:
 
-   ```shell
+   ```javascript
    SimpleStorage.deployed().then(function(instance){return instance.set(4);});
    ```
 
    This sets the variable to `4`. The output shows some information about the transaction, including the transaction ID (hash), transaction receipt,  and any event logs that were triggered during the course of the transaction:
 
-   ```shell
+   ```javascript
     { tx: '0x7f799ad56584199db36bd617b77cc1d825ff18714e80da9d2d5a0a9fff5b4d42',
       receipt:
        { transactionHash: '0x7f799ad56584199db36bd617b77cc1d825ff18714e80da9d2d5a0a9fff5b4d42',
@@ -178,7 +178,7 @@ We next want to interact with the smart contract to see how it works when workin
          cumulativeGasUsed: 41577,
          contractAddress: null,
          logs: [] },
-      logs: [] }   
+      logs: [] }
    ```
 
    Most important to us is the transaction ID (listed here both as `tx` and as `transactionHash`). We'll need to copy that value when we start to debug.
@@ -189,13 +189,13 @@ We next want to interact with the smart contract to see how it works when workin
 
 1. To verify that the variable has changed values, run the `get()` function again:
 
-   ```shell
+   ```javascript
    SimpleStorage.deployed().then(function(instance){return instance.get.call();}).then(function(value){return value.toNumber()});
    ```
 
    The output should look like this:
 
-   ```shell
+   ```javascript
    4
    ```
 
@@ -206,7 +206,7 @@ The above shows how the contract *should* work. Now, we will introduce some smal
 We will look at the following issues:
 
 * An infinite loop
-* Invalid error check 
+* Invalid error check
 * No error, but a function isn't operating as desired
 
 
@@ -226,7 +226,7 @@ An infinite loop is easy to create.
 
 1. Replace the `set()` function with the following:
 
-   ```javascript
+   ```solidity
    function set(uint x) public {
      while(true) {
        myVariable = x;
@@ -258,13 +258,13 @@ The Truffle Develop console has the ability to migrate updated contracts without
 
 1. Now we are ready to run that transaction. Run the `set()` command from above.
 
-   ```shell
+   ```javascript
    SimpleStorage.deployed().then(function(instance){return instance.set(4);});
    ```
 
    An error will display:
 
-   ```shell
+   ```
    Error: VM Exception while processing transaction: out of gas
    ```
 
@@ -277,7 +277,7 @@ The Truffle Develop console has the ability to migrate updated contracts without
     develop:testrpc   Gas usage: 4712388 +11ms
     develop:testrpc   Block Number: 6 +15ms
     develop:testrpc   Runtime Error: out of gas +0ms
-    develop:testrpc  +16ms   
+    develop:testrpc  +16ms
    ```
 
 With our failure and our transaction ID, we can now debug the transaction.
@@ -299,7 +299,7 @@ Truffle contains a built-in debugger. The command to launch this is `debug <Tran
 
    You will see the following output:
 
-   ```shell
+   ```solidity
    Gathering transaction data...
 
    Addresses affected:
@@ -326,7 +326,7 @@ Truffle contains a built-in debugger. The command to launch this is `debug <Tran
 
    The output is as follows:
 
-   ```shell
+   ```solidity
    Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
 
    4:   uint myVariable;
@@ -339,7 +339,7 @@ Truffle contains a built-in debugger. The command to launch this is `debug <Tran
 
 1. Press `Enter` again to step to the next instruction:
 
-   ```shell
+   ```solidity
    Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
 
    5:
@@ -350,7 +350,7 @@ Truffle contains a built-in debugger. The command to launch this is `debug <Tran
 
 1. Keep pressing Enter:
 
-   ```shell
+   ```solidity
    Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
 
    5:
@@ -421,7 +421,7 @@ Here we will introduce such a condition, and then see how the debugger can find 
 
 1. Replace the `set()` function with the following:
 
-   ```javascript
+   ```solidity
    function set(uint x) public {
      assert(x == 0);
      myVariable = x;
@@ -442,13 +442,13 @@ Just as before, we'll reset the contract on the blockchain.
 
 1. Now we are ready to test the new transaction. Run the same command as above:
 
-   ```shell
+   ```javascript
    SimpleStorage.deployed().then(function(instance){return instance.set(4);});
    ```
 
    You will see an error:
 
-   ```shell
+   ```
    Error: VM Exception while processing transaction: invalid opcode
    ```
 
@@ -471,7 +471,7 @@ Just as before, we'll reset the contract on the blockchain.
 
    Now we are back in the debugger:
 
-   ```shell
+   ```solidity
    Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
 
    1: pragma solidity ^0.4.17;
@@ -484,8 +484,7 @@ Just as before, we'll reset the contract on the blockchain.
 
 1. Press `Enter` a few times to step through the code. Eventually, the debugger will halt with an error message:
 
-   ```shell
-
+   ```solidity
    Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
 
    5:
@@ -497,9 +496,9 @@ Just as before, we'll reset the contract on the blockchain.
 
    Transaction halted with a RUNTIME ERROR.
 
-   This is likely due to an intentional halting expression, like 
+   This is likely due to an intentional halting expression, like
    assert(), require() or revert(). It can also be due to out-of-gas
-   exceptions. Please inspect your transaction parameters and 
+   exceptions. Please inspect your transaction parameters and
    contract code to determine the meaning of this error.
    ```
 
@@ -520,7 +519,7 @@ Once again, we can use the debugger to see where things go wrong.
 
 1. Replace the `set()` function with the following:
 
-   ```javascript
+   ```solidity
    event Odd();
 
    event Even();
@@ -534,7 +533,7 @@ Once again, we can use the debugger to see where things go wrong.
      }
    }
    ```
-   
+
    This code introduces two dummy events, `Odd()` and `Even()` that are triggered based on a conditional that checks whether `x` is divisible by `2`.
 
    But notice that we have the results flipped. If `x` is divisible by `2`, the `Odd()` event will run.
@@ -553,13 +552,13 @@ Just as before, we'll reset the contract on the blockchain.
 
 1. Now we are ready to test the new transaction. Run the same command as above:
 
-   ```shell
+   ```javascript
    SimpleStorage.deployed().then(function(instance){return instance.set(4);});
    ```
 
    **Note that there is no error here.** The response is given as a transaction ID with details:
 
-   ```shell
+   ```javascript
    { tx: '0x7f799ad56584199db36bd617b77cc1d825ff18714e80da9d2d5a0a9fff5b4d42',
      receipt:
       { transactionHash: '0x7f799ad56584199db36bd617b77cc1d825ff18714e80da9d2d5a0a9fff5b4d42',
@@ -600,7 +599,7 @@ Just as before, we'll reset the contract on the blockchain.
 
 1. Press `Enter` multiple times to cycle through the steps. Eventually you will see that the conditional leads to the `Odd()` event:
 
-   ```shell
+   ```solidity
    Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
 
    10:   function set(uint x) public {

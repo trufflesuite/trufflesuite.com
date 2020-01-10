@@ -4,13 +4,13 @@ This is a beta document and refers to the `beta` version of Truffle. The followi
 
 As this feature is in beta, you must first get the beta version of Truffle. To make sure the beta version doesn't conflict with the released version, first remove the Truffle version you have currently installed:
 
-```
+```shell
 $ npm uninstall -g truffle
 ```
 
 And then install the beta version:
 
-```
+```shell
 $ npm install -g truffle@beta
 ```
 
@@ -37,7 +37,7 @@ When using a package within your own project, it is important to note that there
 
 For this example, we're going to use the [Example Truffle Library](https://github.com/ConsenSys/example-truffle-library), which provides a simple name registry that is deployed to the Morden test network. In order to use it as a dependency, we must first install it within our project through `npm`:
 
-```
+```shell
 $ cd my_project
 $ npm install example-truffle-library
 ```
@@ -93,7 +93,6 @@ contract MyContract {
     registry = SimpleNameRegistry(addr);
   }
 }
-
 ```
 
 Migration: 3_hook_up_example_library.js

@@ -14,13 +14,13 @@ Like Truffle, we need you to put this version through its paces before we can re
 
 To get the beta version, first uninstall the version of the TestRPC you currently have (because they'll conflict):
 
-```
+```shell
 $ npm uninstall -g ethereumjs-testrpc
 ```
 
 And now install the beta version:
 
-```
+```shell
 $ npm install -g ethereumjs-testrpc@beta
 ```
 

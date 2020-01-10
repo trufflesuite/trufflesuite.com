@@ -1,11 +1,3 @@
-<div class="post-trufflecon-box mb-5">
-  **[TruffleCon 2019](https://www.trufflesuite.com/trufflecon2019)** is happening August 2-4 on Microsoft’s campus in Redmond, WA. This year’s event will include 60+ speakers from the blockchain ecosystem, along with hands-on workshops geared toward novice users and expert builders alike. The Truffle team is ramping up for TruffleCon 2019 by writing a daily blog post about everything that’s on our minds. We hope you enjoy and we’ll see you in Redmond!
-
-  <div class="text-center">
-    <a class="btn btn-truffle mt-3" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>
-
 Although the Internet continues to drive digital transformation, the technology operates far beyond its original parameters. Since its inception over two decades ago, the web has been subject to increasing levels of centralization and mass surveillance. As a result, large corporations, governments, and media outlets remain the primary beneficiaries of an infrastructure meant to serve all of humanity. Herein lies the problem with the current Internet ecosystem, also known as Web 2.0.
 
 In the current online environment, users continually function as commodities, generating value along with their data. And while large entities should not shoulder the blame for their role in our everyday lives, their control over our personal information is cause for concern. As Internet founder Tim Berners-Lee [once said](https://www.vanityfair.com/news/2018/07/the-man-who-created-the-world-wide-web-has-some-regrets), "for people who want to make sure the Web serves humanity, we have to concern ourselves with what people are building on top of it."
@@ -99,12 +91,3 @@ State channels are mostly two-way pathways open between two users that want to c
 As the development of Web 3.0 technology persists, blockchain technology will remain a vital component of online infrastructure. Although the world continues to benefit from the transformative power of the web, user empowerment remains a priority among a growing segment of society. In a time when centralized institutions and governments exert control over personal data, many have begun to challenge the status quo.
 
 Those exploring this emerging subset of the web are well-positioned to benefit from growing momentum. By leveraging Web 3.0 technologies, companies also have the ability to enact new, potentially lucrative business models. Regardless of the industry, the new web presents an opportunity to pivot from traditional revenue streams in search of more optimal solutions. In the midst of ongoing innovation, it’s important to note that all new technology requires refinement - and Web 3.0 is only just beginning.
-
-
-<div class="post-trufflecon-box mt-5 text-center">
-  Join Kevin along with 60+ speakers from EY, IBM, Quorum, Runtime Verification, and more!
-
-  <div class="mt-3">
-    <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>

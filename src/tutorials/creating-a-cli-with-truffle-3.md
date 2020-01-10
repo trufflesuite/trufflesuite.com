@@ -8,7 +8,7 @@ For this tutorial, we'll be building a command line tool that interacts with the
 ## Getting Started
 If you were using Truffle beta 3.0.0-9 or below, **do not immediately upgrade**. Read [these release notes](https://github.com/ConsenSys/truffle/releases/tag/v3.0.2) and the [upgrade guide](/tutorials/upgrading-from-truffle-2-to-3) first. Next, make a new folder and run the following command:
 
-```
+```shell
 $ truffle init
 ```
 

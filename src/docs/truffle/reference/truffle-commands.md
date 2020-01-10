@@ -132,7 +132,7 @@ Alias for `migrate`. See [migrate](/docs/truffle/reference/truffle-commands#migr
 Open a console with a development blockchain
 
 ```shell
-truffle develop
+truffle develop [--log]
 ```
 
 Spawns a local development blockchain, and allows you to interact with contracts via the command line. Additionally, many Truffle commands are available within the console (without the `truffle` prefix).
@@ -140,6 +140,13 @@ Spawns a local development blockchain, and allows you to interact with contracts
 If you want an interactive console but want to use an existing blockchain, use `truffle console`.
 
 See the [Using the console](/docs/getting_started/console) section for more details.
+
+
+Option:
+
+* `--log`: Start/Connect to a Truffle develop session and log all RPC activity.
+See the [Log RPC Activity](docs/getting_started/console#log-rpc-activity)
+docs for more information about using this option.
 
 
 ### exec

@@ -1,16 +1,8 @@
-<div class="post-trufflecon-box mb-5">
-  **[TruffleCon 2019](/trufflecon2019)** is happening August 2-4 on Microsoft's campus in Redmond, WA. This year's event will include 60+ speakers from the blockchain ecosystem, along with hands-on workshops geared toward novice users and expert builders alike. The Truffle team is ramping up for TruffleCon 2019 by writing a daily blog post about everything that's on our minds. We hope you enjoy and we'll see you in Redmond!
-
-  <div class="text-center">
-    <a class="btn btn-truffle mt-3" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>
-
 ![Drizzle + Vue = <3](/img/blog/drizzle-vue-a-truffle-story/title-image.png)
 
 Truffle is an organization that maintains a balance of transparency, mentorship, encouragement, inclusivity and humor that I'm thankful for everyday. While much could be written about Truffle's management culture, I want to share my experience of working on a side project here.
 
-Our remote work setup and the openness of our team contributes to a healthy and productive environment. The ability to schedule zoom sessions to brainstorm and discuss ideas fits well with our schedule. Every member contributes to this culture being generous with their time and knowledge. I'm happy and inspired to see team members grow as developers through the subtle mentorship as a result of our culture. 
+Our remote work setup and the openness of our team contributes to a healthy and productive environment. The ability to schedule zoom sessions to brainstorm and discuss ideas fits well with our schedule. Every member contributes to this culture being generous with their time and knowledge. I'm happy and inspired to see team members grow as developers through the subtle mentorship as a result of our culture.
 
 For most of my career, I dreaded mandatory soul draining review type meetings, but at Truffle, I look forward to the incredibly productive and creative weekly one-on-ones I have with Joshua Quintal, our Product Lead. Josh originally developed Drizzle and we often discuss its role in the dapp ecosystem, issues and roadmap during our meetings.
 
@@ -24,7 +16,7 @@ Drizzle originated as a helper library for a React project Josh was developing. 
 
 Unfortunately, this is not how Drizzle is understood by developers we interviewed formally and informally. The most common misunderstanding is that Drizzle is coupled with React, the most popular JavaScript front end framework. We can't blame our community as most of our documentation focuses on implementing Dapps using React.
 
-Drizzle was initially released with bindings only for React which created this misperception that excluded developers from utilizing other front end frameworks such as Vue and Angular. 
+Drizzle was initially released with bindings only for React which created this misperception that excluded developers from utilizing other front end frameworks such as Vue and Angular.
 
 The problem is that we didn't offer an easy solution for Vue or Angular and our documentation doesn't offer guidance. We want to change this! We want to support all the frameworks!
 
@@ -34,7 +26,7 @@ I felt this was an important problem to solve in order to improve the dapp devel
 
 The basic plan was to:
 - Use Vuex, Vue's popular State management plugin
-- Transform Drizzle's redux store to be consumed by Vuex 
+- Transform Drizzle's redux store to be consumed by Vuex
   - A redux store as an [2] [Observable](https://redux.js.org/api/store#subscribe) which would allow us to transform/map drizzle state to a more state pieces that Vuex could consume.
   - This would allow us to have more efficient UI renders by using RxJS techniques like `distinctUntilChanged`
 - Create basic Vue components mimicking drizzle-react-components
@@ -70,11 +62,3 @@ Come meet the team and learn about our tools at TruffleCon. We're looking forwar
 1. https://www.youtube.com/watch?v=XaVEZ1ucxac
 1. https://www.youtube.com/watch?v=ApJwXfWKl7Q
 1. https://www.youtube.com/watch?v=xyoztqeYd6U
-
-<div class="post-trufflecon-box mt-5 text-center">
-  Get your ticket for TruffleCon 2019 Today
-
-  <div class="mt-3">
-    <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>

@@ -96,7 +96,7 @@ Success! We now have seven Quorum nodes set up that we can use to represent seve
 
 To set up Truffle, we're going to start by creating a bare Truffle project, without any contracts or code.
 
-1. We want to leave the old command line window alone and let the Quorum example run without bothering it, so open a second terminal. 
+1. We want to leave the old command line window alone and let the Quorum example run without bothering it, so open a second terminal.
 
 1. In the new terminal, navigate to your workspace and create a new directory for your Truffle project.
 
@@ -146,7 +146,7 @@ We won't spend too much time talking about writing or deploying contracts in Tru
 
 1. First, copy the following contract into a new file, called `SimpleStorage.sol`. Place it in your `contracts/` directory:
 
-   ```javascript
+   ```solidity
    // File: `./contracts/SimpleStorage.sol`
 
    pragma solidity ^0.4.17;
@@ -268,13 +268,13 @@ We originally configured Truffle to point our development environment to the fir
 
 1. Here, we'll get the deployed instance of the SimpleStorage contract and then get the integer value we specified on deployment. Enter the following command:
 
-   ```shell
+   ```javascript
    truffle(development)> SimpleStorage.deployed().then(function(instance) { return instance.get(); })
    ```
 
    You'll see the following response:
 
-   ```shell
+   ```javascript
    { [String: '42'] s: 1, e: 1, c: [ 42 ] }
    ```
 
@@ -292,15 +292,15 @@ We originally configured Truffle to point our development environment to the fir
    truffle(nodefour)>
    ```
 
-1. Run the same command as above to get the integer value from the SimpleStorage contract: 
+1. Run the same command as above to get the integer value from the SimpleStorage contract:
 
-   ```shell
+   ```javascript
    truffle(nodefour)> SimpleStorage.deployed().then(function(instance) { return instance.get(); })
    ```
 
    You'll see the following response:
 
-   ```shell
+   ```javascript
    { [String: '0'] s: 1, e: 0, c: [ 0 ] }
    ```
 
@@ -318,15 +318,15 @@ We originally configured Truffle to point our development environment to the fir
    truffle(nodeseven)>
    ```
 
-1. Run the same command as above to get the integer value from the SimpleStorage contract: 
+1. Run the same command as above to get the integer value from the SimpleStorage contract:
 
-   ```shell
+   ```javascript
    truffle(nodeseven)> SimpleStorage.deployed().then(function(instance) { return instance.get(); })
    ```
 
    You'll see the following response:
 
-   ```shell
+   ```javascript
    { [String: '42'] s: 1, e: 1, c: [ 42 ] }
    ```
 
@@ -336,7 +336,7 @@ We originally configured Truffle to point our development environment to the fir
 
 So far, we've shown you how to deploy contracts that are private within your migrations. When building a dapp on Quorum, it'd also be helpful to learn how to make *all* transactions private.
 
-Truffle uses its [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/truffle-contract) contract abstraction wherever contracts are used in JavaScript. When you interacted with `SimpleStorage` in the console above, for instance, you were using a `truffle-contract` contract abstraction. These abstractions are also used within your migrations, your JavaScript-based unit tests, as well as executing external scripts with Truffle.
+Truffle uses its [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) contract abstraction wherever contracts are used in JavaScript. When you interacted with `SimpleStorage` in the console above, for instance, you were using a `truffle-contract` contract abstraction. These abstractions are also used within your migrations, your JavaScript-based unit tests, as well as executing external scripts with Truffle.
 
 Truffle's contract abstraction allow you to make a transaction against any function available on the contract. It does so by evaluating the functions of the contract and making them available to JavaScript. To see these transactions in action, we're going to use an advanced feature of Truffle that lets us execute external scripts within our Truffle environment.
 
@@ -386,13 +386,13 @@ Truffle's contract abstraction allow you to make a transaction against any funct
    truffle console
    ```
 
-   ```shell
+   ```javascript
    truffle(development)> SimpleStorage.deployed().then(function(instance) { return instance.get(); })
    ```
 
    The response will be:
 
-   ```shell
+   ```javascript
    { [String: '65'] s: 1, e: 1, c: [ 65 ] }
    ```
 
@@ -402,13 +402,13 @@ Truffle's contract abstraction allow you to make a transaction against any funct
    truffle console --network nodefour
    ```
 
-   ```shell
+   ```javascript
    truffle(nodefour)> SimpleStorage.deployed().then(function(instance) { return instance.get(); })
    ```
 
    The response will be:
 
-   ```shell
+   ```javascript
    { [String: '0'] s: 1, e: 0, c: [ 0 ] }
    ```
 
@@ -418,13 +418,13 @@ Truffle's contract abstraction allow you to make a transaction against any funct
    truffle console --network nodeseven
    ```
 
-   ```shell
+   ```javascript
    truffle(nodeseven)> SimpleStorage.deployed().then(function(instance) { return instance.get(); })
    ```
 
    The response will be:
 
-   ```shell
+   ```javascript
    { [String: '65'] s: 1, e: 1, c: [ 65 ] }
    ```
 

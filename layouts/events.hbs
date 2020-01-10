@@ -2,6 +2,7 @@
 <html>
 <head>
   {{> ga-tag-head}}
+  {{> hs-tag}}
   
   <meta charset="utf-8">
   <meta name="description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}">
@@ -81,7 +82,7 @@
               {{#if this.excerpt}}
                 <p>{{ this.excerpt }}</p>
               {{/if}}
-              <a class="btn btn-eventbrite" href="{{ this.eventbrite }}">READ MORE</a>
+              <a class="btn btn-eventbrite" href="{{ this.eventbrite }}">REGISTER HERE</a>
             </div>
           </div>
         {{else}}
@@ -95,7 +96,7 @@
               {{#if this.excerpt}}
                 <p>{{ this.excerpt }}</p>
               {{/if}}
-              <a class="btn btn-eventbrite" href="{{ this.eventbrite }}">READ MORE</a>
+              <!-- <a class="btn btn-eventbrite" href="{{ this.eventbrite }}">READ MORE</a> -->
             </div>
           </div>
         {{/if}}
@@ -108,6 +109,8 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.slim.min.js"><\/script>')</script>
   <script src="/js/bootstrap.min.js"></script>
-  <script src="https://embed.small.chat/TB3UH2TUPGHLKTAY23.js" async></script>
+  <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5258293.js"></script>
+  <!-- End of HubSpot Embed Code -->
 </body>
 </html>

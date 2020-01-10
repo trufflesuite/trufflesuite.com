@@ -145,7 +145,7 @@ This test will produce the following output:
 
 ### Using async/await
 
-Here is a similar example, but using [async/await](https://javascript.info/async-await) notation: 
+Here is a similar example, but using [async/await](https://javascript.info/async-await) notation:
 
 ```javascript
 const MetaCoin = artifacts.require("MetaCoin");
@@ -209,7 +209,7 @@ This test will produce identical output to the previous example.
 
 You can limit the tests being executed to a specific file as follows:
 
-```
+```shell
 truffle test ./test/metacoin.js
 ```
 
@@ -221,4 +221,4 @@ Truffle gives you access to Mocha's configuration so you can change how Mocha be
 
 ## TypeScript File Support
 
-Truffle now supports tests saved as a `.ts` [TypeScript](https://www.typescriptlang.org/) file. Please see the [Writing Tests in JavaScript](#writing-tests-in-javascript) guide for more information.
+Truffle supports tests saved as a `.ts` [TypeScript](https://www.typescriptlang.org/) file. Please see the [Writing Tests in JavaScript](#writing-tests-in-javascript) guide for more information.

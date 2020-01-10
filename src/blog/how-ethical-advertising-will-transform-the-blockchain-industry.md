@@ -1,17 +1,9 @@
-<div class="post-trufflecon-box mb-5">
-  **[TruffleCon 2019](https://www.trufflesuite.com/trufflecon2019)** is happening August 2-4 on Microsoft’s campus in Redmond, WA. This year’s event will include 60+ speakers from the blockchain ecosystem, along with hands-on workshops geared toward novice users and expert builders alike. The Truffle team is ramping up for TruffleCon 2019 by writing a daily blog post about everything that’s on our minds. We hope you enjoy and we’ll see you in Redmond!
-
-  <div class="text-center">
-    <a class="btn btn-truffle mt-3" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>
-
 ![GitCoin](/img/blog/how-ethical-advertising-will-transform-the-blockchain-industry/pasted image 0-5.png)
 
 *CodeFund is an ethical ad platform that funds contributors to the open source ecosystem. Visit [CodeFund](https://codefund.io/) to learn more and apply.*
 
 ### The Conflicting Relationship Between Blockchain and Marketing
-In the initial years following Bitcoin’s inception, most blockchain companies didn’t need paid advertising. The early adopters were a community of cypherpunks, libertarians, developers, miners, and hobbyists, that truly believed in the power of decentralized networks. To them, adoption was inevitable, and rather than putting paid ads in front of the general public, resources were better spent building wallets, development tools, infrastructure, and scalability solutions. 
+In the initial years following Bitcoin’s inception, most blockchain companies didn’t need paid advertising. The early adopters were a community of cypherpunks, libertarians, developers, miners, and hobbyists, that truly believed in the power of decentralized networks. To them, adoption was inevitable, and rather than putting paid ads in front of the general public, resources were better spent building wallets, development tools, infrastructure, and scalability solutions.
 
 Additionally, almost all early blockchain users and entrepreneurs were extremely privacy-conscious. Pseudonymity is a key component to cryptocurrencies, they wouldn’t work in a permissionless manner without it. The Adtech industry, on the other hand, is run by monolithic centralized powerhouses that gather and store immense amounts of personal data for precise targeting. For the first 5 years of Bitcoin, **the blockchain community ethos was quite literally the polar opposite of the advertising industry**.
 
@@ -76,12 +68,3 @@ The first option is working with companies to run direct advertising campaigns. 
 At Gitcoin and CodeFund, we are a small team that has been in the blockchain world for years. We view every publisher and advertiser as a partner, diligently vet them, and hold them to the highest standards. **We’d like to see ethical advertising become the new standard in the blockchain space, and eventually on the Internet as a whole.**
 
 If your blockchain company is interested in advertising to a high-quality audience, or you would like to earn passive income showing relevant ads on your website without sacrificing your community’s privacy, CodeFund is for you! Apply now on the [CodeFund](https://codefund.io/) landing page and we’ll be in touch, or reach out to [connor@codefund.io](mailto:connor@codefund.io) for more information.
-
-
-<div class="post-trufflecon-box mt-5 text-center">
-  Get your ticket for TruffleCon 2019 Today
-
-  <div class="mt-3">
-    <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>

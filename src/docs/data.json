@@ -26,20 +26,23 @@
       "Package Management via NPM",
       "Debugging Your Contracts",
       "Using Truffle Develop and The Console",
-      "Writing External Scripts",
-      "Working With Quorum",
-      "Working With Hyperledger EVM"
+      "Writing External Scripts"
     ],
     "Testing": [
       "Testing Your Contracts",
       "Writing Tests in JavaScript",
       "Writing Tests in Solidity"
     ],
+    "Distributed Ledger Support": [
+      "Working With Quorum",
+      "Working With Hyperledger EVM"
+    ],
     "Advanced": [
       "Networks and App Deployment",
       "Build Processes",
       "Creating a Truffle Box",
-      "Event System"
+      "Event System",
+      "Ethereum Name Service"
     ],
     "Reference": [
       "Choosing an Ethereum Client",

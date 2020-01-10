@@ -1,22 +1,12 @@
 [
   {
-    "title": "How to Use Provable + Truffle Suite Together",
-    "start": "Thursday, July 11, 2019, 11:00",
-    "end": "11:45 AM PT",
+    "title": "Truffle Teams Overview",
+    "start": "Wednesday, December 11th, 2019, 12:00",
+    "end": "12:45 PM PST",
     "location": "Webinar",
-    "excerpt": "In this upcoming webinar Nick and Greg will showcase the Provable Truffle Box and demonstrate leveraging Provable within the Truffle framework.",
-    "eventbrite": "/events/webinar-truffle-provable",
+    "excerpt": "We are hosting our last webinar of the year on Wednesday, December 11th at 12 PM PST. Join Mike Seese to learn how Truffle Teams helps you with blockchain DevOps and smart contract management. Mike will walk you through the entire Truffle Teams life-cycle: from set-up and testing to public deployment and transaction monitoring. Don’t miss this webinar choc-ablock with sneak peeks of what’s next in the sweet suite!",
+    "eventbrite": "https://share.hsforms.com/1AUIyy2W7TPCBQNTifIua7g34pbp",
     "status": "open",
-    "image": "/img/webinar-7-11-19.png"
-  },
-  {
-    "title": "TruffleCon 2019",
-    "start": "Friday, Aug 2, 2019, 9:00 AM PT",
-    "end": "Sunday, Aug 4, 2019, 6:00 PM PT",
-    "location": "Microsoft Building 33 | 16070 NE 36th Way, Redmond, WA 98052",
-    "excerpt": "TruffleCon is a gathering for Truffle users, fans, developers, and those who want to build world-changing applications powered by decentralized technologies. Join people from around the world as we meet August 2-4 in Redmond, WA to build community and foster connections in the blockchain developer space, share tips and tricks, challenges and successes.",
-    "eventbrite": "/trufflecon2019",
-    "status": "open",
-    "image": "/img/trufflecon.jpg"
+    "image": "/img/webinar-12-11-19-seese-teams16x9a.png"
   }
 ]

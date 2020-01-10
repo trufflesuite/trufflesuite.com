@@ -10,7 +10,7 @@ Migrations are JavaScript files that help you deploy contracts to the Ethereum n
 
 To run your migrations, run the following:
 
-```none
+```shell
 $ truffle migrate
 ```
 
@@ -41,8 +41,7 @@ Consider this example where two contracts are specified within the same source f
 
 Filename: `./contracts/Contracts.sol`
 
-```javascript
-
+```solidity
 contract ContractOne {
   // ...
 }
@@ -54,13 +53,13 @@ contract ContractTwo {
 
 To use only `ContractTwo`, your `artifacts.require()` statement would look like this:
 
-```
+```javascript
 var ContractTwo = artifacts.require("ContractTwo");
 ```
 
 To use both contracts, you will need two `artifacts.require()` statements:
 
-```
+```javascript
 var ContractOne = artifacts.require("ContractOne");
 var ContractTwo = artifacts.require("ContractTwo");
 ```
@@ -77,7 +76,7 @@ Truffle requires you to have a Migrations contract in order to use the Migration
 
 Filename: `contracts/Migrations.sol`
 
-```
+```solidity
 pragma solidity ^0.4.8;
 
 contract Migrations {
@@ -180,7 +179,7 @@ You can optionally pass an array of contracts, or an array of arrays, to speed u
 
 Note that you will need to deploy and link any libraries your contracts depend on first before calling `deploy`. See the `link` function below for more details.
 
-For more information, please see the [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/truffle-contract) documentation.
+For more information, please see the [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) documentation.
 
 
 Examples:

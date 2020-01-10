@@ -1,11 +1,3 @@
-<div class="post-trufflecon-box mb-5">
-  **[TruffleCon 2019](https://www.trufflesuite.com/trufflecon2019)** is happening August 2-4 on Microsoft’s campus in Redmond, WA. This year’s event will include 60+ speakers from the blockchain ecosystem, along with hands-on workshops geared toward novice users and expert builders alike. The Truffle team is ramping up for TruffleCon 2019 by writing a daily blog post about everything that’s on our minds. We hope you enjoy and we’ll see you in Redmond!
-
-  <div class="text-center">
-    <a class="btn btn-truffle mt-3" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>
-
 Welcome back! If you missed the [first part](/blog/introducing-truffle-db-part-1) of this post, you may want to read it to learn more about Truffle’s contract artifacts, their current limitations, and why we seek to build a better solution.
 
 Or, just to catch up:
@@ -37,7 +29,7 @@ Truffle DB comprises two key ideas, currently at different stages of development
   <figcaption>**Data model excerpt**: how contracts, sources, compilers, and compilations all relate. ([Text-accessible version](https://github.com/trufflesuite/artifact-updates/blob/master/docs/uml/macros.iuml) available via diagram source)</figcaption>
 </figure>
 
-What is a smart contract? What is your contract’s bytecode, what is its source code, and how do they relate? By looking at how Truffle expects these relationships in practice, and considering how these concepts are commonly understood, we hope to make life easy by creating a shared vocabulary for interacting with the smart contract domain. 
+What is a smart contract? What is your contract’s bytecode, what is its source code, and how do they relate? By looking at how Truffle expects these relationships in practice, and considering how these concepts are commonly understood, we hope to make life easy by creating a shared vocabulary for interacting with the smart contract domain.
 
 Diagrams are worth more than words here, so please check out our data model docs to get a broader sense for what this represents.
 
@@ -110,11 +102,3 @@ Please reach out with questions/thoughts/use case ideas/implementation strategie
 We’re tracking overall progress in this [GitHub issue (trufflesuite/truffle#1718)](https://github.com/trufflesuite/truffle/issues/1718). Expect to see this filled out more in the coming weeks, so please follow along there if you’re interested.
 
 Thanks for reading! Hope to see you at TruffleCon!
-
-<div class="post-trufflecon-box mt-5 text-center">
-  Get your ticket for TruffleCon 2019 Today
-
-  <div class="mt-3">
-    <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>

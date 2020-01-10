@@ -10,13 +10,13 @@ EthPM is the new [Package Registry](https://www.ethpm.com/) for Ethereum. It fol
 
 Installing a package from EthPM is nearly as easy as installing a package via NPM. You can simply run the following command:
 
-```
+```shell
 $ truffle install <package name>
 ```
 
 You can also install a package at a specific version:
 
-```
+```shell
 $ truffle install <package name>@<version>
 ```
 
@@ -26,7 +26,7 @@ Like NPM, EthPM versions follow [semver](http://semver.org/). You can find a lis
 
 Your project can define an `ethpm.json` file that among other things can pin your project to specific dependencies and versions. To install all dependencies listed in the `ethpm.json` file, run:
 
-```
+```shell
 $ truffle install
 ```
 
@@ -38,7 +38,7 @@ Installed packages will be placed in the `installed_contracts` directory within 
 
 Installed packages can be consumed within your tests, migrations and solidity contract files by `import`'ing or `require`'ing that package and contract by name. For example, the following Solidity contract would import the `owned.sol` file from the `owned` package:
 
-```javascript
+```solidity
 pragma solidity ^0.4.2;
 
 import "owned/owned.sol";
@@ -78,7 +78,7 @@ The Ethereum Package Registry currently exists on the Ropsten test network. To p
 
 In this example, we'll use Infura for publishing packages along with the `truffle-hdwallet-provider` NPM module and a 12-word hd-wallet mnemonic that represents our Ethereum address on the Ropsten network. First, install the `truffle-hdwallet-provider` via NPM within your project directory:
 
-```
+```shell
 $ npm install truffle-hdwallet-provider --save
 ```
 
@@ -137,13 +137,13 @@ File: `ethpm.json`
 
 After you have your configuration settled, publishing is a snap:
 
-```
+```shell
 $ truffle publish
 ```
 
 You'll see output similar to that below, with confirmation that your package was published successfully.
 
-```
+```shell
 $ truffle publish
 Gathering contracts...
 Finding publishable artifacts...
@@ -155,7 +155,7 @@ Uploading sources and publishing to registry...
 
 When using a network like the default `develop` network that's configured to match any Ethereum client (like [Ganache](/ganache) or Truffle Develop), you're bound to have network artifacts lying around that you don't want published. Before publishing your package, consider running the following command to remove any extraneous network artifacts:
 
-```
+```shell
 $ truffle networks --clean
 ```
 

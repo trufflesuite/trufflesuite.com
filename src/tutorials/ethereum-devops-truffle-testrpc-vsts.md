@@ -14,7 +14,7 @@ My final system will allow you to run “truffle test” locally to see standa
 
 ## The Build system
 
-The system uses the [Visual Studio Team Services](https://azure.microsoft.com/en-us/services/visual-studio-team-services/) (VSTS) build engine to automate this. You can sign up for free, and get unlimited private Git repos.  
+The system uses the [Visual Studio Team Services](https://azure.microsoft.com/en-us/services/visual-studio-team-services/) (VSTS) build engine to automate this. You can sign up for free, and get unlimited private Git repos.
 
 You can have the code hosted on any Git provider. So either within VSTS itself, or GitHub, BitBucket, etc.
 
@@ -23,11 +23,11 @@ You can have the code hosted on any Git provider. So either within VSTS itself, 
 A pre-step is to define the  test section in the truffle.js file
 
 ```javascript
-mocha: {  
-  reporter: “spec”,  
-  reporterOptions: {  
-    mochaFile: ‘junitresults.xml’  
-  }  
+mocha: {
+  reporter: “spec”,
+  reporterOptions: {
+    mochaFile: ‘junitresults.xml’
+  }
 }
 ```
 
@@ -35,23 +35,23 @@ mocha: {
 
 VSTS does provide hosted build agents, which are generic and can build standard .Net projects, Xamarin, etc. But because we are going to use npm packages installed globally on the box to handle the Truffle builds
 
-- Create a new Windows VM (Can be your own hosted server, or Azure).  
+- Create a new Windows VM (Can be your own hosted server, or Azure).
 e.g. [Windows Server 2016 Datacentre edition on Azure](https://azure.microsoft.com/en-au/marketplace/partners/microsoft/windowsserver2016datacenter/)
-- Install the VSTS build agent. Instructions at [https://www.visualstudio.com/en-us/docs/build/admin/agents/v2-windows](https://www.visualstudio.com/en-us/docs/build/admin/agents/v2-windows)  
-Note: DON’T select to run service as NT AUTHORITY\NETWORK, this will not work with TestRPC (needs to open ports).  
+- Install the VSTS build agent. Instructions at [https://www.visualstudio.com/en-us/docs/build/admin/agents/v2-windows](https://www.visualstudio.com/en-us/docs/build/admin/agents/v2-windows)
+Note: DON’T select to run service as NT AUTHORITY\NETWORK, this will not work with TestRPC (needs to open ports).
 Run the service as another user, or NT AUTHORITY\SYSTEM
-- Install chocolatey  
+- Install chocolatey
 [https://chocolatey.org/install](https://chocolatey.org/install)
 - Install these chocolatey packages
 
-```
+```shell
 $ choco install git -y
 $ choco install nodejs.install –y
 ```
 
 - Install npm packages (make sure you open a new PowerShell window so that node is in your path)
 
-```
+```shell
 $ npm install -g npm
 $ npm install -g –production windows-build-tools
 $ npm install -g ethereumjs-testrpc
@@ -67,105 +67,105 @@ $ npm install -g mocha-junit-reporter
 Create a new variable with the path to where the npm global path is, for the user you installed the npm packages on above:
 
 - variable name: `npm.path`
-- variable value: path to npm packages e.g. `C:\Users\<user>\AppData\Roaming\npm`  
+- variable value: path to npm packages e.g. `C:\Users\<user>\AppData\Roaming\npm`
 
 ![image](https://davidburela.files.wordpress.com/2016/12/image5.png)
 
 ## Add 7 PowerShell tasks, and configure them like this
-- Name: System version information  
-- Script:  
+- Name: System version information
+- Script:
 
-```
-#Setting environment paths  
-$ENV:Path = $ENV:Path + “;” + $env:npm_path  
-npm config set prefix $env:npm_path    #only needs to be set once, will update for user  
+```powershell
+#Setting environment paths
+$ENV:Path = $ENV:Path + “;” + $env:npm_path
+npm config set prefix $env:npm_path    #only needs to be set once, will update for user
 
-#DEBUG  
-#$env:path  
-#npm list -g –depth=0  
-#Display system information  
-Write-Host “System version information”  
-Write-Host -nonewline    “node version: ” ; node -v  
-Write-Host -nonewline    “npm version: “; npm -v  
-Write-Host -nonewline    “npm prefix: “;  npm prefix -g  
-Write-Host -nonewline    “truffle: ” ;    truffle version  
+#DEBUG
+#$env:path
+#npm list -g –depth=0
+#Display system information
+Write-Host “System version information”
+Write-Host -nonewline    “node version: ” ; node -v
+Write-Host -nonewline    “npm version: “; npm -v
+Write-Host -nonewline    “npm prefix: “;  npm prefix -g
+Write-Host -nonewline    “truffle: ” ;    truffle version
 ```
 ![image](https://davidburela.files.wordpress.com/2016/12/image6.png)
 
 - Name: Config transform & test clean
 - Script:
 
-```
-# remove old test results  
+```powershell
+# remove old test results
 rm .\junitresults.xml -ea SilentlyContinue 
 
-# Modify the Truffle test runner to use the JUnit reporter  
-Rename-Item .\truffle.js .\truffle_temp.js  
-cat .\truffle_temp.js | % { $_ -replace ‘reporter: “spec”‘, ‘reporter: “mocha-junit-reporter”‘ } | Out-File -Encoding ASCII .\truffle.js  
-rm .\truffle_temp.js  
+# Modify the Truffle test runner to use the JUnit reporter
+Rename-Item .\truffle.js .\truffle_temp.js
+cat .\truffle_temp.js | % { $_ -replace ‘reporter: “spec”‘, ‘reporter: “mocha-junit-reporter”‘ } | Out-File -Encoding ASCII .\truffle.js
+rm .\truffle_temp.js
 ```
 ![image](https://davidburela.files.wordpress.com/2016/12/image7.png)
 
 
-- Name: Truffle build  
-- Script:  
+- Name: Truffle build
+- Script:
 
-```
-#Setting environment paths  
+```powershell
+#Setting environment paths
 $ENV:Path = $ENV:Path + “;” + $env:npm_path
 
-#Truffle build  
-truffle compile  
+#Truffle build
+truffle compile
 ```
 ![image](https://davidburela.files.wordpress.com/2016/12/image8.png)
 
-- Name: Launch TestRPC  
-- Script:  
+- Name: Launch TestRPC
+- Script:
 
-```
-#Setting environment paths  
+```powershell
+#Setting environment paths
 $ENV:Path = $ENV:Path + “;” + $env:npm_path
 
-# launch the process  
-echo “launching TestRPC”  
-$testrpcProcess = Start-Process testrpc -passthru  
+# launch the process
+echo “launching TestRPC”
+$testrpcProcess = Start-Process testrpc -passthru
 
-# persist the PID to disk and display in logs  
-$testrpcProcess.Id | Export-CliXml testrpcPID.xml  
+# persist the PID to disk and display in logs
+$testrpcProcess.Id | Export-CliXml testrpcPID.xml
 cat testrpcPID.xml
 ```
 
 
-- Name: Run Truffle tests  
-- Script:  
+- Name: Run Truffle tests
+- Script:
 
-```
-#Setting environment paths  
+```powershell
+#Setting environment paths
 $ENV:Path = $ENV:Path + “;” + $env:npm_path
 
-# Run the tests  
-truffle test  
+# Run the tests
+truffle test
 ```
 ![image](https://davidburela.files.wordpress.com/2016/12/image10.png)
 
 
-- Name: Shutdown TestRPC  
-- Other Settings: Enable “Always Run” (to make sure it is shutdown if there is an error)  
-- Script:  
+- Name: Shutdown TestRPC
+- Other Settings: Enable “Always Run” (to make sure it is shutdown if there is an error)
+- Script:
 
-```
-#Setting environment paths  
+```powershell
+#Setting environment paths
 $ENV:Path = $ENV:Path + “;” + $env:npm_path
 
-# retrieve the PID and kill the entire processs tree  
-cat testrpcPID.xml  
-$testrpcPID = Import-CliXml testrpcPID.xml  
-taskkill /pid $testrpcPID /F /T  
+# retrieve the PID and kill the entire processs tree
+cat testrpcPID.xml
+$testrpcPID = Import-CliXml testrpcPID.xml
+taskkill /pid $testrpcPID /F /T
 ```
 ![image](https://davidburela.files.wordpress.com/2016/12/image11.png)
 
 - Add a new Publish test result
-- Test Result Format: JUnit  
+- Test Result Format: JUnit
 - Test Result Files: `junitresults.xml`
 ![image](https://davidburela.files.wordpress.com/2016/12/image12.png)
 

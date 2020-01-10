@@ -14,7 +14,7 @@ See the [Configuration](/docs/truffle/reference/configuration#networks) section 
 
 Most Truffle commands will behave differently based on the network specified, and will use that network's contracts and configuration. You can specify a network using the `--network` option, like below:
 
-```bash
+```shell
 $ truffle migrate --network live
 ```
 
@@ -22,7 +22,7 @@ In this example, Truffle will run your migrations on the "live" network, which -
 
 ## Build artifacts
 
-As mentioned in the [Compiling contracts](/docs/truffle/getting-started/compiling-contracts) section, build artifacts are stored in the `./build/contracts` directory as `.json` files. When you compile your contracts or run your migrations using a specific network, Truffle will update those `.json` files so they contain the information related to that network. When those artifacts are used later -- such as within your frontend or application via [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/truffle-contract) -- they'll automatically detect which network the Ethereum client is connected to and use the correct contract artifacts accordingly.
+As mentioned in the [Compiling contracts](/docs/truffle/getting-started/compiling-contracts) section, build artifacts are stored in the `./build/contracts` directory as `.json` files. When you compile your contracts or run your migrations using a specific network, Truffle will update those `.json` files so they contain the information related to that network. When those artifacts are used later -- such as within your frontend or application via [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) -- they'll automatically detect which network the Ethereum client is connected to and use the correct contract artifacts accordingly.
 
 ## Application deployment
 

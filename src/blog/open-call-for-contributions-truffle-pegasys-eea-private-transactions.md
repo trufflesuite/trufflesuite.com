@@ -1,10 +1,3 @@
-<div class="post-trufflecon-box mb-5">
-  **[TruffleCon 2019](/trufflecon2019)** is happening August 2-4 on Microsoft's campus in Redmond, WA. This year's event will include 60+ speakers from the blockchain ecosystem, along with hands-on workshops geared toward novice users and expert builders alike. The Truffle team is ramping up for TruffleCon 2019 by writing a daily blog post about everything that's on our minds. We hope you enjoy and we'll see you in Redmond!
-
-  <div class="text-center">
-    <a class="btn btn-truffle mt-3" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>
 
 # Open call for contributions by Truffle + PegaSys: EEA private transactions
 ![Pegasys Truffle Open Call For Contributions](https://i.imgur.com/GLw8iok.jpg)
@@ -26,7 +19,7 @@ PegaSys and Truffle have teamed up to make a single open call for contributions.
 The solution involves using a Delegation pattern to help make that work.
 
 The location of the files to be modified can be found here:
-[truffle/packages/truffle-interface-adapter/lib](https://github.com/trufflesuite/truffle/tree/develop/packages/truffle-interface-adapter/lib)
+[truffle/packages/interface-adapter/lib](https://github.com/trufflesuite/truffle/tree/develop/packages/interface-adapter/lib)
 
 In short, when Truffle receives a transaction, it should determine if its a `privateFor` transaction. If so, it would delegate the rest of the business logic to the EEA library. If not, it should just continue processing the transaction with the original web3 methods.
 
@@ -101,10 +94,3 @@ Two things:
 
 For more information or help on this contribution, contact [Felipe](mailto:felipe.faraggi@consensys.net) from [PegaSys](http://pegasys.tech),  or write us on [our gitter channel](https://gitter.im/PegaSysEng/pantheon).
 
-<div class="post-trufflecon-box mt-5 text-center">
-  Get your ticket for TruffleCon 2019 Today
-
-  <div class="mt-3">
-    <a class="btn btn-truffle" href="/trufflecon2019">Get your Ticket for TruffleCon 2019 Today</a>
-  </div>
-</div>

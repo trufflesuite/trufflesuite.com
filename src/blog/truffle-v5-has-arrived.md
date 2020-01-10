@@ -43,9 +43,9 @@ full [Release Notes](https://github.com/trufflesuite/truffle/releases/tag/v5.0.0
 
 - **Vyper support** - Another added feature is that Truffle will now compile
   `*.vy` contracts. We have published a Truffle Box to help you get started
-  with Vyper. You can access it by running:  
+  with Vyper. You can access it by running:
 
-  ```
+  ```shell
   $ truffle unbox vyper-example
   ```
 
@@ -60,7 +60,7 @@ full [Release Notes](https://github.com/trufflesuite/truffle/releases/tag/v5.0.0
    ‘struct’s in Solidity functions. To use this ability, you need to specify the
    following at the top of your contracts:
 
-  ```
+  ```solidity
   pragma experimental ABIEncoderV2
   ```
 
@@ -69,7 +69,7 @@ full [Release Notes](https://github.com/trufflesuite/truffle/releases/tag/v5.0.0
   JS interface.
 
 - **Help system** - Now access Truffle’s built in help system by running:
-  ```
+  ```shell
   $ truffle help <command>
   ```
 
