@@ -161,8 +161,14 @@
 // HubSpot GDPR Banner
 
 div#hs-eu-cookie-confirmation {
+  border-radius: 6px 6px 0 0;
+  bottom: 0 !important;
+  left: 50% !important;
+  max-width: 1140px !important;
   position: fixed !important;
-  top: 60px !important;
+  top: auto !important;
+  transform: translateX(-50%);
+  z-index: 9999 !important;
 }
 
 div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner div#hs-en-cookie-confirmation-buttons-area a#hs-eu-confirmation-button {
@@ -179,4 +185,8 @@ div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner div#hs-en-cook
 div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner div#hs-en-cookie-confirmation-buttons-area a#hs-eu-confirmation-button:hover {
   background-color: #fff !important;
   background-image: none !important;
+}
+
+div#hubspot-messages-iframe-container {
+  z-index: 9998 !important;
 }
