@@ -3,16 +3,16 @@ title: Truffle | Truffle Event System
 layout: docs.hbs
 ---
 
-ℹ️ The Truffle Event System is currently an experimental feature and we
+# Truffle Event System
+
+<p class="alert alert-warning">**Note**: The Truffle Event System is currently an experimental feature and we
 anticipate that it will be developing and changing in the near future.
 Please keep this in mind when using this feature as we cannot promise that its
 architecture or the API will remain the same until we declare it as stable.
 Please enjoy and if you discover any issues or bugs, we would love it if you
 created an issue on the
 [Truffle GitHub page](https://github.com/trufflesuite/truffle/issues).
-Thank you!
-
-# Truffle Event System
+Thank you!</p>
 
 The Truffle Event System is a system of hooks implemented in several of the
 command flows. Truffle commands emit events for specific tasks, passing
