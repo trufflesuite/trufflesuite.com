@@ -277,7 +277,7 @@ Now we are ready to create our own migration script.
 You've now written your first smart contract and deployed it to a locally running blockchain. It's time to interact with our smart contract now to make sure it does what we want.
 
 
-## Testing the smart contract
+## Testing the smart contract using Solidity
 
 Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this tutorial, we'll be writing our tests in Solidity.
 
@@ -374,6 +374,99 @@ Since arrays can only return a single value given a single key, we create our ow
    ```
 
 Note the **memory** attribute on `adopters`. The memory attribute tells Solidity to temporarily store the value in memory, rather than saving it to the contract's storage. Since `adopters` is an array, and we know from the first adoption test that we adopted pet `expectedPetId`, we compare the testing contracts address with location `expectedPetId` in the array.
+
+## Testing the smart contract using Javascript 
+
+Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this tutorial, we'll be writing our tests in Javascript using chai and mocha library.
+
+1. Create a new file named `TestAdoption.test.js` in the `test/` directory.
+1. Add the following content to the `TestAdoption.test.js` file:
+
+  ```
+  const Adoption = require("../contracts/Adoption.sol");
+
+  require('chai')
+    .use(require('chai-as-promised'))
+    .should()
+  
+  contract("TestAdoption", (accounts) => {
+    let adoption;
+    let expectedPetId = 8;
+    
+    before( async()=>{
+        adoption = await Adoption.deployed();
+    });
+
+    describe('Test of functions', async() => {
+      const address = await Adoption.address; 
+      const expectedAdopter = accounts[0];
+    });
+  });
+
+  ```
+  We start the contract by importing : 
+  * ```Adoption.sol```:The smart contract we want to test
+  * ```chai```: Gives us various assertions to use in our tests to be used for equality, inequality or emptiness to return a pass/fail from our test.
+
+  **Note**: When writing the contract, we make use of the callback function ```accounts``` that provides us with the accounts in the development or the test network used.
+
+  Then, we make use of async functions : 
+  * To deploy the contract as soon as the test begins for the contract 
+  * To use the asynchronous feature to get the address of the contract and expectedAdopter
+
+  ### Testing the adopt() function 
+
+  To test the ```adopt()``` function, recall that upon success it returns the given ```petId```. We can ensure an ID was returned and that it's correct by comparing the return value of ```adopt()``` to the ID we passed in.
+
+  1. Add the following function within the ```TestAdoption.test.js``` test file, after the declaration of ```describe```. 
+
+  ```
+  describe('Test of functions', async() => {
+      const address = await Adoption.address; 
+      const expectedAdopter = accounts[0];
+
+      it("testUserCanAdoptPet", async() => {
+        const returnedId = await adoption.adopt(expectedPetId, {from: accounts[0]});
+        assert.equal(returnedId, expectedPetId, "Adoption of the expected pet should match what is returned.");
+      });
+  });
+
+  ```
+
+  Things to notice:
+
+  * We call the smart contract we declared earlier with the ID of expectedPetId.
+  * When called the function within the smart contract, we send metadata for the solidity contract to know that ```msg.sender``` is ```accounts[0]```.
+  * Finally, we pass the actual value, the expected value and a failure message (which gets printed to the console if the test does not pass) to assert.equal().
+
+  ### Testing retrieval of a single pet's owner
+
+  1. Add this function below the previously added function in ```TestAdoption.test.js```.
+
+  ```
+  it("testGetAdopterAddressByPetId", async() => {
+    const adopter = await adoption.adopters(expectedPetId);
+    assert.equal(adopter, expectedAdopter, "Owner of the expected pet should be the first account");
+  });
+
+  ```
+
+  After getting the adopter address stored by the adoption contract, as assert equality as we did above.
+
+  ### Testing retrieval of all pet owners
+
+  Since arrays can only return a single value given a single key, we create our own getter for the entire array.
+
+  1. Add this function below the previously added function in ```TestAdoption.test.js```.
+  
+  ```
+  it("testGetAdopterAddressByPetIdInArray", async() => {
+    let adopters = await adoption.getAdopters();
+    assert.equal(adopters[expectedPetId], expectedAdopter, "Owner of the expected pet should be the first account");
+  });
+
+  ```
+  Since adopters is an array, and we know from the first adoption test that we adopted pet expectedPetId, we compare the testing contracts address with location expectedPetId in the array.
 
 ### Running the tests
 
