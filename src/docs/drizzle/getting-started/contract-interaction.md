@@ -78,7 +78,7 @@ var contractConfig = {
 events = ['Mint']
 
 // Using an action
-dispatch({type: 'ADD_CONTRACT', drizzle, contractConfig, events, web3})
+dispatch({type: 'ADD_CONTRACT', contractConfig, events})
 
 // Or using the Drizzle context object
 this.context.drizzle.addContract(contractConfig, events)
