@@ -92,7 +92,7 @@ You can also delete contracts using either `drizzle.deleteContract()` or the `DE
 const contractName = "MyContract"
 
 // Using an action
-dispatch({type: 'DELETE_CONTRACT', drizzle, contractName})
+dispatch({type: 'DELETE_CONTRACT', contractName})
 
 // Or using the Drizzle context object
 this.context.drizzle.deleteContract(contractName)
