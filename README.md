@@ -1,5 +1,5 @@
 
-# Truffle Suite Website - https://www.truffleframework.com
+# Truffle Suite Website - https://www.trufflesuite.com
 
 Our website is built with [Metalsmith](http://www.metalsmith.io/), using Handlebars templates and a combination of HTML and markdown for page content.
 
