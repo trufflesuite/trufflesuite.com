@@ -13,7 +13,7 @@ jQuery(function($) {
         "Compiling Contracts",
         "Running Migrations",
         "Interacting with Your Contracts",
-        "Package Management via EthPM",
+        "Package Management via ethPM",
         "Package Management via NPM",
         "Debugging Your Contracts",
         "Using Truffle Develop and The Console",

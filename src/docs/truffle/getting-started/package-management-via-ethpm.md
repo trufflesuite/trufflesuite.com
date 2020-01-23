@@ -1,26 +1,22 @@
 ---
-title: Truffle | Package Management via EthPM
+title: Truffle | Package Management via ethPM
 layout: docs.hbs
 ---
-# Package Management via EthPM
+# Package Management via ethPM
 
-EthPM is the new [Package Registry](https://www.ethpm.com/) for Ethereum. It follows the [ERC190 spec](https://github.com/ethereum/EIPs/issues/190) for publishing and consuming smart contract packages, and has gained wide support from many diverse Ethereum development tools. To show our support, we've integrated the Ethereum Package Registry directly into Truffle.
+ethPM is the [Package Manager](https://www.ethpm.com/) for Ethereum. It follows the [ERC1123 spec](https://github.com/ethereum/EIPs/issues/1123) for publishing and consuming smart contract packages, and has gained wide support from many diverse Ethereum development tools. To show our support, we've integrated the Ethereum Package Registry directly into Truffle.
 
 ## Installing a package
 
-Installing a package from EthPM is nearly as easy as installing a package via NPM. You can simply run the following command:
+To install a package, all you need is the [ethPM URI](TODO) that identifies the registry and package version you want to install.
+
+It is recommended that users only install packages from registries managed by trusted developer teams. A list of popular, trusted registries can be found [here](https://docs.ethpm.com/public-registry-directory).
+
+Installing a package from ethPM is nearly as easy as installing a package via NPM. Simply run the following command:
 
 ```shell
-$ truffle install <package name>
+$ truffle install ethpm://<registry_address_or_ens>/<package name>@<version>
 ```
-
-You can also install a package at a specific version:
-
-```shell
-$ truffle install <package name>@<version>
-```
-
-Like NPM, EthPM versions follow [semver](http://semver.org/). You can find a list of all available packages at [the Ethereum Package Registry](http://explorer.ethpm.com/).
 
 ## Installing Dependencies
 
@@ -34,12 +30,12 @@ For more details on the `ethpm.json` file, see the [package configuration](/docs
 
 ## Consuming installed contracts
 
-Installed packages will be placed in the `installed_contracts` directory within your project folder. If no `installed_contracts` directory exists it'll be created for you. You should treat this folder like you treat the `node_modules` folder with NPM -- that is, you shouldn't edit the contents inside unless you know what you're doing. :)
+Installed packages will be placed in the `_ethpm_packages` directory within your project folder. If no `_ethpm_packages` directory exists it'll be created for you. You should treat this folder like you treat the `node_modules` folder with NPM -- that is, you shouldn't edit the contents inside unless you know what you're doing. :)
 
 Installed packages can be consumed within your tests, migrations and solidity contract files by `import`'ing or `require`'ing that package and contract by name. For example, the following Solidity contract would import the `owned.sol` file from the `owned` package:
 
 ```solidity
-pragma solidity ^0.4.2;
+pragma solidity ^0.5.1;
 
 import "owned/owned.sol";
 
@@ -72,37 +68,41 @@ Note that in the migration above, we consume the `ens` package and deploy the EN
 
 Publishing your own package is as straightforward as installing, but like NPM, requires a bit more configuration.
 
-### Ropsten, Ropsten, Ropsten
+### Setup
 
-The Ethereum Package Registry currently exists on the Ropsten test network. To publish to the registry, we need to set up our own Ropsten configuration because we'll be making transactions that need to be signed.
+By default, your package will be published to the un-authorized, public registry. This means that anybody can publish a package to this registry, so use caution when installing packages located on this registry. This registry must not be used in production, and is only provided to make it easy to begin using ethPM. We strongly recommend that you [deploy your own](https://docs.ethpm.com/ethpm-developer-guide/install-a-package#deploying-a-registry), authorized ethPM registry on the mainnet to host your packages.
 
-In this example, we'll use Infura for publishing packages along with the `truffle-hdwallet-provider` NPM module and a 12-word hd-wallet mnemonic that represents our Ethereum address on the Ropsten network. First, install the `truffle-hdwallet-provider` via NPM within your project directory:
+To publish to any registry, we need to set up our own configuration because we'll be making transactions that need to be signed. If you are publishing to an authorized registry, you must make sure that the provided mnemonic can sign txs for an address authorized to cut releases.
+
+In this example, we'll use Infura for publishing packages along with the `truffle-hdwallet-provider` NPM module and a 12-word hd-wallet mnemonic that represents our Ethereum address. First, install the `truffle-hdwallet-provider` via NPM within your project directory:
 
 ```shell
 $ npm install truffle-hdwallet-provider --save
 ```
 
-Then edit your configuration to add the `ropsten` network using your 12-word mnemonic:
+Then edit your configuration to add the `mainnet` network using your 12-word mnemonic:
 
-File: `truffle.js`
+File: `truffle-config.js`
 
 ```javascript
 var HDWalletProvider = require("truffle-hdwallet-provider");
 
 // 12-word mnemonic
 var mnemonic = "opinion destroy betray ...";
+var infuraKey = "YOUR_INFURA_PROJECT_ID";
+var ethpmUri = "ethpm://YOUR_REGISTRY_ADDRESS_OR_ENS:1"
 
 module.exports = {
+  ethpm: {
+    infuraKey: infuraKey,
+    registry: ethpmUri
+  },
+  network: 'mainnet', // required?
   networks: {
-    development: {
-      host: "127.0.0.1",
-      port: 8545,
-      network_id: "*" // Match any network id
-    },
-    ropsten: {
+    mainnet: {
       provider: () =>
-        new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/YOUR-PROJECT-ID"),
-      network_id: 3 // official id of the ropsten network
+        new HDWalletProvider(mnemonic, `https://mainnet.infura.io/v3/${infuraKey}`),
+      network_id: 1
     }
   }
 };
@@ -110,7 +110,7 @@ module.exports = {
 
 ### Package configuration
 
-Like NPM, configuration options for EthPM go in a separate JSON file called `ethpm.json`. This file sits alongside your Truffle configuration and gives Truffle all the information it needs to publish your package. You can see a full list of available options in the [Configuration](/docs/advanced/configuration) section.
+Like NPM, configuration options for ethPM go in a separate JSON file called `ethpm.json`. This file sits alongside your Truffle configuration and gives Truffle all the information it needs to publish your package. You can see a full list of available options in the [Configuration](/docs/advanced/configuration) section.
 
 File: `ethpm.json`
 
@@ -119,6 +119,12 @@ File: `ethpm.json`
   "package_name": "adder",
   "version": "0.0.3",
   "description": "Simple contract to add two numbers",
+  "license": "MIT",
+  "links": {
+	"documentation": "www.readthedocs.com",
+	"repository": "www.github.com",
+	"website": "www.project.com"
+  },
   "authors": [
     "Tim Coulter <tim.coulter@consensys.net>"
   ],
@@ -126,10 +132,9 @@ File: `ethpm.json`
     "ethereum",
     "addition"
   ],
-  "dependencies": {
-    "owned": "^0.0.1"
-  },
-  "license": "MIT"
+  "dependencies": { // TODO
+    "owned": "^0.0.1" // TODO
+  } // TODO
 }
 ```
 
@@ -142,6 +147,8 @@ $ truffle publish
 ```
 
 You'll see output similar to that below, with confirmation that your package was published successfully.
+
+TODO update
 
 ```shell
 $ truffle publish

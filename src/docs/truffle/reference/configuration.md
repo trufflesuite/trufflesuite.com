@@ -370,22 +370,22 @@ workflow commands. For more information, see [Third-Party Plugin Commands](/docs
 
 
 
-## EthPM configuration
+## ethPM configuration
 
 This configuration applies to the optional `ethpm.json` file that exists alongside your `truffle.js` configuration file.
 
-### package_name
+### packageName
 
-Name of the package you're publishing. Your package name must be unique to the EthPM registry.
+Name of the package you're publishing. Your package name must be unique to the ethPM registry.
 
 Example:
 ```javascript
-package_name: "adder"
+packageName: "adder"
 ```
 
 ### version
 
-Version of this package, using the [semver](http://semver.org/) specification.
+Version of this package. It's recommended to use the [semver](http://semver.org/) specification.
 
 Example:
 ```javascript
@@ -424,19 +424,6 @@ keywords: [
 ],
 ```
 
-### dependencies
-
-A list of EthPM packages your package depends on, using [semver](http://semver.org/) version ranges, like npm.
-
-Example:
-```javascript
-dependencies: {
-  "owned": "^0.0.1",
-  "erc20-token": "1.0.0"
-}
-```
-
-
 ### license
 
 License to use for this package. Strictly informative.
@@ -444,4 +431,18 @@ License to use for this package. Strictly informative.
 Example:
 ```javascript
 license: "MIT",
+```
+
+### dependencies
+
+TODO!! SUPPORT 
+
+A list of ethPM packages your package depends on, using [semver](http://semver.org/) version ranges, like npm.
+
+Example:
+```javascript
+dependencies: {
+  "owned": "^0.0.1",
+  "erc20-token": "1.0.0"
+}
 ```
