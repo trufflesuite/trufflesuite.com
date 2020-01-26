@@ -36,5 +36,8 @@
     "metalsmith-sitemap": "^1.2.2",
     "recursive-uglifyjs": "^0.2.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "handlebars-helpers": "^0.10.0",
+    "metalsmith-debug": "^1.2.0"
+  }
 }
