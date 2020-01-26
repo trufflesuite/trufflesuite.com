@@ -87,5 +87,13 @@
       "Drizzle Actions",
       "How Data Stays Fresh"
     ]
+  },
+  "tezos": {
+    "truffle": {
+      "Getting Started": [
+        "Installation",
+        "Compiling Contracts"
+      ]
+    }
   }
 }
