@@ -91,8 +91,11 @@
   "tezos": {
     "truffle": {
       "Getting Started": [
-        "Installation",
-        "Compiling Contracts"
+        "Installing Truffle with Tezos",
+        "Creating a Tezos project",
+        "Writing Tezos Contracts",
+        "Compiling Tezos Contracts",
+        "Interacting with Your Tezos Contracts"
       ]
     }
   }
