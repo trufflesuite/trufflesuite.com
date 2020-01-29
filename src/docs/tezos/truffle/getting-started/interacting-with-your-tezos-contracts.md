@@ -25,7 +25,7 @@ function main (const newValue : int;  const storedValue : int) : (list(operation
 
 This contract has a single method, or "entry point", called `main()`. You'll notice that the first parameter to `main()` is an integer that gets stored in the contract's storage. The second parameter represents current state of the contract's storage at time of the function execution. 
 
-Now let's look at the Javascript object called `SimpleStorage` provided for us by Truffle, as made available in the [Truffle console](/docs/tezos/truffle/getting-started/using-truffle-the-console):
+Now let's look at the Javascript object called `SimpleStorage` provided for us by Truffle, as made available in the [Truffle console](/docs/tezos/truffle/getting-started/using-the-console-with-Tezos):
 
 ```javascript
 truffle(development)> let instance = await SimpleStorage.deployed()
