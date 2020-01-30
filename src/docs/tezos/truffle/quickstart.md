@@ -2,13 +2,14 @@
 title: Truffle | Tezos Quickstart
 layout: docs.hbs
 ---
+
+<p class="alert alert-danger">
+<strong>Tezos support</strong> in Truffle is experimental. Give it a spin, and help us out by [filing issues on Github](https://github.com/trufflesuite/truffle/issues).
+</p>
+
 # Tezos Quickstart
 
 Wanna build apps on Tezos using Truffle? You're in the right place. 
-
-<p class="alert alert-warning">
-<strong>Tezos support</strong> in Truffle is experimental. You'll need to download a special version of Truffle in order to develop with Tezos (see below).
-</p>
 
 ## Table of Contents
 
@@ -62,11 +63,52 @@ The example box comes with two contracts, which you can find in the `./contracts
 * `Counter.ligo`
 * `SimpleStorage.ligo`
 
-You can see that these contracts end in the `.ligo` file extension. This refers to the [LIGO programming language](https://ligolang.org/). See the [Writing LIGO contracts]() section for more info. 
+You can see that these contracts end in the `.ligo` file extension. This refers to the [LIGO programming language](https://ligolang.org/). See the [Writing Tezos contracts](/docs/tezos/truffle/getting-started/writing-tezos-contracts) section for more info. 
 
 ## Deploying Contracts
 
-By default, the example box deploys your contracts to a public test network called [BabylonNet](https://tezos.gitlab.io/#babylonnet-test-network). You can find the following deployment scripts within the `./migrations` directory:
+For this quick start, we're going to configure your project to deploy to the [BabylonNet](https://tezos.gitlab.io/#babylonnet-test-network) test network for Tezos. This is the quickest way to get started, though as you get familiar with Tezos, you'll want to set up a local development environment. 
+
+### Configuring Truffle to point to the Babylon testnet
+
+First, navigate to [https://faucet.tzalpha.net/](https://faucet.tzalpha.net/) to get a faucet account. This will create a new account for you on the testnet and fill it with some testnet XTZ. Download the file and save it as `faucet.json` in the root of your project.
+
+Next, replace the box's `truffle-config.js` with the following: 
+
+```javascript
+const { mnemonic, secret, password: passphrase, email } = require("./faucet.json");
+
+module.exports = {
+  // see <http://truffleframework.com/docs/advanced/configuration>
+  // for more details on how to specify configuration options!
+  networks: {
+    development: {
+      host: "https://api.tez.ie/rpc/babylonnet",
+      port: 443,
+      network_id: "*",
+      secret,
+      mnemonic,
+      passphrase,
+      email,
+      type: "tezos"
+    }
+  }
+};
+```
+
+That's it! You're all set to run the box's deployment scripts against a testnet. 
+
+<p class="alert alert-info">
+<strong>Note:</strong> The default tezos box is configured to deploy to multiple networks, including mainnet. If you'd like to deploy to those networks, you'll need to first configure the `secret`, `mnemonic`, `passphrase`, and `email` like the above to represent an account you own that's funded with XTZ. See the [Configuring Tezos Projects](/docs/tezos/getting-started/configuring-tezos-projects) section for more info. 
+</p>
+
+<p class="alert alert-danger">
+<strong>Caution!</strong> Keep your `secret`, `mnemonic` and `passphrase` safe! When not on a testnet, you can quickly lose all your tez if someone else gets ahold of them.
+</p>
+
+### Running Truffle's deployment scripts
+
+The example box comes default with pre-written deployment scripts, found within the `./migrations` directory:
 
 * `1_deploy_simple_storage.js`
 * `2_deploy_counter.js`
@@ -76,10 +118,6 @@ Truffle will handle running these scripts when you run the following command:
     $ truffle migrate
 
 See the [Deploying your Contracts]() section for more information on how to write and use Truffle's deployment scripts.
-
-<p class="alert alert-danger">
-<strong>Caution!</strong> This example box uses a default account and private key, and is given free XTZ from a faucet on the Babylon network. You should not use this account and private key when deploying your application to the production network. You will lose funds. 
-</p>
 
 ## Testing Contracts
 

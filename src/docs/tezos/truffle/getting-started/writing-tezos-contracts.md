@@ -3,6 +3,10 @@ title: Truffle | Writing Tezos Contracts | Tezos
 layout: docs.hbs
 ---
 
+<p class="alert alert-danger">
+<strong>Tezos support</strong> in Truffle is experimental. Give it a spin, and help us out by [filing issues on Github](https://github.com/trufflesuite/truffle/issues).
+</p>
+
 # Writing Tezos Contracts
 
 Smart contracts in Tezos are written in the [LIGO programming language](https://ligolang.org/). We recommend you familiarize yourself with the language before continuing. Their documentation is excellent.
@@ -46,7 +50,7 @@ There's some important takeaways to note when writing LIGO contracts:
 
 ## Defining Multiple Entry Points
 
-You'll notice that the comments in the example contract above suggest there are multiple entry points beyond `main()`. Conceptually there _are_ multiple entry points -- `add()` and `subtract()` -- but under the hood, `main()` is technically the single entery point of the contract. To code a contract with multiple entry points that Truffle can take advantage of, you'll need to follow the example above. Start by defining an enum-like type called `action` with values relative to the functions being called, and then pass the action as the first value into `main()`. As you'll see in the [Interacting With Your Contracts](/docs/tezos/truffle/getting-started/interacting-with-your-contracts) section, if Truffle detects an `action` type as the first parameter in `main()`, it'll treat your contract as though it has multiple entry points, it'll make those entry points easy to call from outside the blockchain.
+You'll notice that the comments in the example contract above suggest there are multiple entry points beyond `main()`. Conceptually there _are_ multiple entry points -- `increment` and `decrement` -- but under the hood, `main()` is technically the single entery point of the contract. To code a contract with multiple entry points that Truffle can take advantage of, you'll need to follow the example above. Start by defining an enum-like type called `action` with values relative to the functions being called, and then pass the action as the first value into `main()`. As you'll see in the [Interacting With Your Contracts](/docs/tezos/truffle/getting-started/interacting-with-your-contracts) section, if Truffle detects an `action` type as the first parameter in `main()`, it'll treat your contract as though it has multiple entry points, it'll make those entry points easy to call from outside the blockchain.
 
 ## How do I compile? 
 

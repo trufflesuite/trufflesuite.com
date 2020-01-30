@@ -2,6 +2,11 @@
 title: Truffle | Creating a Tezos Project | Tezos
 layout: docs.hbs
 ---
+
+<p class="alert alert-danger">
+<strong>Tezos support</strong> in Truffle is experimental. Give it a spin, and help us out by [filing issues on Github](https://github.com/trufflesuite/truffle/issues).
+</p>
+
 # Creating a Tezos Project
 
 To use most Truffle commands, you need to run them against an existing Truffle project. So the first step is to create a Truffle project with Tezos.

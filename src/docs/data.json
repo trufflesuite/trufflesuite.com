@@ -97,6 +97,9 @@
         "Compiling Tezos Contracts",
         "Interacting with Your Tezos Contracts",
         "Using the Console with Tezos"
+      ],
+      "Reference": [
+        "Configuring Tezos Projects"
       ]
     }
   }

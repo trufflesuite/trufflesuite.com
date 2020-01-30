@@ -2,6 +2,11 @@
 title: Truffle | Compiling LIGO contracts | Tezos
 layout: docs.hbs
 ---
+
+<p class="alert alert-danger">
+<strong>Tezos support</strong> in Truffle is experimental. Give it a spin, and help us out by [filing issues on Github](https://github.com/trufflesuite/truffle/issues).
+</p>
+
 # Compiling LIGO contracts
 
 ## Location

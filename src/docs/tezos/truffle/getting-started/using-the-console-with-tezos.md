@@ -2,6 +2,11 @@
 title: Truffle | Using Truffle Console | Tezos
 layout: docs.hbs
 ---
+
+<p class="alert alert-danger">
+<strong>Tezos support</strong> in Truffle is experimental. Give it a spin, and help us out by [filing issues on Github](https://github.com/trufflesuite/truffle/issues).
+</p>
+
 # Using the Truffle Console with Tezos
 
 Sometimes it's nice to work with your contracts interactively for testing and debugging purposes, or for executing transactions by hand. Truffle provides you an easy way to do this via an interactive console, with your contracts available and ready to use.
