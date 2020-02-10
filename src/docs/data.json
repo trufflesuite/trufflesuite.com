@@ -95,6 +95,7 @@
         "Creating a Tezos project",
         "Writing Tezos Contracts",
         "Compiling Tezos Contracts",
+        "Deploying Tezos Contracts",
         "Interacting with Your Tezos Contracts",
         "Using the Console with Tezos"
       ],
