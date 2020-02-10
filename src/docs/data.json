@@ -97,7 +97,8 @@
         "Compiling Tezos Contracts",
         "Deploying Tezos Contracts",
         "Interacting with Your Tezos Contracts",
-        "Using the Console with Tezos"
+        "Using the Console with Tezos",
+        "Writing External Scripts with Tezos"
       ],
       "Reference": [
         "Configuring Tezos Projects"
