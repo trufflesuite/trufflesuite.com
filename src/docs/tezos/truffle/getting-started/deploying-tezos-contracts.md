@@ -163,8 +163,16 @@ deployer.deploy(A);
 // Deploy a single contract with an initial state of 3.
 deployer.deploy(A, 3);
 
-// Don't deploy this contract if it has already been deployed
+// Don't deploy this contract if it has already been deployed.
 deployer.deploy(A, {overwrite: false});
+
+// More specific example: 
+//
+// Don't redeploy if the contract object represents an already-deployed dependency.
+// If it has already been deployed to our target network, we can skip deploying it.
+// This is useful for cases where we _do_ want to deploy that dependency for testing
+// and development networks, but we don't want to replace it in production. 
+deployer.deploy(SomeDependency, {overwrite: false});
 ```
 
 ### deployer.then(function() {...})
