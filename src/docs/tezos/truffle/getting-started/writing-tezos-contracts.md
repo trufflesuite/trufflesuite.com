@@ -54,6 +54,10 @@ You'll notice that the comments in the example contract above suggest there are 
 
 To code a contract with multiple entry points that Truffle can take advantage of, you'll need to follow the example above. Start by defining an enum-like type called `action` with values relative to the functions being called, and then pass the action as the first value into `main()`. As you'll see in the [Interacting With Your Contracts](/docs/tezos/truffle/getting-started/interacting-with-your-contracts) section, if Truffle detects an `action` type as the first parameter in `main()`, it'll treat your contract as though it has multiple entry points, and make those entry points easy to call from outside the blockchain.
 
+## Including Other Contracts
+
+Sometimes it's nice to organize your code in multiple files. Fortunately, the LIGO compiler does this for you. To do so, check out the [LIGO documentation](https://ligolang.org/docs/advanced/include/) for more. You'll still need one contract that contains a `main()` function, though you can organize other contract code in other files as needed.
+
 ## How do I compile? 
 
 It's easy. See the [Compiling Tezos Contracts](/docs/tezos/truffle/getting-started/compiling-tezos-contracts) section for more! 
