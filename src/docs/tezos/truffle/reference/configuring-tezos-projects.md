@@ -42,7 +42,7 @@ Developing on public test nets can be limiting for a number of reasons (acquirin
 
 ## Setting up a local test network with Flextesa
 
-Enter Flextesa. "Flextesa" is short for [flexible Tezos sandboxes](https://medium.com/@obsidian.systems/introducing-flextesa-robust-testing-tools-for-tezos-and-its-applications-edc1e336a209), and can help you quickly set up a Tezos environment locally.
+Enter Flextesa. "Flextesa" is short for [flexible test sandboxes](https://medium.com/@obsidian.systems/introducing-flextesa-robust-testing-tools-for-tezos-and-its-applications-edc1e336a209), and can help you quickly set up a Tezos environment locally.
 
 Our [example Tezos box](https://github.com/truffle-box/tezos-example-box) comes with scripts to spin up a flextesa environment with zero-work. Check out [the documentation](https://github.com/truffle-box/tezos-example-box#sandbox-management).
 
