@@ -138,8 +138,8 @@ If you've reached this point, you now have a Truffle project that lets you compi
 
 * [LIGO language documentation](https://ligolang.org/docs/intro/what-and-why/)
 * [Tezos documentation](https://tezos.gitlab.io/)
-
-TODO: Add links to Truffle's documentation here.
+* [Taquito communcation library](https://tezostaquito.io/)
+* [Main Truffle Suite documentation](https://trufflesuite.com/docs)
 
 
 
