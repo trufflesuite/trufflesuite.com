@@ -13,9 +13,13 @@ If you're familiar with Truffle, then you already know about [Truffle's deployme
 
 ## Overview
 
-When working with Tezos contracts, you'll need to write migration scripts to tell Truffle how to deploy your LIGO contracts. In contrast with Truffle's normal behavior, all scripts will be run for every deployment. Truffle will not try to determine which scripts have been run previously, though it can be configured at runtime to only run specific deployment scripts. If you only want to run some of the scripts you've created, it'll be up to you to tell Truffle which script to run.
+To deploy Tezos contracts, you'll first need to write migration scripts to tell Truffle how to deploy those contracts. In contrast with Truffle's normal behavior, all scripts defined in the `./migrations` directory will be run for every deployment. Truffle will not try to determine which scripts have been run previously, though it can be configured at runtime to only run specific deployment scripts. If you only want to run some of the scripts you've created, it'll be up to you to tell Truffle which script to run.
 
-For the rest of this document, we'll be referring to deployment scripts as "migrations", to keep in line with Truffle's normal lingo. Keep in mind that a "migration" is syonymous with "deployment script. 
+For the rest of this document, we'll be referring to deployment scripts as "migrations" to keep in line with Truffle's normal lingo. Keep in mind that a "migration" is synonymous with "deployment script". 
+
+<p class="alert alert-warning">
+<strong>Coming from Ethereum?</strong> If you're already familiar with Truffle projects created for Ethereum, you'll notice a distinct lack of a `Migrations` contract. As of now, the migrations system isn't yet supported by Truffle for Tezos projects, and instead all migration scripts are run during deployment.
+</p>
 
 ## Migrations
 
