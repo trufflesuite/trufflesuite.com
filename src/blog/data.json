@@ -1,4 +1,12 @@
 {
+  "announcing-tezos-truffle-integration-multi-blockchain-strategy": {
+    "title": "Announcing Tezos Support in Truffle: A multi-blockchain strategy",
+    "date": "2019-2-17",
+    "author": "Tim Coulter",
+    "published": true,
+    "excerpt": "Tim: You forgot to put an excerpt here.",
+    "image": "/img/blog/thumbnails/corda-ganache-beta-blog-thumb.png"
+  },
   "unwrap-the-corda-flavored-ganache-beta": {
     "title": "Unwrap the Corda Flavored Ganache Beta",
     "date": "2019-12-23",
