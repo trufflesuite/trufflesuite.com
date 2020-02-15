@@ -8,7 +8,7 @@ We chose Tezos as our first non-EVM chain because of its blossoming developer co
 
 Are you a developer who wants to build on top of Tezos using Truffle? [Check out our documentation](#) and our [quick start guide](#).
 
-It's important to note that our integration with Tezos is experimental. As of now you'll need to download a special version of Truffle to start building on Tezos. This is by design: Integrating a new blockchain into a common workflow takes some work, and we want to ensure keep the same level of quality for our existing chains while we work out the kinks. You can be extremely helpful here! If you run into an issue using the Tezos version of Truffle, let us know! You can file an issue at our [issue tracker](#), or reach out to us on [Spectrum](#).
+It's important to note that our integration with Tezos is experimental. As of now you'll need to download a special version of Truffle to start building on Tezos. This is by design: Integrating a new blockchain into a common workflow takes some work, and we want to ensure we keep the same level of quality for our existing chains while we work out the kinks. You can be extremely helpful here! If you run into an issue using the Tezos version of Truffle, let us know! You can file an issue at our [issue tracker](#), or reach out to us on [Spectrum](#).
 
 Our plan over the coming months is to harden our Tezos integration and ultimately release it under the mainline version of Truffle. We're also working with the Tezos Foundation to explore further inegrations, like a Tezos-flavored-Ganache. If this is something you'd like to see, to speed up your development process and make your tests run blazing fast, please reach out to them and let them know! 
 
@@ -19,4 +19,3 @@ I'd like to thank some standout developers in the Tezos community for making thi
 We're excited to announce Tezos support as one of many integrations to come in 2020. Thank you for your continued support of our work, and the opportunity to make your development life easier. Happy coding!
 
 Tim
-
