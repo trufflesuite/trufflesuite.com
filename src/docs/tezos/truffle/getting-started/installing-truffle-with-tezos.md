@@ -28,7 +28,7 @@ Before you can start developing Tezos applications with Truffle, you'll first ne
 
 You'll need to download a special version of Truffle to use Tezos. 
 
-    $ npm install -g truffle@alphaTez
+    $ npm install -g truffle@tezos
 
 If you already have Truffle installed, we recommend uninstalling truffle before running the above command.
 
