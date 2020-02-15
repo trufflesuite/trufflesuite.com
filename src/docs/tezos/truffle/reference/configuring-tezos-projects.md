@@ -98,8 +98,6 @@ networks: {
 }
 ```
 
-TODO: Talk about parameters in the faucet example.
-
 ### contracts_directory
 
 The default directory for uncompiled contracts is `./contracts` relative to the project root. If you wish to keep your contracts in a different directory you may specify a `contracts_directory` property.
