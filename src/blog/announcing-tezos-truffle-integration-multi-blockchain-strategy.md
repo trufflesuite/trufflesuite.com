@@ -4,7 +4,7 @@ If you've been following Truffle's development, you'll notice that our tools alr
 
 **I'm excited to announce we've added experimental Tezos integration into the Truffle command line tool.** This means that right now, at this very moment, you can [download a Tezos-specific version of Truffle](#) and start building smart contracts on Tezos networks using the time-tested tooling you already know and love. And if you're a Tezos native who got _your_ start building on top of the Tezos platform, then this means professional-grade tooling has finally arrived. 
 
-We chose Tezos as our first non-EVM chain because of its blossoming developer community. In our position as tools builders, we go where the market takes us: If enough people ask for Tezos support, we listen. This market demand was coupled with an active and interested group of core developers, and a blockchain architecture that's similar to Ethereum. Ultimately, Tezos is "EVM-like". This makes it a great candidate for integration, fitting into Truffle like a glove. 
+We chose Tezos as our first non-EVM chain because of its blossoming developer community. In our position as tool builders, we go where the market takes us: If enough people ask for Tezos support, we listen. This market demand was coupled with an active and interested group of core developers, and a blockchain architecture that's similar to Ethereum. Ultimately, Tezos is "EVM-like". This makes it a great candidate for integration, fitting into Truffle like a glove. 
 
 Are you a developer who wants to build on top of Tezos using Truffle? [Check out our documentation](#) and our [quick start guide](#).
 
