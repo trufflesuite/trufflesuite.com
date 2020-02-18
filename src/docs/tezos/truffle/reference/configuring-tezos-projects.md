@@ -14,7 +14,7 @@ layout: docs.hbs
 Your configuration file is called `truffle-config.js` and is located at the root of your project directory. This file is a Javascript file and can execute any code necessary to create your configuration. It must export an object representing your project configuration like the example below.
 
 ```javascript
-const { mnemonic, secret, password: passphrase, email } = require("./faucet.json");
+const { mnemonic, secret, password, email } = require("./faucet.json");
 
 module.exports = {
   // see <http://truffleframework.com/docs/advanced/configuration>
@@ -186,5 +186,4 @@ NPM package dependencies.
 
 Truffle plugin support is currently limited to plugins that define custom
 workflow commands. For more information, see [Third-Party Plugin Commands](/docs/truffle/getting-started/writing-external-scripts#third-party-plugin-commands).
-
 
