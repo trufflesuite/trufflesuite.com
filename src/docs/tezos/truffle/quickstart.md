@@ -103,7 +103,7 @@ That's it! You're all set to run the box's deployment scripts against a testnet.
 </p>
 
 <p class="alert alert-danger">
-<strong>Caution!</strong> Keep your `secret`, `mnemonic` and `passphrase` safe! When not on a testnet, you can quickly lose all your tez if someone else gets ahold of them.
+<strong>Caution!</strong> Keep your `secret`, `mnemonic` and `password` safe! When not on a testnet, you can quickly lose all your tez if someone else gets ahold of them.
 </p>
 
 ### Running Truffle's deployment scripts
@@ -140,5 +140,4 @@ If you've reached this point, you now have a Truffle project that lets you compi
 * [Tezos documentation](https://tezos.gitlab.io/)
 * [Taquito communcation library](https://tezostaquito.io/)
 * [Main Truffle Suite documentation](https://trufflesuite.com/docs)
-
 
