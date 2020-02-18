@@ -76,7 +76,7 @@ First, navigate to [https://faucet.tzalpha.net/](https://faucet.tzalpha.net/) to
 Next, replace the box's `truffle-config.js` with the following: 
 
 ```javascript
-const { mnemonic, secret, password: passphrase, email } = require("./faucet.json");
+const { mnemonic, secret, password, email } = require("./faucet.json");
 
 module.exports = {
   // see <http://truffleframework.com/docs/advanced/configuration>
@@ -88,7 +88,7 @@ module.exports = {
       network_id: "*",
       secret,
       mnemonic,
-      passphrase,
+      password,
       email,
       type: "tezos"
     }
@@ -99,11 +99,11 @@ module.exports = {
 That's it! You're all set to run the box's deployment scripts against a testnet. 
 
 <p class="alert alert-info">
-<strong>Note:</strong> The default tezos box is configured to deploy to multiple networks, including mainnet. If you'd like to deploy to those networks, you'll need to first configure the `secret`, `mnemonic`, `passphrase`, and `email` like the above to represent an account you own that's funded with XTZ. See the [Configuring Tezos Projects](/docs/tezos/getting-started/configuring-tezos-projects) section for more info. 
+<strong>Note:</strong> The default tezos box is configured to deploy to multiple networks, including mainnet. If you'd like to deploy to those networks, you'll need to first configure the `secret`, `mnemonic`, `password`, and `email` like the above to represent an account you own that's funded with XTZ. See the [Configuring Tezos Projects](/docs/tezos/getting-started/configuring-tezos-projects) section for more info. 
 </p>
 
 <p class="alert alert-danger">
-<strong>Caution!</strong> Keep your `secret`, `mnemonic` and `passphrase` safe! When not on a testnet, you can quickly lose all your tez if someone else gets ahold of them.
+<strong>Caution!</strong> Keep your `secret`, `mnemonic` and `password` safe! When not on a testnet, you can quickly lose all your tez if someone else gets ahold of them.
 </p>
 
 ### Running Truffle's deployment scripts
@@ -140,8 +140,4 @@ If you've reached this point, you now have a Truffle project that lets you compi
 * [Tezos documentation](https://tezos.gitlab.io/)
 * [Taquito communcation library](https://tezostaquito.io/)
 * [Main Truffle Suite documentation](https://trufflesuite.com/docs)
-
-
-
-
 
