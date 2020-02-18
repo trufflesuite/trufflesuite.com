@@ -16,7 +16,7 @@ Smart contracts in Tezos are written in the [LIGO programming language](https://
 * [Documentation](https://ligolang.org/docs/intro/what-and-why/)
 
 <p class="alert alert-warning">
-<strong>Note!</strong> LIGO supports three different syntaxes out of the box: CamelLIGO, PascalLIGO, and ReasonLIGO. Due to current compiler constraints, Truffle only supports PascalLIGO out of the box. So use that! We'll let you know when we've updated support for other versions.
+<strong>Note!</strong> LIGO supports three different syntaxes out of the box: CamelLIGO, PascalLIGO, and ReasonLIGO. For all examples in this documentation, we use PascalLIGO.
 </p>
 
 ## Example Contract & Overview

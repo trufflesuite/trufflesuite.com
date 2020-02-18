@@ -80,6 +80,10 @@ Your migration function can accept other parameters as well. See the examples be
 
 A full migration script using `SimpleStorage` would look like the example below. Note that a default value (`3`) is passed to the deployer's `deploy()` function in order to set the contract's initial state. Note that the type of this second parameter must represent the type of state held in the contract, and should be represented in a form that is convertable from Javascript. More details on this below.   
 
+<p class="alert alert-warning">
+<strong>Coming from Ethereum?</strong> You'll notice that LIGO contracts lack constructors. Passing in default values as part of deployment is the only way to set the initial state of a contract. Constructors may be added to LIGO at a later date.
+</p>
+
 Filename: `./migrations/1_deploy_simplestorage.js`
 ```javascript
 const SimpleStorage = artifacts.require("SimpleStorage");
