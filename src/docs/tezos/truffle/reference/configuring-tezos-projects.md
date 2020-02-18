@@ -26,7 +26,7 @@ module.exports = {
       network_id: "*",
       secret,
       mnemonic,
-      passphrase,
+      password,
       email,
       type: "tezos"
     }
@@ -186,4 +186,3 @@ NPM package dependencies.
 
 Truffle plugin support is currently limited to plugins that define custom
 workflow commands. For more information, see [Third-Party Plugin Commands](/docs/truffle/getting-started/writing-external-scripts#third-party-plugin-commands).
-
