@@ -76,7 +76,7 @@ First, navigate to [https://faucet.tzalpha.net/](https://faucet.tzalpha.net/) to
 Next, replace the box's `truffle-config.js` with the following: 
 
 ```javascript
-const { mnemonic, secret, password: passphrase, email } = require("./faucet.json");
+const { mnemonic, secret, password, email } = require("./faucet.json");
 
 module.exports = {
   // see <http://truffleframework.com/docs/advanced/configuration>
@@ -140,7 +140,6 @@ If you've reached this point, you now have a Truffle project that lets you compi
 * [Tezos documentation](https://tezos.gitlab.io/)
 * [Taquito communcation library](https://tezostaquito.io/)
 * [Main Truffle Suite documentation](https://trufflesuite.com/docs)
-
 
 
 
