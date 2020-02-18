@@ -88,7 +88,7 @@ module.exports = {
       network_id: "*",
       secret,
       mnemonic,
-      passphrase,
+      password,
       email,
       type: "tezos"
     }
@@ -140,7 +140,6 @@ If you've reached this point, you now have a Truffle project that lets you compi
 * [Tezos documentation](https://tezos.gitlab.io/)
 * [Taquito communcation library](https://tezostaquito.io/)
 * [Main Truffle Suite documentation](https://trufflesuite.com/docs)
-
 
 
 
