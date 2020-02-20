@@ -18,6 +18,7 @@ This page will take you through the basics of creating a Truffle Teams account a
 
 1. [Creating an Account](#creating-an-account)
 1. [Starting Builds](#starting-builds)
+1. [Deploying Contracts](#deploying-contracts)
 
 ## Creating an Account
 
@@ -50,6 +51,10 @@ We then arrive at the home screen and see the repos we've added--let's commit so
 Builds will start automatically once a new commit is pushed to any branch of a repository added to Truffle Teams. You will see the build queued in both the Truffle Teams interface on the `BUILDS` page and on GitHub with the commit itself.
 
 ![Truffle Teams DATA view](/img/docs/teams/starting-builds-comp.png)
+
+## Deploying Contracts
+
+Please see our detailed tutorial, ["Learning to Deploy with Truffle Teams"](https://www.trufflesuite.com/tutorials/learn-how-to-deploy-with-truffle-teams).
 
 ## Continue Learning
 

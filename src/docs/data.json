@@ -7,6 +7,9 @@
     "Testing": [
       "Starting Builds"
     ],
+    "Deployments": [
+      "Deploying Contracts"
+    ],
     "Contracts": [
       "Contract Monitoring"
     ],
