@@ -5,7 +5,7 @@ layout: docs.hbs
 # Truffle Teams Quickstart
 
 <p class="alert alert-warning">
-<strong>Truffle Teams is currently in beta</strong>, so if you run into any glitches or bugs, please [raise an issue on the Truffle Teams GitHub repository](https://github.com/trufflesuite/truffle-teams/issues).
+<strong>Truffle Teams is currently in alpha</strong>, so if you run into any glitches or bugs, please [raise an issue on the Truffle Teams GitHub repository](https://github.com/trufflesuite/truffle-teams/issues).
 </p>
 
 This page will take you through the basics of creating a Truffle Teams account and linking it to a Truffle project repository.
