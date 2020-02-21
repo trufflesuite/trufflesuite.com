@@ -37,4 +37,4 @@ These artifacts are integral to the inner workings of Truffle, and they play an 
 
 ## All good? 
 
-If you've gotten this far, read more about writing Tezos contracts in the [Writing LIGO Contracts](/docs/tezos/truffle/writing-ligo-contracts) section. 
+If you've gotten this far, it's time to deploy. Check out our [Deploying Tezos Contracts](/docs/tezos/truffle/getting-started/deploying-tezos-contracts) section for more! 
