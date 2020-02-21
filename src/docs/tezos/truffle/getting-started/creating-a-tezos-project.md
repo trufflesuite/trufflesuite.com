@@ -40,11 +40,11 @@ The best way to create a project with Tezos is to start with the `tezos-example`
 
 Once this operation is completed, you'll now have a project structure with the following items:
 
-* `contracts/`: Directory for [LIGO contracts](/docs/tezos/truffle/getting-started/writing-ligo-contracts)
-* `migrations/`: Directory for [scriptable deployment files](/docs/tezos/truffle/getting-started/running-migrations)
-* `test/`: Directory for test files for [testing your application and contracts](/docs/tezos/truffle/getting-started/testing/testing-your-ligo-contracts)
-* `truffle-config.js`: Truffle [configuration file](/docs/truffle/reference/configuration), configured specifically for Tezos
+* `contracts/`: Directory for [LIGO contracts](/docs/tezos/truffle/getting-started/writing-tezos-contracts)
+* `migrations/`: Directory for [scriptable deployment files](/docs/tezos/truffle/getting-started/deploying-tezos-contracts)
+* `test/`: Directory for test files for [testing your application and contracts](/docs/tezos/truffle/getting-started/testing-your-tezos-contracts)
+* `truffle-config.js`: Truffle [configuration file](/docs/tezos/truffle/reference/configuring-tezos-projects), configured specifically for Tezos
 
 ## Ready to write some contracts?
 
-See the [Writing LIGO Contracts](/docs/tezos/truffle/getting-started/writing-ligo-contracts) section to get building!
+See the [Writing LIGO Contracts](/docs/tezos/truffle/getting-started/writing-tezos-contracts) section to get building!
