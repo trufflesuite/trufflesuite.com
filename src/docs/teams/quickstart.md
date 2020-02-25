@@ -5,7 +5,7 @@ layout: docs.hbs
 # Truffle Teams Quickstart
 
 <p class="alert alert-warning">
-<strong>Truffle Teams is currently in beta</strong>, so if you run into any glitches or bugs, please [raise an issue on the Truffle Teams GitHub repository](https://github.com/trufflesuite/truffle-teams/issues).
+<strong>Truffle Teams is currently in alpha</strong>, so if you run into any glitches or bugs, please [raise an issue on the Truffle Teams GitHub repository](https://github.com/trufflesuite/truffle-teams/issues).
 </p>
 
 This page will take you through the basics of creating a Truffle Teams account and linking it to a Truffle project repository.
@@ -18,6 +18,7 @@ This page will take you through the basics of creating a Truffle Teams account a
 
 1. [Creating an Account](#creating-an-account)
 1. [Starting Builds](#starting-builds)
+1. [Deploying Contracts](#deploying-contracts)
 
 ## Creating an Account
 
@@ -51,8 +52,12 @@ Builds will start automatically once a new commit is pushed to any branch of a r
 
 ![Truffle Teams DATA view](/img/docs/teams/starting-builds-comp.png)
 
+## Deploying Contracts
+
+Please see our detailed tutorial, ["Learning to Deploy with Truffle Teams"](https://www.trufflesuite.com/tutorials/learn-how-to-deploy-with-truffle-teams).
+
 ## Continue Learning
 
-This quickstart showed you the basics of the Truffle Teams testing workflow, but once your contracts are deployed there's more to learn about **[monitoring deployed contracts](/docs/teams/contracts/monitoring-contracts)**.
+This quickstart showed you the basics of the Truffle Teams testing workflow, but once your contracts are deployed there's more to learn about **[monitoring deployed contracts](/docs/teams/contracts/contract-monitoring)**.
 
 We're in a cycle of rapid development; constantly adding new features and refining existing ones. If you run into any glitches or bugs, please [raise an issue on the Truffle Teams GitHub repository](https://github.com/trufflesuite/truffle-teams/issues). To get notified of the latest updates consider [signing up for the Truffle Teams mailing list](https://share.hsforms.com/1OaTglVhGTdWk7spR6nE_AA34pbp).
