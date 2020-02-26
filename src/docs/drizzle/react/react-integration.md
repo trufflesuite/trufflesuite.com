@@ -21,8 +21,6 @@ npm install @drizzle/react-plugin
 
 ## Getting Started
 
-**Note**: Since Drizzle uses web3 1.0 and web sockets, be sure your development environment can support these.
-
 1. Import the `DrizzleContext` provider.
   ```javascript
   import { DrizzleContext } from '@drizzle/react-plugin'
@@ -89,13 +87,13 @@ npm install @drizzle/react-plugin
   import React from 'react';
 
   class CacheCallExample extends React.Component {
-    state = { dataKey: null }
+    state = { dataKey: null };
 
     componentDidMount() {
       const { drizzle } = this.props;
       const contract = drizzle.contracts.SimpleStorage;
       let dataKey = contract.methods["storedData"].cacheCall(); // declare this call to be cached and synchronized
-      this.setState({ dataKey })
+      this.setState({ dataKey });
     }
 
     render() {
