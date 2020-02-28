@@ -8,7 +8,9 @@
       "Starting Builds"
     ],
     "Deployments": [
-      "Deploying Contracts"
+      "About Deployments",
+      "Deploying Contracts",
+      "Graduating Deployments"
     ],
     "Contracts": [
       "Contract Monitoring"
