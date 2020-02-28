@@ -1,4 +1,11 @@
 {
+  "truffle-teams-redesign": {
+    "title": "Truffle Teams Gets a New Look!",
+    "date": "2020-02-24",
+    "author": "Mike Seese",
+    "published": true,
+    "excerpt": "The Theobromine design efforts Josh presented at TruffleCon are coming alive in the latest release of Truffle Teams! The application now has a lighter, cleaner feal. We also changed the navigation a little to make the navigation experience smoother."
+  },
   "unwrap-the-corda-flavored-ganache-beta": {
     "title": "Unwrap the Corda Flavored Ganache Beta",
     "date": "2019-12-23",
