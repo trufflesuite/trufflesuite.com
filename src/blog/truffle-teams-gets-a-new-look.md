@@ -6,11 +6,11 @@ Read more below about the most recent changes, or [go check them out for yoursel
 
 The Theobromine Design System uplifts the entire Truffle Teams application. This lighter theme makes the application feel more welcoming and presents itself more as a professional productivity tool.
 
-![Teams Redesign - Builds Page](/img/blog/truffle-teams-redesign/teams-redesign-builds.png)
+![Teams Redesign - Builds Page](/img/blog/truffle-teams-gets-a-new-look/teams-redesign-builds.png)
 
 We also added support to collapse the left navbar to give you some more screen real estate. This is super helpful for those with small or vertical screens; it’s also instrumental for multitaskers that use Truffle Teams in a split-screen setup.
 
-![Teams Redesign - Builds Page](/img/blog/truffle-teams-redesign/teams-redesign-build-detail.png)
+![Teams Redesign - Builds Page](/img/blog/truffle-teams-gets-a-new-look/teams-redesign-build-detail.png)
 
 ## Navigation Updates
 
@@ -18,19 +18,19 @@ The previous iteration of Truffle Teams utilized a "feature first" navigation wh
 
 When you login, you'll now see a home page with a list of your repositories. You can quickly search for a repository or keep your favorites at the top of the list by pinning them.
 
-![Teams Redesign - Home Page](/img/blog/truffle-teams-redesign/teams-home.png)
+![Teams Redesign - Home Page](/img/blog/truffle-teams-gets-a-new-look/teams-home.png)
 
 After clicking on a repository you'll be presented with the details of that repository. On the Builds page you'll now see a history of your builds rather than seeing the list of your repositories. The Deployments and Monitoring pages will look familiar as they haven't changed much other than not having to select the repository again.
 
-![Teams Redesign - Builds Page](/img/blog/truffle-teams-redesign/teams-redesign-builds.png)
+![Teams Redesign - Builds Page](/img/blog/truffle-teams-gets-a-new-look/teams-redesign-builds.png)
 
 Want to focus on a different repository? You can quickly switch between them using the breadcrumb dropdown at the top of each page.
 
-![Teams Redesign - Breadcrumb Dropdown](/img/blog/truffle-teams-redesign/teams-repo-breadcrumb.png)
+![Teams Redesign - Breadcrumb Dropdown](/img/blog/truffle-teams-gets-a-new-look/teams-repo-breadcrumb.png)
 
 You can also click the Truffle Teams logo in the top left to go back to the home page with the search bar and pinned repositories.
 
-![Teams Redesign - Logo in Top Left](/img/blog/truffle-teams-redesign/teams-logo-to-home.png)
+![Teams Redesign - Logo in Top Left](/img/blog/truffle-teams-gets-a-new-look/teams-logo-to-home.png)
 
 ## Got Feedback or Questions?
 
