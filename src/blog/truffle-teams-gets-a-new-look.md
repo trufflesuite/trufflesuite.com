@@ -1,3 +1,5 @@
+![Truffle Teams Redesign Banner](/img/blog/truffle-teams-gets-a-new-look/banner.png)
+
 Thanks to [Josh Quintal](https://github.com/DiscRiskandBisque) and [Heyse Li](https://github.com/honestbonsai), the redesign of Truffle Teams is complete! Josh presented the [Theobromine design system at TruffleCon 2019](https://www.youtube.com/watch?v=aoU710h38xE&t=1m47s), and this release is the first step towards this vision! In addition to the stylistic upgrade, we've redesigned the app navigation to help you focus on a single repository at a time.
 
 Read more below about the most recent changes, or [go check them out for yourself](https://my.truffleteams.com)!
