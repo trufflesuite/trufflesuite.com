@@ -1,32 +1,30 @@
-Thanks to [Josh Quintal](https://github.com/DiscRiskandBisque) and [Heyse Li](https://github.com/honestbonsai), the redesign of Truffle Teams is complete! Josh presented the [Theobromine design system at TruffleCon 2019](https://www.youtube.com/watch?v=aoU710h38xE&t=1m47s), and this release is the first steps for Truffle Teams to implement this design system! In addition to changing the look and feel of Truffle Teams, we've also shifted up a little on how your navigate the application.
+Thanks to [Josh Quintal](https://github.com/DiscRiskandBisque) and [Heyse Li](https://github.com/honestbonsai), the redesign of Truffle Teams is complete! Josh presented the [Theobromine design system at TruffleCon 2019](https://www.youtube.com/watch?v=aoU710h38xE&t=1m47s), and this release is the first step towards this vision! In addition to the stylistic upgrade, we've redesigned the app navigation to help you focus on a single repository at a time.
 
 Read more below about the most recent changes, or [go check them out for yourself](https://my.truffleteams.com)!
 
 ## Redesign
 
-The Theobromine Design System uplifts the entire Truffle Teams application. This lighter feel makes the application feel more welcoming and presents itself more as a professional productivity tool.
+The Theobromine Design System uplifts the entire Truffle Teams application. This lighter theme makes the application feel more welcoming and presents itself more as a professional productivity tool.
 
 ![Teams Redesign - Builds Page](/img/blog/truffle-teams-redesign/teams-redesign-builds.png)
 
-And before you ask, yes, we'll be adding a Dark Mode in a future release.
-
-We also added support to collapse the left navbar to give you some more screen real estate. This is super helpful for those with small or vertical screens as well as for multitaskers that use Truffle Teams in a split-screen setup.
+We also added support to collapse the left navbar to give you some more screen real estate. This is super helpful for those with small or vertical screens; it’s also instrumental for multitaskers that use Truffle Teams in a split-screen setup.
 
 ![Teams Redesign - Builds Page](/img/blog/truffle-teams-redesign/teams-redesign-build-detail.png)
 
 ## Navigation Updates
 
-Up until this point, Truffle Teams has had a "feature first" navigation where you would select the feature you'd like to see (Builds, Deployments, Monitoring [formally known as Data]) and then select the repository you'd want to drill into. We found this to be a jarring and tedious experience, so we changed things to be "repository first".
+The previous iteration of Truffle Teams utilized a "feature first" navigation where you would select the feature you'd like to see (Builds, Deployments, Monitoring [formally known as Data]) and then select the repository you'd want to drill into. We found this to be a jarring and tedious experience, so we changed things to be "repository first".
 
-When you login, you'll now see a home page with a list of your repositories. You can quickly search for the one you want in the search bar as well as pin some of your favorites to keep at the top of the list.
+When you login, you'll now see a home page with a list of your repositories. You can quickly search for a repository or keep your favorites at the top of the list by pinning them.
 
 ![Teams Redesign - Home Page](/img/blog/truffle-teams-redesign/teams-home.png)
 
-After clicking on a repository you'll be presented with the details of that repository. On the Builds page you'll now see a history of your builds rather than seeing the list of the repositories. The Deployments and Monitoring pages will look familiar as they haven't changed much other than not having to select the repository again.
+After clicking on a repository you'll be presented with the details of that repository. On the Builds page you'll now see a history of your builds rather than seeing the list of your repositories. The Deployments and Monitoring pages will look familiar as they haven't changed much other than not having to select the repository again.
 
 ![Teams Redesign - Builds Page](/img/blog/truffle-teams-redesign/teams-redesign-builds.png)
 
-Want to switch repositories quickly? We give you a breadcrumb dropdown at the top of each page to let you change which repository you'd like to be on.
+Want to focus on a different repository? You can quickly switch between them using the breadcrumb dropdown at the top of each page.
 
 ![Teams Redesign - Breadcrumb Dropdown](/img/blog/truffle-teams-redesign/teams-repo-breadcrumb.png)
 
