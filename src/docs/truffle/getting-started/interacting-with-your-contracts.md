@@ -287,7 +287,7 @@ The current implementation of Truffle's contract abstraction can mistakenly
 infer the signature of an overloaded method even though it exists in the
 contract ABI.
 
-Therefore, some contract's methods may not be accessible thought the contract's
+Therefore, some methods may not be accessible through the contract's
 instance, but their accessors can be invoked explicitly via the `.methods`
 property of the contract.
 
