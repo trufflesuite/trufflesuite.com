@@ -61026,9 +61026,10 @@
 	    }
 
 	    _axios2.default.request({
-	      url: "https://api.github.com/repos/" + project + "/stargazers?access_token=" + this.state.access_token,
+	      url: "https://api.github.com/repos/" + project + "/stargazers",
 	      headers: {
-	        Accept: "application/vnd.github.v3.star+json"
+	        Accept: "application/vnd.github.v3.star+json",
+	        Authorization: "token " + this.state.access_token
 	      }
 	    }).then(function (response) {
 	      processResponse(response);
@@ -61043,9 +61044,10 @@
 
 	      while (current <= last) {
 	        requests.push(_axios2.default.request({
-	          url: "https://api.github.com/repos/" + project + "/stargazers?page=" + current + "&access_token=" + self.state.access_token,
+	          url: "https://api.github.com/repos/" + project + "/stargazers?page=" + current,
 	          headers: {
-	            Accept: "application/vnd.github.v3.star+json"
+	            Accept: "application/vnd.github.v3.star+json",
+	            Authorization: "token " + self.state.access_token
 	          }
 	        }));
 
