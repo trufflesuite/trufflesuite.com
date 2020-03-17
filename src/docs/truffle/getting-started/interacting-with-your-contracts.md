@@ -281,6 +281,24 @@ use the `call` method found on your contract abstraction's method. So you
 would write something that looks like
 `const result = await instance.myMethod.call()`.
 
+### Invoking overloaded methods
+
+The current implementation of Truffle's contract abstraction can mistakenly
+infer the signature of an overloaded method even though it exists in the
+contract ABI.
+
+Therefore, some methods may not be accessible through the contract's
+instance, but their accessors can be invoked explicitly via the `.methods`
+property of the contract.
+
+```javascript
+const instance = await MyContract.deployed();
+instance.methods['setValue(uint256)'](123);
+instance.methods['setValue(uint256,uint256)'](11, 55);
+```
+
+Please see this issue [here](https://github.com/trufflesuite/truffle/issues/2868) for more information.
+
 ## Further reading
 
 The contract abstractions provided by Truffle contain a wealth of utilities for making interacting with your contracts easy. Check out the [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) documentation for tips, tricks and insights.
