@@ -83,13 +83,34 @@
     
 
     <div class="row row-docs-main">
-      {{> docs-sidebar}}
+      <!-- Show the sidebar *only if* we're not directly under /docs (e.g., index, search). --> 
+      {{#unlessEq path.dir "docs"}}
 
-      <div class="col-lg-9 bd-light-cream docs-content">
-        {{{ contents }}}
+        {{#contains path.href "tezos"}}
+          {{> tezos-docs-sidebar}}  
+        {{else}}
+          {{> docs-sidebar}}  
+        {{/contains}}
+      
+        <div class="col-lg-9 bd-light-cream docs-content">
+          {{{ contents }}}
 
-        {{> contrib-link}}
-      </div>
+          {{> contrib-link}}
+        </div>
+      {{else}}
+        <div class="col-lg-12 bd-light-cream docs-content">
+          <!-- Added this container to center things. Overkill? --> 
+          <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                  {{{ contents }}}
+
+                  {{> contrib-link}}
+                </div>
+            </div>
+          </div>
+        </div>
+      {{/unlessEq}}
     </div>
   </main>
 

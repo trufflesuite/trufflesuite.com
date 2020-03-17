@@ -7,6 +7,8 @@ var sass = require('metalsmith-sass');
 var layouts = require('metalsmith-layouts');
 var discoverHelpers = require('metalsmith-discover-helpers');
 var discoverPartials = require('metalsmith-discover-partials');
+var Handlebars = require('handlebars');
+var handlebarHelpers = require('handlebars-helpers');
 var path = require('path');
 var paths = require('metalsmith-paths');
 var metadata = require('metalsmith-collections');
@@ -41,6 +43,11 @@ function app(clean) {
     pressReleases: pressReleasesData,
     staff: staffData,
     tutorials: tutorialsData
+  })
+  .use(function (options) {
+    handlebarHelpers({
+      handlebars: Handlebars
+    });
   })
   .use(discoverHelpers({
     directory: 'helpers',
