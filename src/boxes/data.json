@@ -378,4 +378,11 @@
     "repoName": "upgradable-proxy-box",
     "official": false
   }
+  ,
+  {
+    "userOrg": "EmanHerawy",
+    "displayName": "besu-drizzle-truffle-box",
+    "repoName": "besu-drizzle-truffle-box",
+    "official": false
+  }
 ]
