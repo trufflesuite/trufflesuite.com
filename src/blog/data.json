@@ -1,4 +1,12 @@
 {
+  "my-new-post": {
+    "title": "My New Example Blog Post!",
+    "date": "2020-04-01",
+    "author": "Mike Seese",
+    "published": true,
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non risus sed ipsum aliquam blandit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    "image": "/img/blog/thumbnails/truffle-teams-gets-a-new-look.png"
+  },
   "truffle-teams-gets-a-new-look": {
     "title": "Truffle Teams Gets a New Look!",
     "date": "2020-03-04",
