@@ -215,3 +215,16 @@
     }
   }
 }
+
+.index, .Homepage-redesign_slick {
+  padding-top: 0;
+}
+
+.index .navbar, .Homepage-redesign_slick .navbar {
+  border: none;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#58484e+0,58484e+100&1+0,0+100 */
+  background: -moz-linear-gradient(top, rgba(0,0,0,.7) 60%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,.7) 60%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,.7) 60%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#58484e', endColorstr='#0058484e',GradientType=0 ); /* IE6-9 */
+}
