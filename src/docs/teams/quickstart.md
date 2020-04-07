@@ -39,7 +39,7 @@ Next you'll be asked for permission to link Truffle Teams to one or more of your
 Finally, click the `Install` button to install Truffle Teams on the selected repos and be redirected to the `BUILDS` page.
 
 <p class="alert alert-warning">
-<strong>Why do we need certain permissions?</strong>: Please see the [Permissions Disclosure](/docs/teams/reference/permissions-disclosure) section for a full breakdown of why we're asking for each permission.
+<strong>Why do we need certain permissions?</strong> Please see the [Permissions Disclosure](/docs/teams/reference/permissions-disclosure) section for a full breakdown of why we're asking for each permission.
 </p>
 
 ![Truffle Teams DATA view](/img/docs/teams/install-02.png)
