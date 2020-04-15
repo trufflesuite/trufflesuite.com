@@ -175,6 +175,6 @@ Additionally, both Truffle Develop and the console have the following features:
 * `test`
 * `version`
 
-If a Truffle command is not available, it is because it is not relevant for an existing project (for example, `init`) or wouldn't make sense (for example, `develop` or `console`).
+If a Truffle command is not available, it is because it is not relevant for an existing project (for example, `init`) wouldn't make sense (for example, `develop` or `console`).
 
 See full [command reference](/docs/advanced/commands) for more information.
