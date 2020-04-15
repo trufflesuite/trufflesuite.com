@@ -42,7 +42,8 @@ function app(clean) {
     events: eventsData,
     pressReleases: pressReleasesData,
     staff: staffData,
-    tutorials: tutorialsData
+    tutorials: tutorialsData,
+    cssVersion: Date.now().toString(),
   })
   .use(function (options) {
     handlebarHelpers({
