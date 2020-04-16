@@ -47,9 +47,9 @@ Since the path didn't start with `./`, Truffle knows to look in your project's `
 To interact with package's contracts within JavaScript code, you simply need to `require` that package's `.json` files, and then use the [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) module to turn those into usable abstractions:
 
 ```javascript
-var contract = require("truffle-contract");
+var truffle_contract = require("truffle-contract");
 var data = require("example-truffle-library/build/contracts/SimpleNameRegistry.json");
-var SimpleNameRegistry = contract(data);
+var SimpleNameRegistry = truffle_contract(data);
 ```
 
 To use these abstractions, see the [Interacting With Your Contracts](/docs/getting_started/contracts) section for more details.
