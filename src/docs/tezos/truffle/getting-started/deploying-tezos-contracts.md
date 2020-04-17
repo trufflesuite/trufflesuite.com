@@ -124,8 +124,8 @@ To conditionally stage deployment steps, write your migrations so that they acce
 
 ```javascript
 module.exports = function(deployer, network) {
-  if (network == "babylonnet") {
-    // Do something specific to the network named "babylonnet".
+  if (network == "carthagenet") {
+    // Do something specific to the network named "carthagenet".
   } else {
     // Perform a different step otherwise.
   }
