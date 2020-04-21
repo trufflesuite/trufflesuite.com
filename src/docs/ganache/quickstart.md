@@ -18,7 +18,7 @@ If this isn't your first time using Ganache, or you already know you'll need cus
 
 * Windows: `Ganache-*.appx`
 * Mac: `Ganache-*.dmg`
-* Linux: `Ganache-*.AppImage`
+* Linux: `ganache-*.AppImage`
 
 Double-click on the downloaded file, follow the prompts, and you're up and running.
 
