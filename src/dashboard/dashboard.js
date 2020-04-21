@@ -6746,7 +6746,7 @@
 	 * Standard/simple iteration through an event's collected dispatches, but stops
 	 * at the first dispatch execution returning true, and returns that id.
 	 *
-	 * @return {?string} id of the first dispatch execution who's listener returns
+	 * @return {?string} id of the first dispatch execution whose listener returns
 	 * true, or null if no listener returned true.
 	 */
 	function executeDispatchesInOrderStopAtTrueImpl(event) {
