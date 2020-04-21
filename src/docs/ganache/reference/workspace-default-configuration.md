@@ -4,7 +4,7 @@ layout: docs.hbs
 ---
 # Workspace Default Configuration
 
-Every workspace has it's own configuration. Each workspace's configuration is based off the Quickstart configuration at the time of workspace creation. While these can be changed, the `Quickstart` workspace starts with the below options:
+Every workspace has its own configuration. Each workspace's configuration is based off the Quickstart configuration at the time of workspace creation. While these can be changed, the `Quickstart` workspace starts with the below options:
 
 ```
 Hostname: 127.0.0.1 - localhost
