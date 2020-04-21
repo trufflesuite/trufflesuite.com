@@ -21,14 +21,14 @@ To accomplish this, click the `SAVE` button near the upper right of the screen w
 
 You can also create a workspace from the home screen. Clicking the `NEW WORKSPACE` button on the home screen will take us to the [options screen to configure your workspace](#workspace-configuration).
 
-![New Workspace Button](https://truffleframework.com/img/docs/ganache/v2-shared-seese/home-new-workspace.png)
+![New Workspace Button](/img/docs/ganache/v2-shared-seese/home-new-workspace.png)
 
 ## Workspace Configuration
 
 A workspace name will be randomly generated for you, but you can go ahead and change it. You can also change any of the other configuration options. When you're ready to start the new workspace, click `SAVE WORKSPACE` in the top right corner.
 
-![New Workspace](https://truffleframework.com/img/docs/ganache/v2-shared-seese/new-workspace.png)
+![New Workspace](/img/docs/ganache/v2-shared-seese/new-workspace.png)
 
 You will be taken to the accounts screen. Notice the name of your new workspace near the upper right.
 
-![Workspace Name](https://truffleframework.com/img/docs/ganache/v2-shared-seese/workspace-name.png)
+![Workspace Name](/img/docs/ganache/v2-shared-seese/workspace-name.png)

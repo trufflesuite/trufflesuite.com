@@ -10,4 +10,4 @@ Ganache will now attempt to decode transactions that are contract calls. In addi
 <strong>Why aren't my transactions being decoded?</strong> Check and make sure you've added the corresponding Truffle project with the contract that the transaction is being interacted with.
 </p>
 
-![Decoded Transaction](https://truffleframework.com/img/docs/ganache/v2-shared-seese/decoded-transaction.png)
+![Decoded Transaction](/img/docs/ganache/v2-shared-seese/decoded-transaction.png)
