@@ -12,6 +12,6 @@ layout: docs.hbs
 
 # Ganache Overview
 
-[Ganache](/ganache) is a personal blockchain for Ethereum development you can use to deploy contracts, develop your applications, and run tests.
+[Ganache](/ganache) is a personal blockchain for Ethereum and Corda development you can use to deploy contracts, develop your applications, and run tests.
 
-It is available as both a desktop application as well as a command-line tool (formerly known as the TestRPC). Ganache is available for Windows, Mac, and Linux.
+It is available for Ethereum and Corda as both a desktop application and also as a command-line tool for Ethereum (formerly known as the TestRPC). Ganache is available for Windows, Mac, and Linux.

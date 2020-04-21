@@ -8,4 +8,4 @@ After at least one workspace has been created, the home screen will now have a l
 
 ![Filled Home Screen](/img/docs/ganache/v2-shared-seese/home-filled.png)
 
-You will be taken to the accounts page. You'll notice that the blockchain state picked up from where you left off (i.e. mnemonic, accounts, associated balances, block height, transactions, etc.).
+You will be taken to the main screen. You'll notice that the blockchain state picked up from where you left off (i.e. mnemonic, accounts, associated balances, block height, transactions, etc.).

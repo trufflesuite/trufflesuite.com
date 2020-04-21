@@ -18,4 +18,4 @@ After selecting the file, you'll see it listed in the `TRUFFLE PROJECTS` section
 
 ![Project Listed](/img/docs/ganache/v2-shared-seese/project-listed.png)
 
-You can add multiple projects to a workspace. After you're finished with adding projects you can click the `SAVE AND RESTART` (`SAVE WORKSPACE` if this is a new workspace) button in the top right.
+You can add multiple projects to a workspace. After you're finished adding projects you can click the `SAVE AND RESTART` (`SAVE WORKSPACE` if this is a new workspace) button in the top right.
