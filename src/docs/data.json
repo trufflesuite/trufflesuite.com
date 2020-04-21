@@ -61,7 +61,8 @@
       "Creating Workspaces",
       "Loading Existing Workspaces",
       "Switching Workspaces",
-      "Deleting Workspaces"
+      "Deleting Workspaces",
+      "Editing Workspaces"
     ],
     "Truffle Projects": [
       "Linking a Truffle Project",
