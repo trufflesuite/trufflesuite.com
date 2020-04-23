@@ -10,8 +10,7 @@ The Corda Transactions screen displays a list of all transactions, filterable by
 
 ![Corda Transactions](/img/docs/ganache/corda/transactions.png)
 
-Clicking on a transaction opens the Transaction Details screen. From this screen you can find which CorDapp flows were
-involved in the transaction, the transaction's attachments, as well as the transaction's input and output states.
+Clicking on a transaction opens the Transaction Details screen. From this screen you can find which CorDapp flows, attachments, and input and output states were involved in the transaction.
 
 Additionally, you can inspect each individual state. You can inspect the data in the state and learn about the transaction's participants (both known and anonymous), notaries, and for Linear States, dive into the state's history.
 

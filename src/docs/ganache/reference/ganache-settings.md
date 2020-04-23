@@ -16,12 +16,12 @@ We've divided the settings into several pages:
 * **Ethereum**
   * **Server** shows details about the network connection, including hostname, port, network ID, and whether to automatically mine each transaction into a block.
   * **Accounts & Keys** sets details about the number of accounts created, and whether to use a specific mnemonic or let Ganache generate its own.
-  * **Chain** sets details about the actual workings of the generated blockchain, including gas limit and gas price.
+  * **Chain** sets configuration details for the genesis and parameters of the generated blockchain, including gas limit and gas price.
   * **Advanced** toggles Google Analytics, which is useful for the Ganache team to track usage of the application.
 * **Corda**
   * **Nodes** manages the nodes for the network.
   * **Notaries** manages the notaries for the network.
-  * **Advanced** sets the default PostgreSQL port and toggles Google Analytics, which is useful for the Ganache team to track usage of the application.
+  * **Advanced** sets the default PostgreSQL port and toggles Google Analytics, which is useful for the team to improve Ganache based on anonymous usage metrics.
 * **About** contains information on the currently installed version of Ganache, along with links to our website and the [Ganache GitHub repository](https://github.com/trufflesuite/ganache).
 
 After making changes, you will have to click **Restart** on the application for the changes to take effect.

@@ -12,7 +12,7 @@ You should be seeing the `WORKSPACE` settings pane; if not, you can get there by
 
 ![Workspaces Settings Pane Tab](/img/docs/ganache/corda/corda-workspaces-pane-tab.png)
 
-From here, there is a section labeled `PROJECTS`. Beneath this box, click the button `ADD PROJECT`. A folder selection modal will appear. Select the folder of your CordApp project. Ganache will inspect the directory, and for folders with a `gradle.build` file containing the string `"corda"`, will automatically watch the `./build/libs` folder for new/changed `.jar` files. If the folder you choose does _not_ have a matching `gradle.build` Ganache will watch the folder itself for new/changed `.jar` files.
+From here, there is a section labeled `PROJECTS`. Beneath this box, click the button `ADD PROJECT`. A folder selection modal will appear. Select the folder of your CordApp project. Ganache will inspect the directory for folders with a `build.gradle` file containing the string `"corda"`, and if found, will automatically watch the `./build/libs` folder for new/changed `.jar` files. If the folder you choose does _not_ have a compatible `build.gradle` Ganache will watch the folder itself for new/changed `.jar` files.
 
 After selecting the folder, you'll see it listed in the `PROJECTS` section.
 

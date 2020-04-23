@@ -12,6 +12,6 @@ layout: docs.hbs
 
 # Ganache Overview
 
-[Ganache](/ganache) is a personal blockchain for Ethereum and Corda development you can use to deploy contracts, develop your applications, and run tests.
+[Ganache](/ganache) is a personal blockchain for rapid Ethereum and Corda distributed application development. You can use Ganache across the entire development cycle; enabling you to develop, deploy, and test your dApps in a safe and deterministic environment.
 
-It is available for Ethereum and Corda as both a desktop application and also as a command-line tool for Ethereum (formerly known as the TestRPC). Ganache is available for Windows, Mac, and Linux.
+Ganache UI is desktop application supporting both Ethereum and Corda technology. In addition, an Ethereum version of ganache is available as a command-line tool: [ganache-cli](https://github.com/trufflesuite/ganache-cli) (formerly known as the TestRPC). All versions of Ganache are available for Windows, Mac, and Linux.
