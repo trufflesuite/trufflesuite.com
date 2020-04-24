@@ -181,10 +181,12 @@
   overflow: visible;
   background: #000000;
   height: 150px;
+  z-index: 1;
 
   img {
-    position: relative;
+    display: block;
     height: 100px;
+    margin: 0 auto;
   }
 }
 
@@ -200,59 +202,58 @@
 /* Factory Images */
 
 .factory-step-2 {
-  top: -48rem;
-  width: 50%;
-  left: 50%;
+  top: -24rem;
+  width: 70%;
+  left: 68%;
   transform: translateX(-50%);
 
   @media (min-width: 576px) and (max-width: 767.98px) {
-    top: -28rem;
-    width: 50%;
-    left: 50%;
+    top: -26rem;
+    width: 90%;
+    left: 65%;
     transform: translateX(-40%);
   }
 
   @media (min-width: 768px) and (max-width: 991.98px) {
-    top: -28rem;
-    width: 70%;
-    left: 50%;
-    transform: translateX(-40%);
+    top: -25rem;
+    width: 130%;
+    left: 32%;
+    transform: translateX(-20%);
   }
 
   @media (min-width: 992px) and (max-width: 1199.98px) {
-    top: -28rem;
-    width: 55%;
+    top: -23.5rem;
+    width: 95%;
     left: 50%;
-    transform: translateX(-40%);
+    transform: translateX(-32%);
   }
 
   @media (min-width: 1199.98px) {
-    top: -32rem;
-    width: 50%;
-    left: 50%;
-    transform: translateX(-30%);
+    top: -25rem;
+    width: 80%;
+    left: 68%;
   }
 }
 
 .factory-step-2-belt {
-  top: -22rem;
-  width: 70%;
+  top: -11.5rem;
+  width: 50%;
   left: 4%;
-  transform: translateX(-20%);
+  transform: translateX(-15%);
   z-index: 6;
 
   @media (min-width: 576px) and (max-width: 767.98px) {
-    top: -8rem;
-    width: 70%;
+    top: -9.5rem;
+    width: 58%;
     left: -5%;
-    transform: translateX(-20%);
+    transform: translateX(-12%);
     z-index: 6;
   }
 
   @media (min-width: 768px) and (max-width: 991.98px) {
     top: -9.5rem;
-    width: 100%;
-    left: -18%;
+    width: 85%;
+    left: -28%;
     transform: translateX(-30%);
     z-index: 6;
   }
@@ -260,16 +261,16 @@
 
   @media (min-width: 992px) and (max-width: 1199.98px) {
     top: -8.5rem;
-    width: 80%;
+    width: 66%;
     left: 2%;
-    transform: translateX(-40%);
+    transform: translateX(-46%);
     z-index: 6;
   }
 
   @media (min-width: 1199.98px) {
-    top: -11rem;
-    width: 70%;
-    left: 6%;
+    top: -10rem;
+    width: 55%;
+    left: 5%;
     transform: translateX(-30%);
     z-index: 6;
   }
@@ -501,4 +502,35 @@
 
 .btn-text-alt {
   line-height: 95%;
+}
+
+.container-social-proof .flickity-viewport {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.flickity-prev-next-button {
+  background: black;
+  color: #fff;
+  border-radius: 0;
+  height: 100%;
+  padding: 0 1rem;
+
+  &.next {
+    right: 0;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+76 */
+    background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 76%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 76%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 76%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+  }
+
+  &.previous {
+    left: 0;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&1+24,0+100 */
+    background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,1) 24%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 24%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 24%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+  }
 }

@@ -5,10 +5,9 @@ $(document).ready(function(){
         prevNextButtons: false,
         wrapAround: true
     });
-
+  
     $('.autoplay').flickity({
-        cellSelector: '.col-6',
-        pageDots: false,
+        prevNextButtons: false,
         wrapAround: true
-    });
-});
+    });     
+  });
