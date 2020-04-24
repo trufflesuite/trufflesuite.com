@@ -22,6 +22,7 @@ var blogData = require('./src/blog/data.json');
 var boxesData = require('./src/boxes/data.json');
 var boxesMetadata = require('./src/data/boxes.json');
 var careersData = require('./src/careers/data.json');
+var caseStudiesData = require('./src/case-studies/data.json');
 var docsData = require('./src/docs/data.json');
 var eventsData = require('./src/events/data.json');
 var pressReleasesData = require('./src/press-releases/data.json');
@@ -38,6 +39,7 @@ function app(clean) {
     boxes: boxesData,
     boxMeta: boxesMetadata,
     careers: careersData,
+    caseStudies: caseStudiesData,
     docs: docsData,
     events: eventsData,
     pressReleases: pressReleasesData,
@@ -82,6 +84,10 @@ function app(clean) {
   .use(layouts({
     "default": "career-single.hbs",
     "pattern": "careers/*.html"
+  }))
+  .use(layouts({
+    "default": "case-study-single.hbs",
+    "pattern": "case-studies/*.html"
   }))
   .use(layouts({
     "default": "tutorial-single.hbs",

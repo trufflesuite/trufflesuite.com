@@ -1,0 +1,34 @@
+{
+  "case-study-dish-network": {
+    "title": "Case Study: Dish Network",
+    "date": "2019-06-07",
+    "published": true,
+    "ingredients": "Truffle Suite, Ethereum, OpenZeppelin",
+    "excerpt": "Truffle, though its Truffle University program, taught engineers at DISH how to build blockchain applications.",
+    "image": "/img/case-studies/case-study-dish-network/dish-logo.svg"
+  },
+  "case-study-microsoft-xbox": {
+    "title": "Case Study: Microsoft Xbox",
+    "date": "2019-06-07",
+    "published": true,
+    "ingredients": "Truffle Suite, Ethereum, OpenZeppelin",
+    "excerpt": "Truffle’s suite of popular developer tools and Microsoft Azure integrate to enhance the developer experience and DevOps of Enterprise Ethereum.",
+    "image": "/img/case-studies/case-study-microsoft-xbox/xbox-logo.png"
+  },
+  "case-study-starbucks": {
+    "title": "Case Study: Starbucks",
+    "date": "2019-06-07",
+    "published": true,
+    "ingredients": "Truffle Suite, Ethereum, OpenZeppelin",
+    "excerpt": "Truffle’s suite of popular developer tools and Microsoft Azure integrate to enhance the developer experience and DevOps of Enterprise Ethereum.",
+    "image": "/img/case-studies/case-study-starbucks/starbucks-logo.png"
+  },
+  "case-study-microsoft-and-the-world-bank": {
+    "title": "Case Study: Microsoft & The World Bank",
+    "date": "2019-06-07",
+    "published": true,
+    "ingredients": "Truffle Suite, Ethereum, OpenZeppelin",
+    "excerpt": "Truffle’s suite of popular developer tools and Microsoft Azure integrate to enhance the developer experience and DevOps of Enterprise Ethereum.",
+    "image": "/img/case-studies/case-study-microsoft-and-the-world-bank/msft-wb-logo.png"
+  }
+}
