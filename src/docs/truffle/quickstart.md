@@ -315,81 +315,96 @@ The only extra step, aside from running Ganache, is that it requires editing the
    truffle migrate
    ```
 
-   You will see the following output
+   You will see the following output:
 
    ```
+   Compiling your contracts...
+   ===========================
+   > Compiling ./contracts/ConvertLib.sol
+   > Compiling ./contracts/MetaCoin.sol
+   > Compiling ./contracts/Migrations.sol
+   > Artifacts written to /home/david/work/MetaCoin/build/contracts
+   > Compiled successfully using:
+      - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
+
    Starting migrations...
    ======================
-   > Network name:    'develop'
-   > Network id:      4447
-   > Block gas limit: 6721975
+   > Network name:    'development'
+   > Network id:      5777
+   > Block gas limit: 6721975 (0x6691b7)
 
    1_initial_migration.js
    ======================
 
       Deploying 'Migrations'
       ----------------------
-      > transaction hash:    0x3fd222279dad48583a3320decd0a2d12e82e728ba9a0f19bdaaff98c72a030a2
+      > transaction hash:    0x3eef05e35ce694c0b7112cc22ba462b9cc0563abc2cc444ee9683b6d89865e3c
       > Blocks: 0            Seconds: 0
-      > contract address:    0xa0AdaB6E829C818d50c75F17CFCc2e15bfd55a63
-      > account:             0x627306090abab3a6e1400e9345bc60c78a8bef57
-      > balance:             99.99445076
-      > gas used:            277462
+      > contract address:    0x8CdaF0CD259887258Bc13a92C0a6dA92698644C0
+      > block number:        1
+      > block timestamp:     1587421933
+      > account:             0x627306090abaB3A6e1400e9345bC60c78a8BEf57
+      > balance:             99.9967165
+      > gas used:            164175 (0x2814f)
       > gas price:           20 gwei
       > value sent:          0 ETH
-      > total cost:          0.00554924 ETH
+      > total cost:          0.0032835 ETH
 
       > Saving migration to chain.
       > Saving artifacts
       -------------------------------------
-      > Total cost:          0.00554924 ETH
+      > Total cost:           0.0032835 ETH
 
    2_deploy_contracts.js
    =====================
 
       Deploying 'ConvertLib'
       ----------------------
-      > transaction hash:    0x97e8168f1c05fc40dd8ffc529b9a2bf45cc7c55b07b6b9a5a22173235ee247b6
+      > transaction hash:    0x23de020bafa41e30615b1d775d2fa9604e876415408e012d1f0faf79eed3a32f
       > Blocks: 0            Seconds: 0
-      > contract address:    0xfb39FeaeF3ac3fd46e2123768e559BCe6bD638d6
-      > account:             0x627306090abab3a6e1400e9345bc60c78a8bef57
-      > balance:             99.9914458
-      > gas used:            108240
+      > contract address:    0x345cA3e014Aaf5dcA488057592ee47305D9B3e10
+      > block number:        3
+      > block timestamp:     1587421933
+      > account:             0x627306090abaB3A6e1400e9345bC60c78a8BEf57
+      > balance:             99.99396028
+      > gas used:            95470 (0x174ee)
       > gas price:           20 gwei
       > value sent:          0 ETH
-      > total cost:          0.0021648 ETH
+      > total cost:          0.0019094 ETH
 
       Linking
       -------
-      * Contract: MetaCoin <--> Library: ConvertLib (at address: 0xfb39FeaeF3ac3fd46e2123768e559BCe6bD638d6)
+      * Contract: MetaCoin <--> Library: ConvertLib (at address: 0x345cA3e014Aaf5dcA488057592ee47305D9B3e10)
 
       Deploying 'MetaCoin'
       --------------------
-      > transaction hash:    0xee4994097c10e7314cc83adf899d67f51f22e08b920e95b6d3f75c5eb498bde4
+      > transaction hash:    0x0cc20353422c4d435f72e8e7850f8178f43bf8d00c8c0d09cc8e0ccdfa81b799
       > Blocks: 0            Seconds: 0
-      > contract address:    0x6891Ac4E2EF3dA9bc88C96fEDbC9eA4d6D88F768
-      > account:             0x627306090abab3a6e1400e9345bc60c78a8bef57
-      > balance:             99.98449716
-      > gas used:            347432
+      > contract address:    0xf25186B5081Ff5cE73482AD761DB0eB0d25abfBF
+      > block number:        4
+      > block timestamp:     1587421934
+      > account:             0x627306090abaB3A6e1400e9345bC60c78a8BEf57
+      > balance:             99.98822922
+      > gas used:            286553 (0x45f59)
       > gas price:           20 gwei
       > value sent:          0 ETH
-      > total cost:          0.00694864 ETH
+      > total cost:          0.00573106 ETH
 
       > Saving migration to chain.
       > Saving artifacts
       -------------------------------------
-      > Total cost:          0.00911344 ETH
+      > Total cost:          0.00764046 ETH
 
    Summary
    =======
    > Total deployments:   3
-   > Final cost:          0.01466268 ETH
+   > Final cost:          0.01092396 ETH
    ```
 
    This shows the transaction IDs and addresses of your deployed contracts. It also includes a cost summary and real-time status updates.
 
    <p class="alert alert-info">
-     <strong>Note</strong>: Your transaction IDs and contract addresses will be different from the above.
+     <strong>Note</strong>: Your transaction IDs and contract addresses may be different from the above.
    </p>
 
 1. In Ganache, click the "Transactions" button to see that the transactions have been processed.
