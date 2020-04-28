@@ -15,7 +15,7 @@ Features Include:
 
 As always, this release is compatible with the latest versions of Windows ⊞, Mac OS 🍎, and Linux 🐧. You can now run and interact with a Corda network without installing prerequisites like Java, PostgreSQL, Corda binaries, docker, etc!
 
-If you are a Corda developer who wants to use Ganache with your CorDapp [check out our documentation and our quick start guide](https://www.trufflesuite.com/docs/corda). We are also hosting a [joint webinar with R3](https://www.crowdcast.io/e/corda-ganache) on May 6th to demonstrate these features along with how this fits into existing Corda developer’s’ workflow.
+If you are a Corda developer who wants to use Ganache with your CorDapp [check out our documentation and our quick start guide](https://www.trufflesuite.com/docs/ganache/corda/working-with-corda). We are also hosting a [joint webinar with R3](https://www.crowdcast.io/e/corda-ganache) on May 6th to demonstrate these features along with how this fits into existing Corda developer’s’ workflow.
 
 In closing, I’d like to thank our partners at R3, Todd McDonald, Lisa Chiong, Tiffany Sarmiento, Chris Chabot, and Nike Rogers for their collaboration, vision, and teamwork. I’d also like to thank [David Murdoch and Nick Paterno](https://www.trufflesuite.com/staff) from the Truffle team for their tireless efforts to make Corda Flavored Ganache a reality.
 
