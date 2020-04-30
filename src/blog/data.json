@@ -1,4 +1,12 @@
 {
+  "bring-your-own-ci-byoci-with-truffle-teams": {
+    "title": "Bring Your Own CI (BYOCI) with Truffle Teams",
+    "date": "2020-4-30",
+    "author": "Josh Quintal",
+    "published": true,
+    "excerpt": "If you remember, back in December we released a beta Corda-flavored Ganache as part of our initial support for the Corda platform. Today, we are excited to share Phase 2 of Corda-flavored Ganache, v2.4.0 with you!",
+    "image": "/img/blog/thumbnails/byoci.png"
+  },
   "branching-out-phase-2-of-corda-flavored-ganache": {
     "title": "Branching Out: Phase 2 of Corda-flavored Ganache",
     "date": "2020-4-28",

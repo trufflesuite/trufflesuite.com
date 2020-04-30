@@ -5,7 +5,8 @@
       "Adding Repositories"
     ],
     "Testing": [
-      "Starting Builds"
+      "Starting Builds",
+      "External CI"
     ],
     "Deployments": [
       "Deploying Contracts"
