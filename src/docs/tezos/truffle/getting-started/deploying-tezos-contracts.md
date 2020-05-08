@@ -9,13 +9,13 @@ layout: docs.hbs
 
 # Deploying Tezos Contracts
 
-If you're familiar with Truffle, then you already know about [Truffle's deployment framework](/docs/truffle/getting-started/running-migrations), called Migrations, used to manage deployment changes over time. Truffle uses a stripped-down version of this system for Tezos. 
+If you're familiar with Truffle, then you already know about [Truffle's deployment framework](/docs/truffle/getting-started/running-migrations), called Migrations, used to manage deployment changes over time. Truffle uses a stripped-down version of this system for Tezos.
 
 ## Overview
 
 To deploy Tezos contracts, you'll first need to write migration scripts to tell Truffle how to deploy those contracts. In contrast with Truffle's normal behavior, all scripts defined in the `./migrations` directory will be run for every deployment. Truffle will not try to determine which scripts have been run previously, though it can be configured at runtime to only run specific deployment scripts. If you only want to run some of the scripts you've created, it'll be up to you to tell Truffle which script to run.
 
-For the rest of this document, we'll be referring to deployment scripts as "migrations" to keep in line with Truffle's normal lingo. Keep in mind that a "migration" is synonymous with "deployment script". 
+For the rest of this document, we'll be referring to deployment scripts as "migrations" to keep in line with Truffle's normal lingo. Keep in mind that a "migration" is synonymous with "deployment script".
 
 <p class="alert alert-warning">
 <strong>Coming from Ethereum?</strong> If you're already familiar with Truffle projects created for Ethereum, you'll notice a distinct lack of a `Migrations` contract. As of now, the migrations system isn't yet supported by Truffle for Tezos projects, and instead all migration scripts are run during deployment.
@@ -134,7 +134,7 @@ module.exports = function(deployer, network) {
 
 ## Available accounts
 
-Migrations are also passed the list of accounts set up in your wallet, for you to use during your deployments. 
+Migrations are also passed the list of accounts set up in your wallet, for you to use during your deployments.
 
 ```javascript
 module.exports = function(deployer, network, accounts) {
@@ -155,11 +155,11 @@ The deployer contains many functions available to simplify your migrations.
 
 Deploy a specific contract, specified by the `contract` object. This will set the address of the contract after deployment (i.e., `Contract.address` will equal the newly deployed address), and it will override any previous address stored.
 
-This function takes an optional initial state as its second argument, that sets the state of your contract on chain when deployed. The type of data passed in this argument should match the type data stored in the state represented by the contract. We use the [Tequito library](https://tezostaquito.io/) to perform the translation from Javascript representation to types understood by Tezos. Please see [their documentation](https://tezostaquito.io/docs/quick_start) for more information. 
+This function takes an optional initial state as its second argument, that sets the state of your contract on chain when deployed. The type of data passed in this argument should match the type data stored in the state represented by the contract. We use the [Tequito library](https://tezostaquito.io/) to perform the translation from Javascript representation to types understood by Tezos. Please see [their documentation](https://tezostaquito.io/docs/quick_start) for more information.
 
 The last argument is an optional object that can include the key named `overwrite`. If `overwrite` is set to `false`, the deployer won't deploy this contract if one has already been deployed. This is useful for certain circumstances where a contract address is provided by an external dependency.
 
-For more information, please see the [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) documentation.
+For more information, please see the [@truffle/contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) documentation.
 
 
 Examples:
@@ -174,12 +174,12 @@ deployer.deploy(A, 3);
 // Don't deploy this contract if it has already been deployed.
 deployer.deploy(A, {overwrite: false});
 
-// More specific example: 
+// More specific example:
 //
 // Don't redeploy if the contract object represents an already-deployed dependency.
 // If it has already been deployed to our target network, we can skip deploying it.
 // This is useful for cases where we _do_ want to deploy that dependency for testing
-// and development networks, but we don't want to replace it in production. 
+// and development networks, but we don't want to replace it in production.
 deployer.deploy(SomeDependency, {overwrite: false});
 ```
 

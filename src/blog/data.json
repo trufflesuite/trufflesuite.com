@@ -1,4 +1,12 @@
 {
+  "stack-tracing-with-truffle-test": {
+    "title": "Stack Tracing with Truffle Test",
+    "date": "2020-5-8",
+    "author": "Harry Altman",
+    "published": true,
+    "excerpt": "Truffle Test can now provide stacktraces when your transactions revert!",
+    "image": "/img/blog/stack-tracing-with-truffle-test/blog-thumbnail-stacktraces.png"
+  },
   "bring-your-own-ci-byoci-with-truffle-teams": {
     "title": "Bring Your Own CI (BYOCI) with Truffle Teams",
     "date": "2020-4-30",
