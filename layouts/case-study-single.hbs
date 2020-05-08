@@ -49,18 +49,26 @@
   <title>{{getMetadata "caseStudies" path.name "title"}} | Case Studies | Truffle Suite</title>
 
   <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans|Oswald|Varela+Round|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-ekOryaXPbeCpWQNxMwSWVvQ0+1VrStoPJq54shlYhR8HzQgig1v5fas6YgOqLoKz" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/index.css">
 </head>
-<body>
+<body class="{{ path.dir }}">
   {{> ga-tag-body}}
   
   {{> navbar}}
 
+  <nav class="nav subnav case-study-subnav justify-content-end">
+    <a class="nav-link scroll-link active" href="/case-studies/case-study-dish-network">DISH</a>
+    <a class="nav-link scroll-link" href="/case-studies/case-study-microsoft-xbox">Microsoft Xbox</a>
+    <a class="nav-link scroll-link" href="/case-studies/case-study-starbucks">Starbucks</a>
+    <a class="nav-link scroll-link" href="/case-studies/case-study-microsoft-and-the-world-bank">World Bank</a>
+  </nav>
+
   <main class="container container-heading container">
-    <div class="row">
+    <div class="row align-items-center">
       <div class="col-6">
-        <img class="img-responsive" src="{{getMetadata "caseStudies" path.name "image"}}" />
+        <img class="case-study-logo" src="{{getMetadata "caseStudies" path.name "image"}}" />
       </div>
 
       <div class="col-6">
@@ -78,8 +86,33 @@
       <div class="row justify-content-center">
         <div class="col">
           {{{ contents }}}
+        </div>
+      </div>
 
-          {{> contrib-link}}
+      <div class="row row-wide justify-content-center">
+        <div class="col">
+          <hr />
+          
+          <h2>READY TO START YOUR BLOCKCHAIN JOURNEY WITH TRUFFLE?</h2>
+        </div>
+      </div>
+
+      <div class="row row-wide case-study-footer">
+        <div class="col-md-6">
+          <h3><i class="fas fa-tools"></i> DISCOVER TRUFFLE’S TOOLS</h3>
+          <p>Truffle’s suite of developer tools have helped teams large and small deliver blockchain applications. Get the resources you need to get started making your next dapp idea a reality!</p>
+          <a href="#" class="btn btn-truffle btn-block">GET STARTED</a>
+        </div>
+
+        <div class="col-md-6">
+          <h3><i class="fas fa-comments"></i> TALK TO US ABOUT YOUR NEEDS</h3>
+          <p>Beyond tooling, Truffle offers other services such as:</p>
+          <ul>
+            <li>Training via Truffle University</li>
+            <li>Integration with other distributed ledgers and development tools</li>
+          </ul>
+          <p>Contact our sales team to see what Truffle can do for your team!</p>
+          <a href="#" class="btn btn-truffle btn-block">CONTACT SALES</a>
         </div>
       </div>
     </div>
