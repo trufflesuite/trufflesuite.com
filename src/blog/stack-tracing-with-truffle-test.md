@@ -2,7 +2,7 @@
   <img class="mb-4 figure-shadow" src="/img/blog/stack-tracing-with-truffle-test/blog-header-stacktraces.png" alt="--stacktrace-extra" style="width:100%">
 </figure>
 
-Truffle Test can now provide stacktraces when your transactions revert! This is still a little experimental, and it requires `truffle test to recompile` all your contracts, so you’ll have to enable it with `truffle test --stacktrace`. 
+Truffle Test can now provide stacktraces when your transactions revert! This is still a little experimental, and it requires `truffle test` to recompile all your contracts, so you’ll have to enable it with `truffle test --stacktrace`. 
 Here’s what the result looks like:
 <figure>
   <img class="mb-4 figure-shadow" src="/img/blog/stack-tracing-with-truffle-test/blog1.png" alt="truffle test --stacktrace" style="width:100%">
