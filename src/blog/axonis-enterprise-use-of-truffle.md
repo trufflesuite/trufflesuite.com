@@ -18,7 +18,7 @@ This raises the question -- why use truffle for this? It seems there are at leas
 
 1. `truffle-config.js` / `truffle.js` serves as an already existing central source of shared information about various network providers relevant for a particular application developer. It only makes sense to extend this format for use in production-like environments as well.
 1. Truffle code artifacts, a battle-tested standard for smart contracts and solidity code, in particular, provide a common interface for a toolchain. By virtue of using truffle, there is no need to re-create this format. For a non-development deployment, a `contracts_build_directory` parameter is supplied, which results in a pull from a remote artifacts repository.
-1. Obviously `truffle-contract` itself provides a nice object oriented interface for deploying and performing operations on contracts within this script, thus avoiding any reinventing the wheel within the deployment library itself.
+1. Obviously `@truffle/contract` itself provides a nice object oriented interface for deploying and performing operations on contracts within this script, thus avoiding any reinventing the wheel within the deployment library itself.
 
 Thus, we ventured to build a package on top of truffle that manages configuration-driven smart contract deployments and upgrades.
 
@@ -83,4 +83,3 @@ I am pleased to announce that we plan to open-source our core Solidity smart con
 In the meantime, we hope the above at least provides a high-level example of an approach to building lightweight extensions within truffle, and as a simplifying approach to the smart contract deployment process, especially for Proxy Pattern topologies.
 
 The Axoni team and I look forward to discussing this topic and much more (such as [Axlang, our Scala-based Solidity-alternative](https://axoni.com/axlang/)) at Trufflecon.
-

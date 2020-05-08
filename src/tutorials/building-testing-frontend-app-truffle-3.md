@@ -1,5 +1,5 @@
 <p class="alert alert-info">
-**Update**: While this tutorial was originally written for Truffle 3, we have updated it to be fully compatible with newer versions of Truffle. We have kept some of the language unaltered, except where necessary. 
+**Update**: While this tutorial was originally written for Truffle 3, we have updated it to be fully compatible with newer versions of Truffle. We have kept some of the language unaltered, except where necessary.
 </p>
 
 Truffle 3 is out and switched to less opinionated build process that allows any build pipeline to be plugged in. We're going to take advantage of that feature today, and build a frontend app with a custom pipeline.
@@ -52,7 +52,7 @@ This is the default setting for [Ganache](/docs/ganache/using), though you can c
 
 Let's get the contracts on the network:
 
-First run `truffle compile`. This will compile the `.sol` contracts into `.json` artifacts (specified in the [`truffle-contract`](https://github.com/trufflesuite/truffle/tree/master/packages/contract) library). They will appear in `build/contracts/*.json`. Now we can include contracts in our app with a simple `import` or `require` statement:
+First run `truffle compile`. This will compile the `.sol` contracts into `.json` artifacts (specified in the [`@truffle/contract`](https://github.com/trufflesuite/truffle/tree/master/packages/contract) library). They will appear in `build/contracts/*.json`. Now we can include contracts in our app with a simple `import` or `require` statement:
 
 ```javascript
 // Import our contract artifacts and turn them into usable abstractions.

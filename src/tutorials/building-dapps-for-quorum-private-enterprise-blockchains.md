@@ -336,7 +336,7 @@ We originally configured Truffle to point our development environment to the fir
 
 So far, we've shown you how to deploy contracts that are private within your migrations. When building a dapp on Quorum, it'd also be helpful to learn how to make *all* transactions private.
 
-Truffle uses its [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) contract abstraction wherever contracts are used in JavaScript. When you interacted with `SimpleStorage` in the console above, for instance, you were using a `truffle-contract` contract abstraction. These abstractions are also used within your migrations, your JavaScript-based unit tests, as well as executing external scripts with Truffle.
+Truffle uses its [@truffle/contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) contract abstraction wherever contracts are used in JavaScript. When you interacted with `SimpleStorage` in the console above, for instance, you were using a `@truffle/contract` contract abstraction. These abstractions are also used within your migrations, your JavaScript-based unit tests, as well as executing external scripts with Truffle.
 
 Truffle's contract abstraction allow you to make a transaction against any function available on the contract. It does so by evaluating the functions of the contract and making them available to JavaScript. To see these transactions in action, we're going to use an advanced feature of Truffle that lets us execute external scripts within our Truffle environment.
 

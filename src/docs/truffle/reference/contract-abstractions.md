@@ -93,7 +93,7 @@ This function creates a new instance of the contract abstraction representing th
 
 #### `MyContract.deployed()`
 
-Creates an instance of the contract abstraction representing the contract at its deployed address. The deployed address is a special value given to truffle-contract that, when set, saves the address internally so that the deployed address can be inferred from the given Ethereum network being used. This allows you to write code referring to a specific deployed contract without having to manage those addresses yourself. Like `at()`, `deployed()` is thenable, and will resolve to a contract abstraction instance representing the deployed contract after ensuring that code exists at that location and that that address exists on the network being used.
+Creates an instance of the contract abstraction representing the contract at its deployed address. The deployed address is a special value given to @truffle/contract that, when set, saves the address internally so that the deployed address can be inferred from the given Ethereum network being used. This allows you to write code referring to a specific deployed contract without having to manage those addresses yourself. Like `at()`, `deployed()` is thenable, and will resolve to a contract abstraction instance representing the deployed contract after ensuring that code exists at that location and that that address exists on the network being used.
 
 #### `MyContract.link(instance)`
 
@@ -255,7 +255,7 @@ const value = await instance.getValue.call();
 // since the contract returns that value.
 ```
 
-Even more helpful, however is we *don't even need* to use `.call` when a function is marked as `view` or `pure` (or the deprecated `constant`), because `truffle-contract` will automatically know that that function can only be interacted with via a call:
+Even more helpful, however is we *don't even need* to use `.call` when a function is marked as `view` or `pure` (or the deprecated `constant`), because `@truffle/contract` will automatically know that that function can only be interacted with via a call:
 
 ```javascript
 const value = await instance.getValue();
