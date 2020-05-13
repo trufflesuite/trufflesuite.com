@@ -30,3 +30,7 @@ Thanks,
 Harry Altman
 
 --Debugger Engineer, Truffle Suite
+
+<div class="mt-12 text-center">
+  <a class="btn btn-truffle mt-6" href="https://github.com/trufflesuite/truffle/releases/tag/v5.1.24">Click here for the release notes on GitHub</a>
+</div>
