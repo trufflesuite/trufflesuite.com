@@ -9,7 +9,8 @@
       "External CI"
     ],
     "Deployments": [
-      "Deploying Contracts"
+      "Deploying Contracts",
+      "Sandboxes"
     ],
     "Contracts": [
       "Contract Monitoring"

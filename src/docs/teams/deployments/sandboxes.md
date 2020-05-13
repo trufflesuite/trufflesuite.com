@@ -4,15 +4,18 @@ layout: docs.hbs
 ---
 # Sandboxes
 
-<p class="alert alert-warning"><i class="fad fa-flask"></i> Thank you so much for participating in the <strong>Truffle Teams Private Preview</strong>! As a VIP, you get exclusive access to this feature in progress! Keep in mind, since this is a new feature, we are still fine tuning the recipe which you get to help us season. So <a href="https://truffle-blockstars.slack.com/archives/GUUKVMTLK"><strong>please let us know if you encounter any issues or want to provide feedback</strong></a> to help us make the recipe even better!</p>
-
 Sandboxes are shared Ganache instances you can create with the click of a button. Convenient features of Ganache's local development experience are now available to the whole team! Each sandbox has 10 pre-funded accounts and near-instant transaction times giving your team a performant, turnkey blockchain environment without spending a single wei on transactions.
 
 Currently, sandboxes exist in isolation of the other features of Truffle Teams. Our next iteration will allow you to target a sandbox on the Deployments screen, as well as integrate with Monitoring. Sandboxes in Truffle Teams will also be the easiest way to use live chain data in your environment via forking.
 
+### Table of Contents
+* [Creating or Destroying a Sandbox](#creating-or-destroying-a-sandbox)
+* [Renaming a Sandbox](#renaming-a-sandbox)
+* [Usage with Truffle](#usage-with-truffle)
+
 ## Creating or Destroying a Sandbox
 
-Creating a sandbox is as easy as hitting the <span class="inline-button">QUICKSTART SANDBOX</span> button. To destroy a box, click the <span class="inline-button red">DESTROY</span> button for the desired sandbox.
+Creating a sandbox is as easy as hitting the <span class="inline-button">QUICKSTART SANDBOX</span> button. To destroy a box, click the <span class="inline-button red">DELETE</span> button for the desired sandbox.
 
 <figure class="screenshot">
   <img class="w-100" src="/img/docs/teams/sandboxes.png" alt="Truffle Teams SANDBOXES screen">
@@ -20,6 +23,15 @@ Creating a sandbox is as easy as hitting the <span class="inline-button">QUICKST
 </figure>
 
 You'll see all the details necessary to start using this sandbox, including the `mnemonic` and `network_id`. See below for complete details on [usage with Truffle](#usage-with-truffle).
+
+## Renaming a Sandbox
+
+By default, we generate a friendly name for each sandbox. To rename a sandbox, first click the <span class="inline-button">VIEW/EDIT</span> button. You'll see a modal with the sandbox details, including a text input with the name. Fill in the new name you would like and click the <span class="inline-button">CONFIRM</span> button to save the new name.
+
+<figure class="screenshot">
+  <img class="w-100" src="/img/docs/teams/sandboxes-02.png" alt="Rename a sandbox in Truffle Teams">
+  <figcaption class="text-center">The sandbox details modal.</figcaption>
+</figure>
 
 ## Usage with Truffle
 
