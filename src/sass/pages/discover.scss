@@ -1,0 +1,18 @@
+.discover-tabs {
+  .media img {
+    max-width: 2.5rem;
+  }
+
+  // Bootstrap Overrides
+  .nav-item {
+    text-align: left;
+    width: 25%;
+  }
+
+  .nav-link,
+  .nav-link.active {
+    background-color: transparent;
+    color: #5e464d;
+    padding: 0;
+  }
+}

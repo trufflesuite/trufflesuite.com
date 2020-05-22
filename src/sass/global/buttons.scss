@@ -60,6 +60,16 @@
   color: #fff;
 }
 
+.btn-teams-green {
+  background: #DAE7A2;
+  color: #5e464d;
+
+  &:hover {
+    background: #fff;
+    color: #5e464d;
+  }
+}
+
 .btn-outline-white {
   background: transparent;
   color: #fff;
