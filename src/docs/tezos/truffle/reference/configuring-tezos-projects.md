@@ -36,7 +36,7 @@ module.exports = {
 
 ## Configuring your project to deploy to a public test network
 
-The above configuration defines a single development network pointed at the public [CarthageNet](https://tezos.gitlab.io/introduction/test_networks.html) test network. You can see how this is set up in context by following our [quickstart](/docs/tezos/quickstart).
+The above configuration defines a single development network pointed at the public [CarthageNet](https://tezos.gitlab.io/introduction/test_networks.html) test network. You can see how this is set up in context by following our [quickstart](/docs/tezos/truffle/quickstart).
 
 Developing on public test nets can be limiting for a number of reasons (acquiring test net tokens, performance, and internet connectivity, among others). Fortunately, there's a local solution.
 
