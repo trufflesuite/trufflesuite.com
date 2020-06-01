@@ -382,6 +382,14 @@
 			"parceljs"
 		]
 	},
+	"tezos-example-box": {
+		"description": "A box containing all you need to get started with Tezos development on Truffle.",
+		"stars": 9,
+		"tags": [
+			"official",
+			"tezos"
+		]
+	},
 	"thunder-box": {
 		"description": "Truffle Dapp boilerplate for ThunderCore",
 		"stars": 0,
