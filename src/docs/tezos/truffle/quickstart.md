@@ -84,7 +84,7 @@ module.exports = {
   // for more details on how to specify configuration options!
   networks: {
     development: {
-      host: "https://api.tez.ie/rpc/carthagenet",
+      host: "https://carthagenet.smartpy.io",
       port: 443,
       network_id: "*",
       secret,
