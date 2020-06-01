@@ -13,11 +13,7 @@ layout: docs.hbs
 
 All of your contracts are located in your project's `contracts/` directory. Tezos contracts are written in [LIGO](https://ligolang.org/), and all files containing contracts will have a file extension of `.ligo`. 
 
-With the example Truffle [Tezos project](/docs/tezos/truffle/quickstart) (created through `truffle unbox tezos-example`), you're given two contracts, `Counter.ligo` and `SimpleStorage.ligo`. 
-
-<p class="alert alert-warning">
-<strong>Coming from Ethereum?</strong> If you're already familiar with Truffle projects created for Ethereum, you'll notice a distinct lack of a `Migrations` contract. As of now, the migrations system isn't yet supported by Truffle for Tezos projects, and instead all migration scripts are run during deployment.
-</p>
+With the example Truffle [Tezos project](/docs/tezos/truffle/quickstart) (created through `truffle unbox tezos-example`), you're given three contracts, `Counter.ligo`, `Migrations.ligo`, and `SimpleStorage.ligo`.
 
 ## Command
 
