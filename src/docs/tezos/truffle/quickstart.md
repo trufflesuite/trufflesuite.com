@@ -111,8 +111,9 @@ That's it! You're all set to run the box's deployment scripts against a testnet.
 
 The example box comes default with pre-written deployment scripts, found within the `./migrations` directory:
 
-* `1_deploy_simple_storage.js`
-* `2_deploy_counter.js`
+* `1_initial_migration.js`
+* `2_deploy_simple_storage.js`
+* `3_deploy_counter.js`
 
 Truffle will handle running these scripts when you run the following command:
 
