@@ -128,7 +128,7 @@ The box also comes equipped with tests, showing you how to write automated tests
 * `counter.test.js`
 * `simpleStorage.test.js`
 
-See the [Test your Contracts]() section for more information on how to write tests for your LIGO congrats.
+See the [Testing Tezos contracts](/docs/tezos/truffle/quick-start/testing-your-tezos-contracts) section for more information on how to write tests for your LIGO congrats.
 
 Running your tests is easy, by running following command: 
 
