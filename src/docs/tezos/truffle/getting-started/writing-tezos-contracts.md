@@ -13,7 +13,7 @@ Smart contracts in Tezos are written in the [LIGO programming language](https://
 
 * [Main language site](https://ligolang.org/)
 * [Online sandbox](https://ide.ligolang.org/)
-* [Documentation](https://ligolang.org/docs/intro/what-and-why/)
+* [Documentation](https://ligolang.org/docs/intro/introduction/)
 
 <p class="alert alert-warning">
 <strong>Note!</strong> LIGO supports three different syntaxes out of the box: CamelLIGO, PascalLIGO, and ReasonLIGO. For all examples in this documentation, we use PascalLIGO.
