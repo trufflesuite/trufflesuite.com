@@ -61,6 +61,12 @@
   },
   {
     "userOrg": "truffle-box",
+    "displayName": "tezos-example",
+    "repoName": "tezos-example-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
     "displayName": "azure-asset-transfer",
     "repoName": "azure-asset-transfer-box",
     "official": true
