@@ -50,7 +50,7 @@ Notice that the abstraction contains the same function you defined in your contr
 
 ## Multi-Entrypoint Contracts
 
-As described in the [Writing Tezos Contracts](/docs/tezos/truffle/writing-tezos-contracts) section, you can define contracts that have multiple entry points. When you create a contract as defined in that section, Truffle does a lot of work to make interacting with that contract easier. Let's take a look:
+As described in the [Writing Tezos Contracts](/docs/tezos/truffle/getting-started/writing-tezos-contracts) section, you can define contracts that have multiple entry points. When you create a contract as defined in that section, Truffle does a lot of work to make interacting with that contract easier. Let's take a look:
 
 ```
 // variant defining pseudo multi-entrypoint actions
