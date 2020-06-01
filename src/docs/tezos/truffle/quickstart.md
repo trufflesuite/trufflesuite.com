@@ -138,7 +138,7 @@ Running your tests is easy, by running following command:
 
 If you've reached this point, you now have a Truffle project that lets you compile, test, and deploy LIGO contracts to the Carthage Tezos test network. Congrats! This is a great start, but there's still much to learn. We suggest you check out the following resources to learn more about Tezos, LIGO, and Truffle:
 
-* [LIGO language documentation](https://ligolang.org/docs/intro/what-and-why/)
+* [LIGO language documentation](https://ligolang.org/docs/intro/introduction/)
 * [Tezos documentation](https://tezos.gitlab.io/)
 * [Taquito communcation library](https://tezostaquito.io/)
 * [Main Truffle Suite documentation](https://trufflesuite.com/docs)
