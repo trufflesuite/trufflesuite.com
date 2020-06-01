@@ -151,7 +151,7 @@ The deployer contains many functions available to simplify your migrations.
 
 Deploy a specific contract, specified by the `contract` object. This will set the address of the contract after deployment (i.e., `Contract.address` will equal the newly deployed address), and it will override any previous address stored.
 
-This function takes an optional initial state as its second argument, that sets the state of your contract on chain when deployed. The type of data passed in this argument should match the type data stored in the state represented by the contract. We use the [Tequito library](https://tezostaquito.io/) to perform the translation from Javascript representation to types understood by Tezos. Please see [their documentation](https://tezostaquito.io/docs/quick_start) for more information.
+This function takes an optional initial state as its second argument, that sets the state of your contract on chain when deployed. The type of data passed in this argument should match the type data stored in the state represented by the contract. We use the [Taquito library](https://tezostaquito.io/) to perform the translation from Javascript representation to types understood by Tezos. Please see [their documentation](https://tezostaquito.io/docs/quick_start) for more information.
 
 The last argument is an optional object that can include the key named `overwrite`. If `overwrite` is set to `false`, the deployer won't deploy this contract if one has already been deployed. This is useful for certain circumstances where a contract address is provided by an external dependency.
 
