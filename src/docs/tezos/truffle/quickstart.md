@@ -119,7 +119,7 @@ Truffle will handle running these scripts when you run the following command:
 
     $ truffle migrate
 
-See the [Deploying your Contracts]() section for more information on how to write and use Truffle's deployment scripts.
+See the [Deploying Tezos contracts](/docs/tezos/truffle/quick-start/deploying-tezos-contracts) section for more information on how to write and use Truffle's deployment scripts.
 
 ## Testing Contracts
 
