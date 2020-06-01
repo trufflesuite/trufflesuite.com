@@ -100,7 +100,7 @@ module.exports = {
 That's it! You're all set to run the box's deployment scripts against a testnet. 
 
 <p class="alert alert-info">
-<strong>Note:</strong> The default tezos box is configured to deploy to multiple networks, including mainnet. If you'd like to deploy to those networks, you'll need to first configure the `secret`, `mnemonic`, `password`, and `email` like the above to represent an account you own that's funded with XTZ. See the [Configuring Tezos Projects](/docs/tezos/getting-started/configuring-tezos-projects) section for more info. 
+<strong>Note:</strong> The default tezos box is configured to deploy to multiple networks, including mainnet. If you'd like to deploy to those networks, you'll need to first configure the `secret`, `mnemonic`, `password`, and `email` like the above to represent an account you own that's funded with XTZ. See the [Configuring Tezos Projects](/docs/tezos/truffle/reference/configuring-tezos-projects) section for more info.
 </p>
 
 <p class="alert alert-danger">
