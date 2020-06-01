@@ -195,6 +195,11 @@
 			"solidity"
 		]
 	},
+  "flashloan-box": {
+    "description": "A truffle box starter to build upgradable-proxy contracts with included React frontend to demonstrate the process.",
+    "stars": "0",
+    "tags": ["community", "flashloan", "aave"]
+  },
 	"fluidity-truffle-box": {
 		"description": "Truffle box to give a skeleton for how Fluidity set up truffle and add-ons",
 		"stars": 2,
