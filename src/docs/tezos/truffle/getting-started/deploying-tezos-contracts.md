@@ -80,7 +80,7 @@ A full migration script using `SimpleStorage` would look like the example below.
 <strong>Coming from Ethereum?</strong> You'll notice that LIGO contracts lack constructors. Passing in default values as part of deployment is the only way to set the initial state of a contract. Constructors may be added to LIGO at a later date.
 </p>
 
-Filename: `./migrations/1_deploy_simplestorage.js`
+Filename: `./migrations/2_deploy_simple_storage.js`
 ```javascript
 const SimpleStorage = artifacts.require("SimpleStorage");
 
