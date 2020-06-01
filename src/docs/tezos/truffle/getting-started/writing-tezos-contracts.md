@@ -52,7 +52,7 @@ There's some important takeaways to note when writing LIGO contracts:
 
 You'll notice that the comments in the example contract above suggest there are multiple entry points beyond `main()`. Conceptually there _are_ multiple entry points -- `increment` and `decrement` -- but under the hood, `main()` is technically the single entery point of the contract. 
 
-To code a contract with multiple entry points that Truffle can take advantage of, you'll need to follow the example above. Start by defining an enum-like type called `action` with values relative to the functions being called, and then pass the action as the first value into `main()`. As you'll see in the [Interacting With Your Contracts](/docs/tezos/truffle/getting-started/interacting-with-your-contracts) section, if Truffle detects an `action` type as the first parameter in `main()`, it'll treat your contract as though it has multiple entry points, and make those entry points easy to call from outside the blockchain.
+To code a contract with multiple entry points that Truffle can take advantage of, you'll need to follow the example above. Start by defining an enum-like type called `action` with values relative to the functions being called, and then pass the action as the first value into `main()`. As you'll see in the [Interacting With Your Contracts](/docs/tezos/truffle/getting-started/interacting-with-your-tezos-contracts) section, if Truffle detects an `action` type as the first parameter in `main()`, it'll treat your contract as though it has multiple entry points, and make those entry points easy to call from outside the blockchain.
 
 ## Including Other Contracts
 
