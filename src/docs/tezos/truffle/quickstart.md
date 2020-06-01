@@ -61,6 +61,7 @@ In your workspace directory, run the following commands:
 The example box comes with two contracts, which you can find in the `./contracts` folder:
 
 * `Counter.ligo`
+* `Migrations.ligo`
 * `SimpleStorage.ligo`
 
 You can see that these contracts end in the `.ligo` file extension. This refers to the [LIGO programming language](https://ligolang.org/). See the [Writing Tezos contracts](/docs/tezos/truffle/getting-started/writing-tezos-contracts) section for more info. 
