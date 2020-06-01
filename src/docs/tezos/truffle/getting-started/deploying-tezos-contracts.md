@@ -9,17 +9,13 @@ layout: docs.hbs
 
 # Deploying Tezos Contracts
 
-If you're familiar with Truffle, then you already know about [Truffle's deployment framework](/docs/truffle/getting-started/running-migrations), called Migrations, used to manage deployment changes over time. Truffle uses a stripped-down version of this system for Tezos.
+If you're familiar with Truffle, then you already know about [Truffle's deployment framework](/docs/truffle/getting-started/running-migrations), called Migrations, used to manage deployment changes over time.
 
 ## Overview
 
-To deploy Tezos contracts, you'll first need to write migration scripts to tell Truffle how to deploy those contracts. In contrast with Truffle's normal behavior, all scripts defined in the `./migrations` directory will be run for every deployment. Truffle will not try to determine which scripts have been run previously, though it can be configured at runtime to only run specific deployment scripts. If you only want to run some of the scripts you've created, it'll be up to you to tell Truffle which script to run.
+To deploy Tezos contracts, you'll first need to write migration scripts to tell Truffle how to deploy those contracts.
 
 For the rest of this document, we'll be referring to deployment scripts as "migrations" to keep in line with Truffle's normal lingo. Keep in mind that a "migration" is synonymous with "deployment script".
-
-<p class="alert alert-warning">
-<strong>Coming from Ethereum?</strong> If you're already familiar with Truffle projects created for Ethereum, you'll notice a distinct lack of a `Migrations` contract. As of now, the migrations system isn't yet supported by Truffle for Tezos projects, and instead all migration scripts are run during deployment.
-</p>
 
 ## Migrations
 
@@ -33,7 +29,7 @@ To run your migrations, run the following:
 $ truffle migrate
 ```
 
-This will run all migrations located within your project's `migrations` directory. At their simplest, migrations are simply a set of managed deployment scripts. Per the description above, for Tezos, `truffle migrate` will run all migration scripts unless otherwise specified. Note that this is in contrast to Truffle's default behavior for other blockchains.
+This will run all migrations located within your project's `migrations` directory. At their simplest, migrations are simply a set of managed deployment scripts.
 
 ## Migration files
 
