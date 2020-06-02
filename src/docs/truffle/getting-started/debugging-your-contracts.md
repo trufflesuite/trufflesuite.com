@@ -27,6 +27,8 @@ In order to debug transactions, you'll need the following:
 
 Note that it's okay if your desired transaction resulted in an exception or if it ran out of gas. The transaction still exists on chain, and so you can still debug it!
 
+Warning: Debugging a transaction against a contract that was compiled with optimization enabled may not work reliably.
+
 ## In-test debugging
 
 Truffle v5.1 and above provides the `truffle test --debug` flag and associated
