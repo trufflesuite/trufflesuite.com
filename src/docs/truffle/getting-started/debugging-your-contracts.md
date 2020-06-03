@@ -173,6 +173,10 @@ This command allows you to remove any of your existing breakpoints, with the sam
 
 This command will cause execution of the code to continue until the next breakpoint is reached or the last line is executed.
 
+### (:) evaluate and print expression
+
+This command will evaluate and print the given expression, based on the current variables and their values (see also `v`).
+
 ### (+) add watch expression
 
 This command will add a watch on a provided expression, based on the following syntax: `+:<expression>`.
