@@ -95,7 +95,11 @@ For each network, if unspecified, transaction options will default to the follow
 * `provider`: Default web3 provider using `host` and `port` options: `new Web3.providers.HttpProvider("http://<host>:<port>")`
 * `websockets`: You will need this enabled to use the `confirmations` listener or to hear Events using `.on` or `.once`.  Default is `false`.
 
-For each network, you can specify `host` / `port`, or `url`, or `provider`, but not more than one. If you need an HTTP provider, we recommend using `host` and `port`, or `url`, while if you need a custom provider such as `HDWalletProvider`, you must use `provider`.  The `url` option also supports WebSockets.
+For each network, you can specify `host` / `port`, `url`, or `provider`, but not more than one. If you need an HTTP provider, we recommend using `host` and `port`, or `url`, while if you need a custom provider such as `HDWalletProvider`, you must use `provider`.  The `url` option also supports WebSockets and SSL. `url` should include the full url; see the examples below:
+- http://127.0.0.1:8545
+- ws://127.0.0.1:8545
+- https://sandbox.truffleteams.com/yoursandboxid
+- wss://sandbox.truffleteams.com/yoursandboxid
 
 #### Providers
 
