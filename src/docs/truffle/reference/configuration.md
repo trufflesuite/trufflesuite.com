@@ -95,7 +95,11 @@ For each network, if unspecified, transaction options will default to the follow
 * `provider`: Default web3 provider using `host` and `port` options: `new Web3.providers.HttpProvider("http://<host>:<port>")`
 * `websockets`: You will need this enabled to use the `confirmations` listener or to hear Events using `.on` or `.once`.  Default is `false`.
 
-For each network, you can specify either `host` / `port` or `provider`, but not both. If you need an HTTP provider, we recommend using `host` and `port`, while if you need a custom provider such as `HDWalletProvider`, you must use `provider`.
+For each network, you can specify `host` / `port`, `url`, or `provider`, but not more than one. If you need an HTTP provider, we recommend using `host` and `port`, or `url`, while if you need a custom provider such as `HDWalletProvider`, you must use `provider`.  The `url` option also supports WebSockets and SSL. `url` should include the full url; see the examples below:
+- http://127.0.0.1:8545
+- ws://127.0.0.1:8545
+- https://sandbox.truffleteams.com/yoursandboxid
+- wss://sandbox.truffleteams.com/yoursandboxid
 
 #### Providers
 
@@ -218,7 +222,7 @@ In the `compilers` object you can specify settings related to the compilers used
 
 ### solc
 
-Solidity compiler settings. Supports optimizer settings for `solc`.
+Solidity compiler settings. Supports optimizer settings for `solc`, as well as other settings such as debug and metadata settings.
 
 You may specify...
 + any solc-js version listed at [solc-bin](http://solc-bin.ethereum.org/bin/list.json). Specify the one you want and Truffle will get it for you.
