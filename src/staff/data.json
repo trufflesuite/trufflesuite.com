@@ -1,15 +1,5 @@
 [
   {
-    "name": "Adrian Li",
-    "position": "Software Development Lead - Front-end",
-    "headshot": "/img/staff/adrian-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/adrian-original.png",
-    "twitter": "adrianmcli",
-    "github": "adrianmcli",
-    "linkedin": "adrianmcli",
-    "email" : "adrian"
-  },
-  {
     "name": "Amal Sudama",
     "position": "Blockchain Tools Engineer",
     "headshot": "/img/staff/amal-truffle-bg.svg",
