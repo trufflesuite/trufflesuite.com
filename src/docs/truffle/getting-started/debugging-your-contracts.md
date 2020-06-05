@@ -20,7 +20,7 @@ Set breakpoints in your JavaScript tests with the new `debug()` global!
 <strong>
 New in Truffle v5.1.29: `truffle debug --fetch-external`.
 </strong>
-Debug transactions involving contracts not in your project that are verified on Etherscan!
+Debug transactions involving contracts not in your project that are verified on [Etherscan](https://etherscan.io/)!
 [See below](#debugging-external-contracts-with-verified-source).
 </p>
 
@@ -110,7 +110,7 @@ You can specify the network you want to debug on with the `--network` option:
 $ truffle debug <transaction hash> --network <network>
 ```
 
-And with the `--fetch-external` option ([see below](#debugging-external-contracts-with-verified-source)), you can debug contract instances outside your project that have verified source code on Etherscan.  (Support for retrieving code from Sourcify as well is planned.)  When using this option, you must specify a transaction hash to debug, and you will not be able to switch transactions from inside the debugger.
+And with the `--fetch-external` option ([see below](#debugging-external-contracts-with-verified-source)), you can debug contract instances outside your project that have verified source code on [Etherscan](https://etherscan.io/).  (Support for retrieving code from [Sourcify](https://github.com/ethereum/sourcify) as well is planned.)  When using this option, you must specify a transaction hash to debug, and you will not be able to switch transactions from inside the debugger.
 
 ```shell
 $ truffle debug <transaction hash> --fetch-external --network <network>
@@ -129,7 +129,7 @@ startup greatly.
 
 ## Debugging external contracts with verified source
 
-If you pass the `--fetch-external` option, the debugger will attempt to download verified source code off of Etherscan for any addresses involved in the transaction that it cannot find source code for in your project.  (Support for retrieving code from Sourcify as well is planned.)  You can of course debug such transactions without this option, but when stepping through the transaction the external calls to these unrecognized contracts will simply be skipped over.
+If you pass the `--fetch-external` option, the debugger will attempt to download verified source code off of [Etherscan](https://etherscan.io/) for any addresses involved in the transaction that it cannot find source code for in your project.  (Support for retrieving code from [Sourcify](https://github.com/ethereum/sourcify) as well is planned.)  You can of course debug such transactions without this option, but when stepping through the transaction the external calls to these unrecognized contracts will simply be skipped over.
 
 This option can also be abbreviated `-x`.
 

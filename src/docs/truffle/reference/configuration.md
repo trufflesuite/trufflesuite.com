@@ -218,7 +218,7 @@ mocha: {
 
 ### etherscan
 
-Configuration options that Truffle will use when attempting to download source code from Etherscan.  Has one suboption:
+Configuration options that Truffle will use when attempting to download source code from [Etherscan](https://etherscan.io/).  Has one suboption:
 
 * `apiKey`: The API key to use when retrieving source code from Etherscan.  If omitted, source will be retrieved without an API key, which may be slower.
 
