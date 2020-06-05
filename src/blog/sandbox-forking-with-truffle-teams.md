@@ -32,7 +32,7 @@ Mainnet as an example: you can call out to Mainnet contracts, and send ETH to Ma
 ## How Will you Use Forking?
 We’re very proud of this feature and think it’s going to be a game-changer for the community. We’re curious: how will you use forking?
 
-We want Truffle Teams to be the most effective devops tool in the blockchain space for both new and existing teams. Let us know what you think about this feature, and if your team has other needs we haven’t met yet.
+We want Truffle Teams to be the most effective devops tool in the blockchain space for both new and existing teams. <a href="https://trfl.co/become-a-truffler" target="_blank">Join our slack community</a> and let us know what you think about this feature, and if your team has other needs we haven’t met yet.
 
 **Thank you!**
 
