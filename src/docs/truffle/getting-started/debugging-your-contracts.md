@@ -137,10 +137,12 @@ If you have an Etherscan API key, you can include it in your configuration file 
 
 Example:
 ```javascript
-etherscan: {
-  apiKey: "0123456789abcdef0123456789abcdef" //replace this with your API key if you have one
+module.exports = {
+  /* ... rest of truffle-config.js ... */
+  etherscan: {
+    apiKey: "0123456789abcdef0123456789abcdef" //replace this with your API key if you have one
+  }
 }
-```
 
 ## Debugging interface
 
