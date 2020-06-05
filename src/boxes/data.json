@@ -383,5 +383,11 @@
     "displayName": "upgradable-proxy-box",
     "repoName": "upgradable-proxy-box",
     "official": false
+  },
+  {
+    "userOrg": "aave",
+    "displayName": "flashloan-box",
+    "repoName": "flashloan-box",
+    "official": false
   }
 ]

@@ -10,12 +10,13 @@ Currently, sandboxes exist in isolation of the other features of Truffle Teams. 
 
 ### Table of Contents
 * [Creating or Destroying a Sandbox](#creating-or-destroying-a-sandbox)
+* [Sandbox Forking](#sandbox-forking)
 * [Renaming a Sandbox](#renaming-a-sandbox)
 * [Usage with Truffle](#usage-with-truffle)
 
 ## Creating or Destroying a Sandbox
 
-Creating a sandbox is as easy as hitting the <span class="inline-button">QUICKSTART SANDBOX</span> button. To destroy a box, click the <span class="inline-button red">DELETE</span> button for the desired sandbox.
+Creating a sandbox is as easy as clicking the <span class="inline-button">NEW SANDBOX</span> button. To destroy a box, click the <span class="inline-button red">DELETE</span> button for the desired sandbox.
 
 <figure class="screenshot">
   <img class="w-100" src="/img/docs/teams/sandboxes.png" alt="Truffle Teams SANDBOXES screen">
@@ -23,6 +24,21 @@ Creating a sandbox is as easy as hitting the <span class="inline-button">QUICKST
 </figure>
 
 You'll see all the details necessary to start using this sandbox, including the `mnemonic` and `network_id`. See below for complete details on [usage with Truffle](#usage-with-truffle).
+
+## Sandbox Forking
+
+Forking allows a sandbox to act as a live network from a given block number. We take for granted in web2 that we can get test credentials and interact with an API that will map to our production environment, but in web3 this hasn’t been so easy. With a forked sandbox you can transact, deploy, test, and debug against Mainnet without spending real Ether!
+
+<figure>
+  <img class="half-width mb-6" src="/img/docs/teams/what-is-forking.png" alt="Forking example">
+</figure>
+
+To fork a network, create a new sandbox by clicking the <span class="inline-button">NEW SANDBOX</span> button. Then, check the `Enable forking` checkbox. From there, select a network and optionally provide a block number. Clicking the <span class="inline-button">CONFIRM</span> button will spin up a new Ganache instance forked from the given network and block.
+
+<figure class="screenshot">
+  <img class="w-100" src="/img/docs/teams/sandbox-forking.png" alt="Sandbox forking options">
+  <figcaption class="text-center">Sandbox forking options and details.</figcaption>
+</figure>
 
 ## Renaming a Sandbox
 
