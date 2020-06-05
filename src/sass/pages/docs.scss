@@ -222,7 +222,23 @@
 
   img {
     display: block;
-    margin: 2rem 0;
+    margin: 2rem auto;
+
+    &.threequarter-width {
+      width: 75%;
+
+      @media (max-width: 767.98px) {
+        width: 100%;
+      }
+    }
+
+    &.half-width {
+      width: 50%;
+
+      @media (max-width: 767.98px) {
+        width: 100%;
+      }
+    }
   }
 
   .img-caption {
