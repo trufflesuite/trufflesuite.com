@@ -1,4 +1,12 @@
-{
+  {
+    "sandbox-forking-with-truffle-teams": {
+    "title": "Simulate Live Networks with Forked Sandboxes",
+    "date": "2020-6-5",
+    "author": "Josh Quintal",
+    "published": true,
+    "excerpt": "Sandboxes are the easiest way to share a Ganache instance across an entire team. Our newest sandbox feature unlocks the power to run a simulated Mainnet (and other live networks).",
+    "image": "/img/blog/sandbox-forking-with-truffle-teams/sandbox-forking-thumb.png"
+  },
   "stack-tracing-with-truffle-test": {
     "title": "Stack Tracing with Truffle Test",
     "date": "2020-5-8",
