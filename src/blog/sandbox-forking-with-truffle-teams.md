@@ -8,7 +8,7 @@ Sandboxes in Truffle Teams are the easiest way to setup a shared Ganache instanc
 
 Forking allows a sandbox to act as a live network from a given block number. We take for granted in web2 that we can get test credentials and interact with an API that will map to our production environment, but in web3 this hasn’t been so easy. With a forked sandbox you can transact, deploy, test, and debug against Mainnet without spending real Ether!
 
-Forking has been available since 2017 ([see this older tutorial](https://www.trufflesuite.com/tutorials/chain-forking-exploiting-the-dao)), but the requirement of a full archival node was a barrier for many. By adding this ability to Truffle Teams, you no longer need to worry about anything--just select a network and go. Here are some more specific examples:
+Forking has been available since 2017 ([see this older tutorial](/tutorials/chain-forking-exploiting-the-dao)), but the requirement of a full archival node was a barrier for many. By adding this ability to Truffle Teams, you no longer need to worry about anything--just select a network and go. Here are some more specific examples:
 
 * **DeFi**: Some DeFi protocols have testnet deployments that differ from their Mainnet counterparts for a variety of reasons. For dapp developers, this inconsistency presents a problem. You want to develop against the “real” protocol, but developing in production is terrible, especially when real ETH is at stake! With forking, you’re free to simply fork Mainnet and deploy your dapp to an environment that translates to the live network.
 
@@ -23,12 +23,12 @@ Forking has been available since 2017 ([see this older tutorial](https://www.tru
   <figcaption class="text-center font-italic">A forked Mainnet sandbox.</figcaption>
 </figure>
 
-To fork a network, create a new sandbox and check the forking checkbox. From there, select a network and optionally provide a block number. Clicking CONFIRM will spin up a new Ganache instance forked from the given network and block. For more details, <a href="https://www.trufflesuite.com/docs/teams/deployments/sandboxes#sandbox-forking" target="_blank">see our sandboxes documentation.</a>
+To fork a network, create a new sandbox and check the forking checkbox. From there, select a network and optionally provide a block number. Clicking CONFIRM will spin up a new Ganache instance forked from the given network and block. For more details, <a href="/docs/teams/deployments/sandboxes#sandbox-forking" target="_blank">see our sandboxes documentation.</a>
 
 You can now interact with this sandbox as you would the forked network. Using Ethereum 
 Mainnet as an example: you can call out to Mainnet contracts, and send ETH to Mainnet addresses.
 <div class="mt-12 text-center">
-    <a class="btn btn-truffle mt-3" href="http://www.trufflesuite.com/teams" target="_blank">START TESTING AGAINST PRODUCTION NETWORKS TODAY!</a>
+    <a class="btn btn-truffle mt-3" href="/teams" target="_blank">START TESTING AGAINST PRODUCTION NETWORKS TODAY!</a>
   </div>
 
 ## How Will you Use Forking?
