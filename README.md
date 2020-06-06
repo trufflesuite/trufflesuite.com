@@ -9,6 +9,8 @@ Check out [the contribution guide](https://github.com/trufflesuite/trufflesuite.
 
 We welcome all contributions, typo corrections, and general feedback. See our [full contribution guide](https://github.com/trufflesuite/trufflesuite.com/blob/master/CONTRIBUTING.md) for details on site architecture and how you could help.
 
+Please base your changes and target your PR against the `develop` branch, not `master`
+
 If you find an issue while browsing, most pages have a GitHub link to the directory containing their source files. Look out for the "See a way to make this page better?" links.
 
 ## Dependencies
