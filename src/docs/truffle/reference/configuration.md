@@ -216,29 +216,6 @@ mocha: {
 }
 ```
 
-### etherscan
-
-Configuration options that Truffle will use when attempting to download source code from [Etherscan](https://etherscan.io/).  Has one suboption:
-
-* `apiKey`: The API key to use when retrieving source code from Etherscan.  If omitted, source will be retrieved without an API key, which may be slower.
-
-Example:
-
-```javascript
-etherscan: {
-  apiKey: "0123456789abcdef0123456789abcdef" //replace this with your API key if you have one
-}
-```
-
-### sourceFetchers
-
-A list of verified source repositories that Truffle may attempt to download source code from, in the order it should attempt to use them.  (You can omit this and Truffle will use all ones it knows about in its default order.)  Currently the only supported one is `"etherscan"`.
-
-Example:
-```javascript
-sourceFetchers: ["etherscan"]
-```
-
 ## Compiler configuration
 
 In the `compilers` object you can specify settings related to the compilers used by Truffle.
