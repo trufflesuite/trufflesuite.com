@@ -3,7 +3,7 @@
     "title": "Case Study: Dish Network",
     "date": "2019-06-07",
     "published": true,
-    "ingredients": "Truffle Suite, Ethereum, OpenZeppelin",
+    "ingredients": "Truffle Suite, Ethereum Blockchain, OpenZeppelin",
     "excerpt": "Truffle, though its Truffle University program, taught engineers at DISH how to build blockchain applications.",
     "image": "/img/case-studies/case-study-dish-network/dish-logo.svg"
   },
@@ -15,20 +15,20 @@
     "excerpt": "Microsoft and EY partnered to develop royalty payment system for Xbox using Truffle and the Quorum blockchain.",
     "image": "/img/case-studies/case-study-microsoft-xbox/xbox-logo.svg"
   },
-  "case-study-starbucks": {
-    "title": "Case Study: Starbucks",
+  "case-study-seattle-coffee": {
+    "title": "Case Study: Seattle Coffee",
     "date": "2019-06-07",
     "published": true,
-    "ingredients": "Truffle Suite, Ethereum, OpenZeppelin",
-    "excerpt": "Truffle’s suite of popular developer tools and Microsoft Azure integrate to enhance the developer experience and DevOps of Enterprise Ethereum.",
-    "image": "/img/case-studies/case-study-starbucks/starbucks-logo.svg"
+    "ingredients": "Truffle Suite, Ethereum Blockchain, Jenkins, Infura, Kubernetes, Azure, Fortify",
+    "excerpt": "A Seattle based coffee company wanted to provide their customers with more transparency while creating financial opportunities for their coffee bean farmers.",
+    "image": "/img/case-studies/case-study-seattle-coffee/coffee-tracker-app.jpg"
   },
   "case-study-microsoft-and-the-world-bank": {
     "title": "Case Study: Microsoft & The World Bank",
     "date": "2019-06-07",
     "published": true,
-    "ingredients": "Truffle Suite, Ethereum, OpenZeppelin",
-    "excerpt": "Truffle’s suite of popular developer tools and Microsoft Azure integrate to enhance the developer experience and DevOps of Enterprise Ethereum.",
+    "ingredients": "Truffle Suite, Ethereum Blockchain",
+    "excerpt": "The World Bank and the Commonwealth Bank of Australia agreed to create a platform to launch the first bond that was created, allocated, transferred and managed using distributed ledger technology.",
     "image": "/img/case-studies/case-study-microsoft-and-the-world-bank/msft-wb-logo.svg"
   }
 }
