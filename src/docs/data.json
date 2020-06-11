@@ -7,6 +7,9 @@
     "Testing": [
       "Starting Builds"
     ],
+    "Deployments": [
+      "Deploying Contracts"
+    ],
     "Contracts": [
       "Contract Monitoring"
     ],
@@ -87,5 +90,23 @@
       "Drizzle Actions",
       "How Data Stays Fresh"
     ]
+  },
+  "tezos": {
+    "truffle": {
+      "Getting Started": [
+        "Installing Truffle with Tezos",
+        "Creating a Tezos project",
+        "Writing Tezos Contracts",
+        "Compiling Tezos Contracts",
+        "Deploying Tezos Contracts",
+        "Interacting with Your Tezos Contracts",
+        "Testing your Tezos Contracts",
+        "Using the Console with Tezos",
+        "Writing External Scripts with Tezos"
+      ],
+      "Reference": [
+        "Configuring Tezos Projects"
+      ]
+    }
   }
 }

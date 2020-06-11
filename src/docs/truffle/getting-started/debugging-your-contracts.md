@@ -94,6 +94,17 @@ $ truffle debug
 
 Regardless of how you start the debugger, once it is running you are not limited to debugging only the transaction you launched it with; it is possible to unload the current transaction and load a new one, as described below.
 
+<p class="alert alert-info m-t-2">
+<strong>
+Faster debugger startup:
+</strong>
+If your project was not compiled all at once (or under certain other
+conditions), the debugger will have to do its own compile of your project on
+startup.  This can be very slow.  If you compile your whole project at once,
+however, the debugger can likely avoid the initial recompile, speeding up
+startup greatly.
+</p>
+
 ## Debugging interface
 
 Starting the debugger will open an interface familiar to those that have debugged other types of applications. When it starts, you'll see the following:

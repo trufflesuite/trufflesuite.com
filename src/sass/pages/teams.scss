@@ -128,45 +128,57 @@
     border: none;
     min-width: unset;
     padding: 1.5rem;
+    border: 2px solid #e0dad7;
+
+    .card-title {
+      border-radius: .25rem .25rem 0 0;
+      color: #ffffff;
+      margin: -2.75rem -2.75rem 1.5rem -2.75rem;
+      padding: 1rem 2.75rem;
+    }
 
     &.free {
-      background: #e0dad7;
-      //border-radius: 0;
-      //transform: skew(-2deg, -1deg);
+      .card-title {
+        background: #8c3ae9;
+      }
 
       ul {
         list-style-image: url('/img/truffle-teams/checkmark-dark.png');
       }
-
-      /*.card-body, .card-footer {
-        transform: skew(2deg, 1deg);
-      }*/
     }
 
-    &.premium {
-      background: #e86591;
-      color: #fff;
-      //border-radius: 0;
-      //transform: skew(0, 2deg);
+    &.pro {
+      transform: scale(1.1);
+
+      .card-title {
+        background: #6926b4;
+      }
+
+      .badge {
+        background: #FFFBBC;
+        border-radius: .75em;
+        color: #69651A;
+        float: right;
+        padding: .25em .5em;
+      }
 
       ul {
-        list-style-image: url('/img/truffle-teams/checkmark-light.png');
+        list-style-image: url('/img/truffle-teams/checkmark-dark.png');
+      }
+    }
+
+    &.enterprise {
+      .card-title {
+        background: #4e1c87;
       }
 
-      /*.card-body, .card-footer {
-        transform: skew(0, -2deg);
-      }*/
-  
-      .btn {
-        background: #fff;
-        color: #e86591;
-        border: 1px solid #fff;
-
-        &:hover {
-          background: #e86591;
-          color: #fff;
-        }
+      ul {
+        list-style-image: url('/img/truffle-teams/checkmark-dark.png');
       }
+    }
+
+    .btn-truffle:hover {
+      background: #f8f5f0;
     }
 
     .card-footer {
@@ -180,7 +192,20 @@
   }
 }
 
+@media (max-width: 991.98px) {
+  .tt-pricing {
+    .card {
+      min-width: 100%;
+  
+      &.pro {
+        transform: none;
+      }
+    }
+  }
+}
+
 .tt-social-proof {
+  margin-top: 9.25rem;
   position: relative;
 
   >.col-8 {
@@ -269,28 +294,36 @@
   }
 }
 
+.tt-hero-img {
+  border: 2px solid rgba(51,38,42,1);
+}
+
 // SHADOWS
 
 .shadow-dark-chocolate {
   -webkit-box-shadow: 12px 12px 0px 0px rgba(51,38,42,1);
   -moz-box-shadow: 12px 12px 0px 0px rgba(51,38,42,1);
   box-shadow: 12px 12px 0px 0px rgba(51,38,42,1);
+  border: 2px solid rgba(51,38,42,1);
 }
 
 .shadow-mint {
   -webkit-box-shadow: 12px 12px 0px 0px rgba(63,224,197,1);
   -moz-box-shadow: 12px 12px 0px 0px rgba(63,224,197,1);
   box-shadow: 12px 12px 0px 0px rgba(63,224,197,1);
+  border: 2px solid rgba(63,224,197,1);
 }
 
 .shadow-periwinkle {
   -webkit-box-shadow: 12px 12px 0px 0px rgba(127,157,209,1);
   -moz-box-shadow: 12px 12px 0px 0px rgba(127,157,209,1);
   box-shadow: 12px 12px 0px 0px rgba(127,157,209,1);
+  border: 2px solid rgba(127,157,209,1);
 }
 
 .shadow-purple {
   -webkit-box-shadow: 12px 12px 0px 0px rgba(135,49,232,1);
   -moz-box-shadow: 12px 12px 0px 0px rgba(135,49,232,1);
   box-shadow: 12px 12px 0px 0px rgba(135,49,232,1);
+  border: 2px solid rgba(135,49,232,1);
 }

@@ -145,7 +145,7 @@ What's interesting here:
 When you make a transaction, you're given a `result` object that gives you a wealth of information about the transaction.
 
 ```javascript
-truffle(develop)> let result = await contract.sendCoin(accounts[1], 10, {from: accounts[0]})
+truffle(develop)> let result = await instance.sendCoin(accounts[1], 10, {from: accounts[0]})
 truffle(develop)> result
 ```
 
@@ -280,6 +280,24 @@ The last method is `call` and the syntax is exactly the same as for
 use the `call` method found on your contract abstraction's method. So you
 would write something that looks like
 `const result = await instance.myMethod.call()`.
+
+### Invoking overloaded methods
+
+The current implementation of Truffle's contract abstraction can mistakenly
+infer the signature of an overloaded method even though it exists in the
+contract ABI.
+
+Therefore, some methods may not be accessible through the contract's
+instance, but their accessors can be invoked explicitly via the `.methods`
+property of the contract.
+
+```javascript
+const instance = await MyContract.deployed();
+instance.methods['setValue(uint256)'](123);
+instance.methods['setValue(uint256,uint256)'](11, 55);
+```
+
+Please see this issue [here](https://github.com/trufflesuite/truffle/issues/2868) for more information.
 
 ## Further reading
 

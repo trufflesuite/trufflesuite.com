@@ -1,12 +1,12 @@
 [
   {
-    "title": "Truffle Teams Overview",
-    "start": "Wednesday, December 11th, 2019, 12:00",
-    "end": "12:45 PM PST",
+    "title": "Truffle Suite is Branching Out to R3's Corda",
+    "start": "Wednesday, May 6th, 2020, 9:00",
+    "end": "9:45 AM PST",
     "location": "Webinar",
-    "excerpt": "We are hosting our last webinar of the year on Wednesday, December 11th at 12 PM PST. Join Mike Seese to learn how Truffle Teams helps you with blockchain DevOps and smart contract management. Mike will walk you through the entire Truffle Teams life-cycle: from set-up and testing to public deployment and transaction monitoring. Don’t miss this webinar choc-ablock with sneak peeks of what’s next in the sweet suite!",
-    "eventbrite": "https://share.hsforms.com/1AUIyy2W7TPCBQNTifIua7g34pbp",
+    "excerpt": "Join Truffle Suite & R3 on May 6th at 9:00 am PDT for a free webinar and learn how to develop, test, and deploy CorDapps to a personal Corda Network using Ganache.",
+    "eventbrite": "https://www.crowdcast.io/e/corda-ganache",
     "status": "open",
-    "image": "/img/webinar-12-11-19-seese-teams16x9a.png"
+    "image": "/img/webinar-c-g-cham-event16x9.png"
   }
 ]
