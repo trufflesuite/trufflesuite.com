@@ -163,7 +163,7 @@ A sentence about the event, such as: conditions under which it fires, what it co
 
 **`stackId` (int)**: An integer representing an index in the `transactionStack`.
 
-### `TX_CONFIRMAITON`
+### `TX_CONFIRMATION`
 ```
 {
   confirmationReceipt,
