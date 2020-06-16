@@ -102,6 +102,21 @@
   }
 }
 
+.home-container2 {
+  background: #210554;
+  padding: 0 0 0 0;
+
+  .github-button-wrapper {
+    margin-left: 1rem;
+    display: inline-block;
+    vertical-align: middle
+  }
+
+  h5 {
+    display: inline-block;
+  }
+}
+
 /* New stuff below */
 
 .home-hero-banner{
@@ -532,5 +547,19 @@
     background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 24%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,1) 24%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+  }
+}
+
+// case studies section
+
+.card-case-study {
+  display: inline-block;
+
+  @media screen and (min-width: 70em) {
+    display: flex;
+  }
+
+  .card {
+      flex: 0 1 calc(20% - 1em);
   }
 }

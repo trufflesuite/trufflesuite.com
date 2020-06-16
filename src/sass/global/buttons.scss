@@ -4,6 +4,14 @@
   text-transform: uppercase;
 }
 
+.btn-truffle-cream:hover,
+.btn-ganache-cream:hover,
+.btn-watermelon-cream:hover,
+.btn-drizzle-cream:hover {
+  background: #EAE4DF;
+  color: #5e464d;
+}
+
 .btn-truffle:hover,
 .btn-ganache:hover,
 .btn-watermelon:hover,
@@ -65,7 +73,7 @@
   color: #5e464d;
 
   &:hover {
-    background: #fff;
+    background: #EAE4DF;
     color: #5e464d;
   }
 }
@@ -83,4 +91,48 @@
 
 .btn-wrap {
   white-space: normal;
+}
+
+// buttons for discover page
+
+.btn-truffle-cream {
+  background: #3fe0c5;
+  color: #5e464d;
+}
+
+.btn-ganache-cream {
+  background: #e4a663;
+  color: #5e464d;
+
+  &.btn-download {
+    font-size: 1.2rem;
+
+    p {
+      float: left;
+      line-height: 1.2rem;
+      margin: .6rem 0 0 0;
+    }
+  
+    img {
+      height: 60px;
+      float: right;
+      margin-left: 1rem;
+      width: 60px;
+    }
+  
+    .os {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1rem;
+    }
+  }
+}
+
+.btn-drizzle-cream {
+  background: #e911bd;
+  color: #fff;
+}
+
+.btn-watermelon-cream {
+  background: #e86591;
+  color: #fff;
 }
