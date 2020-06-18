@@ -143,6 +143,7 @@ module.exports = {
     apiKey: "0123456789abcdef0123456789abcdef" //replace this with your API key if you have one
   }
 }
+```
 
 ## Debugging interface
 
