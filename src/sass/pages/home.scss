@@ -552,14 +552,24 @@
 
 // case studies section
 
-.card-case-study {
-  display: inline-block;
+.case-study {
+  height: 500px;
 
-  @media screen and (min-width: 70em) {
+  a {
+    color: #fff;
     display: flex;
-  }
+    flex: 1 0 0%;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#33262a+14,161111+75&0+21,0+21,1+89 */
+    background: -moz-linear-gradient(top,  rgba(51,38,42,0) 14%, rgba(48,36,39,0) 21%, rgba(22,17,17,0.79) 75%, rgba(22,17,17,1) 89%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(51,38,42,0) 14%,rgba(48,36,39,0) 21%,rgba(22,17,17,0.79) 75%,rgba(22,17,17,1) 89%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(51,38,42,0) 14%,rgba(48,36,39,0) 21%,rgba(22,17,17,0.79) 75%,rgba(22,17,17,1) 89%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0033262a', endColorstr='#161111',GradientType=0 ); /* IE6-9 */
 
-  .card {
-      flex: 0 1 calc(20% - 1em);
+    h4 {
+      margin-top: auto;
+    }
   }
 }
