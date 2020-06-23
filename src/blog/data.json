@@ -1,5 +1,13 @@
-  {
-    "sandbox-forking-with-truffle-teams": {
+{
+  "debugging-verified-external-contracts-with-truffle-debugger": {
+    "title": "Debugging verified external contracts with Truffle Debugger",
+    "date": "2020-6-18",
+    "author": "Harry Altman",
+    "published": true,
+    "excerpt": "Use Truffle Debugger and Truffle Teams to debug any Etherscan verified contract!",
+    "image": "/img/blog/debugging-verified-external-contracts-with-truffle-debugger/blog-thumbnail.png"
+  },
+  "sandbox-forking-with-truffle-teams": {
     "title": "Simulate Live Networks with Forked Sandboxes",
     "date": "2020-6-5",
     "author": "Josh Quintal",
