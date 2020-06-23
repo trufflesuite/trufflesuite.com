@@ -61,6 +61,12 @@
   },
   {
     "userOrg": "truffle-box",
+    "displayName": "tezos-example",
+    "repoName": "tezos-example-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
     "displayName": "azure-asset-transfer",
     "repoName": "azure-asset-transfer-box",
     "official": true
@@ -376,6 +382,12 @@
     "userOrg": "pranav-singhal",
     "displayName": "upgradable-proxy-box",
     "repoName": "upgradable-proxy-box",
+    "official": false
+  },
+  {
+    "userOrg": "aave",
+    "displayName": "flashloan-box",
+    "repoName": "flashloan-box",
     "official": false
   }
 ]

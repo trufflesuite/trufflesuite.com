@@ -250,10 +250,10 @@ From there, make sure you run the `compile` and `migrate` commands again so that
 This is the most delicious part, we install Drizzle. Make sure you are in the `client` directory and then run the following:
 
 ```shell
-npm install drizzle
+npm install @drizzle/store
 ```
 
-And that's it for dependencies! Note that we don't need to install Web3.js or Truffle-Contract ourselves. Drizzle contains everything we need to work reactively with our smart contracts.
+And that's it for dependencies! Note that we don't need to install Web3.js or @truffle/contract ourselves. Drizzle contains everything we need to work reactively with our smart contracts.
 
 ## Wire up the React app with Drizzle
 

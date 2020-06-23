@@ -92,7 +92,8 @@
   }
 
   .text-ganache {
-    font-size: 1.2rem;
+    // Ganache's font is just way smaller than Truffle and Drizzle's
+    font-size: 1.5rem;
   }
 
   @media (max-width: 767.98px) {
