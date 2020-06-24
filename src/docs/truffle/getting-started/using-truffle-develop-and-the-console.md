@@ -92,7 +92,7 @@ Mnemonic: candy maple cake sugar pudding cream honey rich smooth crumble sweet t
 This shows you the addresses, private keys, and mnemonic for this particular blockchain.
 
 <p class="alert alert-info">
-**Note**: When you run `truffle develop` for the first time, Truffle will generate a random mnemonic that will persist for you and you alone. If you want to use a different mnemonic or set of addresses, we recommend using [Ganache](/docs/ganache/using).
+**Note**: When you run `truffle develop` for the first time, Truffle will generate a random mnemonic that will persist for you and you alone. If you want to use a different mnemonic or set of addresses, we recommend using <a href="/docs/ganache/using">Ganache</a>.
 </p>
 
 

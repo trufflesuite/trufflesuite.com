@@ -4,7 +4,7 @@ layout: docs.hbs
 ---
 
 <p class="alert alert-danger">
-<strong>Tezos support</strong> in Truffle is experimental. Give it a spin, and help us out by [filing issues on Github](https://github.com/trufflesuite/truffle/issues).
+<strong>Tezos support</strong> in Truffle is experimental. Give it a spin, and help us out by <a href="https://github.com/trufflesuite/truffle/issues">filing issues on Github</a>.
 </p>
 
 # Installing Truffle with Tezos
@@ -16,7 +16,7 @@ Before you can start developing Tezos applications with Truffle, you'll first ne
 [See Docker install instructions for your platform.](https://docs.docker.com/install/)
 
 <p class="alert alert-info">
-<strong>Docker on Windows:</strong> If you're developing on Windows, you need to install the [Docker edge release](https://docs.docker.com/docker-for-windows/edge-release-notes/) instead of the mainline docker version. Trust us: This is a better experience.
+<strong>Docker on Windows:</strong> If you're developing on Windows, you need to install the <a href="https://docs.docker.com/docker-for-windows/edge-release-notes/">Docker edge release</a> instead of the mainline docker version. Trust us: This is a better experience.
 </p>
 
 ### Other Requirements

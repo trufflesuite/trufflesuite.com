@@ -32,7 +32,7 @@ truffle build
 Requires the `build` key to be present in the configuration. See the [Building your application](/docs/getting_started/build) and [Build processes](/docs/advanced/build_processes) sections for more details.
 
 <p class="alert alert-warning">
-**Alert**: This command is deprecated. Please use third-party build tools like webpack or grunt, or see our [Truffle Boxes](/boxes) for an example.
+**Alert**: This command is deprecated. Please use third-party build tools like webpack or grunt, or see our <a href="/boxes">Truffle Boxes</a> for an example.
 </p>
 
 

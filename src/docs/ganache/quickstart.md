@@ -9,7 +9,7 @@ This quickstart guide will walk you through installing Ganache and creating a pe
 If this isn't your first time using Ganache, or you already know you'll need custom configuration options, check out the [Creating Workspaces documentation](/docs/ganache/workspaces/creating-workspaces).
 
 <p class="alert alert-info">
-<strong>Working with Ethereum and prefer using the command line?</strong>: This page will focus only on the graphical interface. Please see the [Ganache CLI Readme](https://github.com/trufflesuite/ganache-cli/blob/master/README.md) for more information on the command line flavor of Ganache.
+<strong>Working with Ethereum and prefer using the command line?</strong>: This page will focus only on the graphical interface. Please see the <a href="https://github.com/trufflesuite/ganache-cli/blob/master/README.md">Ganache CLI Readme</a> for more information on the command line flavor of Ganache.
 </p>
 
 ## 1. Install Ganache

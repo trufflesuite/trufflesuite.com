@@ -4,7 +4,7 @@ layout: docs.hbs
 ---
 
 <p class="alert alert-danger">
-<strong>Tezos support</strong> in Truffle is experimental. Give it a spin, and help us out by [filing issues on Github](https://github.com/trufflesuite/truffle/issues).
+<strong>Tezos support</strong> in Truffle is experimental. Give it a spin, and help us out by <a href="https://github.com/trufflesuite/truffle/issues">filing issues on Github</a>.
 </p>
 
 # Creating a Tezos Project
@@ -27,7 +27,7 @@ The best way to create a project with Tezos is to start with the `tezos-example`
    ```
 
    <p class="alert alert-info">
-   <strong>Note</strong>: You can use the `truffle unbox <box-name>` command to download any of the other [Truffle Boxes](/boxes), though note that as of this writing, few exist for Tezos.
+   <strong>Note</strong>: You can use the `truffle unbox <box-name>` command to download any of the other <a href="/boxes">Truffle Boxes</a>, though note that as of this writing, few exist for Tezos.
    </p>
 
    <p class="alert alert-info">

@@ -13,15 +13,15 @@ Truffle includes an integrated debugger so that you can debug transactions made 
 New in Truffle v5.1: `truffle test --debug`.
 </strong>
 Set breakpoints in your JavaScript tests with the new `debug()` global!
-[See below](#in-test-debugging).
+<a href="#in-test-debugging">See below</a>.
 </p>
 
 <p class="alert alert-info m-t-2">
 <strong>
 New in Truffle v5.1.29: `truffle debug --fetch-external`.
 </strong>
-Debug transactions involving contracts not in your project that are verified on [Etherscan](https://etherscan.io/)!
-[See below](#debugging-external-contracts-with-verified-source).
+Debug transactions involving contracts not in your project that are verified on <a href="https://etherscan.io/">Etherscan</a>!
+<a href="#debugging-external-contracts-with-verified-source">See below</a>.
 </p>
 
 
