@@ -11,7 +11,7 @@ Please keep this in mind when using this feature as we cannot promise that its
 architecture or the API will remain the same until we declare it as stable.
 Please enjoy and if you discover any issues or bugs, we would love it if you
 created an issue on the
-[Truffle GitHub page](https://github.com/trufflesuite/truffle/issues).
+<a href="https://github.com/trufflesuite/truffle/issues">Truffle GitHub page</a>.
 Thank you!</p>
 
 The Truffle Event System is a system of hooks implemented in several of the
