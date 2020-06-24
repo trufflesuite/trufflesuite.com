@@ -7,7 +7,7 @@ layout: docs.hbs
 This page will take you through the basics of creating a Truffle project and deploying a smart contract to a blockchain.
 
 <p class="alert alert-info">
-<strong>Note</strong>: Before you begin, make sure that you read our [Ethereum Overview](/tutorials/ethereum-overview) page.
+<strong>Note</strong>: Before you begin, make sure that you read our <a href="/tutorials/ethereum-overview">Ethereum Overview</a> page.
 </p>
 
 ## Table of Contents
@@ -94,7 +94,7 @@ Once this operation is completed, you'll now have a project structure with the f
    ```
 
    <p class="alert alert-info">
-   <strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on [resolving naming conflicts on Windows](/docs/truffle/reference/configuration#resolving-naming-conflicts-on-windows).
+   <strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on <a href="/docs/truffle/reference/configuration#resolving-naming-conflicts-on-windows">resolving naming conflicts on Windows</a>.
    </p>
 
    These tree tests were run against the contract, with descriptions displayed on what the tests are supposed to do.
@@ -137,7 +137,7 @@ Once this operation is completed, you'll now have a project structure with the f
 ## Migrating with Truffle Develop
 
 <p class="alert alert-info">
-<strong>Note</strong>: To use [Ganache](/ganache), please skip to the next section.
+<strong>Note</strong>: To use <a href="/ganache">Ganache</a>, please skip to the next section.
 </p>
 
 To deploy our smart contracts, we're going to need to connect to a blockchain. Truffle has a built-in personal blockchain that can be used for testing. This blockchain is local to your system and does not interact with the main Ethereum network.

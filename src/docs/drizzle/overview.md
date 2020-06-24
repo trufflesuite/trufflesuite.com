@@ -5,7 +5,9 @@ layout: docs.hbs
 <img style="max-width: 160px;" src="/img/drizzle-logo-dark.svg" alt="Drizzle Logo" />
 
 <div class="text-center docs-badges">
-  [![Join the chat at https://gitter.im/consensys/truffle](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/consensys/truffle?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+  <a href="https://gitter.im/consensys/truffle?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
+    <img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/consensys/truffle"/>
+  </a>
   <a class="github-button" href="https://github.com/trufflesuite/drizzle" data-icon="octicon-star" data-show-count="true" aria-label="Star trufflesuite/drizzle on GitHub">Star</a>
   <a class="github-button" href="https://github.com/trufflesuite/drizzle/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork trufflesuite/drizzle on GitHub">Fork</a>
 </div>

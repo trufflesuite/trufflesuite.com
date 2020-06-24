@@ -4,7 +4,7 @@ layout: docs.hbs
 ---
 
 <p class="alert alert-danger">
-<strong>Tezos support</strong> in Truffle is experimental. Give it a spin, and help us out by [filing issues on Github](https://github.com/trufflesuite/truffle/issues).
+<strong>Tezos support</strong> in Truffle is experimental. Give it a spin, and help us out by <a href="https://github.com/trufflesuite/truffle/issues">filing issues on Github</a>.
 </p>
 
 # Using the Truffle Console with Tezos
