@@ -232,11 +232,11 @@ etherscan: {
 
 ### sourceFetchers
 
-A list of verified source repositories that Truffle may attempt to download source code from, in the order it should attempt to use them.  (You can omit this and Truffle will use all ones it knows about in its default order.)  Currently the only supported one is `"etherscan"`.
+A list of verified source repositories that Truffle may attempt to download source code from, in the order it should attempt to use them.  Currently the supported repositories are `"etherscan"` (for [Etherscan](https://etherscan.io/)) and `"sourcify"` (for [Sourcify](https://github.com/ethereum/sourcify)).  The default is `["etherscan", "sourcify"]`, i.e., to check Etherscan first, then Sourcify.
 
 Example:
 ```javascript
-sourceFetchers: ["etherscan"]
+sourceFetchers: ["sourcify", "etherscan"] //prefer Sourcify over Etherscan
 ```
 
 ## Compiler configuration
