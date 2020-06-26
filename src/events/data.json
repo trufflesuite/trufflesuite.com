@@ -5,6 +5,7 @@
     "end": "Saturday, November 7th, 2020, 5:00 PM PST",
     "location": "Virtual Conference",
     "excerpt": "A conference for those who want to build world-changing applications powered by decentralized technologies.",
+    "eventbrite": "https://www.trufflesuite.com/trufflecon2020",
     "image": "/img/tcon-branding-2020-16x9b.jpg",
     "current": "true"
   },
@@ -26,7 +27,7 @@
     "end": "9:45 AM PST",
     "location": "Webinar",
     "excerpt": "Kevin Bluer & Tim Coulter discuss trends in blockchain development.",
-    "eventbrite": "https://youtu.be/KpIAwY-_YPY",
+    "youtube": "https://www.youtube.com/watch?v=KpIAwY-_YPY",
     "image": "/img/future-solutions-truffle.png",
     "past": "true"
   },
@@ -37,7 +38,7 @@
     "end": "9:45 AM PST",
     "location": "Webinar",
     "excerpt": "Truffle's very own Mike Seese walks us through the features available in Truffle Teams.",
-    "eventbrite": "https://youtu.be/OnAiw2fkMdM",
+    "youtube": "https://youtu.be/OnAiw2fkMdM?t=389",
     "image": "/img/webinar-12-11-19-seese-teams16x9a.png",
     "past": "true"
   }
