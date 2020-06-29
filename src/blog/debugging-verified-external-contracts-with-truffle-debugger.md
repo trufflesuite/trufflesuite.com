@@ -109,4 +109,8 @@ decentralized alternative to Etherscan's repository. We plan to add this in an
 upcoming release.  But as of right now, you can use this feature with
 Etherscan's large library of verified contracts!
 
+**Update**: As of Truffle v5.1.32, [Sourcify](https://github.com/ethereum/sourcify) is now supported!  Truffle
+Debugger will now check both [Etherscan](https://etherscan.io/) and [Sourcify](https://github.com/ethereum/sourcify) for verified
+contract sources!
+
 Hope you find this as exciting as we do! Thanks for using Truffle!
