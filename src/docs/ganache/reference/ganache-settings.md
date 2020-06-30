@@ -29,3 +29,23 @@ After making changes, you will have to click **Restart** on the application for 
 ![Ganache Settings](/img/docs/ganache/ganache-settings.png)
 
 <p class="text-center">*Ganache Settings*</p>
+
+## Configuring Truffle to connect to Ganache
+
+To configure Truffle connect to Ganache, edit `truffle-config.js` to point
+to the Ganache's IP and port, e.g.,
+
+```
+module.exports = {
+  networks: {
+    development: {
+      host: "localhost",
+      port: 7545,
+      network_id: "1234"
+    }
+    // live: { ... }
+  }
+};
+```
+
+Then you can run migration commands like `truffle migrate --network development`.
