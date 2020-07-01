@@ -126,7 +126,7 @@
 
 .home-casestudy-banner{
   background: #ca37ae;
-  background: radial-gradient(closest-side at 50% 50%, #3FE0C5, #210554);
+  background: radial-gradient(closest-side at 50% 50%, #ffffff, #DBD2CA);
 }
 
 .home-banner-truffle{
@@ -575,6 +575,11 @@
 
     h3 {
       margin-top: auto;
+    }
+    
+    h2 {
+      margin-top: auto;
+      color: brown;
     }
   }
 }
