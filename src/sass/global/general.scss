@@ -118,6 +118,16 @@ blockquote {
   }
 }
 
+.container-heading_alt {
+  padding: 1rem 15px;
+  max-height: 45vh;
+
+  @media (max-width: 575.98px) {
+    padding: 1rem 15px;
+    max-height: none;
+  }
+}
+
 .container-narrow {
   max-width: 630px;
 
