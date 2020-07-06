@@ -8,10 +8,10 @@ layout: docs.hbs
 
 Install Drizzle via npm:
 ```shell
-npm install --save drizzle
+npm install --save @drizzle/store
 ```
 
-**Using React?**: The easiest way to get started with Drizzle is to use our [official `@drizzle/react-plugin` package](https://github.com/trufflesuite/drizzle/tree/master/packages/react-plugin) and (optionally) its [companion `@drizzle/react-components`](https://github.com/trufflesuite/drizzle/tree/master/packages/react-components) and/or (optionally) [the redux helpers `@drizzle/store`](https://github.com/trufflesuite/drizzle/tree/master/packages/store).
+**Using React?**: The easiest way to get started with Drizzle is to use our [official `@drizzle/react-plugin` package](https://github.com/trufflesuite/drizzle/tree/master/packages/react-plugin) and (optionally) its [companion `@drizzle/react-components`](https://github.com/trufflesuite/drizzle/tree/master/packages/react-components).
 
 ## Initialization
 
