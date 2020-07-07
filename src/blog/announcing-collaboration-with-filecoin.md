@@ -24,13 +24,17 @@ Like preserving fruit, Truffle follows a "recipe" to preserve your files. In the
 $ npm install -g truffle@preserves
 ```
 
-To use `truffle preserve`, simply specify the files you want to preserve on the command line, and choose the `--filecoin` recipe: 
+To use `truffle preserve`, simply specify the files you want to preserve on the command line, and choose between the `--filecoin` or `--ipfs` recipes. The `filecoin` recipe uses the `ipfs` recipe under the hood. You can choose only the `ipfs` recipe if you have a different set up!  
 
-```
+```javascript
+// Preserve to Filecoin:
 $ truffle preserve ./path/to/directory --filecoin
+
+// Preserve to IPFS only:
+$ truffle preserve ./path/to/directory --ipfs 
 ```
 
-By default, `truffle preserve` comes configured to work with the [Powergate localnet](https://docs.textile.io/powergate/localnet/), though you can change the IPFS and Filecoin connection information by adding the following to your `truffle-config.js` file:
+By default, `truffle preserve` comes configured to work with the [Powergate localnet](https://docs.textile.io/powergate/localnet/), though you can change the IPFS and Filecoin connection information by adding the following to your `truffle-config.js` file: 
 
 ```javascript 
   // ...,
