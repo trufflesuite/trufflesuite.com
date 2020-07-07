@@ -1,11 +1,11 @@
 {
   "announcing-partnership-with-filecoin": {
-    "title": "Announcing Our Parnership with Filecoin - Big Integrations Coming",
+    "title": "Announcing Collaboration with Filecoin - Big Integrations Coming",
     "date": "2020-7-7",
     "author": "Tim Coulter",
     "published": true,
     "excerpt": "Truffle and Filecoin have teamed up to help you build fully decentralized applications.",
-    "image": "/img/blog/announcing-partnership-with-filecoin/blog-thumbnail.png"
+    "image": "/img/blog/announcing-collaboration-with-filecoin/blog-thumbnail.png"
   },
   "debugging-verified-external-contracts-with-truffle-debugger": {
     "title": "Debugging verified external contracts with Truffle Debugger",
