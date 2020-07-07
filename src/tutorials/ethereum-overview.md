@@ -181,7 +181,7 @@ An example of a private enterprise blockchain is [Quorum](https://www.jpmorgan.c
 
 ## Decentralized applications (dapps)
 
-**Applications using smart contracts for their processing are called "decentralized applications", or "dapps".** The user interfaces for these dapps consist of familiar languages such as HTML, CSS, and JavaScript. The application itself can be hosted on a traditional web server or on a decentralized file service such as [Swarm](http://swarm-gateways.net/bzz:/theswarm.eth/) or [IPFS](http://ipfs.io/).
+**Applications using smart contracts for their processing and/or datastorage are called "decentralized applications", or "dapps".** The user interfaces for these dapps consist of familiar languages such as HTML, CSS, and JavaScript. The application itself can be hosted on a traditional web server or on a decentralized file service such as [Swarm](http://swarm-gateways.net/bzz:/theswarm.eth/) or [IPFS](http://ipfs.io/).
 
 Given the benefits of the Ethereum blockchain, a dapp could be a solution for many industries, including but not limited to:
 
