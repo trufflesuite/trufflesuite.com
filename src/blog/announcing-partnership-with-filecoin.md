@@ -16,13 +16,38 @@ There's a lot we have to do before we reach this ideal, but I'd love to tell you
 
 In thinking about our support for Filecoin, the idea of *preservation* came quickly to mind. We envisioned that preserving application data like Javascript frontends and static assets would be a normal part of the deployment process. So we ran with that idea and added a new command to the Truffle command line tool: `truffle preserve`.
 
-You can see `truffle preserve` in action in the gif above. For our first roll out of this feature (of which there will be much more to come!), all you have to do is tell Truffle which directory you want to preserve, and the "recipe" you're using, Truffle will do all the heavy lifting. Like preserving fruit, Truffle follows a recipe, and that recipe can be configured within in your `truffle-config.js` file.
+Like preserving fruit, Truffle follows a "recipe" to preserve your files. In the gif above, Truffle is using the `filecoin` recipe, which will ship standard with our new version of Truffle. 
 
-**You can use `truffle preserve` today!** You'll need to download a special release we created today so you can start testing, shown below. Note that our Filecoin integration is very alpha, but we wanted to support all the amazing devs hacking on Filecoin this month during [HackFS](https://hackfs.com/). 
+**You can use `truffle preserve` today!** You'll need to download a special release we created so you can start testing, shown below. Note that our Filecoin integration is very alpha, but we wanted to support all the amazing devs hacking on Filecoin this month during [HackFS](https://hackfs.com/). 
 
 ```
-Placeholder for code block - @gnidan needs to finish the release
+$ npm install -g truffle@preserves
 ```
+
+To use `truffle preserve`, simply specify the files you want to preserve on the command line, and choose between the `--ipfs` or `--filecoin` recipes: 
+
+```
+$ truffle preserve ./path/to/directory --ipfs
+$ truffle preserve ./path/to/directory --filecoin
+```
+
+By default, `truffle preserve` comes configured to work with the [Powergate localnet](https://docs.textile.io/powergate/localnet/), though you can change the IPFS and Filecoin connection information by adding the following to your `truffle-config.js` file: 
+
+```javascript 
+  // ...,
+  environments: {
+    development: {
+      "ipfs": {
+        address: "http://localhost:5001"
+      },
+      "filecoin": {
+        address: "ws://localhost:7777"
+      }
+    }
+  },
+```
+
+Note that this configuration adds a new top-level `environments` object. We'll be using this new configuration object as we upgrade to Truffle 6 in the future.
 
 ### Filecoin-flavored Ganache: Simulate Filecoin (Summer/Fall/Winter)
 
