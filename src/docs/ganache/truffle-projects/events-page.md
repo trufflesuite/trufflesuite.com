@@ -10,8 +10,8 @@ The new events page shows the events that have fired during this chain's life. W
 <strong>Why aren't my events being decoded?</strong> Check and make sure you've added the corresponding Truffle project with the contract that defines that event.
 </p>
 
-![Events Page](https://truffleframework.com/img/docs/ganache/v2-shared-seese/events.png)
+![Events Page](/img/docs/ganache/v2-shared-seese/events.png)
 
 Clicking a decoded contract will reveal more information about the event including its return values and signature.
 
-![Event Details](https://truffleframework.com/img/docs/ganache/v2-shared-seese/event-details.png)
+![Event Details](/img/docs/ganache/v2-shared-seese/event-details.png)

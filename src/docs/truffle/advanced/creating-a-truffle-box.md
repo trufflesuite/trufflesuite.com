@@ -34,7 +34,7 @@ An array of files or relative paths you'd like Truffle to ignore when unboxing. 
 
 ### <span style="text-transform: none;">`commands`</span> (object)
 
-An object who's key/value pairs are a descriptor and console command respectively. These pairs will be shown to users once your box is successfully unboxed. Think of these as quick instructions.
+An object whose key/value pairs are a descriptor and console command respectively. These pairs will be shown to users once your box is successfully unboxed. Think of these as quick instructions.
 
 For example, consider the object below. We've given our users all they need to compile, migrate and test their smart contracts, along with commands for developing the front-end.
 

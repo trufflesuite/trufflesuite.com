@@ -1,4 +1,60 @@
 {
+  "announcing-collaboration-with-filecoin": {
+    "title": "Announcing Collaboration with Filecoin - Big Integrations Coming",
+    "date": "2020-7-7",
+    "author": "Tim Coulter",
+    "published": true,
+    "excerpt": "Truffle and Filecoin have teamed up to help you build fully decentralized applications.",
+    "image": "/img/blog/announcing-collaboration-with-filecoin/blog-thumbnail.png"
+  },
+  "debugging-verified-external-contracts-with-truffle-debugger": {
+    "title": "Debugging verified external contracts with Truffle Debugger",
+    "date": "2020-6-18",
+    "author": "Harry Altman",
+    "published": true,
+    "excerpt": "Use Truffle Debugger and Truffle Teams to debug any Etherscan verified contract!",
+    "image": "/img/blog/debugging-verified-external-contracts-with-truffle-debugger/blog-thumbnail.png"
+  },
+  "sandbox-forking-with-truffle-teams": {
+    "title": "Simulate Live Networks with Forked Sandboxes",
+    "date": "2020-6-5",
+    "author": "Josh Quintal",
+    "published": true,
+    "excerpt": "Sandboxes are the easiest way to share a Ganache instance across an entire team. Our newest sandbox feature unlocks the power to run a simulated Mainnet (and other live networks).",
+    "image": "/img/blog/sandbox-forking-with-truffle-teams/sandbox-forking-thumb.png"
+  },
+  "stack-tracing-with-truffle-test": {
+    "title": "Stack Tracing with Truffle Test",
+    "date": "2020-5-8",
+    "author": "Harry Altman",
+    "published": true,
+    "excerpt": "Truffle Test can now provide stacktraces when your transactions revert!",
+    "image": "/img/blog/stack-tracing-with-truffle-test/blog-thumbnail-stacktraces.png"
+  },
+  "bring-your-own-ci-byoci-with-truffle-teams": {
+    "title": "Bring Your Own CI (BYOCI) with Truffle Teams",
+    "date": "2020-4-30",
+    "author": "Josh Quintal",
+    "published": true,
+    "excerpt": "If you remember, back in December we released a beta Corda-flavored Ganache as part of our initial support for the Corda platform. Today, we are excited to share Phase 2 of Corda-flavored Ganache, v2.4.0 with you!",
+    "image": "/img/blog/thumbnails/byoci.png"
+  },
+  "branching-out-phase-2-of-corda-flavored-ganache": {
+    "title": "Branching Out: Phase 2 of Corda-flavored Ganache",
+    "date": "2020-4-28",
+    "author": "Tim Coulter",
+    "published": true,
+    "excerpt": "If you remember, back in December we released a beta Corda-flavored Ganache as part of our initial support for the Corda platform. Today, we are excited to share Phase 2 of Corda-flavored Ganache, v2.4.0 with you!",
+    "image": "/img/blog/thumbnails/chameleon-corda-circle.png"
+  },
+  "branching-out-announcing-tezos-support-in-truffle": {
+    "title": "Branching Out: Announcing Tezos Support in Truffle",
+    "date": "2020-4-15",
+    "author": "Tim Coulter",
+    "published": true,
+    "excerpt": "We're branching out with a new integration: Tezos! We've teamed up with the Tezos Foundation to provide Truffle's time-tested developer tools to the Tezos community.",
+    "image": "/img/blog/thumbnails/chameleon-t3-circle2.png"
+  },
   "truffle-teams-gets-a-new-look": {
     "title": "Truffle Teams Gets a New Look!",
     "date": "2020-03-04",

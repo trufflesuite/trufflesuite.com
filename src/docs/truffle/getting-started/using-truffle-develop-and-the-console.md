@@ -92,7 +92,7 @@ Mnemonic: candy maple cake sugar pudding cream honey rich smooth crumble sweet t
 This shows you the addresses, private keys, and mnemonic for this particular blockchain.
 
 <p class="alert alert-info">
-**Note**: When you run `truffle develop` for the first time, Truffle will generate a random mnemonic that will persist for you and you alone. If you want to use a different mnemonic or set of addresses, we recommend using [Ganache](/docs/ganache/using).
+**Note**: When you run `truffle develop` for the first time, Truffle will generate a random mnemonic that will persist for you and you alone. If you want to use a different mnemonic or set of addresses, we recommend using <a href="/docs/ganache/using">Ganache</a>.
 </p>
 
 
@@ -175,6 +175,6 @@ Additionally, both Truffle Develop and the console have the following features:
 * `test`
 * `version`
 
-If a Truffle command is not available, it is because it is not relevant for an existing project (for example, `init`) or wouldn't make sense (for example, `develop` or `console`).
+If a Truffle command is not available, it is because it is not relevant for an existing project (for example, `init`) wouldn't make sense (for example, `develop` or `console`).
 
 See full [command reference](/docs/advanced/commands) for more information.

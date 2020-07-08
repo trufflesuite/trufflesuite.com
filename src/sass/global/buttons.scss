@@ -7,20 +7,21 @@
 .btn-truffle:hover,
 .btn-ganache:hover,
 .btn-watermelon:hover,
+.btn-youtube:hover,
 .btn-drizzle:hover,
 .btn-eventbrite:hover {
   background: #fff;
-  color: #5e464d;
+  color: #33262a;
 }
 
 .btn-truffle {
   background: #3fe0c5;
-  color: #5e464d;
+  color: #33262a;
 }
 
 .btn-ganache {
   background: #e4a663;
-  color: #5e464d;
+  color: #33262a;
 
   &.btn-download {
     font-size: 1.2rem;
@@ -58,6 +59,11 @@
 .btn-eventbrite {
   background: #f6682F;
   color: #fff;
+}
+
+.btn-youtube {
+  background: #3fe0c5;
+  color: #33262a;
 }
 
 .btn-outline-white {
