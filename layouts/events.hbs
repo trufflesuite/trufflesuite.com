@@ -83,7 +83,13 @@
                 {{#if this.excerpt}}
                   <p>{{ this.excerpt }}</p>
                 {{/if}}
+                {{#if this.youtube}}
+                   <a class="btn btn-youtube" href="{{ this.youtube }}">ATTEND THE LIVE SESSION</a>
+                {{/if}}
+                {{#if this.eventbrite}}
                 <a class="btn btn-eventbrite" href="{{ this.eventbrite }}">REGISTER HERE</a>
+                {{/if}}
+
               </div>
             </div>
           {{else}}
