@@ -1,13 +1,4 @@
 [
-  {
-    "title": "An Introduction to Truffle Suite and Solidity (Spanish)",
-    "start": "Wednesday, July 8, 2020, 5:00 PM PST",
-    "location": "Webinar",
-    "excerpt": "Join Ernesto García, Full Stack & Blockchain Developer, on a live Youtube broadcast walking through developing a Dapp using Truffle + Solidity. This live webinar is in Spanish.",
-    "youtube": "https://www.youtube.com/watch?v=1fWLW1lD660",
-    "image": "/img/blockchain-academy-mexico-event2.jpg",
-    "current": "true"
-  },
 
   {
     "title": "TruffleCon2020",
@@ -18,6 +9,16 @@
     "eventbrite": "https://www.trufflesuite.com/trufflecon2020",
     "image": "/img/tcon-branding-2020-16x9b.jpg",
     "current": "true"
+  },
+
+  {
+    "title": "An Introduction to Truffle Suite and Solidity (Spanish)",
+    "start": "Wednesday, July 8, 2020, 5:00 PM PST",
+    "location": "Webinar",
+    "excerpt": "Join Ernesto García, Full Stack & Blockchain Developer, on a live Youtube broadcast walking through developing a Dapp using Truffle + Solidity. This live webinar is in Spanish.",
+    "youtube": "https://www.youtube.com/watch?v=1fWLW1lD660",
+    "image": "/img/blockchain-academy-mexico-event2.jpg",
+    "past": "true"
   },
 
   {
