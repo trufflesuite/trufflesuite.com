@@ -40,5 +40,5 @@ npm install --save @drizzle/store
    ```
 
 <p class="alert alert-info m-t-2">
-<strong>Note</strong>: The above assumes you have no existing redux store and generates a new one. To use your existing redux store, see <a href="/docs/drizzle/using-drizzles-redux-store">Using an Existing Redux Store</a>.
+<strong>Note</strong>: The above assumes you have no existing redux store and generates a new one. To use your existing redux store, see <a href="./getting-started/using-drizzles-redux-store">Using an Existing Redux Store</a>.
 </p>
