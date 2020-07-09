@@ -1,11 +1,12 @@
 [
+
   {
-    "title": "An Introduction to Truffle Suite and Solidity (Spanish)",
-    "start": "Wednesday, July 8, 2020, 5:00 PM PST",
+    "title": "Kaleido Technical Tuesday",
+    "start": "Tuesday, July 21, 2020, 8:00 AM PST",
     "location": "Webinar",
-    "excerpt": "Join Ernesto García, Full Stack & Blockchain Developer, on a live Youtube broadcast walking through developing a Dapp using Truffle + Solidity. This live webinar is in Spanish.",
-    "youtube": "https://www.youtube.com/watch?v=1fWLW1lD660",
-    "image": "/img/blockchain-academy-mexico-event2.jpg",
+    "excerpt": "Learn about developer tools and smart contract capabilities available on Kaleido's full-stack platform. Featuring a live demo of Truffle's smart contract management suite.",
+    "eventbrite": "https://pages.kaleido.io/technical-tuesday-july21-truffle",
+    "image": "/img/kaleido-tech-tuesday.png",
     "current": "true"
   },
 
@@ -18,6 +19,16 @@
     "eventbrite": "https://www.trufflesuite.com/trufflecon2020",
     "image": "/img/tcon-branding-2020-16x9b.jpg",
     "current": "true"
+  },
+
+  {
+    "title": "An Introduction to Truffle Suite and Solidity (Spanish)",
+    "start": "Wednesday, July 8, 2020, 5:00 PM PST",
+    "location": "Webinar",
+    "excerpt": "Join Ernesto García, Full Stack & Blockchain Developer, on a live Youtube broadcast walking through developing a Dapp using Truffle + Solidity. This live webinar is in Spanish.",
+    "youtube": "https://www.youtube.com/watch?v=1fWLW1lD660",
+    "image": "/img/blockchain-academy-mexico-event2.jpg",
+    "past": "true"
   },
 
   {
