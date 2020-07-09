@@ -1,6 +1,16 @@
 [
 
   {
+    "title": "Kaleido Technical Tuesday",
+    "start": "Tuesday, July 21, 2020, 8:00 AM PST",
+    "location": "Webinar",
+    "excerpt": "Learn about developer tools and smart contract capabilities available on Kaleido's full-stack platform. Featuring a live demo of Truffle's smart contract management suite.",
+    "eventbrite": "https://pages.kaleido.io/technical-tuesday-july21-truffle",
+    "image": "/img/kaleido-tech-tuesday.png",
+    "current": "true"
+  },
+
+  {
     "title": "TruffleCon2020",
     "start": "Friday, November 6th, 2020, 9:00 AM PST",
     "end": "Saturday, November 7th, 2020, 5:00 PM PST",
