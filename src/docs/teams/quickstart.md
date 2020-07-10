@@ -2,6 +2,7 @@
 title: Teams | Truffle Teams Quickstart
 layout: docs.hbs
 ---
+
 # Truffle Teams Quickstart
 
 This page will take you through the basics of creating a Truffle Teams account and linking it to a Truffle project repository.
@@ -38,7 +39,7 @@ Finally, click the `Install` button to install Truffle Teams on the selected rep
 <strong>Why do we need certain permissions?</strong> Please see the <a href="/docs/teams/reference/permissions-disclosure">Permissions Disclosure</a> section for a full breakdown of why we're asking for each permission.
 </p>
 
-![Truffle Teams DATA view](/img/docs/teams/install-02.png)
+![Truffle Teams DATA view](/img/docs/teams/install-03.png)
 
 We then arrive at the home screen and see the repos we've added--let's commit some code and see how Truffle Teams will automatically run our tests!
 
