@@ -2,9 +2,10 @@
 title: Teams | External CI
 layout: docs.hbs
 ---
+
 # External CI
 
-To enable external CI for a repository, navigate to your user or organization’s settings page by clicking the user/org icon in the navbar. From there, click the BUILDS tab, then check the checkbox next to the repository of your choice.
+To enable external CI for a repository, navigate to your user or organization’s settings page by clicking the user/organization icon in the navbar. From there, click the `BUILDS` tab, then check the checkbox next to the repository of your choice.
 
 <figure>
   <img class="mb-4 figure-shadow" src="/img/blog/bring-your-own-ci-byoci-with-truffle-teams/figure-1.png" alt="Builds settings screen" style="width:100%">
