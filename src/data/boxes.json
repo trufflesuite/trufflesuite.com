@@ -76,6 +76,17 @@
 			"partner"
 		]
 	},
+  "besu-box": {
+		"description": "Starter to create API Endpoints for Hyperledger Besu network",
+		"stars": 1,
+		"tags": [
+      "besu",
+			"community",
+      "docker",
+      "hyperledger",
+      "nestJS"
+		]
+  },
 	"blueprint-box": {
 		"description": "All you need to get started making your own Truffle Box!",
 		"stars": 13,
