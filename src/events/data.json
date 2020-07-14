@@ -1,6 +1,17 @@
 [
 
   {
+    "title": "Filecoin Virtual Community July Meetup",
+    "start": "Tuesday, July 14, 2020, 1:00 ",
+    "end": "2:00 PM PDT",
+    "location": "Webinar",
+    "excerpt": "Join us in a free virtual meetup where we team up w/ Filecoin to show you how to create a truly decentralized app! Register now & come with your questions - learn the power of Filecoin & Truffle combined!",
+    "eventbrite": "https://www.meetup.com/Filecoin-San-Francisco/events/271648935/",
+    "image": "/img/filecoin_meetup-banner-truffle.png",
+    "current": "true"
+  },
+
+  {
     "title": "Kaleido Technical Tuesday",
     "start": "Tuesday, July 21, 2020, 8:00 AM PST",
     "location": "Webinar",
