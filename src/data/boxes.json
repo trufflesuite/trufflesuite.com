@@ -76,17 +76,17 @@
 			"partner"
 		]
 	},
-  "besu-box": {
+	"besu-box": {
 		"description": "Starter to create API Endpoints for Hyperledger Besu network",
 		"stars": 1,
 		"tags": [
-      "besu",
+			"besu",
 			"community",
-      "docker",
-      "hyperledger",
-      "nestJS"
+			"docker",
+			"hyperledger",
+			"nestJS"
 		]
-  },
+	},
 	"blueprint-box": {
 		"description": "All you need to get started making your own Truffle Box!",
 		"stars": 13,
@@ -206,11 +206,15 @@
 			"solidity"
 		]
 	},
-  "flashloan-box": {
-    "description": "A truffle box starter to build upgradable-proxy contracts with included React frontend to demonstrate the process.",
-    "stars": "0",
-    "tags": ["community", "flashloan", "aave"]
-  },
+	"flashloan-box": {
+		"description": "A truffle box starter to build upgradable-proxy contracts with included React frontend to demonstrate the process.",
+		"stars": "0",
+		"tags": [
+			"community",
+			"flashloan",
+			"aave"
+		]
+	},
 	"fluidity-truffle-box": {
 		"description": "Truffle box to give a skeleton for how Fluidity set up truffle and add-ons",
 		"stars": 2,
@@ -354,6 +358,42 @@
 		"stars": 2,
 		"tags": [
 			"community"
+		]
+	},
+	"rsk-starter-box": {
+		"description": "This box comes with everything needed to start using Truffle on RSK Network, including configurations for Mainnet and Testnet",
+		"stars": "0",
+		"tags": [
+			"community",
+			"rsk"
+		]
+	},
+	"rsk-react-box": {
+		"description": "This box comes with everything needed to start using Truffle on RSK Network, including configurations for Mainnet and Testnet",
+		"stars": "0",
+		"tags": [
+			"community",
+			"rsk",
+			"react"
+		]
+	},
+	"rsk-next-box": {
+		"description": "This box comes with everything needed to start using Truffle on RSK Network, including configurations for Mainnet and Testnet",
+		"stars": "0",
+		"tags": [
+			"community",
+			"rsk",
+			"next"
+		]
+	},
+	"rsk-react-express-box": {
+		"description": "This box comes with everything needed to start using Truffle on RSK Network, including configurations for Mainnet and Testnet",
+		"stars": "0",
+		"tags": [
+			"community",
+			"rsk",
+			"react",
+			"express"
 		]
 	},
 	"scoreboard": {

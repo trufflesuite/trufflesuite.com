@@ -144,6 +144,12 @@
     "official": false
   },
   {
+    "userOrg": "illuzzig",
+    "displayName": "besu-box",
+    "repoName": "besu-box",
+    "official": false
+  },
+  {
     "userOrg": "endless-nameless-inc",
     "displayName": "cheshire",
     "repoName": "cheshire",
@@ -183,6 +189,12 @@
     "userOrg": "arvindkalra",
     "displayName": "express-box",
     "repoName": "express-box",
+    "official": false
+  },
+  {
+    "userOrg": "aave",
+    "displayName": "flashloan-box",
+    "repoName": "flashloan-box",
     "official": false
   },
   {
@@ -256,6 +268,30 @@
     "userOrg": "uport-project",
     "displayName": "react-uport-box",
     "repoName": "react-uport-box",
+    "official": false
+  },
+  {
+    "userOrg": "rsksmart",
+    "displayName": "rsk-starter-box",
+    "repoName": "rsk-starter-box",
+    "official": false
+  },
+  {
+    "userOrg": "rsksmart",
+    "displayName": "rsk-react-box",
+    "repoName": "rsk-react-box",
+    "official": false
+  },
+  {
+    "userOrg": "rsksmart",
+    "displayName": "rsk-next-box",
+    "repoName": "rsk-next-box",
+    "official": false
+  },
+  {
+    "userOrg": "rsksmart",
+    "displayName": "rsk-react-express-box",
+    "repoName": "rsk-react-express-box",
     "official": false
   },
   {
@@ -355,6 +391,12 @@
     "official": false
   },
   {
+    "userOrg": "pranav-singhal",
+    "displayName": "upgradable-proxy-box",
+    "repoName": "upgradable-proxy-box",
+    "official": false
+  },
+  {
     "userOrg": "standup75",
     "displayName": "vue-box",
     "repoName": "vue-box",
@@ -376,24 +418,6 @@
     "userOrg": "zeppelinos",
     "displayName": "zepkit",
     "repoName": "zepkit",
-    "official": false
-  },
-  {
-    "userOrg": "pranav-singhal",
-    "displayName": "upgradable-proxy-box",
-    "repoName": "upgradable-proxy-box",
-    "official": false
-  },
-  {
-    "userOrg": "aave",
-    "displayName": "flashloan-box",
-    "repoName": "flashloan-box",
-    "official": false
-  },
-  {
-    "userOrg": "illuzzig",
-    "displayName": "besu-box",
-    "repoName": "besu-box",
     "official": false
   }
 ]
