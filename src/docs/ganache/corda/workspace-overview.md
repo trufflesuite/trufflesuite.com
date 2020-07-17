@@ -20,7 +20,7 @@ There are five pages available:
 * [**Transactions**](../corda/transactions) displays a list of all transactions
 * [**CorDapps**](../corda/cordapps) lists all CorDapp jars installed on the network.
 * [**Shell**](../corda/shell) provides Corda CRaSH shell access to each node and notary.
-* **Logs** shows the logs for the Ganche server, nodes, and notaries, which is useful for debugging.
+* **Logs** shows the logs for the Ganache server, nodes, and notaries, which is useful for debugging.
 
 ## You're Up and Running!
 
