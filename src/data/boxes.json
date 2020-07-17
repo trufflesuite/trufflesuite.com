@@ -364,7 +364,7 @@
 		"description": "This box comes with everything needed to start using Truffle on RSK Network, including configurations for Mainnet and Testnet",
 		"stars": "0",
 		"tags": [
-			"community",
+			"partner",
 			"rsk"
 		]
 	},
@@ -372,7 +372,7 @@
 		"description": "This box comes with everything needed to start using Truffle on RSK Network, including configurations for Mainnet and Testnet",
 		"stars": "0",
 		"tags": [
-			"community",
+			"partner",
 			"rsk",
 			"react"
 		]
@@ -381,7 +381,7 @@
 		"description": "This box comes with everything needed to start using Truffle on RSK Network, including configurations for Mainnet and Testnet",
 		"stars": "0",
 		"tags": [
-			"community",
+			"partner",
 			"rsk",
 			"next"
 		]
@@ -390,7 +390,7 @@
 		"description": "This box comes with everything needed to start using Truffle on RSK Network, including configurations for Mainnet and Testnet",
 		"stars": "0",
 		"tags": [
-			"community",
+			"partner",
 			"rsk",
 			"react",
 			"express"
