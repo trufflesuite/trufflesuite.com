@@ -52,7 +52,7 @@ This quick start uses an already-created project to provide the base Truffle pro
 
 In your workspace directory, run the following commands:
 
-    $ mdkir tezos-example
+    $ mkdir tezos-example
     $ cd tezos-example
     $ truffle unbox tezos-example
 
