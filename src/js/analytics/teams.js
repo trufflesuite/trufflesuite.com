@@ -1,8 +1,23 @@
+// API Proxy
+let httpRequest = new XMLHttpRequest();
+
+httpRequest.open('POST', 'http://localhost:3000/mixpanel/track');
+httpRequest.setRequestHeader("Content-Type", "application/json");
+
+// TODO: ERROR HANDLING
+httpRequest.onreadystatechange = (data) => console.log(data);
+
+httpRequest.send(JSON.stringify({
+  "eventName": "Navigate",
+  "eventParams": {'section': 'pricing'}
+}));
+
+
 /* Visitor Source
- * --------------
- * First checks for a known campaign via the source query string.
- * Falls back to document.referrer.
- */ 
+* --------------
+* First checks for a known campaign via the source query string.
+* Falls back to document.referrer.
+*/
 mixpanel.track("Page visit", {'source': getSource()});
 
 
@@ -24,15 +39,15 @@ document.getElementById('teamsSignUp2').onclick = () => {
 }
 
 document.getElementById('teamsSignUp3').onclick = () => {
-  mixpanel.track("Click teams signup", {'position': 2, 'plan': 'free'});
+  mixpanel.track("Click teams signup", {'position': 3, 'plan': 'free'});
 }
 
 document.getElementById('teamsSignUp4').onclick = () => {
-  mixpanel.track("Click teams signup", {'position': 2, 'plan': 'pro'});
+  mixpanel.track("Click teams signup", {'position': 4, 'plan': 'pro'});
 }
 
 document.getElementById('teamsSignUp5').onclick = () => {
-  mixpanel.track("Click teams signup", {'position': 2, 'plan': 'none'});
+  mixpanel.track("Click teams signup", {'position': 5, 'plan': 'none'});
 }
 
 
@@ -72,4 +87,4 @@ function getSource() {
   }
 
   return document.referrer;
-}
+};
