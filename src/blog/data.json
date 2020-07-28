@@ -1,4 +1,12 @@
 {
+  "truffle-teams-dashboard": {
+    "title": "Truffle Teams Dashboard",
+    "date": "2020-7-28",
+    "author": "Josh Quintal",
+    "published": true,
+    "excerpt": "Truffle Teams new dashboard provides an overview of your application, along with ways to drill down and get further context on more narrow slices.",
+    "image": "/img/blog/announcing-collaboration-with-filecoin/blog-thumbnail.png"
+  },
   "announcing-collaboration-with-filecoin": {
     "title": "Announcing Collaboration with Filecoin - Big Integrations Coming",
     "date": "2020-7-7",
