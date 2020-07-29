@@ -1,27 +1,6 @@
 [
 
   {
-    "title": "Filecoin Virtual Community July Meetup",
-    "start": "Tuesday, July 14, 2020, 1:00 ",
-    "end": "2:00 PM PDT",
-    "location": "Webinar",
-    "excerpt": "Join us in a free virtual meetup where we team up w/ Filecoin to show you how to create a truly decentralized app! Register now & come with your questions - learn the power of Filecoin & Truffle combined!",
-    "eventbrite": "https://www.meetup.com/Filecoin-San-Francisco/events/271648935/",
-    "image": "/img/filecoin_meetup-banner-truffle.png",
-    "current": "true"
-  },
-
-  {
-    "title": "Kaleido Technical Tuesday",
-    "start": "Tuesday, July 21, 2020, 8:00 AM PST",
-    "location": "Webinar",
-    "excerpt": "Learn about developer tools and smart contract capabilities available on Kaleido's full-stack platform. Featuring a live demo of Truffle's smart contract management suite.",
-    "eventbrite": "https://pages.kaleido.io/technical-tuesday-july21-truffle",
-    "image": "/img/kaleido-tech-tuesday.png",
-    "current": "true"
-  },
-
-  {
     "title": "TruffleCon2020",
     "start": "Friday, November 6th, 2020, 9:00 AM PST",
     "end": "Saturday, November 7th, 2020, 5:00 PM PST",
@@ -31,7 +10,25 @@
     "image": "/img/tcon-branding-2020-16x9b.jpg",
     "current": "true"
   },
-
+  {
+    "title": "Kaleido Technical Tuesday",
+    "start": "Tuesday, July 21, 2020, 8:00 AM PST",
+    "location": "Webinar",
+    "excerpt": "Learn about developer tools and smart contract capabilities available on Kaleido's full-stack platform. Featuring a live demo of Truffle's smart contract management suite.",
+    "eventbrite": "https://pages.kaleido.io/technical-tuesday-july21-truffle",
+    "image": "/img/kaleido-tech-tuesday.png",
+    "past": "true"
+  },
+  {
+    "title": "Filecoin Virtual Community July Meetup",
+    "start": "Tuesday, July 14, 2020, 1:00 ",
+    "end": "2:00 PM PDT",
+    "location": "Webinar",
+    "excerpt": "Join us in a free virtual meetup where we team up w/ Filecoin to show you how to create a truly decentralized app! Register now & come with your questions - learn the power of Filecoin & Truffle combined!",
+    "eventbrite": "https://www.meetup.com/Filecoin-San-Francisco/events/271648935/",
+    "image": "/img/filecoin_meetup-banner-truffle.png",
+    "past": "true"
+  },
   {
     "title": "An Introduction to Truffle Suite and Solidity (Spanish)",
     "start": "Wednesday, July 8, 2020, 5:00 PM PST",
@@ -41,7 +38,6 @@
     "image": "/img/blockchain-academy-mexico-event2.jpg",
     "past": "true"
   },
-
   {
     "title": "Truffle Suite is Branching Out to R3's Corda",
     "start": "Wednesday, May 6th, 2020, 9:00",
