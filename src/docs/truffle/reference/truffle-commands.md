@@ -341,18 +341,32 @@ Options:
 Download a Truffle Box, a pre-built Truffle project.
 
 ```shell
-truffle unbox <box_name> [--force]
+truffle unbox <box_name> [<destination_path>] [--force]
 ```
 
-Downloads a [Truffle Box](/boxes) to the current working directory. See the [list of available boxes](/boxes).
+Downloads a [Truffle Box](/boxes) to destination_path if provided. Truffle
+defaults to the current working directory if this argument is not provided.
 
-You can also design and create your own boxes!  See the section on [Truffle boxes](docs/truffle/getting-started/truffle-boxes) for more information.
+See the [list of available Truffle boxes](/boxes).
+
+You can also design and create your own boxes!  See the section on [Truffle boxes](docs/truffle/advanced/creating-a-truffle-box) for more information.
 
 Options:
 
 * `<box_name>`: Name of the Truffle Box. (required)
 * `--force`: Unbox project in the current directory regardless of its state. Be careful, this will potentially overwrite files that exist in the directory.
 
+**Note**: box_name can be one of several formats:
+  1. \<truffleBoxName\> - like "metacoin"
+  2. \<gitOrgName/repoName\> - like "truffle-box/bare-box" (your repo will have to
+    have the proper structure - see our page on [creating a Truffle
+    Box](docs/truffle/advanced/creating-a-truffle-box))
+  3. \<urlToGitRepo\> - like "https://github.com/truffle-box/bare-box"
+  4. \<sshUrlToGitRepo\> - like "git@github.com:truffle-box/bare-box"
+
+Also note you can add a `#` followed branch name to the end of all of the
+above formats to unbox from a specific branch - like
+truffle-box/bare-box#myBranch
 
 ### version
 
