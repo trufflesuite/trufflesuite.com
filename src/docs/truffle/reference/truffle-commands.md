@@ -366,7 +366,7 @@ Options:
 
 Also note you can add a `#` followed branch name to the end of all of the
 above formats to unbox from a specific branch - like
-truffle-box/bare-box#myBranch
+"truffle-box/bare-box#myBranch"
 
 ### version
 
