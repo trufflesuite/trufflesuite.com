@@ -377,29 +377,27 @@ Note the **memory** attribute on `adopters`. The memory attribute tells Solidity
 
 ## Testing the smart contract using Javascript 
 
-Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this tutorial, we'll be writing our tests in Javascript using chai and mocha library.
+Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this tutorial, we'll be writing our tests in Javascript using chai and mocha library.<br/>
 
-1. Create a new file named `TestAdoption.test.js` in the `test/` directory.
-1. Add the following content to the `TestAdoption.test.js` file:
+1. Create a new file named `testAdoption.test.js` in the `test/` directory.<br/>
+2. Add the following content to the `testAdoption.test.js` file:<br/>
 
   ```
   const Adoption = require("../contracts/Adoption.sol");
-
-  require('chai')
-    .use(require('chai-as-promised'))
-    .should()
   
-  contract("TestAdoption", (accounts) => {
+  contract("Adoption", (accounts) => {
     let adoption;
-    let expectedPetId = 8;
+    let expectedPetId;
     
-    before( async()=>{
+    before(async() => {
         adoption = await Adoption.deployed();
     });
 
-    describe('Test of functions', async() => {
-      const address = await Adoption.address; 
-      const expectedAdopter = accounts[0];
+    describe("adopting a pet and retrieving account addresses", async() => {
+      before("adopt a pet using accounts[0]", async () => {
+      await adoption.adopt(8, { from: accounts[0] });
+      expectedAdopter = accounts[0];
+    });
     });
   });
 
@@ -418,19 +416,20 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 
   To test the ```adopt()``` function, recall that upon success it returns the given ```petId```. We can ensure an ID was returned and that it's correct by comparing the return value of ```adopt()``` to the ID we passed in.
 
-  1. Add the following function within the ```TestAdoption.test.js``` test file, after the declaration of ```describe```. 
+  1. Add the following function within the ```testAdoption.test.js``` test file, after the declaration of ```describe```. 
 
   ```
-  describe('Test of functions', async() => {
-      const address = await Adoption.address; 
-      const expectedAdopter = accounts[0];
+  describe("adopting a pet and retrieving account addresses", async () => {
+    before("adopt a pet using accounts[0]", async () => {
+      await adoption.adopt(8, { from: accounts[0] });
+      expectedAdopter = accounts[0];
+    });
 
-      it("testUserCanAdoptPet", async() => {
-        const returnedId = await adoption.adopt(expectedPetId, {from: accounts[0]});
-        assert.equal(returnedId, expectedPetId, "Adoption of the expected pet should match what is returned.");
-      });
+    it("can fetch the address of an owner by pet id", async () => {
+      const adopter = await adoption.adopters(8);
+      assert.equal(adopter, expectedAdopter, "The owner of the adopted pet should be the first account.");
+    });
   });
-
   ```
 
   Things to notice:
@@ -441,14 +440,13 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 
   ### Testing retrieval of a single pet's owner
 
-  1. Add this function below the previously added function in ```TestAdoption.test.js```.
+  1. Add this function below the previously added function in ```testAdoption.test.js```.
 
   ```
-  it("testGetAdopterAddressByPetId", async() => {
-    const adopter = await adoption.adopters(expectedPetId);
-    assert.equal(adopter, expectedAdopter, "Owner of the expected pet should be the first account");
+  it("can fetch the address of an owner by pet id", async () => {
+    const adopter = await adoption.adopters(8);
+    assert.equal(adopter, expectedAdopter, "The owner of the adopted pet should be the first account.");
   });
-
   ```
 
   After getting the adopter address stored by the adoption contract, as assert equality as we did above.
@@ -457,14 +455,13 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 
   Since arrays can only return a single value given a single key, we create our own getter for the entire array.
 
-  1. Add this function below the previously added function in ```TestAdoption.test.js```.
+  1. Add this function below the previously added function in ```testAdoption.test.js```.
   
   ```
-  it("testGetAdopterAddressByPetIdInArray", async() => {
-    let adopters = await adoption.getAdopters();
-    assert.equal(adopters[expectedPetId], expectedAdopter, "Owner of the expected pet should be the first account");
+  it("can fetch the collection of all pet owners addresses", async () => {
+    const adopters = await adoption.getAdopters();
+    assert.equal(adopters[8], expectedAdopter, "The owner of the adopted pet should be in the collection.");
   });
-
   ```
   Since adopters is an array, and we know from the first adoption test that we adopted pet expectedPetId, we compare the testing contracts address with location expectedPetId in the array.
 
