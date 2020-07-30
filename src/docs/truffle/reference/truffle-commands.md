@@ -364,9 +364,9 @@ Options:
   3. \<urlToGitRepo\> - like `https://github.com/truffle-box/bare-box`
   4. \<sshUrlToGitRepo\> - like `git@github.com:truffle-box/bare-box`
 
-Also note you can add a `#` followed branch name to the end of all of the
-above formats to unbox from a specific branch - like
-`truffle-box/bare-box#myBranch`
+Also note that you can add a `#` followed by a branch name to the end of all
+of the above formats to unbox from a specific branch - for example, you could
+use `truffle-box/bare-box#myBranch`
 
 ### version
 
