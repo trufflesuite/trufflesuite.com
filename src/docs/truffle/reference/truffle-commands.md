@@ -357,12 +357,12 @@ Options:
 * `--force`: Unbox project in the current directory regardless of its state. Be careful, this will potentially overwrite files that exist in the directory.
 
 **Note**: box_name can be one of several formats:
-  1. \<truffleBoxName\> - like "metacoin"
-  2. \<gitOrgName/repoName\> - like "truffle-box/bare-box" (your repo will have to
+  1. \<truffleBoxName\> - like `metacoin`
+  2. \<gitOrgName/repoName\> - like `truffle-box/bare-box` (your repo will have to
     have the proper structure - see our page on [creating a Truffle
     Box](docs/truffle/advanced/creating-a-truffle-box))
-  3. \<urlToGitRepo\> - like "https://github.com/truffle-box/bare-box"
-  4. \<sshUrlToGitRepo\> - like "git@github.com:truffle-box/bare-box"
+  3. \<urlToGitRepo\> - like `https://github.com/truffle-box/bare-box`
+  4. \<sshUrlToGitRepo\> - like `git@github.com:truffle-box/bare-box`
 
 Also note you can add a `#` followed branch name to the end of all of the
 above formats to unbox from a specific branch - like
