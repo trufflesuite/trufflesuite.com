@@ -357,7 +357,7 @@ Options:
 * `--force`: Unbox project in the current directory regardless of its state. Be careful, this will potentially overwrite files that exist in the directory.
 
 **Note**: box_name can be one of several formats:
-  1. \<truffleBoxName\> - like `metacoin`
+  1. \<truffleBoxName\> - like `metacoin` (see the official Truffle boxes [here](https://www.trufflesuite.com/boxes))
   2. \<gitOrgName/repoName\> - like `truffle-box/bare-box` (your repo will have to
     have the proper structure - see our page on [creating a Truffle
     Box](docs/truffle/advanced/creating-a-truffle-box))
