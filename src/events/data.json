@@ -15,7 +15,7 @@
     "start": "Tuesday, July 21, 2020, 8:00 AM PST",
     "location": "Webinar",
     "excerpt": "Learn about developer tools and smart contract capabilities available on Kaleido's full-stack platform. Featuring a live demo of Truffle's smart contract management suite.",
-    "eventbrite": "https://pages.kaleido.io/technical-tuesday-july21-truffle",
+    "youtube": "https://www.youtube.com/watch?v=boa5F5phZxo",
     "image": "/img/kaleido-tech-tuesday.png",
     "past": "true"
   },
@@ -23,9 +23,9 @@
     "title": "Filecoin Virtual Community July Meetup",
     "start": "Tuesday, July 14, 2020, 1:00 ",
     "end": "2:00 PM PDT",
-    "location": "Webinar",
+    "location": "Meetup",
     "excerpt": "Join us in a free virtual meetup where we team up w/ Filecoin to show you how to create a truly decentralized app! Register now & come with your questions - learn the power of Filecoin & Truffle combined!",
-    "eventbrite": "https://www.meetup.com/Filecoin-San-Francisco/events/271648935/",
+    "youtube": "https://www.youtube.com/watch?v=VHmw_akBxkI",
     "image": "/img/filecoin_meetup-banner-truffle.png",
     "past": "true"
   },
