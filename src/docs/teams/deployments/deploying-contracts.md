@@ -4,13 +4,11 @@ layout: docs.hbs
 ---
 # Deploying Contracts
 
-<p class="alert alert-info">
-<strong><i class="far fa-info-circle"></i> Network Support</strong>: Currently, Truffle Teams supports Ethereum testnets and Mainnet, with support for more target networks over time.
-</p>
+To begin a deployment, press the <span class="inline-button">DEPLOY <i class="far fa-parachute-box"></i></span> button on the commit you'd like to deploy. Currently Truffle Teams supports Ethereum testnets, Ethereum Mainnet, and [sandboxes](/docs/teams/deployments/sandboxes) with support for more target networks over time.
 
-To begin a deployment, press the parachute icon on the commit you'd like to deploy.
-
-![Parachute Callout](/img/tutorials/learn-how-to-deploy-with-truffle-teams/parachute-callout.png)
+<figure>
+  <img class="mb-5" src="/img/docs/teams/commit-card.png" alt="Commit Card">
+</figure>
 
 A wizard will pop up; select a Destination Network, then press the <span class="inline-button">CONNECT WALLET</span> button.
 
@@ -62,12 +60,20 @@ After a short wait, you'll see a window with your deployment results:
 
 Your contracts are deployed! That was easy. Go ahead and push the <span class="inline-button">GREAT! GO BACK TO WORKFLOW</span> button or the **X** in the wizard. You'll now see a new card in the **Staging** column with the results of your deployment:
 
-![Deployment Card](/img/tutorials/learn-how-to-deploy-with-truffle-teams/deployment-card.png)
+<figure>
+  <img class="mb-5" src="/img/docs/teams/deployment-card.png" alt="Deployment Card">
+</figure>
 
 You can click on the **+ Contracts** bar on the bottom of the card to see a list of your deployed contracts and their addresses:
 
-![Deployment Card Instance Details](/img/tutorials/learn-how-to-deploy-with-truffle-teams/deployment-card-instance-details.png)
+<figure>
+  <img class="mb-5" src="/img/docs/teams/deployment-card-expanded.png" alt="Deployment Card Expanded">
+</figure>
 
-You can also click the vertical 3 dots in the top right of the card to find a menu. In this menu, you can download a **.zip** file of the Truffle **.json** artifacts used in your frontend webapp, graduate a deployment to production, or archive the deployment. **Note:** Be careful when using the archive feature; we haven't implemented a way to unarchive deployments yet.
+You can also click the vertical 3 dots in the top right of the card to find a menu. In this menu, you can download a **.zip** file of the Truffle **.json** artifacts used in your frontend webapp, graduate a deployment to production, or archive the deployment.
+
+<p class="alert alert-warning">
+<strong><i class="far fa-exclamation-triangle"></i> Be careful</strong> when using the archive feature; we haven't implemented a way to unarchive deployments yet.
+</p>
 
 ![Deployment Card Menu](/img/tutorials/learn-how-to-deploy-with-truffle-teams/deployment-card-menu.png)
