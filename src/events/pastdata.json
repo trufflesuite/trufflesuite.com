@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Truffle Suite is Branching Out to R3's Corda",
+    "start": "Wednesday, May 6th, 2020, 9:00",
+    "end": "9:45 AM PST",
+    "location": "Webinar",
+    "excerpt": "Join Truffle Suite & R3 on May 6th at 9:00 am PDT for a free webinar and learn how to develop, test, and deploy CorDapps to a personal Corda Network using Ganache.",
+    "youtube": "https://youtu.be/DAsMMqGVXj4",
+    "status": "closed",
+    "image": "/img/webinar-c-g-cham-event16x9.png"
+  },
+
+  {
+    "title": "Truffle Teams Overview",
+    "start": "Thursday, December 11th, 2019, 9:00",
+    "end": "9:45 AM PST",
+    "location": "Webinar",
+    "excerpt": "Truffle's very own Mike Seese walks us through the features available in Truffle Teams.",
+    "eventbrite": "https://youtu.be/OnAiw2fkMdM",
+    "status": "closed",
+    "image": "/img/webinar-12-11-19-seese-teams16x9a.png"
+  }
+]

@@ -5,12 +5,14 @@
       "Adding Repositories"
     ],
     "Testing": [
-      "Starting Builds"
+      "Starting Builds",
+      "External CI"
     ],
     "Deployments": [
       "About Deployments",
       "Deploying Contracts",
-      "Graduating Deployments"
+      "Graduating Deployments",
+      "Sandboxes"
     ],
     "Contracts": [
       "Contract Monitoring"
@@ -63,7 +65,8 @@
       "Creating Workspaces",
       "Loading Existing Workspaces",
       "Switching Workspaces",
-      "Deleting Workspaces"
+      "Deleting Workspaces",
+      "Editing Workspaces"
     ],
     "Truffle Projects": [
       "Linking a Truffle Project",
@@ -71,6 +74,16 @@
       "Contracts Page",
       "Events Page",
       "Decoded Transactions"
+    ],
+    "Corda": [
+      "Working with Corda",
+      "Workspace Overview",
+      "Linking a Corda Project",
+      "Unlinking a Corda Project",
+      "Nodes",
+      "Transactions",
+      "CorDapps",
+      "Shell"
     ],
     "Reference": [
       "Ganache Settings",
@@ -92,5 +105,23 @@
       "Drizzle Actions",
       "How Data Stays Fresh"
     ]
+  },
+  "tezos": {
+    "truffle": {
+      "Getting Started": [
+        "Installing Truffle with Tezos",
+        "Creating a Tezos project",
+        "Writing Tezos Contracts",
+        "Compiling Tezos Contracts",
+        "Deploying Tezos Contracts",
+        "Interacting with Your Tezos Contracts",
+        "Testing your Tezos Contracts",
+        "Using the Console with Tezos",
+        "Writing External Scripts with Tezos"
+      ],
+      "Reference": [
+        "Configuring Tezos Projects"
+      ]
+    }
   }
 }
