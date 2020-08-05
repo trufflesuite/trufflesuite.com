@@ -5,7 +5,7 @@ layout: docs.hbs
 
 # Dashboard
 
-The Truffle Teams dashboard allows you to get at-a-glance information about the health of a deployed DApp. Here, you can see important information such as recent commits, the cost of your deployment, as well as failed and successful transactions over time.
+The Truffle Teams dashboard allows you to get at-a-glance information about the health of a deployed DApp such as a link to the commit which was deployed, the cost of your deployment, and transactions over time.
 
 ## Getting Started
 
