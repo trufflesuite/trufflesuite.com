@@ -2,7 +2,8 @@
   "teams": {
     "Getting Started": [
       "Creating an Account",
-      "Adding Repositories"
+      "Adding Repositories",
+      "Dashboard"
     ],
     "Testing": [
       "Starting Builds",
