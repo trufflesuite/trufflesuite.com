@@ -7,6 +7,10 @@ layout: docs.hbs
 
 Builds will start automatically once a new commit is pushed to any branch of a repository added to Truffle Teams. You will see the build queued in both the Truffle Teams interface on the `BUILDS` page and on GitHub with the commit itself.
 
+<p class="alert alert-info">
+<strong>Note</strong>: Truffle Teams will only build repositories who have a Truffle project at the root of the repository. It looks for a <code>truffle-config.js</code> or <code>truffle.js</code> config in the root directory before building. Read more in the <a href="/docs/teams/reference/configuration#repository-structure">Configuration docs</a>.
+</p>
+
 <figure>
   <img class="figure-shadow mb-2" src="/img/docs/teams/starting-builds-01.png" alt="Build in progress" style="width: 100%">
 </figure>
