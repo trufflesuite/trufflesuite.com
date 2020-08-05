@@ -9,7 +9,9 @@
       "External CI"
     ],
     "Deployments": [
+      "About Deployments",
       "Deploying Contracts",
+      "Graduating Deployments",
       "Sandboxes"
     ],
     "Contracts": [
