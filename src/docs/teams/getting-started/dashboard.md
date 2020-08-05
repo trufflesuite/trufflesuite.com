@@ -9,7 +9,7 @@ The Truffle Teams dashboard allows you to get at-a-glance information about the 
 
 ## Getting Started
 
- To get started with the dashboard, first you will need to select a repository and deploy your dapp. Once you have a deployment available, you can select that deployment to monitor via the dashboard by clicking the <span class="inline-button">ADD DEPLOYMENT</span> button.
+To get started with the dashboard, first you will need to select a repository and [deploy your DApp](/docs/teams/deployments/deploying-contracts). Once you have a deployment available, you can select that deployment to monitor via the dashboard by clicking the <span class="inline-button">ADD DEPLOYMENT</span> button.
 
 <p class="alert alert-info">
   These instructions assume you have already created a Teams account. For documentation on how to get your Teams account up and running, see
