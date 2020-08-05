@@ -13,6 +13,10 @@ Truffle Teams will only build repositories who have a Truffle project at the roo
 
 Truffle Teams doesn't currently support configuring a subfolder folder for the Truffle project, and Truffle Teams doesn't currently support more than one Truffle project. We're evaluating options to give you the ability to configure those.
 
+## Environment Variables & Secrets
+
+Truffle Teams currently doesn't support injecting environment variables and/or secrets into the build or deployment environments. For Builds, checkout [External CI](/docs/teams/testing/external-ci) which can enable you use an external CI provider that does have those features with Truffle Teams.
+
 ## Truffle Config File
 
 Truffle Teams makes some assumptions and modifications to your `truffle-config.js` (or `truffle.js`) configuration file.
