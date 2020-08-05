@@ -1,63 +1,71 @@
 // API Proxy
-let httpRequest = new XMLHttpRequest();
+function mixpanelTrackProxy(eventName, eventParams) {
+  let httpRequest = new XMLHttpRequest();
 
-httpRequest.open('POST', 'http://localhost:3000/mixpanel/track');
-httpRequest.setRequestHeader("Content-Type", "application/json");
-
-// TODO: ERROR HANDLING
-httpRequest.onreadystatechange = (data) => console.log(data);
-
-httpRequest.send(JSON.stringify({
-  "eventName": "Navigate",
-  "eventParams": {'section': 'pricing'}
-}));
-
+  httpRequest.open('POST', 'http://localhost:3000/mixpanel/track');
+  httpRequest.setRequestHeader("Content-Type", "application/json");
+  
+  httpRequest.onload = () => {
+    // We don't expect a response here in the happy path, so
+    // just check the reponse for errors originating in the server.
+    if (httpRequest.status != 200) {
+      console.error(`API Proxy Error ${httpRequest.status}: ${httpRequest.statusText}`);
+    }
+  };
+  
+  // Catching cases where the request failed completely.
+  httpRequest.onerror = () => console.error('API Proxy Error: Request failed');
+  
+  httpRequest.send(JSON.stringify({
+    "eventName": eventName,
+    "eventParams": eventParams
+  }));
+}
 
 /* Visitor Source
 * --------------
 * First checks for a known campaign via the source query string.
 * Falls back to document.referrer.
 */
-mixpanel.track("Page visit", {'source': getSource()});
-
+mixpanelTrackProxy("Page visit", {'source': getSource()});
 
 // Navigation
 Array.from(document.querySelectorAll('.subnav a')).forEach((link) => {
   link.onclick = (event) => {
-    mixpanel.track("Navigate", {'section': event.srcElement.hash.substring(1)});
+    mixpanelTrackProxy("Navigate", {'section': event.srcElement.hash.substring(1)});
   }
 });
 
 
 // Signup Buttons
 document.getElementById('teamsSignUp1').onclick = () => {
-  mixpanel.track("Click teams signup", {'position': 1, 'plan': 'none'});
+  mixpanelTrackProxy("Click teams signup", {'position': 1, 'plan': 'none'});
 }
 
 document.getElementById('teamsSignUp2').onclick = () => {
-  mixpanel.track("Click teams signup", {'position': 2, 'plan': 'none'});
+  mixpanelTrackProxy("Click teams signup", {'position': 2, 'plan': 'none'});
 }
 
 document.getElementById('teamsSignUp3').onclick = () => {
-  mixpanel.track("Click teams signup", {'position': 3, 'plan': 'free'});
+  mixpanelTrackProxy("Click teams signup", {'position': 3, 'plan': 'free'});
 }
 
 document.getElementById('teamsSignUp4').onclick = () => {
-  mixpanel.track("Click teams signup", {'position': 4, 'plan': 'pro'});
+  mixpanelTrackProxy("Click teams signup", {'position': 4, 'plan': 'pro'});
 }
 
 document.getElementById('teamsSignUp5').onclick = () => {
-  mixpanel.track("Click teams signup", {'position': 5, 'plan': 'none'});
+  mixpanelTrackProxy("Click teams signup", {'position': 5, 'plan': 'none'});
 }
 
 
 // Other Buttons
 document.getElementById('contactSales').onclick = () => {
-  mixpanel.track("Click contact sales", {'plan': 'enterprise'});
+  mixpanelTrackProxy("Click contact sales", {'plan': 'enterprise'});
 }
 
 document.getElementById('mailingListSignUp').onclick = () => {
-  mixpanel.track("Click teams mailing list", {});
+  mixpanelTrackProxy("Click teams mailing list", {});
 }
 
 
