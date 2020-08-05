@@ -40,11 +40,11 @@ As your DApp matures and changes, you may find you want to change the deployment
   will make the change for all developers on your team.
 </p>
 
- <figure class="screenshot">
+<figure class="screenshot">
   <img class="img-fluid"
   src="/img/docs/teams/dashboard-modal.png"  title="Truffle Teams change dashboard deployment modal view" alt="Truffle Teams change dashboard deployment modal view" />
   <figcaption class="text-center">Dashboard Deployment Choice Modal</figcaption>
-  </figure>
+</figure>
 
 ## Feedback and Suggestions
 
