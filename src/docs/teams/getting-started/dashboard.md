@@ -23,7 +23,7 @@ To get started with the dashboard, first you will need to select a repository an
   <figcaption class="text-center">Dashboard Page Before a Deployment is Added</figcaption>
 </figure>
 
- Once you have added a deployment to monitor, you will be taken to the main dashboard page.
+Once you have added a deployment to monitor, you will be taken to the main dashboard page.
 
 
 <figure class="screenshot">
