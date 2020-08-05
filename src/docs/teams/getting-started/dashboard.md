@@ -48,5 +48,5 @@ As your DApp matures and changes, you may find you want to change the deployment
 
 ## Feedback and Suggestions
 
-Dashboard is a new Truffle Teams feature and is in development. If you woould like to suggest new features or other changes, please let us know
+Dashboard is a new Truffle Teams feature and is in development. If you would like to suggest new features or other changes, please let us know.
 <a href="https://spectrum.chat/trufflesuite/truffle-teams" target="_blank">here.</a>
