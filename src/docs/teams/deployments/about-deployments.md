@@ -7,7 +7,7 @@ layout: docs.hbs
 On the left navigation bar, click the item near the top labelled <span class="inline-menu-item"><i class="fal fa-parachute-box"></i>DEPLOYMENTS</span> next to the parachute icon. This will bring you to the deployments page. You'll notice there are three columns: **Commits**, **Staging**, and **Production**.
 
 <figure>
-  <img class="mb-2" src="/img/docs/teams/deployment-manager.png" alt="Deployment Manager" style="width: 100%" class="figure-shadow">
+  <img class="figure-shadow mb-2" src="/img/docs/teams/deployment-manager.png" alt="Deployment Manager" style="width: 100%">
   <figcaption class="text-center font-italic">The main deployments screen</figcaption>
 </figure>
 
