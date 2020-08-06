@@ -279,6 +279,8 @@ You've now written your first smart contract and deployed it to a locally runnin
 
 ## Testing the smart contract using Solidity
 
+<details> 
+<summary> Expand This Section </summary>
 Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this tutorial, we'll be writing our tests in Solidity.
 
 1. Create a new file named `TestAdoption.sol` in the `test/` directory.
@@ -374,9 +376,12 @@ Since arrays can only return a single value given a single key, we create our ow
    ```
 
 Note the **memory** attribute on `adopters`. The memory attribute tells Solidity to temporarily store the value in memory, rather than saving it to the contract's storage. Since `adopters` is an array, and we know from the first adoption test that we adopted pet `expectedPetId`, we compare the testing contracts address with location `expectedPetId` in the array.
+</details>
 
 ## Testing the smart contract using Javascript 
 
+<details>
+<summary> Expand This Section </summary>
 Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this tutorial, we'll be writing our tests in Javascript using chai and mocha library.<br/>
 
 1. Create a new file named `testAdoption.test.js` in the `test/` directory.<br/>
@@ -464,6 +469,7 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
   });
   ```
   Since adopters is an array, and we know from the first adoption test that we adopted pet expectedPetId, we compare the testing contracts address with location expectedPetId in the array.
+</details>
 
 ### Running the tests
 
