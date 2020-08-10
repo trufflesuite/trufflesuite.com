@@ -378,50 +378,50 @@ Since arrays can only return a single value given a single key, we create our ow
 Note the **memory** attribute on `adopters`. The memory attribute tells Solidity to temporarily store the value in memory, rather than saving it to the contract's storage. Since `adopters` is an array, and we know from the first adoption test that we adopted pet `expectedPetId`, we compare the testing contracts address with location `expectedPetId` in the array.
 </details>
 
-## Testing the smart contract using Javascript 
+## Testing the smart contract using JavaScript 
 
 <details>
 <summary> Expand This Section </summary>
-Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this tutorial, we'll be writing our tests in Javascript using chai and mocha library.<br/>
+Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this tutorial, we'll be writing our tests in Javascript using the Chai and Mocha libraries.<br/>
 
 1. Create a new file named `testAdoption.test.js` in the `test/` directory.<br/>
 2. Add the following content to the `testAdoption.test.js` file:<br/>
 
   ```
-  const Adoption = require("../contracts/Adoption.sol");
+  const Adoption = artifacts.require("Adoption");
   
   contract("Adoption", (accounts) => {
     let adoption;
     let expectedPetId;
     
-    before(async() => {
+    before(async () => {
         adoption = await Adoption.deployed();
     });
 
-    describe("adopting a pet and retrieving account addresses", async() => {
+    describe("adopting a pet and retrieving account addresses", async () => {
       before("adopt a pet using accounts[0]", async () => {
-      await adoption.adopt(8, { from: accounts[0] });
-      expectedAdopter = accounts[0];
-    });
+        await adoption.adopt(8, { from: accounts[0] });
+        expectedAdopter = accounts[0];
+      });
     });
   });
 
   ```
   We start the contract by importing : 
-  * ```Adoption.sol```:The smart contract we want to test
-  * ```chai```: Gives us various assertions to use in our tests to be used for equality, inequality or emptiness to return a pass/fail from our test.
+  * `Adoption.sol`: The smart contract we want to test
+  We begin our test by importing our `Adoption` contract using `artifacts.require`.
 
-  **Note**: When writing the contract, we make use of the callback function ```accounts``` that provides us with the accounts in the development or the test network used.
+  **Note**: When writing this test, our callback function take the argument `accounts`. This provides us with the accounts available on the network when using this test.
 
-  Then, we make use of async functions : 
-  * To deploy the contract as soon as the test begins for the contract 
-  * To use the asynchronous feature to get the address of the contract and expectedAdopter
+  Then, we make use of the `before` to provide initial setups for the following: 
+  * Adopt a pet with id 8 and assign it to the first account within the test accounts on the network.
+  * This function later is used to check whether the `petId: 8` has been adopted by `accounts[0]`.
 
-  ### Testing the adopt() function 
+  ### Testing the adopt function 
 
-  To test the ```adopt()``` function, recall that upon success it returns the given ```petId```. We can ensure an ID was returned and that it's correct by comparing the return value of ```adopt()``` to the ID we passed in.
+  To test the `adopt` function, recall that upon success it returns the given `adopter`. We can ensure that the adopter based on given petID was returned and is compared with the `expectedAdopter` within the `adopt` function.
 
-  1. Add the following function within the ```testAdoption.test.js``` test file, after the declaration of ```describe```. 
+  1. Add the following function within the `testAdoption.test.js` test file, after the declaration of `before` code block. 
 
   ```
   describe("adopting a pet and retrieving account addresses", async () => {
@@ -439,36 +439,22 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 
   Things to notice:
 
-  * We call the smart contract we declared earlier with the ID of expectedPetId.
-  * When called the function within the smart contract, we send metadata for the solidity contract to know that ```msg.sender``` is ```accounts[0]```.
-  * Finally, we pass the actual value, the expected value and a failure message (which gets printed to the console if the test does not pass) to assert.equal().
-
-  ### Testing retrieval of a single pet's owner
-
-  1. Add this function below the previously added function in ```testAdoption.test.js```.
-
-  ```
-  it("can fetch the address of an owner by pet id", async () => {
-    const adopter = await adoption.adopters(8);
-    assert.equal(adopter, expectedAdopter, "The owner of the adopted pet should be the first account.");
-  });
-  ```
-
-  After getting the adopter address stored by the adoption contract, as assert equality as we did above.
+  * We call smart contract method `adopters` to see what address adopted the pet with `petID` 8.
+  * Truffle imports `Chai` for the user so we can use the `assert` functions. We pass the actual value, the expected value and a failure message (which gets printed to the console if the test does not pass) to `assert.equal()`.
 
   ### Testing retrieval of all pet owners
 
   Since arrays can only return a single value given a single key, we create our own getter for the entire array.
 
-  1. Add this function below the previously added function in ```testAdoption.test.js```.
+  1. Add this function below the previously added function in `testAdoption.test.js`.
   
   ```
-  it("can fetch the collection of all pet owners addresses", async () => {
+  it("can fetch the collection of all pet owners' addresses", async () => {
     const adopters = await adoption.getAdopters();
     assert.equal(adopters[8], expectedAdopter, "The owner of the adopted pet should be in the collection.");
   });
   ```
-  Since adopters is an array, and we know from the first adoption test that we adopted pet expectedPetId, we compare the testing contracts address with location expectedPetId in the array.
+  Since adopters is an array, and we know from the first adoption test that we adopted the pet with `petId` 8, we are comparing the contract's address with the address that we expect to find.
 </details>
 
 ### Running the tests
