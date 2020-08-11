@@ -31,7 +31,7 @@ Here’s a bit of a teaser for you to get an idea of where this is going:
 * A list of contracts providing the ability to hop into monitoring a specific contract instance or...
 * Quickly interact with those contracts via our upcoming Contract Manager
 
-We want Truffle Teams to be the most effective DevOps tool in the blockchain space for both new and existing teams. Let us know what you think about this integration solution, and if your team has other needs we haven’t met yet.
+We strive for Truffle Teams to be the most effective DevOps tool in the blockchain space for both new and existing teams. Let us know what you think about this integration solution, and if your team has other needs we haven’t met yet.
 
 Continue the conversation with your fellow Trufflers in our Slack community!
 
