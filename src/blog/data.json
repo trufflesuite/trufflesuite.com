@@ -1,4 +1,12 @@
 {
+  "get-a-birds-eye-view-with-truffle-teams-new-dashboard": {
+    "title": "Get a Bird's Eye View with Truffle Teams' New Dashboard",
+    "date": "2020-8-11",
+    "author": "Josh Quintal",
+    "published": true,
+    "excerpt": "Truffle Teams new dashboard provides an overview of your application, along with ways to drill down and get further context on more narrow slices.",
+    "image": "/img/blog/get-a-birds-eye-view-with-truffle-teams-new-dashboard/blog-thumbnail.jpg"
+  },
   "announcing-collaboration-with-filecoin": {
     "title": "Announcing Collaboration with Filecoin - Big Integrations Coming",
     "date": "2020-7-7",
