@@ -9,13 +9,15 @@ The first release focuses mostly on the high-level, but we plan to increase the 
 ## A Bird’s Eye View
 
 <figure>
-  <img class="mb-4 figure-shadow" src="/img/blog/bring-your-own-ci-byoci-with-truffle-teams/figure-1.png" alt="Builds settings screen" style="width:100%">
-  <figcaption class="text-center font-italic">The BUILDS settings screen</figcaption>
+  <img class="mb-4 figure-shadow" src="/img/blog/get-a-birds-eye-view-with-truffle-teams-new-dashboard/truffle-teams-dashboard.png" alt="Truffle Teams Dashboard" style="width:100%">
+  <figcaption class="text-center font-italic">The dashboard page with a deployment selected</figcaption>
 </figure>
 
 In this first version of the dashboard, you can pin a deployment for quick insights and visualization. Some of this information we haven’t surfaced before, such as the deployment’s cost and the number of unique addresses interacting with a deployment’s contracts.
 
-[ CHECK OUT TRUFFLE TEAMS DASHBOARD ]
+<div class="mt-12 text-center">
+  <a class="btn btn-truffle mt-3" href="https://my.truffleteams.com/" target="_blank">CHECK OUT THE NEW DASHBOARD</a>
+</div>
 
 ## Looking Ahead
 
@@ -25,16 +27,13 @@ Here’s a bit of a teaser for you to get an idea of where this is going:
 * A list of contracts below will give the ability to hop into monitoring a specific contract instance
 * Quickly interacting via our upcoming Contract Manager.
 
-<figure>
-  <img class="mb-4 figure-shadow" src="/img/blog/bring-your-own-ci-byoci-with-truffle-teams/figure-1.png" alt="Builds settings screen" style="width:100%">
-  <figcaption class="text-center font-italic">The BUILDS settings screen</figcaption>
-</figure>
-
 We want Truffle Teams to be the most effective DevOps tool in the blockchain space for both new and existing teams. Let us know what you think about this integration solution, and if your team has other needs we haven’t met yet.
 
 Continue the conversation with your fellow Trufflers in our Slack community!
 
-[ SIGN UP FOR THE TRUFFLER SLACK ]
+<div class="mt-12 text-center">
+  <a class="btn btn-truffle mt-3 mb-4" href="https://join.slack.com/t/truffle-community/shared_invite/zt-8wab0bnl-KcugRAqsY9yeNJYcnanfLA" target="_blank">SIGN UP FOR THE TRUFFLE SLACK COMMUNITY</a>
+</div>
 
 Thanks!
 _Josh Quintal, Head of Product & Marketing_
