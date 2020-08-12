@@ -85,25 +85,25 @@ Here's the whole process visually:
 <div class="container text-center">
 <div class="row row-steps justify-content-center">
 <div class="col-lg-4">
-![Mining Step 1](/img/tutorials/ethereum-overview/chain-step1.png "1. Bob attempts to send Alice 1 ETH")
+ <img src="img/tutorials/ethereum-overview/chain-step1.png" alt="Mining Step 1" title="1. Bob attempts to send Alice 1 ETH">
 </div>
 
 <div class="col-lg-4">
-![Mining Step 2](/img/tutorials/ethereum-overview/chain-step2.png "2. Bob and Alice's transaction is combined with other transactions that have occurred since the last block")
+ <img src="/img/tutorials/ethereum-overview/chain-step2.png" alt="Mining Step 2" title="2. Bob and Alice's transaction is combined with other transactions that have occurred since the last block">
 </div>
 
 <div class="col-lg-4">
-![Mining Step 3](/img/tutorials/ethereum-overview/chain-step3.png "3. Miners compete to validate the block with the new set of transactions")
+   <img src="/img/tutorials/ethereum-overview/chain-step3.png" alt="Mining Step 3" title="3. Miners compete to validate the block with the new set of transactions">
 </div>
 </div>
 
 <div class="row row-steps justify-content-center">
 <div class="col-lg-4">
-![Mining Step 4](/img/tutorials/ethereum-overview/chain-step4.png "4. The victorious miner creates a new block and receives a reward")
+   <img src="/img/tutorials/ethereum-overview/chain-step4.png" alt="Mining Step 4" title="4. The victorious miner creates a new block and receives a reward">
 </div>
 
 <div class="col-lg-4">
-![Mining Step 5](/img/tutorials/ethereum-overview/chain-step5.png "5. With the transaction validated, Alice receives 1 ETH")
+   <img src="/img/tutorials/ethereum-overview/chain-step5.png" alt="Mining Step 5" title="5. With the transaction validated, Alice receives 1 ETH">
 </div>
 </div>
 </div>
@@ -128,15 +128,15 @@ Here's the whole process visually:
 <div class="container">
 <div class="row row-steps text-center">
 <div class="col-lg-4">
-![Smart Contract Step 1](/img/tutorials/ethereum-overview/smart-contract-step1.png "1. Alice agrees to store her payment for the patio within the escrow contract, and Bob agrees to deposit an equal amount")
+  <img src="/img/tutorials/ethereum-overview/smart-contract-step1.png" alt="Smart Contract Step 1" title="1. Alice agrees to store her payment for the patio within the escrow contract, and Bob agrees to deposit an equal amount">
 </div>
 
 <div class="col-lg-4">
-![Smart Contract Step 2](/img/tutorials/ethereum-overview/smart-contract-step2.png "2. Bob completes the patio project and Alice gives the smart contract permission to release the funds")
+  <img src="/img/tutorials/ethereum-overview/smart-contract-step2.png" alt="Smart Contract Step 2" title="2. Bob completes the patio project and Alice gives the smart contract permission to release the funds">
 </div>
 
 <div class="col-lg-4">
-![Smart Contract Step 3](/img/tutorials/ethereum-overview/smart-contract-step3.png "3. Bob receives Alice's payment along with his collateral")
+  <img src="/img/tutorials/ethereum-overview/smart-contract-step3.png" alt="Smart Contract Step 3" title="3. Bob receives Alice's payment along with his collateral">
 </div>
 </div>
 </div>
