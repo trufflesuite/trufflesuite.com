@@ -44,14 +44,14 @@ Note that Solidity allows other import syntaxes as well. See the Solidity [impor
 
 ### Importing contracts from an external package
 
-Truffle supports dependencies installed via both [ethPM](/docs/truffle/getting-started/package-management-via-ethpm) and [NPM](/docs/truffle/getting-started/package-management-via-npm). To import contracts from a dependency, use the following syntax
+Truffle supports dependencies installed via both [ethpm](/docs/truffle/getting-started/package-management-via-ethpm) and [NPM](/docs/truffle/getting-started/package-management-via-npm). To import contracts from a dependency, use the following syntax
 
 ```solidity
 import "somepackage/SomeContract.sol";
 ```
 
-Here, `somepackage` represents a package installed via ethPM or NPM, and `SomeContract.sol` represents a Solidity source file provided by that package.
+Here, `somepackage` represents a package installed via ethpm or NPM, and `SomeContract.sol` represents a Solidity source file provided by that package.
 
-Note that Truffle will search installed packages from ethPM first before searching for packages installed from NPM, so in the rare case of a naming conflict the package installed via ethPM will be used.
+Note that Truffle will search installed packages from ethpm first before searching for packages installed from NPM, so in the rare case of a naming conflict the package installed via ethpm will be used.
 
-For more information on how to use Truffle's package management features, please see the Truffle [ethPM](/docs/truffle/getting-started/package-management-via-ethpm) and [NPM](/docs/truffle/getting-started/package-management-via-npm) documentation.
+For more information on how to use Truffle's package management features, please see the Truffle [ethpm](/docs/truffle/getting-started/package-management-via-ethpm) and [NPM](/docs/truffle/getting-started/package-management-via-npm) documentation.
