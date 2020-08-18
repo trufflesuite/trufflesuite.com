@@ -2,11 +2,8 @@
 title: Teams | Truffle Teams Quickstart
 layout: docs.hbs
 ---
-# Truffle Teams Quickstart
 
-<p class="alert alert-warning">
-<strong>Truffle Teams is currently in alpha</strong>, so if you run into any glitches or bugs, please [raise an issue on the Truffle Teams GitHub repository](https://github.com/trufflesuite/truffle-teams/issues).
-</p>
+# Truffle Teams Quickstart
 
 This page will take you through the basics of creating a Truffle Teams account and linking it to a Truffle project repository.
 
@@ -33,16 +30,16 @@ If you are a member of any organizations other than your personal account, you'l
 Next you'll be asked for permission to link Truffle Teams to one or more of your GitHub repositories. Select the repositories you wish to add and click continue. Select either `All repositories` to add all repos in this account/org to teams or `Only select repositories` to select individual repos from the dropdown.
 
 <p class="alert alert-info">
-<strong>Note</strong>: We can always add a repo later if necessary. See the [Adding Repositories](/docs/teams/getting-started/adding-repositories) documentation for more informaiton.
+<strong>Note</strong>: We can always add a repo later if necessary. See the <a href="/docs/teams/getting-started/adding-repositories">Adding Repositories</a> documentation for more informaiton.
 </p>
 
 Finally, click the `Install` button to install Truffle Teams on the selected repos and be redirected to the `BUILDS` page.
 
 <p class="alert alert-warning">
-<strong>Why do we need certain permissions?</strong>: Please see the [Permissions Disclosure](/docs/teams/reference/permissions-disclosure) section for a full breakdown of why we're asking for each permission.
+<strong>Why do we need certain permissions?</strong> Please see the <a href="/docs/teams/reference/permissions-disclosure">Permissions Disclosure</a> section for a full breakdown of why we're asking for each permission.
 </p>
 
-![Truffle Teams DATA view](/img/docs/teams/install-02.png)
+![Truffle Teams DATA view](/img/docs/teams/install-03.png)
 
 We then arrive at the home screen and see the repos we've added--let's commit some code and see how Truffle Teams will automatically run our tests!
 
@@ -50,7 +47,9 @@ We then arrive at the home screen and see the repos we've added--let's commit so
 
 Builds will start automatically once a new commit is pushed to any branch of a repository added to Truffle Teams. You will see the build queued in both the Truffle Teams interface on the `BUILDS` page and on GitHub with the commit itself.
 
-![Truffle Teams DATA view](/img/docs/teams/starting-builds-comp.png)
+<figure>
+  <img class="figure-shadow mb-2" src="/img/docs/teams/starting-builds-comp.png" alt="Build in Progress in both Truffle Teams and GitHub" style="width: 100%">
+</figure>
 
 ## Deploying Contracts
 

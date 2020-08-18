@@ -13,7 +13,15 @@ Truffle includes an integrated debugger so that you can debug transactions made 
 New in Truffle v5.1: `truffle test --debug`.
 </strong>
 Set breakpoints in your JavaScript tests with the new `debug()` global!
-[See below](#in-test-debugging).
+<a href="#in-test-debugging">See below</a>.
+</p>
+
+<p class="alert alert-info m-t-2">
+<strong>
+New in Truffle v5.1.29: `truffle debug --fetch-external`.
+</strong>
+Debug transactions involving contracts not in your project that are verified on <a href="https://etherscan.io/">Etherscan</a>!  (And as of v5.1.32, it works with <a href="https://github.com/ethereum/sourcify">Sourcify</a> too!)
+<a href="#debugging-external-contracts-with-verified-source">See below</a>.
 </p>
 
 
@@ -26,6 +34,8 @@ In order to debug transactions, you'll need the following:
 * The source code and artifacts the transaction encounters.
 
 Note that it's okay if your desired transaction resulted in an exception or if it ran out of gas. The transaction still exists on chain, and so you can still debug it!
+
+Warning: Debugging a transaction against a contract that was compiled with optimization enabled may not work reliably.
 
 ## In-test debugging
 
@@ -94,6 +104,18 @@ $ truffle debug
 
 Regardless of how you start the debugger, once it is running you are not limited to debugging only the transaction you launched it with; it is possible to unload the current transaction and load a new one, as described below.
 
+You can specify the network you want to debug on with the `--network` option:
+
+```shell
+$ truffle debug <transaction hash> --network <network>
+```
+
+And with the `--fetch-external` option ([see below](#debugging-external-contracts-with-verified-source)), you can debug contract instances outside your project that have verified source code on [Etherscan](https://etherscan.io/) or [Sourcify](https://github.com/ethereum/sourcify).  When using this option, you must specify a transaction hash to debug, and you will not be able to switch transactions from inside the debugger.
+
+```shell
+$ truffle debug <transaction hash> --fetch-external --network <network>
+```
+
 <p class="alert alert-info m-t-2">
 <strong>
 Faster debugger startup:
@@ -104,6 +126,24 @@ startup.  This can be very slow.  If you compile your whole project at once,
 however, the debugger can likely avoid the initial recompile, speeding up
 startup greatly.
 </p>
+
+## Debugging external contracts with verified source
+
+If you pass the `--fetch-external` option, the debugger will attempt to download verified source code off of [Etherscan](https://etherscan.io/) and [Sourcify](https://github.com/ethereum/sourcify) for any addresses involved in the transaction that it cannot find source code for in your project.  You can of course debug such transactions without this option, but when stepping through the transaction the external calls to these unrecognized contracts will simply be skipped over.
+
+This option can also be abbreviated `-x`.
+
+If you have an Etherscan API key, you can include it in your configuration file and the debugger will use it when downloading source from Etherscan.  Including this can speed up downloads.
+
+Example:
+```javascript
+module.exports = {
+  /* ... rest of truffle-config.js ... */
+  etherscan: {
+    apiKey: "0123456789abcdef0123456789abcdef" //replace this with your API key if you have one
+  }
+}
+```
 
 ## Debugging interface
 
@@ -171,6 +211,10 @@ This command allows you to remove any of your existing breakpoints, with the sam
 
 This command will cause execution of the code to continue until the next breakpoint is reached or the last line is executed.
 
+### (:) evaluate and print expression
+
+This command will evaluate and print the given expression, based on the current variables and their values (see also `v`).
+
 ### (+) add watch expression
 
 This command will add a watch on a provided expression, based on the following syntax: `+:<expression>`.
@@ -189,15 +233,15 @@ This command will display the current variables and their values.
 
 ### (T) unload transaction
 
-This command unloads the current transaction so you can load a new one.
+This command unloads the current transaction so you can load a new one.  Not usable in `--fetch-external` mode.
 
 ### (t) load transaction
 
-This command loads a new transaction (given by its transaction hash).  Note that if you already have a transaction loaded, you must first explicitly unload it before you can load a new one.
+This command loads a new transaction (given by its transaction hash).  Note that if you already have a transaction loaded, you must first explicitly unload it before you can load a new one.  Not usable in `--fetch-external` mode.
 
 ## Adding and removing breakpoints
 
-Below are some examples of adding and removing breakpoints. Note the difference in case between adding (a lowercase 'b') and removing (an uppercase 'B').
+Below are some examples of adding and removing breakpoints. Note the difference in case between adding (a lowercase 'b') and removing (an uppercase 'B').  If you add a breakpoint at a place where the debugger will skip over, it will be automatically moved down to the next point that the debugger might stop.  This does not apply to removing breakpoints.  Use the `?` command to list current breakpoints.
 
 ```
 MagicSquare.sol:
