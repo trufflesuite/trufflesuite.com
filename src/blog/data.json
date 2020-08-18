@@ -1,4 +1,12 @@
 {
+  "a-sweet-upgradeable-contract-experience-with-openzeppelin-and-truffle": {
+    "title": "A Sweet Upgradeable Contract Experience with OpenZeppelin and Truffle",
+    "date": "2020-8-18",
+    "author": "Josh Quintal",
+    "published": true,
+    "excerpt": "Check out OpenZeppelin's new plugin to make it easier to deploy and upgrade proxy contracts.",
+    "image": "/img/blog/a-sweet-upgradeable-contract-experience-with-openzeppelin-and-truffle/blog-thumbnail.png"
+  },
   "get-a-birds-eye-view-with-truffle-teams-new-dashboard": {
     "title": "Get a Bird's Eye View with Truffle Teams' New Dashboard",
     "date": "2020-8-11",
