@@ -308,5 +308,16 @@
     "description": "A truffle box starter to build upgradable-proxy contracts with included React frontend to demonstrate the process.",
     "stars": "0",
     "tags": ["community"]
-  }
+  },
+  "besu-drizzle-truffle-box": {
+		"description": "Drizzle starter for Hyperledger Besu network",
+		"stars": 1,
+		"tags": [
+			"besu",
+			"community",
+			"docker",
+			"drizzle",
+			"hyperledger"
+		]
+	}
 }
