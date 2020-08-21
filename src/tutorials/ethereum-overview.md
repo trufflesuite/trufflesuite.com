@@ -32,7 +32,9 @@ Centralized systems can be manipulated, from inside or outside, so we have to tr
 A self-hosted blog is a common example of a centralized database. The owner could potentially edit posts in hindsight or censor users without recourse. Alternately, a hacker could infiltrate the server and commit malicious acts. If there is no database backup, reversing the damage might be impossible.
 
 <div class="centralized-db-image">
+  
 ![Centralized Database](/img/tutorials/ethereum-overview/db-server.png "Graphically represented, each arrow crossing a boundary of the main server box is a connection which requires trust")
+
 </div>
 
 ### The need to share data
@@ -85,25 +87,35 @@ Here's the whole process visually:
 <div class="container text-center">
 <div class="row row-steps justify-content-center">
 <div class="col-lg-4">
+  
 ![Mining Step 1](/img/tutorials/ethereum-overview/chain-step1.png "1. Bob attempts to send Alice 1 ETH")
+
 </div>
 
 <div class="col-lg-4">
+  
 ![Mining Step 2](/img/tutorials/ethereum-overview/chain-step2.png "2. Bob and Alice's transaction is combined with other transactions that have occurred since the last block")
+
 </div>
 
 <div class="col-lg-4">
+  
 ![Mining Step 3](/img/tutorials/ethereum-overview/chain-step3.png "3. Miners compete to validate the block with the new set of transactions")
+
 </div>
 </div>
 
 <div class="row row-steps justify-content-center">
 <div class="col-lg-4">
+  
 ![Mining Step 4](/img/tutorials/ethereum-overview/chain-step4.png "4. The victorious miner creates a new block and receives a reward")
+
 </div>
 
 <div class="col-lg-4">
+
 ![Mining Step 5](/img/tutorials/ethereum-overview/chain-step5.png "5. With the transaction validated, Alice receives 1 ETH")
+
 </div>
 </div>
 </div>
@@ -128,15 +140,21 @@ Here's the whole process visually:
 <div class="container">
 <div class="row row-steps text-center">
 <div class="col-lg-4">
+  
 ![Smart Contract Step 1](/img/tutorials/ethereum-overview/smart-contract-step1.png "1. Alice agrees to store her payment for the patio within the escrow contract, and Bob agrees to deposit an equal amount")
+
 </div>
 
 <div class="col-lg-4">
+  
 ![Smart Contract Step 2](/img/tutorials/ethereum-overview/smart-contract-step2.png "2. Bob completes the patio project and Alice gives the smart contract permission to release the funds")
+
 </div>
 
 <div class="col-lg-4">
+  
 ![Smart Contract Step 3](/img/tutorials/ethereum-overview/smart-contract-step3.png "3. Bob receives Alice's payment along with his collateral")
+
 </div>
 </div>
 </div>
