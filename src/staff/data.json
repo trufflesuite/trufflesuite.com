@@ -22,14 +22,6 @@
     "email" : "bryan"
   },
   {
-    "name": "Cruz Molina",
-    "position": "Blockchain Tools Engineer",
-    "headshot": "/img/staff/cruz-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/cruz-original.png",
-    "github": "CruzMolina",
-    "email" : "cruz"
-  },
-  {
     "name": "David Clark",
     "position": "Global Partner Relations",
     "headshot": "/img/staff/dc-truffle-bg.svg",
@@ -136,14 +128,6 @@
     "linkedin": "seesemichaelj",
     "github": "seesemichaelj",
     "email" : "seese"
-  },
-  {
-    "name": "Nick Paterno",
-    "position": "Blockchain Engineer",
-    "headshot": "/img/staff/nick-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/nick-original.png",
-    "github": "nicholasjpaterno",
-    "email" : "nicholas.paterno"
   },
   {
     "name": "Scott Olson",
