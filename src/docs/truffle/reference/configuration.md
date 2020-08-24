@@ -56,7 +56,7 @@ The `networks` object, shown below, is keyed by a network name and contains a co
 
 The network name is used for user interface purposes, such as when running your migrations on a specific network:
 
-```bash
+```shell
 $ truffle migrate --network live
 ```
 
@@ -89,13 +89,17 @@ networks: {
 
 For each network, if unspecified, transaction options will default to the following values:
 
-* `gas`: Gas limit used for deploys. Default is `4712388`.
+* `gas`: Gas limit used for deploys. Default is `6721975`.
 * `gasPrice`: Gas price used for deploys. Default is `100000000000` (100 Shannon).
 * `from`: From address used during migrations. Defaults to the first available account provided by your Ethereum client.
 * `provider`: Default web3 provider using `host` and `port` options: `new Web3.providers.HttpProvider("http://<host>:<port>")`
 * `websockets`: You will need this enabled to use the `confirmations` listener or to hear Events using `.on` or `.once`.  Default is `false`.
 
-For each network, you can specify either `host` / `port` or `provider`, but not both. If you need an HTTP provider, we recommend using `host` and `port`, while if you need a custom provider such as `HDWalletProvider`, you must use `provider`.
+For each network, you can specify `host` / `port`, `url`, or `provider`, but not more than one. If you need an HTTP provider, we recommend using `host` and `port`, or `url`, while if you need a custom provider such as `HDWalletProvider`, you must use `provider`.  The `url` option also supports WebSockets and SSL. `url` should include the full url; see the examples below:
+- http://127.0.0.1:8545
+- ws://127.0.0.1:8545
+- https://sandbox.truffleteams.com/yoursandboxid
+- wss://sandbox.truffleteams.com/yoursandboxid
 
 #### Providers
 
@@ -105,7 +109,7 @@ The following network list consists of a local test network and an Infura-hosted
 networks: {
   ropsten: {
     provider: function() {
-      return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/");
+      return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/YOUR-PROJECT-ID");
     },
     network_id: '3',
   },
@@ -181,6 +185,25 @@ module.exports = {
 
 Absolute paths will also work. This is not recommended though, as an absolute path may not exist when compiled on another system. If you use absolute paths on Windows, make sure to use double backslashes for paths (example: `C:\\Users\\Username\\output`).
 
+### migrations_directory
+The default migrations directory is `./migrations` relative to the project root. This can be changed with the `migrations_directory` key.
+
+ Example:
+
+```javascript
+module.exports = {
+  migrations_directory: "./allMyStuff/someStuff/theMigrationsFolder",
+  networks: {
+    development: {
+      host: "127.0.0.1",
+      port: 8545,
+      network_id: "*",
+    }
+  }
+};
+```
+
+
 ### mocha
 
 Configuration options for the [MochaJS](http://mochajs.org/) testing framework. This configuration expects an object as detailed in Mocha's [documentation](https://github.com/mochajs/mocha/wiki/Using-mocha-programmatically#set-options).
@@ -193,19 +216,43 @@ mocha: {
 }
 ```
 
+### etherscan
+
+Configuration options that Truffle will use when attempting to download source code from [Etherscan](https://etherscan.io/).  Has one suboption:
+
+* `apiKey`: The API key to use when retrieving source code from Etherscan.  If omitted, source will be retrieved without an API key, which may be slower.
+
+Example:
+
+```javascript
+etherscan: {
+  apiKey: "0123456789abcdef0123456789abcdef" //replace this with your API key if you have one
+}
+```
+
+### sourceFetchers
+
+A list of verified source repositories that Truffle may attempt to download source code from, in the order it should attempt to use them.  Currently the supported repositories are `"etherscan"` (for [Etherscan](https://etherscan.io/)) and `"sourcify"` (for [Sourcify](https://github.com/ethereum/sourcify)).  The default is `["etherscan", "sourcify"]`, i.e., to check Etherscan first, then Sourcify.
+
+Example:
+```javascript
+sourceFetchers: ["sourcify", "etherscan"] //prefer Sourcify over Etherscan
+```
+
 ## Compiler configuration
 
 In the `compilers` object you can specify settings related to the compilers used by Truffle.
 
 ### solc
 
-Solidity compiler settings. Supports optimizer settings for `solc`.
+Solidity compiler settings. Supports optimizer settings for `solc`, as well as other settings such as debug and metadata settings.
 
 You may specify...
 + any solc-js version listed at [solc-bin](http://solc-bin.ethereum.org/bin/list.json). Specify the one you want and Truffle will get it for you.
 + a natively compiled solc binary (you'll need to install this yourself, links to help below).
 + a dockerized solc from one of images published [here](https://hub.docker.com/r/ethereum/solc/tags/).
 + a path to a locally available solc
++ a solc-js parser for faster docker and native compilations
 
 Truffle config example:
 
@@ -216,12 +263,13 @@ module.exports = {
       version: <string>, // A version or constraint - Ex. "^0.5.0"
                          // Can also be set to "native" to use a native solc
       docker: <boolean>, // Use a version obtained through docker
+      parser: "solcjs",  // Leverages solc-js purely for speedy parsing
       settings: {
         optimizer: {
           enabled: <boolean>,
           runs: <number>   // Optimize for how many times you intend to run the code
-        }
-        evmVersion: <string> // Default: "byzantium"
+        },
+        evmVersion: <string> // Default: "petersburg"
       }
     }
   }
@@ -313,6 +361,26 @@ module.exports = {
 }
 ```
 Specify `properties` and/or `fileProperties`, and Truffle will look for those values when building the artifacts.
+
+To override the working directory for all specified paths and running commands, use the `workingDirectory` option.
+For instance, the following will run `./proj/compile-contracts` and read `./proj/output/contract.abi`:
+```javascript
+module.exports = {
+  compilers: {
+    external: {
+      command: "./compile-contracts",
+      workingDirectory: "./proj",
+      targets: [{
+        fileProperties: {
+          abi: "./output/contract.abi",
+          bytecode: "./output/contract.bytecode",
+        }
+      }]
+    }
+  }
+}
+```
+
 
 ## plugins
 

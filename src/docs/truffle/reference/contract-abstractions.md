@@ -93,7 +93,7 @@ This function creates a new instance of the contract abstraction representing th
 
 #### `MyContract.deployed()`
 
-Creates an instance of the contract abstraction representing the contract at its deployed address. The deployed address is a special value given to truffle-contract that, when set, saves the address internally so that the deployed address can be inferred from the given Ethereum network being used. This allows you to write code referring to a specific deployed contract without having to manage those addresses yourself. Like `at()`, `deployed()` is thenable, and will resolve to a contract abstraction instance representing the deployed contract after ensuring that code exists at that location and that that address exists on the network being used.
+Creates an instance of the contract abstraction representing the contract at its deployed address. The deployed address is a special value given to @truffle/contract that, when set, saves the address internally so that the deployed address can be inferred from the given Ethereum network being used. This allows you to write code referring to a specific deployed contract without having to manage those addresses yourself. Like `at()`, `deployed()` is thenable, and will resolve to a contract abstraction instance representing the deployed contract after ensuring that code exists at that location and that that address exists on the network being used.
 
 #### `MyContract.link(instance)`
 
@@ -171,7 +171,7 @@ This is the value used when `autoGas` is enabled to determine the amount of gas 
 
 Each contract instance is different based on the source Solidity contract, and the API is created dynamically. For the purposes of this documentation, let's use the following Solidity source code below:
 
-```javascript
+```solidity
 contract MyContract {
   uint public value;
   event ValueSet(uint val);
@@ -179,7 +179,7 @@ contract MyContract {
     value = val;
     emit ValueSet(value);
   }
-  function getValue() constant returns (uint) {
+  function getValue() view returns (uint) {
     return value;
   }
 }
@@ -207,19 +207,26 @@ The result object that gets returned looks like this:
     // See https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethgettransactionreceipt
   },
   logs: [
-    {
-      address: "0x13274fe19c0178208bcbee397af8167a7be27f6f",
-      args: {
-        val: BigNumber(5),
-      },
-      blockHash: "0x2f0700b5d039c6ea7cdcca4309a175f97826322beb49aca891bf6ea82ce019e6",
-      blockNumber: 40,
-      event: "ValueSet",
-      logIndex: 0,
-      transactionHash: "0x6cb0bbb6466b342ed7bc4a9816f1da8b92db1ccf197c3f91914fc2c721072ebd",
+    { logIndex: 0,
       transactionIndex: 0,
-      type:"mined",
-    },
+      transactionHash: '0x728b4d1983cd00d93ae00b7adf76f78c1b32d922de636ead42e93f70cf58cdc9',
+      blockHash: '0xdce5e6c580267c9bf1d82bf0a167fa60509ef9fc520b8619d8183a8373a42035',
+      blockNumber: 19,
+      address: '0x035b8A9e427d93D178E2D22d600B779717696831',
+      type: 'mined',
+      id: 'log_70be22b0',
+      event: 'Transfer',
+      args:
+        Result {
+          '0': '0x7FEb9FAA5aED0FD547Ccc70f00C19dDe95ea54d4',
+          '1': '0x7FEb9FAA5aED0FD547Ccc70f00C19dDe95ea54d4',
+          '2': <BN: 1>,
+          __length__: 3,
+          _from: '0x7FEb9FAA5aED0FD547Ccc70f00C19dDe95ea54d4',
+          _to: '0x7FEb9FAA5aED0FD547Ccc70f00C19dDe95ea54d4',
+          _value: <BN: 1>
+        }
+    }
   ],
 }
 ```
@@ -248,7 +255,7 @@ const value = await instance.getValue.call();
 // since the contract returns that value.
 ```
 
-Even more helpful, however is we *don't even need* to use `.call` when a function is marked as `constant`, because `truffle-contract` will automatically know that that function can only be interacted with via a call:
+Even more helpful, however is we *don't even need* to use `.call` when a function is marked as `view` or `pure` (or the deprecated `constant`), because `@truffle/contract` will automatically know that that function can only be interacted with via a call:
 
 ```javascript
 const value = await instance.getValue();

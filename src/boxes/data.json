@@ -13,6 +13,12 @@
   },
   {
     "userOrg": "truffle-box",
+    "displayName": "drizzle-vue-box",
+    "repoName": "vue-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
     "displayName": "react",
     "repoName": "react-box",
     "official": true
@@ -51,6 +57,12 @@
     "userOrg": "truffle-box",
     "displayName": "vyper-example",
     "repoName": "vyper-example-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "tezos-example",
+    "repoName": "tezos-example-box",
     "official": true
   },
   {
@@ -102,6 +114,36 @@
     "official": true
   },
   {
+    "userOrg": "truffle-box",
+    "displayName": "nightfall",
+    "repoName": "nightfall-box",
+    "official": true
+  },
+  {
+    "userOrg": "rsksmart",
+    "displayName": "rsk-starter-box",
+    "repoName": "rsk-starter-box",
+    "official": false
+  },
+  {
+    "userOrg": "rsksmart",
+    "displayName": "rsk-react-box",
+    "repoName": "rsk-react-box",
+    "official": false
+  },
+  {
+    "userOrg": "rsksmart",
+    "displayName": "rsk-next-box",
+    "repoName": "rsk-next-box",
+    "official": false
+  },
+  {
+    "userOrg": "rsksmart",
+    "displayName": "rsk-react-express-box",
+    "repoName": "rsk-react-express-box",
+    "official": false
+  },
+  {
     "userOrg": "kaleido-io",
     "displayName": "drizzle-kaleido-box",
     "repoName": "drizzle-kaleido-box",
@@ -126,6 +168,12 @@
     "official": false
   },
   {
+    "userOrg": "illuzzig",
+    "displayName": "besu-box",
+    "repoName": "besu-box",
+    "official": false
+  },
+  {
     "userOrg": "endless-nameless-inc",
     "displayName": "cheshire",
     "repoName": "cheshire",
@@ -135,6 +183,18 @@
     "userOrg": "CITA-Toys",
     "displayName": "cita-truffle-box",
     "repoName": "cita-truffle-box",
+    "official": false
+  },
+  {
+    "userOrg": "atkinsonholly",
+    "displayName": "drizzle-tutorial-with-react-hooks",
+    "repoName": "drizzle-tutorial-with-react-hooks",
+    "official": false
+  },
+  {
+    "userOrg": "lzhou1110",
+    "displayName": "drizzle-truffle-ganache-docker-box",
+    "repoName": "drizzle-truffle-ganache-docker-box",
     "official": false
   },
   {
@@ -153,6 +213,30 @@
     "userOrg": "arvindkalra",
     "displayName": "express-box",
     "repoName": "express-box",
+    "official": false
+  },
+  {
+    "userOrg": "aave",
+    "displayName": "flashloan-box",
+    "repoName": "flashloan-box",
+    "official": false
+  },
+  {
+    "userOrg": "fluidity",
+    "displayName": "fluidity-truffle-box",
+    "repoName": "fluidity-truffle-box",
+    "official": false
+  },
+  {
+    "userOrg": "yehia67",
+    "displayName": "helloworldbox",
+    "repoName": "HelloWorldBox",
+    "official": false
+  },
+  {
+    "userOrg": "manjeet-thadani",
+    "displayName": "koa-trufflebox",
+    "repoName": "koa-trufflebox",
     "official": false
   },
   {
@@ -198,6 +282,13 @@
     "official": false
   },
   {
+    "userOrg": "brannanc",
+    "displayName": "react_hooks_box",
+    "repoName": "react_hooks_box",
+    "slug": "react-hooks-box",
+    "official": false
+  },
+  {
     "userOrg": "uport-project",
     "displayName": "react-uport-box",
     "repoName": "react-uport-box",
@@ -210,9 +301,27 @@
     "official": false
   },
   {
+    "userOrg": "antoniocardenas",
+    "displayName": "skaledapp",
+    "repoName": "skaledapp",
+    "official": false
+  },
+  {
     "userOrg": "antony",
     "displayName": "svelte-box",
     "repoName": "svelte-box",
+    "official": false
+  },
+  {
+    "userOrg": "thundercore",
+    "displayName": "thunder-box",
+    "repoName": "thunder-box",
+    "official": false
+  },
+  {
+    "userOrg": "etienne-napoleone",
+    "displayName": "tomochain-box",
+    "repoName": "tomochain-box",
     "official": false
   },
   {
@@ -282,6 +391,12 @@
     "official": false
   },
   {
+    "userOrg": "pranav-singhal",
+    "displayName": "upgradable-proxy-box",
+    "repoName": "upgradable-proxy-box",
+    "official": false
+  },
+  {
     "userOrg": "standup75",
     "displayName": "vue-box",
     "repoName": "vue-box",
@@ -297,6 +412,12 @@
     "userOrg": "saga-foundation",
     "displayName": "vueport-box",
     "repoName": "vueport-box",
+    "official": false
+  },
+  {
+    "userOrg": "zeppelinos",
+    "displayName": "zepkit",
+    "repoName": "zepkit",
     "official": false
   }
 ]

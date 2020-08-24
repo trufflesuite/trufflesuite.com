@@ -1,4 +1,28 @@
 {
+  "teams": {
+    "Getting Started": [
+      "Creating an Account",
+      "Adding Repositories",
+      "Dashboard"
+    ],
+    "Testing": [
+      "Starting Builds",
+      "External CI"
+    ],
+    "Deployments": [
+      "About Deployments",
+      "Deploying Contracts",
+      "Graduating Deployments",
+      "Sandboxes"
+    ],
+    "Contracts": [
+      "Contract Monitoring"
+    ],
+    "Reference": [
+      "Configuration",
+      "Permissions Disclosure"
+    ]
+  },
   "truffle": {
     "Getting Started": [
       "Installation",
@@ -11,18 +35,23 @@
       "Package Management via NPM",
       "Debugging Your Contracts",
       "Using Truffle Develop and The Console",
-      "Writing External Scripts",
-      "Working With Quorum"
+      "Writing External Scripts"
     ],
     "Testing": [
       "Testing Your Contracts",
       "Writing Tests in JavaScript",
       "Writing Tests in Solidity"
     ],
+    "Distributed Ledger Support": [
+      "Working With Quorum",
+      "Working With Hyperledger EVM"
+    ],
     "Advanced": [
       "Networks and App Deployment",
       "Build Processes",
-      "Creating a Truffle Box"
+      "Creating a Truffle Box",
+      "Event System",
+      "Ethereum Name Service"
     ],
     "Reference": [
       "Choosing an Ethereum Client",
@@ -38,7 +67,8 @@
       "Creating Workspaces",
       "Loading Existing Workspaces",
       "Switching Workspaces",
-      "Deleting Workspaces"
+      "Deleting Workspaces",
+      "Editing Workspaces"
     ],
     "Truffle Projects": [
       "Linking a Truffle Project",
@@ -46,6 +76,16 @@
       "Contracts Page",
       "Events Page",
       "Decoded Transactions"
+    ],
+    "Corda": [
+      "Working with Corda",
+      "Workspace Overview",
+      "Linking a Corda Project",
+      "Unlinking a Corda Project",
+      "Nodes",
+      "Transactions",
+      "CorDapps",
+      "Shell"
     ],
     "Reference": [
       "Ganache Settings",
@@ -64,7 +104,26 @@
     "Reference": [
       "Drizzle Options",
       "Drizzle State",
+      "Drizzle Actions",
       "How Data Stays Fresh"
     ]
+  },
+  "tezos": {
+    "truffle": {
+      "Getting Started": [
+        "Installing Truffle with Tezos",
+        "Creating a Tezos project",
+        "Writing Tezos Contracts",
+        "Compiling Tezos Contracts",
+        "Deploying Tezos Contracts",
+        "Interacting with Your Tezos Contracts",
+        "Testing your Tezos Contracts",
+        "Using the Console with Tezos",
+        "Writing External Scripts with Tezos"
+      ],
+      "Reference": [
+        "Configuring Tezos Projects"
+      ]
+    }
   }
 }

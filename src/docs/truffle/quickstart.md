@@ -7,7 +7,7 @@ layout: docs.hbs
 This page will take you through the basics of creating a Truffle project and deploying a smart contract to a blockchain.
 
 <p class="alert alert-info">
-<strong>Note</strong>: Before you begin, make sure that you read our [Ethereum Overview](/tutorials/ethereum-overview) page.
+<strong>Note</strong>: Before you begin, make sure that you read our <a href="/tutorials/ethereum-overview">Ethereum Overview</a> page.
 </p>
 
 ## Table of Contents
@@ -63,7 +63,7 @@ Once this operation is completed, you'll now have a project structure with the f
 
 1. Open the `contracts/MetaCoin.sol` file in a text editor. This is a smart contract (written in Solidity) that creates a MetaCoin token. Note that this also references another Solidity file `contracts/ConvertLib.sol` in the same directory.
 
-1. Open the `contracts/Migrations.sol` file. This is a separate Solidity file that manages and updates [the status of your deployed smart contract](/docs/truffle/getting-started/running-migrations). This file comes with every Truffle project, and is usually not edited. 
+1. Open the `contracts/Migrations.sol` file. This is a separate Solidity file that manages and updates [the status of your deployed smart contract](/docs/truffle/getting-started/running-migrations). This file comes with every Truffle project, and is usually not edited.
 
 1. Open the `migrations/1_initial_migration.js` file. This file is the migration (deployment) script for the `Migrations` contract found in the `Migrations.sol` file.
 
@@ -80,7 +80,7 @@ Once this operation is completed, you'll now have a project structure with the f
 1. On a terminal, run the Solidity test:
 
    ```shell
-   truffle test ./test/TestMetacoin.sol
+   truffle test ./test/TestMetaCoin.sol
    ```
 
    You will see the following output
@@ -94,7 +94,7 @@ Once this operation is completed, you'll now have a project structure with the f
    ```
 
    <p class="alert alert-info">
-   <strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on [resolving naming conflicts on Windows](/docs/truffle/reference/configuration#resolving-naming-conflicts-on-windows).
+   <strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on <a href="/docs/truffle/reference/configuration#resolving-naming-conflicts-on-windows">resolving naming conflicts on Windows</a>.
    </p>
 
    These tree tests were run against the contract, with descriptions displayed on what the tests are supposed to do.
@@ -137,7 +137,7 @@ Once this operation is completed, you'll now have a project structure with the f
 ## Migrating with Truffle Develop
 
 <p class="alert alert-info">
-<strong>Note</strong>: To use [Ganache](/ganache), please skip to the next section.
+<strong>Note</strong>: To use <a href="/ganache">Ganache</a>, please skip to the next section.
 </p>
 
 To deploy our smart contracts, we're going to need to connect to a blockchain. Truffle has a built-in personal blockchain that can be used for testing. This blockchain is local to your system and does not interact with the main Ethereum network.
@@ -182,7 +182,7 @@ You can create this blockchain and interact with it using [Truffle Develop](/doc
    Mnemonic: candy maple cake sugar pudding cream honey rich smooth crumble sweet treat
 
    ⚠️  Important ⚠️  : This mnemonic was created for you by Truffle. It is not secure.
-   Ensure you do not use it on production blockchains, or else you risk losing funds.   
+   Ensure you do not use it on production blockchains, or else you risk losing funds.
 
    truffle(development)>
    ```
@@ -217,7 +217,7 @@ You can create this blockchain and interact with it using [Truffle Develop](/doc
       > gas used:            277462
       > gas price:           20 gwei
       > value sent:          0 ETH
-      > total cost:          0.00554924 ETH   
+      > total cost:          0.00554924 ETH
 
       > Saving migration to chain.
       > Saving artifacts
@@ -285,7 +285,7 @@ The only extra step, aside from running Ganache, is that it requires editing the
 
 1. Download and install [Ganache](/ganache).
 
-1. Open `truffle.js` in a text editor. Replace the content with the following:
+1. Open `truffle-config.js` in a text editor. Replace the content with the following:
 
    ```javascript
    module.exports = {
@@ -315,85 +315,100 @@ The only extra step, aside from running Ganache, is that it requires editing the
    truffle migrate
    ```
 
-   You will see the following output
+   You will see the following output:
 
    ```
+   Compiling your contracts...
+   ===========================
+   > Compiling ./contracts/ConvertLib.sol
+   > Compiling ./contracts/MetaCoin.sol
+   > Compiling ./contracts/Migrations.sol
+   > Artifacts written to /home/david/work/MetaCoin/build/contracts
+   > Compiled successfully using:
+      - solc: 0.5.16+commit.9c3226ce.Emscripten.clang
+
    Starting migrations...
    ======================
-   > Network name:    'develop'
-   > Network id:      4447
-   > Block gas limit: 6721975
+   > Network name:    'development'
+   > Network id:      5777
+   > Block gas limit: 6721975 (0x6691b7)
 
    1_initial_migration.js
    ======================
 
       Deploying 'Migrations'
       ----------------------
-      > transaction hash:    0x3fd222279dad48583a3320decd0a2d12e82e728ba9a0f19bdaaff98c72a030a2
+      > transaction hash:    0x3eef05e35ce694c0b7112cc22ba462b9cc0563abc2cc444ee9683b6d89865e3c
       > Blocks: 0            Seconds: 0
-      > contract address:    0xa0AdaB6E829C818d50c75F17CFCc2e15bfd55a63
-      > account:             0x627306090abab3a6e1400e9345bc60c78a8bef57
-      > balance:             99.99445076
-      > gas used:            277462
+      > contract address:    0x8CdaF0CD259887258Bc13a92C0a6dA92698644C0
+      > block number:        1
+      > block timestamp:     1587421933
+      > account:             0x627306090abaB3A6e1400e9345bC60c78a8BEf57
+      > balance:             99.9967165
+      > gas used:            164175 (0x2814f)
       > gas price:           20 gwei
       > value sent:          0 ETH
-      > total cost:          0.00554924 ETH   
+      > total cost:          0.0032835 ETH
 
       > Saving migration to chain.
       > Saving artifacts
       -------------------------------------
-      > Total cost:          0.00554924 ETH
+      > Total cost:           0.0032835 ETH
 
    2_deploy_contracts.js
    =====================
 
       Deploying 'ConvertLib'
       ----------------------
-      > transaction hash:    0x97e8168f1c05fc40dd8ffc529b9a2bf45cc7c55b07b6b9a5a22173235ee247b6
+      > transaction hash:    0x23de020bafa41e30615b1d775d2fa9604e876415408e012d1f0faf79eed3a32f
       > Blocks: 0            Seconds: 0
-      > contract address:    0xfb39FeaeF3ac3fd46e2123768e559BCe6bD638d6
-      > account:             0x627306090abab3a6e1400e9345bc60c78a8bef57
-      > balance:             99.9914458
-      > gas used:            108240
+      > contract address:    0x345cA3e014Aaf5dcA488057592ee47305D9B3e10
+      > block number:        3
+      > block timestamp:     1587421933
+      > account:             0x627306090abaB3A6e1400e9345bC60c78a8BEf57
+      > balance:             99.99396028
+      > gas used:            95470 (0x174ee)
       > gas price:           20 gwei
       > value sent:          0 ETH
-      > total cost:          0.0021648 ETH
+      > total cost:          0.0019094 ETH
 
       Linking
       -------
-      * Contract: MetaCoin <--> Library: ConvertLib (at address: 0xfb39FeaeF3ac3fd46e2123768e559BCe6bD638d6)
+      * Contract: MetaCoin <--> Library: ConvertLib (at address: 0x345cA3e014Aaf5dcA488057592ee47305D9B3e10)
 
       Deploying 'MetaCoin'
       --------------------
-      > transaction hash:    0xee4994097c10e7314cc83adf899d67f51f22e08b920e95b6d3f75c5eb498bde4
+      > transaction hash:    0x0cc20353422c4d435f72e8e7850f8178f43bf8d00c8c0d09cc8e0ccdfa81b799
       > Blocks: 0            Seconds: 0
-      > contract address:    0x6891Ac4E2EF3dA9bc88C96fEDbC9eA4d6D88F768
-      > account:             0x627306090abab3a6e1400e9345bc60c78a8bef57
-      > balance:             99.98449716
-      > gas used:            347432
+      > contract address:    0xf25186B5081Ff5cE73482AD761DB0eB0d25abfBF
+      > block number:        4
+      > block timestamp:     1587421934
+      > account:             0x627306090abaB3A6e1400e9345bC60c78a8BEf57
+      > balance:             99.98822922
+      > gas used:            286553 (0x45f59)
       > gas price:           20 gwei
       > value sent:          0 ETH
-      > total cost:          0.00694864 ETH
+      > total cost:          0.00573106 ETH
 
       > Saving migration to chain.
       > Saving artifacts
       -------------------------------------
-      > Total cost:          0.00911344 ETH
+      > Total cost:          0.00764046 ETH
 
    Summary
    =======
    > Total deployments:   3
-   > Final cost:          0.01466268 ETH
+   > Final cost:          0.01092396 ETH
    ```
 
    This shows the transaction IDs and addresses of your deployed contracts. It also includes a cost summary and real-time status updates.
 
    <p class="alert alert-info">
-     <strong>Note</strong>: Your transaction IDs and contract addresses will be different from the above.
+     <strong>Note</strong>: Your transaction IDs and contract addresses may be different from the above.
    </p>
 
 1. In Ganache, click the "Transactions" button to see that the transactions have been processed.
-   
+
 1. To interact with the contract, you can use the Truffle console. The Truffle console is similar to Truffle Develop, except it connects to an existing blockchain (in this case, the one generated by Ganache).
 
    ```shell
@@ -418,41 +433,41 @@ As of Truffle v5, the console supports async/await functions, enabling much simp
 
 * Begin by establishing both the deployed MetaCoin contract instance and the accounts created by either Truffle's built-in blockchain or Ganache:
 
-  ```shell
+  ```javascript
   truffle(development)> let instance = await MetaCoin.deployed()
   truffle(development)> let accounts = await web3.eth.getAccounts()
   ```
 
 * Check the metacoin balance of the account that deployed the contract:
 
-  ```shell
+  ```javascript
   truffle(development)> let balance = await instance.getBalance(accounts[0])
   truffle(development)> balance.toNumber()
   ```
 
 * See how much ether that balance is worth (and note that the contract defines a metacoin to be worth 2 ether):
 
-  ```shell
+  ```javascript
   truffle(development)> let ether = await instance.getBalanceInEth(accounts[0])
   truffle(development)> ether.toNumber()
   ```
 
 * Transfer some metacoin from one account to another:
 
-  ```shell
+  ```javascript
   truffle(development)> instance.sendCoin(accounts[1], 500)
   ```
 
 * Check the balance of the account that *received* the metacoin:
 
-  ```shell
+  ```javascript
   truffle(development)> let received = await instance.getBalance(accounts[1])
   truffle(development)> received.toNumber()
   ```
 
 * Check the balance of the account that *sent* the metacoin:
 
-  ```shell
+  ```javascript
   truffle(development)> let newBalance = await instance.getBalance(accounts[0])
   truffle(development)> newBalance.toNumber()
   ```

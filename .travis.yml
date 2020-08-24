@@ -6,7 +6,7 @@ env:
   - MASTER: "master"
 language: node_js
 node_js:
-    - "6.9.1"
+    - "lts/*"
 
 before_script:
 - >
@@ -21,15 +21,18 @@ before_script:
     git clone "${GH_REF}" build
    fi
 
+install:
+- yarn install --ignore-engines
+
 script:
 - >
   if [ "${TRAVIS_PULL_REQUEST}" = "false" -a "$TRAVIS_BRANCH" = "${MASTER}" ];
   then
     mv build/.git .git-backup
-    npm run build
+    yarn build
     mv .git-backup build/.git
   else
-    npm run build
+    yarn build
   fi
 
 after_success:

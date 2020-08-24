@@ -45,13 +45,13 @@ Bundling Truffle's dependencies means releasing a version of the code where cert
 
 To get the beta version of Truffle, first uninstall the version you currently have (they'll conflict):
 
-```
+```shell
 $ npm uninstall -g truffle
 ```
 
 And now install the beta version:
 
-```
+```shell
 $ npm install -g truffle@beta
 ```
 

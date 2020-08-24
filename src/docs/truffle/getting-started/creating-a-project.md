@@ -22,7 +22,7 @@ You can create a bare project template, but for those just getting started, you 
    ```
 
    <p class="alert alert-info">
-   <strong>Note</strong>: You can use the `truffle unbox <box-name>` command to download any of the other Truffle Boxes.
+   <strong>Note</strong>: You can use the `truffle unbox <box-name>` command to download any of the other <a href="/boxes">Truffle Boxes</a>.
    </p>
 
    <p class="alert alert-info">

@@ -30,6 +30,17 @@
   background-color: #fff;
 }
 
+.banner-tcon-2020 {
+  color: #fff;
+  background-color: #361C5E;
+}
+
+.banner-tcon-white {
+  color: #fff;
+  background-color: #ffffff;
+  align-items: flex-start;
+}
+
 .banner-milk-choc {
   background-color: #5e464d;
 }
@@ -44,6 +55,28 @@
 
 .banner-green {
   background-color: #3fe0c5;
+}
+
+.banner-periwinkle {
+  background-color: #7f9dd1;
+}
+
+.banner-purple {
+  background-color: #A359EA;
+}
+
+.banner-purple-rev {
+  background-color: #A359EA;
+  transform: skewY(20deg);
+}
+
+.banner-light-purple {
+  color: #fff;
+  background-color: #361C5E;
+}
+
+.banner-white {
+  background-color: #fff;
 }
 
 // "Like the Taste"
@@ -130,10 +163,10 @@
   img:first-of-type {
     position: absolute;
     left: 0px;
-    top: -35px;
+    top: -25px;
     height: 100px;
     
-    @media (max-width:1085px) {
+    @media (max-width:1185px) {
       display: none;
     }
   }
@@ -144,8 +177,62 @@
     top: -30px;
     height: 100px; 
      
-    @media (max-width:1085px) {
+    @media (max-width:1185px) {
       display: none;
     }
   }
+}
+
+.banner-trufflecon-swag {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  background-image: url(/img/trufflecon/swag-bg2.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  a {
+    text-decoration: none;
+    color: #58484e;
+
+    &:hover {
+      color: #3fe0c5;
+      text-decoration: none;
+    }
+  }
+}
+
+
+// HubSpot GDPR Banner
+
+div#hs-eu-cookie-confirmation {
+  border-radius: 6px 6px 0 0;
+  bottom: 0 !important;
+  left: 50% !important;
+  max-width: 1140px !important;
+  position: fixed !important;
+  top: auto !important;
+  transform: translateX(-50%);
+  z-index: 9999 !important;
+}
+
+div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner div#hs-en-cookie-confirmation-buttons-area a#hs-eu-confirmation-button {
+  background-color: #3fe0c5 !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #5e464d !important;
+  font-family: 'Oswald', sans-serif !important;
+  text-shadow: none !important;
+  text-transform: uppercase !important;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+
+div#hs-eu-cookie-confirmation div#hs-eu-cookie-confirmation-inner div#hs-en-cookie-confirmation-buttons-area a#hs-eu-confirmation-button:hover {
+  background-color: #fff !important;
+  background-image: none !important;
+}
+
+div#hubspot-messages-iframe-container {
+  z-index: 9998 !important;
 }

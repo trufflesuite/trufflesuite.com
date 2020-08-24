@@ -1,252 +1,659 @@
 {
-  "drizzle-box": {
-    "description": "This box comes with everything you need to start using smart contracts from a react app with Drizzle. It includes drizzle, drizzle-react and drizzle-react-components to give you a complete overview of Drizzle's capabilities.",
-    "stars": 161,
-    "tags": ["official", "drizzle", "react", "redux"]
-  },
-  "drizzle-react-native-box": {
-    "description": "This box is to help get you started with building dapps with Drizzle on React Native.",
-    "stars": 1,
-    "tags": ["official", "drizzle", "react-native"]
-  },
-  "react-box": {
-    "description": "Truffle, Webpack and React boilerplate.",
-    "stars": 379,
-    "tags": ["official", "ethereum", "ethereumjs", "truffle", "webpack", "react", "solidity"]
-  },
-  "pet-shop-box": {
-    "description": "A box containing all you need to get started with our Pet Shop tutorial.",
-    "stars": 108,
-    "tags": ["official"]
-  },
-  "tutorialtoken-box": {
-    "description": "A box containing all you need to get started with our OpenZeppelin (TutorialToken) tutorial.",
-    "stars": 45,
-    "tags": ["official"]
-  },
-  "webpack-box": {
-    "description": "Example webpack-based app for Truffle (boilerplate)",
-    "stars": 34,
-    "tags": ["official"]
-  },
-  "metacoin-box": {
-    "description": "MetaCoin smart contracts example box",
-    "stars": 44,
-    "tags": ["official"]
-  },
-  "blueprint-box": {
-    "description": "All you need to get started making your own Truffle Box!",
-    "stars": 13,
-    "tags": ["official"]
-  },
-  "vyper-example-box": {
-    "description": "A box containing all you need to get started with Vyper development on Truffle.",
-    "stars": 3,
-    "tags": ["official"]
-  },
-  "azure-asset-transfer-box": {
-    "description": "Azure Samples - Asset Transfer",
-    "stars": 0,
-    "tags": ["partner"]
-  },
-  "azure-basic-provenance-box": {
-    "description": "Azure Samples - Basic Provenance",
-    "stars": 1,
-    "tags": ["partner"]
-  },
-  "azure-bazaar-item-listing-box": {
-    "description": "Azure Samples - Bazaar Item Listing",
-    "stars": 0,
-    "tags": ["partner"]
-  },
-  "azure-digital-locker-box": {
-    "description": "Azure Samples - Digital Locker",
-    "stars": 0,
-    "tags": ["partner"]
-  },
-  "azure-hello-blockchain-box": {
-    "description": "Azure Samples - Hello Blockchain",
-    "stars": 2,
-    "tags": ["partner"]
-  },
-  "azure-refrigerated-transportation-box": {
-    "description": "Azure Samples - Refrigerated Transportation",
-    "stars": 0,
-    "tags": ["partner"]
-  },
-  "azure-room-thermostat-box": {
-    "description": "Azure Samples - Room Thermostat",
-    "stars": 0,
-    "tags": ["partner"]
-  },
-  "azure-simple-marketplace-box": {
-    "description": "Azure Samples - Simple Marketplace",
-    "stars": 1,
-    "tags": ["partner"]
-  },
-  "drizzle-kaleido-box": {
-    "description": "Truffle box to get up and running quickly with Drizzle & Truffle on a Kaleido chain.",
-    "stars": 0,
-    "tags": ["partner", "drizzle", "kaleido", "react", "truffle", "truffle-box"]
-  },
-  "truffle-kaleido-box": {
-    "description": "Truffle Box that comes ready to go with appropriate versions and config to connect to Kaleido chains.",
-    "stars": 0,
-    "tags": ["partner", "kaleido", "truffle", "truffle-box"]
-  },
-  "angulartruffledapp": {
-    "description": "This Trufflebox provides a base for Truffle Framework and Angular ÐAPP. and you can make transactions between accounts",
-    "stars": 0,
-    "tags": ["community"]
-  },
-  "angular-truffle-box": {
-    "description": "Truffle Box for Angular is a quick-and-easy way to get your Dapp on the road with Truffle and Angular",
-    "stars": 49,
-    "tags": ["community"]
-  },
-  "cheshire": {
-    "description": "A sandbox for CryptoKitties dApp developers",
-    "stars": 69,
-    "tags": ["community", "cryptokitties", "dapp", "ethereum"]
-  },
-  "cita-truffle-box": {
-    "description": "",
-    "stars": 10,
-    "tags": ["community"]
-  },
-  "etherplate": {
-    "description": " 🔗 Use this to make your next Ethereum DApp w/ React (&amp; Router), Redux, Bulma &amp; OpenZeppelin ERC721",
-    "stars": 39,
-    "tags": ["community"]
-  },
-  "eth-vue": {
-    "description": "This Truffle Box provides everything you need to quickly build Ethereum dApps that have authentication features with vue, including configuration for easy deployment to the Ropsten Network. It's also Gravatar-enabled. Connecting to a running Ganache blockchain network from Truffle is also possible -- for fast development and testing purposes. Built on Truffle 4, eth-vue uses vuex for state management, vuex-persist for local storage of app state, and vue-router for routing. Authentication functionalities are handled by Smart Contracts running on the Ethereum blockchain.",
-    "stars": 111,
-    "tags": ["community", "vuejs", "ethereum", "ethereum-contract", "dapp", "ethereum-dapp", "eth-vue", "blockchain", "truffle", "truffle-framework", "vue-router", "vue-components", "contracts", "boilerplate", "vuex", "vuex-persist", "web3"]
-  },
-  "express-box": {
-    "description": "A truffle box to serve as the foundation of any Truffle and Express.js dApp.  This Box Uses NodeJS(Express JS) to provide API endpoints to the Ethereum Blockchain smart contract so that this smart contract can be used in Android Apps as well.",
-    "stars": 29,
-    "tags": ["community", "truffle-box", "truffle", "nodejs", "ethereum-blockchain", "ganache-cli", "solidity"]
-  },
-  "limelabs-angular-box": {
-    "description": "Truffle Box for Angular is a quick-and-easy way to get your Dapp on the road with Truffle and Angular",
-    "stars": 7,
-    "tags": ["community"]
-  },
-  "macroverse-truffle-box": {
-    "description": "Truffle Box for projects building on Macroverse's shared world",
-    "stars": 0,
-    "tags": ["community"]
-  },
-  "nuxt-box": {
-    "description": "Truffle, Nuxt and Vue boilerplate",
-    "stars": 32,
-    "tags": ["community", "ethereum", "truffle", "vuejs", "nuxtjs", "vue", "nuxt", "truffle-framework", "solidity"]
-  },
-  "peerai-api": {
-    "description": "Peerism's Peer.ai API built with Truffle, Node.js, Express.js, Solidity, and Ethereum TestRPC",
-    "stars": 14,
-    "tags": ["community", "node", "express", "express-middleware", "jwt", "passport", "mongodb", "mongoose", "curl", "truffle", "solidity", "ethereum", "dapp", "api", "solc"]
-  },
-  "rapid-box": {
-    "description": "A quick start truffle box to host REST APIs interacting with Smart Contracts",
-    "stars": 0,
-    "tags": ["community", "ethereum", "truffle-framework", "truffle-box"]
-  },
-  "react-box-web3-todo": {
-    "description": "Truffle, Webpack, Web3, Redux and React boilerplate.",
-    "stars": 7,
-    "tags": ["community"]
-  },
-  "react-dapp-boilerplate": {
-    "description": "A superior UI setup for Ethereum Smart Contracts.  Check out www.reactdapps.com!",
-    "stars": 24,
-    "tags": ["community"]
-  },
-  "react-uport-box": {
-    "description": "Truffle and React/Redux boilerplate with uPort Connect",
-    "stars": 4,
-    "tags": ["community", "identity", "react", "uport"]
-  },
-  "scoreboard": {
-    "description": "",
-    "stars": 15,
-    "tags": ["community"]
-  },
-  "svelte-box": {
-    "description": "A truffle box for svelte",
-    "stars": 9,
-    "tags": ["community", "truffle", "truffle-framework", "truffle-box", "truffle-boilerplates", "svelte", "sveltejs", "svelte-components", "ethereum", "ethereum-dapp", "dapp", "seed", "blockchain", "parcel", "parcel-bundler", "parceljs"]
-  },
-  "truffle-ci-box": {
-    "description": "Truffle box for quick integration with Travis CI and Coveralls",
-    "stars": 2,
-    "tags": ["community", "truffle-box", "solidity", "travis-ci", "coveralls", "solidity-coverage"]
-  },
-  "truffle-create-react-app": {
-    "description": "Basic integration of truffle and React front-end based on the create-react-app without resorting to the 'reject' mode.",
-    "stars": 8,
-    "tags": ["community"]
-  },
-  "truffle-next": {
-    "description": "️️🛰️ A boilerplate Truffle Box project with Next.js for rapid Ethereum Dapp development",
-    "stars": 110,
-    "tags": ["community", "truffle", "truffle-framework", "reactjs", "nextjs", "solidity", "ethereum", "ethereum-contract"]
-  },
-  "truffle-react-dapp": {
-    "description": "This project is build for react dapp developing, include solidity contract writing and web3.js API using demo.",
-    "stars": 0,
-    "tags": ["community", "web3js", "solidity", "truffle", "dapp"]
-  },
-  "truffle-react-redux": {
-    "description": "Template for your next dapp with React and Redux",
-    "stars": 11,
-    "tags": ["community", "truffle", "react", "redux", "dapp"]
-  },
-  "truffle-react-ts-template": {
-    "description": "Template for Ethereum DApps. Truffle + React + Typescript",
-    "stars": 7,
-    "tags": ["community"]
-  },
-  "truffle-security": {
-    "description": "Security infrastructure for Truffle DApps",
-    "stars": 7,
-    "tags": ["community", "solium", "truffle-framework", "ethereum", "blockchain", "security", "smart-contracts"]
-  },
-  "truffle-shavings": {
-    "description": "Truffle Boilerplate with solium, linguist, zeppelin, migrations, tests &amp;tc",
-    "stars": 2,
-    "tags": ["community"]
-  },
-  "truffle-starter": {
-    "description": "A react-based truffle starter box for use with Caster.io blockchain lessons",
-    "stars": 4,
-    "tags": ["community"]
-  },
-  "truffle-ts-percel-box": {
-    "description": "boxes for truffle",
-    "stars": 2,
-    "tags": ["community", "ethereum", "truffle", "box"]
-  },
-  "truffle-vue": {
-    "description": "A truffle box to serve as the foundation of any Truffle and Vue.js dApp. Comes with Vue.js, vue-router and Vuex.",
-    "stars": 62,
-    "tags": ["community", "ethereum", "truffle", "webpack", "vuejs", "vue-router", "vuex", "javascript", "solidity"]
-  },
-  "vue-box": {
-    "description": "",
-    "stars": 15,
-    "tags": ["community"]
-  },
-  "vue-dark-chocolate": {
-    "description": "A truffle box that comes with everything you need to start using smart contracts from a Vue App, with Bootstrap styling and components. Supporting frameworks include Vuex, Vue-Router, Bootstrap 4 (via Bootstrap-Vue), and webpack. The sample uses webpack-dev-server for hot-reloading or you can build and serve from Express.",
-    "stars": 13,
-    "tags": ["community", "blockchain", "truffle-box", "solidity-contracts", "vue", "vue-bootstrap", "webpack-boilerplate"]
-  },
-  "vueport-box": {
-    "description": "Truffle box with built in uPort self-sovereign identity authentication and contract interaction using VueJS. Inspired by https://github.com/truffle-box/react-uport-box",
-    "stars": 4,
-    "tags": ["community"]
-  }
+	"HelloWorldBox": {
+		"description": "This truffle box could used for Dapp & ICO development with deployment. Ready to migrate with infura or local developement.",
+		"stars": 0,
+		"tags": [
+			"community"
+		]
+	},
+	"angular-truffle-box": {
+		"description": "Truffle Box for Angular is a quick-and-easy way to get your Dapp on the road with Truffle and Angular",
+		"stars": 49,
+		"tags": [
+			"community"
+		]
+	},
+	"angulartruffledapp": {
+		"description": "This Trufflebox provides a base for Truffle Framework and Angular ÐAPP. and you can make transactions between accounts",
+		"stars": 0,
+		"tags": [
+			"community"
+		]
+	},
+	"azure-asset-transfer-box": {
+		"description": "Azure Samples - Asset Transfer",
+		"stars": 0,
+		"tags": [
+			"partner"
+		]
+	},
+	"azure-basic-provenance-box": {
+		"description": "Azure Samples - Basic Provenance",
+		"stars": 1,
+		"tags": [
+			"partner"
+		]
+	},
+	"azure-bazaar-item-listing-box": {
+		"description": "Azure Samples - Bazaar Item Listing",
+		"stars": 0,
+		"tags": [
+			"partner"
+		]
+	},
+	"azure-digital-locker-box": {
+		"description": "Azure Samples - Digital Locker",
+		"stars": 0,
+		"tags": [
+			"partner"
+		]
+	},
+	"azure-hello-blockchain-box": {
+		"description": "Azure Samples - Hello Blockchain",
+		"stars": 2,
+		"tags": [
+			"partner"
+		]
+	},
+	"azure-refrigerated-transportation-box": {
+		"description": "Azure Samples - Refrigerated Transportation",
+		"stars": 0,
+		"tags": [
+			"partner"
+		]
+	},
+	"azure-room-thermostat-box": {
+		"description": "Azure Samples - Room Thermostat",
+		"stars": 0,
+		"tags": [
+			"partner"
+		]
+	},
+	"azure-simple-marketplace-box": {
+		"description": "Azure Samples - Simple Marketplace",
+		"stars": 1,
+		"tags": [
+			"partner"
+		]
+	},
+	"besu-box": {
+		"description": "Starter to create API Endpoints for Hyperledger Besu network",
+		"stars": 1,
+		"tags": [
+			"besu",
+			"community",
+			"docker",
+			"hyperledger",
+			"nestJS"
+		]
+	},
+	"blueprint-box": {
+		"description": "All you need to get started making your own Truffle Box!",
+		"stars": 13,
+		"tags": [
+			"official"
+		]
+	},
+	"cheshire": {
+		"description": "A sandbox for CryptoKitties dApp developers",
+		"stars": 69,
+		"tags": [
+			"community",
+			"cryptokitties",
+			"dapp",
+			"ethereum"
+		]
+	},
+	"cita-truffle-box": {
+		"description": "",
+		"stars": 10,
+		"tags": [
+			"community"
+		]
+	},
+	"drizzle-box": {
+		"description": "This box comes with everything you need to start using smart contracts from a react app with Drizzle. It includes drizzle, drizzle-react and drizzle-react-components to give you a complete overview of Drizzle's capabilities.",
+		"stars": 161,
+		"tags": [
+			"official",
+			"drizzle",
+			"react",
+			"redux"
+		]
+	},
+	"drizzle-kaleido-box": {
+		"description": "Truffle box to get up and running quickly with Drizzle & Truffle on a Kaleido chain.",
+		"stars": 0,
+		"tags": [
+			"partner",
+			"drizzle",
+			"kaleido",
+			"react",
+			"truffle",
+			"truffle-box"
+		]
+	},
+	"drizzle-react-native-box": {
+		"description": "This box is to help get you started with building dapps with Drizzle on React Native.",
+		"stars": 6,
+		"tags": [
+			"official",
+			"drizzle",
+			"react-native"
+		]
+	},
+	"drizzle-truffle-ganache-docker-box": {
+		"description": "",
+		"stars": 0,
+		"tags": [
+			"community",
+			"docker",
+			"drizzle"
+		]
+	},
+	"drizzle-tutorial-with-react-hooks": {
+		"description": "Drizzle tutorial. Drizzle is a reactive Ethereum datastore for dapp UIs.",
+		"stars": 1,
+		"tags": [
+			"community",
+			"drizzle",
+			"ethereum",
+			"hooks",
+			"react",
+			"redux"
+		]
+	},
+	"eth-vue": {
+		"description": "This Truffle Box provides everything you need to quickly build Ethereum dApps that have authentication features with vue, including configuration for easy deployment to the Ropsten Network. It's also Gravatar-enabled. Connecting to a running Ganache blockchain network from Truffle is also possible -- for fast development and testing purposes. Built on Truffle 4, eth-vue uses vuex for state management, vuex-persist for local storage of app state, and vue-router for routing. Authentication functionalities are handled by Smart Contracts running on the Ethereum blockchain.",
+		"stars": 111,
+		"tags": [
+			"community",
+			"vuejs",
+			"ethereum",
+			"ethereum-contract",
+			"dapp",
+			"ethereum-dapp",
+			"eth-vue",
+			"blockchain",
+			"truffle",
+			"truffle-framework",
+			"vue-router",
+			"vue-components",
+			"contracts",
+			"boilerplate",
+			"vuex",
+			"vuex-persist",
+			"web3"
+		]
+	},
+	"etherplate": {
+		"description": " 🔗 Use this to make your next Ethereum DApp w/ React (&amp; Router), Redux, Bulma &amp; OpenZeppelin ERC721",
+		"stars": 39,
+		"tags": [
+			"community"
+		]
+	},
+	"express-box": {
+		"description": "A truffle box to serve as the foundation of any Truffle and Express.js dApp.  This Box Uses NodeJS(Express JS) to provide API endpoints to the Ethereum Blockchain smart contract so that this smart contract can be used in Android Apps as well.",
+		"stars": 29,
+		"tags": [
+			"community",
+			"truffle-box",
+			"truffle",
+			"nodejs",
+			"ethereum-blockchain",
+			"ganache-cli",
+			"solidity"
+		]
+	},
+	"flashloan-box": {
+		"description": "A truffle box starter to build upgradable-proxy contracts with included React frontend to demonstrate the process.",
+		"stars": "0",
+		"tags": [
+			"community",
+			"flashloan",
+			"aave"
+		]
+	},
+	"fluidity-truffle-box": {
+		"description": "Truffle box to give a skeleton for how Fluidity set up truffle and add-ons",
+		"stars": 2,
+		"tags": [
+			"community",
+			"circle-ci",
+			"eth-gas-reporter",
+			"mythril",
+			"slither",
+			"solhint"
+		]
+	},
+	"koa-trufflebox": {
+		"description": "- Production grade lightweight JSON based logging utility\n- configurable env's based on current NODE_ENV\n- Error handling middlewares\n- Easily pluggable controllers and routers\n- The project structure is highly modular and can be directly used or extended for production purpose",
+		"stars": 0,
+		"tags": [
+			"community"
+		]
+	},
+	"limelabs-angular-box": {
+		"description": "Truffle Box for Angular is a quick-and-easy way to get your Dapp on the road with Truffle and Angular",
+		"stars": 7,
+		"tags": [
+			"community"
+		]
+	},
+	"macroverse-truffle-box": {
+		"description": "Truffle Box for projects building on Macroverse's shared world",
+		"stars": 0,
+		"tags": [
+			"community"
+		]
+	},
+	"metacoin-box": {
+		"description": "MetaCoin smart contracts example box",
+		"stars": 44,
+		"tags": [
+			"official"
+		]
+	},
+	"nightfall-box": {
+		"description": "A box to help get you started building dapps with Nightfall!",
+		"stars": 4,
+		"tags": [
+			"official",
+			"nightfall"
+		]
+	},
+	"nuxt-box": {
+		"description": "Truffle, Nuxt and Vue boilerplate",
+		"stars": 32,
+		"tags": [
+			"community",
+			"ethereum",
+			"truffle",
+			"vuejs",
+			"nuxtjs",
+			"vue",
+			"nuxt",
+			"truffle-framework",
+			"solidity"
+		]
+	},
+	"peerai-api": {
+		"description": "Peerism's Peer.ai API built with Truffle, Node.js, Express.js, Solidity, and Ethereum TestRPC",
+		"stars": 14,
+		"tags": [
+			"community",
+			"node",
+			"express",
+			"express-middleware",
+			"jwt",
+			"passport",
+			"mongodb",
+			"mongoose",
+			"curl",
+			"truffle",
+			"solidity",
+			"ethereum",
+			"dapp",
+			"api",
+			"solc"
+		]
+	},
+	"pet-shop-box": {
+		"description": "A box containing all you need to get started with our Pet Shop tutorial.",
+		"stars": 108,
+		"tags": [
+			"official"
+		]
+	},
+	"rapid-box": {
+		"description": "A quick start truffle box to host REST APIs interacting with Smart Contracts",
+		"stars": 0,
+		"tags": [
+			"community",
+			"ethereum",
+			"truffle-framework",
+			"truffle-box"
+		]
+	},
+	"react-box": {
+		"description": "Truffle, Webpack and React boilerplate.",
+		"stars": 379,
+		"tags": [
+			"official",
+			"ethereum",
+			"ethereumjs",
+			"truffle",
+			"webpack",
+			"react",
+			"solidity"
+		]
+	},
+	"react-box-web3-todo": {
+		"description": "Truffle, Webpack, Web3, Redux and React boilerplate.",
+		"stars": 7,
+		"tags": [
+			"community"
+		]
+	},
+	"react-dapp-boilerplate": {
+		"description": "A superior UI setup for Ethereum Smart Contracts.  Check out www.reactdapps.com!",
+		"stars": 24,
+		"tags": [
+			"community"
+		]
+	},
+	"react-uport-box": {
+		"description": "Truffle and React/Redux boilerplate with uPort Connect",
+		"stars": 4,
+		"tags": [
+			"community",
+			"identity",
+			"react",
+			"uport"
+		]
+	},
+	"react_hooks_box": {
+		"description": "",
+		"stars": 2,
+		"tags": [
+			"community"
+		]
+	},
+	"rsk-starter-box": {
+		"description": "This box comes with everything needed to start using Truffle on RSK Network, including configurations for Mainnet and Testnet",
+		"stars": "0",
+		"tags": [
+			"partner",
+			"rsk"
+		]
+	},
+	"rsk-react-box": {
+		"description": "This box comes with everything needed to start using Truffle on RSK Network, including configurations for Mainnet and Testnet",
+		"stars": "0",
+		"tags": [
+			"partner",
+			"rsk",
+			"react"
+		]
+	},
+	"rsk-next-box": {
+		"description": "This box comes with everything needed to start using Truffle on RSK Network, including configurations for Mainnet and Testnet",
+		"stars": "0",
+		"tags": [
+			"partner",
+			"rsk",
+			"next"
+		]
+	},
+	"rsk-react-express-box": {
+		"description": "This box comes with everything needed to start using Truffle on RSK Network, including configurations for Mainnet and Testnet",
+		"stars": "0",
+		"tags": [
+			"partner",
+			"rsk",
+			"react",
+			"express"
+		]
+	},
+	"scoreboard": {
+		"description": "",
+		"stars": 15,
+		"tags": [
+			"community"
+		]
+	},
+	"skaledapp": {
+		"description": "",
+		"stars": 3,
+		"tags": [
+			"community",
+			"skale",
+			"skale-network",
+			"angular8",
+			"angular-material",
+			"ethereum",
+			"solidity"
+		]
+	},
+	"svelte-box": {
+		"description": "A truffle box for svelte",
+		"stars": 9,
+		"tags": [
+			"community",
+			"truffle",
+			"truffle-framework",
+			"truffle-box",
+			"truffle-boilerplates",
+			"svelte",
+			"sveltejs",
+			"svelte-components",
+			"ethereum",
+			"ethereum-dapp",
+			"dapp",
+			"seed",
+			"blockchain",
+			"parcel",
+			"parcel-bundler",
+			"parceljs"
+		]
+	},
+	"tezos-example-box": {
+		"description": "A box containing all you need to get started with Tezos development on Truffle.",
+		"stars": 9,
+		"tags": [
+			"official",
+			"tezos"
+		]
+	},
+	"thunder-box": {
+		"description": "Truffle Dapp boilerplate for ThunderCore",
+		"stars": 0,
+		"tags": [
+			"community",
+			"thundercore"
+		]
+	},
+	"tomochain-box": {
+		"description": "🍫 TomoChain starter truffle box",
+		"stars": 6,
+		"tags": [
+			"community",
+			"tomochain",
+			"truffle",
+			"truffle-box",
+			"smart-contracts"
+		]
+	},
+	"truffle-ci-box": {
+		"description": "Truffle box for quick integration with Travis CI and Coveralls",
+		"stars": 2,
+		"tags": [
+			"community",
+			"truffle-box",
+			"solidity",
+			"travis-ci",
+			"coveralls",
+			"solidity-coverage"
+		]
+	},
+	"truffle-create-react-app": {
+		"description": "Basic integration of truffle and React front-end based on the create-react-app without resorting to the 'reject' mode.",
+		"stars": 8,
+		"tags": [
+			"community"
+		]
+	},
+	"truffle-kaleido-box": {
+		"description": "Truffle Box that comes ready to go with appropriate versions and config to connect to Kaleido chains.",
+		"stars": 0,
+		"tags": [
+			"partner",
+			"kaleido",
+			"truffle",
+			"truffle-box"
+		]
+	},
+	"truffle-next": {
+		"description": "️️🛰️ A boilerplate Truffle Box project with Next.js for rapid Ethereum Dapp development",
+		"stars": 110,
+		"tags": [
+			"community",
+			"truffle",
+			"truffle-framework",
+			"reactjs",
+			"nextjs",
+			"solidity",
+			"ethereum",
+			"ethereum-contract"
+		]
+	},
+	"truffle-react-dapp": {
+		"description": "This project is build for react dapp developing, include solidity contract writing and web3.js API using demo.",
+		"stars": 0,
+		"tags": [
+			"community",
+			"web3js",
+			"solidity",
+			"truffle",
+			"dapp"
+		]
+	},
+	"truffle-react-redux": {
+		"description": "Template for your next dapp with React and Redux",
+		"stars": 11,
+		"tags": [
+			"community",
+			"truffle",
+			"react",
+			"redux",
+			"dapp"
+		]
+	},
+	"truffle-react-ts-template": {
+		"description": "Template for Ethereum DApps. Truffle + React + Typescript",
+		"stars": 7,
+		"tags": [
+			"community"
+		]
+	},
+	"truffle-security": {
+		"description": "Security infrastructure for Truffle DApps",
+		"stars": 7,
+		"tags": [
+			"community",
+			"solium",
+			"truffle-framework",
+			"ethereum",
+			"blockchain",
+			"security",
+			"smart-contracts"
+		]
+	},
+	"truffle-shavings": {
+		"description": "Truffle Boilerplate with solium, linguist, zeppelin, migrations, tests &amp;tc",
+		"stars": 2,
+		"tags": [
+			"community"
+		]
+	},
+	"truffle-starter": {
+		"description": "A react-based truffle starter box for use with Caster.io blockchain lessons",
+		"stars": 4,
+		"tags": [
+			"community"
+		]
+	},
+	"truffle-ts-percel-box": {
+		"description": "boxes for truffle",
+		"stars": 2,
+		"tags": [
+			"community",
+			"ethereum",
+			"truffle",
+			"box"
+		]
+	},
+	"truffle-vue": {
+		"description": "A truffle box to serve as the foundation of any Truffle and Vue.js dApp. Comes with Vue.js, vue-router and Vuex.",
+		"stars": 62,
+		"tags": [
+			"community",
+			"ethereum",
+			"truffle",
+			"webpack",
+			"vuejs",
+			"vue-router",
+			"vuex",
+			"javascript",
+			"solidity"
+		]
+	},
+	"tutorialtoken-box": {
+		"description": "A box containing all you need to get started with our OpenZeppelin (TutorialToken) tutorial.",
+		"stars": 45,
+		"tags": [
+			"official"
+		]
+	},
+	"upgradable-proxy-box": {
+		"description": "A truffle box starter to build upgradable-proxy contracts with included React frontend to demonstrate the process.",
+		"stars": "0",
+		"tags": [
+			"community"
+		]
+	},
+	"vue-box": {
+		"description": "Starter box to begin your Drizzle Vue dapp.",
+		"stars": 6,
+		"tags": [
+			"official",
+			"drizzle",
+			"vue-plugin",
+			"vue"
+		]
+	},
+	"vue-dark-chocolate": {
+		"description": "A truffle box that comes with everything you need to start using smart contracts from a Vue App, with Bootstrap styling and components. Supporting frameworks include Vuex, Vue-Router, Bootstrap 4 (via Bootstrap-Vue), and webpack. The sample uses webpack-dev-server for hot-reloading or you can build and serve from Express.",
+		"stars": 13,
+		"tags": [
+			"community",
+			"blockchain",
+			"truffle-box",
+			"solidity-contracts",
+			"vue",
+			"vue-bootstrap",
+			"webpack-boilerplate"
+		]
+	},
+	"vueport-box": {
+		"description": "Truffle box with built in uPort self-sovereign identity authentication and contract interaction using VueJS. Inspired by https://github.com/truffle-box/react-uport-box",
+		"stars": 4,
+		"tags": [
+			"community"
+		]
+	},
+	"vyper-example-box": {
+		"description": "A box containing all you need to get started with Vyper development on Truffle.",
+		"stars": 3,
+		"tags": [
+			"official"
+		]
+	},
+	"webpack-box": {
+		"description": "Example webpack-based app for Truffle (boilerplate)",
+		"stars": 34,
+		"tags": [
+			"official"
+		]
+	},
+	"zepkit": {
+		"description": "A truffle box containing React, ZeppelinOS & OpenZeppelin",
+		"stars": 40,
+		"tags": [
+			"community",
+			"openzeppelin",
+			"zeppelinos"
+		]
+	}
 }

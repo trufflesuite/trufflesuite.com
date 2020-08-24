@@ -86,7 +86,7 @@ We'll start our dapp by writing the smart contract that acts as the back-end log
 
 1. Add the following content to the file:
 
-   ```javascript
+   ```solidity
    pragma solidity ^0.5.0;
 
    contract Adoption {
@@ -105,7 +105,7 @@ Solidity is a statically-typed language, meaning data types like strings, intege
 
 1. Add the following variable on the next line after `contract Adoption {`.
 
-   ```javascript
+   ```solidity
    address[16] public adopters;
    ```
 
@@ -121,7 +121,7 @@ Let's allow users to make adoption requests.
 
 1. Add the following function to the smart contract after the variable declaration we set up above.
 
-   ```javascript
+   ```solidity
    // Adopting a pet
    function adopt(uint petId) public returns (uint) {
      require(petId >= 0 && petId <= 15);
@@ -151,7 +151,7 @@ As mentioned above, array getters return only a single value from a given key. O
 
 1. Add the following `getAdopters()` function to the smart contract, after the `adopt()` function we added above:
 
-   ```javascript
+   ```solidity
    // Retrieving the adopters
    function getAdopters() public view returns (address[16] memory) {
      return adopters;
@@ -285,7 +285,7 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 
 1. Add the following content to the `TestAdoption.sol` file:
 
-  ```javascript
+  ```solidity
   pragma solidity ^0.5.0;
 
   import "truffle/Assert.sol";
@@ -307,7 +307,7 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 
 We start the contract off with 3 imports:
 
-* `Assert.sol`: Gives us various assertions to use in our tests. In testing, **an assertion checks for things like equality, inequality or emptiness to return a pass/fail** from our test. [Here's a full list of the assertions included with Truffle](https://github.com/trufflesuite/truffle/tree/master/packages/truffle-core/lib/testing/Assert.sol).
+* `Assert.sol`: Gives us various assertions to use in our tests. In testing, **an assertion checks for things like equality, inequality or emptiness to return a pass/fail** from our test. [Here's a full list of the assertions included with Truffle](https://github.com/trufflesuite/truffle/blob/master/packages/core/lib/testing/Assert.sol).
 * `DeployedAddresses.sol`: When running tests, Truffle will deploy a fresh instance of the contract being tested to the blockchain. This smart contract gets the address of the deployed contract.
 * `Adoption.sol`: The smart contract we want to test.
 
@@ -326,7 +326,7 @@ To test the `adopt()` function, recall that upon success it returns the given `p
 
 1. Add the following function within the `TestAdoption.sol` smart contract, after the declaration of `Adoption`:
 
-   ```javascript
+   ```solidity
    // Testing the adopt() function
    function testUserCanAdoptPet() public {
      uint returnedId = adoption.adopt(expectedPetId);
@@ -346,7 +346,7 @@ Remembering from above that public variables have automatic getter methods, we c
 
 1. Add this function below the previously added function in `TestAdoption.sol`.
 
-   ```javascript
+   ```solidity
    // Testing retrieval of a single pet's owner
    function testGetAdopterAddressByPetId() public {
      address adopter = adoption.adopters(expectedPetId);
@@ -363,7 +363,7 @@ Since arrays can only return a single value given a single key, we create our ow
 
 1. Add this function below the previously added function in `TestAdoption.sol`.
 
-   ```javascript
+   ```solidity
    // Testing retrieval of all pet owners
    function testGetAdopterAddressByPetIdInArray() public {
      // Store adopters in memory rather than contract's storage
@@ -454,13 +454,13 @@ Things to notice:
 
 ### Instantiating the contract
 
-Now that we can interact with Ethereum via web3, we need to instantiate our smart contract so web3 knows where to find it and how it works. Truffle has a library to help with this called `truffle-contract`. It keeps information about the contract in sync with migrations, so you don't need to change the contract's deployed address manually.
+Now that we can interact with Ethereum via web3, we need to instantiate our smart contract so web3 knows where to find it and how it works. Truffle has a library to help with this called `@truffle/contract`. It keeps information about the contract in sync with migrations, so you don't need to change the contract's deployed address manually.
 
 1. Still in `/src/js/app.js`, remove the multi-line comment from within `initContract` and replace it with the following:
 
    ```javascript
    $.getJSON('Adoption.json', function(data) {
-     // Get the necessary contract artifact file and instantiate it with truffle-contract
+     // Get the necessary contract artifact file and instantiate it with @truffle/contract
      var AdoptionArtifact = data;
      App.contracts.Adoption = TruffleContract(AdoptionArtifact);
 
@@ -571,11 +571,11 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 1. After clicking **Getting Started**, you should see the initial MetaMask screen. Click **Import Wallet**.
 
    ![Initial screen](/img/tutorials/pet-shop/metamask-initial.png "MetaMask initial screen")
-   
+
 1. Next, you should see a screen requesting anonymous analytics. Choose to decline or agree.
 
    ![Improve MetaMask](/img/tutorials/pet-shop/metamask-analytics.png "Improve MetaMask")
-   
+
 1. In the box marked **Wallet Seed**, enter the mnemonic that is displayed in Ganache.
 
    <p class="alert alert-danger">
@@ -585,7 +585,7 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
    Enter a password below that and click **OK**.
 
    ![MetaMask seed phrase](/img/tutorials/pet-shop/metamask-seed.png "MetaMask seed phrase")
-   
+
 1. If all goes well, MetaMask should display the following screen. Click **All Done**.
 
    ![Congratulations](/img/tutorials/pet-shop/metamask-congratulations.png "Congratulations")
@@ -646,7 +646,7 @@ We can now start a local web server and use the dapp. We're using the `lite-serv
    The dev server will launch and automatically open a new browser tab containing your dapp.
 
    ![Pete's Pet Shop](/img/tutorials/pet-shop/dapp.png "Pete's Pet Shop")
-   
+
 1. A MetaMask pop-up should appear requesting your approval to allow Pete's Pet Shop to connect to your MetaMask wallet. Without explicit approval, you will be unable to interact with the dapp. Click **Connect**.
 
    ![MetaMask approval request](/img/tutorials/pet-shop/metamask-transactionconfirm.png "MetaMask approval request")

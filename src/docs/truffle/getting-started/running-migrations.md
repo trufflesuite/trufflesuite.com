@@ -10,11 +10,12 @@ Migrations are JavaScript files that help you deploy contracts to the Ethereum n
 
 To run your migrations, run the following:
 
-```none
+```shell
 $ truffle migrate
 ```
 
-This will run all migrations located within your project's `migrations` directory. At their simplest, migrations are simply a set of managed deployment scripts. If your migrations were previously run successfully, `truffle migrate` will start execution from the last migration that was run, running only newly created migrations. If no new migrations exists, `truffle migrate` won't perform any action at all. You can use the `--reset` option to run all your migrations from the beginning. For local testing, make sure to have a test blockchain such as [Ganache](/ganache) configured and running before executing `truffle migrate`. You can also use `truffle develop` and run your migrations.
+This will run all migrations located within your project's `migrations` directory. At their simplest, migrations are simply a set of managed deployment scripts. If your migrations were previously run successfully, `truffle migrate` will start execution from the last migration that was run, running only newly created migrations. If no new migrations exists, `truffle migrate` won't perform any action at all. You can use the `--reset` option to run all your migrations from the beginning. Other command options are documented [here](../reference/truffle-commands#migrate). For local testing, make sure to have a test blockchain such as [Ganache](/ganache) configured and running before executing `truffle migrate`. You can also use `truffle develop` and run your migrations.
+
 
 ## Migration files
 
@@ -41,8 +42,7 @@ Consider this example where two contracts are specified within the same source f
 
 Filename: `./contracts/Contracts.sol`
 
-```javascript
-
+```solidity
 contract ContractOne {
   // ...
 }
@@ -54,13 +54,13 @@ contract ContractTwo {
 
 To use only `ContractTwo`, your `artifacts.require()` statement would look like this:
 
-```
+```javascript
 var ContractTwo = artifacts.require("ContractTwo");
 ```
 
 To use both contracts, you will need two `artifacts.require()` statements:
 
-```
+```javascript
 var ContractOne = artifacts.require("ContractOne");
 var ContractTwo = artifacts.require("ContractTwo");
 ```
@@ -77,7 +77,7 @@ Truffle requires you to have a Migrations contract in order to use the Migration
 
 Filename: `contracts/Migrations.sol`
 
-```
+```solidity
 pragma solidity ^0.4.8;
 
 contract Migrations {
@@ -180,7 +180,7 @@ You can optionally pass an array of contracts, or an array of arrays, to speed u
 
 Note that you will need to deploy and link any libraries your contracts depend on first before calling `deploy`. See the `link` function below for more details.
 
-For more information, please see the [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/truffle-contract) documentation.
+For more information, please see the [@truffle/contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) documentation.
 
 
 Examples:
@@ -198,14 +198,14 @@ deployer.deploy(A, {overwrite: false});
 // Set a maximum amount of gas and `from` address for the deployment
 deployer.deploy(A, {gas: 4612388, from: "0x...."});
 
-// Deploy multiple contracts, some with arguments and some without.
-// This is quicker than writing three `deployer.deploy()` statements as the deployer
+// Deploying multiple contracts as an array is now deprecated.
+// This used to be quicker than writing three `deployer.deploy()` statements as the deployer
 // can perform the deployment as a single batched request.
-deployer.deploy([
-  [A, arg1, arg2, ...],
-  B,
-  [C, arg1]
-]);
+// deployer.deploy([
+//   [A, arg1, arg2, ...],
+//   B,
+//   [C, arg1]
+// ]);
 
 // External dependency example:
 //

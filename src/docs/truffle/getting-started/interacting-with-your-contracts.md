@@ -34,11 +34,11 @@ Choosing between a transaction and a call is as simple as deciding whether you w
 
 ## Introducing abstractions
 
-Contract abstractions are the bread and butter of interacting with Ethereum contracts from Javascript. In short, contract abstractions are wrapper code that makes interaction with your contracts easy, in a way that lets you forget about the many engines and gears executing under the hood. Truffle uses its own contract abstraction via the [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/truffle-contract) module, and it is this contract abstraction that's described below.
+Contract abstractions are the bread and butter of interacting with Ethereum contracts from Javascript. In short, contract abstractions are wrapper code that makes interaction with your contracts easy, in a way that lets you forget about the many engines and gears executing under the hood. Truffle uses its own contract abstraction via the [@truffle/contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) module, and it is this contract abstraction that's described below.
 
 In order to appreciate the usefulness of a contract abstraction, however, we first need a contract to talk about. We'll use the MetaCoin contract available to you through Truffle Boxes via `truffle unbox metacoin`.
 
-```javascript
+```solidity
 pragma solidity >=0.4.25 <0.6.0;
 
 import "./ConvertLib.sol";
@@ -73,7 +73,6 @@ contract MetaCoin {
 		return balances[addr];
 	}
 }
-
 ```
 
 This contract has three methods aside from the constructor (`sendCoin`, `getBalanceInEth`, and `getBalance`). All three methods can be executed as either a transaction or a call.
@@ -115,8 +114,14 @@ truffle(develop)> instance.sendCoin(accounts[1], 10, {from: accounts[0]})
 There are a few things interesting about the above code:
 
 * We called the abstraction's `sendCoin` function directly. This will result in a transaction by default (i.e, writing data) instead of call.
-* We passed an object as the third parameter to `sendCoin`. Note that the `sendCoin` function in our Solidity contract doesn't have a third parameter. What you see above is a special object that can always be passed as the last parameter to a function that lets you edit specific details about the transaction. Here, we set the `from` address ensuring this transaction came from `accounts[0]`.
-
+* We passed an object as the third parameter to `sendCoin`. Note that the `sendCoin` function in our Solidity contract doesn't have a third parameter. What you see above is a special object that can always be passed as the last parameter to a function that lets you edit specific details about the transaction ("transaction params"). Here, we set the `from` address ensuring this transaction came from `accounts[0]`.  The transaction params that you can set correspond to the fields in an Ethereum transaction:
+    * `from`
+    * `to`
+    * `gas`
+    * `gasPrice`
+    * `value`
+    * `data`
+    * `nonce`
 
 ### Making a call
 
@@ -129,10 +134,10 @@ truffle(develop)> balance.toNumber()
 
 What's interesting here:
 
-* We received a return value. Note that since the Ethereum network can handle very large numbers, we're given a [BigNumber](https://github.com/MikeMcl/bignumber.js/) object which we then convert to a number.
+* We received a return value. Note that since the Ethereum network can handle very large numbers, we're given a [BN](https://github.com/indutny/bn.js/) object which we then convert to a number.
 
 <p class="alert alert-warning">
-**Warning**: We convert the return value to a number because in this example the numbers are small. However, if you try to convert a BigNumber that's larger than the largest integer supported by Javascript, you'll likely run into errors or unexpected behavior.
+**Warning**: We convert the return value to a number because in this example the numbers are small. However, if you try to convert a BN that's larger than the largest integer supported by Javascript, you'll likely run into errors or unexpected behavior.
 </p>
 
 ### Processing transaction results
@@ -140,7 +145,7 @@ What's interesting here:
 When you make a transaction, you're given a `result` object that gives you a wealth of information about the transaction.
 
 ```javascript
-truffle(develop)> let result = await contract.sendCoin(accounts[1], 10, {from: accounts[0]})
+truffle(develop)> let result = await instance.sendCoin(accounts[1], 10, {from: accounts[0]})
 truffle(develop)> result
 ```
 
@@ -150,7 +155,7 @@ Specifically, you get the following:
 * `result.logs` *(array)* - Decoded events (logs)
 * `result.receipt` *(object)* - Transaction receipt (includes the amount of gas used)
 
-For more information, please see the [README](https://github.com/trufflesuite/truffle/tree/master/packages/truffle-contract) in the `truffle-contract` package.
+For more information, please see the [README](https://github.com/trufflesuite/truffle/tree/master/packages/contract) in the `@truffle/contract` package.
 
 ### Catching events
 
@@ -213,11 +218,87 @@ instance.sendTransaction({...}).then(function(result) {
 Option 2: There's also shorthand for just sending Ether directly:
 
 ```javascript
-instance.send(web3.toWei(1, "ether")).then(function(result) {
+instance.send(web3.utils.toWei(1, "ether")).then(function(result) {
   // Same result object as above.
 });
 ```
 
+### Special methods on Truffle contract objects
+
+There are a couple of special functions that you can find on the actual contract
+methods of your contract abstractions:
+
+- `estimateGas`
+- `sendTransaction`
+- `call`
+
+The first special method mentioned above is the `estimateGas` method. This, as you
+probably can guess, estimates the amount of gas that a transaction will require.
+If we wanted to estimate the gas for a transaction, we would call it on the
+contract method itself. It would look something like the following:
+
+```javascript
+const instance = await MyContract.deployed();
+const amountOfGas = await instance.sendTokens.estimateGas(4, myAccount);
+```
+
+This will give us an estimate of how much gas it will take to run the
+transaction specified.
+
+Note that the arguments above (`4` and `myAccount`) correspond to whatever the
+signature of the contract method happens to be.
+
+Another useful thing to note is that you can also call this on a contract's
+new method to see how much gas it will take to deploy. So you would do
+`Contract.new.estimateGas()` to get the gas estimate for the contract's deployment.
+
+The next mentioned method is `sendTransaction`. In general, if you execute a
+contract method, Truffle will intelligently figure out whether it needs
+to make a transaction or a call. If your function can be executed
+as a call, then Truffle will do so and you will be able to avoid gas costs.
+
+There may be some scenarios, however, where you want to force Truffle to
+make a transaction. In these cases, you can use the `sendTransaction`
+method found on the method itself. This would look something
+like `instance.myMethod.sendTransaction()`.
+
+For example, suppose I have a contract instance with the method
+`getTokenBalance`. I could do the following to force a transaction to take
+place while executing `getTokenBalance`:
+
+```javascript
+const instance = await MyContract.deployed();
+const result = await instance.getTokenBalance.sendTransaction(myAccount);
+```
+
+The `result` variable above will be the same kind of result you would get
+from executing any normal transaction in Truffle. It will contain the
+transaction hash, the logs, etc.
+
+The last method is `call` and the syntax is exactly the same as for
+`sendTransaction`. If you want to explicitly make a call, you can
+use the `call` method found on your contract abstraction's method. So you
+would write something that looks like
+`const result = await instance.myMethod.call()`.
+
+### Invoking overloaded methods
+
+The current implementation of Truffle's contract abstraction can mistakenly
+infer the signature of an overloaded method even though it exists in the
+contract ABI.
+
+Therefore, some methods may not be accessible through the contract's
+instance, but their accessors can be invoked explicitly via the `.methods`
+property of the contract.
+
+```javascript
+const instance = await MyContract.deployed();
+instance.methods['setValue(uint256)'](123);
+instance.methods['setValue(uint256,uint256)'](11, 55);
+```
+
+Please see this issue [here](https://github.com/trufflesuite/truffle/issues/2868) for more information.
+
 ## Further reading
 
-The contract abstractions provided by Truffle contain a wealth of utilities for making interacting with your contracts easy. Check out the [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/truffle-contract) documentation for tips, tricks and insights.
+The contract abstractions provided by Truffle contain a wealth of utilities for making interacting with your contracts easy. Check out the [@truffle/contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) documentation for tips, tricks and insights.

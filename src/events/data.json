@@ -1,12 +1,73 @@
 [
+
   {
-    "title": "TruffleCon 2019",
-    "start": "Friday, Aug 2, 2019, 9:00 AM PST",
-    "end": "Sunday, Aug 4, 2019, 6:00 PM PST",
-    "location": "Microsoft Building 33 | 16070 NE 36th Way, Redmond, WA 98052",
-    "excerpt": "TruffleCon is a gathering for Truffle users, fans, developers, and those who want to build world-changing applications powered by decentralized technologies. Join people from around the world as we meet August 2-4 in Redmond, WA to build community and foster connections in the blockchain developer space, share tips and tricks, challenges and successes.",
-    "eventbrite": "/trufflecon2019",
-    "status": "open",
-    "image": "/img/trufflecon.jpg"
+    "title": "TruffleCon2020",
+    "start": "Friday, November 6th, 2020, 9:00 AM PST",
+    "end": "Saturday, November 7th, 2020, 5:00 PM PST",
+    "location": "Virtual Conference",
+    "excerpt": "A conference for those who want to build world-changing applications powered by decentralized technologies.",
+    "eventbrite": "https://www.trufflesuite.com/trufflecon2020",
+    "image": "/img/tcon-branding-2020-16x9b.jpg",
+    "current": "true"
+  },
+  {
+    "title": "Kaleido Technical Tuesday",
+    "start": "Tuesday, July 21, 2020, 8:00 AM PST",
+    "location": "Webinar",
+    "excerpt": "Learn about developer tools and smart contract capabilities available on Kaleido's full-stack platform. Featuring a live demo of Truffle's smart contract management suite.",
+    "youtube": "https://www.youtube.com/watch?v=boa5F5phZxo",
+    "image": "/img/kaleido-tech-tuesday.png",
+    "past": "true"
+  },
+  {
+    "title": "Filecoin Virtual Community July Meetup",
+    "start": "Tuesday, July 14, 2020, 1:00 ",
+    "end": "2:00 PM PDT",
+    "location": "Meetup",
+    "excerpt": "Join us in a free virtual meetup where we team up w/ Filecoin to show you how to create a truly decentralized app! Register now & come with your questions - learn the power of Filecoin & Truffle combined!",
+    "youtube": "https://www.youtube.com/watch?v=VHmw_akBxkI",
+    "image": "/img/filecoin_meetup-banner-truffle.png",
+    "past": "true"
+  },
+  {
+    "title": "An Introduction to Truffle Suite and Solidity (Spanish)",
+    "start": "Wednesday, July 8, 2020, 5:00 PM PST",
+    "location": "Webinar",
+    "excerpt": "Join Ernesto García, Full Stack & Blockchain Developer, on a live Youtube broadcast walking through developing a Dapp using Truffle + Solidity. This live webinar is in Spanish.",
+    "youtube": "https://www.youtube.com/watch?v=1fWLW1lD660",
+    "image": "/img/blockchain-academy-mexico-event2.jpg",
+    "past": "true"
+  },
+  {
+    "title": "Truffle Suite is Branching Out to R3's Corda",
+    "start": "Wednesday, May 6th, 2020, 9:00",
+    "end": "9:45 AM PST",
+    "location": "Webinar",
+    "excerpt": "Join Truffle Suite & R3 on May 6th at 9:00 am PDT for a free webinar and learn how to develop, test, and deploy CorDapps to a personal Corda Network using Ganache.",
+    "youtube": "https://youtu.be/DAsMMqGVXj4",
+    "image": "/img/webinar-c-g-cham-event16x9.png",
+    "past": "true"
+  },
+
+  {
+    "title": "Future of Blockchain Solution Development",
+    "start": "Tuesday, January 14th, 2020, 9:00",
+    "end": "9:45 AM PST",
+    "location": "Webinar",
+    "excerpt": "Kevin Bluer & Tim Coulter discuss trends in blockchain development.",
+    "youtube": "https://www.youtube.com/watch?v=KpIAwY-_YPY",
+    "image": "/img/future-solutions-truffle.png",
+    "past": "true"
+  },
+
+  {
+    "title": "Truffle Teams Overview",
+    "start": "Thursday, December 11th, 2019, 9:00",
+    "end": "9:45 AM PST",
+    "location": "Webinar",
+    "excerpt": "Truffle's very own Mike Seese walks us through the features available in Truffle Teams.",
+    "youtube": "https://youtu.be/OnAiw2fkMdM?t=389",
+    "image": "/img/webinar-12-11-19-seese-teams16x9a.png",
+    "past": "true"
   }
 ]

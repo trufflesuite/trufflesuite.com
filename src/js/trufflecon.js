@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+  // 2018 Buy Button
+
   $(window).scroll(function() {
     var buyButton = $('.trufflecon-nav, .trufflecon-nav-inline');
     var windowScrollPos = $(this).scrollTop();
@@ -15,6 +18,8 @@ $(document).ready(function() {
   
     return buyButton.removeClass('scroll');
   });
+
+  // Hero Nav
 
   $('.trufflecon-nav .scroll-link, .trufflecon-nav-inline .scroll-link').click(function(event) {
     event.preventDefault();

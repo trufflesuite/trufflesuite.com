@@ -6,25 +6,25 @@ This post was originally published by David Burela on his blog [Burela's House-o
 
 This configuration works really well with Truffle (as shown in the final screenshot). You can read how to install Truffle on Windows in [my previous post](/tutorials/how-to-install-truffle-and-testrpc-on-windows-for-blockchain-development).
 
-## Step 1: Install Visual Studio code   
+## Step 1: Install Visual Studio code 
 [https://code.visualstudio.com/](https://code.visualstudio.com/)
 
-Easy option on Windows: Just install via [https://chocolatey.org/](https://chocolatey.org/) by using the command  
+Easy option on Windows: Just install via [https://chocolatey.org/](https://chocolatey.org/) by using the command
 
-```
+```shell
 choco install VisualstudioCode –y
 ```
 
-## Step 2: Install Visual Studio extensions  
+## Step 2: Install Visual Studio extensions
 Go into the extensions section, then install these plugins:
 
 * Solidity
 * Material Icon Theme
 ![image](https://davidburela.files.wordpress.com/2016/11/image3.png)
 
-## Step 3: Enable icon theme  
+## Step 3: Enable icon theme
 Select `File –> Preferences –> File Icon Theme`.
 ![image](https://davidburela.files.wordpress.com/2016/11/image4.png)
 
-## Final result: Sexy workspace  
+## Final result: Sexy workspace
 ![image](https://davidburela.files.wordpress.com/2016/11/image5.png)

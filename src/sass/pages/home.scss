@@ -91,7 +91,14 @@
   .github-button-wrapper {
     margin-left: 1rem;
     display: inline-block;
-    vertical-align: middle
+    vertical-align: middle;
+    letter-spacing: 0;
+    text-transform: none;
+
+    @media (max-width: 767px) {
+      float: right;
+      margin-right: 0.75rem;
+    }
   }
 
   h5 {

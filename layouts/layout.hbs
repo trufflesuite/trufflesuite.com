@@ -1,8 +1,12 @@
 <!DOCTYPE html>
+<html>
 <head>
-  {{> ga-tag}}
+  {{> ga-tag-head}}
+  {{> hs-tag}}
   
   <meta charset="utf-8">
+  <meta name="description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}">
+  {{#if keywords}}<meta name="keywords" content="{{ keywords }}">{{/if}}
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
   <!-- Favicon -->
@@ -26,7 +30,7 @@
   <!-- Facebook OpenGraph -->
   <meta property="og:site_name" content="Truffle Suite" />
   <meta property="og:description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}" />
-  <meta property="og:title" content="Truffle Suite | {{#if parent-title}}{{ parent-title }} | {{ title }}{{else}}{{ title }}{{/if}}" />
+  <meta property="og:title" content="{{#if parent-title}}{{ title }} | {{ parent-title }}{{else}}{{ title }}{{/if}} | Truffle Suite" />
   <meta property="og:url" content="{{getPageUrl path}}" />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="{{#if social-image}}{{ social-image }}{{else}}https://truffleframework.com/img/favicons/truffle-share.png{{/if}}" />
@@ -34,7 +38,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="Truffle Suite" />
-  <meta name="twitter:title" content="Truffle Suite | {{#if parent-title}}{{ parent-title }} | {{ title }}{{else}}{{ title }}{{/if}}" />
+  <meta name="twitter:title" content="{{#if parent-title}}{{ title }} | {{ parent-title }}{{else}}{{ title }}{{/if}} | Truffle Suite" />
   <meta name="twitter:description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}" />
   <meta name="twitter:creator" content="Truffle Suite" />
   <meta name="twitter:domain" content="trufflesuite.com" />
@@ -43,16 +47,18 @@
   <meta name="google-site-verification" content="BSgPkMHzw7IxJTpEElNfD8ZZYPzXgOQiTVPzAxAG8-o" />
 
   {{#if parent-title}}
-    <title>Truffle Suite | {{ parent-title }} | {{ title }}</title>
+    <title>{{ title }} | {{ parent-title }} | Truffle Suite</title>
   {{else}}
-    <title>Truffle Suite | {{ title }}</title>
+    <title>{{ title }} | Truffle Suite</title>
   {{/if}}
 
   <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans|Oswald|Varela+Round|Roboto+Condensed|Roboto+Mono|Cinzel" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/371f2d7a8a.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/index.css?cache_buster={{cachebuster}}">
 </head>
 <body>
+  {{> ga-tag-body}}
+  
   {{> navbar}}
   
   {{{ contents }}}

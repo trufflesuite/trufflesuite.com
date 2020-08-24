@@ -1,7 +1,42 @@
-.post-row:not(:last-child) {
-  margin-bottom: 3rem;
+.post-row-link {
+  color: inherit;
+  display: block;
+  transition: all .125s ease-in-out;
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+
+    .btn-truffle {
+      background: #fff;
+      color: #5e464d;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
 }
 
 .post-thumbnail {
   border: 4px solid #3fe0c5;
+}
+
+.post-trufflecon-box {
+  background: #e0dad7;
+  padding: 1.5rem;
+  border-radius: .25rem;
+}
+
+.container-post {
+  figcaption {
+    font-size: .9rem;
+    margin-top: -1rem;
+    font-style: italic;
+  }
 }

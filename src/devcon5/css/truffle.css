@@ -1,0 +1,42 @@
+#truffle li {
+    text-align: center;
+    list-style:none;
+    font-style:italic;
+    position: relative;
+    font-size: 1.1em;
+}
+#truffle li > span {
+    line-height: 1.5;
+    position: relative;
+    z-index:1;
+    text-shadow: 0 -1px 1px rgba(0,0,0,.25);
+    opacity:.9;
+}
+#truffle li:nth-child(2), #truffle li:nth-child(3){
+    box-sizing: border-box;
+    width: 50%;
+    float: left;
+    padding-right: 3vw;
+}
+#truffle li:nth-child(2) {
+    padding-right: 0;
+    padding-left: 3vw;
+}
+#truffle li:nth-child(2) > img {
+    left: calc(50% + 1.5vw);
+    height:110px;
+    top:.2em;
+}
+#truffle li:nth-child(3) > img {
+    left: calc(50% - 1.5vw);
+    height: 120px;
+}
+#truffle li > img {
+    height: 100px;
+    position: absolute;
+    left: calc(50%);
+    top:0;
+    transform: translate(-50%, 0%);
+    z-index: 0;
+    opacity:.3;
+}

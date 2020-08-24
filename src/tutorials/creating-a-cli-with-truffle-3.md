@@ -8,7 +8,7 @@ For this tutorial, we'll be building a command line tool that interacts with the
 ## Getting Started
 If you were using Truffle beta 3.0.0-9 or below, **do not immediately upgrade**. Read [these release notes](https://github.com/ConsenSys/truffle/releases/tag/v3.0.2) and the [upgrade guide](/tutorials/upgrading-from-truffle-2-to-3) first. Next, make a new folder and run the following command:
 
-```
+```shell
 $ truffle init
 ```
 
@@ -112,7 +112,7 @@ Here's [index.js](https://github.com/dougvk/ens-registrar3/blob/master/index.js)
 ```javascript
 import { default as ENSAuctionLib } from './lib/ens_registrar'
 import { default as Web3 } from 'web3'
-import { default as contract } from 'truffle-contract'
+import { default as contract } from '@truffle/contract'
 
 const AuctionRegistrar = contract(require('./build/contracts/Registrar.json'))
 const Deed = contract(require('./build/contracts/Deed.json'))
@@ -128,7 +128,7 @@ export default function (host, port, registrarAddress, fromAddress) {
   )
 }
 ```
-Here I'm using the same library, `truffle-contract`, that `artifacts.require` uses under the hood. Because I can't rely on the Truffle framework within the CLI, I have to include the compiled contract artifacts manually. The rest is passed in through the CLI in `bin/ensa.js`:
+Here I'm using the same library, `@truffle/contract`, that `artifacts.require` uses under the hood. Because I can't rely on the Truffle framework within the CLI, I have to include the compiled contract artifacts manually. The rest is passed in through the CLI in `bin/ensa.js`:
 ```javascript
 import { default as initializeLib } from '../index'
 ...

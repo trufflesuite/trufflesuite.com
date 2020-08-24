@@ -1,0 +1,12 @@
+{
+  "name": "pentesting-etehreum-contracts-with-ganache",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "start": "ws"
+  },
+  "devDependencies": {
+    "local-web-server": "^3.0.7"
+  },
+  "dependencies": {}
+}

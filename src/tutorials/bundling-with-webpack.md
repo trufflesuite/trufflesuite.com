@@ -1,6 +1,6 @@
 [Webpack](https://webpack.github.io/) is a powerful module bundler that helps turn your code into static assets you can deploy to the web. With the [Truffle Solidity loader](https://github.com/ConsenSys/truffle-solidity-loader), we'll show you how you can use Webpack with your existing Truffle project.
 
-## Intended Audience 
+## Intended Audience
 
 This tutorial is for Truffle users who are familiar with Webpack already. Since Webpack requires considerable knowledge to use effectively, we recommend checking out the [Webpack documentation](http://webpack.github.io/docs/) as well as the [Truffle + Webpack Demo application](https://github.com/ConsenSys/truffle-webpack-demo) before proceeding.
 
@@ -8,7 +8,7 @@ This tutorial is for Truffle users who are familiar with Webpack already. Since 
 
 Navigate to your project in the command line, and then install the required dependencies. These dependencies are in addition to any other Webpack-related dependencies your project might have.
 
-```
+```shell
 $ npm install webpack webpack-dev-server truffle-solidity-loader --save-dev
 ```
 
@@ -56,15 +56,15 @@ In the past, Truffle bootstrapped applications to look for an open Ethereum node
 ```javascript
 var Web3 = require("web3");
 
-window.addEventListener('load', function() {                    
-  // Supports Metamask and Mist, and other wallets that provide 'web3'.      
-  if (typeof web3 !== 'undefined') {                            
-    // Use the Mist/wallet provider.                            
-    window.web3 = new Web3(web3.currentProvider);               
-  } else {                                                      
+window.addEventListener('load', function() {
+  // Supports Metamask and Mist, and other wallets that provide 'web3'.
+  if (typeof web3 !== 'undefined') {
+    // Use the Mist/wallet provider.
+    window.web3 = new Web3(web3.currentProvider);
+  } else {
     // No web3 detected. Show an error to the user or use Infura: https://infura.io/
-  }                                                                                                                       
-});     
+  }
+});
 ```
 
 Notice we only use the wallet's provider and not the whole `web3` object provided to us. This ensures our application is not dependent on the wallet's version of Web3, and reduces the surface area in which version errors might occur.
@@ -97,7 +97,7 @@ You can prevent having to perform this provisioning more than once per contract 
 
 From here you can run webpack like normal, via the normal `webpack` command or the `webpack-dev-server`, if you have those installed globally on your machine:
 
-```
+```shell
 $ webpack
 $ webpack-dev-server --hot
 ```

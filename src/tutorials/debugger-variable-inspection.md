@@ -4,7 +4,7 @@
   <strong>Note</strong>: This tutorial requires Truffle version 4.1.8 or newer.
 </p>
 
-The integrated Solidity debugger in Truffle is a powerful tool for inspecting your contracts. 
+The integrated Solidity debugger in Truffle is a powerful tool for inspecting your contracts.
 
 When initially released, the debugger had the ability to to step through Solidity code, but that was it.
 
@@ -45,7 +45,7 @@ Generating the Fibonacci sequence with a smart contract can show off the debugge
 
 1. In the `contracts/` directory, create a file named `Fibonacci.sol` and add the following content:
 
-   ```javascript
+   ```solidity
    pragma solidity ^0.4.22;
 
    contract Fibonacci {
@@ -65,7 +65,7 @@ Generating the Fibonacci sequence with a smart contract can show off the debugge
        }
 
      }
-  
+
    }
    ```
 
@@ -124,7 +124,7 @@ Generating the Fibonacci sequence with a smart contract can show off the debugge
 
    You will see a prompt:
 
-   ```
+   ```shell
    truffle(development)>
    ```
 
@@ -150,11 +150,11 @@ Generating the Fibonacci sequence with a smart contract can show off the debugge
 
    <!--TODO: Update Migrations.sol template to eliminate constructor warning-->
 
-1. Migrate the contract to our blockchain. 
+1. Migrate the contract to our blockchain.
 
    ```shell
    migrate
-   ``` 
+   ```
 
    You will see output that looks like this, though the addresses and transaction IDs will be different:
 
@@ -190,13 +190,13 @@ Now it's time to interact with the contract. First we'll check to make sure that
 
 1. In the Truffle console, enter the following command:
 
-   ```shell
+   ```javascript
    Fibonacci.deployed().then(function(instance){return instance.generateFib(10);});
    ```
 
    Before we run the command, let's take a look at it in greater detail. Displayed in a more easily-readable manner, it reads:
 
-   ```shell
+   ```javascript
    Fibonacci.deployed().then(function(instance) {
      return instance.generateFib(10);
    });
@@ -206,7 +206,7 @@ Now it's time to interact with the contract. First we'll check to make sure that
 
 1. Run the above command. A transaction will be created on the blockchain because our array that holds the generated Fibonacci sequence is in storage. Because of this, the output of the console will be the transaction details, which will look similar to this:
 
-   ```
+   ```javascript
    { tx: '0xf47f01da1a6991f4dc168928cf4c490cb9bb57ca403b428f40a333ea65d1c41c',
      receipt:
       { transactionHash: '0xf47f01da1a6991f4dc168928cf4c490cb9bb57ca403b428f40a333ea65d1c41c',
@@ -244,7 +244,7 @@ You can debug a transaction in the Truffle console by typing `debug <transaction
 
    This will enter the debugger. You will see the following output:
 
-   ```
+   ```solidity
    Gathering transaction data...
 
    Addresses affected:
@@ -277,7 +277,7 @@ You can debug a transaction in the Truffle console by typing `debug <transaction
 
 1. Type `n` and `<Enter>` to step next. This will move to the next instruction:
 
-   ```
+   ```solidity
    6:
    7:   // n = how many in the series to return
    8:   function generateFib(uint n) public {
@@ -285,10 +285,10 @@ You can debug a transaction in the Truffle console by typing `debug <transaction
 
    debug(development:0xf47f01da...)>
    ```
-   
+
 1. We've seen in the [previous tutorial on debugging](/tutorials/debugging-a-smart-contract) how you can step through the instructions to debug your contract. But here, we have an additional concern, which is that we don't actually know the outcome of our function call; we want to know what a *variable* is set to. You can view the state of all known variables by pressing `v`:
 
-   ```
+   ```solidity
      fibseries: []
 
    debug(development:0xf47f01da...)>
@@ -298,7 +298,7 @@ You can debug a transaction in the Truffle console by typing `debug <transaction
 
 1. Press `Enter` to repeat the last command, and step next to the next instruction:
 
-   ```
+   ```solidity
     9:
    10:     // set 1st and 2nd entries
    11:     fibseries.push(1);
@@ -310,13 +310,13 @@ You can debug a transaction in the Truffle console by typing `debug <transaction
 
 1. Press `v` to see the current state of the variables:
 
-   ```
+   ```solidity
              i: 0
              n: 10
      fibseries: []
    ```
 
-   Now we see three variables, our `fibseries` array and two others: 
+   Now we see three variables, our `fibseries` array and two others:
 
    * `i` is an index variable, used to determine the location of the next number in the sequence
    * `n` is the integer we passed to the function (`10` in this case) indicating the number of entries in our Fibonacci sequence
@@ -325,7 +325,7 @@ You can debug a transaction in the Truffle console by typing `debug <transaction
 
 1. Press `Enter` to step next to the next instruction:
 
-   ```
+   ```solidity
     9:
    10:     // set 1st and 2nd entries
    11:     fibseries.push(1);
@@ -334,7 +334,7 @@ You can debug a transaction in the Truffle console by typing `debug <transaction
 
 1. It's rather tedious to constantly press `v` after every state change. Thankfully, you can set certain variables to be "watched", so that they will display after every movement in the debugger. The syntax to watch a variable is `+:<variable>`. So let's watch the variables we care about (`i` and `fibseries`) with the following two commands:
 
-   ```shell
+   ```solidity
    +:i
 
    +:fibseries
@@ -344,7 +344,7 @@ You can debug a transaction in the Truffle console by typing `debug <transaction
 
 1. Press `Enter` to move to the next instruction:
 
-   ```
+   ```solidity
     9:
    10:     // set 1st and 2nd entries
    11:     fibseries.push(1);
@@ -361,19 +361,19 @@ You can debug a transaction in the Truffle console by typing `debug <transaction
 
 1. You can also watch expressions, not just variables. Run the following expression to make our output a little more compact.
 
-   ```shell
+   ```solidity
    +:{ i, fibseries }
    ```
 
    This will output as follows:
 
-   ```
+   ```solidity
    { i: 0, fibseries: [] }
    ```
 
 1. Since we have all we need in this one expression, we can unwatch the individual variables. The syntax to watch a variable is `-:<variable>`.
 
-   ```shell
+   ```solidity
    -:i
 
    -:fibseries
@@ -383,7 +383,7 @@ You can debug a transaction in the Truffle console by typing `debug <transaction
 
 1. Press `Enter` to move to the next instruction and see the output:
 
-   ```
+   ```solidity
    10:     // set 1st and 2nd entries
    11:     fibseries.push(1);
    12:     fibseries.push(1);
@@ -395,10 +395,10 @@ You can debug a transaction in the Truffle console by typing `debug <transaction
 
    Notice that we have now populated the first entry in the sequence.
 
-1. Because the debugger steps through each instruction one at a time, it's going to take a long time to see results if we don't pick 
+1. Because the debugger steps through each instruction one at a time, it's going to take a long time to see results if we don't pick
 up our pace. Luckily, the debugger can "step over", which steps over the current line, moving to the next line, as long as it's at the same function depth. This will allow us to make progress much more quickly. So type `o` to step over the current instruction set. The output will be:
 
-   ```
+   ```solidity
    13:
    14:     // generate subsequent entries
    15:     for (uint i=2; i < n ; i++) {
@@ -412,7 +412,7 @@ up our pace. Luckily, the debugger can "step over", which steps over the current
 
 1. Since `Enter` will replay the previous command, press `Enter` now to step over again:
 
-   ```
+   ```solidity
    14:     // generate subsequent entries
    15:     for (uint i=2; i < n ; i++) {
    16:       fibseries.push(fibseries[i-1] + fibseries[i-2]);
@@ -426,8 +426,8 @@ up our pace. Luckily, the debugger can "step over", which steps over the current
 
 1. Continue pressing `Enter` and watching the variable output. You should notice that when `i` gets to `10`, the for loop ends (as the loop terminates at `i < n`). The final array is:
 
-   ```
-   [1, 1, 2, 3, 5, 8, 13, 21, 34, 55] 
+   ```solidity
+   [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
    ```
 
    It can be verified that this is the correct first ten entries in the Fibonacci sequence.
@@ -439,7 +439,7 @@ Our contract as we have created it is working as expected. That's great, but we 
 
 It's amazing what switching a plus sign for a minus sign can do. Instead of the Fibonacci sequence:
 
-```
+```solidity
 F[1] = 1
 F[2] = 1
 F[n] = F[n-1] + F[n-2]
@@ -447,7 +447,7 @@ F[n] = F[n-1] + F[n-2]
 
 Let's switch the plus for a minus sign:
 
-```
+```solidity
 F[1] = 1
 F[2] = 1
 F[n] = F[n-1] - F[n-2]
@@ -459,7 +459,7 @@ Let's edit our contract and see what happens.
 
 1. Open the Fibonacci.sol file. Edit the definition of our `fibseries[]` array to be of type `uint8[]`.
 
-   ```javascript
+   ```solidity
    uint8[] fibseries;
    ```
 
@@ -469,7 +469,7 @@ Let's edit our contract and see what happens.
 
 1. Edit the for loop so that the terms are subtracted instead of added:
 
-   ```javascript
+   ```solidity
    fibseries.push(fibseries[i-1] - fibseries[i-2]);
    ```
 
@@ -493,7 +493,7 @@ Let's edit our contract and see what happens.
 
 1. We can now run the same command as before, which will generate a new transaction:
 
-    ```shell
+    ```javascript
    Fibonacci.deployed().then(function(instance){return instance.generateFib(10);});
    ```
 
@@ -501,7 +501,7 @@ Let's edit our contract and see what happens.
 
 1. Type `debug` and then the value of `tx:` found in your transaction details. This will enter the debugger again.
 
-   ```
+   ```solidity
    Fibonacci.sol:
 
    1: pragma solidity ^0.4.22;
@@ -512,7 +512,7 @@ Let's edit our contract and see what happens.
 
 1. We're curious about what our `fibseries` array is going to look like, so let's watch it:
 
-   ```shell
+   ```solidity
    +:fibseries
    ```
 
@@ -520,7 +520,7 @@ Let's edit our contract and see what happens.
 
 1. Let's "step over" execution, so as to speed things up ("step next" takes much longer, as it's a more granular process). You can "step over" by running the `o` command.
 
-   ```
+   ```solidity
    Fibonacci.sol:
 
    6:
@@ -536,7 +536,7 @@ Let's edit our contract and see what happens.
 
 1. Since `Enter` repeats the previous command (in our case, "step over"), press Enter twice. You'll see that the first element of `fibseries` has been populated.
 
-   ```
+   ```solidity
    10:     // set 1st and 2nd entries
    11:     fibseries.push(1);
    12:     fibseries.push(1);
@@ -548,7 +548,7 @@ Let's edit our contract and see what happens.
 
 1. Keep pressing Enter until four elements have been populated:
 
-   ```
+   ```solidity
    :fibseries
      [ 1, 1, 0, 255 ]
    ```
@@ -559,7 +559,7 @@ But the jump from `0` to `255` should be suspicious too. And in fact, what we're
 
 Assuming this was the series we wanted (and that our minus sign was correct), the way to change this is to change the definition of our `fibseries` array from `uint8[]` to `int8[]`. That would make values "signed integers" and able to accept negative values, giving you an array that would look like this instead:
 
-```
+```solidity
 [ 1, 1, 0, -1 ]
 ```
 
@@ -572,11 +572,11 @@ This is one of the reasons to use Ganache over a public testnet: you can easily 
 
 So we're going to introduce a small error, a misnumbering in our for loop that will cause it to have an invalid index.
 
-1. Open the `Fibonacci.sol` file again. 
+1. Open the `Fibonacci.sol` file again.
 
 1. Edit the for loop so that the `i` variable starts from `1`
 
-   ```javascript
+   ```solidity
    for (uint i=1; i < n ; i++) {
    ```
 
@@ -596,7 +596,7 @@ So we're going to introduce a small error, a misnumbering in our for loop that w
 
 1. Run the same command as before:
 
-   ```shell
+   ```javascript
    Fibonacci.deployed().then(function(instance){return instance.generateFib(10);});
    ```
 
@@ -624,13 +624,13 @@ So we're going to introduce a small error, a misnumbering in our for loop that w
 
 1. Let's watch the same compacted expression as before, showing both the value of `i` and the value of `fibseries`.
 
-   ```shell
+   ```solidity
    +:{ i, fibseries }
    ```
 
 1. Continually step next. You will eventually reach a state where the debugger will error out.
 
-   ```
+   ```solidity
    14:     // generate subsequent entries
    15:     for (uint i=1; i < n ; i++) {
    16:       fibseries.push(fibseries[i-1] - fibseries[i-2]);

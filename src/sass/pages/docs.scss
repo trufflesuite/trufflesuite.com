@@ -5,7 +5,7 @@
 }
 
 .docs-sidebar {
-  padding: 1rem 2rem;
+  padding: 0;
   z-index: 200;
   background: #33262a;
 
@@ -20,6 +20,41 @@
     font-size: 1.25rem;
   }
 
+  .docs-top-nav {
+    padding: 0.5rem 1rem;
+    background-color: #5e464d;
+
+    a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        color: white;
+      }
+    }
+  
+    .docs-back-button {
+      display: inline-block;
+      vertical-align: middle;
+      color: white;
+      font-size: 2.5rem;
+      margin-right: 0.5rem;
+      text-overflow: ellipsis;
+
+      .fa-arrow-square-left:after {
+        color: #3fe0c5;
+        opacity: 1;
+      }
+    }    
+  }
+
+  .docs-wrapper {
+    padding: 1rem;
+  }
+
+  .toggle-teams h2 {
+    line-height: 2.5rem;
+  }
+
   .toggle-truffle h2 {
     line-height: 2.5rem;
   }
@@ -30,6 +65,10 @@
 
   .toggle-drizzle h2 {
     line-height: 2.3rem;
+  }
+
+  form {
+    margin-top: 1rem;
   }
 
   h3 {
@@ -47,10 +86,6 @@
     }
   }
 
-  form {
-    margin-top: 1.5rem;
-  }
-
   .suite-logo {
     display: block;
     float: left;
@@ -59,7 +94,7 @@
     width: 2.5rem;
   }
 
-  .toggle-truffle, .suite-link {
+  .suite-link {
     color: #fff;
     display: block;
     margin-bottom: 1.25rem;
@@ -67,6 +102,14 @@
 
   a:first-of-type {
     margin-top: 2rem;
+  }
+
+  .teams {
+    color: #ffffff;
+
+    a {
+      color: #ffffff;
+    }
   }
 
   .truffle {
@@ -77,24 +120,12 @@
     }
   }
 
-  .toggle-ganache {
-    color: #fff;
-    display: block;
-    margin-bottom: 1.25rem;
-  }
-
   .ganache {
     color: #e4a663;
 
     a {
       color: #e4a663;
     }
-  }
-
-  .toggle-drizzle {
-    color: #fff;
-    display: block;
-    margin-bottom: 1.25rem;
   }
 
   .drizzle {
@@ -192,6 +223,22 @@
   img {
     display: block;
     margin: 2rem auto;
+
+    &.threequarter-width {
+      width: 75%;
+
+      @media (max-width: 767.98px) {
+        width: 100%;
+      }
+    }
+
+    &.half-width {
+      width: 50%;
+
+      @media (max-width: 767.98px) {
+        width: 100%;
+      }
+    }
   }
 
   .img-caption {
@@ -220,52 +267,49 @@
 
 .docs-home {
   .card {
-    text-align: center;
-
     .card-title {
       color: #5e464d;
       margin-bottom: 0;
+      display: inline-block;
     }
 
-    .card-text {
-      text-align: left;
+    .card-img-top {
+      display: inline-block;
+      margin: 0 .5em 0 0;
+      width: 2.5rem;
+      max-height: 2.5rem;
+    }
+
+    &.docs-teams-card {
+      .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
     }
 
     &.docs-truffle-card {
-      .card-img-top {
-        display: inline;
-        max-height: 120px;
-        margin: 0;
-      }
-
       .card-title {
         font-size: 2rem;
         font-weight: bold;
-        margin-top: 1.25rem;
       }
     }
 
     &.docs-ganache-card {
-      .card-img-top {
-        max-height: 120px;
-        margin: 0;
-      }
-
       .card-title {
-        font-size: 2.25rem;
-        margin-top: 1rem;
+        font-size: 2rem;
       }
     }
 
     &.docs-drizzle-card {
-      .card-img-top {
-        margin: 20px 0 0 0;
-        max-height: 100px;
-      }
-
       .card-title {
-        font-size: 2.25rem;
-        margin: 1rem 0 0 0;
+        font-size: 2rem;
+      }
+    }
+
+    &.docs-blockchain-card {
+      .card-title { 
+        font-weight: bold;
+        font-size: 1.25rem;
       }
     }
   }
@@ -302,5 +346,48 @@
         text-decoration: underline;
       }
     }
+  }
+}
+
+//
+// Truffle Teams Controls
+//
+
+.inline-button {
+  color: #33262a;
+  background: #3fe0c5;
+  padding: .25em .5em;
+  border-radius: .25em;
+  font-size: .9em;
+  line-height: 2em;
+
+  &.red {
+    color: #ffffff;
+    background: #a61200;
+  }
+}
+
+.inline-menu-item {
+  line-height: 2em;
+  font-weight: bold;
+  
+  i {
+    background: #ffffff;
+    border: 2px solid #47BAA7;
+    border-radius: 50%;
+    margin-right: .25em;
+    padding: .33em;
+  }
+}
+
+.screenshot {
+  img {
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.25);
+  }
+
+  figcaption {
+    font-style: italic;
   }
 }

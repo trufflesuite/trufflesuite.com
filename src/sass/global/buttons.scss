@@ -6,20 +6,22 @@
 
 .btn-truffle:hover,
 .btn-ganache:hover,
+.btn-watermelon:hover,
+.btn-youtube:hover,
 .btn-drizzle:hover,
 .btn-eventbrite:hover {
   background: #fff;
-  color: #5e464d;
+  color: #33262a;
 }
 
 .btn-truffle {
   background: #3fe0c5;
-  color: #5e464d;
+  color: #33262a;
 }
 
 .btn-ganache {
   background: #e4a663;
-  color: #5e464d;
+  color: #33262a;
 
   &.btn-download {
     font-size: 1.2rem;
@@ -49,7 +51,43 @@
   color: #fff;
 }
 
+.btn-watermelon {
+  background: #e86591;
+  color: #fff;
+}
+
 .btn-eventbrite {
   background: #f6682F;
   color: #fff;
+}
+
+.btn-youtube {
+  background: #3fe0c5;
+  color: #33262a;
+}
+
+.btn-outline-white {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+
+  &:hover {
+    background: #fff;
+    color: #5e464d;
+  }
+}
+
+.btn-wrap {
+  white-space: normal;
+}
+
+.btn-drizzle-tcon {
+  background: #e911bd;
+  color: #fff;
+}
+
+.btn-tcon {
+  border: none;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
 }

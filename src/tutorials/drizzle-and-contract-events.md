@@ -21,13 +21,12 @@ event reducer respectively.
 **A Complete example is available at the following [repo](https://github.com/trufflesuite/drizzle-event-demo).**
 
 <div class="alert alert-info">
-  <strong>Prerequisite</strong>: You should be familiar with Truffle, Ganache, Drizzle, React and Redux. If you need an introduction please consult the following resources:
+  <strong>Prerequisite</strong>: You should be familiar with Truffle, Drizzle, React and Redux. If you need an introduction please consult the following resources:
 
   <br/><br/>
 
   <ol>
     <li>[Truffle Quickstart](https://truffleframework.com/docs/truffle/quickstart)</li>
-    <li>[Ganache Quickstart](https://truffleframework.com/docs/ganache/quickstart)</li>
     <li>[Getting Started with Drizzle and React](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react)</li>
     <li>[Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html)</li>
     <li>[Redux Basic Tutorial](https://redux.js.org/basics/basic-tutorial)</li>
@@ -44,35 +43,31 @@ Let's use `truffle unbox` to bootstrap a project and then wire up a contract
 event to a display component by creating a reducer and hook it up to Drizzle's
 `EVENT_FIRED` action.
 
-First start the `ganache-cli` test chain and `unbox` Drizzle.
+<p class="alert alert-info">
+  <strong>Note</strong>: More Drizzle actions are listed in our [Drizzle Actions documentation](/docs/drizzle/reference/drizzle-actions).
+</p>
+
+First create an empty directory, navigate to it, and `unbox` Drizzle.
 
 ```bash
-// In a separate console window run the test chain.
-$ ganache-cli
-
 // In the project directory...
 $ truffle unbox drizzle
 ```
 
-We'll then have to modify the default `truffle-config.js` file to point to the network parameters used by `ganache-cli`.
+Now let's start the `truffle develop` console (which runs a Ganache test blockchain in the background):
 
-```js
-module.exports = {
-  networks: {
-    development: {
-      host: '127.0.0.1',
-      port: 8545,
-      network_id: '*' // Match any network id
-    }
-  }
-};
+```
+$ truffle develop
 ```
 
-Finally, let's compile and migrate our smart contracts.
+Finally, in our Truffle develop console, let's compile and migrate our smart contracts.
 
-```bash
-$ truffle compile
-$ truffle migrate
+```shell
+truffle(develop)> compile
+
+# some output here...
+
+truffle(develop)> migrate
 ```
 
 Now that we have a test chain running and our smart contracts deployed, let's add a toast notification to the UI.
@@ -86,14 +81,14 @@ We want to listen for the `SimpleStorage` contract's `StorageSet` event and show
 The front end code is located under the `app` folder. Lets add the notification
 library `react-toastify` to simulate an external interaction.
 
-```sh
+```shell
 $ cd app
 $ npm install react-toastify
 ```
 
 For the sake of simplicity, we will work in one file, `./app/src/middleware/index.js`.
 
-```
+```shell
 $ mkdir ./src/middleware
 $ touch ./src/middleware/index.js
 ```
@@ -101,22 +96,21 @@ $ touch ./src/middleware/index.js
 Import `EventActions` and `generateStore` from Drizzle as well as
 toast from `react-toastify`, and `drizzleOptions`.
 
-```js
+```javascript
 // ./app/middleware/index.js
-import { generateStore, EventActions } from 'drizzle'
+import { generateStore, EventActions } from '@drizzle/store'
 import drizzleOptions from '../drizzleOptions'
 import { toast } from 'react-toastify'
-
 ```
 
-The action `EventActions.FIRE_EVENT` is emitted whenever a contract event is
+The action `EventActions.EVENT_FIRED` is emitted whenever a contract event is
 detected in a Block. We will gain access to it by registering a custom
 middleware with the Redux store. As you know, Redux middleware comprises a set
 of functions executed in a sequence that processes each dispatched actions
 before passing them to Reducers.
 
 
-```js
+```javascript
 const contractEventNotifier = store => next => action => {
   if (action.type === EventActions.EVENT_FIRED) {
     const contract = action.name
@@ -134,7 +128,7 @@ Now lets register this middleware with Drizzle. `generateStore` will return a
 Redux store that you can use anywhere you can use a store. We will export it to
 be used by `DrizzleProvider`.
 
-```js
+```javascript
 const appMiddlewares = [ contractEventNotifier ]
 
 export default generateStore({
@@ -142,7 +136,6 @@ export default generateStore({
   appMiddlewares,
   disableReduxDevTools: false  // enable ReduxDevTools!
 })
-
 ```
 
 Connect the Store
@@ -150,14 +143,13 @@ Connect the Store
 
 Send the `store` as a prop to `DrizzleProvider`
 
-```js
+```javascript
 // App.js
 ...
 import store from './middleware'
 ...
-<DrizzleProvider store={store} options={drizzleOptions} />
+<DrizzleProvider store={store} options={drizzleOptions}>
 ...
-
 ```
 
 Hook up Display
@@ -165,7 +157,7 @@ Hook up Display
 
 Modify `MyComponent.js` to import `ReactToastify.css` and configure `ToastContainer`
 
-```js
+```javascript
 ...
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -184,15 +176,12 @@ A Quick Test
   * Things often go south during development so a pretest check is in order.
     1. MetaMask should NOT be on Main net! Do not run this if you're on main
        net!
-    1. Is ganache running on port 7545? This is the default. If your development
-       environment is different, make sure `truffle-config` points to the
-       correct port.
     1. Is MetaMask listening on the correct port defined above? Metamask should
        have ETH funds. Something is amiss if it doesn't.
     1. Are the smart contracts deployed from the correct directory?
 
   * Fire up the app.
-    ```
+    ```shell
     $ npm run start
     ```
   * Change SimpleStorage's `stored Value`
@@ -205,3 +194,5 @@ A Quick Test
 
 The dapp is now a consumer of Drizzle's `EVENT_FIRED` action item and can
 coordinate with other services to implement its business logic.
+
+More Drizzle actions are listed in our [Drizzle Actions documentation](/docs/drizzle/reference/drizzle-actions).

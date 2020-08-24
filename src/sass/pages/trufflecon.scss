@@ -1,8 +1,9 @@
 .trufflecon-subnav {
+  z-index: 10;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#58484e+0,58484e+100&1+0,0+100 */
-  background: -moz-linear-gradient(top, rgba(88,72,78,.7) 0%, rgba(88,72,78,0) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(88,72,78,.7) 0%,rgba(88,72,78,0) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(88,72,78,.7) 0%,rgba(88,72,78,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient(top, rgba(88,72,78,.7) 0%, rgba(88,72,78,0) 0%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(88,72,78,.7) 0%,rgba(88,72,78,0) 0%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(88,72,78,.7) 0%,rgba(88,72,78,0) 0%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#58484e', endColorstr='#0058484e',GradientType=0 ); /* IE6-9 */
 
   &.scroll {
@@ -16,11 +17,13 @@
 
 .trufflecon-heading {
   max-height: none;
-  padding-top: 6rem;
+  background-color: #7532D6;
+
 
   h1 {
-    font-size: 6rem;
+    font-size: 9.5vw;
     letter-spacing: .35em;
+    text-indent: .2em;
 
     span {
       display: none;
@@ -32,10 +35,10 @@
       margin-right: .35em;
     }
 
-    @media (max-width: 991.98px) {
+   /* @media (max-width: 991.98px) {
       font-size: 2.75rem;
       letter-spacing: .2em;
-    }
+    }*/
   }
 
   h2 {
@@ -61,13 +64,13 @@
     padding: 4rem 15px 3rem 15px;
     max-height: none;
     h1 {
-      font-size: 2rem;
+      font-size: 3rem;
     }
     h2 {
       font-size: 1.4rem;
     }
     h3 {
-      font-size: 1rem;
+      font-size: 1.4rem;
     }
   }
 }
@@ -106,23 +109,10 @@ blockquote {
   bottom: 0;
   right: 0;
   background-color: #000;
- background-image: url(/img/trufflecon/trufflecon-banner-hdr-2019a.jpg);
+  background-image: url(/img/trufflecon/trufflecon-banner-hdr-2019a.jpg);
   background-size: cover;
   background-position: center center;
   opacity: .3;
-  z-index: -1;
-}
-
-.trufflecon-heading-funky {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: #fff;
-  background-image: url(/img/trufflecon/header-2019.svg);
-  background-size: cover;
-  background-position: center center;
   z-index: -1;
 }
 
@@ -145,6 +135,10 @@ blockquote {
   border-style: solid;
   border-width: 0 100vw 50px 0;
   border-color: transparent #ca37af transparent transparent;
+    
+  &.cream {
+    background: #f8f5f0;
+  }
 }
 
 .triangle-br {
@@ -154,6 +148,25 @@ blockquote {
   border-style: solid;
   border-width: 0 0 50px 100vw;
   border-color: transparent transparent #f7a34e transparent;
+}
+
+.triangle-purple {
+  background: #f8f5f0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 50px 100vw;
+  border-color: transparent transparent #A359EA transparent;
+}
+
+.triangle-purple-rev {
+  background: #f8f5f0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 50px 100vw;
+  border-color: transparent transparent #A359EA transparent;
+  transform: rotate(180deg);
 }
 
 .trufflecon-segment-footer {
@@ -209,13 +222,47 @@ blockquote {
 }
 
 .trufflecon-speakers {
+  img {
+    border: 4px solid #3fe0c5;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    color: #3fe0c5;
+  }
+
+  &.featured {
+    img {
+      border-color: #fff;
+    }
+
+    h3{
+      color: #3fe0c5
+    }
+  }
+
+  &.trufflecon-team {
+    img {
+      max-width: 240px;
+      width: 100%;
+    }
+  }
+}
+
+.trufflecon-guests {
+  text-align: center;
   .circle-image-container {
-    margin: 0 auto .5rem auto;
+    margin: 0 2.4rem .5rem 2.4rem;
     padding-bottom: 0;
     border: 4px solid #3fe0c5;
     overflow: hidden;
 
     @media (max-width: 991.98px) {
+      margin: 0 auto .5rem auto;
       width: 200px;
       height: 200px;
 
@@ -224,9 +271,130 @@ blockquote {
       }
     }
   }
+}
 
-  h3 {
-    text-transform: uppercase;
-    color: #3fe0c5;
+.trufflecon-map-heading {
+  font-size: 1.3em;
+  line-height: 48px;
+  padding-left: 1rem;
+}
+
+.trufflecon-map {
+  padding: 0;
+  background: #3fe0c5;
+
+  .map-toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    pointer-events: none;
   }
+
+  .map-toolbar-nested {
+    background: #3fe0c5;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 49px;
+    z-index: 1;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    .fas {
+      font-size: 1.3rem;
+      &:hover {
+      cursor: pointer;
+      }
+    }
+    .fa-bars {
+      margin-left: 25px;
+    }
+    .fa-share-alt, .fa-external-link-alt {
+      margin-right: 25px;
+    }
+    .unclickable {
+      flex-grow: 1;
+      align-self: stretch;
+      pointer-events: initial;
+    }
+  }
+
+  iframe {
+    width: 100%
+  }
+}
+
+.speaker-icon {
+  position:absolute;
+  bottom: 0;
+  left: 50px;
+  z-index: 2;
+}
+
+.countdown-align {
+  object-position: center;
+}
+
+.tcon-countdown {
+  margin: 0 auto;
+}
+
+.map-overlay {
+  background: rgba(0,0,0,.6);
+  position: absolute;
+  top: 49px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  
+  &:hover {
+    cursor: pointer;
+  }
+
+  p {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    width: 100%;
+  }
+}
+
+.btn-buytickets-xlg {
+  font-size: 1.5rem;
+  min-width: 17rem;
+}
+
+.container {
+  &.keynotes {
+    @media (min-width: 1200px) {
+      max-width: 1500px;
+    }
+  }
+} 
+
+.media-image {
+  max-width: 100px; 
+}
+
+.alert-slides {
+  border-color: #fff;
+  color: #58484E;
+  background: rgba(255,255,255,.8);
+
+  a {
+    color: #58484E;
+  }
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -250px;
+  visibility: hidden;
 }

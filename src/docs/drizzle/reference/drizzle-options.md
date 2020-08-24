@@ -36,7 +36,7 @@ An array of either contract artifact files or Web3 contract objects. The objects
 
 i.e.
 
-```
+```javascript
 contracts: [
   truffleArtifact, // A regular Truffle contract artifact
   {
@@ -61,7 +61,7 @@ Options regarding `web3` instantiation.
 #### `customProvider` (object)
 A valid web3 `provider` object. For example, you may wish to programatically create a Ganache provider for testing:
 
-```
+```javascript
 // Create a Ganache provider.
 const testingProvider = Ganache.provider({
   gasLimit: 7000000

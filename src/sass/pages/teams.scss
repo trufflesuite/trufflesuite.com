@@ -2,7 +2,6 @@
   background: url(/img/truffle-teams/landing-background.png);
   background-size: cover;
   color: #fff;
-  border-bottom: 3px solid #33262a;
   text-align: center;
 
   h2 {
@@ -13,15 +12,29 @@
     color: #fff;
     display: block;
     margin-top: .5rem;
+    text-decoration: underline;
 
     &:hover {
       color: #fff;
+      opacity: .8;
     }
   }
 
   .tt-screenshot {
     margin: 0;
     transform: translateY(8rem);
+  }
+
+  .link-truffle {
+    color: #3fe0c5;
+  }
+
+  .triangle-br {
+    position: absolute;
+    background: transparent;
+    border-width: 0 0 50px 100vw;
+    bottom: 0;
+    border-color: transparent transparent #f8f5f0 transparent;
   }
 
   @media (max-width: 991.98px) {
@@ -74,24 +87,31 @@
   }
 }
 
-.tt-feature {
-  text-align: center;
+.tt-bowtie-container {
+  margin: -80px auto 0 auto;
 
-  i {
-    background: #8731e8;
-    padding: 1rem;
-    border-radius: 50%;
-    font-size: 2rem;
-    color: #fff;
-    margin-bottom: .5rem;
+  @media (min-width: 992px) {
+    margin: -145px auto 0 auto;
   }
+}
 
-  @media (min-width: 768px) {
-    text-align: left;
+.tt-bowtie-top, .tt-bowtie-bottom {
+  margin: 0 -5px;
+}
 
-    i {
-      margin-bottom: 0;
-    }
+.tt-bowtie-top {
+  position: relative;
+}
+
+.tt-bowtie {
+  background: #8731e8;
+  color: #fff;
+  margin: -1px 0;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 991.98px) {
+    padding: 1.5rem 0;
   }
 }
 
@@ -100,7 +120,7 @@
     padding-left: 20px;
 
     li:not(:last-child) {
-      margin-bottom: .5rem;
+      margin-bottom: .75rem;
     }
   }
 
@@ -108,33 +128,57 @@
     border: none;
     min-width: unset;
     padding: 1.5rem;
+    border: 2px solid #e0dad7;
+
+    .card-title {
+      border-radius: .25rem .25rem 0 0;
+      color: #ffffff;
+      margin: -2.75rem -2.75rem 1.5rem -2.75rem;
+      padding: 1rem 2.75rem;
+    }
 
     &.free {
-      background: #e0dad7;
+      .card-title {
+        background: #8c3ae9;
+      }
 
       ul {
         list-style-image: url('/img/truffle-teams/checkmark-dark.png');
       }
     }
 
-    &.premium {
-      background: #e86591;
-      color: #fff;
+    &.pro {
+      transform: scale(1.1);
+
+      .card-title {
+        background: #6926b4;
+      }
+
+      .badge {
+        background: #FFFBBC;
+        border-radius: .75em;
+        color: #69651A;
+        float: right;
+        padding: .25em .5em;
+      }
 
       ul {
-        list-style-image: url('/img/truffle-teams/checkmark-light.png');
+        list-style-image: url('/img/truffle-teams/checkmark-dark.png');
       }
-  
-      .btn {
-        background: #fff;
-        color: #e86591;
-        border: 1px solid #fff;
+    }
 
-        &:hover {
-          background: #e86591;
-          color: #fff;
-        }
+    &.enterprise {
+      .card-title {
+        background: #4e1c87;
       }
+
+      ul {
+        list-style-image: url('/img/truffle-teams/checkmark-dark.png');
+      }
+    }
+
+    .btn-truffle:hover {
+      background: #f8f5f0;
     }
 
     .card-footer {
@@ -148,7 +192,20 @@
   }
 }
 
+@media (max-width: 991.98px) {
+  .tt-pricing {
+    .card {
+      min-width: 100%;
+  
+      &.pro {
+        transform: none;
+      }
+    }
+  }
+}
+
 .tt-social-proof {
+  margin-top: 9.25rem;
   position: relative;
 
   >.col-8 {
@@ -202,4 +259,71 @@
       padding-bottom:50%;
     }
   }
+}
+
+.tt-container .triangle-tr {
+  background: #f8f5f0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 0 0 100vw;
+  border-color: transparent transparent transparent #7f9dd1;
+
+  &.white {
+    border-width: 0 0 50px 100vw;
+    border-color: transparent transparent #fff transparent;
+  }
+  
+  &.cream {
+    border-width: 0 0 50px 100vw;
+    border-color: transparent transparent #f8f5f0 transparent;
+  }
+}
+
+.tt-container .triangle-br {
+  background: #f8f5f0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 100vw 0 0;
+  border-color: #7f9dd1 transparent transparent transparent;
+
+  &.white {
+    border-width: 0 100vw 50px 0;
+    border-color: transparent #fff transparent transparent;
+  }
+}
+
+.tt-hero-img {
+  border: 2px solid rgba(51,38,42,1);
+}
+
+// SHADOWS
+
+.shadow-dark-chocolate {
+  -webkit-box-shadow: 12px 12px 0px 0px rgba(51,38,42,1);
+  -moz-box-shadow: 12px 12px 0px 0px rgba(51,38,42,1);
+  box-shadow: 12px 12px 0px 0px rgba(51,38,42,1);
+  border: 2px solid rgba(51,38,42,1);
+}
+
+.shadow-mint {
+  -webkit-box-shadow: 12px 12px 0px 0px rgba(63,224,197,1);
+  -moz-box-shadow: 12px 12px 0px 0px rgba(63,224,197,1);
+  box-shadow: 12px 12px 0px 0px rgba(63,224,197,1);
+  border: 2px solid rgba(63,224,197,1);
+}
+
+.shadow-periwinkle {
+  -webkit-box-shadow: 12px 12px 0px 0px rgba(127,157,209,1);
+  -moz-box-shadow: 12px 12px 0px 0px rgba(127,157,209,1);
+  box-shadow: 12px 12px 0px 0px rgba(127,157,209,1);
+  border: 2px solid rgba(127,157,209,1);
+}
+
+.shadow-purple {
+  -webkit-box-shadow: 12px 12px 0px 0px rgba(135,49,232,1);
+  -moz-box-shadow: 12px 12px 0px 0px rgba(135,49,232,1);
+  box-shadow: 12px 12px 0px 0px rgba(135,49,232,1);
+  border: 2px solid rgba(135,49,232,1);
 }
