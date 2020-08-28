@@ -223,7 +223,7 @@ Now we are ready to create our own migration script.
 1. Before we can migrate our contract to the blockchain, we need to have a blockchain running. For this tutorial, we're going to use [Ganache](/ganache), a personal blockchain for Ethereum development you can use to deploy contracts, develop applications, and run tests. If you haven't already, [download Ganache](/ganache) and double click the icon to launch the application. This will generate a blockchain running locally on port 7545.
 
    <p class="alert alert-info">
-     <strong>Note</strong>: Read more about Ganache in the <a href="/docs/ganache/overview">Truffle documentation</a>.
+     <strong>Note</strong>: Read more about Ganache in the <a href="/docs/ganache/using">Truffle documentation</a>.
    </p>
 
    ![Ganache on first launch](/img/tutorials/pet-shop/ganache-initial.png "Ganache on first launch")
