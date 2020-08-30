@@ -3,6 +3,7 @@ title: Truffle | Creating a Project
 layout: docs.hbs
 ---
 # Creating a Project
+Before you start, ensure that you are running Node v10 or Node v12. Other versions of node are not officially supported yet, and could cause problems.
 
 To use most Truffle commands, you need to run them against an existing Truffle project. So the first step is to create a Truffle project.
 

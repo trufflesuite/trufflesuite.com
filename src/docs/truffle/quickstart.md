@@ -76,6 +76,7 @@ Once this operation is completed, you'll now have a project structure with the f
 1. Open the `truffle-config.js` file. This is the Truffle [configuration file](/docs/truffle/reference/configuration), for setting network information and other project-related settings. The file is blank, but this is okay, as we'll be using a Truffle command that has some defaults built-in.
 
 ## Testing
+Before you start testing, ensure that you are running Node v10 or Node v12. Other versions of node are not officially supported yet, and could cause problems.
 
 1. On a terminal, run the Solidity test:
 
