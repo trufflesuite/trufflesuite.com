@@ -5,7 +5,7 @@ This tutorial will take you through the process of building your first dapp---an
 This tutorial is meant for those with a basic knowledge of Ethereum and smart contracts, who have some knowledge of HTML and JavaScript, but who are new to dapps.
 
 <p class="alert alert-info">
-<strong>Note</strong>: For Ethereum basics, please read the Truffle [Ethereum Overview](/tutorials/ethereum-overview) tutorial before proceeding.
+<strong>Note</strong>: For Ethereum basics, please read the Truffle <a href="/tutorials/ethereum-overview">Ethereum Overview</a> tutorial before proceeding.
 </p>
 
 In this tutorial we will be covering:
@@ -63,7 +63,7 @@ We also will be using [Ganache](/ganache), a personal blockchain for Ethereum de
   ```
 
 <p class="alert alert-info">
-  <strong>Note</strong>: Truffle can be initialized a few different ways. Another useful initialization command is `truffle init`, which creates an empty Truffle project with no example contracts included. For more information, please see the documentation on [Creating a project](/docs/getting_started/project).
+  <strong>Note</strong>: Truffle can be initialized a few different ways. Another useful initialization command is `truffle init`, which creates an empty Truffle project with no example contracts included. For more information, please see the documentation on <a href="/docs/truffle/getting-started/creating-a-project">Creating a project</a>.
 </p>
 
 ### Directory structure
@@ -179,7 +179,7 @@ Solidity is a compiled language, meaning we need to compile our Solidity to byte
    ```
 
    <p class="alert alert-info">
-   <strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on [resolving naming conflicts on Windows](/docs/advanced/configuration#resolving-naming-conflicts-on-windows).
+   <strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on <a href="/docs/truffle/reference/configuration#resolving-naming-conflicts-on-windows">resolving naming conflicts on Windows</a>.
    </p>
 
    You should see output similar to the following:
@@ -201,7 +201,7 @@ Now that we've successfully compiled our contracts, it's time to migrate them to
 **A migration is a deployment script meant to alter the state of your application's contracts**, moving it from one state to the next. For the first migration, you might just be deploying new code, but over time, other migrations might move data around or replace a contract with a new one.
 
 <p class="alert alert-info">
-  <strong>Note</strong>: Read more about migrations in the [Truffle documentation](/docs/getting_started/migrations).
+  <strong>Note</strong>: Read more about migrations in the <a href="/docs/truffle/getting-started/running-migrations">Truffle documentation</a>.
 </p>
 
 You'll see one JavaScript file already in the `migrations/` directory: `1_initial_migration.js`. This handles deploying the `Migrations.sol` contract to observe subsequent smart contract migrations, and ensures we don't double-migrate unchanged contracts in the future.
@@ -223,7 +223,7 @@ Now we are ready to create our own migration script.
 1. Before we can migrate our contract to the blockchain, we need to have a blockchain running. For this tutorial, we're going to use [Ganache](/ganache), a personal blockchain for Ethereum development you can use to deploy contracts, develop applications, and run tests. If you haven't already, [download Ganache](/ganache) and double click the icon to launch the application. This will generate a blockchain running locally on port 7545.
 
    <p class="alert alert-info">
-     <strong>Note</strong>: Read more about Ganache in the [Truffle documentation](/docs/ganache/using).
+     <strong>Note</strong>: Read more about Ganache in the <a href="/docs/ganache/using">Truffle documentation</a>.
    </p>
 
    ![Ganache on first launch](/img/tutorials/pet-shop/ganache-initial.png "Ganache on first launch")
