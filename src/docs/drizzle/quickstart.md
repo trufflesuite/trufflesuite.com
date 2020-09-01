@@ -21,7 +21,7 @@ npm install --save @drizzle/store
 
 1. Import the provider.
    ```javascript
-   import { Drizzle } from 'drizzle'
+   import { Drizzle } from '@drizzle/store'
    ```
 
 1. Create an `options` object and pass in the desired contract artifacts for Drizzle to instantiate. Other options are available, see [the Options section](./reference/drizzle-options).
