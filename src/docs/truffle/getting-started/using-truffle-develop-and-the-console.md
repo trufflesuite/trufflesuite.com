@@ -9,6 +9,10 @@ Sometimes it's nice to work with your contracts interactively for testing and de
 * **Truffle Console**: A basic interactive console connecting to any Ethereum client
 * **Truffle Develop**: An interactive console that also spawns a development blockchain
 
+<p class="alert alert-info">
+**Note**: Your contract names get loaded as variables into the console context. For this reason it is recommended to avoid names that might conflict with Node's native objects like Buffer or String. For updates see the related <a href="https://github.com/trufflesuite/truffle/issues/3329">issue on GitHub</a>.
+</p>
+
 ## Why two different consoles?
 
 Having two different consoles allows you to choose the best tool for your needs.
