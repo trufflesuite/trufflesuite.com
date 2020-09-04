@@ -2,7 +2,7 @@
 function mixpanelTrackProxy(eventName, eventParams) {
   let httpRequest = new XMLHttpRequest();
 
-  httpRequest.open('POST', 'https://ops-website_api-proxy_1:3000/mixpanel/track');
+  httpRequest.open('POST', 'https://localhost:3000/mixpanel/track');
   httpRequest.setRequestHeader("Content-Type", "application/json");
   
   httpRequest.onload = () => {
