@@ -27,6 +27,13 @@
   border: 4px solid #3fe0c5;
 }
 
+@media screen and (max-width: 767px) {
+  .post-thumbnail {
+    margin: 1rem auto;
+    width: 50%;
+  }
+}
+
 .post-trufflecon-box {
   background: #e0dad7;
   padding: 1.5rem;
