@@ -2,10 +2,10 @@
 function mixpanelTrackProxy(eventName, eventParams) {
   let httpRequest = new XMLHttpRequest();
 
-  httpRequest.open('POST', 'https://172.26.0.4:3001/mixpanel/track');
+  httpRequest.open('POST', 'https://165.227.8.60:3001/mixpanel/track');
   httpRequest.setRequestHeader("Content-Type", "application/json");
   
-  httpRequest.onload = () => {  
+  httpRequest.onload = () => {
     // We don't expect a response here in the happy path, so
     // just check the reponse for errors originating in the server.
     if (httpRequest.status != 204) {
