@@ -183,6 +183,25 @@
   }
 }
 
+.banner-truffle-tcon-2020 {
+  background-color: #3fe0c5;
+  font-weight: bold;
+  text-decoration: none;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+
+  a {
+    text-decoration: none;
+    color: #5E464D;
+
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
 .banner-trufflecon-swag {
   color: white;
   font-weight: bold;

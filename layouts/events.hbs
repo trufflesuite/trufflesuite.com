@@ -70,7 +70,7 @@
       {{#each events}}
         {{#if this.current}}
           {{#if this.image}}
-            <div class="row align-items-center post-row pb-5">
+            <div class="row post-row pb-5">
               <div class="col-md-3">
                 <img src="{{ this.image }}" class="img-fluid post-thumbnail" />
               </div>
@@ -86,8 +86,11 @@
                 {{#if this.youtube}}
                    <a class="btn btn-youtube" href="{{ this.youtube }}" target="_blank">ATTEND THE LIVE SESSION</a>
                 {{/if}}
+                {{#if this.image2}}
+                  <img src="{{ this.image2 }}" class="post-livestream" />
+                {{/if}}
                 {{#if this.eventbrite}}
-                <a class="btn btn-eventbrite" href="{{ this.eventbrite }}" target="_blank">REGISTER HERE</a>
+                <a class="btn btn-watermelon" href="{{ this.eventbrite }}" target="_blank">REGISTER HERE</a>
                 {{/if}}
 
               </div>
@@ -125,7 +128,7 @@
       {{#each events}}
         {{#if this.past}}
           {{#if this.image}}
-            <div class="row align-items-center post-row  pb-5">
+            <div class="row post-row  pb-5">
               <div class="col-md-3">
                 <img src="{{ this.image }}" class="img-fluid post-thumbnail" />
               </div>
