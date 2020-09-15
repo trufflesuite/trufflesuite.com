@@ -1,13 +1,24 @@
 [
 
   {
+    "title": "Truffle Webinar Series - Explore the full life cycle of developing and deploying a Dapp",
+    "start": "Thursday, September 17th, 2020, 12:00 PM PDT",
+    "end": "Thursday, September 17th, 2020, 1:00 PM PDT",
+    "location": "Live Stream Webinar",
+    "image2": "/img/live-stream3.png",
+    "excerpt": "Join Trufflers, Kevin Bluer and Amal Sudama, in this premiere Truffle webinar series exploring the full life cycle of developing and deploying a Dapp. Kevin and Amal will walk you through the 101s of developing a Dapp, highlighting popular Ethereum development tooling used, as well as demonstrating the power of the Truffle Suite, including Truffle Teams, in this process.",
+    "eventbrite": "https://trfl.co/truffle-webinar-series1",
+    "image": "/img/events/webinar-livestream2.jpg",
+    "current": "true"
+  },
+  {
     "title": "TruffleCon2020",
     "start": "Friday, November 6th, 2020, 9:00 AM PST",
     "end": "Saturday, November 7th, 2020, 5:00 PM PST",
     "location": "Virtual Conference",
     "excerpt": "A conference for those who want to build world-changing applications powered by decentralized technologies.",
     "eventbrite": "https://www.trufflesuite.com/trufflecon2020",
-    "image": "/img/tcon-branding-2020-16x9b.jpg",
+    "image": "/img/events/trufflecon-2020-2.jpg",
     "current": "true"
   },
   {
