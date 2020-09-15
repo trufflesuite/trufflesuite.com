@@ -655,5 +655,16 @@
 			"openzeppelin",
 			"zeppelinos"
 		]
-	}
+	},
+	"besu-drizzle-truffle-box": {
+		  "description": "Drizzle starter for Hyperledger Besu network",
+		  "stars": 1,
+		  "tags": [
+			  "besu",
+			  "community",
+			  "docker",
+			  "drizzle",
+			  "hyperledger"
+		  ]
+	  }
 }
