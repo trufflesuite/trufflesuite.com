@@ -231,6 +231,7 @@ methods of your contract abstractions:
 - `estimateGas`
 - `sendTransaction`
 - `call`
+- `request`
 
 The first special method mentioned above is the `estimateGas` method. This, as you
 probably can guess, estimates the amount of gas that a transaction will require.
@@ -275,11 +276,18 @@ The `result` variable above will be the same kind of result you would get
 from executing any normal transaction in Truffle. It will contain the
 transaction hash, the logs, etc.
 
-The last method is `call` and the syntax is exactly the same as for
+The next method is `call` and the syntax is exactly the same as for
 `sendTransaction`. If you want to explicitly make a call, you can
 use the `call` method found on your contract abstraction's method. So you
 would write something that looks like
 `const result = await instance.myMethod.call()`.
+
+The last method is `request`; this method does not perform a transaction or
+call, but rather returns an object that can be passed to
+`web3.eth.sendTransaction` or `web3.eth.call` if you want to perform the
+transaction or call yourself.  It has the same syntax as the others; and
+like with `estimateGas`, you can also do `Contract.new.request()` if you
+want to perform a manual deployment.
 
 ### Invoking overloaded methods
 
