@@ -282,10 +282,10 @@ use the `call` method found on your contract abstraction's method. So you
 would write something that looks like
 `const result = await instance.myMethod.call()`.
 
-The last method is `request`; this method does not perform a transaction or
+The last method is `request`.  This method does not perform a transaction or
 call, but rather returns an object that can be passed to
 `web3.eth.sendTransaction` or `web3.eth.call` if you want to perform the
-transaction or call yourself.  It has the same syntax as the others; and
+transaction or call yourself.  It has the same syntax as the others, and
 like with `estimateGas`, you can also do `Contract.new.request()` if you
 want to perform a manual deployment.
 
