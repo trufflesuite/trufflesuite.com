@@ -1,6 +1,7 @@
 {
   "teams": {
     "Getting Started": [
+      "Creating an account",
       "Adding Repositories",
       "Dashboard"
     ],
