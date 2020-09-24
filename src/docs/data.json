@@ -9,6 +9,14 @@
       "Starting Builds",
       "External CI"
     ],
+    "Sandboxes": [
+      "Sandboxes overview",
+      "Creating a sandbox",
+      "Renaming a sandbox",
+      "Destroying a sandbox",
+      "Sandbox Forking",
+      "Usage with Truffle"
+    ],
     "Deployments": [
       "About Deployments",
       "Deploying Contracts",
