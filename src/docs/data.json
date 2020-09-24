@@ -5,8 +5,10 @@
       "Adding Repositories",
       "Dashboard"
     ],
-    "Testing": [
+    "Builds": [
+      "Builds overview",
       "Starting Builds",
+      "Restarting Builds",
       "External CI"
     ],
     "Deployments": [
