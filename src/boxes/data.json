@@ -425,5 +425,11 @@
     "displayName": "besu-drizzle-truffle-box",
     "repoName": "besu-drizzle-truffle-box",
     "official": false
+  },
+  {
+    "userOrg": "smartcontractkit",
+    "displayName": "box",
+    "repoName": "box",
+    "official": false
   }
 ]

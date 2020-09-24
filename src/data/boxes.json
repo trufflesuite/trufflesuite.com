@@ -666,5 +666,14 @@
 			  "drizzle",
 			  "hyperledger"
 		  ]
+		},
+		"box": {
+		  "description": "An example smart contract utilizing Chainlink",
+		  "stars": 12,
+		  "tags": [
+			  "community",
+			  "chainlink",
+			  "oracle"
+		  ]
 	  }
 }
