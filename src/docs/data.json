@@ -16,7 +16,8 @@
       "Sandboxes"
     ],
     "Contracts": [
-      "Contract Monitoring"
+      "Contracts overview",
+      "Monitor a contract"
     ],
     "Reference": [
       "Configuration",
