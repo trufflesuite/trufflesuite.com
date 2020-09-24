@@ -21,6 +21,9 @@
     "Reference": [
       "Configuration",
       "Permissions Disclosure"
+    ],
+    "Questions": [
+      "Questions"
     ]
   },
   "truffle": {
