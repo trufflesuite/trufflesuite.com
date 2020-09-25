@@ -2,7 +2,7 @@
 function mixpanelTrackProxy(eventName, eventParams) {
   let httpRequest = new XMLHttpRequest();
 
-  httpRequest.open('POST', 'https://165.227.8.60:3001/mixpanel/track');
+  httpRequest.open('POST', 'https://www.trufflesuite.com:443/mixpanel/track');
   httpRequest.setRequestHeader("Content-Type", "application/json");
   
   httpRequest.onload = () => {
