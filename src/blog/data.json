@@ -1,4 +1,12 @@
 {
+  "you-decide-pipeline-or-table-view-in-truffle-teams-deployments-manager": {
+    "title": "You Decide: Pipeline or Table View in Truffle Teams' Refreshed Deployments Manager",
+    "date": "2020-10-8",
+    "author": "Josh Quintal",
+    "published": true,
+    "excerpt": "Truffle Teams new deployments manager now has a table view, deployment cost, and console output.",
+    "image": "/img/blog/you-decide-pipeline-or-table-view-in-truffle-teams-deployments/blog-thumbnail.png"
+  },
   "a-sweet-upgradeable-contract-experience-with-openzeppelin-and-truffle": {
     "title": "A Sweet Upgradeable Contract Experience with OpenZeppelin and Truffle",
     "date": "2020-8-18",
