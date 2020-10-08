@@ -1,24 +1,24 @@
 ---
-title: Teams | Deploying Contracts
+title: Teams | Creating a deployment
 layout: docs.hbs
 ---
-# Deploying Contracts
+# Creating a deployment
 
-To begin a deployment, press the <span class="inline-button">DEPLOY <i class="far fa-parachute-box"></i></span> button on the commit you'd like to deploy. Currently Truffle Teams supports Ethereum testnets, Ethereum Mainnet, and [sandboxes](/docs/teams/deployments/sandboxes) with support for more target networks over time.
+To begin a deployment, press **<span class="inline-button">DEPLOY <i class="far fa-parachute-box"></i></span>**  on the commit you'd like to deploy. Currently Truffle Teams supports Ethereum testnets, Ethereum Mainnet, and [sandboxes](/docs/teams/sandboxes/sandboxes-overview) with support for more target networks over time.
 
 <figure>
   <img class="mb-5" src="/img/docs/teams/commit-card.png" alt="Commit Card">
 </figure>
 
-A wizard will pop up; select a Destination Network, then press the <span class="inline-button">CONNECT WALLET</span> button.
+A wizard will pop up; select a Destination Network, then press **<span class="inline-button">CONNECT WALLET</span>**.
 
 ![Deployment Wizard Ropsten Select](/img/tutorials/learn-how-to-deploy-with-truffle-teams/deployment-wizard-ropsten-select.png)
 
-MetaMask will pop up asking you to login (if you haven't already). Then you will need to press `Connect` to confirm the connection with Truffle Teams.
+MetaMask will pop up asking you to login (if you haven't already). Then you will need to press **Connect** to confirm the connection with Truffle Teams.
 
 ![MetaMask Connect](/img/tutorials/learn-how-to-deploy-with-truffle-teams/metamask-connect.png)
 
-If the wizard hasn't changed (i.e. you don't see a button to start deploying), you likely need to switch your MetaMask network to the destinaiton network. This may reload the page; if this happens, you'll need to repeat the steps above.
+If the wizard hasn't changed (i.e. you don't see a button to start deploying), you likely need to switch your MetaMask network to the destination network. This may reload the page; if this happens, you'll need to repeat the steps above.
 
 ![MetaMask Network](/img/tutorials/learn-how-to-deploy-with-truffle-teams/metamask-network.png)
 
@@ -26,7 +26,7 @@ Before moving on, make sure you have the correct account selected in MetaMask.
 
 ![MetaMask Account](/img/tutorials/learn-how-to-deploy-with-truffle-teams/metamask-account.png)
 
-Now you should see the wizard prompting for a **Deployment Context**. Leave it set to **Create a New Deployment**, or selet a previous deployment to migrate against (see below). Then, press the <span class="inline-button">OK, START DEPLOYING</span> button!
+Now you should see the wizard prompting for a **Deployment Context**. Leave it set to **Create a New Deployment**, or selet a previous deployment to migrate against (see below). Then, press **<span class="inline-button">OK, START DEPLOYING</span>**!
 
 <p class="alert alert-info">
 <strong><i class="far fa-info-circle"></i> Deployment Context</strong>: This option will let you select an existing deployment on the same network that you'd like to use the deployed artifacts for. Truffle supports the concept of migrating your application and will only run the new migration scripts from the last deployment (a.k.a. the deployment context). This becomes useful in a handful of scenarios: maybe you added an extra contract to work with your existing deployment, your Truffle project uses proxy contracts to upgrade your contracts, and more. Technically speaking, selecting the Deployment Context will put the Truffle artifacts from the deployment context you selected in the directory before running `truffle migrate`.
@@ -52,13 +52,13 @@ You'll notice that this interface with MetaMask is like sending a transaction to
 
 ![MetaMask Gas](/img/tutorials/learn-how-to-deploy-with-truffle-teams/metamask-gas.png)
 
-Once you're happy with the transaction gas fee, press the `Confirm` button to send your transaction. Once the transaction is confirmed (the timing of confirmations from MetaMask and Truffle Teams may be slightly offset), you'll receive the next transaction. Repeat this process until you see a message that your deployment is being finalized.
+Once you're happy with the transaction gas fee, press **Confirm** to send your transaction. Once the transaction is confirmed (the timing of confirmations from MetaMask and Truffle Teams may be slightly offset), you'll receive the next transaction. Repeat this process until you see a message that your deployment is being finalized.
 
 After a short wait, you'll see a window with your deployment results:
 
 ![Deployment Results](/img/tutorials/learn-how-to-deploy-with-truffle-teams/deployment-results.png)
 
-Your contracts are deployed! That was easy. Go ahead and push the <span class="inline-button">GREAT! GO BACK TO WORKFLOW</span> button or the **X** in the wizard. You'll now see a new card in the **Staging** column with the results of your deployment:
+Your contracts are deployed! That was easy. Go ahead and push **<span class="inline-button">GREAT! GO BACK TO WORKFLOW</span>** or the **X** in the wizard. You'll now see a new card in the **Staging** column with the results of your deployment:
 
 <figure>
   <img class="mb-5" src="/img/docs/teams/deployment-card.png" alt="Deployment Card">

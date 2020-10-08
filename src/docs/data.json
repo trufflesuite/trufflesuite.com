@@ -17,10 +17,13 @@
       "External CI"
     ],
     "Deployments": [
-      "About Deployments",
-      "Deploying Contracts",
-      "Graduating Deployments",
-      "Sandboxes"
+      "Deployments overview",
+      "Creating a deployment",
+      "Graduating a deployment",
+      "Archiving a deployment",
+      "Deployment console",
+      "Deploying to a sandbox",
+      "External deployments"
     ],
     "Contracts": [
       "Contract Monitoring"
