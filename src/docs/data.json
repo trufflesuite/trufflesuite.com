@@ -1,9 +1,16 @@
 {
   "teams": {
     "Getting Started": [
-      "Creating an Account",
+      "Creating an account",
       "Adding Repositories",
       "Dashboard"
+    ],
+    "Account": [
+      "Creating an account",
+      "Manage your account",
+      "Switching accounts",
+      "Claim a pro trial",
+      "Invite your team"
     ],
     "Testing": [
       "Starting Builds",

@@ -14,7 +14,7 @@ To get started with the dashboard, first you will need to select a repository an
 <p class="alert alert-info">
   These instructions assume you have already created a Teams account. For documentation on how to get your Teams account up and running, see
   <a
-    href="/docs/teams/getting-started/creating-an-account" target="_blank">here</a>
+    href="/docs/teams/account/creating-an-account" target="_blank">here</a>
   and <a href="/docs/teams/getting-started/adding-repositories" target="_blank"> here.</a>
 </p>
 
