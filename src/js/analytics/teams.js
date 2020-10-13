@@ -3,15 +3,16 @@ function getPort() {
   // It feels a bit dirty, but it's the best we can do with metalsmith
   const environment = document.querySelector('meta[name="environment"]').getAttribute('content');
 
-  if (environment === 'dev') {
+  if (environment === 'dev' || environment === 'staging') {
     return '2053';
   }
 
   if (environment === 'prod') {
-    return '2054';
+    return '3053';
   }
 
   // process.env.NODE_ENV should always be set, but in case of error fallback to dev
+  // so we don't pollute production data
   return  '2053';
 }
 
