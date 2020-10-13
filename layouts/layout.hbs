@@ -9,6 +9,8 @@
   {{#if keywords}}<meta name="keywords" content="{{ keywords }}">{{/if}}
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
+  <meta name="environment" content="{{ NODE_ENV }}">
+
   <!-- Favicon -->
   <link rel="icon" href="/img/favicons/favicon.ico">
 
@@ -55,6 +57,8 @@
   <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans|Oswald|Varela+Round|Roboto+Condensed|Roboto+Mono|Cinzel" rel="stylesheet">
   <script src="https://kit.fontawesome.com/371f2d7a8a.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/index.css?cache_buster={{cachebuster}}">
+
+  {{> mixpanel-tag-head}}
 </head>
 <body>
   {{> ga-tag-body}}

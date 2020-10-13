@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node ./scripts/dev.js",
+    "dev": "NODE_ENV=dev node ./scripts/dev.js",
     "uglify": "recursive-uglifyjs build/js && recursive-uglifyjs build/dashboard",
     "build": "node ./scripts/compile.js",
     "postcompile": "npm run uglify && npm run imagemin",
@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "handlebars-helpers": "^0.10.0",
-    "metalsmith-debug": "^1.2.0"
+    "metalsmith-debug": "^1.2.0",
+    "metalsmith-env": "^2.1.2"
   }
 }
