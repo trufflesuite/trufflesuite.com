@@ -8,7 +8,7 @@ function getPort() {
   }
 
   if (environment === 'prod') {
-    return '3053';
+    return '2083';
   }
 
   // process.env.NODE_ENV should always be set, but in case of error fallback to dev
