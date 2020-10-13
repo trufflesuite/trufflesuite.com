@@ -1,8 +1,25 @@
+function getPort() {
+  // We grab this value from process.env.NODE_ENV
+  // It feels a bit dirty, but it's the best we can do with metalsmith
+  const environment = document.querySelector('meta[name="environment"]').getAttribute('content');
+
+  if (environment === 'dev') {
+    return '2053';
+  }
+
+  if (environment === 'prod') {
+    return '2054';
+  }
+
+  // process.env.NODE_ENV should always be set, but in case of error fallback to dev
+  return  '2053';
+}
+
 // API Proxy
 function mixpanelTrackProxy(eventName, eventParams) {
   let httpRequest = new XMLHttpRequest();
 
-  httpRequest.open('POST', 'https://www.trufflesuite.com:2053/mixpanel/track');
+  httpRequest.open('POST', 'https://www.trufflesuite.com:' + getPort() + '/mixpanel/track');
   httpRequest.setRequestHeader("Content-Type", "application/json");
   
   httpRequest.onload = () => {

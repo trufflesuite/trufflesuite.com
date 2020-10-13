@@ -3950,6 +3950,13 @@ metalsmith-discover-partials@^0.1.2:
     fs-tools "^0.5.0"
     handlebars "*"
 
+metalsmith-env@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/metalsmith-env/-/metalsmith-env-2.1.2.tgz#c3bb603864304f72bc36ec15e357cac8157aeab4"
+  integrity sha512-Kv/MmerPrXeOm/DiN+WIICCE9AZ2e/hl8NiKZx9dxGwX2f+bdj/fOcqFkGRsO2RS43KX6Z+Geu9yfAUh0Gp6FA==
+  dependencies:
+    extend-shallow "^3.0.2"
+
 metalsmith-json-to-files@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/metalsmith-json-to-files/-/metalsmith-json-to-files-2.0.0.tgz#ed1ae2d798794bd90cc931f0d23d21fa09f9f38f"
