@@ -1,33 +1,34 @@
-var Metalsmith = require('metalsmith');
+const Metalsmith = require('metalsmith');
 
 // Plugins
-var markdown = require('metalsmith-markdown');
-var markdownPrecompiler = require('metalsmith-markdown-precompiler');
-var sass = require('metalsmith-sass');
-var layouts = require('metalsmith-layouts');
-var discoverHelpers = require('metalsmith-discover-helpers');
-var discoverPartials = require('metalsmith-discover-partials');
-var Handlebars = require('handlebars');
-var handlebarHelpers = require('handlebars-helpers');
-var path = require('path');
-var paths = require('metalsmith-paths');
-var metadata = require('metalsmith-collections');
-var json_to_files = require('metalsmith-json-to-files');
-var moonSearch = require('./metalsmith-moonsearch/metalsmith-moonsearch.js');
-var siteMap = require('metalsmith-sitemap');
-var redirect = require('metalsmith-redirect');
+const markdown = require('metalsmith-markdown');
+const markdownPrecompiler = require('metalsmith-markdown-precompiler');
+const sass = require('metalsmith-sass');
+const layouts = require('metalsmith-layouts');
+const discoverHelpers = require('metalsmith-discover-helpers');
+const discoverPartials = require('metalsmith-discover-partials');
+const Handlebars = require('handlebars');
+const handlebarHelpers = require('handlebars-helpers');
+const path = require('path');
+const paths = require('metalsmith-paths');
+const metadata = require('metalsmith-collections');
+const json_to_files = require('metalsmith-json-to-files');
+const moonSearch = require('./metalsmith-moonsearch/metalsmith-moonsearch.js');
+const siteMap = require('metalsmith-sitemap');
+const redirect = require('metalsmith-redirect');
+const env = require('metalsmith-env');
 
 // Data
-var blogData = require('./src/blog/data.json');
-var boxesData = require('./src/boxes/data.json');
-var boxesMetadata = require('./src/data/boxes.json');
-var careersData = require('./src/careers/data.json');
-var caseStudiesData = require('./src/case-studies/data.json');
-var docsData = require('./src/docs/data.json');
-var eventsData = require('./src/events/data.json');
-var pressReleasesData = require('./src/press-releases/data.json');
-var staffData = require('./src/staff/data.json');
-var tutorialsData = require('./src/tutorials/data.json');
+const blogData = require('./src/blog/data.json');
+const boxesData = require('./src/boxes/data.json');
+const boxesMetadata = require('./src/data/boxes.json');
+const careersData = require('./src/careers/data.json');
+const caseStudiesData = require('./src/case-studies/data.json');
+const docsData = require('./src/docs/data.json');
+const eventsData = require('./src/events/data.json');
+const pressReleasesData = require('./src/press-releases/data.json');
+const staffData = require('./src/staff/data.json');
+const tutorialsData = require('./src/tutorials/data.json');
 
 function app(clean) {
   return Metalsmith(__dirname)
@@ -47,6 +48,7 @@ function app(clean) {
     tutorials: tutorialsData,
     cssVersion: Date.now().toString(),
   })
+  .use(env())
   .use(function (options) {
     handlebarHelpers({
       handlebars: Handlebars
