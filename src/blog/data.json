@@ -1,4 +1,12 @@
 {
+  "truffle-teams-early-access": {
+    "title": "Early Access",
+    "date": "2020-10-8",
+    "author": "Josh Quintal",
+    "published": true,
+    "excerpt": "Lorem ipsum dolor sit amet...",
+    "image": "/img/blog/you-decide-pipeline-or-table-view-in-truffle-teams-deployments-manager/blog-thumbnail.png"
+  },
   "you-decide-pipeline-or-table-view-in-truffle-teams-deployments-manager": {
     "title": "You Decide: Pipeline or Table View in Truffle Teams' Refreshed Deployments Manager",
     "date": "2020-10-8",
