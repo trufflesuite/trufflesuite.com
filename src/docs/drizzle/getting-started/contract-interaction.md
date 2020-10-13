@@ -47,7 +47,7 @@ if (state.drizzleStatus.initialized) {
     // Declare this transaction to be observed. We'll receive the stackId for reference.
     const stackId = drizzle.contracts.SimpleStorage.methods.set.cacheSend(2, {from: '0x3f...'})
 
-    // Use the dataKey to display the transaction status.
+    // Use the stackId to display the transaction status.
     if (state.transactionStack[stackId]) {
         const txHash = state.transactionStack[stackId]
 

@@ -17,11 +17,13 @@
 
 .trufflecon-heading {
   max-height: none;
-  //padding-top: 6rem;
+  background-color: #7532D6;
+
 
   h1 {
-    font-size: 6rem;
+    font-size: 9.5vw;
     letter-spacing: .35em;
+    text-indent: .2em;
 
     span {
       display: none;
@@ -33,10 +35,10 @@
       margin-right: .35em;
     }
 
-    @media (max-width: 991.98px) {
+   /* @media (max-width: 991.98px) {
       font-size: 2.75rem;
       letter-spacing: .2em;
-    }
+    }*/
   }
 
   h2 {
@@ -62,13 +64,13 @@
     padding: 4rem 15px 3rem 15px;
     max-height: none;
     h1 {
-      font-size: 2rem;
+      font-size: 3rem;
     }
     h2 {
       font-size: 1.4rem;
     }
     h3 {
-      font-size: 1rem;
+      font-size: 1.4rem;
     }
   }
 }
@@ -111,19 +113,6 @@ blockquote {
   background-size: cover;
   background-position: center center;
   opacity: .3;
-  z-index: -1;
-}
-
-.trufflecon-heading-funky {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: #fff;
-  background-image: url(/img/home/trufflecon-2020-topbanner.svg);
-  background-size: cover;
-  background-position: center center;
   z-index: -1;
 }
 
@@ -401,4 +390,11 @@ blockquote {
   a {
     color: #58484E;
   }
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -60px;
+  visibility: hidden;
 }

@@ -35,6 +35,12 @@
   background-color: #361C5E;
 }
 
+.banner-tcon-white {
+  color: #fff;
+  background-color: #ffffff;
+  align-items: flex-start;
+}
+
 .banner-milk-choc {
   background-color: #5e464d;
 }
@@ -176,6 +182,46 @@
     }
   }
 }
+
+.banner-truffle-tcon-2020 {
+  background-color: #3fe0c5;
+  font-weight: bold;
+  text-decoration: none;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+
+  a {
+    text-decoration: none;
+    color: #5E464D;
+
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.banner-trufflecon-swag {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  background-image: url(/img/trufflecon/swag-bg2.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  a {
+    text-decoration: none;
+    color: #58484e;
+
+    &:hover {
+      color: #3fe0c5;
+      text-decoration: none;
+    }
+  }
+}
+
 
 // HubSpot GDPR Banner
 

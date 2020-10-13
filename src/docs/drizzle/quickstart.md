@@ -8,10 +8,10 @@ layout: docs.hbs
 
 Install Drizzle via npm:
 ```shell
-npm install --save drizzle
+npm install --save @drizzle/store
 ```
 
-**Using React?**: The easiest way to get started with Drizzle is to use our [official `@drizzle/react-plugin` package](https://github.com/trufflesuite/drizzle/tree/master/packages/react-plugin) and (optionally) its [companion `@drizzle/react-components`](https://github.com/trufflesuite/drizzle/tree/master/packages/react-components) and/or (optionally) [the redux helpers `@drizzle/store`](https://github.com/trufflesuite/drizzle/tree/master/packages/store).
+**Using React?**: The easiest way to get started with Drizzle is to use our [official `@drizzle/react-plugin` package](https://github.com/trufflesuite/drizzle/tree/master/packages/react-plugin) and (optionally) its [companion `@drizzle/react-components`](https://github.com/trufflesuite/drizzle/tree/master/packages/react-components).
 
 ## Initialization
 
@@ -21,7 +21,7 @@ npm install --save drizzle
 
 1. Import the provider.
    ```javascript
-   import { Drizzle } from 'drizzle'
+   import { Drizzle } from '@drizzle/store'
    ```
 
 1. Create an `options` object and pass in the desired contract artifacts for Drizzle to instantiate. Other options are available, see [the Options section](./reference/drizzle-options).
@@ -40,5 +40,5 @@ npm install --save drizzle
    ```
 
 <p class="alert alert-info m-t-2">
-<strong>Note</strong>: The above assumes you have no existing redux store and generates a new one. To use your existing redux store, see <a href="/docs/drizzle/using-drizzles-redux-store">Using an Existing Redux Store</a>.
+<strong>Note</strong>: The above assumes you have no existing redux store and generates a new one. To use your existing redux store, see <a href="./getting-started/using-drizzles-redux-store">Using an Existing Redux Store</a>.
 </p>

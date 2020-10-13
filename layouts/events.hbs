@@ -60,7 +60,7 @@
   <main class="container container-heading">
     <div class="row">
       <div class="col">
-        <h1>EVENTS</h1>
+        <h1>UPCOMING EVENTS</h1>
       </div>
     </div>
   </main>
@@ -68,38 +68,98 @@
   <main class="banner banner-light-cream pt-5 pb-5" role="main">
     <div class="container events-container">
       {{#each events}}
-        {{#if this.image}}
-          <div class="row align-items-center post-row">
-            <div class="col-md-3">
-              <img src="{{ this.image }}" class="img-fluid post-thumbnail" />
+        {{#if this.current}}
+          {{#if this.image}}
+            <div class="row post-row pb-5">
+              <div class="col-md-3">
+                <img src="{{ this.image }}" class="img-fluid post-thumbnail" />
+              </div>
+              <div class="col-md-9">
+                <h2>{{ this.title }}</h2>
+                <p class="mb-1"><i class="far fa-calendar-alt"></i> {{ this.start }} - {{ this.end }}</p>
+                {{#if this.location}}
+                  <p><i class="fas fa-map-marker-alt"></i> {{ this.location }}</p>
+                {{/if}}
+                {{#if this.excerpt}}
+                  <p>{{ this.excerpt }}</p>
+                {{/if}}
+                {{#if this.youtube}}
+                   <a class="btn btn-youtube" href="{{ this.youtube }}" target="_blank">ATTEND THE LIVE SESSION</a>
+                {{/if}}
+                {{#if this.image2}}
+                  <img src="{{ this.image2 }}" class="post-livestream" />
+                {{/if}}
+                {{#if this.eventbrite}}
+                <a class="btn btn-watermelon" href="{{ this.eventbrite }}" target="_blank">REGISTER HERE</a>
+                {{/if}}
+
+              </div>
             </div>
-            <div class="col-md-9">
-              <h2>{{ this.title }}</h2>
-              <p class="mb-1"><i class="far fa-calendar-alt"></i> {{ this.start }} - {{ this.end }}</p>
-              {{#if this.location}}
-                <p><i class="fas fa-map-marker-alt"></i> {{ this.location }}</p>
-              {{/if}}
-              {{#if this.excerpt}}
-                <p>{{ this.excerpt }}</p>
-              {{/if}}
-              <a class="btn btn-eventbrite" href="{{ this.eventbrite }}">REGISTER HERE</a>
+          {{else}}
+            <div class="row post-row">
+              <div class="col">
+                <h2>{{ this.title }}</h2>
+                <p class="mb-1"><i class="far fa-calendar-alt"></i> {{ this.start }} - {{ this.end }}</p>
+                {{#if this.location}}
+                  <p><i class="fas fa-map-marker-alt"></i> {{ this.location }}</p>
+                {{/if}}
+                {{#if this.excerpt}}
+                  <p>{{ this.excerpt }}</p>
+                {{/if}}
+                <!-- <a class="btn btn-eventbrite" href="{{ this.eventbrite }}">READ MORE</a> -->
+              </div>
             </div>
-          </div>
-        {{else}}
-          <div class="row post-row">
-            <div class="col">
-              <h2>{{ this.title }}</h2>
-              <p class="mb-1"><i class="far fa-calendar-alt"></i> {{ this.start }} - {{ this.end }}</p>
-              {{#if this.location}}
-                <p><i class="fas fa-map-marker-alt"></i> {{ this.location }}</p>
-              {{/if}}
-              {{#if this.excerpt}}
-                <p>{{ this.excerpt }}</p>
-              {{/if}}
-              <!-- <a class="btn btn-eventbrite" href="{{ this.eventbrite }}">READ MORE</a> -->
+          {{/if}}
+        {{/if}}        
+      {{/each}}
+    </div>
+  </main>
+
+  <main class="container container-heading_alt">
+    <div class="row">
+      <div class="col">
+        <h1>PAST EVENTS</h1>
+      </div>
+    </div>
+  </main>
+
+  <main class="banner banner-light-cream pt-5 pb-5" role="main">
+    <div class="container events-container">
+      {{#each events}}
+        {{#if this.past}}
+          {{#if this.image}}
+            <div class="row post-row pb-5">
+              <div class="col-md-3">
+                <img src="{{ this.image }}" class="img-fluid post-thumbnail" />
+              </div>
+              <div class="col-md-9">
+                <h2>{{ this.title }}</h2>
+                <p class="mb-1"><i class="far fa-calendar-alt"></i> {{ this.start }} - {{ this.end }}</p>
+                {{#if this.location}}
+                  <p><i class="fas fa-map-marker-alt"></i> {{ this.location }}</p>
+                {{/if}}
+                {{#if this.excerpt}}
+                  <p>{{ this.excerpt }}</p>
+                {{/if}}
+                <a class="btn btn-youtube" href="{{ this.youtube }}" target="_blank">WATCH  NOW</a>
+              </div>
             </div>
-          </div>
-        {{/if}}
+          {{else}}
+            <div class="row post-row">
+              <div class="col">
+                <h2>{{ this.title }}</h2>
+                <p class="mb-1"><i class="far fa-calendar-alt"></i> {{ this.start }} - {{ this.end }}</p>
+                {{#if this.location}}
+                  <p><i class="fas fa-map-marker-alt"></i> {{ this.location }}</p>
+                {{/if}}
+                {{#if this.excerpt}}
+                  <p>{{ this.excerpt }}</p>
+                {{/if}}
+                <!-- <a class="btn btn-eventbrite" href="{{ this.eventbrite }}">READ MORE</a> -->
+              </div>
+            </div>
+          {{/if}}
+        {{/if}}          
       {{/each}}
     </div>
   </main>

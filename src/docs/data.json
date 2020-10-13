@@ -2,20 +2,24 @@
   "teams": {
     "Getting Started": [
       "Creating an Account",
-      "Adding Repositories"
+      "Adding Repositories",
+      "Dashboard"
     ],
     "Testing": [
       "Starting Builds",
       "External CI"
     ],
     "Deployments": [
+      "About Deployments",
       "Deploying Contracts",
+      "Graduating Deployments",
       "Sandboxes"
     ],
     "Contracts": [
       "Contract Monitoring"
     ],
     "Reference": [
+      "Configuration",
       "Permissions Disclosure"
     ]
   },

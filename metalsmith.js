@@ -23,6 +23,7 @@ const blogData = require('./src/blog/data.json');
 const boxesData = require('./src/boxes/data.json');
 const boxesMetadata = require('./src/data/boxes.json');
 const careersData = require('./src/careers/data.json');
+const caseStudiesData = require('./src/case-studies/data.json');
 const docsData = require('./src/docs/data.json');
 const eventsData = require('./src/events/data.json');
 const pressReleasesData = require('./src/press-releases/data.json');
@@ -39,6 +40,7 @@ function app(clean) {
     boxes: boxesData,
     boxMeta: boxesMetadata,
     careers: careersData,
+    caseStudies: caseStudiesData,
     docs: docsData,
     events: eventsData,
     pressReleases: pressReleasesData,
@@ -84,6 +86,10 @@ function app(clean) {
   .use(layouts({
     "default": "career-single.hbs",
     "pattern": "careers/*.html"
+  }))
+  .use(layouts({
+    "default": "case-study-single.hbs",
+    "pattern": "case-studies/*.html"
   }))
   .use(layouts({
     "default": "tutorial-single.hbs",

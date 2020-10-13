@@ -30,7 +30,7 @@ Debugging a transaction on the blockchain is different than debugging traditiona
 In order to debug transactions, you'll need the following:
 
 * Truffle 4.0 or above.
-* The hash of a transaction on your desired blockchain.
+* The hash of a transaction on your desired blockchain.  (If you are using the built-in  blockchain and trying to debug a test execution, you may obtain the hash by running `truffle develop --log`.)
 * The source code and artifacts the transaction encounters.
 
 Note that it's okay if your desired transaction resulted in an exception or if it ran out of gas. The transaction still exists on chain, and so you can still debug it!

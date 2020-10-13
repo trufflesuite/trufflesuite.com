@@ -349,6 +349,10 @@
   }
 }
 
+//
+// Truffle Teams Controls
+//
+
 .inline-button {
   color: #33262a;
   background: #3fe0c5;
@@ -364,13 +368,15 @@
 }
 
 .inline-menu-item {
-  color: #ffffff;
-  background: #33262a;
-  padding: .125em .33em;
   line-height: 2em;
+  font-weight: bold;
   
   i {
+    background: #ffffff;
+    border: 2px solid #47BAA7;
+    border-radius: 50%;
     margin-right: .25em;
+    padding: .33em;
   }
 }
 
