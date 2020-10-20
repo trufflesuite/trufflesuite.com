@@ -17,8 +17,6 @@
 
 .trufflecon-heading {
   max-height: none;
-  background-color: #7532D6;
-
 
   h1 {
     font-size: 9.5vw;
@@ -138,6 +136,10 @@ blockquote {
     
   &.cream {
     background: #f8f5f0;
+  }
+
+  &.purple {
+    border-color: transparent #7532D6 transparent transparent;
   }
 }
 
