@@ -1,13 +1,13 @@
 [
   {
-    "title": "Truffle Webinar Series - Explore the full life cycle of developing and deploying a Dapp (Episode 2)",
-    "start": "Thursday, October 8th, 2020, 1:00 PM",
+    "title": "Truffle Webinar Series - Explore the full life cycle of developing and deploying a Dapp (Episode 3)",
+    "start": "Thursday, October 29th, 2020, 1:00 PM",
     "end": "2:00 PM PDT",
     "location": "Live Stream Webinar",
     "image2": "/img/live-stream3.png",
-    "excerpt": "Continue the blockchain journey, with our very own, Kevin Bluer and Amal Sudama, in this FREE Truffle webinar series exploring the full life cycle of developing and deploying a Dapp. In episode 2, you will be delving deeper into the development workflow taking a look at Ganache, both running locally (CLI and UI) and in a shared sandbox environment. Kevin and Amal will also give you a first look at Truffle Teams, the newest dev ops edition to the Truffle Suite! After this episode, you should have a solid understanding of all things Ganache, a deeper understanding of the development workflow, and an introduction to Truffle Teams.",
-    "eventbrite": "https://trfl.co/truffle-webinar-series2",
-    "image": "/img/webinar_social_eps2.jpg",
+    "excerpt": "Join Trufflers, Kevin Bluer and Amal Sudama, in Episode 3 of the Truffle FREE webinar series exploring the full life cycle of developing and deploying a Dapp with confidence. In this episode we explore Truffle Teams and its role in the DApp development lifecycle, including CI/CD, Deployment, Monitoring, and Debugging. We will deep dive into smart contract deployment and you will get hands-on with Truffle Teams in the context of a ERC721!",
+    "eventbrite": "https://trfl.co/truffle-webinar-series3",
+    "image": "/img/events/events page-TWS-episode3.png",
     "current": "true"
   },
   {
@@ -19,6 +19,16 @@
     "eventbrite": "https://www.trufflesuite.com/trufflecon2020",
     "image": "/img/events/trufflecon-2020-2.jpg",
     "current": "true"
+  },
+  {
+    "title": "Truffle Webinar Series - Explore the full life cycle of developing and deploying a Dapp (Episode 2)",
+    "start": "Thursday, October 8th, 2020, 1:00 PM",
+    "location": "Live Stream Webinar",
+    "image2": "/img/live-stream3.png",
+    "excerpt": "Continue the blockchain journey, with our very own, Kevin Bluer and Amal Sudama, in this FREE Truffle webinar series exploring the full life cycle of developing and deploying a Dapp. In episode 2, you will be delving deeper into the development workflow taking a look at Ganache, both running locally (CLI and UI) and in a shared sandbox environment. Kevin and Amal will also give you a first look at Truffle Teams, the newest dev ops edition to the Truffle Suite! After this episode, you should have a solid understanding of all things Ganache, a deeper understanding of the development workflow, and an introduction to Truffle Teams.",
+    "eventbrite": "https://trfl.co/truffle-webinar-series2",
+    "image": "/img/webinar_social_eps2.jpg",
+    "past": "true"
   },
   {
     "title": "Truffle Webinar Series - Explore the full life cycle of developing and deploying a Dapp",
