@@ -14,7 +14,8 @@ To run your migrations, run the following:
 $ truffle migrate
 ```
 
-This will run all migrations located within your project's `migrations` directory. At their simplest, migrations are simply a set of managed deployment scripts. If your migrations were previously run successfully, `truffle migrate` will start execution from the last migration that was run, running only newly created migrations. If no new migrations exists, `truffle migrate` won't perform any action at all. You can use the `--reset` option to run all your migrations from the beginning. For local testing make sure to have a test blockchain such as [Ganache](/ganache) installed and running before executing `migrate`.
+This will run all migrations located within your project's `migrations` directory. At their simplest, migrations are simply a set of managed deployment scripts. If your migrations were previously run successfully, `truffle migrate` will start execution from the last migration that was run, running only newly created migrations. If no new migrations exists, `truffle migrate` won't perform any action at all. You can use the `--reset` option to run all your migrations from the beginning. Other command options are documented [here](../reference/truffle-commands#migrate). For local testing, make sure to have a test blockchain such as [Ganache](/ganache) configured and running before executing `truffle migrate`. You can also use `truffle develop` and run your migrations.
+
 
 ## Migration files
 
@@ -105,7 +106,7 @@ contract Migrations {
 }
 ```
 
-You must deploy this contract inside your first migration in order to take advantage of the Migrations feature. To do so, create the following migration:
+You must deploy this contract inside your first migration in order to take advantage of the migrations feature.  The following migration is provided by default when creating a new project with `truffle init`:
 
 Filename: `migrations/1_initial_migration.js`
 
@@ -179,7 +180,7 @@ You can optionally pass an array of contracts, or an array of arrays, to speed u
 
 Note that you will need to deploy and link any libraries your contracts depend on first before calling `deploy`. See the `link` function below for more details.
 
-For more information, please see the [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) documentation.
+For more information, please see the [@truffle/contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) documentation.
 
 
 Examples:

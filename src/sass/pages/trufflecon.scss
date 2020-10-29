@@ -1,9 +1,9 @@
 .trufflecon-subnav {
   z-index: 10;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#58484e+0,58484e+100&1+0,0+100 */
-  background: -moz-linear-gradient(top, rgba(88,72,78,.7) 0%, rgba(88,72,78,0) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(88,72,78,.7) 0%,rgba(88,72,78,0) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(88,72,78,.7) 0%,rgba(88,72,78,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient(top, rgba(88,72,78,.7) 0%, rgba(88,72,78,0) 0%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(88,72,78,.7) 0%,rgba(88,72,78,0) 0%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(88,72,78,.7) 0%,rgba(88,72,78,0) 0%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#58484e', endColorstr='#0058484e',GradientType=0 ); /* IE6-9 */
 
   &.scroll {
@@ -17,11 +17,11 @@
 
 .trufflecon-heading {
   max-height: none;
-  padding-top: 6rem;
 
   h1 {
-    font-size: 6rem;
+    font-size: 9.5vw;
     letter-spacing: .35em;
+    text-indent: .2em;
 
     span {
       display: none;
@@ -33,10 +33,10 @@
       margin-right: .35em;
     }
 
-    @media (max-width: 991.98px) {
+   /* @media (max-width: 991.98px) {
       font-size: 2.75rem;
       letter-spacing: .2em;
-    }
+    }*/
   }
 
   h2 {
@@ -62,13 +62,13 @@
     padding: 4rem 15px 3rem 15px;
     max-height: none;
     h1 {
-      font-size: 2rem;
+      font-size: 3rem;
     }
     h2 {
       font-size: 1.4rem;
     }
     h3 {
-      font-size: 1rem;
+      font-size: 1.4rem;
     }
   }
 }
@@ -114,19 +114,6 @@ blockquote {
   z-index: -1;
 }
 
-.trufflecon-heading-funky {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: #fff;
-  background-image: url(/img/trufflecon/header-2019.svg);
-  background-size: cover;
-  background-position: center center;
-  z-index: -1;
-}
-
 .trufflecon-heading-stage {
   top: 0;
   left: 0;
@@ -150,6 +137,10 @@ blockquote {
   &.cream {
     background: #f8f5f0;
   }
+
+  &.purple {
+    border-color: transparent #7532D6 transparent transparent;
+  }
 }
 
 .triangle-br {
@@ -159,6 +150,25 @@ blockquote {
   border-style: solid;
   border-width: 0 0 50px 100vw;
   border-color: transparent transparent #f7a34e transparent;
+}
+
+.triangle-purple {
+  background: #f8f5f0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 50px 100vw;
+  border-color: transparent transparent #A359EA transparent;
+}
+
+.triangle-purple-rev {
+  background: #f8f5f0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 50px 100vw;
+  border-color: transparent transparent #A359EA transparent;
+  transform: rotate(180deg);
 }
 
 .trufflecon-segment-footer {
@@ -233,7 +243,7 @@ blockquote {
     }
 
     h3{
-      color: #5e464d
+      color: #3fe0c5
     }
   }
 
@@ -371,7 +381,7 @@ blockquote {
 } 
 
 .media-image {
-  max-width: 150px; 
+  max-width: 100px; 
 }
 
 .alert-slides {
@@ -382,4 +392,20 @@ blockquote {
   a {
     color: #58484E;
   }
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -60px;
+  visibility: hidden;
+}
+
+.poker-logo {
+  margin: 0 auto;
+}
+
+.btn-poker {
+  display: block;
+  margin: 1rem auto 0 auto;
 }

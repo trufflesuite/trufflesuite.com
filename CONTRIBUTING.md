@@ -32,7 +32,9 @@ This repo uses short-lived, prefixed branches. For example, a new blog post woul
 1. PRs from Truffle employee require at least one review approval; PRs from external contributors are recommended (though not required) to have >1 review
 1. PRs that pass all automatic checks **and** meet the approval criteria above may be merged by anyone (though give the author time to merge it themselves, as they deserve the satisfaction of pushing the button)
     - After a PR has been merged, **please delete the original branch**
-1. When preparing to publish to master, anyone may merge `develop` into `master` **after** successfully testing in the staging environment.
+1. When preparing to publish to master, anyone may merge `develop` into `master` under two circumstances:
+    - **After** successfully testing in the staging environment **or**
+    - You get a single Truffle employee approval in a PR to merge from `develop` into `master`
 
 ## Build Process & Directory Structure
 

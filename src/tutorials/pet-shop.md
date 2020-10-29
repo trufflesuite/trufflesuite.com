@@ -5,7 +5,7 @@ This tutorial will take you through the process of building your first dapp---an
 This tutorial is meant for those with a basic knowledge of Ethereum and smart contracts, who have some knowledge of HTML and JavaScript, but who are new to dapps.
 
 <p class="alert alert-info">
-<strong>Note</strong>: For Ethereum basics, please read the Truffle [Ethereum Overview](/tutorials/ethereum-overview) tutorial before proceeding.
+<strong>Note</strong>: For Ethereum basics, please read the Truffle <a href="/tutorials/ethereum-overview">Ethereum Overview</a> tutorial before proceeding.
 </p>
 
 In this tutorial we will be covering:
@@ -63,7 +63,7 @@ We also will be using [Ganache](/ganache), a personal blockchain for Ethereum de
   ```
 
 <p class="alert alert-info">
-  <strong>Note</strong>: Truffle can be initialized a few different ways. Another useful initialization command is `truffle init`, which creates an empty Truffle project with no example contracts included. For more information, please see the documentation on [Creating a project](/docs/getting_started/project).
+  <strong>Note</strong>: Truffle can be initialized a few different ways. Another useful initialization command is `truffle init`, which creates an empty Truffle project with no example contracts included. For more information, please see the documentation on <a href="/docs/truffle/getting-started/creating-a-project">Creating a project</a>.
 </p>
 
 ### Directory structure
@@ -179,7 +179,7 @@ Solidity is a compiled language, meaning we need to compile our Solidity to byte
    ```
 
    <p class="alert alert-info">
-   <strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on [resolving naming conflicts on Windows](/docs/advanced/configuration#resolving-naming-conflicts-on-windows).
+   <strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on <a href="/docs/truffle/reference/configuration#resolving-naming-conflicts-on-windows">resolving naming conflicts on Windows</a>.
    </p>
 
    You should see output similar to the following:
@@ -201,7 +201,7 @@ Now that we've successfully compiled our contracts, it's time to migrate them to
 **A migration is a deployment script meant to alter the state of your application's contracts**, moving it from one state to the next. For the first migration, you might just be deploying new code, but over time, other migrations might move data around or replace a contract with a new one.
 
 <p class="alert alert-info">
-  <strong>Note</strong>: Read more about migrations in the [Truffle documentation](/docs/getting_started/migrations).
+  <strong>Note</strong>: Read more about migrations in the <a href="/docs/truffle/getting-started/running-migrations">Truffle documentation</a>.
 </p>
 
 You'll see one JavaScript file already in the `migrations/` directory: `1_initial_migration.js`. This handles deploying the `Migrations.sol` contract to observe subsequent smart contract migrations, and ensures we don't double-migrate unchanged contracts in the future.
@@ -223,7 +223,7 @@ Now we are ready to create our own migration script.
 1. Before we can migrate our contract to the blockchain, we need to have a blockchain running. For this tutorial, we're going to use [Ganache](/ganache), a personal blockchain for Ethereum development you can use to deploy contracts, develop applications, and run tests. If you haven't already, [download Ganache](/ganache) and double click the icon to launch the application. This will generate a blockchain running locally on port 7545.
 
    <p class="alert alert-info">
-     <strong>Note</strong>: Read more about Ganache in the [Truffle documentation](/docs/ganache/using).
+     <strong>Note</strong>: Read more about Ganache in the <a href="/docs/ganache/using">Truffle documentation</a>.
    </p>
 
    ![Ganache on first launch](/img/tutorials/pet-shop/ganache-initial.png "Ganache on first launch")
@@ -277,8 +277,10 @@ Now we are ready to create our own migration script.
 You've now written your first smart contract and deployed it to a locally running blockchain. It's time to interact with our smart contract now to make sure it does what we want.
 
 
-## Testing the smart contract
+## Testing the smart contract using Solidity
 
+<details> 
+<summary> Expand This Section </summary>
 Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this tutorial, we'll be writing our tests in Solidity.
 
 1. Create a new file named `TestAdoption.sol` in the `test/` directory.
@@ -309,7 +311,7 @@ We start the contract off with 3 imports:
 
 * `Assert.sol`: Gives us various assertions to use in our tests. In testing, **an assertion checks for things like equality, inequality or emptiness to return a pass/fail** from our test. [Here's a full list of the assertions included with Truffle](https://github.com/trufflesuite/truffle/blob/master/packages/core/lib/testing/Assert.sol).
 * `DeployedAddresses.sol`: When running tests, Truffle will deploy a fresh instance of the contract being tested to the blockchain. This smart contract gets the address of the deployed contract.
-* `Adoption.sol`: The smart contract we want to test.
+* `Adoption`: The smart contract we want to test.
 
 <p class="alert alert-info">
   <strong>Note</strong>: The first two imports are referring to global Truffle files, not a `truffle` directory. You should not see a `truffle` directory inside your `test/` directory.
@@ -374,6 +376,86 @@ Since arrays can only return a single value given a single key, we create our ow
    ```
 
 Note the **memory** attribute on `adopters`. The memory attribute tells Solidity to temporarily store the value in memory, rather than saving it to the contract's storage. Since `adopters` is an array, and we know from the first adoption test that we adopted pet `expectedPetId`, we compare the testing contracts address with location `expectedPetId` in the array.
+</details>
+
+## Testing the smart contract using JavaScript 
+
+<details>
+<summary> Expand This Section </summary>
+Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this tutorial, we'll be writing our tests in Javascript using the Chai and Mocha libraries.<br/>
+
+1. Create a new file named `testAdoption.test.js` in the `test/` directory.<br/>
+2. Add the following content to the `testAdoption.test.js` file:<br/>
+
+  ```
+  const Adoption = artifacts.require("Adoption");
+  
+  contract("Adoption", (accounts) => {
+    let adoption;
+    let expectedPetId;
+    
+    before(async () => {
+        adoption = await Adoption.deployed();
+    });
+
+    describe("adopting a pet and retrieving account addresses", async () => {
+      before("adopt a pet using accounts[0]", async () => {
+        await adoption.adopt(8, { from: accounts[0] });
+        expectedAdopter = accounts[0];
+      });
+    });
+  });
+
+  ```
+  We start the contract by importing : 
+  * `Adoption`: The smart contract we want to test
+  We begin our test by importing our `Adoption` contract using `artifacts.require`.
+
+  **Note**: When writing this test, our callback function take the argument `accounts`. This provides us with the accounts available on the network when using this test.
+
+  Then, we make use of the `before` to provide initial setups for the following: 
+  * Adopt a pet with id 8 and assign it to the first account within the test accounts on the network.
+  * This function later is used to check whether the `petId: 8` has been adopted by `accounts[0]`.
+
+  ### Testing the adopt function 
+
+  To test the `adopt` function, recall that upon success it returns the given `adopter`. We can ensure that the adopter based on given petID was returned and is compared with the `expectedAdopter` within the `adopt` function.
+
+  1. Add the following function within the `testAdoption.test.js` test file, after the declaration of `before` code block. 
+
+  ```
+  describe("adopting a pet and retrieving account addresses", async () => {
+    before("adopt a pet using accounts[0]", async () => {
+      await adoption.adopt(8, { from: accounts[0] });
+      expectedAdopter = accounts[0];
+    });
+
+    it("can fetch the address of an owner by pet id", async () => {
+      const adopter = await adoption.adopters(8);
+      assert.equal(adopter, expectedAdopter, "The owner of the adopted pet should be the first account.");
+    });
+  });
+  ```
+
+  Things to notice:
+
+  * We call smart contract method `adopters` to see what address adopted the pet with `petID` 8.
+  * Truffle imports `Chai` for the user so we can use the `assert` functions. We pass the actual value, the expected value and a failure message (which gets printed to the console if the test does not pass) to `assert.equal()`.
+
+  ### Testing retrieval of all pet owners
+
+  Since arrays can only return a single value given a single key, we create our own getter for the entire array.
+
+  1. Add this function below the previously added function in `testAdoption.test.js`.
+  
+  ```
+  it("can fetch the collection of all pet owners' addresses", async () => {
+    const adopters = await adoption.getAdopters();
+    assert.equal(adopters[8], expectedAdopter, "The owner of the adopted pet should be in the collection.");
+  });
+  ```
+  Since adopters is an array, and we know from the first adoption test that we adopted the pet with `petId` 8, we are comparing the contract's address with the address that we expect to find.
+</details>
 
 ### Running the tests
 
@@ -454,13 +536,13 @@ Things to notice:
 
 ### Instantiating the contract
 
-Now that we can interact with Ethereum via web3, we need to instantiate our smart contract so web3 knows where to find it and how it works. Truffle has a library to help with this called `truffle-contract`. It keeps information about the contract in sync with migrations, so you don't need to change the contract's deployed address manually.
+Now that we can interact with Ethereum via web3, we need to instantiate our smart contract so web3 knows where to find it and how it works. Truffle has a library to help with this called `@truffle/contract`. It keeps information about the contract in sync with migrations, so you don't need to change the contract's deployed address manually.
 
 1. Still in `/src/js/app.js`, remove the multi-line comment from within `initContract` and replace it with the following:
 
    ```javascript
    $.getJSON('Adoption.json', function(data) {
-     // Get the necessary contract artifact file and instantiate it with truffle-contract
+     // Get the necessary contract artifact file and instantiate it with @truffle/contract
      var AdoptionArtifact = data;
      App.contracts.Adoption = TruffleContract(AdoptionArtifact);
 

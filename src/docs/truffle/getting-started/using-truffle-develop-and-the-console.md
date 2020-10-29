@@ -9,6 +9,10 @@ Sometimes it's nice to work with your contracts interactively for testing and de
 * **Truffle Console**: A basic interactive console connecting to any Ethereum client
 * **Truffle Develop**: An interactive console that also spawns a development blockchain
 
+<p class="alert alert-info">
+**Note**: Your contract names get loaded as variables into the console context. For this reason it is recommended to avoid names that might conflict with Node's native objects like Buffer or String. For updates see the related <a href="https://github.com/trufflesuite/truffle/issues/3329">issue on GitHub</a>.
+</p>
+
 ## Why two different consoles?
 
 Having two different consoles allows you to choose the best tool for your needs.
@@ -92,7 +96,7 @@ Mnemonic: candy maple cake sugar pudding cream honey rich smooth crumble sweet t
 This shows you the addresses, private keys, and mnemonic for this particular blockchain.
 
 <p class="alert alert-info">
-**Note**: When you run `truffle develop` for the first time, Truffle will generate a random mnemonic that will persist for you and you alone. If you want to use a different mnemonic or set of addresses, we recommend using [Ganache](/docs/ganache/using).
+**Note**: When you run `truffle develop` for the first time, Truffle will generate a random mnemonic that will persist for you and you alone. If you want to use a different mnemonic or set of addresses, we recommend using <a href="/docs/ganache/using">Ganache</a>.
 </p>
 
 
@@ -175,6 +179,6 @@ Additionally, both Truffle Develop and the console have the following features:
 * `test`
 * `version`
 
-If a Truffle command is not available, it is because it is not relevant for an existing project (for example, `init`) or wouldn't make sense (for example, `develop` or `console`).
+If a Truffle command is not available, it is because it is not relevant for an existing project (for example, `init`) wouldn't make sense (for example, `develop` or `console`).
 
 See full [command reference](/docs/advanced/commands) for more information.

@@ -34,7 +34,7 @@ Choosing between a transaction and a call is as simple as deciding whether you w
 
 ## Introducing abstractions
 
-Contract abstractions are the bread and butter of interacting with Ethereum contracts from Javascript. In short, contract abstractions are wrapper code that makes interaction with your contracts easy, in a way that lets you forget about the many engines and gears executing under the hood. Truffle uses its own contract abstraction via the [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) module, and it is this contract abstraction that's described below.
+Contract abstractions are the bread and butter of interacting with Ethereum contracts from Javascript. In short, contract abstractions are wrapper code that makes interaction with your contracts easy, in a way that lets you forget about the many engines and gears executing under the hood. Truffle uses its own contract abstraction via the [@truffle/contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) module, and it is this contract abstraction that's described below.
 
 In order to appreciate the usefulness of a contract abstraction, however, we first need a contract to talk about. We'll use the MetaCoin contract available to you through Truffle Boxes via `truffle unbox metacoin`.
 
@@ -155,7 +155,7 @@ Specifically, you get the following:
 * `result.logs` *(array)* - Decoded events (logs)
 * `result.receipt` *(object)* - Transaction receipt (includes the amount of gas used)
 
-For more information, please see the [README](https://github.com/trufflesuite/truffle/tree/master/packages/contract) in the `truffle-contract` package.
+For more information, please see the [README](https://github.com/trufflesuite/truffle/tree/master/packages/contract) in the `@truffle/contract` package.
 
 ### Catching events
 
@@ -231,6 +231,7 @@ methods of your contract abstractions:
 - `estimateGas`
 - `sendTransaction`
 - `call`
+- `request`
 
 The first special method mentioned above is the `estimateGas` method. This, as you
 probably can guess, estimates the amount of gas that a transaction will require.
@@ -275,12 +276,37 @@ The `result` variable above will be the same kind of result you would get
 from executing any normal transaction in Truffle. It will contain the
 transaction hash, the logs, etc.
 
-The last method is `call` and the syntax is exactly the same as for
+The next method is `call` and the syntax is exactly the same as for
 `sendTransaction`. If you want to explicitly make a call, you can
 use the `call` method found on your contract abstraction's method. So you
 would write something that looks like
 `const result = await instance.myMethod.call()`.
 
+The last method is `request`.  This method does not perform a transaction or
+call, but rather returns an object that can be passed to
+`web3.eth.sendTransaction` or `web3.eth.call` if you want to perform the
+transaction or call yourself.  It has the same syntax as the others, and
+like with `estimateGas`, you can also do `Contract.new.request()` if you
+want to perform a manual deployment.
+
+### Invoking overloaded methods
+
+The current implementation of Truffle's contract abstraction can mistakenly
+infer the signature of an overloaded method even though it exists in the
+contract ABI.
+
+Therefore, some methods may not be accessible through the contract's
+instance, but their accessors can be invoked explicitly via the `.methods`
+property of the contract.
+
+```javascript
+const instance = await MyContract.deployed();
+instance.methods['setValue(uint256)'](123);
+instance.methods['setValue(uint256,uint256)'](11, 55);
+```
+
+Please see this issue [here](https://github.com/trufflesuite/truffle/issues/2868) for more information.
+
 ## Further reading
 
-The contract abstractions provided by Truffle contain a wealth of utilities for making interacting with your contracts easy. Check out the [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) documentation for tips, tricks and insights.
+The contract abstractions provided by Truffle contain a wealth of utilities for making interacting with your contracts easy. Check out the [@truffle/contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) documentation for tips, tricks and insights.

@@ -32,7 +32,7 @@ truffle build
 Requires the `build` key to be present in the configuration. See the [Building your application](/docs/getting_started/build) and [Build processes](/docs/advanced/build_processes) sections for more details.
 
 <p class="alert alert-warning">
-**Alert**: This command is deprecated. Please use third-party build tools like webpack or grunt, or see our [Truffle Boxes](/boxes) for an example.
+**Alert**: This command is deprecated. Please use third-party build tools like webpack or grunt, or see our <a href="/boxes">Truffle Boxes</a> for an example.
 </p>
 
 
@@ -55,15 +55,17 @@ Options:
 
 ### config
 
-Display whether analytics are enabled or disabled and prompt whether to toggle the setting.
+Displays and sets user-level configuration options.
 
 ```shell
-truffle config [--enable-analytics|--disable-analytics]
+truffle config [--enable-analytics|--disable-analytics] [[<get|set> <key>] [<value-for-set>]]
 ```
 
 Options:
 
 * `--enable-analytics|--disable-analytics`: Enable or disable analytics.
+* `get`: Get a Truffle configuration option value.
+* `set`: Set a Truffle configuration option value.
 
 
 ### console
@@ -107,19 +109,17 @@ Camel case names of artifacts will be converted to underscore-separated file nam
 Interactively debug any transaction on the blockchain.
 
 ```shell
-truffle debug <transaction_hash>
+truffle debug [<transaction_hash>] [--network <network>] [--fetch-external]
 ```
 
 Will start an interactive debugging session on a particular transaction. Allows you to step through each action and replay. See the [Debugging your contracts](/docs/getting_started/debugging) section for more details.
 
-<p class="alert alert-warning">
-**Alert**: This command is considered experimental.
-</p>
 
+Options:
 
-Option:
-
-* `<transaction_hash>`: Transaction ID to use for debugging. (required)
+* `<transaction_hash>`: Transaction ID to use for debugging.  You can omit this to simply start the debugger and then load a transaction later.
+* `--network`: The network to connect to.
+* `--fetch-external`: Allows the debugger to download source from source verification services to debug transactions involving external contracts.  When used, a transaction hash is required.  May be abbreviated `-x`.
 
 
 ### deploy
@@ -221,7 +221,7 @@ See the [Package Management with EthPM](/docs/getting_started/packages-ethpm) se
 Run migrations to deploy contracts.
 
 ```shell
-truffle migrate [--reset] [--f <number>] [--to <number>] [--network <name>] [--compile-all] [--verbose-rpc] [--dry-run] [--interactive]
+truffle migrate [--reset] [--f <number>] [--to <number>] [--network <name>] [--compile-all] [--verbose-rpc] [--dry-run] [--interactive] [--skip-dry-run] [--describe-json]
 ```
 
 Unless specified, this will run from the last completed migration. See the [Migrations](/docs/getting_started/migrations) section for more details.
@@ -235,7 +235,9 @@ Options:
 * `--compile-all`: Compile all contracts instead of intelligently choosing which contracts need to be compiled.
 * `--verbose-rpc`: Log communication between Truffle and the Ethereum client.
 * `--dry-run`: Fork the network specified and only perform a test migration.
+* `--skip-dry-run`: Skip the test migration performed before the real migration.
 * `--interactive`: Prompt to confirm that the user wants to proceed after the dry run.
+* `--describe-json`: Prints additional status messages.
 
 
 ### networks
@@ -251,6 +253,18 @@ Use this command before publishing your package to see if there are any extraneo
 Option:
 
 * `--clean`: Remove all network artifacts that aren't associated with a named network.
+
+### obtain
+
+Fetch and cache a specified compiler.
+
+```shell
+truffle obtain [--solc <version>]
+```
+
+Option:
+
+* `--solc`: Download and cache a version of the solc compiler. (required)
 
 
 ### opcode
@@ -302,7 +316,7 @@ to recognize the plugin. For more information, see [Third-Party Plugin Commands]
 Run JavaScript and Solidity tests.
 
 ```shell
-truffle test [<test_file>] [--compile-all] [--network <name>] [--verbose-rpc] [--show-events]
+truffle test [<test_file>] [--compile-all[-debug]] [--network <name>] [--verbose-rpc] [--show-events] [--debug] [--debug-global <identifier>] [--bail] [--stacktrace[-extra]]
 ```
 
 Runs some or all tests within the `test/` directory as specified. See the section on [Testing your contracts](/docs/getting_started/testing) for more information.
@@ -311,9 +325,15 @@ Options:
 
 * `<test_file>`: Name of the test file to be run. Can include path information if the file does not exist in the current directory.
 * `--compile-all`: Compile all contracts instead of intelligently choosing which contracts need to be compiled.
+* `--compile-all-debug`: Like `--compile-all`, but compiles contracts in debug mode for extra information.  Has no effect on Solidity <0.6.3.
 * `--network <name>`: Specify the network to use, using artifacts specific to that network. Network name must exist in the configuration.
 * `--verbose-rpc`: Log communication between Truffle and the Ethereum client.
 * `--show-events`: Log all contract events.
+* `--debug`: Provides global `debug()` function for in-test debugging. Usable with Javascript tests only; implies `--compile-all`.
+* `--debug-global <identifier>`: Allows one to rename the `debug()` function to something else.
+* `--bail`: Bail after the first test failure.  May be abbreviated `-b`.
+* `--stacktrace`: Allows for mixed Javascript-and-Solidity stacktraces when a Truffle Contract transaction or deployment reverts.  Does not apply to calls or gas estimates.  Implies `--compile-all`.  May be abbreviated `-t`.  Warning: This option is still somewhat experimental.
+* `--stacktrace-extra`: Shortcut for `--stacktrace --compile-all-debug`.
 
 
 ### unbox
@@ -321,18 +341,32 @@ Options:
 Download a Truffle Box, a pre-built Truffle project.
 
 ```shell
-truffle unbox <box_name>
+truffle unbox <box_name> [<destination_path>] [--force]
 ```
 
-Downloads a [Truffle Box](/boxes) to the current working directory. See the [list of available boxes](/boxes).
+Downloads a [Truffle Box](/boxes) to destination_path if provided. Truffle
+defaults to the current working directory if this argument is not provided.
 
-You can also design and create your own boxes!  See the section on [Truffle boxes](docs/truffle/getting-started/truffle-boxes) for more information.
+See the [list of available Truffle boxes](/boxes).
+
+You can also design and create your own boxes!  See the section on [Truffle boxes](docs/truffle/advanced/creating-a-truffle-box) for more information.
 
 Options:
 
 * `<box_name>`: Name of the Truffle Box. (required)
 * `--force`: Unbox project in the current directory regardless of its state. Be careful, this will potentially overwrite files that exist in the directory.
 
+**Note**: box_name can be one of several formats:
+  1. \<truffleBoxName\> - like `metacoin` (see the official Truffle boxes [here](https://www.trufflesuite.com/boxes))
+  2. \<gitOrgName/repoName\> - like `truffle-box/bare-box` (your repo will have to
+    have the proper structure - see our page on [creating a Truffle
+    Box](docs/truffle/advanced/creating-a-truffle-box))
+  3. \<urlToGitRepo\> - like `https://github.com/truffle-box/bare-box`
+  4. \<sshUrlToGitRepo\> - like `git@github.com:truffle-box/bare-box`
+
+Also note that you can add a `#` followed by a branch name to the end of all
+of the above formats to unbox from a specific branch - for example, you could
+use `truffle-box/bare-box#myBranch`
 
 ### version
 

@@ -47,7 +47,7 @@ if (state.drizzleStatus.initialized) {
     // Declare this transaction to be observed. We'll receive the stackId for reference.
     const stackId = drizzle.contracts.SimpleStorage.methods.set.cacheSend(2, {from: '0x3f...'})
 
-    // Use the dataKey to display the transaction status.
+    // Use the stackId to display the transaction status.
     if (state.transactionStack[stackId]) {
         const txHash = state.transactionStack[stackId]
 
@@ -78,7 +78,7 @@ var contractConfig = {
 events = ['Mint']
 
 // Using an action
-dispatch({type: 'ADD_CONTRACT', drizzle, contractConfig, events, web3})
+dispatch({type: 'ADD_CONTRACT', contractConfig, events})
 
 // Or using the Drizzle context object
 this.context.drizzle.addContract(contractConfig, events)
@@ -92,7 +92,7 @@ You can also delete contracts using either `drizzle.deleteContract()` or the `DE
 const contractName = "MyContract"
 
 // Using an action
-dispatch({type: 'DELETE_CONTRACT', drizzle, contractName})
+dispatch({type: 'DELETE_CONTRACT', contractName})
 
 // Or using the Drizzle context object
 this.context.drizzle.deleteContract(contractName)
