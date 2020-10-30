@@ -431,5 +431,11 @@
     "displayName": "box",
     "repoName": "box",
     "official": false
+  },
+  {
+    "userOrg": "fortmatic",
+    "displayName": "wallette",
+    "repoName": "wallette",
+    "official": false
   }
 ]
