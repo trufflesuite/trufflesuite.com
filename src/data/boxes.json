@@ -687,5 +687,15 @@
 			"fortmatic",
 			"magic"
 		]
+	},
+	"moonbeam-truffle-box": {
+		"description": "Moonbeam Truffle Box",
+		"stars": 1,
+		"tags": [
+			"community",
+			"blockchain",
+			"moonbeam",
+			"purestake"
+		]
 	}
 }

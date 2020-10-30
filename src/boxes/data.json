@@ -437,5 +437,11 @@
     "displayName": "wallette",
     "repoName": "wallette",
     "official": false
+  },
+  {
+    "userOrg": "PureStake",
+    "displayName": "moonbeam-truffle-box",
+    "repoName": "moonbeam-truffle-box",
+    "official": false
   }
 ]
