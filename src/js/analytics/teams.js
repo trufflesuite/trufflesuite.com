@@ -1,21 +1,3 @@
-function getPort() {
-  // We grab this value from process.env.NODE_ENV
-  // It feels a bit dirty, but it's the best we can do with metalsmith
-  const environment = document.querySelector('meta[name="environment"]').getAttribute('content');
-
-  if (environment === 'dev' || environment === 'staging') {
-    return '2053';
-  }
-
-  if (environment === 'prod') {
-    return '2083';
-  }
-
-  // process.env.NODE_ENV should always be set, but in case of error fallback to dev
-  // so we don't pollute production data
-  return  '2053';
-}
-
 // API Proxy
 function mixpanelTrackProxy(eventName, eventParams) {
   let httpRequest = new XMLHttpRequest();
@@ -44,8 +26,14 @@ function mixpanelTrackProxy(eventName, eventParams) {
 * --------------
 * First checks for a known campaign via the source query string.
 * Falls back to document.referrer.
+* Checks for email (if applicable) and sends that over if possible also.
 */
-mixpanelTrackProxy("Page visit", {'source': getSource()});
+if (getEmail()) {
+  let formattedEmail = getEmail().replace('%40', '@');
+  mixpanelTrackProxy("Page visit", {'source': getSource(), 'email': formattedEmail});
+} else {
+  mixpanelTrackProxy("Page visit", {'source': getSource()});
+}
 
 // Navigation
 Array.from(document.querySelectorAll('.subnav a')).forEach((link) => {
@@ -113,4 +101,30 @@ function getSource() {
   }
 
   return document.referrer;
+};
+
+function getEmail() {
+  const emailAddress = getQueryParam('email');
+
+  if (emailAddress.length > 0) {
+    return emailAddress;
+  }
+};
+
+function getPort() {
+  // We grab this value from process.env.NODE_ENV
+  // It feels a bit dirty, but it's the best we can do with metalsmith
+  const environment = document.querySelector('meta[name="environment"]').getAttribute('content');
+
+  if (environment === 'dev' || environment === 'staging') {
+    return '2053';
+  }
+
+  if (environment === 'prod') {
+    return '2083';
+  }
+
+  // process.env.NODE_ENV should always be set, but in case of error fallback to dev
+  // so we don't pollute production data
+  return  '2053';
 };
