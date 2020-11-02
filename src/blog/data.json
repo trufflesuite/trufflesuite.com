@@ -1,4 +1,12 @@
 {
+  "using-ethpm-and-truffle": {
+    "title": "Using ethpm and Truffle",
+    "date": "2020-11-4",
+    "author": "Nick Gheorghita",
+    "published": true,
+    "excerpt": "Truffle now comes with built-in support for ethpm v3 to simplify your development workflow.",
+    "image": "/img/blog/you-decide-pipeline-or-table-view-in-truffle-teams-deployments-manager/blog-thumbnail.png"
+  },
   "you-decide-pipeline-or-table-view-in-truffle-teams-deployments-manager": {
     "title": "You Decide: Pipeline or Table View in Truffle Teams' Refreshed Deployments Manager",
     "date": "2020-10-8",
