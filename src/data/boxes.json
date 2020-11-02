@@ -697,5 +697,16 @@
 			"moonbeam",
 			"purestake"
 		]
+	},
+	"dappstarter-trufflebox": {
+		"description": "Decentology DappStarter Truffle Box",
+		"stars": 1,
+		"tags": [
+			"community",
+			"blockchain",
+			"decentology",
+			"library",
+			"framework"
+		]
 	}
 }
