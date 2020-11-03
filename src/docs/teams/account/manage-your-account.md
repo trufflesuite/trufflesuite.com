@@ -5,19 +5,19 @@ layout: docs.hbs
 
 # Manage your account
 
-To manage and view your account settings, click on your username or GitHub avatar in the left sidebar. Here you can update your plan and billing settings, view and/or manage users (depending on your permissions), and select repositories to use with CI providers of your choice. 
+To manage and view your account settings, click on your username or GitHub avatar in the left sidebar. Here you can update your plan and billing settings, view and/or manage users (depending on your permissions), and select repositories to use with CI providers of your choice.
 
-If you're apart of one or many organizations, a list of the the organizations you belong to will appear in the left sidebar. You can click on the organization's name or or GitHub avatar to view and/or manage the organization's settings. 
+If you're apart of one or many organizations, a list of the the organizations you belong to will appear in the left sidebar. You can click on the organization's name or or GitHub avatar to view and/or manage the organization's settings.
 
 ## Plans
 
-When you sign up for Truffle Teams you are automatically enrolled in the free plan. The free plan comes with unlimited builds, monitoring of unlimited contracts, unlimited deployments to testnets, sandboxes, and mainnet, and access to 1 Ganache sandbox.
+When you sign up for Truffle Teams you are automatically enrolled in the Free plan. The Free plan comes with unlimited builds, monitoring of unlimited contracts, unlimited deployments to Sandboxes, testnets, and mainnet, and access to 1 Ganache sandbox. However, the Free plan is limited to public repositories.
 
-You can upgrade to pro or enterprise plans at anytime. For a pro plan, you'll get everything that comes with the free plan plus private repositories and access to 3 Ganache sandboxes. <a href="/docs/teams/account/claim-pro-trial">Try out pro for a free month</a>!
+You can upgrade to Pro or enterprise plans at anytime. For a Pro plan, you'll get everything that comes with the Free plan plus private repositories and access to 3 Ganache Sandboxes. <a href="/docs/teams/account/claim-a-1-month-trial">Try out Pro for a free month</a>!
 
-To upgrade to a pro plan, click **BILLING > UPGRADE** and you'll be prompted to enter your billing information and payment method. If you're interested in our enterprise plan, <a href="mailto:sales@trufflesuite.com" target="_blank" rel="noopener noreferrer" class="sc-dymIpo jtCNSr sc-ktHwxA isqCSL">contact us</a> to get a tailored experience for you and your team.
+To upgrade to a Pro plan, click **BILLING > UPGRADE** and you'll be prompted to enter your billing information and payment method. If you're interested in our enterprise plan, <a href="mailto:sales@trufflesuite.com" target="_blank" rel="noopener noreferrer" class="sc-dymIpo jtCNSr sc-ktHwxA isqCSL">contact us</a> to get a tailored experience for you and your team.
 
-If you have subscribed to the pro plan and for any reason would like to switch back to the free plan, click **BILLING** then select the **FREE** plan.  
+If you have subscribed to the Pro plan and for any reason would like to switch back to the Free plan, click **BILLING** then select the **FREE** plan by clicking **<span class="inline-button">SWITCH</span>**. You will continue to receive Pro services until the end of your billing period.
 
 ## Users
 
