@@ -31,6 +31,9 @@
     "Reference": [
       "Configuration",
       "Permissions Disclosure"
+    ],
+    "Support": [
+      "Ask Us a Question"
     ]
   },
   "truffle": {
