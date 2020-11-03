@@ -21,3 +21,7 @@ Truffle Teams will then verify that the contracts exist on the given network at 
 <figure>
   <img class="figure-shadow mb-2" src="/img/docs/teams/add-contract-04.png" alt="Contract address confirmation" style="width: 100%">
 </figure>
+
+<p class="alert alert-info">
+<strong>Note</strong>: Monitoring for external deployments begins once the contract is added to Truffle Teams and does not currently include historical data from before that point.
+</p>
