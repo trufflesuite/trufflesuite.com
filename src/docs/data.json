@@ -1,9 +1,7 @@
 {
   "teams": {
     "Getting Started": [
-      "Creating an account",
-      "Adding Repositories",
-      "Dashboard"
+      "Adding Repositories"
     ],
     "Account": [
       "Creating an account",
@@ -27,6 +25,11 @@
     ],
     "Contracts": [
       "Contract Monitoring"
+    ],
+    "Dashboard": [
+      "Dashboard overview",
+      "Adding a deployment",
+      "Switching deployments"
     ],
     "Reference": [
       "Configuration",
