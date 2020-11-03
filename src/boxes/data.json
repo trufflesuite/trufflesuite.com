@@ -431,5 +431,23 @@
     "displayName": "box",
     "repoName": "box",
     "official": false
+  },
+  {
+    "userOrg": "fortmatic",
+    "displayName": "wallette",
+    "repoName": "wallette",
+    "official": false
+  },
+  {
+    "userOrg": "PureStake",
+    "displayName": "moonbeam-truffle-box",
+    "repoName": "moonbeam-truffle-box",
+    "official": false
+  },
+  {
+    "userOrg": "Decentology",
+    "displayName": "dappstarter-trufflebox",
+    "repoName": "dappstarter-trufflebox",
+    "official": false
   }
 ]

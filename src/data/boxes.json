@@ -657,23 +657,56 @@
 		]
 	},
 	"besu-drizzle-truffle-box": {
-		  "description": "Drizzle starter for Hyperledger Besu network",
-		  "stars": 1,
-		  "tags": [
-			  "besu",
-			  "community",
-			  "docker",
-			  "drizzle",
-			  "hyperledger"
-		  ]
-		},
-		"box": {
-		  "description": "An example smart contract utilizing Chainlink",
-		  "stars": 12,
-		  "tags": [
-			  "community",
-			  "chainlink",
-			  "oracle"
-		  ]
-	  }
+		"description": "Drizzle starter for Hyperledger Besu network",
+		"stars": 1,
+		"tags": [
+			"besu",
+			"community",
+			"docker",
+			"drizzle",
+			"hyperledger"
+		]
+	},
+	"box": {
+		"description": "An example smart contract utilizing Chainlink",
+		"stars": 12,
+		"tags": [
+			"community",
+			"chainlink",
+			"oracle"
+		]
+	},
+	"wallette": {
+		"description": "Wallette is Multi-Signature Ethereum wallet that utilizes the Magic SDK for the user authentication.",
+		"stars": 5,
+		"tags": [
+			"community",
+			"blockchain",
+			"wallet",
+			"authentication",
+			"fortmatic",
+			"magic"
+		]
+	},
+	"moonbeam-truffle-box": {
+		"description": "Moonbeam Truffle Box",
+		"stars": 1,
+		"tags": [
+			"community",
+			"blockchain",
+			"moonbeam",
+			"purestake"
+		]
+	},
+	"dappstarter-trufflebox": {
+		"description": "Decentology DappStarter Truffle Box",
+		"stars": 1,
+		"tags": [
+			"community",
+			"blockchain",
+			"decentology",
+			"library",
+			"framework"
+		]
+	}
 }
