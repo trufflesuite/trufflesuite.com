@@ -19,7 +19,7 @@ This page will take you through the basics of creating a Truffle Teams account a
 
 ## Creating an Account
 
-To start, navigate to <a href="https://my.truffleteams.com" target="_blank">https://my.truffleteams.com (this link will open in a new window)</a>. Click on **<span class="inline-button"><i class="fab fa-github"></i> LOGIN WITH GITHUB</span>**. If you're not already logged in to your GitHub account, Github will prompt you to do so.
+To start, navigate to <a href="https://my.truffleteams.com" target="_blank">https://my.truffleteams.com</a>. Click on **<span class="inline-button"><i class="fab fa-github"></i> LOGIN WITH GITHUB</span>**. If you're not already logged in to your GitHub account, Github will prompt you to do so.
 
 If you are a member of any organizations other than your personal account, you'll be prompted to select an org to continue with installation. Orgs with an existing Truffle Teams installation will have a **Configure >** link.
 
