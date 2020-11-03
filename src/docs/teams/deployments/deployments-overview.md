@@ -11,9 +11,9 @@ On the **<span class="inline-menu-item"><i class="fal fa-parachute-box"></i>DEPL
   <figcaption class="text-center font-italic">The main deployments screen</figcaption>
 </figure>
 
-### Commits Column
+### Builds Column
 
-**Commits** is a list of all the commits that Truffle Teams is processing, or has processed, as a build. Each will have a status icon to show if the build is in progress, failed, or successful. Commits with a successful icon (a green box with a checkmark, as pictured) will be able to be deployed; the **<span class="inline-button">DEPLOY <i class="far fa-parachute-box"></i></span>** button in the top right of the commit indicates this.
+**Builds** is a list of all the builds that Truffle Teams is processing or has processed. Each will have a status icon to show if the build is in progress, failed, or successful. Builds with a successful icon (a green box with a checkmark, as pictured) will be able to be deployed; the **<span class="inline-button">DEPLOY <i class="far fa-parachute-box"></i></span>** button in the top right of the commit indicates this.
 
 <figure>
   <img class="mb-2" src="/img/docs/teams/commit-card.png" alt="Commit Card">

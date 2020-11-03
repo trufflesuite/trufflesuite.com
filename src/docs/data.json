@@ -1,10 +1,10 @@
 {
   "teams": {
     "Getting Started": [
+      "Creating an account",
       "Adding Repositories"
     ],
     "Account": [
-      "Creating an account",
       "Manage your account",
       "Switching accounts",
       "Claim a 1-month trial",
@@ -25,14 +25,12 @@
     "Deployments": [
       "Deployments overview",
       "Creating a deployment",
+      "Deploying to a sandbox",
+      "Contract Monitoring",
+      "Deployment console",
       "Graduating a deployment",
       "Archiving a deployment",
-      "Deployment console",
-      "Deploying to a sandbox",
       "External deployments"
-    ],
-    "Contracts": [
-      "Contract Monitoring"
     ],
     "Dashboard": [
       "Dashboard overview",
