@@ -4,7 +4,7 @@ layout: docs.hbs
 ---
 # Deployments overview
 
-On the **<span class="inline-menu-item"><i class="fal fa-parachute-box"></i>DEPLOYMENTS</span>** page you'll notice there are three columns: **Commits**, **Staging**, and **Production**. These columns contain your builds available to be deployed as well as any successful deployments. 
+On the **<span class="inline-menu-item"><i class="fal fa-parachute-box"></i>DEPLOYMENTS</span>** page you'll notice there are three columns: **Commits**, **Staging**, and **Production**. These columns contain your builds available to be deployed as well as any successful deployments.
 
 <figure>
   <img class="figure-shadow mb-2" src="/img/docs/teams/deployment-manager.png" alt="Deployment Manager" style="width: 100%">
