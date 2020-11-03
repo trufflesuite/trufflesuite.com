@@ -1,5 +1,3 @@
-![ethPM Banner](/img/blog/using-ethpm-and-truffle/blog-header.png)
-
 [ethpm](https://www.ethpm.com/) is a framework-agnostic, secure protocol for packaging and distributing evm smart contracts and their on-chain deployments. Truffle now comes with built-in support for [ethpm v3](http://ethpm.github.io/ethpm-spec/v3-package-spec.html) to simplify your development workflow.
 
 ## use ethpm x truffle to ...
@@ -7,7 +5,7 @@
 - **explore**
 	- verfied smart contracts & protocols
 	- on-chain deployments from any chain
--	**install**
+- **install** 
 	- interact with verified deployments from your truffle console
 	- import packaged contracts directly in your own contract
 	- re-deploy packaged contracts on any chain
@@ -38,7 +36,7 @@ There is no central registry in ethpm (eg. npm, pip, etc..). ethpm uses a federa
 
 **Always** verify that a registry is maintained by a trusted source. Verification of registry addresses is best done by advertising your registry address via the `README.md` on the Github repository, or Twitter. Connecting your registry address to an ENS domain name further helps simplify the trust-establishment process.
 
-One more time. Just because a package is available, this **DOES NOT** establish that it is safe. Trust in a package's safety is established by verifying the controlling account of the package's host registry.
+One more time. Just because a package is available, this **DOES NOT** establish that it is safe. Trust in a package's safety is established by verifying the controlling account of the package's host registry. 
 
 tl:dr; ```ONLY INSTALL PACKAGES FROM TRUSTED REGISTRIES!```
 
@@ -48,14 +46,14 @@ tl:dr; ```ONLY INSTALL PACKAGES FROM TRUSTED REGISTRIES!```
 - `truffle publish`: publish your truffle project as an ethpm package
 
 # setting your truffle-config.js
-Below are the default values Truffle needs to know to interact with the ethpm ecosystem. This `ethpm` config is located within a project's `truffle-config.js`. To override any of these default values for your project, simply include the field in your project's `truffle-config.js`.
+Below are the default values Truffle needs to know to interact with the ethpm ecosystem. This `ethpm` config is located within a project's `truffle-config.js`. To override any of these default values for your project, include the field in your project's `truffle-config.js`.
 ```javascript
   ethpm: {
     ipfsHost: "ipfs.infura.io",
     ipfsProtocol: "https",
     ipfsPort: "5001",
     registry: {
-      address: "libraries.ethpm.eth",
+      address: "0x0bd0200357D26A0bB5d1D1c1Fd56C317B68d15d5",
       network: "ropsten",
     },
     version: "3"
@@ -76,7 +74,7 @@ The best place to find an interesting ethpm package is from the package author. 
 In this tutorial, we'll be using a package containing the OpenZeppelin ERC20 contract. This package is for tutorial purposes only, it has not been audited and should not be used in production.
 
 - name: `erc20-example`
-- version: `0.1.0`
+- version: `0.0.1`
 - manifest uri: `ipfs://QmYmstuuQmVVaWvde5VHzwxs5zDaJbjGk8nGHeTfZnEgoe`
 - ethpm uri: `ethpm://0x0bd0200357D26A0bB5d1D1c1Fd56C317B68d15d5:3/erc20-example@0.0.1`
 - layout:
@@ -90,29 +88,16 @@ In this tutorial, we'll be using a package containing the OpenZeppelin ERC20 con
 		- `deployments/`
 			- `ropsten/ERC20`
 			- `goerli/ERC20`
-
+	
 # `truffle packages`
 To list the available packages on Truffle's default registry or the registry defined in your `truffle-config.js` - run `truffle packages`.
 
 ```bash
-Searching for packages published on registry located at: 0x586b308Cbef331CE15fED8ff1c56aDeA594636cA
-Registry controlled by account: 0x9182902397B57a8c611D764D4DCD24BA951B4319
-Package: address
-  - 0.1.0 @ ipfs://QmZsDxfqbjrGXZovHMpQQE9QbCPEPwL6rVZLYr5cS9givF
-Package: create2
-  - 0.1.0 @ ipfs://QmbcDBSUyoZWcSQEZvJjpscx2JXqPdgMucAjV2ZPhdxE4Q
-Package: ecdsa
-  - 0.1.0 @ ipfs://QmQtWK7Q9ttuH2EP2r25YX66tCbkSm5jqZZTm2akPncHaC
-Package: enumerable-map
-  - 0.1.0 @ ipfs://QmRzQnzPf63mTjwSc2kA1K4vLTZz4YNMUpLCn259Sveaz5
-Package: enumerable-set
-  - 0.1.0 @ ipfs://QmfWjW8qo6weoQzzKBXNCAgCqYB9J8co97qMPGFCBZhNL6
-Package: math
-  - 0.1.0 @ ipfs://QmQtuNsSbSjnnizxwpx8FuGRfi2Mxbgam3chB2VeKXgV28
-Package: safe-math
-  - 0.1.0 @ ipfs://QmNcgfrYg6u9Xv84oFASSy7yfAf7igNhhewhohPBoY5iVx
-Package: unauthorized
-  - 0.1.0 @ ipfs://QmQPe1C3qSiEwuNEUHUZd6qMYBcNPNDR5bsWDgwWCFHuJr
+Searching for packages published on registry located at: 0x0bd0200357D26A0bB5d1D1c1Fd56C317B68d15d5
+This registry does not appear to have permissioned releases. This means that anybody can publish a package to this registry.
+Please be very careful before installing and interacting with packages on this registry.
+Package: erc20-example
+  - 0.0.1 @ ipfs://QmYmstuuQmVVaWvde5VHzwxs5zDaJbjGk8nGHeTfZnEgoe
 ```
 
 # `truffle install`
@@ -124,19 +109,19 @@ There are a couple different options to install a package...
 From the package's registry set in your `truffle-config.js`.
 
 ```bash
-truffle install erc20@1.0.0
+truffle install erc20-example@0.0.1
 ```
 
 ... or to install the latest version of the package.
 
 ```bash
-truffle install erc20
+truffle install erc20-example
 ````
 
 Install a package directly with its `ethpm` URI.
 
 ```bash
-truffle install ethpm://ethpm.eth:3/erc20@1.0.0
+truffle install ethpm://libraries.ethpm.eth:3/safe-math@1.0.0
 ```
 
 Install a package directly with its manifest uri (currently, only ipfs manifest uris are supported).
@@ -148,9 +133,9 @@ truffle install ipfs://QmYmstuuQmVVaWvde5VHzwxs5zDaJbjGk8nGHeTfZnEgoe
 You can install any package under an alias wth the `--alias` flag, and then use the alias to reference the package. This is useful if you want to install two different packages with the same name.
 
 ```bash
-truffle install erc20 --alias erc20-version-2
+truffle install erc20 --alias erc20-alternate
 ```
-
+	
 ## interact with a deployment from an installed package
 - Run `truffle console` to launch a console connected to the chain defined in your `truffle-config.js`.
 - From the console, list all available deployments from the package with `networks` (only deployments found on the connected chain will be available to interact with from the console).
@@ -178,7 +163,7 @@ import "erc20-example/GSN/Context.sol"
 ```
 
 ## linking to a library contract in a deployment
-Tired of redeploying your libraries over and over? You can find some instances of available libraries on `ethpm://libraries.ethpm.eth:3`. These have not been audited, and are not fit for use in production.
+Tired of redeploying your libraries over and over? You can find some instances of available libraries on `ethpm://libraries.ethpm.eth:3`. These have not been audited, and are not fit for use in production. 
 
 After installing the `ethpm://libraries.ethpm.eth:1/safe-math@0.1.0` library, you can link your contracts to it like...
 
@@ -193,7 +178,7 @@ module.exports = function(deployer) {
 ```
 
 # `truffle publish`
-Publishing ethpm packages makes it easy to distribute your smart contracts and deployments for other developers to use.
+Publishing ethpm packages makes it easy to distribute your smart contracts and deployments for other developers to use. 
 
 ## setting your `ethpm.json`
 Before you can publish a package, you must create an `ethpm.json` config file in the root-level of your truffle project. This file defines the `name`, `version`, and metadata for the published package. The only required fields are `"name"` and `"version"`, but it is recommended to use all of the metadata to describe your package.
