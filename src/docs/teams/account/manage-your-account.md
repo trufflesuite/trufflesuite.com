@@ -5,9 +5,9 @@ layout: docs.hbs
 
 # Manage your account
 
-To manage and view your account settings, click on your username or GitHub avatar. Here you can update your plan and billing settings, view and/or manage users (depending on your permissions), and select repositories to use with CI providers of your choice. 
+To manage and view your account settings, click on your username or GitHub avatar in the left sidebar. Here you can update your plan and billing settings, view and/or manage users (depending on your permissions), and select repositories to use with CI providers of your choice. 
 
-If you're apart of one or many organizations, a list of the the organizations you belong to will appear in the navigation bar. You can click on the organization's name or or GitHub avatar to view and/or manage the organization's settings. 
+If you're apart of one or many organizations, a list of the the organizations you belong to will appear in the left sidebar. You can click on the organization's name or or GitHub avatar to view and/or manage the organization's settings. 
 
 ## Plans
 
