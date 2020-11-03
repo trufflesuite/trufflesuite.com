@@ -33,11 +33,11 @@ Truffle ships with a default unauthenticated registry, to make it easy to get st
 
 ### 1. Set your registry.
 By default, your Truffle project will be connected to the default Truffle registry. Some other registries to explore include...
-- `libraries.ethpm.eth`: Contains deployments of all [OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/) libraries across mainnet and all testnets available to use, so you never have to deploy a library again.
+- `libraries.ethpm.eth`: Contains deployments of all [OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/) libraries across mainnet and all testnets available to use.
 - `registry.ethpm.eth`: Contains packages for ERC1319 registries, so you can easily deploy your own registry.
 - [ethpm registry directory](https://docs.ethpm.com/public-registry-directory): A list of verified registries from various projects and organizations.
 
-Once you have the registry address or ENS name, update the `ethpm/registry/address` and `ethpm/registry/network` fields in your project's `truffle-config.json`. Be sure that your `truffle-config` also includes a valid provider inside its `networks` field for the chain on which your target registry is located.
+Once you have the registry address or ENS name, update the `ethpm/registry/address` and `ethpm/registry/network` fields in your project's `truffle-config.json`. Be sure that your `truffle-config` also includes a valid provider inside its `networks` field for the chain on which your target registry is located. Note that to use the ENS name of a registry, you must have [ENS enabled](https://www.trufflesuite.com/docs/truffle/advanced/ethereum-name-service#configuration).
 
 ### 2. Find your package.
 Once you've set your ethpm registry, use the `truffle packages` command to display the available packages on the connected registry.
