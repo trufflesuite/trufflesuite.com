@@ -185,6 +185,16 @@ This command can also print locations other than the stack, if you want to view 
 
 You can also add these extra locations to the default display with `+`; e.g., `p +mem` will make it so that memory will always be displayed when you enter `p` or `;`, and `p -mem` will turn this off.  You can even turn off the stack display with `p -sta`, or force it to display with `p sta`.  All of these options can again be combined.
 
+### (g) turn on generated sources
+
+When using Solidity 0.7.2 or later, you can use this option to allow the debugger to step into the internal assembly routines that Solidity generates.  You can always advance into these with the `;` command, but this option allows the other debugger commands (`n`, `i`, `o`, `u`) to step into these routines as well.
+
+### (G) turn off generated sources
+
+This command undoes the `g` command, returning the debugger to its default behavior with regard to generated sources.
+
+Note that when generated sources are turned off, you can still advance into them with the `;` command; and if a breakpoint is placed in one, continuing with `c` will still stop on such breakpoints.  In addition, once inside such a routine, the other debugger commands (`n`, `i`, `o`, `u`) will advance as normal inside of it; they won't immediately exit it.
+
 ### (h) print this help
 
 Print the list of available commands.
