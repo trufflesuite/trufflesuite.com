@@ -28,7 +28,7 @@ Next, verify you're on the **BILLING** tab.
 
 ![Billing Tab](/img/docs/teams/coupon-redemption-billing-tab.png)
 
-You should see that **FREE** is your current plan like the below picture; if it is not, please follow the instructions [below](#existing-subscriptions) for redeeming the coupon for existing subscriptions.
+You should see that **FREE** is your current plan like the below picture; if it is not, please follow the instructions in the [existing subscriptions](#existing-subscriptions) section.
 
 ![Verification of Free Plan](/img/docs/teams/coupon-redemption-free-verification.png)
 
@@ -40,13 +40,13 @@ Confirm/update the **Billing Email** so that it is correct. This is the email th
 
 Press **<span class="inline-button">CONTINUE</span>**.
 
-Enter your location information and press **<span class="inline-button">Continue</span>**.
+Enter your location information and press **<span class="inline-button text-light">Continue &raquo;</span>**.
 
-Click **Add Coupon**.
+Click <strong class="color-truffle"><u>Add Coupon</u></strong>.
 
 ![Add Coupon Link](/img/docs/teams/coupon-redemption-coupon-link.png)
 
-Enter your unique one-time coupon code. Then click **<span class="inline-button">Add Coupon</span>**.
+Enter your unique one-time coupon code. Then click **<span class="inline-button text-light">Add Coupon</span>**.
 
 You'll be redirected to the prior screen. It should show that your coupon has been applied.
 
@@ -54,13 +54,13 @@ You'll be redirected to the prior screen. It should show that your coupon has be
 
 You can then checkout as normal with your Credit/Debit Card or PayPal account. You will not be charged today; this information will be used to renew your subscription after 1 month.
 
-After you finish checking out, you should see that PRO is now your current plan.
+After you finish checking out, you should see that **PRO** is now your current plan.
 
 ![Pro Verification](/img/docs/teams/coupon-redemption-pro-verification.png)
 
 ## Existing Subscriptions
 
-If you already have a paid subscription that you'd like to redeem the coupon towards your next billing cycle, please fill out <a href="https://share.hsforms.com/1swjEgFE8RgKszFUT0UAblQ34pbp" target="_blank">this form</a>.
+If you already have a paid subscription that you'd like to redeem the coupon towards your next billing cycle, please fill out the <a href="https://share.hsforms.com/1swjEgFE8RgKszFUT0UAblQ34pbp" target="_blank">existing subscription coupon form</a>.
 
 You will need to provide the account name you'd like to apply the coupon to. This is usually the GitHub user/organization name. For example, to apply a coupon for the `https://github.com/trufflesuite/truffle` repo, the account name would be **trufflesuite**.
 
