@@ -14,7 +14,7 @@ Redeeming a coupon for a Truffle Teams paid subscription is different for new an
 
 Before you can continue below, you'll need to make sure you have [created an account](/docs/teams/getting-started/creating-an-account) **and** [added at least one repository](/docs/teams/getting-started/adding-repositories) for the GitHub user/organization you'd like to apply your coupon code for.
 
-Once you've made sure the account you'd like to apply the coupon for exists, navigate to the <a href="https://my.truffleteams.com/#/settings" target="_blank">settings</a> page. You can also navigate there by clicking on your avatar/username in the left sidebar.
+Once you've made sure the account you'd like to apply the coupon for exists, navigate to the <a href="https://my.truffleteams.com/#/settings" target="_blank">settings</a> page. You can also navigate there by clicking on your avatar/username in the sidebar.
 
 Next, click on the GitHub user or organization in the sidebar that you'd like to redeem the coupon for.
 
@@ -64,4 +64,4 @@ If you already have a paid subscription that you'd like to redeem the coupon tow
 
 You will need to provide the account name you'd like to apply the coupon to. This is usually the GitHub user/organization name. For example, to apply a coupon for the `https://github.com/trufflesuite/truffle` repo, the account name would be **trufflesuite**.
 
-You can also go to https://my.truffleteams.com/#/settings and give the name of the account as it is written in the left sidebar.
+You can also go to https://my.truffleteams.com/#/settings and give the name of the account as it is written in the sidebar.
