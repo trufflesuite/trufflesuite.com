@@ -20,7 +20,7 @@ Next, click on the GitHub user or organization in the sidebar that you'd like to
 
 ![Account Select](/img/docs/teams/coupon-redemption-account-selection.png)
 
-Verify you are on the correct account by looking at the top bar that says **Settings for ...**
+Verify you are on the correct account by looking at the application header that says **Settings for ...**
 
 ![Account Verification](/img/docs/teams/coupon-redemption-account-verification.png)
 
