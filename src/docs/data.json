@@ -1,26 +1,50 @@
 {
   "teams": {
     "Getting Started": [
-      "Creating an Account",
-      "Adding Repositories",
-      "Dashboard"
+      "Creating an account",
+      "Adding Repositories"
     ],
-    "Testing": [
+    "Account": [
+      "Manage your account",
+      "Switching accounts",
+      "Claim a 1-month trial",
+      "Invite your team",
+      "Redeeming a coupon"
+    ],
+    "Builds": [
+      "Builds overview",
       "Starting Builds",
+      "Restarting Builds",
       "External CI"
     ],
-    "Deployments": [
-      "About Deployments",
-      "Deploying Contracts",
-      "Graduating Deployments",
-      "Sandboxes"
+    "Sandboxes": [
+      "Sandboxes overview",
+      "Creating a sandbox",
+      "Renaming a sandbox",
+      "Destroying a sandbox",
+      "Sandbox Forking",
+      "Usage with Truffle"
     ],
-    "Contracts": [
-      "Contract Monitoring"
+    "Deployments": [
+      "Deployments overview",
+      "Creating a deployment",
+      "Deploying to a sandbox",
+      "Contract Monitoring",
+      "Deployment console",
+      "Graduating a deployment",
+      "Archiving a deployment"
+    ],
+    "Dashboard": [
+      "Dashboard overview",
+      "Adding a deployment",
+      "Switching deployments"
     ],
     "Reference": [
       "Configuration",
       "Permissions Disclosure"
+    ],
+    "Support": [
+      "Ask Us a Question"
     ]
   },
   "truffle": {

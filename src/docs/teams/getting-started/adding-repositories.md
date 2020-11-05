@@ -7,7 +7,7 @@ layout: docs.hbs
 
 The first time you sign in to Truffle Teams, GitHub will prompt you to install it on one or more repositories. In some cases you may want to add a repository after initial installation. For example, if it's been created after signing up for Truffle Teams.
 
-To add a repository to Truffle Teams, navigate to <a href="https://my.truffleteams.com" target="_blank">https://my.truffleteams.com</a> (this link will open in a new window). Click `LOGIN WITH GITHUB` and once you've successfully logged in you'll be redirected to the Truffle Teams home page. Once logged in, you can also click on the `Truffle Teams` logo in the top right corner of any page to be redirected to the home page. From there you can scroll to the bottom of the page and click <span class="inline-button">ADD REPOSITORY</span>, this will take you to the Truffle Teams GitHub app page where you can select which repositories you would like to add to Teams.
+To add a repository to Truffle Teams, navigate to <a href="https://my.truffleteams.com" target="_blank">https://my.truffleteams.com</a>. Click `LOGIN WITH GITHUB` and once you've successfully logged in you'll be redirected to the Truffle Teams home page. Once logged in, you can also click on the `Truffle Teams` logo in the top right corner of any page to be redirected to the home page. From there you can scroll to the bottom of the page and click <span class="inline-button">ADD REPOSITORY</span>, this will take you to the Truffle Teams GitHub app page where you can select which repositories you would like to add to Teams.
 
 <figure>
   <img class="figure-shadow mb-2" src="/img/docs/teams/add-repo-00.png" alt="Deployment Selection Screen" style="width: 100%">
