@@ -395,6 +395,24 @@
 			"react",
 			"express"
 		]
+  },
+  "rsk-token-box": {
+		"description": "Truffle box with everything you need to start creating a token using Open Zeppelin smart contracts library in Truffle framework, connected to a RSK network",
+		"stars": "1",
+		"tags": [
+			"partner",
+			"rsk",
+			"token"
+		]
+  },
+  "rsk-plant-box": {
+		"description": "Truffle box is configured to create a complete dApp using Truffle framework on RSK Blockchain, including a user interface to interact with the smart contract",
+		"stars": "1",
+		"tags": [
+			"partner",
+			"rsk",
+			"plant"
+		]
 	},
 	"scoreboard": {
 		"description": "",
