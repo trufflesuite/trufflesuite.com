@@ -144,6 +144,18 @@
     "official": false
   },
   {
+    "userOrg": "rsksmart",
+    "displayName": "rsk-token-box",
+    "repoName": "rsk-token-box",
+    "official": false
+  },
+  {
+    "userOrg": "rsksmart",
+    "displayName": "rsk-plant-box",
+    "repoName": "rsk-plant-box",
+    "official": false
+  },
+  {
     "userOrg": "kaleido-io",
     "displayName": "drizzle-kaleido-box",
     "repoName": "drizzle-kaleido-box",
