@@ -34,6 +34,9 @@
       "Graduating a deployment",
       "Archiving a deployment"
     ],
+    "Debugger": [
+      "Debugger overview"
+    ],
     "Dashboard": [
       "Dashboard overview",
       "Adding a deployment",
