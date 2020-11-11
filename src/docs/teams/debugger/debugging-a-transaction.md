@@ -15,18 +15,18 @@ The debugger is reached from the DEPLOYMENTS tab. From here, select the deployme
   <figcaption class="text-center">The Truffle Teams Deployments screen.</figcaption>
 </figure>
 
-At this screen you can either click **<span class="inline-button"><i class="fas fa-heart-rate"></i> MONITOR</span>**  to the right of the contract to view transactions sent solely to that contract address or TRANSACTIONS to view all the transactions associated with the entire project. 
+At this screen, you can either click **<span class="inline-button"><i class="fas fa-heart-rate"></i> MONITOR</span>**  to the right of the contract to view transactions sent solely to that contract address, or TRANSACTIONS to view all the transactions associated with the entire project.
 
 <figure class="screenshot">
   <img class="figure-shadow mb-2 w-100" src="/img/docs/teams/debugger-deployment.png" alt="Teams Deployment">
   <figcaption class="text-center">The Truffle Teams Deployment screen.</figcaption>
 </figure>
 
-Assuming your contract(s) have received one or more transactions you will now see a list similar to the example below.
+Assuming your contract(s) have received one or more transactions you will now see a list similar to the screenshot below.
 
 <figure class="screenshot">
   <img class="figure-shadow mb-2 w-100" src="/img/docs/teams/debugger-monitoring-transactions.png" alt="Teams Transaction Monitoring">
   <figcaption class="text-center">The Truffle Teams Transaction Monitoring screen.</figcaption>
 </figure>
 
-The debugger can be started by clicking on the **<span class="inline-button"><i class="fas fa-debug"></i> DEBUG</span>** button within the context of a given transaction.
+The debugger can be started by clicking on the **<span class="inline-button"><i class="fas fa-debug"></i> DEBUG</span>** button located on the right-hand-side of a given transaction.
