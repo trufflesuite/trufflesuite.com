@@ -48,8 +48,8 @@ As you use the debugger's controls to step through a transaction you will likely
 As the core of the Truffle Teams Debugger is the source viewport. This is a read-only display of the code that the transaction will be stepping through as part of its execution. An example is shown in the screenshot below.
 
 <figure class="screenshot">
-  <img class="figure-shadow mb-2 w-50" src="/img/docs/teams/debugger-code.png" alt="Teams Debugger Code Panel">
-  <figcaption class="text-center">The Truffle Teams Debugger Code Panel.</figcaption>
+  <img class="figure-shadow mb-2 w-50" src="/img/docs/teams/debugger-source-viewport.png" alt="Teams Debugger Source Viewport">
+  <figcaption class="text-center">The Truffle Teams Debugger Source Viewport.</figcaption>
 </figure>
 
 The main thing to note is the active line which is highlighted in yellow. As your step through your transaction this will update accordingly.
