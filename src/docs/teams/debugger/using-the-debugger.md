@@ -30,7 +30,7 @@ From left to right, the controls, with a description of their associated action,
 - <code>Step Out</code> - steps out of the currently running function
 - <code>Restart</code> - restarts the debugger session
 
-## Debugger Tabs Control
+## Source Files
 
 Located directly the debugger control palette are the tabs representing all the files that will be accessed as part of the transaction's execution path. It's worth noting that it's likely your project may contain more files than are displayed here.
 
