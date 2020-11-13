@@ -65,7 +65,7 @@ Next to the source viewport is the variable inspector. This shows the variable v
 
 ## Status Messages
 
-If your transaction's execution ultimately fails, you will receive the associated status message just below the transaction hash. The screenshot below provides an example.
+If your transaction's execution ultimately fails, a banner appear after the `REVERT` happens. An associated status message or reason string will be shown if one exists. The screenshot below provides an example.
 
 <figure class="screenshot">
   <img class="figure-shadow mb-2 w-100" src="/img/docs/teams/debugger-status-message.png" alt="Teams Debugger Status Message">
