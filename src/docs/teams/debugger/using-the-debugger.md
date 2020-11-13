@@ -63,8 +63,6 @@ Next to the source viewport is the variable inspector. This shows the variable v
   <figcaption class="text-center">The Truffle Teams Debugger Variable Inspector.</figcaption>
 </figure>
 
-Note that global state variables such as `msg`, `tx`, and `block` are also available within the inspector.
-
 ## Status Messages
 
 If your transaction's execution ultimately fails, you will receive the associated status message just below the transaction hash. The screenshot below provides an example.
