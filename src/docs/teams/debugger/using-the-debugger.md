@@ -54,7 +54,7 @@ As the core of the Truffle Teams Debugger is the code panel. This is a read-only
 
 The main thing to note is the active line which is highlighted in yellow. As your step through your transaction this will update accordingly.
 
-## Debugger State Variable Inspector
+## Debugger Variable Inspector
 
 To the right of the code panel is the state variable inspector. This is a reflection of your contract's state at the corresponding point in the transaction's execution. The inspector uses a tree-like explorer enabling you to drill down by clicking on a given branch, represented by the green right-facing caret icon <i class="fas fa-caret-right" style="color: #17B89D"></i>.
 
