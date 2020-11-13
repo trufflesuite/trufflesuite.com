@@ -35,8 +35,8 @@ From left to right, the controls, with a description of their associated action,
 Located directly below the debugger control palette are the tabs representing all the source files that will be accessed as part of the transaction's execution path. It's worth noting that it's likely your project may contain more files than are displayed here.
 
 <figure class="screenshot">
-  <img class="figure-shadow mb-2 w-50" src="/img/docs/teams/debugger-interface-tabs.png" alt="Teams Debugger Tabs Control">
-  <figcaption class="text-center">The Truffle Teams Debugger Tabs Control.</figcaption>
+  <img class="figure-shadow mb-2 w-50" src="/img/docs/teams/debugger-interface-tabs.png" alt="Teams Debugger Source File Tabs">
+  <figcaption class="text-center">The Truffle Teams Debugger Source File Tabs.</figcaption>
 </figure>
 
 There are two noteworthy visual cues with the debugger tabs. The first is that of an "open tab", which means that you're looking at the file's code below and is represented with a light green background. The second is that of "active tab" which is represented by an orange circle <i class="fas fa-dot-circle" style="color: #dc9e5b"></i> which indicates that the debugger is currently paused within this file.
