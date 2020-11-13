@@ -45,7 +45,7 @@ As you use the debugger's controls to step through a transaction you will likely
 
 ## Debugger Source Viewport
 
-As the core of the Truffle Teams Debugger is the code panel. This is a read-only display of the code that the transaction will be stepping through as part of its execution. An example is shown in the screenshot below.
+As the core of the Truffle Teams Debugger is the source viewport. This is a read-only display of the code that the transaction will be stepping through as part of its execution. An example is shown in the screenshot below.
 
 <figure class="screenshot">
   <img class="figure-shadow mb-2 w-50" src="/img/docs/teams/debugger-code.png" alt="Teams Debugger Code Panel">
