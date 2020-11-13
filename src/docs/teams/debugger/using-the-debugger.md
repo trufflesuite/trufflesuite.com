@@ -59,8 +59,8 @@ The main thing to note is the active line which is highlighted in yellow. As you
 To the right of the code panel is the state variable inspector. This is a reflection of your contract's state at the corresponding point in the transaction's execution. The inspector uses a tree-like explorer enabling you to drill down by clicking on a given branch, represented by the green right-facing caret icon <i class="fas fa-caret-right" style="color: #17B89D"></i>.
 
 <figure class="screenshot">
-  <img class="figure-shadow mb-2 w-50" src="/img/docs/teams/debugger-state-variables.png" alt="Teams Debugger State Variable Inspector">
-  <figcaption class="text-center">The Truffle Teams Debugger State Variable Inspector.</figcaption>
+  <img class="figure-shadow mb-2 w-50" src="/img/docs/teams/debugger-variables.png" alt="Teams Debugger Variable Inspector">
+  <figcaption class="text-center">The Truffle Teams Debugger Variable Inspector.</figcaption>
 </figure>
 
 Note that global state variables such as `msg`, `tx`, and `block` are also available within the inspector.
