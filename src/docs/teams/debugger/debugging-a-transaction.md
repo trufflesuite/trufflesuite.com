@@ -34,7 +34,7 @@ Assuming your contract(s) have received one or more transactions you will now se
 </p>
 
 <p class="alert alert-info">
-<strong>Note</strong>: The Truffle Teams Debugger is currently available as part of our <code>Early Access</code> program, which when enabled gives you access to cutting-edge and potentially unstable features. It requires opting-in which can be done by clicking Settings | Advanced.
+<strong>Note</strong>: The Truffle Teams Debugger is currently available as part of our <code>Early Access</code> program and, as such, the <span class="inline-button"><i class="fas fa-debug"></i> DEBUG</span> button will not be visible until it's enabled. It requires opting-in, as it gives you access to cutting-edge and potentially unstable features, which can be done by clicking Settings | Advanced.
 </p>
 
 The debugger can be started by clicking on the **<span class="inline-button"><i class="fas fa-debug"></i> DEBUG</span>** button located on the right-hand-side of a given transaction.
