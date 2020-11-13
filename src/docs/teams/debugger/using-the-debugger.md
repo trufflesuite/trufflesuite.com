@@ -56,7 +56,7 @@ The main thing to note is the active line which is highlighted in yellow. As you
 
 ## Debugger Variable Inspector
 
-To the right of the code panel is the state variable inspector. This is a reflection of your contract's state at the corresponding point in the transaction's execution. The inspector uses a tree-like explorer enabling you to drill down by clicking on a given branch, represented by the green right-facing caret icon <i class="fas fa-caret-right" style="color: #17B89D"></i>.
+Next to the source viewport is the variable inspector. This shows the variable values for the current transaction execution context, including contract state, local function, and global variables. The inspector uses a tree-like explorer enabling you to drill down by clicking on a given branch, represented by the green right-facing caret icon <i class="fas fa-caret-right" style="color: #17B89D"></i>.
 
 <figure class="screenshot">
   <img class="figure-shadow mb-2 w-50" src="/img/docs/teams/debugger-variables.png" alt="Teams Debugger Variable Inspector">
