@@ -39,7 +39,7 @@ Located directly below the debugger control palette are the tabs representing al
   <figcaption class="text-center">The Truffle Teams Debugger Tabs Control.</figcaption>
 </figure>
 
-There are two noteworthy visual cues with the debugger tabs. The first is that of an "open tab", which means that you're looking at the file's code below and is represented with a light green background. The second is that of "active tab" which is represented by an orange circle <i class="fas fa-dot-circle" style="color: #dc9e5b"></i> to the right of the filename (e.g. `TruffleBadge.sol`) which indicates that the debugger is currently paused within this file.
+There are two noteworthy visual cues with the debugger tabs. The first is that of an "open tab", which means that you're looking at the file's code below and is represented with a light green background. The second is that of "active tab" which is represented by an orange circle <i class="fas fa-dot-circle" style="color: #dc9e5b"></i> which indicates that the debugger is currently paused within this file.
 
 As you use the debugger's controls to step through a transaction you will likely see the active tab update. Note that the open tab will also update when the code steps into it.
 
