@@ -11,7 +11,7 @@ In this section we'll explore both the various elements of the debugger's user i
   <figcaption class="text-center">The Truffle Teams Debugger Interface.</figcaption>
 </figure>
 
-Using the above example as a reference, the first thing to note is the transaction hash (`0x82f668a...`) at the very top of the screen. To the left of this is a visual representation of whether the transaction ultimately succeeded <i class="fas fa-check-circle" style="color: #00A311"></i> or failed <i class="fas fa-times-circle" style="color: #D60000"></i>. This is a useful reference as it allows you to preemptively know whether to expect a status message when execution completes. More on this in the [Status Messages](/docs/teams/debugger/using-the-debugger#status-messages) section below.
+Using the above example as a reference, the first thing to note is the transaction hash (`0x82f668a...`) in the page header. The header includes a visual representation of whether the transaction ultimately succeeded <i class="fas fa-check-circle" style="color: #00A311"></i> or failed <i class="fas fa-times-circle" style="color: #D60000"></i>. This is a useful reference as it allows you to preemptively know whether to expect a status message when execution completes. More on this in the [Status Messages](/docs/teams/debugger/using-the-debugger#status-messages) section below.
 
 ## Debugger Control Palette
 
