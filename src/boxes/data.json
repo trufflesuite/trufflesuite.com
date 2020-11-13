@@ -427,12 +427,6 @@
     "official": false
   },
   {
-    "userOrg": "zeppelinos",
-    "displayName": "zepkit",
-    "repoName": "zepkit",
-    "official": false
-  } ,
-  {
     "userOrg": "EmanHerawy",
     "displayName": "besu-drizzle-truffle-box",
     "repoName": "besu-drizzle-truffle-box",
