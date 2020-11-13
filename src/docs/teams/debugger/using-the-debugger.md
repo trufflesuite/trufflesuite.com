@@ -43,7 +43,7 @@ There are two noteworthy visual cues with the debugger tabs. The first is that o
 
 As you use the debugger's controls to step through a transaction you will likely see the active tab update. Note that the open tab will also update when the code steps into it.
 
-## Debugger Code Panel
+## Debugger Source Viewport
 
 As the core of the Truffle Teams Debugger is the code panel. This is a read-only display of the code that the transaction will be stepping through as part of its execution. An example is shown in the screenshot below.
 
