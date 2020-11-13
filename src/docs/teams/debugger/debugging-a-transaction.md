@@ -33,4 +33,8 @@ Assuming your contract(s) have received one or more transactions you will now se
 <strong>Note</strong>: The Truffle Teams Debugger is currently only available for transactions excuted sent to contracts in <a href="/docs/teams/sandboxes/sandboxes-overview">Ganache sandboxes</a> and accordingly the DEBUG button will show as disabled for other networks. Debugging transactions made against public networks will be available in a forthcoming release.
 </p>
 
+<p class="alert alert-info">
+<strong>Note</strong>: The Truffle Teams Debugger is currently available as part of our <code>Early Access</code> program, which when enabled gives you access to cutting-edge and potentially unstable features. It requires opting-in which can be done by clicking Settings | Advanced.
+</p>
+
 The debugger can be started by clicking on the **<span class="inline-button"><i class="fas fa-debug"></i> DEBUG</span>** button located on the right-hand-side of a given transaction.
