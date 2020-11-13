@@ -15,7 +15,7 @@ The debugger is accessed from the DEPLOYMENTS tab. From here, [select the deploy
   <figcaption class="text-center">The Truffle Teams Deployments screen.</figcaption>
 </figure>
 
-At this screen, you can either click **<span class="inline-button"><i class="fas fa-heart-rate"></i> MONITOR</span>**  to the right of the contract to view transactions sent solely to that contract address, or TRANSACTIONS to view all the transactions associated with the entire project.
+At this screen, you can either click **<span class="inline-button"><i class="fas fa-heart-rate"></i> MONITOR</span>**  to the right of the contract to view transactions sent solely to that contract address, or the **TRANSACTIONS** tab to view all the transactions associated with the entire deployment.
 
 <figure class="screenshot">
   <img class="figure-shadow mb-2 w-100" src="/img/docs/teams/debugger-deployment.png" alt="Teams Deployment">
