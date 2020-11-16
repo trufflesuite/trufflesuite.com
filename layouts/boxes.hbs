@@ -108,7 +108,7 @@
               <a class="link-card" href="/boxes/{{this.displayName}}">
             {{/if}}
               <div class="card box-card" data-userorg="{{this.userOrg}}" data-repo="{{this.repoName}}">
-                <img class="card-img-top" src="https://github.com/{{this.userOrg}}/{{this.repoName}}/blob/master/box-img-sm.png?raw=true" alt="{{this.slug}}" onerror="javascript:this.src='/img/boxes/loading-banner.png'" />
+                <div class="card-img-top" style="background: url('https://github.com/{{this.userOrg}}/{{this.repoName}}/blob/master/box-img-sm.png?raw=true'), url('/img/boxes/loading-banner.png'); background-position: left center; background-size: cover; background-repeat: no-repeat;"></div>
 
                 <div class="card-body">
                   {{#if this.official}}
