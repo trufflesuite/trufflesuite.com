@@ -27,7 +27,21 @@
   border: 4px solid #3fe0c5;
 }
 
-@media screen and (max-width: 767px) {
+.breakout {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+
+  @media screen and (max-width: 991.98px) {
+    width: 90%;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
   .post-thumbnail {
     margin: 1rem auto;
     width: 50%;
