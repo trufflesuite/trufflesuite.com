@@ -21,6 +21,10 @@ Want to switch back to the stable track? You can disable Early Access at any tim
 
 We hope you enjoy getting a taste of what's to come!
 
+<div class="mt-12 text-center">
+  <a class="btn btn-truffle mt-3" href="https://my.truffleteams.com/" target="_blank">CHECK OUT TRUFFLE TEAMS EARLY ACCESS</a>
+</div>
+
 ## Continue the Conversation
 
 We want Truffle Teams to be the most effective DevOps tool in the blockchain space for both new and existing teams. Let us know what you think about the new deployment views, or if your team has other needs we haven't met yet.
