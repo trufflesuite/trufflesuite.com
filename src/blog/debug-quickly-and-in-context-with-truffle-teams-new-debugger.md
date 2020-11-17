@@ -36,6 +36,10 @@ At the moment some other enhancements, including breakpoints and syntax highligh
 
 For more information, check out [the Truffle Teams Debugger docs](/docs/teams/debugger/debugging-a-transaction) or for general information about Truffle's debugger, check out [the Truffle Debugger docs](/docs/truffle/getting-started/debugging-your-contracts).
 
+<div class="mt-12 text-center">
+  <a class="btn btn-truffle mt-3" href="https://my.truffleteams.com/" target="_blank">CHECK OUT THE TRUFFLE TEAMS DEBUGGER</a>
+</div>
+
 ## Continue the Conversation
 
 We want Truffle Teams to be the most effective DevOps tool in the blockchain space for both new and existing teams. Let us know what you think about the new deployment views, or if your team has other needs we haven't met yet.
