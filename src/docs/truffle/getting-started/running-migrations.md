@@ -113,9 +113,11 @@ Filename: `migrations/1_initial_migration.js`
 ```javascript
 var Migrations = artifacts.require("Migrations");
 
-module.exports = function(deployer) {
-  // Deploy the Migrations contract as our only task
-  deployer.deploy(Migrations);
+module.exports = function(deployer, networks, accounts) {
+  deployer.then(async () => {
+    // Deploy the Migrations contract as our only task
+    await deployer.deploy(Migrations);
+  });
 };
 ```
 
@@ -123,7 +125,7 @@ From here, you can create new migrations with increasing numbered prefixes to de
 
 ## Deployer
 
-Your migration files will use the deployer to stage deployment tasks. As such, you can write deployment tasks synchronously and they'll be executed in the correct order:
+Your migration files will use the deployer to stage deployment tasks. As such, you can write deployment tasks asynchronously:
 
 ```javascript
 // Stage deploying A before B
@@ -131,16 +133,20 @@ deployer.deploy(A);
 deployer.deploy(B);
 ```
 
-Alternatively, each function on the deployer can be used as a Promise, to queue up deployment tasks that depend on the execution of the previous task:
+Alternatively, use async to deploy queue up deployment tasks that depend on the execution of the previous task:
 
 ```javascript
-// Deploy A, then deploy B, passing in A's newly deployed address
-deployer.deploy(A).then(function() {
-  return deployer.deploy(B, A.address);
-});
+module.exports = function(deployer, networks, accounts /* See note 1 */) {
+  deployer.then(async () => {
+    await deployer.deploy(A);
+    await deployer.deploy(B);
+  });
+};
+// NOTE 1: list of accounts injected by your Ethereum client and web3 provider.
+//         This is the exact same list of accounts returned from
+//        `web3.eth.getAccounts()`.
 ```
 
-It is possible to write your deployment as a single promise chain if you find that syntax to be more clear. The deployer API is discussed at the bottom of this page.
 
 ## Network considerations
 
@@ -149,18 +155,16 @@ It is possible to run deployment steps conditionally based on the network being 
 To conditionally stage deployment steps, write your migrations so that they accept a second parameter, called `network`. Example:
 
 ```javascript
-module.exports = function(deployer, network) {
+module.exports = function(deployer, networks, accounts) {
+  deployer.then(async () => {
   if (network == "live") {
     // Do something specific to the network named "live".
   } else {
     // Perform a different step otherwise.
   }
 }
+};
 ```
-
-## Available accounts
-
-Migrations are also passed the list of accounts provided to you by your Ethereum client and web3 provider, for you to use during your deployments. This is the exact same list of accounts returned from `web3.eth.getAccounts()`.
 
 ```javascript
 module.exports = function(deployer, network, accounts) {
@@ -174,9 +178,11 @@ The deployer contains many functions available to simplify your migrations.
 
 ### deployer.deploy(contract, args..., options)
 
-Deploy a specific contract, specified by the contract object, with optional constructor arguments. This is useful for singleton contracts, such that only one instance of this contract exists for your dapp. This will set the address of the contract after deployment (i.e., `Contract.address` will equal the newly deployed address), and it will override any previous address stored.
+Deploy a specific contract, specified by the contract object, with optional constructor arguments.
 
-You can optionally pass an array of contracts, or an array of arrays, to speed up deployment of multiple contracts. Additionally, the last argument is an optional object that can include the key named `overwrite` as well as other transaction parameters such as `gas` and `from`. If `overwrite` is set to `false`, the deployer won't deploy this contract if one has already been deployed. This is useful for certain circumstances where a contract address is provided by an external dependency.
+
+An array of contracts can be passed, but this option is deprecated.
+ Additionally, the last argument is an optional object that can include the key named `overwrite` as well as other transaction parameters such as `gas` and `from`. If `overwrite` is set to `false`, the deployer won't deploy this contract if one has already been deployed. This is useful for certain circumstances where a contract address is provided by an external dependency.
 
 Note that you will need to deploy and link any libraries your contracts depend on first before calling `deploy`. See the `link` function below for more details.
 
@@ -187,16 +193,16 @@ Examples:
 
 ```javascript
 // Deploy a single contract without constructor arguments
-deployer.deploy(A);
+async deployer.deploy(A);
 
 // Deploy a single contract with constructor arguments
-deployer.deploy(A, arg1, arg2, ...);
+async deployer.deploy(A, arg1, arg2, ...);
 
 // Don't deploy this contract if it has already been deployed
-deployer.deploy(A, {overwrite: false});
+async deployer.deploy(A, {overwrite: false});
 
 // Set a maximum amount of gas and `from` address for the deployment
-deployer.deploy(A, {gas: 4612388, from: "0x...."});
+async deployer.deploy(A, {gas: 4612388, from: "0x...."});
 
 // Deploying multiple contracts as an array is now deprecated.
 // This used to be quicker than writing three `deployer.deploy()` statements as the deployer
@@ -225,32 +231,22 @@ Example:
 
 ```javascript
 // Deploy library LibA, then link LibA to contract B, then deploy B.
-deployer.deploy(LibA);
+async deployer.deploy(LibA);
 deployer.link(LibA, B);
-deployer.deploy(B);
+async deployer.deploy(B);
 
 // Link LibA to many contracts
 deployer.link(LibA, [B, C, D]);
 ```
 
-### deployer.then(function() {...})
 
-Just like a promise, run an arbitrary deployment step. Use this to call specific contract functions during your migration to add, edit and reorganize contract data.
-
-Example:
+Advanced example:
 
 ```javascript
 var a, b;
-deployer.then(function() {
-  // Create a new version of A
-  return A.new();
-}).then(function(instance) {
-  a = instance;
-  // Get the deployed instance of B
-  return B.deployed();
-}).then(function(instance) {
-  b = instance;
-  // Set the new instance of A's address on B via B's setA() function.
-  return b.setA(a.address);
+deployer.then(async function() {
+  const a = await A.new();      // Create a new version of A
+  const b = await B.deployed(); // Get the deployed instance of B
+        b.setA(a.address);      // Update new A in B instance-
 });
 ```
