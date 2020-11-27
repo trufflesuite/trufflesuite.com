@@ -49,6 +49,7 @@ There are many official and unofficial Ethereum clients available for you to use
 * WebThree (cpp-ethereum): [https://github.com/ethereum/cpp-ethereum](https://github.com/ethereum/cpp-ethereum)
 * Hyperledger Besu (java): [https://github.com/hyperledger/besu](https://github.com/hyperledger/besu)
 * Parity: [https://github.com/paritytech/parity](https://github.com/paritytech/parity)
+* Nethermind: [https://github.com/NethermindEth/nethermind](https://github.com/NethermindEth/nethermind)
 * More: [https://ethereum.org/developers/#clients--running-your-own-node](https://ethereum.org/developers/#clients--running-your-own-node)
 
 These are full client implementations that include mining, networking, blocks and transaction processing. You should use these clients after you've sufficiently tested your dapp with Ganache or Truffle Develop and you're ready to deploy to your desired Ethereum network.
