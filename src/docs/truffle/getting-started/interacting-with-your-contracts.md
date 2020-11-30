@@ -307,6 +307,31 @@ instance.methods['setValue(uint256,uint256)'](11, 55);
 
 Please see this issue [here](https://github.com/trufflesuite/truffle/issues/2868) for more information.
 
+### Using enumerations
+
+Contract abstractions can also be used to access Solidity enumerations defined
+within that contract.  For instance, suppose we have the following Solidity contract:
+
+```solidity
+contract ExampleContract {
+  enum ExampleEnum {
+    ExampleOption0,
+    ExampleOption1,
+    ExampleOption2
+  }
+ 
+  // ...
+}
+```
+
+One could then use `ExampleContract.ExampleEnum.ExampleOption0` to access that enum
+value; in this case, that is equal to `0`, but using this allows one to pass in enums
+to contract methods without having to worry about their numerical value.
+
+A contract's enums are also available under `.enums`, so in this case, one could also
+write `ExampleContract.enums.ExampleEnum.ExampleOption0`.
+
+
 ## Further reading
 
 The contract abstractions provided by Truffle contain a wealth of utilities for making interacting with your contracts easy. Check out the [@truffle/contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) documentation for tips, tricks and insights.
