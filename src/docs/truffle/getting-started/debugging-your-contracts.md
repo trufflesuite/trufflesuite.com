@@ -235,7 +235,7 @@ This command will remove a watch expression, based on the following syntax: `-:<
 
 ### (?) list existing watch expressions and breakpoints
 
-This command will display a list of all the current watch expressions and breakpoints.
+This command will display a list of all the current watch expressions and breakpoints.  It will also report whether generated sources are turned on or off.
 
 ### (v) display variables
 
