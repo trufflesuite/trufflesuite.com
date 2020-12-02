@@ -281,7 +281,7 @@ module.exports = {
   }
 }
 ```
-For more information, please see the Solidity documentation on [Compiler Input and Output JSON Description](http://solidity.readthedocs.io/en/develop/using-the-compiler.html#compiler-input-and-output-json-description) for the various possible settings.  Note that customizing `stopAfter` and `outputSelection` are not currently supported.
+For more information, please see the Solidity documentation on [Compiler Input JSON Description](https://docs.soliditylang.org/en/latest/using-the-compiler.html#input-description) for the various possible settings.  Note that customizing `stopAfter` and `outputSelection` are not currently supported.
 
 ### vyper
 
@@ -301,7 +301,7 @@ module.exports = {
 }
 ```
 
-Currently, only changing the `settings` is supported for Vyper, and customizing `outputSelection` is not supported, so the only option supported under `settings` is `evmVersion`.
+Currently, only changing the `settings` is supported for Vyper; see the Vyper documentation on [Compiler Input JSON Description](https://vyper.readthedocs.io/en/stable/compiling-a-contract.html#input-json-description) for the possible settings.  However customizing `outputSelection` is not supported, so currently the only supported setting is `evmVersion`.
 
 ### external compilers
 
