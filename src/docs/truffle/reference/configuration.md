@@ -273,13 +273,15 @@ module.exports = {
           runs: <number>   // Optimize for how many times you intend to run the code
         },
         evmVersion: <string> // Default: "istanbul"
+      },
+      modelCheckerSettings: {
+        // contains options for SMTChecker
       }
     }
   }
 }
 ```
-For more information, please see the Solidity documentation on [Compiler Input and Output JSON Description](http://solidity.readthedocs.io/en/develop/using-the-compiler.html#compiler-input-and-output-json-description); the various
-options under `settings` there can be used under `settings` here as well.
+For more information, please see the Solidity documentation on [Compiler Input and Output JSON Description](http://solidity.readthedocs.io/en/develop/using-the-compiler.html#compiler-input-and-output-json-description) for the various possible settings.  Note that customizing `stopAfter` and `outputSelection` are not currently supported.
 
 ### vyper
 
@@ -299,7 +301,7 @@ module.exports = {
 }
 ```
 
-Currently, only changing the `settings` is supported for Vyper, and the only option supported under `settings` is `evmVersion`.
+Currently, only changing the `settings` is supported for Vyper, and customizing `outputSelection` is not supported, so the only option supported under `settings` is `evmVersion`.
 
 ### external compilers
 
