@@ -271,13 +271,34 @@ module.exports = {
           enabled: <boolean>,
           runs: <number>   // Optimize for how many times you intend to run the code
         },
-        evmVersion: <string> // Default: "petersburg"
+        evmVersion: <string> // Default: "istanbul"
       }
     }
   }
 }
 ```
-For more information, please see the Solidity documentation on [Compiler Input and Output JSON Description](http://solidity.readthedocs.io/en/develop/using-the-compiler.html#compiler-input-and-output-json-description).
+For more information, please see the Solidity documentation on [Compiler Input and Output JSON Description](http://solidity.readthedocs.io/en/develop/using-the-compiler.html#compiler-input-and-output-json-description); the various
+options under `settings` there can be used under `settings` here as well.
+
+### vyper
+
+Vyper compiler settings.  Similar to the `solc` settings, but not as extensive.  In particular, specifying a Vyper version is not currently supported; your local Vyper installation will always be used.
+
+Truffle config example:
+
+```javascript
+module.exports = {
+  compilers: {
+    vyper: {
+      settings: {
+        evmVersion: <string>
+      }
+    }
+  }
+}
+```
+
+Currently, only changing the `settings` is supported for Vyper, and the only option supported under `settings` is `evmVersion`.
 
 ### external compilers
 
