@@ -84,6 +84,7 @@ networks: {
     // skipDryRun: - true if you don't want to test run the migration locally before the actual migration (default is false)
     // timeoutBlocks: - if a transaction is not mined, keep waiting for this number of blocks (default is 50)
     // deploymentPollingInterval: - duration between checks for completion of deployment transactions
+    // disableConfirmationListener: - true to disable web3's confirmation listener
   }
 }
 ```
