@@ -26,7 +26,7 @@ The default configuration ships with configuration for a single development netw
 ### Resolving naming conflicts on Windows
 
 <p class="alert alert-warning">
-**Note**: This only applies to Truffle version 4 and below.
+<strong>Note</strong>: This only applies to Truffle version 4 and below.
 </p>
 
 
@@ -411,7 +411,7 @@ module.exports = {
 ## plugins
 
 <p class="alert alert-warning">
-**Note**: This feature is new and still in a barebones state. Please let us
+<strong>Note</strong>: This feature is new and still in a barebones state. Please let us
 know how we can improve it!
 </p>
 

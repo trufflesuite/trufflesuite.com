@@ -177,7 +177,7 @@ mocha: {
 ## plugins
 
 <p class="alert alert-warning">
-**Note**: This feature is new and still in a barebones state. Please let us
+<strong>Note</strong>: This feature is new and still in a barebones state. Please let us
 know how we can improve it!
 </p>
 
