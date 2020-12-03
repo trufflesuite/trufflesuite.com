@@ -33,7 +33,7 @@ With our front-end ready to be used and MetaMask installed, we're ready to see o
 [Ganache](/ganache) is a graphical application that runs a blockchain that can be used for testing purposes. It runs on `127.0.0.1:7545`.
 
 <p class="alert alert-info">
-**Note**: We recommend specifying `127.0.0.1` instead of `localhost` because the address does not require a network connection and so is more suitable for development.
+<strong>Note</strong>: We recommend specifying `127.0.0.1` instead of `localhost` because the address does not require a network connection and so is more suitable for development.
 </p>
 
 ### Detecting MetaMask's web3 injection
@@ -65,7 +65,7 @@ To use Ganache with MetaMask, click the MetaMask icon in your browser and this s
 Click **Import with seed phrase**. In the box marked **Wallet Seed**, enter the mnemonic that was displayed when launching Ganache.
 
 <p class="alert alert-danger">
-**Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). Make sure that you set the network to "Private Network" (use the "Custom RPC" setting). See below for details.
+<strong>Warning</strong>: Do not use this mnemonic on the main Ethereum network (mainnet). Make sure that you set the network to "Private Network" (use the "Custom RPC" setting). See below for details.
 </p>
 
 Enter a password below that and click **OK**.
@@ -99,7 +99,7 @@ Click the account icon in the upper-right to create new accounts, the first 10 o
 Truffle Develop is a command-line application that runs a temporary blockchain that is also used for testing purposes. It runs on `127.0.0.1:9545`.
 
 <p class="alert alert-info">
-**Note**: We recommend specifying `127.0.0.1` instead of `localhost` because the address does not require a network connection and so is more suitable for development.
+<strong>Note</strong>: We recommend specifying `127.0.0.1` instead of `localhost` because the address does not require a network connection and so is more suitable for development.
 </p>
 
 Using MetaMask with Truffle Develop is very similar to that of Ganache. The only difference is that Truffle Develop runs by default on `127.0.0.1:9545`, so you'll want to edit the above web3 code to say:
