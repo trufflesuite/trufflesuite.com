@@ -17,7 +17,9 @@ Install Drizzle React-Plugin via npm:
 npm install @drizzle/react-plugin
 ```
 
-**Note**: `@drizzle/react-plugin` requires Requires React v16.3+ for the Context API. You'll also need the `@drizzle/store` package, if it isn't already installed.
+<p class="alert alert-warning">
+<strong>Note</strong>: `@drizzle/react-plugin` requires Requires React v16.3+ for the Context API. You'll also need the `@drizzle/store` package, if it isn't already installed.
+</p>
 
 ## Getting Started
 
@@ -60,7 +62,9 @@ npm install @drizzle/react-plugin
 
 1. Use `DrizzleContext.Consumer` to consume the drizzle context and pass `drizzle` and `drizzleState` to your component. Drizzle also provides prebuilt components via the `@drizzle/react-components`.
 
-  **Note**: We have to check that Drizzle is initialized before fetching data. The `initialized` variable returns the drizzle store's initialization status.
+<p class="alert alert-warning">
+  <strong>Note</strong>: We have to check that Drizzle is initialized before fetching data. The `initialized` variable returns the drizzle store's initialization status.
+</p>
 
   ```javascript
   <DrizzleContext.Provider drizzle={drizzle}>
@@ -107,7 +111,9 @@ npm install @drizzle/react-plugin
 
   export default CacheCallExample
   ```
-  **Note**: The contract instances have all the standard web3 properties and methods.
+<p class="alert alert-info">
+  <strong>Note</strong>: The contract instances have all the standard web3 properties and methods.
+</p>
   ```javascript
   drizzle.contracts.SimpleStorage.methods.set(5).send(); // sets SimpleStorage contract's storedData state variable to uint 5.
   drizzle.contracts.SimpleStorage.methods.storedData.call(); // gets the storedData value

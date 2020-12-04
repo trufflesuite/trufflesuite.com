@@ -32,7 +32,7 @@ You can do anything you'd like within this script, so long as the callback is ca
 # Third-party plugin commands
 
 <p class="alert alert-warning">
-**Note**: This feature is new and still in a barebones state. Please let us
+<strong>Note</strong>: This feature is new and still in a barebones state. Please let us
 know how we can improve it!
 </p>
 

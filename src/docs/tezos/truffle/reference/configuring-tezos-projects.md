@@ -115,7 +115,9 @@ module.exports = {
 };
 ```
 
-**Note**: In addition to specifying a relative path, you can also use globs/regular expressions to selectively compile contracts.
+<p class="alert alert-info">
+<strong>Note</strong>: In addition to specifying a relative path, you can also use globs/regular expressions to selectively compile contracts.
+</p>
 
 ### contracts_build_directory
 
@@ -177,7 +179,7 @@ mocha: {
 ## plugins
 
 <p class="alert alert-warning">
-**Note**: This feature is new and still in a barebones state. Please let us
+<strong>Note</strong>: This feature is new and still in a barebones state. Please let us
 know how we can improve it!
 </p>
 

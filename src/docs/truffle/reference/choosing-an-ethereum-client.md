@@ -15,7 +15,7 @@ We recommend [Ganache](/ganache), a personal blockchain for Ethereum development
 Ganache, when launched, runs on `http://127.0.0.1:7545`. It will display the first 10 accounts and the mnemonic used to create those accounts. ([Read more about account mnemonics](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki).) The mnemonic will persist across restarts of Ganache, though it can be changed to be randomly generated. You can also [input your own](/docs/ganache/using).
 
 <p class="alert alert-danger">
-**Warning**: Do not use this mnemonic on the main Ethereum network (mainnet).
+<strong>Warning</strong>: Do not use this mnemonic on the main Ethereum network (mainnet).
 </p>
 
 ### Truffle Develop
@@ -29,7 +29,7 @@ truffle develop
 This will run the client on `http://127.0.0.1:9545`. It will display the first 10 accounts and the mnemonic used to create those accounts. ([Read more about account mnemonics](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki).) When you run `truffle develop` for the first time it will generate a random mnemonic that will persist for you and you alone.
 
 <p class="alert alert-danger">
-**Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). If you send ETH to any account generated from this mnemonic, you will lose it all!
+<strong>Warning</strong>: Do not use this mnemonic on the main Ethereum network (mainnet). If you send ETH to any account generated from this mnemonic, you will lose it all!
 </p>
 
 Once launched, Truffle Develop will provide you with a console you can use to run all available Truffle commands. These commands are input by omitting the `truffle` prefix. So, for example, to compile your smart contracts, instead of typing `truffle compile`, you need to only type `compile`.
