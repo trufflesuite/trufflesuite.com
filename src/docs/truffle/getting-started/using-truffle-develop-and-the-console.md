@@ -10,7 +10,7 @@ Sometimes it's nice to work with your contracts interactively for testing and de
 * **Truffle Develop**: An interactive console that also spawns a development blockchain
 
 <p class="alert alert-info">
-**Note**: Your contract names get loaded as variables into the console context. For this reason it is recommended to avoid names that might conflict with Node's native objects like Buffer or String. For updates see the related <a href="https://github.com/trufflesuite/truffle/issues/3329">issue on GitHub</a>.
+<strong>Note</strong>: Your contract names get loaded as variables into the console context. For this reason it is recommended to avoid names that might conflict with Node's native objects like Buffer or String. For updates see the related <a href="https://github.com/trufflesuite/truffle/issues/3329">issue on GitHub</a>.
 </p>
 
 ## Why two different consoles?
@@ -96,13 +96,13 @@ Mnemonic: candy maple cake sugar pudding cream honey rich smooth crumble sweet t
 This shows you the addresses, private keys, and mnemonic for this particular blockchain.
 
 <p class="alert alert-info">
-**Note**: When you run `truffle develop` for the first time, Truffle will generate a random mnemonic that will persist for you and you alone. If you want to use a different mnemonic or set of addresses, we recommend using <a href="/docs/ganache/using">Ganache</a>.
+<strong>Note</strong>: When you run `truffle develop` for the first time, Truffle will generate a random mnemonic that will persist for you and you alone. If you want to use a different mnemonic or set of addresses, we recommend using <a href="/docs/ganache/using">Ganache</a>.
 </p>
 
 
 
 <p class="alert alert-danger">
-**Warning**: Remember to never use any of these addresses or the mnemonic on the mainnet. This is for development only.
+<strong>Warning</strong>: Remember to never use any of these addresses or the mnemonic on the mainnet. This is for development only.
 </p>
 
 

@@ -137,7 +137,7 @@ What's interesting here:
 * We received a return value. Note that since the Ethereum network can handle very large numbers, we're given a [BN](https://github.com/indutny/bn.js/) object which we then convert to a number.
 
 <p class="alert alert-warning">
-**Warning**: We convert the return value to a number because in this example the numbers are small. However, if you try to convert a BN that's larger than the largest integer supported by Javascript, you'll likely run into errors or unexpected behavior.
+<strong>Warning</strong>: We convert the return value to a number because in this example the numbers are small. However, if you try to convert a BN that's larger than the largest integer supported by Javascript, you'll likely run into errors or unexpected behavior.
 </p>
 
 ### Processing transaction results
@@ -306,6 +306,31 @@ instance.methods['setValue(uint256,uint256)'](11, 55);
 ```
 
 Please see this issue [here](https://github.com/trufflesuite/truffle/issues/2868) for more information.
+
+### Using enumerations
+
+Contract abstractions can also be used to access Solidity enumerations defined
+within that contract.  For instance, suppose we have the following Solidity contract:
+
+```solidity
+contract ExampleContract {
+  enum ExampleEnum {
+    ExampleOption0,
+    ExampleOption1,
+    ExampleOption2
+  }
+ 
+  // ...
+}
+```
+
+One could then use `ExampleContract.ExampleEnum.ExampleOption0` to access that enum
+value; in this case, that is equal to `0`, but using this allows one to pass in enums
+to contract methods without having to worry about their numerical value.
+
+A contract's enums are also available under `.enums`, so in this case, one could also
+write `ExampleContract.enums.ExampleEnum.ExampleOption0`.
+
 
 ## Further reading
 

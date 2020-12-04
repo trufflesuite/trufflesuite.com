@@ -26,7 +26,7 @@ The default configuration ships with configuration for a single development netw
 ### Resolving naming conflicts on Windows
 
 <p class="alert alert-warning">
-**Note**: This only applies to Truffle version 4 and below.
+<strong>Note</strong>: This only applies to Truffle version 4 and below.
 </p>
 
 
@@ -84,6 +84,7 @@ networks: {
     // skipDryRun: - true if you don't want to test run the migration locally before the actual migration (default is false)
     // timeoutBlocks: - if a transaction is not mined, keep waiting for this number of blocks (default is 50)
     // deploymentPollingInterval: - duration between checks for completion of deployment transactions
+    // disableConfirmationListener: - true to disable web3's confirmation listener
   }
 }
 ```
@@ -147,7 +148,9 @@ module.exports = {
 };
 ```
 
-**Note**: In addition to specifying a relative path, you can also use globs/regular expressions to selectively compile contracts.
+<p class="alert alert-info">
+<strong>Note</strong>: In addition to specifying a relative path, you can also use globs/regular expressions to selectively compile contracts.
+</p>
 
 ### contracts_build_directory
 
@@ -271,13 +274,36 @@ module.exports = {
           enabled: <boolean>,
           runs: <number>   // Optimize for how many times you intend to run the code
         },
-        evmVersion: <string> // Default: "petersburg"
+        evmVersion: <string> // Default: "istanbul"
+      },
+      modelCheckerSettings: {
+        // contains options for SMTChecker
       }
     }
   }
 }
 ```
-For more information, please see the Solidity documentation on [Compiler Input and Output JSON Description](http://solidity.readthedocs.io/en/develop/using-the-compiler.html#compiler-input-and-output-json-description).
+For more information, please see the Solidity documentation on [Compiler Input JSON Description](https://docs.soliditylang.org/en/latest/using-the-compiler.html#input-description) for the various possible settings.  Note that customizing `stopAfter` and `outputSelection` are not currently supported.
+
+### vyper
+
+Vyper compiler settings.  Similar to the `solc` settings, but not as extensive.  In particular, specifying a Vyper version is not currently supported; your local Vyper installation will always be used.
+
+Truffle config example:
+
+```javascript
+module.exports = {
+  compilers: {
+    vyper: {
+      settings: {
+        evmVersion: <string>
+      }
+    }
+  }
+}
+```
+
+Currently, only changing the `settings` is supported for Vyper; see the Vyper documentation on [Compiler Input JSON Description](https://vyper.readthedocs.io/en/stable/compiling-a-contract.html#input-json-description) for the possible settings.  However customizing `outputSelection` is not supported, so currently the only supported setting is `evmVersion`.
 
 ### external compilers
 
@@ -387,7 +413,7 @@ module.exports = {
 ## plugins
 
 <p class="alert alert-warning">
-**Note**: This feature is new and still in a barebones state. Please let us
+<strong>Note</strong>: This feature is new and still in a barebones state. Please let us
 know how we can improve it!
 </p>
 

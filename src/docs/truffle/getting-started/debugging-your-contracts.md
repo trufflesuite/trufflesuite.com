@@ -64,6 +64,12 @@ for more information on `truffle test`, and see
 [Interacting with your contracts](/docs/truffle/getting-started/interacting-with-your-contracts)
 to learn about contract operations.
 
+<p class="alert alert-warning">
+<strong>Note</strong>: This feature currently doesn't work with reverted transactions;
+until we fix this, you can debug those with direct use of `truffle debug`.
+</p>
+
+
 ### Debugging read-only calls
 
 Running the debugger from inside your JS tests allow additional functionality

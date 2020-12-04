@@ -32,7 +32,7 @@ truffle build
 Requires the `build` key to be present in the configuration. See the [Building your application](/docs/getting_started/build) and [Build processes](/docs/advanced/build_processes) sections for more details.
 
 <p class="alert alert-warning">
-**Alert**: This command is deprecated. Please use third-party build tools like webpack or grunt, or see our <a href="/boxes">Truffle Boxes</a> for an example.
+<strong>Alert</strong>: This command is deprecated. Please use third-party build tools like webpack or grunt, or see our <a href="/boxes">Truffle Boxes</a> for an example.
 </p>
 
 
@@ -192,7 +192,7 @@ truffle init [--force]
 Creates a new and empty Truffle project within the current working directory.
 
 <p class="alert alert-warning">
-**Alert**: Older versions of Truffle used `truffle init bare` to create an empty project. This usage has been deprecated. Those looking for the MetaCoin example that used to be available through `truffle init` should use `truffle unbox MetaCoin` instead.
+<strong>Alert</strong>: Older versions of Truffle used `truffle init bare` to create an empty project. This usage has been deprecated. Those looking for the MetaCoin example that used to be available through `truffle init` should use `truffle unbox MetaCoin` instead.
 </p>
 
 Option:
@@ -293,7 +293,7 @@ All parameters are pulled from your project's configuration file. Takes no argum
 ### run
 
 <p class="alert alert-warning">
-**Note**: This feature is new and still in a barebones state. Please let us
+<strong>Note</strong>: This feature is new and still in a barebones state. Please let us
 know how we can improve it!
 </p>
 
@@ -387,5 +387,5 @@ truffle watch
 This command will initiate a watch for changes to contracts, application, and configuration files. When there's a change, it will rebuild the app as necessary.
 
 <p class="alert alert-warning">
-**Alert**: This command is deprecated. Please use external tools to watch for filesystem changes and rerun tests.
+<strong>Alert</strong>: This command is deprecated. Please use external tools to watch for filesystem changes and rerun tests.
 </p>
