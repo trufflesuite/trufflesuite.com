@@ -77,6 +77,16 @@
   }
 }
 
+.btn-consensys {
+  background: #2c56dd;
+  color: #fff;
+
+  &:hover {
+    background: #fff;
+    color: #2c56dd;
+  }
+}
+
 .btn-wrap {
   white-space: normal;
 }
