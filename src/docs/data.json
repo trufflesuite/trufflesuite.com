@@ -39,6 +39,11 @@
       "Debugging a transaction",
       "Using the debugger"
     ],
+    "Contract Manager": [
+      "Contract manager overview",
+      "Interacting with functions",
+      "Connecting to a sandbox"
+    ],
     "Dashboard": [
       "Dashboard overview",
       "Adding a deployment",
