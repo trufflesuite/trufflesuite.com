@@ -1,8 +1,9 @@
 ---
-title: Teams | Contract Monitoring
+title: Teams | Contract monitoring
 layout: docs.hbs
 ---
-# Contract Monitoring
+
+# Contract monitoring
 
 Truffle Teams monitors your deployments for new transactions. You can view these transactions by going to the [detail page](/docs/teams/deployments/deployment-details) for the respective deployment.
 

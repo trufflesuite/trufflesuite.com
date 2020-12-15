@@ -1,9 +1,9 @@
 ---
-title: Teams | Truffle Teams Quickstart
+title: Teams | Truffle Teams quickstart
 layout: docs.hbs
 ---
 
-# Truffle Teams Quickstart
+# Truffle Teams quickstart
 
 This page will take you through the basics of creating a Truffle Teams account and linking it to a Truffle project repository.
 
@@ -11,13 +11,13 @@ This page will take you through the basics of creating a Truffle Teams account a
 <strong>Note</strong>: Before you begin, make sure that you have a GitHub repository containing a Truffle project.
 </p>
 
-## Table of Contents
+## Table of contents
 
-1. [Creating an Account](#creating-an-account)
-1. [Starting Builds](#starting-builds)
-1. [Deploying Contracts](#deploying-contracts)
+1. [Creating an account](#creating-an-account)
+1. [Starting builds](#starting-builds)
+1. [Deploying contracts](#deploying-contracts)
 
-## Creating an Account
+## Creating an account
 
 To start, navigate to <a href="https://my.truffleteams.com" target="_blank">https://my.truffleteams.com</a>. Click on **<span class="inline-button"><i class="fab fa-github"></i> LOGIN WITH GITHUB</span>**. If you're not already logged in to your GitHub account, Github will prompt you to do so.
 
@@ -28,20 +28,20 @@ If you are a member of any organizations other than your personal account, you'l
 Next you'll be asked for permission to link Truffle Teams to one or more of your GitHub repositories. Select the repositories you wish to add and click continue. Select either **All repositories** to add all repos in this account/org to teams or **Only select repositories** to select individual repos from the dropdown.
 
 <p class="alert alert-info">
-<strong>Note</strong>: We can always add a repo later if necessary. See the <a href="/docs/teams/getting-started/adding-repositories">Adding Repositories</a> documentation for more informaiton.
+<strong>Note</strong>: We can always add a repo later if necessary. See the <a href="/docs/teams/getting-started/adding-repositories">Adding repositories</a> documentation for more informaiton.
 </p>
 
 Finally, click **Install** to install Truffle Teams on the selected repositories.
 
 <p class="alert alert-warning">
-<strong>Why do we need certain permissions?</strong> Please see the <a href="/docs/teams/reference/permissions-disclosure">Permissions Disclosure</a> section for a full breakdown of why we're asking for each permission.
+<strong>Why do we need certain permissions?</strong> Please see the <a href="/docs/teams/reference/permissions-disclosure">Permissions disclosure</a> section for a full breakdown of why we're asking for each permission.
 </p>
 
 ![Truffle Teams DATA view](/img/docs/teams/install-03.png)
 
 We then arrive at the home screen and see the repos we've added--let's commit some code and see how Truffle Teams will automatically run our tests!
 
-## Starting Builds
+## Starting builds
 
 Builds will start automatically once a new commit is pushed to any branch of a repository added to Truffle Teams. You will see the build queued in both the Truffle Teams interface on the `BUILDS` page and on GitHub with the commit itself.
 
@@ -49,11 +49,11 @@ Builds will start automatically once a new commit is pushed to any branch of a r
   <img class="figure-shadow mb-2" src="/img/docs/teams/starting-builds-comp.png" alt="Build in Progress in both Truffle Teams and GitHub" style="width: 100%">
 </figure>
 
-## Deploying Contracts
+## Deploying contracts
 
 Please see our detailed tutorial, ["Learning to Deploy with Truffle Teams"](https://www.trufflesuite.com/tutorials/learn-how-to-deploy-with-truffle-teams).
 
-## Continue Learning
+## Continue learning
 
 This quickstart showed you the basics of the Truffle Teams testing workflow, but once your contracts are deployed there's more to learn about **[monitoring deployed contracts](/docs/teams/deployments/contract-monitoring)**.
 

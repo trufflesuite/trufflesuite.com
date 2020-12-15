@@ -1,9 +1,9 @@
 ---
-title: Teams | Ask us a Question
+title: Teams | Ask us a question
 layout: docs.hbs
 ---
 
-# Ask us a Question
+# Ask us a question
 
 Couldn't find what you were looking for and still have questions? Please reach out to us! We're active on our Truffle Teams community <a href="https://spectrum.chat/trufflesuite/truffle-teams" target="_blank">Spectrum</a> channel.
 

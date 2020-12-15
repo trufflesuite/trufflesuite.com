@@ -2,7 +2,7 @@
   "teams": {
     "Getting Started": [
       "Creating an account",
-      "Adding Repositories"
+      "Adding repositories"
     ],
     "Account": [
       "Manage your account",
@@ -13,8 +13,8 @@
     ],
     "Builds": [
       "Builds overview",
-      "Starting Builds",
-      "Restarting Builds",
+      "Starting builds",
+      "Restarting builds",
       "External CI"
     ],
     "Sandboxes": [
@@ -22,14 +22,14 @@
       "Creating a sandbox",
       "Renaming a sandbox",
       "Destroying a sandbox",
-      "Sandbox Forking",
+      "Sandbox forking",
       "Usage with Truffle"
     ],
     "Deployments": [
       "Deployments overview",
       "Creating a deployment",
       "Deploying to a sandbox",
-      "Contract Monitoring",
+      "Contract monitoring",
       "Deployment console",
       "Graduating a deployment",
       "Archiving a deployment"
@@ -51,10 +51,10 @@
     ],
     "Reference": [
       "Configuration",
-      "Permissions Disclosure"
+      "Permissions disclosure"
     ],
     "Support": [
-      "Ask Us a Question"
+      "Ask us a question"
     ]
   },
   "truffle": {

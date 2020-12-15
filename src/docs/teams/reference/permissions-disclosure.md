@@ -1,8 +1,9 @@
 ---
-title: Teams | Truffle Teams Permissions Disclosure
+title: Teams | Truffle Teams Permissions disclosure
 layout: docs.hbs
 ---
-# Truffle Teams Permissions Disclosure
+
+# Truffle Teams Permissions disclosure
 
 During installation Truffle Teams asks for various permissions. We respect your data and want to be very clear about why we ask for the following permissions.
 
