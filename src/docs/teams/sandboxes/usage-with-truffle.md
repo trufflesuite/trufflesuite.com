@@ -20,7 +20,7 @@ module.exports = {
 };
 ```
 
-If you're using an older version of truffle, You'll need to use HDWalletProvider. In addition to providing the `mnemonic` and `network_id`, we must specify the initial account index (`0`), total number of accounts (`10`), and set the `shareNonce` option to `false`. Here's a complete example:
+If you're using an older version of Truffle, you'll need to use HDWalletProvider. In addition to providing the `mnemonic` and `network_id`, we must specify the initial account index (`0`), total number of accounts (`10`), and set the `shareNonce` option to `false`. Here's a complete example:
 
 ```javascript
 const HDWalletProvider = require("@truffle/hdwallet-provider");
