@@ -22,7 +22,7 @@ Finally, click **Install** to install Truffle Teams on the selected repositories
 ![Truffle Teams DATA view](/img/docs/teams/install-03.png)
 
 <p class="alert alert-warning">
-<strong>Why do we need certain permissions?</strong>: Please see the <a href="/docs/teams/reference/permissions-disclosure">Permissions Disclosure</a> section for a full breakdown of why we're asking for each permission.
+<strong>Why do we need certain permissions?</strong> Please see the <a href="/docs/teams/reference/permissions-disclosure">Permissions Disclosure</a> section for a full breakdown of why we're asking for each permission.
 </p>
 
 ![Truffle Teams DATA view](/img/docs/teams/install-03.png)
