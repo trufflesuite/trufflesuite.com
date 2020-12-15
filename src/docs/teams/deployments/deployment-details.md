@@ -2,11 +2,12 @@
 title: Teams | Deployment details
 layout: docs.hbs
 ---
+
 # Deployment details
 
-From the Deployment Details page, you can the associated contracts, addresses, [transactions](/docs/teams/contract-monitoring), and [deployment console output](/docs/teams/deployments/deployment-console).
+From the deployment details page, you can view the associated contracts, addresses, [transactions](/docs/teams/contract-monitoring), and [deployment console output](/docs/teams/deployments/deployment-console).
 
-To view the Deployment Details page, head to **<span class="inline-menu-item"><i class="fal fa-parachute-box"></i>DEPLOYMENTS</span>** and click on the deployment name you would like to view.
+To view the deployment details page, head to **<span class="inline-menu-item"><i class="fal fa-parachute-box"></i>DEPLOYMENTS</span>** and click on the deployment name you would like to view.
 
 If you're using the **TABLE** view, you can find the deployment name under the **NAME** column.
 
