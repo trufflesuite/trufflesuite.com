@@ -19,7 +19,7 @@ There will be three or four tabs to toggle between, depending on your permission
 1. [Billing](#billing-and-plans)
 1. [Builds](#builds)
 1. [Advanced](#advanced)
-1. [Users](#users) (this tab will only appear if you have admin permissions)
+1. [Users](#users) (this tab will only appear if you are a part of an organization)
 
 ## Billing and plans
 
@@ -45,4 +45,4 @@ The advanced tab is where you can opt-in to early access features that are cutti
 
 ## Users
 
-The **USERS** tab will only appear if you have admin permissions. Here you can find a list of users and their permissions. This information can be particularaly useful if you're part of an organization and need to view or manage your teams permissions.
+The **USERS** tab will only appear if you are a part of an organization. Here you can find a list of users within the organization and their permissions. This information can be particularaly useful if you need to view or manage your teams permissions.
