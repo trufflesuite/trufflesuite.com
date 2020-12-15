@@ -1,9 +1,9 @@
 ---
-title: Teams | Dashboard
+title: Teams | Dashboard overview
 layout: docs.hbs
 ---
 
-# Dashboard
+# Dashboard overview
 
 The Truffle Teams dashboard allows you to get at-a-glance information about the health of a deployed DApp such as a link to the commit which was deployed, the cost of your deployment, and transactions over time.
 
