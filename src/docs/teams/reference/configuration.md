@@ -2,6 +2,7 @@
 title: Teams | Configuration
 layout: docs.hbs
 ---
+
 # Configuration
 
 ## Repository structure
@@ -31,7 +32,6 @@ When deploying, Truffle Teams ignores any user-provided options in the `networks
 **Görli Ethereum Network:** `goerli`<br/>
 **Rinkeby Ethereum Network:** `rinkeby`<br/>
 **Kovan Ethereum Network:** `kovan`<br/>
-**Sandbox Network:** Use the name of your Sandbox, except single and double quotation marks are removed. Below are some examples.
-
+**Sandbox Network:** Use the name of your Sandbox, except single and double quotation marks are removed. <br />
 `truffles-sandbox` => `truffles-sandbox`<br/>
 `Truffle's "Sandbox"` => `Truffles Sandbox`
