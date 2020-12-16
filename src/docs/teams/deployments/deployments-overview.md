@@ -5,7 +5,7 @@ layout: docs.hbs
 
 # Deployments overview
 
-Truffle Teams provides a quick and easy interface for deploying your smart contracts to Ethereum testnets, sandboxes, and mainnet. On the **<span class="inline-menu-item"><i class="fal fa-parachute-box"></i>DEPLOYMENTS</span>** page, you can toggle between two views: [cards](#cards-view) and [table](#table-view).
+Truffle Teams provides a quick and easy interface for deploying your smart contracts to Ethereum testnets, mainnet, and [sandboxes](/docs/teams/sandboxes/sandboxes-overview). On the **<span class="inline-menu-item"><i class="fal fa-parachute-box"></i>DEPLOYMENTS</span>** page, you can toggle between two views: [cards](#cards-view) and [table](#table-view).
 
 ## Cards view
 
