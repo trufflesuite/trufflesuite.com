@@ -19,7 +19,7 @@ Click the **TRANSACTIONS** tab to see all transactions for all associated contra
 
 ## Viewing transactions for a specific contract
 
-Click the **CONTRACTS** tab and click <span class="inline-button"><i class="far fa-heart-rate"> **MONITOR**</i></span> to see contracts for a specific contract.
+Click the **CONTRACTS** tab and click **<span class="inline-button"><i class="far fa-heart-rate"></i> MONITOR</span>** to see contracts for a specific contract.
 
 <figure>
   <img class="figure-shadow mb-2" src="/img/docs/teams/transactions-contract.png" alt="Transactions page for a specific contract" style="width: 100%">
