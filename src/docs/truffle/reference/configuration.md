@@ -494,7 +494,8 @@ dependencies: {
 
 ### license
 
-License to use for this package. Strictly informative.
+License to use for this package; primarily informative.  Contracts created with `truffle create` will
+also include this in their `SPDX-License-Identifier` comment.
 
 Example:
 ```javascript
