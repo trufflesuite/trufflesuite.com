@@ -7,7 +7,7 @@ layout: docs.hbs
 
 Truffle Teams monitors your deployments for new transactions. You can view these transactions by going to the [detail page](/docs/teams/deployments/deployment-details) for the respective deployment.
 
-You can either view all the associated transactions at once or only the transactions for a specific contract.
+You can either [view all the associated transactions](#viewing-all-associated-transactions) at once or only the [transactions for a specific contract](#viewing-transactions-for-a-specific-contract).
 
 ## Viewing all associated transactions
 
