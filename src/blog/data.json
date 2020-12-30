@@ -1,4 +1,12 @@
 {
+  "2020-is-finally-over-a-year-end-wrapup": {
+    "title": "2020 is Finally Over: A Year End Wrapup",
+    "date": "2020-12-22",
+    "author": "Josh Quintal & The Truffle Team",
+    "published": true,
+    "excerpt": "2020 has been a trying time for us all: COVID-19 is still ravaging the world, the United States mired through one of our most contentious elections yet; basically, it’s been a rough year. Let’s take a look back at some positive things that came out of 2020, along with a little of what to look forward to in 2021.",
+    "image": "/img/blog/2020-is-finally-over-a-year-end-wrapup/blog-thumbnail.png"
+  },
   "debug-quickly-and-in-context-with-truffle-teams-new-debugger": {
     "title": "Debug Quickly and in Context with Truffle Teams New Debugger",
     "date": "2020-11-12",
