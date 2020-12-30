@@ -14,24 +14,32 @@ This year was a busy one for Truffle, but the biggest news squeaked in just in t
 
 It was also a big year for Truffle Teams. We’ve added new features and enhanced existing ones to complete the core workflow Truffle Teams offers (I summarize this in our final Dapp Lifecycle webinar episode here). Big highlights include the release of:
 
-* **Dashboard** ([Blog](https://www.trufflesuite.com/blog/get-a-birds-eye-view-with-truffle-teams-new-dashboard) | [Docs](https://www.trufflesuite.com/docs/teams/dashboard/dashboard-overview)): More incoming data begets a greater need to gain insights and properly segment that data to prevent overload. Truffle Teams new dashboard provides an overview of your application, along with ways to drill down and get further context on more narrow slices.
-* **Debugger** ([Blog](https://www.trufflesuite.com/blog/debug-quickly-and-in-context-with-truffle-teams-new-debugger) | [Docs](https://www.trufflesuite.com/docs/teams/debugger/debugger-overview)): This is a huge workflow enhancement--allowing us to debug transactions in the places we're already viewing--via the deployment details screen or while monitoring individual contracts.
-* **Early Access** ([Blog](https://www.trufflesuite.com/blog/try-new-features-first-with-truffle-teams-early-access)): Truffle Teams is constantly evolving. Between adding new features, polishing, and refining the app there's so much we'd love to share with the world in a faster way. Wouldn't it be nice to take those new enhancements and features for a test drive? Now you can with early access!
-* **Deployment and Monitoring Improvements** ([Blog](https://www.trufflesuite.com/blog/you-decide-pipeline-or-table-view-in-truffle-teams-deployments-managerhttps://www.trufflesuite.com/blog/you-decide-pipeline-or-table-view-in-truffle-teams-deployments-manager) | [Docs](https://www.trufflesuite.com/docs/teams/deployments/deployments-overview)): We’ve added a table view and a deployment details page. We're also offering more insight into each deployment, by providing the cost and console output.
+* **Dashboard** ([Blog](/blog/get-a-birds-eye-view-with-truffle-teams-new-dashboard) | [Docs](/docs/teams/dashboard/dashboard-overview)): More incoming data begets a greater need to gain insights and properly segment that data to prevent overload. Truffle Teams new dashboard provides an overview of your application, along with ways to drill down and get further context on more narrow slices.
+* **Debugger** ([Blog](/blog/debug-quickly-and-in-context-with-truffle-teams-new-debugger) | [Docs](/docs/teams/debugger/debugger-overview)): This is a huge workflow enhancement--allowing us to debug transactions in the places we're already viewing--via the deployment details screen or while monitoring individual contracts.
+* **Early Access** ([Blog](/blog/try-new-features-first-with-truffle-teams-early-access)): Truffle Teams is constantly evolving. Between adding new features, polishing, and refining the app there's so much we'd love to share with the world in a faster way. Wouldn't it be nice to take those new enhancements and features for a test drive? Now you can with early access!
+* **Deployment and Monitoring Improvements** ([Blog](/blog/you-decide-pipeline-or-table-view-in-truffle-teams-deployments-manager/blog/you-decide-pipeline-or-table-view-in-truffle-teams-deployments-manager) | [Docs](/docs/teams/deployments/deployments-overview)): We’ve added a table view and a deployment details page. We're also offering more insight into each deployment, by providing the cost and console output.
 
 Before the end of this year, we’ll be releasing the Contract Manager to Early Access, completing the workflow and allowing teams to build, deploy, monitor, and debug conveniently in one place.
 
 ### Truffle’s Unstoppable Release Schedule
 
-For 62 weeks and counting, Truffle has released on a weekly basis. We’re so proud of our team for their hard work and commitment to improving the lives of other developers. We don’t have any plans to stop this cadence--full steam ahead for the Truffle train!
+Going on 2 years now, Truffle has released on a weekly basis. We’re so proud of our team for their hard work and commitment to improving the lives of other developers. We don’t have any plans to stop this cadence--full steam ahead for the Truffle train!
+
+### Debugger and Test Enhancements
+
+2020 saw great improvements to Truffle, including debugging verified contracts with `truffle debug --fetch-external` ([Blog](/blog/debugging-verified-external-contracts-with-truffle-debugger)), support for stacktraces in tests with `truffle test --stacktrace` ([Blog](/blog/stack-tracing-with-truffle-test)), and even freshly-added support for stepping through Vyper contracts!
+
+### Forking in Ganache – much improved!
+
+Since the summer of 2020 saw DeFi reach a whole new level of usage, more and more people have been looking to test their code against live smart contracts on-chain. Ganache has always had its `--fork` option, but thanks to members of the community, we’ve fixed more than half a dozen critical bugs that inhibited certain use cases. Forking is more reliable than ever!
 
 ### Collaborations
 
 2020 was a year of partnerships for Truffle, seeing us make good on the vision to become a multi-blockchain toolset.
 
-* **Tezos** ([Blog](https://www.trufflesuite.com/blog/branching-out-announcing-tezos-support-in-truffle) | [Docs](https://www.trufflesuite.com/docs/tezos/truffle/quickstart)): Tezos is supported in Truffle! Many of the commands you’re used to are still here: compile, deploy, test, and console!
-* **Corda** ([Blog](https://www.trufflesuite.com/blog/branching-out-phase-2-of-corda-flavored-ganache) | [Docs](https://www.trufflesuite.com/docs/ganache/corda/working-with-corda)): Ganache UI supports creating Corda networks! Easily create and introspect into a local Corada development network with a familiar UI.
-* **Filecoin** ([Blog](https://www.trufflesuite.com/blog/announcing-collaboration-with-filecoin)): Truffle Preserve allows you to easily preserve files on IPFS and/or Filecoin.
+* **Tezos** ([Blog](/blog/branching-out-announcing-tezos-support-in-truffle) | [Docs](/docs/tezos/truffle/quickstart)): Tezos is supported in Truffle! Many of the commands you’re used to are still here: compile, deploy, test, and console!
+* **Corda** ([Blog](/blog/branching-out-phase-2-of-corda-flavored-ganache) | [Docs](/docs/ganache/corda/working-with-corda)): Ganache UI supports creating Corda networks! Easily create and introspect into a local Corada development network with a familiar UI.
+* **Filecoin** ([Blog](/blog/announcing-collaboration-with-filecoin)): Truffle Preserve allows you to easily preserve files on IPFS and/or Filecoin.
 
 ## A Look Forward
 
@@ -70,7 +78,7 @@ As mentioned above, now that we’re a part of ConsenSys Software Inc, Truffle's
 
 ## Catch us on Slack
 
-We want Truffle the best developer tools group in the blockchain space for new and seasoned devs alike. Let us know what you think about our plans, or if you/your team have other needs we haven't met yet.
+We want Truffle the best developer tool suite in the blockchain space for new and seasoned devs alike. Let us know what you think about our plans, or if you/your team have other needs we haven't met yet.
 
 Continue the conversation with your fellow Trufflers in our Slack community!
 
