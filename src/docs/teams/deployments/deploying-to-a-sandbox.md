@@ -7,7 +7,7 @@ layout: docs.hbs
 
 To deploy to a sandbox, be sure that you have already created a sandbox, or head to the <a href="/docs/teams/sandboxes/creating-a-sandbox">Creating a sandbox</a> section of our documentation for more information.
 
-Follow the initial steps in <a href="/docs/teams/deployments/creating-a-deployment">Creating a Deployment</a> to start a deployment. When selecting the **Destination Network**, you'll see the name of your available sandboxes in the dropdown.
+Follow the steps in <a href="/docs/teams/deployments/creating-a-deployment">Creating a Deployment</a> to start a deployment. At the second step, <a href="docs/teams/deployments/creating-a-deployment#select-network-and-connect-wallet">Select network and connect wallet</a>, you'll see the name of your available sandboxes in the **Destination Network** dropdown.
 
 <figure>
   <img class="figure-shadow mb-2" src="/img/docs/teams/sandbox-deployment.png" alt="Deployment wizard list of destination networks">
