@@ -9,11 +9,11 @@ Truffle Teams provides a quick and easy interface for deploying your smart contr
 
 ## Cards view
 
-The cards view contains three columns: **Commits**, **Staging**, and **Production**. These columns contain your builds available to be deployed as well as any successful deployments.
+The **CARDS** view contains three columns: **Commits**, **Staging**, and **Production**. These columns contain your builds available to be deployed as well as any successful deployments.
 
 <figure>
-  <img class="figure-shadow mb-2" src="/img/docs/teams/deployments-card-view.png" alt="Deployments card view" style="width: 100%">
-  <figcaption class="text-center font-italic">Deployments card view</figcaption>
+  <img class="figure-shadow mb-2" src="/img/docs/teams/deployments-card-view.png" alt="Deployments cards view" style="width: 100%">
+  <figcaption class="text-center font-italic">Deployments cards view</figcaption>
 </figure>
 
 ### Builds Column
@@ -30,7 +30,7 @@ The cards view contains three columns: **Commits**, **Staging**, and **Productio
 
 ## Table view
 
-The table view contains a list of all of your successful deployments, regardless of what network they were deployed to. There is a **NETWORK** column that indicates which network the deployment was deployed on.
+The **TABLE** view contains a list of all of your successful deployments, regardless of what network they were deployed to. There is a **NETWORK** column that indicates which network the deployment was deployed on.
 
 <figure>
   <img class="figure-shadow mb-2" src="/img/docs/teams/deployments-table-view.png" alt="Deployments table view" style="width: 100%">

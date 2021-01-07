@@ -12,9 +12,9 @@ From the deployment details page, you can view the associated contracts, address
   <figcaption class="text-center font-italic">Deployment details view</figcaption>
 </figure>
 
-Directions for navigating to the deployment detail page differs depending on if you're using the [card](#card-view) or [table](#table-view) view for deployments.
+Directions for navigating to the deployment detail page differs depending on if you're using the [cards](#cards-view) or [table](#table-view) view for deployments.
 
-### Card view
+### Cards view
 
 To get to the deployment details page, you can click on the deployment name in the **Deployment Details** section of the deployment card.
 

@@ -17,9 +17,9 @@ Creating a deployment slightly differs depending on which view you have selected
 
 ## Choose a commit to deploy
 
-This step can differ slightly depending on which deployments view you are using, [card](#card-view) or [table](#table-view).
+This step can differ slightly depending on which deployments view you are using, [cards](#cards-view) or [table](#table-view).
 
-### Card view
+### Cards view
 
 To begin a deployment, press **<span class="inline-button">DEPLOY <i class="far fa-parachute-box"></i></span>** on the build you'd like to deploy. You can also click **<span class="inline-button"><i class="fas fa-rocket"></i> NEW DEPLOYMENT</span>**. The deployment wizard modal will pop-up and walk you through the deployment process.
 
@@ -29,7 +29,7 @@ To begin a deployment, press **<span class="inline-button">DEPLOY <i class="far 
 
 ### Table view
 
-For the table view, you'll select a build to deploy from within the deployment wizard. To start a deployment, click **<span class="inline-button"><i class="fas fa-rocket"></i> NEW DEPLOYMENT</span>**, this will open the deployment wizard modal. From the **Build to Deploy** dropdown, select which build to deploy.
+For the **TABLE** view, you'll select a build to deploy from within the deployment wizard. To start a deployment, click **<span class="inline-button"><i class="fas fa-rocket"></i> NEW DEPLOYMENT</span>**, this will open the deployment wizard modal. From the **Build to Deploy** dropdown, select which build to deploy.
 
 <figure>
   <img class="figure-shadow mb-2" src="/img/docs/teams/table-view-deployment-wizard.png" alt="Table view deployment wizard">
@@ -107,4 +107,4 @@ After a short wait, you'll see a window with your deployment results:
   <img class="figure-shadow mb-2" src="/img/docs/teams/deployment-wizard-results.png" alt="Deployment wizard results modal">
 </figure>
 
-Your contracts are deployed! That was easy. Go ahead and push **<span class="inline-button">GREAT! GO BACK TO WORKFLOW</span>** or the **X** in the wizard. If you're using the card view, you should now see a new card under the **Staging** column. If you're using the table view, the new deployment will appear in the first row. For more information check out the [Deployment details](/docs/teams/deployments/deployment-details) section of our documentation.
+Your contracts are deployed! That was easy. Go ahead and push **<span class="inline-button">GREAT! GO BACK TO WORKFLOW</span>** or the **X** in the wizard. If you're using the **CARDS** view, you should now see a new card under the **Staging** column. If you're using the **TABLE** view, the new deployment will appear in the first row. For more information check out the [Deployment details](/docs/teams/deployments/deployment-details) section of our documentation.

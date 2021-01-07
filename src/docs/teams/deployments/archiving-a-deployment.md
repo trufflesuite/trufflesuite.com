@@ -5,11 +5,11 @@ layout: docs.hbs
 
 # Archiving a deployment
 
-No longer need a particular deployment? To archive a deployment, go to **<span class="inline-menu-item"><i class="fal fa-parachute-box"></i>DEPLOYMENTS</span>**. Depending on which view you are using the steps can vary: [card](#card-view) or [table](#table-view).
+No longer need a particular deployment? To archive a deployment, go to **<span class="inline-menu-item"><i class="fal fa-parachute-box"></i>DEPLOYMENTS</span>**. Depending on which view you are using the steps can vary: [cards](#cards-view) or [table](#table-view).
 
-### Card view
+### Cards view
 
-If you're using the **CARD** view, click on the 3 vertical dots of your chosen deployment, select **ARCHIVE**, and confirm the archival.
+If you're using the **CARDS** view, click on the 3 vertical dots of your chosen deployment, select **ARCHIVE**, and confirm the archival.
 
 ![Deployment Card Menu](/img/tutorials/learn-how-to-deploy-with-truffle-teams/deployment-card-menu.png)
 
