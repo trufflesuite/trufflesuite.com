@@ -29,7 +29,7 @@ To begin a deployment, press **<span class="inline-button">DEPLOY <i class="far 
 
 ### Table view
 
-For the table view, you'll select a build to deploy from within the deployment wizard. To start a deployment, click **<span class="inline-button"><i class="fas fa-rocket"></i> NEW DEPLOYMENT</span>**, this will open the deployment wizard modal. Under **Build to Deploy**, select which build you would like to deploy from the dropdown.
+For the table view, you'll select a build to deploy from within the deployment wizard. To start a deployment, click **<span class="inline-button"><i class="fas fa-rocket"></i> NEW DEPLOYMENT</span>**, this will open the deployment wizard modal. From the **Build to Deploy** dropdown, select which build to deploy.
 
 <figure>
   <img class="figure-shadow mb-2" src="/img/docs/teams/table-view-deployment-wizard.png" alt="Table view deployment wizard">
@@ -107,28 +107,4 @@ After a short wait, you'll see a window with your deployment results:
   <img class="figure-shadow mb-2" src="/img/docs/teams/deployment-wizard-results.png" alt="Deployment wizard results modal">
 </figure>
 
-Your contracts are deployed! That was easy. Go ahead and push **<span class="inline-button">GREAT! GO BACK TO WORKFLOW</span>** or the **X** in the wizard. If you're using the card view, you'll now see a new card in the **Staging** column with the results of your deployment.
-
-<figure>
-  <img class="mb-5" src="/img/docs/teams/deployment-card.png" alt="Deployment Card">
-</figure>
-
-You can click on the **+ Contracts** bar on the bottom of the card to see a list of your deployed contracts and their addresses:
-
-<figure>
-  <img class="mb-5" src="/img/docs/teams/deployment-card-expanded.png" alt="Deployment Card Expanded">
-</figure>
-
-You can also click the vertical 3 dots in the top right of the card to find a menu. In this menu, you can download a **.zip** file of the Truffle **.json** artifacts used in your frontend webapp, graduate a deployment to production, or archive the deployment.
-
-<p class="alert alert-warning">
-<strong><i class="far fa-exclamation-triangle"></i> Be careful</strong> when using the archive feature; we haven't implemented a way to unarchive deployments yet.
-</p>
-
-![Deployment Card Menu](/img/tutorials/learn-how-to-deploy-with-truffle-teams/deployment-card-menu.png)
-
-If you're using the table view, you'll now see your new deployment in the first row of the deployments table. You can click on the **ACTIONS** dropdown menu to **Download Artifacts**, **Graduate**, or **Archive** the deployment.
-
-<figure>
-  <img class="figure-shadow mb-2" src="/img/docs/teams/deployment-table-actions-expanded.png" alt="Deployments table" style="width:100%">
-</figure>
+Your contracts are deployed! That was easy. Go ahead and push **<span class="inline-button">GREAT! GO BACK TO WORKFLOW</span>** or the **X** in the wizard. If you're using the card view, you should now see a new card under the **Staging** column. If you're using the table view, the new deployment will appear in the first row. For more information check out the [Deployment details](/docs/teams/deployments/deployment-details) section of our documentation.
