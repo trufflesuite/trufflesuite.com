@@ -22,13 +22,13 @@ Located directly below the transaction hash is the debugger's control palette.
   <figcaption class="text-center">The Truffle Teams Debugger Control Palette.</figcaption>
 </figure>
 
-From left to right, the controls, with a description of their associated action, are as follows. Note that you can also hover a control to display its associated name.
+From left to right, the controls, with a description of their associated action, are as follows. Note that you can also hover a control to display its associated name. Note that the brackets contain the corresponding keyboard shortcuts for each command.
 
-- <code>Continue</code> - continue until the next breakpoint is reached or the last line is executed
-- <code>Step Over</code> - steps over the current line
-- <code>Step Into</code> - steps into the function call or contract creation currently being evaluated
-- <code>Step Out</code> - steps out of the currently running function
-- <code>Restart</code> - restarts the debugger session
+- <code>Continue</code> - continue until the next breakpoint is reached or the last line is executed ("c" or "F8")
+- <code>Step Over</code> - steps over the current line ("o" or "F10")
+- <code>Step Into</code> - steps into the function call or contract creation currently being evaluated ("i" or "F11")
+- <code>Step Out</code> - steps out of the currently running function ("u" or "Shift+F11")
+- <code>Restart</code> - restarts the debugger session ("r")
 
 ## Source Files
 
