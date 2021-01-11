@@ -79,8 +79,8 @@ Similarly, the following migration file would use the `ENS.sol` contract from th
 File: `./migrations/2_deploy_contracts.js`
 
 ```javascript
-var ENS = artifacts.require("ens/ENS");
-var MyContract = artifacts.require("MyContract");
+const ENS = artifacts.require("ens/ENS");
+const MyContract = artifacts.require("MyContract");
 
 module.exports = function(deployer) {
   // Only deploy ENS if there's not already an address already.
@@ -118,11 +118,11 @@ Then edit your configuration to add a provider using your 12-word mnemonic. The 
 File: `truffle-config.js`
 
 ```javascript
-var HDWalletProvider = require("truffle-hdwallet-provider");
+const HDWalletProvider = require("truffle-hdwallet-provider");
 
 // 12-word mnemonic
-var mnemonic = "opinion destroy betray ...";
-var infuraKey = "INFURA_PROJECT_ID";
+const mnemonic = "opinion destroy betray ...";
+const infuraKey = "INFURA_PROJECT_ID";
 
 module.exports = {
   ethpm: {
