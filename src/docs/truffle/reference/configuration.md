@@ -425,69 +425,49 @@ workflow commands. For more information, see [Third-Party Plugin Commands](/docs
 
 
 
-## EthPM configuration
+## ethpm configuration
 
 This configuration applies to the optional `ethpm.json` file that exists alongside your `truffle.js` configuration file.
 
-### package_name
+### name
 
-Name of the package you're publishing. Your package name must be unique to the EthPM registry.
-
-Example:
-```javascript
-package_name: "adder"
-```
+(required) Name of the package you're publishing. Your package name must be unique to the ethpm registry.
 
 ### version
 
-Version of this package, using the [semver](http://semver.org/) specification.
+(required) Version of this package. It's recommended to use the [semver](http://semver.org/) specification.
+
+### meta
+
+Metadata about the package.
+
+- `description`: A text description of your package for human readers.
+- `authors`: An array of authors.
+- `keywords`: An array of keywords that tag this package with helpful categories.
+- `license`: License to use for this package. Strictly informative.
+- `links`: Useful links related to the packages. Recommended fields include: `website`, `documentation` and `repository`.
 
 Example:
-```javascript
-version: "0.0.3"
-```
-
-### description
-
-A text description of your package for human readers.
-
-Example:
-```javascript
-description: "Simple contract to add two numbers"
-```
-
-### authors
-
-An array of authors. Can have any format, but we recommend the format below.
-
-Example:
-```javascript
-authors: [
-  "Tim Coulter <tim.coulter@consensys.net>"
-]
-```
-
-### keywords
-
-An array of keywords that tag this package with helpful categories.
-
-Example:
-```javascript
-keywords: [
-  "ethereum",
-  "addition"
-],
-```
-
-### dependencies
-
-A list of EthPM packages your package depends on, using [semver](http://semver.org/) version ranges, like npm.
-
-Example:
-```javascript
-dependencies: {
-  "owned": "^0.0.1",
-  "erc20-token": "1.0.0"
+```json
+{
+  "name": "adder",
+  "version": "0.0.3",
+  "meta": {
+    "description": "Simple contract to add two numbers",
+    "authors": [
+      "Tim Coulter <tim.coulter@consensys.net>"
+    ],
+    "keywords": [
+      "ethereum",
+      "addition"
+    ],
+    "license": "MIT",
+    "links": {
+      "website": "www.adderproject.com",
+	  "documentation": "www.readthedocs.com/adder",
+	  "repository": "www.github.com/adderproject/adder"
+    }
+  }
 }
 ```
 

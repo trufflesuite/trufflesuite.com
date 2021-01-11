@@ -13,7 +13,7 @@ jQuery(function($) {
         "Compiling Contracts",
         "Running Migrations",
         "Interacting with Your Contracts",
-        "Package Management via EthPM",
+        "Package Management via ethpm",
         "Package Management via NPM",
         "Debugging Your Contracts",
         "Using Truffle Develop and The Console",
@@ -97,4 +97,4 @@ jQuery(function($) {
     var results = idx.search("migration"); // Get lunr to perform a search
     console.log(results);  
   });
-});
+})
