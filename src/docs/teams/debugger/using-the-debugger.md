@@ -63,6 +63,19 @@ Next to the source viewport is the variable inspector. This shows the variable v
   <figcaption class="text-center">The Truffle Teams Debugger Variable Inspector.</figcaption>
 </figure>
 
+## Breakpoints
+
+Located in the lower right corner of the screen is the breakpoint tray. Breakpoints are added to the tray by clicking on a given line number or just to the left in the line's "gutter". They can subsequently be removed by clicking in the same location or on the circular cross <i class="fas fa-times-circle" style="color: #BCA296"></i> to the right of the breakpoint entry in the tray itself.
+
+<figure class="screenshot">
+  <img class="figure-shadow mb-2 w-100" src="/img/docs/teams/debugger-breakpoints.png" alt="Teams Debugger Breakpoints">
+  <figcaption class="text-center">The Truffle Teams Debugger Breakpoints.</figcaption>
+</figure>
+
+Functionally, breakpoints will cause code execution to stop (or break) upon being reached. At this point it's common to inspect state via the [Variable Inspector](#debugger-variable-inspector) or continue [stepping through](#debugger-control-palette) to ensure your code is behaving as expected or when tracking down a bug.
+
+Lastly, note that clicking on a given breakpoint within the tray will jump you to the corresponding tab and line. This is particularly useful when navigating more complex contracts that comprise of multiple files.
+
 ## Status Messages
 
 If your transaction's execution ultimately fails, a banner appear after the `REVERT` happens. An associated status message or reason string will be shown if one exists. The screenshot below provides an example.
