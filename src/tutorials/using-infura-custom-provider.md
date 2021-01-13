@@ -1,4 +1,4 @@
-[Infura](https://infura.io/) is a hosted Ethereum node cluster that lets your users run your application without requiring them to set up their own Ethereum node or wallet.
+[Infura’s API suite](https://infura.io/) provides instant HTTPS and WebSocket access to the Ethereum and IPFS networks. By using Infura, you can connect easily to Web 3.0 without having to spin-up and maintain your own infrastructure. Their [core service is free](https://infura.io/pricing) and provides everything you need to start building awesome decentralized applications today!
 
 ![Infura](/img/tutorials/infura/infura.png)
 
@@ -24,10 +24,7 @@ npm install @truffle/hdwallet-provider
 
 ## Register with Infura and create a new project
 
-Before you can use Infura, you need to [register](https://infura.io/signup).
-
-Upon registration you will be able to create a new project, which will in turn generate a new Project ID (and the associated Infura API endpoint URLs). Make sure you save this key and keep it private!
-
+Before you can use Infura, you need to [register](https://infura.io/signup). Upon registration, [this guide](https://blog.infura.io/getting-started-with-infura-28e41844cc89/) will walk you through creating a new project, authenticating with your new Project ID and Secret, securely copying your keys and selecting the appropriate network endpoint.
 
 ## Configure your Truffle project
 
@@ -39,7 +36,7 @@ The next step is to edit your `truffle-config.js` file to use `HDWalletProvider`
    const HDWalletProvider = require("@truffle/hdwallet-provider");
    ```
 
-2. Next, provide a reference to your mnemonic that generates your accounts. If you don't have a mnemonic, you can generate one using an [online mnemonic generator](https://iancoleman.io/bip39) or a hardware wallet such as a product from [Ledger](https://www.ledgerwallet.com).
+2. Next, provide a reference to your mnemonic that generates your accounts. If you don't have a mnemonic, you can generate one using an [online mnemonic generator](https://iancoleman.io/bip39) or a hardware wallet such as a product from [Ledger](https://www.ledger.com).
 
    ```javascript
    const mnemonic = "orange apple banana ... ";
@@ -70,7 +67,11 @@ The next step is to edit your `truffle-config.js` file to use `HDWalletProvider`
 
    * The `provider` for the `ropsten` network definition instantiates the `HDWalletProvider`.
 
-   * The `HDWalletProvider` takes as arguments a mnemonic and the desired network. A list of Infura-supported networks is available on the [Infura homepage](https://infura.io/).
+   * The `HDWalletProvider` takes as arguments a mnemonic and the desired network. A list of Infura-supported networks is available in the Endpoints dropdown on your Infura Project Settings page.
+
+<figure class="screenshot">
+  <img class="figure-shadow mb-2 w-100" src="/img/tutorials/infura/infura-project-details.png" alt="Infura Project Details">
+</figure>
 
    * Make sure to replace `<INFURA_PROJECT_ID>` with your Infura Project ID.
 
@@ -119,39 +120,39 @@ We are now ready to deploy to Ropsten!
 
    If all goes well, you should see a response that looks similar to the following:
 
-   ```
-   Starting migrations...
-   ======================
-   > Network name:    'ropsten'
-   > Network id:      3
-   > Block gas limit: 0x6691b7
+```
+Starting migrations...
+======================
+> Network name:    'ropsten'
+> Network id:      3
+> Block gas limit: 0x6691b7
 
 
-   1_initial_migration.js
-   ======================
+1_initial_migration.js
+======================
 
-      Deploying 'Migrations'
-      ----------------------
-      > transaction hash:    0x166c1791caa73cca6a75fe4258866bd1f2d1bcf2cd4c3a2a1e03fab29c42829d
-      > Blocks: 0            Seconds: 0
-      > contract address:    0x5ccb4dc04600cffA8a67197d5b644ae71856aEE4
-      ......
-      ......
-   ```
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x166c1791caa73cca6a75fe4258866bd1f2d1bcf2cd4c3a2a1e03fab29c42829d
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x5ccb4dc04600cffA8a67197d5b644ae71856aEE4
+   ......
+   ......
+```
 
-   Note that your transaction hash and contract address will be different from the ones above.
+Note that your transaction hash and contract address will be different from the ones above.
 
-   <p class="alert alert-info">
+<p class="alert alert-info">
    <strong>Note</strong>: If you receive an error `Error: Exceeds block gas limit
-`, you may need to manually set the gas limit for your contract. See the [Truffle Configuration](/docs/advanced/configuration) documentation for details.
-   </p>
+   `, you may need to manually set the gas limit for your contract. See the [Truffle Configuration](/docs/advanced/configuration) documentation for details.
+</p>
 
-1. If you want to verify that your contract was deployed successfully, you can check this on the [Ropsten section of Etherscan](https://ropsten.etherscan.io/). In the search field, type in the transaction ID for your contract. In the above example, the transaction ID is:
+If you want to verify that your contract was deployed successfully, you can check this on the [Ropsten section of Etherscan](https://ropsten.etherscan.io/). In the search field, type in the transaction ID for your contract. In the above example, the transaction ID is:
 
-   ```
-   0x166c1791caa73cca6a75fe4258866bd1f2d1bcf2cd4c3a2a1e03fab29c42829d
-   ```
+```
+0x166c1791caa73cca6a75fe4258866bd1f2d1bcf2cd4c3a2a1e03fab29c42829d
+```
 
-   You should see details about the transaction, including the block number where the transaction was secured.
+You should see details about the transaction, including the block number where the transaction was secured.
 
 Congratulations! You've deployed your contract to Ropsten using the combined power of Infura and Truffle.
