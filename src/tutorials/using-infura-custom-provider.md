@@ -1,3 +1,7 @@
+<figure class="screenshot">
+  <img class="figure-shadow mb-2 w-100" src="/img/tutorials/infura/infura-truffle.png" alt="Infura Truffle logos">
+</figure>
+
 [Infura’s API suite](https://infura.io/) provides instant HTTPS and WebSocket access to the Ethereum and IPFS networks. By using Infura, you can connect easily to Web 3.0 without having to spin-up and maintain your own infrastructure. Their [core service is free](https://infura.io/pricing) and provides everything you need to start building awesome decentralized applications today!
 
 ![Infura](/img/tutorials/infura/infura.png)
