@@ -113,7 +113,13 @@ Regardless of how you start the debugger, once it is running you are not limited
 You can specify the network you want to debug on with the `--network` option:
 
 ```shell
-$ truffle debug <transaction hash> --network <network>
+$ truffle debug [<transaction hash>] --network <network>
+```
+
+And if you want to debug your [Solidity test contracts](../testing/writing-tests-in-solidity), you can pass the `--compile-tests` option:
+
+```shell
+$ truffle debug [<transaction hash>] --compile-tests
 ```
 
 And with the `--fetch-external` option ([see below](#debugging-external-contracts-with-verified-source)), you can debug contract instances outside your project that have verified source code on [Etherscan](https://etherscan.io/) or [Sourcify](https://github.com/ethereum/sourcify).  When using this option, you must specify a transaction hash to debug, and you will not be able to switch transactions from inside the debugger.
