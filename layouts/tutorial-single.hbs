@@ -62,7 +62,7 @@
       <div class="col">
         <h1>{{getMetadata "tutorials" path.name "title"}}</h1>
         <ul class="list-sm-stacker space-icon mb-0">
-          <li><i class="far fa-calendar-alt"></i> {{getMetadata "tutorials" path.name "date"}}&nbsp;&nbsp;&nbsp;</li>
+          <li><i class="far fa-calendar-alt"></i> {{getMetadata "tutorials" path.name "date"}}&nbsp;{{#if (metadataExists "tutorials" path.name "updated")}}(updated {{getMetadata "tutorials" path.name "updated"}}){{/if}}&nbsp;&nbsp;</li>
           <li><i class="far fa-user"></i> {{getMetadata "tutorials" path.name "author"}}</li>
         </ul>
       </div>
