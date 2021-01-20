@@ -74,17 +74,16 @@ The best place to find an interesting ethpm package is from the package author. 
 In this tutorial, we'll be using a package containing the OpenZeppelin ERC20 contract. This package is for tutorial purposes only, it has not been audited and should not be used in production.
 
 - name: `erc20-example`
-- version: `0.0.1`
-- manifest uri: `ipfs://QmYmstuuQmVVaWvde5VHzwxs5zDaJbjGk8nGHeTfZnEgoe`
-- ethpm uri: `ethpm://0x0bd0200357D26A0bB5d1D1c1Fd56C317B68d15d5:3/erc20-example@0.0.1`
+- version: `0.0.2`
+- manifest uri: `ipfs://QmZH3Pz5QzT4rWS3ccsFe7ozXZ3fqj7j8FnwJ62REa4war`
+- ethpm uri: `ethpm://0x0bd0200357D26A0bB5d1D1c1Fd56C317B68d15d5:3/erc20-example@0.0.2`
 - layout:
 	- `erc20/`
-		- `ERC20.sol`
-		- `IERC20.sol`
-		- `GSN/Context.sol`
-		- `buildDependencies/`
-			- `safe-math`
-				- `SafeMath.sol`
+		- '_src/'
+			- `ERC20.sol`
+			- `IERC20.sol`
+			- `GSN/Context.sol`
+			- `safe-math/SafeMath.sol`
 		- `deployments/`
 			- `ropsten/ERC20`
 			- `goerli/ERC20`
@@ -97,7 +96,7 @@ Searching for packages published on registry located at: 0x0bd0200357D26A0bB5d1D
 This registry does not appear to have permissioned releases. This means that anybody can publish a package to this registry.
 Please be very careful before installing and interacting with packages on this registry.
 Package: erc20-example
-  - 0.0.1 @ ipfs://QmYmstuuQmVVaWvde5VHzwxs5zDaJbjGk8nGHeTfZnEgoe
+  - 0.0.2 @ ipfs://QmZH3Pz5QzT4rWS3ccsFe7ozXZ3fqj7j8FnwJ62REa4war
 ```
 
 # `truffle install`
@@ -109,7 +108,7 @@ There are a couple different options to install a package...
 From the package's registry set in your `truffle-config.js`.
 
 ```bash
-truffle install erc20-example@0.0.1
+truffle install erc20-example@0.0.2
 ```
 
 ... or to install the latest version of the package.
@@ -127,7 +126,7 @@ truffle install ethpm://libraries.ethpm.eth:3/safe-math@1.0.0
 Install a package directly with its manifest uri (currently, only ipfs manifest uris are supported).
 
 ```bash
-truffle install ipfs://QmYmstuuQmVVaWvde5VHzwxs5zDaJbjGk8nGHeTfZnEgoe
+truffle install ipfs://QmZH3Pz5QzT4rWS3ccsFe7ozXZ3fqj7j8FnwJ62REa4war
 ```
 
 You can install any package under an alias wth the `--alias` flag, and then use the alias to reference the package. This is useful if you want to install two different packages with the same name.
