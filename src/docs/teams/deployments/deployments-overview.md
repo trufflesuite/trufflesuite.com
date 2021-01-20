@@ -2,13 +2,18 @@
 title: Teams | Deployments overview
 layout: docs.hbs
 ---
+
 # Deployments overview
 
-On the **<span class="inline-menu-item"><i class="fal fa-parachute-box"></i>DEPLOYMENTS</span>** page you'll notice there are three columns: **Commits**, **Staging**, and **Production**. These columns contain your builds available to be deployed as well as any successful deployments.
+Truffle Teams provides a quick and easy interface for deploying your smart contracts to Ethereum testnets, mainnet, and [sandboxes](/docs/teams/sandboxes/sandboxes-overview). On the **<span class="inline-menu-item"><i class="fal fa-parachute-box"></i>DEPLOYMENTS</span>** page, you can toggle between two views: [cards](#cards-view) and [table](#table-view).
+
+## Cards view
+
+The **CARDS** view contains three columns: **Commits**, **Staging**, and **Production**. These columns contain your builds available to be deployed as well as any successful deployments.
 
 <figure>
-  <img class="figure-shadow mb-2" src="/img/docs/teams/deployment-manager.png" alt="Deployment Manager" style="width: 100%">
-  <figcaption class="text-center font-italic">The main deployments screen</figcaption>
+  <img class="figure-shadow mb-2" src="/img/docs/teams/deployments-card-view.png" alt="Deployments cards view" style="width: 100%">
+  <figcaption class="text-center font-italic">Deployments cards view</figcaption>
 </figure>
 
 ### Builds Column
@@ -22,3 +27,12 @@ On the **<span class="inline-menu-item"><i class="fal fa-parachute-box"></i>DEPL
 ### Staging and Production Columns
 
 **Staging** contains a list of all testnet (i.e. Ropsten, Görli, Rinkeby, and Kovan) and sandbox deployments. **Production** contains a list of Mainnet deployments.
+
+## Table view
+
+The **TABLE** view contains a list of all of your successful deployments, regardless of what network they were deployed to. There is a **NETWORK** column that indicates which network the deployment was deployed on.
+
+<figure>
+  <img class="figure-shadow mb-2" src="/img/docs/teams/deployments-table-view.png" alt="Deployments table view" style="width: 100%">
+  <figcaption class="text-center font-italic">Deployments table view</figcaption>
+</figure>

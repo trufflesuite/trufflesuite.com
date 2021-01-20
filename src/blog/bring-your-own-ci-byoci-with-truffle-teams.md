@@ -18,7 +18,7 @@ Enabling external CI for a repository only requires a single checkbox! Navigate 
 
 Now, when you navigate to the builds page for that repository, any new builds will show a list of your GitHub-integrated build services, along with their respective statuses.
 
-For more detailed information on the external CI service, [check out our documentation here](/docs/teams/testing/external-ci).
+For more detailed information on the external CI service, [check out our documentation here](/docs/teams/builds/external-ci).
 
 For more detailed information on adding services to GitHub via their Marketplace, [check out the GitHub Marketplace docs here](https://help.github.com/en/github/customizing-your-github-workflow/about-github-marketplace).
 

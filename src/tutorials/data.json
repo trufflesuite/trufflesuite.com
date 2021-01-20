@@ -156,6 +156,7 @@
   "using-infura-custom-provider": {
     "title": "Using Infura (or a custom provider)",
     "date": "2016-09-16",
+    "updated": "2021-01-14",
     "author": "Tim Coulter",
     "published": true,
     "products": ["truffle"]
