@@ -48,7 +48,7 @@ In this tutorial, we are focusing on smart contract creation. To that end, we've
 1. Next, we'll install OpenZeppelin. The most recent version of OpenZeppelin can be found as an npm package.
 
    ```shell
-   npm install openzeppelin-solidity
+   npm install openzeppelin-solidity@2.5.1
    ```
 
 ## Creating the "TutorialToken" smart contract
