@@ -7,7 +7,7 @@ layout: docs.hbs
 <div class="row">
   <div class="col">
     <div class="card mt-3">
-      <div class="card-body">
+      <div class="card-body card-zendesk">
         <h2 class="mt-0">Open a Support Ticket! <span class="badge badge-pill badge-success">NEW</span></h2>
         <p>The easiest way to track your conversation and contribute to our knowledge base! Open a support ticket to begin talking to our support staff. Common questions will be added to our knowledge base to assist future Trufflers!</p>
         <a href="https://trufflesuite.zendesk.com/hc/en-us/requests/new" class="btn btn-truffle">Open a Support Ticket</a>
