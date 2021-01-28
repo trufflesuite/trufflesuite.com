@@ -4,6 +4,18 @@ layout: docs.hbs
 ---
 # Contact the developers
 
+<div class="row">
+  <div class="col">
+    <div class="card mt-3">
+      <div class="card-body">
+        <h2 class="mt-0">Open a Support Ticket! <span class="badge badge-pill badge-success">NEW</span></h2>
+        <p>The easiest way to track your conversation and contribute to our knowledge base! Open a support ticket to begin talking to our support staff. Common questions will be added to our knowledge base to assist future Trufflers!</p>
+        <a href="https://trufflesuite.zendesk.com/hc/en-us/requests/new" class="btn btn-truffle">Open a Support Ticket</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 ## Gitter
 
 The fastest way to get help is to reach out on our [community Gitter channel](https://gitter.im/ConsenSys/truffle), where hundreds of your fellow Trufflers congregate to answer your questions.
