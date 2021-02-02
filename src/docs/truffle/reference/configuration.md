@@ -99,6 +99,8 @@ For each network, if unspecified, transaction options will default to the follow
 * `websockets`: You will need this enabled to use the `confirmations` listener or to hear Events using `.on` or `.once`.  Default is `false`.
 * `deploymentPollingInterval`: When a smart contract is deployed, this determines how often to check whether the transaction has been completed, specified in milliseconds. Default is `4000`. Note that this is *independent* of the polling interval that `provider` may use. See [`@truffle/hdwallet-provider` documentation](https://github.com/trufflesuite/truffle/blob/develop/packages/hdwallet-provider/README.md#instantiation) if you are using `HDWalletProvider` and wish to specify a custom `pollingInterval`.
 
+Note that it is perfectly fine to set `disableConfirmationListener` while also setting a value for `confirmations`; this will not cause hangs during deployment.
+
 For each network, you can specify `host` / `port`, `url`, or `provider`, but not more than one. If you need an HTTP provider, we recommend using `host` and `port`, or `url`, while if you need a custom provider such as `HDWalletProvider`, you must use `provider`.  The `url` option also supports WebSockets and SSL. `url` should include the full url; see the examples below:
 - http://127.0.0.1:8545
 - ws://127.0.0.1:8545
