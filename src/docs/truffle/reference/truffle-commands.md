@@ -216,7 +216,7 @@ Options:
 * `<package_name>`: Name of the package as listed in the Ethereum Package Registry. (required)
 * `@<version>`: When specified, will install a specific version of the package, otherwise will install the latest version.
 
-See the [Package Management with EthPM](/docs/getting_started/packages-ethpm) section for more details.
+See the [Package Management with ethpm](/docs/getting_started/packages-ethpm) section for more details.
 
 
 ### migrate
@@ -291,7 +291,7 @@ Publish a package to the Ethereum Package Registry.
 truffle publish
 ```
 
-All parameters are pulled from your project's configuration file. Takes no arguments. See the [Package Management with EthPM](/docs/getting_started/packages-ethpm) section for more details.
+All parameters are pulled from your project's configuration file. Takes no arguments. See the [Package Management with ethpm](/docs/getting_started/packages-ethpm) section for more details.
 
 ### run
 

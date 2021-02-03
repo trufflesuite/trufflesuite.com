@@ -1,4 +1,12 @@
 {
+  "using-ethpm-and-truffle": {
+    "title": "Using ethpm and Truffle",
+    "date": "2021-1-14",
+    "author": "Nick Gheorghita",
+    "published": true,
+    "excerpt": "Truffle now comes with built-in support for ethpm v3 to simplify your development workflow.",
+    "image": "/img/blog/using-ethpm-and-truffle/blog-thumbnail.png"
+  },
   "2020-is-finally-over-a-year-end-wrapup": {
     "title": "2020 is Finally Over: A Year End Wrapup",
     "date": "2020-12-22",
