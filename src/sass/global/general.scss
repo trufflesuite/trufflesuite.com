@@ -7,6 +7,11 @@ body {
   color: #fff;
   padding-top: 60px;
   font-family: 'Open Sans', sans-serif;
+
+  &.light {
+    background-color: #f8f5f0;
+    color: #5e464d;
+  }
 }
 
 h1, h2, h3 {

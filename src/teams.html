@@ -2,39 +2,28 @@
 title: Teams
 layout: layout.hbs
 social-image: https://truffleframework.com/img/favicons/teams-share.png
+nav-logo: teams
+nav-theme: light
 ---
-<nav class="nav subnav justify-content-end">
-  <a class="nav-link scroll-link" href="#features">Features</a>
+<nav class="nav subnav subnav-light justify-content-end">
   <a class="nav-link scroll-link" href="#pricing">Pricing</a>
+  <a class="nav-link scroll-link" href="#getStarted">Get Started</a>
   <a class="nav-link scroll-link" href="#support">Support</a>
 </nav>
 
 <div class="banner tt-hero-banner pt-6 pb-7 pt-lg-7">
   <header role="main" class="container">
-    <div class="row align-items-center">
-      <div class="col-12">
+    <div class="row">
+      <div class="col-12 col-md-6 col-xl-5 text-left">
         <h1 class="tt-logo"><img src="/img/tt-logomark.svg" alt="Truffle Teams logomark." />TRUFFLE TEAMS</h1>
-        <h2>Smart Contract Management for Dapp Developers</h2>
-        <p class="mb-4">Manage and monitor the health of your blockchain-enabled application. Truffle integrated. Built for open source and enterprise.</p>
+        <h2>Iterate Faster</h2>
+        <p class="mb-4">Tighten the feedback loop between deployment, operation, and debugging; all within powerful development sandboxes. Share insights with the whole team.</p>
+        <a href="https://my.truffleteams.com" class="btn btn-lg btn-truffle" id="teamsSignUp1"><i class="fab fa-github"></i>&nbsp;&nbsp;SIGN UP WITH GITHUB</a>
+        <a href="https://my.truffleteams.com" class="sign-in-link d-block">Already have an account? Sign In!</a>
       </div>
-    </div>
 
-    <div class="row align-items-center mt-2 mt-md-0">
-      <div class="col-12">
-        <p class="text-center mb-0">
-          <a href="https://my.truffleteams.com" class="btn btn-lg btn-truffle" id="teamsSignUp1"><i class="fab fa-github"></i>&nbsp;&nbsp;SIGN UP WITH GITHUB</a>
-          <a href="https://my.truffleteams.com" class="sign-in-link d-block d-md-none">Already have an account? Sign In!</a>
-          <a href="https://share.hsforms.com/1OaTglVhGTdWk7spR6nE_AA34pbp" class="btn btn-lg btn-outline-white btn-wrap mt-5 mt-md-0" id="mailingListSignUp"><i class="fas fa-envelope"></i>&nbsp;&nbsp;GET NOTIFIED OF UPDATES &amp; NEW FEATURES</a>
-        </p>
-      </div>
-    </div>
-
-
-    <div class="row align-items-center d-none d-md-block">
-      <div class="col-12">
-        <p class="text-center mb-0">
-          <a href="https://my.truffleteams.com" class="sign-in-link">Already have an account? Sign In!</a>
-        </p>
+      <div class="col-12 col-md-6 col-xl-7 mt-5 mt-md-0">
+        <img class="img-fluid" src="/img/truffle-teams/dev-lifecycle-3d.png" alt="The dapp development lifecycle" />
       </div>
     </div>
   </header>
@@ -43,86 +32,44 @@ social-image: https://truffleframework.com/img/favicons/teams-share.png
 </div>
 
 <div class="banner banner-light-cream tt-container">
-  <main class="container pt-7 pb-2">
-    <div class="row text-center mb-4">
-      <div class="col-12">
-        <h2 id="features" class="text-truffle">Features to Help You<br/>Test and Deploy with Confidence</h2>
-      </div>
-    </div>
-
-    <div class="row mb-4">
-      <div class="col-12">
-        <img class="img-fluid tt-hero-img" src="/img/truffle-teams/tt-sandboxes.png" alt="Truffle Teams sandboxes screen" />
-      </div>
-    </div>
-  </main>
-
-  <div class="tt-bowtie-container">
-    <img class="tt-bowtie-top" src="/img/truffle-teams/tt-bowtie-top.svg" />
-
-    <div class="tt-bowtie">
-      <main class="container">
-        <div class="row">
-          <div class="col-12 col-lg-6">
-            <h3>Shared Ganache Sandboxes</h3>
-            <p class="mb-0">The fastest path to a team development blockchain! With just one click, create a shared development blockchain powered by Ganache. Runs all Truffle commands and integrates with our Visual Deployment and Contract Monitoring features.</p>
-          </div>
-        </div>
-      </main>
-    </div>
-
-    <img class="tt-bowtie-bottom" src="/img/truffle-teams/tt-bowtie-bottom.svg" />
-  </div>
-
   <main class="container">
-    <div class="row justify-content-center align-items-center mt-5 mb-6 tt-feature">
-      <div class="col-12 col-md-6">
-        <h3>Zero Config Continuous Integration</h3>
-        <p class="mb-4 mb-md-0">With no configuration required, test on every commit for maximum confidence in your Solidity code. Truffle Teams removes environmental inconsistencies by providing a unified environment for continuous smart contract testing.</p>
+    <div class="row mt-7 mb-7">
+      <div class="col-12 col-lg-4">
+        <span class="badge badge-pill badge-teams d-inline-block">Operate &amp; Debug</span>
+        <h3>Debug with One Click</h3>
+        <p>Execute transactions and <strong>view the complete state of your smart contracts</strong> with the Contract Manager.</p>
+        <p>Debug transactions in context and with one click right from the transaction list. Step, set breakpoints, and inspect variables for a surgical debugging experience.</p>
       </div>
-      <div class="col-12 col-md-6">
-        <img class="img-fluid shadow-purple" src="/img/truffle-teams/tt-builds.png" alt="Truffle Teams monitoring screen" />
-      </div>
-    </div>
-  </main>
 
-  <div class="triangle-tr"></div>
-
-  <div class="banner banner-periwinkle">
-    <main class="container pt-5 pb-5">
-      <div class="row justify-content-center align-items-center tt-feature" style="background: #7f9dd1; color: #fff;">
-        <div class="col-12 col-md-6 order-2 order-md-1">
-          <img class="img-fluid shadow-mint" src="/img/truffle-teams/tt-deployments.png" alt="Truffle Teams deployments screen" />
-        </div>
-        <div class="col-12 col-md-6 order-1 order-md-2">
-          <h3>Visual Deployments</h3>
-          <p class="mb-4 mb-md-0">See all deployed instances of your dapp at a glance. Deploy with your browser wallet to any live Ethereum network or Ganache sandbox. Truffle Teams automatically begins monitoring your contracts post-deployment.</p>
-        </div>
-      </div>
-    </main>
-  </div>
-
-  <div class="triangle-br"></div>
-
-  <main class="container">
-    <div class="row justify-content-center align-items-center mt-5 mb-6 tt-feature">
-      <div class="col-12 col-md-6">
-        <h3>Smart Contract Monitoring</h3>
-        <p class="mb-4 mb-md-0">Monitor a deployed smart contract's transactions, balance, and events. Filter by transaction failures for quick error detection.</p>
-      </div>
-      <div class="col-12 col-md-6">
-        <img class="img-fluid shadow-dark-chocolate" src="/img/truffle-teams/tt-monitor.png" alt="Truffle Teams contract monitoring screen" />
-      </div>
-    </div>
-
-    <div class="row text-center">
       <div class="col-12">
-        <a class="btn btn-lg btn-truffle" id="teamsSignUp2" href="http://my.truffleteams.com"><i class="fab fa-github"></i>&nbsp;&nbsp;SIGN UP WITH GITHUB</a>
+        <img class="img-fluid tt-operate-debug-img pointer-none" src="/img/truffle-teams/debug-manage.png" alt="Truffle Teams monitoring screen" />
+      </div>
+    </div>
+
+    <div class="row mt-5 mb-7">
+      <div class="col-12 col-lg-7 ml-auto">
+        <span class="badge badge-pill badge-teams d-inline-block">Build &amp; Test</span>
+        <h3>Tests and Development Networks Made Easy</h3>
+        <p><strong>With no configuration required</strong>, test on every commit for maximum confidence in your Solidity code. Truffle Teams removes environmental inconsistencies by providing a unified environment for continuous smart contract testing.</p>
+        <p>The fastest path to a team development blockchain! Create shared development blockchains powered by Ganache. <strong>Test against production networks without spending real Ether.</strong> Runs all Truffle commands and integrates with our Visual Deployment and Contract Monitoring features.</p>
+      </div>
+      <div class="col-12 col-lg-8">
+        <img class="img-fluid tt-build-test-img pointer-none" src="/img/truffle-teams/builds-sandboxes.png" alt="Truffle Teams monitoring screen" />
+      </div>
+    </div>
+
+    <div class="row mt-5 mb-7">
+      <div class="col-12 col-lg-6">
+        <span class="badge badge-pill badge-teams d-inline-block">Deploy &amp; Monitor</span>
+        <h3>Visually Manage Contract Instances and Transactions</h3>
+        <p>See all deployed instances of your dapp at a glance. Deploy with your browser wallet to any live Ethereum network or Ganache sandbox. Truffle Teams automatically begins monitoring your contracts post-deployment.</p>
+        <p>Monitor a deployed smart contract's transactions, balance, and events. Filter by transaction failures for quick error detection. Get a bird's eye view with the Dashboard.</p>
+      </div>
+      <div class="col-12 col-lg-9 ml-auto">
+        <img class="img-fluid tt-deploy-monitor-img pointer-none" src="/img/truffle-teams/deploy-monitor.png" alt="Truffle Teams monitoring screen" />
       </div>
     </div>
   </main>
-
-  <div class="triangle-tr white mt-6"></div>
 
   <div class="banner banner-white">
     <main class="container pt-4 pb-4">
@@ -140,7 +87,7 @@ social-image: https://truffleframework.com/img/favicons/teams-share.png
   <main class="container pb-7">
     <div class="row text-center mb-6">
       <div class="col-12">
-        <h2 id="pricing" class="text-truffle">Premium Features for Larger Teams</h2>
+        <h2 id="pricing" class="text-truffle">Pricing</h2>
       </div>
     </div>
 
@@ -154,9 +101,12 @@ social-image: https://truffleframework.com/img/favicons/teams-share.png
                 <ul>
                   <li>Unlimited open source repositories</li>
                   <li>Automated smart contract compilation and testing</li>
+                  <li>Visual Debugging</li>
                   <li>1 Ganache sandbox</li>
-                  <li>Visual Deployments</li>
+                  <li>Deployment Manager</li>
                   <li>Contract Monitoring</li>
+                  <li>Contract Management</li>
+                  <li>Deployment Dashboard</li>
                 </ul>
               </p>
             </div>
@@ -169,13 +119,16 @@ social-image: https://truffleframework.com/img/favicons/teams-share.png
             <div class="card-body">
               <h2 class="card-title">Pro<span class="badge badge-warning">$29/mo.</span></h5>
               <p class="card-text">
+                <p>Everything in Free plus:</p>
                 <ul>
-                  <li>Unlimited open source repositories</li>
+                  <li>Unlimited open source <span class="differentiator">and private</span> repositories</li>
                   <li>Automated smart contract compilation and testing</li>
-                  <li><strong>3 Ganache sandboxes</strong></li>
-                  <li>Visual Deployments</li>
+                  <li>Visual Debugging</li>
+                  <li><span class="differentiator">3 Ganache Sandboxes</span></li>
+                  <li>Deployment Manager</li>
                   <li>Contract Monitoring</li>
-                  <li><strong>Private repositories</strong></li>
+                  <li>Contract Management</li>
+                  <li>Deployment Dashboard</li>
                 </ul>
               </p>
             </div>
@@ -209,12 +162,12 @@ social-image: https://truffleframework.com/img/favicons/teams-share.png
         <p>Across the Truffle Suite, we are the most downloaded in the blockchain development community.</p>
         <div class="row justify-content-center">
           <div class="col-5">
-            <p class="stat">2.5M+</p>
+            <p class="stat">7M+</p>
             <p class="mb-0">Downloads</p>
           </div>
 
           <div class="col-5">
-            <p class="stat">10k+</p>
+            <p class="stat">17k+</p>
             <p class="mb-0">GitHub Stars</p>
           </div>
         </div>
@@ -225,39 +178,45 @@ social-image: https://truffleframework.com/img/favicons/teams-share.png
 
     <div class="row text-center mt-8 mb-4">
       <div class="col-12">
-        <h2 class="text-truffle">It's Easy to Get Started</h2>
-      </div>
-    </div>
-
-    <div class="row text-center tt-steps">
-      <div class="col-12 col-md-4">
-        <span class="number-circle mb-2"><span class="number">1</span></span>
-        <h3>Sign Up with GitHub</h3>
-        <p>Sign in with your GitHub account to begin setting up your Truffle Teams account.</p>
-      </div>
-
-      <div class="col-12 col-md-4">
-        <span class="number-circle mb-2"><span class="number">2</span></span>
-        <h3>Push Some Code</h3>
-        <p>Truffle Teams will trigger a build, running your test suite and reporting the results.</p>
-      </div>
-
-      <div class="col-12 col-md-4">
-        <span class="number-circle mb-2"><span class="number">3</span></span>
-        <h3><a class="enjoy-link" href="https://xkcd.com/303/">Enjoy</a> Your Time</h3>
-        <p>With the time you just saved using Truffle Teams, keep on coding while your build runs or take a break!</p>
+        <h2 class="text-truffle" id="getStarted">It's Easy to Get Started</h2>
       </div>
     </div>
 
     <div class="row text-center">
+      <div class="col-12 col-md-6">
+        <h3>Get Going with a Quickstart</h3>
+        <a href="/docs/teams/quickstart"><img class="img-fluid shadow-purple rounded mb-3" src="/img/truffle-teams/thumb-quickstart.png" alt="Truffle Teams quickstart documentation" /></a>
+        <p>Our quickstart documentation will get you working with Truffle Teams in no time!</p>
+      </div>
+
+      <div class="col-12 col-md-6 mt-3 mt-md-0">
+        <h3>Dive Deep with a Webinar</h3>
+        <a href="https://youtu.be/hdvDQj7cQJs?t=109"><img class="img-fluid shadow-purple rounded mb-3" src="/img/truffle-teams/thumb-webinar.png" alt="Truffle Teams quickstart documentation" /></a>
+        <p>Join the Truffle team as we traverse the entire development lifecycle with Truffle Teams using a mintable NFT!</p>
+      </div>
+    </div>
+
+    <div class="row text-center mt-4">
       <div class="col-12">
-        <a class="btn btn-lg btn-truffle" id="teamsSignUp5" href="http://my.truffleteams.com"><i class="fab fa-github"></i>&nbsp;&nbsp;START BUILDING NOW</a>
+        <a class="btn btn-lg btn-truffle" id="teamsSignUp5" href="https://my.truffleteams.com"><i class="fab fa-github"></i>&nbsp;&nbsp;SIGN UP WITH GITHUB</a>
       </div>
     </div>
 
     <div class="row text-center mt-7 mb-4">
       <div class="col-12">
         <h2 id="support" class="text-truffle">Need Support?</h2>
+      </div>
+    </div>
+
+    <div class="row mb-5">
+      <div class="col">
+        <div class="card">
+          <div class="card-body card-zendesk">
+            <h2>Open a Support Ticket! <span class="badge badge-pill badge-success">NEW</span></h2>
+            <p>The easiest way to track your conversation and contribute to our knowledge base! Open a support ticket to begin talking to our support staff. Common questions will be added to our knowledge base to assist future Trufflers!</p>
+            <a href="https://trufflesuite.zendesk.com/hc/en-us/requests/new" class="btn btn-truffle">Open a Support Ticket</a>
+          </div>
+        </div>
       </div>
     </div>
 

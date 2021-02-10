@@ -1,7 +1,14 @@
+// Hero Section
+
 .tt-hero-banner {
-  background: url(/img/truffle-teams/landing-background.png);
-  background-size: cover;
-  color: #fff;
+  // background: url(/img/truffle-teams/landing-background.png);
+  // background-size: cover;
+  background: rgb(239,229,220);
+  background: -moz-linear-gradient(0deg, rgba(239,229,220,1) 0%, rgba(248,245,240,1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(239,229,220,1) 0%, rgba(248,245,240,1) 100%);
+  background: linear-gradient(0deg, rgba(239,229,220,1) 0%, rgba(248,245,240,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#efe5dc",endColorstr="#f8f5f0",GradientType=1);
+  color: #5e464d;
   text-align: center;
 
   h2 {
@@ -9,13 +16,13 @@
   }
 
   .sign-in-link {
-    color: #fff;
+    color: #5e464d;
     display: block;
     margin-top: .5rem;
     text-decoration: underline;
 
     &:hover {
-      color: #fff;
+      color: #5e464d;
       opacity: .8;
     }
   }
@@ -32,7 +39,7 @@
   .triangle-br {
     position: absolute;
     background: transparent;
-    border-width: 0 0 50px 100vw;
+    border-width: 0 100vw 50px 0;
     bottom: 0;
     border-color: transparent transparent #f8f5f0 transparent;
   }
@@ -87,6 +94,34 @@
   }
 }
 
+// Feature/Benefits Section
+
+.tt-operate-debug-img {
+  margin-top: -12rem;
+}
+
+.tt-build-test-img {
+  margin-top: -11rem;
+}
+
+.tt-deploy-monitor-img {
+  margin-top: -3rem;
+}
+
+@media (max-width: 991.98px) {
+  .tt-operate-debug-img {
+    margin-top: 1rem;
+  }
+  
+  .tt-build-test-img {
+    margin-top: 1rem;
+  }
+  
+  .tt-deploy-monitor-img {
+    margin-top: 1rem;
+  }
+}
+
 .tt-bowtie-container {
   margin: -80px auto 0 auto;
 
@@ -115,6 +150,8 @@
   }
 }
 
+// Pricing Section
+
 .tt-pricing {
   ul {
     padding-left: 20px;
@@ -135,6 +172,11 @@
       color: #ffffff;
       margin: -2.75rem -2.75rem 1.5rem -2.75rem;
       padding: 1rem 2.75rem;
+    }
+
+    .differentiator {
+      font-weight: bold;
+      text-decoration: underline;
     }
 
     &.free {
@@ -220,6 +262,7 @@
     height: 150%;
     opacity: .1;
     z-index: 0;
+    pointer-events: none;
   }
   
   .stat {
@@ -322,8 +365,5 @@
 }
 
 .shadow-purple {
-  -webkit-box-shadow: 12px 12px 0px 0px rgba(135,49,232,1);
-  -moz-box-shadow: 12px 12px 0px 0px rgba(135,49,232,1);
-  box-shadow: 12px 12px 0px 0px rgba(135,49,232,1);
-  border: 2px solid rgba(135,49,232,1);
+  border: 1px solid rgba(0, 0, 0, 0.125);
 }
