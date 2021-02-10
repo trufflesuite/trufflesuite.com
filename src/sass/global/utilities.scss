@@ -1,3 +1,5 @@
+// Logo Font Families
+
 .text-truffle {
   font-family: 'Roboto Mono', monospace;
   font-weight: 600;
@@ -19,6 +21,20 @@
   text-transform: lowercase;
 }
 
+.text-truffle-og {
+  font-family: century-gothic,sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.text-truffle-og-em {
+  font-family: century-gothic,sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+// Text Colors
+
 .text-muted {
   color: #e0dad7 !important;
   text-shadow: none;
@@ -36,6 +52,10 @@
   color: #5e464d !important;
 }
 
+.color-teams {
+  color: #8731e8;
+}
+
 .color-truffle {
   color: #3fe0c5;
 }
@@ -47,6 +67,8 @@
 .color-drizzle {
   color: #e911bd;
 }
+
+// Link Variations
 
 .link-truffle {
   color: #3fe0c5;
@@ -111,6 +133,8 @@
   }
 }
 
+// Backgrounds
+
 .bd-milk-chocolate {
   background-color: #5e464d;
   color: #fff;
@@ -134,7 +158,7 @@
   margin-right: .25rem;
 }
 
-// Spacers - Margins
+// Spacers
 
 .mt-6 {
   margin-top: 4rem;
@@ -150,4 +174,19 @@
 
 .mb-7 {
   margin-bottom: 6rem;
+}
+
+// Badges
+
+.badge-teams {
+  background: #8731e8;
+  color: #fff;
+  font-size: .9rem;
+  margin-bottom: .5rem;
+}
+
+// Misc
+
+.pointer-none {
+  pointer-events: none;
 }

@@ -27,7 +27,7 @@
     margin-bottom: .25rem;
 
     .hs-form-required {
-      color: #f2e941;
+      color: #d80b0b;
     }
   }
 
@@ -40,7 +40,7 @@
     font-weight: 400;
     line-height: 1.5;
     color: #495057;
-    background-color: #e0dad7;
+    background-color: #f8f5f0;
     border: none;
     background-clip: padding-box;
     border-radius: 0.25rem;
@@ -54,6 +54,10 @@
       box-shadow: 0 0 0 0.2rem rgba(63, 224, 197, 0.5);
       outline: none;
     }
+  }
+
+  input[type="checkbox"] {
+    margin-right: .5em;
   }
 
   input[type="submit"] {
@@ -85,7 +89,22 @@
 
   ul.hs-error-msgs {
     margin-top: -.75rem;
-    color: #f2e941;
+    color: #d80b0b;
+  }
+}
+
+footer .hs-form {
+  label {
+    margin-bottom: .25rem;
+
+    .hs-form-required {
+      color: #e35353;
+    }
+  }
+
+  ul.hs-error-msgs {
+    margin-top: -.75rem;
+    color: #e35353;
   }
 }
 
