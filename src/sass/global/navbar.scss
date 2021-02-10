@@ -1,15 +1,11 @@
+//
+// NAVBAR
+//
+
+// Navbar - General
+
 .navbar {
   font-family: 'Oswald', sans-serif;
-  background: #33262a;
-  border-bottom: 2px solid #5e464d;
-
-  .dropdown-menu {
-    min-width: 14.5rem;
-  }
-}
-
-.navbar a, .navbar-expand-md .navbar-nav .nav-link {
-  color: #fff;
 }
 
 .navbar-nav {
@@ -18,7 +14,7 @@
   }
 }
 
-// Left Side
+// Navbar - Left Side
 
 .navbar a.navbar-brand {
   line-height: 2rem;
@@ -54,23 +50,65 @@
   }
 }
 
-// Right Side
+// Navbar - Right Side
 
 .navbar .navbar-collapse {
   flex-grow: 0;
   margin-left: auto;
 }
 
-// Dropdown
+// Navbar - Dark
 
-.navbar .dropdown-menu {
+.navbar-dark {
+  background: #33262a;
+  border-bottom: 2px solid #5e464d;
+}
+
+.navbar-dark a, .navbar-dark .navbar-expand-md .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-dark .dropdown-menu {
   background: #33262a;
   border-bottom: 2px solid #5e464d;
   border-left: 2px solid #5e464d;
-  border-radius: 0 0 .25rem .25rem;
   border-right: 2px solid #5e464d;
+}
+
+.navbar-dark .navbar-toggler .icon-bar {
+  background: #fff;
+}
+
+// Navbar - Light
+
+.navbar-light {
+  background: #f8f5f0;
+  border-bottom: 2px solid #efe5dc;
+}
+
+.navbar-light a, .navbar-light .navbar-nav .nav-link {
+  color: #33262a;
+  opacity: 1;
+}
+
+.navbar-light .dropdown-menu {
+  background: #f8f5f0;
+  border-bottom: 2px solid #efe5dc;
+  border-left: 2px solid #efe5dc;
+  border-right: 2px solid #efe5dc;
+}
+
+.navbar-light .navbar-toggler .icon-bar {
+  background: #33262a;
+}
+
+// Navbar - Dropdown
+
+.navbar .dropdown-menu {
+  border-radius: 0 0 .25rem .25rem;
   border-top: none;
   margin: 8.5px 0 0 -4px;
+  min-width: 14.5rem;
   padding: 1rem;
 
   a {
@@ -92,7 +130,6 @@
   }
 
   .text-ganache {
-    // Ganache's font is just way smaller than Truffle and Drizzle's
     font-size: 1.5rem;
   }
 
@@ -104,7 +141,7 @@
   }
 }
 
-// Hamburger Button
+// Navbar - Hamburger Button
 
 .navbar-toggler {
   position: relative;
@@ -121,7 +158,6 @@
     height: 3px;
     width: 25px;
     transition: all .25s ease-in-out;
-    background: #fff;
     transform: none;
   }
 }
@@ -162,7 +198,12 @@
   }
 }
 
-// Subnav
+
+//
+// SUBNAV
+//
+
+// Subnav - General
 
 .subnav {
   position: fixed;
@@ -177,7 +218,6 @@
   -webkit-transition: all .125s ease-in-out;
 
   a {
-    color: #fff;
     font-family: 'Oswald', 'Arial Narrow', sans-serif;
     text-transform: uppercase;
 
@@ -196,7 +236,6 @@
   }
 
   &.scroll {
-    background: #5e464d;
     padding: 0 .5rem 0 0;
 
     .btn {
@@ -214,5 +253,29 @@
     .btn-eventbrite {
       margin-right: .5rem;
     }
+  }
+}
+
+// Subnav - Dark
+
+.subnav-dark {
+  a {
+    color: #fff;
+  }
+
+  &.scroll {
+    background: #5e464d;
+  }
+}
+
+// Subnav - Light
+
+.subnav-light {
+  &.scroll {
+    background: #efe5dc;
+  }
+  
+  a {
+    color: #5e464d;
   }
 }

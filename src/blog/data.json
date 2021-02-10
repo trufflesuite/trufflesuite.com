@@ -1,4 +1,12 @@
 {
+  "iterate-faster-with-truffle-teams": {
+    "title": "Iterate Faster with Truffle Teams",
+    "date": "2021-2-10",
+    "author": "Josh Quintal",
+    "published": true,
+    "excerpt": "Consider the amount of context switching required to develop a dapp: you’re writing Solidity one minute, writing tests another, debugging those results--it’s easy to get lost! I’m happy to inform you Truffle Teams can help reduce context switching and help you or your team iterate faster.",
+    "image": "/img/blog/iterate-faster-with-truffle-teams/blog-thumbnail.png"
+  },
   "2020-is-finally-over-a-year-end-wrapup": {
     "title": "2020 is Finally Over: A Year End Wrapup",
     "date": "2020-12-22",

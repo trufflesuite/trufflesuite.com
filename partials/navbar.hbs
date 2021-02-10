@@ -1,7 +1,33 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top" id="primaryNav">
+{{#if nav-theme}}
+  {{#equal nav-theme "dark"}}
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="primaryNav">
+  {{/equal}}
+
+  {{#equal nav-theme "light"}}
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" id="primaryNav">
+  {{/equal}}
+{{else}}
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="primaryNav">
+{{/if}}
   <a class="navbar-brand current" href="/">
-    <img class="suite-logo" src="/img/truffle-logomark.svg" alt="Truffle Logo" /><span class="d-none d-lg-block">TRUFFLE SUITE</span>
+    {{#if nav-logo}}
+      {{#equal nav-logo "teams"}}
+        <img class="suite-logo" src="/img/tt-logomark.svg" alt="Truffle Teams Logo" /><span class="d-none d-lg-block">TRUFFLE SUITE</span>
+      {{/equal}}
+
+      {{#equal nav-logo "ganache"}}
+        <img class="suite-logo" src="/img/ganache-logomark.svg" alt="Truffle Teams Logo" /><span class="d-none d-lg-block">TRUFFLE SUITE</span>
+      {{/equal}}
+
+      {{#equal nav-logo "drizzle"}}
+        <img class="suite-logo" src="/img/drizzle-logomark.svg" alt="Truffle Teams Logo" /><span class="d-none d-lg-block">TRUFFLE SUITE</span>
+      {{/equal}}
+    {{else}}
+      <img class="suite-logo" src="/img/truffle-logomark.svg" alt="Truffle Logo" /><span class="d-none d-lg-block">TRUFFLE SUITE</span>
+    {{/if}}
   </a>
+
+  {{!-- <button id="toggleDarkMode" class="btn btn-truffle ml-5">Toggle Dark Mode</button> --}}
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="icon-bar"></span>

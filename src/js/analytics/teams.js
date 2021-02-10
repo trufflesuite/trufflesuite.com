@@ -48,9 +48,10 @@ document.getElementById('teamsSignUp1').onclick = () => {
   mixpanelTrackProxy("Click teams signup", {'position': 1, 'plan': 'none'});
 }
 
-document.getElementById('teamsSignUp2').onclick = () => {
-  mixpanelTrackProxy("Click teams signup", {'position': 2, 'plan': 'none'});
-}
+// WHERE'S BUTTON POSITION 2?
+//
+// Button position 2 was eliminated with new Teams page styling
+// Kept other existing numbers for MixPanel continuity!
 
 document.getElementById('teamsSignUp3').onclick = () => {
   mixpanelTrackProxy("Click teams signup", {'position': 3, 'plan': 'free'});
