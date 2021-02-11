@@ -68,7 +68,7 @@ You can see that these contracts end in the `.ligo` file extension. This refers 
 
 ## Deploying Contracts
 
-For this quick start, we're going to configure your project to deploy to [Delphinet](https://tezos.gitlab.io/introduction/test_networks.html#delphinet) or any other existing [test network](https://tezos.gitlab.io/introduction/test_networks.html) for Tezos. This is the quickest way to get started, though as you get familiar with Tezos, you'll want to set up a local development environment. See the [example box documentation](https://github.com/truffle-box/tezos-example-box#sandbox-management) for an example on using a local flextesa sandbox.
+For this quick start, we're going to configure your project to deploy to the [Delphinet](https://tezos.gitlab.io/introduction/test_networks.html#delphinet) or any other existing [test network](https://tezos.gitlab.io/introduction/test_networks.html) for Tezos. This is the quickest way to get started, though as you get familiar with Tezos, you'll want to set up a local development environment. See the [example box documentation](https://github.com/truffle-box/tezos-example-box#sandbox-management) for an example on using a local flextesa sandbox.
 
 ### Configuring Truffle to point to the Tezos testnet
 
