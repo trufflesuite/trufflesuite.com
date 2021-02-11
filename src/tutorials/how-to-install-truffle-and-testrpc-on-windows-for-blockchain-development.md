@@ -1,6 +1,7 @@
-<p class="alert alert-info">
-**Update**: Since this tutorial was published, we have released [Ganache](/ganache) a personal blockchain and a replacement to the TestRPC. We have left this tutorial unaltered, but we highly recommend checking out our [Working with Ganache](/docs/ganache/using) page.
-</p>
+<div class="alert alert-info">
+
+**Update**: Since this tutorial was published, we have released [Ganache](https://www.trufflesuite.com/docs/ganache/overview), a personal blockchain and a replacement to the TestRPC. We have left this tutorial unaltered, but we highly recommend checking out our [Ganache Documentation](https://www.trufflesuite.com/ganache).
+</div>
 
 This post was originally published by David Burela on his blog [Burela's House-o-blog](https://davidburela.wordpress.com/2016/11/18/how-to-install-truffle-testrpc-on-windows-for-blockchain-development/). Big thanks to David for allowing us publish it here!
 
