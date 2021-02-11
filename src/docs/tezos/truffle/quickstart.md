@@ -72,7 +72,7 @@ For this quick start, we're going to configure your project to deploy to the [De
 
 ### Configuring Truffle to point to the Tezos testnet
 
-First, navigate to [https://faucet.tzalpha.net/](https://faucet.tzalpha.net/) to get a faucet account. This will create a new account for you on the testnet and fill it with some testnet XTZ. This account is valid for all the Tezos test networks. Download the file and save it as `faucet.json` in the root of your project.
+First, navigate to [https://faucet.tzalpha.net/](https://faucet.tzalpha.net/) to get a faucet account. This will create a new account for you on the testnet and fill it with some testnet XTZ. This account is valid for all Tezos test networks. Download the file and save it as `faucet.json` in the root of your project.
 
 Next, replace the box's `truffle-config.js` with the following: 
 
