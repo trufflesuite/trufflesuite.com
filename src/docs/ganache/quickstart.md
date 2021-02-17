@@ -2,6 +2,7 @@
 title: Ganache | Ganache Quickstart
 layout: docs.hbs
 ---
+
 # Ganache Quickstart
 
 This quickstart guide will walk you through installing Ganache and creating a personal development blockchain via a quickstart workspace.
@@ -16,9 +17,9 @@ If this isn't your first time using Ganache, or you already know you'll need cus
 
 [Download](https://github.com/trufflesuite/ganache/releases) the appropriate version for your OS:
 
-* Windows: `Ganache-*.appx`
-* Mac: `Ganache-*.dmg`
-* Linux: `ganache-*.AppImage`
+- Windows: `Ganache-*.appx`
+- Mac: `Ganache-*.dmg`
+- Linux: `ganache-*.AppImage`
 
 Next, double-click on the downloaded file, follow the prompts, and you're up and running.
 
@@ -34,5 +35,5 @@ When you open Ganache for the first time, you'll see the home screen. On this sc
 
 Now that you've got a workspace created, let's take a look at what you can do:
 
- * **[Ethereum workspace overview](./workspaces/ethereum)**
- * **[Corda workspace overview](./corda/workspace-overview)**
+- **[Ethereum workspace overview](./workspaces/ethereum-workspace-overview)**
+- **[Corda workspace overview](./corda/workspace-overview)**
