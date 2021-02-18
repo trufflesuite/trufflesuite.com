@@ -21,7 +21,7 @@ module.exports = {
   // for more details on how to specify configuration options!
   networks: {
     development: {
-      host: "https://carthagenet.smartpy.io",
+      host: "https://delphinet.smartpy.io",
       port: 443,
       network_id: "*",
       secret,
@@ -36,7 +36,7 @@ module.exports = {
 
 ## Configuring your project to deploy to a public test network
 
-The above configuration defines a single development network pointed at the public [CarthageNet](https://tezos.gitlab.io/introduction/test_networks.html) test network. You can see how this is set up in context by following our [quickstart](/docs/tezos/truffle/quickstart).
+The above configuration defines a single development network pointed at the public [Delphinet](https://tezos.gitlab.io/introduction/test_networks.html) test network. You can see how this is set up in context by following our [quickstart](/docs/tezos/truffle/quickstart).
 
 Developing on public test nets can be limiting for a number of reasons (acquiring test net tokens, performance, and internet connectivity, among others). Fortunately, there's a local solution.
 
@@ -64,7 +64,7 @@ The `networks` object, shown below, is keyed by a network name and contains a co
 The network name is used for user interface purposes, such as when running your migrations on a specific network:
 
 ```shell
-$ truffle migrate --network carthagenet
+$ truffle migrate --network delphinet
 ```
 
 Example:
@@ -72,13 +72,13 @@ Example:
 ```javascript
 networks: {
   development: {
-    host: "https://carthagenet.smartpy.io",
+    host: "https://delphinet.smartpy.io",
     port: 443,
     network_id: "*",
     type: "tezos"
   },
-  carthagenet: {
-    host: "https://carthagenet.smartpy.io",
+  delphinet: {
+    host: "https://delphinet.smartpy.io",
     port: 443,
     network_id: "*",
     type: "tezos"
