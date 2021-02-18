@@ -1,6 +1,6 @@
-<p class="alert alert-info">
-**Update**: Since this tutorial was published, we have released [Ganache](/ganache) a personal blockchain and a replacement to the TestRPC. We have left this tutorial unaltered, but for the most up-to-date information on using Truffle with Metamask, we highly recommend checking out [our documentation](/docs/advanced/truffle-with-metamask).
-</p>
+<div class="alert alert-info">
+  <p class="mb-0"><strong>Update</strong>: Since this tutorial was published, we have released <a href="/docs/ganache/overview">Ganache</a>, a personal blockchain and a replacement to the TestRPC. We have left this tutorial unaltered, but we highly recommend checking out our <a href="https://www.trufflesuite.com/ganache">Ganache Documentation</a></p>
+</div>
 
 This article was originally written by Dan Finlay and published as a [github gist](https://gist.github.com/flyswatter/aea93752fb90322bbe11). Dan has kindly allowed us to republish it here!
 

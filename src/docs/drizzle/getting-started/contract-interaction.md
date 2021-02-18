@@ -4,7 +4,7 @@ layout: docs.hbs
 ---
 # Contract Interaction
 
-Drizzle provides helpful methods on top of the default web3.Contract methods to keep your calls and transactions in sync with the store.
+Drizzle provides helpful methods on top of the default `web3.Contract` methods to keep your calls and transactions in sync with the store.
 
 ## `cacheCall()`
 
