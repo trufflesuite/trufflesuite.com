@@ -28,7 +28,7 @@ npm install --save-dev @openzeppelin/truffle-upgrades
 Then, in your migration script, use the new deployProxy and upgradeProxy functions:
 
 ```javascript
-const { deployProxy, upgradeProxy } = require('@openzeppelin/truffle-upgrades);
+const { deployProxy, upgradeProxy } = require('@openzeppelin/truffle-upgrades');
 
 const Box = artifacts.require('Box');
 const BoxV2 = artifacts.require('BoxV2');
