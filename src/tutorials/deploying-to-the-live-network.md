@@ -9,7 +9,7 @@ There are [many Ethereum clients](http://ethdocs.org/en/latest/ethereum-clients/
 * Your client has at least one account registered and can sign transactions for that account
 * The registered account contains enough Ether to deploy your contracts
 
-If you don't want to set up an Ethereum client yourself, you can alternatively use [Infura](https://infura.io/). This will require you [configure Truffle correctly for Infura](/tutorials/using-infura-custom-provider) before proceeding.
+If you don't want to set up an Ethereum client yourself, you can alternatively use [Infura](https://infura.io/?&utm_source=truffle&utm_medium=referral&utm_campaign=tutorials&utm_content=truffleinfuraguide). This will require you [configure Truffle correctly for Infura](/tutorials/using-infura-custom-provider) before proceeding.
 
 ## Configuring Truffle
 
