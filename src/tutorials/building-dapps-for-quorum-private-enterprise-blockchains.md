@@ -1,3 +1,7 @@
+<div class="alert alert-info">
+  <p>This tutorial is archived. Please visit <a href="/">our homepage</a> for the latest tutorials and documentation.</p>
+</div>
+
 Ethereum is perhaps best defined by its public network, a network where every transaction -- and all participants of each transaction -- are publicly available to anyone looking at its transaction history.
 
 Truffle got its start building for the public blockchain: at the time of Ethereum's launch, the public blockchain was the only smart contract blockchain around. However since launch, technology has changed, most notably with [Quorum](https://github.com/jpmorganchase/quorum/wiki), the permissioned blockchain initially developed by JP Morgan Chase.

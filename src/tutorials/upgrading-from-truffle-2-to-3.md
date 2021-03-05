@@ -1,3 +1,7 @@
+<div class="alert alert-info">
+  <p>This tutorial is archived. Please visit <a href="/">our homepage</a> for the latest tutorials and documentation.</p>
+</div>
+
 _Note: This guide also applies to users upgrading from Truffle beta 3.0.0-9 to Truffle 3.0.1_
 
 ## Introduction

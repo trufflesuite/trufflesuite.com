@@ -1,3 +1,7 @@
+<div class="alert alert-info">
+  <p>This tutorial is archived. Please visit <a href="/">our homepage</a> for the latest tutorials and documentation.</p>
+</div>
+
 Starting with Drizzle v1.3, we are very happy to announce official support for React Native (^0.57.7)!
 
 This tutorial will guide you through how to get Drizzle and Truffle running on your React Native dapps. This tutorial assumes some prior knowledge about Truffle, Drizzle, and React Native, so if you haven't already, go over the following tutorials first to set up your development environment:

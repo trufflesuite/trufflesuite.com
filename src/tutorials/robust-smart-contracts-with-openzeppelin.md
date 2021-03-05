@@ -1,3 +1,7 @@
+<div class="alert alert-info">
+  <p>This tutorial is archived. Please visit <a href="/">our homepage</a> for the latest tutorials and documentation.</p>
+</div>
+
 ![OpenZeppelin](/img/tutorials/open-zeppelin/oz-logo.png)
 
 Smart contracts deployed to the Ethereum mainnet can deal with real money, so having our Solidity code free from errors and highly secure is essential.

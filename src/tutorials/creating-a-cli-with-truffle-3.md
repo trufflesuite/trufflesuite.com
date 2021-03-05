@@ -1,3 +1,7 @@
+<div class="alert alert-info">
+  <p>This tutorial is archived. Please visit <a href="/">our homepage</a> for the latest tutorials and documentation.</p>
+</div>
+
 Truffle 3 [is out](https://github.com/ConsenSys/truffle/releases/tag/v3.0.2), and it switched to a less opinionated build process. In Truffle 2, the default app from `truffle init` included a frontend example with build process. Now, there's nothing other than a `build` folder for your JSON contract artifacts. This opens up the door for testing and building other (**cough** command line **cough**) types of applications!
 
 ## Intended Audience

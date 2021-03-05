@@ -1,3 +1,7 @@
+<div class="alert alert-info">
+  <p>This tutorial is archived. Please visit <a href="/">our homepage</a> for the latest tutorials and documentation.</p>
+</div>
+
 [Webpack](https://webpack.github.io/) is a powerful module bundler that helps turn your code into static assets you can deploy to the web. With the [Truffle Solidity loader](https://github.com/ConsenSys/truffle-solidity-loader), we'll show you how you can use Webpack with your existing Truffle project.
 
 ## Intended Audience
