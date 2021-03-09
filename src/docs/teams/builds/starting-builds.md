@@ -13,8 +13,8 @@ Builds will start automatically once a new commit is pushed to any branch of any
 
 To see the build as it progresses, click on **<span class="inline-menu-item"><i class="fal fa-tasks"></i> BUILDS</span>**.
 
-<p class="alert alert-info">
-<strong>Note</strong>: Truffle Teams will only build repositories who have a Truffle project at the root of the repository. It looks for a <code>truffle-config.js</code> or <code>truffle.js</code> config in the root directory before building. Read more in the <a href="/docs/teams/reference/configuration#repository-structure">Configuration docs</a>.
+<p class="alert alert-warning">
+<i class="far fa-exclamation-triangle"></i> <strong>Note</strong>: Truffle Teams will only build repositories who have a Truffle project at the root of the repository. It looks for a <code>truffle-config.js</code> or <code>truffle.js</code> config in the root directory before building. Read more in the <a href="/docs/teams/reference/configuration#repository-structure">Configuration docs</a>.
 </p>
 
 <figure>

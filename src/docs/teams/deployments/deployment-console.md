@@ -11,7 +11,3 @@ The deployment console is where you can find all of the output from the deployme
   <img class="figure-shadow mb-2" src="/img/docs/teams/deployment-console.png" alt="Deployment console" style="width: 100%">
     <figcaption class="text-center font-italic">Deployment console</figcaption>
 </figure>
-
-<p class="alert alert-info">
-  <strong>Note</strong>: You cannot currently view the deployment console for in progress or failed deployments. We're currently working on fixing this.
-</p>

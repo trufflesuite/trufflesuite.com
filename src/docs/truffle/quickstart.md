@@ -7,7 +7,7 @@ layout: docs.hbs
 This page will take you through the basics of creating a Truffle project and deploying a smart contract to a blockchain.
 
 <p class="alert alert-info">
-<strong>Note</strong>: Before you begin, make sure that you read our <a href="/tutorials/ethereum-overview">Ethereum Overview</a> page.
+<i class="far fa-info-circle"></i> <strong>Note</strong>: Before you begin, make sure that you read our <a href="/tutorials/ethereum-overview">Ethereum Overview</a> page.
 </p>
 
 ## Table of Contents
@@ -41,11 +41,11 @@ You can create a bare project template, but for those just getting started, you 
    ```
 
    <p class="alert alert-info">
-   <strong>Note</strong>: You can use the `truffle unbox <box-name>` command to download any of the other Truffle Boxes.
+   <i class="far fa-info-circle"></i> <strong>Note</strong>: You can use the <code>truffle unbox &lt;box-name&gt;</code> command to download any of the other Truffle Boxes.
    </p>
 
    <p class="alert alert-info">
-   <strong>Note</strong>: To create a bare Truffle project with no smart contracts included, use `truffle init`.
+   <i class="far fa-info-circle"></i> <strong>Note</strong>: To create a bare Truffle project with no smart contracts included, use <code>truffle init</code>.
    </p>
 
 Once this operation is completed, you'll now have a project structure with the following items:
@@ -58,7 +58,7 @@ Once this operation is completed, you'll now have a project structure with the f
 ## Exploring the project
 
 <p class="alert alert-info">
-<strong>Note</strong>: This page is just a quickstart, so we're not going to go into much detail here. Please see the rest of the Truffle documentation to learn more.
+<i class="far fa-info-circle"></i> <strong>Note</strong>: This page is just a quickstart, so we're not going to go into much detail here. Please see the rest of the Truffle documentation to learn more.
 </p>
 
 1. Open the `contracts/MetaCoin.sol` file in a text editor. This is a smart contract (written in Solidity) that creates a MetaCoin token. Note that this also references another Solidity file `contracts/ConvertLib.sol` in the same directory.
@@ -94,7 +94,7 @@ Once this operation is completed, you'll now have a project structure with the f
    ```
 
    <p class="alert alert-info">
-   <strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on <a href="/docs/truffle/reference/configuration#resolving-naming-conflicts-on-windows">resolving naming conflicts on Windows</a>.
+   <i class="far fa-info-circle"></i> <strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on <a href="/docs/truffle/reference/configuration#resolving-naming-conflicts-on-windows">resolving naming conflicts on Windows</a>.
    </p>
 
    These tree tests were run against the contract, with descriptions displayed on what the tests are supposed to do.
@@ -137,7 +137,7 @@ Once this operation is completed, you'll now have a project structure with the f
 ## Migrating with Truffle Develop
 
 <p class="alert alert-info">
-<strong>Note</strong>: To use <a href="/ganache">Ganache</a>, please skip to the next section.
+<i class="far fa-info-circle"></i> <strong>Note</strong>: To use <a href="/ganache">Ganache</a>, please skip to the next section.
 </p>
 
 To deploy our smart contracts, we're going to need to connect to a blockchain. Truffle has a built-in personal blockchain that can be used for testing. This blockchain is local to your system and does not interact with the main Ethereum network.
@@ -269,11 +269,11 @@ You can create this blockchain and interact with it using [Truffle Develop](/doc
    This shows the transaction IDs and addresses of your deployed contracts. It also includes a cost summary and real-time status updates.
 
    <p class="alert alert-info">
-     <strong>Note</strong>: Your transaction hashes, contract addresses, and accounts will be different from the above.
+     <i class="far fa-info-circle"></i> <strong>Note</strong>: Your transaction hashes, contract addresses, and accounts will be different from the above.
    </p>
 
 <p class="alert alert-info">
-<strong>Note</strong>: To see how to interact with the contract, please skip to the next section.
+<i class="far fa-info-circle"></i> <strong>Note</strong>: To see how to interact with the contract, please skip to the next section.
 </p>
 
 
@@ -404,7 +404,7 @@ The only extra step, aside from running Ganache, is that it requires editing the
    This shows the transaction IDs and addresses of your deployed contracts. It also includes a cost summary and real-time status updates.
 
    <p class="alert alert-info">
-     <strong>Note</strong>: Your transaction IDs and contract addresses may be different from the above.
+     <i class="far fa-info-circle"></i> <strong>Note</strong>: Your transaction IDs and contract addresses may be different from the above.
    </p>
 
 1. In Ganache, click the "Transactions" button to see that the transactions have been processed.
@@ -426,7 +426,7 @@ The only extra step, aside from running Ganache, is that it requires editing the
 Interact with the contract using the console in the following ways:
 
 <p class="alert alert-info">
-<strong>Note</strong>: We're using `web3.eth.getAccounts()` in these examples, which returns a promise which resolves to an array of all the accounts generated by the mnemonic. So, given the addresses generated by our mnemonic above, specifying `(await web3.eth.getAccounts())[0]` is equivalent to the address `0x627306090abab3a6e1400e9345bc60c78a8bef57`.
+<i class="far fa-info-circle"></i> <strong>Note</strong>: We're using <code>web3.eth.getAccounts()</code> in these examples, which returns a promise which resolves to an array of all the accounts generated by the mnemonic. So, given the addresses generated by our mnemonic above, specifying <code>(await web3.eth.getAccounts())[0]</code> is equivalent to the address <code>0x627306090abab3a6e1400e9345bc60c78a8bef57</code>.
 </p>
 
 As of Truffle v5, the console supports async/await functions, enabling much simpler interactions with the contract.

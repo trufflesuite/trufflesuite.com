@@ -14,7 +14,7 @@ npm install --save drizzle-react-components
 ```
 
 <p class="alert alert-warning">
-<strong>Note</strong>: You'll also need the `drizzle-react` package, if it isn't already installed.
+<i class="far fa-exclamation-triangle"></i> <strong>Note</strong>: You'll also need the <code>drizzle-react</code> package, if it isn't already installed.
 </p>
 
 ## Components

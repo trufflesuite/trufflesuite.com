@@ -5,15 +5,16 @@ layout: docs.hbs
 
 # Contract manager overview
 
+<p class="alert alert-warning">
+<i class="far fa-exclamation-triangle"></i> <strong>Note</strong>: The contract manager is currently available as part of our <strong>Early Access</strong> program, which when enabled gives you access to cutting-edge and potentially unstable features. It requires opting-in; navigate to your account settings by clicking on your username or GitHub avatar in the sidebar. Click <strong>ADVANCED</strong> and choose <strong>Early Access</strong>.
+</p>
+
 The contract mananger provides a user-friendly interface for interacting with your deployed contract instances. It enables you to view the current state of a contract and interact with a contracts functions.
 
 <figure class="screenshot">
   <img class="img-fluid" src="/img/docs/teams/contract-manager-01.png" title="Truffle Teams contract manager view" alt="Truffle Teams contract manager view" />
   <figcaption class="text-center">Contract manager</figcaption>
 </figure>
-
-<p class="alert alert-info">
-<strong>Note</strong>: The contract manager is currently available as part of our <strong>Early Access</strong> program, which when enabled gives you access to cutting-edge and potentially unstable features. It requires opting-in; navigate to your account settings by clicking on your username or GitHub avatar in the sidebar. Click <strong>ADVANCED</strong> and choose <strong>Early Access</strong>.</p>
 
 ## Getting started
 

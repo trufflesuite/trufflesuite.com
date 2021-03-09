@@ -27,15 +27,15 @@ The best way to create a project with Tezos is to start with the `tezos-example`
    ```
 
    <p class="alert alert-info">
-   <strong>Note</strong>: You can use the `truffle unbox <box-name>` command to download any of the other <a href="/boxes">Truffle Boxes</a>, though note that as of this writing, few exist for Tezos.
+   <i class="far fa-info-circle"></i> <strong>Note</strong>: You can use the `truffle unbox <box-name>` command to download any of the other <a href="/boxes">Truffle Boxes</a>, though note that as of this writing, few exist for Tezos.
    </p>
 
    <p class="alert alert-info">
-   <strong>Note</strong>: To create a bare Truffle project with no smart contracts included, use `truffle init`.
+   <i class="far fa-info-circle"></i> <strong>Note</strong>: To create a bare Truffle project with no smart contracts included, use `truffle init`.
    </p>
 
    <p class="alert alert-info">
-   <strong>Note</strong>: You can use an optional `--force` to initialize the project in the current directory regardless of its state (e.g. even if it contains other files or directories). This applies to both the `init` and `unbox` commands. Be careful, this will potentially overwrite files that exist in the directory.
+   <i class="far fa-info-circle"></i> <strong>Note</strong>: You can use an optional `--force` to initialize the project in the current directory regardless of its state (e.g. even if it contains other files or directories). This applies to both the `init` and `unbox` commands. Be careful, this will potentially overwrite files that exist in the directory.
    </p>
 
 Once this operation is completed, you'll now have a project structure with the following items:

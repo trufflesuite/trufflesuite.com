@@ -137,7 +137,7 @@ What's interesting here:
 * We received a return value. Note that since the Ethereum network can handle very large numbers, we're given a [BN](https://github.com/indutny/bn.js/) object which we then convert to a number.
 
 <p class="alert alert-warning">
-<strong>Warning</strong>: We convert the return value to a number because in this example the numbers are small. However, if you try to convert a BN that's larger than the largest integer supported by Javascript, you'll likely run into errors or unexpected behavior.
+<i class="far fa-exclamation-triangle"></i> <strong>Warning</strong>: We convert the return value to a number because in this example the numbers are small. However, if you try to convert a BN that's larger than the largest integer supported by Javascript, you'll likely run into errors or unexpected behavior.
 </p>
 
 ### Processing transaction results

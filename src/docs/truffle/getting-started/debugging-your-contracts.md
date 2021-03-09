@@ -9,16 +9,16 @@ Truffle includes an integrated debugger so that you can debug transactions made 
 ## Overview
 
 <p class="alert alert-info m-t-2">
-<strong>
-New in Truffle v5.1: `truffle test --debug`.
+<i class="far fa-info-circle"></i> <strong>
+New in Truffle v5.1: <code>truffle test --debug</code>.
 </strong>
-Set breakpoints in your JavaScript tests with the new `debug()` global!
+Set breakpoints in your JavaScript tests with the new <code>debug()</code> global!
 <a href="#in-test-debugging">See below</a>.
 </p>
 
 <p class="alert alert-info m-t-2">
-<strong>
-New in Truffle v5.1.29: `truffle debug --fetch-external`.
+<i class="far fa-info-circle"></i> <strong>
+New in Truffle v5.1.29: <code>truffle debug --fetch-external</code>.
 </strong>
 Debug transactions involving contracts not in your project that are verified on <a href="https://etherscan.io/">Etherscan</a>!  (And as of v5.1.32, it works with <a href="https://github.com/ethereum/sourcify">Sourcify</a> too!)
 <a href="#debugging-external-contracts-with-verified-source">See below</a>.
@@ -65,8 +65,8 @@ for more information on `truffle test`, and see
 to learn about contract operations.
 
 <p class="alert alert-warning">
-<strong>Note</strong>: This feature currently doesn't work with reverted transactions;
-until we fix this, you can debug those with direct use of `truffle debug`.
+<i class="far fa-exclamation-triangle"></i> <strong>Note</strong>: This feature currently doesn't work with reverted transactions;
+until we fix this, you can debug those with direct use of <code>truffle debug</code>.
 </p>
 
 
@@ -129,7 +129,7 @@ $ truffle debug <transaction hash> --fetch-external --network <network>
 ```
 
 <p class="alert alert-info m-t-2">
-<strong>
+<i class="far fa-info-circle"></i> <strong>
 Faster debugger startup:
 </strong>
 If your project was not compiled all at once (or under certain other

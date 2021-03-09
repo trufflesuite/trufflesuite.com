@@ -4,7 +4,7 @@ layout: docs.hbs
 ---
 # Unlinking a Corda Project
 
-<p class="alert alert-warning"><strong>Warning:</strong> Once a Cordapp has been installed on a node, removing it can result in node start-up failure. For this reason, Ganache will _not_ remove installed CorDapps from existing nodes and notaries.</p>
+<p class="alert alert-warning"><i class="far fa-exclamation-triangle"></i> <strong>Warning:</strong> Once a Cordapp has been installed on a node, removing it can result in node start-up failure. For this reason, Ganache will _not_ remove installed CorDapps from existing nodes and notaries.</p>
 
 If you no longer want a Corda project linked to a workspace, go to the `WORKSPACE` settings pane the same way you did when [linking the project](/docs/ganache/corda/linking-a-truffle-project).
 

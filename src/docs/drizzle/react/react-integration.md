@@ -19,7 +19,7 @@ npm install @drizzle/react-plugin
 ```
 
 <p class="alert alert-info">
-  <i class="fas fa-info-circle"></i> <strong>Note</strong>: <code>@drizzle/react-plugin</code> requires Requires React v16.3+ for the Context API. You'll also need the <code>@drizzle/store</code> package, if it isn't already installed.
+  <i class="far fa-info-circle"></i> <strong>Note</strong>: <code>@drizzle/react-plugin</code> requires Requires React v16.3+ for the Context API. You'll also need the <code>@drizzle/store</code> package, if it isn't already installed.
 </p>
 
 ## Getting Started
@@ -65,7 +65,7 @@ npm install @drizzle/react-plugin
 1. Use `DrizzleContext.Consumer` to consume the drizzle context and pass `drizzle` and `drizzleState` to your component. Drizzle also provides codebuilt components via the `@drizzle/react-components`.
 
 <p class="alert alert-info">
-  <i class="fas fa-info-circle"></i> <strong>Note</strong>: We have to check that Drizzle is initialized before fetching data. The <code>initialized</code> variable returns the drizzle store's initialization status.
+  <i class="far fa-info-circle"></i> <strong>Note</strong>: We have to check that Drizzle is initialized before fetching data. The <code>initialized</code> variable returns the drizzle store's initialization status.
 </p>
 
   ```javascript
@@ -116,7 +116,7 @@ npm install @drizzle/react-plugin
   ```
 
   <p class="alert alert-info">
-    <i class="fas fa-info-circle"></i> <strong>Note</strong>: The contract instances have all the standard <code>web3</code> properties and methods.
+    <i class="far fa-info-circle"></i> <strong>Note</strong>: The contract instances have all the standard <code>web3</code> properties and methods.
   </p>
   
   ```javascript
