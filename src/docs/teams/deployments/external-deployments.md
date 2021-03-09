@@ -23,5 +23,5 @@ Truffle Teams will then verify that the contracts exist on the given network at 
 </figure>
 
 <p class="alert alert-info">
-<strong>Note</strong>: Monitoring for external deployments begins once the contract is added to Truffle Teams and does not currently include historical data from before that point.
+<i class="far fa-info-circle"></i> <strong>Note</strong>: Monitoring for external deployments begins once the contract is added to Truffle Teams and does not currently include historical data from before that point.
 </p>

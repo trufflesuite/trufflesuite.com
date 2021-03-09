@@ -5,6 +5,10 @@ layout: docs.hbs
 
 # Connecting to a sandbox
 
+<p class="alert alert-warning">
+<i class="far fa-exclamation-triangle"></i> <strong>Note</strong>: The contract manager is currently available as part of our <strong>Early Access</strong> program, which when enabled gives you access to cutting-edge and potentially unstable features. It requires opting-in; navigate to your account settings by clicking on your username or GitHub avatar in the sidebar. Click <strong>ADVANCED</strong> and choose <strong>Early Access</strong>.
+</p>
+
 Please note, this section of the documentation assumes that you have already created a sandbox and deployed your contracts to the sandbox. If you need help getting started with sandboxes and deployments to sandboxes, please check out the <a href="/docs/teams/sandboxes/creating-a-sandbox">creating a sandbox</a> section and the <a href="/docs/teams/deployments/deploying-to-a-sandbox">deploying to a sandbox</a> section for more details.
 
 If you deployed your contract to a sandbox and would like to interact with it using the contract manager, you'll need to have your MetaMask connected to your sandbox instance. To connect MetaMask to your sandbox, you'll need the RPC URL and the generated mnemonic. Navigate to **<span class="inline-menu-item"><i class="far fa-cubes"></i>SANDBOXES</span>** and click on <span class="inline-button">VIEW/EDIT</span> of the sandbox you deployed to. Copy the **Mnemonic**, open your MetaMask browser extension, and select **Import using account seed phrase**.

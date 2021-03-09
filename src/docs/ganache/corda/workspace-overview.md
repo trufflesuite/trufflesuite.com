@@ -4,7 +4,7 @@ layout: docs.hbs
 ---
 # Corda Workspace Overview
 
-<p class="alert alert-info">For Corda technical documentation not related to Ganache head over to <a href="https://docs.corda.net/docs/corda-os/4.4.html">Corda's official documentation</a>.</p>
+<p class="alert alert-info"><i class="far fa-info-circle"></i> <strong>For Corda technical documentation</strong> not related to Ganache head over to <a href="https://docs.corda.net/docs/corda-os/4.4.html">Corda's official documentation</a>.</p>
 
 ## Main Interface
 
