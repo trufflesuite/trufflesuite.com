@@ -26,7 +26,7 @@ The default configuration ships with configuration for a single development netw
 ### Resolving naming conflicts on Windows
 
 <p class="alert alert-warning">
-<strong>Note</strong>: This only applies to Truffle version 4 and below.
+<i class="far fa-exclamation-triangle"></i> <strong>Note</strong>: This only applies to Truffle version 4 and below.
 </p>
 
 
@@ -152,7 +152,7 @@ module.exports = {
 ```
 
 <p class="alert alert-info">
-<strong>Note</strong>: In addition to specifying a relative path, you can also use globs/regular expressions to selectively compile contracts.
+<i class="far fa-info-circle"></i> <strong>Note</strong>: In addition to specifying a relative path, you can also use globs/regular expressions to selectively compile contracts.
 </p>
 
 ### contracts_build_directory

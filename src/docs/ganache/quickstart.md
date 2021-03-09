@@ -9,7 +9,7 @@ This quickstart guide will walk you through installing Ganache and creating a pe
 If this isn't your first time using Ganache, or you already know you'll need custom configuration options, check out the [Creating Workspaces documentation](/docs/ganache/workspaces/creating-workspaces).
 
 <p class="alert alert-info">
-<strong>Working with Ethereum and prefer using the command line?</strong>: This page will focus only on the graphical interface. Please see the <a href="https://github.com/trufflesuite/ganache-cli/blob/master/README.md">Ganache CLI Readme</a> for more information on the command line flavor of Ganache.
+<i class="far fa-info-circle"></i> <strong>Working with Ethereum and prefer using the command line?</strong>: This page will focus only on the graphical interface. Please see the <a href="https://github.com/trufflesuite/ganache-cli/blob/master/README.md">Ganache CLI Readme</a> for more information on the command line flavor of Ganache.
 </p>
 
 ## 1. Install Ganache
@@ -23,7 +23,7 @@ If this isn't your first time using Ganache, or you already know you'll need cus
 Next, double-click on the downloaded file, follow the prompts, and you're up and running.
 
 <p class="alert alert-info">
-<strong>Note</strong>: The first time you launch Ganache, you will be asked if you want to allow Google Analytics tracking. While optional, turning this on will help the development team gain more insight into how Ganache is used. This tracking is totally anonymous, and no account data or private keys will ever be shared.
+<i class="far fa-info-circle"></i> <strong>Note</strong>: The first time you launch Ganache, you will be asked if you want to allow Google Analytics tracking. While optional, turning this on will help the development team gain more insight into how Ganache is used. This tracking is totally anonymous, and no account data or private keys will ever be shared.
 </p>
 
 ## 2. Create a Workspace

@@ -5,6 +5,10 @@ layout: docs.hbs
 
 # Using the debugger
 
+<p class="alert alert-warning">
+<i class="far fa-exclamation-triangle"></i> <strong>Note</strong>: The debugger is currently available as part of our <strong>Early Access</strong> program, which when enabled gives you access to cutting-edge and potentially unstable features. It requires opting-in; navigate to your account settings by clicking on your username or GitHub avatar in the sidebar. Click <strong>ADVANCED</strong> and choose <strong>Early Access</strong>.
+</p>
+
 In this section we'll explore both the various elements of the debugger's user interface and steps invovled in actually debugging a transaction. Let's explore an example of the Truffle Teams debugger interface, wherein a simple ERC721 token implementation is being debugged.
 
 <figure class="screenshot">

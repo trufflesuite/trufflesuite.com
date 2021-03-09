@@ -21,7 +21,7 @@ Click `Configure` to continue configuring Truffle Teams.
 Next will be a list of repositories with the ones Teams already installed on having a `Configure >` link. Click one of those repositories of click one without that link to install Truffle Teams onto that repository.
 
 <p class="alert alert-info">
-<strong>Note</strong>: You may be prompted for your GitHub password at this point.
+<i class="far fa-info-circle"></i> <strong>Note</strong>: You may be prompted for your GitHub password at this point.
 </p>
 
 ![Truffle Teams DATA view](/img/docs/teams/add-repo-02.png)
@@ -34,6 +34,6 @@ Once you've selected one or more repositories, click the green `Save` button. Yo
 
 You can now navigate back to Truffle Teams to see your newly added repository!
 
-<p class="alert alert-info">
-<strong>Note</strong>: Truffle Teams will only build repositories who have a Truffle project at the root of the repository. It looks for a <code>truffle-config.js</code> or <code>truffle.js</code> config in the root directory before building. Read more in the <a href="/docs/teams/reference/configuration#repository-structure">Configuration docs</a>.
+<p class="alert alert-warning">
+<i class="far fa-exclamation-triangle"></i> <strong>Note</strong>: Truffle Teams will only build repositories who have a Truffle project at the root of the repository. It looks for a <code>truffle-config.js</code> or <code>truffle.js</code> config in the root directory before building. Read more in the <a href="/docs/teams/reference/configuration#repository-structure">Configuration docs</a>.
 </p>

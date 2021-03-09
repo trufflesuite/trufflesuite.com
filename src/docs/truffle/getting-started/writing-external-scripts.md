@@ -32,7 +32,7 @@ You can do anything you'd like within this script, so long as the callback is ca
 # Third-party plugin commands
 
 <p class="alert alert-warning">
-<strong>Note</strong>: This feature is new and still in a barebones state. Please let us
+<i class="far fa-exclamation-triangle"></i> <strong>Note</strong>: This feature is new and still in a barebones state. Please let us
 know how we can improve it!
 </p>
 
@@ -125,20 +125,14 @@ aggregate data and report
 ```
 The Truffle library lets you do this without making the user add configuration or string their own commands together.
 
-:warning: **Important Note** :warning:
-
-Truffle does not guarantee its internal APIs will follow semver. You should be prepared for your user
-to run any Truffle version and handle mismatches gracefully. By using the library **you are entering into a gentleperson's agreement** to manage API volatility and other contingencies on your users' behalf. Some tips:
-
-+ Always `require` Truffle in a try/catch block
-+ At runtime, verify the API components you need are actually exposed
-+ Consume separately published (and semver guaranteed) Truffle modules when possible
-+ Add yourself to the Truffle repo watch list on GitHub and keep abreast of internal changes that
-might affect you.
-+ Do not go on vacation
-
-
-
-
-
-
+<p class="alert alert-danger">
+<i class="far fa-times-octagon"></i> <strong>Warning</strong>: Truffle does not guarantee its internal APIs will follow semver. You should be prepared for your user to run any Truffle version and handle mismatches gracefully. By using the library <strong>you are entering into an agreement</strong> to manage API volatility and other contingencies on your users' behalf.
+Some tips:<br/>
+<span class="d-block mt-2">
+&bull; Always <code>require</code> Truffle in a try/catch block<br/>
+&bull; At runtime, verify the API components you need are actually exposed<br/>
+&bull; Consume separately published (and semver guaranteed) Truffle modules when possible<br/>
+&bull; Add yourself to the Truffle repo watch list on GitHub and keep abreast of internal changes that might affect you.<br/>
+&bull; Do not go on vacation
+</span>
+</p>

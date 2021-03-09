@@ -5,7 +5,7 @@ layout: docs.hbs
 
 # Truffle Event System
 
-<p class="alert alert-warning"><strong>Note</strong>: The Truffle Event System is currently an experimental feature and we
+<p class="alert alert-warning"><i class="far fa-exclamation-triangle"></i> <strong>Note</strong>: The Truffle Event System is currently an experimental feature and we
 anticipate that it will be developing and changing in the near future.
 Please keep this in mind when using this feature as we cannot promise that its
 architecture or the API will remain the same until we declare it as stable.

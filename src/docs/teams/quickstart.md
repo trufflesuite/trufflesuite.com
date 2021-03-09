@@ -7,8 +7,8 @@ layout: docs.hbs
 
 This page will take you through the basics of creating a Truffle Teams account and linking it to a Truffle project repository.
 
-<p class="alert alert-info">
-<strong>Note</strong>: Before you begin, make sure that you have a GitHub repository containing a Truffle project.
+<p class="alert alert-warning">
+<i class="far fa-exclamation-triangle"></i> <strong>Note</strong>: Before you begin, make sure you have a GitHub repository containing a Truffle project.
 </p>
 
 ## Table of contents
@@ -28,13 +28,13 @@ If you are a member of any organizations other than your personal account, you'l
 Next you'll be asked for permission to link Truffle Teams to one or more of your GitHub repositories. Select the repositories you wish to add and click continue. Select either **All repositories** to add all repos in this account/org to teams or **Only select repositories** to select individual repos from the dropdown.
 
 <p class="alert alert-info">
-<strong>Note</strong>: We can always add a repo later if necessary. See the <a href="/docs/teams/getting-started/adding-repositories">Adding repositories</a> documentation for more informaiton.
+<i class="far fa-info-circle"></i> <strong>Note</strong>: We can always add a repo later if necessary. See the <a href="/docs/teams/getting-started/adding-repositories">Adding repositories</a> documentation for more informaiton.
 </p>
 
 Finally, click **Install** to install Truffle Teams on the selected repositories.
 
-<p class="alert alert-warning">
-<strong>Why do we need certain permissions?</strong> Please see the <a href="/docs/teams/reference/permissions-disclosure">Permissions disclosure</a> section for a full breakdown of why we're asking for each permission.
+<p class="alert alert-info">
+<i class="far fa-info-circle"></i> <strong>Why do we need certain permissions?</strong> Please see the <a href="/docs/teams/reference/permissions-disclosure">Permissions disclosure</a> section for a full breakdown of why we're asking for each permission.
 </p>
 
 ![Truffle Teams DATA view](/img/docs/teams/install-03.png)
@@ -55,6 +55,6 @@ Please see our detailed tutorial, ["Learning to Deploy with Truffle Teams"](http
 
 ## Continue learning
 
-This quickstart showed you the basics of the Truffle Teams testing workflow, but once your contracts are deployed there's more to learn about **[monitoring deployed contracts](/docs/teams/deployments/contract-monitoring)**.
+This quickstart showed you the basics of the Truffle Teams testing workflow, but once your contracts are deployed there's more to learn about [monitoring deployed contracts](/docs/teams/deployments/contract-monitoring).
 
 We're in a cycle of rapid development; constantly adding new features and refining existing ones. If you run into any glitches or bugs, please [raise an issue on the Truffle Teams GitHub repository](https://github.com/trufflesuite/truffle-teams/issues). To get notified of the latest updates consider [signing up for the Truffle Teams mailing list](https://share.hsforms.com/1OaTglVhGTdWk7spR6nE_AA34pbp).

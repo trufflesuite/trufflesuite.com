@@ -7,7 +7,7 @@ layout: docs.hbs
 Before you can interact with smart contracts in a browser, make sure they're compiled, deployed, and that you're interacting with them via `web3` in client-side JavaScript. We recommend using the [@truffle/contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) library, as it makes interacting with contracts easier and more robust.
 
 <p class="alert alert-info">
-<strong>Note</strong>: For more information on these topics, including using `@truffle/contract`, check out our <a href="/tutorials/pet-shop">Pet Shop</a> or <a href="/tutorials/robust-smart-contracts-with-openzeppelin">TutorialToken</a> tutorials.
+<i class="far fa-info-circle"></i> <strong>Note</strong>: For more information on these topics, including using <code>@truffle/contract</code>, check out our <a href="/tutorials/pet-shop">Pet Shop</a> or <a href="/tutorials/robust-smart-contracts-with-openzeppelin">TutorialToken</a> tutorials.
 </p>
 
 Once you've done the above, you're ready to use MetaMask.
@@ -33,7 +33,7 @@ With our front-end ready to be used and MetaMask installed, we're ready to see o
 [Ganache](/ganache) is a graphical application that runs a blockchain that can be used for testing purposes. It runs on `127.0.0.1:7545`.
 
 <p class="alert alert-info">
-<strong>Note</strong>: We recommend specifying `127.0.0.1` instead of `localhost` because the address does not require a network connection and so is more suitable for development.
+<i class="far fa-info-circle"></i> <strong>Note</strong>: We recommend specifying <code>127.0.0.1</code> instead of <code>localhost</code> because the address does not require a network connection and so is more suitable for development.
 </p>
 
 ### Detecting MetaMask's web3 injection
@@ -65,7 +65,7 @@ To use Ganache with MetaMask, click the MetaMask icon in your browser and this s
 Click **Import with seed phrase**. In the box marked **Wallet Seed**, enter the mnemonic that was displayed when launching Ganache.
 
 <p class="alert alert-danger">
-<strong>Warning</strong>: Do not use this mnemonic on the main Ethereum network (mainnet). Make sure that you set the network to "Private Network" (use the "Custom RPC" setting). See below for details.
+<i class="far fa-times-octagon"></i> <strong>Warning</strong>: Do not use this mnemonic on the main Ethereum network (mainnet). Make sure that you set the network to "Private Network" (use the "Custom RPC" setting). See below for details.
 </p>
 
 Enter a password below that and click **OK**.
@@ -99,7 +99,7 @@ Click the account icon in the upper-right to create new accounts, the first 10 o
 Truffle Develop is a command-line application that runs a temporary blockchain that is also used for testing purposes. It runs on `127.0.0.1:9545`.
 
 <p class="alert alert-info">
-<strong>Note</strong>: We recommend specifying `127.0.0.1` instead of `localhost` because the address does not require a network connection and so is more suitable for development.
+<i class="far fa-info-circle"></i> <strong>Note</strong>: We recommend specifying <code>127.0.0.1</code> instead of <code>localhost</code> because the address does not require a network connection and so is more suitable for development.
 </p>
 
 Using MetaMask with Truffle Develop is very similar to that of Ganache. The only difference is that Truffle Develop runs by default on `127.0.0.1:9545`, so you'll want to edit the above web3 code to say:

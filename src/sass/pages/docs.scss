@@ -360,6 +360,7 @@
   border-radius: .25em;
   font-size: .9em;
   line-height: 2em;
+  white-space: nowrap;
 
   &.red {
     color: #ffffff;
@@ -370,6 +371,7 @@
 .inline-menu-item {
   line-height: 2em;
   font-weight: bold;
+  white-space: nowrap;
   
   i {
     background: #ffffff;
