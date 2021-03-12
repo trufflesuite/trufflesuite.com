@@ -17,7 +17,7 @@
     "title": "Drizzle and React Native",
     "date": "2019-01-31",
     "author": "Heyse Li",
-    "published": true,
+    "published": false,
     "products": ["truffle", "ganache", "drizzle"]
   },
   "getting-started-with-drizzle-and-react": {
@@ -45,7 +45,7 @@
     "title": "Building Robust Smart Contracts with OpenZeppelin",
     "date": "2017-08-03",
     "author": "Josh Quintal",
-    "published": true,
+    "published": false,
     "products": ["truffle", "ganache"]
   },
   "pet-shop": {
@@ -59,7 +59,7 @@
     "title": "Building dapps for Quorum: Private Enterprise Blockchains",
     "date": "2017-05-15",
     "author": "Tim Coulter",
-    "published": true,
+    "published": false,
     "products": ["truffle"]
   },
   "ethereum-overview": {
@@ -73,14 +73,14 @@
     "title": "Building & Testing a Frontend App with Truffle 3.0",
     "date": "2017-02-14",
     "author": "Doug von Kohorn",
-    "published": true,
+    "published": false,
     "products": ["truffle", "ganache"]
   },
   "testing-for-throws-in-solidity-tests": {
     "title": "Testing for throws in Solidity Tests",
     "date": "2017-02-13",
     "author": "Simon de la Rouviere",
-    "published": true,
+    "published": false,
     "products": ["truffle", "ganache"]
   },
   "creating-a-cli-with-truffle-3": {
@@ -94,14 +94,14 @@
     "title": "Upgrading from Truffle 2.0 to 3.0 - a Guide",
     "date": "2017-02-01",
     "author": "Tim Coulter",
-    "published": true,
+    "published": false,
     "products": ["truffle"]
   },
   "ethereum-devops-truffle-testrpc-vsts": {
     "title": "Ethereum DevOps with Truffle, TestRPC & Visual Studio Team Services",
     "date": "2016-12-23",
     "author": "David Burela",
-    "published": true,
+    "published": false,
     "products": ["truffle", "ganache"]
   },
   "configuring-visual-studio-code": {
@@ -115,7 +115,7 @@
     "title": "How to install Truffle & TestRPC on Windows for Blockchain Development",
     "date": "2016-11-18",
     "author": "David Burela",
-    "published": true,
+    "published": false,
     "products": ["truffle", "ganache"]
   },
   "deploying-to-the-live-network": {
@@ -129,7 +129,7 @@
     "title": "Bundling with Webpack",
     "date": "2016-09-16",
     "author": "Tim Coulter",
-    "published": true,
+    "published": false,
     "products": ["truffle"]
   },
   "package-management": {
@@ -165,7 +165,7 @@
     "title": "Chain Forking and Dynamic Analysis: Exploiting The DAO",
     "date": "2016-09-26",
     "author": "Tim Coulter",
-    "published": true,
+    "published": false,
     "products": ["truffle", "ganache"]
   }
 }
