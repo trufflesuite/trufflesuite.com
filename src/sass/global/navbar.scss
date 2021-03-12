@@ -64,7 +64,8 @@
   border-bottom: 2px solid #5e464d;
 }
 
-.navbar-dark a, .navbar-dark .navbar-expand-md .navbar-nav .nav-link {
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-expand-md .navbar-nav .nav-link {
   color: #fff;
 }
 
@@ -73,6 +74,10 @@
   border-bottom: 2px solid #5e464d;
   border-left: 2px solid #5e464d;
   border-right: 2px solid #5e464d;
+
+  a {
+    color: #fff;
+  }
 }
 
 .navbar-dark .navbar-toggler .icon-bar {
