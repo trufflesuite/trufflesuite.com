@@ -240,6 +240,13 @@
     "official": false
   },
   {
+    "userOrg": "harmony-one",
+    "displayName": "harmony-box",
+    "repoName": "harmony-box",
+    "official": false,
+    "defaultBranch": "main"
+  },
+  {
     "userOrg": "yehia67",
     "displayName": "helloworldbox",
     "repoName": "HelloWorldBox",

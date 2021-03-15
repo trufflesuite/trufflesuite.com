@@ -84,7 +84,11 @@
       <div class="row">
         <div class="col-md-4 order-5">
           <div class="card box-single-card mt-4 mt-md-0 mb-0">
-            <img class="card-img-top d-none d-md-block" src="https://github.com/{{ data.userOrg }}/{{ data.repoName }}/blob/master/box-img-lg.png?raw=true" alt="{{ data.repoName }}" onerror="javascript:this.src='/img/boxes/loading-thumb.png'" />
+            {{#if data.defaultBranch}}
+              <img class="card-img-top d-none d-md-block" src="https://github.com/{{ data.userOrg }}/{{ data.repoName }}/blob/{{ data.defaultBranch }}/box-img-lg.png?raw=true" alt="{{ data.repoName }}" onerror="javascript:this.src='/img/boxes/loading-thumb.png'" />
+            {{else}}
+              <img class="card-img-top d-none d-md-block" src="https://github.com/{{ data.userOrg }}/{{ data.repoName }}/blob/master/box-img-lg.png?raw=true" alt="{{ data.repoName }}" onerror="javascript:this.src='/img/boxes/loading-thumb.png'" />
+            {{/if}}
 
             <div class="card-body">
               <h5 class="card-title">TAGS</h5>
