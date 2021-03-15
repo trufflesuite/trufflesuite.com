@@ -108,7 +108,11 @@
               <a class="link-card" href="/boxes/{{this.displayName}}">
             {{/if}}
               <div class="card box-card" data-userorg="{{this.userOrg}}" data-repo="{{this.repoName}}">
-                <div class="card-img-top" style="background: url('https://github.com/{{this.userOrg}}/{{this.repoName}}/blob/master/box-img-sm.png?raw=true'), url('/img/boxes/loading-banner.png'); background-position: left center; background-size: cover; background-repeat: no-repeat;"></div>
+                {{#if this.defaultBranch}}
+                  <div class="card-img-top" style="background: url('https://github.com/{{this.userOrg}}/{{this.repoName}}/blob/{{this.defaultBranch}}/box-img-sm.png?raw=true'), url('/img/boxes/loading-banner.png'); background-position: left center; background-size: cover; background-repeat: no-repeat;"></div>
+                {{else}}
+                  <div class="card-img-top" style="background: url('https://github.com/{{this.userOrg}}/{{this.repoName}}/blob/master/box-img-sm.png?raw=true'), url('/img/boxes/loading-banner.png'); background-position: left center; background-size: cover; background-repeat: no-repeat;"></div>
+                {{/if}}
 
                 <div class="card-body">
                   {{#if this.official}}

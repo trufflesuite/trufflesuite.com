@@ -1,4 +1,12 @@
 {
+	"harmony-box": {
+		"description": "Harmony Box is a Truffle box that will get you quickly up and running deploying smart contracts on Harmony using Truffle & native Ethereum tooling.",
+		"stars": 0,
+		"tags": [
+			"community",
+			"harmony"
+		]
+	},
 	"HelloWorldBox": {
 		"description": "This truffle box could used for Dapp & ICO development with deployment. Ready to migrate with infura or local developement.",
 		"stars": 0,
