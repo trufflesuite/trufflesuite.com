@@ -278,22 +278,6 @@
       margin: 0 .5em 0 0;
       width: 2.5rem;
       max-height: 2.5rem;
-
-      > * {
-        display: inline-block;
-        margin: 0;
-        width: 2.5rem;
-        max-height: 2.5rem;
-      }
-
-      // Let icons be whatever width they render as
-      > i {
-        width: initial;
-      }
-    }
-
-    div.card-img-top {
-      width: initial;
     }
 
     &.docs-teams-card {

@@ -4,6 +4,16 @@ layout: docs.hbs
 ---
 # Get Started With using the Filecoin-flavored Ganache CLI
 
+## Requirements
+
+Filecoin-flavored Ganache CLI requires [NodeJS](https://nodejs.org) version `12.13.0` or later.
+
+You can check your current version by running:
+
+```bash
+node --version
+```
+
 ## Installation
 
 1. Remove any existing version of Ganache CLI

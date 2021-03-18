@@ -4,6 +4,16 @@ layout: docs.hbs
 ---
 # Get Started With using the Filecoin-flavored Ganache as a NodeJS Dependency
 
+## Requirements
+
+Using the Filecoin-flavored Ganache NodeJS module requires [NodeJS](https://nodejs.org) version `12.13.0` or later.
+
+You can check your current version by running:
+
+```bash
+node --version
+```
+
 ## Installation
 
 If you're using Filecoin-flavored Ganache as a NodeJS dependency, you need to make sure you install both the `ganache` package (with the `filecoin` tag) and the `@ganache/filecoin` package.
