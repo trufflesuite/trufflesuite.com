@@ -122,6 +122,12 @@
       "CorDapps",
       "Shell"
     ],
+    "Filecoin": [
+      "Working with Filecoin",
+      "Get Started with the CLI",
+      "Get Started with the GUI",
+      "Get Started with NodeJS"
+    ],
     "Reference": [
       "Ganache Settings",
       "Workspace Default Configuration"
