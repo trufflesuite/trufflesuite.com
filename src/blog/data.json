@@ -1,4 +1,12 @@
 {
+  "features-from-version-5.x": {
+    "title": "Features from versions 5.x",
+    "date": "???",
+    "author": "Harry Altman, Josh Quintal, Tyler Feickert",
+    "published": true,
+    "excerpt": "In this blogpost we will go over some of the features included in version 5.2.x of Truffle as well as some features that you may have missed in 5.1.x.",
+    "image": "/img/blog/iterate-faster-with-truffle-teams/blog-thumbnail.png"
+  },
   "iterate-faster-with-truffle-teams": {
     "title": "Iterate Faster with Truffle Teams",
     "date": "2021-2-10",
