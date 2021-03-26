@@ -95,6 +95,10 @@ function app(clean) {
     "default": "tutorial-single.hbs",
     "pattern": "tutorials/*.html"
   }))
+  .use(layouts({
+    "default": "tutorial-single.hbs",
+    "pattern": "guides/*.html"
+  }))
   .use(layouts())
   .use(sass({
     outputStyle: 'expanded',

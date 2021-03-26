@@ -1,5 +1,7 @@
 $(window).on('load', function() {
   // Initialization
+  var buttonFilter;
+  console.log(buttonFilter);
   var qsRegex;
   var $container = $('#isoContainer');
 
@@ -7,45 +9,32 @@ $(window).on('load', function() {
     itemSelector: '.iso-item',
     layoutMode: 'masonry',
     filter: function() {
-      var isMatched = true;
       var $this = $(this);
-
-      var searchField = qsRegex ? $this.text().match(qsRegex) : true;
-
-      for (var prop in filters) {
-        var filter = filters[prop];
-        // Use function if it matches.
-        filter = filterFns[filter] || filter;
-        // Test each filter.
-        if (filter) {
-          isMatched = isMatched && $this.hasClass(filter);
-        }
-        // Break if not matched.
-        if (!isMatched) {
-          break;
-        }
-      }
-      return isMatched && searchField;
+      var searchResult = qsRegex ? $this.text().match( qsRegex ) : true;
+      var buttonResult = buttonFilter ? $this.is( buttonFilter ) : true;
+      return searchResult && buttonResult;
     }
   });
 
   // Filters & Search
-  var filterFns = {};
-  var filters = {};
+  $('#filterGuides input').on('change', function(event) {
+    const filterProduct = $(event.currentTarget).attr('data-filter');
 
-  $('#isoSort').on('change', 'select', function(event) {
-    var filterGroup = $(event.currentTarget).attr('data-filter-group');
-    var filterValue = $(event.currentTarget).find(':selected').attr('data-filter');
-
-    filterValue = filterFns[filterValue] || filterValue;
-
-    filters[filterGroup] = filterValue;
+    buttonFilter = filterProduct;
 
     $container.isotope('arrange');
   });
 
+  $('#filterClear').on('click', function() {
+    $('input[name="product"]').prop('checked', false);
+    $('#tutorialsSearch').val('');
+    buttonFilter = '';
+    qsRegex = '';
+    $container.isotope('arrange');
+  });
+
   // Use value of search field to filter.
-  var $quicksearch = $('#tutorialsSearch').keyup(debounce( function() {
+  var $quicksearch = $('#tutorialsSearch').on('keyup', debounce( function() {
     qsRegex = new RegExp( $quicksearch.val(), 'gi' );
     $container.isotope('arrange');
   }, 200));

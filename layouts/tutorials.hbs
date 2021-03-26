@@ -57,10 +57,12 @@
 
   {{> navbar}}
 
-  <main class="container container-heading">
-    <div class="row">
-      <div class="col">
-        <h1>TUTORIALS</h1>
+  <main class="banner banner-dark-cream pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>GUIDES</h1>
+        </div>
       </div>
     </div>
   </main>
@@ -76,26 +78,33 @@
               </div>
             </div>
 
-            <!--<div class="row mt-3 mb-3">
-              <div class="col form-inline">
+            <div class="row mt-3 mb-3">
+              <div class="col form-inline" id="filterGuides">
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Truffle</label>
+                  <input type="radio" name="product" class="form-check-input" id="filterTruffle" data-filter=".truffle">
+                  <label class="form-check-label" for="filterTruffle">Truffle</label>
                 </div>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Ganache</label>
+                  <input type="radio" name="product" class="form-check-input" id="filterGanache" data-filter=".ganache">
+                  <label class="form-check-label" for="filterGanache">Ganache</label>
                 </div>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Drizzle</label>
+                  <input type="radio" name="product" class="form-check-input" id="filterDrizzle" data-filter=".drizzle">
+                  <label class="form-check-label" for="filterDrizzle">Drizzle</label>
                 </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="form-check">
+                  <input type="radio" name="product" class="form-check-input" id="filterTeams" data-filter=".teams">
+                  <label class="form-check-label" for="filterTeams">Truffle Teams</label>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-truffle" id="filterClear" type="button">Clear</button>
               </div>
             </div>
 
-            <div class="row" id="isoSort">
+            <!--<div class="row" id="isoSort">
               <div class="col">
                 <select id="inputState" class="form-control">
                   <option selected>Version</option>
@@ -130,7 +139,7 @@
       <div class="row" id="isoContainer">
         {{#each tutorials as |tutorial slug|}}
           {{#if tutorial.published}}
-            <div class="col-xs-12 col-md-6 col-lg-4 iso-item {{makeSlug tutorial.author}}">
+            <div class="col-xs-12 col-md-6 col-lg-4 iso-item {{makeSlug tutorial.author}} {{listToClasses tutorial.products}}">
               <a class="link-card" href="/tutorials/{{ slug }}">
                 <div class="card card-tutorial {{listToClasses tutorial.products}}">
                   <div class="card-body">
