@@ -1,37 +1,14 @@
-Truffle version 5.2.x and features you may have missed in 5.1.x
+![New Features in Truffle 5.1 and 5.2 Banner](/img/blog/features-from-version-5/blog-header.png)
 
+Truffle 5.1 and 5.2 are exciting releases in the flexibilty they provide to your workflow. Truffle now offers more flexible compilation options by detecting the version of Solidity in your contracts at compile time and by allowing for compilation from ABI files. Because of this, wrangling a project whose contracts use multiple version of Solidity is much easier going forward. We've also enhanced our testing capapbilities with Solidity strack traces and better event decoding, making it much easier to get to the source of an errors and get richer information from events. When our projects integrate with existing protocols, it's a pain to have to deal with those external contracts. Now Truffle makes this easy with the ability to fetch external contracts verified on Etherscan! Vyper support continues to improve with experimental debugging for Vyper contracts, as well as improved import handling for Vyper.
 
-
-Intro
-
- - More flexible compilation
-
-    -- pragma compilation
-
-    -- compilation of abi.json files
-
- - Test & Debugging Enhancements
-
-    -- Solidity stacktraces in Truffle Test
-
-    -- Debugging verified external contracts
-
- - Vyper Enhancements
-
-    -- Experimental Vyper debugging
-
-    -- Improved import handling in Vyper
-
- - Enumeration values in Truffle Contract objects
-
-In this blogpost we will go over some of the features included in version 5.2.x of Truffle as well as some features that you may have missed in 5.1.x. To illustrate some of these features we have created a Truffle box. You can unbox it using the unbox command in an empty directory as follows:
+There's quite a bit here, even more than is mentioned above, so to illustrate some of these features we have created a Truffle box. Get started by using the `unbox` command in an empty directory as follows:
 
 ```
 truffle unbox https://github.com/truffle-box/v5.2-example-box
 ```
 
 ### Pragma compilation
-
 
 As of version 5.2.0, Truffle now ships with a fun, experimental setting for compilation: the “pragma” setting. This feature analyzes your Solidity source files for their pragma expressions. It then uses these expressions to figure out which version of the Solidity compiler is required for each given source. This allows your project to compile when it contains multiple Solidity files, each requiring a different version of the Solidity compiler!
 
@@ -52,12 +29,9 @@ In `v5.2-example-box` referenced above, you can see how the `truffle-config.js` 
 
 As mentioned above, when you use this feature, Truffle will analyze each or your Solidity sources one by one to find the appropriate version of the Solidity compiler for each source. Do note, however, that each source file and all of its imports must be compiled with one version of Solidity; this means there must be a version of the compiler that satisfies all of their pragma expressions.
 
-
-
-
 ## Things you may have missed in Truffle 5.1
-We’ve added a fair bit over the course of Truffle 5.1 as well, and there’s a good chance you didn’t catch all of it!  We thought this would be a good time to review some of that as well!
 
+We’ve added a fair bit over the course of Truffle 5.1 as well, and there’s a good chance you didn’t catch all of it!  We thought this would be a good time to review some of that as well!
 
 ### Compilation of abi.json files
 
@@ -65,16 +39,17 @@ Another exciting addition to Truffle is the ability to compile from a contract�
 
 In the v5.2-example-box, consider the `contracts/MetaCoin.sol` and `contracts/Conversion.sol`. We would like to import Conversion into the MetaCoin contract to use it but cannot since they require different versions of the Solidity compiler.  To work around this, we have created `contracts/IConversion.abi.json` which contains the ABI from the compiled Conversion. In this way we can now import the interface into `contracts/MetaCoin.sol` (see line 4 in the MetaCoin contract) to use it!
 
-
 ### Solidity stacktraces in Truffle Test
 
-Try running your tests with the `--stacktrace` option (or `-t`) for short and get combined Solidity-Javascript stacktraces!  This feature does have some limitations and is still somewhat experimental, but we expect you’ll find it quite useful.  In the future we may add support for Vyper stacktraces as well!  And speaking of Vyper 
-Experimental Vyper debugging...
+Try running your tests with the `--stacktrace` option (or `-t`) for short and get combined Solidity-Javascript stacktraces!  This feature does have some limitations and is still somewhat experimental, but we expect you’ll find it quite useful.  In the future we may add support for Vyper stacktraces as well!  
+
+And speaking of Vyper...
+
+### Experimental Vyper debugging
 
 You can now use Truffle Debugger with Vyper!  Support for this is still in its early stages; you won’t be able to inspect variables, I’m afraid.  But you can step through a Vyper transaction, and there will likely be more in the future!
 
-But perhaps the biggest improvement to the debugger is…
-
+But perhaps the biggest improvement to the debugger is...
 
 ### Debugging verified external contracts
 
@@ -87,39 +62,49 @@ For instance, suppose `examplepackage` is an NPM package which is structured as 
 ```
 from examplepackage.contracts import VyperContract
 ```
+
 or
+
 ```
 import examplepackage.contracts.VyperContract as VyperContract
 ```
+
 to import it, much like you could do in Solidity!
 
 Note that if your own project uses such “absolute” imports as a way to import its own files from the project root -- e.g., if you have a file `contracts/subdirectory/Contract1.vy` which imports `contracts/Contract2.vy` via
+
 ```
 import Contract2 as Contract2
 ```
+
 then this will work within your own project, but won’t work if other people try to import your `Contract1`.  We suggest that if you want other people to import contracts from your project, you use explicitly relative imports instead:
+
 ```
 from .. import Contract2
 ```
+
 But such imports are now possible.  We hope you’ll find all sorts of uses for this!
-Enumeration values in Truffle Contract objects
+
+### Enumeration values in Truffle Contract objects
+
 When sending a transaction that takes an `enum`, it’s inconvenient to have to look up the numeric constants that the `enum` uses.  Well, now, each Truffle Contract constructor object contains enumeration constants, so you don’t need to do that.  Just do
+
 ```
 contractInstance.exampleMethod(Contract.ExampleEnum.EnumValue)
 ```
+
 and don’t worry about the particular numeric value of `EnumValue`.  You can also do `Contract.enums.ExampleEnum.EnumValue`, if you want to be extra-certain.
 
 Note that it’s not currently possible to access enums declared outside of a contract this way, but we have plans in the future to make using those easier, too!
-Even more!
+
+### Even more!
 
 Other things you might have missed include: Improved event decoding in `truffle test`; being able to use the debugger to step through Yul (assembly) sources generated by Solidity for its own internal subroutines (try the `g` command!); being able to inspect assembly variables in the debugger; `truffle test --bail`; `truffle create all`; and the debugger providing more information upon transaction reversion.
 
-We’re always adding more… so be on the lookout for it!
+### What's Next? Want to Help us Build it?
 
-How are you liking Truffle?
+How will you use the new enhancements in Truffle? Let us know what you think about these features on Twitter, and if you have other needs we haven’t met yet.
 
-What do you think of the new enhancements in Truffle?
-
-We want Ganache to be the most effective development blockchain in the space. Let us know what you think about this feature, and if your team has other needs we haven’t met yet.
-
-Thanks!
+<p class="alert alert-info m-t-2">
+<i class="fas fa-info-circle"></i> <strong>WE'RE HIRING!</strong> Why stop at feature requests--cut out the middleman and work with us directly! There are many exciting problems to solve like layer 2 support, mapping decoding, and a revamped deployment system, to name a few. We'd love your help and perspective. <strong><a href="https://consensys.net/open-roles/3004215/">Apply here on ConsenSys' website!</a></strong>
+</p>
