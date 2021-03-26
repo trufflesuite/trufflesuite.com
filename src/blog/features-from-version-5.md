@@ -3,16 +3,26 @@ Truffle version 5.2.x and features you may have missed in 5.1.x
 
 
 Intro
-More flexible compilation
-pragma compilation
-compilation of abi.json files
-Test & Debugging Enhancements
-Solidity stacktraces in Truffle Test
-Debugging verified external contracts
-Vyper Enhancements
-Experimental Vyper debugging
-Improved import handling in Vyper
-Enumeration values in Truffle Contract objects
+
+ - More flexible compilation
+
+    -- pragma compilation
+
+    -- compilation of abi.json files
+
+ - Test & Debugging Enhancements
+
+    -- Solidity stacktraces in Truffle Test
+
+    -- Debugging verified external contracts
+
+ - Vyper Enhancements
+
+    -- Experimental Vyper debugging
+
+    -- Improved import handling in Vyper
+
+ - Enumeration values in Truffle Contract objects
 
 In this blogpost we will go over some of the features included in version 5.2.x of Truffle as well as some features that you may have missed in 5.1.x. To illustrate some of these features we have created a Truffle box. You can unbox it using the unbox command in an empty directory as follows: `truffle unbox https://github.com/truffle-box/v5.2-example-box`.
 
