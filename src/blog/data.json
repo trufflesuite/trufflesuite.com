@@ -4,7 +4,8 @@
     "date": "2021-4-5",
     "author": "Mike Seese",
     "published": true,
-    "excerpt": "Filecoin-flavored Ganache is here and ready for you to start tinkering with; start making Filecoin dapps by using Ganache CLI or Ganache UI!"
+    "excerpt": "Filecoin-flavored Ganache is here and ready for you to start tinkering with; start making Filecoin dapps by using Ganache CLI or Ganache UI!",
+    "image": "/img/blog/ganache-now-comes-with-the-filecoin-flavor/blog-thumbnail.png"
   },
   "iterate-faster-with-truffle-teams": {
     "title": "Iterate Faster with Truffle Teams",

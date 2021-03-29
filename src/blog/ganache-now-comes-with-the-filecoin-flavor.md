@@ -1,3 +1,5 @@
+![Filecoin Collab Banner with Ganache](/img/blog/ganache-now-comes-with-the-filecoin-flavor/blog-header.png)
+
 We [teased a Filecoin flavor for Ganache back in July](/blog/announcing-collaboration-with-filecoin#filecoin-flavored-ganache-simulate-filecoin-summer-fall-winter-), and we're excited to announce that it has been released!
 
 The Filecoin flavor comes with all versions of Ganache: the NodeJS library, Ganache CLI, and Ganache UI. Head over to our [documentation](/docs/filecoin/ganache/overview) to see how to get started!
