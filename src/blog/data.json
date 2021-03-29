@@ -1,4 +1,11 @@
 {
+  "ganache-now-comes-with-the-filecoin-flavor": {
+    "title": "Ganache now comes with the Filecoin Flavor",
+    "date": "2021-4-5",
+    "author": "Mike Seese",
+    "published": true,
+    "excerpt": "Filecoin-flavored Ganache is here and ready for you to start tinkering with; start making Filecoin dapps by using Ganache CLI or Ganache UI!"
+  },
   "iterate-faster-with-truffle-teams": {
     "title": "Iterate Faster with Truffle Teams",
     "date": "2021-2-10",
