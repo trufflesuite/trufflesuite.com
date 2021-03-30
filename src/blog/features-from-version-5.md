@@ -53,19 +53,19 @@ But perhaps the biggest improvement to the debugger is...
 
 ### Debugging verified external contracts
 
-Use the `--fetch-external` (or `-x` for short) option with Truffle Debugger and it will automatically download sources for any verified contracts and allow you to step through them!  Contracts can be verified on either Etherscan or Sourcify.  You no longer need to download these yourself and add them to your Truffle project!  You can see [this](add URL here) earlier post for more information.
+Use the `--fetch-external` (or `-x` for short) option with Truffle Debugger and it will automatically download sources for any verified contracts and allow you to step through them!  Contracts can be verified on either Etherscan or Sourcify.  You no longer need to download these yourself and add them to your Truffle project!  You can see [this](https://www.trufflesuite.com/blog/debugging-verified-external-contracts-with-truffle-debugger) earlier post for more information.
 Improved import handling in Vyper
 Here’s another one for our Vyper users; you can now do imports from other projects (via NPM or EthPM) just like in Solidity!
 
 For instance, suppose `examplepackage` is an NPM package which is structured as a Truffle project, and you want to import a Vyper contract `VyperContract` from it.  You can now do
 
-```
+```python
 from examplepackage.contracts import VyperContract
 ```
 
 or
 
-```
+```python
 import examplepackage.contracts.VyperContract as VyperContract
 ```
 
@@ -73,13 +73,13 @@ to import it, much like you could do in Solidity!
 
 Note that if your own project uses such “absolute” imports as a way to import its own files from the project root -- e.g., if you have a file `contracts/subdirectory/Contract1.vy` which imports `contracts/Contract2.vy` via
 
-```
+```python
 import Contract2 as Contract2
 ```
 
 then this will work within your own project, but won’t work if other people try to import your `Contract1`.  We suggest that if you want other people to import contracts from your project, you use explicitly relative imports instead:
 
-```
+```python
 from .. import Contract2
 ```
 
@@ -89,7 +89,7 @@ But such imports are now possible.  We hope you’ll find all sorts of uses for 
 
 When sending a transaction that takes an `enum`, it’s inconvenient to have to look up the numeric constants that the `enum` uses.  Well, now, each Truffle Contract constructor object contains enumeration constants, so you don’t need to do that.  Just do
 
-```
+```javascript
 contractInstance.exampleMethod(Contract.ExampleEnum.EnumValue)
 ```
 
