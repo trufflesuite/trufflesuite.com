@@ -27,7 +27,7 @@ Now you can run `truffle compile` and your project will compile!
 
 In `v5.2-example-box` referenced above, you can see how the `truffle-config.js` is set up to use this new experimental feature. Notice that `contracts/MetaCoin.sol` requires `^0.7.0` and how `contracts/Conversion.sol` requires `^0.6.0`. When running `truffle compile` on this example project you should get a printout of all the versions of the Solidity compiler used during compilation. Namely, you should see that both version `0.6.12` and `0.7.6` are listed.
 
-As mentioned above, when you use this feature, Truffle will analyze each or your Solidity sources one by one to find the appropriate version of the Solidity compiler for each source. Do note, however, that each source file and all of its imports must be compiled with one version of Solidity; this means there must be a version of the compiler that satisfies all of their pragma expressions.
+As mentioned above, when you use this feature, Truffle will analyze each of your Solidity sources one by one to find the appropriate version of the Solidity compiler for each source. Do note, however, that each source file and all of its imports must be compiled with one version of Solidity; this means there must be a version of the compiler that satisfies all of their pragma expressions.
 
 ## Things you may have missed in Truffle 5.1
 
