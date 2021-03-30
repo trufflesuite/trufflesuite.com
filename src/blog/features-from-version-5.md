@@ -8,10 +8,6 @@ There's quite a bit here, even more than is mentioned above, so to illustrate so
 truffle unbox https://github.com/truffle-box/v5.2-example-box
 ```
 
-<p class="alert alert-warning m-t-2">
-<i class="far fa-exclamation-triangle"></i> <strong>Some features are experimental!</strong> Namely: pragma compilation, Solidity stack traces, and Vyper debugging. Some things may not work as expected so be on the lookout! 🐉
-</p>
-
 ### Pragma compilation
 
 As of version 5.2.0, Truffle now ships with a fun, experimental setting for compilation: the “pragma” setting. This feature analyzes your Solidity source files for their pragma expressions. It then uses these expressions to figure out which version of the Solidity compiler is required for each given source. This allows your project to compile when it contains multiple Solidity files, each requiring a different version of the Solidity compiler!
