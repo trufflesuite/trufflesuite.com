@@ -41,7 +41,7 @@ In the v5.2-example-box, consider the `contracts/MetaCoin.sol` and `contracts/Co
 
 ### Solidity stacktraces in Truffle Test
 
-Try running your tests with the `--stacktrace` option (or `-t`) for short and get combined Solidity-Javascript stacktraces!  This feature does have some limitations and is still somewhat experimental, but we expect you’ll find it quite useful.  In the future we may add support for Vyper stacktraces as well!  
+Try running your tests with the `--stacktrace` option (or `-t` for short) and get combined Solidity-Javascript stacktraces!  This feature does have some limitations and is still somewhat experimental, but we expect you’ll find it quite useful.  In the future we may add support for Vyper stacktraces as well!  
 
 And speaking of Vyper...
 
@@ -54,10 +54,12 @@ But perhaps the biggest improvement to the debugger is...
 ### Debugging verified external contracts
 
 Use the `--fetch-external` (or `-x` for short) option with Truffle Debugger and it will automatically download sources for any verified contracts and allow you to step through them!  Contracts can be verified on either Etherscan or Sourcify.  You no longer need to download these yourself and add them to your Truffle project!  You can see [this](https://www.trufflesuite.com/blog/debugging-verified-external-contracts-with-truffle-debugger) earlier post for more information.
-Improved import handling in Vyper
+
+###Improved import handling in Vyper
+
 Here’s another one for our Vyper users; you can now do imports from other projects (via NPM or EthPM) just like in Solidity!
 
-For instance, suppose `examplepackage` is an NPM package which is structured as a Truffle project, and you want to import a Vyper contract `VyperContract` from it.  You can now do
+For instance, suppose `examplepackage` is an NPM package which is structured as a Truffle project, and you want to import a Vyper contract, `VyperContract`, from it.  You can now do
 
 ```python
 from examplepackage.contracts import VyperContract
@@ -90,7 +92,7 @@ But such imports are now possible.  We hope you’ll find all sorts of uses for 
 When sending a transaction that takes an `enum`, it’s inconvenient to have to look up the numeric constants that the `enum` uses.  Well, now, each Truffle Contract constructor object contains enumeration constants, so you don’t need to do that.  Just do
 
 ```javascript
-contractInstance.exampleMethod(Contract.ExampleEnum.EnumValue)
+contractInstance.exampleMethod(Contract.ExampleEnum.EnumValue);
 ```
 
 and don’t worry about the particular numeric value of `EnumValue`.  You can also do `Contract.enums.ExampleEnum.EnumValue`, if you want to be extra-certain.
