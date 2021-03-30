@@ -1,12 +1,16 @@
 ![New Features in Truffle 5.1 and 5.2 Banner](/img/blog/features-from-version-5/blog-header.png)
 
-Truffle 5.1 and 5.2 are exciting releases in the flexibilty they provide to your workflow. Truffle now offers more flexible compilation options by detecting the version of Solidity in your contracts at compile time and by allowing for compilation from ABI files. Because of this, wrangling a project whose contracts use multiple version of Solidity is much easier going forward. We've also enhanced our testing capapbilities with Solidity strack traces and better event decoding, making it much easier to get to the source of an errors and get richer information from events. When our projects integrate with existing protocols, it's a pain to have to deal with those external contracts. Now Truffle makes this easy with the ability to fetch external contracts verified on Etherscan! Vyper support continues to improve with experimental debugging for Vyper contracts, as well as improved import handling for Vyper.
+Truffle 5.1 and 5.2 are exciting releases in the flexibilty they provide to your workflow. Truffle now offers more flexible compilation options by detecting the version of Solidity in your contracts at compile time and by allowing for compilation from ABI files. Because of this, wrangling a project whose contracts use multiple version of Solidity is much easier going forward. We've also enhanced our testing capabilities with Solidity strack traces and better event decoding, making it much easier to get to the source of an error and get richer information from events. When our projects integrate with existing protocols, it's a pain to have to deal with those external contracts. Now Truffle makes this easy with the ability to fetch external contracts verified on Etherscan! Vyper support continues to improve with experimental debugging for Vyper contracts, as well as improved import handling for Vyper.
 
 There's quite a bit here, even more than is mentioned above, so to illustrate some of these features we have created a Truffle box. Get started by using the `unbox` command in an empty directory as follows:
 
 ```
 truffle unbox https://github.com/truffle-box/v5.2-example-box
 ```
+
+<p class="alert alert-warning m-t-2">
+<i class="far fa-exclamation-triangle"></i> <strong>Some features are experimental!</strong> Namely: pragma compilation, Solidity stack traces, and Vyper debugging. Some things may not work as expected so be on the lookout! 🐉
+</p>
 
 ### Pragma compilation
 
