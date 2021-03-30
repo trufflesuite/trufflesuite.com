@@ -40,4 +40,4 @@ Need an example on how to build a Filecoin application? Check out the [Filecoin 
 
 We're extremely excited to be working with the Filecoin team to add support for Filecoin into Truffle's tooling. If you have questions about our Filecoin integration or our plan for the future, join our Discord community and get your questions answered. We're happy to help!
 
-http://trfl.co/truffle-community
+https://trfl.co/truffle-community
