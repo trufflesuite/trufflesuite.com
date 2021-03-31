@@ -120,6 +120,12 @@
     "official": true
   },
   {
+    "userOrg": "truffle-box",
+    "displayName": "filecoin",
+    "repoName": "filecoin-box",
+    "official": true
+  },
+  {
     "userOrg": "rsksmart",
     "displayName": "rsk-starter-box",
     "repoName": "rsk-starter-box",
