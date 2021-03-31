@@ -1,10 +1,10 @@
 {
-  "ganache-now-comes-with-the-filecoin-flavor": {
-    "title": "Ganache now comes with the Filecoin Flavor",
+  "truffle-and-ganache-now-come-in-filecoin-flavor": {
+    "title": "Truffle and Ganache now come in Filecoin Flavor",
     "date": "2021-4-5",
-    "author": "Mike Seese",
+    "author": "The Truffle Team",
     "published": true,
-    "excerpt": "Filecoin-flavored Ganache is here and ready for you to start tinkering with; start making Filecoin dapps by using Ganache CLI or Ganache UI!",
+    "excerpt": "Today we are introducing two new integrations that support Filecoin and IPFS capabilities within Truffle and Ganache to build fully decentralized applications.",
     "image": "/img/blog/ganache-now-comes-with-the-filecoin-flavor/blog-thumbnail.png"
   },
   "iterate-faster-with-truffle-teams": {
