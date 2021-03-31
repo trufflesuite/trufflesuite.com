@@ -1,9 +1,6 @@
 {
   "teams": {
-    "Getting Started": [
-      "Creating an account",
-      "Adding repositories"
-    ],
+    "Getting Started": ["Creating an account", "Adding repositories"],
     "Account": [
       "Manage your account",
       "Switching accounts",
@@ -50,13 +47,8 @@
       "Adding a deployment",
       "Switching deployments"
     ],
-    "Reference": [
-      "Configuration",
-      "Permissions disclosure"
-    ],
-    "Support": [
-      "Ask us a question"
-    ]
+    "Reference": ["Configuration", "Permissions disclosure"],
+    "Support": ["Ask us a question"]
   },
   "truffle": {
     "Getting Started": [
@@ -100,6 +92,7 @@
   "ganache": {
     "Workspaces": [
       "The Quickstart Workspace",
+      "Ethereum Workspace Overview",
       "Creating Workspaces",
       "Loading Existing Workspaces",
       "Switching Workspaces",
@@ -123,20 +116,11 @@
       "CorDapps",
       "Shell"
     ],
-    "Reference": [
-      "Ganache Settings",
-      "Workspace Default Configuration"
-    ]
+    "Reference": ["Ganache Settings", "Workspace Default Configuration"]
   },
   "drizzle": {
-    "Getting Started": [
-      "Using Drizzle's Redux Store",
-      "Contract Interaction"
-    ],
-    "React": [
-      "React Integration",
-      "React Components"
-    ],
+    "Getting Started": ["Using Drizzle's Redux Store", "Contract Interaction"],
+    "React": ["React Integration", "React Components"],
     "Reference": [
       "Drizzle Options",
       "Drizzle State",
@@ -157,9 +141,7 @@
         "Using the Console with Tezos",
         "Writing External Scripts with Tezos"
       ],
-      "Reference": [
-        "Configuring Tezos Projects"
-      ]
+      "Reference": ["Configuring Tezos Projects"]
     }
   },
   "filecoin": {
