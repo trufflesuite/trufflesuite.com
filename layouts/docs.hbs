@@ -3,12 +3,12 @@
 <head>
   {{> ga-tag-head}}
   {{> hs-tag}}
-  
+
   <meta charset="utf-8">
   <meta name="description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}">
   {{#if keywords}}<meta name="keywords" content="{{ keywords }}">{{/if}}
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
+
   <!-- Favicon -->
   <link rel="icon" href="/img/favicons/favicon.ico">
 
@@ -43,7 +43,7 @@
   <meta name="twitter:creator" content="Truffle Suite" />
   <meta name="twitter:domain" content="trufflesuite.com" />
   <meta name="twitter:image:src" content="https://truffleframework.com/img/favicons/truffle-share.png" />
-  
+
   <meta name="google-site-verification" content="BSgPkMHzw7IxJTpEElNfD8ZZYPzXgOQiTVPzAxAG8-o" />
 
   <title>{{#if title}}{{ title }} | {{/if}}Documentation | Truffle Suite</title>
@@ -56,7 +56,7 @@
   {{> ga-tag-body}}
 
   {{> navbar}}
-  
+
   <main role="main" class="container-fluid">
     <!--<div class="row pt-4 pb-4">
       <div class="col">
@@ -80,18 +80,20 @@
       </div>
     </div>-->
 
-    
+
 
     <div class="row row-docs-main">
-      <!-- Show the sidebar *only if* we're not directly under /docs (e.g., index, search). --> 
+      <!-- Show the sidebar *only if* we're not directly under /docs (e.g., index, search). -->
       {{#unlessEq path.dir "docs"}}
 
         {{#contains path.href "tezos"}}
-          {{> tezos-docs-sidebar}}  
+          {{> tezos-docs-sidebar}}
+        {{else contains path.href "filecoin"}}
+          {{> filecoin-docs-sidebar}}
         {{else}}
-          {{> docs-sidebar}}  
+          {{> docs-sidebar}}
         {{/contains}}
-      
+
         <div class="col-lg-9 bd-light-cream docs-content">
           {{{ contents }}}
 
@@ -99,7 +101,7 @@
         </div>
       {{else}}
         <div class="col-lg-12 bd-light-cream docs-content">
-          <!-- Added this container to center things. Overkill? --> 
+          <!-- Added this container to center things. Overkill? -->
           <div class="container">
             <div class="row">
                 <div class="col-lg-12">

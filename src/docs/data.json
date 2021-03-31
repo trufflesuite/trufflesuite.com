@@ -70,7 +70,8 @@
       "Package Management via NPM",
       "Debugging Your Contracts",
       "Using Truffle Develop and The Console",
-      "Writing External Scripts"
+      "Writing External Scripts",
+      "Preserving Files and Content to Storage Platforms"
     ],
     "Testing": [
       "Testing Your Contracts",
@@ -158,6 +159,17 @@
       ],
       "Reference": [
         "Configuring Tezos Projects"
+      ]
+    }
+  },
+  "filecoin": {
+    "truffle": {
+    },
+    "ganache": {
+      "Getting Started": [
+        "Get Started with the CLI",
+        "Get Started with the GUI",
+        "Get Started with NodeJS"
       ]
     }
   }
