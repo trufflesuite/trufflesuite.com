@@ -3,10 +3,6 @@ title: Truffle | Filecoin Quickstart
 layout: docs.hbs
 ---
 
-<p class="alert alert-danger">
-<strong>Filecoin support</strong> in Truffle is experimental. Give it a spin, and help us out by <a href="https://github.com/trufflesuite/truffle/issues">filing issues on Github</a>.
-</p>
-
 # Filecoin Quickstart
 
 Wanna build apps on Filecoin using Truffle? You're in the right place.
@@ -31,13 +27,9 @@ Looking to set up Filecoin-flavored Ganache? Head over to the [Ganache-specific 
 
 ## Installing Truffle
 
-<!-- TODO: Mike just replaced Tezos with Filecoin; Rosco/gnidan may need to update the below -->
+Truffle's Filecoin integration works out of the box with the latest Truffle, so no need to install any special versions for it.
 
-You'll need to download a special version of Truffle to use Filecoin.
-
-    $ npm install -g truffle@filecoin
-
-If you already have Truffle installed, we recommend uninstalling truffle before running the above command.
+    $ npm install -g truffle
 
 ## Using the Filecoin Truffle Box
 
@@ -49,9 +41,21 @@ In your workspace directory, run the following commands:
     $ cd filecoin-example
     $ truffle unbox filecoin
 
-## Further Resources
+More specific usage information about the Filecoin Truffle Box can be found in its [README](https://github.com/truffle-box/filecoin-box).
 
-<!-- TODO: Below may need some Truffle-specific modification from Rosco/gnidan -->
+## Preserving files to IPFS and Filecoin
+
+Truffle offers builtin functionality to preserve any files and directories to IPFS, Filecoin or Textile Buckets through the `truffle preserve` command. This works with local IPFS / Filecoin nodes, remote nodes and Filecoin-flavored Ganache! Besides this, `truffle preserve` also has support for [Textile Buckets](https://docs.textile.io/buckets/), which offers a smooth user experience around IPFS and Filecoin.
+
+```shell
+$ truffle preserve ./stuff --ipfs
+$ truffle preserve ./stuff --filecoin
+$ truffle preserve ./stuff --buckets
+```
+
+For extensive documentation on `truffle preserve` refer to the [main Truffle documentation](/docs/truffle/getting-started/preserving-files-and-content-to-storage-platforms).
+
+## Further Resources
 
 If you've reached this point, you now have a Truffle project that lets you interact with the Filecoin network. Congrats! This is a great start, but there's still much to learn. We suggest you check out the following resources to learn more about Filecoin, Textile, Ganache, and the entire Truffle Suite:
 
