@@ -1,4 +1,12 @@
 {
+  "truffle-and-ganache-now-come-in-filecoin-flavor": {
+    "title": "Truffle and Ganache now come in Filecoin Flavor",
+    "date": "2021-3-31",
+    "author": "The Truffle Team",
+    "published": true,
+    "excerpt": "Today we are introducing two new integrations that support Filecoin and IPFS capabilities within Truffle and Ganache to build fully decentralized applications.",
+    "image": "/img/blog/truffle-and-ganache-now-come-in-filecoin-flavor/blog-thumbnail.png"
+  },
   "iterate-faster-with-truffle-teams": {
     "title": "Iterate Faster with Truffle Teams",
     "date": "2021-2-10",

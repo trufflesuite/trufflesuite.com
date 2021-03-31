@@ -423,10 +423,32 @@ know how we can improve it!
 Provides Truffle with a list of installed third-party extensions installed as
 NPM package dependencies.
 
-Truffle plugin support is currently limited to plugins that define custom
-workflow commands. For more information, see [Third-Party Plugin Commands](/docs/truffle/getting-started/writing-external-scripts#third-party-plugin-commands).
+Truffle supports two separate kinds of plugins. The first are `run` plugins that define a custom workflow command. More information on these can be found under [Third-Party Plugin Commands](/docs/truffle/getting-started/writing-external-scripts#third-party-plugin-commands). The second type of plugins are `preserve` plugins that define a custom workflow for preserving content using the `truffle preserve` command. More information on these can be found under [Preserving Files and Content to Storage Platforms](/docs/truffle/getting-started/preserving-files-and-content-to-storage-platforms).
 
+## Environments
 
+Environments are a way to specify different configuration parameters depending on the selected environment. For example, connection to IPFS is often done with a local node or ganache, while in production, it makes sense to connect to Infura. This can be configured with environments.
+
+```js
+module.exports = {
+  /* ... rest of truffle-config */
+
+  environments: {
+    /* ... other environments */
+
+    development: {
+      ipfs: {
+        address: 'http://localhost:5001
+      }
+    },
+    production: {
+      ipfs: {
+        address: 'https://ipfs.infura.io:5001'
+      }
+    }
+  }
+}
+```
 
 ## EthPM configuration
 
