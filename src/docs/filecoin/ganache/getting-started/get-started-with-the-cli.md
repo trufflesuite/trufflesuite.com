@@ -16,11 +16,6 @@ node --version
 
 ## Installation
 
-1. Remove any existing version of Ganache CLI
-   ```bash
-   npm uninstall --global ganache-cli
-   npm uninstall --global ganache
-   ```
 1. Install the `ganache` package globally with the `filecoin` tag (note that we're **not** installing the old `ganache-cli` package)
    ```bash
    npm install --global ganache@filecoin
@@ -75,15 +70,7 @@ Lotus RPC listening on 127.0.0.1:7777
 IPFS  RPC listening on 127.0.0.1:5001
 ```
 
-You can still use Ethereum-flavored Ganache with
-
-```bash
-# Running "ganache" defaults to Ethereum
-ganache
-
-# or you can specify ethereum as the flavor
-ganache ethereum
-```
+If you would like to use the `ethereum` flavor, please use the [ganache-cli package](https://npmjs.com/package/ganache-cli).
 
 ## Configuration
 
