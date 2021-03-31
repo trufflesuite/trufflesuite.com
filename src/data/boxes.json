@@ -271,6 +271,17 @@
 			"nightfall"
 		]
 	},
+	"filecoin-box": {
+		"description": "Filecoin flavored Ganache Truffle box",
+		"stars": 5,
+		"tags": [
+			"filecoin",
+			"ipfs",
+			"truffle",
+			"ganache",
+			"lotus"
+		]
+	},
 	"nuxt-box": {
 		"description": "Truffle, Nuxt and Vue boilerplate",
 		"stars": 32,
