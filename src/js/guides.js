@@ -1,7 +1,6 @@
 $(window).on('load', function() {
   // Initialization
   var buttonFilter;
-  console.log(buttonFilter);
   var qsRegex;
   var $container = $('#isoContainer');
 
@@ -16,6 +15,14 @@ $(window).on('load', function() {
     }
   });
 
+  const selectedProduct = getQueryParam('product');
+
+  if (selectedProduct.length > 0) {
+    $('input[data-filter=".' + selectedProduct + '"]').prop('checked', true);
+    buttonFilter = '.' + selectedProduct;
+    $container.isotope('arrange');
+  }
+
   // Filters & Search
   $('#filterGuides input').on('change', function(event) {
     const filterProduct = $(event.currentTarget).attr('data-filter');
@@ -27,14 +34,14 @@ $(window).on('load', function() {
 
   $('#filterClear').on('click', function() {
     $('input[name="product"]').prop('checked', false);
-    $('#tutorialsSearch').val('');
+    $('#guidesSearch').val('');
     buttonFilter = '';
     qsRegex = '';
     $container.isotope('arrange');
   });
 
   // Use value of search field to filter.
-  var $quicksearch = $('#tutorialsSearch').on('keyup', debounce( function() {
+  var $quicksearch = $('#guidesSearch').on('keyup', debounce( function() {
     qsRegex = new RegExp( $quicksearch.val(), 'gi' );
     $container.isotope('arrange');
   }, 200));
@@ -57,3 +64,17 @@ $(window).on('load', function() {
     }
   }
 });
+
+function getQueryParam(param) {
+  param = param.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+
+  const regexS = "[\\?&]" + param + "=([^&#]*)";
+  const regex = new RegExp(regexS);
+  let results = regex.exec(document.URL);
+  
+  if (results === null || (results && typeof(results[1]) !== 'string' && results[1].length)) {
+      return '';
+  } else {
+      return decodeURIComponent(results[1]).replace(/\+/g, ' ');
+  }
+};

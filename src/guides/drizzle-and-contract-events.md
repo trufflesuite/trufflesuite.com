@@ -21,17 +21,15 @@ event reducer respectively.
 **A Complete example is available at the following [repo](https://github.com/trufflesuite/drizzle-event-demo).**
 
 <div class="alert alert-info">
-  <strong>Prerequisite</strong>: You should be familiar with Truffle, Drizzle, React and Redux. If you need an introduction please consult the following resources:
+  <i class="far fa-info-circle"></i> <strong>Prerequisite</strong>: You should be familiar with Truffle, Drizzle, React and Redux. If you need an introduction please consult the following resources:
 
-  <br/><br/>
-
-  <ol>
-    <li>[Truffle Quickstart](https://truffleframework.com/docs/truffle/quickstart)</li>
-    <li>[Getting Started with Drizzle and React](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react)</li>
-    <li>[Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html)</li>
-    <li>[Redux Basic Tutorial](https://redux.js.org/basics/basic-tutorial)</li>
-    <li>[Redux Saga](https://redux-saga.js.org/)</li>
-    <li>[Redux Middleware](https://redux.js.org/advanced/middleware#middleware)</li>
+  <ol class="mt-3">
+    <li><a href="https://truffleframework.com/docs/truffle/quickstart">Truffle Quickstart</a></li>
+    <li><a href="https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react">Getting Started with Drizzle and React</a></li>
+    <li><a href="https://reactjs.org/tutorial/tutorial.html">Tutorial: Intro to React</a></li>
+    <li><a href="https://redux.js.org/basics/basic-tutorial">Redux Basic Tutorial</a></li>
+    <li><a href="https://redux-saga.js.org/">Redux Saga</a></li>
+    <li><a href="https://redux.js.org/advanced/middleware#middleware">Redux Middleware</a></li>
   </ol>
 </div>
 
@@ -44,7 +42,7 @@ event to a display component by creating a reducer and hook it up to Drizzle's
 `EVENT_FIRED` action.
 
 <p class="alert alert-info">
-  <strong>Note</strong>: More Drizzle actions are listed in our [Drizzle Actions documentation](/docs/drizzle/reference/drizzle-actions).
+  <i class="far fa-info-circle"></i> <strong>Note</strong>: More Drizzle actions are listed in our <a href="/docs/drizzle/reference/drizzle-actions">Drizzle Actions documentation</a>.
 </p>
 
 First create an empty directory, navigate to it, and `unbox` Drizzle.

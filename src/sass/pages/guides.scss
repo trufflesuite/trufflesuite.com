@@ -1,4 +1,4 @@
-.card-tutorial {
+.card-guide {
   position: relative;
   border: none;
   margin-bottom: 2rem;
@@ -15,23 +15,23 @@
   }
 }
 
-.card-tutorial.truffle::before {
+.card-guide.truffle::before {
   background: #3fe0c5;
 }
 
-.card-tutorial.ganache::before {
+.card-guide.ganache::before {
   background: #e4a663;
 }
 
-.card-tutorial.drizzle::before {
+.card-guide.drizzle::before {
   background: #e911bd;
 }
 
-.card-tutorial.teams::before {
+.card-guide.teams::before {
   background: #8731e8;
 }
 
-.card-tutorial.truffle.ganache::before {
+.card-guide.truffle.ganache::before {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3fe0c5+0,e4a663+100 */
   background: rgb(63,224,197); /* Old browsers */
   background: -moz-linear-gradient(top, rgba(63,224,197,1) 0%, rgba(228,166,99,1) 100%); /* FF3.6-15 */
@@ -40,7 +40,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3fe0c5', endColorstr='#e4a663',GradientType=0 ); /* IE6-9 */
 }
 
-.card-tutorial.truffle.ganache.drizzle::before {
+.card-guide.truffle.ganache.drizzle::before {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3fe0c5+0,e4a663+50,e911bd+100 */
   background: rgb(63,224,197); /* Old browsers */
   background: -moz-linear-gradient(top, rgba(63,224,197,1) 0%, rgba(228,166,99,1) 50%, rgba(233,17,189,1) 100%); /* FF3.6-15 */
