@@ -143,7 +143,7 @@ truffle preserve ./path --my-server
 ## Creating custom preserve recipes
 Refer to the following resources to get started creating your own custom recipes:
 
-- [@truffle/preserve Typedocs](/docs/truffle/preserve)
+- [@truffle/preserve Typedocs](/docs/truffle/preserves)
 - [@truffle/preserve-to-ipfs source code](https://github.com/trufflesuite/truffle/tree/develop/packages/preserve-to-ipfs)
 - [@truffle/preserve-to-filecoin source code](https://github.com/trufflesuite/truffle/tree/develop/packages/preserve-to-filecoin)
 - [@truffle/preserve-to-buckets source code](https://github.com/trufflesuite/truffle/tree/develop/packages/preserve-to-buckets)
