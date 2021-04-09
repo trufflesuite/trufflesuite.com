@@ -3,7 +3,7 @@
     "title": "Learn How to Deploy with Truffle Teams",
     "date": "2019-12-18",
     "author": "Mike Seese",
-    "published": true,
+    "published": false,
     "products": ["teams"]
   },
   "drizzle-and-contract-events": {
@@ -52,7 +52,7 @@
     "title": "Ethereum Pet Shop -- Your First Dapp",
     "date": "2017-07-20",
     "author": "Josh Quintal",
-    "published": true,
+    "published": false,
     "products": ["truffle", "ganache"]
   },
   "building-dapps-for-quorum-private-enterprise-blockchains": {
@@ -88,7 +88,7 @@
     "date": "2017-02-09",
     "author": "Doug von Kohorn",
     "published": true,
-    "products": ["truffle", "ganache"]
+    "products": ["truffle"]
   },
   "upgrading-from-truffle-2-to-3": {
     "title": "Upgrading from Truffle 2.0 to 3.0 - a Guide",
@@ -136,14 +136,14 @@
     "title": "Beta: Package Management",
     "date": "2016-09-15",
     "author": "Tim Coulter",
-    "published": true,
+    "published": false,
     "products": ["truffle", "ganache"]
   },
   "solidity-unit-tests": {
     "title": "Beta: Solidity Unit Tests",
     "date": "2016-09-01",
     "author": "Tim Coulter",
-    "published": true,
+    "published": false,
     "products": ["truffle"]
   },
   "truffle-and-metamask": {

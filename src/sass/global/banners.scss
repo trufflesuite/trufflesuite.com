@@ -18,6 +18,28 @@
   }
 }
 
+// Themed Banners
+
+.light-mode .banner-title {
+  background-color: #efe5dc;
+  color: #33262a;
+}
+
+.dark-mode .banner-title {
+  background-color: #5e464d;
+  color: #ffffff;
+}
+
+.light-mode .banner-body {
+  background-color: #f8f5f0;
+  color: #5e464d;
+}
+
+.dark-mode .banner-body {
+  background-color: #33262a;
+  color: #ffffff;
+}
+
 // Colors
 
 .banner-light-cream {

@@ -61,13 +61,41 @@
 
   {{> mixpanel-tag-head}}
 </head>
-<body{{#if light-body}} class="light-mode"{{/if}}>
+<body{{#if light-body}} class="light"{{/if}}>
   {{> ga-tag-body}}
   
   {{> navbar}}
-  
-  {{{ contents }}}
+
+  {{!-- <main class="container container-heading container-narrow">
+    <div class="row">
+      <div class="col">
+        <h1>{{ title }}</h1>
+        <ul class="list-sm-stacker space-icon mb-0">
+          <li><i class="far fa-calendar-alt"></i> {{getMetadata "tutorials" path.name "date"}}&nbsp;{{#if (metadataExists "tutorials" path.name "updated")}}(updated {{getMetadata "tutorials" path.name "updated"}}){{/if}}&nbsp;&nbsp;</li>
+          <li><i class="far fa-user"></i> {{getMetadata "tutorials" path.name "author"}}</li>
+        </ul>
+      </div>
+    </div>
+  </main> --}}
+
+  <main class="banner banner-light-cream pt-5 pb-5" role="main">
+    <div class="container container-post">
+      <div class="row justify-content-center">
+        <div class="col">
+          {{{ contents }}}
+
+          {{> contrib-link}}
+        </div>
+      </div>
+    </div>
+  </main>
 
   {{> footer}}
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.slim.min.js"><\/script>')</script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/vendor/prism.js"></script>
+  <script src="/js/markdown-cleanup.js"></script>
 </body>
 </html>

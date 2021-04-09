@@ -28,7 +28,7 @@ const docsData = require('./src/docs/data.json');
 const eventsData = require('./src/events/data.json');
 const pressReleasesData = require('./src/press-releases/data.json');
 const staffData = require('./src/staff/data.json');
-const tutorialsData = require('./src/tutorials/data.json');
+const guidesData = require('./src/guides/data.json');
 
 function app(clean) {
   return Metalsmith(__dirname)
@@ -45,7 +45,7 @@ function app(clean) {
     events: eventsData,
     pressReleases: pressReleasesData,
     staff: staffData,
-    tutorials: tutorialsData,
+    guides: guidesData,
     cssVersion: Date.now().toString(),
   })
   .use(env())
@@ -92,8 +92,8 @@ function app(clean) {
     "pattern": "case-studies/*.html"
   }))
   .use(layouts({
-    "default": "tutorial-single.hbs",
-    "pattern": "tutorials/*.html"
+    "default": "guide-single.hbs",
+    "pattern": "guides/*.html"
   }))
   .use(layouts())
   .use(sass({

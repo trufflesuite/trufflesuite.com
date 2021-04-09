@@ -8,7 +8,7 @@
   <meta name="description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}">
   {{#if keywords}}<meta name="keywords" content="{{ keywords }}">{{/if}}
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
+        
   <!-- Favicon -->
   <link rel="icon" href="/img/favicons/favicon.ico">
 
@@ -30,7 +30,7 @@
   <!-- Facebook OpenGraph -->
   <meta property="og:site_name" content="Truffle Suite" />
   <meta property="og:description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}" />
-  <meta property="og:title" content="{{getMetadata "tutorials" path.name "title"}} | Tutorials | Truffle Suite" />
+  <meta property="og:title" content="Tutorials | Truffle Suite" />
   <meta property="og:url" content="{{getPageUrl path}}" />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="https://truffleframework.com/img/favicons/truffle-share.png" />
@@ -38,7 +38,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="Truffle Suite" />
-  <meta name="twitter:title" content="{{getMetadata "tutorials" path.name "title"}} | Tutorials | Truffle Suite" />
+  <meta name="twitter:title" content="Tutorials | Truffle Suite" />
   <meta name="twitter:description" content="{{#if social-description}}{{ social-description }}{{else}}The Truffle suite of tools make dapp development easier and more consistent.{{/if}}" />
   <meta name="twitter:creator" content="Truffle Suite" />
   <meta name="twitter:domain" content="trufflesuite.com" />
@@ -46,37 +46,83 @@
   
   <meta name="google-site-verification" content="BSgPkMHzw7IxJTpEElNfD8ZZYPzXgOQiTVPzAxAG8-o" />
     
-  <title>{{getMetadata "tutorials" path.name "title"}} | Tutorials | Truffle Suite</title>
+  <title>Guides | Truffle Suite</title>
 
   <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans|Oswald|Varela+Round|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
   <script src="https://kit.fontawesome.com/371f2d7a8a.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/index.css">
 </head>
-<body>
+<body{{#if light-body}} class="light-mode"{{/if}}>
   {{> ga-tag-body}}
-  
+
   {{> navbar}}
 
-  <main class="container container-heading container-narrow">
-    <div class="row">
-      <div class="col">
-        <h1>{{getMetadata "tutorials" path.name "title"}}</h1>
-        <ul class="list-sm-stacker space-icon mb-0">
-          <li><i class="far fa-calendar-alt"></i> {{getMetadata "tutorials" path.name "date"}}&nbsp;{{#if (metadataExists "tutorials" path.name "updated")}}(updated {{getMetadata "tutorials" path.name "updated"}}){{/if}}&nbsp;&nbsp;</li>
-          <li><i class="far fa-user"></i> {{getMetadata "tutorials" path.name "author"}}</li>
-        </ul>
+  <main class="banner banner-title pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>GUIDES</h1>
+        </div>
       </div>
     </div>
   </main>
 
-  <main class="banner banner-light-cream pt-5 pb-5" role="main">
-    <div class="container container-post">
-      <div class="row justify-content-center">
+  <main class="banner banner-body pt-5 pb-5" role="main">
+    <div class="container">
+      <div class="row mb-5">
         <div class="col">
-          {{{ contents }}}
+          <form>
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" id="guidesSearch" placeholder="Search by name or author...">
+              </div>
+            </div>
 
-          {{> contrib-link}}
+            <div class="row mt-3 mb-3">
+              <div class="col form-inline" id="filterGuides">
+                <div class="form-check">
+                  <input type="radio" name="product" class="form-check-input" id="filterTruffle" data-filter=".truffle">
+                  <label class="form-check-label" for="filterTruffle">Truffle</label>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="form-check">
+                  <input type="radio" name="product" class="form-check-input" id="filterGanache" data-filter=".ganache">
+                  <label class="form-check-label" for="filterGanache">Ganache</label>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="form-check">
+                  <input type="radio" name="product" class="form-check-input" id="filterDrizzle" data-filter=".drizzle">
+                  <label class="form-check-label" for="filterDrizzle">Drizzle</label>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="form-check">
+                  <input type="radio" name="product" class="form-check-input" id="filterTeams" data-filter=".teams">
+                  <label class="form-check-label" for="filterTeams">Truffle Teams</label>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-truffle" id="filterClear" type="button">Clear</button>
+              </div>
+            </div>
+          </form>
         </div>
+      </div>
+
+      <div class="row" id="isoContainer">
+        {{#each guides as |guide slug|}}
+          {{#if guide.published}}
+            <div class="col-xs-12 col-md-6 col-lg-4 iso-item {{makeSlug guide.author}} {{listToClasses guide.products}}">
+              <a class="link-card" href="/guides/{{ slug }}">
+                <div class="card card-guide {{listToClasses guide.products}}">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ guide.title }}</h5>
+                    <p class="card-text space-icon"><i class="far fa-calendar-alt"></i> {{ guide.date }}</p>
+                    <p class="card-text space-icon"><i class="far fa-user"></i> {{ guide.author }}</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          {{/if}}
+        {{/each}}
       </div>
     </div>
   </main>
@@ -86,7 +132,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.slim.min.js"><\/script>')</script>
   <script src="/js/bootstrap.min.js"></script>
-  <script src="/js/vendor/prism.js"></script>
-  <script src="/js/markdown-cleanup.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="/js/guides.js"></script>
 </body>
 </html>

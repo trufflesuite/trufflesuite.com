@@ -1,7 +1,5 @@
-# Variable inspection: Going deeper with the Truffle Solidity debugger
-
 <p class="alert alert-info">
-  <strong>Note</strong>: This tutorial requires Truffle version 4.1.8 or newer.
+  <i class="far fa-info-circle"></i> <strong>Note</strong>: This tutorial requires Truffle version 4.1.8 or newer.
 </p>
 
 The integrated Solidity debugger in Truffle is a powerful tool for inspecting your contracts.
