@@ -93,7 +93,7 @@ networks: {
 For each network, if unspecified, transaction options will default to the following values:
 
 * `gas`: Gas limit used for deploys. Default is `6721975`.
-* `gasPrice`: Gas price used for deploys. Default is `100000000000` (100 Shannon).
+* `gasPrice`: Gas price used for deploys. Default is `20000000000` (20 Gwei).
 * `from`: From address used during migrations. Defaults to the first available account provided by your Ethereum client.
 * `provider`: Default web3 provider using `host` and `port` options: `new Web3.providers.HttpProvider("http://<host>:<port>")`
 * `websockets`: You will need this enabled to use the `confirmations` listener or to hear Events using `.on` or `.once`.  Default is `false`.
