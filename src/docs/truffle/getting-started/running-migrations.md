@@ -254,3 +254,18 @@ deployer.then(function() {
   return b.setA(a.address);
 });
 ```
+
+### Migrations with async/await
+
+You can also migrate your contracts using `async/await`:
+
+Example:
+
+```javascript
+module.exports = async function(deployer) {
+  // deploy a contract
+  await deployer.deploy(MyContract);
+  //access information about your deployed contract instance
+  const MyDeployedContract = MyContract.deployed();
+}
+```
