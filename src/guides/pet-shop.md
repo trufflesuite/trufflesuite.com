@@ -59,7 +59,7 @@ We also will be using [Ganache](/ganache), a personal blockchain for Ethereum de
 1. We've created a special [Truffle Box](/boxes) just for this tutorial called `pet-shop`, which includes the basic project structure as well as code for the user interface. Use the `truffle unbox` command to unpack this Truffle Box.
 
   ```shell
-  truffle unbox pet-shop
+  truffle unbox pet-shop-box
   ```
 
 <p class="alert alert-info">
