@@ -4,7 +4,7 @@
     "date": "2021-4-20",
     "author": "Harry Altman, Josh Quintal, Tyler Feickert",
     "published": true,
-    "excerpt": "In this blogpost we will go over some of the features included in version 5.2.x of Truffle as well as some features that you may have missed in 5.1.x.",
+    "excerpt": "Dive into all the new features in Truffle's recent 5.x releases: Filecoin support, Solidity version detection, better Vyper compatibility and more!",
     "image": "/img/blog/take-a-dive-into-truffle-5/blog-thumbnail.png"
   },
   "iterate-faster-with-truffle-teams": {
