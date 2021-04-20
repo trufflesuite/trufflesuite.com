@@ -1,9 +1,6 @@
 {
   "teams": {
-    "Getting Started": [
-      "Creating an account",
-      "Adding repositories"
-    ],
+    "Getting Started": ["Creating an account", "Adding repositories"],
     "Account": [
       "Manage your account",
       "Switching accounts",
@@ -50,13 +47,8 @@
       "Adding a deployment",
       "Switching deployments"
     ],
-    "Reference": [
-      "Configuration",
-      "Permissions disclosure"
-    ],
-    "Support": [
-      "Ask us a question"
-    ]
+    "Reference": ["Configuration", "Permissions disclosure"],
+    "Support": ["Ask us a question"]
   },
   "truffle": {
     "Getting Started": [
@@ -70,7 +62,8 @@
       "Package Management via NPM",
       "Debugging Your Contracts",
       "Using Truffle Develop and The Console",
-      "Writing External Scripts"
+      "Writing External Scripts",
+      "Preserving Files and Content to Storage Platforms"
     ],
     "Testing": [
       "Testing Your Contracts",
@@ -99,6 +92,7 @@
   "ganache": {
     "Workspaces": [
       "The Quickstart Workspace",
+      "Ethereum Workspace Overview",
       "Creating Workspaces",
       "Loading Existing Workspaces",
       "Switching Workspaces",
@@ -122,20 +116,11 @@
       "CorDapps",
       "Shell"
     ],
-    "Reference": [
-      "Ganache Settings",
-      "Workspace Default Configuration"
-    ]
+    "Reference": ["Ganache Settings", "Workspace Default Configuration"]
   },
   "drizzle": {
-    "Getting Started": [
-      "Using Drizzle's Redux Store",
-      "Contract Interaction"
-    ],
-    "React": [
-      "React Integration",
-      "React Components"
-    ],
+    "Getting Started": ["Using Drizzle's Redux Store", "Contract Interaction"],
+    "React": ["React Integration", "React Components"],
     "Reference": [
       "Drizzle Options",
       "Drizzle State",
@@ -156,8 +141,17 @@
         "Using the Console with Tezos",
         "Writing External Scripts with Tezos"
       ],
-      "Reference": [
-        "Configuring Tezos Projects"
+      "Reference": ["Configuring Tezos Projects"]
+    }
+  },
+  "filecoin": {
+    "truffle": {
+    },
+    "ganache": {
+      "Getting Started": [
+        "Get Started with the CLI",
+        "Get Started with the GUI",
+        "Get Started with NodeJS"
       ]
     }
   }

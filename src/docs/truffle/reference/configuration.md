@@ -93,7 +93,7 @@ networks: {
 For each network, if unspecified, transaction options will default to the following values:
 
 * `gas`: Gas limit used for deploys. Default is `6721975`.
-* `gasPrice`: Gas price used for deploys. Default is `100000000000` (100 Shannon).
+* `gasPrice`: Gas price used for deploys. Default is `20000000000` (20 Gwei).
 * `from`: From address used during migrations. Defaults to the first available account provided by your Ethereum client.
 * `provider`: Default web3 provider using `host` and `port` options: `new Web3.providers.HttpProvider("http://<host>:<port>")`
 * `websockets`: You will need this enabled to use the `confirmations` listener or to hear Events using `.on` or `.once`.  Default is `false`.
@@ -423,10 +423,32 @@ know how we can improve it!
 Provides Truffle with a list of installed third-party extensions installed as
 NPM package dependencies.
 
-Truffle plugin support is currently limited to plugins that define custom
-workflow commands. For more information, see [Third-Party Plugin Commands](/docs/truffle/getting-started/writing-external-scripts#third-party-plugin-commands).
+Truffle supports two separate kinds of plugins. The first are `run` plugins that define a custom workflow command. More information on these can be found under [Third-Party Plugin Commands](/docs/truffle/getting-started/writing-external-scripts#third-party-plugin-commands). The second type of plugins are `preserve` plugins that define a custom workflow for preserving content using the `truffle preserve` command. More information on these can be found under [Preserving Files and Content to Storage Platforms](/docs/truffle/getting-started/preserving-files-and-content-to-storage-platforms).
 
+## Environments
 
+Environments are a way to specify different configuration parameters depending on the selected environment. For example, connection to IPFS is often done with a local node or ganache, while in production, it makes sense to connect to Infura. This can be configured with environments.
+
+```js
+module.exports = {
+  /* ... rest of truffle-config */
+
+  environments: {
+    /* ... other environments */
+
+    development: {
+      ipfs: {
+        address: 'http://localhost:5001
+      }
+    },
+    production: {
+      ipfs: {
+        address: 'https://ipfs.infura.io:5001'
+      }
+    }
+  }
+}
+```
 
 ## EthPM configuration
 
