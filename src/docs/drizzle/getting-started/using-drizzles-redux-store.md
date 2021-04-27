@@ -9,9 +9,6 @@ you covered. You can pass your Redux sagas, reducers, middleware and
 drizzleOptions to `generateStore` and drizzle will incorporate them in its own
 Redux Store.
 
-For an example use case see the [Drizzle and Contract
-Events](/tutorials/drizzle-and-contract-events) tutorial.
-
 
 Add Middleware to the Store
 ---------------------------
