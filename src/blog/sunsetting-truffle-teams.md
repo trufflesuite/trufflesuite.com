@@ -13,11 +13,15 @@ Parts of Truffle Teams will be making their way into our open-source tools! We'r
 These repurposed bits will all be open-source, so you can [check out the `truffle-plugin-debugger` repository here.](https://github.com/trufflesuite/truffle-plugin-debugger)
 
 <figure>
-  <img class="mb-4 w-100" src="/img/blog/sunsetting-truffle-teams/visual-debugger.png" alt="the Truffle Teams visual debugger--soon in Truffle!">
-  <figcaption class="text-center font-italic">The Truffle Teams visual debugger--soon in Truffle!</figcaption>
+  <img class="mb-4 w-100" src="/img/blog/sunsetting-truffle-teams/visual-debugger.png" alt="the Truffle Teams visual debugger--coming to Truffle!">
+  <figcaption class="text-center font-italic">The Truffle Teams visual debugger--coming to Truffle!</figcaption>
 </figure>
 
 If there are other features you'd like to see again, for example the deployments screen or contract manager, let us know!
+
+## What about paid subscribers?
+
+All Pro and Enterprise tier users will receive a refund of 1 month and recurring billings will cease. If you don't see a refund within 5 days (Paddle's processing time), email us at [info@truffleteams.com](mailto:info@truffleteams.com).
 
 ## What about my data?
 

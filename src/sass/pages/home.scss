@@ -14,29 +14,6 @@
   top: 0;
   transform: translateX(-50%);
 
-  .teams-plug {
-    background: #8731e8;
-    color: #fff;
-    border-radius: 5rem;
-    padding: 1rem;
-    text-align: left;
-    max-width: 724px;
-    margin: 0 auto;
-
-    img {
-      position: static;
-      float: left;
-      height: 3em;
-      margin-right: 1rem;
-    }
-
-    @media (max-width: 767.98px) {
-      img {
-        display: none;
-      }
-    }
-  }
-
   @media (max-width: 1199.98px) {
     width: 100%;
   }
