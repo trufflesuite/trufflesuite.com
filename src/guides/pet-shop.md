@@ -18,7 +18,6 @@ In this tutorial we will be covering:
 1. Creating a user interface to interact with the smart contract
 1. Interacting with the dapp in a browser
 
-
 ## Background
 
 Pete Scandlon of Pete's Pet Shop is interested in using Ethereum as an efficient way to handle their pet adoptions. The store has space for 16 pets at a given time, and they already have a database of pets. As an initial proof of concept, **Pete wants to see a dapp which associates an Ethereum address with a pet to be adopted.**
@@ -29,8 +28,8 @@ The website structure and styling will be supplied. **Our job is to write the sm
 
 There are a few technical requirements before we start. Please install the following:
 
-*   [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
-*   [Git](https://git-scm.com/)
+- [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
+- [Git](https://git-scm.com/)
 
 Once we have those installed, we only need one command to install Truffle:
 
@@ -50,17 +49,17 @@ We also will be using [Ganache](/ganache), a personal blockchain for Ethereum de
 
 1. Truffle initializes in the current directory, so first create a directory in your development folder of choice and then moving inside it.
 
-  ```shell
-  mkdir pet-shop-tutorial
+```shell
+mkdir pet-shop-tutorial
 
-  cd pet-shop-tutorial
-  ```
+cd pet-shop-tutorial
+```
 
 1. We've created a special [Truffle Box](/boxes) just for this tutorial called `pet-shop`, which includes the basic project structure as well as code for the user interface. Use the `truffle unbox` command to unpack this Truffle Box.
 
-  ```shell
-  truffle unbox pet-shop
-  ```
+```shell
+truffle unbox pet-shop
+```
 
 <p class="alert alert-info">
   <strong>Note</strong>: Truffle can be initialized a few different ways. Another useful initialization command is `truffle init`, which creates an empty Truffle project with no example contracts included. For more information, please see the documentation on <a href="/docs/truffle/getting-started/creating-a-project">Creating a project</a>.
@@ -70,13 +69,12 @@ We also will be using [Ganache](/ganache), a personal blockchain for Ethereum de
 
 The default Truffle directory structure contains the following:
 
-* `contracts/`: Contains the [Solidity](https://solidity.readthedocs.io/) source files for our smart contracts. There is an important contract in here called `Migrations.sol`, which we'll talk about later.
-* `migrations/`: Truffle uses a migration system to handle smart contract deployments. A migration is an additional special smart contract that keeps track of changes.
-* `test/`: Contains both JavaScript and Solidity tests for our smart contracts
-* `truffle-config.js`: Truffle configuration file
+- `contracts/`: Contains the [Solidity](https://solidity.readthedocs.io/) source files for our smart contracts. There is an important contract in here called `Migrations.sol`, which we'll talk about later.
+- `migrations/`: Truffle uses a migration system to handle smart contract deployments. A migration is an additional special smart contract that keeps track of changes.
+- `test/`: Contains both JavaScript and Solidity tests for our smart contracts
+- `truffle-config.js`: Truffle configuration file
 
 The `pet-shop` Truffle Box has extra files and folders in it, but we won't worry about those just yet.
-
 
 ## Writing the smart contract
 
@@ -96,8 +94,8 @@ We'll start our dapp by writing the smart contract that acts as the back-end log
 
 Things to notice:
 
-* The minimum version of Solidity required is noted at the top of the contract: `pragma solidity ^0.5.0;`. The `pragma` command means "*additional information that only the compiler cares about*", while the caret symbol (^) means "*the version indicated or higher*".
-* Like JavaScript or PHP, statements are terminated with semicolons.
+- The minimum version of Solidity required is noted at the top of the contract: `pragma solidity ^0.5.0;`. The `pragma` command means "_additional information that only the compiler cares about_", while the caret symbol (^) means "_the version indicated or higher_".
+- Like JavaScript or PHP, statements are terminated with semicolons.
 
 ### Variable setup
 
@@ -111,9 +109,9 @@ Solidity is a statically-typed language, meaning data types like strings, intege
 
 Things to notice:
 
-* We've defined a single variable: `adopters`. This is an **array** of Ethereum addresses. Arrays contain one type and can have a fixed or variable length. In this case the type is `address` and the length is `16`.
+- We've defined a single variable: `adopters`. This is an **array** of Ethereum addresses. Arrays contain one type and can have a fixed or variable length. In this case the type is `address` and the length is `16`.
 
-* You'll also notice `adopters` is public. **Public** variables have automatic getter methods, but in the case of arrays a key is required and will only return a single value. Later, we'll write a function to return the whole array for use in our UI.
+- You'll also notice `adopters` is public. **Public** variables have automatic getter methods, but in the case of arrays a key is required and will only return a single value. Later, we'll write a function to return the whole array for use in our UI.
 
 ### Your first function: Adopting a pet
 
@@ -134,16 +132,15 @@ Let's allow users to make adoption requests.
 
 Things to notice:
 
-* In Solidity the types of both the function parameters and output must be specified. In this case we'll be taking in a `petId` (integer) and returning an integer.
+- In Solidity the types of both the function parameters and output must be specified. In this case we'll be taking in a `petId` (integer) and returning an integer.
 
-* We are checking to make sure `petId` is in range of our `adopters` array. Arrays in Solidity are indexed from 0, so the ID value will need to be between 0 and 15. We use the `require()` statement to ensure the ID is within range.
+- We are checking to make sure `petId` is in range of our `adopters` array. Arrays in Solidity are indexed from 0, so the ID value will need to be between 0 and 15. We use the `require()` statement to ensure the ID is within range.
 
-* If the ID is in range, we then add the address that made the call to our `adopters` array. **The address of the person or smart contract who called this function is denoted by `msg.sender`**.
+- If the ID is in range, we then add the address that made the call to our `adopters` array. **The address of the person or smart contract who called this function is denoted by `msg.sender`**.
 
-* Finally, we return the `petId` provided as a confirmation.
+- Finally, we return the `petId` provided as a confirmation.
 
 <!-- ADD SOMETHING ABOUT PUBLIC VIEW? -->
-
 
 ### Your second function: Retrieving the adopters
 
@@ -157,12 +154,12 @@ As mentioned above, array getters return only a single value from a given key. O
      return adopters;
    }
    ```
-Things to notice:
 
-* Since `adopters` is already declared, we can simply return it. Be sure to specify the return type (in this case, the type for `adopters`) as `address[16] memory`. `memory` gives the data location for the variable.
+   Things to notice:
 
-* The `view` keyword in the function declaration means that the function will not modify the state of the contract. Further information about the exact limits imposed by view is available [here](https://solidity.readthedocs.io/en/latest/contracts.html#view-functions).
+- Since `adopters` is already declared, we can simply return it. Be sure to specify the return type (in this case, the type for `adopters`) as `address[16] memory`. `memory` gives the data location for the variable.
 
+- The `view` keyword in the function declaration means that the function will not modify the state of the contract. Further information about the exact limits imposed by view is available [here](https://solidity.readthedocs.io/en/latest/contracts.html#view-functions).
 
 ## Compiling and migrating the smart contract
 
@@ -215,7 +212,7 @@ Now we are ready to create our own migration script.
    ```javascript
    var Adoption = artifacts.require("Adoption");
 
-   module.exports = function(deployer) {
+   module.exports = function (deployer) {
      deployer.deploy(Adoption);
    };
    ```
@@ -236,46 +233,44 @@ Now we are ready to create our own migration script.
 
    You should see output similar to the following:
 
+```shell
+1_initial_migration.js
+======================
 
-  ```shell
-  1_initial_migration.js
-  ======================
-
-     Deploying 'Migrations'
-     ----------------------
-     > transaction hash:    0x3b558e9cdf1231d8ffb3445cb2f9fb01de9d0363e0b97a17f9517da318c2e5af
-     > Blocks: 0            Seconds: 0
-     > contract address:    0x5ccb4dc04600cffA8a67197d5b644ae71856aEE4
-     > account:             0x8d9606F90B6CA5D856A9f0867a82a645e2DfFf37
-     > balance:             99.99430184
-     > gas used:            284908
-     > gas price:           20 gwei
-     > value sent:          0 ETH
-     > total cost:          0.00569816 ETH
-
-
-     > Saving migration to chain.
-     > Saving artifacts
-     -------------------------------------
-     > Total cost:          0.00569816 ETH
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x3b558e9cdf1231d8ffb3445cb2f9fb01de9d0363e0b97a17f9517da318c2e5af
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x5ccb4dc04600cffA8a67197d5b644ae71856aEE4
+   > account:             0x8d9606F90B6CA5D856A9f0867a82a645e2DfFf37
+   > balance:             99.99430184
+   > gas used:            284908
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00569816 ETH
 
 
-  2_deploy_contracts.js
-  =====================
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00569816 ETH
 
-     Deploying 'Adoption'
-     .............................
-     .............................
-  ```
 
-   You can see the migrations being executed in order, followed by some information related to each migration. (Your information will differ.)
+2_deploy_contracts.js
+=====================
+
+   Deploying 'Adoption'
+   .............................
+   .............................
+```
+
+You can see the migrations being executed in order, followed by some information related to each migration. (Your information will differ.)
 
 1. In Ganache, note that the state of the blockchain has changed. The blockchain now shows that the current block, previously `0`, is now `4`. In addition, while the first account originally had 100 ether, it is now lower, due to the transaction costs of migration. We'll talk more about transaction costs later.
 
    ![Ganache after migration](/img/tutorials/pet-shop/ganache-migrated.png "Ganache after migration")
 
 You've now written your first smart contract and deployed it to a locally running blockchain. It's time to interact with our smart contract now to make sure it does what we want.
-
 
 ## Testing the smart contract using Solidity
 
@@ -287,40 +282,41 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 
 1. Add the following content to the `TestAdoption.sol` file:
 
-  ```solidity
-  pragma solidity ^0.5.0;
+```solidity
+pragma solidity ^0.5.0;
 
-  import "truffle/Assert.sol";
-  import "truffle/DeployedAddresses.sol";
-  import "../contracts/Adoption.sol";
+import "truffle/Assert.sol";
+import "truffle/DeployedAddresses.sol";
+import "../contracts/Adoption.sol";
 
-  contract TestAdoption {
-    // The address of the adoption contract to be tested
-    Adoption adoption = Adoption(DeployedAddresses.Adoption());
+contract TestAdoption {
+  // The address of the adoption contract to be tested
+  Adoption adoption = Adoption(DeployedAddresses.Adoption());
 
-    // The id of the pet that will be used for testing
-    uint expectedPetId = 8;
+  // The id of the pet that will be used for testing
+  uint expectedPetId = 8;
 
-    //The expected owner of adopted pet is this contract
-    address expectedAdopter = address(this);
+  //The expected owner of adopted pet is this contract
+  address expectedAdopter = address(this);
 
-  }
-  ```
+}
+```
 
 We start the contract off with 3 imports:
 
-* `Assert.sol`: Gives us various assertions to use in our tests. In testing, **an assertion checks for things like equality, inequality or emptiness to return a pass/fail** from our test. [Here's a full list of the assertions included with Truffle](https://github.com/trufflesuite/truffle/blob/master/packages/core/lib/testing/Assert.sol).
-* `DeployedAddresses.sol`: When running tests, Truffle will deploy a fresh instance of the contract being tested to the blockchain. This smart contract gets the address of the deployed contract.
-* `Adoption`: The smart contract we want to test.
+- `Assert.sol`: Gives us various assertions to use in our tests. In testing, **an assertion checks for things like equality, inequality or emptiness to return a pass/fail** from our test. [Here's a full list of the assertions included with Truffle](https://github.com/trufflesuite/truffle/blob/master/packages/core/lib/testing/Assert.sol).
+- `DeployedAddresses.sol`: When running tests, Truffle will deploy a fresh instance of the contract being tested to the blockchain. This smart contract gets the address of the deployed contract.
+- `Adoption`: The smart contract we want to test.
 
 <p class="alert alert-info">
   <strong>Note</strong>: The first two imports are referring to global Truffle files, not a `truffle` directory. You should not see a `truffle` directory inside your `test/` directory.
 </p>
 
 Then we define three contract-wide variables:
-* First, one containing the smart contract to be tested, calling the `DeployedAddresses` smart contract to get its address.
-* Second, the id of the pet that will be used to test the adoption functions.
-* Third, since the TestAdoption contract will be sending the transaction, we set the expected adopter address to **this**, a contract-wide variable that gets the current contract's address.
+
+- First, one containing the smart contract to be tested, calling the `DeployedAddresses` smart contract to get its address.
+- Second, the id of the pet that will be used to test the adoption functions.
+- Third, since the TestAdoption contract will be sending the transaction, we set the expected adopter address to **this**, a contract-wide variable that gets the current contract's address.
 
 ### Testing the adopt() function
 
@@ -339,8 +335,8 @@ To test the `adopt()` function, recall that upon success it returns the given `p
 
 Things to notice:
 
-* We call the smart contract we declared earlier with the ID of `expectedPetId`.
-* Finally, we pass the actual value, the expected value and a failure message (which gets printed to the console if the test does not pass) to `Assert.equal()`.
+- We call the smart contract we declared earlier with the ID of `expectedPetId`.
+- Finally, we pass the actual value, the expected value and a failure message (which gets printed to the console if the test does not pass) to `Assert.equal()`.
 
 ### Testing retrieval of a single pet's owner
 
@@ -376,9 +372,10 @@ Since arrays can only return a single value given a single key, we create our ow
    ```
 
 Note the **memory** attribute on `adopters`. The memory attribute tells Solidity to temporarily store the value in memory, rather than saving it to the contract's storage. Since `adopters` is an array, and we know from the first adoption test that we adopted pet `expectedPetId`, we compare the testing contracts address with location `expectedPetId` in the array.
+
 </details>
 
-## Testing the smart contract using JavaScript 
+## Testing the smart contract using JavaScript
 
 <details>
 <summary> Expand This Section </summary>
@@ -387,74 +384,79 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 1. Create a new file named `testAdoption.test.js` in the `test/` directory.<br/>
 2. Add the following content to the `testAdoption.test.js` file:<br/>
 
-  ```
-  const Adoption = artifacts.require("Adoption");
-  
-  contract("Adoption", (accounts) => {
-    let adoption;
-    let expectedPetId;
-    
-    before(async () => {
-        adoption = await Adoption.deployed();
-    });
+```
+const Adoption = artifacts.require("Adoption");
 
-    describe("adopting a pet and retrieving account addresses", async () => {
-      before("adopt a pet using accounts[0]", async () => {
-        await adoption.adopt(8, { from: accounts[0] });
-        expectedAdopter = accounts[0];
-      });
-    });
+contract("Adoption", (accounts) => {
+  let adoption;
+  let expectedPetId;
+
+  before(async () => {
+      adoption = await Adoption.deployed();
   });
 
-  ```
-  We start the contract by importing : 
-  * `Adoption`: The smart contract we want to test
-  We begin our test by importing our `Adoption` contract using `artifacts.require`.
-
-  **Note**: When writing this test, our callback function take the argument `accounts`. This provides us with the accounts available on the network when using this test.
-
-  Then, we make use of the `before` to provide initial setups for the following: 
-  * Adopt a pet with id 8 and assign it to the first account within the test accounts on the network.
-  * This function later is used to check whether the `petId: 8` has been adopted by `accounts[0]`.
-
-  ### Testing the adopt function 
-
-  To test the `adopt` function, recall that upon success it returns the given `adopter`. We can ensure that the adopter based on given petID was returned and is compared with the `expectedAdopter` within the `adopt` function.
-
-  1. Add the following function within the `testAdoption.test.js` test file, after the declaration of `before` code block. 
-
-  ```
   describe("adopting a pet and retrieving account addresses", async () => {
     before("adopt a pet using accounts[0]", async () => {
       await adoption.adopt(8, { from: accounts[0] });
       expectedAdopter = accounts[0];
     });
-
-    it("can fetch the address of an owner by pet id", async () => {
-      const adopter = await adoption.adopters(8);
-      assert.equal(adopter, expectedAdopter, "The owner of the adopted pet should be the first account.");
-    });
   });
-  ```
+});
 
-  Things to notice:
+```
 
-  * We call smart contract method `adopters` to see what address adopted the pet with `petID` 8.
-  * Truffle imports `Chai` for the user so we can use the `assert` functions. We pass the actual value, the expected value and a failure message (which gets printed to the console if the test does not pass) to `assert.equal()`.
+We start the contract by importing :
 
-  ### Testing retrieval of all pet owners
+- `Adoption`: The smart contract we want to test
+  We begin our test by importing our `Adoption` contract using `artifacts.require`.
 
-  Since arrays can only return a single value given a single key, we create our own getter for the entire array.
+**Note**: When writing this test, our callback function take the argument `accounts`. This provides us with the accounts available on the network when using this test.
 
-  1. Add this function below the previously added function in `testAdoption.test.js`.
-  
-  ```
-  it("can fetch the collection of all pet owners' addresses", async () => {
-    const adopters = await adoption.getAdopters();
-    assert.equal(adopters[8], expectedAdopter, "The owner of the adopted pet should be in the collection.");
+Then, we make use of the `before` to provide initial setups for the following:
+
+- Adopt a pet with id 8 and assign it to the first account within the test accounts on the network.
+- This function later is used to check whether the `petId: 8` has been adopted by `accounts[0]`.
+
+### Testing the adopt function
+
+To test the `adopt` function, recall that upon success it returns the given `adopter`. We can ensure that the adopter based on given petID was returned and is compared with the `expectedAdopter` within the `adopt` function.
+
+1. Add the following function within the `testAdoption.test.js` test file, after the declaration of `before` code block.
+
+```
+describe("adopting a pet and retrieving account addresses", async () => {
+  before("adopt a pet using accounts[0]", async () => {
+    await adoption.adopt(8, { from: accounts[0] });
+    expectedAdopter = accounts[0];
   });
-  ```
-  Since adopters is an array, and we know from the first adoption test that we adopted the pet with `petId` 8, we are comparing the contract's address with the address that we expect to find.
+
+  it("can fetch the address of an owner by pet id", async () => {
+    const adopter = await adoption.adopters(8);
+    assert.equal(adopter, expectedAdopter, "The owner of the adopted pet should be the first account.");
+  });
+});
+```
+
+Things to notice:
+
+- We call smart contract method `adopters` to see what address adopted the pet with `petID` 8.
+- Truffle imports `Chai` for the user so we can use the `assert` functions. We pass the actual value, the expected value and a failure message (which gets printed to the console if the test does not pass) to `assert.equal()`.
+
+### Testing retrieval of all pet owners
+
+Since arrays can only return a single value given a single key, we create our own getter for the entire array.
+
+1. Add this function below the previously added function in `testAdoption.test.js`.
+
+```
+it("can fetch the collection of all pet owners' addresses", async () => {
+  const adopters = await adoption.getAdopters();
+  assert.equal(adopters[8], expectedAdopter, "The owner of the adopted pet should be in the collection.");
+});
+```
+
+Since adopters is an array, and we know from the first adoption test that we adopted the pet with `petId` 8, we are comparing the contract's address with the address that we expect to find.
+
 </details>
 
 ### Running the tests
@@ -466,7 +468,6 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
    ```
 
 1. If all the tests pass, you'll see console output similar to this:
-
 
    ```shell
    Using network 'development'.
@@ -512,7 +513,7 @@ The front-end doesn't use a build system (webpack, grunt, etc.) to be as easy as
        await window.ethereum.enable();
      } catch (error) {
        // User denied account access...
-       console.error("User denied account access")
+       console.error("User denied account access");
      }
    }
    // Legacy dapp browsers...
@@ -521,18 +522,20 @@ The front-end doesn't use a build system (webpack, grunt, etc.) to be as easy as
    }
    // If no injected web3 instance is detected, fall back to Ganache
    else {
-     App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
+     App.web3Provider = new Web3.providers.HttpProvider(
+       "http://localhost:7545"
+     );
    }
    web3 = new Web3(App.web3Provider);
    ```
 
 Things to notice:
 
-* First, we check if we are using modern dapp browsers or the more recent versions of [MetaMask](https://github.com/MetaMask) where an `ethereum` provider is injected into the `window` object. If so, we use it to create our web3 object, but we also need to explicitly request access to the accounts with `ethereum.enable()`.
+- First, we check if we are using modern dapp browsers or the more recent versions of [MetaMask](https://github.com/MetaMask) where an `ethereum` provider is injected into the `window` object. If so, we use it to create our web3 object, but we also need to explicitly request access to the accounts with `ethereum.enable()`.
 
-* If the `ethereum` object does not exist, we then check for an injected `web3` instance. If it exists, this indicates that we are using an older dapp browser (like [Mist](https://github.com/ethereum/mist) or an older version of MetaMask). If so, we get its provider and use it to create our web3 object.
+- If the `ethereum` object does not exist, we then check for an injected `web3` instance. If it exists, this indicates that we are using an older dapp browser (like [Mist](https://github.com/ethereum/mist) or an older version of MetaMask). If so, we get its provider and use it to create our web3 object.
 
-* If no injected web3 instance is present, we create our web3 object based on our local provider. (This fallback is fine for development environments, but insecure and not suitable for production.)
+- If no injected web3 instance is present, we create our web3 object based on our local provider. (This fallback is fine for development environments, but insecure and not suitable for production.)
 
 ### Instantiating the contract
 
@@ -541,7 +544,7 @@ Now that we can interact with Ethereum via web3, we need to instantiate our smar
 1. Still in `/src/js/app.js`, remove the multi-line comment from within `initContract` and replace it with the following:
 
    ```javascript
-   $.getJSON('Adoption.json', function(data) {
+   $.getJSON("Adoption.json", function (data) {
      // Get the necessary contract artifact file and instantiate it with @truffle/contract
      var AdoptionArtifact = data;
      App.contracts.Adoption = TruffleContract(AdoptionArtifact);
@@ -556,13 +559,13 @@ Now that we can interact with Ethereum via web3, we need to instantiate our smar
 
 Things to notice:
 
-* We first retrieve the artifact file for our smart contract. **Artifacts are information about our contract such as its deployed address and Application Binary Interface (ABI)**. **The ABI is a JavaScript object defining how to interact with the contract including its variables, functions and their parameters.**
+- We first retrieve the artifact file for our smart contract. **Artifacts are information about our contract such as its deployed address and Application Binary Interface (ABI)**. **The ABI is a JavaScript object defining how to interact with the contract including its variables, functions and their parameters.**
 
-* Once we have the artifacts in our callback, we pass them to `TruffleContract()`. This creates an instance of the contract we can interact with.
+- Once we have the artifacts in our callback, we pass them to `TruffleContract()`. This creates an instance of the contract we can interact with.
 
-* With our contract instantiated, we set its web3 provider using the `App.web3Provider` value we stored earlier when setting up web3.
+- With our contract instantiated, we set its web3 provider using the `App.web3Provider` value we stored earlier when setting up web3.
 
-* We then call the app's `markAdopted()` function in case any pets are already adopted from a previous visit. We've encapsulated this in a separate function since we'll need to update the UI any time we make a change to the smart contract's data.
+- We then call the app's `markAdopted()` function in case any pets are already adopted from a previous visit. We've encapsulated this in a separate function since we'll need to update the UI any time we make a change to the smart contract's data.
 
 ### Getting The Adopted Pets and Updating The UI
 
@@ -571,34 +574,41 @@ Things to notice:
    ```javascript
    var adoptionInstance;
 
-   App.contracts.Adoption.deployed().then(function(instance) {
-     adoptionInstance = instance;
+   App.contracts.Adoption.deployed()
+     .then(function (instance) {
+       adoptionInstance = instance;
 
-     return adoptionInstance.getAdopters.call();
-   }).then(function(adopters) {
-     for (i = 0; i < adopters.length; i++) {
-       if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
-         $('.panel-pet').eq(i).find('button').text('Success').attr('disabled', true);
+       return adoptionInstance.getAdopters.call();
+     })
+     .then(function (adopters) {
+       for (i = 0; i < adopters.length; i++) {
+         if (adopters[i] !== "0x0000000000000000000000000000000000000000") {
+           $(".panel-pet")
+             .eq(i)
+             .find("button")
+             .text("Success")
+             .attr("disabled", true);
+         }
        }
-     }
-   }).catch(function(err) {
-     console.log(err.message);
-   });
+     })
+     .catch(function (err) {
+       console.log(err.message);
+     });
    ```
 
 Things to notice:
 
-* We access the deployed `Adoption` contract, then call `getAdopters()` on that instance.
+- We access the deployed `Adoption` contract, then call `getAdopters()` on that instance.
 
-* We first declare the variable `adoptionInstance` outside of the smart contract calls so we can access the instance after initially retrieving it.
+- We first declare the variable `adoptionInstance` outside of the smart contract calls so we can access the instance after initially retrieving it.
 
-* Using **call()** allows us to read data from the blockchain without having to send a full transaction, meaning we won't have to spend any ether.
+- Using **call()** allows us to read data from the blockchain without having to send a full transaction, meaning we won't have to spend any ether.
 
-* After calling `getAdopters()`, we then loop through all of them, checking to see if an address is stored for each pet. Since the array contains address types, Ethereum initializes the array with 16 empty addresses. This is why we check for an empty address string rather than null or other falsey value.
+- After calling `getAdopters()`, we then loop through all of them, checking to see if an address is stored for each pet. Since the array contains address types, Ethereum initializes the array with 16 empty addresses. This is why we check for an empty address string rather than null or other falsey value.
 
-* Once a `petId` with a corresponding address is found, we disable its adopt button and change the button text to "Success", so the user gets some feedback.
+- Once a `petId` with a corresponding address is found, we disable its adopt button and change the button text to "Success", so the user gets some feedback.
 
-* Any errors are logged to the console.
+- Any errors are logged to the console.
 
 ### Handling the adopt() Function
 
@@ -607,34 +617,36 @@ Things to notice:
    ```javascript
    var adoptionInstance;
 
-   web3.eth.getAccounts(function(error, accounts) {
+   web3.eth.getAccounts(function (error, accounts) {
      if (error) {
        console.log(error);
      }
 
      var account = accounts[0];
 
-     App.contracts.Adoption.deployed().then(function(instance) {
-       adoptionInstance = instance;
+     App.contracts.Adoption.deployed()
+       .then(function (instance) {
+         adoptionInstance = instance;
 
-       // Execute adopt as a transaction by sending account
-       return adoptionInstance.adopt(petId, {from: account});
-     }).then(function(result) {
-       return App.markAdopted();
-     }).catch(function(err) {
-       console.log(err.message);
-     });
+         // Execute adopt as a transaction by sending account
+         return adoptionInstance.adopt(petId, { from: account });
+       })
+       .then(function (result) {
+         return App.markAdopted();
+       })
+       .catch(function (err) {
+         console.log(err.message);
+       });
    });
    ```
 
 Things to notice:
 
-* We use web3 to get the user's accounts. In the callback after an error check, we then select the first account.
+- We use web3 to get the user's accounts. In the callback after an error check, we then select the first account.
 
-* From there, we get the deployed contract as we did above and store the instance in `adoptionInstance`. This time though, we're going to send a **transaction** instead of a call. Transactions require a "from" address and have an associated cost. This cost, paid in ether, is called **gas**. The gas cost is the fee for performing computation and/or storing data in a smart contract. We send the transaction by executing the `adopt()` function with both the pet's ID and an object containing the account address, which we stored earlier in `account`.
+- From there, we get the deployed contract as we did above and store the instance in `adoptionInstance`. This time though, we're going to send a **transaction** instead of a call. Transactions require a "from" address and have an associated cost. This cost, paid in ether, is called **gas**. The gas cost is the fee for performing computation and/or storing data in a smart contract. We send the transaction by executing the `adopt()` function with both the pet's ID and an object containing the account address, which we stored earlier in `account`.
 
-* The result of sending a transaction is the transaction object. If there are no errors, we proceed to call our `markAdopted()` function to sync the UI with our newly stored data.
-
+- The result of sending a transaction is the transaction object. If there are no errors, we proceed to call our `markAdopted()` function to sync the UI with our newly stored data.
 
 ## Interacting with the dapp in a browser
 
@@ -676,7 +688,7 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
    ![MetaMask network menu](/img/tutorials/pet-shop/metamask-networkmenu.png "MetaMask network menu")
 
-1. In the box titled "New Network" enter `http://127.0.0.1:7545`, in the box titled "Chain ID" enter `1337` (Default Chain ID for Ganache) and click **Save**.
+1. In the box titled "New Network" enter `http://127.0.0.1:7545` and click **Save**.
 
    ![MetaMask Custom RPC](/img/tutorials/pet-shop/metamask-customrpc.png "MetaMask Custom RPC")
 
