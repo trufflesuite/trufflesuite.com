@@ -282,6 +282,13 @@
 			"lotus"
 		]
 	},
+	"polygon-box": {
+		"description": "Polygon Truffle box",
+		"stars": 1,
+		"tags": [
+			"polygon"
+		]
+	},
 	"nuxt-box": {
 		"description": "Truffle, Nuxt and Vue boilerplate",
 		"stars": 32,
