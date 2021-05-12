@@ -10,8 +10,7 @@ drizzleOptions to `generateStore` and drizzle will incorporate them in its own
 Redux Store.
 
 For an example use case see the [Drizzle and Contract
-Events](/tutorials/drizzle-and-contract-events) tutorial.
-
+Events](/guides/drizzle-and-contract-events) guide.
 
 Add Middleware to the Store
 ---------------------------
