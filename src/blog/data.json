@@ -1,4 +1,12 @@
 {
+  "truffle-and-infura-support-polygon": {
+    "title": "Truffle and Infura Now Support Polygon",
+    "date": "2021-05-11",
+    "author": "Faina Shalts & Michael Godsey",
+    "published": true,
+    "excerpt": "The developer demand for scaling solutions that work directly with Ethereum is here and growing, so today we are very excited to launch our all new Polygon Truffle Box.",
+    "image": "/img/blog/truffle-and-infura-support-polygon/blog-thumbnail.png"
+  },
   "take-a-dive-into-truffle-5": {
     "title": "Take a Dive into Truffle 5",
     "date": "2021-4-20",
