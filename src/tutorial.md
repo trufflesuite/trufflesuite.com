@@ -12,7 +12,7 @@ This tutorial will take you through the process of building your first dapp---an
 This tutorial is meant for those with a basic knowledge of Ethereum and smart contracts, who have some knowledge of HTML and JavaScript, but who are new to dapps.
 
 <p class="alert alert-info">
-<strong>Note</strong>: For Ethereum basics, please read the Truffle <a href="/tutorials/ethereum-overview">Ethereum Overview</a> tutorial before proceeding.
+<strong>Note</strong>: For Ethereum basics, please read the Truffle <a href="/guides/ethereum-overview">Ethereum Overview</a> tutorial before proceeding.
 </p>
 
 In this tutorial we will be covering:
