@@ -109,7 +109,7 @@ For each network, you can specify `host` / `port`, `url`, or `provider`, but not
 
 #### Providers
 
-The following network list consists of a local test network and an Infura-hosted Ropsten network, both provided by HDWalletProvider. Make sure you wrap `truffle-hdwallet` providers in a function closure as shown below to ensure that only one network is ever connected at a time.
+The following network list consists of a local test network and an Infura-hosted Ropsten network, both provided by HDWalletProvider. Make sure you wrap `@truffle/hdwallet-provider` instances in a function closure as shown below to ensure that only one network is ever connected at a time.
 
 ```javascript
 networks: {

@@ -49,6 +49,13 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
   integrity sha512-ONhaKPIufzzrlNbqtWFFd+jlnemX6lJAgq9ZeiZtS7I1PIf/la7CW4m83rTXRnVnsMbW2k56pGYu7AUFJD9Pow==
 
+"@trufflesuite/metalsmith-markdown-precompiler@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@trufflesuite/metalsmith-markdown-precompiler/-/metalsmith-markdown-precompiler-1.0.1.tgz#bb35bed97f7d1bffc1de7bf249ab0809652af737"
+  integrity sha512-QuX1WuyFQxPOMTYu2XPOKCKbutizu1zDoVjLF0AuFZ846NU7ZC/WFwVU7XQefEkOdRhiYpcLDvq9xGU5UV7cBA==
+  dependencies:
+    handlebars "^4.0.5"
+
 "@types/color-name@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
@@ -2564,10 +2571,22 @@ handlebars-utils@^1.0.2, handlebars-utils@^1.0.4, handlebars-utils@^1.0.6:
     kind-of "^6.0.0"
     typeof-article "^0.1.1"
 
-handlebars@*, handlebars@^4.0.1, handlebars@^4.0.11, handlebars@^4.0.5:
+handlebars@*, handlebars@^4.0.1, handlebars@^4.0.11:
   version "4.7.6"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.6.tgz#d4c05c1baf90e9945f77aa68a7a219aa4a7df74e"
   integrity sha512-1f2BACcBfiwAfStCKZNrUCgqNZkGsAT7UM3kkYtXuLo0KnaVfjKOyf7PRzB6++aK9STyT1Pd2ZCPe3EGOXleXA==
+  dependencies:
+    minimist "^1.2.5"
+    neo-async "^2.6.0"
+    source-map "^0.6.1"
+    wordwrap "^1.0.0"
+  optionalDependencies:
+    uglify-js "^3.1.4"
+
+handlebars@^4.0.5:
+  version "4.7.7"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.7.tgz#9ce33416aad02dbd6c8fafa8240d5d98004945a1"
+  integrity sha512-aAcXm5OAfE/8IXkcZvCepKU3VzW1/39Fb5ZuqMtgI/hT8X2YgoMvBY5dLhq/cpOvw7Lk1nK/UF71aLG/ZnVYRA==
   dependencies:
     minimist "^1.2.5"
     neo-async "^2.6.0"
@@ -3980,13 +3999,6 @@ metalsmith-layouts@^2.1.0:
     is-utf8 "^0.2.1"
     jstransformer "^1.0.0"
     multimatch "^2.1.0"
-
-metalsmith-markdown-precompiler@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/metalsmith-markdown-precompiler/-/metalsmith-markdown-precompiler-1.0.0.tgz#de1c61d69eae5513ae8574723f22604c20f99656"
-  integrity sha1-3hxh1p6uVROuhXRyPyJgTCD5llY=
-  dependencies:
-    handlebars "^4.0.5"
 
 metalsmith-markdown@^1.3.0:
   version "1.3.0"

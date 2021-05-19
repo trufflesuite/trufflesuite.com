@@ -2,7 +2,7 @@ const Metalsmith = require('metalsmith');
 
 // Plugins
 const markdown = require('metalsmith-markdown');
-const markdownPrecompiler = require('metalsmith-markdown-precompiler');
+const markdownPrecompiler = require('@trufflesuite/metalsmith-markdown-precompiler');
 const sass = require('metalsmith-sass');
 const layouts = require('metalsmith-layouts');
 const discoverHelpers = require('metalsmith-discover-helpers');
