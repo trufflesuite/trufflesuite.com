@@ -147,7 +147,6 @@ Send the `store` as a prop to `DrizzleProvider`
 import store from './middleware'
 ...
 const drizzle = new Drizzle(drizzleOptions, store);
-
 ...
 ```
 
