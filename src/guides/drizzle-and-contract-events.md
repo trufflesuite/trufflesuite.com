@@ -146,7 +146,8 @@ Send the `store` as a prop to `DrizzleProvider`
 ...
 import store from './middleware'
 ...
-<DrizzleProvider store={store} options={drizzleOptions}>
+const drizzle = new Drizzle(drizzleOptions, store);
+
 ...
 ```
 
