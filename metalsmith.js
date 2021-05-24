@@ -29,6 +29,7 @@ const eventsData = require('./src/events/data.json');
 const pressReleasesData = require('./src/press-releases/data.json');
 const staffData = require('./src/staff/data.json');
 const guidesData = require('./src/guides/data.json');
+const extensionsData = require('./src/extensions/data.json');
 
 function app(clean) {
   return Metalsmith(__dirname)
@@ -46,6 +47,7 @@ function app(clean) {
     pressReleases: pressReleasesData,
     staff: staffData,
     guides: guidesData,
+    extensions: extensionsData,
     cssVersion: Date.now().toString(),
   })
   .use(env())

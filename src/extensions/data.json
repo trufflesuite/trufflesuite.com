@@ -1,0 +1,66 @@
+{
+  "openzeppelin-upgrades": {
+    "title": "OpenZeppelin Upgrades",
+    "description": "Integrate upgrades into your existing workflow. Plugins for Hardhat and Truffle to deploy and manage upgradeable contracts on Ethereum.",
+    "author": "OpenZeppelin",
+    "published": true,
+    "products": ["teams"],
+    "url": "https://github.com/OpenZeppelin/openzeppelin-upgrades"
+  },
+  "db-kit": {
+    "title": "db-kit",
+    "description": "Smart contract utility widget leveraging @truffle/db, a system of record for blockchain metadata.",
+    "author": "Truffle",
+    "published": true,
+    "products": ["truffle"],
+    "url": "https://www.npmjs.com/package/@truffle/db-kit"
+  },
+  "truffle-plugin-verify": {
+    "title": "truffle-plugin-verify",
+    "description": "This truffle plugin allows you to automatically verify your smart contracts' source code on Etherscan, straight from the Truffle CLI.",
+    "author": "Rosco Kalis",
+    "published": true,
+    "products": ["truffle"],
+    "url": "https://www.npmjs.com/package/truffle-plugin-verify"
+  },
+  "truffle-flattener": {
+    "title": "Truffle Flattener",
+    "description": "Truffle Flattener concats solidity files from Truffle and Buidler projects with all of their dependencies.",
+    "author": "Nomic Labs",
+    "published": true,
+    "products": ["truffle"],
+    "url": "https://www.npmjs.com/package/truffle-flattener"
+  },
+  "truffle-seeder": {
+    "title": "Truffle Seeder",
+    "description": "Easily seed initial data to smart contracts using this npm package.",
+    "author": "Liberty Pie",
+    "published": true,
+    "products": ["truffle"],
+    "url": "https://github.com/LibertyPie/solidity-seeder"
+  },
+  "simba-truffle-integration": {
+    "title": "SIMBA Truffle Integration",
+    "description": "Enables interaction with your SIMBA Enterprise Platform Instance from inside your VS Code development environment.",
+    "author": "SIMBAChain",
+    "published": true,
+    "products": ["integration"],
+    "url": "https://github.com/SIMBAChain/truffle"
+  },
+  "truffle-multibaas-plugin": {
+    "title": "truffle-multibaas-plugin",
+    "description": "MultiBaas is blockchain middleware that makes it fast and easy to develop, deploy, and operate on the Ethereum and OmiseGO blockchain platforms",
+    "author": "Curvegrid",
+    "published": true,
+    "products": ["integration"],
+    "url": "https://github.com/curvegrid/truffle-multibaas-plugin"
+  },
+  "moonbeam-truffle-plugin": {
+    "title": "Moonbeam Truffle Plugin",
+    "description": "The plugin is used to get you started with a local development Moonbeam node.",
+    "author": "PureStake",
+    "published": true,
+    "products": ["integration"],
+    "url": "https://github.com/PureStake/moonbeam-truffle-plugin#readme"
+  }
+}
