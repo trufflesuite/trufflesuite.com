@@ -16,11 +16,18 @@ module.exports = {
       port: 8545,
       network_id: "*" // Match any network id
     }
+  },
+  compilers: {
+    solc: {
+      version: "^0.8.0"
+    }
   }
 };
 ```
 
-The default configuration ships with configuration for a single development network, running on `127.0.0.1:8545`. There are many other configuration options, detailed below.
+Be sure to check out the `truffle-config.js` contained by the barebones project that
+`truffle init` creates. The `truffle-config.js` contains a handful of commented out
+examples of some configuration options that you might specify/tweak.
 
 
 ### Resolving naming conflicts on Windows
@@ -52,13 +59,23 @@ Build configuration of your application, if your application requires tight inte
 
 Specifies which networks are available for deployment during migrations, as well as specific transaction parameters when interacting with each network (such as gas price, from address, etc.). When compiling and running migrations on a specific network, contract artifacts will be saved and recorded for later use. When your contract abstractions detect that your Ethereum client is connected to a specific network, they'll use the contract artifacts associated that network to simplify app deployment. Networks are identified through Ethereum's `net_version` RPC call, as well as blockchain URIs.
 
-The `networks` object, shown below, is keyed by a network name and contains a corresponding object that defines the parameters of the network. The `networks` option is required, as if you have no network configuration, Truffle will not be able to deploy your contracts. The default network configuration provided by `truffle init` gives you a development network that matches any network it connects to -- this is useful during development, but not suitable for production deployments. To configure Truffle to connect to other networks, simply add more named networks and specify the corresponding network id.
+The `networks` object, shown below, is keyed by network names and each name contains a corresponding
+object that defines the parameters of the network. You will most likely want to provide
+your own network names and configurations to tell Truffle what networks to connect to
+for deployments and testing.
 
-The network name is used for user interface purposes, such as when running your migrations on a specific network:
+Once you have defined your networks, you can provide the names as an option for certain
+commands; this is possible during testing or running migrations. You might specify a
+network name during migrations as follows:
 
 ```shell
 $ truffle migrate --network live
 ```
+
+Note that if no `--network` option is provided when using commands
+that require a network, Truffle will by default look for a network named "development" in your
+`truffle-config.js`. It will then use those settings to try and connect. See the
+provided examples below for some guidance on defining your networks.
 
 Example:
 
