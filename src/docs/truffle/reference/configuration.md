@@ -25,7 +25,9 @@ module.exports = {
 };
 ```
 
-The default configuration ships with configuration for a single development network, running on `127.0.0.1:8545`. There are many other configuration options, detailed below.
+Be sure to check out the `truffle-config.js` contained by the barebones project that
+`truffle init` creates. The `truffle-config.js` contains a handful of commented out
+examples of some configuration options that you might specify/tweak.
 
 
 ### Resolving naming conflicts on Windows
