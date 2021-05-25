@@ -12,7 +12,7 @@
     "description": "Smart contract utility widget leveraging @truffle/db, a system of record for blockchain metadata.",
     "author": "Truffle",
     "published": true,
-    "products": ["truffle"],
+    "products": ["utility"],
     "url": "https://www.npmjs.com/package/@truffle/db-kit"
   },
   "truffle-plugin-verify": {
@@ -20,7 +20,7 @@
     "description": "This truffle plugin allows you to automatically verify your smart contracts' source code on Etherscan, straight from the Truffle CLI.",
     "author": "Rosco Kalis",
     "published": true,
-    "products": ["truffle"],
+    "products": ["utility", "security"],
     "url": "https://www.npmjs.com/package/truffle-plugin-verify"
   },
   "truffle-flattener": {
@@ -28,7 +28,7 @@
     "description": "Truffle Flattener concats solidity files from Truffle and Buidler projects with all of their dependencies.",
     "author": "Nomic Labs",
     "published": true,
-    "products": ["truffle"],
+    "products": ["utility"],
     "url": "https://www.npmjs.com/package/truffle-flattener"
   },
   "truffle-seeder": {
@@ -36,7 +36,7 @@
     "description": "Easily seed initial data to smart contracts using this npm package.",
     "author": "Liberty Pie",
     "published": true,
-    "products": ["truffle"],
+    "products": ["utility"],
     "url": "https://github.com/LibertyPie/solidity-seeder"
   },
   "simba-truffle-integration": {
@@ -60,7 +60,7 @@
     "description": "The plugin is used to get you started with a local development Moonbeam node.",
     "author": "PureStake",
     "published": true,
-    "products": ["integration"],
+    "products": ["integration", "truffle"],
     "url": "https://github.com/PureStake/moonbeam-truffle-plugin#readme"
   }
 }

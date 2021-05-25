@@ -24,7 +24,7 @@ $(window).on('load', function() {
   }
 
   // Filters & Search
-  $('#filterGuides input').on('change', function(event) {
+  $('#filterExtensions input').on('change', function(event) {
     const filterProduct = $(event.currentTarget).attr('data-filter');
 
     buttonFilter = filterProduct;
@@ -34,14 +34,14 @@ $(window).on('load', function() {
 
   $('#filterClear').on('click', function() {
     $('input[name="product"]').prop('checked', false);
-    $('#guidesSearch').val('');
+    $('#extensionsSearch').val('');
     buttonFilter = '';
     qsRegex = '';
     $container.isotope('arrange');
   });
 
   // Use value of search field to filter.
-  var $quicksearch = $('#guidesSearch').on('keyup', debounce( function() {
+  var $quicksearch = $('#extensionsSearch').on('keyup', debounce( function() {
     qsRegex = new RegExp( $quicksearch.val(), 'gi' );
     $container.isotope('arrange');
   }, 200));
