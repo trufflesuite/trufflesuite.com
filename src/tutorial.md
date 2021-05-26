@@ -399,7 +399,7 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
   
   contract("Adoption", (accounts) => {
     let adoption;
-    let expectedPetId;
+    let expectedAdopter;
     
     before(async () => {
         adoption = await Adoption.deployed();
