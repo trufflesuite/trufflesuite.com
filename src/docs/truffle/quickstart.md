@@ -69,7 +69,7 @@ Once this operation is completed, you'll now have a project structure with the f
 
 1. Open the `migrations/2_deploy_contracts.js` file. This file is the migration script for the `MetaCoin` contract. (Migration scripts are run in order, so the file beginning with `2` will be run after the file beginning with `1`.)
 
-1. Open the `test/TestMetacoin.sol` file. This is a [test file written in Solidity](/docs/truffle/testing/writing-tests-in-solidity) which ensures that your contract is working as expected.
+1. Open the `test/TestMetaCoin.sol` file. This is a [test file written in Solidity](/docs/truffle/testing/writing-tests-in-solidity) which ensures that your contract is working as expected.
 
 1. Open the `test/metacoin.js` file. This is a [test file written in JavaScript](/docs/truffle/testing/writing-tests-in-javascript) which performs a similar function to the Solidity test above.
 
