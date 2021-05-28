@@ -282,7 +282,7 @@
 			"lotus"
 		]
 	},
-	"skale-box": {
+	"truffle-skale-network-box": {
 		"description": "SKALE Network Box",
 		"stars": 1,
 		"tags": [
