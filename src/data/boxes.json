@@ -282,6 +282,15 @@
 			"lotus"
 		]
 	},
+	"skale-box": {
+		"description": "SKALE Network Box",
+		"stars": 1,
+		"tags": [
+			"ethereum",
+			"skale",
+			"layer-2"
+		]
+	},
 	"polygon-box": {
 		"description": "Polygon Truffle box",
 		"stars": 1,
