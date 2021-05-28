@@ -132,6 +132,12 @@
     "official": true
   },
   {
+    "userOrg": "skalenetwork",
+    "displayName": "skale-box",
+    "repoName": "truffle-skale-network-box",
+    "official": false
+  },
+  {
     "userOrg": "rsksmart",
     "displayName": "rsk-starter-box",
     "repoName": "rsk-starter-box",
