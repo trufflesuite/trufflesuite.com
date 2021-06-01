@@ -104,7 +104,7 @@ We'll start our dapp by writing the smart contract that acts as the back-end log
 Things to notice:
 
 * The minimum version of Solidity required is noted at the top of the contract: `pragma solidity ^0.5.0;`. The `pragma` command means "*additional information that only the compiler cares about*", while the caret symbol (^) means "*the version indicated or higher*".
-* Like JavaScript or PHP, statements are terminated with semicolons.
+* Like Java or PHP, statements are terminated with semicolons.
 
 ### Variable setup
 
