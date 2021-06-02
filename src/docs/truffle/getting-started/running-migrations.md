@@ -78,30 +78,25 @@ Truffle requires you to have a Migrations contract in order to use the Migration
 Filename: `contracts/Migrations.sol`
 
 ```solidity
-pragma solidity ^0.4.8;
+pragma solidity >=0.4.22 <0.9.0;
 
 contract Migrations {
-  address public owner;
-
+  address public owner = msg.sender;
+  
   // A function with the signature `last_completed_migration()`, returning a uint, is required.
   uint public last_completed_migration;
 
   modifier restricted() {
-    if (msg.sender == owner) _;
+    require(
+      msg.sender == owner,
+      "This function is restricted to the contract's owner"
+    );
+    _;
   }
-
-  function Migrations() {
-    owner = msg.sender;
-  }
-
+  
   // A function with the signature `setCompleted(uint)` is required.
-  function setCompleted(uint completed) restricted {
+  function setCompleted(uint completed) public restricted {
     last_completed_migration = completed;
-  }
-
-  function upgrade(address new_address) restricted {
-    Migrations upgraded = Migrations(new_address);
-    upgraded.setCompleted(last_completed_migration);
   }
 }
 ```

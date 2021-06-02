@@ -683,7 +683,7 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
    ![MetaMask network menu](/img/tutorials/pet-shop/metamask-networkmenu.png "MetaMask network menu")
 
-1. In the box titled "New Network" enter `http://127.0.0.1:7545` and click **Save**.
+1. In the box titled "New Network" enter `http://127.0.0.1:7545`, in the box titled "Chain ID" enter `1337` (Default Chain ID for Ganache) and click **Save**.
 
    ![MetaMask Custom RPC](/img/tutorials/pet-shop/metamask-customrpc.png "MetaMask Custom RPC")
 

@@ -341,7 +341,9 @@ Run JavaScript and Solidity tests.
 truffle test [<test_file>] [--compile-all[-debug]] [--network <name>] [--verbose-rpc] [--show-events] [--debug] [--debug-global <identifier>] [--bail] [--stacktrace[-extra]]
 ```
 
-Runs some or all tests within the `test/` directory as specified. See the section on [Testing your contracts](/docs/getting_started/testing) for more information.
+Runs some or all tests within the `test/` directory as specified. See the section on [Testing your contracts](/docs/testing/testing-your-contracts) for more information.
+
+The exit status of this command (assuming no internal errors) is equal to the number of failing tests, capped at 255.
 
 Options:
 
