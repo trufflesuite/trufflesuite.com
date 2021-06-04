@@ -1,0 +1,14 @@
+[
+  {
+    "userOrg": "truffle-box",
+    "displayName": "drizzle",
+    "repoName": "drizzle-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "optimism",
+    "repoName": "optimism-box",
+    "official": true
+  }
+]

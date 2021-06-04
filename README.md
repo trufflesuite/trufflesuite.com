@@ -1,59 +1,45 @@
+# New trufflesuite.com
 
-# Truffle Suite Website - https://www.trufflesuite.com
+A new iteration (as of Q3 2021) of trufflesuite.com built upon [mkdocs](https://www.mkdocs.org/) and the [material theme](https://squidfunk.github.io/mkdocs-material/). It also targets [ipfs](https://ipfs.io/) via the awesome [Fleek](https://fleek.co/).
 
-Our website is built with [Metalsmith](http://www.metalsmith.io/), using Handlebars templates and a combination of HTML and markdown for page content.
+## Setup
 
-Check out [the contribution guide](https://github.com/trufflesuite/trufflesuite.com/blob/master/CONTRIBUTING.md) to get a lay of the land.
+- `git clone <repo>`
+  
+### Installing Dependencies
 
-## Contributing
+- `sudo pip3 install mkdocs-material`
+- `sudo pip3 install mkdocs-awesome-pages-plugin mkdocs-macros-plugin`
 
-We welcome all contributions, typo corrections, and general feedback. See our [full contribution guide](https://github.com/trufflesuite/trufflesuite.com/blob/master/CONTRIBUTING.md) for details on site architecture and how you could help.
+### Running Locally
 
-Please base your changes and target your PR against the `develop` branch, not `master`
+- `mkdocs serve --no-livereload`
 
-If you find an issue while browsing, most pages have a GitHub link to the directory containing their source files. Look out for the "See a way to make this page better?" links.
+Open [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
-## Dependencies
+A full reference can be found [here](https://www.mkdocs.org/#installation).
 
-Install `yarn` if you haven't already:
+## CSS
 
-```
-npm install -g yarn
-```
+https://getbootstrap.com/docs/5.1/getting-started/introduction/
 
-## Getting Started
-Download zip file or git clone repo:
+## Plugins
 
-```
-git clone https://github.com/trufflesuite/trufflesuite.com.git
-```
+- https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin
+- https://mkdocs-macros-plugin.readthedocs.io/en/latest/
 
-Navigate into the directory in terminal:
+### Jinja2
 
-```
-cd trufflesuite.com/
-yarn
-```
+- [Templating Docs](https://jinja.palletsprojects.com/en/3.0.x/templates/)
 
-## Run dev build
-In terminal run:
+## Post Build Action
 
-```
-yarn dev
-```
+This is used to generate the templated pages for each of the Truffle Boxes...
 
-Navigate to **[localhost:9000](http://localhost:9000)**/port specified in your terminal
+- https://mkdocs-macros-plugin.readthedocs.io/en/latest/advanced/#adding-post-build-files-to-the-html-website
+- https://docs.python-requests.org/en/master/user/authentication/
 
-To view Browsersync settings navigate to **[localhost:3001](http://localhost:3001)**
+## TODO
 
-## Compile to a production build
-
-In terminal run:
-
-```
-yarn build
-```
-
-Navigate to ./build folder for the compiled files.
-
-
+- l18n - https://github.com/ultrabug/mkdocs-static-i18n
+- darkmode toggle - https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#custom-colors

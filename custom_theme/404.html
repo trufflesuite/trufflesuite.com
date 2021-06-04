@@ -1,7 +1,63 @@
----
-title: 404 Error
-layout: layout.hbs
----
-<main role="main" class="container">
-  <h1>404</h1>
-</main>
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+  {{ super() }}
+
+  <!-- Additional styles for landing page -->
+  <style>
+
+    /* Remove spacing, as we cannot hide it completely */
+    .md-main__inner {
+      margin: 0;
+    }
+
+    /* Hide main content for now */
+    .md-content {
+      display: none;
+    }
+
+    /* Hide table of contents */
+    @media screen and (min-width: 60em) {
+      .md-sidebar--secondary {
+        display: none;
+      }
+    }
+
+    .card-img-top {
+      display: inline-block;
+      margin: 0 .5em 0 0;
+      width: 2.5rem;
+      max-height: 2.5rem;
+    }
+  </style>
+
+<section class="p-5">
+
+  <h1>Houston, we have a 404 🚀</h1>
+
+  <p class="mt-4">We're sure what happened there but here's a few suggestions...</p>
+
+  <ul>
+      <li><a href="/">Homepage</a></li>
+      <li><a href="/docs">Documentation</a></li>
+      <li><a href="/guides">Guides</a></li>
+      <li><a href="/tutorial">Tutorial</a></li>
+      <li><a href="/boxes">Boxes</a></li>
+  </ul>
+
+  <p>In addition, you can reach out to us <a href="/community">here</a>.</p>
+
+</section>
+
+
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->
+
+{% block footer %}
+    {% include "partials/footer.html" %}
+{% endblock %}

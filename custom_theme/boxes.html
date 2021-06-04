@@ -1,0 +1,82 @@
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+  {{ super() }}
+
+  <!-- Additional styles for landing page -->
+  <style>
+
+    /* Remove spacing, as we cannot hide it completely */
+    .md-main__inner {
+      margin: 0;
+    }
+
+    /* Hide main content for now */
+    .md-content {
+      display: none;
+    }
+
+    /* Hide table of contents */
+    @media screen and (min-width: 60em) {
+      .md-sidebar--secondary {
+        display: none;
+      }
+    }
+
+    /* Hide navigation */
+    @media screen and (min-width: 76.25em) {
+      .md-sidebar--primary {
+        display: none;
+      }
+    }
+
+  </style>
+
+<section class="container p-5">
+
+  <h1>Truffle Boxes</h1>
+  <h2>The easiest way to get started</h2>
+  <p>Truffle Boxes are helpful boilerplates that allow you to focus on what makes your dapp unique. In addition to Truffle, Truffle Boxes can contain other helpful modules, Solidity contracts & libraries, front-end views and more; all the way up to complete example dapps.</p>
+  <a href="/docs/truffle/advanced/creating-a-truffle-box.html" class="btn btn-sm btn-truffle">Create a Box</a>
+
+
+  <p class="mt-4">
+    <div id="boxes" class="row row-cols-3 row-cols-md-3 g-4">
+
+    {% for box in config.extra.boxes %}
+
+      <div class="col">
+          <a href={{ "/boxes/" + box.displayName }}>
+            <div class="card">
+                <img src={{ "https://raw.githubusercontent.com/" + box.userOrg + "/" + box.repoName + "/master/box-img-sm.png" }} class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title">{{ box.displayName }}</h5>
+                    <p class="card-text">{{ box.deets.stars }}</p>
+                    <p class="card-text">{{ box.deets.description }}</p>
+                    <p class="card-text">
+                      {% for tag in box.deets.tags %}
+                        <span class="badge bg-secondary">{{ tag }}</span>
+                      {% endfor %}
+                    </p>
+                </div>
+            </div>
+          </a>
+      </div>
+    {% endfor %}
+
+    </div>
+  </p>
+      
+</section>
+
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->
+
+{% block footer %}
+    {% include "partials/footer.html" %}
+{% endblock %}

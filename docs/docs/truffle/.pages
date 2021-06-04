@@ -1,0 +1,9 @@
+nav:
+  - index.md
+  - quickstart.md
+  - getting-started
+  - testing
+  - distributed-ledger-support
+  - advanced
+  - reference
+  - Guides: https://trufflesuite.com/guides

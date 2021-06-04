@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+  {{ super() }}
+
+<script>
+  window.location = "/404.html"
+</script>
+
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->
+
+{% block footer %}
+    {% include "partials/footer.html" %}
+{% endblock %}

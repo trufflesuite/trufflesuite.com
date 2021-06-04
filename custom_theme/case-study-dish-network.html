@@ -1,0 +1,84 @@
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+  {{ super() }}
+
+  <!-- Additional styles for landing page -->
+  <style>
+
+    /* Remove spacing, as we cannot hide it completely */
+    .md-main__inner {
+      margin: 0;
+    }
+
+    /* Hide main content for now */
+    .md-content {
+      display: none;
+    }
+
+    /* Hide table of contents */
+    @media screen and (min-width: 60em) {
+      .md-sidebar--secondary {
+        display: none;
+      }
+    }
+
+    /* Hide navigation */
+    @media screen and (min-width: 76.25em) {
+      .md-sidebar--primary {
+        display: none;
+      }
+    }
+
+  </style>
+
+<section class="container p-5">
+
+    <main role="main" class="container container-heading">
+        <div class="row">
+          <div class="col">
+            <h1>DISH</h1>
+            <p>DISH Network Corporation is a U.S. television provider based in Englewood, Colorado. It is the owner of the direct-broadcast satellite provider DISH, also still commonly known as DISH Network, and the over-the-top IPTV service Sling TV. The company has approximately 16,000 employees.</p>
+
+            <div class="row row-wide justify-content-center">
+                <div class="col">
+                    <div class="media align-items-center">
+                    <img src="/img/case-studies/case-study-dish-network/rob-steiner.jpg" class="rounded-circle img-fluid post-thumbnail align-self-center mr-4" />
+                    <div class="media-body">
+                        <p>I’m trying to get our massive team of engineers up to speed. We need to demystify the tech. Truffle does that.</p>
+                        <p class="author">
+                        Rob Steiner<br/>
+                        <span class="author-title">Head of Blockchain/DLT, Wireless Innovation at DISH</span>
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>The Problem</h2>
+            <p><a href="https://www.gartner.com/en/doc/3855708-digital-disruption-profile-blockchains-radical-promise-spans-business-and-society">Gartner forecasts blockchain will generate an annual business value of $176 billion by 2025 and rise to over $3.1 trillion by 2030.</a> DISH wanted to upskill their in-house software development teams to explore the potential of this new technological paradigm.</p>
+
+            <figure>
+            <img class="mb-2" src="/img/case-studies/case-study-dish-network/figure-1.jpg" alt="Kevin training DISH developers on Truffle's tools." style="width:100%">
+            <figcaption class="text-center font-italic mt-2">Kevin Bluer, Truffle’s Head of Curriculum & Training, teaching employees at DISH about the Truffle suite.</figcaption>
+            </figure>
+            <h2>The Solution</h2>
+            <p>DISH partnered with Truffle Suite to co-develop a long form training program to train DISH’s existing software engineering on blockchain. The program syllabus included the development lifecycle, smart contract development, tokenization, and decentralized identity. Rob Steiner, Head of Blockchain/Distributed Ledger Technology at Dish says "I’m trying to get our massive team of engineers up to speed. We need to demystify the tech. Truffle does that."</p>
+          </div>
+        </div>
+      </main>
+      
+
+</section>
+
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->
+
+{% block footer %}
+    {% include "partials/footer.html" %}
+{% endblock %}
