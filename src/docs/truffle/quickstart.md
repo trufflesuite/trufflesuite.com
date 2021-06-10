@@ -97,7 +97,7 @@ Once this operation is completed, you'll now have a project structure with the f
    <i class="far fa-info-circle"></i> <strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on <a href="/docs/truffle/reference/configuration#resolving-naming-conflicts-on-windows">resolving naming conflicts on Windows</a>.
    </p>
 
-   These tree tests were run against the contract, with descriptions displayed on what the tests are supposed to do.
+   These two tests were run against the contract, with descriptions displayed on what the tests are supposed to do.
 
 1. Run the JavaScript test:
 
