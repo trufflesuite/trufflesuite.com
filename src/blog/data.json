@@ -2,7 +2,7 @@
   "sunsetting-truffle-teams": {
     "title": "Sunsetting Truffle Teams",
     "date": "2021-4-20",
-    "author": "Josh Quintal",
+    "author": "The Truffle Suite Team",
     "published": true,
     "excerpt": "After a 2 year long road, we're sunsetting Truffle Teams. Truffle Teams will be shutting down in 30 days. Parts of Truffle Teams will be making their way into our open-source tools!",
     "image": "/img/blog/sunsetting-truffle-teams/blog-thumbnail.png"

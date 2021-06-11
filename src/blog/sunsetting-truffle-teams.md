@@ -31,6 +31,6 @@ These repurposed bits will all be open-source, so you can [check out the `truffl
 
 If there are other features you'd like to see again, for example the deployments screen or contract manager, let us know!
 
-Thanks,
+Sincerely,
 
 _The Truffle Suite Team_
