@@ -7,7 +7,7 @@ layout: docs.hbs
 This page will take you through the basics of creating a Truffle project and deploying a smart contract to a blockchain.
 
 <p class="alert alert-info">
-<i class="far fa-info-circle"></i> <strong>Note</strong>: Before you begin, make sure that you read our <a href="/tutorials/ethereum-overview">Ethereum Overview</a> page.
+<i class="far fa-info-circle"></i> <strong>Note</strong>: Before you begin, make sure that you read our <a href="/guides/ethereum-overview">Ethereum Overview</a> page.
 </p>
 
 ## Table of Contents
@@ -69,7 +69,7 @@ Once this operation is completed, you'll now have a project structure with the f
 
 1. Open the `migrations/2_deploy_contracts.js` file. This file is the migration script for the `MetaCoin` contract. (Migration scripts are run in order, so the file beginning with `2` will be run after the file beginning with `1`.)
 
-1. Open the `test/TestMetacoin.sol` file. This is a [test file written in Solidity](/docs/truffle/testing/writing-tests-in-solidity) which ensures that your contract is working as expected.
+1. Open the `test/TestMetaCoin.sol` file. This is a [test file written in Solidity](/docs/truffle/testing/writing-tests-in-solidity) which ensures that your contract is working as expected.
 
 1. Open the `test/metacoin.js` file. This is a [test file written in JavaScript](/docs/truffle/testing/writing-tests-in-javascript) which performs a similar function to the Solidity test above.
 
@@ -97,7 +97,7 @@ Once this operation is completed, you'll now have a project structure with the f
    <i class="far fa-info-circle"></i> <strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on <a href="/docs/truffle/reference/configuration#resolving-naming-conflicts-on-windows">resolving naming conflicts on Windows</a>.
    </p>
 
-   These tree tests were run against the contract, with descriptions displayed on what the tests are supposed to do.
+   These two tests were run against the contract, with descriptions displayed on what the tests are supposed to do.
 
 1. Run the JavaScript test:
 
@@ -474,4 +474,4 @@ As of Truffle v5, the console supports async/await functions, enabling much simp
 
 ## Continue learning
 
-This quickstart showed you the basics of the Truffle project lifecycle, but there is much more to learn. Please continue on with the rest of our [documentation](/docs) and especially our [tutorials](/tutorials) to learn more.
+This quickstart showed you the basics of the Truffle project lifecycle, but there is much more to learn. Please continue on with the rest of our [documentation](/docs) and especially our [guides](/guides) or [tutorial](/tutorial) to learn more.

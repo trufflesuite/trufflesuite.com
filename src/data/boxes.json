@@ -271,6 +271,33 @@
 			"nightfall"
 		]
 	},
+	"filecoin-box": {
+		"description": "Filecoin flavored Ganache Truffle box",
+		"stars": 5,
+		"tags": [
+			"filecoin",
+			"ipfs",
+			"truffle",
+			"ganache",
+			"lotus"
+		]
+	},
+	"truffle-skale-network-box": {
+		"description": "SKALE Network Box",
+		"stars": 1,
+		"tags": [
+			"ethereum",
+			"skale",
+			"layer-2"
+		]
+	},
+	"polygon-box": {
+		"description": "Polygon Truffle box",
+		"stars": 1,
+		"tags": [
+			"polygon"
+		]
+	},
 	"nuxt-box": {
 		"description": "Truffle, Nuxt and Vue boilerplate",
 		"stars": 32,

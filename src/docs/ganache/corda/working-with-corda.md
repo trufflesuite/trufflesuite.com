@@ -1,5 +1,5 @@
 ---
-title: Truffle | Working With Corda
+title: Ganache | Working With Corda
 layout: docs.hbs
 ---
 # Working With Corda

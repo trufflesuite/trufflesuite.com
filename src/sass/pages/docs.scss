@@ -31,7 +31,7 @@
         color: white;
       }
     }
-  
+
     .docs-back-button {
       display: inline-block;
       vertical-align: middle;
@@ -44,7 +44,7 @@
         color: #3fe0c5;
         opacity: 1;
       }
-    }    
+    }
   }
 
   .docs-wrapper {
@@ -188,7 +188,7 @@
 
     img:first-of-type {
       top: -67px;
-      left: -100px; 
+      left: -100px;
     }
 
     img:last-of-type {
@@ -246,7 +246,7 @@
     font-style: italic;
     text-align: center;
   }
-  
+
   video {
     display: block;
     width: 100%;
@@ -307,7 +307,7 @@
     }
 
     &.docs-blockchain-card {
-      .card-title { 
+      .card-title {
         font-weight: bold;
         font-size: 1.25rem;
       }
@@ -372,7 +372,7 @@
   line-height: 2em;
   font-weight: bold;
   white-space: nowrap;
-  
+
   i {
     background: #ffffff;
     border: 2px solid #47BAA7;

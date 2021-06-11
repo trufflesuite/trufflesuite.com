@@ -16,11 +16,18 @@ module.exports = {
       port: 8545,
       network_id: "*" // Match any network id
     }
+  },
+  compilers: {
+    solc: {
+      version: "^0.8.0"
+    }
   }
 };
 ```
 
-The default configuration ships with configuration for a single development network, running on `127.0.0.1:8545`. There are many other configuration options, detailed below.
+Be sure to check out the `truffle-config.js` contained by the barebones project that
+`truffle init` creates. The `truffle-config.js` contains a handful of commented out
+examples of some configuration options that you might specify/tweak.
 
 
 ### Resolving naming conflicts on Windows
@@ -52,13 +59,23 @@ Build configuration of your application, if your application requires tight inte
 
 Specifies which networks are available for deployment during migrations, as well as specific transaction parameters when interacting with each network (such as gas price, from address, etc.). When compiling and running migrations on a specific network, contract artifacts will be saved and recorded for later use. When your contract abstractions detect that your Ethereum client is connected to a specific network, they'll use the contract artifacts associated that network to simplify app deployment. Networks are identified through Ethereum's `net_version` RPC call, as well as blockchain URIs.
 
-The `networks` object, shown below, is keyed by a network name and contains a corresponding object that defines the parameters of the network. The `networks` option is required, as if you have no network configuration, Truffle will not be able to deploy your contracts. The default network configuration provided by `truffle init` gives you a development network that matches any network it connects to -- this is useful during development, but not suitable for production deployments. To configure Truffle to connect to other networks, simply add more named networks and specify the corresponding network id.
+The `networks` object, shown below, is keyed by network names and each name contains a corresponding
+object that defines the parameters of the network. You will most likely want to provide
+your own network names and configurations to tell Truffle what networks to connect to
+for deployments and testing.
 
-The network name is used for user interface purposes, such as when running your migrations on a specific network:
+Once you have defined your networks, you can provide the names as an option for certain
+commands; this is possible during testing or running migrations. You might specify a
+network name during migrations as follows:
 
 ```shell
 $ truffle migrate --network live
 ```
+
+Note that if no `--network` option is provided when using commands
+that require a network, Truffle will by default look for a network named "development" in your
+`truffle-config.js`. It will then use those settings to try and connect. See the
+provided examples below for some guidance on defining your networks.
 
 Example:
 
@@ -93,7 +110,7 @@ networks: {
 For each network, if unspecified, transaction options will default to the following values:
 
 * `gas`: Gas limit used for deploys. Default is `6721975`.
-* `gasPrice`: Gas price used for deploys. Default is `100000000000` (100 Shannon).
+* `gasPrice`: Gas price used for deploys. Default is `20000000000` (20 Gwei).
 * `from`: From address used during migrations. Defaults to the first available account provided by your Ethereum client.
 * `provider`: Default web3 provider using `host` and `port` options: `new Web3.providers.HttpProvider("http://<host>:<port>")`
 * `websockets`: You will need this enabled to use the `confirmations` listener or to hear Events using `.on` or `.once`.  Default is `false`.
@@ -109,7 +126,7 @@ For each network, you can specify `host` / `port`, `url`, or `provider`, but not
 
 #### Providers
 
-The following network list consists of a local test network and an Infura-hosted Ropsten network, both provided by HDWalletProvider. Make sure you wrap `truffle-hdwallet` providers in a function closure as shown below to ensure that only one network is ever connected at a time.
+The following network list consists of a local test network and an Infura-hosted Ropsten network, both provided by HDWalletProvider. Make sure you wrap `@truffle/hdwallet-provider` instances in a function closure as shown below to ensure that only one network is ever connected at a time.
 
 ```javascript
 networks: {
@@ -423,10 +440,32 @@ know how we can improve it!
 Provides Truffle with a list of installed third-party extensions installed as
 NPM package dependencies.
 
-Truffle plugin support is currently limited to plugins that define custom
-workflow commands. For more information, see [Third-Party Plugin Commands](/docs/truffle/getting-started/writing-external-scripts#third-party-plugin-commands).
+Truffle supports two separate kinds of plugins. The first are `run` plugins that define a custom workflow command. More information on these can be found under [Third-Party Plugin Commands](/docs/truffle/getting-started/writing-external-scripts#third-party-plugin-commands). The second type of plugins are `preserve` plugins that define a custom workflow for preserving content using the `truffle preserve` command. More information on these can be found under [Preserving Files and Content to Storage Platforms](/docs/truffle/getting-started/preserving-files-and-content-to-storage-platforms).
 
+## Environments
 
+Environments are a way to specify different configuration parameters depending on the selected environment. For example, connection to IPFS is often done with a local node or ganache, while in production, it makes sense to connect to Infura. This can be configured with environments.
+
+```js
+module.exports = {
+  /* ... rest of truffle-config */
+
+  environments: {
+    /* ... other environments */
+
+    development: {
+      ipfs: {
+        address: 'http://localhost:5001
+      }
+    },
+    production: {
+      ipfs: {
+        address: 'https://ipfs.infura.io:5001'
+      }
+    }
+  }
+}
+```
 
 ## EthPM configuration
 

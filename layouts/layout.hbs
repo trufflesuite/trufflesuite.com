@@ -61,14 +61,12 @@
 
   {{> mixpanel-tag-head}}
 </head>
-<body{{#if light-body}} class="light"{{/if}}>
+<body{{#if light-body}} class="light-mode"{{/if}}>
   {{> ga-tag-body}}
   
   {{> navbar}}
   
   {{{ contents }}}
-
-  <script src="/js/dark-mode.js"></script>
 
   {{> footer}}
 </body>

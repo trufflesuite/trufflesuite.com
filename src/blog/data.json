@@ -7,6 +7,14 @@
     "excerpt": "After a 2 year long road, we're sunsetting Truffle Teams. Truffle Teams will be shutting down in 30 days. Parts of Truffle Teams will be making their way into our open-source tools!",
     "image": "/img/blog/sunsetting-truffle-teams/blog-thumbnail.png"
   },
+  "truffle-and-infura-support-polygon": {
+    "title": "Truffle and Infura Now Support Polygon",
+    "date": "2021-05-11",
+    "author": "Faina Shalts & Michael Godsey",
+    "published": true,
+    "excerpt": "The developer demand for scaling solutions that work directly with Ethereum is here and growing, so today we are very excited to launch our all new Polygon Truffle Box.",
+    "image": "/img/blog/truffle-and-infura-support-polygon/blog-thumbnail.png"
+  },
   "take-a-dive-into-truffle-5": {
     "title": "Take a Dive into Truffle 5",
     "date": "2021-4-20",
@@ -14,6 +22,14 @@
     "published": true,
     "excerpt": "Dive into all the new features in Truffle's recent 5.x releases: Filecoin support, Solidity version detection, better Vyper compatibility and more!",
     "image": "/img/blog/take-a-dive-into-truffle-5/blog-thumbnail.png"
+  },
+  "truffle-and-ganache-now-come-in-filecoin-flavor": {
+    "title": "Truffle and Ganache now come in Filecoin Flavor",
+    "date": "2021-3-31",
+    "author": "The Truffle Team",
+    "published": true,
+    "excerpt": "Today we are introducing two new integrations that support Filecoin and IPFS capabilities within Truffle and Ganache to build fully decentralized applications.",
+    "image": "/img/blog/truffle-and-ganache-now-come-in-filecoin-flavor/blog-thumbnail.png"
   },
   "iterate-faster-with-truffle-teams": {
     "title": "Iterate Faster with Truffle Teams",

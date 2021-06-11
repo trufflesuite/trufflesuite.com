@@ -283,6 +283,25 @@ Option:
 * `<contract_name>`: Name of the contract to print opcodes for. Must be a contract name, not a file name. (required)
 
 
+### preserve
+
+Preserve files and content to decentralised storage platforms such as IPFS or Filecoin.
+
+```shell
+truffle preserve <path> --<recipe> [--environment <name>]
+```
+
+Options:
+
+* `--ipfs`: Preserve files to IPFS
+* `--filecoin`: Preserve files to Filecoin
+* `--buckets`: Preserve files to Textile Buckets
+* `--<recipe>`: Preserve files using an installed plugin with the specified recipe tag
+* `--environment <name>`: Specify the environment to use (defined in `truffle-config.js`) (default: "development")
+
+Custom options for these "preserve recipes" can be provided through [environments](/docs/truffle/reference/configuration#environments). Additional preserve recipes can be installed through NPM and [configured as Truffle plugins](/docs/truffle/reference/configuration#plugins). More information about usage, configuration and installation of preserve recipes can be found on the [dedicated documentation page](/docs/truffle/getting-started/preserving-files-and-content-to-storage-platforms).
+
+
 ### publish
 
 Publish a package to the Ethereum Package Registry.
@@ -322,7 +341,9 @@ Run JavaScript and Solidity tests.
 truffle test [<test_file>] [--compile-all[-debug]] [--network <name>] [--verbose-rpc] [--show-events] [--debug] [--debug-global <identifier>] [--bail] [--stacktrace[-extra]]
 ```
 
-Runs some or all tests within the `test/` directory as specified. See the section on [Testing your contracts](/docs/getting_started/testing) for more information.
+Runs some or all tests within the `test/` directory as specified. See the section on [Testing your contracts](/docs/testing/testing-your-contracts) for more information.
+
+The exit status of this command (assuming no internal errors) is equal to the number of failing tests, capped at 255.
 
 Options:
 

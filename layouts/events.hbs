@@ -60,12 +60,12 @@
   <main class="container container-heading">
     <div class="row">
       <div class="col">
-        <h1>UPCOMING EVENTS</h1>
+        <h1>EVENTS</h1>
       </div>
     </div>
   </main>
 
-  <main class="banner banner-light-cream pt-5 pb-5" role="main">
+  {{!-- <main class="banner banner-light-cream pt-5 pb-5" role="main">
     <div class="container events-container">
       {{#each events}}
         {{#if this.current}}
@@ -113,18 +113,16 @@
         {{/if}}        
       {{/each}}
     </div>
-  </main>
-
-  <main class="container container-heading_alt">
-    <div class="row">
-      <div class="col">
-        <h1>PAST EVENTS</h1>
-      </div>
-    </div>
-  </main>
+  </main> --}}
 
   <main class="banner banner-light-cream pt-5 pb-5" role="main">
     <div class="container events-container">
+      <div class="row">
+        <div class="col">
+          <h2 class="mb-5">PAST EVENTS</h2>
+        </div>
+      </div>
+
       {{#each events}}
         {{#if this.past}}
           {{#if this.image}}
