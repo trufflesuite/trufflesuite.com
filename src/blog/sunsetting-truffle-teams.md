@@ -16,7 +16,7 @@ All active Pro and Enterprise tier users will receive a refund of 1 month and re
 
 Truffle Teams will be shutting down in 30 days. This means the service will no longer be accessible via the my.truffleteams.com address and we will be shutting down the relevant infrastructure. This does not include user data. If you would like a dump of your data, email us at [info@truffleteams.com](mailto:info@truffleteams.com).
 
-**All user data will be deleted on September 11th, 2021.** Make sure to request your data before this time, otherwise we'll be unable to recover it.
+**All user data will be deleted on September 10th, 2021.** Make sure to request your data before this time, otherwise we'll be unable to recover it.
 
 ## The afterlife is open-source
 
