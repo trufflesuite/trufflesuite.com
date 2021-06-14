@@ -98,7 +98,7 @@ truffle create <artifact_type> <ArtifactName>
 
 Options:
 
-* `<artifact_type>`: Create a new artifact where artifact_type is one of the following: contract, migration or test. The new artifact is created along with one of the following files: `contracts/ArtifactName.sol`, `migrations/####_artifact_name.js` or `tests/artifact_name.js`. (required)
+* `<artifact_type>`: Create a new artifact, where `artifact_type` is one of the following: `contract`, `migration`, `test`, or `all`. The new artifact is created along with one of the following files: `contracts/ArtifactName.sol`, `migrations/####_artifact_name.js` or `tests/artifact_name.js`.  Using `truffle create all` will create all three. (required)
 * `<ArtifactName>`: Name of new artifact. (required)
 
 Camel case names of artifacts will be converted to underscore-separated file names for the migrations and tests. Number prefixes for migrations are automatically generated.
