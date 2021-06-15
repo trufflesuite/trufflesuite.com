@@ -261,6 +261,18 @@ This command unloads the current transaction so you can load a new one.  Not usa
 
 This command loads a new transaction (given by its transaction hash).  Note that if you already have a transaction loaded, you must first explicitly unload it before you can load a new one.  Not usable in `--fetch-external` mode.
 
+### (y) Reset and advance to final error
+
+This command is only usable at the end of a trace.  It resets the debugger and then advances it to the location of the final error.  If the final error is at the end of the trace, this will have no effect.
+
+Note: The use of resetting and advancing, rather than directly jumping to the final error, is something of a stopgap due to the debugger not currently moving backwards; this will be changed in the future to jump directly back to the final error.
+
+### (Y) Reset and advance to previous error
+
+This command resets the debugger and then advances to the location of the previous error; unlike `y`, it can be used from anywhere in the trace.
+
+Note: The use of resetting and advancing, rather than directly jumping to the final error, is something of a stopgap due to the debugger not currently moving backwards; this will be changed in the future to jump directly back to the final error.
+
 ## Adding and removing breakpoints
 
 Below are some examples of adding and removing breakpoints. Note the difference in case between adding (a lowercase 'b') and removing (an uppercase 'B').  If you add a breakpoint at a place where the debugger will skip over, it will be automatically moved down to the next point that the debugger might stop.  This does not apply to removing breakpoints.  Use the `?` command to list current breakpoints.
