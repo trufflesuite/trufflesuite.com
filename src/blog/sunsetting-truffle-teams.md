@@ -6,7 +6,7 @@ The journey began when Truffle was an independent company. It extended our reach
 
 As an independent company, Truffle Teams was integral to building a business for the long-term, but it came with some costly tradeoffs. Over time the resources required to develop and maintain it were too great, taking time away from development of our open-source tools and eventually taking time away from supporting tasks like ecosystem engagement and development. This was unsustainable.
 
-Another important factor made this sunsetting possible: Acquisition by ConsenSys Software granted us greater supporting resources and freed us from monetary metrics. Which leads us to some good news! We are reaffirming our commitment to having the best-in-class open-source blockchain developer tools.
+Another important factor made this sunsetting possible: The acquisition by ConsenSys Software granted us greater supporting resources and freed us from monetary metrics. Which leads us to some good news! We are reaffirming our commitment to having the best-in-class open-source blockchain developer tools.
 
 ## What about paid subscribers?
 
