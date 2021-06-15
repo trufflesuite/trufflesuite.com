@@ -10,11 +10,11 @@ Another important factor made this sunsetting possible: Acquisition by ConsenSys
 
 ## What about paid subscribers?
 
-All active Pro and Enterprise tier users will receive a refund of 1 month and recurring billings will cease. If you don't see a refund within 5 days (Paddle's processing time), email us at [info@truffleteams.com](mailto:info@truffleteams.com).
+All active Pro and Enterprise tier users will receive a refund of 1 month and recurring billings will cease. If you don't see a refund within 5 days (Paddle's processing time), email us at [truffle-teams@trufflesuite.com](mailto:truffle-teams@trufflesuite.com).
 
 ## What about my data?
 
-Truffle Teams will be shutting down in 30 days. This means the service will no longer be accessible via the my.truffleteams.com address and we will be shutting down the relevant infrastructure. This does not include user data. If you would like a dump of your data, email us at [info@truffleteams.com](mailto:info@truffleteams.com).
+Truffle Teams will be shutting down in 30 days. This means the service will no longer be accessible via the my.truffleteams.com address and we will be shutting down the relevant infrastructure. This does not include user data. If you would like a dump of your data, email us at [truffle-teams@trufflesuite.com](mailto:truffle-teams@trufflesuite.com).
 
 **All user data will be deleted on September 10th, 2021.** Make sure to request your data before this time, otherwise we'll be unable to recover it.
 
