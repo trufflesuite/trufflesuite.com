@@ -6,15 +6,15 @@ The journey began when Truffle was an independent company. It extended our reach
 
 As an independent company, Truffle Teams was integral to building a business for the long-term, but it came with some costly tradeoffs. Over time the resources required to develop and maintain it were too great, taking time away from development of our open-source tools and eventually taking time away from supporting tasks like ecosystem engagement and development. This was unsustainable.
 
-Another important factor made this sunsetting possible: Acquisition by ConsenSys Software granted us greater supporting resources and freed us from monetary metrics. Which leads us to some good news! We are reaffirming our commitment to having the best-in-class open-source blockchain developer tools.
+Another important factor made this sunsetting possible: The acquisition of Truffle Suite by ConsenSys Software granted us greater supporting resources and freed us from monetary metrics. Which leads us to some good news! We are reaffirming our commitment to having the best-in-class open-source blockchain developer tools.
 
 ## What about paid subscribers?
 
-All active Pro and Enterprise tier users will receive a refund of 1 month and recurring billings will cease. If you don't see a refund within 5 days (Paddle's processing time), email us at [info@truffleteams.com](mailto:info@truffleteams.com).
+All active Pro and Enterprise tier users will receive a refund of 1 month and recurring billings will cease. If you don't see a refund within 5 days (Paddle's processing time), email us at [truffle-teams@trufflesuite.com](mailto:truffle-teams@trufflesuite.com).
 
 ## What about my data?
 
-Truffle Teams will be shutting down in 30 days. This means the service will no longer be accessible via the my.truffleteams.com address and we will be shutting down the relevant infrastructure. This does not include user data. If you would like a dump of your data, email us at [info@truffleteams.com](mailto:info@truffleteams.com).
+Truffle Teams will be shutting down in 30 days. This means the service will no longer be accessible via the my.truffleteams.com address and we will be shutting down the relevant infrastructure. This does not include user data. If you would like a dump of your data, email us at [truffle-teams@trufflesuite.com](mailto:truffle-teams@trufflesuite.com).
 
 **All user data will be deleted on September 10th, 2021.** Make sure to request your data before this time, otherwise we'll be unable to recover it.
 
