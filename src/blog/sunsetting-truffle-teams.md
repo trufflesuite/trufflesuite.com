@@ -1,7 +1,7 @@
 ![Sunsetting Truffle Teams Banner](/img/blog/sunsetting-truffle-teams/blog-header.png)
 
 <p class="alert alert-warning">
-<i class="far fa-info-circle"></i> <strong>N.B.</strong>: we published an earlier version of this blogpost with an incorrect timeline. Truffle Teams will be sunset on September 10, 2021.</a>
+<i class="far fa-info-circle"></i> <strong>N.B</strong>: we published an earlier version of this blogpost with an incorrect timeline. Truffle Teams will be sunset on September 10, 2021.</a>
 </p>
 
 After a 2 year long road, we're sunsetting Truffle Teams (effective September 10th, 2021). 
