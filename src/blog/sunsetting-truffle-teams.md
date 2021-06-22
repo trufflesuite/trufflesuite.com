@@ -1,6 +1,10 @@
 ![Sunsetting Truffle Teams Banner](/img/blog/sunsetting-truffle-teams/blog-header.png)
 
-After a 2 year long road, we're sunsetting Truffle Teams. 
+<p class="alert alert-warning">
+<i class="far fa-info-circle"></i> <strong>N.B.</strong>: we published an earlier version of this blogpost with an incorrect timeline. Truffle Teams will be sunset on September 10, 2021.</a>
+</p>
+
+After a 2 year long road, we're sunsetting Truffle Teams (effective September 10th, 2021). 
 
 The journey began when Truffle was an independent company. It extended our reach from dapp development into dapp maintenance. We've gained valuable insights about the state of blockchain devops, the most desirable parts of our tools, and a new clarity around our core competencies.
 
@@ -14,7 +18,7 @@ All active Pro and Enterprise tier users will receive a refund of 1 month and re
 
 ## What about my data?
 
-Truffle Teams will be shutting down in 30 days. This means the service will no longer be accessible via the my.truffleteams.com address and we will be shutting down the relevant infrastructure. This does not include user data. If you would like a dump of your data, email us at [truffle-teams@trufflesuite.com](mailto:truffle-teams@trufflesuite.com).
+All user data will be deleted 30 days following the date of shut down (September 10th 2021). Be sure to request your data before this time, otherwise we'll be unable to guarantee recovery. If you would like a dump of your data, email us at [truffle-teams@trufflesuite.com](mailto:truffle-teams@trufflesuite.com).
 
 **All user data will be deleted on September 10th, 2021.** Make sure to request your data before this time, otherwise we'll be unable to recover it.
 
