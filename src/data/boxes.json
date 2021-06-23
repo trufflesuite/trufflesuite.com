@@ -291,6 +291,13 @@
 			"layer-2"
 		]
 	},
+	"optimism-box": {
+		"description": "Optimism Truffle box",
+		"stars": 1,
+		"tags": [
+			"optimism"
+		]
+	},
 	"polygon-box": {
 		"description": "Polygon Truffle box",
 		"stars": 1,
