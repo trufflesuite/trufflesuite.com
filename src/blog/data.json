@@ -1,4 +1,12 @@
 {
+  "truffle-and-infura-support-optimism": {
+    "title": "Truffle and Infura Now Support Optimism",
+    "date": "2021-06-23",
+    "author": "Faina Shalts",
+    "published": true,
+    "excerpt": "The Truffle team is delighted to support Optimistic Ethereum in helping developers build for this ecosystem. Today we are announcing the launch of the new Truffle Optimism Box.",
+    "image": "/img/blog/truffle-and-infura-support-optimism/blog-thumbnail.jpg"
+  },
   "sunsetting-truffle-teams": {
     "title": "Sunsetting Truffle Teams",
     "date": "2021-06-11",
