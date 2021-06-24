@@ -132,6 +132,12 @@
     "official": true
   },
   {
+    "userOrg": "consensys",
+    "displayName": "scribble",
+    "repoName": "scribble-exercise-1",
+    "official": false
+  },
+  {
     "userOrg": "skalenetwork",
     "displayName": "skale-box",
     "repoName": "truffle-skale-network-box",

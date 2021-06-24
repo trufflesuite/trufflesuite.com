@@ -298,6 +298,15 @@
 			"polygon"
 		]
 	},
+	"scribble-exercise-1": {
+		"description": "Scribble",
+		"stars": 1,
+		"tags": [
+			"consensys",
+			"security",
+			"scribble"
+		]
+	},
 	"nuxt-box": {
 		"description": "Truffle, Nuxt and Vue boilerplate",
 		"stars": 32,
