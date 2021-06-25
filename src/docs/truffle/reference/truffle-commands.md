@@ -73,7 +73,7 @@ Options:
 Run a console with contract abstractions and commands available.
 
 ```shell
-truffle console [--network <name>] [--verbose-rpc]
+truffle console [--network <name>] [--verbose-rpc] [--require|-r <file>]
 ```
 
 Spawns an interface to interact with contracts via the command line. Additionally, many Truffle commands are available within the console (without the `truffle` prefix).
@@ -86,6 +86,10 @@ Options:
 
 * `--network <name>`: Specify the network to use. Network name must exist in the configuration.
 * `--verbose-rpc`: Log communication between Truffle and the Ethereum client.
+* `--require|-r <file>`: Preload console environment from required JavaScript file.
+The default export must be an object with named keys that will be used to populate the console environment.
+For example, if your JavaScript is `module.exports = { desert: "yes please!" }`
+then `breakfast` will be available in the console with the value `"yes please!"`.
 
 
 ### create
@@ -135,7 +139,7 @@ Alias for `migrate`. See [migrate](/docs/truffle/reference/truffle-commands#migr
 Open a console with a development blockchain
 
 ```shell
-truffle develop [--log]
+truffle develop [--log] [--require|-r <file>]
 ```
 
 Spawns a local development blockchain, and allows you to interact with contracts via the command line. Additionally, many Truffle commands are available within the console (without the `truffle` prefix).
@@ -145,11 +149,15 @@ If you want an interactive console but want to use an existing blockchain, use `
 See the [Using the console](/docs/getting_started/console) section for more details.
 
 
-Option:
+Options:
 
 * `--log`: Start/Connect to a Truffle develop session and log all RPC activity.
 See the [Log RPC Activity](docs/getting_started/console#log-rpc-activity)
 docs for more information about using this option.
+* `--require|-r <file>`: Preload console environment from required JavaScript file.
+The default export must be an object with named keys that will be used to populate the console environment.
+For example, if your JavaScript is `module.exports = { desert: "yes please!" }` 
+then `breakfast` will be available in the console with the value `"yes please!"`.
 
 
 ### exec
