@@ -124,6 +124,22 @@ For each network, you can specify `host` / `port`, `url`, or `provider`, but not
 - https://sandbox.truffleteams.com/yoursandboxid
 - wss://sandbox.truffleteams.com/yoursandboxid
 
+### console
+
+Use this option to configure the console environment. This is the environment you get when using `truffle console` or `truffle develop`.
+
+* `require`: Use this to specify JavaScript that will be loaded into the console environment at startup. Your JavaScript's default
+export must be an object with named keys. Each key will used as a variable name, assigned its value, and be available in the console environment.
+For example, if your JavaScript is `module.exports = { myVariable: "three doughnuts please!" }` then you will have the variable `myVariable`
+available in the console with the value `"three doughnuts please!"`.
+
+You may specify this option in several ways.
+1. The value of require can be a string path to the target JavaScript file to be loaded.
+2. An object with a `path` property that is a string path to the JavaScript to be loaded.
+3. An object with a `path` property that is a string path to the JavaScript to be loaded as well as an `as` property
+that specifies the namespace where the variables loaded will be available.
+
+
 #### Providers
 
 The following network list consists of a local test network and an Infura-hosted Ropsten network, both provided by HDWalletProvider. Make sure you wrap `@truffle/hdwallet-provider` instances in a function closure as shown below to ensure that only one network is ever connected at a time.
