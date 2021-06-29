@@ -59,7 +59,7 @@ your tests as normal until reaching the operation in question. At this point,
 Truffle will interrupt the normal test flow and start the debugger, allowing
 you to set breakpoints, inspect Solidity variables, etc.
 
-See [Writing tests in JavaScript](/docs/truffle/writing-tests-in-javascript)
+See [Writing tests in JavaScript](../testing/writing-tests-in-javascript)
 for more information on `truffle test`, and see
 [Interacting with your contracts](/docs/truffle/getting-started/interacting-with-your-contracts)
 to learn about contract operations.
