@@ -72,17 +72,15 @@ until we fix this, you can debug those with direct use of <code>truffle debug</c
 
 ### Debugging read-only calls
 
-Running the debugger from inside your JS tests allow additional functionality
-beyond which `truffle debug <txHash>` can provide.
-
-Beyond just debugging transactions, in-test debugging allows you to debug
-read-only calls as well.
+It's not currently possible to debug read-only calls with in-test debugging.
+You can work around this for now by forcing the call to be a transaction instead
+with `method.sendTransaction()`.
 
 ```javascript
 it("should get latest result", async function() {
-  // wrap what you want to debug with `debug()`:
-  const result = await debug( myContract.getResult("latest") );
-  //                          ^^^^^ read-only function ^^^^^
+  // wrap what you want to debug with `debug()` and use `sendTransaction`:
+  const result = await debug( myContract.getResult.sendTransaction("latest") );
+  //                          ^^^^^ read-only function turned into call^^^^^
 });
 ```
 
