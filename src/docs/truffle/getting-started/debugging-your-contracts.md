@@ -59,7 +59,7 @@ your tests as normal until reaching the operation in question. At this point,
 Truffle will interrupt the normal test flow and start the debugger, allowing
 you to set breakpoints, inspect Solidity variables, etc.
 
-See [Writing tests in JavaScript](/docs/truffle/writing-tests-in-javascript)
+See [Writing tests in JavaScript](../testing/writing-tests-in-javascript)
 for more information on `truffle test`, and see
 [Interacting with your contracts](/docs/truffle/getting-started/interacting-with-your-contracts)
 to learn about contract operations.
@@ -72,15 +72,17 @@ until we fix this, you can debug those with direct use of <code>truffle debug</c
 
 ### Debugging read-only calls
 
-It's not currently possible to debug read-only calls with in-test debugging.
-You can work around this for now by forcing the call to be a transaction instead
-with `method.sendTransaction()`.
+Running the debugger from inside your JS tests allow additional functionality
+beyond which `truffle debug <txHash>` can provide.
+
+Beyond just debugging transactions, in-test debugging allows you to debug
+read-only calls as well.
 
 ```javascript
 it("should get latest result", async function() {
-  // wrap what you want to debug with `debug()` and use `sendTransaction`:
-  const result = await debug( myContract.getResult.sendTransaction("latest") );
-  //                          ^^^^^ read-only function turned into call^^^^^
+  // wrap what you want to debug with `debug()`:
+  const result = await debug( myContract.getResult("latest") );
+  //                          ^^^^^ read-only function ^^^^^
 });
 ```
 
