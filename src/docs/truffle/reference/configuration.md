@@ -139,6 +139,32 @@ You may specify this option in several ways.
 3. An object with a `path` property that is a string path to the JavaScript to be loaded as well as an `as` property
 that specifies the namespace where the variables loaded will be available.
 
+The following are examples of how you can set this property in your `truffle-config.js`.
+
+You can set `console.require` to be a string path.
+```javascript
+module.exports = {
+  console: {
+    require: "./somePath.js"
+  }
+}
+```
+
+You can alternatively set `console.require` to an array of objects where you specify a `path` property.
+Note the use of the optional property `as` when specifying the path `"../../someOtherPath.js"`.
+The values loaded from that module will be namespaced under `myVariables` in the console environment.
+In other words, you will access the loaded variables from that module like `myVariables.<myVariableName>`.
+```javascript
+module.exports = {
+  console: {
+    require: [
+      { path: "./somePath.js" },
+      { path: "../../someOtherPath.js", as: "myVariables" }
+    ]
+  }
+}
+```
+
 
 #### Providers
 
