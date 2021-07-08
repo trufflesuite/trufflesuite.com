@@ -128,7 +128,7 @@ For each network, you can specify `host` / `port`, `url`, or `provider`, but not
 
 Use this option to configure the console environment. This is the environment you get when using `truffle console` or `truffle develop`.
 
-* `require`: Use this to specify JavaScript that will be loaded into the console environment at startup. Your JavaScript's default
+* `require`: Use this to specify a JavaScript module that will be loaded into the console environment at startup. Your module's default
 export must be an object with named keys. Each key will used as a variable name, assigned its value, and be available in the console environment.
 For example, if your JavaScript is `module.exports = { myVariable: "three doughnuts please!" }` then you will have the variable `myVariable`
 available in the console with the value `"three doughnuts please!"`.
