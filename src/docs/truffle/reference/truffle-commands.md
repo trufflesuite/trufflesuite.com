@@ -73,7 +73,7 @@ Options:
 Run a console with contract abstractions and commands available.
 
 ```shell
-truffle console [--network <name>] [--verbose-rpc] [--require|-r <file>]
+truffle console [--network <name>] [--verbose-rpc] [(--require|-r) <file>] [--require-none]
 ```
 
 Spawns an interface to interact with contracts via the command line. Additionally, many Truffle commands are available within the console (without the `truffle` prefix).
@@ -90,6 +90,8 @@ Options:
 The default export must be an object with named keys that will be used to populate the console environment.
 For example, if your JavaScript is `module.exports = { desert: "yes please!" }`
 then `breakfast` will be available in the console with the value `"yes please!"`.
+* `--require-none`: Do not load any user-defined JavaScript into the console environment.
+This option takes precedence over `--require`, `-r`, and values provided for `console.require` in your project's `truffle-config.js`.
 
 
 ### create
@@ -139,7 +141,7 @@ Alias for `migrate`. See [migrate](/docs/truffle/reference/truffle-commands#migr
 Open a console with a development blockchain
 
 ```shell
-truffle develop [--log] [--require|-r <file>]
+truffle develop [--log] [(--require|-r) <file>] [--require-none]
 ```
 
 Spawns a local development blockchain, and allows you to interact with contracts via the command line. Additionally, many Truffle commands are available within the console (without the `truffle` prefix).
@@ -156,8 +158,10 @@ See the [Log RPC Activity](docs/getting_started/console#log-rpc-activity)
 docs for more information about using this option.
 * `--require|-r <file>`: Preload console environment from required JavaScript file.
 The default export must be an object with named keys that will be used to populate the console environment.
-For example, if your JavaScript is `module.exports = { desert: "yes please!" }` 
+For example, if your JavaScript is `module.exports = { desert: "yes please!" }`
 then `breakfast` will be available in the console with the value `"yes please!"`.
+* `--require-none`: Do not load any user-defined JavaScript into the console environment.
+This option takes precedence over `--require`, `-r`, and values provided for `console.require` in your project's `truffle-config.js`.
 
 
 ### exec
