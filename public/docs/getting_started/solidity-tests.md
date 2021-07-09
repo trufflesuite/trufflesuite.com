@@ -148,7 +148,7 @@ Note that Truffle sends Ether to your test contract in a way that does **not** e
 
 Below is another example with ether transactions and parameters. Imagine a crowdfunding campaign contract on which contributors could attach a message to their contribution. Here is an extract of the contract to be tested:
 
-```javascript
+```solidity
 contract Campaign {
 
     // code of campaign smart contract 
