@@ -22,6 +22,7 @@ layout: docs.hbs
   },
   syncAlways,
   web3: {
+    customProvider,
     fallback: {
       type
       url
@@ -35,7 +36,7 @@ An array of either contract artifact files or Web3 contract objects. The objects
 
 i.e.
 
-```
+```javascript
 contracts: [
   truffleArtifact, // A regular Truffle contract artifact
   {
@@ -56,6 +57,24 @@ If `true`, will replay all contract calls at every block. This is useful if your
 
 ### `web3` (object)
 Options regarding `web3` instantiation.
+
+#### `customProvider` (object)
+A valid web3 `provider` object. For example, you may wish to programatically create a Ganache provider for testing:
+
+```javascript
+// Create a Ganache provider.
+const testingProvider = Ganache.provider({
+  gasLimit: 7000000
+})
+
+const options = {
+  web3: {
+    customProvider: testingProvider
+  }
+}
+
+const drizzle = new Drizzle(options)
+```
 
 #### `fallback` (object)
 An object consisting of the type and url of a fallback web3 provider. This is used if no injected provider, such as MetaMask or Mist, is detected.

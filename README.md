@@ -1,37 +1,59 @@
-# Truffle Suite website - http://truffleframework.com
 
-This is a [Metalsmith](http://www.metalsmith.io/) project.
+# Truffle Suite Website - https://www.trufflesuite.com
 
-Much of the static build process is coded by hand, to reflect the previous build system, Harp.js. All of this is coded in a middleware-like structure in `metalsmith.js`.
+Our website is built with [Metalsmith](http://www.metalsmith.io/), using Handlebars templates and a combination of HTML and markdown for page content.
 
-## Development
-
-Make sure you have run `npm install` in the root directory to install all dependencies.
-
-To run a local server to view the site (available on `localhost:9000`), in the root directory run:
-
-```
-npm run dev
-```
-
-To build the site, in the root directory, run:
-
-```
-npm run build
-```
-
-Running the build step will build the site and place it in the `build/` directory.
+Check out [the contribution guide](https://github.com/trufflesuite/trufflesuite.com/blob/master/CONTRIBUTING.md) to get a lay of the land.
 
 ## Contributing
 
-We welcome all contributions, typo corrections, and general feedback.
+We welcome all contributions, typo corrections, and general feedback. See our [full contribution guide](https://github.com/trufflesuite/trufflesuite.com/blob/master/CONTRIBUTING.md) for details on site architecture and how you could help.
 
-You can find the markdown source code inside the `src/` subdirectory.
+Please base your changes and target your PR against the `develop` branch, not `master`
 
-For example: 
+If you find an issue while browsing, most pages have a GitHub link to the directory containing their source files. Look out for the "See a way to make this page better?" links.
 
-* For [tutorials](http://truffleframework.com/tutorials) see `src/tutorials`.
+## Dependencies
 
-* For [docs](http://truffleframework.com/docs) see `src/docs`.
+Install `yarn` if you haven't already:
 
-Commits to master (and PRs accepted) will trigger updates to the live site. Thank you!
+```
+npm install -g yarn
+```
+
+## Getting Started
+Download zip file or git clone repo:
+
+```
+git clone https://github.com/trufflesuite/trufflesuite.com.git
+```
+
+Navigate into the directory in terminal:
+
+```
+cd trufflesuite.com/
+yarn
+```
+
+## Run dev build
+In terminal run:
+
+```
+yarn dev
+```
+
+Navigate to **[localhost:9000](http://localhost:9000)**/port specified in your terminal
+
+To view Browsersync settings navigate to **[localhost:3001](http://localhost:3001)**
+
+## Compile to a production build
+
+In terminal run:
+
+```
+yarn build
+```
+
+Navigate to ./build folder for the compiled files.
+
+

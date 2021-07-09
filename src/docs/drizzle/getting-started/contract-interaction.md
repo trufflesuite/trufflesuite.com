@@ -4,7 +4,7 @@ layout: docs.hbs
 ---
 # Contract Interaction
 
-Drizzle provides helpful methods on top of the default web3.Contract methods to keep your calls and transactions in sync with the store.
+Drizzle provides helpful methods on top of the default `web3.Contract` methods to keep your calls and transactions in sync with the store.
 
 ## `cacheCall()`
 
@@ -21,7 +21,7 @@ if (state.drizzleStatus.initialized) {
     const dataKey = drizzle.contracts.SimpleStorage.methods.storedData.cacheCall()
 
     // Use the dataKey to display data from the store.
-    return state.contracts.SimpleStorage.methods.storedData[dataKey].value
+    return state.contracts.SimpleStorage.storedData[dataKey].value
 }
 
 // If Drizzle isn't initialized, display some loading indication.
@@ -47,7 +47,7 @@ if (state.drizzleStatus.initialized) {
     // Declare this transaction to be observed. We'll receive the stackId for reference.
     const stackId = drizzle.contracts.SimpleStorage.methods.set.cacheSend(2, {from: '0x3f...'})
 
-    // Use the dataKey to display the transaction status.
+    // Use the stackId to display the transaction status.
     if (state.transactionStack[stackId]) {
         const txHash = state.transactionStack[stackId]
 
@@ -78,8 +78,22 @@ var contractConfig = {
 events = ['Mint']
 
 // Using an action
-dispatch({type: 'ADD_CONTRACT', drizzle, contractConfig, events, web3})
+dispatch({type: 'ADD_CONTRACT', contractConfig, events})
 
 // Or using the Drizzle context object
-this.context.drizzle.addContract({contractConfig, events})
+this.context.drizzle.addContract(contractConfig, events)
+```
+
+## Removing Contracts Dynamically
+
+You can also delete contracts using either `drizzle.deleteContract()` or the `DELETE_CONTRACT` action.
+
+```javascript
+const contractName = "MyContract"
+
+// Using an action
+dispatch({type: 'DELETE_CONTRACT', contractName})
+
+// Or using the Drizzle context object
+this.context.drizzle.deleteContract(contractName)
 ```

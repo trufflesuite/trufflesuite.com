@@ -4,6 +4,10 @@ layout: docs.hbs
 ---
 # Build Processes
 
+<p class="alert alert-warning">
+<i class="far fa-exclamation-triangle"></i> <strong>Warning</strong>: The <code>build</code> command and this approach is being deprecated. Please use third-party build tools like webpack or grunt, or see our <a href="/boxes">Truffle Boxes</a> for an example.
+</p>
+
 In order to provide tight integration with Truffle for those that desire it, Truffle allows you to specify a custom build pipeline meant to bootstrap and configure your application. Truffle provides three methods of integration, described below.
 
 ## Running an external command
@@ -62,7 +66,7 @@ When configuring your build tool or application, you'll need to perform the foll
 
 1) Get all your contract artifacts into your build pipeline / application. This includes all of the `.json` files within the `./build/contracts` directory.
 
-2) Turn those `.json` contract artifacts into contract abstractions that are easy to use, via [truffle-contract](https://github.com/trufflesuite/truffle-contract).
+2) Turn those `.json` contract artifacts into contract abstractions that are easy to use, via [@truffle/contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract).
 
 3) Provision those contract abstractions with a Web3 provider. In the browser, this provider might come from [Metamask](https://metamask.io/) or [Mist](https://github.com/ethereum/mist), but it could also be a custom provider you've configured to point to [Infura](http://infura.io/) or any other Ethereum client.
 
@@ -75,7 +79,7 @@ In Node, this is very easy to do. Let's take a look at an example that shows off
 var json = require("./build/contracts/MyContract.json");
 
 // Step 2: Turn that contract into an abstraction I can use
-var contract = require("truffle-contract");
+var contract = require("@truffle/contract");
 var MyContract = contract(json);
 
 // Step 3: Provision the contract with a web3 provider

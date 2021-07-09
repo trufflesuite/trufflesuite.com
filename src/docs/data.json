@@ -1,9 +1,59 @@
 {
+  "teams": {
+    "Getting Started": ["Creating an account", "Adding repositories"],
+    "Account": [
+      "Manage your account",
+      "Switching accounts",
+      "Claim a 1-month trial",
+      "Invite your team",
+      "Redeeming a coupon"
+    ],
+    "Builds": [
+      "Builds overview",
+      "Starting builds",
+      "Restarting builds",
+      "External CI"
+    ],
+    "Sandboxes": [
+      "Sandboxes overview",
+      "Creating a sandbox",
+      "Renaming a sandbox",
+      "Destroying a sandbox",
+      "Sandbox forking",
+      "Usage with Truffle"
+    ],
+    "Deployments": [
+      "Deployments overview",
+      "Creating a deployment",
+      "Deploying to a sandbox",
+      "Deployment details",
+      "Contract monitoring",
+      "Deployment console",
+      "Graduating a deployment",
+      "Archiving a deployment"
+    ],
+    "Debugger": [
+      "Debugger overview",
+      "Debugging a transaction",
+      "Using the debugger"
+    ],
+    "Contract Manager": [
+      "Contract manager overview",
+      "Interacting with functions",
+      "Connecting to a sandbox"
+    ],
+    "Dashboard": [
+      "Dashboard overview",
+      "Adding a deployment",
+      "Switching deployments"
+    ],
+    "Reference": ["Configuration", "Permissions disclosure"],
+    "Support": ["Ask us a question"]
+  },
   "truffle": {
     "Getting Started": [
       "Installation",
       "Creating a Project",
-      "Truffle Boxes",
       "Compiling Contracts",
       "Running Migrations",
       "Interacting with Your Contracts",
@@ -13,39 +63,96 @@
       "Debugging Your Contracts",
       "Using Truffle Develop and The Console",
       "Writing External Scripts",
-      "Using The Build Pipeline"
+      "Preserving Files and Content to Storage Platforms"
     ],
     "Testing": [
       "Testing Your Contracts",
       "Writing Tests in JavaScript",
       "Writing Tests in Solidity"
     ],
+    "Distributed Ledger Support": [
+      "Working With Quorum",
+      "Working With Hyperledger EVM"
+    ],
     "Advanced": [
       "Networks and App Deployment",
-      "Build Processes"
+      "Build Processes",
+      "Creating a Truffle Box",
+      "Event System",
+      "Ethereum Name Service"
     ],
     "Reference": [
       "Choosing an Ethereum Client",
       "Configuration",
+      "Contract Abstractions",
       "Truffle Commands",
       "Contact The Developers"
     ]
   },
   "ganache": {
+    "Workspaces": [
+      "The Quickstart Workspace",
+      "Ethereum Workspace Overview",
+      "Creating Workspaces",
+      "Loading Existing Workspaces",
+      "Switching Workspaces",
+      "Deleting Workspaces",
+      "Editing Workspaces"
+    ],
+    "Truffle Projects": [
+      "Linking a Truffle Project",
+      "Unlinking a Truffle Project",
+      "Contracts Page",
+      "Events Page",
+      "Decoded Transactions"
+    ],
+    "Corda": [
+      "Working with Corda",
+      "Workspace Overview",
+      "Linking a Corda Project",
+      "Unlinking a Corda Project",
+      "Nodes",
+      "Transactions",
+      "CorDapps",
+      "Shell"
+    ],
+    "Reference": ["Ganache Settings", "Workspace Default Configuration"]
   },
   "drizzle": {
-    "Getting Started": [
-      "Using an Existing Redux Store",
-      "Contract Interaction"
-    ],
-    "React": [
-      "React Integration",
-      "React Components"
-    ],
+    "Getting Started": ["Using Drizzle's Redux Store", "Contract Interaction"],
+    "React": ["React Integration", "React Components"],
     "Reference": [
       "Drizzle Options",
       "Drizzle State",
+      "Drizzle Actions",
       "How Data Stays Fresh"
     ]
+  },
+  "tezos": {
+    "truffle": {
+      "Getting Started": [
+        "Installing Truffle with Tezos",
+        "Creating a Tezos project",
+        "Writing Tezos Contracts",
+        "Compiling Tezos Contracts",
+        "Deploying Tezos Contracts",
+        "Interacting with Your Tezos Contracts",
+        "Testing your Tezos Contracts",
+        "Using the Console with Tezos",
+        "Writing External Scripts with Tezos"
+      ],
+      "Reference": ["Configuring Tezos Projects"]
+    }
+  },
+  "filecoin": {
+    "truffle": {
+    },
+    "ganache": {
+      "Getting Started": [
+        "Get Started with the CLI",
+        "Get Started with the GUI",
+        "Get Started with NodeJS"
+      ]
+    }
   }
 }

@@ -7,20 +7,26 @@
   },
   {
     "userOrg": "truffle-box",
+    "displayName": "optimism",
+    "repoName": "optimism-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "drizzle-react-native",
+    "repoName": "drizzle-react-native-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "drizzle-vue-box",
+    "repoName": "vue-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
     "displayName": "react",
     "repoName": "react-box",
-    "official": true
-  },
-  {
-    "userOrg": "truffle-box",
-    "displayName": "react-auth",
-    "repoName": "react-auth-box",
-    "official": true
-  },
-  {
-    "userOrg": "truffle-box",
-    "displayName": "react-uport",
-    "repoName": "react-uport-box",
     "official": true
   },
   {
@@ -54,9 +60,159 @@
     "official": true
   },
   {
+    "userOrg": "truffle-box",
+    "displayName": "vyper-example",
+    "repoName": "vyper-example-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "tezos-example",
+    "repoName": "tezos-example-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "azure-asset-transfer",
+    "repoName": "azure-asset-transfer-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "azure-basic-provenance",
+    "repoName": "azure-basic-provenance-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "bazaar-item-listing",
+    "repoName": "azure-bazaar-item-listing-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "azure-digital-locker",
+    "repoName": "azure-digital-locker-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "azure-hello-blockchain",
+    "repoName": "azure-hello-blockchain-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "azure-refrigerated-transportation",
+    "repoName": "azure-refrigerated-transportation-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "azure-room-thermostat",
+    "repoName": "azure-room-thermostat-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "azure-simple-marketplace",
+    "repoName": "azure-simple-marketplace-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "nightfall",
+    "repoName": "nightfall-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "filecoin",
+    "repoName": "filecoin-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "polygon",
+    "repoName": "polygon-box",
+    "official": true
+  },
+  {
+    "userOrg": "consensys",
+    "displayName": "scribble",
+    "repoName": "scribble-exercise-1",
+    "official": false
+  },
+  {
+    "userOrg": "skalenetwork",
+    "displayName": "skale-box",
+    "repoName": "truffle-skale-network-box",
+    "official": false
+  },
+  {
+    "userOrg": "rsksmart",
+    "displayName": "rsk-starter-box",
+    "repoName": "rsk-starter-box",
+    "official": false
+  },
+  {
+    "userOrg": "rsksmart",
+    "displayName": "rsk-react-box",
+    "repoName": "rsk-react-box",
+    "official": false
+  },
+  {
+    "userOrg": "rsksmart",
+    "displayName": "rsk-next-box",
+    "repoName": "rsk-next-box",
+    "official": false
+  },
+  {
+    "userOrg": "rsksmart",
+    "displayName": "rsk-react-express-box",
+    "repoName": "rsk-react-express-box",
+    "official": false
+  },
+  {
+    "userOrg": "rsksmart",
+    "displayName": "rsk-token-box",
+    "repoName": "rsk-token-box",
+    "official": false
+  },
+  {
+    "userOrg": "rsksmart",
+    "displayName": "rsk-plant-box",
+    "repoName": "rsk-plant-box",
+    "official": false
+  },
+  {
+    "userOrg": "kaleido-io",
+    "displayName": "drizzle-kaleido-box",
+    "repoName": "drizzle-kaleido-box",
+    "official": false
+  },
+  {
+    "userOrg": "kaleido-io",
+    "displayName": "truffle-kaleido-box",
+    "repoName": "truffle-kaleido-box",
+    "official": false
+  },
+  {
+    "userOrg": "ng-es",
+    "displayName": "AngularTruffleDapp",
+    "repoName": "angulartruffledapp",
+    "official": false
+  },
+  {
     "userOrg": "Quintor",
     "displayName": "angular-truffle-box",
     "repoName": "angular-truffle-box",
+    "official": false
+  },
+  {
+    "userOrg": "illuzzig",
+    "displayName": "besu-box",
+    "repoName": "besu-box",
     "official": false
   },
   {
@@ -72,15 +228,21 @@
     "official": false
   },
   {
-    "userOrg": "chuckbergeron",
-    "displayName": "etherplate",
-    "repoName": "etherplate",
+    "userOrg": "atkinsonholly",
+    "displayName": "drizzle-tutorial-with-react-hooks",
+    "repoName": "drizzle-tutorial-with-react-hooks",
     "official": false
   },
   {
-    "userOrg": "blockchangers",
-    "displayName": "eth-truffle-vue",
-    "repoName": "eth-truffle-vue",
+    "userOrg": "lzhou1110",
+    "displayName": "drizzle-truffle-ganache-docker-box",
+    "repoName": "drizzle-truffle-ganache-docker-box",
+    "official": false
+  },
+  {
+    "userOrg": "chuckbergeron",
+    "displayName": "etherplate",
+    "repoName": "etherplate",
     "official": false
   },
   {
@@ -93,6 +255,37 @@
     "userOrg": "arvindkalra",
     "displayName": "express-box",
     "repoName": "express-box",
+    "official": false
+  },
+  {
+    "userOrg": "aave",
+    "displayName": "flashloan-box",
+    "repoName": "flashloan-box",
+    "official": false
+  },
+  {
+    "userOrg": "fluidity",
+    "displayName": "fluidity-truffle-box",
+    "repoName": "fluidity-truffle-box",
+    "official": false
+  },
+  {
+    "userOrg": "harmony-one",
+    "displayName": "harmony-box",
+    "repoName": "harmony-box",
+    "official": false,
+    "defaultBranch": "main"
+  },
+  {
+    "userOrg": "yehia67",
+    "displayName": "helloworldbox",
+    "repoName": "HelloWorldBox",
+    "official": false
+  },
+  {
+    "userOrg": "manjeet-thadani",
+    "displayName": "koa-trufflebox",
+    "repoName": "koa-trufflebox",
     "official": false
   },
   {
@@ -138,15 +331,46 @@
     "official": false
   },
   {
+    "userOrg": "brannanc",
+    "displayName": "react_hooks_box",
+    "repoName": "react_hooks_box",
+    "slug": "react-hooks-box",
+    "official": false
+  },
+  {
+    "userOrg": "uport-project",
+    "displayName": "react-uport-box",
+    "repoName": "react-uport-box",
+    "official": false
+  },
+  {
     "userOrg": "3of5of7",
     "displayName": "scoreboard",
     "repoName": "scoreboard",
     "official": false
   },
   {
+    "userOrg": "antoniocardenas",
+    "displayName": "skaledapp",
+    "repoName": "skaledapp",
+    "official": false
+  },
+  {
     "userOrg": "antony",
     "displayName": "svelte-box",
     "repoName": "svelte-box",
+    "official": false
+  },
+  {
+    "userOrg": "thundercore",
+    "displayName": "thunder-box",
+    "repoName": "thunder-box",
+    "official": false
+  },
+  {
+    "userOrg": "etienne-napoleone",
+    "displayName": "tomochain-box",
+    "repoName": "tomochain-box",
     "official": false
   },
   {
@@ -216,6 +440,12 @@
     "official": false
   },
   {
+    "userOrg": "pranav-singhal",
+    "displayName": "upgradable-proxy-box",
+    "repoName": "upgradable-proxy-box",
+    "official": false
+  },
+  {
     "userOrg": "standup75",
     "displayName": "vue-box",
     "repoName": "vue-box",
@@ -225,6 +455,42 @@
     "userOrg": "kierenh",
     "displayName": "vue-dark-chocolate",
     "repoName": "vue-dark-chocolate",
+    "official": false
+  },
+  {
+    "userOrg": "saga-foundation",
+    "displayName": "vueport-box",
+    "repoName": "vueport-box",
+    "official": false
+  },
+  {
+    "userOrg": "EmanHerawy",
+    "displayName": "besu-drizzle-truffle-box",
+    "repoName": "besu-drizzle-truffle-box",
+    "official": false
+  },
+  {
+    "userOrg": "smartcontractkit",
+    "displayName": "box",
+    "repoName": "box",
+    "official": false
+  },
+  {
+    "userOrg": "fortmatic",
+    "displayName": "wallette",
+    "repoName": "wallette",
+    "official": false
+  },
+  {
+    "userOrg": "PureStake",
+    "displayName": "moonbeam-truffle-box",
+    "repoName": "moonbeam-truffle-box",
+    "official": false
+  },
+  {
+    "userOrg": "Decentology",
+    "displayName": "dappstarter-trufflebox",
+    "repoName": "dappstarter-trufflebox",
     "official": false
   }
 ]

@@ -1,7 +1,6 @@
 .university {
-
-  background-color: #3fe0c5;
-  border-bottom: solid 1px #e0dad7;
+  background-color: #f8f5f0;
+  color: #5e464d;
 
   h1 {
     width: 100%;
@@ -18,7 +17,7 @@
 
   .text-truffle {
     font-size: 4.2rem;
-    border-bottom: dotted 2px white;
+    border-bottom: dotted 2px #5e464d;
     margin-bottom: 0;
     padding-bottom: 0.4rem;
     width: 20.8rem;
@@ -56,7 +55,8 @@
     // color: #e0dad7; 
     // text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
     font-weight: bold;
-    text-decoration: underline;
+    text-decoration: none;
+    font-style: italic;
   }
 
   .spacer {
@@ -73,8 +73,6 @@
 .university-details {
   background-color: #f8f5f0;
   color: #5e464d;
-
-  
 
   h2 {
     color: #5e464d;

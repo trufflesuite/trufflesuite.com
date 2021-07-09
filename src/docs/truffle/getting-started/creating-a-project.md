@@ -22,11 +22,15 @@ You can create a bare project template, but for those just getting started, you 
    ```
 
    <p class="alert alert-info">
-   <strong>Note</strong>: You can use the `truffle unbox <box-name>` command to download any of the other Truffle Boxes.
+   <i class="far fa-info-circle"></i> <strong>Note</strong>: You can use the <code>truffle unbox &lt;box-name&gt;</code> command to download any of the other <a href="/boxes">Truffle Boxes</a>.
    </p>
 
    <p class="alert alert-info">
-   <strong>Note</strong>: To create a bare Truffle project with no smart contracts included, use `truffle init`.
+   <i class="far fa-info-circle"></i> <strong>Note</strong>: To create a bare Truffle project with no smart contracts included, use <code>truffle init</code>.
+   </p>
+
+   <p class="alert alert-info">
+   <i class="far fa-info-circle"></i> <strong>Note</strong>: You can use an optional <code>--force</code> to initialize the project in the current directory regardless of its state (e.g. even if it contains other files or directories). This applies to both the `init` and `unbox` commands. Be careful, this will potentially overwrite files that exist in the directory.
    </p>
 
 Once this operation is completed, you'll now have a project structure with the following items:
@@ -34,4 +38,4 @@ Once this operation is completed, you'll now have a project structure with the f
 * `contracts/`: Directory for [Solidity contracts](/docs/truffle/getting-started/interacting-with-your-contracts)
 * `migrations/`: Directory for [scriptable deployment files](/docs/truffle/getting-started/running-migrations#migration-files)
 * `test/`: Directory for test files for [testing your application and contracts](/docs/truffle/testing/testing-your-contracts)
-* `truffle.js`: Truffle [configuration file](/docs/truffle/reference/configuration)
+* `truffle-config.js`: Truffle [configuration file](/docs/truffle/reference/configuration)

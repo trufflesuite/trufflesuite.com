@@ -1,0 +1,131 @@
+// API Proxy
+function mixpanelTrackProxy(eventName, eventParams) {
+  let httpRequest = new XMLHttpRequest();
+
+  httpRequest.open('POST', 'https://www.trufflesuite.com:' + getPort() + '/mixpanel/track');
+  httpRequest.setRequestHeader("Content-Type", "application/json");
+  
+  httpRequest.onload = () => {
+    // We don't expect a response here in the happy path, so
+    // just check the reponse for errors originating in the server.
+    if (httpRequest.status != 204) {
+      console.error(`API Proxy Error ${httpRequest.status}: ${httpRequest.statusText}`);
+    }
+  };
+  
+  // Catching cases where the request failed completely.
+  httpRequest.onerror = () => console.error('API Proxy Error: Request failed');
+  
+  httpRequest.send(JSON.stringify({
+    "eventName": eventName,
+    "eventParams": eventParams
+  }));
+}
+
+/* Visitor Source
+* --------------
+* First checks for a known campaign via the source query string.
+* Falls back to document.referrer.
+* Checks for email (if applicable) and sends that over if possible also.
+*/
+if (getEmail()) {
+  let formattedEmail = getEmail().replace('%40', '@');
+  mixpanelTrackProxy("Page visit", {'source': getSource(), 'email': formattedEmail});
+} else {
+  mixpanelTrackProxy("Page visit", {'source': getSource()});
+}
+
+// Navigation
+Array.from(document.querySelectorAll('.subnav a')).forEach((link) => {
+  link.onclick = (event) => {
+    mixpanelTrackProxy("Navigate", {'section': event.srcElement.hash.substring(1)});
+  }
+});
+
+
+// Signup Buttons
+document.getElementById('teamsSignUp1').onclick = () => {
+  mixpanelTrackProxy("Click teams signup", {'position': 1, 'plan': 'none'});
+}
+
+// WHERE'S BUTTON POSITION 2?
+//
+// Button position 2 was eliminated with new Teams page styling
+// Kept other existing numbers for MixPanel continuity!
+
+document.getElementById('teamsSignUp3').onclick = () => {
+  mixpanelTrackProxy("Click teams signup", {'position': 3, 'plan': 'free'});
+}
+
+document.getElementById('teamsSignUp4').onclick = () => {
+  mixpanelTrackProxy("Click teams signup", {'position': 4, 'plan': 'pro'});
+}
+
+document.getElementById('teamsSignUp5').onclick = () => {
+  mixpanelTrackProxy("Click teams signup", {'position': 5, 'plan': 'none'});
+}
+
+
+// Other Buttons
+document.getElementById('contactSales').onclick = () => {
+  mixpanelTrackProxy("Click contact sales", {'plan': 'enterprise'});
+}
+
+document.getElementById('mailingListSignUp').onclick = () => {
+  mixpanelTrackProxy("Click teams mailing list", {});
+}
+
+
+/* Utilies
+ * -------
+ * TODO: Extract once we have more than one MixPanel-enabled page.
+ */
+function getQueryParam(param) {
+  param = param.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+
+  const regexS = "[\\?&]" + param + "=([^&#]*)";
+  const regex = new RegExp(regexS);
+  let results = regex.exec(document.URL);
+  
+  if (results === null || (results && typeof(results[1]) !== 'string' && results[1].length)) {
+      return '';
+  } else {
+      return decodeURIComponent(results[1]).replace(/\+/g, ' ');
+  }
+};
+
+function getSource() {
+  const campaignSource = getQueryParam('source');
+
+  if (campaignSource.length > 0) {
+    return campaignSource;
+  }
+
+  return document.referrer;
+};
+
+function getEmail() {
+  const emailAddress = getQueryParam('email');
+
+  if (emailAddress.length > 0) {
+    return emailAddress;
+  }
+};
+
+function getPort() {
+  // We grab this value from process.env.NODE_ENV
+  // It feels a bit dirty, but it's the best we can do with metalsmith
+  const environment = document.querySelector('meta[name="environment"]').getAttribute('content');
+
+  if (environment === 'dev' || environment === 'staging') {
+    return '2053';
+  }
+
+  if (environment === 'prod') {
+    return '2083';
+  }
+
+  // process.env.NODE_ENV should always be set, but in case of error fallback to dev
+  // so we don't pollute production data
+  return  '2053';
+};

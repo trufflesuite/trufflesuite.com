@@ -14,12 +14,14 @@ Solidity test contracts live alongside Javascript tests as `.sol` files. When `t
 
 Let's take a look at an example Solidity test before diving too deeply. Here's the example Solidity test provided for you by `truffle unbox metacoin`:
 
-```javascript
+```solidity
+pragma solidity >=0.4.25 <0.6.0;
+
 import "truffle/Assert.sol";
 import "truffle/DeployedAddresses.sol";
 import "../contracts/MetaCoin.sol";
 
-contract TestMetacoin {
+contract TestMetaCoin {
   function testInitialBalanceUsingDeployedContract() {
     MetaCoin meta = MetaCoin(DeployedAddresses.MetaCoin());
 
@@ -42,18 +44,33 @@ This produces the following output:
 
 ```
 $ truffle test
-Compiling ConvertLib.sol...
-Compiling MetaCoin.sol...
-Compiling truffle/Assert.sol
-Compiling truffle/DeployedAddresses.sol
-Compiling ../test/TestMetacoin.sol...
 
-  TestMetacoin
-    ✓ testInitialBalanceUsingDeployedContract (61ms)
-    ✓ testInitialBalanceWithNewMetaCoin (69ms)
+Compiling your contracts...
+===========================
+> Compiling ./contracts/ConvertLib.sol
+> Compiling ./contracts/MetaCoin.sol
+> Compiling ./contracts/Migrations.sol
+> Compiling ./test/TestMetaCoin.sol
 
-  2 passing (3s)
+
+
+  TestMetaCoin
+    ✓ testInitialBalanceUsingDeployedContract (79ms)
+    ✓ testInitialBalanceWithNewMetaCoin (65ms)
+
+  Contract: MetaCoin
+    ✓ should put 10000 MetaCoin in the first account (38ms)
+    ✓ should call a function that depends on a linked library (42ms)
+    ✓ should send coin correctly (120ms)
+
+
+  5 passing (7s)
 ```
+
+From the output, you can see reports from two different test files: one
+JavaScript (Contract: MetaCoin above) and one Solidity (TestMetaCoin above).
+In this document we will be concerning ourselves exclusively with the
+Solidity test.
 
 ## Test structure
 
@@ -61,7 +78,7 @@ To better understand whats happening, let's discuss things in more detail.
 
 ### Assertions
 
-Your assertion functions like `Assert.equal()` are provided to you by the `truffle/Assert.sol` library. This is the default assertion library, however you can include your own assertion library so long as the library loosely integrates with Truffle's test runner by triggering the correct assertion events. You can find all available assertion functions in [Assert.sol](https://github.com/ConsenSys/truffle/blob/beta/lib/testing/Assert.sol).
+Your assertion functions like `Assert.equal()` are provided to you by the `truffle/Assert.sol` library. This is the default assertion library, however you can include your own assertion library so long as the library loosely integrates with Truffle's test runner by triggering the correct assertion events. You can find all available assertion functions in [Assert.sol](https://github.com/trufflesuite/truffle/blob/develop/packages/resolver/solidity/Assert.sol).
 
 ### Deployed addresses
 
@@ -107,7 +124,6 @@ contract TestHooks {
     Assert.equal(someValue, expected, "someValue should have been 6");
   }
 }
-
 ```
 
 This test contract also shows that your test functions and hook functions all share the same contract state. You can setup contract data before the test, use that data during the test, and reset it afterward in preparation for the next one. Note that just like your Javascript tests, your next test function will continue from the state of the previous test function that ran.
@@ -120,13 +136,43 @@ Solidity tests come with a few advanced features to let you test specific use ca
 
 You can easily test if your contract should or shouldn't raise an exception (i.e., for `require()`/`assert()`/`revert()` statements; `throw` on previous versions of Solidity).
 
-This topic was first written about by guest writer Simon de la Rouviere in [his tutorial Testing for Throws in Truffle Solidity Tests](/tutorials/testing-for-throws-in-solidity-tests).  N.B. that the tutorial makes heavy use of exceptions via the deprecated keyword `throw`, replaced by `revert()`, `require()`, and `assert()` starting in Solidity v0.4.13.
+This topic was first written about by guest writer Simon de la Rouviere in [his guide Testing for Throws in Truffle Solidity Tests](/guides/testing-for-throws-in-solidity-tests).  N.B. that the guide makes heavy use of exceptions via the deprecated keyword `throw`, replaced by `revert()`, `require()`, and `assert()` starting in Solidity v0.4.13.
+
+Also, since Solidity v0.4.17, a function type member was added to enable you to access a function selector (e.g.: `this.f.selector`), and so, testing for throws with external calls has been made much easier:
+```solidity
+pragma solidity ^0.5.0;
+
+import "truffle/Assert.sol";
+
+contract TestBytesLib2 {
+    function testThrowFunctions() public {
+        bool r;
+
+        // We're basically calling our contract externally with a raw call, forwarding all available gas, with
+        // msg.data equal to the throwing function selector that we want to be sure throws and using only the boolean
+        // value associated with the message call's success
+        (r, ) = address(this).call(abi.encodePacked(this.IThrow1.selector));
+        Assert.isFalse(r, "If this is true, something is broken!");
+
+        (r, ) = address(this).call(abi.encodePacked(this.IThrow2.selector));
+        Assert.isFalse(r, "What?! 1 is equal to 10?");
+    }
+
+    function IThrow1() public pure {
+        revert("I will throw");
+    }
+
+    function IThrow2() public pure {
+        require(1 == 10, "I will throw, too!");
+    }
+}
+```
 
 ### Testing ether transactions
 
 You can also test how your contracts react to receiving Ether, and script that interaction within Solidity. To do so, your Solidity test should have a public function that returns a `uint`, called `initialBalance`. This can be written directly as a function or a public variable, as shown below. When your test contract is deployed to the network, Truffle will send that amount of Ether from your test account to your test contract. Your test contract can then use that Ether to script Ether interactions within your contract under test. Note that `initialBalance` is optional and not required.
 
-```javascript
+```solidity
 import "truffle/Assert.sol";
 import "truffle/DeployedAddresses.sol";
 import "../contracts/MyContract.sol";

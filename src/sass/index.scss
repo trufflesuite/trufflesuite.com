@@ -6,6 +6,7 @@
 @import "./vendor/prism.scss";
 
 // Global
+@import "./global/alerts.scss";
 @import "./global/banners.scss";
 @import "./global/buttons.scss";
 @import "./global/colors.scss";
@@ -21,7 +22,7 @@
 @import "./pages/boxes.scss";
 @import "./pages/home.scss";
 @import "./pages/docs.scss";
-@import "./pages/tutorials.scss";
+@import "./pages/guides.scss";
 @import "./pages/truffle.scss";
 @import "./pages/ganache.scss";
 @import "./pages/drizzle.scss";
@@ -29,3 +30,12 @@
 @import "./pages/trufflecon.scss";
 @import "./pages/policy.scss";
 @import "./pages/university.scss";
+@import "./pages/events.scss";
+@import "./pages/teams.scss";
+@import "./pages/press-releases.scss";
+@import "./pages/onepagers.scss";
+@import "./pages/case-studies.scss";
+
+// Staff
+
+@import "./pages/staff.scss";
