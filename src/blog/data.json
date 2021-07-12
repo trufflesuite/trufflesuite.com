@@ -1,4 +1,12 @@
 {
+  "truffle-and-infura-support-arbitrum": {
+    "title": "Truffle and Infura Now Support Arbitrum",
+    "date": "2021-07-07",
+    "author": "Faina Shalts",
+    "published": true,
+    "excerpt": "The Truffle team is thrilled to announce the launch of the Arbitrum Truffle Box. The usability and efficiency of Ethereum depends on scalability, and Arbitrum’s Layer 2 solution blends security and higher throughput to help make scalable Ethereum a reality.",
+    "image": "/img/blog/truffle-and-infura-support-arbitrum/blog-thumbnail.png"
+  },
   "truffle-and-infura-support-optimism": {
     "title": "Truffle and Infura Now Support Optimism",
     "date": "2021-06-23",

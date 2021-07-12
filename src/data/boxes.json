@@ -291,6 +291,13 @@
 			"layer-2"
 		]
 	},
+	"arbitrum-box": {
+		"description": "Arbitrum Truffle box",
+		"stars": 1,
+		"tags": [
+			"arbitrum"
+		]
+	},
 	"optimism-box": {
 		"description": "Optimism Truffle box",
 		"stars": 1,
