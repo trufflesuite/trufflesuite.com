@@ -316,7 +316,7 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 
 We start the contract off with 3 imports:
 
-* `Assert.sol`: Gives us various assertions to use in our tests. In testing, **an assertion checks for things like equality, inequality or emptiness to return a pass/fail** from our test. [Here's a full list of the assertions included with Truffle](https://github.com/trufflesuite/truffle/blob/develop/packages/resolver/solidity/Assert.sol).
+* `Assert.sol`: Gives us various assertions to use in our tests. In testing, **an assertion checks for things like equality, inequality or emptiness to return a pass/fail** from our test. [Here's a full list of the assertions included with Truffle](https://github.com/trufflesuite/truffle/blob/master/packages/resolver/solidity/Assert.sol).
 * `DeployedAddresses.sol`: When running tests, Truffle will deploy a fresh instance of the contract being tested to the blockchain. This smart contract gets the address of the deployed contract.
 * `Adoption`: The smart contract we want to test.
 
