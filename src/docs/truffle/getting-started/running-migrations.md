@@ -26,13 +26,14 @@ Filename: `4_example_migration.js`
 ```javascript
 const MyContract = artifacts.require("MyContract");
 
-module.exports = function (deployer, network, accounts) {
+module.exports = async function (deployer, network, accounts) {
   // deployment steps
-  deployer.deploy(MyContract);
+  await deployer.deploy(MyContract);
 };
 ```
 
-Note that the filename is prefixed with a number and is suffixed by a description. The numbered prefix is required in order to record whether the migration ran successfully. The suffix is purely for human readability and comprehension.
+Note that the filename is prefixed with a number and is suffixed by a description. The numbered prefix is required in order to record whether the migration ran successfully. The suffix is purely for human readability and comprehension. Your migration function also may
+be `async` if you wish (as written above) in order to use the `await` keyword to await your deployments.
 
 Another thing to note is that each migration function takes 3 arguments:
 1. `deployer` which is the object responsible for deploying contracts
@@ -187,16 +188,16 @@ Examples:
 
 ```javascript
 // Deploy a single contract without constructor arguments
-async deployer.deploy(A);
+await deployer.deploy(A);
 
 // Deploy a single contract with constructor arguments
-async deployer.deploy(A, arg1, arg2, ...);
+await deployer.deploy(A, arg1, arg2, ...);
 
 // Don't deploy this contract if it has already been deployed
-async deployer.deploy(A, { overwrite: false });
+await deployer.deploy(A, { overwrite: false });
 
 // Set a maximum amount of gas and `from` address for the deployment
-async deployer.deploy(A, { gas: 4612388, from: "0x...." });
+await deployer.deploy(A, { gas: 4612388, from: "0x...." });
 
 // Deploying multiple contracts as an array is now deprecated.
 // This used to be quicker than writing three `deployer.deploy()` statements as the deployer
