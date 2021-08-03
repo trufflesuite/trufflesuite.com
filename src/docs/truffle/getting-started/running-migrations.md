@@ -153,19 +153,17 @@ It is possible to run deployment steps conditionally based on the network being 
 To conditionally stage deployment steps, write your migrations so that they accept a second parameter, called `network`. Example:
 
 ```javascript
-module.exports = function(deployer, networks, accounts) {
-  deployer.then(async () => {
+module.exports = function (deployer, network, accounts) {
   if (network == "live") {
     // Do something specific to the network named "live".
   } else {
     // Perform a different step otherwise.
   }
-}
 };
 ```
 
 ```javascript
-module.exports = function(deployer, network, accounts) {
+module.exports = function (deployer, network, accounts) {
   // Use the accounts within your migrations.
 }
 ```
@@ -197,10 +195,10 @@ async deployer.deploy(A);
 async deployer.deploy(A, arg1, arg2, ...);
 
 // Don't deploy this contract if it has already been deployed
-async deployer.deploy(A, {overwrite: false});
+async deployer.deploy(A, { overwrite: false });
 
 // Set a maximum amount of gas and `from` address for the deployment
-async deployer.deploy(A, {gas: 4612388, from: "0x...."});
+async deployer.deploy(A, { gas: 4612388, from: "0x...." });
 
 // Deploying multiple contracts as an array is now deprecated.
 // This used to be quicker than writing three `deployer.deploy()` statements as the deployer
