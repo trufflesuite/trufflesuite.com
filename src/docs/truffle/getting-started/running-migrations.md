@@ -24,15 +24,20 @@ A simple migration file looks like this:
 Filename: `4_example_migration.js`
 
 ```javascript
-var MyContract = artifacts.require("MyContract");
+const MyContract = artifacts.require("MyContract");
 
-module.exports = function(deployer) {
+module.exports = function (deployer, network, accounts) {
   // deployment steps
   deployer.deploy(MyContract);
 };
 ```
 
 Note that the filename is prefixed with a number and is suffixed by a description. The numbered prefix is required in order to record whether the migration ran successfully. The suffix is purely for human readability and comprehension.
+
+Another thing to note is that each migration function takes 3 arguments:
+1. `deployer` which is the object responsible for deploying contracts
+2. `network` which is the name (string) of the network being used during the migration
+3. `accounts` which is an array of the available (unlocked accounts) during the migration
 
 ### artifacts.require()
 
@@ -55,14 +60,14 @@ contract ContractTwo {
 To use only `ContractTwo`, your `artifacts.require()` statement would look like this:
 
 ```javascript
-var ContractTwo = artifacts.require("ContractTwo");
+const ContractTwo = artifacts.require("ContractTwo");
 ```
 
 To use both contracts, you will need two `artifacts.require()` statements:
 
 ```javascript
-var ContractOne = artifacts.require("ContractOne");
-var ContractTwo = artifacts.require("ContractTwo");
+const ContractOne = artifacts.require("ContractOne");
+const ContractTwo = artifacts.require("ContractTwo");
 ```
 
 ### module.exports
@@ -111,13 +116,11 @@ You must deploy this contract inside your first migration in order to take advan
 Filename: `migrations/1_initial_migration.js`
 
 ```javascript
-var Migrations = artifacts.require("Migrations");
+const Migrations = artifacts.require("Migrations");
 
-module.exports = function(deployer, networks, accounts) {
-  deployer.then(async () => {
-    // Deploy the Migrations contract as our only task
-    await deployer.deploy(Migrations);
-  });
+module.exports = async function (deployer, network, accounts) {
+  // Deploy the Migrations contract as our only task
+  await deployer.deploy(Migrations);
 };
 ```
 
@@ -133,18 +136,13 @@ deployer.deploy(A);
 deployer.deploy(B);
 ```
 
-Alternatively, use async to deploy queue up deployment tasks that depend on the execution of the previous task:
+Alternatively, use `async` to deploy queue up deployment tasks that depend on the execution of the previous task:
 
 ```javascript
-module.exports = function(deployer, networks, accounts /* See note 1 */) {
-  deployer.then(async () => {
-    await deployer.deploy(A);
-    await deployer.deploy(B);
-  });
+module.exports = async function (deployer, network, accounts) {
+  await deployer.deploy(A);
+  await deployer.deploy(B);
 };
-// NOTE 1: list of accounts injected by your Ethereum client and web3 provider.
-//         This is the exact same list of accounts returned from
-//        `web3.eth.getAccounts()`.
 ```
 
 
@@ -220,7 +218,7 @@ async deployer.deploy(A, {gas: 4612388, from: "0x...."});
 // When we're deploying to the live network we want it to use that address, but in
 // testing and development we need to deploy a version of our own. Instead of writing
 // a bunch of conditionals, we can simply use the `overwrite` key.
-deployer.deploy(SomeDependency, {overwrite: false});
+deployer.deploy(SomeDependency, { overwrite: false });
 ```
 
 ### deployer.link(library, destinations)
@@ -231,22 +229,21 @@ Example:
 
 ```javascript
 // Deploy library LibA, then link LibA to contract B, then deploy B.
-async deployer.deploy(LibA);
-deployer.link(LibA, B);
-async deployer.deploy(B);
+await deployer.deploy(LibA);
+await deployer.link(LibA, B);
+await deployer.deploy(B);
 
 // Link LibA to many contracts
 deployer.link(LibA, [B, C, D]);
 ```
 
-
 Advanced example:
 
 ```javascript
-var a, b;
-deployer.then(async function() {
-  const a = await A.new();      // Create a new version of A
-  const b = await B.deployed(); // Get the deployed instance of B
-        b.setA(a.address);      // Update new A in B instance-
+await deployer.deploy(A);     // deploy A
+const a = await A.deployed(); // get the deployed instance of A
+await deployer.deploy(B);     // deploy B
+const b = await B.deployed(); // get the deployed instance of B
+await b.setA(a.address);      // update b with new a address
 });
 ```
