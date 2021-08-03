@@ -79,7 +79,7 @@ Your migration function can accept other parameters as well. See the examples be
 
 ## Initial migration
 
-Truffle requires you to have a Migrations contract in order to use the Migrations feature. This contract must contain a specific interface, but you're free to edit this contract at will. For most projects, this contract will be deployed initially as the first migration and won't be updated again. You will also receive this contract by default when creating a new project with `truffle init`.
+Truffle uses a Migrations contract in order to help manage the migrations feature. This contract must contain a specific interface, but you're free to edit this contract at will. For most projects, this contract will be deployed initially as the first migration and won't be updated again. You will also receive this contract by default when creating a new project with `truffle init`.
 
 Filename: `contracts/Migrations.sol`
 
