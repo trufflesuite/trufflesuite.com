@@ -129,7 +129,7 @@ From here, you can create new migrations with increasing numbered prefixes to de
 
 ## Deployer
 
-Your migration files will use the deployer to stage deployment tasks. As such, you can write deployment tasks asynchronously:
+Your migration files will use the deployer to stage deployment tasks. As such, you can write deployment tasks asynchronously (`deployer.deploy` is an asynchronous function):
 
 ```javascript
 // Stage deploying A before B
@@ -154,7 +154,7 @@ It is possible to run deployment steps conditionally based on the network being 
 To conditionally stage deployment steps, write your migrations so that they accept a second parameter, called `network`. Example:
 
 ```javascript
-module.exports = function (deployer, network, accounts) {
+module.exports = async function (deployer, network, accounts) {
   if (network == "live") {
     // Do something specific to the network named "live".
   } else {
@@ -164,7 +164,7 @@ module.exports = function (deployer, network, accounts) {
 ```
 
 ```javascript
-module.exports = function (deployer, network, accounts) {
+module.exports = async function (deployer, network, accounts) {
   // Use the accounts within your migrations.
 }
 ```
@@ -215,7 +215,7 @@ await deployer.deploy(A, { gas: 4612388, from: "0x...." });
 // When we're deploying to the live network we want it to use that address, but in
 // testing and development we need to deploy a version of our own. Instead of writing
 // a bunch of conditionals, we can simply use the `overwrite` key.
-deployer.deploy(SomeDependency, { overwrite: false });
+await deployer.deploy(SomeDependency, { overwrite: false });
 ```
 
 ### deployer.link(library, destinations)
@@ -231,7 +231,7 @@ await deployer.link(LibA, B);
 await deployer.deploy(B);
 
 // Link LibA to many contracts
-deployer.link(LibA, [B, C, D]);
+await deployer.link(LibA, [B, C, D]);
 ```
 
 Advanced example:
