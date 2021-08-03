@@ -176,9 +176,7 @@ The deployer contains many functions available to simplify your migrations.
 
 Deploy a specific contract, specified by the contract object, with optional constructor arguments.
 
-
-An array of contracts can be passed, but this option is deprecated.
- Additionally, the last argument is an optional object that can include the key named `overwrite` as well as other transaction parameters such as `gas` and `from`. If `overwrite` is set to `false`, the deployer won't deploy this contract if one has already been deployed. This is useful for certain circumstances where a contract address is provided by an external dependency.
+Additionally, the last argument is an optional object that can include the key named `overwrite` as well as other transaction parameters such as `gas` and `from`. If `overwrite` is set to `false`, the deployer won't deploy this contract if one has already been deployed. This is useful for certain circumstances where a contract address is provided by an external dependency.
 
 Note that you will need to deploy and link any libraries your contracts depend on first before calling `deploy`. See the `link` function below for more details.
 
