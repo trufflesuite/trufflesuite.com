@@ -137,7 +137,7 @@ deployer.deploy(A);
 deployer.deploy(B);
 ```
 
-Alternatively, use `async` to deploy queue up deployment tasks that depend on the execution of the previous task:
+Alternatively, use `async` to queue up deployment tasks that depend on the execution of the previous task:
 
 ```javascript
 module.exports = async function (deployer, network, accounts) {
