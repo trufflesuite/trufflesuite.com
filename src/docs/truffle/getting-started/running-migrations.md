@@ -32,13 +32,13 @@ module.exports = async function (deployer, network, accounts) {
 };
 ```
 
-Note that the filename is prefixed with a number and is suffixed by a description. The numbered prefix is required in order to record whether the migration ran successfully. The suffix is purely for human readability and comprehension. Your migration function also may
+Note that the filename is prefixed with a number and is suffixed by a description. The numbered prefix is required in order to determine the order in which to run migrations as well as to record whether the migration ran successfully. The suffix is purely for human readability and comprehension. Your migration function also may
 be `async` if you wish (as written above) in order to use the `await` keyword to await your deployments.
 
 Another thing to note is that each migration function takes 3 arguments:
-1. `deployer` which is the object responsible for deploying contracts
-2. `network` which is the name (string) of the network being used during the migration
-3. `accounts` which is an array of the available (unlocked accounts) during the migration
+1. `deployer` - the object responsible for deploying contracts
+2. `network` - the name (string) of the network being used during the migration
+3. `accounts` - an array of the available (unlocked) accounts during the migration
 
 ### artifacts.require()
 
