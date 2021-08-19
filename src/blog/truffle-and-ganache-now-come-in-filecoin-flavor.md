@@ -29,7 +29,7 @@ With Filecoin-flavored Ganache, you can do most of the development tasks for bui
 - Transfer Filecoin's token FIL between accounts
 - Interact with the various Filecoin wallet methods
 
-You can find a full list of supported RPC methods on [GitHub](https://github.com/trufflesuite/ganache-core/tree/develop/src/chains/filecoin/filecoin#supported-rpc-methods).
+You can find a full list of supported RPC methods on [GitHub](https://github.com/trufflesuite/ganache/tree/develop/src/chains/filecoin/filecoin#supported-rpc-methods).
 
 ## How do I get started?
 
