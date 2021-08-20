@@ -20,7 +20,7 @@ The settings page will vary depending on whether you're developing on [Ethereum]
 - **Accounts & Keys** sets details about the number of accounts created, and whether to use a specific mnemonic or let Ganache generate its own.
 - **Chain** sets configuration details for the genesis and parameters of the generated blockchain, including gas limit and gas price.
 - **Advanced** toggles Google Analytics, which is useful for the Ganache team to track usage of the application.
-- **About** contains information on the currently installed version of Ganache, along with links to our website and the [Ganache GitHub repository](https://github.com/trufflesuite/ganache).
+- **About** contains information on the currently installed version of Ganache, along with links to our website and the [Ganache GitHub repository](https://github.com/trufflesuite/ganache-ui).
 
 ## Corda
 
@@ -28,7 +28,7 @@ The settings page will vary depending on whether you're developing on [Ethereum]
 - **Nodes** manages the nodes for the network.
 - **Notaries** manages the notaries for the network.
 - **Advanced** sets the default PostgreSQL port and toggles Google Analytics, which is useful for the team to improve Ganache based on anonymous usage metrics.
-- **About** contains information on the currently installed version of Ganache, along with links to our website and the [Ganache GitHub repository](https://github.com/trufflesuite/ganache).
+- **About** contains information on the currently installed version of Ganache, along with links to our website and the [Ganache GitHub repository](https://github.com/trufflesuite/ganache-ui).
 
 ## Save your changes
 

@@ -24,8 +24,8 @@ Additionally, we realized over time that the TestRPC was a poor name. The TestRP
 
 With this name change, we also released [a fully-interactive, graphical version of Ganache](/ganache).
 
-The command-line utility is still available via NPM; the [command line flags](https://github.com/trufflesuite/ganache-cli/blob/master/README.md) are the same too. All that's changed is the name of the command.
+The command-line utility is still available via NPM; the [command line flags](https://github.com/trufflesuite/ganache-cli-archive/blob/master/README.md) are the same too. All that's changed is the name of the command.
 
-Ganache is also available as a library for your applications. See the [README](https://github.com/trufflesuite/ganache-cli/blob/master/README.md) for more details.
+Ganache is also available as a library for your applications. See the [README](https://github.com/trufflesuite/ganache-cli-archive/blob/master/README.md) for more details.
 
 So now you have multiple ways to create a personal blockchain. If you're looking for a blockchain with a graphical environment that's perfect for beginners, check out [Ganache](/ganache). And if you want the familiar command-line interface, install Ganache CLI. Happy developing!

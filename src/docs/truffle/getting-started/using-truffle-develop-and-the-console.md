@@ -128,7 +128,7 @@ and act the same way as described above.
 #### Configuring Truffle Develop
 
 You can configure `truffle develop` to use any of the available
-[ganache-core](https://github.com/trufflesuite/ganache-core#usage) options and [configurable](/docs/truffle/reference/configuration#networks) network settings.
+[ganache](https://github.com/trufflesuite/ganache#usage) options and [configurable](/docs/truffle/reference/configuration#networks) network settings.
 
 For example:
 
