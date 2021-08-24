@@ -286,7 +286,7 @@ You've now written your first smart contract and deployed it to a locally runnin
 
 ## Testing the smart contract using Solidity
 
-<details> 
+<details>
 <summary> Expand This Section </summary>
 Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this tutorial, we'll be writing our tests in Solidity.
 
@@ -385,7 +385,7 @@ Since arrays can only return a single value given a single key, we create our ow
 Note the **memory** attribute on `adopters`. The memory attribute tells Solidity to temporarily store the value in memory, rather than saving it to the contract's storage. Since `adopters` is an array, and we know from the first adoption test that we adopted pet `expectedPetId`, we compare the testing contracts address with location `expectedPetId` in the array.
 </details>
 
-## Testing the smart contract using JavaScript 
+## Testing the smart contract using JavaScript
 
 <details>
 <summary> Expand This Section </summary>
@@ -396,11 +396,11 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 
   ```
   const Adoption = artifacts.require("Adoption");
-  
+
   contract("Adoption", (accounts) => {
     let adoption;
     let expectedAdopter;
-    
+
     before(async () => {
         adoption = await Adoption.deployed();
     });
@@ -414,21 +414,21 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
   });
 
   ```
-  We start the contract by importing : 
+  We start the contract by importing :
   * `Adoption`: The smart contract we want to test
   We begin our test by importing our `Adoption` contract using `artifacts.require`.
 
   **Note**: When writing this test, our callback function take the argument `accounts`. This provides us with the accounts available on the network when using this test.
 
-  Then, we make use of the `before` to provide initial setups for the following: 
+  Then, we make use of the `before` to provide initial setups for the following:
   * Adopt a pet with id 8 and assign it to the first account within the test accounts on the network.
   * This function later is used to check whether the `petId: 8` has been adopted by `accounts[0]`.
 
-  ### Testing the adopt function 
+  ### Testing the adopt function
 
   To test the `adopt` function, recall that upon success it returns the given `adopter`. We can ensure that the adopter based on given petID was returned and is compared with the `expectedAdopter` within the `adopt` function.
 
-  1. Add the following function within the `testAdoption.test.js` test file, after the declaration of `before` code block. 
+  1. Add the following function within the `testAdoption.test.js` test file, after the declaration of `before` code block.
 
   ```
   describe("adopting a pet and retrieving account addresses", async () => {
@@ -454,7 +454,7 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
   Since arrays can only return a single value given a single key, we create our own getter for the entire array.
 
   1. Add this function below the previously added function in `testAdoption.test.js`.
-  
+
   ```
   it("can fetch the collection of all pet owners' addresses", async () => {
     const adopters = await adoption.getAdopters();
@@ -510,28 +510,25 @@ The front-end doesn't use a build system (webpack, grunt, etc.) to be as easy as
 
 1. Remove the multi-line comment from within `initWeb3` and replace it with the following:
 
-   ```javascript
-   // Modern dapp browsers...
-   if (window.ethereum) {
-     App.web3Provider = window.ethereum;
-     try {
-       // Request account access
-       await window.ethereum.enable();
-     } catch (error) {
-       // User denied account access...
-       console.error("User denied account access")
-     }
-   }
-   // Legacy dapp browsers...
-   else if (window.web3) {
-     App.web3Provider = window.web3.currentProvider;
-   }
-   // If no injected web3 instance is detected, fall back to Ganache
-   else {
-     App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
-   }
-   web3 = new Web3(App.web3Provider);
-   ```
+```javascript
+// Modern dapp browsers...
+if (window.ethereum) {
+  App.web3Provider = window.ethereum;
+  try {
+    let _ = await window.ethereum.request({ method: 'eth_requestAccounts' });
+  } catch (error) {
+    console.error("User denied account access");
+  }
+  // Legacy dapp browsers
+} else if (window.web3) {
+  App.web3Provider = window.web3.currentProvider;
+  // If no injected web3 instance is detected, fall back to Ganache
+} else {
+  App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
+}
+
+return App.initContract();
+```
 
 Things to notice:
 
@@ -547,19 +544,19 @@ Now that we can interact with Ethereum via web3, we need to instantiate our smar
 
 1. Still in `/src/js/app.js`, remove the multi-line comment from within `initContract` and replace it with the following:
 
-   ```javascript
-   $.getJSON('Adoption.json', function(data) {
-     // Get the necessary contract artifact file and instantiate it with @truffle/contract
-     var AdoptionArtifact = data;
-     App.contracts.Adoption = TruffleContract(AdoptionArtifact);
+```javascript
+let data = await $.getJSON('Adoption.json');
+let AdoptionArtifact = data;
 
-     // Set the provider for our contract
-     App.contracts.Adoption.setProvider(App.web3Provider);
+App.contracts.Adoption = TruffleContract(AdoptionArtifact);
 
-     // Use our contract to retrieve and mark the adopted pets
-     return App.markAdopted();
-   });
-   ```
+// Set the provider for our contract
+App.contracts.Adoption.setProvider(App.web3Provider);
+
+await App.bindEvents();
+
+return App.markAdopted();
+```
 
 Things to notice:
 
@@ -575,23 +572,22 @@ Things to notice:
 
 1. Still in `/src/js/app.js`, remove the multi-line comment from `markAdopted` and replace it with the following:
 
-   ```javascript
-   var adoptionInstance;
+```javascript
+let adoptionInstance;
 
-   App.contracts.Adoption.deployed().then(function(instance) {
-     adoptionInstance = instance;
-
-     return adoptionInstance.getAdopters.call();
-   }).then(function(adopters) {
-     for (i = 0; i < adopters.length; i++) {
-       if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
-         $('.panel-pet').eq(i).find('button').text('Success').attr('disabled', true);
-       }
-     }
-   }).catch(function(err) {
-     console.log(err.message);
-   });
-   ```
+try {
+  let instance = await App.contracts.Adoption.deployed();
+  adoptionInstance = instance;
+  let adopters = await adoptionInstance.getAdopters.call();
+  adopters.forEach((element, i) => {
+    if (element !== '0x0000000000000000000000000000000000000000') {
+      $('.panel-pet').eq(i).find('button').text('Success').attr('disabled', true);
+    }
+  });
+} catch (err) {
+  console.log(err.message);
+}
+```
 
 Things to notice:
 
@@ -611,28 +607,20 @@ Things to notice:
 
 1. Still in `/src/js/app.js`, remove the multi-line comment from `handleAdopt` and replace it with the following:
 
-   ```javascript
-   var adoptionInstance;
+```javascript
+  let adoptionInstance;
 
-   web3.eth.getAccounts(function(error, accounts) {
-     if (error) {
-       console.log(error);
-     }
+  let petId = parseInt($(event.target).data('id'));
 
-     var account = accounts[0];
+  let accounts = await App.web3Provider.request({ method: 'eth_requestAccounts' });
+  let account = accounts[0];
 
-     App.contracts.Adoption.deployed().then(function(instance) {
-       adoptionInstance = instance;
+  let instance = await App.contracts.Adoption.deployed();
+  adoptionInstance = instance;
 
-       // Execute adopt as a transaction by sending account
-       return adoptionInstance.adopt(petId, {from: account});
-     }).then(function(result) {
-       return App.markAdopted();
-     }).catch(function(err) {
-       console.log(err.message);
-     });
-   });
-   ```
+  let _ = await adoptionInstance.adopt(petId, { from: account });
+  return App.markAdopted();
+```
 
 Things to notice:
 
