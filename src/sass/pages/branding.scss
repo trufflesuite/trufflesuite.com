@@ -1,0 +1,29 @@
+.branding {
+  td {
+    display: table-cell;
+    padding: 14px 22px;
+    border-right: 1px solid #5e464d;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  th {
+    border-right: 1px solid #5e464d;
+    padding: 8px 12px;
+  }
+
+  tbody {
+    vertical-align: baseline;
+  }
+
+  tr {
+    display: table-row;
+    border: 1px solid #5e464d;
+  }
+}
+
+table {
+  border-collapse: collapse;
+}

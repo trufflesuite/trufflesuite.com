@@ -1,0 +1,44 @@
+{
+    "Branding-guidelines": {
+      "title": "Branding",
+      "excerpt": "Here you can find Truffle Suite project brand guidelines, assets, and license. See our official media repository for more information and to find the license that governs this work. Click any of the images to download them."
+    },
+    "name": {
+      "title": "The Name",
+      "excerpt": "Truffle Suite can be written with a capital T when used at the start of a sentence, otherwise it should be written in upper-case letters"
+    },
+    "logo":{
+        "title": "Logo",
+        "excerpt": "The Truffle Suite logo should be placed on a white background with enough space around it like this:",
+        "light-image": "./../img/truffle-logo-light.svg"
+    },
+    "dark-logo": {
+        "title":"Dark-Logo",
+        "excerpt": "Double the size of the inner dark blue cube to get an idea how much space the logo should have. For dark backgrounds, you can use the negative version of the logo:",
+        "tip": "Tip: Please use the icon+text whenever possible",
+        "image": "./../img/truffle-logo-dark.svg"
+    },
+    "icon":{
+        "title": "Icon only",
+        "excerpt": "The icon is designed to be used in layout-constrained areas. As previously stated, please prefer icon + text.",
+        "light-image": "./../img/truffle-logo-light.svg"
+    },
+    "avatar-icon":{
+        "title": "Icon only",
+        "excerpt": "The icon is designed to be used in layout-constrained areas. As previously stated, please prefer icon + text.",
+        "light-image": "./../img/truffle-logo-light.svg"
+    },
+    "favicon-icon":{
+        "excerpt": "Square-sized icon for smaller areas (like favicons):",
+        "light-image":"./..//img/favicons/favicon.ico"
+    },
+    "emoji-icon":{
+        "tip": "Tip: For those of you following our guidelines and have gotten this far, we've made a special smaller size image used especially for custom emoji (like in a slack or gitter channel ;))",
+        "light-image":"./..//img/favicons/favicon.ico"
+    },
+    "font-data":{
+        "title": "FONT",
+        "excerpt": "We use the beautiful Geomanist Medium font from the extremely talented folks at the Atipo Foundry who provide the entire font family at a 'pay what you want' model."
+    }
+  }
+  
