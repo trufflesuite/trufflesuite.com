@@ -4,6 +4,7 @@
       "excerpt": "Here you can find Truffle Suite project brand guidelines, assets, and license. See our official media repository for more information and to find the license that governs this work. Click any of the images to download them."
     },
     "name": {
+        "id": "the-name",
       "title": "The Name",
       "excerpt": "Truffle Suite can be written with a capital T when used at the start of a sentence, otherwise it should be written in upper-case letters"
     },

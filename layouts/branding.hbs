@@ -50,6 +50,7 @@
     <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans|Oswald|Varela+Round|Roboto+Condensed|Roboto+Mono" rel="stylesheet">
     <script src="https://kit.fontawesome.com/371f2d7a8a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/index.css">
+    
 </head>
 <body>
     {{> ga-tag-body}}
@@ -67,7 +68,30 @@
         <nav class="leftpanel">
             <div>
                 <div class="leftpanel-list">
-                    
+                    <li class="nav-item dropdown show">
+                        <a class="nav-link branding-leftpanel" id="suiteDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                            Branding Guidelines
+                        </a>
+                        <ul class="dropdown-menu show">
+                            <li href="#">
+                            <a aria-current="page" class="active" href="/branding/#the-name">
+                                The Name
+                            </a>
+                            </li>
+                            <li href="#">
+                                Logo
+                            </li>
+                            <li href="#">
+                                Icon only
+                            </li>
+                            <li href="#">
+                                Color Palette
+                            </li>
+                            <li href="#">
+                                License
+                            </li>
+                        </ul>
+                    </li>
                 </div>
             </div>
         </nav>
@@ -81,6 +105,7 @@
                         {{#if pr.title}}
                             <h2>{{ pr.title }}</h2>
                         {{/if}}
+
                         {{#if pr.excerpt}}
                             <p>{{ pr.excerpt }}</p>
                         {{/if}}
@@ -92,17 +117,20 @@
                                     {{pr.tip}}
                                 </p>
                             {{/if}}
-
                         <p><a href="https://google.co.in">svg</a> | <a>png</a> | <a>jpg</a></p>
-
                         </div>
                     </div>
                     {{else}}
                         <div class="row pr-row">
                             <div class="col">
-
-                            <h2>{{ pr.title }}</h2>
+                                {{#if pr.id}}
+                                    <h2 >{{ pr.title }}</h2>
+                                {{/if}}
+                            
                             <p><i class="far fa-calendar-alt"></i> {{ pr.date }}</p>
+                            <a href="#the-name" aria-hidden="true" tabindex="-1">
+                                <span class="header-link"></span>
+                            </a>
                             {{#if pr.excerpt}}
                                 <p>{{ pr.excerpt }}</p>
                             {{/if}}
@@ -167,5 +195,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.1.slim.min.js"><\/script>')</script>
     <script src="/js/bootstrap.min.js"></script>
+
 </body>
 </html>
