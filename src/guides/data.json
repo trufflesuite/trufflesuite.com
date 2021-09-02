@@ -1,4 +1,11 @@
 {
+  "scribble": {
+    "title": "Supercharge your test suite with Scribble",
+    "date": "2024-08-30",
+    "author": "Joran Honig",
+    "published": true,
+    "products": ["truffle", "scribble", "testing"]
+  },
   "learn-how-to-deploy-with-truffle-teams": {
     "title": "Learn How to Deploy with Truffle Teams",
     "date": "2019-12-18",
