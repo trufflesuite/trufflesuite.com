@@ -315,10 +315,11 @@ In the `compilers` object you can specify settings related to the compilers used
 Solidity compiler settings. Supports optimizer settings for `solc`, as well as other settings such as debug and metadata settings.
 
 You may specify...
-+ any solc-js version listed at [solc-bin](http://solc-bin.ethereum.org/bin/list.json). Specify the one you want and Truffle will get it for you.
-+ a natively compiled solc binary (you'll need to install this yourself, links to help below).
-+ a dockerized solc from one of images published [here](https://hub.docker.com/r/ethereum/solc/tags/).
++ any solc-js version (using semver) listed at [solc-bin](http://solc-bin.ethereum.org/bin/list.json). Specify the one you want and Truffle will get it for you.
++ "native" to use a natively compiled solc binary (you'll need to install this yourself, links to help below).
++ a dockerized solc tag from one of images published [here](https://hub.docker.com/r/ethereum/solc/tags/).
 + a path to a locally available solc
++ "pragma" to have Truffle autodetect solc versions from your source files. This can be used to compile using multiple versions of solc.
 + a solc-js parser for faster docker and native compilations
 
 Truffle config example:
@@ -328,7 +329,8 @@ module.exports = {
   compilers: {
     solc: {
       version: <string>, // A version or constraint - Ex. "^0.5.0"
-                         // Can also be set to "native" to use a native solc
+                         // Can be set to "native" to use a native solc or
+                         // "pragma" which attempts to autodetect compiler versions
       docker: <boolean>, // Use a version obtained through docker
       parser: "solcjs",  // Leverages solc-js purely for speedy parsing
       settings: {
