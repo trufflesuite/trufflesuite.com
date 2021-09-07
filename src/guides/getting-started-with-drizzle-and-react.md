@@ -5,7 +5,7 @@ We're going to focus on the lower levels today, taking you through setting up a 
 This will be a very minimal tutorial focused on setting and getting a simple string stored in a contract. It's meant for those with a basic knowledge of Truffle, who have some knowledge of JavaScript and React.js, but who are new to using Drizzle.
 
 <p class="alert alert-info">
-<i class="far fa-info-circle"></i> <strong>Note</strong>: For Truffle basics, please read through the Truffle <a href="/tutorials/pet-shop">Pet Shop</a> tutorial before proceeding.
+<i class="far fa-info-circle"></i> <strong>Note</strong>: For Truffle basics, please read through the Truffle <a href="/tutorial/">Pet Shop</a> tutorial before proceeding.
 </p>
 
 In this tutorial we will be covering:
