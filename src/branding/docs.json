@@ -6,7 +6,8 @@
     "name": {
         "id": "the-name",
       "title": "The Name",
-      "excerpt": "Truffle Suite can be written with a capital T when used at the start of a sentence, otherwise it should be written in upper-case letters"
+      "excerpt": "Truffle Suite can be written with a capital T when used at the start of a sentence, otherwise it should be written in upper-case letters",
+      "hover": "#the-name"
     },
     "logo":{
         "title": "Logo",

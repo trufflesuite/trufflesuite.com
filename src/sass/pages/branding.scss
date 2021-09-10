@@ -24,9 +24,29 @@
   }
 }
 
+.anchors::before{
+  border-left: 1px dashed #777676;
+  content: "";
+  height: calc(100% - .6em);
+  left: 1.5em;
+  position: absolute;
+  top: 0;
+}
+
+.anchor::before{
+  border-bottom: 1px dashed #777676;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 10px;
+  width: .5em;
+}
+
 table {
   border-collapse: collapse;
 }
+
+ul, li {list-style-type: none;}
 
 .header-link {
   background-image: url(/https://webpack.js.org/link.e767e2ededb63bd7f5dd.svg);
