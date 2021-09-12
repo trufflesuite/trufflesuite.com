@@ -26,19 +26,28 @@
   .alert-info{
     margin-top: 30px;
   }
+
+  a{
+    color:#5e464d;
+  } 
+
+  
+  a:hover{
+    color:#5e464d;
+    text-decoration: none;
+  }
+
+  .dropdown-item:active{
+    background-color: transparent;
+    color: white;
+  }
+
+  ul, li {list-style-type: none;}
+  
 }
 
 .anchors{
   width: 50%;
-}
-
-a{
-  color:#5e464d;
-}
-
-a:hover{
-  color:#5e464d;
-  text-decoration: none;
 }
 
 .align_header{
@@ -80,8 +89,6 @@ table {
   border-collapse: collapse;
 }
 
-ul, li {list-style-type: none;}
-
 .header-link {
   background-image: url(/https://webpack.js.org/link.e767e2ededb63bd7f5dd.svg);
   background-position: 50%;
@@ -101,7 +108,6 @@ ul, li {list-style-type: none;}
   color:#5e464d;
   
 }
-
 
 .anchor-svg .svg-align{
   position: absolute;
