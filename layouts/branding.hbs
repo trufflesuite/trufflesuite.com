@@ -67,49 +67,67 @@
         <div class="container pt-6 pb-6">
             <div class="row">
                 <div class="col-md-4 order-5">
-                    <nav class="leftpanel">
-                            <div class="leftpanel-list">
-                                <li class="nav-item dropdown show">
-                                    <a class="nav-link branding-leftpanel" id="suiteDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                                        Branding Guidelines
-                                    </a>
-                                    <ul class="dropdown-menu anchors">
-                                        <li href="#" title="The Name" class="anchor">
-                                        <a aria-current="page" class="active" href="/branding/#the-name">
-                                            The Name
-                                        </a>
-                                        </li>
-                                        <li href="#">
-                                            Logo
-                                        </li>
-                                        <li href="#">
-                                            Icon only
-                                        </li>
-                                        <li href="#">
-                                            <a href="/branding/#color-palette">Color Palette</a>
-                                        </li>
-                                        <li href="#">
-                                            License
+                    <nav>
+                            <div >
+                                <div id="navbarSupportedContent"> 
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toogle branding-leftpanel" id="suiteDropdown" href="#" data-toggle="dropdown">
+                                                Branding Guidelines
+                                            </a>
+                                            <div class="dropdown-menu anchors">
+                                                <span class="dropdown-item anchor_list">
+                                                    <a href="/branding/#the-name" title="The Name" class="branding_left-header" >
+                                                        The Name
+                                                    </a>
+                                                </span>
+                                                <span class="dropdown-item anchor_list">
+                                                    <a href="/branding/#logo" class="branding_left-header"  >
+                                                        Logo
+                                                    </a>
+                                                </span>
+                                                <span class="dropdown-item anchor_list">
+                                                    <a  href="/branding/#icon-only" class="branding_left-header">
+                                                            Icon only
+                                                    </a>
+                                                </span>
+                                                <span class="dropdown-item anchor_list">
+                                                    <a  href="/branding/#color" class="branding_left-header">
+                                                            Color Palette
+                                                    </a>
+                                                </span>
+                                                <span class="dropdown-item anchor_list">
+                                                    <a  href="/branding/#license" class="branding_left-header">
+                                                            License
+                                                    </a>
+                                                </span>
+                                            </div>
                                         </li>
                                     </ul>
-                                </li>
+                                </div>
                             </div>
                     </nav>
                 </div>
-
                 <div class="col-md-8 order-1">
                     <section class="branding">
                         {{#each branding as |pr slug|}}
                             {{#if pr.light-image}}
                             <div class="row align-items-center pr-row">
+                                <div class="col-md-9 align_header">
+                                    {{#if pr.title}}
+                                        <h2>{{ pr.title }}</h2> 
+                                    {{/if}}
+                                    {{#if pr.anchorLink}}
+                                    <a class="anchor-svg">
+                                        <span class="svg-align" id={{pr.anchorLink}}></span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                                            <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+                                            <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
+                                        </svg>
+                                    </a>
+                                    {{/if}}
+                                </div>
                                 <div class="col-md-9">
-                                {{#if pr.title}}
-                                    <h2>{{ pr.title }}</h2> 
-                                {{/if}}
-
-                                {{#if pr.hover}}
-                                    <a>{{pr.hover}}</a>
-                                {{/if}}
 
                                 {{#if pr.excerpt}}
                                     <p>{{ pr.excerpt }}</p>
@@ -126,72 +144,105 @@
                                 </div>
                             </div>
                             {{else}}
-                                <div class="row pr-row">
-                                    <div class="col">
-                                        {{#if pr.id}}
-                                            <h2 >{{ pr.title }}</h2>
+                                <div class="row align-items-center pr-row">
+                                    <div class="col-md-8 align_header">
+                                        {{#if pr.title}}
+                                            <h2>{{ pr.title }}</h2> 
                                         {{/if}}
-                                    
-                                    <p><i class="far fa-calendar-alt"></i> {{ pr.date }}</p>
-                                    <a href="#the-name" aria-hidden="true" tabindex="-1">
-                                        <span class="header-link"></span>
-                                    </a>
-                                    {{#if pr.excerpt}}
-                                        <p>{{ pr.excerpt }}</p>
-                                    {{/if}}
-                                    {{#if pr.image}}
-                                        <img  src="{{ pr.image }}"/>
-                                    {{/if}}
-                                    {{#if pr.tip}}
-                                        <p class="alert alert-info">
-                                            {{pr.tip}}
-                                        </p>
-                                    {{/if}}
+                                        {{#if pr.anchorLink}}
+                                            <a class="anchor-svg">
+                                                <span class="svg-align" id={{pr.anchorLink}}></span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                                                    <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+                                                    <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
+                                                </svg>
+                                            </a>
+                                        {{/if}}
+                                    </div>
+                                    <div class="col-md-9">
+                                        <p><i class="far fa-calendar-alt"></i> {{ pr.date }}</p>
+
+                                        {{#if pr.excerpt}}
+                                            <p>{{ pr.excerpt }}</p>
+                                        {{/if}}
+                                        {{#if pr.image}}
+                                            <img  src="{{ pr.image }}"/>
+                                        {{/if}}
+                                        {{#if pr.tip}}
+                                            <p class="alert alert-info">
+                                                {{pr.tip}}
+                                            </p>
+                                        {{/if}}
                                     {{!-- <a class="btn btn-truffle" href="/press-releases/{{ slug }}">READ MORE</a> --}}
                                     </div>
                                 </div>
                             {{/if}}
                         {{/each}}
-                        <h2>Color Palette<a href="#the-name"><span>check</span></a></h2>
-                    
-                        <p>The following colors are used throughout the site in various combinations and on our fancy clothing line launched with the help of Open Collective and Threadless over at the official webpack store!</p>
+                        <div class="row align-items-center pr-row">
+                            <div class="col-md-8 align_header">
+                                <h2>Color Palette</h2>
+                                <a class="anchor-svg" >
+                                    <span class="svg-align" id="color"></span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                                        <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+                                        <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        
+                            <div class="col-md-9">
+                                <p>The following colors are used throughout the site in various combinations and on our fancy clothing line launched with the help of Open Collective and Threadless over at the official webpack store!</p>
 
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Color Name</th>
-                                    <th>HEX Code</th>
-                                    <th>RGB Code</th>
-                                    <th>Sample</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td data-th="Color Name"><span>Eggplant</span></td>
-                                    <td data-th="HEX Code">#5E464D</td>
-                                    <td data-th="RGB Code"><span><code>rgb(94,70,77)</code></span></td>
-                                    <td data-th="Sample"><span><div style="background-color: #5E464D">&nbsp;</div></span></td>
-                                </tr>
-                                <tr>
-                                    <td data-th="Color Name"><span>White</span></td>
-                                    <td data="HEX Code">#FFFFFF</td>
-                                    <td data-th="RGB Code"><span><code>rgb(255,255,255)</code></span></td>
-                                    <td data-th="Sample"><span><div style="background-color: #FFFFFF">&nbsp;</div></span></td>
-                                </tr>
-                                <tr>
-                                    <td data-th="Color Name"><span>Turquoise</span></td>
-                                    <td data="HEX Code">#3FE0C5</td>
-                                    <td data-th="RGB Code"><span><code>rgb(63,224,197)</code></span></td>
-                                    <td data-th="Sample"><span><div style="background-color: #3FE0C5">&nbsp;</div></span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Color Name</th>
+                                            <th>HEX Code</th>
+                                            <th>RGB Code</th>
+                                            <th>Sample</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-th="Color Name"><span>Eggplant</span></td>
+                                            <td data-th="HEX Code">#5E464D</td>
+                                            <td data-th="RGB Code"><span><code>rgb(94,70,77)</code></span></td>
+                                            <td data-th="Sample"><span><div style="background-color: #5E464D">&nbsp;</div></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Color Name"><span>White</span></td>
+                                            <td data="HEX Code">#FFFFFF</td>
+                                            <td data-th="RGB Code"><span><code>rgb(255,255,255)</code></span></td>
+                                            <td data-th="Sample"><span><div style="background-color: #FFFFFF">&nbsp;</div></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td data-th="Color Name"><span>Turquoise</span></td>
+                                            <td data="HEX Code">#3FE0C5</td>
+                                            <td data-th="RGB Code"><span><code>rgb(63,224,197)</code></span></td>
+                                            <td data-th="Sample"><span><div style="background-color: #3FE0C5">&nbsp;</div></span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>In addition, you can grab the following file types directly from these links:</p>
+                                <p> <a>png</a> | <a href="https://google.co.in">svg</a> | <a>png</a> | <a>jpg</a></p>
+                            </div>
+                        </div>
 
-                        <p>In addition, you can grab the following file types directly from these links:</p>
-                        <p> <a>png</a> | <a href="https://google.co.in">svg</a> | <a>png</a> | <a>jpg</a></p>
-
-                        <h2>License</h2>
-                        <p>The logo and the brand name are <stromg>not MIT licensed</stromg>. Please check our LICENSE for usage guidelines.</p>
+                        <div class="row align-items-center pr-row">
+                            <div class="col-md-8 align_header">
+                                <h2>License</h2>
+                                <a class="anchor-svg">
+                                    <span class="svg-align" id="/branding/#license"></span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                                        <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+                                        <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="col-md-9">
+                                    <p>The logo and the brand name are <stromg>not MIT licensed</stromg>. Please check our LICENSE for usage guidelines.</p>
+                            </div>
+                        </div>
                     </section>
                 </div>
             </div>

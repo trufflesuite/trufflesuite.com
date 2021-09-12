@@ -1,18 +1,19 @@
 {
     "Branding-guidelines": {
-      "title": "Branding",
+      "title": "Branding Guidelines",
       "excerpt": "Here you can find Truffle Suite project brand guidelines, assets, and license. See our official media repository for more information and to find the license that governs this work. Click any of the images to download them."
     },
     "name": {
         "id": "the-name",
       "title": "The Name",
       "excerpt": "Truffle Suite can be written with a capital T when used at the start of a sentence, otherwise it should be written in upper-case letters",
-      "hover": "#the-name"
+      "anchorLink": "the-name"
     },
     "logo":{
         "title": "Logo",
         "excerpt": "The Truffle Suite logo should be placed on a white background with enough space around it like this:",
-        "light-image": "./../img/truffle-logo-light.svg"
+        "light-image": "./../img/truffle-logo-light.svg",
+        "anchorLink":"logo"
     },
     "dark-logo": {
         "title":"Dark-Logo",
@@ -23,7 +24,8 @@
     "icon":{
         "title": "Icon only",
         "excerpt": "The icon is designed to be used in layout-constrained areas. As previously stated, please prefer icon + text.",
-        "light-image": "./../img/truffle-logo-light.svg"
+        "light-image": "./../img/truffle-logo-light.svg",
+        "anchorLink": "icon-only"
     },
     "avatar-icon":{
         "title": "Icon only",
