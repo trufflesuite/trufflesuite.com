@@ -27,12 +27,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  var href = "https://github.com/trufflesuite/ganache/releases";
+  var href = "https://github.com/trufflesuite/ganache-ui/releases";
   var os = "All Releases";
   var image = "";
 
   var request = new XMLHttpRequest();
-  request.open('GET', 'https://api.github.com/repos/trufflesuite/ganache/releases/latest', true);
+  request.open('GET', 'https://api.github.com/repos/trufflesuite/ganache-ui/releases/latest', true);
 
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {

@@ -1,10 +1,7 @@
 .home-heading-container {
-  background: rgb(239,229,220);
-  background: -moz-linear-gradient(0deg, rgba(239,229,220,1) 0%, rgba(248,245,240,1) 100%);
-  background: -webkit-linear-gradient(0deg, rgba(239,229,220,1) 0%, rgba(248,245,240,1) 100%);
-  background: linear-gradient(0deg, rgba(239,229,220,1) 0%, rgba(248,245,240,1) 100%);
+  background: #33262A;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#efe5dc",endColorstr="#f8f5f0",GradientType=1);
-  color: #5e464d;
+  color: #fff;
   text-align: center;
 }
 
@@ -58,10 +55,10 @@
   padding: 3rem 0 2rem 0;
   flex-wrap: nowrap;
 
-  .hero-image {
-    max-height: 67%;
-    margin-top: 14rem;
-  }
+  // .hero-image {
+  //   max-height: 67%;
+  //   margin-top: 14rem;
+  // }
   
   @media (max-width: 767.98px) {
     height: auto;

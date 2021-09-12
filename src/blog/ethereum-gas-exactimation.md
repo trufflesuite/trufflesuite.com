@@ -2,7 +2,7 @@ In Ethereum, estimating gas for a given transaction is a tricky problem to solve
 
 ![Ganache Logo](/img/ganache-logo-h-dark.svg)
 
-At [Truffle](https://www.trufflesuite.com/), we decided such an approach was an unnecessarily CPU-intensive solution to the problem and set out to find a (theoretically) more performant and perfectly accurate way of estimating gas. The result? [Gas exactimation](https://github.com/trufflesuite/ganache-cli/releases/tag/v6.4.2). In this tutorial, we’ll go over gas exactimation at a high level in order to demonstrate its precision.
+At [Truffle](https://www.trufflesuite.com/), we decided such an approach was an unnecessarily CPU-intensive solution to the problem and set out to find a (theoretically) more performant and perfectly accurate way of estimating gas. The result? [Gas exactimation](https://github.com/trufflesuite/ganache-cli-archive/releases/tag/v6.4.2). In this tutorial, we’ll go over gas exactimation at a high level in order to demonstrate its precision.
 
 **Complete example available at [the following repo](https://github.com/trufflesuite/gas-exactimation-tutorial).**
 

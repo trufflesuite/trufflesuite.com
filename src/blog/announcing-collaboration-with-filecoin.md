@@ -54,7 +54,7 @@ Note that this configuration adds a new top-level `environments` object. We'll b
 
 ### Filecoin-flavored Ganache: Simulate Filecoin (Summer/Fall/Winter)
 
-Ganache was built as the sister application to Truffle, to speed up development and testing Ethereum applications. Now that we've added support to Truffle, it's only natural we provide the same highly-modular simulator for Filecoin. Over this summer and into Fall, we plan to create a Filecoin simulation library, as part of [`ganache-core`](https://github.com/trufflesuite/ganache-core). Then later on this Fall/Winter, we'll follow that up with support in our graphical version of Ganache, below! 
+Ganache was built as the sister application to Truffle, to speed up development and testing Ethereum applications. Now that we've added support to Truffle, it's only natural we provide the same highly-modular simulator for Filecoin. Over this summer and into Fall, we plan to create a Filecoin simulation library, as part of [`ganache`](https://github.com/trufflesuite/ganache). Then later on this Fall/Winter, we'll follow that up with support in our graphical version of Ganache, below! 
 
 
 ![Filecoin-flavored Ganache](/img/blog/announcing-collaboration-with-filecoin/filecoin-flavored-ganache.png)
