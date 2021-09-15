@@ -194,12 +194,12 @@ Private Ethereum networks allow parties to share data without making it publicly
 * Sharing of sensitive data, such as health care records
 * Scaling to handle higher read/write throughput, due to the smaller network size
 
-An example of a private enterprise blockchain is [Quorum](https://www.jpmorgan.com/country/US/EN/Quorum), originally written by J.P. Morgan. ([Read our blog post on using Truffle with Quorum.](/tutorials/building-dapps-for-quorum-private-enterprise-blockchains))
+An example of a private enterprise blockchain is [Quorum](https://www.jpmorgan.com/country/US/EN/Quorum), originally written by J.P. Morgan. ([Read our documentation on using Truffle with Quorum.](/docs/truffle/distributed-ledger-support/working-with-quorum))
 
 
 ## Decentralized applications (dapps)
 
-**Applications using smart contracts for their processing and/or datastorage are called "decentralized applications", or "dapps".** The user interfaces for these dapps consist of familiar languages such as HTML, CSS, and JavaScript. The application itself can be hosted on a traditional web server or on a decentralized file service such as [Swarm](http://swarm-gateways.net/bzz:/theswarm.eth/) or [IPFS](http://ipfs.io/).
+**Applications using smart contracts for their processing and/or datastorage are called "decentralized applications", or "dapps".** The user interfaces for these dapps consist of familiar languages such as HTML, CSS, and JavaScript. The application itself can be hosted on a traditional web server or on a decentralized file service such as [Swarm](https://swarm-gateways.net/) or [IPFS](http://ipfs.io/).
 
 Given the benefits of the Ethereum blockchain, a dapp could be a solution for many industries, including but not limited to:
 
