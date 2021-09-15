@@ -194,7 +194,7 @@ Private Ethereum networks allow parties to share data without making it publicly
 * Sharing of sensitive data, such as health care records
 * Scaling to handle higher read/write throughput, due to the smaller network size
 
-An example of a private enterprise blockchain is [Quorum](https://www.jpmorgan.com/country/US/EN/Quorum), originally written by J.P. Morgan. ([Read our blog post on using Truffle with Quorum.](/docs/truffle/distributed-ledger-support/working-with-quorum))
+An example of a private enterprise blockchain is [Quorum](https://www.jpmorgan.com/country/US/EN/Quorum), originally written by J.P. Morgan. ([Read our documentation on using Truffle with Quorum.](/docs/truffle/distributed-ledger-support/working-with-quorum))
 
 
 ## Decentralized applications (dapps)
