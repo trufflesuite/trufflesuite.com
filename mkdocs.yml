@@ -6,14 +6,16 @@ theme:
   logo: /assets/logo.png
   favicon: /assets/favicon-32x32.png  
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       toggle:
         icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-    - scheme: chocolatey
+        name: Dark Chocolate Swirl
+    - media: "(prefers-color-scheme: dark)"
+      scheme: chocolatey
       toggle:
         icon: material/toggle-switch
-        name: Switch to light mode
+        name: Vanilla Caramel Supreme
   font:
     text: "Open Sans"
     code: "Open Sans"
@@ -21,7 +23,7 @@ theme:
     - navigation.tabs
   language: en
 google_analytics:
-  - UA-262533-X
+  - UA-83874933-3
   - auto
 copyright: Copyright &copy; 2016 - 2021 ConsenSys Software Inc.
 extra:
@@ -43,7 +45,8 @@ extra_css:
 markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
-  - pymdownx.inlinehilite  
+  - pymdownx.inlinehilite
+use_directory_urls: false
 plugins:
   - search
   - awesome-pages

@@ -10,6 +10,7 @@ A new iteration (as of Q3 2021) of trufflesuite.com built upon [mkdocs](https://
 
 - `sudo pip3 install mkdocs-material`
 - `sudo pip3 install mkdocs-awesome-pages-plugin mkdocs-macros-plugin`
+- `sudo pip3 install requests`
 
 ### Running Locally
 

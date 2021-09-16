@@ -10,5 +10,17 @@
     "displayName": "optimism",
     "repoName": "optimism-box",
     "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "arbitrum",
+    "repoName": "arbitrum-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "drizzle-react-native",
+    "repoName": "drizzle-react-native-box",
+    "official": true
   }
 ]

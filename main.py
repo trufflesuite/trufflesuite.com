@@ -8,7 +8,7 @@ import mkdocs
 import requests
 from requests.auth import HTTPBasicAuth
 
-from jinja2 import Environment, FileSystemLoader, Template
+from jinja2 import Template
 
 def define_env(env):
     "Definition of the module"
@@ -19,7 +19,6 @@ def on_pre_page_macros(env):
     "Pre-page actions"
 
     # boxes page
-
     data_file_object = open('docs/boxes/sample.json')
     boxes = json.load(data_file_object)
 
@@ -34,29 +33,43 @@ def on_pre_page_macros(env):
     env.conf['extra']['boxes'] = boxes
 
     # blog posts page
-
     blog_file_object = open('docs/blog/data.json')
     posts = json.load(blog_file_object)
-    env.conf['extra']['posts'] = posts
+    publishedposts = []
+    for key in posts.keys():
+        if posts[key]['published']:
+            entry = posts[key]
+            entry['route'] = key
+            publishedposts.append(entry)
 
+    env.conf['extra']['posts'] = publishedposts
 
     # guide page
-
     guide_file_object = open('docs/guides/data.json')
     guides = json.load(guide_file_object)
-    env.conf['extra']['guides'] = guides
+    publishedguides = []
+    for key in guides.keys():
+        if guides[key]['published']:
+            entry = guides[key]
+            entry['route'] = key
+            publishedguides.append(entry)
+
+    env.conf['extra']['guides'] = publishedguides
 
     # team page
-
     team_file_object = open('docs/staff/data.json')
     team = json.load(team_file_object)
     env.conf['extra']['team'] = team
+
+    # events page
+    events_file_object = open('docs/events/data.json')
+    events = json.load(events_file_object)
+    env.conf['extra']['events'] = events
 
 def on_post_build(env):
     "Post-build actions"
 
     # box individual pages
-
     site_dir = env.conf['docs_dir']
     file_object = open('docs/boxes/sample.json',)
     boxes = json.load(file_object)
@@ -72,8 +85,6 @@ def on_post_build(env):
         json_response = response.json()
 
         markdown = base64.b64decode(json_response['content'])
-
-        # print(markdown)
 
         with open('docs/boxes/box.html.jinja2') as file_:
             template = Template(file_.read())

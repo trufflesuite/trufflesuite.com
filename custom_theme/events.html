@@ -1,0 +1,80 @@
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+  {{ super() }}
+
+  <!-- Additional styles for landing page -->
+  <style>
+
+    /* Remove spacing, as we cannot hide it completely */
+    .md-main__inner {
+      margin: 0;
+    }
+
+    /* Hide main content for now */
+    .md-content {
+      display: none;
+    }
+
+    /* Hide table of contents */
+    @media screen and (min-width: 60em) {
+      .md-sidebar--secondary {
+        display: none;
+      }
+    }
+
+    /* Hide navigation */
+    @media screen and (min-width: 76.25em) {
+      .md-sidebar--primary {
+        display: none;
+      }
+    }
+
+    .post-thumbnail {
+        border-radius: .5rem;
+        border: solid 0.2rem var(--mint);
+    }
+
+  </style>
+
+<section class="container p-5">
+
+    <h1>Past Events</h1>
+  
+    <div class="row">
+    {% for event in config.extra.events %}
+        <div class="col-md-12 mb-3">
+
+            <div class="row post-row pb-5">
+                <div class="col-md-3">
+                  <img src="{{ event.image }}" class="img-fluid post-thumbnail" />
+                </div>
+                <div class="col-md-9">
+                  <h2>{{ event.title }}</h2>
+                  <p class="mb-1"><i class="far fa-calendar-alt"></i> {{ event.start }} - {{ event.end }}</p>
+                  {% if event.location %}
+                    <p><i class="fas fa-map-marker-alt"></i> {{ event.location }}</p>
+                  {% endif %}
+                  {% if event.excerpt %}
+                    <p>{{ event.excerpt }}</p>
+                  {% endif %}
+                  <a class="btn btn-sm btn-truffle" href="{{ event.youtube }}" target="_blank">WATCH  NOW</a>
+                </div>
+              </div>
+        </div>
+    {% endfor %}
+     </div>
+
+</section>
+
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->
+
+{% block footer %}
+    {% include "partials/footer.html" %}
+{% endblock %}

@@ -1,7 +1,3 @@
-<div style="text-align: center">
-  <img style="max-width: 160px;" src="/assets/ganache-logo-dark.svg" alt="Ganache Logo">
-</div>
-
 # Overview
 
 Ganache is a personal blockchain for rapid Ethereum and Corda distributed application development. You can use Ganache across the entire development cycle; enabling you to develop, deploy, and test your dApps in a safe and deterministic environment.

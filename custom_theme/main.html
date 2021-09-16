@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
+{% block site_meta %}
+    {{ super() }}
+    <!-- <base href="/" /> -->
+{% endblock %}
+
 <!-- Announcement bar -->
 {% block announce %}
   <a href="https://twitter.com/trufflesuite">

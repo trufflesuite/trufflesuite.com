@@ -54,14 +54,14 @@
   
     <p class="mt-4">
       <div id="guides" class="row row-cols-3 row-cols-md-3 g-4">
-        {% for guide in config.extra.guides.keys() %}
-          <a href="/guides/{{ guide }}">
+        {% for guide in config.extra.guides %}
+          <a href="/guides/{{ guide.route }}">
             <div class="col" >
                 <div class="card ">
                     <div class="card-body">
-                        <h5 class="card-title">{{ config.extra.guides[guide].title }}</h5>
-                        <p class="card-text">{{ config.extra.guides[guide].date }}</p>
-                        <p class="card-text">{{ config.extra.guides[guide].author }}</p>
+                        <h5 class="card-title">{{ guide.title }}</h5>
+                        <p class="card-text">{{ guide.date }}</p>
+                        <p class="card-text">{{ guide.author }}</p>
                     </div>
                 </div>
             </div>

@@ -42,17 +42,19 @@
 <div class="container">
     <section class="p-5">
         <h1>Truffle Blog</h1>
-        {% for post in config.extra.posts.keys() %}
-            <a href="/blog/{{ post }}">
+        {% for post in config.extra.posts %}
+            <a href="/blog/{{ post.route }}">
                 <div class="row pt-3 pb-3">
+                    {% if post.image %}
                     <div class="col-md-3">
-                        <img src="{{ config.extra.posts[post].image }}" class="rounded-circle img-fluid green" />
+                        <img src="{{ post.image }}" class="rounded-circle img-fluid green" />
                     </div>
+                    {% endif %}
                     <div class="col-md-9">
-                        <h2>{{ config.extra.posts[post].title }}</h2>
-                        <p>{{ config.extra.posts[post].date }}&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> {{ config.extra.posts[post].author }}</p>
-                        {% if config.extra.posts[post].excerpt is not none %}
-                            <p>{{ config.extra.posts[post].excerpt }}</p>
+                        <h2>{{ post.title }}</h2>
+                        <p>{{ post.date }}&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> {{ post.author }}</p>
+                        {% if post.excerpt is not none %}
+                            <p>{{ post.excerpt }}</p>
                         {% endif %}
                         <span class="btn btn-secondary">READ MORE</span>
                     </div>
