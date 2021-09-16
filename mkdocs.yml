@@ -40,6 +40,10 @@ extra:
 extra_css:
   - /assets/stylesheets/bootstrap.min.css
   - /assets/stylesheets/extra.css
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite  
 plugins:
   - search
   - awesome-pages
