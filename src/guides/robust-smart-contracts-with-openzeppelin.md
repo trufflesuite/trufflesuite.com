@@ -11,7 +11,7 @@ We can use and extend these contracts to create more secure dapps in less time. 
 
 ## Requirements
 
-This tutorial expects you to have some knowledge of Truffle, Ethereum, and Solidity. If you haven't gone through our [Ethereum overview](/tutorials/ethereum-overview) and our [Pet Shop tutorial](/tutorials/pet-shop) yet, those would be great places to start.
+This tutorial expects you to have some knowledge of Truffle, Ethereum, and Solidity. If you haven't gone through our [Ethereum overview](/guides/ethereum-overview) and our [Pet Shop tutorial](/tutorial) yet, those would be great places to start.
 
 For even more information, please see the following links:
 
@@ -164,7 +164,7 @@ Using less than 15 lines of hand-coded Solidity, we've created our own Ethereum 
 
 ## Interacting with the new token
 
-For this portion of the tutorial, we recommend using [MetaMask](http://metamask.io), a browser extension for Chrome and Firefox. It will allow you to switch between accounts quickly, perfect for testing the ability to transfer our newly created tokens. Our [Pet Shop tutorial](/tutorials/pet-shop) has more information about [configuring MetaMask](/tutorials/pet-shop#interacting-with-the-dapp-in-a-browser).
+For this portion of the tutorial, we recommend using [MetaMask](http://metamask.io), a browser extension for Chrome and Firefox. It will allow you to switch between accounts quickly, perfect for testing the ability to transfer our newly created tokens. Our [Pet Shop tutorial](/tutorial) has more information about [configuring MetaMask](/tutorial#interacting-with-the-dapp-in-a-browser).
 
 You will want to enter the mnemonic displayed in Ganache into MetaMask, and make sure that MetaMask is listening to the Custom RPC `http://127.0.0.1:7545`.
 
