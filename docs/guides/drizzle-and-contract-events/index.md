@@ -1,3 +1,11 @@
+---
+title: Drizzle and Contract Events
+hide:
+  - navigation
+---
+
+# Drizzle and Contract Events
+
 Drizzle is ideal for synchronizing contract state with a user interface, but as
 dapps grow in complexity we foresee growing demand for coordination with
 off-chain services.

@@ -1,3 +1,9 @@
+---
+title: Creating an Ethereum-enabled command line tool with Truffle 3.0
+hide:
+  - navigation
+---
+
 <p class="alert alert-warning"><i class="far fa-exclamation-triangle"></i> <strong>Archived:</strong> This tutorial has been archived and may not work as expected; versions are out of date, methods and workflows may have changed. We leave these up for historical context and for any universally useful information contained. Use at your own risk!</p>
 
 Truffle 3 [is out](https://github.com/ConsenSys/truffle/releases/tag/v3.0.2), and it switched to a less opinionated build process. In Truffle 2, the default app from `truffle init` included a frontend example with build process. Now, there's nothing other than a `build` folder for your JSON contract artifacts. This opens up the door for testing and building other (**cough** command line **cough**) types of applications!

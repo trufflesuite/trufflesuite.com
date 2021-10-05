@@ -1,3 +1,9 @@
+---
+title: Configuring Visual Studio code for Ethereum Blockchain Development
+hide:
+  - navigation
+---
+
 This post was originally published by David Burela on his blog [Burela's House-o-blog](https://davidburela.wordpress.com/2016/11/18/configuring-visual-studio-code-for-ethereum-blockchain-development/). Big thanks to David for allowing us publish it here!
 
 -------------------

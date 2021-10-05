@@ -1,3 +1,9 @@
+---
+title: Truffle Suite
+hide:
+  - navigation
+---
+
 <p class="alert alert-warning"><i class="far fa-exclamation-triangle"></i> <strong>Archived:</strong> This tutorial has been archived and may not work as expected; versions are out of date, methods and workflows may have changed. We leave these up for historical context and for any universally useful information contained.<br/><br/>David Burela now recommends a different, updated way of doing this on his blog, which you can check out here: <a target="_blank" href="https://davidburela.wordpress.com/2017/05/12/how-to-install-truffle-testrpc-on-ubuntu-or-windows-10-with-windows-subsystem-for-linux/">How to install Truffle & TestRPC on Ubuntu or Windows 10 with ?"Windows subsystem for Linux"</a></p>
 
 <div class="alert alert-info">

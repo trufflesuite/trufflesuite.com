@@ -1,3 +1,9 @@
+---
+title: Using Infura (or a custom provider)
+hide:
+  - navigation
+---
+
 ![Infura Truffle logos](/img/tutorials/infura/infura-truffle.png)
 
 [Infura’s API suite](https://infura.io/?&utm_source=truffle&utm_medium=referral&utm_campaign=tutorials&utm_content=truffleinfuraguide) provides instant HTTPS and WebSocket access to the Ethereum and IPFS networks. By using Infura, you can connect easily to Web 3.0 without having to spin-up and maintain your own infrastructure. Their [core service is free](https://infura.io/pricing?&utm_source=truffle&utm_medium=referral&utm_campaign=tutorials&utm_content=truffleinfuraguide) and provides everything you need to start building awesome decentralized applications today!

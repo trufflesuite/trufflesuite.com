@@ -46,6 +46,8 @@ markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.inlinehilite
+  - toc:
+      permalink: true
 use_directory_urls: false
 plugins:
   - search

@@ -1,3 +1,9 @@
+---
+title: Truffle Suite
+hide:
+  - navigation
+---
+
 <div class="alert alert-info">
   <p class="mb-0"><strong>Update</strong>: Since this tutorial was published, we have released <a href="/docs/ganache/overview">Ganache</a>, a personal blockchain and a replacement to the TestRPC. We have left this tutorial unaltered, but we highly recommend checking out our <a href="https://www.trufflesuite.com/ganache">Ganache Documentation</a></p>
 </div>

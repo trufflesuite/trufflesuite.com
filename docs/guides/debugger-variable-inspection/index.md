@@ -1,3 +1,9 @@
+---
+title: Variable Inspection - Going Deeper with the Truffle Solidity Debugger
+hide:
+  - navigation
+---
+
 <p class="alert alert-info">
   <i class="far fa-info-circle"></i> <strong>Note</strong>: This tutorial requires Truffle version 4.1.8 or newer.
 </p>
@@ -11,8 +17,8 @@ But development has continued apace, and new functionality has been added to mak
 In this tutorial, we're going to take a look at a simple contract and inspect it using the Truffle Solidity debugger. We'll investigate three scenarios:
 
 1. A working contract
-1. A working contract with unexpected output
-1. A broken contract
+2. A working contract with unexpected output
+3. A broken contract
 
 ## A basic smart contract
 

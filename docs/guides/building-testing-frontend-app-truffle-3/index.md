@@ -1,3 +1,9 @@
+---
+title: Truffle Suite
+hide:
+  - navigation
+---
+
 <p class="alert alert-info">
 **Update**: While this tutorial was originally written for Truffle 3, we have updated it to be fully compatible with newer versions of Truffle. We have kept some of the language unaltered, except where necessary.
 </p>

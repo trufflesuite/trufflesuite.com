@@ -1,3 +1,9 @@
+---
+title: Debugging a smart contract
+hide:
+  - navigation
+---
+
 <p class="alert alert-info">
 <strong>Note</strong>: This tutorial requires Truffle version 4.0 or newer.
 </p>

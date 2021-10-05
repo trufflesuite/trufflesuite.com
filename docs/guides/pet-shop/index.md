@@ -1,3 +1,9 @@
+---
+title: Truffle Suite
+hide:
+  - navigation
+---
+
 ![Ethereum Pet Shop](/img/tutorials/pet-shop/petshop.png)
 
 This tutorial will take you through the process of building your first dapp---an adoption tracking system for a pet shop!
