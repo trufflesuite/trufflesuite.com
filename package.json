@@ -39,7 +39,6 @@
     "@trufflesuite/metalsmith-markdown-precompiler": "^1.0.1",
     "handlebars-helpers": "^0.10.0",
     "metalsmith-debug": "^1.2.0",
-    "metalsmith-env": "^2.1.2",
-    "win-node-env": "^0.4.0"
+    "metalsmith-env": "^2.1.2"
   }
 }
