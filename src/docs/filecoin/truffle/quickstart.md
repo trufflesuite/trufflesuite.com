@@ -1,5 +1,5 @@
 ---
-title: Truffle | Filecoin Quickstart
+title: Filecoin Quickstart
 layout: docs.hbs
 ---
 

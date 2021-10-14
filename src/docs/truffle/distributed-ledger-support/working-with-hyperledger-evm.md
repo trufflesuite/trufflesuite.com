@@ -1,5 +1,5 @@
 ---
-title: Truffle | Working With Hyperledger EVM
+title: Working With Hyperledger EVM
 layout: docs.hbs
 ---
 # Working With Hyperledger EVM

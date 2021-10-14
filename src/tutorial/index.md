@@ -1,10 +1,16 @@
 ---
-title: Tutorial | Pet Shop
-layout: tutorial.hbs
-social-description: This tutorial will take you through the process of building your first dapp---an adoption tracking system for a pet shop! This tutorial is meant for those with a basic knowledge of Ethereum and smart contracts, who have some knowledge of HTML and JavaScript, but who are new to dapps.
-nav-theme: light
-light-body: true
+title: Truffle Suite
+hide:
+  - navigation
 ---
+
+<style>
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+</style>
+
 ![Ethereum Pet Shop](/img/tutorials/pet-shop/petshop.png)
 
 This tutorial will take you through the process of building your first dapp---an adoption tracking system for a pet shop!
@@ -18,12 +24,12 @@ This tutorial is meant for those with a basic knowledge of Ethereum and smart co
 In this tutorial we will be covering:
 
 1. Setting up the development environment
-1. Creating a Truffle project using a Truffle Box
-1. Writing the smart contract
-1. Compiling and migrating the smart contract
-1. Testing the smart contract
-1. Creating a user interface to interact with the smart contract
-1. Interacting with the dapp in a browser
+2. Creating a Truffle project using a Truffle Box
+3. Writing the smart contract
+4. Compiling and migrating the smart contract
+5. Testing the smart contract
+6. Creating a user interface to interact with the smart contract
+7. Interacting with the dapp in a browser
 
 
 ## Background

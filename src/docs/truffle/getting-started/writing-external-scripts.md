@@ -1,5 +1,5 @@
 ---
-title: Truffle | Writing External Scripts / Command Plugins
+title: Writing External Scripts / Command Plugins
 layout: docs.hbs
 ---
 # Writing External Scripts

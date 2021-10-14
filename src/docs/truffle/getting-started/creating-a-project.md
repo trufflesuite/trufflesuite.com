@@ -1,5 +1,5 @@
 ---
-title: Truffle | Creating a Project
+title: Creating a Project
 layout: docs.hbs
 ---
 # Creating a Project

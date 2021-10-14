@@ -43,7 +43,7 @@
     <section class="p-5">
         <h1>Truffle Blog</h1>
         {% for post in config.extra.posts %}
-            <a href="/blog/{{ post.route }}">
+            <a href="{{ post.route }}">
                 <div class="row pt-3 pb-3">
                     {% if post.image %}
                     <div class="col-md-3">

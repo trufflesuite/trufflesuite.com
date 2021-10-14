@@ -1,5 +1,5 @@
 ---
-title: Truffle | Package Management via EthPM
+title: Package Management via EthPM
 layout: docs.hbs
 ---
 # Package Management via EthPM

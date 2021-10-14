@@ -1,5 +1,5 @@
 ---
-title: Truffle | Truffle and MetaMask
+title: Truffle and MetaMask
 layout: docs.hbs
 ---
 # Truffle and MetaMask
@@ -7,7 +7,7 @@ layout: docs.hbs
 Before you can interact with smart contracts in a browser, make sure they're compiled, deployed, and that you're interacting with them via `web3` in client-side JavaScript. We recommend using the [@truffle/contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract) library, as it makes interacting with contracts easier and more robust.
 
 <p class="alert alert-info">
-<i class="far fa-info-circle"></i> <strong>Note</strong>: For more information on these topics, including using <code>@truffle/contract</code>, check out our <a href="/tutorial">Pet Shop</a> tutorial.
+<i class="far fa-info-circle"></i> <strong>Note</strong>: For more information on these topics, including using <code>@truffle/contract</code>, check out our <a href="/tutorials/pet-shop">Pet Shop</a> tutorial.
 </p>
 
 Once you've done the above, you're ready to use MetaMask.

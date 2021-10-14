@@ -1,5 +1,5 @@
 ---
-title: Drizzle | Drizzle Options
+title: Drizzle Options
 layout: docs.hbs
 ---
 # Drizzle Options

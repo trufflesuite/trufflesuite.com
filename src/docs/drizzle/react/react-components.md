@@ -1,5 +1,5 @@
 ---
-title: Drizzle | React Components
+title: React Components
 layout: docs.hbs
 ---
 # Drizzle React Components
@@ -10,7 +10,7 @@ A set of useful components for common UI elements.
 
 Install Drizzle React Components via npm:
 ```bash
-npm install --save @drizzle/react-components
+npm install --save drizzle-react-components
 ```
 
 <p class="alert alert-warning">

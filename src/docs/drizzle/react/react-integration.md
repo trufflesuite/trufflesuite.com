@@ -1,5 +1,5 @@
 ---
-title: Drizzle | React Integration
+title: React Integration
 layout: docs.hbs
 ---
 # React Integration

@@ -344,12 +344,6 @@
     "official": false
   },
   {
-    "userOrg": "uport-project",
-    "displayName": "react-uport-box",
-    "repoName": "react-uport-box",
-    "official": false
-  },
-  {
     "userOrg": "3of5of7",
     "displayName": "scoreboard",
     "repoName": "scoreboard",
@@ -461,12 +455,6 @@
     "userOrg": "kierenh",
     "displayName": "vue-dark-chocolate",
     "repoName": "vue-dark-chocolate",
-    "official": false
-  },
-  {
-    "userOrg": "saga-foundation",
-    "displayName": "vueport-box",
-    "repoName": "vueport-box",
     "official": false
   },
   {

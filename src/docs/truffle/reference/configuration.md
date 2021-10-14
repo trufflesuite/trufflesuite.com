@@ -1,5 +1,5 @@
 ---
-title: Truffle | Configuration
+title: Configuration
 layout: docs.hbs
 ---
 # Configuration

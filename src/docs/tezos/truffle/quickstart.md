@@ -1,5 +1,5 @@
 ---
-title: Truffle | Tezos Quickstart
+title: Tezos Quickstart
 layout: docs.hbs
 ---
 

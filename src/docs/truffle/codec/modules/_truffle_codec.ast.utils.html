@@ -1,0 +1,1232 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Utils | Truffle Decoding and Encoding</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Truffle Decoding and Encoding</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">Public</span>
+								<ul class="tsd-select-list">
+									<li data-value="public" class="selected">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-only-exported" checked />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">Globals</a>
+				</li>
+				<li>
+					<a href="_truffle_codec.html">@truffle/codec</a>
+				</li>
+				<li>
+					<a href="_truffle_codec.ast.html">Ast</a>
+				</li>
+				<li>
+					<a href="_truffle_codec.ast.utils.html">Utils</a>
+				</li>
+			</ul>
+			<h1>Namespace Utils</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Definition Reading Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#basedefinition" class="tsd-kind-icon">base<wbr>Definition</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#contractkind" class="tsd-kind-icon">contract<wbr>Kind</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#decimalplaces" class="tsd-kind-icon">decimal<wbr>Places</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#functionkind" class="tsd-kind-icon">function<wbr>Kind</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#isarray" class="tsd-kind-icon">is<wbr>Array</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#iscontractpayable" class="tsd-kind-icon">is<wbr>Contract<wbr>Payable</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#isdynamicarray" class="tsd-kind-icon">is<wbr>Dynamic<wbr>Array</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#isenum" class="tsd-kind-icon">is<wbr>Enum</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#ismapping" class="tsd-kind-icon">is<wbr>Mapping</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#isreference" class="tsd-kind-icon">is<wbr>Reference</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#issimpleconstant" class="tsd-kind-icon">is<wbr>Simple<wbr>Constant</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#isstruct" class="tsd-kind-icon">is<wbr>Struct</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#keydefinition" class="tsd-kind-icon">key<wbr>Definition</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#mutability" class="tsd-kind-icon">mutability</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#parameters" class="tsd-kind-icon">parameters</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#rationalvalue" class="tsd-kind-icon">rational<wbr>Value</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#referencetype" class="tsd-kind-icon">reference<wbr>Type</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#regularizetypeidentifier" class="tsd-kind-icon">regularize<wbr>Type<wbr>Identifier</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#specifiedsize" class="tsd-kind-icon">specified<wbr>Size</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#splicelocation" class="tsd-kind-icon">splice<wbr>Location</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#stacksize" class="tsd-kind-icon">stack<wbr>Size</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#staticlength" class="tsd-kind-icon">static<wbr>Length</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#staticlengthasstring" class="tsd-kind-icon">static<wbr>Length<wbr>AsString</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#typeclass" class="tsd-kind-icon">type<wbr>Class</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#typeclasslongform" class="tsd-kind-icon">type<wbr>Class<wbr>Long<wbr>Form</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#typeid" class="tsd-kind-icon">type<wbr>Id</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#typeidentifier" class="tsd-kind-icon">type<wbr>Identifier</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#typestring" class="tsd-kind-icon">type<wbr>String</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#typestringwithoutlocation" class="tsd-kind-icon">type<wbr>String<wbr>Without<wbr>Location</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#valuedefinition" class="tsd-kind-icon">value<wbr>Definition</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#visibility" class="tsd-kind-icon">visibility</a></li>
+							</ul>
+							<h3>Other Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#definitiontoabi" class="tsd-kind-icon">definition<wbr>ToAbi</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.ast.utils.html#getterparameters" class="tsd-kind-icon">getter<wbr>Parameters</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Definition Reading Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="basedefinition" class="tsd-anchor"></a>
+					<h3>base<wbr>Definition</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">base<wbr>Definition<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L298">codec/lib/ast/utils.ts:298</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="contractkind" class="tsd-anchor"></a>
+					<h3>contract<wbr>Kind</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">contract<wbr>Kind<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_truffle_codec.html#contractkind" class="tsd-signature-type">ContractKind</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L213">codec/lib/ast/utils.ts:213</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>only for contract types, obviously! will yield nonsense otherwise!</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_truffle_codec.html#contractkind" class="tsd-signature-type">ContractKind</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="decimalplaces" class="tsd-anchor"></a>
+					<h3>decimal<wbr>Places</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">decimal<wbr>Places<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L129">codec/lib/ast/utils.ts:129</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>for fixed-point types, obviously</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="functionkind" class="tsd-anchor"></a>
+					<h3>function<wbr>Kind</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">function<wbr>Kind<span class="tsd-signature-symbol">(</span>node<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L468">codec/lib/ast/utils.ts:468</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>compatibility function, since pre-0.5.0 functions don&#39;t have node.kind
+									returns undefined if you don&#39;t put in a function node</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>node: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="isarray" class="tsd-anchor"></a>
+					<h3>is<wbr>Array</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Array<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L136">codec/lib/ast/utils.ts:136</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="iscontractpayable" class="tsd-anchor"></a>
+					<h3>is<wbr>Contract<wbr>Payable</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Contract<wbr>Payable<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L518">codec/lib/ast/utils.ts:518</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>takes a contract definition and asks, does it have a payable fallback
+									function?</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="isdynamicarray" class="tsd-anchor"></a>
+					<h3>is<wbr>Dynamic<wbr>Array</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Dynamic<wbr>Array<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L141">codec/lib/ast/utils.ts:141</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="isenum" class="tsd-anchor"></a>
+					<h3>is<wbr>Enum</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Enum<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L186">codec/lib/ast/utils.ts:186</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="ismapping" class="tsd-anchor"></a>
+					<h3>is<wbr>Mapping</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Mapping<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L181">codec/lib/ast/utils.ts:181</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="isreference" class="tsd-anchor"></a>
+					<h3>is<wbr>Reference</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Reference<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L191">codec/lib/ast/utils.ts:191</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="issimpleconstant" class="tsd-anchor"></a>
+					<h3>is<wbr>Simple<wbr>Constant</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Simple<wbr>Constant<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L243">codec/lib/ast/utils.ts:243</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="isstruct" class="tsd-anchor"></a>
+					<h3>is<wbr>Struct</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Struct<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L176">codec/lib/ast/utils.ts:176</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="keydefinition" class="tsd-anchor"></a>
+					<h3>key<wbr>Definition</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">key<wbr>Definition<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a>, scopes<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_truffle_codec.ast.scopes.html" class="tsd-signature-type">Scopes</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L330">codec/lib/ast/utils.ts:330</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>for use for mappings and arrays only!
+									for arrays, fakes up a uint definition</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> scopes: <a href="../interfaces/_truffle_codec.ast.scopes.html" class="tsd-signature-type">Scopes</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="mutability" class="tsd-anchor"></a>
+					<h3>mutability</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">mutability<span class="tsd-signature-symbol">(</span>node<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_truffle_codec.html#mutability" class="tsd-signature-type">Mutability</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L489">codec/lib/ast/utils.ts:489</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>similar compatibility function for mutability for pre-0.4.16 versions
+										returns undefined if you don&#39;t give it a FunctionDefinition or
+									VariableDeclaration</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>node: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_truffle_codec.html#mutability" class="tsd-signature-type">Mutability</a>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="parameters" class="tsd-anchor"></a>
+					<h3>parameters</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">parameters<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L451">codec/lib/ast/utils.ts:451</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>returns input parameters, then output parameters
+										NOTE: ONLY FOR VARIABLE DECLARATIONS OF FUNCTION TYPE
+									NOT FOR FUNCTION DEFINITIONS</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">[</span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="rationalvalue" class="tsd-anchor"></a>
+					<h3>rational<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">rational<wbr>Value<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BN</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L290">codec/lib/ast/utils.ts:290</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>extract the actual numerical value from a node of type rational.
+									currently assumes result will be integer (currently returns BN)</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BN</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="referencetype" class="tsd-anchor"></a>
+					<h3>reference<wbr>Type</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">reference<wbr>Type<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_truffle_codec.html#location" class="tsd-signature-type">Location</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L203">codec/lib/ast/utils.ts:203</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>note: only use this on things already verified to be references</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_truffle_codec.html#location" class="tsd-signature-type">Location</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="regularizetypeidentifier" class="tsd-anchor"></a>
+					<h3>regularize<wbr>Type<wbr>Identifier</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">regularize<wbr>Type<wbr>Identifier<span class="tsd-signature-symbol">(</span>identifier<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L277">codec/lib/ast/utils.ts:277</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>adds &quot;_ptr&quot; on to the end of type identifiers that might need it; note that
+									this operates on identifiers, not definitions</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>identifier: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="specifiedsize" class="tsd-anchor"></a>
+					<h3>specified<wbr>Size</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">specified<wbr>Size<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L95">codec/lib/ast/utils.ts:95</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>e.g. uint48 -&gt; 6</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>size in bytes for explicit type size, or <code>null</code> if not stated</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="splicelocation" class="tsd-anchor"></a>
+					<h3>splice<wbr>Location</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">splice<wbr>Location<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a>, location<span class="tsd-signature-symbol">: </span><a href="_truffle_codec.html#location" class="tsd-signature-type">Location</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L253">codec/lib/ast/utils.ts:253</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>definition: a storage reference definition
+									location: the location you want it to refer to instead</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+								<li>
+									<h5>location: <a href="_truffle_codec.html#location" class="tsd-signature-type">Location</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="stacksize" class="tsd-anchor"></a>
+					<h3>stack<wbr>Size</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">stack<wbr>Size<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L221">codec/lib/ast/utils.ts:221</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>stack size, in words, of a given type</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="staticlength" class="tsd-anchor"></a>
+					<h3>static<wbr>Length</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">static<wbr>Length<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L158">codec/lib/ast/utils.ts:158</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>length of a statically sized array -- please only use for arrays
+									already verified to be static!</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="staticlengthasstring" class="tsd-anchor"></a>
+					<h3>static<wbr>Length<wbr>AsString</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">static<wbr>Length<wbr>AsString<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L169">codec/lib/ast/utils.ts:169</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>see staticLength for explanation</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="typeclass" class="tsd-anchor"></a>
+					<h3>type<wbr>Class</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">type<wbr>Class<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L43">codec/lib/ast/utils.ts:43</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>returns basic type class for a variable definition node
+										e.g.:
+										<code>t_uint256</code> becomes <code>uint</code>
+									<code>t_struct$_Thing_$20_memory_ptr</code> becomes <code>struct</code></p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="typeclasslongform" class="tsd-anchor"></a>
+					<h3>type<wbr>Class<wbr>Long<wbr>Form</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">type<wbr>Class<wbr>Long<wbr>Form<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L57">codec/lib/ast/utils.ts:57</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>similar to typeClass, but includes any numeric qualifiers
+										e.g.:
+									<code>t_uint256</code> becomes <code>uint256</code></p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="typeid" class="tsd-anchor"></a>
+					<h3>type<wbr>Id</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">type<wbr>Id<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L67">codec/lib/ast/utils.ts:67</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>for user-defined types -- structs, enums, contracts
+										often you can get these from referencedDeclaration, but not
+									always</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="typeidentifier" class="tsd-anchor"></a>
+					<h3>type<wbr>Identifier</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">type<wbr>Identifier<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L12">codec/lib/ast/utils.ts:12</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="typestring" class="tsd-anchor"></a>
+					<h3>type<wbr>String</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">type<wbr>String<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L17">codec/lib/ast/utils.ts:17</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="typestringwithoutlocation" class="tsd-anchor"></a>
+					<h3>type<wbr>String<wbr>Without<wbr>Location</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">type<wbr>String<wbr>Without<wbr>Location<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L25">codec/lib/ast/utils.ts:25</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the type string, but with location (if any) stripped off the end</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="valuedefinition" class="tsd-anchor"></a>
+					<h3>value<wbr>Definition</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">value<wbr>Definition<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a>, scopes<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_truffle_codec.ast.scopes.html" class="tsd-signature-type">Scopes</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L397">codec/lib/ast/utils.ts:397</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>for use for mappings only!</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> scopes: <a href="../interfaces/_truffle_codec.ast.scopes.html" class="tsd-signature-type">Scopes</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="visibility" class="tsd-anchor"></a>
+					<h3>visibility</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">visibility<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_truffle_codec.html#visibility" class="tsd-signature-type">Visibility</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L82">codec/lib/ast/utils.ts:82</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>For function types; returns internal or external
+										(not for use on other types! will cause an error!)
+									should only return &quot;internal&quot; or &quot;external&quot;</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_truffle_codec.html#visibility" class="tsd-signature-type">Visibility</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Other Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="definitiontoabi" class="tsd-anchor"></a>
+					<h3>definition<wbr>ToAbi</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">definition<wbr>ToAbi<span class="tsd-signature-symbol">(</span>node<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a>, referenceDeclarations<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnodes.html" class="tsd-signature-type">AstNodes</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Abi.Entry</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L531">codec/lib/ast/utils.ts:531</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>the main function. just does some dispatch.
+									returns undefined on bad input</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>node: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+								<li>
+									<h5>referenceDeclarations: <a href="../interfaces/_truffle_codec.ast.astnodes.html" class="tsd-signature-type">AstNodes</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Abi.Entry</span>
+								<span class="tsd-signature-symbol"> | </span>
+								<span class="tsd-signature-type">undefined</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="getterparameters" class="tsd-anchor"></a>
+					<h3>getter<wbr>Parameters</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">getter<wbr>Parameters<span class="tsd-signature-symbol">(</span>node<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a>, referenceDeclarations<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnodes.html" class="tsd-signature-type">AstNodes</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/ast/utils.ts#L804">codec/lib/ast/utils.ts:804</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>node: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+								<li>
+									<h5>referenceDeclarations: <a href="../interfaces/_truffle_codec.ast.astnodes.html" class="tsd-signature-type">AstNodes</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>inputs<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>outputs<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Modules</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#basedefinition" class="tsd-kind-icon">base<wbr>Definition</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#contractkind" class="tsd-kind-icon">contract<wbr>Kind</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#decimalplaces" class="tsd-kind-icon">decimal<wbr>Places</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#definitiontoabi" class="tsd-kind-icon">definition<wbr>ToAbi</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#functionkind" class="tsd-kind-icon">function<wbr>Kind</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#getterparameters" class="tsd-kind-icon">getter<wbr>Parameters</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#isarray" class="tsd-kind-icon">is<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#iscontractpayable" class="tsd-kind-icon">is<wbr>Contract<wbr>Payable</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#isdynamicarray" class="tsd-kind-icon">is<wbr>Dynamic<wbr>Array</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#isenum" class="tsd-kind-icon">is<wbr>Enum</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#ismapping" class="tsd-kind-icon">is<wbr>Mapping</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#isreference" class="tsd-kind-icon">is<wbr>Reference</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#issimpleconstant" class="tsd-kind-icon">is<wbr>Simple<wbr>Constant</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#isstruct" class="tsd-kind-icon">is<wbr>Struct</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#keydefinition" class="tsd-kind-icon">key<wbr>Definition</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#mutability" class="tsd-kind-icon">mutability</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#parameters" class="tsd-kind-icon">parameters</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#rationalvalue" class="tsd-kind-icon">rational<wbr>Value</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#referencetype" class="tsd-kind-icon">reference<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#regularizetypeidentifier" class="tsd-kind-icon">regularize<wbr>Type<wbr>Identifier</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#specifiedsize" class="tsd-kind-icon">specified<wbr>Size</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#splicelocation" class="tsd-kind-icon">splice<wbr>Location</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#stacksize" class="tsd-kind-icon">stack<wbr>Size</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#staticlength" class="tsd-kind-icon">static<wbr>Length</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#staticlengthasstring" class="tsd-kind-icon">static<wbr>Length<wbr>AsString</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#typeclass" class="tsd-kind-icon">type<wbr>Class</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#typeclasslongform" class="tsd-kind-icon">type<wbr>Class<wbr>Long<wbr>Form</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#typeid" class="tsd-kind-icon">type<wbr>Id</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#typeidentifier" class="tsd-kind-icon">type<wbr>Identifier</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#typestring" class="tsd-kind-icon">type<wbr>String</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#typestringwithoutlocation" class="tsd-kind-icon">type<wbr>String<wbr>Without<wbr>Location</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#valuedefinition" class="tsd-kind-icon">value<wbr>Definition</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.ast.utils.html#visibility" class="tsd-kind-icon">visibility</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

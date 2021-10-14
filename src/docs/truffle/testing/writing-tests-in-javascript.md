@@ -1,5 +1,5 @@
 ---
-title: Truffle | Writing Tests in JavaScript
+title: Writing Tests in JavaScript
 layout: docs.hbs
 ---
 # Writing Tests in JavaScript
@@ -170,14 +170,13 @@ contract("2nd MetaCoin test", async accounts => {
     // Get initial balances of first and second account.
     const account_one = accounts[0];
     const account_two = accounts[1];
-    let balance;
 
     const amount = 10;
 
     const instance = await MetaCoin.deployed();
     const meta = instance;
 
-    balance = await meta.getBalance.call(account_one);
+    const balance = await meta.getBalance.call(account_one);
     const account_one_starting_balance = balance.toNumber();
 
     balance = await meta.getBalance.call(account_two);

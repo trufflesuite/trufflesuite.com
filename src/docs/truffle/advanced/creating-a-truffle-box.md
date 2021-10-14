@@ -1,5 +1,5 @@
 ---
-title: Truffle | Truffle Boxes
+title: Truffle Boxes
 layout: docs.hbs
 ---
 # Creating a Truffle Box

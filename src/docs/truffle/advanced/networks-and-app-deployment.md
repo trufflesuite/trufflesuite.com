@@ -1,5 +1,5 @@
 ---
-title: Truffle | Networks and App Deployment
+title: Networks and App Deployment
 layout: docs.hbs
 ---
 # Networks and App Deployment

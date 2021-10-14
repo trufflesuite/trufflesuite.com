@@ -2,8 +2,7 @@
   {
     "name": "Amal Sudama",
     "position": "Blockchain Tools Engineer",
-    "headshot": "/img/staff/amal-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/amal-original.png",
+    "headshot": "../img/staff/amal-truffle-bg.svg",
     "twitter": "cdsudama",
     "github": "cds-amal",
     "linkedin": "csudama",
@@ -12,49 +11,30 @@
   {
     "name": "Bryan Combs",
     "position": "Digital Marketing Designer",
-    "headshot": "/img/staff/bryan-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/bryan-original.png",
+    "headshot": "../img/staff/bryan-truffle-bg.svg",
     "twitter": "spudnicky",
     "github": "combsiez",
-    "linkedin": "combsie",
-    "ig": "combsiez",
-    "fb": "combsie",
     "email" : "bryan"
-  },
-  {
-    "name": "David Clark",
-    "position": "Global Partner Relations",
-    "headshot": "/img/staff/dc-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/dc-original.png",
-    "twitter": "david2bxact",
-    "github": "david2bxact",
-    "linkedin": "dav1clark",
-    "ig": "david2bxact",
-    "email" : "dc"
   },
   {
     "name": "David Murdoch",
     "position": "Software Development Lead",
-    "headshot": "/img/staff/david-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/david-original.png",
+    "headshot": "../img/staff/david-truffle-bg.svg",
     "twitter": "atdavidmurdoch",
     "github": "davidmurdoch",
     "email" : "david"
   },
   {
-    "name": "Erin Shaben",
-    "position": "Jr. Blockchain Tools Engineer",
-    "headshot": "/img/staff/erin-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/erin-original.png",
-    "github": "eshaben",
-    "linkedin": "eshaben",
-    "email" : "erin"
+    "name": "Dongming Hwang",
+    "position": "Blockchain Engineer",
+    "headshot": "../img/staff/dongming-truffle-bg.svg",
+    "github": "dongming",
+    "email" : "dongming"
   },
   {
     "name": "Faina Shalts",
-    "position": "Blockchain Tools Engineer",
-    "headshot": "/img/staff/faina-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/faina-original.png",
+    "position": "Senior Blockchain Engineer",
+    "headshot": "../img/staff/faina-truffle-bg.svg",
     "twitter": "bitsplaining",
     "linkedin": "fainashalts",
     "github": "fainashalts",
@@ -63,8 +43,7 @@
   {
     "name": "gnidan (Nick D'Andrea)",
     "position": "Head of Engineering",
-    "headshot": "/img/staff/gnidan-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/gnidan-original.png",
+    "headshot": "../img/staff/gnidan-truffle-bg.svg",
     "twitter": "gnidan",
     "github": "gnidan",
     "email" : "gnidan"
@@ -72,108 +51,51 @@
   {
     "name": "Harry Altman",
     "position": "Debugger Engineer",
-    "headshot": "/img/staff/harry-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/harry-original.png",
+    "headshot": "../img/staff/harry-truffle-bg.svg",
     "twitter": "haltman-at",
     "email" : "harry"
   },
   {
-    "name": "Heyse Li",
-    "position": "Blockchain Tools Engineer",
-    "headshot": "/img/staff/heyse-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/heyse-original.png",
-    "github": "honestbonsai",
-    "email" : "heyse"
-  },
-  {
-    "name": "Josh Quintal",
-    "position": "Head of Product & Marketing",
-    "headshot": "/img/staff/josh-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/josh-original.png",
-    "twitter": "OnlyOneJMJQ",
-    "github": "DiscRiskandBisque",
-    "email" : "josh"
-  },
-  {
     "name": "Kevin Bluer",
-    "position": "Head of Curriculum & Training",
-    "headshot": "/img/staff/kevin-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/kevin-original.png",
+    "position": "Senior Blockchain Engineer",
+    "headshot": "../img/staff/kevin-truffle-bg.svg",
     "twitter": "kevinbluer",
     "github": "kevinbluer",
     "email" : "kevin"
   },
   {
-    "name": "Kirsten Seese",
-    "position": "Finance Ninja",
-    "headshot": "/img/staff/kirsten-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/kirsten-original.png",
-    "email" : "kirsten"
+    "name": "Kevin Weaver",
+    "position": "Senior Blockchain Engineer",
+    "headshot": "../img/staff/kevin-weaver-truffle-bg2.svg",
+    "twitter": "kevin_weaver",
+    "github": "kevinweaver",
+    "email" : "kevin.w"
   },
   {
-    "name": "Liz Daldalian",
-    "position": "Head of Business Operations & Delivery",
-    "headshot": "/img/staff/liz-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/liz-original.png",
-    "github": "lizdaldal",
-    "linkedin": "lizdaldalian",
-    "email" : "liz"
+    "name": "Lee Faria",
+    "position": "Blockchain Engineer",
+    "headshot": "../img/staff/lee2-truffle-bg.svg",
+    "github": "leeftk",
+    "email" : "lee"
   },
   {
-    "name": "Mike Seese",
-    "position": "Technical Lead for Truffle Teams",
-    "headshot": "/img/staff/seese-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/seese-original.png",
-    "twitter": "seesemichaelj",
-    "linkedin": "seesemichaelj",
-    "github": "seesemichaelj",
-    "email" : "seese"
-  },
-  {
-    "name": "Scott Olson",
-    "position": "Director, Project Solutions & Talent",
-    "headshot": "/img/staff/scott-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/scott-original.png",
-    "twitter": "scottg_olson",
-    "linkedin": "scottgolson",
-    "github": "Olsoniter13085",
-    "email" : "scott"
-  },
-  {
-    "name": "Shay Magro",
-    "position": "Director of User Experience",
-    "headshot": "/img/staff/shay-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/shay-original.png",
-    "twitter": "shaymagro",
-    "linkedin": "shaymagro",
-    "github": "shayzee",
-    "fb": "ShayMagro",
-    "ig": "iamshayzeeriot",
-    "email" : "shay"
-  },
-  {
-    "name": "Tim Coulter",
-    "position": "Founder & CEO",
-    "headshot": "/img/staff/tim2-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/tim2-original.png",
-    "twitter": "timothyjcoulter",
-    "linkedin": "timothyjcoulter",
-    "github": "tcoulter",
-    "email" : "tim"
+    "name": "Micaiah Reid",
+    "position": "Blockchain Engineer",
+    "headshot": "../img/staff/micaiah2-truffle-bg.svg",
+    "github": "MicaiahReid",
+    "email" : "micaiah"
   },
   {
     "name": "Tyler Feickert",
     "position": "Blockchain Tools Engineer",
-    "headshot": "/img/staff/tyler-truffle-bg.svg",
-    "headshot2": "/img/staff/flip-image/tyler-original.png",
+    "headshot": "../img/staff/tyler-truffle-bg.svg",
     "github": "eggplantzzz",
     "email" : "tyler"
   },
   {
     "name": "Wes McVay",
-    "position": "Vice President, Global Strategic Partnerships",
-    "headshot2": "/img/staff/flip-image/wes-original.png",
-    "headshot": "/img/staff/wes-truffle-bg.svg",
+    "position": "Worker Bee",
+    "headshot": "../img/staff/wes-truffle-bg2-update.svg",
     "twitter": "Wes_McVay",
     "email" : "wes"
   }

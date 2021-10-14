@@ -55,7 +55,7 @@
     <p class="mt-4">
       <div id="guides" class="row row-cols-3 row-cols-md-3 g-4">
         {% for guide in config.extra.guides %}
-          <a href="/guides/{{ guide.route }}">
+          <a href="{{ guide.route }}">
             <div class="col" >
                 <div class="card ">
                     <div class="card-body">

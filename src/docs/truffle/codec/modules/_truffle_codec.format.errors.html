@@ -1,0 +1,994 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Errors | Truffle Decoding and Encoding</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Truffle Decoding and Encoding</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">Public</span>
+								<ul class="tsd-select-list">
+									<li data-value="public" class="selected">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-only-exported" checked />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">Globals</a>
+				</li>
+				<li>
+					<a href="_truffle_codec.html">@truffle/codec</a>
+				</li>
+				<li>
+					<a href="_truffle_codec.format.html">Format</a>
+				</li>
+				<li>
+					<a href="_truffle_codec.format.errors.html">Errors</a>
+				</li>
+			</ul>
+			<h1>Namespace Errors</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Contains the types for error and <code>ErrorResult</code> objects.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Elementary types Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.addresserrorresult.html" class="tsd-kind-icon">Address<wbr>Error<wbr>Result</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.addresspaddingerror.html" class="tsd-kind-icon">Address<wbr>Padding<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.boolerrorresult.html" class="tsd-kind-icon">Bool<wbr>Error<wbr>Result</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.booloutofrangeerror.html" class="tsd-kind-icon">Bool<wbr>Out<wbr>OfRange<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.boolpaddingerror.html" class="tsd-kind-icon">Bool<wbr>Padding<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.bytesdynamicerrorresult.html" class="tsd-kind-icon">Bytes<wbr>Dynamic<wbr>Error<wbr>Result</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.bytespaddingerror.html" class="tsd-kind-icon">Bytes<wbr>Padding<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.bytesstaticerrorresult.html" class="tsd-kind-icon">Bytes<wbr>Static<wbr>Error<wbr>Result</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.enumpaddingerror.html" class="tsd-kind-icon">Enum<wbr>Padding<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.fixederrorresult.html" class="tsd-kind-icon">Fixed<wbr>Error<wbr>Result</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.fixedpaddingerror.html" class="tsd-kind-icon">Fixed<wbr>Padding<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.interrorresult.html" class="tsd-kind-icon">Int<wbr>Error<wbr>Result</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.intpaddingerror.html" class="tsd-kind-icon">Int<wbr>Padding<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.stringerrorresult.html" class="tsd-kind-icon">String<wbr>Error<wbr>Result</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.ufixederrorresult.html" class="tsd-kind-icon">Ufixed<wbr>Error<wbr>Result</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.ufixedpaddingerror.html" class="tsd-kind-icon">Ufixed<wbr>Padding<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.uinterrorresult.html" class="tsd-kind-icon">Uint<wbr>Error<wbr>Result</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.uintpaddingerror.html" class="tsd-kind-icon">Uint<wbr>Padding<wbr>Error</a></li>
+							</ul>
+							<h3>Container types Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.arrayerrorresult.html" class="tsd-kind-icon">Array<wbr>Error<wbr>Result</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.mappingerrorresult.html" class="tsd-kind-icon">Mapping<wbr>Error<wbr>Result</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.structerrorresult.html" class="tsd-kind-icon">Struct<wbr>Error<wbr>Result</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.tupleerrorresult.html" class="tsd-kind-icon">Tuple<wbr>Error<wbr>Result</a></li>
+							</ul>
+							<h3>Function types Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.deployedfunctioninconstructorerror.html" class="tsd-kind-icon">Deployed<wbr>Function<wbr>InConstructor<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.functionexternalerrorresult.html" class="tsd-kind-icon">Function<wbr>External<wbr>Error<wbr>Result</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.functionexternalnonstackpaddingerror.html" class="tsd-kind-icon">Function<wbr>External<wbr>Non<wbr>Stack<wbr>Padding<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.functionexternalstackpaddingerror.html" class="tsd-kind-icon">Function<wbr>External<wbr>Stack<wbr>Padding<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.functioninternalerrorresult.html" class="tsd-kind-icon">Function<wbr>Internal<wbr>Error<wbr>Result</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.functioninternalpaddingerror.html" class="tsd-kind-icon">Function<wbr>Internal<wbr>Padding<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.malformedinternalfunctionerror.html" class="tsd-kind-icon">Malformed<wbr>Internal<wbr>Function<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.nosuchinternalfunctionerror.html" class="tsd-kind-icon">No<wbr>Such<wbr>Internal<wbr>Function<wbr>Error</a></li>
+							</ul>
+							<h3>Special container types (debugger-only) Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.magicerrorresult.html" class="tsd-kind-icon">Magic<wbr>Error<wbr>Result</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.typeerrorresult.html" class="tsd-kind-icon">Type<wbr>Error<wbr>Result</a></li>
+							</ul>
+							<h3>Generic errors Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.indexedreferencetypeerror.html" class="tsd-kind-icon">Indexed<wbr>Reference<wbr>Type<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.overlargepointersnotimplementederror.html" class="tsd-kind-icon">Overlarge<wbr>Pointers<wbr>Not<wbr>Implemented<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.overlongarraysandstringsnotimplementederror.html" class="tsd-kind-icon">Overlong<wbr>Arrays<wbr>And<wbr>Strings<wbr>Not<wbr>Implemented<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.readerrorbytes.html" class="tsd-kind-icon">Read<wbr>Error<wbr>Bytes</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.readerrorstack.html" class="tsd-kind-icon">Read<wbr>Error<wbr>Stack</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.readerrorstorage.html" class="tsd-kind-icon">Read<wbr>Error<wbr>Storage</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.unsupportedconstanterror.html" class="tsd-kind-icon">Unsupported<wbr>Constant<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.unusedimmutableerror.html" class="tsd-kind-icon">Unused<wbr>Immutable<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.userdefinedtypenotfounderror.html" class="tsd-kind-icon">User<wbr>Defined<wbr>Type<wbr>Not<wbr>Found<wbr>Error</a></li>
+							</ul>
+							<h3>Internal-use errors Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.internalfunctioninabierror.html" class="tsd-kind-icon">Internal<wbr>Function<wbr>InABIError</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.overlongarrayorstringstrictmodeerror.html" class="tsd-kind-icon">Overlong<wbr>Array<wbr>OrString<wbr>Strict<wbr>Mode<wbr>Error</a></li>
+							</ul>
+							<h3>User-defined elementary types Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.contracterrorresult.html" class="tsd-kind-icon">Contract<wbr>Error<wbr>Result</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.contractpaddingerror.html" class="tsd-kind-icon">Contract<wbr>Padding<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.enumerrorresult.html" class="tsd-kind-icon">Enum<wbr>Error<wbr>Result</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.enumnotfounddecodingerror.html" class="tsd-kind-icon">Enum<wbr>Not<wbr>Found<wbr>Decoding<wbr>Error</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.errors.enumoutofrangeerror.html" class="tsd-kind-icon">Enum<wbr>Out<wbr>OfRange<wbr>Error</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>General categories Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#decodererror" class="tsd-kind-icon">Decoder<wbr>Error</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#errorresult" class="tsd-kind-icon">Error<wbr>Result</a></li>
+							</ul>
+							<h3>Elementary types Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#addresserror" class="tsd-kind-icon">Address<wbr>Error</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#boolerror" class="tsd-kind-icon">Bool<wbr>Error</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#bytesdynamicerror" class="tsd-kind-icon">Bytes<wbr>Dynamic<wbr>Error</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#byteserrorresult" class="tsd-kind-icon">Bytes<wbr>Error<wbr>Result</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#bytesstaticerror" class="tsd-kind-icon">Bytes<wbr>Static<wbr>Error</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#elementaryerrorresult" class="tsd-kind-icon">Elementary<wbr>Error<wbr>Result</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#fixederror" class="tsd-kind-icon">Fixed<wbr>Error</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#interror" class="tsd-kind-icon">Int<wbr>Error</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#stringerror" class="tsd-kind-icon">String<wbr>Error</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#ufixederror" class="tsd-kind-icon">Ufixed<wbr>Error</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#uinterror" class="tsd-kind-icon">Uint<wbr>Error</a></li>
+							</ul>
+							<h3>Container types Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#arrayerror" class="tsd-kind-icon">Array<wbr>Error</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#mappingerror" class="tsd-kind-icon">Mapping<wbr>Error</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#structerror" class="tsd-kind-icon">Struct<wbr>Error</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#tupleerror" class="tsd-kind-icon">Tuple<wbr>Error</a></li>
+							</ul>
+							<h3>Function types Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#functionexternalerror" class="tsd-kind-icon">Function<wbr>External<wbr>Error</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#functioninternalerror" class="tsd-kind-icon">Function<wbr>Internal<wbr>Error</a></li>
+							</ul>
+							<h3>Special container types (debugger-only) Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#magicerror" class="tsd-kind-icon">Magic<wbr>Error</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#typeerrorunion" class="tsd-kind-icon">Type<wbr>Error<wbr>Union</a></li>
+							</ul>
+							<h3>Generic errors Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#dynamicdataimplementationerror" class="tsd-kind-icon">Dynamic<wbr>Data<wbr>Implementation<wbr>Error</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#errorforthrowing" class="tsd-kind-icon">Error<wbr>For<wbr>Throwing</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#genericerror" class="tsd-kind-icon">Generic<wbr>Error</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#readerror" class="tsd-kind-icon">Read<wbr>Error</a></li>
+							</ul>
+							<h3>Internal-use errors Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#internaluseerror" class="tsd-kind-icon">Internal<wbr>Use<wbr>Error</a></li>
+							</ul>
+							<h3>User-defined elementary types Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#contracterror" class="tsd-kind-icon">Contract<wbr>Error</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#enumerror" class="tsd-kind-icon">Enum<wbr>Error</a></li>
+							</ul>
+							<h3>Other Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="_truffle_codec.format.errors.html#byteslocation" class="tsd-kind-icon">Bytes<wbr>Location</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>General categories Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="decodererror" class="tsd-anchor"></a>
+					<h3>Decoder<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Decoder<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="_truffle_codec.format.errors.html#genericerror" class="tsd-signature-type">GenericError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#uinterror" class="tsd-signature-type">UintError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#interror" class="tsd-signature-type">IntError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#boolerror" class="tsd-signature-type">BoolError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#bytesstaticerror" class="tsd-signature-type">BytesStaticError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#bytesdynamicerror" class="tsd-signature-type">BytesDynamicError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#addresserror" class="tsd-signature-type">AddressError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#stringerror" class="tsd-signature-type">StringError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#fixederror" class="tsd-signature-type">FixedError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#ufixederror" class="tsd-signature-type">UfixedError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#arrayerror" class="tsd-signature-type">ArrayError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#mappingerror" class="tsd-signature-type">MappingError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#structerror" class="tsd-signature-type">StructError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#magicerror" class="tsd-signature-type">MagicError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#typeerrorunion" class="tsd-signature-type">TypeErrorUnion</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#tupleerror" class="tsd-signature-type">TupleError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#enumerror" class="tsd-signature-type">EnumError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#contracterror" class="tsd-signature-type">ContractError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#functionexternalerror" class="tsd-signature-type">FunctionExternalError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#functioninternalerror" class="tsd-signature-type">FunctionInternalError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#internaluseerror" class="tsd-signature-type">InternalUseError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L47">codec/lib/format/errors.ts:47</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>One of the underlying errors contained in an <a href="_truffle_codec.format.errors.html#errorresult">ErrorResult</a></p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="errorresult" class="tsd-anchor"></a>
+					<h3>Error<wbr>Result</h3>
+					<div class="tsd-signature tsd-kind-icon">Error<wbr>Result<span class="tsd-signature-symbol">:</span> <a href="_truffle_codec.format.errors.html#elementaryerrorresult" class="tsd-signature-type">ElementaryErrorResult</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.arrayerrorresult.html" class="tsd-signature-type">ArrayErrorResult</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.mappingerrorresult.html" class="tsd-signature-type">MappingErrorResult</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.structerrorresult.html" class="tsd-signature-type">StructErrorResult</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.magicerrorresult.html" class="tsd-signature-type">MagicErrorResult</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.typeerrorresult.html" class="tsd-signature-type">TypeErrorResult</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.tupleerrorresult.html" class="tsd-signature-type">TupleErrorResult</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.functionexternalerrorresult.html" class="tsd-signature-type">FunctionExternalErrorResult</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.functioninternalerrorresult.html" class="tsd-signature-type">FunctionInternalErrorResult</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L31">codec/lib/format/errors.ts:31</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A result which is an error rather than a value</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Elementary types Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="addresserror" class="tsd-anchor"></a>
+					<h3>Address<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Address<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.format.errors.addresspaddingerror.html" class="tsd-signature-type">AddressPaddingError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L270">codec/lib/format/errors.ts:270</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A address-specific error</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="boolerror" class="tsd-anchor"></a>
+					<h3>Bool<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Bool<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.format.errors.booloutofrangeerror.html" class="tsd-signature-type">BoolOutOfRangeError</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.boolpaddingerror.html" class="tsd-signature-type">BoolPaddingError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L178">codec/lib/format/errors.ts:178</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A bool-specific error</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="bytesdynamicerror" class="tsd-anchor"></a>
+					<h3>Bytes<wbr>Dynamic<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Bytes<wbr>Dynamic<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="_truffle_codec.format.errors.html#dynamicdataimplementationerror" class="tsd-signature-type">DynamicDataImplementationError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L252">codec/lib/format/errors.ts:252</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A dynamic-bytestring-specific error</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="byteserrorresult" class="tsd-anchor"></a>
+					<h3>Bytes<wbr>Error<wbr>Result</h3>
+					<div class="tsd-signature tsd-kind-icon">Bytes<wbr>Error<wbr>Result<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.format.errors.bytesstaticerrorresult.html" class="tsd-signature-type">BytesStaticErrorResult</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.bytesdynamicerrorresult.html" class="tsd-signature-type">BytesDynamicErrorResult</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L96">codec/lib/format/errors.ts:96</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An error result for a bytestring</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="bytesstaticerror" class="tsd-anchor"></a>
+					<h3>Bytes<wbr>Static<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Bytes<wbr>Static<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.format.errors.bytespaddingerror.html" class="tsd-signature-type">BytesPaddingError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L220">codec/lib/format/errors.ts:220</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A static-bytestring-specific error</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="elementaryerrorresult" class="tsd-anchor"></a>
+					<h3>Elementary<wbr>Error<wbr>Result</h3>
+					<div class="tsd-signature tsd-kind-icon">Elementary<wbr>Error<wbr>Result<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.format.errors.uinterrorresult.html" class="tsd-signature-type">UintErrorResult</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.interrorresult.html" class="tsd-signature-type">IntErrorResult</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.boolerrorresult.html" class="tsd-signature-type">BoolErrorResult</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#byteserrorresult" class="tsd-signature-type">BytesErrorResult</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.addresserrorresult.html" class="tsd-signature-type">AddressErrorResult</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.stringerrorresult.html" class="tsd-signature-type">StringErrorResult</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.fixederrorresult.html" class="tsd-signature-type">FixedErrorResult</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.ufixederrorresult.html" class="tsd-signature-type">UfixedErrorResult</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.enumerrorresult.html" class="tsd-signature-type">EnumErrorResult</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.contracterrorresult.html" class="tsd-signature-type">ContractErrorResult</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L79">codec/lib/format/errors.ts:79</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An error result for an elementary value</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="fixederror" class="tsd-anchor"></a>
+					<h3>Fixed<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Fixed<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.format.errors.fixedpaddingerror.html" class="tsd-signature-type">FixedPaddingError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L330">codec/lib/format/errors.ts:330</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A fixed-specific error</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="interror" class="tsd-anchor"></a>
+					<h3>Int<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Int<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.format.errors.intpaddingerror.html" class="tsd-signature-type">IntPaddingError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L146">codec/lib/format/errors.ts:146</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An int-specific error</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="stringerror" class="tsd-anchor"></a>
+					<h3>String<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">String<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="_truffle_codec.format.errors.html#dynamicdataimplementationerror" class="tsd-signature-type">DynamicDataImplementationError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L302">codec/lib/format/errors.ts:302</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A string-specific error</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="ufixederror" class="tsd-anchor"></a>
+					<h3>Ufixed<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Ufixed<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.format.errors.ufixedpaddingerror.html" class="tsd-signature-type">UfixedPaddingError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L351">codec/lib/format/errors.ts:351</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A ufixed-specific error</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="uinterror" class="tsd-anchor"></a>
+					<h3>Uint<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Uint<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.format.errors.uintpaddingerror.html" class="tsd-signature-type">UintPaddingError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L114">codec/lib/format/errors.ts:114</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A uint-specific error</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Container types Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="arrayerror" class="tsd-anchor"></a>
+					<h3>Array<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Array<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="_truffle_codec.format.errors.html#dynamicdataimplementationerror" class="tsd-signature-type">DynamicDataImplementationError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L481">codec/lib/format/errors.ts:481</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An arrray-specific error</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="mappingerror" class="tsd-anchor"></a>
+					<h3>Mapping<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Mapping<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">never</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L499">codec/lib/format/errors.ts:499</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A mapping-specific error (there are none)</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="structerror" class="tsd-anchor"></a>
+					<h3>Struct<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Struct<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="_truffle_codec.format.errors.html#dynamicdataimplementationerror" class="tsd-signature-type">DynamicDataImplementationError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L517">codec/lib/format/errors.ts:517</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A struct-specific error</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="tupleerror" class="tsd-anchor"></a>
+					<h3>Tuple<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Tuple<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="_truffle_codec.format.errors.html#dynamicdataimplementationerror" class="tsd-signature-type">DynamicDataImplementationError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L535">codec/lib/format/errors.ts:535</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A tuple-specific error</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Function types Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="functionexternalerror" class="tsd-anchor"></a>
+					<h3>Function<wbr>External<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Function<wbr>External<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.format.errors.functionexternalnonstackpaddingerror.html" class="tsd-signature-type">FunctionExternalNonStackPaddingError</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.functionexternalstackpaddingerror.html" class="tsd-signature-type">FunctionExternalStackPaddingError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L594">codec/lib/format/errors.ts:594</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An external-function specific error</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="functioninternalerror" class="tsd-anchor"></a>
+					<h3>Function<wbr>Internal<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Function<wbr>Internal<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.format.errors.functioninternalpaddingerror.html" class="tsd-signature-type">FunctionInternalPaddingError</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.nosuchinternalfunctionerror.html" class="tsd-signature-type">NoSuchInternalFunctionError</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.deployedfunctioninconstructorerror.html" class="tsd-signature-type">DeployedFunctionInConstructorError</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.malformedinternalfunctionerror.html" class="tsd-signature-type">MalformedInternalFunctionError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L649">codec/lib/format/errors.ts:649</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An internal-function specific error</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Special container types (debugger-only) Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="magicerror" class="tsd-anchor"></a>
+					<h3>Magic<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Magic<wbr>Error<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">never</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L553">codec/lib/format/errors.ts:553</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A magic-specific error (there are none)</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="typeerrorunion" class="tsd-anchor"></a>
+					<h3>Type<wbr>Error<wbr>Union</h3>
+					<div class="tsd-signature tsd-kind-icon">Type<wbr>Error<wbr>Union<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">never</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L572">codec/lib/format/errors.ts:572</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An error specific to type values (there are none);
+							this isn&#39;t called TypeError because that&#39;s not legal</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Generic errors Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="dynamicdataimplementationerror" class="tsd-anchor"></a>
+					<h3>Dynamic<wbr>Data<wbr>Implementation<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Dynamic<wbr>Data<wbr>Implementation<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.format.errors.overlongarraysandstringsnotimplementederror.html" class="tsd-signature-type">OverlongArraysAndStringsNotImplementedError</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.overlargepointersnotimplementederror.html" class="tsd-signature-type">OverlargePointersNotImplementedError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L738">codec/lib/format/errors.ts:738</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An error resulting from overlarge length or pointer values</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="errorforthrowing" class="tsd-anchor"></a>
+					<h3>Error<wbr>For<wbr>Throwing</h3>
+					<div class="tsd-signature tsd-kind-icon">Error<wbr>For<wbr>Throwing<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.format.errors.userdefinedtypenotfounderror.html" class="tsd-signature-type">UserDefinedTypeNotFoundError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#readerror" class="tsd-signature-type">ReadError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L748">codec/lib/format/errors.ts:748</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An error that may occur in a component other than the main
+							core of the decoder itself and thus may need to get thrown to it</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="genericerror" class="tsd-anchor"></a>
+					<h3>Generic<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Generic<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.format.errors.userdefinedtypenotfounderror.html" class="tsd-signature-type">UserDefinedTypeNotFoundError</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.indexedreferencetypeerror.html" class="tsd-signature-type">IndexedReferenceTypeError</a><span class="tsd-signature-symbol"> | </span><a href="_truffle_codec.format.errors.html#readerror" class="tsd-signature-type">ReadError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L718">codec/lib/format/errors.ts:718</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A type-non-specific error</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="readerror" class="tsd-anchor"></a>
+					<h3>Read<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Read<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.format.errors.unsupportedconstanterror.html" class="tsd-signature-type">UnsupportedConstantError</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.readerrorstack.html" class="tsd-signature-type">ReadErrorStack</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.readerrorbytes.html" class="tsd-signature-type">ReadErrorBytes</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.readerrorstorage.html" class="tsd-signature-type">ReadErrorStorage</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.unusedimmutableerror.html" class="tsd-signature-type">UnusedImmutableError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L727">codec/lib/format/errors.ts:727</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A read error</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Internal-use errors Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="internaluseerror" class="tsd-anchor"></a>
+					<h3>Internal<wbr>Use<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Internal<wbr>Use<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.format.errors.overlongarrayorstringstrictmodeerror.html" class="tsd-signature-type">OverlongArrayOrStringStrictModeError</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.internalfunctioninabierror.html" class="tsd-signature-type">InternalFunctionInABIError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L867">codec/lib/format/errors.ts:867</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Internal-use error</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>User-defined elementary types Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="contracterror" class="tsd-anchor"></a>
+					<h3>Contract<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Contract<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.format.errors.contractpaddingerror.html" class="tsd-signature-type">ContractPaddingError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L445">codec/lib/format/errors.ts:445</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A contract-specific error</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="enumerror" class="tsd-anchor"></a>
+					<h3>Enum<wbr>Error</h3>
+					<div class="tsd-signature tsd-kind-icon">Enum<wbr>Error<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.format.errors.enumoutofrangeerror.html" class="tsd-signature-type">EnumOutOfRangeError</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.enumpaddingerror.html" class="tsd-signature-type">EnumPaddingError</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.format.errors.enumnotfounddecodingerror.html" class="tsd-signature-type">EnumNotFoundDecodingError</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L387">codec/lib/format/errors.ts:387</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An enum-specific error</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Other Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="byteslocation" class="tsd-anchor"></a>
+					<h3>Bytes<wbr>Location</h3>
+					<div class="tsd-signature tsd-kind-icon">Bytes<wbr>Location<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"memory"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"calldata"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"eventdata"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"returndata"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"code"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/errors.ts#L799">codec/lib/format/errors.ts:799</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A byte-based location</p>
+						</div>
+					</div>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Modules</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.addresserrorresult.html" class="tsd-kind-icon">Address<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.addresspaddingerror.html" class="tsd-kind-icon">Address<wbr>Padding<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.arrayerrorresult.html" class="tsd-kind-icon">Array<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.boolerrorresult.html" class="tsd-kind-icon">Bool<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.booloutofrangeerror.html" class="tsd-kind-icon">Bool<wbr>Out<wbr>OfRange<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.boolpaddingerror.html" class="tsd-kind-icon">Bool<wbr>Padding<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.bytesdynamicerrorresult.html" class="tsd-kind-icon">Bytes<wbr>Dynamic<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.bytespaddingerror.html" class="tsd-kind-icon">Bytes<wbr>Padding<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.bytesstaticerrorresult.html" class="tsd-kind-icon">Bytes<wbr>Static<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.contracterrorresult.html" class="tsd-kind-icon">Contract<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.contractpaddingerror.html" class="tsd-kind-icon">Contract<wbr>Padding<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.deployedfunctioninconstructorerror.html" class="tsd-kind-icon">Deployed<wbr>Function<wbr>InConstructor<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.enumerrorresult.html" class="tsd-kind-icon">Enum<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.enumnotfounddecodingerror.html" class="tsd-kind-icon">Enum<wbr>Not<wbr>Found<wbr>Decoding<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.enumoutofrangeerror.html" class="tsd-kind-icon">Enum<wbr>Out<wbr>OfRange<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.enumpaddingerror.html" class="tsd-kind-icon">Enum<wbr>Padding<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.fixederrorresult.html" class="tsd-kind-icon">Fixed<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.fixedpaddingerror.html" class="tsd-kind-icon">Fixed<wbr>Padding<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.functionexternalerrorresult.html" class="tsd-kind-icon">Function<wbr>External<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.functionexternalnonstackpaddingerror.html" class="tsd-kind-icon">Function<wbr>External<wbr>Non<wbr>Stack<wbr>Padding<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.functionexternalstackpaddingerror.html" class="tsd-kind-icon">Function<wbr>External<wbr>Stack<wbr>Padding<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.functioninternalerrorresult.html" class="tsd-kind-icon">Function<wbr>Internal<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.functioninternalpaddingerror.html" class="tsd-kind-icon">Function<wbr>Internal<wbr>Padding<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.indexedreferencetypeerror.html" class="tsd-kind-icon">Indexed<wbr>Reference<wbr>Type<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.interrorresult.html" class="tsd-kind-icon">Int<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.intpaddingerror.html" class="tsd-kind-icon">Int<wbr>Padding<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.internalfunctioninabierror.html" class="tsd-kind-icon">Internal<wbr>Function<wbr>InABIError</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.magicerrorresult.html" class="tsd-kind-icon">Magic<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.malformedinternalfunctionerror.html" class="tsd-kind-icon">Malformed<wbr>Internal<wbr>Function<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.mappingerrorresult.html" class="tsd-kind-icon">Mapping<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.nosuchinternalfunctionerror.html" class="tsd-kind-icon">No<wbr>Such<wbr>Internal<wbr>Function<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.overlargepointersnotimplementederror.html" class="tsd-kind-icon">Overlarge<wbr>Pointers<wbr>Not<wbr>Implemented<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.overlongarrayorstringstrictmodeerror.html" class="tsd-kind-icon">Overlong<wbr>Array<wbr>OrString<wbr>Strict<wbr>Mode<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.overlongarraysandstringsnotimplementederror.html" class="tsd-kind-icon">Overlong<wbr>Arrays<wbr>And<wbr>Strings<wbr>Not<wbr>Implemented<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.readerrorbytes.html" class="tsd-kind-icon">Read<wbr>Error<wbr>Bytes</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.readerrorstack.html" class="tsd-kind-icon">Read<wbr>Error<wbr>Stack</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.readerrorstorage.html" class="tsd-kind-icon">Read<wbr>Error<wbr>Storage</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.stringerrorresult.html" class="tsd-kind-icon">String<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.structerrorresult.html" class="tsd-kind-icon">Struct<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.tupleerrorresult.html" class="tsd-kind-icon">Tuple<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.typeerrorresult.html" class="tsd-kind-icon">Type<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.ufixederrorresult.html" class="tsd-kind-icon">Ufixed<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.ufixedpaddingerror.html" class="tsd-kind-icon">Ufixed<wbr>Padding<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.uinterrorresult.html" class="tsd-kind-icon">Uint<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.uintpaddingerror.html" class="tsd-kind-icon">Uint<wbr>Padding<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.unsupportedconstanterror.html" class="tsd-kind-icon">Unsupported<wbr>Constant<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.unusedimmutableerror.html" class="tsd-kind-icon">Unused<wbr>Immutable<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.errors.userdefinedtypenotfounderror.html" class="tsd-kind-icon">User<wbr>Defined<wbr>Type<wbr>Not<wbr>Found<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#addresserror" class="tsd-kind-icon">Address<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#arrayerror" class="tsd-kind-icon">Array<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#boolerror" class="tsd-kind-icon">Bool<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#bytesdynamicerror" class="tsd-kind-icon">Bytes<wbr>Dynamic<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#byteserrorresult" class="tsd-kind-icon">Bytes<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#byteslocation" class="tsd-kind-icon">Bytes<wbr>Location</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#bytesstaticerror" class="tsd-kind-icon">Bytes<wbr>Static<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#contracterror" class="tsd-kind-icon">Contract<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#decodererror" class="tsd-kind-icon">Decoder<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#dynamicdataimplementationerror" class="tsd-kind-icon">Dynamic<wbr>Data<wbr>Implementation<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#elementaryerrorresult" class="tsd-kind-icon">Elementary<wbr>Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#enumerror" class="tsd-kind-icon">Enum<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#errorforthrowing" class="tsd-kind-icon">Error<wbr>For<wbr>Throwing</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#errorresult" class="tsd-kind-icon">Error<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#fixederror" class="tsd-kind-icon">Fixed<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#functionexternalerror" class="tsd-kind-icon">Function<wbr>External<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#functioninternalerror" class="tsd-kind-icon">Function<wbr>Internal<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#genericerror" class="tsd-kind-icon">Generic<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#interror" class="tsd-kind-icon">Int<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#internaluseerror" class="tsd-kind-icon">Internal<wbr>Use<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#magicerror" class="tsd-kind-icon">Magic<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#mappingerror" class="tsd-kind-icon">Mapping<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#readerror" class="tsd-kind-icon">Read<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#stringerror" class="tsd-kind-icon">String<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#structerror" class="tsd-kind-icon">Struct<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#tupleerror" class="tsd-kind-icon">Tuple<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#typeerrorunion" class="tsd-kind-icon">Type<wbr>Error<wbr>Union</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#ufixederror" class="tsd-kind-icon">Ufixed<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.errors.html#uinterror" class="tsd-kind-icon">Uint<wbr>Error</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

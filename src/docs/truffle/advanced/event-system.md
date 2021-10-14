@@ -1,5 +1,5 @@
 ---
-title: Truffle | Truffle Event System
+title: Truffle Event System
 layout: docs.hbs
 ---
 

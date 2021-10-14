@@ -1,5 +1,5 @@
 ---
-title: Drizzle | Drizzle State
+title: Drizzle State
 layout: docs.hbs
 ---
 # Drizzle State
