@@ -349,7 +349,7 @@ to recognize the plugin. For more information, see [Third-Party Plugin Commands]
 Run JavaScript and Solidity tests.
 
 ```shell
-truffle test [<test_file>] [--compile-all[-debug]] [--network <name>] [--verbose-rpc] [--show-events] [--debug] [--debug-global <identifier>] [--bail] [--stacktrace[-extra]]
+truffle test [<test_file>] [--compile-all[-debug]|--compile-none] [--migrate-none] [--network <name>] [--verbose-rpc] [--show-events] [--debug] [--debug-global <identifier>] [--bail] [--stacktrace[-extra]]
 ```
 
 Runs some or all tests within the `test/` directory as specified. See the section on [Testing your contracts](/docs/testing/testing-your-contracts) for more information.
@@ -361,6 +361,8 @@ Options:
 * `<test_file>`: Name of the test file to be run. Can include path information if the file does not exist in the current directory.
 * `--compile-all`: Compile all contracts instead of intelligently choosing which contracts need to be compiled.
 * `--compile-all-debug`: Like `--compile-all`, but compiles contracts in debug mode for extra information.  Has no effect on Solidity <0.6.3.
+* `--compile-none`: Skip all contract compilations. This option is not intended for use with most tests, which will require compilation.
+* `--migrate-none`: Skip all contract migrations. This option could be useful if you will be deploying your own contracts and don't want Truffle to do this automatically for you.
 * `--network <name>`: Specify the network to use, using artifacts specific to that network. Network name must exist in the configuration.
 * `--verbose-rpc`: Log communication between Truffle and the Ethereum client.
 * `--show-events`: Log all contract events.
