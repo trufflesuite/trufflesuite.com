@@ -333,7 +333,7 @@ Then we define three contract-wide variables:
 
 To test the `adopt()` function, recall that upon success it returns the given `petId`. We can ensure an ID was returned and that it's correct by comparing the return value of `adopt()` to the ID we passed in.
 
-1. Add the following function within the `TestAdoption.sol` smart contract, after the declaration of `Adoption`:
+1. Add the following function within the `TestAdoption.sol` smart contract, after the declaration of `expectedPetId`:
 
    ```solidity
    // Testing the adopt() function
