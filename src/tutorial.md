@@ -308,7 +308,7 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
     // The id of the pet that will be used for testing
     uint expectedPetId = 8;
 
-    //The expected owner of adopted pet is this contract
+    // The expected owner of adopted pet is this contract
     address expectedAdopter = address(this);
 
   }
