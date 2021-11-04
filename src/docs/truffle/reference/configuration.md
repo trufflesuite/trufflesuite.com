@@ -92,8 +92,10 @@ networks: {
     port: 80,
     network_id: 1,        // Ethereum public network
     // optional config values:
-    // gas
-    // gasPrice
+    // gas                  -
+    // gasPrice             - use gas and gasPrice if creating type 0 transactions
+    // maxFeePerGas         -
+    // maxPriorityFeePerGas - use maxFeePerGas and maxPriorityFeePerGas if creating type 2 transactions
     // from - default address to use for any transaction Truffle makes during migrations
     // provider - web3 provider instance Truffle should use to talk to the Ethereum network.
     //          - function that returns a web3 provider instance (see below.)
