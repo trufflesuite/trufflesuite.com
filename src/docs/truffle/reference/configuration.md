@@ -95,7 +95,7 @@ networks: {
     // gas                  -
     // gasPrice             - use gas and gasPrice if creating type 0 transactions
     // maxFeePerGas         -
-    // maxPriorityFeePerGas - use maxFeePerGas and maxPriorityFeePerGas if creating type 2 transactions
+    // maxPriorityFeePerGas - use maxFeePerGas and maxPriorityFeePerGas if creating type 2 transactions (https://eips.ethereum.org/EIPS/eip-1559)
     // from - default address to use for any transaction Truffle makes during migrations
     // provider - web3 provider instance Truffle should use to talk to the Ethereum network.
     //          - function that returns a web3 provider instance (see below.)
