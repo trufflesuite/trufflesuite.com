@@ -251,7 +251,11 @@ This command will display a list of all the current watch expressions and breakp
 
 ### (v) display variables
 
-This command will display the current variables and their values.
+This command will display the current variables and their values, but does not step to the next instruction. Use this when you'd like to see the current variables and their values after navigating through the transaction with the logical commands described above.
+
+This command can also remove variables and their values from the variables display. If you want to remove solidity builtins variables, global constants, contract variables, or local variables, simply type `v -builtins` to remove solidity builtins along with the other information from the display, `v -global` for global constants, `v -contract` for contract variables, or `v -local` for local variables.  Each of these can also be abbreviated, e.g. `v -bui`, `v -glo`, `v -con`, and `v -loc`; they can also be combined, e.g. `v -bui -glo`.
+
+If variables are removed from the variables display, you can still display them without a sign; e.g., `v bui` will cause solidity builtins variables to be displayed.  You can also add these variables back in to the display with `+`; e.g., `v +bui` will make it so that solidity builtins variables will once again always be displayed when you enter `v`.  All of these options can again be combined.
 
 ### (T) unload transaction
 
