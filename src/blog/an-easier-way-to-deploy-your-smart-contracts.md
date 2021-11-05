@@ -122,7 +122,7 @@ To get started with Truffle Teams, you must first connect your GitHub repository
 
 ### Setup Your Migrations Scripts
 
-If you haven't built a Truffle project, you should really give it a try; the [Pet Shop Tutorial](/tutorials/pet-shop) is a great place to start as it gives a good survey of the different facets of Truffle, including the `migration` scripts. These scripts let you define the behavior of deploying your smart contracts using a language you're already familiar with. In the tutorial, you deploy a single contract, but it has the flexibility to do so much more (i.e. you can deploy one contract, get its address, and use that in the constructor when deploying another contract).
+If you haven't built a Truffle project, you should really give it a try; the [Pet Shop Tutorial](/tutorial) is a great place to start as it gives a good survey of the different facets of Truffle, including the `migration` scripts. These scripts let you define the behavior of deploying your smart contracts using a language you're already familiar with. In the tutorial, you deploy a single contract, but it has the flexibility to do so much more (i.e. you can deploy one contract, get its address, and use that in the constructor when deploying another contract).
 
 Setting up these scripts is part of the development lifecycle of creating a Truffle project, so I won't cover that here. But that's great! You should already be done with this step!!
 

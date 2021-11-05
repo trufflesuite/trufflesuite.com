@@ -1,4 +1,4 @@
-Here at Truffle we want to make Ethereum development accessible to developers of all stripes. To that end, today we're releasing a new tutorial called [Pet Shop](/tutorials/pet-shop). It covers the entire local development process, start to finish. For added fun, we've tied the whole thing together within the narrative of creating a pet adoption dapp for a local pet shop owner.
+Here at Truffle we want to make Ethereum development accessible to developers of all stripes. To that end, today we're releasing a new tutorial called [Pet Shop](/tutorial). It covers the entire local development process, start to finish. For added fun, we've tied the whole thing together within the narrative of creating a pet adoption dapp for a local pet shop owner.
 
 Here's a preview of what's covered:
 
@@ -15,7 +15,7 @@ By then end of the tutorial you'll have a shiny new dapp with which you can rese
 
 In the future we'll be building on this tutorial with others such as deploying to live testnets and additional, more advanced functionality. We hope you enjoy and thank everyone for your support!
 
-Got stuck? The fastest way to get help is from our [community Gitter channel](https://github.com/ConsenSys/truffle), where hundreds of your fellow Trufflers congregate to answer your questions. 
+Got stuck? The fastest way to get help is from our [community Gitter channel](https://github.com/ConsenSys/truffle), where hundreds of your fellow Trufflers congregate to answer your questions.
 
 Love it? Send us your feedback on [Twitter](https://twitter.com/trufflesuite).
 

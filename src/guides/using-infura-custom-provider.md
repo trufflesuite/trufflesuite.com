@@ -8,7 +8,7 @@ For security reasons, Infura does not manage your private keys, which means Infu
 
 However, Truffle can sign transactions through the use of its `HDWalletProvider`. This provider can handle the transaction signing as well as the connection to the Ethereum network. ([Read more about HDWalletProvider](https://github.com/trufflesuite/truffle/tree/develop/packages/hdwallet-provider).)
 
-This tutorial will show you how to use Infura to migrate an existing dapp to an Ethereum network supported by Infura. In this specific instance, we'll migrate to Ropsten. We'll assume that you already have a dapp to migrate. If you want a test dapp, feel free to use our [Pet Shop](/tutorials/pet-shop) tutorial dapp.
+This tutorial will show you how to use Infura to migrate an existing dapp to an Ethereum network supported by Infura. In this specific instance, we'll migrate to Ropsten. We'll assume that you already have a dapp to migrate. If you want a test dapp, feel free to use our [Pet Shop](/tutorial) tutorial dapp.
 
 ## Install HDWalletProvider
 
