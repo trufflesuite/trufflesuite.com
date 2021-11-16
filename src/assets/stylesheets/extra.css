@@ -376,6 +376,20 @@ footer .hs-form ul.hs-error-msgs {
  }
 }
 
+/* custom */
+
+.feature-icon-sm {
+  max-width: 7.5rem;
+}
+
+.feature-icon-md {
+  max-width: 11.5rem;
+}
+
+.feature-icon-lg {
+  max-width: 15rem;
+}
+
 .banner-taste {
   position: relative;
   background-image: url("/img/truffle-accent.svg");
