@@ -67,6 +67,13 @@ a:hover {
   color: var(--mint);
 }
 
+pre {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.5em;
+}
+
 @media screen and (max-width: 76.1875em) {
   .md-nav--primary .md-nav__title,
   .md-nav--primary .md-nav__title~.md-nav__list
@@ -88,6 +95,10 @@ a:hover {
 .md-nav__link, .md-nav__item .md-nav__link--active,
 .md-nav--primary .md-nav__item--active>.md-nav__link {
   color: var(--md-primary-fg-color--light);
+}
+
+[data-md-component="announce"], .md-tabs {
+  z-index: 1000;
 }
 
 /* material overrides */
@@ -200,6 +211,11 @@ a:hover {
   height: auto;
   margin-top: .5rem;
   margin-right: .5rem;
+}
+
+.bd-milk-chocolate {
+  background-color: var(--light-chocolate);
+  color: var(--milk);
 }
 
 /* bootstrap overrides */
@@ -341,4 +357,47 @@ footer .hs-form ul.hs-error-msgs {
 .hs-form-docs input[type="text"], .hs-form-docs input[type="email"] {
   background-color: #f8f5f0;
   color: #495057;
+}
+
+.truffle-feature-row h4 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+.truffle-feature-row img {
+  max-height: 400px;
+}
+@media (max-width: 767.98px) {
+  .truffle-feature-row img {
+    max-height: 260px;
+    margin-bottom: 2rem;
+ }
+}
+
+.banner-taste {
+  position: relative;
+  background-image: url("/img/truffle-accent.svg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 10rem 0;
+  margin-top: 4rem;
+}
+.banner-taste.truffle {
+  background-image: url("/img/truffle-accent.svg");
+  background-position: -5% center;
+  background-size: 100vh;
+  border-top: 1px solid #3fe0c5;
+}
+.banner-taste.ganache {
+  background-image: url("/img/ganache-accent.png");
+  background-repeat: repeat-x;
+}
+.banner-taste.drizzle {
+  background-image: url("/img/drizzle-accent.svg");
+  background-position: -5% center;
+  background-size: 80vh;
+  border-top: 1px solid #e911bd;
 }

@@ -1,99 +1,179 @@
----
-title: Truffle
-layout: layout.hbs
-social-description: Open source framework for rapid Dapp development and Smart Contract Life Cycle Management. Truffle is the most popular dev framework for Ethereum and makes your life easier!
----
-<main role="main" class="container">
-  <div class="row align-items-center truffle-heading-row">
-    <div class="col-md-6">
-      <img class="truffle-banner-image" src="img/truffle-header.svg" alt="Truffle" title="Truffle" />
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+  {{ super() }}
+
+  <!-- Additional styles for landing page -->
+  <style>
+
+    /* Remove spacing, as we cannot hide it completely */
+    .md-main__inner {
+      margin: 0;
+    }
+
+    /* Hide main content for now */
+    .md-content {
+      display: none;
+    }
+
+    /* Hide table of contents */
+    @media screen and (min-width: 60em) {
+      .md-sidebar--secondary {
+        display: none;
+      }
+    }
+
+    /* Hide navigation */
+    @media screen and (min-width: 76.25em) {
+      .md-sidebar--primary {
+        display: none;
+      }
+    }
+
+    .truffle-heading-row {
+	 position: relative;
+	 max-height: calc(100vh - 60px);
+    }
+    .truffle-heading-row .truffle-banner-image {
+        margin-top: -40%;
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .truffle-heading-row .truffle-banner-image {
+            margin-top: 0;
+        }
+    }
+    @media (max-width: 767.98px) {
+        .truffle-heading-row .truffle-banner-image {
+            margin-top: -60%;
+        }
+    }
+    .truffle-heading-row .github-button-wrapper {
+        margin-left: 0.8rem;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .truffle-heading-row .truffle-down-arrow {
+        font-size: 2rem;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        line-height: 0.1rem;
+        margin-bottom: 2rem;
+    }
+    @media (max-width: 767.98px) {
+        .truffle-heading-row {
+            height: auto;
+            margin-bottom: 4rem;
+        }
+    }
+    
+
+  </style>
+
+<section>
+    <div class="container p-5">
+    <div class="row align-items-center truffle-heading-row">
+        <div class="col-md-6">
+        <img class="truffle-banner-image" src="/img/truffle-header.svg" alt="Truffle" title="Truffle" />
+        </div>
+
+        <div class="col-md-6">
+        <h1 class="text-truffle"><span class="narrow">T</span>RUFFLE</h1>
+        <h2>SMART CONTRACTS MADE SWEETER</h2>
+        <p>Truffle is the most popular development framework for Ethereum with a mission to make your life a whole lot easier.</p>
+        <pre class="bd-milk-chocolate"><code>npm install truffle -g</code></pre>
+        <br/>
+        <a href="https://github.com/trufflesuite/truffle" class="btn btn-truffle">GITHUB REPO</a>
+        <a href="/docs/truffle/overview" class="btn btn-truffle">DOCS</a>
+        <div class="github-button-wrapper">
+            <a class="github-button" href="https://github.com/trufflesuite/truffle" data-size="large"  data-show-count="true" aria-label="Star trufflesuite/truffle on GitHub">Star</a>
+        </div>
+        </div>
+
+        <!--<p class="truffle-down-arrow d-none d-md-block" id="headerArrow"><i class="fas fa-chevron-down"></i></p>-->
     </div>
 
-    <div class="col-md-6">
-      <h1 class="text-truffle"><span class="narrow">T</span>RUFFLE</h1>
-      <h2>SMART CONTRACTS MADE SWEETER</h2>
-      <p>Truffle is the most popular development framework for Ethereum with a mission to make your life a whole lot easier.</p>
-      <pre class="bd-milk-chocolate"><code>npm install truffle -g</code></pre>
-      <br/>
-      <a href="https://github.com/trufflesuite/truffle" class="btn btn-truffle">GITHUB REPO</a>
-      <a href="/docs/truffle/overview" class="btn btn-truffle">DOCS</a>
-      <div class="github-button-wrapper">
-        <a class="github-button" href="https://github.com/trufflesuite/truffle" data-size="large"  data-show-count="true" aria-label="Star trufflesuite/truffle on GitHub">Star</a>
-      </div>
+    <div class="row mt-5 mb-5" id="contentBegins">
+        <div class="col text-center">
+            <h1 class="text-truffle">FEATURES</h1>
+        </div>
     </div>
 
-    <!--<p class="truffle-down-arrow d-none d-md-block" id="headerArrow"><i class="fas fa-chevron-down"></i></p>-->
-  </div>
+    <div class="row align-items-center truffle-feature-row mb-5">
+        <div class="col-md-6">
+            <img src="/img/truffle-icon-1.svg" alt="Truffle Feature" title="Truffle Feature" class="img-fluid" />
+        </div>
 
-  <div class="row mt-5 mb-6" id="contentBegins">
-    <div class="col text-center">
-      <h1 class="text-truffle">FEATURES</h1>
-    </div>
-  </div>
-
-  <div class="row align-items-center truffle-feature-row mb-6">
-    <div class="col-md-6">
-      <img src="img/truffle-icon-1.svg" alt="Truffle Feature" title="Truffle Feature" />
-    </div>
-
-    <div class="col-md-6">
-      <h4 class="mb-3 text-truffle">Smart Contract Lifecycle Management</h4>
-      <p class="mb-1">Truffle takes care of managing your contract artifacts so you don't have to. Includes support for custom deployments, library linking and complex Ethereum applications.</p>
-      <a class="link-truffle" href="/docs/truffle/getting-started/compiling-contracts">Learn More</a>
-      
-      <h4 class="mt-4 mt-md-5 mb-3 text-truffle">Automated Contract Testing</h4>
-      <p class="mb-1">Bring your dapp development to the 21st century. Write automated tests for your contracts in both JavaScript and Solidity, and get your contracts developed quickly.</p>
-      <a class="link-truffle" href="/docs/truffle/testing/testing-your-contracts">Learn More</a>
-    </div>
-  </div>
-
-  <div class="row align-items-center truffle-feature-row mb-6">
-    <div class="col-md-6 order-md-7">
-      <img src="img/truffle-icon-2.svg" alt="Truffle Feature" title="Truffle Feature" />
-    </div>
-        
-    <div class="col-md-6 order-md-1">
-      <h4 class="mb-3 text-truffle">Scriptable Deployment &amp; Migrations</h4>
-      <p class="mb-1">Write simple, manageable deployment scripts that acknowledge your application will change over time. Foster your dapp's evolution and ensure you can maintain your contracts far into the future.</p>
-      <a class="link-truffle" href="/docs/truffle/getting-started/running-migrations">Learn More</a>
-      
-      <h4 class="mt-4 mt-md-5 mb-3 text-truffle">Simple Network Management</h4>
-      <p class="mb-1">Don't manage network artifacts ever again. Let Truffle do it for you, and put your focus on dapp development where it belongs.</p>
-      <a class="link-truffle" href="/docs/truffle/advanced/networks-and-app-deployment">Learn More</a>
-    </div>
-  </div>  
-
-  <div class="row align-items-center truffle-feature-row mb-7">
-    <div class="col-md-6">
-      <img src="img/truffle-icon-3.svg" alt="Truffle Feature" title="Truffle Feature" />
+        <div class="col-md-6">
+            <h4 class="mb-3 text-truffle">Smart Contract Lifecycle Management</h4>
+            <p class="mb-1">Truffle takes care of managing your contract artifacts so you don't have to. Includes support for custom deployments, library linking and complex Ethereum applications.</p>
+            <a class="link-truffle" href="/docs/truffle/getting-started/compiling-contracts">Learn More</a>
+            
+            <h4 class="mt-4 mt-md-5 mb-3 text-truffle">Automated Contract Testing</h4>
+            <p class="mb-1">Bring your dapp development to the 21st century. Write automated tests for your contracts in both JavaScript and Solidity, and get your contracts developed quickly.</p>
+            <a class="link-truffle" href="/docs/truffle/testing/testing-your-contracts">Learn More</a>
+        </div>
     </div>
 
-    <div class="col-md-6">
-      <h4 class="mb-3 text-truffle">Powerful Interactive Console</h4>
-      <p class="mb-1">Use Truffle to save time and talk to your contracts via an interactive console, which includes access to all your built contracts and all available Truffle commands.</p>
-      <a class="link-truffle" href="/docs/truffle/getting-started/using-truffle-develop-and-the-console">Learn More</a>
-      
-      <h4 class="mt-4 mt-md-5 mb-3 text-truffle">External Script Runner</h4>
-      <p class="mb-1">Use Truffle to bootstrap your contracts and run a network-aware script, without hassle. </p>
-      <a class="link-truffle" href="/docs/truffle/getting-started/writing-external-scripts">Learn More</a>
+    <div class="row align-items-center truffle-feature-row mb-5">
+        <div class="col-md-6">
+            <h4 class="mb-3 text-truffle">Scriptable Deployment &amp; Migrations</h4>
+            <p class="mb-1">Write simple, manageable deployment scripts that acknowledge your application will change over time. Foster your dapp's evolution and ensure you can maintain your contracts far into the future.</p>
+            <a class="link-truffle" href="/docs/truffle/getting-started/running-migrations">Learn More</a>
+            
+            <h4 class="mt-4 mt-md-5 mb-3 text-truffle">Simple Network Management</h4>
+            <p class="mb-1">Don't manage network artifacts ever again. Let Truffle do it for you, and put your focus on dapp development where it belongs.</p>
+            <a class="link-truffle" href="/docs/truffle/advanced/networks-and-app-deployment">Learn More</a>
+        </div>
+
+        <div class="col-md-6">
+            <img src="/img/truffle-icon-2.svg" alt="Truffle Feature" title="Truffle Feature" />
+        </div>
+    </div>  
+
+    <div class="row align-items-center truffle-feature-row mb-7">
+        <div class="col-md-6">
+            <img src="/img/truffle-icon-3.svg" alt="Truffle Feature" title="Truffle Feature" />
+        </div>
+
+        <div class="col-md-6">
+            <h4 class="mb-3 text-truffle">Powerful Interactive Console</h4>
+            <p class="mb-1">Use Truffle to save time and talk to your contracts via an interactive console, which includes access to all your built contracts and all available Truffle commands.</p>
+            <a class="link-truffle" href="/docs/truffle/getting-started/using-truffle-develop-and-the-console">Learn More</a>
+            
+            <h4 class="mt-4 mt-md-5 mb-3 text-truffle">External Script Runner</h4>
+            <p class="mb-1">Use Truffle to bootstrap your contracts and run a network-aware script, without hassle. </p>
+            <a class="link-truffle" href="/docs/truffle/getting-started/writing-external-scripts">Learn More</a>
+        </div>
     </div>
-  </div>
-</main>
+    </main>
+
+</div>
+</section>
 
 <div class="banner-taste truffle">
-  <div class="container">
-    <div class="row">
-      <div class="col text-center">
-        <h1 class="text-truffle">Like the taste?</h1>
-        <h2>The recipe is open source!</h2>
-        <p>The full source code of Truffle is on <a href="https://github.com/trufflesuite/truffle">GitHub</a>! We welcome all contributions and feature suggestions.</p>
-      </div>
+    <div class="container">
+        <div class="row">
+        <div class="col text-center">
+            <h1 class="text-truffle">Like the taste?</h1>
+            <h2>The recipe is open source!</h2>
+            <p>The full source code of Truffle is on <a href="https://github.com/trufflesuite/truffle">GitHub</a>! We welcome all contributions and feature suggestions.</p>
+        </div>
+        </div>
     </div>
-  </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/scroll-arrow.js"></script>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->
+
+{% block footer %}
+    {% include "partials/footer.html" %}
+{% endblock %}
