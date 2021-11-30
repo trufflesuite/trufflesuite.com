@@ -2,7 +2,7 @@
   {
     "name": "Amal Sudama",
     "position": "Blockchain Tools Engineer",
-    "headshot": "../img/staff/amal-truffle-bg.svg",
+    "headshot": "/img/staff/amal-truffle-bg.svg",
     "twitter": "cdsudama",
     "github": "cds-amal",
     "linkedin": "csudama",
@@ -10,16 +10,24 @@
   },
   {
     "name": "Bryan Combs",
-    "position": "Digital Marketing Designer",
-    "headshot": "../img/staff/bryan-truffle-bg.svg",
+    "position": "Senior Marketing Designer",
+    "headshot": "/img/staff/bryan-truffle-bg.svg",
     "twitter": "spudnicky",
     "github": "combsiez",
     "email" : "bryan"
   },
   {
+    "name": "David Killen",
+    "position": "Senior Blockchain Engineer",
+    "headshot": "/img/staff/dave-killen-truffle-bg.svg",
+    "twitter": "DavidAKillen",
+    "github": "dkillen",
+    "email" : "david.k"
+  },
+  {
     "name": "David Murdoch",
     "position": "Software Development Lead",
-    "headshot": "../img/staff/david-truffle-bg.svg",
+    "headshot": "/img/staff/david-truffle-bg.svg",
     "twitter": "atdavidmurdoch",
     "github": "davidmurdoch",
     "email" : "david"
@@ -27,14 +35,14 @@
   {
     "name": "Dongming Hwang",
     "position": "Blockchain Engineer",
-    "headshot": "../img/staff/dongming-truffle-bg.svg",
+    "headshot": "/img/staff/dongming-truffle-bg.svg",
     "github": "dongming",
     "email" : "dongming"
   },
   {
     "name": "Faina Shalts",
     "position": "Senior Blockchain Engineer",
-    "headshot": "../img/staff/faina-truffle-bg.svg",
+    "headshot": "/img/staff/faina-truffle-bg.svg",
     "twitter": "bitsplaining",
     "linkedin": "fainashalts",
     "github": "fainashalts",
@@ -43,7 +51,7 @@
   {
     "name": "gnidan (Nick D'Andrea)",
     "position": "Head of Engineering",
-    "headshot": "../img/staff/gnidan-truffle-bg.svg",
+    "headshot": "/img/staff/gnidan-truffle-bg.svg",
     "twitter": "gnidan",
     "github": "gnidan",
     "email" : "gnidan"
@@ -51,14 +59,14 @@
   {
     "name": "Harry Altman",
     "position": "Debugger Engineer",
-    "headshot": "../img/staff/harry-truffle-bg.svg",
+    "headshot": "/img/staff/harry-truffle-bg.svg",
     "twitter": "haltman-at",
     "email" : "harry"
   },
   {
     "name": "Kevin Bluer",
-    "position": "Senior Blockchain Engineer",
-    "headshot": "../img/staff/kevin-truffle-bg.svg",
+    "position": "Head of Curriculum & Training",
+    "headshot": "/img/staff/kevin-truffle-bg.svg",
     "twitter": "kevinbluer",
     "github": "kevinbluer",
     "email" : "kevin"
@@ -66,7 +74,7 @@
   {
     "name": "Kevin Weaver",
     "position": "Senior Blockchain Engineer",
-    "headshot": "../img/staff/kevin-weaver-truffle-bg2.svg",
+    "headshot": "/img/staff/kevin-weaver-truffle-bg2.svg",
     "twitter": "kevin_weaver",
     "github": "kevinweaver",
     "email" : "kevin.w"
@@ -74,28 +82,42 @@
   {
     "name": "Lee Faria",
     "position": "Blockchain Engineer",
-    "headshot": "../img/staff/lee2-truffle-bg.svg",
+    "headshot": "/img/staff/lee2-truffle-bg.svg",
     "github": "leeftk",
     "email" : "lee"
   },
   {
+    "name": "Liang Liang",
+    "position": "Associate Blockchain Engineer",
+    "headshot": "/img/staff/liangliang-truffle-bg.svg",
+    "github": "lsqproduction",
+    "email" : "liang"
+  },
+  {
     "name": "Micaiah Reid",
     "position": "Blockchain Engineer",
-    "headshot": "../img/staff/micaiah2-truffle-bg.svg",
+    "headshot": "/img/staff/micaiah2-truffle-bg.svg",
     "github": "MicaiahReid",
     "email" : "micaiah"
   },
   {
+    "name": "Sukanya Parashar",
+    "position": "Blockchain Engineer",
+    "headshot": "/img/staff/sukanya-truffle-bg.svg",
+    "github": "sukanyaparashar",
+    "email" : "sukanya"
+  },
+  {
     "name": "Tyler Feickert",
     "position": "Blockchain Tools Engineer",
-    "headshot": "../img/staff/tyler-truffle-bg.svg",
+    "headshot": "/img/staff/tyler-truffle-bg.svg",
     "github": "eggplantzzz",
     "email" : "tyler"
   },
   {
     "name": "Wes McVay",
-    "position": "Worker Bee",
-    "headshot": "../img/staff/wes-truffle-bg2-update.svg",
+    "position": "Head of Truffle",
+    "headshot": "/img/staff/wes-truffle-bg2-update.svg",
     "twitter": "Wes_McVay",
     "email" : "wes"
   }
