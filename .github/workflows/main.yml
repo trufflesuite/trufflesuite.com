@@ -14,8 +14,9 @@ jobs:
         uses: actions/checkout@v1
 
       - name: Deploy docs
-        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        uses: mhausenblas/mkdocs-deploy-gh-pages@1.20
         env:
+          CUSTOM_DOMAIN: "staging.trufflesuite.com"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TRUFFLESUITE_COM_GH_API_USERNAME: ${{ secrets.TRUFFLESUITE_COM_GH_API_USERNAME }}
           TRUFFLESUITE_COM_GH_API_KEY: ${{ secrets.TRUFFLESUITE_COM_GH_API_KEY }}

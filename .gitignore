@@ -1,4 +1,4 @@
 site
-docs/boxes/*/
+src/boxes/*/
 __pycache__
 .DS_Store

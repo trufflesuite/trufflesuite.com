@@ -91,6 +91,8 @@ def on_post_build(env):
         json_response = response.json()
 
         try:
+            print(json_response)
+
             markdown = base64.b64decode(json_response['content'])
 
             with open('src/boxes/box.html.jinja2') as file_:
@@ -102,7 +104,7 @@ def on_post_build(env):
                 f.write(outputText)
 
         except Exception as ex:
-            print(ex)
+            print('error: ' + repr(ex))
 
     # rebuild?
     conf = env.conf
