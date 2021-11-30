@@ -141,9 +141,139 @@ truffle preserve ./path --my-server
 ```
 
 ## Creating custom preserve recipes
-Refer to the following resources to get started creating your own custom recipes:
 
-- [@truffle/preserve Typedocs](/docs/truffle/preserves)
+Additional preserve recipes can be defined through Truffle's plugin system.
+
+### truffle-plugin.json
+
+To define a Truffle preserve recipe you need to create a `truffle-plugin.json` file that specifies the tag that the recipe uses (`truffle preserve --my-tag`) and the path to the recipe source module.
+
+```javascript
+{
+  "preserve": {
+    "tag": "my-tag",
+    "recipe": "./index.js"
+  }
+}
+```
+
+### Recipe interface
+
+The `@truffle/preserve` package defines a `Recipe` interface that needs to be implemented by custom preserve recipes. This includes a static `help` string, a `name` string, lists of `inputLabels` and `outputLabels`, an `execute` function, and it can optionally include a constructor. These are discussed below.
+
+```typescript
+import * as Preserve from "@truffle/preserve";
+
+export class Recipe implements Preserve.Recipe {
+  static help = "Help text about the preserve recipe";
+
+  name = "name-of-the-recipe";
+
+  inputLabels = ["input-label-1"];
+  outputLabels = ["output-label-1"];
+
+  configParam: number;
+  constructor(options: any) {
+    this.configParam = options.configParam;
+  }
+
+  async *execute(options: Preserve.Recipes.ExecuteOptions): Preserve.Process {
+    return {
+      "output-label-1": "Hello World!"
+    };
+  }
+}
+```
+
+### Recipe constructor
+
+It is possible to define a constructor for your recipe. Truffle will automatically pass any variables configured in the config file environment under the key that corresponds to the recipe's "tag" (as specified in its `truffle-plugin.json` file). E.g. when using the configuration below, the constructor for the recipe with tag `ipfs` will receive `{ address: 'http://localhost:5001' }` as its options parameter.
+
+```javascript
+module.exports = {
+  /* ... rest of truffle-config */
+
+  environments: {
+    /* ... other environments */
+
+    development: {
+      ipfs: {
+        address: 'http://localhost:5001'
+      }
+    },
+  }
+}
+```
+
+### Recipe dependencies
+The Recipe interface contains input and output labels. The "output labels" specify the outputs that the recipe produces, while the "input labels" specify the inputs that the recipe requires.
+
+By default, Truffle provides the `"path"` and `"config"` inputs, which are the path specified in the `truffle preserve` command and the ["Truffle config" object](/docs/truffle/reference/configuration) respectively. When specifying other inputs, the truffle preserve engine will match the specified input labels with the output labels of other installed recipes and execute these dependency recipes in order.
+
+#### Middleware recipes
+
+Through this system of input and output labels, it is possible to create end-user recipes, such as the `@truffle/preserve-to-buckets` recipe, but also middleware recipes that are *only* used by other recipes, such as the `@truffle/preserve-fs` recipe. Of course it is also possible to create recipes that can function as either, such as the `@truffle/preserve-to-ipfs` recipe.
+
+### Implementing the execute function
+
+The Recipe interface contains an `execute` function. This function gets called by Truffle when your recipe gets executed directly or as a dependency of another recipe. Because preserve plugins have to work with files and directories, this execute function is [*generator function*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*), meaning that it produces async iterables - or streams. This can be slightly tricky to work with, so if you haven't used them before you should read up on generators and async iterables.
+
+#### ExecuteOptions
+
+The `execute` function has one single object parameter with several properties as defined in the `ExecuteOptions` interface.
+
+```typescript
+interface ExecuteOptions {
+  inputs: { [index: string]: any };
+  controls: Controls;
+}
+```
+
+##### Inputs
+
+The "inputs" property contains a dictionary that maps from an input label to a value provided by Truffle or by dependency recipes, as discussed in the section above.
+So to access the Truffle config object you need to use `options.inputs.config` and to access the provided path you need to use `options.inputs.path`. Other notable middleware recipes that truffle provides are `@truffle/preserve-fs` and `@truffle/preserve-to-ipfs`. These two recipes provide the `"fs-target"` label, and the `"ipfs-cid"` label, respectively.
+
+###### FileSystem Target
+
+The `"fs-target"` input conforms to the `Preserve.Target` interface, which is a structured interface to represent files or directories in any shape or form. These directory structures can be normalised using the `@truffle/preserve` package so that all `Content` types are represented as `AsyncIterable<Buffer>`.
+
+```typescript
+export interface Target {
+  source: Source;
+}
+
+export type Source = Content | Container;
+
+export type Content = string | Bytes | Iterable<Bytes> | AsyncIterable<Bytes>;
+
+export type Bytes = Buffer | ArrayBuffer | TypedArray;
+
+export interface Container {
+  entries: Iterable<Entry> | AsyncIterable<Entry>;
+}
+
+export interface Entry {
+  path: string;
+  source: Source;
+}
+```
+
+##### Controls
+
+The "controls" property contains a number of functions that are used to control the execution of your recipe with a state machine. This controls object has three functions: `update` updates the description of the recipe's CLI spinner, `step` creates a new sub-task, and `declare` declares a new value that can be resolved at a later time. The `step` and `declare` return new controller objects that are used to control the sub-task. A full reference of these controller objects can be found in the [typedocs](/docs/truffle/preserves/modules/_truffle_preserve.control.html).
+
+#### Your custom functionality
+
+Now that we discussed the `Recipe` interface and the parameters of the `execute` function, the rest of the recipe is up to you. Implement the code to preserve files and content to a custom storage platform, or build on top of the existing recipes to employ more advanced preservation strategies. For all the possibilities, check out the typedcos and the examples in the section below.
+
+### Reference
+
+A full reference of the `@truffle/preserve` package can be found in the [@truffle/preserve Typedocs](/docs/truffle/preserves).
+
+To see examples of existing preserve recipes, refer to the source code of the recipes that are included in Truffle by default:
+
+- [@truffle/preserve-fs source code](https://github.com/trufflesuite/truffle/tree/develop/packages/preserve-fs)
 - [@truffle/preserve-to-ipfs source code](https://github.com/trufflesuite/truffle/tree/develop/packages/preserve-to-ipfs)
 - [@truffle/preserve-to-filecoin source code](https://github.com/trufflesuite/truffle/tree/develop/packages/preserve-to-filecoin)
 - [@truffle/preserve-to-buckets source code](https://github.com/trufflesuite/truffle/tree/develop/packages/preserve-to-buckets)
