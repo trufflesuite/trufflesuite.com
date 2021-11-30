@@ -91,7 +91,6 @@ def on_post_build(env):
         json_response = response.json()
 
         try:
-            print(json_response)
 
             markdown = base64.b64decode(json_response['content'])
 
