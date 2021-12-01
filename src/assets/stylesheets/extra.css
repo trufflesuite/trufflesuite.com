@@ -97,10 +97,6 @@ pre {
   color: var(--md-primary-fg-color--light);
 }
 
-[data-md-component="announce"], .md-tabs {
-  z-index: 1000;
-}
-
 /* material overrides */
 
 .md-ellipsis {
