@@ -98,6 +98,36 @@ Options:
 
 Camel case names of artifacts will be converted to underscore-separated file names for the migrations and tests. Number prefixes for migrations are automatically generated.
 
+### dashboard
+
+Start and open an instance of the Truffle dashboard.
+
+```shell
+truffle dashboard [--port <number>] [--host <string>] [--verbose]
+```
+
+Options:
+
+* `--port <number>`: Port to start the Truffle dashboard on (default `24012`).
+* `--host <string>`: Host to start the Truffle dashboard on (default `0.0.0.0`).
+* `--verbose`: Start the Truffle dashboard with additional verbose logging (default `false`)
+
+It is also possible to specify these options in the `truffle-config.js` file under `"dashboard"`. For example:
+
+```js
+module.exports = {
+  // ... rest of truffle config
+
+  dashboard: {
+    port: 25012,
+    host: "localhost",
+    verbose: true
+  }
+}
+```
+
+When specifying options in the config file *and* in the CLI, the options provided in the CLI take precedence.
+
 ### debug
 
 Interactively debug any transaction on the blockchain.
