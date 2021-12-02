@@ -4,9 +4,9 @@ layout: docs.hbs
 ---
 # Using the Truffle Dashboard
 
-When deploying your smart contracts you need to specify an Ethereum account that has enough funds to cover the transaction fees of the deployment. A popular method of doing this is copy-pasting your mnemmonic phrase to a gitignored `.env` file so that it can be used for e.g. the `@truffle/hdwallet-provider`. But in general it is a bad practice to copy-paste your keys, especially since we have wallets like Metamask that can send transactions for us.
+When deploying your smart contracts you need to specify an Ethereum account that has enough funds to cover the transaction fees of the deployment. A popular method of doing this is copy-pasting your mnemonic phrase to a gitignored `.env` file so that it can be used for e.g. the `@truffle/hdwallet-provider`. But in general it is a bad practice to copy-paste your keys, especially since we have wallets like MetaMask that can send transactions for us.
 
-This is why we developed the Truffle Dashboard, an easy way to use your existing Metamask wallet for your deployments and for other transactions that you need to send from a command line context. Because the Truffle Dashboard connects directly to Metamask it is also possible to use it in combination with hardware wallets like Ledger or Trezor.
+This is why we developed the Truffle Dashboard, an easy way to use your existing MetaMask wallet for your deployments and for other transactions that you need to send from a command line context. Because the Truffle Dashboard connects directly to MetaMask it is also possible to use it in combination with hardware wallets like Ledger or Trezor.
 
 ## Starting a dashboard
 
@@ -21,7 +21,7 @@ DashboardProvider RPC endpoint running at http://localhost:24012/rpc
                                           http://192.168.178.21:24012/rpc
 ```
 
-By default, this starts a dashboard at `http://localhost:24012` and opens the dashboard in a new tab in your default browser. The Dashboard then prompts you to connect your wallet and confirm that you're connected to the right network.
+By default, this starts a dashboard at `http://localhost:24012` and opens the dashboard in a new tab in your default browser. The Dashboard then prompts you to connect your wallet and confirm that you're connected to the right network. You should double check your connected network at this point, since switching to a different network during a deployment can have unintended consequences.
 
 ![Connect your wallet to the Truffle Dashboard](/img/docs/truffle/using-the-truffle-dashboard/truffle-dashboard-connect.png)
 
@@ -34,7 +34,12 @@ module.exports = {
   // ... rest of truffle config
 
   dashboard: {
-    port: 25012,
+    port: 24012,
+  }
+
+  // Not to be
+  networks: {
+    // ... network configurations, including the network named 'dashboard'
   }
 }
 ```
@@ -42,7 +47,18 @@ module.exports = {
 
 ## Connecting to the dashboard
 
-To connect to this dashboard window you need to add a network to your `truffle-config.js` that specifies the dashboard's RPC URL.
+To make connecting to the Truffle Dashboard easy, Truffle includes a builtin network named "dashboard". This builtin network automatically uses the port and host specified in the dashboard config or falls back to the default `localhost:24012`. This builtin network can be used with all your deployments or scripts.
+
+```
+truffle migrate --network dashboard
+truffle console --network dashboard
+```
+
+From there every Ethereum RPC request will be forwarded from Truffle to the Truffle Dashboard, where the user can inspect the RPC requests and process them with MetaMask.
+
+![Truffle Dashboard Transaction](/img/docs/truffle/using-the-truffle-dashboard/truffle-dashboard-transaction.png)
+
+Any additional network options or overrides can be provided by adding a network called "dashboard" to your `truffle-config.js` file and providing network options like it were a regular network.
 
 ```js
 module.exports = {
@@ -50,24 +66,18 @@ module.exports = {
 
   networks: {
     // ... rest of network config
+
     dashboard: {
-      url: "http://localhost:24012/rpc",
-      network_id: "*"
+      networkCheckTimeout: 120000,
     }
+  }
+
+  dashboard: {
+    // ... dashboard host/port config
   }
 };
 ```
 
-From there you can use this network configuration with your deployments, scripts or console.
-
-```
-truffle migrate --network dashboard
-truffle console --network dashboard
-```
-
-From there every Ethereum RPC request will be forwarded from Truffle to the Truffle Dashboard, where the user can inspect the RPC request and process them with Metamask.
-
-![Truffle Dashboard Transaction](/img/docs/truffle/using-the-truffle-dashboard/truffle-dashboard-transaction.png)
 
 ## Usage with non-Truffle tooling
 
