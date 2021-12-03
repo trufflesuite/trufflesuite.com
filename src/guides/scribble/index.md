@@ -1,3 +1,9 @@
+---
+title: Truffle Suite
+hide:
+  - navigation
+---
+
 # Supercharge your test suite with Scribble!
 
 Scribble is a specification language that we built at ConsenSys diligence. The core idea is to add comments to your code that say what the code is supposed to do!
