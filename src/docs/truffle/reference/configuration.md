@@ -362,14 +362,15 @@ module.exports = {
   compilers: {
     vyper: {
       settings: {
-        evmVersion: <string>
+        evmVersion: <string>,
+        optimize: <boolean> //defaults to true
       }
     }
   }
 }
 ```
 
-Currently, only changing the `settings` is supported for Vyper; see the Vyper documentation on [Compiler Input JSON Description](https://vyper.readthedocs.io/en/stable/compiling-a-contract.html#input-json-description) for the possible settings.  However customizing `outputSelection` is not supported, so currently the only supported setting is `evmVersion`.
+Currently, only changing the `settings` is supported for Vyper; see the Vyper documentation on [Compiler Input JSON Description](https://vyper.readthedocs.io/en/stable/compiling-a-contract.html#input-json-description) for the possible settings.  Note that customizing `outputSelection` is not supported.
 
 ### external compilers
 
