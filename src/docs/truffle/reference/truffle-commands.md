@@ -55,14 +55,15 @@ Options:
 Displays and sets user-level configuration options.
 
 ```shell
-truffle config [--enable-analytics|--disable-analytics] [[<get|set> <key>] [<value-for-set>]]
+truffle config [--enable-analytics|--disable-analytics] [[<get|set> <key>] [<list>] [<value-for-set>]]
 ```
 
 Options:
 
-- `--enable-analytics|--disable-analytics`: Enable or disable analytics.
-- `get`: Get a Truffle configuration option value.
-- `set`: Set a Truffle configuration option value.
+* `--enable-analytics|--disable-analytics`: Enable or disable analytics.
+* `get`: Get a Truffle configuration option value.
+* `set`: Set a Truffle configuration option value.
+* `list`: List all Truffle configuration option values.
 
 ### console
 
