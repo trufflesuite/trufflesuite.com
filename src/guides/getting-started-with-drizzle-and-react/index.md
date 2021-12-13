@@ -5,14 +5,14 @@ hide:
 
 # Getting Started with Drizzle and React
 
-Drizzle is the newest member of the Truffle Suite and our first front-end development tool. At its core, **Drizzle** takes care of synchronizing your contract data, transaction data and more from the blockchain to a Redux store. There are also higher-level abstractions on top of the base `drizzle` library; tools for React compatibility ([`drizzle-react`](/docs/drizzle/react/react-integration)) and a set of ready-to-use React components ([`drizzle-react-components`](/docs/drizzle/react/react-components)).
+Drizzle is the newest member of the Truffle Suite and our first front-end development tool. At its core, **Drizzle** takes care of synchronizing your contract data, transaction data and more from the blockchain to a [Redux](https://redux.js.org/) store. There are also higher-level abstractions on top of the base `drizzle` library; tools for React compatibility ([`drizzle-react`](/docs/drizzle/react/react-integration.html)) and a set of ready-to-use React components ([`drizzle-react-components`](/docs/drizzle/react/react-components.html)).
 
 We're going to focus on the lower levels today, taking you through setting up a Truffle project with React and Drizzle from scratch. This way we can gain the best understanding of how Drizzle works under the hood. With this knowledge, you can leverage the full power of Drizzle with any front-end framework of your choosing, or use the higher-level React abstractions with confidence.
 
 This will be a very minimal tutorial focused on setting and getting a simple string stored in a contract. It's meant for those with a basic knowledge of Truffle, who have some knowledge of JavaScript and React.js, but who are new to using Drizzle.
 
 <p class="alert alert-info">
-<i class="far fa-info-circle"></i> <strong>Note</strong>: For Truffle basics, please read through the Truffle <a href="/tutorials/pet-shop">Pet Shop</a> tutorial before proceeding.
+<i class="far fa-info-circle"></i> <strong>Note</strong>: For Truffle basics, please read through the Truffle <a href="/guides/pet-shop">Pet Shop</a> tutorial before proceeding.
 </p>
 
 In this tutorial we will be covering:
@@ -32,7 +32,7 @@ In this tutorial we will be covering:
 
 There are a few technical requirements before we start. Please install the following:
 
-*   [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
+*   [Node.js v12+ LTS and npm](https://nodejs.org/en/) (comes with Node)
 
 ### Truffle
 
@@ -58,16 +58,16 @@ npm install -g create-react-app
 
 1. Truffle initializes in the current directory, so first create a directory in your development folder of choice and then move inside it.
 
-   ```shell
-   mkdir drizzle-react-tutorial
-   cd drizzle-react-tutorial
-   ```
+    ```shell
+    mkdir drizzle-react-tutorial
+    cd drizzle-react-tutorial
+    ```
 
 2. Now we're ready to spawn our empty Truffle project by running the following command:
 
-   ```shell
-   truffle init
-   ```
+    ```shell
+    truffle init
+    ```
 
 Let's take a brief look at the directory structure that was just generated.
 
@@ -89,7 +89,7 @@ We'll add a simple smart contract called MyStringStore.
 2. Add the following content to the file:
 
    ```solidity
-   pragma solidity ^0.5.0;
+   pragma solidity ^0.8.0 <0.9.0;
 
    contract MyStringStore {
      string public myString = "Hello World";
@@ -130,7 +130,7 @@ compile
 ```
 
 <p class="alert alert-info">
-<strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on [resolving naming conflicts on Windows](/docs/advanced/configuration#resolving-naming-conflicts-on-windows).
+<strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on <a href="/docs/truffle/reference/configuration.html#resolving-naming-conflicts-on-windows">resolving naming conflicts on Windows</link>.
 </p>
 
 You should see output similar to the following:
@@ -146,7 +146,7 @@ Writing artifacts to ./build/contracts
 Now that we've successfully compiled our contracts, it's time to migrate them to the blockchain!
 
 <p class="alert alert-info">
-  <strong>Note</strong>: Read more about migrations in the [Truffle documentation](/docs/getting_started/migrations).
+  <strong>Note</strong>: Read more about migrations in the <a href="/docs/getting_started/migrations">Truffle documentation</a>.
 </p>
 
 To create our own migration script.
@@ -236,7 +236,7 @@ This should create a `client` directory in your Truffle project and bootstrap a 
 
 ## Wiring up the front-end client
 
-Since Create-React-App's default behavior disallows importing files from outside of the `src` folder, we need to bring the contracts in our `build` folder inside `src`. We can copy and paste them every time we compile our contracts, but a better way is to simply configure Truffle to put the files there.
+Since Create-React-App's default behavior disallows importing files from outside of the `src` folder, we need to bring the contracts from our `build` folder inside `src`. We can copy and paste them every time we compile our contracts, but a better way is to simply configure Truffle to put the files there.
 
 In the `truffle-config.js` file, replace the contents with the following:
 
@@ -315,10 +315,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import reportWebVitals from './reportWebVitals';
 
 // import drizzle functions and contract artifact
-import { Drizzle, generateStore } from "@drizzle/store";
+import { Drizzle } from "@drizzle/store";
 import MyStringStore from "./contracts/MyStringStore.json";
 
 // let drizzle know what contracts we want and how to access our test blockchain
@@ -332,90 +332,35 @@ const options = {
   },
 };
 
-// setup the drizzle store and drizzle
+// setup drizzle
 const drizzle = new Drizzle(options);
 
-ReactDOM.render(<App drizzle={drizzle} />, document.getElementById('root'));
+ReactDOM.render(
+  <React.StrictMode>
+    <App drizzle={drizzle} />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
 ```
 
 Note again that the `drizzle` instance is passed into the `App` component as props.
 
 ### Wire up the App component
 
-Now that we have a `drizzle` instance to play around with, we can go into `client/src/App.js` to start working with the React API.
+Now that we have a `drizzle` instance to play around with, we can go into `client/src/App.js` to start working with the React API. By default `create-react-app` will generate the App component as a React functional component. For the purpose of this tutorial we will replace the entire contents of `client/src/App.js` with a Class component as it will simplify state and lifecycle management for the component. The important parts of the App component will be explained below.
 
-#### Adding state variables
-
-First thing we will do is to add the following line inside our App component:
+Replace the contents of `client/src/App.js` with the following:
 
 ```javascript
-state = { loading: true, drizzleState: null };
-```
+import React from 'react';
 
-We are going to be using two state variables here:
+class App extends React.Component {
 
-1. `loading` — Indicates if Drizzle has finished initializing and the app is ready. The initialization process includes instantiating `web3` and our smart contracts, fetching any available Ethereum accounts and listening (or, in cases where subscriptions are not supported: polling) for new blocks.
-2. `drizzleState` — This is where we will store the state of the Drizzle store in our top-level component. If we can keep this state variable up-to-date, then we can simply use simple `props` and `state` to work with Drizzle (i.e. you don't have to use any Redux or advanced React patterns).
-
-#### Adding some initialization logic
-
-Next we will add in our `componentDidMount` method into the component class so that we can run some initialization logic.
-
-```javascript
-componentDidMount() {
-  const { drizzle } = this.props;
-
-  // subscribe to changes in the store
-  this.unsubscribe = drizzle.store.subscribe(() => {
-
-    // every time the store updates, grab the state from drizzle
-    const drizzleState = drizzle.store.getState();
-
-    // check to see if it's ready, if so, update local component state
-    if (drizzleState.drizzleStatus.initialized) {
-      this.setState({ loading: false, drizzleState });
-    }
-  });
-}
-```
-
-First, we grab the `drizzle` instance from the props, then we call `drizzle.store.subscribe` and pass in a callback function. This callback function is called whenever the Drizzle store is updated. Note that this store is actually a Redux store under the hood, so this might look familiar if you've used Redux previously.
-
-Whenever the store is updated, we will try to grab the state with `drizzle.store.getState()` and then if Drizzle is initialized and ready, we will set `loading` to false, and also update the `drizzleState` state variable.
-
-By doing this, `drizzleState` will always be up-to-date and we also know exactly when Drizzle is ready so we can use a loading component to let the user know.
-
-##### Unsubscribing from the store
-
-Note that we assign the return value of the `subscribe()` to a class variable `this.unsubscribe`. This is because it is always good practice to unsubscribe from any subscriptions you have when the component un-mounts. In order to do this, we save a reference to that subscription (i.e. `this.unsubscribe`), and inside `componentWillUnmount`, we have the following:
-
-```javascript
-componentWillUnmount() {
-  this.unsubscribe();
-}
-```
-
-This will safely unsubscribe when the App component un-mounts so we can prevent any memory leaks.
-
-#### Replace the `render` method
-
-Finally, we can replace the boilerplate render method with something that applies to us better:
-
-```javascript
-render() {
-  if (this.state.loading) return "Loading Drizzle...";
-  return <div className="App">Drizzle is ready</div>;
-}
-```
-
-In the next section, we will replace "Drizzle is ready" with an actual component that will read from the store. If you refresh your browser and run this app now, you should see "Loading Drizzle..." briefly flash on screen and then subsequently "Drizzle is ready".
-
-### Full component code
-
-When you are done this section, your `App` component should look like the following:
-
-```javascript
-class App extends Component {
   state = { loading: true, drizzleState: null };
 
   componentDidMount() {
@@ -444,6 +389,72 @@ class App extends Component {
   }
 }
 ```
+
+#### Adding state variables
+
+The first thing we have done is to set up our state variables inside our App component:
+
+```javascript
+state = { loading: true, drizzleState: null };
+```
+
+We are using two state variables here:
+
+1. `loading` — Indicates if Drizzle has finished initializing and the app is ready. The initialization process includes instantiating `web3` and our smart contracts, fetching any available Ethereum accounts and listening (or, in cases where subscriptions are not supported: polling) for new blocks.
+2. `drizzleState` — This is where we will store the state of the Drizzle store in our top-level component. If we can keep this state variable up-to-date, then we can simply use simple `props` and `state` to work with Drizzle (i.e. you don't have to use any Redux or advanced React patterns).
+
+#### Adding some initialization logic
+
+Next we have provided the `componentDidMount` lifecycle method for the component. The `componentDidMount` lifecycle method will run after the component output has been rendered to the DOM. This allows us to run some initialization logic.
+
+```javascript
+componentDidMount() {
+  const { drizzle } = this.props;
+
+  // subscribe to changes in the store
+  this.unsubscribe = drizzle.store.subscribe(() => {
+
+    // every time the store updates, grab the state from drizzle
+    const drizzleState = drizzle.store.getState();
+
+    // check to see if it's ready, if so, update local component state
+    if (drizzleState.drizzleStatus.initialized) {
+      this.setState({ loading: false, drizzleState });
+    }
+  });
+}
+```
+
+First, we grab the `drizzle` instance from the props, then we call `drizzle.store.subscribe` and pass in a callback function. This callback function is called whenever the Drizzle store is updated. Note that this store is actually a Redux store under the hood, so this might look familiar if you've used Redux previously.
+
+Whenever the store is updated, we will try to grab the state with `drizzle.store.getState()` and then if Drizzle is initialized and ready, we will set `loading` to false, and also update the `drizzleState` state variable.
+
+By doing this, `drizzleState` will always be up-to-date and we also know exactly when Drizzle is ready so we can use a loading component to let the user know.
+
+#### Unsubscribing from the store
+
+Note that we assign the return value of `subscribe()` to a class variable `this.unsubscribe`. This is because it is always good practice to unsubscribe from any subscriptions you have when the component un-mounts. In order to do this, we save a reference to that subscription (i.e. `this.unsubscribe`), and inside `componentWillUnmount`, we have the following:
+
+```javascript
+componentWillUnmount() {
+  this.unsubscribe();
+}
+```
+
+This will safely unsubscribe when the App component un-mounts so we can prevent any memory leaks.
+
+#### Replace the `render` method
+
+Finally, we have replaced the boilerplate render method with something that applies to us better:
+
+```javascript
+render() {
+  if (this.state.loading) return "Loading Drizzle...";
+  return <div className="App">Drizzle is ready</div>;
+}
+```
+
+In the next section, we will replace "Drizzle is ready" with an actual component that will read from the store. If you refresh your browser and run this app now, you should see "Loading Drizzle..." briefly flash on screen and then subsequently "Drizzle is ready".
 
 ## Write a component to read from Drizzle
 
@@ -750,6 +761,6 @@ Otherwise, we display a string to show the status of our transaction. Usually, t
 
 # The End
 
-Congratulations! You have taken a huge step to understanding how Drizzle works. Of course, this is only the beginning, you can use tools like [`drizzle-react`](https://github.com/trufflesuite/drizzle-react) to help you integrate Drizzle into your dapp, reducing the necessary boilerplate that you would have to write.
+Congratulations! You have taken a huge step to understanding how Drizzle works. Of course, this is only the beginning. You can use tools like [`Drizzle`](https://github.com/trufflesuite/drizzle) in your dapp to help reduce the boilerplate code that you would have to write.
 
 Alternatively, you could also bootstrap your Drizzle dapp with our [Truffle box](https://github.com/truffle-box/drizzle-box).
