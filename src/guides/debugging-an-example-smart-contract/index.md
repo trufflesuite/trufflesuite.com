@@ -27,7 +27,7 @@ In this tutorial, we will migrate a basic contract to a test blockchain, introdu
 One of the most basic, non-trivial, types of smart contract is a **simple storage contract**. (This example was adapted from the [Solidity documentation](https://solidity.readthedocs.io/en/develop/introduction-to-smart-contracts.html).)
 
 ```solidity
-pragma solidity ^0.4.17;
+pragma solidity ^0.8.10;
 
 contract SimpleStorage {
   uint myVariable;
