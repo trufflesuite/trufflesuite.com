@@ -60,7 +60,7 @@
       "Truffle with MetaMask",
       "Package Management via EthPM",
       "Package Management via NPM",
-      "Debugging Your Contracts",
+      "Using the Truffle Debugger",
       "Using Truffle Develop and The Console",
       "Writing External Scripts",
       "Preserving Files and Content to Storage Platforms"
@@ -145,8 +145,7 @@
     }
   },
   "filecoin": {
-    "truffle": {
-    },
+    "truffle": {},
     "ganache": {
       "Getting Started": [
         "Get Started with the CLI",

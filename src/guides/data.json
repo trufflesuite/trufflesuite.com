@@ -41,8 +41,8 @@
     "published": true,
     "products": ["truffle", "ganache"]
   },
-  "debugging-a-smart-contract": {
-    "title": "Debugging a smart contract",
+  "debugging-an-example-smart-contract": {
+    "title": "Debugging an example smart contract",
     "date": "2017-10-23",
     "author": "Mike Pumphrey",
     "published": true,
