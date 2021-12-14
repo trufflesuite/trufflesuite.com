@@ -590,9 +590,9 @@ Once again, we can use the debugger to see where things go wrong.
    function set(uint x) public {
      myVariable = x;
      if (x % 2 == 0) {
-       Odd();
+       emit Odd();
      } else {
-       Even();
+       emit Even();
      }
    }
    ```
@@ -624,26 +624,38 @@ Just as before, we'll reset the contract on the blockchain.
    **Note that there is no error here.** The response is given as a transaction ID with details:
 
    ```javascript
-   { tx: '0x7f799ad56584199db36bd617b77cc1d825ff18714e80da9d2d5a0a9fff5b4d42',
-     receipt:
-      { transactionHash: '0x7f799ad56584199db36bd617b77cc1d825ff18714e80da9d2d5a0a9fff5b4d42',
-        transactionIndex: 0,
-        blockHash: '0x08d7c35904e4a93298ed5be862227fcf18383fec374759202cf9e513b390956f',
-        blockNumber: 5,
-        gasUsed: 42404,
-        cumulativeGasUsed: 42404,
-        contractAddress: null,
-        logs: [ [Object] ] },
-     logs:
-      [ { logIndex: 0,
-          transactionIndex: 0,
-          transactionHash: '0x7f799ad56584199db36bd617b77cc1d825ff18714e80da9d2d5a0a9fff5b4d42',
-          blockHash: '0x08d7c35904e4a93298ed5be862227fcf18383fec374759202cf9e513b390956f',
-          blockNumber: 5,
-          address: '0x377bbcae5327695b32a1784e0e13bedc8e078c9c',
-          type: 'mined',
-          event: 'Odd',
-          args: {} } ] }
+   {
+     tx: '0x31d64ba6ed196d12b634b1ea7cbe0612b3dc623ee6d25f0fc59091e1e19dfe08',
+     receipt: {
+       transactionHash: '0x31d64ba6ed196d12b634b1ea7cbe0612b3dc623ee6d25f0fc59091e1e19dfe08',
+       transactionIndex: 0,
+       blockHash: '0x4ef7b0987604e6ca92382d75d16e746de2415fa482d7cfc85d9183e966d5beaf',
+       blockNumber: 5,
+       from: '0x8e0128437dc799045b9c24da41eda77f0dea281b',
+       to: '0x30775260f639d51a837b094cc9f66dc1426f3efb',
+       gasUsed: 42597,
+       cumulativeGasUsed: 42597,
+       contractAddress: null,
+       logs: [ [Object] ],
+       status: true,
+       logsBloom: '0x000...',
+       rawLogs: [ [Object] ]
+     },
+     logs: [
+       {
+         logIndex: 0,
+         transactionIndex: 0,
+         transactionHash: '0x31d64ba6ed196d12b634b1ea7cbe0612b3dc623ee6d25f0fc59091e1e19dfe08',
+         blockHash: '0x4ef7b0987604e6ca92382d75d16e746de2415fa482d7cfc85d9183e966d5beaf',
+         blockNumber: 5,
+         address: '0x30775260F639D51a837b094Cc9f66DC1426f3EFB',
+         type: 'mined',
+         id: 'log_8a20539f',
+         event: 'Odd',
+         args: [Result]
+       }
+     ]
+   }
    ```
 
    But notice the logs of the transaction show the event `Odd`. That's wrong, and so our job is to find out why that's being invoked.
@@ -653,7 +665,7 @@ Just as before, we'll reset the contract on the blockchain.
 1. Copy that transaction ID and use it as an argument with the `debug` command:
 
    ```shell
-   debug 0x7f799ad56584199db36bd617b77cc1d825ff18714e80da9d2d5a0a9fff5b4d42
+   debug 0x31d64ba6ed196d12b634b1ea7cbe0612b3dc623ee6d25f0fc59091e1e19dfe08
    ```
 
    <p class="alert alert-info">
@@ -665,23 +677,24 @@ Just as before, we'll reset the contract on the blockchain.
 1. Press `Enter` multiple times to cycle through the steps. Eventually you will see that the conditional leads to the `Odd()` event:
 
    ```solidity
-   Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
+   Store.sol:
 
-   10:   function set(uint x) public {
-   11:     myVariable = x;
-   12:     if (x % 2 == 0) {
-           ^^^^^^^^^^^^^^^^
+   9:   function set(uint x) public {
+   10:     myVariable = x;
+   11:     if (x % 2 == 0) {
+           ^^^^^^^^^^^^^^^^^
 
-   debug(develop:0x7f799ad5...)>
+   debug(develop:0x31d64ba6...)> n
 
-   Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
+   Store.sol:
 
-   11:     myVariable = x;
-   12:     if (x % 2 == 0) {
-   13:       Odd();
-             ^^^^^
+   10:     myVariable = x;
+   11:     if (x % 2 == 0) {
+   12:       emit Odd();
+                  ^^^^^
 
-   debug(develop:0x7f799ad5...)>
+   debug(develop:0x31d64ba6...)>
+
    ```
 
    **The problem is revealed.** The conditional is leading to the wrong event.
