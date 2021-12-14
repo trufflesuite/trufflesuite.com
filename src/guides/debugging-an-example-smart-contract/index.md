@@ -123,21 +123,59 @@ First, let's set up our environment.
    The response should look something like below, though the specific IDs will differ:
 
    ```shell
-    Running migration: 1_initial_migration.js
-      Replacing Migrations...
-      ... 0xe4f911d95904c808a81f28de1e70a377968608348b627a66efa60077a900fb4c
-      Migrations: 0x3ed10fd31b3fbb2c262e6ab074dd3c684b8aa06b
-    Saving successful migration to network...
-      ... 0x429a40ee574664a48753a33ea0c103fc78c5ca7750961d567d518ff7a31eefda
-    Saving artifacts...
-    Running migration: 2_deploy_contracts.js
-      Replacing SimpleStorage...
-      ... 0x6783341ba67d5c0415daa647513771f14cb8a3103cc5c15dab61e86a7ab0cfd2
-      SimpleStorage: 0x377bbcae5327695b32a1784e0e13bedc8e078c9c
-    Saving successful migration to network...
-      ... 0x6e25158c01a403d33079db641cb4d46b6245fd2e9196093d9e5984e45d64a866
-    Saving artifacts...
+   Starting migrations...
+   ======================
+   > Network name:    'develop'
+   > Network id:      5777
+   > Block gas limit: 6721975 (0x6691b7)
+
+   # 1_initial_migration.js
+
+   Deploying 'Migrations'
+
+   ---
+
+   > transaction hash: 0xbaf1963942bd99e949a966c16d204c4786fdbfde096f5fed0ec4c82e7b85aff5
+   > ...
+   > total cost: 0.000497708 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+
+   ---
+
+   > Total cost: 0.000497708 ETH
+
+   # 2_deploy_contracts.js
+
+   Deploying 'SimpleStorage'
+
+   ---
+
+   > transaction hash: 0xf4bf0a56cff1e1e5c121a3b1688a0103f12b8c45c4ed99818d160a1e3cc064f1
+   > ...
+   > total cost: 0.000251306 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+
+   ---
+
+   > Total cost: 0.000251306 ETH
+
+   # Summary
+
+   > Total deployments: 2
+   > Final cost: 0.000749014 ETH
+
+   - Fetching solc version list from solc-bin. Attempt #1
+   - Blocks: 0 Seconds: 0
+   - Saving migration to chain.
+   - Blocks: 0 Seconds: 0
+   - Saving migration to chain.
    ```
+
+````
 
 ## Interacting with the basic smart contract
 
