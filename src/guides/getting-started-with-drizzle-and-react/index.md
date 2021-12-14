@@ -392,7 +392,7 @@ class App extends React.Component {
 
 #### Adding state variables
 
-The first thing we have done is to set up our state variables inside our App component:
+First, we set up our state variables inside our App component:
 
 ```javascript
 state = { loading: true, drizzleState: null };
