@@ -160,7 +160,7 @@ pre {
   }
   /* Firefox < 19 */
   .md-search__input:hover:-moz-placeholder {
-      color: var(--md-primary-fg-color--dark)d;
+      color: var(--md-primary-fg-color--dark);
   } 
   /* Firefox > 19 */
   .md-search__input:hover::-moz-placeholder {
