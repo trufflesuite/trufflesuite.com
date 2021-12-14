@@ -1,5 +1,5 @@
 ---
-title: Debugging an example smart contract
+title: Debugging an Example Smart Contract
 hide:
   - navigation
 ---
@@ -474,6 +474,12 @@ Truffle contains a built-in debugger. The command to launch this is `debug <Tran
 
 ### Issue #1: An invalid error check
 
+
+1. Type `q` to exit the debugger.
+
+### Issue #2: An invalid error check
+
+>>>>>>> f596fb87 (Remove merge commit artifacts)
 Smart contracts can use statements like `assert()` to ensure that certain conditions are met. These can conflict with the state of the contract in ways that are irreconcilable.
 
 Here we will introduce such a condition, and then see how the debugger can find it.
@@ -704,6 +710,6 @@ Just as before, we'll reset the contract on the blockchain.
 
 ## Conclusion
 
-With the ability to debug your contracts directly within Truffle, you have even more power at your hands to make your smart contracts rock-solid and ready to deploy. Make sure to read more about Truffle Develop console and the debugger in the docs. If you have any questions, please join our [community Gitter channel](https://gitter.im/ConsenSys/truffle) where hundreds of fellow Trufflers congregate to answer your questions!
+With the ability to debug your contracts directly within Truffle, you have even more power at your hands to make your smart contracts rock-solid and ready to deploy. Make sure to read more about Truffle Develop console and the debugger in the docs. If you have any trouble, please don't hesitate to open an issue on [Github](https://github.com/trufflesuite/trufflesuite.com/issues)!
 
 Happy debugging!
