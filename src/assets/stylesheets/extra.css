@@ -155,6 +155,21 @@ pre {
   .md-search__form:hover, .md-search__input {
     color: var(--md-primary-fg-color--dark);
   }
+  .md-search__input:hover::-webkit-input-placeholder {
+      color: var(--md-primary-fg-color--dark);
+  }
+  /* Firefox < 19 */
+  .md-search__input:hover:-moz-placeholder {
+      color: var(--md-primary-fg-color--dark)d;
+  } 
+  /* Firefox > 19 */
+  .md-search__input:hover::-moz-placeholder {
+      color: var(--md-primary-fg-color--dark);
+  } 
+  /* Internet Explorer 10 */
+  .md-search__input:hover:-ms-input-placeholder {
+      color: var(--md-primary-fg-color--dark);
+  } 
 }
 
 .md-footer {
