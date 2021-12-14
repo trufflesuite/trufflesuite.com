@@ -175,8 +175,6 @@ First, let's set up our environment.
    - Saving migration to chain.
    ```
 
-````
-
 ## Interacting with the basic smart contract
 
 The smart contract is now deployed to a test network via `truffle develop`, which launches a [console](/docs/getting_started/console) against [Ganache](/ganache), a local development blockchain built right into Truffle.
@@ -269,11 +267,13 @@ The above shows how the contract _should_ work. Now, we will introduce some smal
 
 We will look at the following issues:
 
-- An infinite loop
+<!-- - An infinite loop -->
+
 - Invalid error check
 - No error, but a function isn't operating as desired
 
-### Issue #1: An infinite loop
+<!-- REMOVED THIS EXAMPLE UNTIL ISSUE # IS RESOLVED -->
+<!-- ### Issue #1: An infinite loop
 
 On the Ethereum blockchain, transactions cannot be set to run forever.
 
@@ -470,9 +470,9 @@ Truffle contains a built-in debugger. The command to launch this is `debug <Tran
 
    Notice that the steps eventually repeat. In fact, pressing `Enter` over and over will repeat those transactions forever (or at least until the transaction runs out of gas). **This tells you where the problem is.**
 
-1. Type `q` to exit the debugger.
+1. Type `q` to exit the debugger. -->
 
-### Issue #2: An invalid error check
+### Issue #1: An invalid error check
 
 Smart contracts can use statements like `assert()` to ensure that certain conditions are met. These can conflict with the state of the contract in ways that are irreconcilable.
 
@@ -568,7 +568,7 @@ Just as before, we'll reset the contract on the blockchain.
 
    **It is this last event that is triggering the error.** You can see that it is the `assert()` that is to blame.
 
-### Issue #3: A function isn't operating as desired
+### Issue #2: A function isn't operating as desired
 
 Sometimes, an error isn't a true error, in that it doesn't cause a problem at runtime, but instead is just doing something that you don't intend it to do.
 
@@ -704,4 +704,3 @@ Just as before, we'll reset the contract on the blockchain.
 With the ability to debug your contracts directly within Truffle, you have even more power at your hands to make your smart contracts rock-solid and ready to deploy. Make sure to read more about Truffle Develop console and the debugger in the docs. If you have any questions, please join our [community Gitter channel](https://gitter.im/ConsenSys/truffle) where hundreds of fellow Trufflers congregate to answer your questions!
 
 Happy debugging!
-````
