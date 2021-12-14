@@ -219,7 +219,7 @@ We next want to interact with the smart contract to see how it works when workin
 
 ## Debugging errors
 
-The above shows how the contract _should_ work. Now, we will introduce some small errors to the contract and redeploy it. We will see how the issues present itself, and also **use Truffle's built-in debug feature to fix the issues**.
+The above shows how the contract _should_ work. Now, we will introduce some small errors to the contract and redeploy it. We will see how the issues present themselves, and also **use Truffle's built-in debug feature to fix the issues**.
 
 We will look at the following issues:
 
