@@ -218,17 +218,25 @@ We next want to interact with the smart contract to see how it works when workin
    This sets the variable to `4`. The output shows some information about the transaction, including the transaction ID (hash), transaction receipt, and any event logs that were triggered during the course of the transaction:
 
    ```javascript
-    { tx: '0x7f799ad56584199db36bd617b77cc1d825ff18714e80da9d2d5a0a9fff5b4d42',
-      receipt:
-       { transactionHash: '0x7f799ad56584199db36bd617b77cc1d825ff18714e80da9d2d5a0a9fff5b4d42',
-         transactionIndex: 0,
-         blockHash: '0x60adbf0523622dc1be52c627f37644ce0a343c8e7c8955b34c5a592da7d7c651',
-         blockNumber: 5,
-         gasUsed: 41577,
-         cumulativeGasUsed: 41577,
-         contractAddress: null,
-         logs: [] },
-      logs: [] }
+   {
+     tx: '0x3af6c0644b34cfb60b00d352212da19ba425dd70d9175380cc709cd5020bc06b',
+     receipt: {
+       transactionHash: '0x3af6c0644b34cfb60b00d352212da19ba425dd70d9175380cc709cd5020bc06b',
+       transactionIndex: 0,
+       blockHash: '0x243abc6a762a89c526256833c38e1ce3fd166dffeaff721f55e31cff89c719d9',
+       blockNumber: 5,
+       from: '0x8e0128437dc799045b9c24da41eda77f0dea281b',
+       to: '0x30775260f639d51a837b094cc9f66dc1426f3efb',
+       gasUsed: 41602,
+       cumulativeGasUsed: 41602,
+       contractAddress: null,
+       logs: [],
+       status: true,
+       logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+       rawLogs: []
+     },
+     logs: []
+   }
    ```
 
    Most important to us is the transaction ID (listed here both as `tx` and as `transactionHash`). We'll need to copy that value when we start to debug.
@@ -683,3 +691,4 @@ Just as before, we'll reset the contract on the blockchain.
 With the ability to debug your contracts directly within Truffle, you have even more power at your hands to make your smart contracts rock-solid and ready to deploy. Make sure to read more about Truffle Develop console and the debugger in the docs. If you have any questions, please join our [community Gitter channel](https://gitter.im/ConsenSys/truffle) where hundreds of fellow Trufflers congregate to answer your questions!
 
 Happy debugging!
+````
