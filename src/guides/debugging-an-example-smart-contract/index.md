@@ -272,7 +272,7 @@ We will look at the following issues:
 - Invalid error check
 - No error, but a function isn't operating as desired
 
-<!-- REMOVED THIS EXAMPLE UNTIL ISSUE # IS RESOLVED -->
+<!-- REMOVED THIS EXAMPLE UNTIL https://github.com/trufflesuite/truffle/issues/4542 IS RESOLVED -->
 <!-- ### Issue #1: An infinite loop
 
 On the Ethereum blockchain, transactions cannot be set to run forever.
