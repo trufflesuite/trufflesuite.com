@@ -445,7 +445,7 @@ This will safely unsubscribe when the App component un-mounts so we can prevent 
 
 #### Replace the `render` method
 
-Finally, we have replaced the boilerplate render method with something that applies to us better:
+Finally, we replace the boilerplate render method with something that applies to us better:
 
 ```javascript
 render() {
