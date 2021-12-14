@@ -156,19 +156,19 @@ pre {
     color: var(--md-primary-fg-color--dark);
   }
   .md-search__input:hover::-webkit-input-placeholder {
-      color: var(--md-primary-fg-color--dark);
+      color: var(--md-primary-bg-color);
   }
   /* Firefox < 19 */
   .md-search__input:hover:-moz-placeholder {
-      color: var(--md-primary-fg-color--dark)d;
+      color: var(--md-primary-bg-color);
   } 
   /* Firefox > 19 */
   .md-search__input:hover::-moz-placeholder {
-      color: var(--md-primary-fg-color--dark);
+      color: var(--md-primary-bg-color);
   } 
   /* Internet Explorer 10 */
   .md-search__input:hover:-ms-input-placeholder {
-      color: var(--md-primary-fg-color--dark);
+      color: var(--md-primary-bg-color);
   } 
 }
 
