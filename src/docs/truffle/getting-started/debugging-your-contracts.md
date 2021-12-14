@@ -201,7 +201,7 @@ This command also prints a group of instructions surrounding the current instruc
 
 ### (l) print additional source context
 
-This command prints source context surrounding the current source line.  By default, it prints 5 lines ahead of and 3 lines behind the current source line. You can configure the number of source line to be printed with `+` and `-`; e.g., `l +<lines-ahead> -<lines-back>` will make it print `lines-ahead` lines ahead of and `lines-back` lines behind the current line.  The configured numbers are saved and used for printout afterward.
+This command prints source context surrounding the current source line.  By default, it prints 5 lines ahead of and 3 lines behind the current source line. You can configure the number of source lines to be printed with `+` and `-`; e.g., `l +<lines-ahead> -<lines-back>` will make it print `lines-ahead` lines ahead of and `lines-back` lines behind the current line.  The configured numbers are saved and used for printout afterward.
 
 ### (g) turn on generated sources
 
