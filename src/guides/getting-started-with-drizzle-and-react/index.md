@@ -398,7 +398,7 @@ The first thing we have done is to set up our state variables inside our App com
 state = { loading: true, drizzleState: null };
 ```
 
-We are using two state variables here:
+We use two state variables here:
 
 1. `loading` — Indicates if Drizzle has finished initializing and the app is ready. The initialization process includes instantiating `web3` and our smart contracts, fetching any available Ethereum accounts and listening (or, in cases where subscriptions are not supported: polling) for new blocks.
 2. `drizzleState` — This is where we will store the state of the Drizzle store in our top-level component. If we can keep this state variable up-to-date, then we can simply use simple `props` and `state` to work with Drizzle (i.e. you don't have to use any Redux or advanced React patterns).
