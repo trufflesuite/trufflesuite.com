@@ -16,28 +16,19 @@ The goals of this release have included the following:
 
 First up, you'll need to ensure you have Python `3.8.9` or above installed locally. You can check your current version by running `python3 --version` in your terminal. You can download the latest build [here](https://www.python.org/downloads/) or install via [brew](https://docs.brew.sh/Homebrew-and-Python) or equivalent.
 
-Once installed, you'll need to install both [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) via the following:
-
+Once python3 is setup you'll need to install project dependencies.
 ```
-sudo pip3 install mkdocs-material
-```
-
-And the additional `mkdocs` plugins via the following:
-
-```
-sudo pip3 install mkdocs-awesome-pages-plugin mkdocs-macros-plugin requests
+pip3 install -r requirements.txt
 ```
 
-Assuming the above installed successfully, you can check the globally installed dependencies with `pip3 list`.
-
-In addition, MkDocs documentation can be found [here](https://www.mkdocs.org/#installation).
+Assuming the above installed successfully, you can check the globally installed dependencies with `pip3 list`. Additionally, MkDocs documentation can be found [here](https://www.mkdocs.org/#installation).
 
 ### Running the Site
 
 You can run the site locally with the following...
 
 ```
-mkdocs serve
+LOCAL_BUILD=true mkdocs serve
 ```
 
 By default the site will be served over [port 8000](http://127.0.0.1:8000).
