@@ -514,19 +514,28 @@ Just as before, we'll reset the contract on the blockchain.
    You will see an error:
 
    ```
-   Error: VM Exception while processing transaction: invalid opcode
+   Uncaught Error: Returned error: VM Exception while processing transaction: revert
+    at evalmachine.<anonymous>:0:66
    ```
 
    This means that we have a problem on our hands.
 
-1. In the log window, note the transaction ID with that error.
+1. In the log window, note the transaction ID with that error in the data key:
+
+   ```shell
+   data: {
+     '0x51f9cce23b57b15fafb13defc52225b1da2e29c5ce15f40a8ef793d2fff1546b': {
+     error: 'revert',
+     program_counter: 346,
+     ...
+   ```
 
 #### Debugging the issue
 
 1. Copy the transaction ID and use it as an argument to the `debug` command:
 
    ```shell
-   debug 0xe493340792ab92b95ac40e43dca6bc88fba7fd67191989d59ca30f79320e883f
+   debug 0x51f9cce23b57b15fafb13defc52225b1da2e29c5ce15f40a8ef793d2fff1546b
    ```
 
    <p class="alert alert-info">
@@ -536,34 +545,28 @@ Just as before, we'll reset the contract on the blockchain.
    Now we are back in the debugger:
 
    ```solidity
-   Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
+   Store.sol:
 
    1: pragma solidity ^0.8.10;
    2:
    3: contract SimpleStorage {
-      ^^^^^^^^^^^^^^^^^^^^^^^
+      ^^^^^^^^^^^^^^^^^^^^^^^^
 
-   debug(develop:0xe4933407...)>
+   debug(develop:0x51f9cce2...)>
    ```
 
 1. Press `Enter` a few times to step through the code. Eventually, the debugger will halt with an error message:
 
    ```solidity
-   Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
+   Store.sol:
 
    5:
    6:   function set(uint x) public {
-   7:     assert(x == 0);
-          ^^^^^^^^^^^^^^
+   7:     assert(x==0);
+         ^^^^^^^^^^^^
 
-   debug(develop:0x7e060037...)>
-
-   Transaction halted with a RUNTIME ERROR.
-
-   This is likely due to an intentional halting expression, like
-   assert(), require() or revert(). It can also be due to out-of-gas
-   exceptions. Please inspect your transaction parameters and
-   contract code to determine the meaning of this error.
+   debug(develop:0x51f9cce2...)>
+   Transaction has halted; cannot advance.
    ```
 
    **It is this last event that is triggering the error.** You can see that it is the `assert()` that is to blame.
