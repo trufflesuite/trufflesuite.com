@@ -405,7 +405,7 @@ We use two state variables here:
 
 #### Adding some initialization logic
 
-Next we have provided the `componentDidMount` lifecycle method for the component. The `componentDidMount` lifecycle method will run after the component output has been rendered to the DOM. This allows us to run some initialization logic.
+Next we provide the `componentDidMount` lifecycle method for the component. The `componentDidMount` lifecycle method runs after the component output is rendered to the DOM. This allows us to run some initialization logic.
 
 ```javascript
 componentDidMount() {
