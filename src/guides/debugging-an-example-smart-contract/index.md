@@ -71,7 +71,7 @@ First, let's set up our environment.
 1. Inside the `contracts/` directory, create a file called `Store.sol` with the following content:
 
    ```solidity
-   pragma solidity ^0.4.17;
+   pragma solidity ^0.8.10;
 
    contract SimpleStorage {
      uint myVariable;
@@ -330,7 +330,7 @@ Truffle contains a built-in debugger. The command to launch this is `debug <Tran
 
    Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
 
-   1: pragma solidity ^0.4.17;
+   1: pragma solidity ^0.8.10;
    2:
    3: contract SimpleStorage {
       ^^^^^^^^^^^^^^^^^^^^^^^
@@ -492,7 +492,7 @@ Just as before, we'll reset the contract on the blockchain.
    ```solidity
    Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
 
-   1: pragma solidity ^0.4.17;
+   1: pragma solidity ^0.8.10;
    2:
    3: contract SimpleStorage {
       ^^^^^^^^^^^^^^^^^^^^^^^
