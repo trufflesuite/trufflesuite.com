@@ -1,10 +1,10 @@
 {
-  "scribble": {
-    "title": "Supercharge your test suite with Scribble",
-    "date": "2021-09-03",
-    "author": "Joran Honig",
+  "using-infura-custom-provider": {
+    "title": "Using Infura (or a custom provider)",
+    "date": "2021-01-14",
+    "author": "Tim Coulter",
     "published": true,
-    "products": ["truffle", "scribble"]
+    "products": ["truffle"]
   },
   "learn-how-to-deploy-with-truffle-teams": {
     "title": "Learn How to Deploy with Truffle Teams",
@@ -159,14 +159,6 @@
     "author": "Tim Coulter",
     "published": false,
     "products": ["truffle", "ganache"]
-  },
-  "using-infura-custom-provider": {
-    "title": "Using Infura (or a custom provider)",
-    "date": "2016-09-16",
-    "updated": "2021-01-14",
-    "author": "Tim Coulter",
-    "published": true,
-    "products": ["truffle"]
   },
   "chain-forking-exploiting-the-dao": {
     "title": "Chain Forking and Dynamic Analysis: Exploiting The DAO",

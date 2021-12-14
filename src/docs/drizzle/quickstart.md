@@ -1,5 +1,5 @@
 ---
-title: Drizzle | Drizzle Quickstart
+title: Drizzle Quickstart
 layout: docs.hbs
 ---
 # Drizzle Quickstart

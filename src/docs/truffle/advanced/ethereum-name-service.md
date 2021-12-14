@@ -1,5 +1,5 @@
 ---
-title: Truffle | Ethereum Name Service
+title: Ethereum Name Service
 layout: docs.hbs
 ---
 # Ethereum Name Service

@@ -1,5 +1,5 @@
 ---
-title: Drizzle | Contract Interaction
+title: Contract Interaction
 layout: docs.hbs
 ---
 # Contract Interaction

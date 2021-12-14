@@ -1,11 +1,4 @@
-node_modules
-www
-.tmp
-.idea
-.idea/workspace.xml
-.DS_store
-bower_components
-client_id.json
-.tern-port
-build/
-npm-debug.log
+site
+src/boxes/*/
+__pycache__
+.DS_Store

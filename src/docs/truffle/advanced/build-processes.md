@@ -1,5 +1,5 @@
 ---
-title: Truffle | Build Processes
+title: Build Processes
 layout: docs.hbs
 ---
 # Build Processes

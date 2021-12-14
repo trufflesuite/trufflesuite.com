@@ -1,0 +1,878 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@truffle/codec | Truffle Decoding and Encoding</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Truffle Decoding and Encoding</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">Public</span>
+								<ul class="tsd-select-list">
+									<li data-value="public" class="selected">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-only-exported" checked />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">Globals</a>
+				</li>
+				<li>
+					<a href="_truffle_codec.html">@truffle/codec</a>
+				</li>
+			</ul>
+			<h1>Module @truffle/codec</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<a href="#truffle-codec" id="truffle-codec" style="color: inherit; text-decoration: none;">
+							<h1>Truffle Codec</h1>
+						</a>
+					</div>
+					<p>This module provides low-level decoding and encoding functionality for
+						Solidity and the Solidity ABI.  Many parts of this module are intended
+						primarily for internal use by Truffle and so remain largely undocumented,
+						but some of its types are also output by @truffle/decoder, which provides
+					a higher-level interface to much of this module&#39;s functionality.</p>
+					<a href="#if-you39re-here-from-truffle-decoder" id="if-you39re-here-from-truffle-decoder" style="color: inherit; text-decoration: none;">
+						<h2>If you&#39;re here from Truffle Decoder</h2>
+					</a>
+					<p>If you&#39;re coming here from <a href="_truffle_decoder.html">@truffle/decoder</a>, you probably just want to
+					know about the parts that are relevant to you.  These are:</p>
+					<ul>
+						<li>The &quot;data&quot; category (specifically <a href="_truffle_codec.format.html">Format</a>)</li>
+						<li>The &quot;output&quot; and &quot;enumerations&quot; categories (<a href="_truffle_codec.html#calldatadecoding">CalldataDecoding</a>, <a href="_truffle_codec.html#logdecoding">LogDecoding</a>, et al., see below)</li>
+						<li>The &quot;errors&quot; category (specifically <a href="../classes/_truffle_codec.unknownuserdefinedtypeerror.html">UnknownUserDefinedTypeError</a>)</li>
+					</ul>
+					<p>Note that the data category is largely scarce in
+					documentation, although that&#39;s because it&#39;s largely self-explanatory.</p>
+					<p>If you&#39;re not just here from Truffle Decoder, but are actually
+					interested in the lower-level workings, read on.</p>
+					<a href="#how-this-module-differs-from-truffle-decoder" id="how-this-module-differs-from-truffle-decoder" style="color: inherit; text-decoration: none;">
+						<h2>How this module differs from Truffle Decoder</h2>
+					</a>
+					<p>Unlike Truffle Decoder, this library makes no network connections
+						and avoids dependencies that do.  Instead, its decoding functionality
+						is generator-based; calling one of the decoding functions returns a
+						generator.  This generator&#39;s <code>next()</code> function may return a finished
+						result, or it may return a request for more information.  It is up to
+						the caller to fulfill these requests -- say, by making a network
+						connection of its own.  This is how @truffle/decoder works; @truffle/codec
+						makes requests, and @truffle/decoder fulfills them by
+					looking up the necessary information on the blockchain.</p>
+					<p>This library also provides additional functionality beyond what&#39;s used by
+						Truffle Decoder.  In particular, this library also exists to support Truffle
+						Debugger, and so it provides encoding functionality not just for
+						transactions, logs, and state variables, but also for Solidity variables
+						during transaction execution, including circularity detection for memroy
+						structures.  It includes functionality for decoding Solidity&#39;s internal
+						function pointers, which the debugger uses, but which Truffle Decoder
+					currently does not (although this is planned for the future).</p>
+					<p>There is also functionality for decoding return values and revert messages
+						that goes beyond what&#39;s currently available in @truffle/decoder; this may get
+					a better interface in the future.</p>
+					<a href="#how-to-use" id="how-to-use" style="color: inherit; text-decoration: none;">
+						<h2>How to use</h2>
+					</a>
+					<p>You should probably use <a href="_truffle_decoder.html">@truffle/decoder</a> instead, if your use case doesn&#39;t
+						preclude it.  This module has little documentation, where it has any at all,
+						and it&#39;s likely that parts of its interface may change (particularly
+						regarding allocation).  That said, if you truly need the functionality here,
+						Truffle Decoder can perhaps serve as something of a reference implementation
+						(and perhaps Truffle Debugger as well, though that code is much harder to
+					read or copy).</p>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Data Namespaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="_truffle_codec.format.html" class="tsd-kind-icon">Format</a></li>
+							</ul>
+							<h3>ABI data location Namespaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="_truffle_codec.abidata.html" class="tsd-kind-icon">Abi<wbr>Data</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-protected"><a href="_truffle_codec.topic.html" class="tsd-kind-icon">Topic</a></li>
+							</ul>
+							<h3>Solidity data location Namespaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="_truffle_codec.astconstant.html" class="tsd-kind-icon">Ast<wbr>Constant</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-protected"><a href="_truffle_codec.mappingkey.html" class="tsd-kind-icon">Mapping<wbr>Key</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="_truffle_codec.memory.html" class="tsd-kind-icon">Memory</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-protected"><a href="_truffle_codec.special.html" class="tsd-kind-icon">Special</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="_truffle_codec.stack.html" class="tsd-kind-icon">Stack</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="_truffle_codec.storage.html" class="tsd-kind-icon">Storage</a></li>
+							</ul>
+							<h3>Other Namespaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="_truffle_codec.ast.html" class="tsd-kind-icon">Ast</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-protected"><a href="_truffle_codec.basic.html" class="tsd-kind-icon">Basic</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-module tsd-is-protected"><a href="_truffle_codec.bytes.html" class="tsd-kind-icon">Bytes</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="_truffle_codec.compilations.html" class="tsd-kind-icon">Compilations</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="_truffle_codec.compiler.html" class="tsd-kind-icon">Compiler</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="_truffle_codec.contexts.html" class="tsd-kind-icon">Contexts</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="_truffle_codec.conversion.html" class="tsd-kind-icon">Conversion</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="_truffle_codec.evm.html" class="tsd-kind-icon">Evm</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="_truffle_codec.export.html" class="tsd-kind-icon">Export</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-module"><a href="_truffle_codec.pointer.html" class="tsd-kind-icon">Pointer</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Errors Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_truffle_codec.unknownuserdefinedtypeerror.html" class="tsd-kind-icon">Unknown<wbr>User<wbr>Defined<wbr>Type<wbr>Error</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Output Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_codec.abiargument.html" class="tsd-kind-icon">Abi<wbr>Argument</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_codec.anonymousdecoding.html" class="tsd-kind-icon">Anonymous<wbr>Decoding</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_codec.bytecodedecoding.html" class="tsd-kind-icon">Bytecode<wbr>Decoding</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_codec.constructordecoding.html" class="tsd-kind-icon">Constructor<wbr>Decoding</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_codec.emptyfailuredecoding.html" class="tsd-kind-icon">Empty<wbr>Failure<wbr>Decoding</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_codec.eventdecoding.html" class="tsd-kind-icon">Event<wbr>Decoding</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_codec.functiondecoding.html" class="tsd-kind-icon">Function<wbr>Decoding</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_codec.messagedecoding.html" class="tsd-kind-icon">Message<wbr>Decoding</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_codec.returndecoding.html" class="tsd-kind-icon">Return<wbr>Decoding</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_codec.revertmessagedecoding.html" class="tsd-kind-icon">Revert<wbr>Message<wbr>Decoding</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_codec.selfdestructdecoding.html" class="tsd-kind-icon">Self<wbr>Destruct<wbr>Decoding</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_codec.statevariable.html" class="tsd-kind-icon">State<wbr>Variable</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_codec.unknownbytecodedecoding.html" class="tsd-kind-icon">Unknown<wbr>Bytecode<wbr>Decoding</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_codec.unknowncalldecoding.html" class="tsd-kind-icon">Unknown<wbr>Call<wbr>Decoding</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_codec.unknowncreationdecoding.html" class="tsd-kind-icon">Unknown<wbr>Creation<wbr>Decoding</a></li>
+							</ul>
+							<h3>Requests Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_codec.coderequest.html" class="tsd-kind-icon">Code<wbr>Request</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_codec.storagerequest.html" class="tsd-kind-icon">Storage<wbr>Request</a></li>
+							</ul>
+							<h3>Inputs Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_codec.logoptions.html" class="tsd-kind-icon">Log<wbr>Options</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Output Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_truffle_codec.html#calldatadecoding" class="tsd-kind-icon">Calldata<wbr>Decoding</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_truffle_codec.html#decodingmode" class="tsd-kind-icon">Decoding<wbr>Mode</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_truffle_codec.html#logdecoding" class="tsd-kind-icon">Log<wbr>Decoding</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_truffle_codec.html#returndatadecoding" class="tsd-kind-icon">Returndata<wbr>Decoding</a></li>
+							</ul>
+							<h3>Enumerations Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_truffle_codec.html#contractkind" class="tsd-kind-icon">Contract<wbr>Kind</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_truffle_codec.html#location" class="tsd-kind-icon">Location</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_truffle_codec.html#mutability" class="tsd-kind-icon">Mutability</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_truffle_codec.html#paddingmode" class="tsd-kind-icon">Padding<wbr>Mode</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_truffle_codec.html#paddingtype" class="tsd-kind-icon">Padding<wbr>Type</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_truffle_codec.html#visibility" class="tsd-kind-icon">Visibility</a></li>
+							</ul>
+							<h3>Requests Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_truffle_codec.html#decoderrequest" class="tsd-kind-icon">Decoder<wbr>Request</a></li>
+							</ul>
+							<h3>Inputs Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_truffle_codec.html#extrasallowed" class="tsd-kind-icon">Extras<wbr>Allowed</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Decoding Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_truffle_codec.html#decodecalldata" class="tsd-kind-icon">decode<wbr>Calldata</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_truffle_codec.html#decodeevent" class="tsd-kind-icon">decode<wbr>Event</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_truffle_codec.html#decodereturndata" class="tsd-kind-icon">decode<wbr>Returndata</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_truffle_codec.html#decodevariable" class="tsd-kind-icon">decode<wbr>Variable</a></li>
+							</ul>
+							<h3>Decoding convenience Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_truffle_codec.html#decoderevert" class="tsd-kind-icon">decode<wbr>Revert</a></li>
+							</ul>
+							<h3>ABIfication Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_truffle_codec.html#abifycalldatadecoding" class="tsd-kind-icon">abify<wbr>Calldata<wbr>Decoding</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_truffle_codec.html#abifylogdecoding" class="tsd-kind-icon">abify<wbr>Log<wbr>Decoding</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_truffle_codec.html#abifyreturndatadecoding" class="tsd-kind-icon">abify<wbr>Returndata<wbr>Decoding</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Output Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="calldatadecoding" class="tsd-anchor"></a>
+					<h3>Calldata<wbr>Decoding</h3>
+					<div class="tsd-signature tsd-kind-icon">Calldata<wbr>Decoding<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.functiondecoding.html" class="tsd-signature-type">FunctionDecoding</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.constructordecoding.html" class="tsd-signature-type">ConstructorDecoding</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.messagedecoding.html" class="tsd-signature-type">MessageDecoding</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.unknowncalldecoding.html" class="tsd-signature-type">UnknownCallDecoding</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.unknowncreationdecoding.html" class="tsd-signature-type">UnknownCreationDecoding</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/types.ts#L13">codec/lib/types.ts:13</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A type representing a transaction (calldata) decoding.  As you can see, these come in five types,
+							each of which is documented separately.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="decodingmode" class="tsd-anchor"></a>
+					<h3>Decoding<wbr>Mode</h3>
+					<div class="tsd-signature tsd-kind-icon">Decoding<wbr>Mode<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"full"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"abi"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/types.ts#L49">codec/lib/types.ts:49</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>This is a type for recording what decoding mode a given decoding was produced in.  There are two
+								decoding modes, full mode and ABI mode.  In ABI mode, decoding is done purely based on the ABI JSON.
+								Full mode, by contrast, additionally uses AST information to produce a more informative decoding.
+							For more on full mode and ABI mode, see the notes on <a href="../#decoding-modes">Decoding modes</a>.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="logdecoding" class="tsd-anchor"></a>
+					<h3>Log<wbr>Decoding</h3>
+					<div class="tsd-signature tsd-kind-icon">Log<wbr>Decoding<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.eventdecoding.html" class="tsd-signature-type">EventDecoding</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.anonymousdecoding.html" class="tsd-signature-type">AnonymousDecoding</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/types.ts#L25">codec/lib/types.ts:25</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A type representing a log (event) decoding.  As you can see, these come in two types, each of which
+							is documented separately.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="returndatadecoding" class="tsd-anchor"></a>
+					<h3>Returndata<wbr>Decoding</h3>
+					<div class="tsd-signature tsd-kind-icon">Returndata<wbr>Decoding<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.returndecoding.html" class="tsd-signature-type">ReturnDecoding</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RawReturnDecoding</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.bytecodedecoding.html" class="tsd-signature-type">BytecodeDecoding</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.unknownbytecodedecoding.html" class="tsd-signature-type">UnknownBytecodeDecoding</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.selfdestructdecoding.html" class="tsd-signature-type">SelfDestructDecoding</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.revertmessagedecoding.html" class="tsd-signature-type">RevertMessageDecoding</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.emptyfailuredecoding.html" class="tsd-signature-type">EmptyFailureDecoding</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/types.ts#L33">codec/lib/types.ts:33</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A type representing a returndata (return value or revert message) decoding.
+								As you can see, these come in six types, each of which is documented
+							separately.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Enumerations Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="contractkind" class="tsd-anchor"></a>
+					<h3>Contract<wbr>Kind</h3>
+					<div class="tsd-signature tsd-kind-icon">Contract<wbr>Kind<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"contract"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"library"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"interface"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/common/types.ts#L16">codec/lib/common/types.ts:16</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="location" class="tsd-anchor"></a>
+					<h3>Location</h3>
+					<div class="tsd-signature tsd-kind-icon">Location<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"storage"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"memory"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"calldata"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/common/types.ts#L4">codec/lib/common/types.ts:4</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="mutability" class="tsd-anchor"></a>
+					<h3>Mutability</h3>
+					<div class="tsd-signature tsd-kind-icon">Mutability<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"pure"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"view"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"nonpayable"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"payable"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/common/types.ts#L12">codec/lib/common/types.ts:12</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="paddingmode" class="tsd-anchor"></a>
+					<h3>Padding<wbr>Mode</h3>
+					<div class="tsd-signature tsd-kind-icon">Padding<wbr>Mode<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"default"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"permissive"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"zero"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"right"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/common/types.ts#L21">codec/lib/common/types.ts:21</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="paddingtype" class="tsd-anchor"></a>
+					<h3>Padding<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">Padding<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"left"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"right"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"signed"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/common/types.ts#L30">codec/lib/common/types.ts:30</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="visibility" class="tsd-anchor"></a>
+					<h3>Visibility</h3>
+					<div class="tsd-signature tsd-kind-icon">Visibility<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"internal"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"external"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/common/types.ts#L8">codec/lib/common/types.ts:8</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Requests Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="decoderrequest" class="tsd-anchor"></a>
+					<h3>Decoder<wbr>Request</h3>
+					<div class="tsd-signature tsd-kind-icon">Decoder<wbr>Request<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.storagerequest.html" class="tsd-signature-type">StorageRequest</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/_truffle_codec.coderequest.html" class="tsd-signature-type">CodeRequest</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/types.ts#L539">codec/lib/types.ts:539</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Inputs Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="extrasallowed" class="tsd-anchor"></a>
+					<h3>Extras<wbr>Allowed</h3>
+					<div class="tsd-signature tsd-kind-icon">Extras<wbr>Allowed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"off"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"on"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"necessary"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/types.ts#L583">codec/lib/types.ts:583</a></li>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/decoder/lib/index.ts#L163">decoder/lib/index.ts:163</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Used to indicate whether &quot;extra&quot; event decodings -- event decodings from
+								non-library contracts other than the one that appears to have emitted
+							the event -- should be returned.</p>
+						</div>
+						<ul>
+							<li><code>&quot;off&quot;</code>: Exclude extra decodings (the default).</li>
+							<li><code>&quot;on&quot;</code>: Include extra decodings.</li>
+							<li><code>&quot;necessary&quot;</code>: Include extra decodings only if there are no others.</li>
+						</ul>
+						<p>Extra decodings will always be returned after other decodings.</p>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Decoding Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="decodecalldata" class="tsd-anchor"></a>
+					<h3>decode<wbr>Calldata</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">decode<wbr>Calldata<span class="tsd-signature-symbol">(</span>info<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.evm.evminfo.html" class="tsd-signature-type">EvmInfo</a>, isConstructor<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Generator</span><span class="tsd-signature-symbol">&lt;</span><a href="_truffle_codec.html#decoderrequest" class="tsd-signature-type">DecoderRequest</a><span class="tsd-signature-symbol">, </span><a href="_truffle_codec.html#calldatadecoding" class="tsd-signature-type">CalldataDecoding</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/core.ts#L54">codec/lib/core.ts:54</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>info: <a href="../interfaces/_truffle_codec.evm.evminfo.html" class="tsd-signature-type">EvmInfo</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> isConstructor: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Generator</span><span class="tsd-signature-symbol">&lt;</span><a href="_truffle_codec.html#decoderrequest" class="tsd-signature-type">DecoderRequest</a><span class="tsd-signature-symbol">, </span><a href="_truffle_codec.html#calldatadecoding" class="tsd-signature-type">CalldataDecoding</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="decodeevent" class="tsd-anchor"></a>
+					<h3>decode<wbr>Event</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">decode<wbr>Event<span class="tsd-signature-symbol">(</span>info<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.evm.evminfo.html" class="tsd-signature-type">EvmInfo</a>, address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_truffle_codec.logoptions.html" class="tsd-signature-type">LogOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Generator</span><span class="tsd-signature-symbol">&lt;</span><a href="_truffle_codec.html#decoderrequest" class="tsd-signature-type">DecoderRequest</a><span class="tsd-signature-symbol">, </span><a href="_truffle_codec.html#logdecoding" class="tsd-signature-type">LogDecoding</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/core.ts#L202">codec/lib/core.ts:202</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>info: <a href="../interfaces/_truffle_codec.evm.evminfo.html" class="tsd-signature-type">EvmInfo</a></h5>
+								</li>
+								<li>
+									<h5>address: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>options: <a href="../interfaces/_truffle_codec.logoptions.html" class="tsd-signature-type">LogOptions</a><span class="tsd-signature-symbol"> = ...</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Generator</span><span class="tsd-signature-symbol">&lt;</span><a href="_truffle_codec.html#decoderrequest" class="tsd-signature-type">DecoderRequest</a><span class="tsd-signature-symbol">, </span><a href="_truffle_codec.html#logdecoding" class="tsd-signature-type">LogDecoding</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="decodereturndata" class="tsd-anchor"></a>
+					<h3>decode<wbr>Returndata</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">decode<wbr>Returndata<span class="tsd-signature-symbol">(</span>info<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.evm.evminfo.html" class="tsd-signature-type">EvmInfo</a>, successAllocation<span class="tsd-signature-symbol">: </span><a href="_truffle_codec.abidata.allocate.html#returndataallocation" class="tsd-signature-type">ReturndataAllocation</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span>, status<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span>, id<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Generator</span><span class="tsd-signature-symbol">&lt;</span><a href="_truffle_codec.html#decoderrequest" class="tsd-signature-type">DecoderRequest</a><span class="tsd-signature-symbol">, </span><a href="_truffle_codec.html#returndatadecoding" class="tsd-signature-type">ReturndataDecoding</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/core.ts#L592">codec/lib/core.ts:592</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>If there are multiple possibilities, they&#39;re always returned in
+										the order: return, revert, returnmessage, failure, empty, bytecode, unknownbytecode
+									Moreover, within &quot;revert&quot;, builtin ones are put above custom ones</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>info: <a href="../interfaces/_truffle_codec.evm.evminfo.html" class="tsd-signature-type">EvmInfo</a></h5>
+								</li>
+								<li>
+									<h5>successAllocation: <a href="_truffle_codec.abidata.allocate.html#returndataallocation" class="tsd-signature-type">ReturndataAllocation</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> status: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> id: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Generator</span><span class="tsd-signature-symbol">&lt;</span><a href="_truffle_codec.html#decoderrequest" class="tsd-signature-type">DecoderRequest</a><span class="tsd-signature-symbol">, </span><a href="_truffle_codec.html#returndatadecoding" class="tsd-signature-type">ReturndataDecoding</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="decodevariable" class="tsd-anchor"></a>
+					<h3>decode<wbr>Variable</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">decode<wbr>Variable<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a>, pointer<span class="tsd-signature-symbol">: </span><a href="_truffle_codec.pointer.html#datapointer" class="tsd-signature-type">DataPointer</a>, info<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.evm.evminfo.html" class="tsd-signature-type">EvmInfo</a>, compilationId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Generator</span><span class="tsd-signature-symbol">&lt;</span><a href="_truffle_codec.html#decoderrequest" class="tsd-signature-type">DecoderRequest</a><span class="tsd-signature-symbol">, </span><a href="_truffle_codec.format.values.html#result" class="tsd-signature-type">Result</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/core.ts#L36">codec/lib/core.ts:36</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <a href="../interfaces/_truffle_codec.ast.astnode.html" class="tsd-signature-type">AstNode</a></h5>
+								</li>
+								<li>
+									<h5>pointer: <a href="_truffle_codec.pointer.html#datapointer" class="tsd-signature-type">DataPointer</a></h5>
+								</li>
+								<li>
+									<h5>info: <a href="../interfaces/_truffle_codec.evm.evminfo.html" class="tsd-signature-type">EvmInfo</a></h5>
+								</li>
+								<li>
+									<h5>compilationId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Generator</span><span class="tsd-signature-symbol">&lt;</span><a href="_truffle_codec.html#decoderrequest" class="tsd-signature-type">DecoderRequest</a><span class="tsd-signature-symbol">, </span><a href="_truffle_codec.format.values.html#result" class="tsd-signature-type">Result</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Decoding convenience Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="decoderevert" class="tsd-anchor"></a>
+					<h3>decode<wbr>Revert</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">decode<wbr>Revert<span class="tsd-signature-symbol">(</span>returndata<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_truffle_codec.html#returndatadecoding" class="tsd-signature-type">ReturndataDecoding</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/core.ts#L905">codec/lib/core.ts:905</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Decodes the return data from a failed call.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>returndata: <span class="tsd-signature-type">Uint8Array</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The returned data, as a Uint8Array.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_truffle_codec.html#returndatadecoding" class="tsd-signature-type">ReturndataDecoding</a><span class="tsd-signature-symbol">[]</span></h4>
+							<p>An array of possible decodings.  At the moment it&#39;s
+								impossible for there to be more than one.  (If the call didn&#39;t actually
+							fail, or failed in a nonstandard way, you may get no decodings at all, though!)</p>
+							<p>  Decodings can either be decodings of revert messages, or decodings
+								indicating that there was no revert message.  If somehow both were to be
+								possible, they&#39;d go in that order, although as mentioned, there (at least
+							currently) isn&#39;t any way for that to occur.</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>ABIfication Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="abifycalldatadecoding" class="tsd-anchor"></a>
+					<h3>abify<wbr>Calldata<wbr>Decoding</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">abify<wbr>Calldata<wbr>Decoding<span class="tsd-signature-symbol">(</span>decoding<span class="tsd-signature-symbol">: </span><a href="_truffle_codec.html#calldatadecoding" class="tsd-signature-type">CalldataDecoding</a>, userDefinedTypes<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.format.types.typesbyid.html" class="tsd-signature-type">TypesById</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_truffle_codec.html#calldatadecoding" class="tsd-signature-type">CalldataDecoding</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/abify.ts#L303">codec/lib/abify.ts:303</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>decoding: <a href="_truffle_codec.html#calldatadecoding" class="tsd-signature-type">CalldataDecoding</a></h5>
+								</li>
+								<li>
+									<h5>userDefinedTypes: <a href="../interfaces/_truffle_codec.format.types.typesbyid.html" class="tsd-signature-type">TypesById</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_truffle_codec.html#calldatadecoding" class="tsd-signature-type">CalldataDecoding</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="abifylogdecoding" class="tsd-anchor"></a>
+					<h3>abify<wbr>Log<wbr>Decoding</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">abify<wbr>Log<wbr>Decoding<span class="tsd-signature-symbol">(</span>decoding<span class="tsd-signature-symbol">: </span><a href="_truffle_codec.html#logdecoding" class="tsd-signature-type">LogDecoding</a>, userDefinedTypes<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.format.types.typesbyid.html" class="tsd-signature-type">TypesById</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_truffle_codec.html#logdecoding" class="tsd-signature-type">LogDecoding</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/abify.ts#L330">codec/lib/abify.ts:330</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>decoding: <a href="_truffle_codec.html#logdecoding" class="tsd-signature-type">LogDecoding</a></h5>
+								</li>
+								<li>
+									<h5>userDefinedTypes: <a href="../interfaces/_truffle_codec.format.types.typesbyid.html" class="tsd-signature-type">TypesById</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_truffle_codec.html#logdecoding" class="tsd-signature-type">LogDecoding</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="abifyreturndatadecoding" class="tsd-anchor"></a>
+					<h3>abify<wbr>Returndata<wbr>Decoding</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">abify<wbr>Returndata<wbr>Decoding<span class="tsd-signature-symbol">(</span>decoding<span class="tsd-signature-symbol">: </span><a href="_truffle_codec.html#returndatadecoding" class="tsd-signature-type">ReturndataDecoding</a>, userDefinedTypes<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.format.types.typesbyid.html" class="tsd-signature-type">TypesById</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_truffle_codec.html#returndatadecoding" class="tsd-signature-type">ReturndataDecoding</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/abify.ts#L348">codec/lib/abify.ts:348</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>decoding: <a href="_truffle_codec.html#returndatadecoding" class="tsd-signature-type">ReturndataDecoding</a></h5>
+								</li>
+								<li>
+									<h5>userDefinedTypes: <a href="../interfaces/_truffle_codec.format.types.typesbyid.html" class="tsd-signature-type">TypesById</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_truffle_codec.html#returndatadecoding" class="tsd-signature-type">ReturndataDecoding</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Modules</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="_truffle_codec.html">@truffle/codec</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_truffle_decoder.html">@truffle/decoder</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_truffle_codec.unknownuserdefinedtypeerror.html" class="tsd-kind-icon">Unknown<wbr>User<wbr>Defined<wbr>Type<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_codec.abiargument.html" class="tsd-kind-icon">Abi<wbr>Argument</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_codec.anonymousdecoding.html" class="tsd-kind-icon">Anonymous<wbr>Decoding</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_codec.bytecodedecoding.html" class="tsd-kind-icon">Bytecode<wbr>Decoding</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_codec.coderequest.html" class="tsd-kind-icon">Code<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_codec.constructordecoding.html" class="tsd-kind-icon">Constructor<wbr>Decoding</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_codec.emptyfailuredecoding.html" class="tsd-kind-icon">Empty<wbr>Failure<wbr>Decoding</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_codec.eventdecoding.html" class="tsd-kind-icon">Event<wbr>Decoding</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_codec.functiondecoding.html" class="tsd-kind-icon">Function<wbr>Decoding</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_codec.logoptions.html" class="tsd-kind-icon">Log<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_codec.messagedecoding.html" class="tsd-kind-icon">Message<wbr>Decoding</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_codec.returndecoding.html" class="tsd-kind-icon">Return<wbr>Decoding</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_codec.revertmessagedecoding.html" class="tsd-kind-icon">Revert<wbr>Message<wbr>Decoding</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_codec.selfdestructdecoding.html" class="tsd-kind-icon">Self<wbr>Destruct<wbr>Decoding</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_codec.statevariable.html" class="tsd-kind-icon">State<wbr>Variable</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_codec.storagerequest.html" class="tsd-kind-icon">Storage<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_codec.unknownbytecodedecoding.html" class="tsd-kind-icon">Unknown<wbr>Bytecode<wbr>Decoding</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_codec.unknowncalldecoding.html" class="tsd-kind-icon">Unknown<wbr>Call<wbr>Decoding</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_codec.unknowncreationdecoding.html" class="tsd-kind-icon">Unknown<wbr>Creation<wbr>Decoding</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_truffle_codec.html#calldatadecoding" class="tsd-kind-icon">Calldata<wbr>Decoding</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_truffle_codec.html#contractkind" class="tsd-kind-icon">Contract<wbr>Kind</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_truffle_codec.html#decoderrequest" class="tsd-kind-icon">Decoder<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_truffle_codec.html#decodingmode" class="tsd-kind-icon">Decoding<wbr>Mode</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_truffle_codec.html#extrasallowed" class="tsd-kind-icon">Extras<wbr>Allowed</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_truffle_codec.html#location" class="tsd-kind-icon">Location</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_truffle_codec.html#logdecoding" class="tsd-kind-icon">Log<wbr>Decoding</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_truffle_codec.html#mutability" class="tsd-kind-icon">Mutability</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_truffle_codec.html#paddingmode" class="tsd-kind-icon">Padding<wbr>Mode</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_truffle_codec.html#paddingtype" class="tsd-kind-icon">Padding<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_truffle_codec.html#returndatadecoding" class="tsd-kind-icon">Returndata<wbr>Decoding</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_truffle_codec.html#visibility" class="tsd-kind-icon">Visibility</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_truffle_codec.html#abifycalldatadecoding" class="tsd-kind-icon">abify<wbr>Calldata<wbr>Decoding</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_truffle_codec.html#abifylogdecoding" class="tsd-kind-icon">abify<wbr>Log<wbr>Decoding</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_truffle_codec.html#abifyreturndatadecoding" class="tsd-kind-icon">abify<wbr>Returndata<wbr>Decoding</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_truffle_codec.html#decodecalldata" class="tsd-kind-icon">decode<wbr>Calldata</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_truffle_codec.html#decodeevent" class="tsd-kind-icon">decode<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_truffle_codec.html#decodereturndata" class="tsd-kind-icon">decode<wbr>Returndata</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_truffle_codec.html#decoderevert" class="tsd-kind-icon">decode<wbr>Revert</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_truffle_codec.html#decodevariable" class="tsd-kind-icon">decode<wbr>Variable</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

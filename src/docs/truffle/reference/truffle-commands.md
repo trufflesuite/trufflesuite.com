@@ -1,5 +1,5 @@
 ---
-title: "Truffle | Truffle Commands"
+title: "Truffle Commands"
 layout: "docs.hbs"
 ---
 
@@ -38,7 +38,7 @@ Requires the `build` key to be present in the configuration. See the [Building y
 Compile contract source files.
 
 ```shell
-truffle compile [--list <filter>] [--all] [--quiet]
+truffle compile [--list <filter>] [--all] [--network <name>] [--quiet]
 ```
 
 This will only compile contracts that have changed since the last compile, unless otherwise specified.
@@ -47,6 +47,7 @@ Options:
 
 - `--list <filter>`: List all recent stable releases from solc-bin. If filter is specified then it will display only that type of release or docker tags. The filter parameter must be one of the following: prereleases, releases, latestRelease or docker.
 - `--all`: Compile all contracts instead of only the contracts changed since last compile.
+- `--network <name>`: Specify the network to use, saving artifacts specific to that network. Network name must exist in the configuration.
 - `--quiet`: Suppress all compilation output.
 
 ### config
@@ -68,7 +69,7 @@ Options:
 Run a console with contract abstractions and commands available.
 
 ```shell
-truffle console [--network <name>] [--verbose-rpc] [(--require|-r) <file>] [--require-none]
+truffle console [--network <name>] [--verbose-rpc]
 ```
 
 Spawns an interface to interact with contracts via the command line. Additionally, many Truffle commands are available within the console (without the `truffle` prefix).
@@ -81,12 +82,6 @@ Options:
 
 - `--network <name>`: Specify the network to use. Network name must exist in the configuration.
 - `--verbose-rpc`: Log communication between Truffle and the Ethereum client.
-- `--require|-r <file>`: Preload console environment from required JavaScript file.
-  The default export must be an object with named keys that will be used to populate the console environment.
-  For example, if your JavaScript is `module.exports = { desert: "yes please!" }`
-  then `breakfast` will be available in the console with the value `"yes please!"`.
-- `--require-none`: Do not load any user-defined JavaScript into the console environment.
-  This option takes precedence over `--require`, `-r`, and values provided for `console.require` in your project's `truffle-config.js`.
 
 ### create
 
@@ -98,7 +93,7 @@ truffle create <artifact_type> <ArtifactName>
 
 Options:
 
-- `<artifact_type>`: Create a new artifact, where `artifact_type` is one of the following: `contract`, `migration`, `test`, or `all`. The new artifact is created along with one of the following files: `contracts/ArtifactName.sol`, `migrations/####_artifact_name.js` or `tests/artifact_name.js`. Using `truffle create all` will create all three. (required)
+- `<artifact_type>`: Create a new artifact where artifact_type is one of the following: contract, migration or test. The new artifact is created along with one of the following files: `contracts/ArtifactName.sol`, `migrations/####_artifact_name.js` or `tests/artifact_name.js`. (required)
 - `<ArtifactName>`: Name of new artifact. (required)
 
 Camel case names of artifacts will be converted to underscore-separated file names for the migrations and tests. Number prefixes for migrations are automatically generated.
@@ -131,7 +126,7 @@ Alias for `migrate`. See [migrate](/docs/truffle/reference/truffle-commands#migr
 Open a console with a development blockchain
 
 ```shell
-truffle develop [--log] [(--require|-r) <file>] [--require-none]
+truffle develop [--log]
 ```
 
 Spawns a local development blockchain, and allows you to interact with contracts via the command line. Additionally, many Truffle commands are available within the console (without the `truffle` prefix).
@@ -140,17 +135,11 @@ If you want an interactive console but want to use an existing blockchain, use `
 
 See the [Using the console](/docs/getting_started/console) section for more details.
 
-Options:
+Option:
 
 - `--log`: Start/Connect to a Truffle develop session and log all RPC activity.
   See the [Log RPC Activity](docs/getting_started/console#log-rpc-activity)
   docs for more information about using this option.
-- `--require|-r <file>`: Preload console environment from required JavaScript file.
-  The default export must be an object with named keys that will be used to populate the console environment.
-  For example, if your JavaScript is `module.exports = { desert: "yes please!" }`
-  then `breakfast` will be available in the console with the value `"yes please!"`.
-- `--require-none`: Do not load any user-defined JavaScript into the console environment.
-  This option takes precedence over `--require`, `-r`, and values provided for `console.require` in your project's `truffle-config.js`.
 
 ### exec
 
@@ -329,20 +318,16 @@ to recognize the plugin. For more information, see [Third-Party Plugin Commands]
 Run JavaScript and Solidity tests.
 
 ```shell
-truffle test [<test_file>] [--compile-all[-debug]|--compile-none] [--migrate-none] [--network <name>] [--verbose-rpc] [--show-events] [--debug] [--debug-global <identifier>] [--bail] [--stacktrace[-extra]]
+truffle test [<test_file>] [--compile-all[-debug]] [--network <name>] [--verbose-rpc] [--show-events] [--debug] [--debug-global <identifier>] [--bail] [--stacktrace[-extra]]
 ```
 
-Runs some or all tests within the `test/` directory as specified. See the section on [Testing your contracts](/docs/testing/testing-your-contracts) for more information.
-
-The exit status of this command (assuming no internal errors) is equal to the number of failing tests, capped at 255.
+Runs some or all tests within the `test/` directory as specified. See the section on [Testing your contracts](/docs/getting_started/testing) for more information.
 
 Options:
 
 - `<test_file>`: Name of the test file to be run. Can include path information if the file does not exist in the current directory.
 - `--compile-all`: Compile all contracts instead of intelligently choosing which contracts need to be compiled.
 - `--compile-all-debug`: Like `--compile-all`, but compiles contracts in debug mode for extra information. Has no effect on Solidity <0.6.3.
-- `--compile-none`: Skip all contract compilations. This option is not intended for use with most tests, which will require compilation.
-- `--migrate-none`: Skip all contract migrations. This option could be useful if you will be deploying your own contracts and don't want Truffle to do this automatically for you.
 - `--network <name>`: Specify the network to use, using artifacts specific to that network. Network name must exist in the configuration.
 - `--verbose-rpc`: Log communication between Truffle and the Ethereum client.
 - `--show-events`: Log all contract events.

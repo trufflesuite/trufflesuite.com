@@ -1,5 +1,5 @@
 ---
-title: Ganache | Working With Corda
+title: XYZ
 layout: docs.hbs
 ---
 # Working With Corda

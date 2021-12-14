@@ -1,5 +1,5 @@
 ---
-title: Truffle | Using the Build Pipeline
+title: Using the Build Pipeline
 layout: docs.hbs
 ---
 # Using the Build Pipeline

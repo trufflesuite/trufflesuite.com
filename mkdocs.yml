@@ -1,0 +1,57 @@
+site_name: Truffle Suite
+docs_dir: src
+site_dir: site
+theme:
+  name: 'material'
+  custom_dir: 'custom_theme/'
+  logo: assets/logo.png
+  favicon: assets/favicon-32x32.png  
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Dark Chocolate Swirl
+    - media: "(prefers-color-scheme: dark)"
+      scheme: chocolatey
+      toggle:
+        icon: material/toggle-switch
+        name: Vanilla Caramel Supreme
+  font:
+    text: "Open Sans"
+    code: "Open Sans"
+  features:
+    - navigation.tabs
+  language: en
+google_analytics:
+  - UA-83874933-3
+  - auto
+copyright: Copyright &copy; 2016 - 2021 ConsenSys Software Inc.
+extra:
+  generator: false
+  social:
+  - icon: fontawesome/brands/twitter
+    link: https://twitter.com/trufflesuite
+    name: Twitter
+  - icon: fontawesome/brands/github
+    link: https://github.com/trufflesuite
+    name: Github
+  - icon: fontawesome/brands/linkedin
+    link: https://www.linkedin.com/company/trufflesuite
+    name: LinkedIn
+  rebuild: false    
+extra_css:
+  - assets/stylesheets/bootstrap.min.css
+  - assets/stylesheets/extra.css
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - toc:
+      permalink: true
+use_directory_urls: false
+plugins:
+  - search
+  - awesome-pages
+  - macros:
+      module_name: main

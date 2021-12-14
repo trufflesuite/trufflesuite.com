@@ -1,5 +1,5 @@
 ---
-title: Drizzle | How Data Stays Fresh
+title: How Data Stays Fresh
 layout: docs.hbs
 ---
 # How Data Stays Fresh

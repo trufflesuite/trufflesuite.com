@@ -1,0 +1,327 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Network | @truffle/db</title>
+	<meta name="description" content="Documentation for @truffle/db">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">@truffle/db</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../index.html">@truffle/db</a>
+				</li>
+				<li>
+					<a href="network.html">Network</a>
+				</li>
+			</ul>
+			<h1>Namespace Network</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<a href="#network-abstraction-for-truffledb" id="network-abstraction-for-truffledb" style="color: inherit; text-decoration: none;">
+							<h1>Network abstraction for @truffle/db</h1>
+						</a>
+					</div>
+					<p>This provides a TypeScript (or JavaScript) interface for loading blockchain
+					network information into a running <a href="../index.html#db">Db</a>.</p>
+					<p>See the <a href="../#network-abstraction">Network abstraction</a> section of this
+						documentation&#39;s index page for an overview of the purpose this abstraction
+						serves, or see the <a href="../classes/network.network-1.html#includeblocks"><code>Network.includeBlocks()</code></a>
+					method documentation for a bit more detail.</p>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section">
+							<h3>Constructor</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="network.html#initializeoptions" class="tsd-kind-icon">Initialize<wbr>Options</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="network.html#initialize" class="tsd-kind-icon">initialize</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section">
+							<h3>Abstraction</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-namespace"><a href="../classes/network.network-1.html" class="tsd-kind-icon">Network</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section">
+							<h3>Other</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="network.html#includesettings" class="tsd-kind-icon">Include<wbr>Settings</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section">
+							<h3>Internal processor</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-namespace tsd-parent-kind-namespace"><a href="network.fetch.html" class="tsd-kind-icon">Fetch</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-namespace"><a href="network.load.html" class="tsd-kind-icon">Load</a></li>
+								<li class="tsd-kind-namespace tsd-parent-kind-namespace"><a href="network.query.html" class="tsd-kind-icon">Query</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructor</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="initializeoptions" class="tsd-anchor"></a>
+					<h3>Initialize<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">Initialize<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#input-10" class="tsd-signature-type" data-tsd-kind="Type alias">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">&quot;networks&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;networkId&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;historicBlock&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>settings<span class="tsd-signature-symbol">?: </span><a href="network.html#includesettings" class="tsd-signature-type" data-tsd-kind="Type alias">IncludeSettings</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>db<span class="tsd-signature-symbol">: </span><a href="../index.html#db" class="tsd-signature-type" data-tsd-kind="Type alias">Db</a><span class="tsd-signature-symbol">; </span>provider<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Provider</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ReturnType</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ReturnType</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">typeof </span><a href="process.run.html#fordb" class="tsd-signature-type" data-tsd-kind="Function">forDb</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;forProvider&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/network/index.ts#L86">packages/db/src/network/index.ts:86</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Options for constructing a <a href="../classes/network.network-1.html">Network</a> abstraction, required by
+							<a href="network.html#initialize"><code>initialize()</code></a>.</p>
+						</div>
+						<p>These options must include either:</p>
+						<ul>
+							<li><code>db</code>, a <a href="../index.html#db">Db</a> instance and <code>provider</code>, JSON-RPC provider
+							(for normal use), or</li>
+							<li><code>run</code>, a provider-enabled <a href="meta.process.html#processorrunner">Process.ProcessorRunner</a> function, e.g. one
+							instantiated via <a href="process.run.html#fordb">Process.Run.forDb</a> (for internal/special-case use).</li>
+						</ul>
+						<p>In addition, these options must contain <code>network</code> with <code>name</code> information,
+						as per the <a href="../interfaces/datamodel.networkinput.html">Network input</a> specification.</p>
+						<p>Optionally this may include <code>settings</code> to specify <a href="network.html#includesettings">IncludeSettings</a>.</p>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="initialize" class="tsd-anchor"></a>
+					<h3>initialize</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">initialize<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><a href="network.html#initializeoptions" class="tsd-signature-type" data-tsd-kind="Type alias">InitializeOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/network.network-1.html" class="tsd-signature-type" data-tsd-kind="Class">Network</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/network/index.ts#L119">packages/db/src/network/index.ts:119</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Construct a <a href="../classes/network.network-1.html">Network</a> abstraction for given <a href="network.html#initializeoptions">InitializeOptions</a>.</p>
+								</div>
+								<p>Example:</p>
+								<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #AF00DB">type</span><span style="color: #000000"> { </span><span style="color: #001080">Provider</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;web3/providers&quot;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">db</span><span style="color: #000000">, </span><span style="color: #001080">Network</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@truffle/db&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">declare</span><span style="color: #000000"> </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">provider</span><span style="color: #000000">: </span><span style="color: #267F99">Provider</span><span style="color: #000000">; </span><span style="color: #008000">// obtain this somehow</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">db</span><span style="color: #000000"> = </span><span style="color: #795E26">connect</span><span style="color: #000000">({</span>
+<span style="color: #000000">  </span><span style="color: #008000">// ...</span>
+<span style="color: #000000">});</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">network</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">Network</span><span style="color: #000000">.</span><span style="color: #795E26">initialize</span><span style="color: #000000">({</span>
+<span style="color: #000000">  </span><span style="color: #001080">db</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">provider</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">network:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #001080">name:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;mainnet&quot;</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">});</span>
+</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <a href="network.html#initializeoptions" class="tsd-signature-type" data-tsd-kind="Type alias">InitializeOptions</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/network.network-1.html" class="tsd-signature-type" data-tsd-kind="Class">Network</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Other</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="includesettings" class="tsd-anchor"></a>
+					<h3>Include<wbr>Settings</h3>
+					<div class="tsd-signature tsd-kind-icon">Include<wbr>Settings<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>disableIndex<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span>skipKnownLatest<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/network/index.ts#L44">packages/db/src/network/index.ts:44</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>As described in the documentation for
+								<a href="../classes/network.network-1.html#includeblocks"><code>Network.includeBlocks()</code></a>, these
+							settings may help mitigate unforeseen problems with large data sets.</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> disable<wbr>Index<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Force the underlying persistence adapter to disable use of certain
+											database indexes. This option exists for purposes of testing fallback
+											behavior for persistence query generation failure. You probably don&#39;t
+											need to use this, but it may help diagnose problems when using the SQLite
+										adapter if you see errors about excessive SQL query parameters.</p>
+									</div>
+									<dl class="tsd-comment-tags">
+										<dt>default</dt>
+										<dd><p>false</p>
+										</dd>
+									</dl>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> skip<wbr>Known<wbr>Latest<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>Skip final query at end of this operation that determines canonical known
+										latest after the operation completes.</p>
+									</div>
+									<p>If set to <code>true</code>, this operation will update <a href="../classes/network.network-1.html#knownlatest">Network.knownLatest</a>
+										using only information already present in the abstraction instance as well
+									as information passed as input.</p>
+									<dl class="tsd-comment-tags">
+										<dt>default</dt>
+										<dd><p>false</p>
+										</dd>
+									</dl>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../index.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="datamodel.html">Data<wbr>Model</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="graph.html">Graph</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="meta.html">Meta</a>
+					</li>
+					<li class="current tsd-kind-namespace">
+						<a href="network.html">Network</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="network.fetch.html">Fetch</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="network.load.html">Load</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="network.query.html">Query</a>
+							</li>
+						</ul>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="pouch.html">Pouch</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="process.html">Process</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="project.html">Project</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="resources.html">Resources</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-namespace">
+						<a href="../classes/network.network-1.html" class="tsd-kind-icon">Network</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="network.html#includesettings" class="tsd-kind-icon">Include<wbr>Settings</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="network.html#initializeoptions" class="tsd-kind-icon">Initialize<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="network.html#initialize" class="tsd-kind-icon">initialize</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

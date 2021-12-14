@@ -1,5 +1,5 @@
 ---
-title: Drizzle | Using Drizzle's Redux Store
+title: Using Drizzle's Redux Store
 layout: docs.hbs
 ---
 # Using Drizzle's Redux Store

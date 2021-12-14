@@ -1,0 +1,79 @@
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+  {{ super() }}
+
+  <!-- Additional styles for landing page -->
+  <style>
+
+    /* Remove spacing, as we cannot hide it completely */
+    .md-main__inner {
+      margin: 0;
+    }
+
+    /* Hide main content for now */
+    .md-content {
+      display: none;
+    }
+
+    /* Hide table of contents */
+    @media screen and (min-width: 60em) {
+      .md-sidebar--secondary {
+        display: none;
+      }
+    }
+
+    /* Hide navigation */
+    @media screen and (min-width: 76.25em) {
+      .md-sidebar--primary {
+        display: none;
+      }
+    }
+
+  </style>
+
+<section class="container p-5">
+
+    <main role="main" class="container container-heading">
+        <div class="row">
+          <div class="col">
+            <h1>World Bank</h1>
+
+            <h2>The Problem</h2>
+
+            <p>The World Bank and the Commonwealth Bank of Australia agreed to create a platform to launch the first bond that was created, allocated, transferred and managed using distributed ledger technology. This new blockchain operating debt instrument, bond-i, was launched in August 2018. Creating and managing the business logic that underpins this application was a critical component. This was built on top of an Ethereum blockchain with a set of smart contracts that formed the foundation for the application.</p>
+
+            <figure>
+            <img class="mb-2" src="/img/case-studies/case-study-microsoft-and-the-world-bank/bond-i.jpg" alt="bond-i" style="width:100%">
+            </figure>
+
+            <h2>The Solution</h2>
+
+            <p>Partnered with World Bank, Microsoft was able to assist in developing blockchain technology to form the core application. Why blockchain? To summarize it best, to streamline and simplify the process that exists between debt capital market intermediaries and agents. This can help to raise capital and trading securities, improve the operational aspects of the application, and provide transparency to the regulatory oversight with this process.</p>
+
+            <div class="media align-items-center">
+            <div class="media-body">
+                <p>Authoring, testing, and auditing of the core components was able to use the Truffle suite to enable bringing this to market quickly.</p>
+            </div>
+            </div>
+
+            <p>The system was built in cooperation with CBA, in a decentralized model with the blockchain nodes stretching the two continents with the key participants. The application allowed investors to engage in the interaction with the bond, with the first one holding 90 million in value.</p>
+
+            <p>Building a complex platform to support this required not only the deep experience with the financial instruments, but also knowledge of blockchain technology and most specifically, smart contracts. Authoring, testing, and auditing of the core components was able to use the Truffle suite to enable bringing this to market quickly. Truly the productivity gains realized by the tooling was key to making this real.</p>          </div>
+        </div>
+      </main>
+      
+
+</section>
+
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->
+
+{% block footer %}
+    {% include "partials/footer.html" %}
+{% endblock %}

@@ -1,0 +1,470 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ResourceProcessors | @truffle/db</title>
+	<meta name="description" content="Documentation for @truffle/db">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">@truffle/db</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../index.html">@truffle/db</a>
+				</li>
+				<li>
+					<a href="process.html">Process</a>
+				</li>
+				<li>
+					<a href="process.resourceprocessors.html">ResourceProcessors</a>
+				</li>
+			</ul>
+			<h1>Namespace ResourceProcessors</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="process.resourceprocessors.html#all" class="tsd-kind-icon">All</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="process.resourceprocessors.html#find" class="tsd-kind-icon">Find</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="process.resourceprocessors.html#get" class="tsd-kind-icon">Get</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="process.resourceprocessors.html#load" class="tsd-kind-icon">Load</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="all" class="tsd-anchor"></a>
+					<h3>All</h3>
+					<div class="tsd-signature tsd-kind-icon">All<span class="tsd-signature-symbol">:</span> &lt;N&gt;<span class="tsd-signature-symbol">(</span>collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">N</span>, document<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">graphql.DocumentNode</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Process</span><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#resource-30" class="tsd-signature-type" data-tsd-kind="Type alias">Resource</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/process.ts#L240">packages/db/src/process.ts:240</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p><code>resources.all</code></p>
+						</div>
+						<p>Retrieves full or partial representations of all known resources for a
+							given collection name.
+							Parameter <code>document</code> is a GraphQL DocumentNode that defines a fragment
+						on the resource object type, to control which fields are returned.</p>
+						<p><strong>Note</strong>: This function returns a generator. For <code>async</code> behavior, use
+							with a <a href="meta.process.html#processorrunner">ProcessorRunner</a> such as
+						that returned by <a href="process.run.html#fordb">Run.forDb</a> or <a href="../classes/project.project-1.html#run">Project.run</a>.</p>
+						<dl class="tsd-comment-tags">
+							<dt>example</dt>
+							<dd><pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">gql</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;graphql-tag&quot;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">connect</span><span style="color: #000000">, </span><span style="color: #001080">Resources</span><span style="color: #000000">, </span><span style="color: #001080">Process</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@truffle/db&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">db</span><span style="color: #000000"> = </span><span style="color: #795E26">connect</span><span style="color: #000000">({</span>
+<span style="color: #000000">  </span><span style="color: #008000">// ...</span>
+<span style="color: #000000">});</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">Run</span><span style="color: #000000">, </span><span style="color: #0070C1">resources</span><span style="color: #000000"> } = </span><span style="color: #001080">Process</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">run</span><span style="color: #000000"> } = </span><span style="color: #001080">Run</span><span style="color: #000000">.</span><span style="color: #795E26">forDb</span><span style="color: #000000">(</span><span style="color: #001080">db</span><span style="color: #000000">);</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">sources</span><span style="color: #000000">: </span><span style="color: #267F99">Pick</span><span style="color: #000000">&lt;</span>
+<span style="color: #000000">  </span><span style="color: #267F99">Resources</span><span style="color: #000000">.</span><span style="color: #267F99">Resource</span><span style="color: #000000">&lt;</span><span style="color: #A31515">&quot;sources&quot;</span><span style="color: #000000">&gt;,</span>
+<span style="color: #000000">  </span><span style="color: #A31515">&quot;contents&quot;</span>
+<span style="color: #000000">&gt;[] = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #795E26">run</span><span style="color: #000000">(</span><span style="color: #001080">resources</span><span style="color: #000000">.</span><span style="color: #001080">all</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;sources&quot;</span><span style="color: #000000">, </span><span style="color: #795E26">gql</span><span style="color: #A31515">`</span>
+<span style="color: #A31515">  fragment Contents on Source {</span>
+<span style="color: #A31515">    contents</span>
+<span style="color: #A31515">  }</span>
+<span style="color: #A31515">`</span><span style="color: #000000">);</span>
+</code></pre>
+							</dd>
+						</dl>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-has-type-parameter">
+									<li class="tsd-signature tsd-kind-icon">&lt;N&gt;<span class="tsd-signature-symbol">(</span>collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">N</span>, document<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">graphql.DocumentNode</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Process</span><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#resource-30" class="tsd-signature-type" data-tsd-kind="Type alias">Resource</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-type-parameters-title">Type parameters</h4>
+										<ul class="tsd-type-parameters">
+											<li>
+												<h4>N<span class="tsd-signature-symbol">: </span><a href="resources.html#collectionname" class="tsd-signature-type" data-tsd-kind="Type alias">CollectionName</a></h4>
+											</li>
+										</ul>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>collectionName: <span class="tsd-signature-type">N</span></h5>
+											</li>
+											<li>
+												<h5>document: <span class="tsd-signature-type">graphql.DocumentNode</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Process</span><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#resource-30" class="tsd-signature-type" data-tsd-kind="Type alias">Resource</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="find" class="tsd-anchor"></a>
+					<h3>Find</h3>
+					<div class="tsd-signature tsd-kind-icon">Find<span class="tsd-signature-symbol">:</span> &lt;N&gt;<span class="tsd-signature-symbol">(</span>collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">N</span>, ids<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span>, document<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">graphql.DocumentNode</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Process</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">(</span><a href="resources.html#resource-30" class="tsd-signature-type" data-tsd-kind="Type alias">Resource</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/process.ts#L199">packages/db/src/process.ts:199</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p><code>resources.find</code></p>
+						</div>
+						<p>Retrieves full or partial representations of all resources in a list of
+							given IDs.
+							Parameter <code>document</code> is a GraphQL DocumentNode that defines a fragment
+						on the resource object type, to control which fields are returned.</p>
+						<p>The resulting array will always have the same length as the provided IDs,
+							with each result corresponding to the ID at the same index. Unknown IDs
+						will have <code>null</code> entries in the resulting array.</p>
+						<p><strong>Note</strong>: This function returns a generator. For <code>async</code> behavior, use
+							with a <a href="meta.process.html#processorrunner">ProcessorRunner</a> such as
+						that returned by <a href="process.run.html#fordb">Run.forDb</a> or <a href="../classes/project.project-1.html#run">Project.run</a>.</p>
+						<dl class="tsd-comment-tags">
+							<dt>example</dt>
+							<dd><pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">gql</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;graphql-tag&quot;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">connect</span><span style="color: #000000">, </span><span style="color: #001080">Process</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@truffle/db&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">db</span><span style="color: #000000"> = </span><span style="color: #795E26">connect</span><span style="color: #000000">({</span>
+<span style="color: #000000">  </span><span style="color: #008000">// ...</span>
+<span style="color: #000000">});</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">Run</span><span style="color: #000000">, </span><span style="color: #0070C1">resources</span><span style="color: #000000"> } = </span><span style="color: #001080">Process</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">run</span><span style="color: #000000"> } = </span><span style="color: #001080">Run</span><span style="color: #000000">.</span><span style="color: #795E26">forDb</span><span style="color: #000000">(</span><span style="color: #001080">db</span><span style="color: #000000">);</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">sources</span><span style="color: #000000">: (</span>
+<span style="color: #000000"> | </span><span style="color: #267F99">Pick</span><span style="color: #000000">&lt;</span><span style="color: #267F99">Resources</span><span style="color: #000000">.</span><span style="color: #267F99">Resource</span><span style="color: #000000">&lt;</span><span style="color: #A31515">&quot;sources&quot;</span><span style="color: #000000">&gt;, </span><span style="color: #A31515">&quot;contents&quot;</span><span style="color: #000000">&gt;</span>
+<span style="color: #000000"> | </span><span style="color: #267F99">null</span>
+<span style="color: #000000">)[] = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #795E26">run</span><span style="color: #000000">(</span><span style="color: #001080">resources</span><span style="color: #000000">.</span><span style="color: #001080">find</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;sources&quot;</span><span style="color: #000000">, [</span><span style="color: #A31515">&quot;0x...&quot;</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;0x...&quot;</span><span style="color: #000000">], </span><span style="color: #795E26">gql</span><span style="color: #A31515">`</span>
+<span style="color: #A31515">  fragment Contents on Source {</span>
+<span style="color: #A31515">    contents</span>
+<span style="color: #A31515">  }</span>
+<span style="color: #A31515">`</span><span style="color: #000000">);</span>
+</code></pre>
+							</dd>
+						</dl>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-has-type-parameter">
+									<li class="tsd-signature tsd-kind-icon">&lt;N&gt;<span class="tsd-signature-symbol">(</span>collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">N</span>, ids<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span>, document<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">graphql.DocumentNode</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Process</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">(</span><a href="resources.html#resource-30" class="tsd-signature-type" data-tsd-kind="Type alias">Resource</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-type-parameters-title">Type parameters</h4>
+										<ul class="tsd-type-parameters">
+											<li>
+												<h4>N<span class="tsd-signature-symbol">: </span><a href="resources.html#collectionname" class="tsd-signature-type" data-tsd-kind="Type alias">CollectionName</a></h4>
+											</li>
+										</ul>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>collectionName: <span class="tsd-signature-type">N</span></h5>
+											</li>
+											<li>
+												<h5>ids: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h5>
+											</li>
+											<li>
+												<h5>document: <span class="tsd-signature-type">graphql.DocumentNode</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Process</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">(</span><a href="resources.html#resource-30" class="tsd-signature-type" data-tsd-kind="Type alias">Resource</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="get" class="tsd-anchor"></a>
+					<h3>Get</h3>
+					<div class="tsd-signature tsd-kind-icon">Get<span class="tsd-signature-symbol">:</span> &lt;N&gt;<span class="tsd-signature-symbol">(</span>collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">N</span>, id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, document<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">graphql.DocumentNode</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Process</span><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#resource-30" class="tsd-signature-type" data-tsd-kind="Type alias">Resource</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/process.ts#L154">packages/db/src/process.ts:154</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p><code>resources.get</code></p>
+						</div>
+						<p>Retrieves full or partial representations of a resource given its ID.
+							Parameter <code>document</code> is a GraphQL DocumentNode that defines a fragment
+						on the resource object type, to control which fields are returned.</p>
+						<p><strong>Note</strong>: This function returns a generator. For <code>async</code> behavior, use
+							with a <a href="meta.process.html#processorrunner">ProcessorRunner</a> such as
+						that returned by <a href="process.run.html#fordb">Run.forDb</a> or <a href="../classes/project.project-1.html#run">Project.run</a>.</p>
+						<dl class="tsd-comment-tags">
+							<dt>example</dt>
+							<dd><pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">gql</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;graphql-tag&quot;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">connect</span><span style="color: #000000">, </span><span style="color: #001080">Process</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@truffle/db&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">db</span><span style="color: #000000"> = </span><span style="color: #795E26">connect</span><span style="color: #000000">({</span>
+<span style="color: #000000">  </span><span style="color: #008000">// ...</span>
+<span style="color: #000000">});</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">Run</span><span style="color: #000000">, </span><span style="color: #0070C1">resources</span><span style="color: #000000"> } = </span><span style="color: #001080">Process</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">run</span><span style="color: #000000"> } = </span><span style="color: #001080">Run</span><span style="color: #000000">.</span><span style="color: #795E26">forDb</span><span style="color: #000000">(</span><span style="color: #001080">db</span><span style="color: #000000">);</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">contents</span><span style="color: #000000"> } = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #795E26">run</span><span style="color: #000000">(</span><span style="color: #001080">resources</span><span style="color: #000000">.</span><span style="color: #001080">get</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;sources&quot;</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;0x...&quot;</span><span style="color: #000000">, </span><span style="color: #795E26">gql</span><span style="color: #A31515">`</span>
+<span style="color: #A31515">  fragment Contents on Source {</span>
+<span style="color: #A31515">    contents</span>
+<span style="color: #A31515">  }</span>
+<span style="color: #A31515">`</span><span style="color: #000000">);</span>
+</code></pre>
+							</dd>
+						</dl>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-has-type-parameter">
+									<li class="tsd-signature tsd-kind-icon">&lt;N&gt;<span class="tsd-signature-symbol">(</span>collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">N</span>, id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, document<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">graphql.DocumentNode</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Process</span><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#resource-30" class="tsd-signature-type" data-tsd-kind="Type alias">Resource</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-type-parameters-title">Type parameters</h4>
+										<ul class="tsd-type-parameters">
+											<li>
+												<h4>N<span class="tsd-signature-symbol">: </span><a href="resources.html#collectionname" class="tsd-signature-type" data-tsd-kind="Type alias">CollectionName</a></h4>
+											</li>
+										</ul>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>collectionName: <span class="tsd-signature-type">N</span></h5>
+											</li>
+											<li>
+												<h5>id: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>document: <span class="tsd-signature-type">graphql.DocumentNode</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Process</span><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#resource-30" class="tsd-signature-type" data-tsd-kind="Type alias">Resource</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="load" class="tsd-anchor"></a>
+					<h3>Load</h3>
+					<div class="tsd-signature tsd-kind-icon">Load<span class="tsd-signature-symbol">:</span> &lt;N&gt;<span class="tsd-signature-symbol">(</span>collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">N</span>, inputs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><a href="resources.html#input-10" class="tsd-signature-type" data-tsd-kind="Type alias">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Process</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">(</span><a href="resources.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/process.ts#L118">packages/db/src/process.ts:118</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p><code>resources.load</code></p>
+						</div>
+						<p>Loads resource inputs and processes into
+						corresponding <a href="resources.html#idobject">IdObjects</a>.</p>
+						<p>The resulting array will always have the same length as the inputs, with
+							each result corresponding to the input at the same index. Invalid inputs
+						correspond to <code>null</code> resource results.</p>
+						<p><strong>Note</strong>: This function returns a generator. For <code>async</code> behavior, use
+							with a <a href="meta.process.html#processorrunner">ProcessorRunner</a> such as
+						that returned by <a href="process.run.html#fordb">Run.forDb</a> or <a href="../classes/project.project-1.html#run">Project.run</a>.</p>
+						<dl class="tsd-comment-tags">
+							<dt>example</dt>
+							<dd><pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">connect</span><span style="color: #000000">, </span><span style="color: #001080">Resources</span><span style="color: #000000">, </span><span style="color: #001080">Process</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@truffle/db&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">db</span><span style="color: #000000"> = </span><span style="color: #795E26">connect</span><span style="color: #000000">({</span>
+<span style="color: #000000">  </span><span style="color: #008000">// ...</span>
+<span style="color: #000000">});</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">Run</span><span style="color: #000000">, </span><span style="color: #0070C1">resources</span><span style="color: #000000"> } = </span><span style="color: #001080">Process</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">run</span><span style="color: #000000"> } = </span><span style="color: #001080">Run</span><span style="color: #000000">.</span><span style="color: #795E26">forDb</span><span style="color: #000000">(</span><span style="color: #001080">db</span><span style="color: #000000">);</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">sources</span><span style="color: #000000">: (</span>
+<span style="color: #000000">  | </span><span style="color: #267F99">Resources</span><span style="color: #000000">.</span><span style="color: #267F99">IdObject</span><span style="color: #000000">&lt;</span><span style="color: #A31515">&quot;sources&quot;</span><span style="color: #000000">&gt;</span>
+<span style="color: #000000">  | </span><span style="color: #267F99">null</span>
+<span style="color: #000000">)[] = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #795E26">run</span><span style="color: #000000">(</span><span style="color: #001080">resources</span><span style="color: #000000">.</span><span style="color: #001080">load</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;sources&quot;</span><span style="color: #000000">, [</span>
+<span style="color: #000000">  { </span><span style="color: #001080">sourcePath:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;...&quot;</span><span style="color: #000000">, </span><span style="color: #001080">contents:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;...&quot;</span><span style="color: #000000"> }</span>
+<span style="color: #000000">]);</span>
+</code></pre>
+							</dd>
+						</dl>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-has-type-parameter">
+									<li class="tsd-signature tsd-kind-icon">&lt;N&gt;<span class="tsd-signature-symbol">(</span>collectionName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">N</span>, inputs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><a href="resources.html#input-10" class="tsd-signature-type" data-tsd-kind="Type alias">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Process</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">(</span><a href="resources.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-type-parameters-title">Type parameters</h4>
+										<ul class="tsd-type-parameters">
+											<li>
+												<h4>N<span class="tsd-signature-symbol">: </span><a href="resources.html#collectionname" class="tsd-signature-type" data-tsd-kind="Type alias">CollectionName</a></h4>
+											</li>
+										</ul>
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>collectionName: <span class="tsd-signature-type">N</span></h5>
+											</li>
+											<li>
+												<h5>inputs: <span class="tsd-signature-symbol">(</span><a href="resources.html#input-10" class="tsd-signature-type" data-tsd-kind="Type alias">Input</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Process</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">(</span><a href="resources.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../index.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="datamodel.html">Data<wbr>Model</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="graph.html">Graph</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="meta.html">Meta</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="network.html">Network</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="pouch.html">Pouch</a>
+					</li>
+					<li class="current tsd-kind-namespace">
+						<a href="process.html">Process</a>
+						<ul>
+							<li class="current tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="process.resourceprocessors.html">Resource<wbr>Processors</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="process.run.html">Run</a>
+							</li>
+						</ul>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="project.html">Project</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="resources.html">Resources</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="process.resourceprocessors.html#all" class="tsd-kind-icon">All</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="process.resourceprocessors.html#find" class="tsd-kind-icon">Find</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="process.resourceprocessors.html#get" class="tsd-kind-icon">Get</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="process.resourceprocessors.html#load" class="tsd-kind-icon">Load</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

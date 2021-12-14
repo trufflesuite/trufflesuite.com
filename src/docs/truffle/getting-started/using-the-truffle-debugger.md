@@ -197,6 +197,12 @@ This command can also print locations other than the stack, if you want to view 
 
 You can also add these extra locations to the default display with `+`; e.g., `p +mem` will make it so that memory will always be displayed when you enter `p` or `;`, and `p -mem` will turn this off.  You can even turn off the stack display with `p -sta`, or force it to display with `p sta`.  All of these options can again be combined.
 
+This command also prints a group of instructions surrounding the current instruction. By default, it prints 3 instructions ahead of and 3 instructions behind the current instruction.  You can configure the number of instructions to be printed with `+` and `-`; e.g., `p +<instructions-ahead> -<instruction-back>` will make it print `instructions-ahead` instructions ahead of and `instructions-back` instructions behind the current instruction. The configured numbers are saved and used for printout afterward.
+
+### (l) print additional source context
+
+This command prints source context surrounding the current source line.  By default, it prints 5 lines ahead of and 3 lines behind the current source line. You can configure the number of source lines to be printed with `+` and `-`; e.g., `l +<lines-ahead> -<lines-back>` will make it print `lines-ahead` lines ahead of and `lines-back` lines behind the current line.  The configured numbers are saved and used for printout afterward.
+
 ### (g) turn on generated sources
 
 When using Solidity 0.7.2 or later, you can use this option to allow the debugger to step into the internal assembly routines that Solidity generates.  You can always advance into these with the `;` command, but this option allows the other debugger commands (`n`, `i`, `o`, `u`) to step into these routines as well.

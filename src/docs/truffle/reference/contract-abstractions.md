@@ -1,5 +1,5 @@
 ---
-title: "Truffle | Contract Abstractions"
+title: "Contract Abstractions"
 layout: "docs.hbs"
 ---
 # Contract Abstractions

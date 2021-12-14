@@ -1,0 +1,221 @@
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+  {{ super() }}
+
+  <!-- Additional styles for landing page -->
+  <style>
+
+    /* Remove spacing, as we cannot hide it completely */
+    .md-main__inner {
+      margin: 0;
+    }
+
+    /* Hide main content for now */
+    .md-content {
+      display: none;
+    }
+
+    /* Hide table of contents */
+    @media screen and (min-width: 60em) {
+      .md-sidebar--secondary {
+        display: none;
+      }
+    }
+
+    /* Hide navigation */
+    @media screen and (min-width: 76.25em) {
+      .md-sidebar--primary {
+        display: none;
+      }
+    }
+
+    .ganache-heading-row {
+	 position: relative;
+    }
+    .ganache-heading-row .ganache-banner-image {
+        margin: -6rem auto 0 auto;
+        width: 80%;
+        max-width: 912px;
+    }
+    @media (min-width: 768px) and (max-height: 767.98px) {
+        .ganache-heading-row .ganache-banner-image {
+            width: 60%;
+        }
+    }
+    .ganache-heading-row .github-button-wrapper {
+        margin-left: 0.8rem;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .ganache-heading-row .ganache-down-arrow {
+        font-size: 2rem;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        line-height: 0.1rem;
+        margin-bottom: 2rem;
+    }
+    @media (max-width: 767.98px) {
+        .ganache-heading-row {
+            height: auto;
+        }
+        .ganache-heading-row [class^="col"] {
+            margin-top: 0;
+            max-height: none;
+        }
+        .ganache-heading-row .ganache-banner-image {
+            position: static;
+            left: auto;
+            top: auto;
+            transform: none;
+            max-height: none;
+            width: 100%;
+            margin-top: -15%;
+        }
+        .ganache-heading-row .btn {
+            margin-top: 1rem;
+        }
+    }
+    
+    .btn-ganache {
+	 background: #e4a663;
+	 color: #33262a;
+    }
+    .btn-ganache.btn-download {
+        font-size: 1.2rem;
+    }
+    .btn-ganache.btn-download p {
+        float: left;
+        line-height: 1.2rem;
+        margin: 0.6rem 0 0 0;
+    }
+    .btn-ganache.btn-download img {
+        height: 60px;
+        float: right;
+        margin-left: 1rem;
+        width: 60px;
+    }
+    .btn-ganache.btn-download .os {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1rem;
+    }
+    
+
+  </style>
+
+<section>
+    <div class="container p-5">
+    
+        <div class="row align-items-center ganache-heading-row">
+            <img class="ganache-banner-image" src="/img/ganache-header.svg" alt="Ganache" title="Ganache" />
+        
+            <div class="col-md-6">
+            <h1 class="text-ganache">Ganache</h1>
+            <h2>ONE CLICK BLOCKCHAIN</h2>
+            <a href="https://github.com/trufflesuite/ganache-ui" class="btn btn-ganache">GITHUB REPO</a>
+            <a href="/docs/ganache/overview" class="btn btn-ganache">DOCS</a>
+            <div class="github-button-wrapper">
+                <a class="github-button" href="https://github.com/trufflesuite/ganache-ui" data-size="large"  data-show-count="true" aria-label="Star trufflesuite/ganache-ui on GitHub">Star</a>
+            </div>
+            </div>
+        
+            <div class="col-md-6">
+            <p>Quickly fire up a personal Ethereum blockchain which you can use to run tests, execute commands, and inspect state while controlling how the chain operates.</p>
+            <a href="#" class="btn btn-ganache btn-download btn-lg dl-ganache text-left">
+                <p>
+                DOWNLOAD
+                <br/>
+                <span class="os">(Windows)</span>
+                </p>
+                <img src="/img/ganache/windows-logo.svg" />
+            </a>
+            <p class="ganache-other-os first"><a href="https://github.com/trufflesuite/ganache-ui/releases">Need another OS download?</a></p>
+            </div>
+        
+            <!--<p class="ganache-down-arrow d-none d-md-block" id="headerArrow"><i class="fas fa-chevron-down"></i></p>-->
+        </div>
+        
+        <div class="row row-ganache-window" id="contentBegins">
+            <div class="col text-center">
+            <h1 class="text-ganache ganache-features-h mb-5 mt-5 mt-md-7">Features</h1>
+            <img class="img-fluid" src="/img/ganache-window.png" alt="Ganache" title="Ganache" />
+            <hr class="ganache-window-rule" />
+            <h2 class="mt-4">VISUAL MNEMONIC &amp; ACCOUNT INFO</h2>
+            <p>Quickly see the current status of all accounts, including their addresses, private keys, transactions and balances.</p>
+            </div>
+        </div>
+        
+        <div class="row text-center mb-5 mt-5">
+            <div class="col-md-6 mb-5 mb-md-0">
+            <img class="feature-icon-sm mb-4" src="/img/ganache-feature-3-icon.svg" alt="Ganache" title="Ganache" />
+            <h2>BLOCKCHAIN LOG OUTPUT</h2>
+            <p>See the log output of Ganache’s internal blockchain, including responses and other vital debugging information.</p>
+            </div>
+        
+            <div class="col-md-6">
+            <img class="feature-icon-sm mb-4" src="/img/ganache-feature-4-icon.svg" alt="Ganache" title="Ganache" />
+            <h2>ADVANCED MINING CONTROLS</h2>
+            <p>Configure advanced mining with a single click, setting block times to best suit your development needs.</p>
+            </div>
+        </div>
+        
+        <div class="row text-center mb-5">
+            <div class="col-md-6 mb-5 mb-md-0">
+            <img class="feature-icon-sm mb-4" src="/img/ganache-feature-5-icon.svg" alt="Ganache" title="Ganache" />
+            <h2>BUILT-IN BLOCK EXPLORER</h2>
+            <p>Examine all blocks and transactions to gain insight about what’s happening under the hood.</p>
+            </div>
+        
+            <div class="col-md-6">
+            <img class="feature-icon-sm mb-4" src="/img/ganache-feature-1-icon.svg" alt="Ganache" title="Ganache" />
+            <h2>THE ETHEREUM BLOCKCHAIN</h2>
+            <p>Byzantium comes standard, giving you the latest Ethereum features needed for modern dapp development.</p>
+            </div>
+        </div>
+        
+        <div class="row text-center mb-5">
+            <div class="col">
+            <a href="#" class="btn btn-ganache btn-download btn-lg dl-ganache text-left">
+                <p>
+                DOWNLOAD
+                <br/>
+                <span class="os">(Windows)</span>
+                </p>
+                <img src="/img/ganache/windows-logo.svg" />
+            </a>
+            <p class="ganache-other-os"><a href="https://github.com/trufflesuite/ganache-ui/releases">Need another OS download?</a></p>
+            </div>
+        </div>
+        </main>
+    
+    </div>
+</section>
+
+<div class="banner-taste ganache">
+    <div class="container">
+        <div class="row">
+        <div class="col text-center">
+            <h1 class="text-ganache">Like the taste?</h1>
+            <h2>The recipe is open source!</h2>
+            <p>The full source code of Ganache is on <a href="https://github.com/trufflesuite/ganache-ui">GitHub</a>! We welcome all contributions and feature suggestions.</p>
+        </div>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/js/os-detector.js"></script>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->
+
+{% block footer %}
+    {% include "partials/footer.html" %}
+{% endblock %}

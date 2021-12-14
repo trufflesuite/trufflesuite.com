@@ -1,6 +1,5 @@
 ---
-title: Truffle | Truffle Quickstart
-layout: docs.hbs
+title: Truffle Quickstart
 ---
 # Truffle Quickstart
 
@@ -12,13 +11,16 @@ This page will take you through the basics of creating a Truffle project and dep
 
 ## Table of Contents
 
-1. [Creating a project](#creating-a-project)
-1. [Exploring the project](#exploring-the-project)
-1. [Testing](#testing)
-1. [Compiling](#compiling)
-1. [Migrating with Truffle Develop](#migrating-with-truffle-develop)
-1. [Alternative: Migrating with Ganache](#alternative-migrating-with-ganache)
-1. [Interacting with the contract](#interacting-with-the-contract)
+- [Truffle Quickstart](#truffle-quickstart)
+  - [Table of Contents](#table-of-contents)
+  - [Creating a project](#creating-a-project)
+  - [Exploring the project](#exploring-the-project)
+  - [Testing](#testing)
+  - [Compiling](#compiling)
+  - [Migrating with Truffle Develop](#migrating-with-truffle-develop)
+  - [Alternative: Migrating with Ganache](#alternative-migrating-with-ganache)
+  - [Interacting with the contract](#interacting-with-the-contract)
+  - [Continue learning](#continue-learning)
 
 
 ## Creating a project

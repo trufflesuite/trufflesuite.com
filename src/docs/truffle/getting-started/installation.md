@@ -1,5 +1,5 @@
 ---
-title: Truffle | Installation
+title: Installation
 layout: docs.hbs
 ---
 # Installation

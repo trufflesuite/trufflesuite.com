@@ -1,0 +1,110 @@
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+  {{ super() }}
+
+  <!-- Additional styles for landing page -->
+  <style>
+
+    /* Remove spacing, as we cannot hide it completely */
+    .md-main__inner {
+      margin: 0;
+    }
+
+    /* Hide main content for now */
+    .md-content {
+      display: none;
+    }
+
+    /* Hide table of contents */
+    @media screen and (min-width: 60em) {
+      .md-sidebar--secondary {
+        display: none;
+      }
+    }
+
+    /* Hide navigation */
+    @media screen and (min-width: 76.25em) {
+      .md-sidebar--primary {
+        display: none;
+      }
+    }
+
+  </style>
+
+<section class="container p-5">
+
+    <h1>Team</h1>
+    <p>Meet the Truffle Team...</p>
+  
+    <div class="row">
+    {% for member in config.extra.team %}
+        <div class="col-xs-12 col-md-6 col-lg-3 mb-3">
+            <div class="flipcardbox">
+              <div class="flipcard flipcard-staff mb-2">
+                <div class="front">
+                    <img class="img-fluid rounded-circle green-border" src="{{member.headshot}}" alt="{{member.name}}" />
+                </div>
+              </div>
+            </div>
+            <h3 class="mb-0">{{ member.name }}</h3>
+            <p>{{ member.position }}</p>
+            {% if member.twitter %}
+                <p class="md-typeset mb-0 small">
+                    <a href="https://twitter.com/{{member.twitter}}">
+                        <span class="twemoji twitter">
+                            {% include ".icons/fontawesome/brands/twitter.svg" %}
+                        </span>
+                        <span>@{{member.twitter}}</span>
+                    </a>
+                </p>
+            {% endif %}
+            {% if member.linkedin %}
+                <p class="md-typeset mb-0 small">
+                    <a href="https://linkedin.com/in/{{member.linkedin}}">
+                        <span class="twemoji linkedin">
+                            {% include ".icons/fontawesome/brands/linkedin.svg" %}
+                        </span>
+                        <span>{{member.linkedin}}</span>
+                    </a>
+                </p>
+            {% endif %}
+            {% if member.github %}
+                <p class="md-typeset mb-0 small">
+                    <a href="https://github.com/{{member.github}}">
+                        <span class="twemoji github">
+                            {% include ".icons/fontawesome/brands/github.svg" %}
+                        </span>
+                        <span>{{member.github}}</span>
+                    </a>
+                </p>
+            {% endif %}
+
+            {% if member.email %}
+                <p class="md-typeset mb-3 small">
+                    <a href="mailto:{{member.email}}@trufflesuite.com">
+                        <span class="twemoji envelope">
+                            {% include ".icons/fontawesome/regular/envelope.svg" %}
+                        </span>
+                        <span>{{member.email}}@trufflesuite.com</span>
+                    </a>
+                </p>
+            {% endif %}
+
+        </div>
+    {% endfor %}
+     </div>
+
+</section>
+
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->
+
+{% block footer %}
+    {% include "partials/footer.html" %}
+{% endblock %}

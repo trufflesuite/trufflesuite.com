@@ -1,0 +1,68 @@
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+  {{ super() }}
+
+  <!-- Additional styles for landing page -->
+  <style>
+
+    /* Remove spacing, as we cannot hide it completely */
+    .md-main__inner {
+      margin: 0;
+    }
+
+    /* Hide main content for now */
+    .md-content {
+      display: none;
+    }
+
+    /* Hide table of contents */
+    @media screen and (min-width: 60em) {
+      .md-sidebar--secondary {
+        display: none;
+      }
+    }
+
+    /* Hide navigation */
+    @media screen and (min-width: 76.25em) {
+      .md-sidebar--primary {
+        display: none;
+      }
+    }
+
+  </style>
+
+<section class="container p-5">
+    <main role="main" class="container container-heading">
+        <div class="row">
+          <div class="col">
+            <h1>Starbucks</h1>
+            <h2>The Problem</h2>
+            <p>Starbucks wanted to provide their customers with more transparency while creating financial opportunities for their coffee bean farmers.</p>
+            <figure>
+              <img class="mb-2" src="/img/case-studies/case-study-starbucks/coffee-tracker-app.jpg" alt="The Starbucks coffee tracking system">
+              <figcaption class="text-center font-italic mt-2">The Starbucks coffee tracking system in-app.</figcaption>
+            </figure>
+            <h2>The Solution</h2>
+            <p>They launched a pilot program with select coffee farmers to develop a blockchain based system to share real-time information along the journey of coffee beans and open up potential financial opportunities for coffee bean farmers at the other end. </p>            
+            <figure>
+              <img class="mb-2" src="/img/case-studies/case-study-starbucks/tcon19-presentation.jpg" alt="Starbucks' head of IT presenting the app at TruffleCon 2019." style="width:100%">
+              <figcaption class="text-center font-italic mt-2">Starbucks' head of IT presenting the app at TruffleCon 2019.</figcaption>
+            </figure>
+            <p>Using a smartphone customers can scan a code on the back of coffee bags for an immutable record, built with the help of Truffle Suite tools, to view the coffee's history. The record includes information about where beans are grown, Starbucks' support efforts for farmers in that region, where the beans were roasted, tasting notes, and more. The goal is to create greater empowerment for farmers and coffee drinkers can better understand where their coffee came from with real-time and transparents data.</p>      
+          </div>
+        </div>
+      </main>
+</section>
+
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->
+
+{% block footer %}
+    {% include "partials/footer.html" %}
+{% endblock %}

@@ -1,0 +1,77 @@
+
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+  {{ super() }}
+
+  <!-- Additional styles for landing page -->
+  <style>
+
+
+    /* Remove spacing, as we cannot hide it completely */
+    .md-main__inner {
+      margin: 0;
+    }
+
+    /* Hide main content for now */
+    .md-content {
+      display: none;
+    }
+
+    /* Hide table of contents */
+    @media screen and (min-width: 60em) {
+      .md-sidebar--secondary {
+        display: none;
+      }
+    }
+
+    /* Hide navigation */
+    @media screen and (min-width: 76.25em) {
+      .md-sidebar--primary {
+        display: none;
+      }
+    }
+
+    .green {
+        border: 4px solid #3fe0c5;
+    }
+
+  </style>
+
+<div class="container">
+    <section class="p-5">
+        <h1>Truffle Blog</h1>
+        {% for post in config.extra.posts %}
+            <a href="{{ post.route }}">
+                <div class="row pt-3 pb-3">
+                    {% if post.image %}
+                    <div class="col-md-3">
+                        <img src="{{ post.image }}" class="rounded-circle img-fluid green" />
+                    </div>
+                    {% endif %}
+                    <div class="col-md-9">
+                        <h2>{{ post.title }}</h2>
+                        <p>{{ post.date }}&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> {{ post.author }}</p>
+                        {% if post.excerpt is not none %}
+                            <p>{{ post.excerpt }}</p>
+                        {% endif %}
+                        <span class="btn btn-secondary">READ MORE</span>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </section>
+</div>
+
+  {% endblock %}
+
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->
+
+{% block footer %}
+    {% include "partials/footer.html" %}
+{% endblock %}

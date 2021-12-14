@@ -401,16 +401,6 @@
 			"community"
 		]
 	},
-	"react-uport-box": {
-		"description": "Truffle and React/Redux boilerplate with uPort Connect",
-		"stars": 4,
-		"tags": [
-			"community",
-			"identity",
-			"react",
-			"uport"
-		]
-	},
 	"react_hooks_box": {
 		"description": "",
 		"stars": 2,
@@ -700,13 +690,6 @@
 			"vue",
 			"vue-bootstrap",
 			"webpack-boilerplate"
-		]
-	},
-	"vueport-box": {
-		"description": "Truffle box with built in uPort self-sovereign identity authentication and contract interaction using VueJS. Inspired by https://github.com/truffle-box/react-uport-box",
-		"stars": 4,
-		"tags": [
-			"community"
 		]
 	},
 	"vyper-example-box": {

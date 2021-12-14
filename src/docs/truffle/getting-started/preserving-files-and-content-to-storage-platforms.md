@@ -1,5 +1,5 @@
 ---
-title: Truffle | Preserving Files and Content to Storage Platforms
+title: Preserving Files and Content to Storage Platforms
 layout: docs.hbs
 ---
 # Preserving Files and Content to Storage Platforms

@@ -1,5 +1,5 @@
 ---
-title: Truffle | Choosing an Ethereum Client
+title: Choosing an Ethereum Client
 layout: docs.hbs
 ---
 # Choosing an Ethereum client
@@ -38,7 +38,7 @@ To read more about interacting with the console, please see the [Using the Conso
 
 ### Ganache CLI
 
-Ganache also has a command-line interface for those who aren't working from a graphical environment. Great for automated testing and continuous integration environments, Ganache CLI runs headless and can be configured to serve all your development needs. Ganache CLI processes transactions instantly instead of waiting for the default block time, so you can test that your code works quickly. It also tells you immediately when your smart contracts run into errors, and integrates directly with Truffle to reduce test runtime up to 90% compared to other clients. [Learn more about Ganache CLI](https://github.com/trufflesuite/ganache-cli-archive/).
+Ganache also has a command-line interface for those who aren't working from a graphical environment. Great for automated testing and continuous integration environments, Ganache CLI runs headless and can be configured to serve all your development needs. Ganache CLI processes transactions instantly instead of waiting for the default block time, so you can test that your code works quickly. It also tells you immediately when your smart contracts run into errors, and integrates directly with Truffle to reduce test runtime up to 90% compared to other clients. [Learn more about Ganache CLI](https://github.com/trufflesuite/ganache-cli/).
 
 
 ## Deploying to live networks

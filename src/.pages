@@ -1,0 +1,8 @@
+nav:
+    - Home: index.md
+    - Documentation: docs
+    - guides
+    - tutorial
+    - boxes
+    - blog
+    - community

@@ -1,5 +1,5 @@
 ---
-title: Truffle | Compiling Contracts
+title: Compiling Contracts
 layout: docs.hbs
 ---
 # Compiling contracts

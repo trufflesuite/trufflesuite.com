@@ -1,0 +1,52 @@
+<style>
+  footer ul.footer-naviation {
+      list-style-type: none;
+      padding-left: 0;
+  }
+  footer .truffle-logo {
+      width: 5rem;
+  }
+</style>
+
+<footer class="md-footer pt-3">
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="container">
+          <div class="row">
+            <div class="col-2">
+              <img class="truffle-logo pt-3" src="/img/truffle-logo-light.svg" alt="Truffle Logo">
+            </div>
+            <div class="col-8">
+              <ul class="footer-naviation">
+                <li><a class="text-uppercase" href="mailto:inquiry@trufflesuite.com">Contact Us</a></li>
+                <li><a class="text-uppercase" href="/policy">Privacy Policy</a></li>
+                <li><a class="text-uppercase" href="/staff">Staff</a></li>
+                <li><a class="text-uppercase" href="https://github.com/trufflesuite">Github</a></li>
+                <li><a class="text-uppercase" href="/trufflecon2020">TruffleCon 2020</a></li>
+              </ul>
+            </div>
+            <div class="col-2">
+              {% include "partials/social.html" %}
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="md-footer-copyright text-center">
+                {% if config.copyright %}
+                  <div class="md-footer-copyright__highlight">
+                    {{ config.copyright }}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4795067.js"></script>
+<!-- End of HubSpot Embed Code -->

@@ -1,0 +1,857 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@truffle/decoder | Truffle Decoding and Encoding</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Truffle Decoding and Encoding</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">Public</span>
+								<ul class="tsd-select-list">
+									<li data-value="public" class="selected">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-only-exported" checked />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">Globals</a>
+				</li>
+				<li>
+					<a href="_truffle_decoder.html">@truffle/decoder</a>
+				</li>
+			</ul>
+			<h1>Module @truffle/decoder</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<a href="#truffle-decoder" id="truffle-decoder" style="color: inherit; text-decoration: none;">
+							<h1>Truffle Decoder</h1>
+						</a>
+					</div>
+					<p>This module provides an interface for decoding contract state, transaction
+						calldata, events, and return values and revert strings.  It&#39;s an interface to
+						the same low-level decoding functionality that Truffle Debugger uses.  However,
+						it has additional functionality that the debugger does not need, and the
+					debugger has additional functionality that this decoder does not need.</p>
+					<p>The interface is split into three classes: The project decoder, the contract
+						decoder, and the contract instance decoder.  The project decoder is associated
+						to the project as a whole and decodes transaction calldata and events.  The
+						contract decoder is associated to a specific contract class.  It has all the
+						capabilities of the project decoder, but it can also decode return values from
+						calls made by the given contract class.  The contract instance decoder is
+						associated to a specific contract instance; it again has all the capabilities
+						of the project decoder and contract decoder, but it can also decode the state
+						variables for the specific instance.  (In addition, in the case that the
+						contract does not include a <code>deployedBytecode</code> field in its artifact, which can
+						hinder decoding certain things, the contract instance decoder can sometimes
+					work around this where the other decoders cannot.)</p>
+					<p>This documentation describes the current state of the decoder, but further
+					improvements are planned.</p>
+					<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+						<h2>Usage</h2>
+					</a>
+					<a href="#initialization" id="initialization" style="color: inherit; text-decoration: none;">
+						<h3>Initialization</h3>
+					</a>
+					<p>Create a decoder with one of the various constructor functions.</p>
+					<p>For a project decoder, use the <a href="_truffle_decoder.html#forproject"><code>forProject</code></a> function.</p>
+					<p>For a contract decoder, use the <a href="_truffle_decoder.html#forartifact"><code>forArtifact</code></a> or
+					<a href="_truffle_decoder.html#forcontract"><code>forContract</code></a> function.</p>
+					<p>For a contract instance decoder, use one of the following:
+						<a href="_truffle_decoder.html#fordeployedartifact"><code>forDeployedArtifact</code></a>
+						<a href="_truffle_decoder.html#fordeployedcontract"><code>forDeployedContract</code></a>
+						<a href="_truffle_decoder.html#forartifactat"><code>forArtifactAt</code></a>
+						<a href="_truffle_decoder.html#forcontractat"><code>forContractAt</code></a>
+						<a href="_truffle_decoder.html#forcontractinstance"><code>forContractInstance</code></a>
+					<a href="_truffle_decoder.html#foraddress"><code>forAddress</code></a></p>
+					<p>See the documentation of these functions for details, or below for usage
+					examples.</p>
+					<p>All of these functions take a final argument in which information about the
+						project is specified; currently only a few methods for specifying project
+					information are allowed, but more are planned.</p>
+					<p>One can also spawn decoders from other decoders by supplying additional
+						information.  See the documentation for the individual decoder classes for a
+					method listing.</p>
+					<a href="#decoder-methods" id="decoder-methods" style="color: inherit; text-decoration: none;">
+						<h3>Decoder methods</h3>
+					</a>
+					<p>See the documentation for the individual decoder classes for a method listing.</p>
+					<a href="#output-format-information" id="output-format-information" style="color: inherit; text-decoration: none;">
+						<h3>Output format information</h3>
+					</a>
+					<p>The decoder outputs lossless, machine-readable <a href="_truffle_codec.format.values.html#result">Format.Values.Result</a> objects
+						containing individual decoded values. See the <a href="_truffle_codec.format.html">format documentation</a>
+					for an overview and complete module listing.</p>
+					<a href="#decoding-modes-abification-and-caveats" id="decoding-modes-abification-and-caveats" style="color: inherit; text-decoration: none;">
+						<h3>Decoding modes, abification, and caveats</h3>
+					</a>
+					<p>The decoder runs in either of two modes: full mode or ABI mode. Full mode
+						requires some additional constraints but returns substantially more detailed
+						information. Please see the notes on <a href="../#decoding-modes">decoding modes</a> for
+					more about this distinction.</p>
+					<p>See also the notes about <a href="../#additional-notes-on-decoding-state-variables">decoding state variables</a> for additional
+					caveats about what may or may not be fully decodable.</p>
+					<a href="#basic-usage-examples" id="basic-usage-examples" style="color: inherit; text-decoration: none;">
+						<h3>Basic usage examples</h3>
+					</a>
+					<a href="#decoding-a-log-with-the-project-decoder" id="decoding-a-log-with-the-project-decoder" style="color: inherit; text-decoration: none;">
+						<h4>Decoding a log with the project decoder</h4>
+					</a>
+					<p>This usage example is for a project with two contracts, <code>Contract1</code> and
+					<code>Contract2</code>.</p>
+					<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">forProject</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@truffle/decoder&quot;</span><span style="color: #000000">;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">contract1</span><span style="color: #000000"> = </span><span style="color: #001080">artifacts</span><span style="color: #000000">.</span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;Contract1&quot;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">contract2</span><span style="color: #000000"> = </span><span style="color: #001080">artifacts</span><span style="color: #000000">.</span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;Contract2&quot;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">provider</span><span style="color: #000000"> = </span><span style="color: #001080">web3</span><span style="color: #000000">.</span><span style="color: #001080">currentProvider</span><span style="color: #000000">;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">decoder</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">Decoder</span><span style="color: #000000">.</span><span style="color: #795E26">forProject</span><span style="color: #000000">(</span><span style="color: #001080">provider</span><span style="color: #000000">, [</span><span style="color: #001080">contract1</span><span style="color: #000000">, </span><span style="color: #001080">contract2</span><span style="color: #000000">]);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">decodings</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">decoder</span><span style="color: #000000">.</span><span style="color: #795E26">decodeLog</span><span style="color: #000000">(</span><span style="color: #001080">log</span><span style="color: #000000">);</span>
+</code></pre>
+					<p>The usage of <a href="../classes/_truffle_decoder.projectdecoder.html#decodetransaction">decodeTransaction</a> is similar.</p>
+					<p>For getting already-decoded logs meeting appropriate conditions, see
+					<a href="../classes/_truffle_decoder.projectdecoder.html#events">ProjectDecoder.events</a>.</p>
+					<a href="#decoding-state-variables-with-the-contract-instance-decoder" id="decoding-state-variables-with-the-contract-instance-decoder" style="color: inherit; text-decoration: none;">
+						<h4>Decoding state variables with the contract instance decoder</h4>
+					</a>
+					<p>This usage example is for decoding the state variables of a contract <code>Contract</code>
+					in a project that also contains a contract <code>OtherContract</code>.</p>
+					<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">forContract</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@truffle/decoder&quot;</span><span style="color: #000000">;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">contract</span><span style="color: #000000"> = </span><span style="color: #001080">artifacts</span><span style="color: #000000">.</span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;Contract&quot;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">otherContract</span><span style="color: #000000"> = </span><span style="color: #001080">artifacts</span><span style="color: #000000">.</span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;OtherContract&quot;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">decoder</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">Decoder</span><span style="color: #000000">.</span><span style="color: #795E26">forContract</span><span style="color: #000000">(</span><span style="color: #001080">contract</span><span style="color: #000000">, [</span><span style="color: #001080">otherContract</span><span style="color: #000000">]);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">instanceDecoder</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">decoder</span><span style="color: #000000">.</span><span style="color: #795E26">forInstance</span><span style="color: #000000">();</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">variables</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">instanceDecoder</span><span style="color: #000000">.</span><span style="color: #795E26">variables</span><span style="color: #000000">();</span>
+</code></pre>
+					<p>In this example, we use the deployed version of <code>Contract</code>.  If we wanted an
+					instance at a different address, we could pass the address to <code>forInstance</code>.</p>
+					<p>In addition, rather than using <code>forContract</code> and then <code>forInstance</code>, we could
+						also use <a href="_truffle_decoder.html#fordeployedcontract"><code>forContractInstance</code></a> to perform both of these
+						in one step.  If we wanted to do this with a specified address, we could use
+					<a href="_truffle_decoder.html#forcontractat"><code>forContractAt</code></a>.</p>
+					<p>Yet another way would be:</p>
+					<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">forContractInstance</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@truffle/decoder&quot;</span><span style="color: #000000">;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">contract</span><span style="color: #000000"> = </span><span style="color: #001080">artifacts</span><span style="color: #000000">.</span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;Contract&quot;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">otherContract</span><span style="color: #000000"> = </span><span style="color: #001080">artifacts</span><span style="color: #000000">.</span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;OtherContract&quot;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">deployedContract</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">contract</span><span style="color: #000000">.</span><span style="color: #795E26">deployed</span><span style="color: #000000">();</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">instanceDecoder</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">Decoder</span><span style="color: #000000">.</span><span style="color: #795E26">forContractInstance</span><span style="color: #000000">(</span><span style="color: #001080">deployedContract</span><span style="color: #000000">, [</span><span style="color: #001080">otherContract</span><span style="color: #000000">]);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">variables</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">instanceDecoder</span><span style="color: #000000">.</span><span style="color: #795E26">variables</span><span style="color: #000000">();</span>
+</code></pre>
+					<p>These examples are not exhaustive.</p>
+					<p>One can find more advanced decoding examples with
+						<a href="../classes/_truffle_decoder.contractinstancedecoder.html#variable"><code>variable</code></a> and
+						<a href="../classes/_truffle_decoder.contractinstancedecoder.html#watchmappingkey"><code>watchMappingKey</code></a> at the
+					documentation for these individual functions.</p>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Decoder Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_truffle_decoder.contractdecoder.html" class="tsd-kind-icon">Contract<wbr>Decoder</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_truffle_decoder.contractinstancedecoder.html" class="tsd-kind-icon">Contract<wbr>Instance<wbr>Decoder</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_truffle_decoder.projectdecoder.html" class="tsd-kind-icon">Project<wbr>Decoder</a></li>
+							</ul>
+							<h3>Exception Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_truffle_decoder.contractallocationfailederror.html" class="tsd-kind-icon">Contract<wbr>Allocation<wbr>Failed<wbr>Error</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_truffle_decoder.contractbeingdecodedhasnonodeerror.html" class="tsd-kind-icon">Contract<wbr>Being<wbr>Decoded<wbr>Has<wbr>NoNode<wbr>Error</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_truffle_decoder.contractnotfounderror.html" class="tsd-kind-icon">Contract<wbr>Not<wbr>Found<wbr>Error</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_truffle_decoder.invalidaddresserror.html" class="tsd-kind-icon">Invalid<wbr>Address<wbr>Error</a></li>
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_truffle_decoder.variablenotfounderror.html" class="tsd-kind-icon">Variable<wbr>Not<wbr>Found<wbr>Error</a></li>
+							</ul>
+							<h3>Other Classes</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-class tsd-parent-kind-module"><a href="../classes/_truffle_decoder.noprovidererror.html" class="tsd-kind-icon">No<wbr>Provider<wbr>Error</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Inputs Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_decoder.decodelogoptions.html" class="tsd-kind-icon">Decode<wbr>Log<wbr>Options</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_decoder.decodersettings.html" class="tsd-kind-icon">Decoder<wbr>Settings</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_decoder.enssettings.html" class="tsd-kind-icon">Ens<wbr>Settings</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_decoder.eventoptions.html" class="tsd-kind-icon">Event<wbr>Options</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_decoder.log.html" class="tsd-kind-icon">Log</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_decoder.returnoptions.html" class="tsd-kind-icon">Return<wbr>Options</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_decoder.transaction.html" class="tsd-kind-icon">Transaction</a></li>
+							</ul>
+							<h3>Results Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_decoder.contractstate.html" class="tsd-kind-icon">Contract<wbr>State</a></li>
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/_truffle_decoder.decodedlog.html" class="tsd-kind-icon">Decoded<wbr>Log</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Inputs Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_truffle_decoder.html#blockspecifier" class="tsd-kind-icon">Block<wbr>Specifier</a></li>
+							</ul>
+							<h3>Other Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-module"><a href="_truffle_decoder.html#projectinfo" class="tsd-kind-icon">Project<wbr>Info</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Provider-based Constructor Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_truffle_decoder.html#foraddress" class="tsd-kind-icon">for<wbr>Address</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_truffle_decoder.html#forartifact" class="tsd-kind-icon">for<wbr>Artifact</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_truffle_decoder.html#forartifactat" class="tsd-kind-icon">for<wbr>Artifact<wbr>At</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_truffle_decoder.html#fordeployedartifact" class="tsd-kind-icon">for<wbr>Deployed<wbr>Artifact</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_truffle_decoder.html#forproject" class="tsd-kind-icon">for<wbr>Project</a></li>
+							</ul>
+							<h3>Truffle Contract-based Constructor Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_truffle_decoder.html#forcontract" class="tsd-kind-icon">for<wbr>Contract</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_truffle_decoder.html#forcontractat" class="tsd-kind-icon">for<wbr>Contract<wbr>At</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_truffle_decoder.html#forcontractinstance" class="tsd-kind-icon">for<wbr>Contract<wbr>Instance</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_truffle_decoder.html#fordeployedcontract" class="tsd-kind-icon">for<wbr>Deployed<wbr>Contract</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Inputs Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="blockspecifier" class="tsd-anchor"></a>
+					<h3>Block<wbr>Specifier</h3>
+					<div class="tsd-signature tsd-kind-icon">Block<wbr>Specifier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"genesis"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"latest"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"pending"</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/decoder/lib/types.ts#L332">decoder/lib/types.ts:332</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Specifies a block.  Can be given by number, or can be given via the
+							special strings &quot;genesis&quot;, &quot;latest&quot;, or &quot;pending&quot;.</p>
+						</div>
+						<p>Intended to work like Web3&#39;s
+						<a href="https://web3js.readthedocs.io/en/v1.2.1/web3-eth.html#id14">BlockType</a>.</p>
+						<p><em>Warning</em>: Using &quot;pending&quot;, while allowed, is not advised, as it may lead
+							to internally inconsistent results.  Use of &quot;latest&quot; is safe and will not
+							lead to inconsistent results from a single decoder call due to the decoder&#39;s
+							caching system, but pending blocks cannot be cached under this system, which
+						may cause inconsistencies.</p>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Other Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
+					<a name="projectinfo" class="tsd-anchor"></a>
+					<h3>Project<wbr>Info</h3>
+					<div class="tsd-signature tsd-kind-icon">Project<wbr>Info<span class="tsd-signature-symbol">:</span> <a href="_truffle_codec.compilations.html#projectinfo" class="tsd-signature-type">ProjectInfo</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/decoder/lib/index.ts#L179">decoder/lib/index.ts:179</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Provider-based Constructor Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="foraddress" class="tsd-anchor"></a>
+					<h3>for<wbr>Address</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">for<wbr>Address<span class="tsd-signature-symbol">(</span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, settings<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_truffle_decoder.decodersettings.html" class="tsd-signature-type">DecoderSettings</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_truffle_decoder.contractinstancedecoder.html" class="tsd-signature-type">ContractInstanceDecoder</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/decoder/lib/index.ts#L370">decoder/lib/index.ts:370</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><strong>This function is asynchronous.</strong></p>
+								</div>
+								<p>Constructs a contract instance decoder for a given instance of a contract in this
+									project.  Unlike the other functions, this method doesn&#39;t require giving an
+									artifact for the address itself; however, the address had better correspond to
+								a contract of a type given in the project info, or you&#39;ll get an exception.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>address: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The address of the contract instance to decode.
+										If an invalid address is provided, this method will throw an exception.</p>
+									</div>
+								</li>
+								<li>
+									<h5>settings: <a href="../interfaces/_truffle_decoder.decodersettings.html" class="tsd-signature-type">DecoderSettings</a><span class="tsd-signature-symbol"> = ...</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <a href="../interfaces/_truffle_decoder.decodersettings.html">DecoderSettings</a> to use, including the provider;
+										see the documentation for that type for more information.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_truffle_decoder.contractinstancedecoder.html" class="tsd-signature-type">ContractInstanceDecoder</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="forartifact" class="tsd-anchor"></a>
+					<h3>for<wbr>Artifact</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">for<wbr>Artifact<span class="tsd-signature-symbol">(</span>artifact<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Artifact</span>, settings<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_decoder.decodersettings.html" class="tsd-signature-type">DecoderSettings</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_truffle_decoder.contractdecoder.html" class="tsd-signature-type">ContractDecoder</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/decoder/lib/index.ts#L211">decoder/lib/index.ts:211</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><strong>This function is asynchronous.</strong></p>
+								</div>
+								<p>Constructs a contract decoder for a given contract artifact.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>artifact: <span class="tsd-signature-type">Artifact</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The artifact for the contract.</p>
+										<p>  A contract constructor object may be substituted for the artifact, so if
+										you&#39;re not sure which you&#39;re dealing with, it&#39;s OK.</p>
+									</div>
+								</li>
+								<li>
+									<h5>settings: <a href="../interfaces/_truffle_decoder.decodersettings.html" class="tsd-signature-type">DecoderSettings</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <a href="../interfaces/_truffle_decoder.decodersettings.html">DecoderSettings</a> to use, including the provider;
+										see the documentation for that type for more information.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_truffle_decoder.contractdecoder.html" class="tsd-signature-type">ContractDecoder</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="forartifactat" class="tsd-anchor"></a>
+					<h3>for<wbr>Artifact<wbr>At</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">for<wbr>Artifact<wbr>At<span class="tsd-signature-symbol">(</span>artifact<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Artifact</span>, address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, settings<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_decoder.decodersettings.html" class="tsd-signature-type">DecoderSettings</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_truffle_decoder.contractinstancedecoder.html" class="tsd-signature-type">ContractInstanceDecoder</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/decoder/lib/index.ts#L304">decoder/lib/index.ts:304</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><strong>This function is asynchronous.</strong></p>
+								</div>
+								<p>Constructs a contract instance decoder for a contract instance at a given address.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>artifact: <span class="tsd-signature-type">Artifact</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The artifact corresponding to the type of the contract.</p>
+										<p>  A contract constructor object may be substituted for the artifact, so if
+										you&#39;re not sure which you&#39;re dealing with, it&#39;s OK.</p>
+									</div>
+								</li>
+								<li>
+									<h5>address: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The address of the contract instance to decode.</p>
+										<p>  Address must either be checksummed, or in all one case to circumvent the checksum.
+										Mixed-case with bad checksum will cause this function to throw an exception.</p>
+									</div>
+								</li>
+								<li>
+									<h5>settings: <a href="../interfaces/_truffle_decoder.decodersettings.html" class="tsd-signature-type">DecoderSettings</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <a href="../interfaces/_truffle_decoder.decodersettings.html">DecoderSettings</a> to use, including the provider;
+										see the documentation for that type for more information.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_truffle_decoder.contractinstancedecoder.html" class="tsd-signature-type">ContractInstanceDecoder</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="fordeployedartifact" class="tsd-anchor"></a>
+					<h3>for<wbr>Deployed<wbr>Artifact</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">for<wbr>Deployed<wbr>Artifact<span class="tsd-signature-symbol">(</span>artifact<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Artifact</span>, settings<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_decoder.decodersettings.html" class="tsd-signature-type">DecoderSettings</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_truffle_decoder.contractinstancedecoder.html" class="tsd-signature-type">ContractInstanceDecoder</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/decoder/lib/index.ts#L259">decoder/lib/index.ts:259</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><strong>This function is asynchronous.</strong></p>
+								</div>
+								<p>Constructs a contract instance decoder for a deployed contract instance.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>artifact: <span class="tsd-signature-type">Artifact</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The artifact corresponding to the type of the contract.</p>
+										<p>  A contract constructor object may be substituted for the artifact, so if
+										you&#39;re not sure which you&#39;re dealing with, it&#39;s OK.</p>
+									</div>
+								</li>
+								<li>
+									<h5>settings: <a href="../interfaces/_truffle_decoder.decodersettings.html" class="tsd-signature-type">DecoderSettings</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <a href="../interfaces/_truffle_decoder.decodersettings.html">DecoderSettings</a> to use, including the provider;
+										see the documentation for that type for more information.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_truffle_decoder.contractinstancedecoder.html" class="tsd-signature-type">ContractInstanceDecoder</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="forproject" class="tsd-anchor"></a>
+					<h3>for<wbr>Project</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">for<wbr>Project<span class="tsd-signature-symbol">(</span>settings<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_decoder.decodersettings.html" class="tsd-signature-type">DecoderSettings</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_truffle_decoder.projectdecoder.html" class="tsd-signature-type">ProjectDecoder</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/decoder/lib/index.ts#L189">decoder/lib/index.ts:189</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><strong>This function is asynchronous.</strong></p>
+								</div>
+								<p>Constructs a project decoder for the project.
+								See the <a href="../interfaces/_truffle_decoder.decodersettings.html">DecoderSettings</a> documentation for further information.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>settings: <a href="../interfaces/_truffle_decoder.decodersettings.html" class="tsd-signature-type">DecoderSettings</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_truffle_decoder.projectdecoder.html" class="tsd-signature-type">ProjectDecoder</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Truffle Contract-based Constructor Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="forcontract" class="tsd-anchor"></a>
+					<h3>for<wbr>Contract</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">for<wbr>Contract<span class="tsd-signature-symbol">(</span>contract<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ContractConstructorObject</span>, settings<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_truffle_decoder.decodersettings.html" class="tsd-signature-type">DecoderSettings</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_truffle_decoder.contractdecoder.html" class="tsd-signature-type">ContractDecoder</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/decoder/lib/index.ts#L237">decoder/lib/index.ts:237</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><strong>This function is asynchronous.</strong></p>
+								</div>
+								<p>Constructs a contract decoder for a given contract.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>contract: <span class="tsd-signature-type">ContractConstructorObject</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The contract constructor object corresponding to the type of
+										the contract.</p>
+									</div>
+								</li>
+								<li>
+									<h5>settings: <a href="../interfaces/_truffle_decoder.decodersettings.html" class="tsd-signature-type">DecoderSettings</a><span class="tsd-signature-symbol"> = ...</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <a href="../interfaces/_truffle_decoder.decodersettings.html">DecoderSettings</a> to use; see the documentation for
+											that type for more information.  If absent, the decoder will be based on
+											just the single contract provided; it is recommended to pass more
+										information to get the decoder&#39;s full power.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_truffle_decoder.contractdecoder.html" class="tsd-signature-type">ContractDecoder</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="forcontractat" class="tsd-anchor"></a>
+					<h3>for<wbr>Contract<wbr>At</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">for<wbr>Contract<wbr>At<span class="tsd-signature-symbol">(</span>contract<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ContractConstructorObject</span>, address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, settings<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_truffle_decoder.decodersettings.html" class="tsd-signature-type">DecoderSettings</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_truffle_decoder.contractinstancedecoder.html" class="tsd-signature-type">ContractInstanceDecoder</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/decoder/lib/index.ts#L329">decoder/lib/index.ts:329</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><strong>This function is asynchronous.</strong></p>
+								</div>
+								<p>Constructs a contract instance decoder for a contract instance at a given address.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>contract: <span class="tsd-signature-type">ContractConstructorObject</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The contract constructor object corresponding to the type of the contract.</p>
+									</div>
+								</li>
+								<li>
+									<h5>address: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The address of the contract instance to decode.</p>
+										<p>  Address must either be checksummed, or in all one case to circumvent the checksum.
+										Mixed-case with bad checksum will cause this function to throw an exception.</p>
+									</div>
+								</li>
+								<li>
+									<h5>settings: <a href="../interfaces/_truffle_decoder.decodersettings.html" class="tsd-signature-type">DecoderSettings</a><span class="tsd-signature-symbol"> = ...</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <a href="../interfaces/_truffle_decoder.decodersettings.html">DecoderSettings</a> to use; see the documentation for
+											that type for more information.  If absent, the decoder will be based on just the
+											single contract provided; it is recommended to pass more information to get the
+										decoder&#39;s full power.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_truffle_decoder.contractinstancedecoder.html" class="tsd-signature-type">ContractInstanceDecoder</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="forcontractinstance" class="tsd-anchor"></a>
+					<h3>for<wbr>Contract<wbr>Instance</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">for<wbr>Contract<wbr>Instance<span class="tsd-signature-symbol">(</span>contract<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ContractInstanceObject</span>, settings<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_truffle_decoder.decodersettings.html" class="tsd-signature-type">DecoderSettings</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_truffle_decoder.contractinstancedecoder.html" class="tsd-signature-type">ContractInstanceDecoder</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/decoder/lib/index.ts#L350">decoder/lib/index.ts:350</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><strong>This function is asynchronous.</strong></p>
+								</div>
+								<p>Constructs a contract instance decoder for a given contract instance.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>contract: <span class="tsd-signature-type">ContractInstanceObject</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The contract abstraction object corresponding to the contract instance.</p>
+									</div>
+								</li>
+								<li>
+									<h5>settings: <a href="../interfaces/_truffle_decoder.decodersettings.html" class="tsd-signature-type">DecoderSettings</a><span class="tsd-signature-symbol"> = ...</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <a href="../interfaces/_truffle_decoder.decodersettings.html">DecoderSettings</a> to use; see the documentation for
+											that type for more information.  If absent, the decoder will be based on just the
+											single contract provided; it is recommended to pass more information to get the
+										decoder&#39;s full power.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_truffle_decoder.contractinstancedecoder.html" class="tsd-signature-type">ContractInstanceDecoder</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module">
+					<a name="fordeployedcontract" class="tsd-anchor"></a>
+					<h3>for<wbr>Deployed<wbr>Contract</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
+						<li class="tsd-signature tsd-kind-icon">for<wbr>Deployed<wbr>Contract<span class="tsd-signature-symbol">(</span>contract<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ContractConstructorObject</span>, settings<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_truffle_decoder.decodersettings.html" class="tsd-signature-type">DecoderSettings</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_truffle_decoder.contractinstancedecoder.html" class="tsd-signature-type">ContractInstanceDecoder</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/decoder/lib/index.ts#L279">decoder/lib/index.ts:279</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><strong>This function is asynchronous.</strong></p>
+								</div>
+								<p>Constructs a contract instance decoder for a deployed contract instance.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>contract: <span class="tsd-signature-type">ContractConstructorObject</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The contract constructor object corresponding to the type of the contract.</p>
+									</div>
+								</li>
+								<li>
+									<h5>settings: <a href="../interfaces/_truffle_decoder.decodersettings.html" class="tsd-signature-type">DecoderSettings</a><span class="tsd-signature-symbol"> = ...</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The <a href="../interfaces/_truffle_decoder.decodersettings.html">DecoderSettings</a> to use; see the documentation for
+											that type for more information.  If absent, the decoder will be based on just the
+											single contract provided; it is recommended to pass more information to get the
+										decoder&#39;s full power.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../classes/_truffle_decoder.contractinstancedecoder.html" class="tsd-signature-type">ContractInstanceDecoder</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Modules</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="_truffle_codec.html">@truffle/codec</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="_truffle_decoder.html">@truffle/decoder</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_truffle_decoder.contractallocationfailederror.html" class="tsd-kind-icon">Contract<wbr>Allocation<wbr>Failed<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_truffle_decoder.contractbeingdecodedhasnonodeerror.html" class="tsd-kind-icon">Contract<wbr>Being<wbr>Decoded<wbr>Has<wbr>NoNode<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_truffle_decoder.contractdecoder.html" class="tsd-kind-icon">Contract<wbr>Decoder</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_truffle_decoder.contractinstancedecoder.html" class="tsd-kind-icon">Contract<wbr>Instance<wbr>Decoder</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_truffle_decoder.contractnotfounderror.html" class="tsd-kind-icon">Contract<wbr>Not<wbr>Found<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_truffle_decoder.invalidaddresserror.html" class="tsd-kind-icon">Invalid<wbr>Address<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_truffle_decoder.noprovidererror.html" class="tsd-kind-icon">No<wbr>Provider<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_truffle_decoder.projectdecoder.html" class="tsd-kind-icon">Project<wbr>Decoder</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/_truffle_decoder.variablenotfounderror.html" class="tsd-kind-icon">Variable<wbr>Not<wbr>Found<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_decoder.contractstate.html" class="tsd-kind-icon">Contract<wbr>State</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_decoder.decodelogoptions.html" class="tsd-kind-icon">Decode<wbr>Log<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_decoder.decodedlog.html" class="tsd-kind-icon">Decoded<wbr>Log</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_decoder.decodersettings.html" class="tsd-kind-icon">Decoder<wbr>Settings</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_decoder.enssettings.html" class="tsd-kind-icon">Ens<wbr>Settings</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_decoder.eventoptions.html" class="tsd-kind-icon">Event<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_decoder.log.html" class="tsd-kind-icon">Log</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_decoder.returnoptions.html" class="tsd-kind-icon">Return<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_decoder.transaction.html" class="tsd-kind-icon">Transaction</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_truffle_decoder.html#blockspecifier" class="tsd-kind-icon">Block<wbr>Specifier</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="_truffle_decoder.html#projectinfo" class="tsd-kind-icon">Project<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_truffle_decoder.html#foraddress" class="tsd-kind-icon">for<wbr>Address</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_truffle_decoder.html#forartifact" class="tsd-kind-icon">for<wbr>Artifact</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_truffle_decoder.html#forartifactat" class="tsd-kind-icon">for<wbr>Artifact<wbr>At</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_truffle_decoder.html#forcontract" class="tsd-kind-icon">for<wbr>Contract</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_truffle_decoder.html#forcontractat" class="tsd-kind-icon">for<wbr>Contract<wbr>At</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_truffle_decoder.html#forcontractinstance" class="tsd-kind-icon">for<wbr>Contract<wbr>Instance</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_truffle_decoder.html#fordeployedartifact" class="tsd-kind-icon">for<wbr>Deployed<wbr>Artifact</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_truffle_decoder.html#fordeployedcontract" class="tsd-kind-icon">for<wbr>Deployed<wbr>Contract</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="_truffle_decoder.html#forproject" class="tsd-kind-icon">for<wbr>Project</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

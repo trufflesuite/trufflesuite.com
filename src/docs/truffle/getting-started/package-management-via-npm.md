@@ -1,5 +1,5 @@
 ---
-title: Truffle | Package Management via NPM
+title: Package Management via NPM
 layout: docs.hbs
 ---
 # Package Management via NPM
