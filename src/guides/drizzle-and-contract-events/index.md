@@ -88,7 +88,7 @@ $ mkdir ./src/middleware
 $ touch ./src/middleware/index.js
 ```
 
-In `./app/src/middleware/index.js` import `EventActions` and `generateStore` from Drizzle as well as
+In `./app/src/middleware/index.js`, import `EventActions` and `generateStore` from Drizzle as well as
 toast from `react-toastify`, and `drizzleOptions`.
 
 ```javascript
