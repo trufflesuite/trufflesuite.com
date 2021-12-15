@@ -292,7 +292,7 @@ You've now written your first smart contract and deployed it to a locally runnin
 
 ## Testing the smart contract using Solidity
 
-<details> 
+<details markdown="1"> 
 <summary> Expand This Section </summary>
 Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this tutorial, we'll be writing our tests in Solidity.
 
@@ -393,7 +393,7 @@ Note the **memory** attribute on `adopters`. The memory attribute tells Solidity
 
 ## Testing the smart contract using JavaScript 
 
-<details>
+<details markdown="1">
 <summary> Expand This Section </summary>
 Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this tutorial, we'll be writing our tests in Javascript using the Chai and Mocha libraries.<br/>
 
