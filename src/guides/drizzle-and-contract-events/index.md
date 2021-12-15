@@ -282,7 +282,7 @@ export default ({ drizzle, drizzleState, accounts }) => {
 
 ## A Quick Test
   * Things often go south during development so a pretest check is in order.
-    1. MetaMask should NOT be on Main net! Do not run this if you're on main
+    1. MetaMask should NOT be on Mainnet! Do not run this if you're on Mainnet!
        net!
     2. Is MetaMask listening on the correct port defined above? Metamask should
        have ETH funds. Something is amiss if it doesn't.
