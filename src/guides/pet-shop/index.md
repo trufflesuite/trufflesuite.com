@@ -285,9 +285,9 @@ You've now written your first smart contract and deployed it to a locally runnin
 
 ## Testing the smart contract using Solidity
 
-<details> 
+<details markdown="1"> 
 <summary> Expand This Section </summary>
-Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this tutorial, we'll be writing our tests in Solidity.
+ Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this tutorial, we'll be writing our tests in Solidity.
 
 1. Create a new file named `TestAdoption.sol` in the `test/` directory.
 
@@ -315,9 +315,9 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 
 We start the contract off with 3 imports:
 
-* `Assert.sol`: Gives us various assertions to use in our tests. In testing, **an assertion checks for things like equality, inequality or emptiness to return a pass/fail** from our test. [Here's a full list of the assertions included with Truffle](https://github.com/trufflesuite/truffle/blob/master/packages/resolver/solidity/Assert.sol).
-* `DeployedAddresses.sol`: When running tests, Truffle will deploy a fresh instance of the contract being tested to the blockchain. This smart contract gets the address of the deployed contract.
-* `Adoption`: The smart contract we want to test.
+ - `Assert.sol`: Gives us various assertions to use in our tests. In testing, **an assertion checks for things like equality, inequality or emptiness to return a pass/fail** from our test. [Here's a full list of the assertions included with Truffle](https://github.com/trufflesuite/truffle/blob/master/packages/resolver/solidity/Assert.sol).
+ - `DeployedAddresses.sol`: When running tests, Truffle will deploy a fresh instance of the contract being tested to the blockchain. This smart contract gets the address of the deployed contract.
+ - `Adoption`: The smart contract we want to test.
 
 <p class="alert alert-info">
   <strong>Note</strong>: The first two imports are referring to global Truffle files, not a `truffle` directory. You should not see a `truffle` directory inside your `test/` directory.
@@ -386,7 +386,7 @@ Note the **memory** attribute on `adopters`. The memory attribute tells Solidity
 
 ## Testing the smart contract using JavaScript 
 
-<details>
+<details  markdown="1">
 <summary> Expand This Section </summary>
 Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this tutorial, we'll be writing our tests in Javascript using the Chai and Mocha libraries.<br/>
 
