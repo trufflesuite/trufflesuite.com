@@ -70,7 +70,7 @@ Every account on the blockchain has a unique signature, which lets everyone know
 
 ### Consensus Mechanism
 
-A blockchain establishes network state, without relying on a central authority, through what is known as a "consensus mechanism" or "consensus algorithm". Several different consensus mechanisms exist, but in each case, financial incentives are used to align the interests of network participants, establish network state, and secure the network.
+A blockchain establishes network state without relying on a central authority using what is known as a "consensus mechanism" or "consensus algorithm". Several different consensus mechanisms exist, but in each case, financial incentives are used to align the interests of network participants, establish network state, and secure the network.
 
 ### PoW Mining
 
