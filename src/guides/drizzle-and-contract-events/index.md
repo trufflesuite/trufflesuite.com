@@ -167,7 +167,7 @@ const drizzle = new Drizzle(drizzleOptions, store);
 ...
 ```
 
-You completed `App.js` file should looks something like this:
+Your completed `App.js` file should looks something like this:
 ```javascript
 import React from "react";
 import { DrizzleContext } from "@drizzle/react-plugin";
