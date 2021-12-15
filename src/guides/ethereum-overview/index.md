@@ -82,7 +82,7 @@ Check out [ethereum.org](https://ethereum.org/en/developers/docs/consensus-mecha
 
 ### PoS Staking
 
-In a "proof of stake" consensus mechanism (often referred to as PoS), "stakers" or "validators" lock up cryptocurrency to prove that they have something to lose if they attempt to cheat the network and introduce fraudulent transactions.. Any node on a PoS network can take part in securing the network and earning staking rewards in exchange for this service.
+In a "proof of stake" consensus mechanism (often referred to as PoS), "stakers" or "validators" lock up cryptocurrency to prove that they have something to lose if they attempt to cheat the network and introduce fraudulent transactions. Any node on a PoS network can take part in the process of staking to secure the network and earn rewards in exchange for this service.
 
 Since staking requires very minimal computing power, it is seen as a more environmentally friendly alternative.
 
@@ -116,7 +116,7 @@ Here's the whole process visually:
 
 **Ethereum is a blockchain that allows you to run programs in its trusted environment.** This contrasts with the Bitcoin blockchain, which only allows you to manage cryptocurrency.
 
-In computer science terms, Ethereum is a "Turing complete", virtual machine. This simply means that Ethereum is an internet-based computer. A single symbolic computer that runs on thousands of physical computers. This virtual computer is called the Ethereum Virtual Machine (EVM). The EVM allows code to be verified and executed on the blockchain, providing guarantees it will be run the same way on everyone's machine. This code is contained in "smart contracts" (more on these below).
+In computer science terms, Ethereum is a "Turing complete", virtual machine. Simply put, Ethereum is an internet-based computer - A single symbolic computer that runs on thousands of physical computers. This virtual computer is called the Ethereum Virtual Machine (EVM). The EVM allows code to be verified and executed on the blockchain, providing guarantees it will be run the same way on everyone's machine. This code is contained in "smart contracts" (more on these below).
 
 Beyond just tracking account balances, Ethereum maintains the state of the EVM, allowing developers to program Ethereum to build any application that they could with a traditional computer. However, these blockchain-based applications can leverage all of the benefits of the trust and digital asset scarcity afforded by the blockchain.
 
