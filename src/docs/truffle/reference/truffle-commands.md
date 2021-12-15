@@ -106,7 +106,7 @@ Interactively debug any transaction on the blockchain.
 truffle debug [<transaction_hash>] [--network <network>] [--fetch-external] [--compile-tests|--compile-all|--compile-none]
 ```
 
-Will start an interactive debugging session on a particular transaction. Allows you to step through each action and replay. See [Using the truffle debugger](/docs/getting_started/using-the-truffle-debugger.html) for more details.
+Will start an interactive debugging session on a particular transaction. Allows you to step through each action and replay. See [Using the truffle debugger](/docs/truffle/getting-started/debugging-your-contracts) for more details.
 
 Options:
 
