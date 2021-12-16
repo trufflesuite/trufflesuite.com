@@ -1,0 +1,17 @@
+#disclaimer .video video {
+    position: relative;
+    margin: -1em 0;
+}
+#disclaimer code {
+    padding: 0;
+    overflow: hidden;
+}
+#disclaimer .video {
+    position: absolute;
+    top: 0;
+    transform: translateY(-3em);
+    left: 0;
+    height: 100%;
+    width: 100%;
+    max-height: 100vh;
+}

@@ -1,0 +1,17 @@
+#the-honeypot {
+    display:flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center
+}
+#the-honeypot div {
+    width: 60vw;
+    height: 70vh;
+    margin: auto;
+}
+#the-honeypot img {
+    position: absolute;
+    left:0;
+    bottom: 0;
+    height:53vh;
+}
