@@ -1,8 +1,8 @@
 ---
-title: Truffle | Debugging Your Contracts
+title: Truffle | Using the Truffle Debugger
 layout: docs.hbs
 ---
-# Debugging Your Contracts
+# Using the Truffle Debugger
 
 Truffle includes an integrated debugger so that you can debug transactions made against your contracts. This debugger looks and feels like existing command line debuggers available for traditional development environments.
 
