@@ -163,8 +163,8 @@ We next want to interact with the smart contract to see how it works when workin
 
    This command looks at the SimpleStorage contract, and then calls the `get()` function as defined inside it. It then returns the output, which is usually rendered as a string, and converts it to a number:
 
-   ```javascript
-   0;
+   ```shell
+   0
    ```
 
    This shows us that our variable, `myVariable`, is set to `0`, even though we haven't set this variable to any value (yet). This is because **variables with integer types are automatically populated with the value of zero in Solidity**, unlike other languages where it might be `NULL` or `undefined`.
@@ -213,8 +213,8 @@ We next want to interact with the smart contract to see how it works when workin
 
    The output should look like this:
 
-   ```javascript
-   4;
+   ```shell
+   4
    ```
 
 ## Debugging errors
