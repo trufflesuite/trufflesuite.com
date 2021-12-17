@@ -421,7 +421,7 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 
   ```
   We start the contract by importing : 
-  * `Adoption`: The smart contract we want to test
+  * `Adoption`: The smart contract we want to test.
   We begin our test by importing our `Adoption` contract using `artifacts.require`.
 
   **Note**: When writing this test, our callback function take the argument `accounts`. This provides us with the accounts available on the network when using this test.
