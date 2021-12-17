@@ -150,7 +150,7 @@ But there are other networks as well. In fact, anyone can create a copy of Ether
 
 ### Sidechain networks
 
-A sidechain network is a copy of Ethereum and a scaling solution that utilizes its own set of validating nodes, its own consensus mechanism, and therefore offers its own security assurances separate from those offered by Ethereum.
+A sidechain network is a copy of Ethereum and a scaling solution that utilizes its own validating nodes and consensus mechanism, offering its own security assurances separate from those provided by Ethereum.
 
 Check out [ethereum.org](https://ethereum.org/en/developers/docs/scaling/sidechains/) to learn more about side chains.
 
