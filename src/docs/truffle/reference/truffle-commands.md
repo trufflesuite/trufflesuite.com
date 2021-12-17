@@ -133,12 +133,12 @@ Spawns a local development blockchain, and allows you to interact with contracts
 
 If you want an interactive console but want to use an existing blockchain, use `truffle console`.
 
-See the [Using the console](/docs/getting_started/console) section for more details.
+See the [Using the console](/docs/truffle/getting-started/using-truffle-develop-and-the-console) section for more details.
 
 Option:
 
 - `--log`: Start/Connect to a Truffle develop session and log all RPC activity.
-  See the [Log RPC Activity](docs/getting_started/console#log-rpc-activity)
+  See the [Log RPC Activity](/docs/truffle/getting-started/using-truffle-develop-and-the-console.html#log-rpc-activity)
   docs for more information about using this option.
 
 ### exec
@@ -202,7 +202,7 @@ Options:
 - `<package_name>`: Name of the package as listed in the Ethereum Package Registry. (required)
 - `@<version>`: When specified, will install a specific version of the package, otherwise will install the latest version.
 
-See the [Package Management with EthPM](/docs/getting_started/packages-ethpm) section for more details.
+See the [Package Management with EthPM](/docs/truffle/getting-started/package-management-via-ethpm) section for more details.
 
 ### migrate
 

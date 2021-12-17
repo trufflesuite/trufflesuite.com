@@ -1,5 +1,5 @@
 ---
-title: Debugging an example smart contract
+title: Debugging an Example Smart Contract
 hide:
   - navigation
 ---
@@ -27,7 +27,7 @@ In this tutorial, we will migrate a basic contract to a test blockchain, introdu
 One of the most basic, non-trivial, types of smart contract is a **simple storage contract**. (This example was adapted from the [Solidity documentation](https://solidity.readthedocs.io/en/develop/introduction-to-smart-contracts.html).)
 
 ```solidity
-pragma solidity ^0.4.17;
+pragma solidity ^0.8.10;
 
 contract SimpleStorage {
   uint myVariable;
@@ -71,7 +71,7 @@ First, let's set up our environment.
 1. Inside the `contracts/` directory, create a file called `Store.sol` with the following content:
 
    ```solidity
-   pragma solidity ^0.4.17;
+   pragma solidity ^0.8.10;
 
    contract SimpleStorage {
      uint myVariable;
@@ -123,20 +123,56 @@ First, let's set up our environment.
    The response should look something like below, though the specific IDs will differ:
 
    ```shell
-    Running migration: 1_initial_migration.js
-      Replacing Migrations...
-      ... 0xe4f911d95904c808a81f28de1e70a377968608348b627a66efa60077a900fb4c
-      Migrations: 0x3ed10fd31b3fbb2c262e6ab074dd3c684b8aa06b
-    Saving successful migration to network...
-      ... 0x429a40ee574664a48753a33ea0c103fc78c5ca7750961d567d518ff7a31eefda
-    Saving artifacts...
-    Running migration: 2_deploy_contracts.js
-      Replacing SimpleStorage...
-      ... 0x6783341ba67d5c0415daa647513771f14cb8a3103cc5c15dab61e86a7ab0cfd2
-      SimpleStorage: 0x377bbcae5327695b32a1784e0e13bedc8e078c9c
-    Saving successful migration to network...
-      ... 0x6e25158c01a403d33079db641cb4d46b6245fd2e9196093d9e5984e45d64a866
-    Saving artifacts...
+   Starting migrations...
+   ======================
+   > Network name:    'develop'
+   > Network id:      5777
+   > Block gas limit: 6721975 (0x6691b7)
+
+   # 1_initial_migration.js
+
+   Deploying 'Migrations'
+
+   ---
+
+   > transaction hash: 0xbaf1963942bd99e949a966c16d204c4786fdbfde096f5fed0ec4c82e7b85aff5
+   > ...
+   > total cost: 0.000497708 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+
+   ---
+
+   > Total cost: 0.000497708 ETH
+
+   # 2_deploy_contracts.js
+
+   Deploying 'SimpleStorage'
+
+   ---
+
+   > transaction hash: 0xf4bf0a56cff1e1e5c121a3b1688a0103f12b8c45c4ed99818d160a1e3cc064f1
+   > ...
+   > total cost: 0.000251306 ETH
+
+   > Saving migration to chain.
+   > Saving artifacts
+
+   ---
+
+   > Total cost: 0.000251306 ETH
+
+   # Summary
+
+   > Total deployments: 2
+   > Final cost: 0.000749014 ETH
+
+   - Fetching solc version list from solc-bin. Attempt #1
+   - Blocks: 0 Seconds: 0
+   - Saving migration to chain.
+   - Blocks: 0 Seconds: 0
+   - Saving migration to chain.
    ```
 
 ## Interacting with the basic smart contract
@@ -180,17 +216,25 @@ We next want to interact with the smart contract to see how it works when workin
    This sets the variable to `4`. The output shows some information about the transaction, including the transaction ID (hash), transaction receipt, and any event logs that were triggered during the course of the transaction:
 
    ```javascript
-    { tx: '0x7f799ad56584199db36bd617b77cc1d825ff18714e80da9d2d5a0a9fff5b4d42',
-      receipt:
-       { transactionHash: '0x7f799ad56584199db36bd617b77cc1d825ff18714e80da9d2d5a0a9fff5b4d42',
-         transactionIndex: 0,
-         blockHash: '0x60adbf0523622dc1be52c627f37644ce0a343c8e7c8955b34c5a592da7d7c651',
-         blockNumber: 5,
-         gasUsed: 41577,
-         cumulativeGasUsed: 41577,
-         contractAddress: null,
-         logs: [] },
-      logs: [] }
+   {
+     tx: '0x3af6c0644b34cfb60b00d352212da19ba425dd70d9175380cc709cd5020bc06b',
+     receipt: {
+       transactionHash: '0x3af6c0644b34cfb60b00d352212da19ba425dd70d9175380cc709cd5020bc06b',
+       transactionIndex: 0,
+       blockHash: '0x243abc6a762a89c526256833c38e1ce3fd166dffeaff721f55e31cff89c719d9',
+       blockNumber: 5,
+       from: '0x8e0128437dc799045b9c24da41eda77f0dea281b',
+       to: '0x30775260f639d51a837b094cc9f66dc1426f3efb',
+       gasUsed: 41602,
+       cumulativeGasUsed: 41602,
+       contractAddress: null,
+       logs: [],
+       status: true,
+       logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+       rawLogs: []
+     },
+     logs: []
+   }
    ```
 
    Most important to us is the transaction ID (listed here both as `tx` and as `transactionHash`). We'll need to copy that value when we start to debug.
@@ -219,15 +263,17 @@ We next want to interact with the smart contract to see how it works when workin
 
 ## Debugging errors
 
-The above shows how the contract _should_ work. Now, we will introduce some small errors to the contract and redeploy it. We will see how the issues present itself, and also **use Truffle's built-in debug feature to fix the issues**.
+The above shows how the contract _should_ work. Now, we will introduce some small errors to the contract and redeploy it. We will see how the issues present themselves, and also **use Truffle's built-in debug feature to fix the issues**.
 
 We will look at the following issues:
 
-- An infinite loop
+<!-- - An infinite loop -->
+
 - Invalid error check
 - No error, but a function isn't operating as desired
 
-### Issue #1: An infinite loop
+<!-- REMOVED THIS EXAMPLE UNTIL https://github.com/trufflesuite/truffle/issues/4542 IS RESOLVED -->
+<!-- ### Issue #1: An infinite loop
 
 On the Ethereum blockchain, transactions cannot be set to run forever.
 
@@ -330,7 +376,7 @@ Truffle contains a built-in debugger. The command to launch this is `debug <Tran
 
    Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
 
-   1: pragma solidity ^0.4.17;
+   1: pragma solidity ^0.8.10;
    2:
    3: contract SimpleStorage {
       ^^^^^^^^^^^^^^^^^^^^^^^
@@ -424,10 +470,16 @@ Truffle contains a built-in debugger. The command to launch this is `debug <Tran
 
    Notice that the steps eventually repeat. In fact, pressing `Enter` over and over will repeat those transactions forever (or at least until the transaction runs out of gas). **This tells you where the problem is.**
 
+1. Type `q` to exit the debugger. -->
+
+### Issue #1: An invalid error check
+
+
 1. Type `q` to exit the debugger.
 
 ### Issue #2: An invalid error check
 
+>>>>>>> f596fb87 (Remove merge commit artifacts)
 Smart contracts can use statements like `assert()` to ensure that certain conditions are met. These can conflict with the state of the contract in ways that are irreconcilable.
 
 Here we will introduce such a condition, and then see how the debugger can find it.
@@ -468,19 +520,28 @@ Just as before, we'll reset the contract on the blockchain.
    You will see an error:
 
    ```
-   Error: VM Exception while processing transaction: invalid opcode
+   Uncaught Error: Returned error: VM Exception while processing transaction: revert
+    at evalmachine.<anonymous>:0:66
    ```
 
    This means that we have a problem on our hands.
 
-1. In the log window, note the transaction ID with that error.
+1. In the log window, note the transaction ID with that error in the data key:
+
+   ```shell
+   data: {
+     '0x51f9cce23b57b15fafb13defc52225b1da2e29c5ce15f40a8ef793d2fff1546b': {
+     error: 'revert',
+     program_counter: 346,
+     ...
+   ```
 
 #### Debugging the issue
 
 1. Copy the transaction ID and use it as an argument to the `debug` command:
 
    ```shell
-   debug 0xe493340792ab92b95ac40e43dca6bc88fba7fd67191989d59ca30f79320e883f
+   debug 0x51f9cce23b57b15fafb13defc52225b1da2e29c5ce15f40a8ef793d2fff1546b
    ```
 
    <p class="alert alert-info">
@@ -490,39 +551,33 @@ Just as before, we'll reset the contract on the blockchain.
    Now we are back in the debugger:
 
    ```solidity
-   Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
+   Store.sol:
 
-   1: pragma solidity ^0.4.17;
+   1: pragma solidity ^0.8.10;
    2:
    3: contract SimpleStorage {
-      ^^^^^^^^^^^^^^^^^^^^^^^
+      ^^^^^^^^^^^^^^^^^^^^^^^^
 
-   debug(develop:0xe4933407...)>
+   debug(develop:0x51f9cce2...)>
    ```
 
 1. Press `Enter` a few times to step through the code. Eventually, the debugger will halt with an error message:
 
    ```solidity
-   Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
+   Store.sol:
 
    5:
    6:   function set(uint x) public {
-   7:     assert(x == 0);
-          ^^^^^^^^^^^^^^
+   7:     assert(x==0);
+         ^^^^^^^^^^^^
 
-   debug(develop:0x7e060037...)>
-
-   Transaction halted with a RUNTIME ERROR.
-
-   This is likely due to an intentional halting expression, like
-   assert(), require() or revert(). It can also be due to out-of-gas
-   exceptions. Please inspect your transaction parameters and
-   contract code to determine the meaning of this error.
+   debug(develop:0x51f9cce2...)>
+   Transaction has halted; cannot advance.
    ```
 
    **It is this last event that is triggering the error.** You can see that it is the `assert()` that is to blame.
 
-### Issue #3: A function isn't operating as desired
+### Issue #2: A function isn't operating as desired
 
 Sometimes, an error isn't a true error, in that it doesn't cause a problem at runtime, but instead is just doing something that you don't intend it to do.
 
@@ -544,9 +599,9 @@ Once again, we can use the debugger to see where things go wrong.
    function set(uint x) public {
      myVariable = x;
      if (x % 2 == 0) {
-       Odd();
+       emit Odd();
      } else {
-       Even();
+       emit Even();
      }
    }
    ```
@@ -578,26 +633,38 @@ Just as before, we'll reset the contract on the blockchain.
    **Note that there is no error here.** The response is given as a transaction ID with details:
 
    ```javascript
-   { tx: '0x7f799ad56584199db36bd617b77cc1d825ff18714e80da9d2d5a0a9fff5b4d42',
-     receipt:
-      { transactionHash: '0x7f799ad56584199db36bd617b77cc1d825ff18714e80da9d2d5a0a9fff5b4d42',
-        transactionIndex: 0,
-        blockHash: '0x08d7c35904e4a93298ed5be862227fcf18383fec374759202cf9e513b390956f',
-        blockNumber: 5,
-        gasUsed: 42404,
-        cumulativeGasUsed: 42404,
-        contractAddress: null,
-        logs: [ [Object] ] },
-     logs:
-      [ { logIndex: 0,
-          transactionIndex: 0,
-          transactionHash: '0x7f799ad56584199db36bd617b77cc1d825ff18714e80da9d2d5a0a9fff5b4d42',
-          blockHash: '0x08d7c35904e4a93298ed5be862227fcf18383fec374759202cf9e513b390956f',
-          blockNumber: 5,
-          address: '0x377bbcae5327695b32a1784e0e13bedc8e078c9c',
-          type: 'mined',
-          event: 'Odd',
-          args: {} } ] }
+   {
+     tx: '0x31d64ba6ed196d12b634b1ea7cbe0612b3dc623ee6d25f0fc59091e1e19dfe08',
+     receipt: {
+       transactionHash: '0x31d64ba6ed196d12b634b1ea7cbe0612b3dc623ee6d25f0fc59091e1e19dfe08',
+       transactionIndex: 0,
+       blockHash: '0x4ef7b0987604e6ca92382d75d16e746de2415fa482d7cfc85d9183e966d5beaf',
+       blockNumber: 5,
+       from: '0x8e0128437dc799045b9c24da41eda77f0dea281b',
+       to: '0x30775260f639d51a837b094cc9f66dc1426f3efb',
+       gasUsed: 42597,
+       cumulativeGasUsed: 42597,
+       contractAddress: null,
+       logs: [ [Object] ],
+       status: true,
+       logsBloom: '0x000...',
+       rawLogs: [ [Object] ]
+     },
+     logs: [
+       {
+         logIndex: 0,
+         transactionIndex: 0,
+         transactionHash: '0x31d64ba6ed196d12b634b1ea7cbe0612b3dc623ee6d25f0fc59091e1e19dfe08',
+         blockHash: '0x4ef7b0987604e6ca92382d75d16e746de2415fa482d7cfc85d9183e966d5beaf',
+         blockNumber: 5,
+         address: '0x30775260F639D51a837b094Cc9f66DC1426f3EFB',
+         type: 'mined',
+         id: 'log_8a20539f',
+         event: 'Odd',
+         args: [Result]
+       }
+     ]
+   }
    ```
 
    But notice the logs of the transaction show the event `Odd`. That's wrong, and so our job is to find out why that's being invoked.
@@ -607,7 +674,7 @@ Just as before, we'll reset the contract on the blockchain.
 1. Copy that transaction ID and use it as an argument with the `debug` command:
 
    ```shell
-   debug 0x7f799ad56584199db36bd617b77cc1d825ff18714e80da9d2d5a0a9fff5b4d42
+   debug 0x31d64ba6ed196d12b634b1ea7cbe0612b3dc623ee6d25f0fc59091e1e19dfe08
    ```
 
    <p class="alert alert-info">
@@ -619,29 +686,30 @@ Just as before, we'll reset the contract on the blockchain.
 1. Press `Enter` multiple times to cycle through the steps. Eventually you will see that the conditional leads to the `Odd()` event:
 
    ```solidity
-   Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
+   Store.sol:
 
-   10:   function set(uint x) public {
-   11:     myVariable = x;
-   12:     if (x % 2 == 0) {
-           ^^^^^^^^^^^^^^^^
+   9:   function set(uint x) public {
+   10:     myVariable = x;
+   11:     if (x % 2 == 0) {
+           ^^^^^^^^^^^^^^^^^
 
-   debug(develop:0x7f799ad5...)>
+   debug(develop:0x31d64ba6...)> n
 
-   Store.sol | 0x377bbcae5327695b32a1784e0e13bedc8e078c9c:
+   Store.sol:
 
-   11:     myVariable = x;
-   12:     if (x % 2 == 0) {
-   13:       Odd();
-             ^^^^^
+   10:     myVariable = x;
+   11:     if (x % 2 == 0) {
+   12:       emit Odd();
+                  ^^^^^
 
-   debug(develop:0x7f799ad5...)>
+   debug(develop:0x31d64ba6...)>
+
    ```
 
    **The problem is revealed.** The conditional is leading to the wrong event.
 
 ## Conclusion
 
-With the ability to debug your contracts directly within Truffle, you have even more power at your hands to make your smart contracts rock-solid and ready to deploy. Make sure to read more about Truffle Develop console and the debugger in the docs. If you have any questions, please join our [community Gitter channel](https://gitter.im/ConsenSys/truffle) where hundreds of fellow Trufflers congregate to answer your questions!
+With the ability to debug your contracts directly within Truffle, you have even more power at your hands to make your smart contracts rock-solid and ready to deploy. Make sure to read more about Truffle Develop console and the debugger in the docs. If you have any trouble, please don't hesitate to open an issue on [Github](https://github.com/trufflesuite/trufflesuite.com/issues)!
 
 Happy debugging!
