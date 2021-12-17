@@ -46,7 +46,7 @@ Sharing large amounts of data can be expensive and cumbersome. We can ease this 
 Modern shared databases use techniques to minimize this corruption. Some of these overlap with blockchains. Depending on the shared database system, it may feature:
 
 - **Immutability**: Rather than overwriting old data, a new copy is created with the old data retained as a historical record. This record can be accessed to prove a piece of data existed at a certain time.
-- **Consensus**: For a database to be shared, all parties must agree on its contents. There are various methods of reaching consensus, one of which (proof-of-work) will be discussed below.
+- **Consensus**: For a database to be shared, all parties must agree on its contents. There are various methods of reaching consensus, two of which, **proof-of-work** and **proof-of-stake** will be discussed below.
 
 Blockchains use these and take them a step further, solving the problem of trust.
 
