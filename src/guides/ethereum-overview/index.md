@@ -76,7 +76,7 @@ A blockchain establishes network state without relying on a central authority us
 
 In a "proof of work" consensus mechanism (often referred to as PoW), "miners" burn electricity to prove that they have something to lose if they attempt to cheat the network and introduce fraudulent transactions. Any node on a PoW network can take part in securing the network through a process called "mining". Nodes which have opted to be miners compete to solve math problems which secure the contents of a block.
 
-Since mining requires computing power (not to mention electricity cost), miners must be compensated for their service. The winner of the competition receives some cryptocurrency as a reward. This incentivizes nodes to work to secure the network, preventing too much power from being in the hands of any single miner.
+Since mining requires computing power, miners must be compensated for their service. The winner of the competition receives some cryptocurrency as a reward. This incentivizes nodes to work to secure the network, preventing too much power from being in the hands of any single miner.
 
 Check out [ethereum.org](https://ethereum.org/en/developers/docs/consensus-mechanisms/pow/) to learn more about proof of work.
 
