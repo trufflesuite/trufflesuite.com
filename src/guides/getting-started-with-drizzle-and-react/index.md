@@ -89,6 +89,7 @@ We'll add a simple smart contract called MyStringStore.
 2. Add the following content to the file:
 
    ```solidity
+   // SPDX-License-Identifier: MIT
    pragma solidity ^0.8.0 <0.9.0;
 
    contract MyStringStore {
