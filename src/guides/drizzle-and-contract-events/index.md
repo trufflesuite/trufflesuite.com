@@ -49,13 +49,13 @@ First create an empty directory, navigate to it, and `unbox` Drizzle.
 
 ```bash
 // In the project directory...
-$ truffle unbox drizzle
+truffle unbox drizzle
 ```
 
 Now let's start the `truffle develop` console (which runs a Ganache test blockchain in the background):
 
 ```
-$ truffle develop
+truffle develop
 ```
 
 Finally, in our Truffle develop console, let's compile and migrate our smart contracts.
@@ -77,15 +77,15 @@ We want to listen for the `SimpleStorage` contract's `StorageSet` event and show
 The front end code is located under the `app` folder. Lets add the notification library `react-toastify` to simulate an external interaction From the project directory:
 
 ```shell
-$ cd app
-$ npm install react-toastify
+cd app
+npm install react-toastify
 ```
 
 For the sake of simplicity, we will work in one file, `./app/src/middleware/index.js`.
 
 ```shell
-$ mkdir ./src/middleware
-$ touch ./src/middleware/index.js
+mkdir ./src/middleware
+touch ./src/middleware/index.js
 ```
 
 In `./app/src/middleware/index.js`, import `EventActions` and `generateStore` from Drizzle as well as
@@ -289,7 +289,7 @@ export default ({ drizzle, drizzleState, accounts }) => {
 
   * Fire up the app.
     ```shell
-    $ npm run start
+    npm run start
     ```
   * Change SimpleStorage's `stored Value`
     ![Change SimpleStorage value!](/img/tutorials/drizzle-and-contract-events/stored-value.gif)
