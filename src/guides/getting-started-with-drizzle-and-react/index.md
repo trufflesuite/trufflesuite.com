@@ -5,7 +5,7 @@ hide:
 
 # Getting Started with Drizzle and React
 
-Drizzle is the newest member of the Truffle Suite and our first front-end development tool. At its core, **Drizzle** takes care of synchronizing your contract data, transaction data and more from the blockchain to a [Redux](https://redux.js.org/) store. There are also higher-level abstractions on top of the base `drizzle` library; tools for React compatibility ([`drizzle-react`](/docs/drizzle/react/react-integration)) and a set of ready-to-use React components ([`drizzle-react-components`](/docs/drizzle/react/react-components)).
+Drizzle is our first front-end development tool. At its core, **Drizzle** takes care of synchronizing your contract data, transaction data and more from the blockchain to a [Redux](https://redux.js.org/) store. There are also higher-level abstractions on top of the base `drizzle` library; tools for React compatibility ([`drizzle-react`](/docs/drizzle/react/react-integration)) and a set of ready-to-use React components ([`drizzle-react-components`](/docs/drizzle/react/react-components)).
 
 We're going to focus on the lower levels today, taking you through setting up a Truffle project with React and Drizzle from scratch. This way we can gain the best understanding of how Drizzle works under the hood. With this knowledge, you can leverage the full power of Drizzle with any front-end framework of your choosing, or use the higher-level React abstractions with confidence.
 
