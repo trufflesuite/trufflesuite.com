@@ -32,7 +32,7 @@ In this tutorial we will be covering:
 
 There are a few technical requirements before we start. Please install the following:
 
-*   [Node.js v12+ LTS and npm](https://nodejs.org/en/) (comes with Node)
+*   [Node.js v12+ LTS and npm](https://nodejs.org/en/) (npm comes packaged with Node)
 
 ### Truffle
 
@@ -46,13 +46,7 @@ To verify that Truffle is installed properly, type `truffle version` on a termin
 
 ### Create-React-App
 
-Finally, since this is a React.js tutorial, we will be creating our React project with [Create-React-App](https://github.com/facebook/create-react-app/).
-
-You won't have to do anything if you have NPM version 5.2 or above. You can check your NPM version by running `npm --version`. If you do not, then you will need to install the tool globally with this command:
-
-```shell
-npm install -g create-react-app
-```
+Finally, since this is a React.js tutorial, we will be creating our React.js project with [create-react-app](https://github.com/facebook/create-react-app/). We will use npx to generate a barebones React.js app with create-react-app. Note, npx is available with npm version 5.2 or higher.
 
 ## Creating a Truffle project
 
@@ -221,16 +215,10 @@ Awesome! Now we know that the contract actually works.
 
 ## Creating our React.js project
 
-Now that we are done with the smart contract, we can write our front-end client with React.js! In order to do this, open another terminal, navigate to your project directory, and simply run this command (if you have NPM version 5.2 or above):
+Now that we are done with the smart contract, we can write our front-end client with React.js! In order to do this, open another terminal, navigate to your project directory, and simply run this command.
 
 ```shell
 npx create-react-app client
-```
-
-**If you have an older version of NPM**, make sure Create-React-App is installed globally as per the instructions in the [Setting up the development environment](#create-react-app) section and then run the following:
-
-```shell
-create-react-app client
 ```
 
 This should create a `client` directory in your Truffle project and bootstrap a barebones React.js project for you to start building your front-end with.
@@ -245,7 +233,12 @@ In the `truffle-config.js` file, replace the contents with the following:
 const path = require("path");
 
 module.exports = {
-  contracts_build_directory: path.join(__dirname, "client/src/contracts")
+  contracts_build_directory: path.join(__dirname, "client/src/contracts"),
+  compilers: {
+    solc: {
+      version: "pragma"
+    }
+  }
 };
 ```
 
