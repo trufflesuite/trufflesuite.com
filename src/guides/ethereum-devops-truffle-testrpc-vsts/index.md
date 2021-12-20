@@ -7,7 +7,7 @@ hide:
 <p class="alert alert-warning"><i class="far fa-exclamation-triangle"></i> <strong>Archived:</strong> This tutorial has been archived and may not work as expected; versions are out of date, methods and workflows may have changed. We leave these up for historical context and for any universally useful information contained. Use at your own risk!</p>
 
 <div class="alert alert-info">
-  <p class="mb-0"><i class="far fa-info-circle"></i> <strong>Update</strong>: Since this tutorial was published, we have released <a href="/docs/ganache/overview">Ganache</a>, a personal blockchain and a replacement to the TestRPC. We have left this tutorial unaltered, but we highly recommend checking out our <a href="https://www.trufflesuite.com/ganache">Ganache Documentation</a></p>
+  <p class="mb-0"><i class="far fa-info-circle"></i> <strong>Update</strong>: Since this tutorial was published, we have released <a href="/docs/ganache">Ganache</a>, a personal blockchain and a replacement to the TestRPC. We have left this tutorial unaltered, but we highly recommend checking out our <a href="https://www.trufflesuite.com/ganache">Ganache Documentation</a></p>
 </div>
 
 This post was originally published by David Burela on his blog [Burela's House-o-blog](https://davidburela.wordpress.com/2016/12/23/ethereum-devops-with-truffle-testrpc-visual-studio-team-services/). Big thanks to David for allowing us publish it here!
