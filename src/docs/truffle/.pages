@@ -1,5 +1,5 @@
 nav:
-  - index.md
+  - Overview: index.md
   - quickstart.md
   - getting-started
   - testing
