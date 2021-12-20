@@ -8,7 +8,7 @@ layout: docs.hbs
   <a href="https://share.hsforms.com/1OaTglVhGTdWk7spR6nE_AA34pbp" class="btn btn-lg btn-wrap btn-ganache mt-2 mt-md-0"><i class="fas fa-envelope"></i>&nbsp;&nbsp;GET NOTIFIED OF UPDATES &amp; NEW FEATURES</a>
 </div>
 
-# Truffle Teams Overview
+# Overview
 
 Manage and monitor the health of your blockchain-enabled application. Truffle integrated. Built for open source and enterprise. Features include:
 
