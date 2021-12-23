@@ -85,7 +85,7 @@ Each contract abstraction -- `MyContract` in the examples above -- have the foll
 
 #### `MyContract.new([arg1, arg2, ...], [tx params])`
 
-This function take whatever contructor parameters your contract requires and deploys a new instance of the contract to the network. There's an optional last argument which you can use to pass transaction parameters including the transaction from address, gas limit and gas price. This function returns a Promise that resolves into a new instance of the contract abstraction at the newly deployed address.
+This function takes whatever constructor parameters your contract requires and deploys a new instance of the contract to the network. There's an optional last argument which you can use to pass transaction parameters including the transaction from address, gas limit and gas price. This function returns a Promise that resolves into a new instance of the contract abstraction at the newly deployed address.
 
 #### `MyContract.at(address)`
 
