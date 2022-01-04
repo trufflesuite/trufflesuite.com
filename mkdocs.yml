@@ -26,7 +26,7 @@ theme:
 google_analytics:
   - UA-83874933-3
   - auto
-copyright: Copyright &copy; 2016 - 2021 ConsenSys Software Inc.
+copyright: Copyright &copy; 2016 - 2022 ConsenSys Software Inc.
 extra:
   generator: false
   social:
