@@ -16,9 +16,7 @@ To start a Truffle Dashboard, you need to run the `truffle dashboard` command in
 > truffle dashboard [--port <number>] [--host <string>] [--verbose]
 
 Truffle Dashboard running at http://localhost:24012
-                             http://192.168.178.21:24012
 DashboardProvider RPC endpoint running at http://localhost:24012/rpc
-                                          http://192.168.178.21:24012/rpc
 ```
 
 By default, this starts a dashboard at `http://localhost:24012` and opens the dashboard in a new tab in your default browser. The Dashboard then prompts you to connect your wallet and confirm that you're connected to the right network. You should double check your connected network at this point, since switching to a different network during a deployment can have unintended consequences.
@@ -37,7 +35,6 @@ module.exports = {
     port: 24012,
   }
 
-  // Not to be
   networks: {
     // ... network configurations, including the network named 'dashboard'
   }
@@ -47,7 +44,7 @@ module.exports = {
 
 ## Connecting to the dashboard
 
-To make connecting to the Truffle Dashboard easy, Truffle includes a builtin network named "dashboard". This builtin network automatically uses the port and host specified in the dashboard config or falls back to the default `localhost:24012`. This builtin network can be used with all your deployments or scripts.
+To make connecting to the Truffle Dashboard easy, Truffle includes a builtin network named "dashboard". This builtin network automatically uses the port and host specified in the dashboard config or falls back to the default `http://localhost:24012`. This builtin network can be used with all your deployments or scripts.
 
 ```
 truffle migrate --network dashboard
@@ -92,7 +89,7 @@ module.exports = {
   networks: {
     // ... rest of network config
 
-    dashboard: {
+    'truffle-dashboard': {
       url: "http://localhost:24012/rpc"
     }
   },
@@ -102,6 +99,6 @@ module.exports = {
 From there it can be used with any Hardhat tasks as well as tools like hardhat-deploy.
 
 ```
-hardhat deploy --network dashboard
+hardhat deploy --network truffle-dashboard
 ```
 

@@ -109,7 +109,7 @@ truffle dashboard [--port <number>] [--host <string>] [--verbose]
 Options:
 
 * `--port <number>`: Port to start the Truffle dashboard on (default `24012`).
-* `--host <string>`: Host to start the Truffle dashboard on (default `0.0.0.0`).
+* `--host <string>`: Host to start the Truffle dashboard on (default `localhost`).
 * `--verbose`: Start the Truffle dashboard with additional verbose logging (default `false`)
 
 It is also possible to specify these options in the `truffle-config.js` file under `"dashboard"`. For example:
