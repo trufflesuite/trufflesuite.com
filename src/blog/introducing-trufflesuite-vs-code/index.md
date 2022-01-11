@@ -12,7 +12,7 @@ If you're not familiar with the extension, it's designed to help [Visual Studio 
 
 If you already have the previous version of the extension installed, you should see a dialog prompting you to make the switch. Simply click "Upgrade now" and you'll be switched over, with the previous version being automatically uninstalled.
 
-Alternatively, if you're new to the extension, you can search for "*Trufflesuite*" in the [marketplace](https://marketplace.visualstudio.com/) and simply click install. More details are also available [here](https://marketplace.visualstudio.com/items?itemName=trufflesuite-csi.trufflesuite-vscode)
+Alternatively, if you're new to the extension, you can search for "*Trufflesuite*" in the [marketplace](https://marketplace.visualstudio.com/) and simply click install. More details are also available [here](https://marketplace.visualstudio.com/items?itemName=trufflesuite-csi.trufflesuite-vscode).
 
 ## What's Next & Feedback
 
