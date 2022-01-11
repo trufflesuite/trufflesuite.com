@@ -1,0 +1,8 @@
+#testing {
+    min-width: unset;
+    text-align: center;
+}
+
+#testing button {
+    margin-top:1em;
+}

@@ -1,0 +1,21 @@
+:root {
+    --chocolate: #33262a;
+    --dark-chocolate: #251c1f;
+    --dark: rgb(20, 18, 19);
+    --porsche: #e4a663;
+    --very-light-porsche: #fff0e1;
+    --very-light-porsche2: #ebd5c0;
+    --light-porsche: #f7e6d5;
+    --medium-light-porsche: #FFCC95;
+    --medium-dark-porsche: #C2823C;
+    --dark-porsche: #957666;
+    --pink:#E911BD;
+    --light-pink: #F069D6;
+    --dark-pink:#AC008B;
+    --turquoise:#3FE0C5;
+    --dark-turquoise: #00C3A2;
+    --medium-dark-turquoise: #1BD4B5;
+    --light-turquoise: #99F4E5;
+    --ratio:calc(16/9);
+    --width: calc(100vh * var(--ratio));
+}

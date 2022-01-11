@@ -1,0 +1,165 @@
+#authors-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-inner {
+    display: inline-block;
+    border-radius: 2px;
+    position: relative;
+    width: 28vw;
+    height: 35.5vw;
+    background:linear-gradient(to bottom right, var(--very-light-porsche), var(--very-light-porsche2));
+    box-shadow: 1px 1px 0 rgba(0,0,0,.4), -1px -1px 0 rgba(255,255,255,.9), 1px 2px 5px rgba(0,0,0,.25),  5px 10px 45px rgba(0,0,0,.4);
+    padding: 1vw;
+    margin:0 3vw;
+    z-index:2;
+}
+.card-inner:nth-child(1) {
+    /* translateZ(0) makes it always blurry, instead of only blurry on animation */
+    transform: rotate(-1deg) translateZ(0);
+}
+.card-inner:nth-child(2) {
+    transform: rotate(1deg) translateZ(0);
+}
+.card-inner .truffle-title, .card-inner .social {
+    display: inline-block;
+    padding:.5vw .5vw 2.5vw;
+    background:var(--porsche);
+    border-radius: 2vw 0 0 0;
+    border:solid var(--chocolate);
+    border-width:.17vw 0 0 .17vw;
+    margin-bottom:-2.5vw;
+    position: relative;
+    z-index: 1;
+    vertical-align: top;
+}
+.card-inner .social {
+    padding: 3vw 0 .5vw 1vw;
+    border-radius: 0 0 2vw 0;
+    border-width:0 .17vw .17vw 0;
+    margin-top:-3vw;
+    margin-bottom: 0;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.8);
+    font-size: 1.2vw;
+    font-weight:bold;
+    color: var(--very-light-porsche);
+    text-decoration: none;
+}
+.card-inner .author-title, .card-inner .name {
+    display: inline-block;
+    color:var(--chocolate);
+    line-height: 3.75vw;
+    vertical-align: top;
+    font-family: Oswald, sans-serif;
+    font-weight: bold;
+    padding-left: 2.5vw;
+    font-size: 1.75vw;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transform: translateX(-2vw);
+}
+.card-inner .author-title span, .card-inner .name span {
+    position: relative;
+    z-index: 2;
+    white-space: nowrap;
+}
+.card-inner .author-title:after, .card-inner .name:after {
+    background: linear-gradient(45deg, var(--very-light-porsche), var(--very-light-porsche) 50%, transparent);
+    content: "\00a0";
+    border-left: .17vw solid;
+    border-bottom: .17vw solid;
+    position: absolute;
+    left: .8vw;
+    transform: rotate(45deg);
+    height: 4.4vw;
+    width: 5vw;
+}
+.card-inner .footer {
+    display: flex;
+    justify-content: space-between;
+}
+.card-inner .name, .card-inner .social {
+    box-sizing: border-box;
+    width:51%;
+    line-height: 3vw;
+}
+.card-inner .name {
+    width:49%;
+    padding-left: 0;
+    padding-right: 0vw;
+    transform: translateX(2vw);
+    text-align: left;
+    z-index: 2;
+    text-transform: uppercase;
+    height: 3.65vw;
+}
+.card-inner .name span {
+    transform: translateX(-1vw)
+}
+.card-inner .name:after {
+    background: linear-gradient(45deg, transparent, var(--very-light-porsche2) 50%, var(--very-light-porsche2));
+    border-width:0;
+    border-right: .17vw solid;
+    border-top: .17vw solid;
+    left: auto;
+    top:0;
+    width: 2.5vw;
+    right: 1.2vw;
+}
+.card-inner .truffle-title img {
+    height: 2.5vw;
+    padding-right:3vw;
+    display: block;
+}
+.card-inner .image {
+    position: relative;
+    z-index:3;
+    border-radius: 2.2vw;
+    border:solid .17vw var(--chocolate);
+    overflow: hidden;
+    background-clip: padding-box;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: .3vw;
+    background:var(--dark-turquoise);   
+}
+.card-inner .image img {
+    width:100%;
+    height: auto;
+    background:var(--very-light-porsche);
+    vertical-align: top;
+    border-radius: 2vw;
+    padding: .4vw;
+    border:solid .17vw var(--chocolate);
+    background-clip: padding-box;
+    box-sizing: border-box;
+}
+.card-inner::after {
+    /* fun fact: firefox can't handle animating this. */
+    content: "\00a0";
+    background: radial-gradient(ellipse at center, rgba(0,0,0,.1) 0%, rgba(0,0,0,.1) 30%, transparent 30%);
+    background: radial-gradient(rgba(0,0,0,.1) 15%, transparent 16%) 1px 20px,
+        radial-gradient(rgba(255,255,255,.1) 18%, transparent 18%) 4px 4px;
+    background-size:.25vw .25vw;
+    background-repeat: repeat;
+    position: absolute;
+    right:0;
+    bottom:0;
+    top:0;
+    left:0;
+    z-index: 8;
+    pointer-events: none;
+}
+
+.card-inner.substep {
+    transform: translate(-120%, -.5%) rotate(-3deg) translateZ(0);
+    z-index: 1;
+    opacity: 1 !important;
+    transition: transform .25s ease-in-out !important;
+}
+.impress-on-overview .card-inner.substep, .card-inner.substep.substep-visible {
+    transform: translate(0, 0) rotate(1.5deg) translateZ(0);
+}
