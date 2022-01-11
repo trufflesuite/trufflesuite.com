@@ -4,16 +4,19 @@ We welcome all contributions, typo corrections, and general feedback.
 
 ## Contents
 
-* [Branching Processes](#branching-processes)
-* [Merging Processes](#merging-processes)
-* [Build Process & Directory Structure](#build-process--directory-structure)
-* [Layouts](#layouts)
-* [Partials](#partials)
-* [Helpers](#helpers)
-* [Styles](#styles)
-* [Static Files](#static-files)
-* [Search](#search)
-* [Translating](#translating)
+- [Contributing](#contributing)
+  - [Contents](#contents)
+  - [Branching Processes](#branching-processes)
+  - [Merging Processes](#merging-processes)
+  - [Build Process & Directory Structure](#build-process--directory-structure)
+  - [Layouts, Partials and Helpers](#layouts-partials-and-helpers)
+    - [Layouts](#layouts)
+    - [Partials](#partials)
+    - [Helpers](#helpers)
+  - [Styles (Sass)](#styles-sass)
+  - [Static Files](#static-files)
+  - [Search](#search)
+  - [Translating](#translating)
 
 ## Branching Processes
 

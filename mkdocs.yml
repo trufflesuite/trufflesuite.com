@@ -56,3 +56,15 @@ plugins:
   - awesome-pages
   - macros:
       module_name: main
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+          remove_comments: true
+      js_files:
+          - assets/js/dashboard.js
+          - assets/js/os-detector.js
+      css_files:
+          - assets/stylesheets/dashboard.css
+          - assets/stylesheets/extra.css
