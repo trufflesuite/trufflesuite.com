@@ -27,7 +27,7 @@ Execute build pipeline (if configuration present).
 truffle build
 ```
 
-Requires the `build` key to be present in the configuration. See the [Building your application](/docs/getting_started/build) and [Build processes](/docs/advanced/build_processes) sections for more details.
+Requires the `build` key to be present in the configuration. See the [Build processes](/docs/truffle/advanced/build-processes) sections for more details.
 
 <p class="alert alert-warning">
 <i class="far fa-exclamation-triangle"></i> <strong>Warning</strong>: The <code>build</code> command and this approach is being deprecated. Please use third-party build tools like webpack or grunt, or see our <a href="/boxes">Truffle Boxes</a> for an example.
@@ -45,7 +45,7 @@ This will only compile contracts that have changed since the last compile, unles
 
 Options:
 
-- `--list <filter>`: List all recent stable releases from solc-bin. If filter is specified then it will display only that type of release or docker tags. The filter parameter must be one of the following: prereleases, releases, latestRelease or docker.
+- `--list <filter>`: List all recent stable releases from solc-bin. If filter is specified then it will display only that type of release or docker tags. The filter parameter must be one of the following: pre-releases, releases, latestRelease or docker.
 - `--all`: Compile all contracts instead of only the contracts changed since last compile.
 - `--network <name>`: Specify the network to use, saving artifacts specific to that network. Network name must exist in the configuration.
 - `--quiet`: Suppress all compilation output.
@@ -74,9 +74,9 @@ truffle console [--network <name>] [--verbose-rpc]
 
 Spawns an interface to interact with contracts via the command line. Additionally, many Truffle commands are available within the console (without the `truffle` prefix).
 
-Requires an external Ethereum client, such as [Ganache](/docs/ganache/using) or geth. For a console that creates a development and test environment, use `truffle develop`.
+Requires an external Ethereum client, such as [Ganache](/docs/ganache/quickstart) or geth. For a console that creates a development and test environment, use `truffle develop`.
 
-See the [Using the console](/docs/getting_started/console) section for more details.
+See the [Using Truffle Develop and the Console](/docs/truffle/getting-started/using-truffle-develop-and-the-console) section for more details.
 
 Options:
 
@@ -106,7 +106,7 @@ Interactively debug any transaction on the blockchain.
 truffle debug [<transaction_hash>] [--network <network>] [--fetch-external] [--compile-tests|--compile-all|--compile-none]
 ```
 
-Will start an interactive debugging session on a particular transaction. Allows you to step through each action and replay. See [Using the truffle debugger](/docs/getting_started/using-the-truffle-debugger) for more details.
+Will start an interactive debugging session on a particular transaction. Allows you to step through each action and replay. See [Using the truffle debugger](/docs/truffle/getting-started/using-the-truffle-debugger) for more details.
 
 Options:
 
@@ -119,7 +119,7 @@ Options:
 
 ### deploy
 
-Alias for `migrate`. See [migrate](/docs/truffle/reference/truffle-commands#migrate) for details.
+Alias for `migrate`. See [migrate](#migrate) for details.
 
 ### develop
 
@@ -138,7 +138,7 @@ See the [Using the console](/docs/truffle/getting-started/using-truffle-develop-
 Option:
 
 - `--log`: Start/Connect to a Truffle develop session and log all RPC activity.
-  See the [Log RPC Activity](/docs/truffle/getting-started/using-truffle-develop-and-the-console.html#log-rpc-activity)
+  See the [Log RPC Activity](/docs/truffle/getting-started/using-truffle-develop-and-the-console#log-rpc-activity)
   docs for more information about using this option.
 
 ### exec
@@ -151,7 +151,7 @@ truffle exec <script.js> [--network <name>] [--compile]
 
 This will include `web3`, set the default provider based on the network specified (if any), and include your contracts as global objects while executing the script. Your script must export a function that Truffle can run.
 
-See the [Writing external scripts](/docs/getting_started/scripts) section for more details.
+See the [Writing external scripts](/docs/truffle/getting-started/writing-external-scripts) section for more details.
 
 Options:
 
@@ -212,7 +212,7 @@ Run migrations to deploy contracts.
 truffle migrate [--reset] [--f <number>] [--to <number>] [--network <name>] [--compile-all] [--verbose-rpc] [--dry-run] [--interactive] [--skip-dry-run] [--describe-json]
 ```
 
-Unless specified, this will run from the last completed migration. See the [Migrations](/docs/getting_started/migrations) section for more details.
+Unless specified, this will run from the last completed migration. See the [Migrations](/docs/truffle/getting-started/running-migrations) section for more details.
 
 Options:
 
@@ -267,7 +267,7 @@ Option:
 
 ### preserve
 
-Preserve files and content to decentralised storage platforms such as IPFS or Filecoin.
+Preserve files and content to decentralized storage platforms such as IPFS or Filecoin.
 
 ```shell
 truffle preserve <path> --<recipe> [--environment <name>]
@@ -291,7 +291,7 @@ Publish a package to the Ethereum Package Registry.
 truffle publish
 ```
 
-All parameters are pulled from your project's configuration file. Takes no arguments. See the [Package Management with EthPM](/docs/getting_started/packages-ethpm) section for more details.
+All parameters are pulled from your project's configuration file. Takes no arguments. See the [Package Management with EthPM](/docs/truffle/getting-started/package-management-via-ethpm) section for more details.
 
 ### run
 
@@ -321,7 +321,7 @@ Run JavaScript and Solidity tests.
 truffle test [<test_file>] [--compile-all[-debug]] [--network <name>] [--verbose-rpc] [--show-events] [--debug] [--debug-global <identifier>] [--bail] [--stacktrace[-extra]]
 ```
 
-Runs some or all tests within the `test/` directory as specified. See the section on [Testing your contracts](/docs/getting_started/testing) for more information.
+Runs some or all tests within the `test/` directory as specified. See the section on [Testing your contracts](/docs/truffle/testing/testing-your-contracts) for more information.
 
 Options:
 
@@ -350,7 +350,7 @@ defaults to the current working directory if this argument is not provided.
 
 See the [list of available Truffle boxes](/boxes).
 
-You can also design and create your own boxes! See the section on [Truffle boxes](docs/truffle/advanced/creating-a-truffle-box) for more information.
+You can also design and create your own boxes! See the section on [Truffle boxes](/docs/truffle/advanced/creating-a-truffle-box) for more information.
 
 Options:
 
@@ -362,7 +362,7 @@ Options:
 1. \<truffleBoxName\> - like `metacoin` (see the official Truffle boxes [here](https://www.trufflesuite.com/boxes))
 2. \<gitOrgName/repoName\> - like `truffle-box/bare-box` (your repo will have to
    have the proper structure - see our page on [creating a Truffle
-   Box](docs/truffle/advanced/creating-a-truffle-box))
+   Box](/docs/truffle/advanced/creating-a-truffle-box))
 3. \<urlToGitRepo\> - like `https://github.com/truffle-box/bare-box`
 4. \<sshUrlToGitRepo\> - like `git@github.com:truffle-box/bare-box`
 

@@ -144,7 +144,7 @@ It is possible to write your deployment as a single promise chain if you find th
 
 ## Network considerations
 
-It is possible to run deployment steps conditionally based on the network being deployed to. This is an advanced feature, so see the [Networks](/docs/advanced/networks) section first before continuing.
+It is possible to run deployment steps conditionally based on the network being deployed to. This is an advanced feature, so see the [Networks](/docs/truffle/advanced/networks-and-app-deployment) section first before continuing.
 
 To conditionally stage deployment steps, write your migrations so that they accept a second parameter, called `network`. Example:
 

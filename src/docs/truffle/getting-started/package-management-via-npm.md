@@ -34,7 +34,7 @@ Note that the last command above downloads the package and places it in `my_proj
 
 ### Within your contracts
 
-To use a package's contracts within your contracts, this can be as simple as Solidity's [import](http://solidity.readthedocs.io/en/develop/layout-of-source-files.html?#importing-other-source-files) statement. When your import path isn't [explicitly relative or absolute](/docs/getting_started/compile#dependencies), this signifies to Truffle that you're looking for a file from a specific named package. Consider this example using the Example Truffle Library mentioned above:
+To use a package's contracts within your contracts, this can be as simple as Solidity's [import](https://solidity.readthedocs.io/en/develop/layout-of-source-files.html?#importing-other-source-files) statement. When your import path isn't [explicitly relative or absolute](/docs/truffle/getting-started/compiling-contracts#dependencies), this signifies to Truffle that you're looking for a file from a specific named package. Consider this example using the Example Truffle Library mentioned above:
 
 ```solidity
 import "example-truffle-library/contracts/SimpleNameRegistry.sol";
@@ -52,7 +52,7 @@ var data = require("example-truffle-library/build/contracts/SimpleNameRegistry.j
 var SimpleNameRegistry = contract(data);
 ```
 
-To use these abstractions, see the [Interacting With Your Contracts](/docs/getting_started/contracts) section for more details.
+To use these abstractions, see the [Interacting With Your Contracts](/docs/truffle/getting-started/interacting-with-your-contracts) section for more details.
 
 ### Package's deployed addresses
 
@@ -111,4 +111,4 @@ When using a network like the default `develop` network that's configured to mat
 $ truffle networks --clean
 ```
 
-See the [command reference](/docs/advanced/commands#networks) for more information.
+See the [command reference](/docs/truffle/reference/truffle-commands#networks) for more information.

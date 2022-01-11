@@ -19,7 +19,7 @@ Having two different consoles allows you to choose the best tool for your needs.
 
 Reasons to use **Truffle Console**:
 
-* You have a client you're already using, such as [Ganache](/docs/ganache/using) or geth
+* You have a client you're already using, such as [Ganache](/docs/ganache/quickstart) or geth
 * You want to migrate to a testnet (or the main Ethereum network)
 * You want to use a specific mnemonic or account list
 
@@ -41,7 +41,7 @@ To launch the console:
 truffle console
 ```
 
-This will look for a network definition called `development` in the configuration, and connect to it, if available. You can override this using the `--network <name>` option or [customize](/docs/truffle/reference/configuration#networks) the `development` network settings. See more details in the [Networks](/docs/advanced/networks) section as well as the [command reference](/docs/advanced/commands).
+This will look for a network definition called `development` in the configuration, and connect to it, if available. You can override this using the `--network <name>` option or [customize](/docs/truffle/reference/configuration#networks) the `development` network settings. See more details in the [Networks](/docs/truffle/advanced/networks-and-app-deployment) section as well as the [command reference](/docs/truffle/reference/truffle-commands).
 
 When you load the console, you'll immediately see the following prompt:
 
@@ -96,7 +96,7 @@ Mnemonic: candy maple cake sugar pudding cream honey rich smooth crumble sweet t
 This shows you the addresses, private keys, and mnemonic for this particular blockchain.
 
 <p class="alert alert-info">
-<i class="far fa-info-circle"></i> <strong>Note</strong>: When you run <code>truffle develop</code> for the first time, Truffle will generate a random mnemonic that will persist for you and you alone. If you want to use a different mnemonic or set of addresses, we recommend using <a href="/docs/ganache/using">Ganache</a>.
+<i class="far fa-info-circle"></i> <strong>Note</strong>: When you run <code>truffle develop</code> for the first time, Truffle will generate a random mnemonic that will persist for you and you alone. If you want to use a different mnemonic or set of addresses, we recommend using <a href="/docs/ganache/quickstart">Ganache</a>.
 </p>
 
 
@@ -181,4 +181,4 @@ Additionally, both Truffle Develop and the console have the following features:
 
 If a Truffle command is not available, it is because it is not relevant for an existing project (for example, `init`) wouldn't make sense (for example, `develop` or `console`).
 
-See full [command reference](/docs/advanced/commands) for more information.
+See full [command reference](/docs/truffle/reference/truffle-commands) for more information.

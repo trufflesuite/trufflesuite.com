@@ -19,7 +19,7 @@ To launch the console, run the following from your project folder:
 truffle console
 ```
 
-Truffle will immediately look for a network definition called `development` in the configuration, and connect to it, if available. You can override this using the `--network <name>` option or [customize](#) the `development` network settings. See more details in the [Networks](/docs/advanced/networks) section as well as the [command reference](#).
+Truffle will immediately look for a network definition called `development` in the configuration, and connect to it, if available. You can override this using the `--network <name>` option or [customize](#) the `development` network settings. See more details in the [Networks](/docs/truffle/advanced/networks-and-app-deployment) section as well as the [command reference](/docs/truffle/reference/configuration#networks).
 
 When you load the console, you'll immediately see the following prompt:
 
@@ -66,11 +66,11 @@ truffle(development)> await instance.storage()  // Get storage data
 BigNumber { s: 1, e: 0, c: [ 2 ] }
 ```
 
-For more information using the contract abstractions made available in the console, see the [Interacting With Your Tezos Contracts](/docs/tezos/truffle/getting-started/interacting-with-your-tezos-contracts) section. 
+For more information using the contract abstractions made available in the console, see the [Interacting With Your Tezos Contracts](/docs/tezos/truffle/getting-started/interacting-with-your-tezos-contracts) section.
 
 ### Commands available
 
-You can run the following commands from within the console: 
+You can run the following commands from within the console:
 
 * `build`
 * `compile`
@@ -90,4 +90,4 @@ You can run the following commands from within the console:
 
 If a Truffle command is not available, it is because it is not relevant for an existing project (for example, `init`) wouldn't make sense (for example, `develop` or `console`).
 
-See full [command reference](/docs/advanced/commands) for more information.
+See full [command reference](/docs/truffle/reference/truffle-commands) for more information.

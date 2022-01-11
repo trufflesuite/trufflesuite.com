@@ -9,7 +9,7 @@ layout: docs.hbs
 
 # Tezos Quickstart
 
-Wanna build apps on Tezos using Truffle? You're in the right place. 
+Wanna build apps on Tezos using Truffle? You're in the right place.
 
 ## Table of Contents
 
@@ -40,7 +40,7 @@ Before you can start developing Tezos applications with Truffle, you'll first ne
 
 ## Installing Truffle
 
-You'll need to download a special version of Truffle to use Tezos. 
+You'll need to download a special version of Truffle to use Tezos.
 
     $ npm install -g truffle@tezos
 
@@ -48,7 +48,7 @@ If you already have Truffle installed, we recommend uninstalling truffle before 
 
 ## Using the Tezos Truffle Box
 
-This quick start uses an already-created project to provide the base Truffle project structure and example contracts. 
+This quick start uses an already-created project to provide the base Truffle project structure and example contracts.
 
 In your workspace directory, run the following commands:
 
@@ -80,7 +80,7 @@ Next, replace the box's `truffle-config.js` with the following:
 const { mnemonic, secret, password, email } = require("./faucet.json");
 
 module.exports = {
-  // see <http://truffleframework.com/docs/advanced/configuration>
+  // see <https://truffleframework.com/docs/tezos/truffle/reference/configuring-tezos-projects>
   // for more details on how to specify configuration options!
   networks: {
     development: {
@@ -97,7 +97,7 @@ module.exports = {
 };
 ```
 
-That's it! You're all set to run the box's deployment scripts against a testnet. 
+That's it! You're all set to run the box's deployment scripts against a testnet.
 
 <p class="alert alert-info">
 <strong>Note:</strong> The default tezos box is configured to deploy to multiple networks, including mainnet. If you'd like to deploy to those networks, you'll need to first configure the `secret`, `mnemonic`, `password`, and `email` like the above to represent an account you own that's funded with XTZ. See the <a href="/docs/tezos/truffle/reference/configuring-tezos-projects">Configuring Tezos Projects</a> section for more info.
@@ -119,7 +119,7 @@ Truffle will handle running these scripts when you run the following command:
 
     $ truffle migrate
 
-See the [Deploying Tezos contracts](/docs/tezos/truffle/quick-start/deploying-tezos-contracts) section for more information on how to write and use Truffle's deployment scripts.
+See the [Deploying Tezos contracts](/docs/tezos/truffle/getting-started/deploying-tezos-contracts) section for more information on how to write and use Truffle's deployment scripts.
 
 ## Testing Contracts
 
@@ -128,7 +128,7 @@ The box also comes equipped with tests, showing you how to write automated tests
 * `counter.test.js`
 * `simpleStorage.test.js`
 
-See the [Testing Tezos contracts](/docs/tezos/truffle/quick-start/testing-your-tezos-contracts) section for more information on how to write tests for your LIGO congrats.
+See the [Testing Tezos contracts](/docs/tezos/truffle/getting-started/testing-your-tezos-contracts) section for more information on how to write tests for your LIGO congrats.
 
 Running your tests is easy, by running following command: 
 
@@ -142,4 +142,3 @@ If you've reached this point, you now have a Truffle project that lets you compi
 * [Tezos documentation](https://tezos.gitlab.io/)
 * [Taquito communcation library](https://tezostaquito.io/)
 * [Main Truffle Suite documentation](https://trufflesuite.com/docs)
-

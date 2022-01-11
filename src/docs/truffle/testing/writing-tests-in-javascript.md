@@ -4,7 +4,7 @@ layout: docs.hbs
 ---
 # Writing Tests in JavaScript
 
-Truffle uses the [Mocha](https://mochajs.org/) testing framework and [Chai](http://chaijs.com/) for assertions to provide you with a solid framework from which to write your JavaScript tests. Let's dive in and see how Truffle builds on top of Mocha to make testing your contracts a breeze.
+Truffle uses the [Mocha](https://mochajs.org/) testing framework and [Chai](https://chaijs.com/) for assertions to provide you with a solid framework from which to write your JavaScript tests. Let's dive in and see how Truffle builds on top of Mocha to make testing your contracts a breeze.
 
 Note: If you're unfamiliar with writing unit tests in Mocha, please see [Mocha's documentation](https://mochajs.org/) before continuing.
 
@@ -217,7 +217,7 @@ See the full [command reference](/docs/truffle/reference/truffle-commands#test) 
 
 ## Advanced
 
-Truffle gives you access to Mocha's configuration so you can change how Mocha behaves. See the [project configuration](/docs/advanced/configuration#mocha) section for more details.
+Truffle gives you access to Mocha's configuration so you can change how Mocha behaves. See the [project configuration](/docs/truffle/reference/configuration#mocha) section for more details.
 
 ## TypeScript File Support
 

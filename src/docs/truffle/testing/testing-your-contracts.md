@@ -8,8 +8,8 @@ layout: docs.hbs
 
 Truffle comes standard with an automated testing framework to make testing your contracts a breeze. This framework lets you write simple and manageable tests in two different ways:
 
-* In [Javascript](/docs/getting_started/javascript-tests) and [TypeScript](/docs/getting_started/javascript-tests#typescript-file-support), for exercising your contracts from the outside world, just like your application.
-* In [Solidity](/docs/getting_started/solidity-tests), for exercising your contracts in advanced, bare-to-the-metal scenarios.
+* In [Javascript](/docs/truffle/testing/writing-tests-in-javascript) and [TypeScript](/docs/truffle/testing/writing-tests-in-javascript#typescript-file-support), for exercising your contracts from the outside world, just like your application.
+* In [Solidity](/docs/truffle/testing/writing-tests-in-solidity), for exercising your contracts in advanced, bare-to-the-metal scenarios.
 
 Both styles of tests have their advantages and drawbacks. See the next two sections for a discussion of each one.
 

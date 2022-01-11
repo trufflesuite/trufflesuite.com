@@ -37,11 +37,11 @@ Truffle provides a clean room environment when running your test files. When run
 
 ## Speed and reliability considerations
 
-The above clean room environment is a trade off between speed and test maintainability, but at times can be slow. We originally built Ganache for Ethereum to make running Ethereum-based tests significantly faster, where the test framework can take advantage of testing-specific features. We hope to do the same for Tezos. Please reach out to TQ and let them know you'd like a version of Ganache for Tezos! 
+The above clean room environment is a trade off between speed and test maintainability, but at times can be slow. We originally built Ganache for Ethereum to make running Ethereum-based tests significantly faster, where the test framework can take advantage of testing-specific features. We hope to do the same for Tezos. Please reach out to TQ and let them know you'd like a version of Ganache for Tezos!
 
 # Writing Tests in JavaScript
 
-Truffle uses the [Mocha](https://mochajs.org/) testing framework and [Chai](http://chaijs.com/) for assertions to provide you with a solid framework from which to write your JavaScript tests. Let's dive in and see how Truffle builds on top of Mocha to make testing your contracts a breeze.
+Truffle uses the [Mocha](https://mochajs.org/) testing framework and [Chai](https://chaijs.com/) for assertions to provide you with a solid framework from which to write your JavaScript tests. Let's dive in and see how Truffle builds on top of Mocha to make testing your contracts a breeze.
 
 Note: If you're unfamiliar with writing unit tests in Mocha, please see [Mocha's documentation](https://mochajs.org/) before continuing.
 
@@ -62,7 +62,7 @@ For more information on using contract abstractions, see the [Interacting With Y
 
 ## Using artifacts.require()
 
-Using `artifacts.require()` within your tests works the same way as using it within your migrations; you just need to pass the name of the contract. See the [artifacts.require() documentation](/docs/tezos/truffle/getting-started/deploying-tezos-contracts#artifacts-require-) in the Migrations section for detailed usage.
+Using `artifacts.require()` within your tests works the same way as using it within your migrations; you just need to pass the name of the contract. See the [artifacts.require() documentation](/docs/tezos/truffle/getting-started/deploying-tezos-contracts#artifactsrequire) in the Migrations section for detailed usage.
 
 ## Using the `Tezos` object
 
@@ -94,10 +94,9 @@ contract('SimpleStorage', () => {
 });
 ```
 
-
 This test will produce the following output:
 
-```
+```shell
   Contract: SimpleStorage
     √ ...should store the integer 89 (283ms)
 
@@ -136,4 +135,4 @@ See the full [command reference](/docs/truffle/reference/truffle-commands#test) 
 
 ## Advanced
 
-Truffle gives you access to Mocha's configuration so you can change how Mocha behaves. See the [project configuration](/docs/advanced/configuration#mocha) section for more details.
+Truffle gives you access to Mocha's configuration so you can change how Mocha behaves. See the [project configuration](/docs/truffle/reference/configuration#mocha) section for more details.

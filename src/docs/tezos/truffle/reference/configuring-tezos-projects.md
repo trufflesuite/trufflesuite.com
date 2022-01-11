@@ -17,7 +17,7 @@ Your configuration file is called `truffle-config.js` and is located at the root
 const { mnemonic, secret, password, email } = require("./faucet.json");
 
 module.exports = {
-  // see <http://truffleframework.com/docs/advanced/configuration>
+  // see <https://truffleframework.com/docs/tezos/truffle/reference/configuring-tezos-projects>
   // for more details on how to specify configuration options!
   networks: {
     development: {
@@ -166,7 +166,7 @@ module.exports = {
 
 ### mocha
 
-Configuration options for the [MochaJS](http://mochajs.org/) testing framework. This configuration expects an object as detailed in Mocha's [documentation](https://github.com/mochajs/mocha/wiki/Using-mocha-programmatically#set-options).
+Configuration options for the [MochaJS](https://mochajs.org/) testing framework. This configuration expects an object as detailed in Mocha's [documentation](https://github.com/mochajs/mocha/wiki/Using-mocha-programmatically#set-options).
 
 Example:
 
