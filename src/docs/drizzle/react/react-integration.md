@@ -29,7 +29,7 @@ npm install @drizzle/react-plugin
   import { DrizzleContext } from '@drizzle/react-plugin'
   ```
 
-1. Create a `drizzleOptions` object and pass in the desired contract artifacts for Drizzle to instantiate. Other options are available, see [the Options section of the Drizzle docs](https://www.trufflesuite.com/docs/drizzle/reference/drizzle-options).
+1. Create a `drizzleOptions` object and pass in the desired contract artifacts for Drizzle to instantiate. Other options are available, see [the Options section of the Drizzle docs](/docs/drizzle/reference/drizzle-options).
 
   ```javascript
   // Import contracts
@@ -88,7 +88,7 @@ npm install @drizzle/react-plugin
 
 1. Fetch contract data by accessing contracts via `drizzle` and `drizzleState` in `props`. For more information on how this works, see [How Data Stays Fresh in the Drizzle docs](https://github.com/trufflesuite/drizzle#how-data-stays-fresh). For more info on the drizzle state, see [state tree docs.](https://github.com/trufflesuite/drizzle/tree/develop/packages/store#drizzle-state)
 
-  The example below utilizes drizzle's `cacheCall` feature, which caches and synchronizes the call with the store. For more information on `cacheCall` and also `cacheSend`, see [Contract Interaction](https://www.trufflesuite.com/docs/drizzle/getting-started/contract-interaction).
+  The example below utilizes drizzle's `cacheCall` feature, which caches and synchronizes the call with the store. For more information on `cacheCall` and also `cacheSend`, see [Contract Interaction](/docs/drizzle/getting-started/contract-interaction).
   ```javascript
   // sample component
   import React from 'react';

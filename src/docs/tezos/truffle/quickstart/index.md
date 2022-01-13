@@ -141,5 +141,5 @@ If you've reached this point, you now have a Truffle project that lets you compi
 * [LIGO language documentation](https://ligolang.org/docs/intro/introduction/)
 * [Tezos documentation](https://tezos.gitlab.io/)
 * [Taquito communcation library](https://tezostaquito.io/)
-* [Main Truffle Suite documentation](https://trufflesuite.com/docs)
+* [Main Truffle Suite documentation](/docs)
 

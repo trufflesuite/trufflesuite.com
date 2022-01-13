@@ -6,15 +6,15 @@ hide:
 
 In this article we explore 5 trends impacting the developer-experience (or DX) when it comes to building blockchain-based solutions. Specifically, applications and services that leverage a blockchain or distributed ledger or as part of their overall architecture.
 
-This is, of course, is by no means a definitive list. As with everything in the industry, change is happening fast and as such, this is more of a selection of trends that are on the team’s radar. If there’s anything we’ve missed or should know about, we’d love to hear from you (or speak in person at [TruffleCon 2019](https://www.trufflesuite.com/trufflecon2019)).
+This is, of course, is by no means a definitive list. As with everything in the industry, change is happening fast and as such, this is more of a selection of trends that are on the team’s radar. If there’s anything we’ve missed or should know about, we’d love to hear from you (or speak in person at [TruffleCon 2019](/trufflecon2019)).
 
 ## #1 Development tooling release velocity is on fire
 
-Obviously we’re a little biased, but in this case, we’re talking about tools and utilities that are not [chocolate-themed](https://www.trufflesuite.com/). It’s literally every day we collectively come across something new that makes our lives as developers (or users, auditors, admins, etc) easier.
+Obviously we’re a little biased, but in this case, we’re talking about tools and utilities that are not [chocolate-themed](/truffle). It’s literally every day we collectively come across something new that makes our lives as developers (or users, auditors, admins, etc) easier.
 
 This is a big deal for the long-term success of the wider ecosystem because happy and productive developers obviously strongly correlates with increased experimentation, the volume of shipped products and services, and expedites the process of on-boarding new people (developers or otherwise) into the blockchain space.
 
-At Truffle, we’re also pushing harder than ever to make the DX as sweet as possible. Like, raspberry truffle sweet. This includes new features and enhancements to the existing suite (such as integration with [Hyperledger Fabric's chaincode EVM](https://github.com/trufflesuite/truffle/releases/tag/v5.0.27)), as well as the upcoming [Truffle DB](https://www.trufflesuite.com/blog/introducing-truffle-db-part-1) and [Truffle Teams](https://www.trufflesuite.com/teams).
+At Truffle, we’re also pushing harder than ever to make the DX as sweet as possible. Like, raspberry truffle sweet. This includes new features and enhancements to the existing suite (such as integration with [Hyperledger Fabric's chaincode EVM](https://github.com/trufflesuite/truffle/releases/tag/v5.0.27)), as well as the upcoming [Truffle DB](/blog/introducing-truffle-db-part-1) and [Truffle Teams](/teams).
 
 ## #2 Managed Blockchain Services are here
 

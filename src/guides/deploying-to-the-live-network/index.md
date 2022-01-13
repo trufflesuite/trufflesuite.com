@@ -62,7 +62,7 @@ $ truffle migrate --network live
 
 Notice that we asked for the `"live"` network, which is the name we defined in the configuration, and Truffle will connect to the specified host and port -- in this case `http://127.0.0.1:8546` -- to deploy our contracts.
 
-Your [migrations](https://trufflesuite.com/docs/getting_started/migrations) are run on this network just as they'd run on any other network. If you had previously deployed to the live network before, `truffle migrate --network live` will check which migration was last run and only start deploying from there.
+Your [migrations](/docs/getting_started/migrations) are run on this network just as they'd run on any other network. If you had previously deployed to the live network before, `truffle migrate --network live` will check which migration was last run and only start deploying from there.
 
 ## And That's it!
 

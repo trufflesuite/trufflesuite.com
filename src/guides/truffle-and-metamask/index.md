@@ -5,7 +5,7 @@ hide:
 ---
 
 <div class="alert alert-info">
-  <p class="mb-0"><strong>Update</strong>: Since this tutorial was published, we have released <a href="/docs/ganache">Ganache</a>, a personal blockchain and a replacement to the TestRPC. We have left this tutorial unaltered, but we highly recommend checking out our <a href="https://www.trufflesuite.com/ganache">Ganache Documentation</a></p>
+  <p class="mb-0"><strong>Update</strong>: Since this tutorial was published, we have released <a href="/docs/ganache">Ganache</a>, a personal blockchain and a replacement to the TestRPC. We have left this tutorial unaltered, but we highly recommend checking out our <a href="/ganache">Ganache Documentation</a></p>
 </div>
 
 This article was originally written by Dan Finlay and published as a [github gist](https://gist.github.com/flyswatter/aea93752fb90322bbe11). Dan has kindly allowed us to republish it here!

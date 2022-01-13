@@ -30,6 +30,6 @@ Infura endpoints for the Polygon PoS chain are included in the configuration of 
 
 ## Where to Get Help
 
-You can find all of the documentation for the Truffle Polygon box [here](https://github.com/truffle-box/polygon-box). If you have any questions, feedback, or just want to chat, reach out to us through the resources on our [community page](https://www.trufflesuite.com/community).
+You can find all of the documentation for the Truffle Polygon box [here](https://github.com/truffle-box/polygon-box). If you have any questions, feedback, or just want to chat, reach out to us through the resources on our [community page](/community).
 
 We are very excited to add Polygon PoS to our development suite and we can't wait to see all of the amazing applications built with these tools. Stay tuned as we continue to add more networks, features, and products that accelerate and simplify development on this exciting new technology.

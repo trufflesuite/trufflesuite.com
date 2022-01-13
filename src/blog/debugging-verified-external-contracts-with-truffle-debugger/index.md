@@ -34,9 +34,9 @@ Now, before you get too excited, some caveats apply:
   APIs](https://github.com/ethereum/go-ethereum/wiki/Management-APIs)).
 
 That last one is a pretty big caveat, but **there's good news here**! Our
-sibling SaaS project, [Truffle Teams](https://www.trufflesuite.com/teams), now
+sibling SaaS project, [Truffle Teams](/teams), now
 lets you [simulate live
-networks](https://www.trufflesuite.com/blog/sandbox-forking-with-truffle-teams)
+networks](/blog/sandbox-forking-with-truffle-teams)
 via the free Sandbox feature. This works without requiring you to run your own
 node or to pay for someone else to run their own node, since Truffle Teams
 offers 1 free sandbox per GitHub organization!
@@ -62,7 +62,7 @@ sure that you manually specify that the Sandbox should use the same network ID
 as the chain it's forked from (in this case, 5).  In the future, however, this
 step will be handled automatically.  You can read more about Sandboxes in [our
 earlier blog post on the
-subject](https://www.trufflesuite.com/blog/sandbox-forking-with-truffle-teams).
+subject](/blog/sandbox-forking-with-truffle-teams).
 
 4. Copy your sandbox JSON RPC url to the clipboard.
 

@@ -6,7 +6,7 @@ hide:
 
 ![TruffleCon 2018](/img/blog/why-were-organizing-trufflecon-2018/trufflecon2018header.jpg)
 
-As you have hopefully heard by now, [TruffleCon](https://trufflesuite.com/trufflecon2018), Truffle's first-ever user conference, will be on [October 5-7, 2018 in Portland, Oregon, U.S.A](https://trufflesuite.com/trufflecon2018).
+As you have hopefully heard by now, [TruffleCon](/trufflecon2018), Truffle's first-ever user conference, will be on [October 5-7, 2018 in Portland, Oregon, U.S.A](/trufflecon2018).
 
 <p class="m-b-2">
   <a href="https://trufflecon2018.eventbrite.com" class="btn btn-eventbrite m-t-1" target="_blank">Buy Tickets!</a>

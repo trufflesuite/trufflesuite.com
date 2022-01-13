@@ -51,7 +51,7 @@ Builds will start automatically once a new commit is pushed to any branch of a r
 
 ## Deploying contracts
 
-Please see our detailed guide, ["Learning to Deploy with Truffle Teams"](https://www.trufflesuite.com/guides/learn-how-to-deploy-with-truffle-teams).
+Please see our detailed guide, ["Learning to Deploy with Truffle Teams"](/guides/learn-how-to-deploy-with-truffle-teams).
 
 ## Continue learning
 

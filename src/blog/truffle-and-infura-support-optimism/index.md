@@ -34,6 +34,6 @@ Infura endpoints for the Optimistic Ethereum chain are included in the configura
 
 ## Where to Get Help
 
-You can find all of the documentation for the Truffle Optimism Box [here](https://github.com/truffle-box/optimism-box). If you have any questions, feedback, or just want to chat, reach out to us through the resources on our [community page](https://www.trufflesuite.com/community).
+You can find all of the documentation for the Truffle Optimism Box [here](https://github.com/truffle-box/optimism-box). If you have any questions, feedback, or just want to chat, reach out to us through the resources on our [community page](/community).
 
 We are thrilled to add Optimistic Ethereum to the Truffle development suite and can’t wait to see the universe of applications built on Layer 2. Stay tuned as we continue to add more networks, features, and tools that accelerate and simplify development on a secure and scalable Ethereum.

@@ -19,7 +19,7 @@ We included a call for pre-screening in the community section of our first box r
 Here are the first community boxes:
 
 **[Quintor/angular-truffle-box](/boxes/angular-truffle-box)**<br/>
-This Truffle Box provides a base for working with the Truffle Framework and Angular. It provides a basic working example of the MetaCoin contracts with Angular components. This project is generated with Angular CLI.
+This Truffle Box provides a base for working with the Truffle Suite and Angular. It provides a basic working example of the MetaCoin contracts with Angular components. This project is generated with Angular CLI.
 
 **[hackingbeauty/react-dapp-material-ui](/boxes/react-dapp-material-ui)**<br/>
 In addition to Webpack and React, this box adds: React-Router, Redux and Material-UI for easy skinning of a Dapp.

@@ -77,7 +77,7 @@ Since we’ve started by building infrastructure, the work remains to connect th
 
 This includes:
 * Documentation, of course! See our current [Truffle DB – Proposal](https://trufflesuite.github.io/artifact-updates/index.html) working docs, which include the data model diagrams. Expect us to convert these docs into proper documentation for release.
-* Better persistence. Our initial implementation will save JSON files to disk, but we intend to support more robust data storage options, including relational databases and native support in [Truffle Teams](https://www.trufflesuite.com/teams).
+* Better persistence. Our initial implementation will save JSON files to disk, but we intend to support more robust data storage options, including relational databases and native support in [Truffle Teams](/teams).
 * Schema design updates, including support for pagination and proper data filtering.
 * A prototype candidate for Truffle DB’s external interface.
 

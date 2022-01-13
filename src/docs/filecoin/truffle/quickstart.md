@@ -62,5 +62,5 @@ If you've reached this point, you now have a Truffle project that lets you inter
 * [Filecoin documentation](https://docs.filecoin.io/)
 * [Textile documentation](https://docs.textile.io/)
 * [Filecoin-flavored Ganache documentation](../ganache)
-* [Main Truffle Suite documentation](https://trufflesuite.com/docs)
+* [Main Truffle Suite documentation](/docs)
 

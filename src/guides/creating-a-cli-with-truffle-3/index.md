@@ -112,7 +112,7 @@ contract('ENS integration', (accounts) => {
 ...
 }
 ```
-Truffle injects a global `artifacts.require` function, a helper for finding the right compiled contract artifacts within the test environment. The test then finds a deployed instance of the Registrar on the test network via `Registrar.deployed()`. Now, with the addition of `accounts`, which is passed in via the `contract` wrapper [(see here)](https://trufflesuite.com/docs/getting_started/javascript-tests), we have enough to instantiate the library and use it to test that the domain name `'test'` is available for auction.
+Truffle injects a global `artifacts.require` function, a helper for finding the right compiled contract artifacts within the test environment. The test then finds a deployed instance of the Registrar on the test network via `Registrar.deployed()`. Now, with the addition of `accounts`, which is passed in via the `contract` wrapper [(see here)](/docs/getting_started/javascript-tests), we have enough to instantiate the library and use it to test that the domain name `'test'` is available for auction.
 
 ### Use #2: the CLI
 
@@ -136,7 +136,7 @@ export default function (host, port, registrarAddress, fromAddress) {
   )
 }
 ```
-Here I'm using the same library, `@truffle/contract`, that `artifacts.require` uses under the hood. Because I can't rely on the Truffle framework within the CLI, I have to include the compiled contract artifacts manually. The rest is passed in through the CLI in `bin/ensa.js`:
+Here I'm using the same library, `@truffle/contract`, that `artifacts.require` uses under the hood. Because I can't rely on the Truffle Suite within the CLI, I have to include the compiled contract artifacts manually. The rest is passed in through the CLI in `bin/ensa.js`:
 ```javascript
 import { default as initializeLib } from '../index'
 ...

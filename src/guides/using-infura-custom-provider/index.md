@@ -81,7 +81,7 @@ The next step is to edit your `truffle-config.js` file to use `HDWalletProvider`
 
    * Make sure to replace `<INFURA_PROJECT_ID>` with your Infura Project ID.
 
-   * The `provider` value is wrapped in a function, which ensures that it won't get initialized until it's needed. This is especially important if connecting to multiple networks. (See the [Networks configuration](https://trufflesuite.com/docs/advanced/configuration#networks) section of the documentation for more on this topic.)
+   * The `provider` value is wrapped in a function, which ensures that it won't get initialized until it's needed. This is especially important if connecting to multiple networks. (See the [Networks configuration](/docs/advanced/configuration#networks) section of the documentation for more on this topic.)
 
      <p class="alert alert-info">
        <strong>Note</strong>: If you encounter issues with this construction, you can skip the function wrapper and use this instead:<br />
