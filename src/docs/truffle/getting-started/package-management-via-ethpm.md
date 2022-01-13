@@ -20,7 +20,7 @@ You can also install a package at a specific version:
 $ truffle install <package name>@<version>
 ```
 
-Like NPM, EthPM versions follow [semver](http://semver.org/). You can find a list of all available packages at [the Ethereum Package Registry](http://explorer.ethpm.com/).
+Like NPM, EthPM versions follow [semver](https://semver.org/). You can find a list of all available packages at [the Ethereum Package Registry](http://explorer.ethpm.com/).
 
 ## Installing Dependencies
 
@@ -30,7 +30,7 @@ Your project can define an `ethpm.json` file that among other things can pin you
 $ truffle install
 ```
 
-For more details on the `ethpm.json` file, see the [package configuration](/docs/getting_started/packages-ethpm#package-configuration) below.
+For more details on the `ethpm.json` file, see the [package configuration](#package-configuration) below.
 
 ## Consuming installed contracts
 
@@ -66,7 +66,7 @@ module.exports = function(deployer) {
 };
 ```
 
-Note that in the migration above, we consume the `ens` package and deploy the ENS contract conditionally based on whether or not ENS already has an address set. This is a fancy trick provided to you by the [deployer](/docs/getting_started/migrations#deployer-deploy-contract-args-options-) that makes it much easier to write migrations dependent on the the existence of network artifacts. In this case, if we were running our migrations on the Ropsten network, this migration **wouldn't** deploy the `ENS` contract because (at the time of this writing) Ropsten is where the canonical `ENS` contract exists -- we wouldn't want to deploy our own. But if we were running our migrations against a different network, or a test network perhaps, then we'd want to deploy the `ENS` contract so that we have a dependency contract to work with.
+Note that in the migration above, we consume the `ens` package and deploy the ENS contract conditionally based on whether or not ENS already has an address set. This is a fancy trick provided to you by the [deployer](/docs/truffle/getting-started/running-migrations#deployerdeploycontract-args-options) that makes it much easier to write migrations dependent on the the existence of network artifacts. In this case, if we were running our migrations on the Ropsten network, this migration **wouldn't** deploy the `ENS` contract because (at the time of this writing) Ropsten is where the canonical `ENS` contract exists -- we wouldn't want to deploy our own. But if we were running our migrations against a different network, or a test network perhaps, then we'd want to deploy the `ENS` contract so that we have a dependency contract to work with.
 
 ## Publishing your own package
 
@@ -110,7 +110,7 @@ module.exports = {
 
 ### Package configuration
 
-Like NPM, configuration options for EthPM go in a separate JSON file called `ethpm.json`. This file sits alongside your Truffle configuration and gives Truffle all the information it needs to publish your package. You can see a full list of available options in the [Configuration](/docs/advanced/configuration) section.
+Like NPM, configuration options for EthPM go in a separate JSON file called `ethpm.json`. This file sits alongside your Truffle configuration and gives Truffle all the information it needs to publish your package. You can see a full list of available options in the [Configuration](/docs/truffle/reference/configuration) section.
 
 File: `ethpm.json`
 
@@ -159,4 +159,4 @@ When using a network like the default `develop` network that's configured to mat
 $ truffle networks --clean
 ```
 
-See the [command reference](/docs/advanced/commands#networks) for more information.
+See the [command reference](/docs/truffle/reference/truffle-commands#networks) for more information.

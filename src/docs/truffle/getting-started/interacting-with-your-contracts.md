@@ -205,7 +205,7 @@ let specificInstance = await MetaCoin.at("0x1234...");
 
 ### Sending ether to a contract
 
-You may simply want to send Ether directly to a contract, or trigger a contract's [fallback function](http://solidity.readthedocs.io/en/develop/contracts.html#fallback-function). You can do so using one of the following two options.
+You may simply want to send Ether directly to a contract, or trigger a contract's [fallback function](https://solidity.readthedocs.io/en/develop/contracts.html#fallback-function). You can do so using one of the following two options.
 
 Option 1: Send a transaction directly to a contract via `instance.sendTransaction()`. This is promisified like all available contract instance functions, and has the same API as `web3.eth.sendTransaction` but without the callback. The `to` value will be automatically filled in for you if not specified.
 

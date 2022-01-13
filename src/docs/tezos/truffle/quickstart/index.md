@@ -80,7 +80,7 @@ Next, replace the box's `truffle-config.js` with the following:
 const { mnemonic, secret, password, email } = require("./faucet.json");
 
 module.exports = {
-  // see <http://truffleframework.com/docs/advanced/configuration>
+  // see <https://truffleframework.com/docs/tezos/truffle/reference/configuring-tezos-projects>
   // for more details on how to specify configuration options!
   networks: {
     development: {

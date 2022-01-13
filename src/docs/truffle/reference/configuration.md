@@ -275,7 +275,7 @@ module.exports = {
 
 ### mocha
 
-Configuration options for the [MochaJS](http://mochajs.org/) testing framework. This configuration expects an object as detailed in Mocha's [documentation](https://github.com/mochajs/mocha/wiki/Using-mocha-programmatically#set-options).
+Configuration options for the [MochaJS](https://mochajs.org/) testing framework. This configuration expects an object as detailed in Mocha's [documentation](https://github.com/mochajs/mocha/wiki/Using-mocha-programmatically#set-options).
 
 Example:
 
@@ -317,7 +317,7 @@ In the `compilers` object you can specify settings related to the compilers used
 Solidity compiler settings. Supports optimizer settings for `solc`, as well as other settings such as debug and metadata settings.
 
 You may specify...
-+ any solc-js version (using semver) listed at [solc-bin](http://solc-bin.ethereum.org/bin/list.json). Specify the one you want and Truffle will get it for you.
++ any solc-js version (using semver) listed at [solc-bin](https://solc-bin.ethereum.org/bin/list.json). Specify the one you want and Truffle will get it for you.
 + "native" to use a natively compiled solc binary (you'll need to install this yourself, links to help below).
 + a dockerized solc tag from one of images published [here](https://hub.docker.com/r/ethereum/solc/tags/).
 + a path to a locally available solc
@@ -529,7 +529,7 @@ package_name: "adder"
 
 ### version
 
-Version of this package, using the [semver](http://semver.org/) specification.
+Version of this package, using the [semver](https://semver.org/) specification.
 
 Example:
 ```javascript
@@ -570,7 +570,7 @@ keywords: [
 
 ### dependencies
 
-A list of EthPM packages your package depends on, using [semver](http://semver.org/) version ranges, like npm.
+A list of EthPM packages your package depends on, using [semver](https://semver.org/) version ranges, like npm.
 
 Example:
 ```javascript
