@@ -22,6 +22,20 @@ This page will take you through the basics of creating a Truffle project and dep
   - [Interacting with the contract](#interacting-with-the-contract)
   - [Continue learning](#continue-learning)
 
+## Installing Truffle
+
+Before you can use Truffle, you will have to install it using npm. Open a terminal and use the following to install it globally.
+
+  ```shell
+  npm install -g truffle
+  ```
+
+  <p class="alert alert-info">
+  <i class="far fa-info-circle"></i> <strong>Note</strong>:  We recommend that you use npm with a node version manager like nvm, and this is actually what npm itself recommends. See <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">this article</a> from npm on installing npm with a
+  node version manager.
+  We also recommend against using <code>sudo</code> while installing Truffle as many users report permissions errors after doing so.
+  </p>
+
 
 ## Creating a project
 
@@ -31,16 +45,16 @@ You can create a bare project template, but for those just getting started, you 
 
 1. Create a new directory for your Truffle project:
 
-   ```shell
-   mkdir MetaCoin
-   cd MetaCoin
-   ```
+  ```shell
+  mkdir MetaCoin
+  cd MetaCoin
+  ```
 
 1. Download ("unbox") the MetaCoin box:
 
-   ```shell
-   truffle unbox metacoin
-   ```
+  ```shell
+  truffle unbox metacoin
+  ```
 
    <p class="alert alert-info">
    <i class="far fa-info-circle"></i> <strong>Note</strong>: You can use the <code>truffle unbox &lt;box-name&gt;</code> command to download any of the other Truffle Boxes.
@@ -85,9 +99,9 @@ Once this operation is completed, you'll now have a project structure with the f
    truffle test ./test/TestMetaCoin.sol
    ```
 
-   You will see the following output
+   You will see the following output:
 
-    ```
+    ```shell
      TestMetacoin
        √ testInitialBalanceUsingDeployedContract (71ms)
        √ testInitialBalanceWithNewMetaCoin (59ms)
@@ -101,15 +115,15 @@ Once this operation is completed, you'll now have a project structure with the f
 
    These two tests were run against the contract, with descriptions displayed on what the tests are supposed to do.
 
-1. Run the JavaScript test:
+2. Run the JavaScript test:
 
    ```shell
    truffle test ./test/metacoin.js
    ```
 
-   You will see the following output
+   You will see the following output:
 
-   ```
+   ```shell
      Contract: MetaCoin
        √ should put 10000 MetaCoin in the first account
        √ should call a function that depends on a linked library (40ms)
@@ -128,7 +142,7 @@ Once this operation is completed, you'll now have a project structure with the f
 
    You will see the following output:
 
-   ```
+   ```shell
    Compiling .\contracts\ConvertLib.sol...
    Compiling .\contracts\MetaCoin.sol...
    Compiling .\contracts\Migrations.sol...
