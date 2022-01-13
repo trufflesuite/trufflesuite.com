@@ -10,7 +10,7 @@ Starting with Drizzle v1.3, we are very happy to announce official support for R
 
 This tutorial will guide you through how to get Drizzle and Truffle running on your React Native dapps. This tutorial assumes some prior knowledge about Truffle, Drizzle, and React Native, so if you haven't already, go over the following tutorials first to set up your development environment:
 
-1. [Getting started with Drizzle and React](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react)
+1. [Getting started with Drizzle and React](https://www.trufflesuite.com/tutorials/getting-started-with-drizzle-and-react)
 1. [React Native](https://facebook.github.io/react-native/docs/getting-started.html)
     - Make sure to select `Building Projects with Native Code` since we will be leveraging some native code.
 
@@ -183,7 +183,7 @@ We're now done with replacing all the global objects and functions that Drizzle 
 
 To add our smart contract we'll just follow the previous tutorial on Drizzle and React.
 
-Do the steps from [Writing our smart contract](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react#writing-our-smart-contract) up to (and including) [Migration](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react#migration).
+Do the steps from [Writing our smart contract](https://www.trufflesuite.com/tutorials/getting-started-with-drizzle-and-react#writing-our-smart-contract) up to (and including) [Migration](https://www.trufflesuite.com/tutorials/getting-started-with-drizzle-and-react#migration).
 
 
 ## Connecting your app to your Ganache testnet
@@ -286,7 +286,7 @@ AppRegistry.registerComponent(appName, () => () => <App drizzle={drizzle} />);
 
 ## Wiring up the App component
 
-This is pretty much the same as [the web tutorial](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react#wire-up-the-app-component), but with React Native components instead of web ones. Refer to the web tutorial for a more in-depth explanation of what's going on.
+This is pretty much the same as [the web tutorial](https://www.trufflesuite.com/tutorials/getting-started-with-drizzle-and-react#wire-up-the-app-component), but with React Native components instead of web ones. Refer to the web tutorial for a more in-depth explanation of what's going on.
 
 Let's create a folder called `app` in the root of the project. Add a file called `App.js` to it.
 
@@ -353,7 +353,7 @@ Run the app, and you should see the string `Loading Drizzle...` while you wait f
 
 ## Writing a component to read from Drizzle
 
-Once again, this is very similar to the [web tutorial](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react#write-a-component-to-read-from-drizzle), just with React Native components.
+Once again, this is very similar to the [web tutorial](https://www.trufflesuite.com/tutorials/getting-started-with-drizzle-and-react#write-a-component-to-read-from-drizzle), just with React Native components.
 
 Add `ReadString.js` to the folder `app`. `app/ReadString.js` should look like this:
 
@@ -418,7 +418,7 @@ You should now see the string `Hello World` being rendered after Drizzle has fin
 ## Writing a component to write to the smart contract
 
 
-Once again, this is very similar to the [web tutorial](https://www.truffleframework.com/tutorials/getting-started-with-drizzle-and-react#write-a-component-to-write-to-the-smart-contract), just with React Native components.
+Once again, this is very similar to the [web tutorial](https://www.trufflesuite.com/tutorials/getting-started-with-drizzle-and-react#write-a-component-to-write-to-the-smart-contract), just with React Native components.
 
 Add `SetString.js` to the folder `app`. `app/SetString.js` should look like this:
 

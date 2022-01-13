@@ -4,7 +4,7 @@ layout: docs.hbs
 ---
 <img style="max-width: 500px;" class="mb-3" src="/img/teams-logo-dark.svg" alt="Truffle Teams Logo" />
 <div class="text-center">
-  <a href="http://my.truffleteams.com" class="btn btn-lg btn-truffle"><i class="fab fa-github"></i>&nbsp;&nbsp;SIGN UP WITH GITHUB</a>
+  <a href="https://my.truffleteams.com" class="btn btn-lg btn-truffle"><i class="fab fa-github"></i>&nbsp;&nbsp;SIGN UP WITH GITHUB</a>
   <a href="https://share.hsforms.com/1OaTglVhGTdWk7spR6nE_AA34pbp" class="btn btn-lg btn-wrap btn-ganache mt-2 mt-md-0"><i class="fas fa-envelope"></i>&nbsp;&nbsp;GET NOTIFIED OF UPDATES &amp; NEW FEATURES</a>
 </div>
 

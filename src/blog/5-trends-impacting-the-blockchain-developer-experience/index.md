@@ -18,7 +18,7 @@ At Truffle, we’re also pushing harder than ever to make the DX as sweet as pos
 
 ## #2 Managed Blockchain Services are here
 
-Managed Blockchain Services (MBS) are evolving rapidly. In the first half of 2019 alone we’ve seen the launch of new services from heavyweights such as [Microsoft](https://azure.microsoft.com/en-us/services/blockchain-service/) and [Amazon](https://aws.amazon.com/managed-blockchain/), and players such as [Kaleido](http://kaleido.io/) evolving their stack with dizzying speed.
+Managed Blockchain Services (MBS) are evolving rapidly. In the first half of 2019 alone we’ve seen the launch of new services from heavyweights such as [Microsoft](https://azure.microsoft.com/en-us/services/blockchain-service/) and [Amazon](https://aws.amazon.com/managed-blockchain/), and players such as [Kaleido](https://kaleido.io/) evolving their stack with dizzying speed.
 
 These services, of course, do all the heavy lifting when it comes to spinning up private or consortium networks, something that was historically cumbersome from a DevOps perspective. Excitingly, the maturation of these services is coinciding with an increased understanding of the use-cases for permissioned ledgers and accordingly, we’re seeing major projects and initiatives begin to roll out.
 
@@ -44,7 +44,7 @@ It’s exciting to see companies of all shapes and sizes embracing the paradigm 
 
 ## #5 Industries are becoming increasingly programmable, led by DeFi
 
-While companies like [Stripe](http://stripe.com/) have turned programming against “centralized” finance into an art form, they are inherently bound by the rules and regulations imposed by the industry itself. Decentralized Finance (or DeFi) on the other hand has no such intrinsic limitations. Want to open a Collateralized Debt Position? MakerDAO has a [JavaScript library](https://makerdao.com/documentation/#dai-js) for that. DeFi is only limited by the imagination (and programming ability) of individual developers.
+While companies like [Stripe](https://stripe.com/) have turned programming against “centralized” finance into an art form, they are inherently bound by the rules and regulations imposed by the industry itself. Decentralized Finance (or DeFi) on the other hand has no such intrinsic limitations. Want to open a Collateralized Debt Position? MakerDAO has a [JavaScript library](https://makerdao.com/documentation/#dai-js) for that. DeFi is only limited by the imagination (and programming ability) of individual developers.
 
 We’re rapidly seeing the decentralized equivalent of swaths of traditional financial services emerge, all of which are open and programmable in ways that the existing industry can only dream of.
 

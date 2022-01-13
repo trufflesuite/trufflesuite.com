@@ -170,7 +170,7 @@ Using less than 15 lines of hand-coded Solidity, we've created our own Ethereum 
 
 ## Interacting with the new token
 
-For this portion of the tutorial, we recommend using [MetaMask](http://metamask.io), a browser extension for Chrome and Firefox. It will allow you to switch between accounts quickly, perfect for testing the ability to transfer our newly created tokens. Our [Pet Shop tutorial](/tutorial) has more information about [configuring MetaMask](/tutorial#interacting-with-the-dapp-in-a-browser).
+For this portion of the tutorial, we recommend using [MetaMask](https://metamask.io), a browser extension for Chrome and Firefox. It will allow you to switch between accounts quickly, perfect for testing the ability to transfer our newly created tokens. Our [Pet Shop tutorial](/tutorial) has more information about [configuring MetaMask](/tutorial#interacting-with-the-dapp-in-a-browser).
 
 You will want to enter the mnemonic displayed in Ganache into MetaMask, and make sure that MetaMask is listening to the Custom RPC `http://127.0.0.1:7545`.
 

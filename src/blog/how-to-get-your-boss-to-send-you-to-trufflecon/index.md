@@ -4,13 +4,13 @@ hide:
   - navigation
 ---
 
-Last year [Truffle Suite](https://truffleframework.com/) launched [TruffleCon](https://truffleframework.com/trufflecon2019), an event designed for the Truffle community and those interested in building world-changing applications powered by decentralized technologies. The event was received with an overwhelmingly positive response. TruffleCon attracted 250 attendees, 53 speakers, and 2 locations. After such a successful inaugural event, the team immediately started planning an even bigger and better Trufflecon for 2019.
+Last year [Truffle Suite](https://trufflesuite.com/) launched [TruffleCon](https://trufflesuite.com/trufflecon2019), an event designed for the Truffle community and those interested in building world-changing applications powered by decentralized technologies. The event was received with an overwhelmingly positive response. TruffleCon attracted 250 attendees, 53 speakers, and 2 locations. After such a successful inaugural event, the team immediately started planning an even bigger and better Trufflecon for 2019.
 
 Join us this year on August 2-4 at the Microsoft Campus in Redmond, WA for the second annual event for the Truffle community: those who actively build using Truffle’s framework for development on Ethereum. Programming will include speakers from the blockchain ecosystem, along with hands-on workshops geared toward novice users and expert builders alike. There’s truly something for developers of all experience levels!
 
 TruffleCon places focus on the developer by exploring the many ways in which the Truffle tools can enhance the development process by increasing efficiency and enabling high-quality dapp production.
 
-We know that attending a blockchain conference often comes down to ROI for your organization. With so many learning and growth opportunities, here are a few things to remind your boss about when asking to send you to the 2nd Annual [TruffleCon](https://truffleframework.com/trufflecon2019).
+We know that attending a blockchain conference often comes down to ROI for your organization. With so many learning and growth opportunities, here are a few things to remind your boss about when asking to send you to the 2nd Annual [TruffleCon](https://trufflesuite.com/trufflecon2019).
 
 ## Truffle is widely considered the most popular tool for blockchain application development
 
@@ -57,6 +57,6 @@ If your boss is still not convinced, most importantly, there will be A LOT of ch
 
 Now, send this to your boss so they can send you to TruffleCon!
 
-[Secure Your Spot for TruffleCon 2019 in Redmond, WA August 2-4, 2019.](https://www.truffleframework.com/trufflecon2019)
+[Secure Your Spot for TruffleCon 2019 in Redmond, WA August 2-4, 2019.](https://www.trufflesuite.com/trufflecon2019)
 
 More 2019 announcements are on the way — [Subscribe to the Truffle newsletter](https://truffleframework.us11.list-manage.com/subscribe/post?u=947c9b18fc27e0b00fc2ad055&id=97cfd4251b) and [join the conversation on Telegram in the TruffleCon Channel](https://t.me/TruffleCon).

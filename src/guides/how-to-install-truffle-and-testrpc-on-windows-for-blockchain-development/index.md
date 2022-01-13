@@ -15,7 +15,7 @@ This post was originally published by David Burela on his blog [Burela's House-o
 -------------------
 
 I have been doing a bunch of Blockchain development work, one of which was recently featured on the front page of the [Australian Financial
-Review](http://www.afr.com/technology/webjet-moves-early-with-microsoft-to-create-first-blockchain-for-hotel-bookings-20161104-gshwra) and on [Microsoft’s news website](https://news.microsoft.com/en-au/2016/11/08/webjet-and-microsoft-build-first-of-a-kind-travel-industry-blockchain-solution/).
+Review](https://www.afr.com/technology/webjet-moves-early-with-microsoft-to-create-first-blockchain-for-hotel-bookings-20161104-gshwra) and on [Microsoft’s news website](https://news.microsoft.com/en-au/2016/11/08/webjet-and-microsoft-build-first-of-a-kind-travel-industry-blockchain-solution/).
 
 One of the trickiest things has been trying to get Windows environments correctly configured, as the tools are npm based and want to be compiled natively and assumes it is on a Linux machine. Here is the simplest install script I have found
 

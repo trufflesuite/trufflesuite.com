@@ -41,7 +41,7 @@ The above user interface gives you access to the debugger features you need to s
 
 Most of the work done by the debugger results in some type of mapping. The debugger gathers tons of disparate data, like the bytecode of your contracts, abstract representations of your code, instructions run during your transaction, etc., and combines them to produce information useful to the contract developer. Perhaps the debugger's most valuable property is variable inspection: Using all the data gathered, the debugger can determine which variables exist within your contract, which apply to each section of the code, and what their values are at any point in time. It can even show the values of complex data types, like structs with nested arrays. We're still filling out a few data types, but expect those in the next couple weeks.
 
-If you plan on using the `debug` command _today_, we recommend using [Truffle Develop](http://truffleframework.com/docs/getting_started/console). Truffle Develop comes with everything you need "baked in" to fully debug your contracts. Ganache and `ganache-cli` will need to be updated, so stay tuned for that in the coming days. 
+If you plan on using the `debug` command _today_, we recommend using [Using Truffle Develop and the Console](/docs/truffle/getting-started/using-truffle-develop-and-the-console). Truffle Develop comes with everything you need "baked in" to fully debug your contracts. Ganache and `ganache-cli` will need to be updated, so stay tuned for that in the coming days. 
 
 ### Where to Next
 

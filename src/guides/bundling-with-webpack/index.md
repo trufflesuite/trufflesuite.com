@@ -10,7 +10,7 @@ hide:
 
 ## Intended Audience
 
-This tutorial is for Truffle users who are familiar with Webpack already. Since Webpack requires considerable knowledge to use effectively, we recommend checking out the [Webpack documentation](http://webpack.github.io/docs/) as well as the [Truffle + Webpack Demo application](https://github.com/ConsenSys/truffle-webpack-demo) before proceeding.
+This tutorial is for Truffle users who are familiar with Webpack already. Since Webpack requires considerable knowledge to use effectively, we recommend checking out the [Webpack documentation](https://webpack.github.io/docs/) as well as the [Truffle + Webpack Demo application](https://github.com/ConsenSys/truffle-webpack-demo) before proceeding.
 
 ## Getting Started
 

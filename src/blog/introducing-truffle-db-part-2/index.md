@@ -16,7 +16,7 @@ Or, just to catch up:
 
 So why should you care?
 * If you are a tools developer, or rely on Truffle artifacts directly in any way: there will be breaking changes!
-* If you use Truffle for smart contract development: the developer experience using Truffle will have fewer roadblocks (“[software warts](http://www.catb.org/jargon/html/W/wart.html)”). This will not break existing Truffle projects.
+* If you use Truffle for smart contract development: the developer experience using Truffle will have fewer roadblocks (“[software warts](https://www.catb.org/jargon/html/W/wart.html)”). This will not break existing Truffle projects.
 * No matter who you are: better data means better tools.
 
 Great! I’m convinced. 😁 Now, where were we?

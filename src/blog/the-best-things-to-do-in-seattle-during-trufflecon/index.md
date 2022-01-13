@@ -32,7 +32,7 @@ From the historic and beautiful grounds of Chateau Ste. Michelle to the quaint b
 
 ![winery building in the Sammamish River Valley](/img/blog/the-best-things-to-do-in-seattle-during-trufflecon/layer-3.jpg)
 
-## [Black Raven Brewing Company](http://www.blackravenbrewing.com/)
+## [Black Raven Brewing Company](https://www.blackravenbrewing.com/)
 
 Black Raven is a neighborhood brewery with a friendly retail taproom, The Raven's Nest, with locations in both Redmond and Woodinville. The Raven's Nest is not a traditional brewpub; it's more like our brewery's living room. Open 7 days a week and a seating capacity of about 100, it's home to local beer lovers who want to be a part of a community that enjoy great beer and great friends.
 
@@ -46,7 +46,7 @@ Flee Escape Game is one of the largest Seattle and Redmond Real Life Escape Room
 
 ![egyptian themed escape room](/img/blog/the-best-things-to-do-in-seattle-during-trufflecon/layer-4.jpg)
 
-## [Paragliding](http://www.tigermountainparagliding.com/fly-tandem/)
+## [Paragliding](https://www.tigermountainparagliding.com/fly-tandem/)
 
 Come paraglide tandem with us, and experience free flight in its purest form! After running down a moderately steep hill you'll find yourself airborne, sitting comfortably in a reclined harness, your feet dangling above the trees, no one in front of you (pilot rides in back) and no cockpit surrounding you.
 

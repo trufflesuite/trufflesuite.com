@@ -14,7 +14,7 @@ This post was originally published by David Burela on his blog [Burela's House-o
 
 -------------------
 
-I have been working on automating the compilation and testing of Ethereum solidity contracts, via the use of [Truffle](http://truffleframework.com/). I’ve got the test results being published back into the portal, allowing me to see on each commit if my code still compiles and passes my tests.
+I have been working on automating the compilation and testing of Ethereum solidity contracts, via the use of [Truffle](https://trufflesuite.com/). I’ve got the test results being published back into the portal, allowing me to see on each commit if my code still compiles and passes my tests.
 
 I’m assuming you already have a Truffle project locally that you want to automate the continuous builds & testing on. Follow the [tutorial on installing Truffle & TestRPC on Windows](/tutorials/how-to-install-truffle-and-testrpc-on-windows-for-blockchain-development).
 

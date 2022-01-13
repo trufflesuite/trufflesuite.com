@@ -17,7 +17,7 @@ Your configuration file is called `truffle-config.js` and is located at the root
 const { mnemonic, secret, password, email } = require("./faucet.json");
 
 module.exports = {
-  // see <https://truffleframework.com/docs/tezos/truffle/reference/configuring-tezos-projects>
+  // see <https://trufflesuite.com/docs/tezos/truffle/reference/configuring-tezos-projects>
   // for more details on how to specify configuration options!
   networks: {
     development: {

@@ -114,7 +114,7 @@ For each network, if unspecified, transaction options will default to the follow
 * `gas`: Gas limit used for deploys. Default is `6721975`.
 * `gasPrice`: Gas price used for deploys. Default is `20000000000` (20 Gwei).
 * `from`: From address used during migrations. Defaults to the first available account provided by your Ethereum client.
-* `provider`: Default web3 provider using `host` and `port` options: `new Web3.providers.HttpProvider("http://<host>:<port>")`
+* `provider`: Default web3 provider using `host` and `port` options: `new Web3.providers.HttpProvider("https://<host>:<port>")`
 * `websockets`: You will need this enabled to use the `confirmations` listener or to hear Events using `.on` or `.once`.  Default is `false`.
 * `deploymentPollingInterval`: When a smart contract is deployed, this determines how often to check whether the transaction has been completed, specified in milliseconds. Default is `4000`. Note that this is *independent* of the polling interval that `provider` may use. See [`@truffle/hdwallet-provider` documentation](https://github.com/trufflesuite/truffle/blob/develop/packages/hdwallet-provider/README.md#instantiation) if you are using `HDWalletProvider` and wish to specify a custom `pollingInterval`.
 

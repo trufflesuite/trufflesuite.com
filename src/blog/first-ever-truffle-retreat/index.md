@@ -77,7 +77,7 @@ In the end, we all agreed why we’re here. Our new mission statement:
 On Thursday, we got into the details of what we’ve been working on at Truffle and where we’re going. This included presentations for new products [SPOILER ALERT!] and discussions about specific features. We’ve been hard at work since we drafted this post, so some you may have heard of already: 
 
 * [Truffle 4.0!](https://github.com/trufflesuite/truffle/releases) - with a debugger, improved development and testing experience, and more! 
-* [Ganache](http://truffleframework.com/ganache/) - a personal blockchain for developers. 
+* [Ganache](https://trufflesuite.com/ganache/) - a personal blockchain for developers. 
 * Drizzle - a frontend framework for React and Angular to easily connect Truffle-based projects.
 * Project Hotcakes - a full stack suite for web applications.
 * Live - a browser-based, interactive Truffle IDE.

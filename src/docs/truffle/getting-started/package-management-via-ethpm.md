@@ -20,7 +20,7 @@ You can also install a package at a specific version:
 $ truffle install <package name>@<version>
 ```
 
-Like NPM, EthPM versions follow [semver](https://semver.org/). You can find a list of all available packages at [the Ethereum Package Registry](http://explorer.ethpm.com/).
+Like NPM, EthPM versions follow [semver](https://semver.org/). You can find a list of all available packages at [the Ethereum Package Registry](https://explorer.ethpm.com/).
 
 ## Installing Dependencies
 

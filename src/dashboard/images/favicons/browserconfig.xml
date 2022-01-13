@@ -2,7 +2,7 @@
 <browserconfig>
     <msapplication>
         <tile>
-            <square150x150logo src="http://truffleframework.com/dashboard/images/favicons/mstile-150x150.png"/>
+            <square150x150logo src="https://trufflesuite.com/dashboard/images/favicons/mstile-150x150.png"/>
             <TileColor>#da532c</TileColor>
         </tile>
     </msapplication>

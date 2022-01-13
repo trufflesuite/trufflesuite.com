@@ -14,7 +14,7 @@ At [Truffle](https://www.trufflesuite.com/), we decided such an approach was an 
 
 **_Prerequisites: You should be familiar with Truffle, Ganache, and Solidity. If you need an introduction please consult the following resources:_**
 
-* [Truffle Quickstart](https://truffleframework.com/docs/truffle/quickstart)
+* [Truffle Quickstart](https://trufflesuite.com/docs/truffle/quickstart)
 * [Ganache Quickstart](https://www.trufflesuite.com/docs/ganache/quickstart)
 * [Solidity Documentation](https://solidity.readthedocs.io/en/v0.5.9/index.html)
 
