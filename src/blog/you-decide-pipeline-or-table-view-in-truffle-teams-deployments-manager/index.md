@@ -24,7 +24,7 @@ You’ll also notice that clicking the name of a deployment now goes to a new de
   <figcaption class="text-center font-italic">The deployment details screen. Notice you can now access the console output!</figcaption>
 </figure>
 
-For more information on the new deployments screen, check out the [Truffle Teams Deployments docs](http://localhost:9000/docs/teams/deployments/about-deployments).
+For more information on the new deployments screen, check out the [Truffle Teams Deployments docs](/docs/teams/deployments/deployment-details).
 
 <div class="mt-12 text-center">
   <a class="btn btn-truffle mt-3" href="https://my.truffleteams.com/" target="_blank">CHECK OUT THE DEPLOYMENTS MANAGER</a>
