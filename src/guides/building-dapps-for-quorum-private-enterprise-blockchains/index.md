@@ -24,7 +24,7 @@ This tutorial represents Truffle's official support for Quorum. By the end of th
 This tutorial expects you to have some knowledge of Truffle, Ethereum, Quorum, and Solidity. For more information on these topics, please see the following links:
 
 * [Truffle documentation](/docs/)
-* [Ethereum overview](/tutorials/ethereum-overview)
+* [Ethereum overview](/guides/ethereum-overview)
 * [Quorum overview](https://www.jpmorgan.com/country/US/EN/Quorum) and [documentation](https://github.com/jpmorganchase/quorum/wiki)
 * [Solidity documentation](https://solidity.readthedocs.io/en/develop/)
 
@@ -121,7 +121,7 @@ To set up Truffle, we're going to start by creating a bare Truffle project, with
    truffle init
    ```
 
-   If you look at the contents of the `myproject` directory, you'll notice directories were created for you. See the [Truffle documentation](/docs/getting_started/project) for more information about Truffle's project structure.
+   If you look at the contents of the `myproject` directory, you'll notice directories were created for you. See the [Truffle documentation](/docs/truffle/getting-started/creating-a-project) for more information about Truffle's project structure.
 
 1. Before moving onto code, we need to configure Truffle to point to our running Quorum client. For this example, we'll edit our `development` network configuration within `truffle-config.js` to point to the first node available in the 7nodes example:
 
@@ -263,7 +263,7 @@ We originally configured Truffle to point our development environment to the fir
 
    Like before, VirtualBox and Vagrant are making these nodes available to us through local ports, so these configurations can look the same as our `development` configuration except with a different ports specified.
 
-1. Now that our configuration is set up, we can use the Truffle console to interact with our deployed contract. First let's be "us" (node 1), configured via our `development` configuration. The easiest way to do this is to launch the [Truffle console](/docs/getting_started/console), which lets us interact with our deployed contracts directly.
+1. Now that our configuration is set up, we can use the Truffle console to interact with our deployed contract. First let's be "us" (node 1), configured via our `development` configuration. The easiest way to do this is to launch the [Truffle console](/docs/truffle/getting-started/using-truffle-develop-and-the-console), which lets us interact with our deployed contracts directly.
 
    ```shell
    truffle console
@@ -443,7 +443,7 @@ And we got `65` again, as we should expect. This is how we can use Truffle's con
 
 Absolutely not! What we've shown you today is everything that makes building dapps for Quorum different than building dapps for the public Ethereum network. And what you'll see is it's not different at all: The only difference is adding the `privateFor` parameter for deployments and transactions you'd like to keep private. The rest is the same!
 
-In fact, now that you have the basics, you can explore [all our other resources](/docs) for building dapps with Truffle, including [tutorials](/tutorials), [writing advanced deployment scripts](/docs/getting_started/migrations), [unit testing](/docs/getting_started/javascript-tests) ([with Solidity too](/docs/getting_started/solidity-tests)), and much more.
+In fact, now that you have the basics, you can explore [all our other resources](/docs) for building dapps with Truffle, including [tutorial](/tutorial), [writing advanced deployment scripts](/docs/truffle/getting-started/running-migrations), [unit testing](/docs/truffle/testing/writing-tests-in-javascript) ([with Solidity too](/docs/truffle/testing/writing-tests-in-solidity)), and much more.
 
 By building with Truffle, you now have access to not only the best development tools and technologies (like Quorum), but you also have access to the largest Ethereum developer community around. Don't hesitate to [drop us a line on Twitter](https://twitter.com/trufflesuite) or [get help from fellow Trufflers in our community Gitter channel](https://gitter.im/ConsenSys/truffle). There's always someone available to answer any questions you have.
 

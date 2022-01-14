@@ -10,7 +10,7 @@ Today we're happy to announce anyone can now make their very own Truffle Box!
 
 ## Making a Box
 
-To get started making a box, we've added a page to [our documentation](/docs/advanced/truffle-boxes). For those starting a new box from scratch, we've also created a [blueprint Truffle Box](/boxes/blueprint) to get you started quickly.
+To get started making a box, we've added a page to [our documentation](/docs/truffle/advanced/creating-a-truffle-box). For those starting a new box from scratch, we've also created a [blueprint Truffle Box](/boxes/blueprint) to get you started quickly.
 
 ## The First Wave
 

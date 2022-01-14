@@ -14,7 +14,7 @@ First, be sure to select the **FILECOIN** flavor in the dropdown under **QUICKST
 
 <img class="img-fluid" style="max-width: min(50rem, 100%);" src="/img/docs/ganache/filecoin/flavor-selection.png" alt="Filecoin Flavor Selection" />
 
-From here, you can click the **QUICKSTART** or **NEW WORKSPACE** buttons. **QUICKSTART** is the quickest way to get started, and you can save the workspace later. You can read more about workspaces in the [dedicated documentation section](/docs/ganache/the-quickstart-workspace).
+From here, you can click the **QUICKSTART** or **NEW WORKSPACE** buttons. **QUICKSTART** is the quickest way to get started, and you can save the workspace later. You can read more about workspaces in the [dedicated documentation section](/docs/ganache/workspaces/the-quickstart-workspace).
 
 ### Accounts
 

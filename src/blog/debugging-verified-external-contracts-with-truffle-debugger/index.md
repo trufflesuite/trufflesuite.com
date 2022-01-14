@@ -34,7 +34,7 @@ Now, before you get too excited, some caveats apply:
   APIs](https://github.com/ethereum/go-ethereum/wiki/Management-APIs)).
 
 That last one is a pretty big caveat, but **there's good news here**! Our
-sibling SaaS project, [Truffle Teams](/teams), now
+sibling SaaS project, [Truffle Teams](/docs/teams/overview), now
 lets you [simulate live
 networks](/blog/sandbox-forking-with-truffle-teams)
 via the free Sandbox feature. This works without requiring you to run your own

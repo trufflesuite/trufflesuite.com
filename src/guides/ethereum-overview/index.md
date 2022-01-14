@@ -165,4 +165,4 @@ Given the benefits of the Ethereum blockchain, a dapp could be a solution for ma
 *   Real estate
 *   Marketplaces
 
-And what is the best way to create your own dapp, test it, and deploy it to an Ethereum network of your choice? With [Truffle](/docs/getting_started/project), of course.
+And what is the best way to create your own dapp, test it, and deploy it to an Ethereum network of your choice? With [Truffle](/docs/truffle/quickstart#creating-a-project), of course.

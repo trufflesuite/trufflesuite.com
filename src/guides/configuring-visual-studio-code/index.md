@@ -10,7 +10,7 @@ This post was originally published by David Burela on his blog [Burela's House-o
 
 [Visual Studio code](https://code.visualstudio.com/) is a great tool for editing Solidity smart contracts, and is available on Windows, Mac & Linux. There is a great plugin that enables Syntax highlighting, snippets, and compiling of the current contract (if you aren’t using an external tool) [https://github.com/juanfranblanco/vscode-solidity/](https://github.com/juanfranblanco/vscode-solidity/)
 
-This configuration works really well with Truffle (as shown in the final screenshot). You can read how to install Truffle on Windows in [my previous post](/tutorials/how-to-install-truffle-and-testrpc-on-windows-for-blockchain-development).
+This configuration works really well with Truffle (as shown in the final screenshot). You can read how to install Truffle on Windows in [my previous post](/guides/how-to-install-truffle-and-testrpc-on-windows-for-blockchain-development).
 
 ## Step 1: Install Visual Studio code 
 [https://code.visualstudio.com/](https://code.visualstudio.com/)

@@ -16,11 +16,11 @@ Following your feedback from the Truffle 3.0 release, we've just released Truffl
 
 1. **We've added huge speed improvements to the Truffle command line tool.** Now your commands trigger in milliseconds! Go ahead, try it out. `truffle version`
 
-1. **Solidity tests can now be given default balances** so you can use those tests to exercise sending Ether to your contracts. Big win for Solidity tests, and your sanity in general. [Documentation](/docs/getting_started/solidity-tests#testing-ether-transactions)
+1. **Solidity tests can now be given default balances** so you can use those tests to exercise sending Ether to your contracts. Big win for Solidity tests, and your sanity in general. [Documentation](/docs/truffle/testing/writing-tests-in-solidity.html#testing-ether-transactions)
 
-1. Similarly, **Javascript abstractions got an upgrade** making it easier to send Ether directly to your contracts as well as trigger your contracts' fallback functions. You can use this feature within your tests as well as within your application. [More on that here](/docs/getting_started/contracts#sending-ether-to-a-contract). Also, they now use web3 0.18.2.
+1. Similarly, **Javascript abstractions got an upgrade** making it easier to send Ether directly to your contracts as well as trigger your contracts' fallback functions. You can use this feature within your tests as well as within your application. [More on that here](/docs/truffle/getting-started/interacting-with-your-contracts.html#sending-ether-to-a-contract). Also, they now use web3 0.18.2.
 
-1. **Migrations got an extra scout badge (function parameter)**, [allowing you to view available accounts directly within your migration](/docs/getting_started/migrations#available-accounts)
+1. **Migrations got an extra scout badge (function parameter)**, [allowing you to view available accounts directly within your migration](/docs/truffle/getting-started/running-migrations.html#available-accounts)
 
 1. Oh, and **there's no more naming restriction on contract names!** 🎉🎉🎉 You can now have a file called `ImABigDeal.sol` and have it define contracts under a completely different name. Woot!
 

@@ -50,10 +50,10 @@ networks: {
 }
 ```
 
-This is the default setting for [Ganache](/docs/ganache/using), though you can change this to use any connection you'd like.
+This is the default setting for [Ganache](/ganache), though you can change this to use any connection you'd like.
 
 <p class="alert alert-info">
-**Note**: Read more about [setting up Ganache](/docs/ganache/using). You can also use [Truffle Develop](/docs/getting_started/console), which launches a personal blockchain for testing and is built directly into Truffle, no separate installation required.
+**Note**: Read more about [setting up Ganache](/docs/ganache/quickstart). You can also use [Truffle Develop](/docs/truffle/getting-started/using-truffle-develop-and-the-console), which launches a personal blockchain for testing and is built directly into Truffle, no separate installation required.
 </p>
 
 Let's get the contracts on the network:

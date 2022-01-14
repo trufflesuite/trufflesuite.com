@@ -81,7 +81,7 @@ The next step is to edit your `truffle-config.js` file to use `HDWalletProvider`
 
    * Make sure to replace `<INFURA_PROJECT_ID>` with your Infura Project ID.
 
-   * The `provider` value is wrapped in a function, which ensures that it won't get initialized until it's needed. This is especially important if connecting to multiple networks. (See the [Networks configuration](/docs/advanced/configuration#networks) section of the documentation for more on this topic.)
+   * The `provider` value is wrapped in a function, which ensures that it won't get initialized until it's needed. This is especially important if connecting to multiple networks. (See the [Networks configuration](/docs/truffle/reference/configuration#networks) section of the documentation for more on this topic.)
 
      <p class="alert alert-info">
        <strong>Note</strong>: If you encounter issues with this construction, you can skip the function wrapper and use this instead:<br />
@@ -150,7 +150,7 @@ Note that your transaction hash and contract address will be different from the 
 
 <p class="alert alert-info">
    <strong>Note</strong>: If you receive an error `Error: Exceeds block gas limit
-   `, you may need to manually set the gas limit for your contract. See the [Truffle Configuration](/docs/advanced/configuration) documentation for details.
+   `, you may need to manually set the gas limit for your contract. See the [Truffle Configuration](/docs/truffle/reference/configuration) documentation for details.
 </p>
 
 If you want to verify that your contract was deployed successfully, you can check this on the [Ropsten section of Etherscan](https://ropsten.etherscan.io/). In the search field, type in the transaction ID for your contract. In the above example, the transaction ID is:

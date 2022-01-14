@@ -48,6 +48,6 @@ If you aren't aware of our official support channel, head over to [the Truffle T
   Get started with Truffle Teams, and see the redesign for yourself!
 
   <div class="mt-3">
-    <a class="btn btn-truffle" href="/teams">Try Truffle Teams</a>
+    <a class="btn btn-truffle" href="/docs/teams/getting-started/creating-an-account">Try Truffle Teams</a>
   </div>
 </div>

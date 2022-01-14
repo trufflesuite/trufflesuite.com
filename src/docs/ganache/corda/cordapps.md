@@ -17,6 +17,6 @@ as well as an transactions that used flows from this CorDapp.
 
 ### Related Documentation
 
-* [Corda Overview](../workspaces/corda)
-* [Nodes](./nodes)
-* [Transactions](./transactions)
+* [Corda Overview](/docs/ganache/corda/workspace-overview)
+* [Nodes](/docs/ganache/corda/nodes)
+* [Transactions](/docs/ganache/corda/transactions)

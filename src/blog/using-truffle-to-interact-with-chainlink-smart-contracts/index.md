@@ -16,7 +16,7 @@ Furthermore, you will also need to fund your MetaMask wallet with [test LINK](ht
 
 _Note: When funding your account from a test faucet, make sure you switch from the default Main Ethereum Network to the Ropsten Test Network, to properly see your funds. You can follow any transactions made on the Ropsten Testnet via Etherscan._
 
-Our second environment variable will require an RPC URL. Some popular RPC connectivity services include [Infura](/tutorials/using-infura-custom-provider), [LinkPool](https://www.linkpool.io/), and [Fiews](https://fiews.io/free-rpc). After establishing a valid RPC connection and the funded address, you can start deploying smart contracts to public networks.
+Our second environment variable will require an RPC URL. Some popular RPC connectivity services include [Infura](/guides/using-infura-custom-provider), [LinkPool](https://www.linkpool.io/), and [Fiews](https://fiews.io/free-rpc). After establishing a valid RPC connection and the funded address, you can start deploying smart contracts to public networks.
 
 <figure>
   <img src="/img/blog/using-truffle-to-interact-with-chainlink-smart-contracts/01.png" alt="Truffle DB data model" style="width:100%">

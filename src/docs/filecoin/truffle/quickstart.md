@@ -9,7 +9,7 @@ Wanna build apps on Filecoin using Truffle? You're in the right place.
 
 ## Ganache
 
-Looking to set up Filecoin-flavored Ganache? Head over to the [Ganache-specific documentation](../ganache).
+Looking to set up Filecoin-flavored Ganache? Head over to the [Ganache-specific documentation](/docs/filecoin/ganache/overview).
 
 ## Table of Contents
 
@@ -61,6 +61,6 @@ If you've reached this point, you now have a Truffle project that lets you inter
 
 * [Filecoin documentation](https://docs.filecoin.io/)
 * [Textile documentation](https://docs.textile.io/)
-* [Filecoin-flavored Ganache documentation](../ganache)
+* [Filecoin-flavored Ganache documentation](/docs/filecoin/ganache/overview)
 * [Main Truffle Suite documentation](/docs)
 

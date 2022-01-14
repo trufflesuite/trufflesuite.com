@@ -101,7 +101,7 @@ Generating the Fibonacci sequence with a smart contract can show off the debugge
    *Ganache*
 
    <p class="alert alert-info">
-     <strong>Note</strong>: You can also run this tutorial with [Truffle Develop](/docs/getting_started/console) and the results will be the same.
+     <strong>Note</strong>: You can also run this tutorial with [Truffle Develop](/docs/truffle/getting-started/using-truffle-develop-and-the-console) and the results will be the same.
    </p>
 
 1. In the root of your project, open your `truffle.js` file and add the following content:
@@ -120,7 +120,7 @@ Generating the Fibonacci sequence with a smart contract can show off the debugge
 
    This allows us to connect our project to Ganache.
 
-1. Launch the [Truffle console](/docs/getting_started/console):
+1. Launch the [Truffle console](/docs/truffle/getting-started/using-truffle-develop-and-the-console):
 
    ```shell
    truffle console
@@ -290,7 +290,7 @@ You can debug a transaction in the Truffle console by typing `debug <transaction
    debug(development:0xf47f01da...)>
    ```
 
-1. We've seen in the [previous tutorial on debugging](/tutorials/debugging-a-smart-contract) how you can step through the instructions to debug your contract. But here, we have an additional concern, which is that we don't actually know the outcome of our function call; we want to know what a *variable* is set to. You can view the state of all known variables by pressing `v`:
+1. We've seen in the [previous tutorial on debugging](/guides/debugging-an-example-smart-contract) how you can step through the instructions to debug your contract. But here, we have an additional concern, which is that we don't actually know the outcome of our function call; we want to know what a *variable* is set to. You can view the state of all known variables by pressing `v`:
 
    ```solidity
      fibseries: []

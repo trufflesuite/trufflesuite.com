@@ -49,7 +49,7 @@ The debugger we built unlocks tons of value for all Ethereum developers both new
 
 * Integrated Development Environments (IDEs) like Visual Studio Code
 * [Ganache](/ganache), including a full debugging UI
-* [Drizzle](/docs/drizzle/getting-started), for automatic variable change detection after a transaction
+* [Drizzle](/docs/drizzle/quickstart), for automatic variable change detection after a transaction
 * Browser plugins so you can debug transactions on the fly within your application
 * Ethereum provider libraries that let you debug your code anywhere, without a plugin
 

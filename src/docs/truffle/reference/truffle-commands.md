@@ -74,7 +74,7 @@ truffle console [--network <name>] [--verbose-rpc]
 
 Spawns an interface to interact with contracts via the command line. Additionally, many Truffle commands are available within the console (without the `truffle` prefix).
 
-Requires an external Ethereum client, such as [Ganache](/docs/ganache/quickstart) or geth. For a console that creates a development and test environment, use `truffle develop`.
+Requires an external Ethereum client, such as [Ganache](/ganache) or geth. For a console that creates a development and test environment, use `truffle develop`.
 
 See the [Using Truffle Develop and the Console](/docs/truffle/getting-started/using-truffle-develop-and-the-console) section for more details.
 

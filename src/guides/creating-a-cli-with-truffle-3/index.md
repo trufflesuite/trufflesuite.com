@@ -14,7 +14,7 @@ This is written for those familiar with Truffle and Ethereum, who want to learn 
 For this tutorial, we'll be building a command line tool that interacts with the [Ethereum Name Service](https://ens.readthedocs.io/en/latest/) (ENS).
 
 ## Getting Started
-If you were using Truffle beta 3.0.0-9 or below, **do not immediately upgrade**. Read [these release notes](https://github.com/ConsenSys/truffle/releases/tag/v3.0.2) and the [upgrade guide](/tutorials/upgrading-from-truffle-2-to-3) first. Next, make a new folder and run the following command:
+If you were using Truffle beta 3.0.0-9 or below, **do not immediately upgrade**. Read [these release notes](https://github.com/ConsenSys/truffle/releases/tag/v3.0.2) and the [upgrade guide](/guides/upgrading-from-truffle-2-to-3) first. Next, make a new folder and run the following command:
 
 ```shell
 $ truffle init
@@ -112,7 +112,7 @@ contract('ENS integration', (accounts) => {
 ...
 }
 ```
-Truffle injects a global `artifacts.require` function, a helper for finding the right compiled contract artifacts within the test environment. The test then finds a deployed instance of the Registrar on the test network via `Registrar.deployed()`. Now, with the addition of `accounts`, which is passed in via the `contract` wrapper [(see here)](/docs/getting_started/javascript-tests), we have enough to instantiate the library and use it to test that the domain name `'test'` is available for auction.
+Truffle injects a global `artifacts.require` function, a helper for finding the right compiled contract artifacts within the test environment. The test then finds a deployed instance of the Registrar on the test network via `Registrar.deployed()`. Now, with the addition of `accounts`, which is passed in via the `contract` wrapper [(see here)](/docs/truffle/testing/writing-tests-in-javascript), we have enough to instantiate the library and use it to test that the domain name `'test'` is available for auction.
 
 ### Use #2: the CLI
 

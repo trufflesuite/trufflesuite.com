@@ -123,6 +123,6 @@ Happy with a particular deployment in **Staging**? You can select the **Graduate
   Get started with Truffle Teams, and see deployments for yourself!
 
   <div class="mt-3">
-    <a class="btn btn-truffle" href="/teams">Try Truffle Teams</a>
+    <a class="btn btn-truffle" href="/docs/teams/getting-started/creating-an-account">Try Truffle Teams</a>
   </div>
 </div>

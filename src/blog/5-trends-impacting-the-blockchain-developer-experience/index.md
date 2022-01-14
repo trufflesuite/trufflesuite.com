@@ -14,7 +14,7 @@ Obviously we’re a little biased, but in this case, we’re talking about tools
 
 This is a big deal for the long-term success of the wider ecosystem because happy and productive developers obviously strongly correlates with increased experimentation, the volume of shipped products and services, and expedites the process of on-boarding new people (developers or otherwise) into the blockchain space.
 
-At Truffle, we’re also pushing harder than ever to make the DX as sweet as possible. Like, raspberry truffle sweet. This includes new features and enhancements to the existing suite (such as integration with [Hyperledger Fabric's chaincode EVM](https://github.com/trufflesuite/truffle/releases/tag/v5.0.27)), as well as the upcoming [Truffle DB](/blog/introducing-truffle-db-part-1) and [Truffle Teams](/teams).
+At Truffle, we’re also pushing harder than ever to make the DX as sweet as possible. Like, raspberry truffle sweet. This includes new features and enhancements to the existing suite (such as integration with [Hyperledger Fabric's chaincode EVM](https://github.com/trufflesuite/truffle/releases/tag/v5.0.27)), as well as the upcoming [Truffle DB](/blog/introducing-truffle-db-part-1) and [Truffle Teams](/docs/teams/overview).
 
 ## #2 Managed Blockchain Services are here
 

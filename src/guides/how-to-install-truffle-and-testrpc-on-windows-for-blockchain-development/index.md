@@ -33,7 +33,7 @@ $ choco install git –y
 $ choco install VisualStudioCode -y
 ```
 
-[Read more about configuring Visual Studio code for Blockchain development](/tutorials/configuring-visual-studio-code).
+[Read more about configuring Visual Studio code for Blockchain development](/guides/configuring-visual-studio-code).
 ![image](https://davidburela.files.wordpress.com/2016/11/image.png)
 
 ## Step 2. Install the tools via npm:

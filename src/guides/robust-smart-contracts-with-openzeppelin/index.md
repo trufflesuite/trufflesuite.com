@@ -124,7 +124,7 @@ Using less than 15 lines of hand-coded Solidity, we've created our own Ethereum 
    ![Ganache](/img/tutorials/open-zeppelin/oz-ganache-initial.png "Ganache")
 
    <p class="alert alert-info">
-     **Note**: Read more about Ganache in the [Truffle documentation](/docs/ganache/using).
+     **Note**: Read more about Ganache in the [Ganache documentation](/docs/ganache).
    </p>
 
 1. With our blockchain launched, head back to your terminal. Inside your project, run the following command to compile the contract:
@@ -134,7 +134,7 @@ Using less than 15 lines of hand-coded Solidity, we've created our own Ethereum 
    ```
 
    <p class="alert alert-info">
-     <strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on [resolving naming conflicts on Windows](/docs/advanced/configuration#resolving-naming-conflicts-on-windows).
+     <strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on [resolving naming conflicts on Windows](/docs/truffle/reference/configuration#resolving-naming-conflicts-on-windows).
    </p>
 
 1. Once the compile has completed, deploy the contract to the blockchain:

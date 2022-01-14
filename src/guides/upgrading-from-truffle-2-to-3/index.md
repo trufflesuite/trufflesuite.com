@@ -83,7 +83,7 @@ Additionally, each network needs to have a network id specified, or a `"*"`. Thi
 
 ## Importing and the Ethereum Package Manager (EthPM)
 
-As Truffle 3.0 uses the new [Ethereum Package Manager (EthPM)](/docs/getting_started/packages-ethpm) we need to tell Truffle when the package manager should be used and when to look in the local directory. If you don't specify the directory to search relative to the `contracts/` directory, it will assume that EthPM will handle this.
+As Truffle 3.0 uses the new [Ethereum Package Manager (EthPM)](/docs/truffle/getting-started/package-management-via-ethpm) we need to tell Truffle when the package manager should be used and when to look in the local directory. If you don't specify the directory to search relative to the `contracts/` directory, it will assume that EthPM will handle this.
 
 So to import a local file:
 
@@ -97,7 +97,7 @@ v3.0:
 import "./test.sol"
 ```
 
-The `./` tells Truffle that the contract is in the current directory. See the [Compiling contracts](/docs/getting_started/compile) page for more details.
+The `./` tells Truffle that the contract is in the current directory. See the [Compiling contracts](/docs/truffle/getting-started/compiling-contracts) page for more details.
 
 ## Migrations and Test Dependencies
 

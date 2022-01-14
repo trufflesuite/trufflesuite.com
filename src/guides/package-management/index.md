@@ -119,7 +119,7 @@ module.exports = function(deployer) {
 ## Recommendation: Use the TestRPC
 
 <p class="alert alert-info">
-**Update**: Since this tutorial was published, we have released [Ganache](/ganache) a personal blockchain and a replacement to the TestRPC. We have left this tutorial unaltered, but we highly recommend checking out our [Working with Ganache](/docs/ganache/using) page.
+**Update**: Since this tutorial was published, we have released [Ganache](/ganache) a personal blockchain and a replacement to the TestRPC. We have left this tutorial unaltered, but we highly recommend checking out our [Ganache Quickstart](/docs/ganache/quickstart) page.
 </p>
 
 The [ethereumjs-testrpc](https://github.com/ethereumjs/testrpc) is wildly useful for packages that were previously deployed to the live network. The TestRPC includes a `--fork` feature which allows you to fork from the main chain while developing your application. What this means for you is that you can develop and test against packages that are deployed live, using **real data**, without having to worry about deploying your dependency's contracts yourself.
