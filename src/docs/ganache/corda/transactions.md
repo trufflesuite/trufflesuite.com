@@ -18,6 +18,6 @@ Additionally, you can inspect each individual state. You can inspect the data in
 
 ### Related Documentation
 
-* [Corda Overview](../workspaces/corda)
-* [Nodes](./nodes)
-* [CorDapps](./cordapps)
+* [Corda Overview](/docs/ganache/corda/workspace-overview)
+* [Nodes](/docs/ganache/corda/nodes)
+* [CorDapps](/docs/ganache/corda/cordapps)

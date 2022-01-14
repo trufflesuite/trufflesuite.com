@@ -16,5 +16,5 @@ The shell updates in real-time, just as if you SSHed into the shell yourself:
 
 ### Related Documentation
 
-* [Corda Overview](../workspaces/corda)
-* [Nodes](./nodes)
+* [Corda Overview](/docs/ganache/corda/workspace-overview)
+* [Nodes](/docs/ganache/corda/nodes)

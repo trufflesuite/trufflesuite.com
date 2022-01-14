@@ -10,7 +10,7 @@ hide:
 
 Physicians and scientists will be the actual agents behind a cure for cancer. But in their potential to disrupt the very nature of medical research and treatment, blockchain-based solutions are extremely likely to light the way. It is important when examining any new technology to consider the ways in which it may change the world. Join me here as we briefly look at how blockchain can help lead us to a world without cancer.
 
-Cancer is a significant public health issue in the United States and around the world. In the United States alone, an estimated [1.7 million new cancer cases](http://www.cancer.gov/about-cancer/understanding/statistics) were diagnosed in 2018. This number is expected to increase drastically as time goes on.
+Cancer is a significant public health issue in the United States and around the world. In the United States alone, an estimated [1.7 million new cancer cases](https://www.cancer.gov/about-cancer/understanding/statistics) were diagnosed in 2018. This number is expected to increase drastically as time goes on.
 
 Several barriers exist to finding a cure for cancer. Key among them are data challenges, difficulty quickly assessing the effectiveness of new treatments, and the financing required to fund research and treatment. Fortunately, blockchain technology is already providing avenues for addressing these barriers and bringing us closer to a cure for cancer.
 
@@ -20,7 +20,7 @@ At its core, the path to curing cancer lies in accessing and evaluating as much 
 
 The particular usefulness of blockchain for cancer data lies in the ability of patients to volunteer their medical records to be used in research. This data will need to be anonymized and, of course, regulatory hurdles are likely to exist, but aggregating medical data from potentially millions of patients around the world will allow physicians and researchers access to unprecedented levels of information about the disease they seek to cure.
 
-[BreastWeCan.org](http://BreastWeCan.org) is one fledgling organization seeking to increase the base of data upon which further cancer research can be built. By encouraging women to upload their mammogram scans and other breast cancer images onto a blockchain, the company hopes to allow an AI to then study these images and share what it learns.
+[BreastWeCan.org](https://BreastWeCan.org) is one fledgling organization seeking to increase the base of data upon which further cancer research can be built. By encouraging women to upload their mammogram scans and other breast cancer images onto a blockchain, the company hopes to allow an AI to then study these images and share what it learns.
 
 ## Better knowledge sharing means more effective treatments
 

@@ -25,7 +25,7 @@ For more information on using contract abstractions, see the [Interacting With Y
 
 ## Using artifacts.require()
 
-Using `artifacts.require()` within your tests works the same way as using it within your migrations; you just need to pass the name of the contract. See the [artifacts.require() documentation](/docs/truffle/getting-started/running-migrations#artifacts-require-) in the Migrations section for detailed usage.
+Using `artifacts.require()` within your tests works the same way as using it within your migrations; you just need to pass the name of the contract. See the [artifacts.require() documentation](/docs/truffle/getting-started/running-migrations#artifactsrequire) in the Migrations section for detailed usage.
 
 ## Using web3
 

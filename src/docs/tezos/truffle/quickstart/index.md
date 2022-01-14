@@ -80,7 +80,7 @@ Next, replace the box's `truffle-config.js` with the following:
 const { mnemonic, secret, password, email } = require("./faucet.json");
 
 module.exports = {
-  // see <https://truffleframework.com/docs/tezos/truffle/reference/configuring-tezos-projects>
+  // see <https://trufflesuite.com/docs/tezos/truffle/reference/configuring-tezos-projects>
   // for more details on how to specify configuration options!
   networks: {
     development: {
@@ -119,7 +119,7 @@ Truffle will handle running these scripts when you run the following command:
 
     $ truffle migrate
 
-See the [Deploying Tezos contracts](/docs/tezos/truffle/quick-start/deploying-tezos-contracts) section for more information on how to write and use Truffle's deployment scripts.
+See the [Deploying Tezos contracts](/docs/tezos/truffle/quickstart.html#deploying-contracts) section for more information on how to write and use Truffle's deployment scripts.
 
 ## Testing Contracts
 
@@ -128,7 +128,7 @@ The box also comes equipped with tests, showing you how to write automated tests
 * `counter.test.js`
 * `simpleStorage.test.js`
 
-See the [Testing Tezos contracts](/docs/tezos/truffle/quick-start/testing-your-tezos-contracts) section for more information on how to write tests for your LIGO congrats.
+See the [Testing Tezos contracts](/docs/tezos/truffle/getting-started/testing-your-tezos-contracts) section for more information on how to write tests for your LIGO congrats.
 
 Running your tests is easy, by running following command: 
 
@@ -141,5 +141,5 @@ If you've reached this point, you now have a Truffle project that lets you compi
 * [LIGO language documentation](https://ligolang.org/docs/intro/introduction/)
 * [Tezos documentation](https://tezos.gitlab.io/)
 * [Taquito communcation library](https://tezostaquito.io/)
-* [Main Truffle Suite documentation](https://trufflesuite.com/docs)
+* [Main Truffle Suite documentation](/docs)
 

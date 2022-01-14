@@ -43,7 +43,7 @@ If you’re looking to get started with Ganache, head over to the [documentation
 
 Need an example on how to build a Filecoin application? Check out the [Filecoin Truffle Box](https://github.com/truffle-box/filecoin-box) to see an example to mint NFTs and provide a decentralized art gallery application.
 
-We’re finalizing the Truffle documentation in the coming days, so stay tuned for those! When they’re live, you’ll be able to find them at our [main documentation page](https://trufflesuite.com/docs) and click on the Filecoin link.
+We’re finalizing the Truffle documentation in the coming days, so stay tuned for those! When they’re live, you’ll be able to find them at our [main documentation page](/docs) and click on the Filecoin link.
 
 ## Where can I get help?
 

@@ -55,7 +55,7 @@ server.listen(7777, () => {
 
 ## Configuration
 
-See the [web documentation](#TODO) for more details on the available NodeJS options.
+See the [web documentation](/docs/filecoin/ganache/getting-started/get-started-with-nodejs#configuration) for more details on the available NodeJS options.
 
 Like the above [usage example](#usage) where `{ flavor }` was provided in `startupOptions`, the options in the web documentation are provide `flavor`. For example:
 

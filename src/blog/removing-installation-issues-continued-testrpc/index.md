@@ -5,7 +5,7 @@ hide:
 ---
 
 <p class="alert alert-info">
-**Update**: Since this blog post was published, we have released [Ganache](/ganache) a personal blockchain and a replacement to the TestRPC. We have left this post unaltered, but we highly recommend checking out our [Working with Ganache](/docs/ganache/using) page.
+**Update**: Since this blog post was published, we have released [Ganache](/ganache) a personal blockchain and a replacement to the TestRPC. We have left this post unaltered, but we highly recommend checking out our [Ganache Quickstart](/docs/ganache/quickstart) page.
 </p>
 
 If you've been following along, you'll know that we recently [removed most if not all installation issues from Truffle](/blog/how-were-making-installation-issues-a-thing-of-the-past). For us it was a pretty big deal: Installation issues were, by far, the number one issue plaguing new users on any platform. We thought our solution was novel, so we blogged about it, and the biggest reaction we received from users was, "This is awesome, thank you! But can you do it for the TestRPC too?" Well you asked, and today we delivered.

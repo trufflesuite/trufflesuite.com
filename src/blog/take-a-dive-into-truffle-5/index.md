@@ -77,7 +77,7 @@ But perhaps the biggest improvement to the debugger is...
 
 ### Debugging verified external contracts
 
-Use the `--fetch-external` (or `-x` for short) option with Truffle Debugger and it will automatically download sources for any verified contracts and allow you to step through them!  Contracts can be verified on either Etherscan or Sourcify.  You no longer need to download these yourself and add them to your Truffle project!  You can see [this](https://www.trufflesuite.com/blog/debugging-verified-external-contracts-with-truffle-debugger) earlier post for more information.
+Use the `--fetch-external` (or `-x` for short) option with Truffle Debugger and it will automatically download sources for any verified contracts and allow you to step through them!  Contracts can be verified on either Etherscan or Sourcify.  You no longer need to download these yourself and add them to your Truffle project!  You can see [this](/blog/debugging-verified-external-contracts-with-truffle-debugger) earlier post for more information.
 
 ###Improved import handling in Vyper
 

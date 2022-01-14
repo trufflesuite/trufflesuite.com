@@ -13,7 +13,7 @@ representation.
 [[@truffle/decoder]] provides a high-level interface for **decoding
 transactions, events, and state variables for Ethereum smart contracts.**
 This package accepts Truffle's
-[contract abstractions](https://www.trufflesuite.com/docs/truffle/reference/contract-abstractions)
+[contract abstractions](/docs/truffle/reference/contract-abstractions)
 as input (or Truffle's artifact files and a provider) and connects to the
 blockchain to retrieve raw values for decoding.
 

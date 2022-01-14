@@ -5,7 +5,7 @@ layout: docs.hbs
 
 # Deployment details
 
-From the deployment details page, you can view the associated contracts, addresses, [transactions](/docs/teams/contract-monitoring), and [deployment console output](/docs/teams/deployments/deployment-console).
+From the deployment details page, you can view the associated contracts, addresses, [transactions](/docs/teams/deployments/contract-monitoring), and [deployment console output](/docs/teams/deployments/deployment-console).
 
 <figure>
   <img class="figure-shadow mb-2" src="/img/docs/teams/deployment-details.png" alt="Deployment details view" style="width: 100%">

@@ -177,7 +177,7 @@ First, let's set up our environment.
 
 ## Interacting with the basic smart contract
 
-The smart contract is now deployed to a test network via `truffle develop`, which launches a [console](/docs/getting_started/console) against [Ganache](/ganache), a local development blockchain built right into Truffle.
+The smart contract is now deployed to a test network via `truffle develop`, which launches a [console](/docs/truffle/getting-started/using-truffle-develop-and-the-console) against [Ganache](/ganache), a local development blockchain built right into Truffle.
 
 We next want to interact with the smart contract to see how it works when working correctly. We'll interact using the `truffle develop` console.
 

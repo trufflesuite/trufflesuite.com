@@ -34,5 +34,5 @@ Infura endpoints for the Arbitrum chain are included in the configuration of the
 
 ## Where To Get Help
 
-You can find all of the documentation for the Truffle Arbitrum Box [here](https://github.com/truffle-box/arbitrum-box). If you have any questions, feedback, or just want to chat, reach out to us through the resources on our [community page](https://www.trufflesuite.com/community).
+You can find all of the documentation for the Truffle Arbitrum Box [here](https://github.com/truffle-box/arbitrum-box). If you have any questions, feedback, or just want to chat, reach out to us through the resources on our [community page](/community).
 We are thrilled to add Arbitrum to the Truffle development suite and can’t wait to see the universe of applications built on Layer 2. Stay tuned as we continue to add more networks, features, and tools that accelerate and simplify development on a secure and scalable Ethereum.

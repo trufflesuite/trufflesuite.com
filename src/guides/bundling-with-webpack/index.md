@@ -10,7 +10,7 @@ hide:
 
 ## Intended Audience
 
-This tutorial is for Truffle users who are familiar with Webpack already. Since Webpack requires considerable knowledge to use effectively, we recommend checking out the [Webpack documentation](http://webpack.github.io/docs/) as well as the [Truffle + Webpack Demo application](https://github.com/ConsenSys/truffle-webpack-demo) before proceeding.
+This tutorial is for Truffle users who are familiar with Webpack already. Since Webpack requires considerable knowledge to use effectively, we recommend checking out the [Webpack documentation](https://webpack.github.io/docs/) as well as the [Truffle + Webpack Demo application](https://github.com/ConsenSys/truffle-webpack-demo) before proceeding.
 
 ## Getting Started
 
@@ -97,7 +97,7 @@ After making sure your contract is imported, you now need to hook up the `web3` 
 MyContract.setProvider(window.web3.currentProvider);
 ```
 
-Finally, you can use the contract abstraction as described within the [Truffle documentation](/docs/getting_started/contracts).
+Finally, you can use the contract abstraction as described within the [Truffle documentation](/docs/truffle/getting-started/interacting-with-your-contracts).
 
 You can prevent having to perform this provisioning more than once per contract dependency by either setting your contract abstractions to the global object, like `window`, and provisioning them once when your application loads; or using something like the [ProvidePlugin](https://webpack.github.io/docs/list-of-plugins.html#provideplugin) to ensure your contract abstractions are available to every file within the bundle (recommended).
 

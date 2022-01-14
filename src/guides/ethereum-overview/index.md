@@ -155,7 +155,7 @@ An example of a private enterprise blockchain is [Quorum](https://www.jpmorgan.c
 
 ## Decentralized applications (dapps)
 
-**Applications using smart contracts for their processing and/or datastorage are called "decentralized applications", or "dapps".** The user interfaces for these dapps consist of familiar languages such as HTML, CSS, and JavaScript. The application itself can be hosted on a traditional web server or on a decentralized file service such as [Swarm](https://swarm-gateways.net/) or [IPFS](http://ipfs.io/).
+**Applications using smart contracts for their processing and/or datastorage are called "decentralized applications", or "dapps".** The user interfaces for these dapps consist of familiar languages such as HTML, CSS, and JavaScript. The application itself can be hosted on a traditional web server or on a decentralized file service such as [Swarm](https://swarm-gateways.net/) or [IPFS](https://ipfs.io/).
 
 Given the benefits of the Ethereum blockchain, a dapp could be a solution for many industries, including but not limited to:
 
@@ -165,4 +165,4 @@ Given the benefits of the Ethereum blockchain, a dapp could be a solution for ma
 *   Real estate
 *   Marketplaces
 
-And what is the best way to create your own dapp, test it, and deploy it to an Ethereum network of your choice? With [Truffle](/docs/getting_started/project), of course.
+And what is the best way to create your own dapp, test it, and deploy it to an Ethereum network of your choice? With [Truffle](/docs/truffle/quickstart#creating-a-project), of course.

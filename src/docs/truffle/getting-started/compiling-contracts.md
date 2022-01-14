@@ -6,7 +6,7 @@ layout: docs.hbs
 
 ## Location
 
-All of your contracts are located in your project's `contracts/` directory. As contracts are written in [Solidity](https://solidity.readthedocs.io/en/develop/), all files containing contracts will have a file extension of `.sol`. Associated Solidity [libraries](http://solidity.readthedocs.org/en/latest/contracts.html#libraries) will also have a `.sol` extension.
+All of your contracts are located in your project's `contracts/` directory. As contracts are written in [Solidity](https://solidity.readthedocs.io/en/develop/), all files containing contracts will have a file extension of `.sol`. Associated Solidity [libraries](https://solidity.readthedocs.org/en/latest/contracts.html#libraries) will also have a `.sol` extension.
 
 With a bare Truffle [project](/docs/truffle/quickstart) (created through `truffle init`), you're given a single `Migrations.sol` file that helps in the deployment process. If you're using a [Truffle Box](/boxes), you will have multiple files here.
 
@@ -27,7 +27,7 @@ These artifacts are integral to the inner workings of Truffle, and they play an 
 
 ## Dependencies
 
-You can declare contract dependencies using Solidity's [import](http://solidity.readthedocs.org/en/latest/layout-of-source-files.html#importing-other-source-files) command. Truffle will compile contracts in the correct order and ensure all dependencies are sent to the compiler. Dependencies can be specified in two ways:
+You can declare contract dependencies using Solidity's [import](https://solidity.readthedocs.org/en/latest/layout-of-source-files.html#importing-other-source-files) command. Truffle will compile contracts in the correct order and ensure all dependencies are sent to the compiler. Dependencies can be specified in two ways:
 
 ### Importing dependencies via file name
 
@@ -39,7 +39,7 @@ import "./AnotherContract.sol";
 
 This will make all contracts within `AnotherContract.sol` available. Here, `AnotherContract.sol` is relative to the path of the current contract being written.
 
-Note that Solidity allows other import syntaxes as well. See the Solidity [import documentation](http://solidity.readthedocs.org/en/latest/layout-of-source-files.html#importing-other-source-files) for more information.
+Note that Solidity allows other import syntaxes as well. See the Solidity [import documentation](https://solidity.readthedocs.org/en/latest/layout-of-source-files.html#importing-other-source-files) for more information.
 
 ### Importing contracts from an external package
 

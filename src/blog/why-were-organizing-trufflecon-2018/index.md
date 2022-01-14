@@ -6,7 +6,7 @@ hide:
 
 ![TruffleCon 2018](/img/blog/why-were-organizing-trufflecon-2018/trufflecon2018header.jpg)
 
-As you have hopefully heard by now, [TruffleCon](http://truffleframework.com/trufflecon2018), Truffle's first-ever user conference, will be on [October 5-7, 2018 in Portland, Oregon, U.S.A](http://truffleframework.com/trufflecon2018).
+As you have hopefully heard by now, [TruffleCon](/trufflecon2018), Truffle's first-ever user conference, will be on [October 5-7, 2018 in Portland, Oregon, U.S.A](/trufflecon2018).
 
 <p class="m-b-2">
   <a href="https://trufflecon2018.eventbrite.com" class="btn btn-eventbrite m-t-1" target="_blank">Buy Tickets!</a>
@@ -50,7 +50,7 @@ From Truffle founder Tim Coulter:
 
 If we do it right, people will go home inspired, and will change how they do their development."</em></blockquote>
 
-We can't wait to see you there. If you have questions, feel free to tweet us at [@trufflesuite](http://twitter.com/trufflesuite). And please use the hashtag [#TruffleCon](https://twitter.com/search?l=&q=%23TruffleCon&src=typd).
+We can't wait to see you there. If you have questions, feel free to tweet us at [@trufflesuite](https://twitter.com/trufflesuite). And please use the hashtag [#TruffleCon](https://twitter.com/search?l=&q=%23TruffleCon&src=typd).
 
 <p class="m-b-2">
   <a href="https://trufflecon2018.eventbrite.com" class="btn btn-eventbrite m-t-1" target="_blank">Buy Tickets!</a>

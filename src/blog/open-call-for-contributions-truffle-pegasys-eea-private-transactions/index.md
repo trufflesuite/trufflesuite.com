@@ -96,5 +96,5 @@ Two things:
 - We'll personally thank and credit you on stage at [Trufflecon at my Permissioning  Talk](https://twitter.com/trufflesuite/status/1150929297647034374)
 
 
-For more information or help on this contribution, contact [Felipe](mailto:felipe.faraggi@consensys.net) from [PegaSys](http://pegasys.tech),  or write us on [our gitter channel](https://gitter.im/PegaSysEng/pantheon).
+For more information or help on this contribution, contact [Felipe](mailto:felipe.faraggi@consensys.net) from [PegaSys](https://pegasys.tech),  or write us on [our gitter channel](https://gitter.im/PegaSysEng/pantheon).
 

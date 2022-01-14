@@ -4,7 +4,7 @@ layout: docs.hbs
 ---
 # Drizzle Actions
 
-Drizzle emits many different actions that we can hook into with Middlewares. For more information about writing middlewares for Drizzle, [see the Drizzle and Contract Events tutorial](/tutorials/drizzle-and-contract-events).
+Drizzle emits many different actions that we can hook into with Middlewares. For more information about writing middlewares for Drizzle, [see the Drizzle and Contract Events tutorial](/guides/drizzle-and-contract-events).
 
 The main categories of actions pertain to:
 * [Accounts](#accounts)

@@ -9,7 +9,7 @@ In this tutorial, you'll learn how to deploy your smart contracts to a public Et
 ## Prerequisites
 
 This tutorial assumes that you've already done the following:
-- [Created a Truffle Teams account](https://www.trufflesuite.com/docs/teams/getting-started/creating-an-account)
+- [Created a Truffle Teams account](/docs/teams/getting-started/creating-an-account)
 - Linked a repo that is a Truffle project (need a project? Grab our MetaCoin box with `truffle unbox metacoin` in an empty directory, and push that to your own repository)
 - Got a passing build within Truffle Teams
 - [Grabbed some Ropsten Ether](https://faucet.metamask.io/)
@@ -123,6 +123,6 @@ Happy with a particular deployment in **Staging**? You can select the **Graduate
   Get started with Truffle Teams, and see deployments for yourself!
 
   <div class="mt-3">
-    <a class="btn btn-truffle" href="/teams">Try Truffle Teams</a>
+    <a class="btn btn-truffle" href="/docs/teams/getting-started/creating-an-account">Try Truffle Teams</a>
   </div>
 </div>

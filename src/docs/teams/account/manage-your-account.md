@@ -37,7 +37,7 @@ If for any reason you would like to close your account, click on **BILLING**, sc
 
 ## Builds
 
-The **BUILDS** tab is where you can update specific repositories to use external CI providers instead of the Truffle Teams' internal CI test runner. For more information, check out our documentation on <a href="/docs/teams/testing/external-ci">External CI</a>.
+The **BUILDS** tab is where you can update specific repositories to use external CI providers instead of the Truffle Teams' internal CI test runner. For more information, check out our documentation on <a href="/docs/teams/builds/external-ci">External CI</a>.
 
 ## Advanced
 

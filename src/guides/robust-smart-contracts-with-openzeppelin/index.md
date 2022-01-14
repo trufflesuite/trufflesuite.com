@@ -124,7 +124,7 @@ Using less than 15 lines of hand-coded Solidity, we've created our own Ethereum 
    ![Ganache](/img/tutorials/open-zeppelin/oz-ganache-initial.png "Ganache")
 
    <p class="alert alert-info">
-     **Note**: Read more about Ganache in the [Truffle documentation](/docs/ganache/using).
+     **Note**: Read more about Ganache in the [Ganache documentation](/docs/ganache).
    </p>
 
 1. With our blockchain launched, head back to your terminal. Inside your project, run the following command to compile the contract:
@@ -134,7 +134,7 @@ Using less than 15 lines of hand-coded Solidity, we've created our own Ethereum 
    ```
 
    <p class="alert alert-info">
-     <strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on [resolving naming conflicts on Windows](/docs/advanced/configuration#resolving-naming-conflicts-on-windows).
+     <strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on [resolving naming conflicts on Windows](/docs/truffle/reference/configuration#resolving-naming-conflicts-on-windows).
    </p>
 
 1. Once the compile has completed, deploy the contract to the blockchain:
@@ -170,7 +170,7 @@ Using less than 15 lines of hand-coded Solidity, we've created our own Ethereum 
 
 ## Interacting with the new token
 
-For this portion of the tutorial, we recommend using [MetaMask](http://metamask.io), a browser extension for Chrome and Firefox. It will allow you to switch between accounts quickly, perfect for testing the ability to transfer our newly created tokens. Our [Pet Shop tutorial](/tutorial) has more information about [configuring MetaMask](/tutorial#interacting-with-the-dapp-in-a-browser).
+For this portion of the tutorial, we recommend using [MetaMask](https://metamask.io), a browser extension for Chrome and Firefox. It will allow you to switch between accounts quickly, perfect for testing the ability to transfer our newly created tokens. Our [Pet Shop tutorial](/tutorial) has more information about [configuring MetaMask](/tutorial#interacting-with-the-dapp-in-a-browser).
 
 You will want to enter the mnemonic displayed in Ganache into MetaMask, and make sure that MetaMask is listening to the Custom RPC `http://127.0.0.1:7545`.
 

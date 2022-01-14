@@ -16,7 +16,7 @@ Or, just to catch up:
 
 So why should you care?
 * If you are a tools developer, or rely on Truffle artifacts directly in any way: there will be breaking changes!
-* If you use Truffle for smart contract development: the developer experience using Truffle will have fewer roadblocks (“[software warts](http://www.catb.org/jargon/html/W/wart.html)”). This will not break existing Truffle projects.
+* If you use Truffle for smart contract development: the developer experience using Truffle will have fewer roadblocks (“[software warts](https://www.catb.org/jargon/html/W/wart.html)”). This will not break existing Truffle projects.
 * No matter who you are: better data means better tools.
 
 Great! I’m convinced. 😁 Now, where were we?
@@ -77,7 +77,7 @@ Since we’ve started by building infrastructure, the work remains to connect th
 
 This includes:
 * Documentation, of course! See our current [Truffle DB – Proposal](https://trufflesuite.github.io/artifact-updates/index.html) working docs, which include the data model diagrams. Expect us to convert these docs into proper documentation for release.
-* Better persistence. Our initial implementation will save JSON files to disk, but we intend to support more robust data storage options, including relational databases and native support in [Truffle Teams](https://www.trufflesuite.com/teams).
+* Better persistence. Our initial implementation will save JSON files to disk, but we intend to support more robust data storage options, including relational databases and native support in [Truffle Teams](/docs/teams/overview).
 * Schema design updates, including support for pagination and proper data filtering.
 * A prototype candidate for Truffle DB’s external interface.
 

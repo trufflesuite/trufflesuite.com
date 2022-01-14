@@ -80,7 +80,7 @@ Next, replace the box's `truffle-config.js` with the following:
 const { mnemonic, secret, password, email } = require("./faucet.json");
 
 module.exports = {
-  // see <https://truffleframework.com/docs/tezos/truffle/reference/configuring-tezos-projects>
+  // see <https://trufflesuite.com/docs/tezos/truffle/reference/configuring-tezos-projects>
   // for more details on how to specify configuration options!
   networks: {
     development: {
@@ -141,4 +141,4 @@ If you've reached this point, you now have a Truffle project that lets you compi
 * [LIGO language documentation](https://ligolang.org/docs/intro/introduction/)
 * [Tezos documentation](https://tezos.gitlab.io/)
 * [Taquito communcation library](https://tezostaquito.io/)
-* [Main Truffle Suite documentation](https://trufflesuite.com/docs)
+* [Main Truffle Suite documentation](/docs)

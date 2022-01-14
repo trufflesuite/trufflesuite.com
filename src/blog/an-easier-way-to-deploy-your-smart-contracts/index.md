@@ -4,7 +4,7 @@ hide:
   - navigation
 ---
 
-**TL;DR** - Deploying your smart contracts shouldn't be difficult, and the process should be flexible. I give a sneak peek at the next feature we're building: an **easy to use interface to deploy your Truffle projects with [Truffle Teams](/teams)**! It's going to be awesome, and **you can be the first to use it**! I'll be giving a **hands-on workshop from 9AM-12PM on Friday, August 2nd, at [TruffleCon 2019](/trufflecon2019)** that will walk you through through the entire Truffle Teams lifecycle, including the **never-before-used Deployments interface**! See you there!
+**TL;DR** - Deploying your smart contracts shouldn't be difficult, and the process should be flexible. I give a sneak peek at the next feature we're building: an **easy to use interface to deploy your Truffle projects with [Truffle Teams](/docs/teams/overview)**! It's going to be awesome, and **you can be the first to use it**! I'll be giving a **hands-on workshop from 9AM-12PM on Friday, August 2nd, at [TruffleCon 2019](/trufflecon2019)** that will walk you through through the entire Truffle Teams lifecycle, including the **never-before-used Deployments interface**! See you there!
 
 ---
 
@@ -114,7 +114,7 @@ In an ideal world, I'd like these features in a deployment interface:
   </div>
 </h3>
 
-If you haven't heard about our latest tool, [Truffle Teams](/teams), you really should check it out. Truffle Teams gives you zero-config Continuous Integration (CI) for your Truffle projects, and it also lets you monitor what's happening with your deployed contracts. Truffle Teams meshes the full Truffle Suite into a cohesive application that enables better collaboration within development teams (even teams of 1!).
+If you haven't heard about our latest tool, [Truffle Teams](/docs/teams/overview), you really should check it out. Truffle Teams gives you zero-config Continuous Integration (CI) for your Truffle projects, and it also lets you monitor what's happening with your deployed contracts. Truffle Teams meshes the full Truffle Suite into a cohesive application that enables better collaboration within development teams (even teams of 1!).
 
 ![Truffle Teams Builds](/img/blog/an-easier-way-to-deploy-your-smart-contracts/teams-build.png)
 

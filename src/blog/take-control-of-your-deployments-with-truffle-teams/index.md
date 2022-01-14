@@ -25,12 +25,12 @@ The interaction between Truffle and Ganache provides an awesome way to iterative
 
 ## Learn More in Our Tutorial or Try It Now!
 
-We put together a step-by-step [tutorial](/tutorials/learn-how-to-deploy-with-truffle-teams) to guide you through your first Truffle Teams deployment. While we recommend that you follow the tutorial (as it answers some FAQs), the deployment experience is simple enough for you to just give it a shot! 👇
+We put together a step-by-step [tutorial](/guides/learn-how-to-deploy-with-truffle-teams) to guide you through your first Truffle Teams deployment. While we recommend that you follow the tutorial (as it answers some FAQs), the deployment experience is simple enough for you to just give it a shot! 👇
 
 <div class="post-trufflecon-box mt-5 text-center">
   Get started with Truffle Teams, and see deployments for yourself!
 
   <div class="mt-3">
-    <a class="btn btn-truffle" href="/teams">Try Truffle Teams</a>
+    <a class="btn btn-truffle" href="/docs/teams/getting-started/creating-an-account">Try Truffle Teams</a>
   </div>
 </div>

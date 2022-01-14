@@ -5,7 +5,7 @@ hide:
 ---
 
 <div class="alert alert-info">
-  <p class="mb-0"><strong>Update</strong>: Since this tutorial was published, we have released <a href="/docs/ganache">Ganache</a>, a personal blockchain and a replacement to the TestRPC. We have left this tutorial unaltered, but we highly recommend checking out our <a href="https://www.trufflesuite.com/ganache">Ganache Documentation</a></p>
+  <p class="mb-0"><strong>Update</strong>: Since this tutorial was published, we have released <a href="/docs/ganache">Ganache</a>, a personal blockchain and a replacement to the TestRPC. We have left this tutorial unaltered, but we highly recommend checking out our <a href="/ganache">Ganache Documentation</a></p>
 </div>
 
 This article was originally written by Dan Finlay and published as a [github gist](https://gist.github.com/flyswatter/aea93752fb90322bbe11). Dan has kindly allowed us to republish it here!
@@ -20,7 +20,7 @@ This is all great for you, but *what about your users?* Truffle has some great d
 
 With Metamask, all your users need to do is [install our Chrome plugin](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?authuser=2), and they will have their own secure blockchain accounts right there in the convenience of their browsers.
 
-![metamask accounts](http://i.imgur.com/oyAvIXZ.png)
+![metamask accounts](https://i.imgur.com/oyAvIXZ.png)
 
 Metamask is just a Developer Preview right now, and has not been released to the general public. We don't recommend putting serious funds in it, but instead encourage you to use it to help prepare your dapps for Ethereum browsers.
 
@@ -61,7 +61,7 @@ truffle serve   # Host your web interface on port 8080
 ```
 We just deployed a simple alt-coin called `MetaCoin` to our local blockchain, and it's available to our browser on `http://127.0.0.1:8080`!
 
-![MetaCoin default](http://i.imgur.com/Uou5raY.png)
+![MetaCoin default](https://i.imgur.com/Uou5raY.png)
 
 If you visit it, you'll see that by default this new Dapp template signs you in with the first account on your `testrpc` account list, which happens to be the same account that got pre-populated with 10k shiny new Metacoins! That's because when you ran `truffle migrate`, Truffle used your first account as the contract publisher, and the contract says to fund the creator's account with 10k coins.
 
@@ -81,7 +81,7 @@ By default you get three accounts, all named Wallie. Again, our developer previe
 
 To use Metamask with your local development blockchain, you need to point it at your `testrpc`.
 
-![setting metamask testrpc](http://i.imgur.com/D6o2Jq8.png)
+![setting metamask testrpc](https://i.imgur.com/D6o2Jq8.png)
 
   1. Open Metamask
   2. Click the gear icon in the bottom left
@@ -164,13 +164,13 @@ Let's try sending some Metacoin from one of our Metamask accounts to another.
 
 First select the account that has the Metacoin and Ether. Now click the details arrow for another account, and copy its address (`COPY ADDR`).
 
-![Metamask account detail view](http://i.imgur.com/5vbrfuQ.png)
+![Metamask account detail view](https://i.imgur.com/5vbrfuQ.png)
 
 Paste the address into the Dapp window, along with how much Metacoin you'd like to send, and hit `send`!
 
 You should see a notification pop-up, notifying you that you have a transaction to approve in Metamask.
 
-![Approval notification](http://i.imgur.com/pRuKb9v.png)
+![Approval notification](https://i.imgur.com/pRuKb9v.png)
 
 You can either click "Approve" on the notification, or open the Metamask pop-up and review the transaction there.
 

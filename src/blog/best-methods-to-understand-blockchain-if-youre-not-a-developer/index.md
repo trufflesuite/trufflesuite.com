@@ -20,7 +20,7 @@ Go to your local blockchain meetups. There's probably more than a few that are a
 
 ## Social Media
 
-Maybe you're a little shy and don't want to network (although I highly recommend it!). There's a myriad of resources available online to learn the underpinnings of blockchain technology. You can visit our [Truffle University](https://www.trufflesuite.com/university) page for more information taking our courses. If you like to learn through watching other people's conversations, [Twitter is the place to go](https://media.consensys.net/i-read-crypto-twitter-for-hours-everyday-here-are-40-accounts-that-really-matter-cfecc681379d). You can make your way over to Quora if you have specific questions about blockchain. Don't want people to know who you are, Reddit has phenomenal ELI5 (explain it like I'm 5) explanations.
+Maybe you're a little shy and don't want to network (although I highly recommend it!). There's a myriad of resources available online to learn the underpinnings of blockchain technology. You can visit our [Truffle University](/university) page for more information taking our courses. If you like to learn through watching other people's conversations, [Twitter is the place to go](https://media.consensys.net/i-read-crypto-twitter-for-hours-everyday-here-are-40-accounts-that-really-matter-cfecc681379d). You can make your way over to Quora if you have specific questions about blockchain. Don't want people to know who you are, Reddit has phenomenal ELI5 (explain it like I'm 5) explanations.
 
 ## Read a Book
 

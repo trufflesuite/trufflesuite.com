@@ -8,14 +8,14 @@ In Ethereum, estimating gas for a given transaction is a tricky problem to solve
 
 ![Ganache Logo](/img/ganache-logo-h-dark.svg)
 
-At [Truffle](https://www.trufflesuite.com/), we decided such an approach was an unnecessarily CPU-intensive solution to the problem and set out to find a (theoretically) more performant and perfectly accurate way of estimating gas. The result? [Gas exactimation](https://github.com/trufflesuite/ganache-cli/releases/tag/v6.4.2). In this tutorial, we’ll go over gas exactimation at a high level in order to demonstrate its precision.
+At [Truffle](/), we decided such an approach was an unnecessarily CPU-intensive solution to the problem and set out to find a (theoretically) more performant and perfectly accurate way of estimating gas. The result? [Gas exactimation](https://github.com/trufflesuite/ganache-cli/releases/tag/v6.4.2). In this tutorial, we’ll go over gas exactimation at a high level in order to demonstrate its precision.
 
 **Complete example available at [the following repo](https://github.com/trufflesuite/gas-exactimation-tutorial).**
 
 **_Prerequisites: You should be familiar with Truffle, Ganache, and Solidity. If you need an introduction please consult the following resources:_**
 
-* [Truffle Quickstart](https://truffleframework.com/docs/truffle/quickstart)
-* [Ganache Quickstart](https://www.trufflesuite.com/docs/ganache/quickstart)
+* [Truffle Quickstart](/docs/truffle/quickstart)
+* [Ganache Quickstart](/docs/ganache/quickstart)
 * [Solidity Documentation](https://solidity.readthedocs.io/en/v0.5.9/index.html)
 
 ## EIP-114, or the “1/64ths rule”
@@ -25,7 +25,7 @@ At [Truffle](https://www.trufflesuite.com/), we decided such an approach was an 
 1. The gas required for a successful transaction can be greater than the actual gas spent (similar to how gas refunds behave).
 2. The extra gas required for a successful transaction varies depending on the transaction’s initial `gas` amount.
 
-A long-standing issue with [Ganache](https://www.trufflesuite.com/ganache) has been the fact that we haven’t returned EIP-114 compliant gas estimations. This has caused our gas estimates to be too low in cases where a transaction executed certain opcodes. **Gas exactimation** addresses this by considering how the gas withheld at any nested stack depth/frame affects the gas needed outside of its execution context.
+A long-standing issue with [Ganache](/ganache) has been the fact that we haven’t returned EIP-114 compliant gas estimations. This has caused our gas estimates to be too low in cases where a transaction executed certain opcodes. **Gas exactimation** addresses this by considering how the gas withheld at any nested stack depth/frame affects the gas needed outside of its execution context.
 
 Let’s see it in action.
 

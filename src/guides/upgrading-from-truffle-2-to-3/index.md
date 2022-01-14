@@ -83,7 +83,7 @@ Additionally, each network needs to have a network id specified, or a `"*"`. Thi
 
 ## Importing and the Ethereum Package Manager (EthPM)
 
-As Truffle 3.0 uses the new [Ethereum Package Manager (EthPM)](/docs/getting_started/packages-ethpm) we need to tell Truffle when the package manager should be used and when to look in the local directory. If you don't specify the directory to search relative to the `contracts/` directory, it will assume that EthPM will handle this.
+As Truffle 3.0 uses the new [Ethereum Package Manager (EthPM)](/docs/truffle/getting-started/package-management-via-ethpm) we need to tell Truffle when the package manager should be used and when to look in the local directory. If you don't specify the directory to search relative to the `contracts/` directory, it will assume that EthPM will handle this.
 
 So to import a local file:
 
@@ -97,7 +97,7 @@ v3.0:
 import "./test.sol"
 ```
 
-The `./` tells Truffle that the contract is in the current directory. See the [Compiling contracts](/docs/getting_started/compile) page for more details.
+The `./` tells Truffle that the contract is in the current directory. See the [Compiling contracts](/docs/truffle/getting-started/compiling-contracts) page for more details.
 
 ## Migrations and Test Dependencies
 
@@ -282,7 +282,7 @@ We have to search through all returned events to ensure we found the one we want
 
 In Truffle 1.0 and 2.0, things were heavily geared toward building web applications, and so Truffle shipped with a default build pipeline that could get your dapp up and running quickly. This build pipeline was magical: It did everything for you, and you didn't have to lift a finger. This was good for some use cases, but it became evidently clear that in any other use case the pipeline was very brittle.
 
-Over the last year, Ethereum-enabled applications have only been growing. What started out as solely a platform for web application, now dapps can be written in native languages and run as standalone applications on mobile and the desktop. Truffle has always intended to support these use cases, and so that's why we **removed the default build pipeline** from Truffle. You can still [write your own custom build pipeline]() if you'd like to tightly integrate it with Truffle, but by default Truffle will focus on continuing to be the best tool for smart contracts around. We'll let the better build pipelines -- like [webpack](https://webpack.github.io/), [browserify](http://browserify.org/), [Grunt](http://gruntjs.com/), [Metalsmith](http://www.metalsmith.io/) -- do the job of, well, building.
+Over the last year, Ethereum-enabled applications have only been growing. What started out as solely a platform for web application, now dapps can be written in native languages and run as standalone applications on mobile and the desktop. Truffle has always intended to support these use cases, and so that's why we **removed the default build pipeline** from Truffle. You can still [write your own custom build pipeline]() if you'd like to tightly integrate it with Truffle, but by default Truffle will focus on continuing to be the best tool for smart contracts around. We'll let the better build pipelines -- like [webpack](https://webpack.github.io/), [browserify](https://browserify.org/), [Grunt](https://gruntjs.com/), [Metalsmith](https://www.metalsmith.io/) -- do the job of, well, building.
 
 Now, just because the build pipeline has been removed by default doesn't mean you don't have options. At Truffle, we care about your developer experience and so would never leave you hanging. In general there are two options for you to choose from, but for the latter option what you'll do is heavily dependent on which build tool (i.e., webpack) you choose to use. Let's go over the options below.
 
@@ -349,7 +349,7 @@ Now, be aware that the default builder does use the latest contract abstractions
 
 ### Use a custom build process / build tool
 
-Custom build processes are not hard to write. Instead, what's hard is writing a build process that fits all shapes and sizes. We now recommend you look into the many build tools available to you that best fits your application. We've already mentioned [webpack](https://webpack.github.io/), [browserify](http://browserify.org/), [Grunt](http://gruntjs.com/), and [Metalsmith](http://www.metalsmith.io/), but there are many others, and their features run the gamut based on the context of the application being built and the features that you need.
+Custom build processes are not hard to write. Instead, what's hard is writing a build process that fits all shapes and sizes. We now recommend you look into the many build tools available to you that best fits your application. We've already mentioned [webpack](https://webpack.github.io/), [browserify](https://browserify.org/), [Grunt](https://gruntjs.com/), and [Metalsmith](https://www.metalsmith.io/), but there are many others, and their features run the gamut based on the context of the application being built and the features that you need.
 
 Whether you're building an application to run in the browser, or a command line tool, a Javascript library or a native mobile application, bootstrapping your contracts is the same, and using your deployed contract artifacts follows the same general process no matter the app you're building.
 
@@ -357,7 +357,7 @@ When configuring your build tool or application, you'll need to perform the foll
 
 1. Get all your contract artifacts into your build pipeline / application. This includes all of the `.json` files within the `./build/contracts` directory.
 2. Turn those `.json` contract artifacts into contract abstractions that are easy to use, via [truffle-contract](https://github.com/trufflesuite/truffle/tree/master/packages/contract).
-3. Provision those contract abstractions with a Web3 provider. In the browser, this provider might come from [Metamask](https://metamask.io/) or [Mist](https://github.com/ethereum/mist), but it could also be a custom provider you've configured to point to [Infura](http://infura.io/) or any other Ethereum client.
+3. Provision those contract abstractions with a Web3 provider. In the browser, this provider might come from [Metamask](https://metamask.io/) or [Mist](https://github.com/ethereum/mist), but it could also be a custom provider you've configured to point to [Infura](https://infura.io/) or any other Ethereum client.
 4. Use your contracts!
 
 In Node, this is very easy to do. Let's take a look at an example that shows off the "purest" way of performing the above steps, since it exists outside of any build process or tool.

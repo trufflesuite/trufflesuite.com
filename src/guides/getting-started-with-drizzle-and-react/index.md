@@ -12,7 +12,7 @@ We're going to focus on the lower levels today, taking you through setting up a 
 This will be a very minimal tutorial focused on setting and getting a simple string stored in a contract. It's meant for those with a basic knowledge of Truffle, who have some knowledge of JavaScript and React.js, but who are new to using Drizzle.
 
 <p class="alert alert-info">
-<i class="far fa-info-circle"></i> <strong>Note</strong>: For Truffle basics, please read through the Truffle <a href="/tutorials/pet-shop">Pet Shop</a> tutorial before proceeding.
+<i class="far fa-info-circle"></i> <strong>Note</strong>: For Truffle basics, please read through the Truffle <a href="/guides/pet-shop">Pet Shop</a> tutorial before proceeding.
 </p>
 
 In this tutorial we will be covering:
@@ -130,7 +130,7 @@ compile
 ```
 
 <p class="alert alert-info">
-<strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on [resolving naming conflicts on Windows](/docs/advanced/configuration#resolving-naming-conflicts-on-windows).
+<strong>Note</strong>: If you're on Windows and encountering problems running this command, please see the documentation on [resolving naming conflicts on Windows](/docs/truffle/reference/configuration#resolving-naming-conflicts-on-windows).
 </p>
 
 You should see output similar to the following:
@@ -146,7 +146,7 @@ Writing artifacts to ./build/contracts
 Now that we've successfully compiled our contracts, it's time to migrate them to the blockchain!
 
 <p class="alert alert-info">
-  <strong>Note</strong>: Read more about migrations in the [Truffle documentation](/docs/getting_started/migrations).
+  <strong>Note</strong>: Read more about migrations in the [Truffle documentation](/docs/truffle/getting-started/running-migrations).
 </p>
 
 To create our own migration script.

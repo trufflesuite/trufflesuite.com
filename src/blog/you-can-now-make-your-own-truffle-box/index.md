@@ -10,7 +10,7 @@ Today we're happy to announce anyone can now make their very own Truffle Box!
 
 ## Making a Box
 
-To get started making a box, we've added a page to [our documentation](/docs/advanced/truffle-boxes). For those starting a new box from scratch, we've also created a [blueprint Truffle Box](/boxes/blueprint) to get you started quickly.
+To get started making a box, we've added a page to [our documentation](/docs/truffle/advanced/creating-a-truffle-box). For those starting a new box from scratch, we've also created a [blueprint Truffle Box](/boxes/blueprint) to get you started quickly.
 
 ## The First Wave
 
@@ -19,7 +19,7 @@ We included a call for pre-screening in the community section of our first box r
 Here are the first community boxes:
 
 **[Quintor/angular-truffle-box](/boxes/angular-truffle-box)**<br/>
-This Truffle Box provides a base for working with the Truffle Framework and Angular. It provides a basic working example of the MetaCoin contracts with Angular components. This project is generated with Angular CLI.
+This Truffle Box provides a base for working with the Truffle Suite and Angular. It provides a basic working example of the MetaCoin contracts with Angular components. This project is generated with Angular CLI.
 
 **[hackingbeauty/react-dapp-material-ui](/boxes/react-dapp-material-ui)**<br/>
 In addition to Webpack and React, this box adds: React-Router, Redux and Material-UI for easy skinning of a Dapp.
