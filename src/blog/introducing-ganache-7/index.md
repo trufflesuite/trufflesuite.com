@@ -188,16 +188,51 @@ This would return the aggregated summary of this transaction for post-processing
 
 Here’s a comparison between Ganache and Hardhat. Both could handle small to medium-sized transactions, but Hardhat crashes when transaction size increases significantly.
 
-+-----------------------+--------------+--------------------------+-----------------------------+
-|     Transaction          |        Size      |         Ganache               |         Hardhat                    |
-+-----------------------+--------------+--------------------------+-----------------------------+
-|                                                         | Cold Strg | Warm Strg |  Cold Strg  | Warm Strg   |
-+-----------------------+--------------+------------+-------------+------------ +---------------+
-|        0x85….659          |     30MB       |   11 Mins    |    5 Secs      |    17 Mins    |   1 Min         |
-
-|        0x8b….090         |      1.3GB       |   14 Mins     |    11 Mins   |     N/A       |    N/A             | 
-                                                                                                   (crashed)    (crashed)
-|       0x0fe…c92          |     10.6GB     |   1.5 Hours |    
+<table>
+    <thead>
+        <tr>
+            <th style="text-align:center">Transaction</th>
+            <th style="text-align:center">Size</th>
+            <th colspan="2" style="text-align:center">Ganache</th>
+            <th colspan="2" style="text-align:center">Hardhat</th>
+        </tr>
+    </thead>
+    <thead>
+        <tr>
+            <th colspan="2"></th>
+            <th style="text-align:center">No Cache</th>
+            <th style="text-align:center">Cached</th>
+            <th style="text-align:center">No Cache</th>
+            <th style="text-align:center">Cached</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href="https://etherscan.io/tx/0x85fc5c53b16aeae03fcac71d484b376ef46317ae75d6858f3817cd8138f2a659" rel="noopener" title="Transaction 0x85fc5c53b16aeae03fcac71d484b376ef46317ae75d6858f3817cd8138f2a659">0x85..659</a></td>
+            <td>30MB</td>
+            <td>??</td>
+            <td>??</td>
+            <td>??</td>
+            <td>??</td>
+        </tr>
+        <tr>
+            <td><a href="https://etherscan.io/tx/0x8bb8dc5c7c830bac85fa48acad2505e9300a91c3ff239c9517d0cae33b595090" rel="noopener" title="Transaction 0x8bb8dc5c7c830bac85fa48acad2505e9300a91c3ff239c9517d0cae33b595090">0x8b...090</a></td>
+            <td>1.3GB</td>
+            <td>??</td>
+            <td>??</td>
+            <td>(crashed)</td>
+            <td>(crashed)</td>
+        </tr>
+        <tr>
+            <td><a href="https://etherscan.io/tx/0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92" rel="noopener" title="Transaction 0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92">0x0f...c92</a></td>
+            <td>10.6GB</td>
+            <td>??</td>
+            <td>??</td>
+            <td>(crashed)</td>
+            <td>(crashed)</td>
+        </tr>
+    </tbody>
+</table>
 
 ### 4. Snapshot and Revert state
 
