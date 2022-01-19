@@ -186,53 +186,19 @@ curl -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0", "id": 1, "met
 
 This would return the aggregated summary of this transaction for post-processing.
 
-Here’s a comparison between Ganache and Hardhat. Both could handle small to medium-sized transactions, but Hardhat crashes when transaction size increases significantly.
+Try it with a large transaction like `0x8bb8dc5c7c830bac85fa48acad2505e9300a91c3ff239c9517d0cae33b595090` (Warp Finance hack):
 
-<table>
-    <thead>
-        <tr>
-            <th style="text-align:center">Transaction</th>
-            <th style="text-align:center">Size</th>
-            <th colspan="2" style="text-align:center">Ganache</th>
-            <th colspan="2" style="text-align:center">Hardhat</th>
-        </tr>
-    </thead>
-    <thead>
-        <tr>
-            <th colspan="2"></th>
-            <th style="text-align:center">No Cache</th>
-            <th style="text-align:center">Cached</th>
-            <th style="text-align:center">No Cache</th>
-            <th style="text-align:center">Cached</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><a href="https://etherscan.io/tx/0x85fc5c53b16aeae03fcac71d484b376ef46317ae75d6858f3817cd8138f2a659" rel="noopener" title="Transaction 0x85fc5c53b16aeae03fcac71d484b376ef46317ae75d6858f3817cd8138f2a659">0x85..659</a></td>
-            <td>30MB</td>
-            <td>??</td>
-            <td>??</td>
-            <td>??</td>
-            <td>??</td>
-        </tr>
-        <tr>
-            <td><a href="https://etherscan.io/tx/0x8bb8dc5c7c830bac85fa48acad2505e9300a91c3ff239c9517d0cae33b595090" rel="noopener" title="Transaction 0x8bb8dc5c7c830bac85fa48acad2505e9300a91c3ff239c9517d0cae33b595090">0x8b...090</a></td>
-            <td>1.3GB</td>
-            <td>??</td>
-            <td>??</td>
-            <td>(crashed)</td>
-            <td>(crashed)</td>
-        </tr>
-        <tr>
-            <td><a href="https://etherscan.io/tx/0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92" rel="noopener" title="Transaction 0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92">0x0f...c92</a></td>
-            <td>10.6GB</td>
-            <td>??</td>
-            <td>??</td>
-            <td>(crashed)</td>
-            <td>(crashed)</td>
-        </tr>
-    </tbody>
-</table>
+First, start ganache (with lots of extra memory):
+```console
+$ NODE_OPTIONS=--max-old-space-size=16384 ganache --fork --fork.blockNumber 14037983
+```
+
+then execute `debug_traceTransaction` and send the output to trace.json: 
+```console
+$ curl -H 'Content-Type: application/json'   --data '{"jsonrpc":"2.0", "id": 1, "method": "debug_traceTransaction", "params": [ "0x8bb8dc5c7c830bac85fa48acad2505e9300a91c3ff239c9517d0cae33b595090" ] }' http://localhost:8545 -o trace.json
+```
+
+If you are really want to test the limits of Ganache (and have a lot of time - about 1-2 hours) try out the 10GB Cream Finance hack transaction, `0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92`!
 
 ### 4. Snapshot and Revert state
 
