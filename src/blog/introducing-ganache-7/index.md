@@ -268,3 +268,13 @@ In Ethereum, every transaction has a nonce. The nonce is the number of transacti
 For a transaction to be mined, it has to have a nonce greater than that of the previous transaction by 1. In earlier versions of Ganache, if you send a transaction with a nonce greater than the last nonce by more than 1, Ganache would error, and the transaction would be rejected.
 
 With Ganache 7, if the nonce of the previous transaction is 1, and you send a transaction with the nonce set to 3 for whatever reason, this transaction with nonce 3 will sit in the transaction pool until a transaction with nonce 2 is sent, at which time both transactions will be mined and added to the blockchain state.
+
+---
+
+This release has been years in the making and we're really proud of the work we've done. We hope you love it as much as we do.
+
+Thank you to everyone who has been a part of making this release happen — contributors, mentors, reviewers, issue reporters, and community participators have all been instrumental in making Ganache v7. We are immensely thankful to you all.
+
+---
+
+<p align="center">💖 The Truffle Team</p>
