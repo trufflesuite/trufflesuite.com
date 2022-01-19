@@ -4,6 +4,8 @@ hide:
   - navigation
 ---
 
+![ganache v7 banner](./ganache-v7.png)
+
 **By Kingsley Arinze, Mei Chan and David Murdoch**
 
 Ganache is a pioneer in the Ethereum development space, aiding DApp developers and enthusiasts to build, test, and explore blockchain since 2016. We are excited to announce the wide release of the latest version of Ganache today, with 30 times faster forking performance and an Infura integration that allows you to replay historical transactions with free access to archive data.
@@ -25,7 +27,7 @@ We heard your feedback that Ganache v6 was slow to install, slow to run, and lea
 How is Ganache v7 better?
 
 - With advanced caching capabilities on the latest version, Ganache's forking feature is up to 30 times faster than v6.
-- Unlike other tools that require passing a URL for archive state data, Ganache v7 has a native integration with Infura enabling you free access to historical data
+- Unlike other tools that require passing a URL for archive state data, Ganache v7 has a [native integration with Infura](https://blog.infura.io/fork-ethereum-replay-historical-transactions-with-ganache-7-archive-support/) enabling you free access to historical data
 - You can run Ganache indefinitely without running into crashes due to memory issues
 - Common operations are about 3 times faster than v6.
 
@@ -41,7 +43,7 @@ With Node.js and NPM installed, you can install Ganache 7 globally by running `n
 
 Your terminal should look like this:
 
-...
+![screenshot-1](./example-1.png)
 
 By default, Ganache provides 10 test accounts, each with 1000 (fake) Ether along with the corresponding private keys and the mnemonic phrase used to generate them. You can use this phrase to import the accounts into wallets like [MetaMask](https://metamask.io/) during development.
 
@@ -74,13 +76,13 @@ See code samples for these different use cases below.
 
 To begin, install Ganache 7 as  npm package in your Node.js project
 
-```bash
-npm install ganache
+```console
+$ npm install ganache
 ```
 
 As a standalone EIP-1193 provider
 
-```
+```javascript
 const ganache = require("ganache");
 
 const options = {};
@@ -91,7 +93,7 @@ const accounts = await provider.request({ method: "eth_accounts", params: [] });
 
 As a JSON-RPC web server and an EIP-1193 provider 
 
-```
+```javascript
 const ganache = require("ganache");
 
 const options = {};
@@ -109,7 +111,7 @@ server.listen(PORT, err => {
 
 As a Web3.js provider
 
-```
+```javascript
 const Web3 = require("web3");
 const ganache = require("ganache");
 
@@ -119,7 +121,7 @@ const web3 = new Web3(ganache.provider());
 
 As an Ethers.js provider
 
-```
+```javascript
 const ganache = require("ganache");
 
 const provider = new ethers.providers.Web3Provider(ganache.provider());
@@ -129,13 +131,13 @@ const provider = new ethers.providers.Web3Provider(ganache.provider());
 
 You can use Ganache 7 in the browser by adding the following script tag to your HTML code:
 
-```
+```javascript
 <script src="https://cdn.jsdelivr.net/npm/ganache@7.0.0/dist/web/ganache.min.js"></script>
 ```
 
 By doing that, Ganache 7 is automatically available in your browser for use:
 
-```
+```javascript
 const options = {};
 const provider = Ganache.provider(options);
 ```
@@ -154,8 +156,8 @@ This opens up many possibilities; for example, you can interact with a real-worl
 
 To use this feature, start Ganache 7 using the `ganache --fork` command. Ganache uses [Infura](https://infura.io/docs) as its provider under the hood by default, but you can also specify a provider by passing a URL; for example, you can use your own Infura URL by running this command:
 
-```
-ganache --fork.url wss://mainnet.infura.io/ws/v3/<PROJECT ID>
+```console
+$ ganache --fork.url wss://mainnet.infura.io/ws/v3/<PROJECT ID>
 ```
 
 Ganache fetches five blocks back from the latest by default to avoid missing blocks due to reordering.
@@ -168,7 +170,7 @@ In addition to being able to fork the Ethereum main network with zero configurat
 
 You can do that by running the fork command with the network option: `ganache -- fork.network <NETWORK NAME>`. Cool, yeah? Here's what forking from the Rinkeby testnet looks like:
 
-...
+![screenshot-2](./example-2.png)
 
 ### 3. Support for massive transaction traces (over 10GB+)
 
@@ -176,14 +178,14 @@ Ganache supports massive transaction tracing using the `debug_traceTransaction` 
 
 To use this feature, start Ganache by forking off of Mainnet (or any test network) at a block number greater than that of the transaction you're trying to trace; for example, if you want to trace a transaction inside block 13,886,877, you will need to start Ganache at block number 13,886,878: 
 
-```
-ganache --fork.network mainnet --fork.blockNumber <blockNumber>
+```console
+$ ganache --fork.network mainnet --fork.blockNumber <blockNumber>
 ```
 
 Then send a curl request using the debug_traceTransaction method specifying the transaction hash like so: 
 
-```
-curl -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0", "id": 1, "method": "debug_traceTransaction", "params": [ "<TRANSACTION HASH>" ] }' http://localhost:8545
+```console
+$ curl -H 'Content-Type: application/json' --data '{"jsonrpc":"2.0", "id": 1, "method": "debug_traceTransaction", "params": [ "<TRANSACTION HASH>" ] }' http://localhost:8545
 ```
 
 This would return the aggregated summary of this transaction for post-processing.
@@ -212,22 +214,45 @@ Ganache also supports reverting state to a previously taken snapshot using the `
 
 You should consider creating a new snapshot after every evm_revert if you need to revert to the same point multiple times; here's a demo of taking a snapshot and reverting state in Ganache:
 
-...
+```javascript
+const provider = ganache.provider();
+const [from, to] = await provider.send("eth_accounts");
+const startingBalance = BigInt(await provider.send("eth_getBalance", [from] ));
+ 
+// take a snapshot
+const snapshotId = await provider.send("evm_snapshot");
+ 
+// send value to another account (over-simplified example)
+await provider.send("eth_subscribe", ["newHeads"] );
+await provider.send("eth_sendTransaction", [{from, to, value: "0xffff"}] );
+await provider.once("message"); // Note: `await provider.once` is non-standard
+ 
+// ensure balance has updated
+const newBalance = await provider.send("eth_getBalance", [from] );
+assert(BigInt(newBalance) < startingBalance);
+ 
+// revert the snapshot
+const isReverted = await provider.send("evm_revert", [snapshotId] );
+assert(isReverted);
+ 
+// ensure balance has reverted
+const endingBalance = await provider.send("eth_getBalance", [from] );
+const isBalanceReverted = assert.strictEqual(BigInt(endingBalance), startingBalance);
+console.log({isBalanceReverted: isBalanceReverted});
+```
 
 ### 5. Mine blocks instantly, at interval, or on demand
 
 Ganache allows you to configure how you want blocks to be mined during development; by default, blocks will be mined immediately upon receiving a transaction, but you can choose between the following options:
 
 - **At interval**: You can specify the time in seconds Ganache should wait before mining the next transaction by passing the `--miner.blockTime <TIME IN SECONDS>` option. A block time of 0 means Ganache should mine new transactions instantly.
-- **On-demand**: Ganache also exposes an `evm_mine` RPC method which forces a single block to be mined whether mining is running or stopped. This will mine an empty block if no transaction exists in the mempool. See code sample below:
+- **On demand**: Ganache also exposes an `evm_mine` RPC method which forces a single block to be mined whether mining is running or stopped. This will mine an empty block if no transaction exists in the mempool. See code sample below:
 
-```
+```javascript
 console.log("start", await provider.send("eth_blockNumber"));
 await provider.send("evm_mine", [{blocks: 5}] ); // mines 5 blocks
 console.log("end", await provider.send("eth_blockNumber"));
 ```
-
-...
 
 ### 6. Fast forward time
 
