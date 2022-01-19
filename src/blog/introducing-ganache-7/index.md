@@ -4,6 +4,8 @@ hide:
   - navigation
 ---
 
+**By Kingsley Arinze, Mei Chan and David Murdoch**
+
 Ganache is a pioneer in the Ethereum development space, aiding DApp developers and enthusiasts to build, test, and explore blockchain since 2016. We are excited to announce the wide release of the latest version of Ganache today, with 30 times faster forking performance and an Infura integration that allows you to replay historical transactions with free access to archive data.
 
 For the uninitiated, Ganache is a local development blockchain used to develop decentralized applications on the Ethereum blockchain. It simulates the Ethereum network, and you can see how your DApp will perform before you release it to production.
@@ -12,7 +14,7 @@ Typically, to start developing distributed applications on the Ethereum network,
 
 Although that is a great way to develop distributed applications on Ethereum, it is not the most efficient and user-friendly approach, as you need to configure these clients manually and keep them running. Maintaining a self-hosted node can be expensive and time-consuming, you don’t want to spend valuable time troubleshooting a failed node during development.
 
-With Ganache, all you need to do is start the application (on the command line or GUI), and you have a preconfigured Ethereum client with ten pre-funded and unlocked accounts ready for use. This allows you to quickly test your DApp throughout your development cycle.
+With Ganache, all you need to do is start the application and you have a preconfigured Ethereum client with 10 pre-funded and unlocked accounts ready for use. This allows you to quickly test your DApp throughout your development cycle.
 
 ## Ganache 7: 30x faster forking and operations
 
@@ -22,8 +24,8 @@ We heard your feedback that Ganache v6 was slow to install, slow to run, and lea
 
 How is Ganache v7 better?
 
-- With advanced caching capabilities on the latest version, Ganache ensures 30 times faster forking performance (3 seconds vs. 42 seconds).
-- Unlike other tools that require passing a URL for archive state data, Ganache v7 has native integration with Infura enabling you free access to historical data
+- With advanced caching capabilities on the latest version, Ganache's forking feature is up to 30 times faster than v6.
+- Unlike other tools that require passing a URL for archive state data, Ganache v7 has a native integration with Infura enabling you free access to historical data
 - You can run Ganache indefinitely without running into crashes due to memory issues
 - Common operations are about 3 times faster than v6.
 
@@ -168,7 +170,7 @@ You can do that by running the fork command with the network option: `ganache --
 
 ...
 
-### 3. Support for massive transaction traces (up to 10GB+)
+### 3. Support for massive transaction traces (over 10GB+)
 
 Ganache supports massive transaction tracing using the `debug_traceTransaction` RPC method.
 
@@ -198,7 +200,7 @@ then execute `debug_traceTransaction` and send the output to trace.json:
 $ curl -H 'Content-Type: application/json'   --data '{"jsonrpc":"2.0", "id": 1, "method": "debug_traceTransaction", "params": [ "0x8bb8dc5c7c830bac85fa48acad2505e9300a91c3ff239c9517d0cae33b595090" ] }' http://localhost:8545 -o trace.json
 ```
 
-If you are really want to test the limits of Ganache (and have a lot of time - about 1-2 hours) try out the 10GB Cream Finance hack transaction, `0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92`!
+If you really want to test the limits of what's possible (and have a lot of time - about 1-2 hours) try out the 10GB+ Cream Finance hack transaction, `0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92`!
 
 ### 4. Snapshot and Revert state
 
@@ -212,7 +214,7 @@ You should consider creating a new snapshot after every evm_revert if you need t
 
 ...
 
-### 5. Mine blocks instantly, at interval, or on-demand
+### 5. Mine blocks instantly, at interval, or on demand
 
 Ganache allows you to configure how you want blocks to be mined during development; by default, blocks will be mined immediately upon receiving a transaction, but you can choose between the following options:
 
@@ -272,10 +274,12 @@ With Ganache 7, if the nonce of the previous transaction is 1, and you send a tr
 
 ---
 
+Start using Ganache 7 today by simply running `npm install ganache --global && ganache --help`, or view the [v7 Release Notes](https://github.com/trufflesuite/ganache/releases/tag/ganache%407.0.0).
+
+---
+
 This release has been years in the making and we're really proud of the work we've done. We hope you love it as much as we do.
 
 Thank you to everyone who has been a part of making this release happen — contributors, mentors, reviewers, issue reporters, and community participators have all been instrumental in making Ganache v7. We are immensely thankful to you all.
-
----
 
 <p align="center">💖 The Truffle Team</p>
