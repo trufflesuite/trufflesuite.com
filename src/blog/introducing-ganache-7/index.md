@@ -299,7 +299,7 @@ With Ganache 7, if the nonce of the previous transaction is 1, and you send a tr
 
 ---
 
-Start using Ganache 7 today by simply running `npm install ganache --global && ganache --help`, or view the [v7 Release Notes](https://github.com/trufflesuite/ganache/releases/tag/ganache%407.0.0).
+Start using Ganache 7 today by simply running `npm install ganache --global && ganache --help`, or view the [v7 Release Notes](https://github.com/trufflesuite/ganache/releases/tag/v7.0.0).
 
 ---
 
