@@ -27,7 +27,7 @@ We heard your feedback that Ganache v6 was slow to install, slow to run, and lea
 How is Ganache v7 better?
 
 - With advanced caching capabilities on the latest version, Ganache's forking feature is up to 30 times faster than v6.
-- Unlike other tools that require passing a URL for archive state data, Ganache v7 has a [native integration with Infura](https://blog.infura.io/fork-ethereum-replay-historical-transactions-with-ganache-7-archive-support/) enabling you free access to historical data
+- Zero-config Mainnet forking! Ganache v7 has a [native integration with Infura](https://blog.infura.io/fork-ethereum-replay-historical-transactions-with-ganache-7-archive-support/) which enables free access to historical data
 - You can run Ganache indefinitely without running into crashes due to memory issues
 - Common operations are about 3 times faster than v6.
 
