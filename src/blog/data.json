@@ -1,4 +1,12 @@
 {
+  "introducing-ganache-7": {
+    "title": "Introducing Ganache 7",
+    "date": "2022-01-20",
+    "author": "Kingsley Arinze, Mei Chan, & David Murdoch",
+    "published": true,
+    "excerpt": "Ganache is a pioneer in the Ethereum development space, aiding DApp developers and enthusiasts to build, test, and explore blockchain since 2016. We are excited to announce the wide release of the latest version of Ganache today...",
+    "image": "/img/blog/thumbnails/ganache-for-blog.jpg"
+  },
   "truffle-and-infura-support-arbitrum": {
     "title": "Truffle and Infura Now Support Arbitrum",
     "date": "2021-07-07",
