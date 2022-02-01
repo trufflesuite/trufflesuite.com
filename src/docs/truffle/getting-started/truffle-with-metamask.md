@@ -43,7 +43,7 @@ Before diving in, we'll need to make sure the dapp is checking for MetaMask's `w
 MetaMask injects its own `web3` instance, so we'll want to make sure we're checking for that. After the window has loaded perform the following check:
 
 ```javascript
-// Is there is an injected web3 instance?
+// Is there an injected web3 instance?
 if (typeof web3 !== 'undefined') {
   App.web3Provider = web3.currentProvider;
   web3 = new Web3(web3.currentProvider);
