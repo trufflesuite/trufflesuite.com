@@ -22,11 +22,14 @@ In order for external scripts to be run correctly, Truffle expects them to expor
 
 ```javascript
 module.exports = function(callback) {
-  // perform actions
+  // TODO: implement your actions
+
+  // invoke callback
+  callback();
 }
 ```
 
-You can do anything you'd like within this script, so long as the callback is called when the script finishes. The callback accepts an error as its first and only parameter. If an error is provided, execution will halt and the process will return a non-zero exit code.
+You can do anything you'd like within this script, so long as the callback is invoked when the script finishes. The callback accepts an error as its first and only parameter. If an error is provided, execution will halt and the process will return a non-zero exit code.
 
 
 # Third-party plugin commands
