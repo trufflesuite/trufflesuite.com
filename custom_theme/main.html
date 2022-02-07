@@ -2,11 +2,23 @@
 
 {% block site_meta %}
     {{ super() }}
-    <!-- <base href="/" /> -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PPB7LNV');</script>
+      <!-- End Google Tag Manager -->
+
 {% endblock %}
 
 <!-- Announcement bar -->
 {% block announce %}
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPB7LNV"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <a href="https://github.com/trufflesuite/ganache/releases/tag/v7.0.0" rel="nofollow">
     <strong>Ganache v7 Stable Release is ready for you to install!</strong> Try out the new <em>zero-config mainnet forking</em>!
     <!-- <span class="twemoji twitter">
