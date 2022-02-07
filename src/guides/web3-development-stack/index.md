@@ -85,7 +85,6 @@ Due to the popularity of the EVM and the Ethereum blockchain, we've seen the eme
 
 - [The Arbitrium layer two solution](https://bridge.arbitrum.io)
 - [The Optimism layer two solution](https://www.optimism.io)
-E.t.c
 - [The Polygon sidechain](https://polygon.technology/get-started)
 - [The Avalanche blockchain](https://www.avax.network)
 - [The Fantom blockchain](https://fantom.foundation)
