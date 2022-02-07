@@ -1,22 +1,22 @@
 ---
-title: The Leading Web3 development stack
+title: The Web3 development stack
 hide:
   - navigation
 ---
 
-Written by [Kingsley Arinze](https://twitter.com/heydamali)
+![Web3 Development Stack header](./web3-dev-stack_blog-header.png)
 
-**Audience**: Beginner/Mid Level
+Written by [Kingsley Arinze](https://twitter.com/heydamali)
 
 Before you set out to build an application, you need to first decide on the technology stack to use. The term “**technology stack”** refers to the tools, libraries, and frameworks needed to build and run a software application. A simple application would consist of three layers: 
 
 1. The Data layer that handles information storage for easy retrieval and computation.
-1. The Logic layer that handles the business logic. All the necessary computation happens here.
-1. The Presentation Layer that is responsible for what the user sees. It presents everything happening under the hood in a user-friendly way.
+2. The Logic layer that handles the business logic. All the necessary computation happens here.
+3. The Presentation Layer that is responsible for what the user sees. It presents everything happening under the hood in a user-friendly way.
 
 To successfully build out each layer, you need to use specific tools, libraries, and frameworks. These tools, libraries, and frameworks are what forms your development stack for that software application.
 
-In the traditional Web2 world, you hear references such as MEAN stack, LAMP stack, MAMP stack. These are all technology stacks for some of the tools, libraries, and frameworks that power Web2 applications.
+In the traditional Web2 world, you hear references such as MEAN stack, LAMP stack, MAMP stack. These are all acronyms for some of the tools, libraries, and frameworks that power Web2 applications.
 
 Web3 is an emergent iteration of the World Wide Web. As with every technology in its nascent stage, most people struggle to understand how the different parts come together. This blog defines the Web3 stack, but before we jump right in, let's review the evolution of the Web. 
 
@@ -51,7 +51,7 @@ The Web2 stack can be said to include the following:
 
 Thus far, we've experienced Web1 where companies created content and, as a result, earned money. We've also seen (and are still seeing) Web2 where users generate content but only companies and platform owners, through user-generated content, make money. This new web iteration known as **Web3** takes the web a step further by allowing content creators to **own** not only their content but their identity and assets. 
 
-Web3. is a decentralized, open, and censorship-resistant web, powered by blockchains like Ethereum, Solana, and hundreds of others. It is a trustless and self-governing web, where companies do not have as much power as they do in Web2 due to the openness and ownership of user data. Instead, it aims to return power to those responsible for keeping the network alive.
+Web3 is a decentralized, open, and censorship-resistant web, powered by blockchains like Ethereum, Solana, and hundreds of others. It is a trustless and self-governing web, where companies do not have as much power as they do in Web2 due to the openness and ownership of user data. Instead, it aims to return power to those responsible for keeping the network alive.
 
 To explain what it means for users to own their data in Web3, let's examine the current situation on Web2 today. Assuming a user isn't impressed with the practices of a company they use regularly and decides to move to a different platform, this user would have to start fresh as all their existing data would live in a centralized database owned by a company like Google, Facebook, Amazon, and others. What makes Web3 different is that anyone with an Internet connection can access the blockchain which gives users more freedom and control over their data.
 
