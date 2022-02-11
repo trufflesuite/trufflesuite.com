@@ -1,4 +1,5 @@
 site_name: Truffle Suite
+site_url: https://trufflesuite.com
 docs_dir: src
 site_dir: site
 theme:
