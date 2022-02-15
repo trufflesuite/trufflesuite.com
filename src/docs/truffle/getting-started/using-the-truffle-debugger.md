@@ -1,5 +1,5 @@
 ---
-title: Truffle | Using the Truffle Debugger
+title: Using the Truffle Debugger
 layout: docs.hbs
 ---
 # Using the Truffle Debugger
