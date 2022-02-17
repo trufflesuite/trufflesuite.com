@@ -78,7 +78,7 @@ module.exports = {
 
 ## Usage with non-Truffle tooling
 
-We know that not everyone uses Truffle for their smart contract development, but we believe that the Truffle Dashboard should be accessible to everyone. This is why we developed the Truffle Dashboard to be agnostic of the tools you're using, so it can also be used with other tools such as Hardhat.
+We know that not everyone uses Truffle for their smart contract development, but we believe that the Truffle Dashboard should be accessible to everyone. This is why we developed the Truffle Dashboard to be agnostic about the tools you're using, so it can also be used with other tools such as Hardhat.
 
 When using the Truffle Dashboard with Hardhat, you need to create a network configuration inside your `hardhat.config.js` file that specifies the Truffle Dashboard's RPC URL.
 
