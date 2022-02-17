@@ -96,7 +96,7 @@ module.exports = {
 };
 ```
 
-From there it can be used with any Hardhat tasks as well as tools like hardhat-deploy.
+From there, it can be used with any Hardhat task or tools like hardhat-deploy.
 
 ```
 hardhat deploy --network truffle-dashboard
