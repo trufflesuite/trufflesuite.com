@@ -748,7 +748,7 @@ Then, we can get the transaction hash (assigned to `txHash`) via `transactionSta
 
 Otherwise, we display a string to show the status of our transaction. Usually, this will either be "pending" or "success".
 
-# The End
+## The End
 
 Congratulations! You have taken a huge step to understanding how Drizzle works. Of course, this is only the beginning, you can use tools like [`drizzle-react`](https://github.com/trufflesuite/drizzle-react) to help you integrate Drizzle into your dapp, reducing the necessary boilerplate that you would have to write.
 

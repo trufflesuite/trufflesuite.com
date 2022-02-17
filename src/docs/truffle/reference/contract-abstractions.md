@@ -75,7 +75,7 @@ example
   .once('data', event => ... etc ... )
 ```
 
-# API
+## API
 
 There are two API's you'll need to be aware of. One is the static Contract Abstraction API and the other is the Contract Instance API. The Abstraction API is a set of functions that exist for all contract abstractions, and those function exist on the abstraction itself (i.e., `MyContract.at()`). In contrast, the Instance API is the API available to contract instances -- i.e., abstractions that represent a specific contract on the network -- and that API is created dynamically based on functions available in your Solidity source file.
 

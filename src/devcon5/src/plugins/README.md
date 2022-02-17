@@ -169,7 +169,7 @@ plugins that you may want to use or adapt.
 
 
 For developers
-==============
+-----------------------
 
 The vision for impress.js is to provide a compact core library doing the
 actual presentations, with a collection of plugins that provide additional
