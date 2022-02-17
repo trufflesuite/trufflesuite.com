@@ -1,5 +1,6 @@
 ---
 title: 3 Ways Enterprises Are Addressing Blockchain Privacy Concerns
+description: 3 Ways Enterprises Are Addressing Blockchain Privacy Concerns
 hide:
   - navigation
 ---
