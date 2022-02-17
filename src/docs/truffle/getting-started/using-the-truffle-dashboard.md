@@ -55,7 +55,7 @@ From there, every Ethereum RPC request will be forwarded from Truffle to the Tru
 
 ![Truffle Dashboard Transaction](/img/docs/truffle/using-the-truffle-dashboard/truffle-dashboard-transaction.png)
 
-Any additional network options or overrides can be provided by adding a network called "dashboard" to your `truffle-config.js` file and providing network options like it were a regular network.
+Any additional network options or overrides can be provided by adding a network called "dashboard" to your `truffle-config.js` file and providing network options like you would a regular network.
 
 ```js
 module.exports = {
