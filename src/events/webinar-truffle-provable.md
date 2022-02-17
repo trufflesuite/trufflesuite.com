@@ -17,6 +17,6 @@ layout: event-single.hbs
     <h3 class="mb-3">Register</h3>
     <p>Enter your details below to register...</p>
     <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
-    <script charset="utf-8" type="text/javascript" src="/js/webinar.js"></script>
+<!--     <script charset="utf-8" type="text/javascript" src="/js/webinar.js"></script> -->
   </div>
 </div>
