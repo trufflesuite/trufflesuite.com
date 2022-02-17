@@ -19,7 +19,7 @@ Truffle Dashboard running at http://localhost:24012
 DashboardProvider RPC endpoint running at http://localhost:24012/rpc
 ```
 
-By default, this starts a dashboard at `http://localhost:24012` and opens the dashboard in a new tab in your default browser. The Dashboard then prompts you to connect your wallet and confirm that you're connected to the right network. You should double check your connected network at this point, since switching to a different network during a deployment can have unintended consequences.
+By default, the command above starts a dashboard at `http://localhost:24012` and opens the dashboard in a new tab in your default browser. The Dashboard then prompts you to connect your wallet and confirm that you're connected to the right network. **You should double check your connected network at this point, since switching to a different network during a deployment can have unintended consequences.**
 
 ![Connect your wallet to the Truffle Dashboard](/img/docs/truffle/using-the-truffle-dashboard/truffle-dashboard-connect.png)
 
