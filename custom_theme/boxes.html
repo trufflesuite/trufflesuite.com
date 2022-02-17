@@ -49,7 +49,7 @@
       <div class="col-xs-12 col-md-6 col-lg-4">
           <a href={{ box.displayName }}>
             <div class="card">
-                <img src={{ "https://raw.githubusercontent.com/" + box.userOrg + "/" + box.repoName + "/master/box-img-sm.png" }} class="card-img-top" />
+                <img alt="{{ box.displayName }}" src={{ "https://raw.githubusercontent.com/" + box.userOrg + "/" + box.repoName + "/master/box-img-sm.png" }} class="card-img-top" />
                 <div class="card-body">
                     <h5 class="card-title">{{ box.displayName }}</h5>
                     <p class="card-text">{{ box.deets.stars }}</p>
@@ -67,7 +67,7 @@
 
     </div>
   </p>
-      
+
 </section>
 
 {% endblock %}
