@@ -1,3 +1,6 @@
+---
+title: Skip Plugin
+---
 Skip Plugin
 ===========
 
@@ -8,7 +11,7 @@ Example:
              example with a url (anything using goto()). -->
         <div class="step skip">
 
-The skip plugin is a pre-stepleave plugin. It is executed before 
+The skip plugin is a pre-stepleave plugin. It is executed before
 `impress:stepleave` event. If the next step also has `class="skip"`
 set, it will set the next step to the one after that.
 

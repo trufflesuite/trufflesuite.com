@@ -1,5 +1,6 @@
 ---
 title: How to Use Provable + Truffle Suite Together
+description: In this upcoming webinar Nick and Greg will showcase the Provable Truffle Box and demonstrate leveraging Provable within the Truffle Suite.
 layout: event-single.hbs
 ---
 <div class="row">

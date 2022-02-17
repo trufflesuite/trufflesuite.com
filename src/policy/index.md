@@ -1,4 +1,5 @@
 ---
 template: policy.html
-title: Truffle Suite
+title: Truffle Policy
+description: This privacy policy (“Policy”) describes how ConsenSys Software Inc.
 ---

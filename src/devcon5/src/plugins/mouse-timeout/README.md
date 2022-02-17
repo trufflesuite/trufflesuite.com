@@ -1,7 +1,10 @@
+---
+title: Mouse Timeout Plugin
+---
 Mouse timeout plugin
 ====================
 
-After 3 seconds of mouse inactivity, add the css class 
+After 3 seconds of mouse inactivity, add the css class
 `body.impress-mouse-timeout`. On `mousemove`, `click` or `touch`, remove the
 class.
 

@@ -1,4 +1,5 @@
 ---
 template: staff.html
-title: Truffle Suite
+title: Truffle Staff
+description: Meet the Sweet Truffle Team.
 ---

@@ -1,3 +1,6 @@
+---
+title: Impress Console Plugin
+---
 Impress Console Plugin
 ======================
 

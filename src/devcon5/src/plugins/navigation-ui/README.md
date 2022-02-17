@@ -1,3 +1,6 @@
+---
+title: Navigation UI Plugin
+---
 Navigation UI plugin
 ====================
 
