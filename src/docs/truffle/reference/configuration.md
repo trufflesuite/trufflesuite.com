@@ -274,7 +274,7 @@ module.exports = {
 
 ### dashboard
 
-Configuration options for the [Truffle Dashboard](/docs/truffle/getting-started/using-the-truffle-dashboard.html). These options will be used when running `truffle dashboard` inside the project directory and these details will be used for the builtin "dashboard" network.
+Configuration options for the [Truffle Dashboard](/docs/truffle/getting-started/using-the-truffle-dashboard.html). These options will be used when running `truffle dashboard` inside the project directory and these details will be used for the built in "dashboard" network.
 
 Example:
 
