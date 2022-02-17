@@ -4,7 +4,7 @@ layout: docs.hbs
 ---
 # Using the Truffle Dashboard
 
-When deploying your smart contracts you need to specify an Ethereum account that has enough funds to cover the transaction fees of the deployment. A popular method of doing this is copy-pasting your mnemonic phrase to a gitignored `.env` file so that it can be used for e.g. the `@truffle/hdwallet-provider`. But in general it is a bad practice to copy-paste your keys, especially since we have wallets like MetaMask that can send transactions for us.
+When deploying your smart contracts you need to specify an Ethereum account that has enough funds to cover the transaction fees of the deployment. A popular method of doing this is copy-pasting your mnemonic phrase to a gitignored `.env` file so that it can be used for, e.g., the `@truffle/hdwallet-provider`. But in general it is a bad practice to copy-paste your keys, especially since we have wallets like MetaMask that can send transactions for us.
 
 This is why we developed the Truffle Dashboard, an easy way to use your existing MetaMask wallet for your deployments and for other transactions that you need to send from a command line context. Because the Truffle Dashboard connects directly to MetaMask it is also possible to use it in combination with hardware wallets like Ledger or Trezor.
 
