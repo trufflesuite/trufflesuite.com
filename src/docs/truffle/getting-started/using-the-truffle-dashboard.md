@@ -44,7 +44,7 @@ module.exports = {
 
 ## Connecting to the dashboard
 
-To make connecting to the Truffle Dashboard easy, Truffle includes a builtin network named "dashboard". This builtin network automatically uses the port and host specified in the dashboard config or falls back to the default `http://localhost:24012`. This builtin network can be used with all your deployments or scripts.
+To make connecting to the Truffle Dashboard easy, Truffle includes a built in network named "dashboard". This built in network automatically uses the port and host specified in the dashboard configuration or falls back to the default `http://localhost:24012`. This built in network can be used with all your deployments or scripts.
 
 ```
 truffle migrate --network dashboard
