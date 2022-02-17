@@ -51,7 +51,7 @@ truffle migrate --network dashboard
 truffle console --network dashboard
 ```
 
-From there every Ethereum RPC request will be forwarded from Truffle to the Truffle Dashboard, where the user can inspect the RPC requests and process them with MetaMask.
+From there, every Ethereum RPC request will be forwarded from Truffle to the Truffle Dashboard, where the user can inspect the RPC requests and process them with MetaMask.
 
 ![Truffle Dashboard Transaction](/img/docs/truffle/using-the-truffle-dashboard/truffle-dashboard-transaction.png)
 
