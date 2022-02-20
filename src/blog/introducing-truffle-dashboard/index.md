@@ -4,9 +4,7 @@ hide:
   - navigation
 ---
 
-<!-- ![truffle dashboard banner](./ganache-v7.png) -->
-
-...
+![truffle dashboard - banner](./truffle-dashboard-private-keys.jpg)
 
 **By [Kingsley Arinze](https://twitter.com/heydamali)**
 
@@ -41,7 +39,7 @@ Running `truffle init` walks you through the process of setting up a new truffle
 
 Running `truffle dashboard` in a separate terminal window starts a dashboard at `http://localhost:24012` and opens the Dashboard in a new tab in your default browser.
 
-...
+![truffle dashboard - start from the cli](./truffle-dashboard-cli.png)
 
 You can also configure the port and host to run the dashboard in two ways:
 
@@ -63,17 +61,17 @@ host: "localhost"
 
 Truffle Dashboard requires you to connect your wallet to get started. Click the `Connect Wallet` button and connect Truffle Dashboard to your wallet the same way you would for any other dapp.
 
-...
+![truffle dashboard - connect wallet](./truffle-dashboard-connect-wallet.png)
 
 Next, Truffle Dashboard prompts you to confirm that you are connected to the correct network, since it uses the wallet's default active network. Make sure you switch to the desired network before confirming. Every transaction you process will be sent to the confirmed network.
 
-...
+![truffle dashboard - confirm](./truffle-dashboard-confirm.png)
 
 During development, a typical workflow is first to deploy and test out your smart contract code on a development blockchain like [Ganache](https://trufflesuite.com/ganache) before deploying to your favorite test network. 
 
 You can still maintain this workflow with Truffle Dashboard by simply importing Ganache’s local blockchain network into your MetaMask wallet as usual and pointing Truffle Dashboard to use it as your confirmed network.
 
-...
+![truffle dashboard - select network](./truffle-dashboard-select-network.png)
 
 ## Connecting your Truffle project to Truffle Dashboard 🎉
 
@@ -106,7 +104,7 @@ truffle console --network dashboard
 
 When you run the above commands or any RPC request, they are forwarded to the Truffle Dashboard, where you can inspect and process them with MetaMask by accepting or declining that request.
 
-...
+![truffle dashboard - process transaction](./truffle-dashboard-sign.png)
 
 As with every zero-configuration feature, you are allowed to override the default configuration by adding a network called `dashboard` to your Truffle configuration file and specifying its options as you would for any other network:
 
