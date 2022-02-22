@@ -31,7 +31,7 @@ If you’ve ever deployed a smart contract, chances are you’ve had to think tw
 
 Truffle Dashboard completely removes the need to manually interact with your wallet's mnemonic phrase or private keys throughout the development lifecycle.  **You can now safely deploy your smart contracts to your network of choice without Truffle ever needing to know what your keys look like.** Truffle seamlessly connects to your MetaMask wallet without any configuration, using the currently selected account and network for Truffle's deployment configuration.
 
-_But that's not all!_ To make things more interesting, **you can use Truffle Dashboard with any development tool.** For example, if you use Hardhat or Foundry to develop your smart contracts, you can also integrate with Truffle Dashboard for this improved security workflow. See the [Using Truffle Dashboard with other development tools](/docs/truffle/getting-started/using-the-truffle-dashboard) section of our docs to learn how.
+_But that's not all!_ To make things more convenient, **you can use Truffle Dashboard with any development tool.** For example, if you use Hardhat or Foundry to develop your smart contracts, you can also integrate with Truffle Dashboard for this improved security workflow. See the [Using Truffle Dashboard with other development tools](/docs/truffle/getting-started/using-the-truffle-dashboard) section of our docs to learn how.
 
 ## How does Truffle Dashboard Work? ⚙️🔧
 
