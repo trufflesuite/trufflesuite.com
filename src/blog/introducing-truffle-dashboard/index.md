@@ -8,6 +8,8 @@ hide:
 
 **By [Kingsley Arinze](https://twitter.com/heydamali)**
 
+## Introduction 🧑‍🔬👋
+
 One of our core missions at Truffle is to make the right developer tooling available to builders in the web3 space while putting security at the forefront. As smart contract developers, among the many requirements you have for your tools, you require tools to keep your sensitive information secret and safe. At Truffle, we always seek to reduce the chances of your security being compromised, regardless of where you are in the development lifecycle.
 
 If you’ve ever had to deploy a smart contract, chances are you’ve had to think twice about sharing your private keys with Truffle or other development tools, or maybe you've had to be vigilant not to accidentally share those keys on GitHub. To deploy smart contracts to an Ethereum network (mainnet, testnet, or a local blockchain on Ganache), you've needed to copy your wallet mnemonic phrase or private key and store it in an insecure location to share with a tool like HDWalletProvider. This has been necessary because this mnemonic or private key gives Truffle the permissions it needs to sign transactions on your behalf.
