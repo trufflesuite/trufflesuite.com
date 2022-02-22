@@ -8,7 +8,7 @@ hide:
 
 **By [Kingsley Arinze](https://twitter.com/heydamali)**
 
-## Introduction 🧑‍🔬👋
+## Don't get rekt 🙀
 
 One of our core missions at Truffle is to make the right developer tooling available to builders in the web3 space while putting security at the forefront. As smart contract developers, among the many requirements you have for your tools, you require tools to keep your sensitive information secret and safe. At Truffle, we always seek to reduce the chances of your security being compromised, regardless of where you are in the development lifecycle.
 
