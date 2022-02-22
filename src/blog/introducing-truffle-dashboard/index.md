@@ -4,13 +4,20 @@ hide:
   - navigation
 ---
 
-![truffle dashboard - banner](./truffle-dashboard-private-keys.jpg)
+![truffle dashboard - banner](./truffle-dashboard-private-keys.png)
 
 **By [Kingsley Arinze](https://twitter.com/heydamali)**
 
 One of our core missions at Truffle is to make the right developer tooling available to builders in the web3 space while putting security at the forefront. Among the many requirements smart contract developers have for their tools, they require that these tools are safe and are able to keep sensitive information secret, reducing their chances of being compromised during development. 
 
 If you’ve ever had to deploy a smart contract, chances are you’ve had to think twice about sharing your private keys with Truffle or other development tools or be vigilant to not accidentally share and compromise those keys on GitHub. To deploy smart contracts to an Ethereum network (mainnet, testnet, or a local blockchain on Ganache), you need to copy your wallet mnemonic phrase or private key and store it in an insecure location to share with a tool like HDWalletProvider. The mnemonic or private key gives Truffle the permissions it needs to sign transactions on your behalf. 
+
+<figure markdown>
+  ![Screenshot of an example truffle-config.js using HDWalletProvider with hardcoded mnemonic and Infura key.](./secrets-oh-no.png)
+  <figcaption>Screenshot of an example truffle-config.js using HDWalletProvider with hardcoded mnemonic and Infura key.</figcaption>
+</figure>
+
+
 
 Storing one’s mnemonic seed phrase or private keys in regular files poses a considerable security concern. Your seed phrase can easily be hijacked by JavaScript code, accidentally committed to git or targeted by bad actors.
 
