@@ -159,6 +159,6 @@ With this setup, when you run the command `hardhat deploy --network truffle-dash
 
 Download the latest version of Truffle and start using Truffle Dashboard today by running the command `npm uninstall -g truffle && npm install -g truffle`.  Please refer to the [Truffle Dashboard](/docs/truffle/getting-started/using-the-truffle-dashboard.html) feature documentation for more.
 
-The Truffle Dashboard was borne out of our years of experience working on developer tools for the Ethereum ecosystem and receiving valuable feedback from our users. We are extremely excited to release this feature. We hope you're excited to try it out.
+Truffle Dashboard was borne out of our years of experience working on developer tools for the Ethereum ecosystem and receiving valuable feedback from our users. We are extremely excited to release this feature. We hope you're excited to try it out.
 
 With ❤️️ from the Truffle team. Questions/comments/concerns? Please shoot us a tweet [@trufflesuite](https://twitter.com/trufflesuite)!
