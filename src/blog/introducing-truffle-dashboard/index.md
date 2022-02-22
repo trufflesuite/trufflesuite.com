@@ -150,7 +150,7 @@ module.exports = {
 };
 ```
 
-With this setup, when you run the command `hardhat deploy --network truffle-dashboard`, the request is forwarded to the Dashboard where you can inspect and process them.
+With this setup, when you run the command `hardhat deploy --network truffle-dashboard`, the request is forwarded to Truffle Dashboard, where you can inspect and process them.
 
 ## Conclusion ❤️️
 
