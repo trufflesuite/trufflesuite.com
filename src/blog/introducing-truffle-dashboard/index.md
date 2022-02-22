@@ -156,10 +156,9 @@ With this setup, when you run the command `hardhat deploy --network truffle-dash
 
 **With Truffle Dashboard, you no longer have to worry about giving your private keys to someone else's JavaScript code.** You can now relax and leave it up to MetaMask to keep your private keys safe and sign transactions on your behalf.
 
+
+Download the latest version of Truffle and start using Truffle Dashboard today by running the command `npm uninstall -g truffle && npm install -g truffle`.  Please refer to the [Truffle Dashboard](/docs/truffle/getting-started/using-the-truffle-dashboard.html) feature documentation for more.
+
 The Truffle Dashboard was borne out of our years of experience working on developer tools for the Ethereum ecosystem and receiving valuable feedback from our users. We are extremely excited to release this feature. We hope you're excited to try it out.
 
-Download the latest version of Truffle and start using Truffle Dashboard today by running the command `npm uninstall -g truffle && npm install -g truffle` (as an existing Truffle user) or `npm install -g truffle` (as a new user).  Please refer to the [Truffle Dashboard](/docs/truffle/getting-started/using-the-truffle-dashboard.html) feature documentation for more.
-
-We are curious to hear what you think about it. Shoot us a tweet [@trufflesuite](https://twitter.com/trufflesuite).
-
-With ❤️️ from the Truffle team.
+With ❤️️ from the Truffle team. Questions/comments/concerns? Please shoot us a tweet [@trufflesuite](https://twitter.com/trufflesuite)!
