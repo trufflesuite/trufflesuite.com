@@ -510,13 +510,13 @@ Now that we've created the smart contract, deployed it to our local test blockch
 
 Included with the `pet-shop` Truffle Box was code for the app's front-end. That code exists within the `src/` directory.
 
-The front-end doesn't use a build system (webpack, grunt, etc.) to be as easy as possible to get started. The structure of the app is already there; we'll be filling in the functions which are unique to Ethereum. This way, you can take this knowledge and apply it to your own front-end development.
+The front-end uses [create-react-app](https://create-react-app.dev/) to be as easy as possible to get started. The structure of the app is already there; we'll be filling in the functions which are unique to Ethereum. This way, you can take this knowledge and apply it to your own front-end development.
 
-### Instantiating web3
+### Initializing the app
 
-1. Open `/src/js/app.js` in a text editor.
+1. Open `/src/App.js` in a text editor.
 
-1. Examine the file. Note that there is a global `App` object to manage our application, load in the pet data in `init()` and then call the function `initWeb3()`. The [web3 JavaScript library](https://github.com/ethereum/web3.js/) interacts with the Ethereum blockchain. It can retrieve user accounts, send transactions, interact with smart contracts, and more.
+1. Examine the file. Note that this is our top-level component to manage our application. Load in the pet data in `init()` and then call the function `initWeb3()`. It can retrieve user accounts, send transactions, interact with smart contracts, and more.
 
 1. Remove the multi-line comment from within `initWeb3` and replace it with the following:
 
