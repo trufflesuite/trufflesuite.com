@@ -233,25 +233,23 @@ Now we are ready to create our own migration script.
 1. Add the following content to the `2_deploy_contracts.js` file:
 
    ```javascript
-   var Adoption = artifacts.require("Adoption");
+   const Adoption = artifacts.require("Adoption");
 
-   module.exports = function(deployer) {
-     deployer.deploy(Adoption);
+   module.exports = async function (deployer) {
+     await deployer.deploy(Adoption);
    };
    ```
 
-1. Before we can migrate our contract to the blockchain, we need to have a blockchain running. For this tutorial, we're going to use [Ganache](/ganache), a personal blockchain for Ethereum development you can use to deploy contracts, develop applications, and run tests. If you haven't already, [download Ganache](/ganache) and double click the icon to launch the application. This will generate a blockchain running locally on port 7545.
+1. Before we can migrate our contract to the blockchain, we need to have a blockchain running. For this tutorial, we're going to use [Ganache](/ganache), a personal blockchain for Ethereum development you can use to deploy contracts, develop applications, and run tests. If you haven't already, install Ganache. In a new terminal run `ganache`. You should see Ganache start up and display a list of funded addresses available along with some other settings. You now have a test blockchain running on your computer at port 8545!
 
    <p class="alert alert-info">
-     <strong>Note</strong>: Read more about Ganache in the <a href="/docs/ganache/quickstart">Ganache documentation</a>.
+     <strong>Note</strong>: Read more about Ganache in the <a href="https://github.com/trufflesuite/ganache">Ganache documentation</a>.
    </p>
-
-   ![Ganache on first launch](/img/tutorials/pet-shop/ganache-initial.png "Ganache on first launch")
 
 1. Back in our terminal, migrate the contract to the blockchain.
 
    ```shell
-   truffle migrate
+   truffle migrate --network ganache
    ```
 
    You should see output similar to the following:
@@ -290,9 +288,7 @@ Now we are ready to create our own migration script.
 
    You can see the migrations being executed in order, followed by some information related to each migration. (Your information will differ.)
 
-1. In Ganache, note that the state of the blockchain has changed. The blockchain now shows that the current block, previously `0`, is now `4`. In addition, while the first account originally had 100 ether, it is now lower, due to the transaction costs of migration. We'll talk more about transaction costs later.
-
-   ![Ganache after migration](/img/tutorials/pet-shop/ganache-migrated.png "Ganache after migration")
+1. In the terminal where Ganache is running, you will note a lot of logging due to the rpc requests being sent from Truffle to alter the state.
 
 You've now written your first smart contract and deployed it to a locally running blockchain. It's time to interact with our smart contract now to make sure it does what we want.
 
@@ -308,7 +304,8 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 1. Add the following content to the `TestAdoption.sol` file:
 
   ```solidity
-  pragma solidity ^0.5.0;
+  // SPDX-License-Identifier: MIT
+  pragma solidity ^0.8.0;
 
   import "truffle/Assert.sol";
   import "truffle/DeployedAddresses.sol";
@@ -349,7 +346,7 @@ To test the `adopt()` function, recall that upon success it returns the given `p
 1. Add the following function within the `TestAdoption.sol` smart contract, after the declaration of `expectedPetId`:
 
    ```solidity
-   // Testing the adopt() function
+   // test the adopt() function
    function testUserCanAdoptPet() public {
      uint returnedId = adoption.adopt(expectedPetId);
 
@@ -369,7 +366,7 @@ Remembering from above that public variables have automatic getter methods, we c
 1. Add this function below the previously added function in `TestAdoption.sol`.
 
    ```solidity
-   // Testing retrieval of a single pet's owner
+   // test retrieval of a single pet's owner
    function testGetAdopterAddressByPetId() public {
      address adopter = adoption.adopters(expectedPetId);
 
@@ -386,7 +383,7 @@ Since arrays can only return a single value given a single key, we create our ow
 1. Add this function below the previously added function in `TestAdoption.sol`.
 
    ```solidity
-   // Testing retrieval of all pet owners
+   // test retrieval of all pet owners
    function testGetAdopterAddressByPetIdInArray() public {
      // Store adopters in memory rather than contract's storage
      address[16] memory adopters = adoption.getAdopters();
@@ -415,7 +412,7 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
     let expectedAdopter;
 
     before(async () => {
-        adoption = await Adoption.deployed();
+      adoption = await Adoption.deployed();
     });
 
     describe("adopting a pet and retrieving account addresses", async () => {
@@ -450,7 +447,7 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
       expectedAdopter = accounts[0];
     });
 
-    it("can fetch the address of an owner by pet id", async () => {
+    it("fetches the address of an owner by pet id", async () => {
       const adopter = await adoption.adopters(8);
       assert.equal(adopter, expectedAdopter, "The owner of the adopted pet should be the first account.");
     });
@@ -469,7 +466,7 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
   1. Add this function below the previously added function in `testAdoption.test.js`.
 
   ```
-  it("can fetch the collection of all pet owners' addresses", async () => {
+  it("fetches the collection of all pet owners' addresses", async () => {
     const adopters = await adoption.getAdopters();
     assert.equal(adopters[8], expectedAdopter, "The owner of the adopted pet should be in the collection.");
   });
@@ -496,7 +493,7 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
    > Compiling ./test/TestAdoption.sol
    > Artifacts written to /var/folders/z3/v0sd04ys11q2sh8tq38mz30c0000gn/T/test-11934-19747-g49sra.0ncrr
    > Compiled successfully using:
-      - solc: 0.5.0+commit.1d4f565a.Emscripten.clang
+      - solc: 0.8.12+commit.f00d7308.Emscripten.clang
 
      TestAdoption
        ✓ testUserCanAdoptPet (91ms)
