@@ -101,7 +101,7 @@ Once this operation is completed, you'll now have a project structure with the f
 
    You will see the following output:
 
-    ```shell
+   ```shell
      TestMetacoin
        √ testInitialBalanceUsingDeployedContract (71ms)
        √ testInitialBalanceWithNewMetaCoin (59ms)
