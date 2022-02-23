@@ -53,15 +53,20 @@ npm install -g truffle
 
 To verify that Truffle is installed properly, type `truffle version` on a terminal. If you see an error, make sure that your npm modules are added to your path.
 
-We also will be using [Ganache](/ganache), a personal blockchain for Ethereum development you can use to deploy contracts, develop applications, and run tests. You can download Ganache by navigating to https://trufflesuite.com/ganache and clicking the "Download" button.
+We also will be using [Ganache](/ganache), a personal blockchain for Ethereum development you can use to deploy contracts, develop applications, and run tests. You can install Ganache using npm as well.
+
+```shell
+npm install -g ganache
+```
+
 
 <p class="alert alert-info">
-<strong>Note</strong>: If you are developing in an environment without a graphical interface, you can also use Truffle Develop, Truffle's built-in personal blockchain, instead of Ganache. You will need to change some settings---such as the port the blockchain runs on---to adapt the tutorial for Truffle Develop.
+<strong>Note</strong>: If you would like, you can also use Truffle Develop, Truffle's built-in personal blockchain, instead of Ganache. You will need to change some settings---such as the port the blockchain runs on---to adapt the tutorial for Truffle Develop.
 </p>
 
 ## Creating a Truffle project using a Truffle Box
 
-1. Truffle initializes in the current directory, so first create a directory in your development folder of choice and then moving inside it.
+1. Truffle initializes in the current directory, so first create a directory in your development folder of choice and then move inside it.
 
   ```shell
   mkdir pet-shop-tutorial
@@ -69,7 +74,7 @@ We also will be using [Ganache](/ganache), a personal blockchain for Ethereum de
   cd pet-shop-tutorial
   ```
 
-1. We've created a special [Truffle Box](/boxes) just for this tutorial called `pet-shop`, which includes the basic project structure as well as code for the user interface. Use the `truffle unbox` command to unpack this Truffle Box.
+1. We've created a special [Truffle Box](/boxes) just for this tutorial called `react-pet-shop`, which includes the basic project structure as well as code for the user interface. Use the `truffle unbox` command to unpack this Truffle Box.
 
   ```shell
   truffle unbox pet-shop
@@ -85,10 +90,10 @@ The default Truffle directory structure contains the following:
 
 * `contracts/`: Contains the [Solidity](https://solidity.readthedocs.io/) source files for our smart contracts. There is an important contract in here called `Migrations.sol`, which we'll talk about later.
 * `migrations/`: Truffle uses a migration system to handle smart contract deployments. A migration is an additional special smart contract that keeps track of changes.
-* `test/`: Contains both JavaScript and Solidity tests for our smart contracts
+* `test/`: Contains JavaScript and/or Solidity tests for our smart contracts
 * `truffle-config.js`: Truffle configuration file
 
-The `pet-shop` Truffle Box has extra files and folders in it, but we won't worry about those just yet.
+The `pet-shop` Truffle Box has some extra files and folders in it, but we won't worry about those just yet.
 
 
 ## Writing the smart contract
@@ -100,7 +105,8 @@ We'll start our dapp by writing the smart contract that acts as the back-end log
 1. Add the following content to the file:
 
    ```solidity
-   pragma solidity ^0.5.0;
+   // SPDX-License-Identifier: MIT
+   pragma solidity ^0.8.0;
 
    contract Adoption {
 
@@ -109,7 +115,8 @@ We'll start our dapp by writing the smart contract that acts as the back-end log
 
 Things to notice:
 
-* The minimum version of Solidity required is noted at the top of the contract: `pragma solidity ^0.5.0;`. The `pragma` command means "*additional information that only the compiler cares about*", while the caret symbol (^) means "*the version indicated or higher*".
+* The first line denotes the license for the contract - in our case MIT. This is written in comments, `//` indicates that everything following on the same line is a comment in Solidity.
+* The minimum version of Solidity required is noted at the top of the contract: `pragma solidity ^0.8.0;`. The `pragma` command means "*additional information that only the compiler cares about*", while the caret symbol (^) means "*the version indicated or higher*".
 * Like JavaScript or PHP, statements are terminated with semicolons.
 
 ### Variable setup
@@ -135,7 +142,7 @@ Let's allow users to make adoption requests.
 1. Add the following function to the smart contract after the variable declaration we set up above.
 
    ```solidity
-   // Adopting a pet
+   // adopt a pet
    function adopt(uint petId) public returns (uint) {
      require(petId >= 0 && petId <= 15);
 
@@ -165,7 +172,7 @@ As mentioned above, array getters return only a single value from a given key. O
 1. Add the following `getAdopters()` function to the smart contract, after the `adopt()` function we added above:
 
    ```solidity
-   // Retrieving the adopters
+   // retrie the adopters' addresses
    function getAdopters() public view returns (address[16] memory) {
      return adopters;
    }
@@ -204,7 +211,7 @@ Solidity is a compiled language, meaning we need to compile our Solidity to byte
    > Compiling ./contracts/Migrations.sol
    > Artifacts written to /Users/cruzmolina/Code/truffle-projects/metacoin/build/contracts
    > Compiled successfully using:
-      - solc: 0.5.0+commit.1d4f565a.Emscripten.clang
+      - solc: 0.8.12+commit.f00d7308.Emscripten.clang
    ```
 
 ### Migration
@@ -292,7 +299,7 @@ You've now written your first smart contract and deployed it to a locally runnin
 
 ## Testing the smart contract using Solidity
 
-<details markdown="1"> 
+<details markdown="1">
 <summary> Expand This Section </summary>
 Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this tutorial, we'll be writing our tests in Solidity.
 
@@ -391,7 +398,7 @@ Since arrays can only return a single value given a single key, we create our ow
 Note the **memory** attribute on `adopters`. The memory attribute tells Solidity to temporarily store the value in memory, rather than saving it to the contract's storage. Since `adopters` is an array, and we know from the first adoption test that we adopted pet `expectedPetId`, we compare the testing contracts address with location `expectedPetId` in the array.
 </details>
 
-## Testing the smart contract using JavaScript 
+## Testing the smart contract using JavaScript
 
 <details markdown="1">
 <summary> Expand This Section </summary>
@@ -402,11 +409,11 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 
   ```
   const Adoption = artifacts.require("Adoption");
-  
+
   contract("Adoption", (accounts) => {
     let adoption;
     let expectedAdopter;
-    
+
     before(async () => {
         adoption = await Adoption.deployed();
     });
@@ -420,21 +427,21 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
   });
 
   ```
-  We start the contract by importing : 
+  We start the contract by importing :
   * `Adoption`: The smart contract we want to test.
   We begin our test by importing our `Adoption` contract using `artifacts.require`.
 
   **Note**: When writing this test, our callback function take the argument `accounts`. This provides us with the accounts available on the network when using this test.
 
-  Then, we make use of the `before` to provide initial setups for the following: 
+  Then, we make use of the `before` to provide initial setups for the following:
   * Adopt a pet with id 8 and assign it to the first account within the test accounts on the network.
   * This function later is used to check whether the `petId: 8` has been adopted by `accounts[0]`.
 
-  ### Testing the adopt function 
+  ### Testing the adopt function
 
   To test the `adopt` function, recall that upon success it returns the given `adopter`. We can ensure that the adopter based on given petID was returned and is compared with the `expectedAdopter` within the `adopt` function.
 
-  1. Add the following function within the `testAdoption.test.js` test file, after the declaration of `before` code block. 
+  1. Add the following function within the `testAdoption.test.js` test file, after the declaration of `before` code block.
 
   ```
   describe("adopting a pet and retrieving account addresses", async () => {
@@ -460,7 +467,7 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
   Since arrays can only return a single value given a single key, we create our own getter for the entire array.
 
   1. Add this function below the previously added function in `testAdoption.test.js`.
-  
+
   ```
   it("can fetch the collection of all pet owners' addresses", async () => {
     const adopters = await adoption.getAdopters();
