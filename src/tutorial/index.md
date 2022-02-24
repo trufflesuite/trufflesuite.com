@@ -577,7 +577,7 @@ Things to notice:
 
 * We then call `markAdopted` in case any pets are already adopted from a previous visit. We've encapsulated this in a separate function since we'll need to update the UI any time we make a change to the smart contract's data.
 
-### Getting The Adopted Pets and Updating The UI
+### Getting the adopted pets and updating the UI
 
 1. Still in `/src/App.js`, remove the multi-line comment from `markAdopted` and replace it with the following:
 
@@ -600,45 +600,41 @@ Things to notice:
 
 * We then call `getAdopters` on that instance which will give us an array containing the addresses that have adopted each pet. We initialized this array filled with the zero address (`"0x0000000000000000000000000000000000000000"`). If a pet has the zero address as an adopter, it signifies that it has not yet been adopted.
 
-* Since `getAdopters` is purely a "view" function, we do not need to spend any ether to execute it. This call does not change state and only reads from it to obtain the values we are interested in.
+* Since `getAdopters` is purely a "view" function, to access the data we only have to make a **call**. Because we are only reading state and not altering it, we do not need to spend any ether to execute it.
 
 * After calling `getAdopters`, we update the state with this new adopters array. Each Pet component that gets created in this component gets its adopter passed in the `props`. If it has no adopter, the button will be clickable. If it has an adopter, the button will be disabled because it cannot be adopted.
 
 
-### Handling the adopt() Function
+### Creating the handleAdopt function
 
-1. Still in `/src/js/app.js`, remove the multi-line comment from `handleAdopt` and replace it with the following:
+1. Still in `/src/App.js`, remove the multi-line comment from `handleAdopt` and replace it with the following:
 
-   ```javascript
-   var adoptionInstance;
+  ```javascript
+    // create a reference to the deployed Adoption contract
+    const adoptionInstance = await this.state.contracts.Adoption.deployed();
 
-   web3.eth.getAccounts(function(error, accounts) {
-     if (error) {
-       console.log(error);
-     }
+    // get the user's accounts
+    const accounts = await this.state.provider.request({
+      method: "eth_accounts"
+    });
 
-     var account = accounts[0];
+    // use the first address as the adopter for the pet - this address
+    // corresponds to the currently selected address in MetaMask
+    await adoptionInstance.adopt(petId, { from: accounts[0] });
 
-     App.contracts.Adoption.deployed().then(function(instance) {
-       adoptionInstance = instance;
-
-       // Execute adopt as a transaction by sending account
-       return adoptionInstance.adopt(petId, {from: account});
-     }).then(function(result) {
-       return App.markAdopted();
-     }).catch(function(err) {
-       console.log(err.message);
-     });
-   });
-   ```
+    // update the UI to show all adopted pets as "adopted"
+    await this.markAdopted();
+  ```
 
 Things to notice:
 
-* We use web3 to get the user's accounts. In the callback after an error check, we then select the first account.
+* First, we get the deployed contract as we did above and store the instance in `adoptionInstance`.
 
-* From there, we get the deployed contract as we did above and store the instance in `adoptionInstance`. This time though, we're going to send a **transaction** instead of a call. Transactions require a "from" address and have an associated cost. This cost, paid in ether, is called **gas**. The gas cost is the fee for performing computation and/or storing data in a smart contract. We send the transaction by executing the `adopt()` function with both the pet's ID and an object containing the account address, which we stored earlier in `account`.
+* We then use the provider to get the user's accounts.
 
-* The result of sending a transaction is the transaction object. If there are no errors, we proceed to call our `markAdopted()` function to sync the UI with our newly stored data.
+* Now we are going to call a function in our `Adoption` contract which will change the state of the blockchain. In order to do this, we're going to send a **transaction** instead of a **call**. Transactions require a "from" address and have an associated cost. This cost, paid in ether, is called **gas**. The gas cost is the fee for performing computation and/or storing data in a smart contract. We send the transaction by executing the `adopt` function with both the pet's ID and an object containing the account address we want to have adopt the pet. The first address in the `accounts` array corresponds to the address that the user has active in MetaMask.
+
+* We then call `markAdopted` to update the state with the new state of our contract. This, in turn, will update our UI by updating the adopters that are passed to the Pet component.
 
 
 ## Interacting with the dapp in a browser
