@@ -562,7 +562,7 @@ Now that we can interact with Ethereum via web3, we need to instantiate our smar
       }
     });
 
-    // use the Adoption contract to retrieve and mark the adopted pets
+    // use the Adoption contract to retrieve the adopters and mark the adopted pets
     await this.markAdopted();
     });
   ```
@@ -571,47 +571,39 @@ Things to notice:
 
 * We first retrieve the artifact file for our smart contract. **Artifacts are information about our contract such as its deployed address and Application Binary Interface (ABI)**. **The ABI is a JavaScript object defining how to interact with the contract including its variables, functions and their parameters.**
 
-* Once we have the artifacts in our callback, we pass them to `TruffleContract()`. This creates an instance of the contract we can interact with.
+* Once we have the artifacts in our callback, we pass them to `TruffleContract`. This creates an instance of the contract we can interact with.
 
-* With our contract instantiated, we set its web3 provider using the `App.web3Provider` value we stored earlier when setting up web3.
+* With our contract instantiated, we set its provider using the provider value we stored earlier in the state in `initProvider`.
 
-* We then call the app's `markAdopted()` function in case any pets are already adopted from a previous visit. We've encapsulated this in a separate function since we'll need to update the UI any time we make a change to the smart contract's data.
+* We then call `markAdopted` in case any pets are already adopted from a previous visit. We've encapsulated this in a separate function since we'll need to update the UI any time we make a change to the smart contract's data.
 
 ### Getting The Adopted Pets and Updating The UI
 
-1. Still in `/src/js/app.js`, remove the multi-line comment from `markAdopted` and replace it with the following:
+1. Still in `/src/App.js`, remove the multi-line comment from `markAdopted` and replace it with the following:
 
-   ```javascript
-   var adoptionInstance;
+  ```javascript
+    // create a reference to the deployed Adoption contract
+    const adoptionInstance = await this.state.contracts.Adoption.deployed();
 
-   App.contracts.Adoption.deployed().then(function(instance) {
-     adoptionInstance = instance;
+    // make a call to the Adoption contract's `getAdopters` function in order
+    // to determine which pets are already adopted - this retrieves the
+    // addresses that have adopted pets from the blockchain
+    const adopters = await adoptionInstance.getAdopters();
 
-     return adoptionInstance.getAdopters.call();
-   }).then(function(adopters) {
-     for (i = 0; i < adopters.length; i++) {
-       if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
-         $('.panel-pet').eq(i).find('button').text('Success').attr('disabled', true);
-       }
-     }
-   }).catch(function(err) {
-     console.log(err.message);
-   });
-   ```
+    // set the adopters list in the state for this component
+    this.setState({ adopters });
+  ```
 
 Things to notice:
 
-* We access the deployed `Adoption` contract, then call `getAdopters()` on that instance.
+* We first access the deployed `Adoption` contract in the component's state.
 
-* We first declare the variable `adoptionInstance` outside of the smart contract calls so we can access the instance after initially retrieving it.
+* We then call `getAdopters` on that instance which will give us an array containing the addresses that have adopted each pet. We initialized this array filled with the zero address (`"0x0000000000000000000000000000000000000000"`). If a pet has the zero address as an adopter, it signifies that it has not yet been adopted.
 
-* Using **call()** allows us to read data from the blockchain without having to send a full transaction, meaning we won't have to spend any ether.
+* Since `getAdopters` is purely a "view" function, we do not need to spend any ether to execute it. This call does not change state and only reads from it to obtain the values we are interested in.
 
-* After calling `getAdopters()`, we then loop through all of them, checking to see if an address is stored for each pet. Since the array contains address types, Ethereum initializes the array with 16 empty addresses. This is why we check for an empty address string rather than null or other falsey value.
+* After calling `getAdopters`, we update the state with this new adopters array. Each Pet component that gets created in this component gets its adopter passed in the `props`. If it has no adopter, the button will be clickable. If it has an adopter, the button will be disabled because it cannot be adopted.
 
-* Once a `petId` with a corresponding address is found, we disable its adopt button and change the button text to "Success", so the user gets some feedback.
-
-* Any errors are logged to the console.
 
 ### Handling the adopt() Function
 
