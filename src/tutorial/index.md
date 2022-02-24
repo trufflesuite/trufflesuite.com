@@ -516,40 +516,32 @@ The front-end uses [create-react-app](https://create-react-app.dev/) to be as ea
 
 1. Open `/src/App.js` in a text editor.
 
-1. Examine the file. Note that this is our top-level component to manage our application. Load in the pet data in `init()` and then call the function `initWeb3()`. It can retrieve user accounts, send transactions, interact with smart contracts, and more.
+1. Examine the file. It contains an `App` component to manage our application and after the component mounts, the `componentDidMount` function gets called. In it we initialize the provider in `initProvider` and then call the function `initContract` to fetch our contract data. The contract is where we store the addresses that have adopted pets and we use this information to update the UI to reflect which pets have been adopted. The provider we gain a reference to in `initProvider` allows us to interact with the Ethereum blockchain. It can retrieve user accounts, send transactions, interact with smart contracts, and more.
 
-1. Remove the multi-line comment from within `initWeb3` and replace it with the following:
+1. Remove the multi-line comment from within `initProvider` and replace it with the following:
 
-   ```javascript
-   // Modern dapp browsers...
-   if (window.ethereum) {
-     App.web3Provider = window.ethereum;
-     try {
-       // Request account access
-       await window.ethereum.request({ method: "eth_requestAccounts" });;
-     } catch (error) {
-       // User denied account access...
-       console.error("User denied account access")
-     }
-   }
-   // Legacy dapp browsers...
-   else if (window.web3) {
-     App.web3Provider = window.web3.currentProvider;
-   }
-   // If no injected web3 instance is detected, fall back to Ganache
-   else {
-     App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
-   }
-   web3 = new Web3(App.web3Provider);
-   ```
+  ```javascript
+    // retrieve a reference to the provider
+    const provider = await detectEthereumProvider();
+
+    if (provider) {
+      // create a reference to the provider in the state
+      this.setState({
+        provider
+      });
+    } else {
+      // tell the user we cannot find a provider and they must install MetaMask
+      alert("You must install MetaMask to adopt a pet.");
+    }
+  ```
 
 Things to notice:
 
-* First, we check if we are using modern dapp browsers or the more recent versions of [MetaMask](https://github.com/MetaMask) where an `ethereum` provider is injected into the `window` object. If so, we use it to create our web3 object, but we also need to explicitly request access to the accounts with `ethereum.enable()`.
+* First, we use MetaMask's package [`@metamask/detect-provider`](https://www.npmjs.com/package/@metamask/detect-provider) to obtain a reference to the provider.
 
-* If the `ethereum` object does not exist, we then check for an injected `web3` instance. If it exists, this indicates that we are using an older dapp browser (like [Mist](https://github.com/ethereum/mist) or an older version of MetaMask). If so, we get its provider and use it to create our web3 object.
+* If there is no provider loaded then we tell the user to install MetaMask.
 
-* If no injected web3 instance is present, we create our web3 object based on our local provider. (This fallback is fine for development environments, but insecure and not suitable for production.)
+* We then create a reference to the provider in the state so that we can use it later.
 
 ### Instantiating the contract
 
@@ -557,19 +549,23 @@ Now that we can interact with Ethereum via web3, we need to instantiate our smar
 
 1. Still in `/src/js/app.js`, remove the multi-line comment from within `initContract` and replace it with the following:
 
-   ```javascript
-   $.getJSON('Adoption.json', function(data) {
-     // Get the necessary contract artifact file and instantiate it with @truffle/contract
-     var AdoptionArtifact = data;
-     App.contracts.Adoption = TruffleContract(AdoptionArtifact);
+  ```javascript
+    // use the built artifact to instantiate a TruffleContract object
+    const AdoptionArtifact = TruffleContract(Adoption);
 
-     // Set the provider for our contract
-     App.contracts.Adoption.setProvider(App.web3Provider);
+    // set the provider for our contract
+    AdoptionArtifact.setProvider(this.state.provider);
 
-     // Use our contract to retrieve and mark the adopted pets
-     return App.markAdopted();
-   });
-   ```
+    this.setState({
+      contracts: {
+        Adoption: AdoptionArtifact
+      }
+    });
+
+    // use the Adoption contract to retrieve and mark the adopted pets
+    await this.markAdopted();
+    });
+  ```
 
 Things to notice:
 
