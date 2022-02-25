@@ -646,7 +646,7 @@ Now we're ready to use our dapp!
 The easiest way to interact with our dapp in a browser is through [MetaMask](https://metamask.io/), a browser extension for both Chrome and Firefox.
 
 <p class="alert alert-info">
-<strong>Note</strong>: If you already use Metamask, you'll need to switch accounts. Before doing that, make sure that you have your personal secret phrase backed up, since you'll need it to log back into your personal account (This secret phrase should definitely remain secret and you won't be able to access your account without it! Check [MetaMask's Basic Safety and Security Tips](https://metamask.zendesk.com/hc/en-us/articles/360015489591-Basic-Safety-and-Security-Tips-for-MetaMask) for more info.) After having your secret phrase safely backed up, you can safely switch to Ganache's test account. To do this, you can click your account logo and then "Lock". After this you can "import using Secret Recovery Phrase" to insert the Ganache mnemonic.
+<strong>Note</strong>: If you already use MetaMask, you'll need to switch accounts. Before doing that, make sure that you have your personal secret phrase backed up, since you'll need it to log back into your personal account (This secret phrase should definitely remain secret and you won't be able to access your account without it! Check [MetaMask's Basic Safety and Security Tips](https://metamask.zendesk.com/hc/en-us/articles/360015489591-Basic-Safety-and-Security-Tips-for-MetaMask) for more info.) After having your secret phrase safely backed up, you can safely switch to Ganache's test account. To do this, you can click your account logo and then "Lock". After this you can "import using Secret Recovery Phrase" to insert the Ganache mnemonic.
 </p>
 
 1. Install MetaMask in your browser.
@@ -695,50 +695,24 @@ The easiest way to interact with our dapp in a browser is through [MetaMask](htt
 
    Configuration is now complete.
 
-### Installing and configuring lite-server
-
-We can now start a local web server and use the dapp. We're using the `lite-server` library to serve our static files. This shipped with the `pet-shop` Truffle Box, but let's take a look at how it works.
-
-1. Open `bs-config.json` in a text editor (in the project's root directory) and examine the contents:
-
-   ```javascript
-   {
-     "server": {
-       "baseDir": ["./src", "./build/contracts"]
-     }
-   }
-   ```
-
-   This tells `lite-server` which files to include in our base directory. We add the `./src` directory for our website files and `./build/contracts` directory for the contract artifacts.
-
-   We've also added a `dev` command to the `scripts` object in the `package.json` file in the project's root directory. The `scripts` object allows us to alias console commands to a single npm command. In this case we're just doing a single command, but it's possible to have more complex configurations. Here's what yours should look like:
-
-   ```javascript
-   "scripts": {
-     "dev": "lite-server",
-     "test": "echo \"Error: no test specified\" && exit 1"
-   },
-   ```
-
-   This tells npm to run our local install of `lite-server` when we execute `npm run dev` from the console.
 
 ### Using the dapp
 
 1. Start the local web server:
 
-   ```shell
-   npm run dev
-   ```
+  ```shell
+  npm start
+  ```
 
-   The dev server will launch and automatically open a new browser tab containing your dapp.
+  The create-react-app server will then start up at http://localhost:3000. You can type that in your browser to navigate to the app.
 
-   ![Pete's Pet Shop](/img/tutorials/pet-shop/dapp.png "Pete's Pet Shop")
+  ![Pete's Pet Shop](/img/tutorials/pet-shop/dapp.png "Pete's Pet Shop")
 
 1. A MetaMask pop-up should appear requesting your approval to allow Pete's Pet Shop to connect to your MetaMask wallet. Without explicit approval, you will be unable to interact with the dapp. Click **Connect**.
 
-   ![MetaMask approval request](/img/tutorials/pet-shop/metamask-transactionconfirm.png "MetaMask approval request")
+  ![MetaMask approval request](/img/tutorials/pet-shop/metamask-transactionconfirm.png "MetaMask approval request")
 
-1. To use the dapp, click the **Adopt** button on the pet of your choice.
+1. You will see a list of pets which you can adopt. To use the dapp, click the **Adopt** button on the pet of your choice.
 
 1. You'll be automatically prompted to approve the transaction by MetaMask. Click **Submit** to approve the transaction.
 
@@ -758,4 +732,4 @@ We can now start a local web server and use the dapp. We're using the `lite-serv
 
    You'll also see the same transaction listed in Ganache under the "Transactions" section.
 
-Congratulations! You have taken a huge step to becoming a full-fledged dapp developer. For developing locally, you have all the tools you need to start making more advanced dapps. If you'd like to make your dapp live for others to use, stay tuned for our future tutorial on deploying to the Ropsten testnet.
+Congratulations! You have taken a huge step to becoming a full-fledged dapp developer. For developing locally, you have all the tools you need to start making more advanced dapps.
