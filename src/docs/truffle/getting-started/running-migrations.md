@@ -219,7 +219,7 @@ deployer.deploy(SomeDependency, {overwrite: false});
 
 ### deployer.link(library, destinations)
 
-Link an already-deployed library to a contract or multiple contracts. `destinations` can be a single contract or an array of multiple contracts. If any contract within the destination doesn't rely on the library being linked, the contract will be ignored.
+Link an already-deployed library to a contract or multiple contracts.  Here `library` can be either the library contract abstraction, to link to the deployed copy, or a specific library instance if you want to link to a copy at a different address.  The `destinations` argument can be a single contract or an array of multiple contracts. If any contract within the destination doesn't rely on the library being linked, the contract will be ignored.
 
 Example:
 
@@ -231,6 +231,10 @@ deployer.deploy(B);
 
 // Link LibA to many contracts
 deployer.link(LibA, [B, C, D]);
+
+// Link to a copy of LibA at a custom address
+const instanceOfLibA = await LibA.at(address);
+await deployer.link(instanceOfLibA, B);
 ```
 
 ### deployer.then(function() {...})

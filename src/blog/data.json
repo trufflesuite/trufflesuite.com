@@ -1,4 +1,12 @@
 {
+  "introducing-truffle-dashboard": {
+    "title": "Introducing Truffle Dashboard",
+    "date": "2022-02-19",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "Truffle Dashboard is a tool that completely removes the need to manually interact with your wallet's mnemonic phrase or private keys throughout the development lifecycle...",
+    "image": "/img/blog/thumbnails/truffle-dashboard-key.png"
+  },
   "introducing-ganache-7": {
     "title": "Introducing Ganache 7",
     "date": "2022-01-20",
