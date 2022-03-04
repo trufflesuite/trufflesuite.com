@@ -134,7 +134,7 @@ When specifying options in the config file *and* in the CLI, the options provide
 Interactively debug any transaction on the blockchain.
 
 ```shell
-truffle debug [<transaction_hash>] [--network <network>] [--fetch-external] [--compile-tests|--compile-all|--compile-none]
+truffle debug [<transaction_hash>] [--network <network>|--url <provider_url>] [--fetch-external] [--compile-tests|--compile-all|--compile-none]
 ```
 
 Will start an interactive debugging session on a particular transaction. Allows you to step through each action and replay. See [Using the truffle debugger](/docs/truffle/getting-started/using-the-truffle-debugger) for more details.
@@ -143,6 +143,7 @@ Options:
 
 - `<transaction_hash>`: Transaction ID to use for debugging. You can omit this to simply start the debugger and then load a transaction later.
 - `--network`: The network to connect to.
+- `--url`: Allows you to specify a provider URL to connect to, in place of `--network`.  If this option is used, the debugger may be used outside of a Truffle project.
 - `--fetch-external`: Allows the debugger to download source from source verification services to debug transactions involving external contracts. When used, a transaction hash is required. May be abbreviated `-x`.
 - `--compile-tests`: Allows the debugger to compile [Solidity test contracts](../testing/writing-tests-in-solidity). Implies `--compile-all`.
 - `--compile-all`: Forces the debugger to recompile all contracts, even when it would otherwise judge doing so unnecessary. Compilation results are not saved.

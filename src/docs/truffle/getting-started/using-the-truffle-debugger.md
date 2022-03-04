@@ -24,6 +24,14 @@ Debug transactions involving contracts not in your project that are verified on 
 <a href="#debugging-external-contracts-with-verified-source">See below</a>.
 </p>
 
+<p class="alert alert-info m-t-2">
+<i class="far fa-info-circle"></i> <strong>
+New in Truffle v5.4.26: <code>truffle debug --url &lt;provider_url&gt;</code>.
+</strong>
+Debug transactions without needing a Truffle projct or config!
+<a href="#debugging-outside-of-a-truffle-project">See below</a>.
+</p>
+
 
 Debugging a transaction on the blockchain is different than debugging traditional applications (for instance, applications written in C++ or Javascript). When debugging a transaction on the blockchain, you're not running the code in real-time; instead, you're stepping over the historical execution of that transaction, and mapping that execution onto its associated code. This gives us many liberties in debugging, in that we can debug any transaction, any time, so long as we have the code and artifacts for the contracts the transaction interacted with. Think of these code and artifacts as akin to the debugging symbols needed by traditional debuggers.
 
@@ -116,7 +124,13 @@ You can specify the network you want to debug on with the `--network` option:
 $ truffle debug [<transaction hash>] --network <network>
 ```
 
-And if you want to debug your [Solidity test contracts](../testing/writing-tests-in-solidity), you can pass the `--compile-tests` option:
+Also, instead of `--network`, you can use `--url` with the URL of a provider; with this option, you can use Truffle Debugger outside of a Truffle project and without a Truffle config.  This is primarily useful with the [`--fetch-external`](#debugging-external-contracts-with-verified-source) option.
+
+```shell
+$ truffle debug [<transaction hash>] --url <provider_url>
+```
+
+If you want to debug your [Solidity test contracts](../testing/writing-tests-in-solidity), you can pass the `--compile-tests` option:
 
 ```shell
 $ truffle debug [<transaction hash>] --compile-tests
@@ -156,6 +170,10 @@ module.exports = {
   }
 }
 ```
+
+### Debugging outside of a Truffle project
+
+If you are outside of a Truffle project, you can still use `truffle debug` so long as you pass the `--url` option, giving the URL of a provider to connect to.  This is primarily useful with the `--fetch-external` option [described above](#debugging-external-contracts-with-verified-source).
 
 ## Debugging interface
 
