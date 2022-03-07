@@ -53,8 +53,17 @@ markdown_extensions:
       permalink: true
 use_directory_urls: false
 plugins:
+  - i18n:
+      default_language: en
+      languages:
+          en:
+              name: English
+              build: true
+          fr:
+              name: French
+              build: true
+      material_alternate: true
   - search
-  - awesome-pages
   - macros:
       module_name: main
   - minify:
