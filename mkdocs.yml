@@ -62,6 +62,9 @@ plugins:
           fr:
               name: French
               build: true
+          zh:
+              name: Chinese
+              build: true              
       material_alternate: true
   - search
   - macros:
