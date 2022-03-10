@@ -554,7 +554,7 @@ Now that we can interact with the Ethereum blockchain via the provider, we need 
 
   ```javascript
     // use the built artifact to instantiate a TruffleContract object
-    const AdoptionArtifact = TruffleContract(Adoption);
+    const AdoptionArtifact = window.TruffleContract(Adoption);
 
     // set the provider for our contract
     AdoptionArtifact.setProvider(this.state.provider);
