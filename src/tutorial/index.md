@@ -296,7 +296,7 @@ You've now written your first smart contract and deployed it to a locally runnin
 
 <details markdown="1">
 <summary> Expand This Section </summary>
-Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this tutorial, we'll be writing our tests in Solidity.
+Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this section, we'll write some tests in Solidity.
 
 1. Create a new file named `TestAdoption.sol` in the `test/` directory.
 
@@ -311,13 +311,13 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
   import "../contracts/Adoption.sol";
 
   contract TestAdoption {
-    // The address of the adoption contract to be tested
+    // the address of the adoption contract to be tested
     Adoption adoption = Adoption(DeployedAddresses.Adoption());
 
-    // The id of the pet that will be used for testing
+    // the id of the pet that will be used for testing
     uint expectedPetId = 8;
 
-    // The expected owner of adopted pet is this contract
+    // the expected owner of adopted pet is this contract
     address expectedAdopter = address(this);
 
   }
@@ -340,12 +340,12 @@ Then we define three contract-wide variables:
 
 ### Testing the adopt() function
 
-To test the `adopt()` function, recall that upon success it returns the given `petId`. We can ensure an ID was returned and that it's correct by comparing the return value of `adopt()` to the ID we passed in.
+To test the `adopt` function, recall that upon success it returns the given `petId`. We can ensure an ID was returned and that it's correct by comparing the return value of `adopt` to the ID we passed in.
 
 1. Add the following function within the `TestAdoption.sol` smart contract, after the declaration of `expectedPetId`:
 
    ```solidity
-   // test the adopt() function
+   // test the adopt function
    function testUserCanAdoptPet() public {
      uint returnedId = adoption.adopt(expectedPetId);
 
@@ -356,11 +356,11 @@ To test the `adopt()` function, recall that upon success it returns the given `p
 Things to notice:
 
 * We call the smart contract we declared earlier with the ID of `expectedPetId`.
-* Finally, we pass the actual value, the expected value and a failure message (which gets printed to the console if the test does not pass) to `Assert.equal()`.
+* Finally, we pass the actual value, the expected value and a failure message (which gets printed to the console if the test does not pass) to `Assert.equal`.
 
 ### Testing retrieval of a single pet's owner
 
-Remembering from above that public variables have automatic getter methods, we can retrieve the address stored by our adoption test above. Stored data will persist for the duration of our tests, so our adoption of pet `expectedPetId` above can be retrieved by other tests.
+Remembering from above that public variables have automatic getter methods. We can retrieve the address stored by our adoption test above. Stored data will persist for the duration of our tests, so our adoption of pet `expectedPetId` above can be retrieved by other tests.
 
 1. Add this function below the previously added function in `TestAdoption.sol`.
 
@@ -384,7 +384,7 @@ Since arrays can only return a single value given a single key, we create our ow
    ```solidity
    // test retrieval of all pet owners
    function testGetAdopterAddressByPetIdInArray() public {
-     // Store adopters in memory rather than contract's storage
+     // store adopters in memory rather than contract's storage
      address[16] memory adopters = adoption.getAdopters();
 
      Assert.equal(adopters[expectedPetId], expectedAdopter, "Owner of the expected pet should be this contract");
