@@ -398,12 +398,12 @@ Note the **memory** attribute on `adopters`. The memory attribute tells Solidity
 
 <details markdown="1">
 <summary> Expand This Section </summary>
-Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this tutorial, we'll be writing our tests in Javascript using the Chai and Mocha libraries.<br/>
+Truffle is very flexible when it comes to smart contract testing, in that tests can be written either in JavaScript or Solidity. In this section, we'll write some tests in Javascript using the Chain and Mocha libraries.<br/>
 
 1. Create a new file named `testAdoption.test.js` in the `test/` directory.<br/>
 2. Add the following content to the `testAdoption.test.js` file:<br/>
 
-  ```
+  ```javascript
   const Adoption = artifacts.require("Adoption");
 
   contract("Adoption", (accounts) => {
@@ -423,9 +423,8 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
   });
 
   ```
-  We start the contract by importing :
-  * `Adoption`: The smart contract we want to test.
-  We begin our test by importing our `Adoption` contract using `artifacts.require`.
+
+  We start the contract by importing the `Adoption` contract which is the smart contract we want to test. Note that `artifacts` is a variable provided in Truffle contexts which allows you to import your contracts using `artifacts.require`. This function takes the name of the contract you wish to import as an argument.
 
   **Note**: When writing this test, our callback function take the argument `accounts`. This provides us with the accounts available on the network when using this test.
 
@@ -437,9 +436,9 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 
   To test the `adopt` function, recall that upon success it returns the given `adopter`. We can ensure that the adopter based on given petID was returned and is compared with the `expectedAdopter` within the `adopt` function.
 
-  1. Add the following function within the `testAdoption.test.js` test file, after the declaration of `before` code block.
+  1. Add the following function within the `testAdoption.test.js` test file, after the declaration of `before` code block like so.
 
-  ```
+  ```javascript
   describe("adopting a pet and retrieving account addresses", async () => {
     before("adopt a pet using accounts[0]", async () => {
       await adoption.adopt(8, { from: accounts[0] });
@@ -464,7 +463,7 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 
   1. Add this function below the previously added function in `testAdoption.test.js`.
 
-  ```
+  ```javascript
   it("fetches the collection of all pet owners' addresses", async () => {
     const adopters = await adoption.getAdopters();
     assert.equal(adopters[8], expectedAdopter, "The owner of the adopted pet should be in the collection.");
@@ -484,24 +483,29 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 1. If all the tests pass, you'll see console output similar to this:
 
 
-   ```shell
-   Using network 'development'.
+  ```shell
+  Using network 'development'.
 
-   Compiling your contracts...
-   ===========================
-   > Compiling ./test/TestAdoption.sol
-   > Artifacts written to /var/folders/z3/v0sd04ys11q2sh8tq38mz30c0000gn/T/test-11934-19747-g49sra.0ncrr
-   > Compiled successfully using:
-      - solc: 0.8.12+commit.f00d7308.Emscripten.clang
+  Compiling your contracts...
+  ===========================
+  > Compiling ./test/TestAdoption.sol
+  > Artifacts written to /var/folders/z3/v0sd04ys11q2sh8tq38mz30c0000gn/T/test-11934-19747-g49sra.0ncrr
+  > Compiled successfully using:
+     - solc: 0.8.12+commit.f00d7308.Emscripten.clang
 
-     TestAdoption
-       ✓ testUserCanAdoptPet (91ms)
-       ✓ testGetAdopterAddressByPetId (70ms)
-       ✓ testGetAdopterAddressByPetIdInArray (89ms)
+    TestAdoption
+      ✓ testUserCanAdoptPet (91ms)
+      ✓ testGetAdopterAddressByPetId (70ms)
+      ✓ testGetAdopterAddressByPetIdInArray (89ms)
+
+    Contract: Adoption
+      adopting a pet and retrieving account addresses
+        ✓ fetches the address of an owner by pet id
+        ✓ fetches the collection of all pet owners\' addresses
 
 
-     3 passing (670ms)
-   ```
+    5 passing (27s)
+  ```
 
 ## Creating a user interface to interact with the smart contract
 
