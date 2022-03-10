@@ -18,9 +18,13 @@ But it's not all doom and gloom, the way most people do this is via a package ma
 
 ## Time to install 🏃🏻‍♀️💨💨💨💨
 
-### Windows 💻
+Below are the guides for each Operating System.
 
-#### Node.JS - Standard Install
+## Windows 💻
+
+We have tested on Windows 10/11 and these instructions work if you have never installed node or git before.
+
+### Node.JS - Standard Install
 
 As we said this is the best steps for installing and getting a good working node.js and compiler chain installed ready to go.
 
@@ -35,24 +39,29 @@ As we said this is the best steps for installing and getting a good working node
     1. Select the build tools option and download and install. This is quite big (at least 1GB) so can take a while.
 
 Once thats installed you can head over to a command prompt and type in: `node --version` and you should get back something like:
+
 ```shell
 C:\Users\vitalik>node --version
 v16.14.0
 ```
+
 Also check NPM is installed ok:
+
 ```shell
 C:\Users\vitalik>npm --version
 8.3.1
 ```
+
 If you get back version numbers like these then you are all set!
 
-
 ### GIT
+
 GIT is quite simple for Windows. You need to install the binary from the GIT website: [https://git-scm.com/downloads](https://git-scm.com/downloads)
 
 1. Select the windows installer, download it and then click on the installer in your `Downloads` folder.
 1. Selecting the default options is fine, if you're not used to using `VIM` as the commit editor or the command line too much perhaps changing the default editor to `nano` would be better.
-1. Once thats all done, you can head to a new command prompt (it's important to open a new command prompt as the PATH will be updated) try the following: 
+
+Once thats all done, you can head to a new command prompt (it's important to open a new command prompt as the PATH will be updated) try the following:
 
 ```shell
 C:\Users\vitalik>git version
@@ -66,9 +75,8 @@ To install these dependencies you can do this inside the extension itself on the
 
 To check these have been installed correctly via the extension, the easiest way to check this is via the output view in VSCode.
 
-1. In VSCode, open the output channel like this: https://user-images.githubusercontent.com/951378/157372569-65615575-53d7-4a15-aedb-e1644e844447.mp4
+1. In VSCode, open the output channel like this: ![VSCode-outputconsole](https://user-images.githubusercontent.com/951378/157374538-8a329eb4-de10-4445-b93d-f7059d43857a.gif)
 1. Check the console output and look for any errors or success. If you see something that looks like an error you can use this output to send to us in an issue.
-
 
 ## MacOS 🖥
 
@@ -77,19 +85,22 @@ To check these have been installed correctly via the extension, the easiest way 
 On MacOS the easiest method is to use NVM. Follow the instructions to get this installed and we can then install node at the end. It's a few more steps but this will work more reliably than other methods.
 
 #### Install NVM
+
 1. Open up a terminal. To do this easily press `command+space` and the search panel will pop up. Type in `terminal.app` and select the terminal application and open it.
 1. Open up the following url [https://github.com/nvm-sh/nvm#installing-and-updating](https://github.com/nvm-sh/nvm#installing-and-updating) and copy the script for installing NVM into the terminal and press `<enter>` key.
 
 ```shell
 > curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ```
+
 This will install NVM and at the end you can check it installed ok by trying:
+
 ```shell
 ❯ nvm --version
 0.39.0
 ```
-If you have issues, the NVM github page up above has a lot of information on issues you may encounter.
 
+If you have issues, the NVM github page up above has a lot of information on issues you may encounter.
 
 #### Install your Node Version
 
@@ -128,12 +139,14 @@ v16.14.0
 
 You did it! WAGMI FTW!
 
-### GIT 
+### GIT
+
 Git is normally installed via the command line tools for OSX dialog. If it hasn't installed you can do it by typing this into the shell:
 
 ```shell
 > xcode-select --install
 ```
+
 A few popups will appear and then install some binaries (1GB+) and you should be able see if git is installed (preferably in a new terminal, path may be updated...)
 
 ```shell
@@ -153,6 +166,25 @@ These can be installed from the requirements page or in your command line if you
 ```
 
 This will install the latest versions of both binaries. The actions in the requirements page inside the extension do exactly the same thing.
+
+To check these have been installed correctly via the extension, the easiest way to check this is via the output view in VSCode.
+
+1. In VSCode, open the output channel like this: ![VSCode-outputconsole](https://user-images.githubusercontent.com/951378/157374538-8a329eb4-de10-4445-b93d-f7059d43857a.gif)
+1. Check the console output and look for any errors or success. If you see something that looks like an error you can use this output to send to us in an issue.
+
+## Ubuntu 🐧
+
+We have tested installing everything on Ubuntu 20 and the steps are almost identical to the MacOS ones above. NVM works the same, you might need to use the second installer script using `wget`.
+
+### GIT
+
+The only difference will be for GIT. You want to install this via the terminal using:
+
+```shell
+sudo apt install git
+```
+
+And the rest should be the same.
 
 ## Final Checks ✅
 

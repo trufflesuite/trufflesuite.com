@@ -2,6 +2,7 @@
 ## Prerequisites
 
 1. Install the Visual Studio Code extension [Trufflesuite for VSCode](https://marketplace.visualstudio.com/items?itemName=trufflesuite-csi.trufflesuite-vscode).
+2. Install and dependencies like Node.js and GIT as per the installation guide.
 
 ## Create a new Solidity Contract
 
