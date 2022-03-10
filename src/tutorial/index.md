@@ -542,15 +542,15 @@ Things to notice:
 
 * First, we use MetaMask's package [`@metamask/detect-provider`](https://www.npmjs.com/package/@metamask/detect-provider) to obtain a reference to the provider.
 
-* If there is no provider loaded then we tell the user to install MetaMask.
-
 * We then create a reference to the provider in the state so that we can use it later.
+
+* If there is no provider loaded, then we tell the user to install MetaMask.
 
 ### Instantiating the contract
 
-Now that we can interact with Ethereum via web3, we need to instantiate our smart contract so web3 knows where to find it and how it works. Truffle has a library to help with this called `@truffle/contract`. It keeps information about the contract in sync with migrations, so you don't need to change the contract's deployed address manually.
+Now that we can interact with the Ethereum blockchain via the provider, we need to instantiate our smart contract so the provider knows where to find it and how it works. Truffle has a library to help with this called `@truffle/contract`. It keeps information about the contract in sync with migrations, so you don't need to change the contract's deployed address manually.
 
-1. Still in `/src/js/app.js`, remove the multi-line comment from within `initContract` and replace it with the following:
+1. Still in `/src/App.js`, remove the multi-line comment from within `initContract` and replace it with the following:
 
   ```javascript
     // use the built artifact to instantiate a TruffleContract object
@@ -567,14 +567,13 @@ Now that we can interact with Ethereum via web3, we need to instantiate our smar
 
     // use the Adoption contract to retrieve the adopters and mark the adopted pets
     await this.markAdopted();
-    });
   ```
 
 Things to notice:
 
 * We first retrieve the artifact file for our smart contract. **Artifacts are information about our contract such as its deployed address and Application Binary Interface (ABI)**. **The ABI is a JavaScript object defining how to interact with the contract including its variables, functions and their parameters.**
 
-* Once we have the artifacts in our callback, we pass them to `TruffleContract`. This creates an instance of the contract we can interact with.
+* You can see at the top of the file we require the `Adoption` (which is JSON) artifact file from `/src/build/contracts`. We now pass it to `TruffleContract`. This creates an instance of the contract we can interact with.
 
 * With our contract instantiated, we set its provider using the provider value we stored earlier in the state in `initProvider`.
 
@@ -601,7 +600,7 @@ Things to notice:
 
 * We first access the deployed `Adoption` contract in the component's state.
 
-* We then call `getAdopters` on that instance which will give us an array containing the addresses that have adopted each pet. We initialized this array filled with the zero address (`"0x0000000000000000000000000000000000000000"`). If a pet has the zero address as an adopter, it signifies that it has not yet been adopted.
+* We then call `getAdopters` on that instance which will give us an array containing the addresses that have adopted each pet. We initialized this array (in the constructor) filled with the zero address (`"0x0000000000000000000000000000000000000000"`). If a pet has the zero address as an adopter, it signifies that it has not yet been adopted.
 
 * Since `getAdopters` is purely a "view" function, to access the data we only have to make a **call**. Because we are only reading state and not altering it, we do not need to spend any ether to execute it.
 
@@ -649,54 +648,54 @@ Now we're ready to use our dapp!
 The easiest way to interact with our dapp in a browser is through [MetaMask](https://metamask.io/), a browser extension for both Chrome and Firefox.
 
 <p class="alert alert-info">
-<strong>Note</strong>: If you already use MetaMask, you'll need to switch accounts. Before doing that, make sure that you have your personal secret phrase backed up, since you'll need it to log back into your personal account (This secret phrase should definitely remain secret and you won't be able to access your account without it! Check [MetaMask's Basic Safety and Security Tips](https://metamask.zendesk.com/hc/en-us/articles/360015489591-Basic-Safety-and-Security-Tips-for-MetaMask) for more info.) After having your secret phrase safely backed up, you can safely switch to Ganache's test account. To do this, you can click your account logo and then "Lock". After this you can "import using Secret Recovery Phrase" to insert the Ganache mnemonic.
+<strong>Note</strong>: If you already use MetaMask, you'll need to switch accounts. Before doing that, make sure that you have your personal secret phrase backed up, since you'll need it to log back into your personal account (This secret phrase should definitely remain secret and you won't be able to access your account without it! Check <a src="https://metamask.zendesk.com/hc/en-us/articles/360015489591-Basic-Safety-and-Security-Tips-for-MetaMask">MetaMask's Basic Safety and Security Tips</a> for more info.) After having your secret phrase safely backed up, you can safely switch to Ganache's test account. To do this, you can click your account logo and then "Lock". After this you can "import using Secret Recovery Phrase" to insert the Ganache mnemonic.
 </p>
 
 1. Install MetaMask in your browser.
 
 1. Once installed, a tab in your browser should open displaying the following:
 
-   ![Welcome to MetaMask](/img/tutorials/pet-shop/metamask-welcome.png "Welcome to MetaMask")
+  ![Welcome to MetaMask](/img/tutorials/pet-shop/metamask-welcome.png "Welcome to MetaMask")
 
 1. After clicking **Getting Started**, you should see the initial MetaMask screen. Click **Import Wallet**.
 
-   ![Initial screen](/img/tutorials/pet-shop/metamask-initial.png "MetaMask initial screen")
+  ![Initial screen](/img/tutorials/pet-shop/metamask-initial.png "MetaMask initial screen")
 
 1. Next, you should see a screen requesting anonymous analytics. Choose to decline or agree.
 
-   ![Improve MetaMask](/img/tutorials/pet-shop/metamask-analytics.png "Improve MetaMask")
+  ![Improve MetaMask](/img/tutorials/pet-shop/metamask-analytics.png "Improve MetaMask")
 
 1. In the box marked **Wallet Seed**, enter the mnemonic that is displayed in Ganache.
 
-   <p class="alert alert-danger">
-   **Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). If you send ETH to any account generated from this mnemonic, you will lose it all!
-   </p>
+  <p class="alert alert-danger">
+  **Warning**: Do not use this mnemonic on the main Ethereum network (mainnet). If you send ETH to any account generated from this mnemonic, you will lose it all!
+  </p>
 
-   Enter a password below that and click **OK**.
+  Enter a password below that and click **OK**.
 
-   ![MetaMask seed phrase](/img/tutorials/pet-shop/metamask-seed.png "MetaMask seed phrase")
+  ![MetaMask seed phrase](/img/tutorials/pet-shop/metamask-seed.png "MetaMask seed phrase")
 
 1. If all goes well, MetaMask should display the following screen. Click **All Done**.
 
-   ![Congratulations](/img/tutorials/pet-shop/metamask-congratulations.png "Congratulations")
+  ![Congratulations](/img/tutorials/pet-shop/metamask-congratulations.png "Congratulations")
 
 1. Now we need to connect MetaMask to the blockchain created by Ganache. Click the menu that shows "Main Network" and select **Custom RPC**.
 
-   ![MetaMask network menu](/img/tutorials/pet-shop/metamask-networkmenu.png "MetaMask network menu")
+  ![MetaMask network menu](/img/tutorials/pet-shop/metamask-networkmenu.png "MetaMask network menu")
 
 1. In the box titled "New Network" enter `http://127.0.0.1:7545`, in the box titled "Chain ID" enter `1337` (Default Chain ID for Ganache) and click **Save**.
 
-   ![MetaMask Custom RPC](/img/tutorials/pet-shop/metamask-customrpc.png "MetaMask Custom RPC")
+  ![MetaMask Custom RPC](/img/tutorials/pet-shop/metamask-customrpc.png "MetaMask Custom RPC")
 
-   The network name at the top will switch to say `http://127.0.0.1:7545`.
+  The network name at the top will switch to say `http://127.0.0.1:7545`.
 
 1. Click the top-right X to close out of Settings and return to the Accounts page.
 
-   Each account created by Ganache is given 100 ether. You'll notice it's slightly less on the first account because some gas was used when the contract itself was deployed and when the tests were run.
+  Each account created by Ganache is given 100 ether. You'll notice it's slightly less on the first account because some gas was used when the contract itself was deployed and when the tests were run.
 
-   ![MetaMask account configured](/img/tutorials/pet-shop/metamask-account1.png "MetaMask account configured")
+  ![MetaMask account configured](/img/tutorials/pet-shop/metamask-account1.png "MetaMask account configured")
 
-   Configuration is now complete.
+  Configuration is now complete.
 
 
 ### Using the dapp
