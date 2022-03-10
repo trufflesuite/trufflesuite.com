@@ -15,7 +15,7 @@ hide:
 
 This tutorial will take you through the process of building your first dapp---an adoption tracking system for a pet shop!
 
-This tutorial is meant for those with a basic knowledge of Ethereum and smart contracts, who have some knowledge of HTML and JavaScript, but who are new to dapps.
+This tutorial is meant for those with a basic knowledge of Ethereum and smart contracts, who have some knowledge of React and JavaScript, but who are new to dapps.
 
 <p class="alert alert-info">
 <strong>Note</strong>: For Ethereum basics, please read the Truffle <a href="/guides/ethereum-overview">Ethereum Overview</a> tutorial before proceeding.
@@ -25,7 +25,7 @@ In this tutorial we will be covering:
 
 1. Setting up the development environment
 2. Creating a Truffle project using a Truffle Box
-3. Writing the smart contract
+3. Writing a smart contract
 4. Compiling and migrating the smart contract
 5. Testing the smart contract
 6. Creating a user interface to interact with the smart contract
@@ -34,7 +34,7 @@ In this tutorial we will be covering:
 
 ## Background
 
-Pete Scandlon of Pete's Pet Shop is interested in using Ethereum as an efficient way to handle their pet adoptions. The store has space for 16 pets at a given time, and they already have a database of pets. As an initial proof of concept, **Pete wants to see a dapp which associates an Ethereum address with a pet to be adopted.**
+Pete Scandalion of Pete's Pet Shop is interested in using Ethereum as an efficient way to handle their pet adoptions. The store has space for 16 pets at a given time, and they already have a database of pets. As an initial proof of concept, **Pete wants to see a dapp which associates an Ethereum address with a pet to be adopted.**
 
 The website structure and styling will be supplied. **Our job is to write the smart contract and front-end logic for its usage.**
 
@@ -42,8 +42,10 @@ The website structure and styling will be supplied. **Our job is to write the sm
 
 There are a few technical requirements before we start. Please install the following:
 
-*   [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
+*   [Node.js v16+ LTS and npm](https://nodejs.org/en/) (comes with Node)
 *   [Git](https://git-scm.com/)
+
+**Note:** npm recommends installing Node and npm with a node version manager like nvm. You can see [this article from npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) which goes into more details about using Node and npm with a node version manager.
 
 Once we have those installed, we only need one command to install Truffle:
 
@@ -69,15 +71,15 @@ npm install -g ganache
 1. Truffle initializes in the current directory, so first create a directory in your development folder of choice and then move inside it.
 
   ```shell
-  mkdir pet-shop-tutorial
+  mkdir react-pet-shop-tutorial
 
-  cd pet-shop-tutorial
+  cd react-pet-shop-tutorial
   ```
 
 1. We've created a special [Truffle Box](/boxes) just for this tutorial called `react-pet-shop`, which includes the basic project structure as well as code for the user interface. Use the `truffle unbox` command to unpack this Truffle Box.
 
   ```shell
-  truffle unbox pet-shop
+  truffle unbox react-pet-shop
   ```
 
 <p class="alert alert-info">
@@ -86,14 +88,14 @@ npm install -g ganache
 
 ### Directory structure
 
-The default Truffle directory structure contains the following:
+The `react-pet-shop` box's directory structure contains the following:
 
-* `contracts/`: Contains the [Solidity](https://solidity.readthedocs.io/) source files for our smart contracts. There is an important contract in here called `Migrations.sol`, which we'll talk about later.
-* `migrations/`: Truffle uses a migration system to handle smart contract deployments. A migration is an additional special smart contract that keeps track of changes.
-* `test/`: Contains JavaScript and/or Solidity tests for our smart contracts
-* `truffle-config.js`: Truffle configuration file
+* `contracts/`: This is where we will put the [Solidity](https://solidity.readthedocs.io/) source files for our smart contracts.
+* `migrations/`: Truffle uses a migration system to handle smart contract deployments. A migration is a set of instructions for deploying contracts.
+* `test/`: This folder is where we will put JavaScript and/or Solidity tests for our smart contracts
+* `truffle-config.js`: This is the Truffle configuration file
 
-The `pet-shop` Truffle Box has some extra files and folders in it, but we won't worry about those just yet.
+The `react-pet-shop` Truffle Box has some extra files and folders in it, but we won't worry about those just yet.
 
 
 ## Writing the smart contract
@@ -116,8 +118,8 @@ We'll start our dapp by writing the smart contract that acts as the back-end log
 Things to notice:
 
 * The first line denotes the license for the contract - in our case MIT. This is written in comments, `//` indicates that everything following on the same line is a comment in Solidity.
-* The minimum version of Solidity required is noted at the top of the contract: `pragma solidity ^0.8.0;`. The `pragma` command means "*additional information that only the compiler cares about*", while the caret symbol (^) means "*the version indicated or higher*".
-* Like JavaScript or PHP, statements are terminated with semicolons.
+* After the license identifier, the minimum version of Solidity required is noted: `pragma solidity ^0.8.0;`. The `pragma` command means "*additional information that only the compiler cares about*", while the caret symbol (^) means "*the version indicated or higher*".
+* Like JavaScript, statements are terminated with semicolons.
 
 ### Variable setup
 
@@ -172,7 +174,7 @@ As mentioned above, array getters return only a single value from a given key. O
 1. Add the following `getAdopters()` function to the smart contract, after the `adopt()` function we added above:
 
    ```solidity
-   // retrie the adopters' addresses
+   // retrieve the adopters' addresses
    function getAdopters() public view returns (address[16] memory) {
      return adopters;
    }
@@ -259,34 +261,31 @@ Now we are ready to create our own migration script.
   1_initial_migration.js
   ======================
 
-     Deploying 'Migrations'
-     ----------------------
-     > transaction hash:    0x3b558e9cdf1231d8ffb3445cb2f9fb01de9d0363e0b97a17f9517da318c2e5af
+     Deploying 'Adoption'
+     --------------------
+     > transaction hash:    0x6f83a3c6d5835faed06e2b350661b7c678318f860ed47eaf52264373a7821368
      > Blocks: 0            Seconds: 0
-     > contract address:    0x5ccb4dc04600cffA8a67197d5b644ae71856aEE4
-     > account:             0x8d9606F90B6CA5D856A9f0867a82a645e2DfFf37
-     > balance:             99.99430184
-     > gas used:            284908
-     > gas price:           20 gwei
+     > contract address:    0xcD66c6F5CFa95F71af4F93Ce0872cbC643694273
+     > block number:        3
+     > block timestamp:     1646929863
+     > account:             0x06A84665134b7c7FEB12dad3faea4f713100aA00
+     > balance:             999.998021783626535287
+     > gas used:            284241 (0x45651)
+     > gas price:           3.171967231 gwei
      > value sent:          0 ETH
-     > total cost:          0.00569816 ETH
+     > total cost:          0.000901603137706671 ETH
 
-
-     > Saving migration to chain.
      > Saving artifacts
      -------------------------------------
-     > Total cost:          0.00569816 ETH
+     > Total cost:     0.000901603137706671 ETH
 
-
-  2_deploy_contracts.js
-  =====================
-
-     Deploying 'Adoption'
-     .............................
-     .............................
+  Summary
+  =======
+  > Total deployments:   1
+  > Final cost:          0.000901603137706671 ETH
   ```
 
-   You can see the migrations being executed in order, followed by some information related to each migration. (Your information will differ.)
+   You can see the migrations being executed alongside some information related to the migration. (Your information will differ.)
 
 1. In the terminal where Ganache is running, you will note a lot of logging due to the rpc requests being sent from Truffle to alter the state.
 
@@ -508,7 +507,7 @@ Truffle is very flexible when it comes to smart contract testing, in that tests 
 
 Now that we've created the smart contract, deployed it to our local test blockchain and confirmed we can interact with it via the console, it's time to create a UI so that Pete has something to use for his pet shop!
 
-Included with the `pet-shop` Truffle Box was code for the app's front-end. That code exists within the `src/` directory.
+Included with the `react-pet-shop` Truffle Box was code for the app's front-end. That code exists within the `src/` directory.
 
 The front-end uses [create-react-app](https://create-react-app.dev/) to be as easy as possible to get started. The structure of the app is already there; we'll be filling in the functions which are unique to Ethereum. This way, you can take this knowledge and apply it to your own front-end development.
 
