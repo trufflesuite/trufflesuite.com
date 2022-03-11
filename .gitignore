@@ -1,4 +1,6 @@
+build
 site
 src/boxes/*/
 __pycache__
 .DS_Store
+node_modules
