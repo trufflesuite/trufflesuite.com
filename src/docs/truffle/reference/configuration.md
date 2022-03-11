@@ -101,6 +101,7 @@ networks: {
     //          - function that returns a web3 provider instance (see below.)
     //          - if specified, host and port are ignored.
     // skipDryRun: - true if you don't want to test run the migration locally before the actual migration (default: false)
+    // production: - true if you would like to force a dry run to be performed every time you migrate using this network
     // confirmations: - number of confirmations to wait between deployments (default: 0)
     // timeoutBlocks: - if a transaction is not mined, keep waiting for this number of blocks (default: 50)
     // deploymentPollingInterval: - duration between checks for completion of deployment transactions
