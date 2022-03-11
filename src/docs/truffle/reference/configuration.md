@@ -100,10 +100,12 @@ networks: {
     // provider - web3 provider instance Truffle should use to talk to the Ethereum network.
     //          - function that returns a web3 provider instance (see below.)
     //          - if specified, host and port are ignored.
-    // skipDryRun: - true if you don't want to test run the migration locally before the actual migration (default is false)
+    // skipDryRun: - true if you don't want to test run the migration locally before the actual migration (default: false)
     // confirmations: - number of confirmations to wait between deployments (default: 0)
-    // timeoutBlocks: - if a transaction is not mined, keep waiting for this number of blocks (default is 50)
+    // timeoutBlocks: - if a transaction is not mined, keep waiting for this number of blocks (default: 50)
     // deploymentPollingInterval: - duration between checks for completion of deployment transactions
+    // networkCheckTimeout: - amount of time for Truffle to wait for a response from the node when testing the provider (in milliseconds)
+    //                      - increase this number if you have a slow internet connection to avoid connection errors (default: 5000)
     // disableConfirmationListener: - true to disable web3's confirmation listener
   }
 }
