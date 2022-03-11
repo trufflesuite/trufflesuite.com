@@ -29,6 +29,8 @@ google_analytics:
   - auto
 copyright: Copyright &copy; 2016 - 2022 ConsenSys Software Inc.
 extra:
+  version:
+    provider: mike
   generator: false
   social:
   - icon: fontawesome/brands/twitter
