@@ -1,6 +1,6 @@
 ---
 title: 3 Ways Enterprises Are Addressing Blockchain Privacy Concerns
-description: 3 Ways Enterprises Are Addressing Blockchain Privacy Concerns
+description: The enterprise world is skeptical about sharing sensitive data on a ledger where the information cannot be deleted, but steps are being taken that will shift their thinking.
 hide:
   - navigation
 ---
