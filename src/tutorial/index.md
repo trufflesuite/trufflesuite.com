@@ -43,7 +43,7 @@ The website structure and styling will be supplied. **Our job is to write the sm
 
 There are a few technical requirements before we start. Please install the following:
 
-*   [Node.js v8+ LTS and npm](https://nodejs.org/en/) (comes with Node)
+*   [Node.js v12+ LTS and npm](https://nodejs.org/en/) (comes with Node)
 *   [Git](https://git-scm.com/)
 
 Once we have those installed, we only need one command to install Truffle:

@@ -31,6 +31,8 @@ Alternatively, you can specify a path to a specific file you want to run, e.g.,
 $ truffle test ./path/to/test/file.js
 ```
 
+**Note:** When the `truffle test` process exits, its exit code is equal to the number of failing tests. If there are more than 255 failing tests, it will exit with code 255.
+
 ## Clean-room environment
 
 Truffle provides a clean room environment when running your test files. When running your tests against [Ganache](/ganache) or Truffle Develop, Truffle will use advanced snapshotting features to ensure your test files don't share state with each other. When running against other Ethereum clients like [go-ethereum](https://github.com/ethereum/go-ethereum), Truffle will re-deploy all of your migrations at the beginning of every test file to ensure you have a fresh set of contracts to test against.

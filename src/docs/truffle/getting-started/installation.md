@@ -10,7 +10,7 @@ npm install -g truffle
 
 ## Requirements
 
-* NodeJS v8.9.4 or later
+* NodeJS v12 or later
 * Windows, Linux or Mac OS X
 
 Truffle also requires that you have a running Ethereum client which supports the standard JSON RPC API (which is nearly all of them). There are many to choose from, and some better than others for development. We'll discuss them in detail in the [Choosing an Ethereum client](/docs/truffle/reference/choosing-an-ethereum-client) section.
