@@ -14,7 +14,7 @@ def define_env(env):
     "Definition of the module"
 
     # boxes page
-    data_file_object = open('src/boxes/data.json')
+    data_file_object = open('src/boxes/data.json', 'rb')
     boxes  = json.load(data_file_object)
 
     # dict: repoName -> box
@@ -23,7 +23,7 @@ def define_env(env):
         boxes
     ))
 
-    boxes_file_object = open('src/data/boxes.json')
+    boxes_file_object = open('src/data/boxes.json', 'rb')
     deets = json.load(boxes_file_object)
 
     # merge boxes and deets
@@ -57,7 +57,7 @@ def define_env(env):
         try:
             markdown = base64.b64decode(json_response['content'])
 
-            with open('src/boxes/box.html.jinja2') as file_:
+            with open('src/boxes/box.html.jinja2', 'rb') as file_:
                 template = Template(file_.read())
 
             outputText = template.render(box=box, readme=markdown.decode('utf-8'))
@@ -72,7 +72,7 @@ def on_pre_page_macros(env):
     "Pre-page actions"
 
     # blog posts page
-    blog_file_object = open('src/blog/data.json')
+    blog_file_object = open('src/blog/data.json', 'rb')
     posts = json.load(blog_file_object)
     publishedposts = []
     for key in posts.keys():
@@ -84,7 +84,7 @@ def on_pre_page_macros(env):
     env.conf['extra']['posts'] = publishedposts
 
     # guide page
-    guide_file_object = open('src/guides/data.json')
+    guide_file_object = open('src/guides/data.json', 'rb')
     guides = json.load(guide_file_object)
     publishedguides = []
     for key in guides.keys():
@@ -96,12 +96,12 @@ def on_pre_page_macros(env):
     env.conf['extra']['guides'] = publishedguides
 
     # team page
-    team_file_object = open('src/staff/data.json')
+    team_file_object = open('src/staff/data.json', 'rb')
     team = json.load(team_file_object)
     env.conf['extra']['team'] = team
 
     # events page
-    events_file_object = open('src/events/data.json')
+    events_file_object = open('src/events/data.json', 'rb')
     events = json.load(events_file_object)
     env.conf['extra']['events'] = events
 

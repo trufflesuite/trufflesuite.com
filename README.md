@@ -31,6 +31,13 @@ You can run the site locally with the following...
 LOCAL_BUILD=true mkdocs serve
 ```
 
+On Windows you may have to run as follows:
+
+```
+$env:LOCAL_BUILD = "true"
+python3 -m mkdocs serve
+```
+
 By default the site will be served over [port 8000](http://127.0.0.1:8000).
 
 ## Dependencies Reference
