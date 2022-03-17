@@ -1,0 +1,19 @@
+<div class="">
+    <div class="row">
+        <div class="col">
+            <h2>{{props.title}}</h2>
+        </div>
+    </div>
+
+    <div class="row align-items-center justify-content-center text-center mb-2 wrapper-bg-{{props.logo_theme}}">
+        {% with logos = props.logos %}
+          {% for logo in logos %}
+            {% with %}
+              {% set props = logo %}
+              {% set template = config.extra.module_id_parse(logo.sys['content_type'].id) %}
+              {% include 'partials/contentful/'+template+'.html' %}
+            {% endwith %}
+          {% endfor %}
+        {% endwith %}
+    </div>
+</div>

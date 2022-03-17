@@ -183,6 +183,10 @@ pre {
   filter: invert(0.5) sepia(1);
 }
 
+.wrapper-bg-sepia img{
+  filter: invert(0.5) sepia(1);
+}
+
 .minty {
   color: var(--mint);
 }
@@ -425,4 +429,17 @@ footer .hs-form ul.hs-error-msgs {
   background-position: -5% center;
   background-size: 80vh;
   border-top: 1px solid #e911bd;
+}
+
+.github-item-row:not(:first-child) {
+  margin-top: 3rem;
+}
+@media (max-width: 480px){
+  .col-xs-12 {
+    width: 100% !important;
+  }
+}
+
+.img-fullwidth {
+  width: 100%;
 }

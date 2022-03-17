@@ -1,0 +1,18 @@
+<div class="mt-5">
+  <h2>{{props.title}}</h2>
+  <p>{{props.description}}</p>
+  <div class="row">
+    {% with listing = props.listing %}
+      {% for item in listing %}
+        {% with %}
+          {% set column = 12 // props.columns %}
+          {% set props = item %}
+          {% set template = config.extra.module_id_parse(item.sys['content_type'].id) %}
+          <div class="col-{{column}} col-xs-12">
+            {% include 'partials/contentful/'+template+'.html' %}
+          </div>
+        {% endwith %}
+      {% endfor %}
+    {% endwith %}
+  </div>
+</div>

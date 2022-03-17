@@ -1,0 +1,8 @@
+<section class="pt-5">
+  <h1 class="text-center">{{props.title}}</h1>
+  <p class="text-center">{{props.description}}</p>
+  {% if props.image is defined %}
+  <!-- <img class="img-fluid" src="{{props.image.file.url}}" alt={{props.image.title}} /> -->
+  <img class="img-fluid img-fullwidth" src={{config.extra.parse_asset_contentful(props.image)}} alt={{props.image.title}} />
+  {% endif %}
+</section>

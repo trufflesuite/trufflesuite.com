@@ -1,0 +1,15 @@
+<div class="card mt-5">
+  <div class="card-body card-zendesk">
+    <h2>{{props.title}}</h2>
+    <p>{{props.description}}</p>
+    {% with buttons = props.buttons %}
+      {% for button in buttons %}
+        {% with %}
+          {% set props = button %}
+          {% set template = config.extra.module_id_parse(button.sys['content_type'].id) %}
+          {% include 'partials/contentful/'+template+'.html' %}
+        {% endwith %}
+      {% endfor %}
+    {% endwith %}
+  </div>
+</div>
