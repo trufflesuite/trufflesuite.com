@@ -342,8 +342,13 @@ pre {
   font-size: 0.85rem;
 }
 .hs-form ul.hs-error-msgs {
-  margin-top: -0.75rem;
+  margin-top: -1rem;
   color: #d80b0b;
+  position: absolute;
+  font-size: .8em;
+}
+.hjs-form ul.hs_error_rollup.hs-error-msgs{
+  position:relative;
 }
 footer .hs-form label {
   margin-bottom: 0.25rem;
