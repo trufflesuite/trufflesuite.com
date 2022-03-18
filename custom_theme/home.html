@@ -30,13 +30,19 @@
           display: none;
         }
       }
+
+      /* stop page from jumping on load */
+      .pt-5 .img-fluid.home-hero{
+        height: calc(100vw * (215.91/597.5));
+      }
     </style>
 
 <!-- Hero for landing page -->
 <section class="pt-5">
     <h1 class="text-center">Sweet Tools for Smart Contracts</h1>
     <p class="text-center">The <strong>Truffle Suite</strong> gets developers from idea to dapp as comfortably as possible.</p>
-    <img class="img-fluid" src="img/homepage-hero-sept2021.svg" alt="Truffle Suite helps you iterate through the development lifecycle" />
+    <!-- if this image changes update the .home-hero CSS rule to reflect the new aspect ratio -->
+    <img class="img-fluid home-hero" src="img/homepage-hero-sept2021.svg" alt="Truffle Suite helps you iterate through the development lifecycle" />
 </section>
 
 <section class="bg-dark text-white">
