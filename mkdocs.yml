@@ -24,11 +24,11 @@ theme:
   features:
     - navigation.tabs
   language: en
-google_analytics:
-  - UA-83874933-3
-  - auto
 copyright: Copyright &copy; 2016 - 2022 ConsenSys Software Inc.
 extra:
+  analytics:
+    provider: google
+    property: UA-83874933-3
   generator: false
   social:
   - icon: fontawesome/brands/twitter

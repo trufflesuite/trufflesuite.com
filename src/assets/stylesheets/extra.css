@@ -99,12 +99,17 @@ pre {
 
 /* material overrides */
 
-.md-ellipsis {
+.md-ellipsis, .md-nav__title {
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
+  font-weight: 400 !important;
 }
 
-.md-header__title {
+.md-header__topic:first-child {
+  font-weight: 400;
+}
+
+[dir=ltr] .md-header__title {
   margin-left: 0rem;
 }
 
