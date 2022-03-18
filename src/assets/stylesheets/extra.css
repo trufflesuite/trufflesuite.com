@@ -73,6 +73,9 @@ pre {
   overflow: auto;
   border-radius: 0.5em;
 }
+.md-clipboard {
+  margin: 1em 1em 0 0;
+}
 
 @media screen and (max-width: 76.1875em) {
   .md-nav--primary .md-nav__title,
