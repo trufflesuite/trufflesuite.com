@@ -17,6 +17,7 @@ html {
   --ganache: #e4a663;
   --drizzle: #e911bd;
 
+  --md-accent-fg-color:        var(--mint);
   --md-primary-fg-color:        var(--milk);
   --md-default-fg-color--light: var(--dark-chocolate);
   --md-primary-fg-color--light: var(--light-chocolate);
