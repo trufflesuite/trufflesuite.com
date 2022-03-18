@@ -12,12 +12,12 @@ theme:
       scheme: default
       toggle:
         icon: material/toggle-switch-off-outline
-        name: Dark Chocolate Swirl
+        name: Enable Dark theme
     - media: "(prefers-color-scheme: dark)"
       scheme: chocolatey
       toggle:
         icon: material/toggle-switch
-        name: Vanilla Caramel Supreme
+        name: Enable Light Theme
   font:
     text: "Open Sans"
     code: "Open Sans"
@@ -51,7 +51,7 @@ markdown_extensions:
   - markdown.extensions.md_in_html
   - toc:
       permalink: true
-use_directory_urls: false
+use_directory_urls: true
 plugins:
   - search
   - awesome-pages
