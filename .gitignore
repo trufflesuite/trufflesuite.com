@@ -3,3 +3,6 @@ src/boxes/*/
 __pycache__
 .DS_Store
 .env
+src/blog
+!src/blog/index.md
+!src/blog/blog.html.jinja2

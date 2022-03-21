@@ -59,12 +59,12 @@ def get_blogs_contentful(client, data):
 def define_env(env):
     "Definition of the module"
 
-    contentful_space_id = os.getenv('CONTENTFUL_SPACE_ID')
-    contentful_token = os.getenv('CONTENTFUL_TOKEN')
-    contentful_environment = os.getenv('CONTENTFUL_ENVIRONMENT')
-    env.conf['extra']['module_id_parse'] = module_id_parse;
-    env.conf['extra']['parse_asset_contentful'] = parse_asset_contentful;
-    env.conf['extra']['parse_url'] = parse_url;
+    contentful_space_id = os.getenv('CONTENTFUL_SPACE_ID') or os.environ.get('CONTENTFUL_SPACE_ID')
+    contentful_token = os.getenv('CONTENTFUL_TOKEN') or os.environ.get('CONTENTFUL_TOKEN')
+    contentful_environment = os.getenv('CONTENTFUL_ENVIRONMENT') or os.environ.get('CONTENTFUL_ENVIRONMENT')
+    env.conf['extra']['module_id_parse'] = module_id_parse
+    env.conf['extra']['parse_asset_contentful'] = parse_asset_contentful
+    env.conf['extra']['parse_url'] = parse_url
     client = contentful.Client(contentful_space_id, contentful_token, environment=contentful_environment)
     site_dir = env.conf['docs_dir']
 
@@ -89,7 +89,7 @@ def define_env(env):
 
         if os.path.exists(blog_dir):
             shutil.rmtree(blog_dir)
-            
+
         os.makedirs(blog_dir)
         file_path = os.path.join(blog_dir, 'index.md')
 
@@ -121,7 +121,7 @@ def define_env(env):
 
     # dict: repoName -> box
     dicBox = dict(zip(
-        [box['repoName'] for box in boxes], 
+        [box['repoName'] for box in boxes],
         boxes
     ))
 
@@ -139,7 +139,7 @@ def define_env(env):
     env.conf['extra']['boxes'] = list(dicBox.values())
 
     if os.environ.get("LOCAL_BUILD"):
-        env.conf['extra']['boxes'] = env.conf['extra']['boxes'][:6] 
+        env.conf['extra']['boxes'] = env.conf['extra']['boxes'][:6]
 
     username = os.environ.get("TRUFFLESUITE_COM_GH_API_USERNAME")
     key = os.environ.get("TRUFFLESUITE_COM_GH_API_KEY")
