@@ -61,10 +61,11 @@ def define_env(env):
 
     contentful_space_id = os.getenv('CONTENTFUL_SPACE_ID')
     contentful_token = os.getenv('CONTENTFUL_TOKEN')
+    contentful_environment = os.getenv('CONTENTFUL_ENVIRONMENT')
     env.conf['extra']['module_id_parse'] = module_id_parse;
     env.conf['extra']['parse_asset_contentful'] = parse_asset_contentful;
     env.conf['extra']['parse_url'] = parse_url;
-    client = contentful.Client(contentful_space_id, contentful_token)
+    client = contentful.Client(contentful_space_id, contentful_token, environment=contentful_environment)
     site_dir = env.conf['docs_dir']
 
     # Query all entry 'page'
