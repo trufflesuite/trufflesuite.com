@@ -12,6 +12,24 @@
 
 {% endblock %}
 
+{% block extrahead %}
+    {{ super() }}
+    <!-- Redirect -->
+    <script>(function(){
+      var path = location.pathname;
+      var slug = path.slice(1);
+      var ext = slug.split('.').pop();
+      var regex = /index\.html\/?$/;
+      if(path.match(regex)) {
+        location.href = path.replace(regex,'')
+      } else if(ext !== slug && ext === 'html') {
+        location.href = path.substr(0, path.lastIndexOf(".")) + '/';
+      } 
+    })()</script>
+    <!-- End redirect -->
+
+{% endblock %}
+
 <!-- Announcement bar -->
 {% block announce %}
   <!-- Google Tag Manager (noscript) -->
