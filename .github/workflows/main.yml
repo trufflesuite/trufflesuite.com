@@ -4,6 +4,8 @@ on:
     branches:
       - main
 
+  workflow_dispatch:
+
 jobs:
   build:
     name: Deploy docs
@@ -11,6 +13,13 @@ jobs:
     steps:
       - name: Checkout master
         uses: actions/checkout@v1
+
+      - name: Create env file
+        run: |
+          touch .env
+          echo CONTENTFUL_SPACE_ID=${{ secrets.CONTENTFUL_SPACE_ID }} >> .env
+          echo CONTENTFUL_ENVIRONMENT=${{ secrets.CONTENTFUL_ENVIRONMENT }} >> .env
+          echo CONTENTFUL_TOKEN=${{ secrets.CONTENTFUL_TOKEN }} >> .env
 
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@1.20

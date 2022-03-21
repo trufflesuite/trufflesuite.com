@@ -2,3 +2,4 @@ site
 src/boxes/*/
 __pycache__
 .DS_Store
+.env
