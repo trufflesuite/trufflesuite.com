@@ -84,14 +84,20 @@ def define_env(env):
     contentful_entries_blogs = get_blogs_contentful(client, [])
     env.conf['extra']['contentful_blogs'] = contentful_entries_blogs
 
+    #clear all data old blog
+    blog_dir = os.path.join(site_dir, 'blog')
+    for f in os.listdir(blog_dir):
+        if(os.path.isdir(os.path.join(blog_dir, f))):
+            shutil.rmtree(os.path.join(blog_dir, f))
+
     for blog in contentful_entries_blogs:
-        blog_dir = os.path.join(site_dir, 'blog', blog.slug)
+        blog_detail_dir = os.path.join(site_dir, 'blog', blog.slug)
 
-        if os.path.exists(blog_dir):
-            shutil.rmtree(blog_dir)
-
-        os.makedirs(blog_dir)
-        file_path = os.path.join(blog_dir, 'index.md')
+        if os.path.exists(blog_detail_dir):
+            shutil.rmtree(blog_detail_dir)
+            
+        os.makedirs(blog_detail_dir)
+        file_path = os.path.join(blog_detail_dir, 'index.md')
 
         #content of blog detail
         blog_detail = blog.detail
@@ -143,31 +149,33 @@ def define_env(env):
 
     username = os.environ.get("TRUFFLESUITE_COM_GH_API_USERNAME")
     key = os.environ.get("TRUFFLESUITE_COM_GH_API_KEY")
-    for box in env.conf['extra']['boxes']:
-        print(box['repoName'])
+    if key:
+        for box in env.conf['extra']['boxes']:
+            print(box['repoName'])
 
-        box_dir = os.path.join(site_dir, 'boxes', box['displayName'])
-        if os.path.exists(box_dir):
-            shutil.rmtree(box_dir)
-        os.makedirs(box_dir)
-        file_path = os.path.join(box_dir, 'index.md')
+            box_dir = os.path.join(site_dir, 'boxes', box['displayName'])
+            if os.path.exists(box_dir):
+                shutil.rmtree(box_dir)
+            os.makedirs(box_dir)
+            file_path = os.path.join(box_dir, 'index.md')
 
-        response = requests.get("https://api.github.com/repos/" + box['userOrg'] + "/" + box['repoName'] + "/readme", auth=HTTPBasicAuth(username, key))
-        json_response = response.json()
+            response = requests.get("https://api.github.com/repos/" + box['userOrg'] + "/" + box['repoName'] + "/readme", auth=HTTPBasicAuth(username, key))
+            json_response = response.json()
 
-        try:
-            markdown = base64.b64decode(json_response['content'])
+            try:
+                if hasattr(json_response, 'content'):
+                    markdown = base64.b64decode(json_response['content'])
 
-            with open('src/boxes/box.html.jinja2') as file_:
-                template = Template(file_.read())
+                    with open('src/boxes/box.html.jinja2') as file_:
+                        template = Template(file_.read())
 
-            outputText = template.render(box=box, readme=markdown.decode('utf-8'))
+                    outputText = template.render(box=box, readme=markdown.decode('utf-8'))
 
-            with open(file_path, 'w') as f:
-                f.write(outputText)
+                    with open(file_path, 'w') as f:
+                        f.write(outputText)
 
-        except Exception as ex:
-            print('error: ' + repr(ex))
+            except Exception as ex:
+                print('error: ' + repr(ex))
 
 def on_pre_page_macros(env):
     "Pre-page actions"

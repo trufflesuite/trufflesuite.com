@@ -1,6 +1,10 @@
 
 {% extends "main.html" %}
 
+{% block htmltitle %}
+<title>{{config.extra.contentful_page.blog.seo.page_title}}</title>
+{% endblock %}
+
 <!-- Render hero under tabs -->
 {% block tabs %}
   {{ super() }}

@@ -1,5 +1,8 @@
 {% extends "main.html" %}
 
+{% block htmltitle %}
+<title>{{config.extra.contentful_page.community.seo.page_title}}</title>
+{% endblock %}
 <!-- Render hero under tabs -->
 {% block tabs %}
   {{ super() }}
