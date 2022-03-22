@@ -59,9 +59,9 @@ def get_blogs_contentful(client, data):
 def define_env(env):
     "Definition of the module"
 
-    contentful_space_id = os.getenv('CONTENTFUL_SPACE_ID') or os.environ.get('CONTENTFUL_SPACE_ID')
-    contentful_token = os.getenv('CONTENTFUL_TOKEN') or os.environ.get('CONTENTFUL_TOKEN')
-    contentful_environment = os.getenv('CONTENTFUL_ENVIRONMENT') or os.environ.get('CONTENTFUL_ENVIRONMENT')
+    contentful_space_id = os.environ.get('CONTENTFUL_SPACE_ID')
+    contentful_token = os.environ.get('CONTENTFUL_TOKEN')
+    contentful_environment = os.environ.get('CONTENTFUL_ENVIRONMENT')
     env.conf['extra']['module_id_parse'] = module_id_parse
     env.conf['extra']['parse_asset_contentful'] = parse_asset_contentful
     env.conf['extra']['parse_url'] = parse_url
