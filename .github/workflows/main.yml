@@ -10,6 +10,7 @@ jobs:
   build:
     name: Deploy docs
     runs-on: ubuntu-latest
+    environment: github-pages
     steps:
       - name: Checkout master
         uses: actions/checkout@v1
