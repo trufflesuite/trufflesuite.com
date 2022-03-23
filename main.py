@@ -68,23 +68,18 @@ def define_env(env):
     client = contentful.Client(contentful_space_id, contentful_token, environment=contentful_environment)
     site_dir = env.conf['docs_dir']
 
-    # Query all entry 'page'
+    # query all entry 'page'
     entries = client.entries({'content_type': 'page', 'include': 10})
     contentful_data = {}
-    # test = client.entry('1CgkzrVtPU7A4FbD6MfwwJ')
-    # from pprint import pprint
-    # pprint(test.date)
     for entry in entries:
-        # dictModules = [{'template': module_id_parse(module.sys['content_type'].id), 'props': module} for module in entry.modules]
         nested_set(contentful_data, [entry.slug], entry)
         env.conf['extra']['contentful_page'] = contentful_data
 
-    #blog page
-    # contentful_entries_blogs = client.entries({'limit': 500, 'content_type': 'blog', 'include': 10, 'order': '-fields.date,-sys.createdAt'})
+    # blog page
     contentful_entries_blogs = get_blogs_contentful(client, [])
     env.conf['extra']['contentful_blogs'] = contentful_entries_blogs
 
-    #clear all data old blog
+    # get blog content from contentful
     blog_dir = os.path.join(site_dir, 'blog')
     for f in os.listdir(blog_dir):
         if(os.path.isdir(os.path.join(blog_dir, f))):
@@ -95,26 +90,32 @@ def define_env(env):
 
         if os.path.exists(blog_detail_dir):
             shutil.rmtree(blog_detail_dir)
-            
+
         os.makedirs(blog_detail_dir)
         file_path = os.path.join(blog_detail_dir, 'index.md')
 
         #content of blog detail
         blog_detail = blog.detail
 
-        #heading detail and SEO title
+        #heading detail title
         blog_detail_title = blog.title
-        if hasattr(blog, 'detail_title'):
+        blog_detail_description = blog.description
+
+        blog_detail_featured = 'https://trufflesuite.com/img/home-hero.png'
+        if hasattr(blog, 'detail_title') and blog.detail_title:
             blog_detail_title = blog.detail_title
+
+        if hasattr(blog, 'thumbnail') and blog.thumbnail.url():
+            blog_detail_featured = blog.thumbnail.url()
+
+        if hasattr(blog, 'featured') and blog.featured.url():
+            blog_detail_featured = blog.featured.url()
 
         try:
             markdown = blog_detail
-
             with open('src/blog/blog.html.jinja2') as file_:
                 template = Template(file_.read())
-
-            outputText = template.render(blog=blog, content=markdown, title=blog_detail_title)
-
+            outputText = template.render(blog=blog, content=markdown, title=blog_detail_title, description=blog_detail_description, featured=blog_detail_featured)
             with open(file_path, 'w') as f:
                 f.write(outputText)
 

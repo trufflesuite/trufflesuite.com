@@ -1,8 +1,22 @@
-
 {% extends "main.html" %}
 
 {% block htmltitle %}
-<title>{{config.extra.contentful_page.blog.seo.page_title}}</title>
+    {% if config.extra.contentful_page.blog and config.extra.contentful_page.blog.seo %}
+        <title>{{config.extra.contentful_page.blog.seo.page_title}}</title>
+        <meta name="description" content="{{config.extra.contentful_page.blog.seo.page_description}}">
+        <meta property="og:site_name" content="{{config.site_name}}">
+        <meta property="og:url" content="{{ page.canonical_url }}">
+        <meta property="og:type" content="page">
+        <meta property="og:title" content="{{config.extra.contentful_page.blog.seo.page_title}}">
+        <meta property="og:description" content="{{config.extra.contentful_page.blog.seo.page_description}}">
+        <meta property="og:image" content="{{config.extra.contentful_page.blog.seo.featured_image.url()}}">
+        <meta name="twitter:url" content="{{ page.canonical_url }}">
+        <meta name="twitter:title" content="{{config.extra.contentful_page.blog.seo.page_title}}">
+        <meta name="twitter:description" content="{{config.extra.contentful_page.blog.seo.page_description}}">
+        <meta name="twitter:image" content="{{config.extra.contentful_page.blog.seo.featured_image.url()}}">
+    {% else %}
+        {{ super() }}
+    {% endif %}
 {% endblock %}
 
 <!-- Render hero under tabs -->
@@ -59,7 +73,7 @@
     </section>
 </div>
 
-  {% endblock %}
+{% endblock %}
 
 
 <!-- Content -->

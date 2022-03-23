@@ -1,7 +1,22 @@
 {% extends "main.html" %}
 
 {% block htmltitle %}
-<title>{{config.extra.contentful_page.community.seo.page_title}}</title>
+  {% if config.extra.contentful_page.community and config.extra.contentful_page.community.seo %}
+    <title>{{config.extra.contentful_page.community.seo.page_title}}</title>
+    <meta name="description" content="{{config.extra.contentful_page.community.seo.page_description}}">
+    <meta property="og:site_name" content="{{config.site_name}}">
+    <meta property="og:url" content="{{ page.canonical_url }}">
+    <meta property="og:type" content="page">
+    <meta property="og:title" content="{{config.extra.contentful_page.community.seo.page_title}}">
+    <meta property="og:description" content="{{config.extra.contentful_page.community.seo.page_description}}">
+    <meta property="og:image" content="{{config.extra.contentful_page.community.seo.featured_image.url()}}">
+    <meta name="twitter:url" content="{{ page.canonical_url }}">
+    <meta name="twitter:title" content="{{config.extra.contentful_page.community.seo.page_title}}">
+    <meta name="twitter:description" content="{{config.extra.contentful_page.community.seo.page_description}}">
+    <meta name="twitter:image" content="{{config.extra.contentful_page.community.seo.featured_image.url()}}">
+  {% else %}
+    {{ super() }}
+  {% endif %}
 {% endblock %}
 <!-- Render hero under tabs -->
 {% block tabs %}
@@ -40,7 +55,7 @@
       width: 2.5rem;
       max-height: 2.5rem;
     }
-    
+
   </style>
 
 {% with modules = config.extra.contentful_page.community.modules %}

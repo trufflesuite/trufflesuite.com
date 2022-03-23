@@ -1,20 +1,30 @@
 {% extends "base.html" %}
 
-{% block site_meta %}
+{% block htmltitle %}
     {{ super() }}
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-PPB7LNV');</script>
-      <!-- End Google Tag Manager -->
-
+    <meta property="og:url" content="{{ page.canonical_url }}">
+    <meta property="og:site_name" content="{{config.site_name}}">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{page.title}} - {{config.site_name}}">
+    {% if page and page.meta and page.meta.description %}<meta property="og:description" content="{{page.meta.description}}">{% endif %}
+    {% if page and page.meta and page.meta.featured %}<meta property="og:image" content="{{page.meta.featured}}">{% endif %}
+    <meta name="twitter:url" content="{{ page.canonical_url }}">
+    <meta name="twitter:title" content="{{page.title}} - {{config.site_name}}">
+    {% if page and page.meta and page.meta.description %}<meta name="twitter:description" content="{{page.meta.description}}">{% endif %}
+    {% if page and page.meta and page.meta.featured %}<meta name="twitter:image" content="{{page.meta.featured}}">{% endif %}
 {% endblock %}
 
 {% block extrahead %}
     {{ super() }}
-    <!-- Redirect -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PPB7LNV');</script>
+    <!-- End Google Tag Manager -->
+
+<!-- Redirect -->
     <script>(function(){
       var path = location.pathname;
       var slug = path.slice(1);
@@ -24,10 +34,9 @@
         location.href = path.replace(regex,'')
       } else if(ext !== slug && ext === 'html') {
         location.href = path.substr(0, path.lastIndexOf(".")) + '/';
-      } 
+      }
     })()</script>
     <!-- End redirect -->
-
 {% endblock %}
 
 <!-- Announcement bar -->

@@ -51,6 +51,7 @@ markdown_extensions:
   - markdown.extensions.md_in_html
   - toc:
       permalink: true
+  - meta
 use_directory_urls: false
 plugins:
   - search
