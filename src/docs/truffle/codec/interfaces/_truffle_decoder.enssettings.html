@@ -70,8 +70,8 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>In the future, this type will indicates settings to be used for ENS resolution
-						and reverse resolution.  Currently it does nothing.</p>
+						<p>This type indicates settings to be used for ENS resolution (and, in the
+						future, reverse resolution).</p>
 					</div>
 				</div>
 			</section>
@@ -105,16 +105,15 @@
 					<div class="tsd-signature tsd-kind-icon">provider<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Provider</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/9a260683d/packages/decoder/lib/types.ts#L64">decoder/lib/types.ts:64</a></li>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/decoder/lib/types.ts#L66">decoder/lib/types.ts:66</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>(This does nothing at present; this description is intended for the future.)</p>
+							<p>The provider to use for ENS resolution; set this to <code>null</code> to disable
+								ENS resolution.  If absent, will default to the decoder&#39;s provider,
+							and ENS resolution will be enabled.</p>
 						</div>
-						<p>The provider to use for ENS resolution; set this to <code>null</code> to disable
-							ENS resolution.  If absent, will default to the decoder&#39;s provider,
-						and ENS resolution will be enabled.</p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
@@ -123,16 +122,15 @@
 					<div class="tsd-signature tsd-kind-icon">registry<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/9a260683d/packages/decoder/lib/types.ts#L72">decoder/lib/types.ts:72</a></li>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/decoder/lib/types.ts#L72">decoder/lib/types.ts:72</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>(This does nothing at present; this description is intended for the future.)</p>
+							<p>The ENS registry address to use; if absent, will use the default one
+								for the current network.  If there is no default registry for the
+							current network, ENS resolution will be disabled.</p>
 						</div>
-						<p>The ENS registry address to use; if absent, will use the default one
-							for the current network.  If there is no default registry for the
-						current network, ENS resolution will be disabled.</p>
 					</div>
 				</section>
 			</section>
@@ -148,6 +146,9 @@
 					</li>
 					<li class="current tsd-kind-module">
 						<a href="../modules/_truffle_decoder.html">@truffle/decoder</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_truffle_encoder.html">@truffle/encoder</a>
 					</li>
 				</ul>
 			</nav>
@@ -218,9 +219,6 @@
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
 						<a href="_truffle_decoder.transaction.html" class="tsd-kind-icon">Transaction</a>
-					</li>
-					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-						<a href="../modules/_truffle_decoder.html#blockspecifier" class="tsd-kind-icon">Block<wbr>Specifier</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
 						<a href="../modules/_truffle_decoder.html#projectinfo" class="tsd-kind-icon">Project<wbr>Info</a>
