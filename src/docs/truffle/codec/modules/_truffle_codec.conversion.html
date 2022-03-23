@@ -76,8 +76,10 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.conversion.html#cleanbool" class="tsd-kind-icon">clean<wbr>Bool</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.conversion.html#countdecimalplaces" class="tsd-kind-icon">count<wbr>Decimal<wbr>Places</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.conversion.html#isbig" class="tsd-kind-icon">is<wbr>Big</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.conversion.html#shiftbigdown" class="tsd-kind-icon">shift<wbr>Big<wbr>Down</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.conversion.html#shiftbigup" class="tsd-kind-icon">shift<wbr>Big<wbr>Up</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.conversion.html#stringtobytes" class="tsd-kind-icon">string<wbr>ToBytes</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.conversion.html#tobn" class="tsd-kind-icon">toBN</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.conversion.html#tobig" class="tsd-kind-icon">to<wbr>Big</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.conversion.html#tobigint" class="tsd-kind-icon">to<wbr>Big<wbr>Int</a></li>
@@ -101,7 +103,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/9a260683d/packages/codec/lib/conversion.ts#L189">codec/lib/conversion.ts:189</a></li>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/conversion.ts#L233">codec/lib/conversion.ts:233</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -124,7 +126,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/9a260683d/packages/codec/lib/conversion.ts#L181">codec/lib/conversion.ts:181</a></li>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/conversion.ts#L225">codec/lib/conversion.ts:225</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -138,6 +140,29 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="isbig" class="tsd-anchor"></a>
+					<h3>is<wbr>Big</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Big<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">input</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/conversion.ts#L40">codec/lib/conversion.ts:40</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>input: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">input</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
 					<a name="shiftbigdown" class="tsd-anchor"></a>
 					<h3>shift<wbr>Big<wbr>Down</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
@@ -147,7 +172,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/9a260683d/packages/codec/lib/conversion.ts#L174">codec/lib/conversion.ts:174</a></li>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/conversion.ts#L219">codec/lib/conversion.ts:219</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -173,7 +198,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/9a260683d/packages/codec/lib/conversion.ts#L167">codec/lib/conversion.ts:167</a></li>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/conversion.ts#L212">codec/lib/conversion.ts:212</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -190,22 +215,45 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
-					<a name="tobn" class="tsd-anchor"></a>
-					<h3>toBN</h3>
+					<a name="stringtobytes" class="tsd-anchor"></a>
+					<h3>string<wbr>ToBytes</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">toBN<span class="tsd-signature-symbol">(</span>bytes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Big</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BN</span></li>
+						<li class="tsd-signature tsd-kind-icon">string<wbr>ToBytes<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/9a260683d/packages/codec/lib/conversion.ts#L12">codec/lib/conversion.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/conversion.ts#L200">codec/lib/conversion.ts:200</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>bytes: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Big</span></h5>
+									<h5>input: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Uint8Array</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="tobn" class="tsd-anchor"></a>
+					<h3>toBN</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">toBN<span class="tsd-signature-symbol">(</span>bytes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Big</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BN</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/conversion.ts#L14">codec/lib/conversion.ts:14</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>bytes: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Big</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>undefined | string | number | BN | Uint8Array | Big</p>
 									</div>
@@ -219,19 +267,19 @@
 					<a name="tobig" class="tsd-anchor"></a>
 					<h3>to<wbr>Big</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">to<wbr>Big<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Big</span></li>
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Big<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Big</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/9a260683d/packages/codec/lib/conversion.ts#L57">codec/lib/conversion.ts:57</a></li>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/conversion.ts#L82">codec/lib/conversion.ts:82</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>value: <span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+									<h5>value: <span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Big</span></h4>
@@ -248,7 +296,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/9a260683d/packages/codec/lib/conversion.ts#L49">codec/lib/conversion.ts:49</a></li>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/conversion.ts#L74">codec/lib/conversion.ts:74</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -265,19 +313,19 @@
 					<a name="tobytes" class="tsd-anchor"></a>
 					<h3>to<wbr>Bytes</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">to<wbr>Bytes<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Big</span>, length<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span></li>
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Bytes<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Big</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span>, length<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/9a260683d/packages/codec/lib/conversion.ts#L109">codec/lib/conversion.ts:109</a></li>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/conversion.ts#L139">codec/lib/conversion.ts:139</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>data: <span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Big</span></h5>
+									<h5>data: <span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Big</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span></h5>
 								</li>
 								<li>
 									<h5>length: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></h5>
@@ -291,21 +339,21 @@
 					<a name="tohexstring" class="tsd-anchor"></a>
 					<h3>to<wbr>Hex<wbr>String</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
-						<li class="tsd-signature tsd-kind-icon">to<wbr>Hex<wbr>String<span class="tsd-signature-symbol">(</span>bytes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span>, padLength<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, padRight<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Hex<wbr>String<span class="tsd-signature-symbol">(</span>bytes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Big</span>, padLength<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, padRight<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/9a260683d/packages/codec/lib/conversion.ts#L69">codec/lib/conversion.ts:69</a></li>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/conversion.ts#L94">codec/lib/conversion.ts:94</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>bytes: <span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span></h5>
+									<h5>bytes: <span class="tsd-signature-type">Uint8Array</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BN</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Big</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>Uint8Array | BN</p>
+										<p>Uint8Array | BN | bigint</p>
 									</div>
 								</li>
 								<li>
@@ -335,7 +383,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/9a260683d/packages/codec/lib/conversion.ts#L38">codec/lib/conversion.ts:38</a></li>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/conversion.ts#L63">codec/lib/conversion.ts:63</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -370,10 +418,16 @@
 						<a href="_truffle_codec.conversion.html#countdecimalplaces" class="tsd-kind-icon">count<wbr>Decimal<wbr>Places</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.conversion.html#isbig" class="tsd-kind-icon">is<wbr>Big</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
 						<a href="_truffle_codec.conversion.html#shiftbigdown" class="tsd-kind-icon">shift<wbr>Big<wbr>Down</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace">
 						<a href="_truffle_codec.conversion.html#shiftbigup" class="tsd-kind-icon">shift<wbr>Big<wbr>Up</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.conversion.html#stringtobytes" class="tsd-kind-icon">string<wbr>ToBytes</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace">
 						<a href="_truffle_codec.conversion.html#tobn" class="tsd-kind-icon">toBN</a>
