@@ -1,0 +1,19 @@
+<a href={{config.extra.parse_url(props.slug)}}>
+  <div class="row pt-3 pb-3">
+      {% if props.thumbnail %}
+      <div class="col-md-3">
+          <img alt={{props.thumbnail.title}} src={{config.extra.parse_asset_contentful(props.thumbnail)}} class="rounded-circle img-fluid green" />
+      </div>
+      {% endif %}
+      <div class="col-md-9">
+          <h2>{{ props.title }}</h2>
+          <p>{% if props.date %}{{ props.date.strftime('%Y-%m-%d') }}&nbsp;&nbsp;&nbsp;{% endif %}<i class="far fa-user"></i> {{ props.author }}</p>
+          {% if props.description %}
+              <p>{{ props.description }}</p>
+          {% endif %}
+          {% if props.cta_text %}
+          <span class="btn btn-secondary">{{props.cta_text}}</span>
+          {% endif %}
+      </div>
+  </div>
+</a>

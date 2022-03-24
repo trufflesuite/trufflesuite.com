@@ -1,5 +1,23 @@
 {% extends "main.html" %}
 
+{% block htmltitle %}
+  {% if config.extra.contentful_page.community and config.extra.contentful_page.community.seo %}
+    <title>{{config.extra.contentful_page.community.seo.page_title}}</title>
+    <meta name="description" content="{{config.extra.contentful_page.community.seo.page_description}}">
+    <meta property="og:site_name" content="{{config.site_name}}">
+    <meta property="og:url" content="{{ page.canonical_url }}">
+    <meta property="og:type" content="page">
+    <meta property="og:title" content="{{config.extra.contentful_page.community.seo.page_title}}">
+    <meta property="og:description" content="{{config.extra.contentful_page.community.seo.page_description}}">
+    <meta property="og:image" content="{{config.extra.contentful_page.community.seo.featured_image.url()}}">
+    <meta name="twitter:url" content="{{ page.canonical_url }}">
+    <meta name="twitter:title" content="{{config.extra.contentful_page.community.seo.page_title}}">
+    <meta name="twitter:description" content="{{config.extra.contentful_page.community.seo.page_description}}">
+    <meta name="twitter:image" content="{{config.extra.contentful_page.community.seo.featured_image.url()}}">
+  {% else %}
+    {{ super() }}
+  {% endif %}
+{% endblock %}
 <!-- Render hero under tabs -->
 {% block tabs %}
   {{ super() }}
@@ -37,73 +55,19 @@
       width: 2.5rem;
       max-height: 2.5rem;
     }
-    
+
   </style>
 
-<div class="container">
-  <section class="p-5">
-    <main role="main" class="container">
-      <div class="row align-items-center">
-        <div class="col-sm">
-          <h1><img class="support-heading" src="../img/support-header.svg" alt="Life Preserver" title="Support" /> COMMUNITY &amp; SUPPORT</h1>
-          <p class="mb-0"><strong>Help is close by!</strong> Truffle has a spectacular community of developers--the largest of any Ethereum development framework!</p>
-        </div>
-      </div>
-    </main>
-    
-    <main class="banner banner-light-cream pt-5 pb-5">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="card">
-              <div class="card-body card-zendesk">
-                <h2>Open a Support Ticket! <span class="badge rounded-pill bg-success">NEW</span></h2>
-                <p>The easiest way to track your conversation and contribute to our knowledge base! Open a support ticket to begin talking to our support staff. Common questions will be added to our knowledge base to assist future Trufflers!</p>
-                <a href="https://trufflesuite.zendesk.com/hc/en-us/requests/new" class="btn btn-sm btn-truffle text-uppercase">Open a Support Ticket</a>
-              </div>
-            </div>
-    
-            <h2 class="mt-5">A Little Help from Our Friends</h2>
-            <p>If you’re stuck trying to get something to work, have any questions, or suggestions, the fastest way to get help from the community. Truffle has the largest community of blockchain developers on Earth! Chat with hundreds of your fellow Trufflers on Gitter or Spectrum.</p>
-            <hr />
-          </div>
-        </div>
-    
-        <div class="row">
-          <div class="col-6">
-            <h3>Chat on Gitter</h3>
-            <p class="mb-0">For a chatroom, <a class="minty" href="http://gitter.im/ConsenSys/truffle">check out Gitter</a>. It's very active; the quickest response is generally here but it's difficult to track longer threads or search.</p>
-          </div>
-    
-          <div class="col-6">
-            <h3>Post on Spectrum</h3>
-            <p class="mb-0">For a forum, <a class="minty" href="https://spectrum.chat/trufflesuite?tab=posts">check out Spectrum</a>. Responses can be slower, but the post/response format lends itself to better tracking of your question and searchability of others.</p>
-          </div>
-        </div>
-    
-        <div class="row">
-          <div class="col">
-            <h2 class="mt-5"><i class="fab fa-github"></i> Find us on GitHub!</h2>
-            <p>Truffle not behaving as intended? Know your issue is a bug? Want to suggest an improvement? This is the place to do it!</p>
-            <hr />
-          </div>
-        </div>
-    
-        <div class="row">
-          <div class="col-6">
-            <h3>Submit an Issue on GitHub</h3>
-            <p>If something’s not working as expected, or you have an idea for a feature or change you’d like to see, please <a class="minty" href="https://github.com/trufflesuite/">open an issue</a> and start a discussion.</p>
-          </div>
-    
-          <div class="col-6">
-            <h3>Help Improve the Documentation</h3>
-            <p>We’re only human, and need all the help you can give us to improve the documentation. If you’d like to submit any feedback or suggestions, please create a pull request on <a class="minty" href="https://github.com/trufflesuite/trufflesuite.com/">our documentation repository</a>.</p>
-          </div>
-        </div>
-      </div>
-    </main>
-  </section>
-</div>
+{% with modules = config.extra.contentful_page.community.modules %}
+  {% for module in modules %}
+    {% with %}
+      {% set props = module %}
+      <!-- {% set template = module.template %} -->
+      {% set template = config.extra.module_id_parse(module.sys['content_type'].id) %}
+      {% include 'partials/contentful/'+template+'.html' %}
+    {% endwith %}
+  {% endfor %}
+{% endwith %}
 
 {% endblock %}
 

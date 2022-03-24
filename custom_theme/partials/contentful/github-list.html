@@ -1,0 +1,15 @@
+<div class="">
+    <div class="row">
+        <div class="col">
+          {% with modules = props.modules %}
+            {% for module in modules %}
+              {% with %}
+                {% set props = module %}
+                {% set template = config.extra.module_id_parse(module.sys['content_type'].id) %}
+                {% include 'partials/contentful/'+template+'.html' %}
+              {% endwith %}
+            {% endfor %}
+          {% endwith %}
+        </div>
+    </div>
+</div>

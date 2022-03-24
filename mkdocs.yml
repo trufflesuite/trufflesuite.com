@@ -48,7 +48,8 @@ markdown_extensions:
   - markdown.extensions.md_in_html
   - toc:
       permalink: true
-use_directory_urls: false
+  - meta
+use_directory_urls: true
 plugins:
   - search
   - awesome-pages

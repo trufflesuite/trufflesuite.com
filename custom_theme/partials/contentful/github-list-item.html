@@ -1,0 +1,19 @@
+<div class="github-item-row">
+  <h2 class="text-{{props.type}}">
+    <div>{{props.heading}}</div>
+    <div class="github-button-wrapper ml-0">
+    <a class="github-button" href="https://github.com/trufflesuite/{{props.type}}" data-size="large"  data-show-count="true" aria-label="Star trufflesuite/{{props.type}} on GitHub">Star</a>
+    </div>
+  </h2>
+  <h5 class="color-{{props.type}}">{{props.title}}</h5>
+  <p>{{props.description}}</p>
+  {% with buttons = props.buttons %}
+    {% for button in buttons %}
+      {% with %}
+        {% set props = button %}
+        {% set template = config.extra.module_id_parse(button.sys['content_type'].id) %}
+        {% include 'partials/contentful/'+template+'.html' %}
+      {% endwith %}
+    {% endfor %}
+  {% endwith %}
+</div>

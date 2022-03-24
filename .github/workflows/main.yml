@@ -4,10 +4,13 @@ on:
     branches:
       - main
 
+  workflow_dispatch:
+
 jobs:
   build:
     name: Deploy docs
     runs-on: ubuntu-latest
+    environment: github-pages
     steps:
       - name: Checkout master
         uses: actions/checkout@v1
@@ -18,3 +21,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TRUFFLESUITE_COM_GH_API_USERNAME: ${{ secrets.TRUFFLESUITE_COM_GH_API_USERNAME }}
           TRUFFLESUITE_COM_GH_API_KEY: ${{ secrets.TRUFFLESUITE_COM_GH_API_KEY }}
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ENVIRONMENT: ${{ secrets.CONTENTFUL_ENVIRONMENT }}
+          CONTENTFUL_TOKEN: ${{ secrets.CONTENTFUL_TOKEN }}

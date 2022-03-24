@@ -1,0 +1,9 @@
+<div class="col-8 col-sm-6 col-md-3 mt-4 mt-sm-3 mb-4 mb-sm-3">
+  {% if props.url %}
+  <a href={{config.extra.parse_url(props.url)}}>
+    <img class="img-fluid {{props.image.theme}}" src={{config.extra.parse_asset_contentful(props.image)}} alt={{props.image.title}} />
+  </a>
+  {% else %}
+  <img class="img-fluid {{props.image.theme}}" src={{config.extra.parse_asset_contentful(props.image)}} alt={{props.image.title}} />
+  {% endif %}
+</div>

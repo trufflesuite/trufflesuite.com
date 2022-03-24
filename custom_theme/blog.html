@@ -1,5 +1,23 @@
-
 {% extends "main.html" %}
+
+{% block htmltitle %}
+    {% if config.extra.contentful_page.blog and config.extra.contentful_page.blog.seo %}
+        <title>{{config.extra.contentful_page.blog.seo.page_title}}</title>
+        <meta name="description" content="{{config.extra.contentful_page.blog.seo.page_description}}">
+        <meta property="og:site_name" content="{{config.site_name}}">
+        <meta property="og:url" content="{{ page.canonical_url }}">
+        <meta property="og:type" content="page">
+        <meta property="og:title" content="{{config.extra.contentful_page.blog.seo.page_title}}">
+        <meta property="og:description" content="{{config.extra.contentful_page.blog.seo.page_description}}">
+        <meta property="og:image" content="{{config.extra.contentful_page.blog.seo.featured_image.url()}}">
+        <meta name="twitter:url" content="{{ page.canonical_url }}">
+        <meta name="twitter:title" content="{{config.extra.contentful_page.blog.seo.page_title}}">
+        <meta name="twitter:description" content="{{config.extra.contentful_page.blog.seo.page_description}}">
+        <meta name="twitter:image" content="{{config.extra.contentful_page.blog.seo.featured_image.url()}}">
+    {% else %}
+        {{ super() }}
+    {% endif %}
+{% endblock %}
 
 <!-- Render hero under tabs -->
 {% block tabs %}
@@ -41,30 +59,21 @@
 
 <div class="container">
     <section class="p-5">
-        <h1>Truffle Blog</h1>
-        {% for post in config.extra.posts %}
-            <a href="{{ post.route }}">
-                <div class="row pt-3 pb-3">
-                    {% if post.image %}
-                    <div class="col-md-3">
-                        <img src="{{ post.image }}" class="rounded-circle img-fluid green" />
-                    </div>
-                    {% endif %}
-                    <div class="col-md-9">
-                        <h2>{{ post.title }}</h2>
-                        <p>{{ post.date }}&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> {{ post.author }}</p>
-                        {% if post.excerpt is not none %}
-                            <p>{{ post.excerpt }}</p>
-                        {% endif %}
-                        <span class="btn btn-secondary">READ MORE</span>
-                    </div>
-                </div>
-            </a>
-        {% endfor %}
+        <h1>{{config.extra.contentful_page.blog.title}}</h1>
+        {% with modules = config.extra.contentful_blogs %}
+          {% for module in modules %}
+            {% with %}
+              {% set props = module %}
+              <!-- {% set template = module.template %} -->
+              {% set template = config.extra.module_id_parse(module.sys['content_type'].id) %}
+              {% include 'partials/contentful/'+template+'.html' %}
+            {% endwith %}
+          {% endfor %}
+        {% endwith %}
     </section>
 </div>
 
-  {% endblock %}
+{% endblock %}
 
 
 <!-- Content -->

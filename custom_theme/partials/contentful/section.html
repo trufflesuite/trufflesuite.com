@@ -1,0 +1,13 @@
+<section class="{% if props.background %}bg-{{props.background}}{% endif %} {% if props.color %}text-{{props.color}}{% endif %}">
+  <div class="{% if props.is_container %}container p-5{% endif %}">
+    {% with modules = props.modules %}
+      {% for module in modules %}
+        {% with %}
+          {% set props = module %}
+          {% set template = config.extra.module_id_parse(module.sys['content_type'].id) %}
+          {% include 'partials/contentful/'+template+'.html' %}
+        {% endwith %}
+      {% endfor %}
+    {% endwith %}
+  </div>
+</section>

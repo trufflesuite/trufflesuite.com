@@ -4,14 +4,123 @@ import base64
 
 import json
 import mkdocs
+import contentful
 
 import requests
 from requests.auth import HTTPBasicAuth
 
 from jinja2 import Template
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
+def nested_set(dic, keys, value):
+    for key in keys[:-1]:
+        dic = dic.setdefault(key, {})
+    dic[keys[-1]] = value
+
+def parse_url(path):
+    return os.path.join(path, '')
+
+def module_id_parse(id):
+    listMapping = {
+        'hero': 'hero',
+        'githubList': 'github-list',
+        'githubItem': 'github-list-item',
+        'button': 'button',
+        'logoList': 'logo-list',
+        'logoItem': 'logo-list-item',
+        'section': 'section',
+        'hubSpotForm': 'hubSpot-form',
+        'feature': 'feature',
+        'blog': 'blog-item',
+        'cardItem': 'card-item',
+        'richText': 'rich-text',
+        'gridListing': 'grid-listing',
+    }
+    return listMapping[id]
+
+def parse_asset_contentful(data, w = 1200):
+    if ("svg" in data.file['contentType']):
+        return data.url()
+    return data.url(w=w, fm='webp', q=100)
+
+def get_blogs_contentful(client, data):
+    blogs = client.entries({'limit': 500, 'content_type': 'blog', 'include': 10, 'order': '-fields.date,-sys.createdAt'})
+    data = data + blogs.items
+    size = len(data)
+    total = blogs.total
+    if(total > size):
+        return get_blogs_contentful(client, data)
+    return data
+
 def define_env(env):
     "Definition of the module"
+
+    contentful_space_id = os.environ.get('CONTENTFUL_SPACE_ID')
+    contentful_token = os.environ.get('CONTENTFUL_TOKEN')
+    contentful_environment = os.environ.get('CONTENTFUL_ENVIRONMENT')
+    env.conf['extra']['module_id_parse'] = module_id_parse
+    env.conf['extra']['parse_asset_contentful'] = parse_asset_contentful
+    env.conf['extra']['parse_url'] = parse_url
+    client = contentful.Client(contentful_space_id, contentful_token, environment=contentful_environment)
+    site_dir = env.conf['docs_dir']
+
+    # query all entry 'page'
+    entries = client.entries({'content_type': 'page', 'include': 10})
+    contentful_data = {}
+    for entry in entries:
+        nested_set(contentful_data, [entry.slug], entry)
+        env.conf['extra']['contentful_page'] = contentful_data
+
+    # blog page
+    contentful_entries_blogs = get_blogs_contentful(client, [])
+    env.conf['extra']['contentful_blogs'] = contentful_entries_blogs
+
+    # get blog content from contentful
+    blog_dir = os.path.join(site_dir, 'blog')
+    for f in os.listdir(blog_dir):
+        if(os.path.isdir(os.path.join(blog_dir, f))):
+            shutil.rmtree(os.path.join(blog_dir, f))
+
+    for blog in contentful_entries_blogs:
+        blog_detail_dir = os.path.join(site_dir, 'blog', blog.slug)
+
+        if os.path.exists(blog_detail_dir):
+            shutil.rmtree(blog_detail_dir)
+
+        os.makedirs(blog_detail_dir)
+        file_path = os.path.join(blog_detail_dir, 'index.md')
+
+        #content of blog detail
+        blog_detail = blog.detail
+
+        #heading detail title
+        blog_detail_title = blog.title
+        blog_detail_description = blog.description
+
+        blog_detail_featured = 'https://trufflesuite.com/img/home-hero.png'
+        if hasattr(blog, 'detail_title') and blog.detail_title:
+            blog_detail_title = blog.detail_title
+
+        if hasattr(blog, 'thumbnail') and blog.thumbnail.url():
+            blog_detail_featured = blog.thumbnail.url()
+
+        if hasattr(blog, 'featured') and blog.featured.url():
+            blog_detail_featured = blog.featured.url()
+
+        try:
+            markdown = blog_detail
+            with open('src/blog/blog.html.jinja2') as file_:
+                template = Template(file_.read())
+            outputText = template.render(blog=blog, content=markdown, title=blog_detail_title, description=blog_detail_description, featured=blog_detail_featured)
+            with open(file_path, 'w') as f:
+                f.write(outputText)
+
+        except Exception as ex:
+            print('error: ' + repr(ex))
 
     # boxes page
     data_file_object = open('src/boxes/data.json')
@@ -19,7 +128,7 @@ def define_env(env):
 
     # dict: repoName -> box
     dicBox = dict(zip(
-        [box['repoName'] for box in boxes], 
+        [box['repoName'] for box in boxes],
         boxes
     ))
 
@@ -37,51 +146,40 @@ def define_env(env):
     env.conf['extra']['boxes'] = list(dicBox.values())
 
     if os.environ.get("LOCAL_BUILD"):
-        env.conf['extra']['boxes'] = env.conf['extra']['boxes'][:6] 
+        env.conf['extra']['boxes'] = env.conf['extra']['boxes'][:6]
 
-    site_dir = env.conf['docs_dir']
     username = os.environ.get("TRUFFLESUITE_COM_GH_API_USERNAME")
     key = os.environ.get("TRUFFLESUITE_COM_GH_API_KEY")
-    for box in env.conf['extra']['boxes']:
-        print(box['repoName'])
+    if key:
+        for box in env.conf['extra']['boxes']:
+            print(box['repoName'])
 
-        box_dir = os.path.join(site_dir, 'boxes', box['displayName'])
-        if os.path.exists(box_dir):
-            shutil.rmtree(box_dir)
-        os.makedirs(box_dir)
-        file_path = os.path.join(box_dir, 'index.md')
+            box_dir = os.path.join(site_dir, 'boxes', box['displayName'])
+            if os.path.exists(box_dir):
+                shutil.rmtree(box_dir)
+            os.makedirs(box_dir)
+            file_path = os.path.join(box_dir, 'index.md')
 
-        response = requests.get("https://api.github.com/repos/" + box['userOrg'] + "/" + box['repoName'] + "/readme", auth=HTTPBasicAuth(username, key))
-        json_response = response.json()
+            response = requests.get("https://api.github.com/repos/" + box['userOrg'] + "/" + box['repoName'] + "/readme", auth=HTTPBasicAuth(username, key))
+            json_response = response.json()
 
-        try:
-            markdown = base64.b64decode(json_response['content'])
+            try:
+                if hasattr(json_response, 'content'):
+                    markdown = base64.b64decode(json_response['content'])
 
-            with open('src/boxes/box.html.jinja2') as file_:
-                template = Template(file_.read())
+                    with open('src/boxes/box.html.jinja2') as file_:
+                        template = Template(file_.read())
 
-            outputText = template.render(box=box, readme=markdown.decode('utf-8'))
+                    outputText = template.render(box=box, readme=markdown.decode('utf-8'))
 
-            with open(file_path, 'w') as f:
-                f.write(outputText)
+                    with open(file_path, 'w') as f:
+                        f.write(outputText)
 
-        except Exception as ex:
-            print('error: ' + repr(ex))
+            except Exception as ex:
+                print('error: ' + repr(ex))
 
 def on_pre_page_macros(env):
     "Pre-page actions"
-
-    # blog posts page
-    blog_file_object = open('src/blog/data.json')
-    posts = json.load(blog_file_object)
-    publishedposts = []
-    for key in posts.keys():
-        if posts[key]['published']:
-            entry = posts[key]
-            entry['route'] = key
-            publishedposts.append(entry)
-
-    env.conf['extra']['posts'] = publishedposts
 
     # guide page
     guide_file_object = open('src/guides/data.json')
