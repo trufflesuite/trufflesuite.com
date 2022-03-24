@@ -52,7 +52,7 @@ markdown_extensions:
   - toc:
       permalink: true
   - meta
-use_directory_urls: false
+use_directory_urls: true
 plugins:
   - search
   - awesome-pages
