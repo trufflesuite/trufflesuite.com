@@ -53,12 +53,8 @@
 
 <script>
   (function() {
-    const escapeListener = (e) => {
-      if (e.key === "Escape") {
-        document.body.removeEventListener("keyup", close);
-        navDrawerCheckox.click();
-      }
-    };
+    // handle opening and closing of nav menus
+
     function focusTargetLink(target){
       if (target.checked) {
         let link;
@@ -70,7 +66,6 @@
         link && link.focus();
       }
     }
-    let escapeListenerAdded = false;
 
     // make the nav bar accessible on narrow-width screens
     let prevElement;
