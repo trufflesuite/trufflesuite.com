@@ -440,3 +440,11 @@ footer .hs-form ul.hs-error-msgs {
   background-size: 80vh;
   border-top: 1px solid #e911bd;
 }
+
+@media screen and (max-width: 76.1875em) {
+  /* show the nav section when elemtn within nav is focused */
+  .md-nav:focus-within {
+    opacity:1;
+    transform: translateX(0);
+  }
+}

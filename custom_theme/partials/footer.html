@@ -49,3 +49,40 @@
 <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4795067.js"></script>
 <!-- End of HubSpot Embed Code -->
+
+
+<script>
+  (function() {
+    const escapeListener = (e) => {
+      if (e.key === "Escape") {
+        document.body.removeEventListener("keyup", close);
+        navDrawerCheckox.click();
+      }
+    };
+    let escapeListenerAdded = false;
+
+    // make the nav bar accessible on narrow-width screens
+    let prevElement;
+    document.querySelectorAll("label[for=__drawer],label.md-nav__link").forEach(label => {
+      // make the labels tabable
+      label.tabIndex = 0;
+      label.addEventListener("keypress", e => {
+        if (e.key === "Enter") {
+          // toggle checkbox state so nav state updates
+          label.click();
+          const labelFor = label.getAttribute("for");
+          const target = document.getElementById(labelFor);
+          if (target.checked) {
+            let element;
+            if (labelFor === "__drawer") {
+              link = document.querySelector("[data-md-toggle=drawer]:checked~.md-container .md-sidebar--primary a");
+            } else {
+              link = target.parentNode.querySelector("label~* a, label~* label[tabindex]");
+            }
+            link && link.focus();
+          }
+        }  
+      });
+    });
+  }());
+</script>
