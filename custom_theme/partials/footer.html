@@ -59,6 +59,17 @@
         navDrawerCheckox.click();
       }
     };
+    function focusTargetLink(target){
+      if (target.checked) {
+        let link;
+        if (target.id === "__drawer") {
+          link = document.querySelector("[data-md-toggle=drawer]:checked~.md-container .md-sidebar--primary a");
+        } else {
+          link = target.parentNode.querySelector("label~* a, label~* label[tabindex]");
+        }
+        link && link.focus();
+      }
+    }
     let escapeListenerAdded = false;
 
     // make the nav bar accessible on narrow-width screens
@@ -66,22 +77,19 @@
     document.querySelectorAll("label[for=__drawer],label.md-nav__link").forEach(label => {
       // make the labels tabable
       label.tabIndex = 0;
-      label.addEventListener("keypress", e => {
+      const labelFor = label.getAttribute("for");
+      const target = document.getElementById(labelFor);
+      label.addEventListener("keydown", e => {
         if (e.key === "Enter") {
           // toggle checkbox state so nav state updates
           label.click();
-          const labelFor = label.getAttribute("for");
-          const target = document.getElementById(labelFor);
-          if (target.checked) {
-            let element;
-            if (labelFor === "__drawer") {
-              link = document.querySelector("[data-md-toggle=drawer]:checked~.md-container .md-sidebar--primary a");
-            } else {
-              link = target.parentNode.querySelector("label~* a, label~* label[tabindex]");
-            }
-            link && link.focus();
-          }
+          focusTargetLink(target);
         }  
+      });
+      // NVDA hijacks the Enter key on the `label` element and fires the click event directly
+      // because of this we need to listen for the click event and then focus the target
+      target.addEventListener("change", e => {
+        focusTargetLink(target);
       });
     });
   }());
