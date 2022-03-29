@@ -5,10 +5,6 @@ layout: docs.hbs
 
 <div class="text-center">
   <img style="max-width: 160px;" src="/img/drizzle-logo-dark.svg" alt="Drizzle Logo" />
-  <div class="docs-badges">
-    <a class="github-button" href="https://github.com/trufflesuite/drizzle" data-icon="octicon-star" data-show-count="true" aria-label="Star trufflesuite/drizzle on GitHub">Star</a>
-    <a class="github-button" href="https://github.com/trufflesuite/drizzle/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork trufflesuite/drizzle on GitHub">Fork</a>
-  </div>
 </div>
 
 # Overview
