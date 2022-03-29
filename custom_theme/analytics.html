@@ -1,0 +1,92 @@
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %}
+{{ super() }}
+
+<!-- Additional styles for landing page -->
+<style>
+  /* Remove spacing, as we cannot hide it completely */
+  .md-main__inner {
+    margin: 0;
+  }
+
+  /* Hide main content for now */
+  .md-content {
+    display: none;
+  }
+
+  /* Hide table of contents */
+  @media screen and (min-width: 60em) {
+    .md-sidebar--secondary {
+      display: none;
+    }
+  }
+
+  /* Hide navigation */
+  @media screen and (min-width: 76.25em) {
+    .md-sidebar--primary {
+      display: none;
+    }
+  }
+</style>
+
+<section class="container p-5">
+
+  <main role="main" class="container container-heading">
+    <div class="row">
+      <div class="col">
+        <h1>Opt-In Analytics Policy</h1>
+      </div>
+    </div>
+  </main>
+
+  <main class="banner banner-light-cream pt-5 pb-5">
+    <div class="container policy-container">
+      <div class="row">
+        <div class="col">
+          <p class="c23"><span class="c3 c25 c2 c1">Last Updated:</span><span class="c3 c1 c25">&nbsp;31
+              March</span><span class="c3 c25 c2 c1">, 20</span><span class="c3 c25 c1">22</span></p>
+          <p class="c0"><span class="c5 c2 c7 c1"></span></p>
+
+          <p class="c9">To try and obtain more information about how we can improve Truffle, we have added an optional
+            new analytics feature. By default it is turned off but if you enable it, the Truffle developers will receive
+            anonymous information about your version number, the commands you run, and whether commands succeed or fail.
+          </p>
+          <p class="c0"><span class="c5 c2 c7 c1"></span></p>
+          <p class="c9">We don't use this anonymous information for anything other than to find out how we can make
+            Truffle better and have also
+            ensured that it doesn't make for a slower experience by sending this information in a background process.
+          </p>
+          <p class="c0">To turn this feature, run:
+          <pre class="bd-milk-chocolate"><code>truffle config --enable-analytics</code></pre>
+          </p>
+          <p class="c0">If you want to turn the analytics off, run:
+          <pre class="bd-milk-chocolate"><code>truffle config --disable-analytics</code></pre>
+          </p>
+          <p class="c9">You can also enable and disable analytics when using Truffle Dashboard. Click on the settings
+            icon at the bottom right to make that choice.</p>
+          <p class="c0"><span class="c5 c2 c7 c1"></span></p>
+          <p class="c9">Feel free to go take a peek at the two current places in the code where metrics are
+            gathered: when running a command and to report version and errors. If you go ahead and do a good ol' GitHub
+            search for the word analytics you can verify that these are the only places this code gets invoked. 🎉
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+</section>
+
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->
+
+{% block footer %}
+{% include "partials/footer.html" %}
+{% endblock %}
