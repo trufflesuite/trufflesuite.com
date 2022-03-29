@@ -9,6 +9,9 @@ html {
 
 :root {
   --milk: #F6F5EF;
+  /* mint, but transparent*/
+  --transparent-mint: #3fe0c533;
+  --dark-mint: #0C5A4E;
   --cream: #F2EDE7;
   --foil: #6d6d6d;
   --light-chocolate: #5e464d;
@@ -17,14 +20,14 @@ html {
   --ganache: #e4a663;
   --drizzle: #e911bd;
 
-  --md-accent-fg-color:        var(--mint);
+  --md-accent-fg-color:        var(--dark-mint);
   --md-primary-fg-color:        var(--milk);
   --md-default-fg-color--light: var(--dark-chocolate);
   --md-primary-fg-color--light: var(--light-chocolate);
   --md-default-fg-color--lightest: var(--light-chocolate);  
   --md-primary-fg-color--dark:  var(--light-chocolate);
   --md-primary-bg-color:        var(--dark-chocolate);
-
+  --md-accent-fg-color--transparent: var(--transparent-mint);
   --md-typeset-a-color: var(--dark-chocolate);
 
   --bs-body-color: var(--dark-chocolate);
@@ -51,8 +54,36 @@ html {
 }
 
 a, .md-typeset a, .md-typeset .alert a {
-  text-decoration: dashed;
-  color: var(--md-primary-fg-color--light);
+  /*
+    it would be nice if we could use one of our primary brand colors (truffle, ganache, drizzle), or even
+    the "light-chocolate" color, but these are all too lights against our cream background. So we underline
+    links (which is better for accessibility anyway) and use the dark version of mint.
+  */
+  text-decoration: underline;
+  color: var(--md-accent-fg-color);
+}
+a.link-card, nav a, .footer-naviation a {
+  /* the footer links are obviously links, so we don't need the underline signal */
+  text-decoration: none;
+}
+
+@media screen and (max-width: 76.1875em) {
+  [data-md-toggle=drawer]:not(:checked)~.md-container .md-sidebar--primary {
+    display: none;
+  }
+  [data-md-toggle=drawer]:checked~.md-container .md-sidebar--primary {
+    display: block;
+  }
+}
+
+.md-banner {
+  text-align: center;
+}
+.md-banner a:hover, .md-banner a:focus {
+  color: var(--mint);
+}
+.md-header__button {
+  outline-color: var(--mint);
 }
 
 .md-typeset a {
@@ -62,10 +93,12 @@ a, .md-typeset a, .md-typeset .alert a {
 .md-announce__inner a {
   color: var(--cream);
 }
+.md-social{
+  text-align: right;
+}
 
 a:hover {
-  text-decoration: none;
-  color: var(--mint);
+  color: var(--dark-mint);
 }
 
 pre {
@@ -99,6 +132,12 @@ pre {
 .md-nav__link, .md-nav__item .md-nav__link--active,
 .md-nav--primary .md-nav__item--active>.md-nav__link {
   color: var(--md-primary-fg-color--light);
+}
+.md-nav--primary .md-nav__link {
+  /*
+    make sure the focus outline is completely visible when navigatin with the keyboard.
+  */
+  outline-offset: -1px;
 }
 
 /* material overrides */
@@ -134,6 +173,9 @@ pre {
 .md-tabs__link {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
+  /* ensure there is enough contrast to improve legibility */
+  opacity: .85;
+  color:var(--md-primary-fg-color--light);
 }
 
 .mdx-hero__content h1 {
@@ -155,14 +197,44 @@ pre {
   color: var(--md-primary-fg-color--light);
 }
 
-.md-search-result__item, .md-search-result__meta {
+.md-search-result__item, .md-search-result__meta, .md-search-result__link {
   background-color: var(--bs-body-bg);
   color: var(--md-primary-fg-color--light);
+}
+.md-search-result__more summary:is(:focus,:hover),
+.md-search-result__link:hover {
+  color: var(--md-primary-bg-color);
+}
+.md-search-result mark {
+  /*
+    prevent the use of the truffle blue highlight on search result matches,
+    as it is difficult to read on our light background
+  */
+  color: var(--md-primary-bg-color);
+  /* reset the padding because: why would this have padding?!?! */
+  padding: 0;
+}
+
+.md-search__input::placeholder {
+  /* make sure contrast is high enough */
+  color: #2B2B2B;
+}
+
+.md-search__form:focus-within {
+  outline: var(--mint) 3px auto;
 }
 
 @media screen and (min-width: 60em) {
   .md-search__form:hover, .md-search__input {
     color: var(--md-primary-fg-color--dark);
+  }
+  .md-search__input:hover:not(:focus) {
+    /*
+      don't make the background invisible on hover, as it makes the form border invisible.
+      clickable elements with no discernible end make for a bad experience.
+      without this line the background of the input form matches the background of the page.
+    */
+    background-color: rgba(0,0,0,.1) !important;
   }
   .md-search__input:hover::-webkit-input-placeholder {
       color: var(--md-primary-bg-color);
@@ -185,8 +257,15 @@ pre {
   background-color: var(--bs-dark);
   color: var(--md-primary-fg-color--light);
 }
+.md-footer a:hover {
+  color: var(--milk);
+}
 
 /* custom */
+
+a.link-card:hover {
+  color: var(--md-primary-fg-color--light);
+}
 
 .sepia {
   filter: invert(0.5) sepia(1);
@@ -227,11 +306,6 @@ pre {
   transform: skewY(-20deg) translate(-.06em, .26em);
 }
 
-.docs-badges {
-  height: auto;
-  margin-top: .5rem;
-  margin-right: .5rem;
-}
 
 .bd-milk-chocolate {
   background-color: var(--light-chocolate);
@@ -240,19 +314,49 @@ pre {
 
 /* bootstrap overrides */
 
+input:focus {
+  /* an outline is required for accessibility */
+  outline: solid 2px var(--mint);
+}
+
 .card {
   background-color: var(--md-primary-fg-color);
+}
+a.link-card:is(:hover, :focus, :focus-visible) {
+  outline: none; /* outline is on the inner .card */
+}
+a.link-card:is(:hover, :focus, :focus-visible) > .card {
+  outline: 2px solid var(--mint);
+  box-shadow:0 0 5px rgba(0,0,0,.2);
 }
 
 .btn {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
+  /* separate buttons to ensure click targets are easy to hit */
+  margin-right:.25em;
+  transition: all .1 ease-in-out;
+}
+.btn:hover {
+  /* a darker version of dark-chocolate to increase contrast against the drizzle pink for better accessibility */
+  color: #1A1416;
+  filter: brightness(110%);
+  box-shadow: 0 3px 3px rgba(0,0,0,.2);
 }
 
 .btn-truffle {
   color: var(--dark-chocolate);
   background-color: var(--mint);
   border-color: var(--mint);
+}
+.btn:focus{
+  box-shadow: 0 0 0 .25rem var(--mint);
+}
+.btn-truffle:focus {
+  box-shadow: 0 0 0 .25rem var(--drizzle);
+}
+.btn-drizzle:focus {
+  box-shadow: 0 0 0 .25rem var(--ganache);
 }
 
 .btn-ganache {
@@ -262,7 +366,8 @@ pre {
 }
 
 .btn-drizzle {
-  color: var(--milk);
+  /* a darker version of dark-chocolate to increase contrast against the drizzle pink for better accessibility */
+  color: #1A1416;
   background-color: var(--drizzle);
   border-color: var(--drizzle);;
 }
@@ -313,7 +418,6 @@ pre {
   background-color: #fff;
   border-color: #3fe0c5;
   box-shadow: 0 0 0 0.2rem rgba(63, 224, 197, 0.5);
-  outline: none;
 }
 .hs-form input[type="checkbox"] {
   margin-right: 0.5em;
@@ -333,11 +437,14 @@ pre {
   font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 .hs-form input[type="submit"]:hover {
-  background: #fff;
-  color: #5e464d;
+  filter: brightness(110%);
+  box-shadow: 0 3px 3px rgba(0,0,0,.2);
+}
+.hs-form input[type="submit"]:focus {
+  outline: solid 2px var(--drizzle);
 }
 .hs-form .legal-consent-container {
   font-size: 0.85rem;
