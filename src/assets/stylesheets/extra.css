@@ -74,8 +74,16 @@ a.link-card, nav a, .footer-naviation a {
   [data-md-toggle=drawer]:checked~.md-container .md-sidebar--primary {
     display: block;
   }
+  /*
+  make the nav keyboard navigatable. without this hidden parts of the nav drawer are focusable, but invisible.
+  */
+  .md-nav__toggle~.md-nav{
+    visibility: hidden;
+  }
+  .md-nav__toggle:checked~.md-nav{
+    visibility: visible;
+  }  
 }
-
 .md-banner {
   text-align: center;
 }
