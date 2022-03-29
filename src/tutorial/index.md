@@ -1,18 +1,17 @@
 ---
-title: Truffle Tutorial
+title: Truffle Tutorials - Pet Shop Tutorial
 description: This tutorial is meant for those with a basic knowledge of Ethereum and smart contracts, who have some knowledge of HTML and JavaScript, but who are new to dapps.
 hide:
   - navigation
 ---
 
+#![Truffle Pet Shop Tutorial](/img/tutorials/pet-shop/petshop.png)
+
 <style>
-  .md-typeset h1,
   .md-content__button {
     display: none;
   }
 </style>
-
-![Ethereum Pet Shop](/img/tutorials/pet-shop/petshop.png)
 
 This tutorial will take you through the process of building your first dapp---an adoption tracking system for a pet shop!
 
