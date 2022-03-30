@@ -95,6 +95,9 @@ a.link-card, nav a, .footer-naviation a {
 }
 
 .md-typeset a {
+  color: var(--md-accent-fg-color);
+}
+.md-banner .md-typeset a {
   color: var(--ganache);
 }
 
