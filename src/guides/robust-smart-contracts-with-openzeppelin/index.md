@@ -1,7 +1,6 @@
 ---
 title: Truffle Suite
-hide:
-  - navigation
+
 ---
 
 ![OpenZeppelin](/img/tutorials/open-zeppelin/oz-logo.png)

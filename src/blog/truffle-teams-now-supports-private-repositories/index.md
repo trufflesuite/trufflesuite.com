@@ -1,7 +1,6 @@
 ---
 title: Truffle Teams Now Supports Private Repositories
-hide:
-  - navigation
+
 ---
 
 Thanks to the awesome work of [@nicholasjpaterno](https://github.com/nicholasjpaterno), you can now integrate private repositories with Truffle Teams! This will eventually be a premium feature, but we're releasing it for free while the product is still in beta.

@@ -1,7 +1,6 @@
 ---
 title: We've moved our github repo!
-hide:
-  - navigation
+
 ---
 
 We recently released [Truffle 3.0](https://github.com/trufflesuite/truffle/releases/tag/v3.0.2) in February to [much fanfare](/dashboard). As part of that release we separated our codebase into multiple different modules to make integrating with Truffle easier. Those modules now live in the github repository [https://github.com/trufflesuite](https://github.com/trufflesuite), which hints at our broader mission of providing a comprehensive suite of tools for Ethereum development.

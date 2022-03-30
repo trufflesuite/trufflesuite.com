@@ -1,7 +1,6 @@
 ---
 title: Ganache 7 Ethereum Simulator - Building on Web3 is now easier and faster than ever before
-hide:
-  - navigation
+
 ---
 
 ![ganache v7 banner](./ganache-v7.png)

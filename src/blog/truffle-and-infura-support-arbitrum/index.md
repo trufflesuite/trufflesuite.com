@@ -1,7 +1,6 @@
 ---
 title: Truffle and Infura Now Support Arbitrum
-hide:
-  - navigation
+
 ---
 
 ![Truffle, Arbitrum Collab Image](/img/blog/truffle-and-infura-support-arbitrum/blog-header.png)

@@ -1,7 +1,6 @@
 ---
 title: Debugging an Example Smart Contract
-hide:
-  - navigation
+
 ---
 
 <p class="alert alert-info">

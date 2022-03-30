@@ -1,7 +1,6 @@
 ---
 title: Using Truffle's ENS Integration
-hide:
-  - navigation
+
 ---
 
 **By Tyler Feickert, Blockchain Tools Engineer at Truffle**

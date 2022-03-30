@@ -1,7 +1,6 @@
 ---
 title: How Ethical Advertising Will Transform the Blockchain Industry
-hide:
-  - navigation
+
 ---
 
 ![GitCoin](/img/blog/how-ethical-advertising-will-transform-the-blockchain-industry/pasted image 0-5.png)

@@ -1,7 +1,6 @@
 ---
 title: Removing installation issues, con't - TestRPC
-hide:
-  - navigation
+
 ---
 
 <p class="alert alert-info">

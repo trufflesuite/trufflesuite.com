@@ -1,7 +1,6 @@
 ---
 title: Using Infura (or a custom provider)
-hide:
-  - navigation
+
 ---
 
 ![Infura Truffle logos](/img/tutorials/infura/infura-truffle.png)

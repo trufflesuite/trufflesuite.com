@@ -1,7 +1,6 @@
 ---
 title: How to get your boss to send you to TruffleCon
-hide:
-  - navigation
+
 ---
 
 Last year [Truffle Suite](/) launched [TruffleCon](/trufflecon2019), an event designed for the Truffle community and those interested in building world-changing applications powered by decentralized technologies. The event was received with an overwhelmingly positive response. TruffleCon attracted 250 attendees, 53 speakers, and 2 locations. After such a successful inaugural event, the team immediately started planning an even bigger and better Trufflecon for 2019.

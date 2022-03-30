@@ -1,7 +1,6 @@
 ---
 title: Drizzle 1.5.0 - A new beginning
-hide:
-  - navigation
+
 ---
 
 <figure>

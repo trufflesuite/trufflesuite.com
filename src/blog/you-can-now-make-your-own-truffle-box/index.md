@@ -1,7 +1,6 @@
 ---
 title: You Can Now Make Your Own Truffle Box
-hide:
-  - navigation
+
 ---
 
 Two months ago we unveiled official integration with **Truffle Boxes**, example Ethereum applications and/or boilerplates that put complimentary tools and libraries into sweet, easily-downloadable packages. In addition to rolling out some official boxes, [Status.im](https://status.im/) released [the first community-supported box](/boxes/status).

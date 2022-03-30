@@ -1,7 +1,6 @@
 ---
 title: Debug Quickly and in Context with Truffle Teams New Debugger
-hide:
-  - navigation
+
 ---
 
 ![Truffle Teams Debugger Banner](/img/blog/debug-quickly-and-in-context-with-truffle-teams-new-debugger/blog-header.png)

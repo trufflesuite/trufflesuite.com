@@ -1,7 +1,6 @@
 ---
 title: Stack Tracing with Truffle Test
-hide:
-  - navigation
+
 ---
 
 <figure>

@@ -1,7 +1,6 @@
 ---
 title: Ethereum Gas Exactimation
-hide:
-  - navigation
+
 ---
 
 In Ethereum, estimating gas for a given transaction is a tricky problem to solve (especially when attempting to maintain [EIP-114](https://github.com/ethereum/EIPs/issues/114) compliance). Most of the well-known Ethereum implementations like Geth<sup>¹</sup> and Parity<sup>²</sup> use interval halving (binary search) to estimate gas by running transactions through the EVM until an approximate estimation converges.

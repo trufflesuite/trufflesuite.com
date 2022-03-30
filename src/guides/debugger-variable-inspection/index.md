@@ -1,7 +1,6 @@
 ---
 title: Variable Inspection - Going Deeper with the Truffle Solidity Debugger
-hide:
-  - navigation
+
 ---
 
 <p class="alert alert-info">

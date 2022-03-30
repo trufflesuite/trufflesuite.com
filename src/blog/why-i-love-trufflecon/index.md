@@ -1,7 +1,6 @@
 ---
 title: Why I love TruffleCon
-hide:
-  - navigation
+
 ---
 
 **By Josh Quintal, Head of Product & Marketing**

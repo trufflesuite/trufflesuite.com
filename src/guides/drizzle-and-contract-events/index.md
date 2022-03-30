@@ -1,7 +1,6 @@
 ---
 title: Drizzle and Contract Events
-hide:
-  - navigation
+
 ---
 
 # Drizzle and Contract Events

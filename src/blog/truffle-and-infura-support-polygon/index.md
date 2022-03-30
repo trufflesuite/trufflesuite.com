@@ -1,7 +1,6 @@
 ---
 title: Truffle and Infura Now Support Polygon
-hide:
-  - navigation
+
 ---
 
 ![Truffle, Infura, and Polygon Collab Image](/img/blog/truffle-and-infura-support-polygon/blog-header.png)

@@ -1,7 +1,6 @@
 ---
 title: Truffle 3.2.0 released
-hide:
-  - navigation
+
 ---
 
 <p class="alert alert-info" style="margin-top: -2rem; margin-bottom: 3rem;">

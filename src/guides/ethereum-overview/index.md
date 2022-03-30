@@ -1,7 +1,6 @@
 ---
 title: Ethereum Overview
-hide:
-  - navigation
+
 ---
 
 You may have heard the terms "blockchain" and "smart contract" floating around, but what do they actually mean? In this tutorial, we'll demystify the jargon, show you practical blockchain solutions, and give you direction on how to create an application that takes advantage of the blockchain.

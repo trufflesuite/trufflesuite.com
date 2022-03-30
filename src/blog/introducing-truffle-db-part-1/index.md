@@ -1,7 +1,6 @@
 ---
 title: Introducing Truffle DB, Part 1 - Artifact archeology
-hide:
-  - navigation
+
 ---
 
 ## Introducing Truffle DB, part 1: Artifact archeology

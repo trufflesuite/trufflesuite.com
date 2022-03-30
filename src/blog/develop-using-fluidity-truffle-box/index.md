@@ -1,7 +1,6 @@
 ---
 title: Develop using Fluidity Truffle Box
-hide:
-  - navigation
+
 ---
 
 **TLDR;** Fluidity has a pretty awesome truffle-box with lots of goodies to build secure, well-tested smart contracts. With two simple commands, you’ll be set up for development using these testing and security tools preconfigured.

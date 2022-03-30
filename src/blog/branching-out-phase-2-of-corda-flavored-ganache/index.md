@@ -1,7 +1,6 @@
 ---
 title: Branching Out - Phase 2 of Corda-flavored Ganache
-hide:
-  - navigation
+
 ---
 
 ![Branching out to Corda-flavored Ganache](/img/blog/branching-out-phase-2-of-corda-flavored-ganache/chameleon-corda-truffle-blog-header.png)

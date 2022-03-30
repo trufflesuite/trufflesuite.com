@@ -1,7 +1,6 @@
 ---
 title: Bring Your Own CI (BYOCI) with Truffle Teams
-hide:
-  - navigation
+
 ---
 
 Truffle Teams has always offered an internal continuous integration (CI) service. This service is great for getting up and running quickly since it requires no configuration to run your Truffle tests.

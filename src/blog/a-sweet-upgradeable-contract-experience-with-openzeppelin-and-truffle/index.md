@@ -1,7 +1,6 @@
 ---
 title: A Sweet Upgradeable Contract Experience with OpenZeppelin and Truffle
-hide:
-  - navigation
+
 ---
 
 ![Truffle + OpenZeppelin Banner](/img/blog/a-sweet-upgradeable-contract-experience-with-openzeppelin-and-truffle/blog-header.png)

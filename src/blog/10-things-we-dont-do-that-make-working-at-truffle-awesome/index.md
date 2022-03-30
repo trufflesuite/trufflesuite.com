@@ -1,7 +1,6 @@
 ---
 title: 10 Things We Don't Do That Make Working at Truffle Awesome
-hide:
-  - navigation
+
 ---
 
 ![tapestry of Truffle team headshots](/img/blog/10-things-we-dont-do-that-make-working-at-truffle-awesome/layer-1.jpg)

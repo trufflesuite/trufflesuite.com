@@ -1,7 +1,6 @@
 ---
 title: Debugging verified external contracts with Truffle Debugger
-hide:
-  - navigation
+
 ---
 
 ![Truffle Teams Redesign Banner](/img/blog/debugging-verified-external-contracts-with-truffle-debugger/blog-header.png)

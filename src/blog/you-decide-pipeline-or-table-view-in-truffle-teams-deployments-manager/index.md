@@ -1,7 +1,6 @@
 ---
 title: You Decide - Pipeline or Table View in Truffle Teams' Refreshed Deployments Manager
-hide:
-  - navigation
+
 ---
 
 ![Truffle Teams Deployments Refresh Banner](/img/blog/you-decide-pipeline-or-table-view-in-truffle-teams-deployments-manager/blog-header.png)

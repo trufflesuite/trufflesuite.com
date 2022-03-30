@@ -1,7 +1,6 @@
 ---
 title: 2020 is Finally Over - A Year End Wrapup
-hide:
-  - navigation
+
 ---
 
 ![Truffle End of Year Wrapup Banner](/img/blog/2020-is-finally-over-a-year-end-wrapup/blog-header.png)

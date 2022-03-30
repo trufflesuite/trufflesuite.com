@@ -1,7 +1,6 @@
 ---
 title: One hundred documentation pull requests? Yes please.
-hide:
-  - navigation
+
 ---
 
 Greetings! The Truffle team has been growing over the course of the last year. From a single developer, we are now a team of five (soon to be even more), which means that we can spread the work around.

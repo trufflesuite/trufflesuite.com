@@ -1,7 +1,6 @@
 ---
 title: Token Taxonomy Framework
-hide:
-  - navigation
+
 ---
 
 To some, the sudden rise of Tokens in the blockchain dialog comes as a surprise. However, tokens have always been the bedrock of the blockchain movement. The introduction of SmartContract by Ethereum quickly overshadowed them, particularly in enterprise contexts. The capabilities of Smart Contracts and the broad acceptance of them, thanks to companies like Truffle, blazed a trail forward and we all went along. It wasn’t until we got halfway up the trail that someone turned around and asked, “did we pack any trail mix?”
