@@ -276,7 +276,9 @@ pre {
 }
 
 /* custom */
-
+a.link-card {
+  color: var(--md-primary-fg-color--dark);
+}
 a.link-card:hover {
   color: var(--md-primary-fg-color--light);
 }
