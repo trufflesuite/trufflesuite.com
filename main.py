@@ -54,11 +54,11 @@ def define_env(env):
         response = requests.get("https://api.github.com/repos/" + box['userOrg'] + "/" + box['repoName'] + "/readme", auth=HTTPBasicAuth(username, key))
         json_response = response.json()
 
+        with open('src/boxes/box.html.jinja2', 'r') as file_:
+            template = Template(file_.read())
+
         try:
             markdown = base64.b64decode(json_response['content'])
-
-            with open('src/boxes/box.html.jinja2', 'rb') as file_:
-                template = Template(file_.read())
 
             outputText = template.render(box=box, readme=markdown.decode('utf-8'))
 
