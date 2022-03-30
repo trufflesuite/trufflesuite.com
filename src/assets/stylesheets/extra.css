@@ -185,6 +185,9 @@ pre {
   opacity: .85;
   color:var(--md-primary-fg-color--light);
 }
+.md-tabs__link--active{
+  opacity: 1;
+}
 
 .mdx-hero__content h1 {
   text-transform: uppercase;
