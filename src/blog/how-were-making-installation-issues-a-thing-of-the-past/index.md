@@ -1,7 +1,6 @@
 ---
 title: How we're making installation issues a thing of the past
-hide:
-  - navigation
+
 ---
 
 <p class="alert alert-info">

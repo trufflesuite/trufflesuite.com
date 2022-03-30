@@ -1,7 +1,6 @@
 ---
 title: Truffle and Ganache now come in Filecoin Flavor
-hide:
-  - navigation
+
 ---
 
 ![Filecoin Collab Banner with Ganache](/img/blog/truffle-and-ganache-now-come-in-filecoin-flavor/blog-header.png)

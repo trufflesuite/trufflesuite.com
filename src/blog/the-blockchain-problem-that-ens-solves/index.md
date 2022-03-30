@@ -1,7 +1,6 @@
 ---
 title: The Blockchain UI Problem that ENS Solves
-hide:
-  - navigation
+
 ---
 
 The blockchain world has a UI problem. This is what an Ethereum receiving address looks like:

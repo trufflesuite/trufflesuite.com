@@ -1,7 +1,6 @@
 ---
 title: Iterate Faster with Truffle Teams
-hide:
-  - navigation
+
 ---
 
 Consider the amount of context switching required to develop a dapp: you’re writing Solidity one minute, writing tests another, debugging those results--it’s easy to get lost! These switches carry a cognitive load and when errors equal a loss of ETH we need all the help we can get. I’m happy to inform you Truffle Teams can help reduce context switching and help you or your team iterate faster.

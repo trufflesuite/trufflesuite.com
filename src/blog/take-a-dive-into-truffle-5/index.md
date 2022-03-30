@@ -1,7 +1,6 @@
 ---
 title: Take a Dive into Truffle 5
-hide:
-  - navigation
+
 ---
 
 ![Take a Dive into Truffle 5 Banner](/img/blog/take-a-dive-into-truffle-5/blog-header.png)

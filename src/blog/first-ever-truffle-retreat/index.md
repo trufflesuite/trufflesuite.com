@@ -1,7 +1,6 @@
 ---
 title: Our First Ever Truffle Retreat
-hide:
-  - navigation
+
 ---
 
 ![Truffle](/img/blog/first-ever-truffle-retreat/medium-truffle-retreat.jpg)

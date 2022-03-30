@@ -1,7 +1,6 @@
 ---
 title: Truffle Suite
 hide:
-  - navigation
   - toc
 ---
 

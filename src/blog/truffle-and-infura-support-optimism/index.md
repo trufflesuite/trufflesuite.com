@@ -1,7 +1,6 @@
 ---
 title: Truffle and Infura Now Support Optimism
-hide:
-  - navigation
+
 ---
 
 ![Truffle, Optimism Collab Image](/img/blog/truffle-and-infura-support-optimism/blog-header.png)

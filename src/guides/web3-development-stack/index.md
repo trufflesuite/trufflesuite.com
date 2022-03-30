@@ -1,7 +1,6 @@
 ---
 title: The Web3 development stack
-hide:
-  - navigation
+
 ---
 
 ![Web3 Development Stack header](./web3-dev-stack_blog-header.png)

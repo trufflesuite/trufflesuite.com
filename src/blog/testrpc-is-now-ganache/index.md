@@ -1,7 +1,6 @@
 ---
 title: TestRPC is now Ganache
-hide:
-  - navigation
+
 ---
 
 Have you been looking for the TestRPC recently and haven't been able to find it?

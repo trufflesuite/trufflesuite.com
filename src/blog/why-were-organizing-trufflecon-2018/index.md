@@ -1,7 +1,6 @@
 ---
 title: Why We're Organizing TruffleCon 2018
-hide:
-  - navigation
+
 ---
 
 ![TruffleCon 2018](/img/blog/why-were-organizing-trufflecon-2018/trufflecon2018header.jpg)

@@ -1,7 +1,6 @@
 ---
 title: Introducing Truffle Dashboard - Stop copy + pasting your private keys!
-hide:
-  - navigation
+
 ---
 
 ![truffle dashboard - banner](./truffle-dashboard-private-keys.png)

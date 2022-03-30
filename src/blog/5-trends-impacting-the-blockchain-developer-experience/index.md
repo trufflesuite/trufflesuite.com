@@ -1,7 +1,6 @@
 ---
 title: 5 Trends Impacting the Blockchain Developer Experience
-hide:
-  - navigation
+
 ---
 
 In this article we explore 5 trends impacting the developer-experience (or DX) when it comes to building blockchain-based solutions. Specifically, applications and services that leverage a blockchain or distributed ledger or as part of their overall architecture.

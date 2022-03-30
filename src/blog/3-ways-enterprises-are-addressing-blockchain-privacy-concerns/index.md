@@ -1,7 +1,6 @@
 ---
 title: 3 Ways Enterprises Are Addressing Blockchain Privacy Concerns
-hide:
-  - navigation
+
 ---
 
 [Blockchain has been touted as the great connector to integrate businesses under consortium networks](https://www.forbes.com/sites/andrewarnold/2019/02/21/why-2019-may-become-the-year-of-enterprise-blockchain/#66c9e516427e). It’s ability to verify data using smart contracts and provide transparency across network participants through immutable shared data has people talking about a technical revolution. However, this benefit has been a double-edged sword because the enterprise world is skeptical about sharing sensitive data on a ledger where the information cannot be deleted. The good news is, this year has seen numerous announcements of single and multi-party blockchain pilots by the Fortune 500 such as… [Starbucks](https://news.microsoft.com/transform/starbucks-turns-to-technology-to-brew-up-a-more-personal-connection-with-its-customers/) and [MetLife](https://www.forbes.com/sites/stevenehrlich/2019/06/19/metlife-plans-to-disrupt-2-7-trillion-life-insurance-industry-using-ethereum-blockchain/#3e9a87277022). Data privacy issues haven’t stopped them and the enterprise blockchain world has taken these steps to shift their thinking.

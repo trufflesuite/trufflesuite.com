@@ -1,7 +1,6 @@
 ---
 title: The Best Things to do in Seattle During TruffleCon
-hide:
-  - navigation
+
 ---
 
 ![river view at Marymoor Park](/img/blog/the-best-things-to-do-in-seattle-during-trufflecon/layer-1.jpg)

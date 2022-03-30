@@ -1,7 +1,6 @@
 ---
 title: Announcing Collaboration with Filecoin - Big Integrations Coming
-hide:
-  - navigation
+
 ---
 
 ![Filecoin Collab Banner](/img/blog/announcing-collaboration-with-filecoin/blog-header.png)

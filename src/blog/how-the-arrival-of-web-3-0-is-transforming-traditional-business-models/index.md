@@ -1,7 +1,6 @@
 ---
 title: How the Arrival of Web 3.0 is Transforming Traditional Business Models
-hide:
-  - navigation
+
 ---
 
 Although the Internet continues to drive digital transformation, the technology operates far beyond its original parameters. Since its inception over two decades ago, the web has been subject to increasing levels of centralization and mass surveillance. As a result, large corporations, governments, and media outlets remain the primary beneficiaries of an infrastructure meant to serve all of humanity. Herein lies the problem with the current Internet ecosystem, also known as Web 2.0.

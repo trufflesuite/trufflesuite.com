@@ -1,7 +1,6 @@
 ---
 title: Truffle v5 has arrived!
-hide:
-  - navigation
+
 ---
 
 We have just released the most awaited version of Truffle just in time for the

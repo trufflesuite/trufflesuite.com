@@ -1,7 +1,5 @@
 ---
 title: Truffle Suite
-hide:
-  - navigation
 ---
 
 <style>

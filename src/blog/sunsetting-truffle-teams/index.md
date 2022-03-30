@@ -1,7 +1,6 @@
 ---
 title: Sunsetting Truffle Teams
-hide:
-  - navigation
+
 ---
 
 ![Sunsetting Truffle Teams Banner](/img/blog/sunsetting-truffle-teams/blog-header.png)

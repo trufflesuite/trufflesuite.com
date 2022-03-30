@@ -1,7 +1,6 @@
 ---
 title: Using Truffle to interact with Chainlink Smart Contracts
-hide:
-  - navigation
+
 ---
 
 ![Truffle + Chainlink](/img/blog/using-truffle-to-interact-with-chainlink-smart-contracts/chainlink-az.png)

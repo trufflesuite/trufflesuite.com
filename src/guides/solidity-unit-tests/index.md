@@ -1,7 +1,6 @@
 ---
 title: Truffle Suite
-hide:
-  - navigation
+
 ---
 
 This is a beta document and refers to the `beta` version of Truffle. The following features will not work unless you are using Truffle Beta.

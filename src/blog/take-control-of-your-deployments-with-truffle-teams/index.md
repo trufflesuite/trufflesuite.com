@@ -1,7 +1,6 @@
 ---
 title: Take Control of Your Deployments with Truffle Teams
-hide:
-  - navigation
+
 ---
 
 ![Truffle Teams Deployments Banner](/img/blog/easily-deploy-your-smart-contracts-with-truffle-teams/truffle-teams-deployments-banner.png)

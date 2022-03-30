@@ -1,7 +1,6 @@
 ---
 title: Get a Bird's Eye View with Truffle Teams' New Dashboard
-hide:
-  - navigation
+
 ---
 
 <figure>

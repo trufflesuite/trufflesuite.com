@@ -1,7 +1,6 @@
 ---
 title: Simulate Live Networks with Forked Sandboxes
-hide:
-  - navigation
+
 ---
 
 <figure>

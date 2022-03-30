@@ -1,7 +1,6 @@
 ---
 title: Upcoming improvements to encoding and decoding
-hide:
-  - navigation
+
 ---
 
 When you’re writing, running, or debugging your smart contract, you don’t want to have to deal with raw binary data. Truffle––and Ganache and Drizzle––already contain a number of encoding and decoding features to help you interact with your contract and understand what you’re seeing. But luckily, encoding and decoding are about to become even more robust, informative, and usable.

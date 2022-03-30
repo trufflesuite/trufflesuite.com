@@ -1,7 +1,6 @@
 ---
 title: Introducing Truffle DB, part 2 - 'Weight and Switch'
-hide:
-  - navigation
+
 ---
 
 Welcome back! If you missed the [first part](/blog/introducing-truffle-db-part-1) of this post, you may want to read it to learn more about Truffle’s contract artifacts, their current limitations, and why we seek to build a better solution.

@@ -1,7 +1,6 @@
 ---
 title: Announcing our Fully Featured, Portable Solidity Debugger
-hide:
-  - navigation
+
 ---
 
 Every one at Truffle is giddy right now. 

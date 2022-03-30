@@ -1,7 +1,6 @@
 ---
 title: Learn Ethereum The Fun Way with our Pet Shop Tutorial
-hide:
-  - navigation
+
 ---
 
 Here at Truffle we want to make Ethereum development accessible to developers of all stripes. To that end, today we're releasing a new tutorial called [Pet Shop](/tutorial). It covers the entire local development process, start to finish. For added fun, we've tied the whole thing together within the narrative of creating a pet adoption dapp for a local pet shop owner.

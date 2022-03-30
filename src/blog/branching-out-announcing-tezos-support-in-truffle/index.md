@@ -1,7 +1,6 @@
 ---
 title: Branching Out - Announcing Tezos Support in Truffle
-hide:
-  - navigation
+
 ---
 
 ![Announcing Truffle Integration](/img/blog/branching-out-announcing-tezos-support-in-truffle/chameleon-t3-truffle-blog-header.png)

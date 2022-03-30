@@ -1,7 +1,6 @@
 ---
 title: Unwrap the Corda Flavored Ganache Beta
-hide:
-  - navigation
+
 ---
 
 ![Truffle Teams Deployments Banner](/img/blog/unwrap-the-corda-flavored-ganache-beta/corda-ganache-beta-blog-banner.png)

@@ -1,7 +1,6 @@
 ---
 title: Try New Features First with Truffle Teams Early Access
-hide:
-  - navigation
+
 ---
 
 ![Truffle Teams Early Access Banner](/img/blog/try-new-features-first-with-truffle-teams-early-access/blog-header.png)

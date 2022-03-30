@@ -1,7 +1,6 @@
 ---
 title: Axoni's Enterprise Use of Truffle
-hide:
-  - navigation
+
 ---
 
 ![Truffle + Axoni](/img/blog/axonis-enterprise-use-of-truffle/truffle-axoni.png)

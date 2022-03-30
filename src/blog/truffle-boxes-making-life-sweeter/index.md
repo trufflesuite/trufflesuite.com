@@ -1,7 +1,6 @@
 ---
 title: Truffle Boxes - Making Life Sweeter
-hide:
-  - navigation
+
 ---
 
 When users begin developing on Ethereum, the first question they ask is, "Where do I start?". In the past, there hasn't been an easy answer: the answer generally consisted of many flavors of "it depends", and usually led to an investigation of what the user was trying to build, a general overview of their development skills, their knowledge of Ethereum, and the libraries and tools they're already most comfortable with. When determining how the Truffle team can help in this process, it quickly became apparent that what our users needed were examples. _Many of them._ So, being the upstanding community members we are, we set out to create those example, and today, we're happy to show you what we've accomplished.

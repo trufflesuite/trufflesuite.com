@@ -1,7 +1,6 @@
 ---
 title: The Best Ways to Contribute to Truffle
-hide:
-  - navigation
+
 ---
 
 Have you ever thought about contributing to Truffle? All of us at Truffle really enjoy producing free and open source software, and it is especially fun when many of you in the community contribute. User contributions make life easier for us, make our work more enjoyable by showing that you’re engaged, and often give us a chance to learn from those that offer code to the project. We’d absolutely love any and all developers to contribute to our project. The following are a few ways that you can get involved.

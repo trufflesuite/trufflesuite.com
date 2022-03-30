@@ -1,7 +1,6 @@
 ---
 title: Drizzle Vue - A Truffle Story
-hide:
-  - navigation
+
 ---
 
 ![Drizzle + Vue = <3](/img/blog/drizzle-vue-a-truffle-story/title-image.png)

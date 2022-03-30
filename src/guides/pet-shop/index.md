@@ -1,7 +1,6 @@
 ---
 title: Truffle Suite
-hide:
-  - navigation
+
 ---
 
 ![Ethereum Pet Shop](/img/tutorials/pet-shop/petshop.png)

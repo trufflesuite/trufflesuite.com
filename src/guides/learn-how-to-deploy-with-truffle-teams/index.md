@@ -1,7 +1,6 @@
 ---
 title: Truffle Suite
-hide:
-  - navigation
+
 ---
 
 In this tutorial, you'll learn how to deploy your smart contracts to a public Ethereum network using Truffle Teams.

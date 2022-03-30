@@ -1,7 +1,6 @@
 ---
 title: Crytic - Continuous Assurance for Smart Contracts
-hide:
-  - navigation
+
 ---
 
 We are proud to announce our new Smart contract security product: [https://crytic.io/](https://crytic.io/). Crytic provides continuous assurance for smart contracts. The platform reports build status on every commit and runs a suite of security analyses for immediate feedback.

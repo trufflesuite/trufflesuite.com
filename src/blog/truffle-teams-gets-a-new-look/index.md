@@ -1,7 +1,6 @@
 ---
 title: Truffle Teams Gets a New Look!
-hide:
-  - navigation
+
 ---
 
 ![Truffle Teams Redesign Banner](/img/blog/truffle-teams-gets-a-new-look/banner.png)

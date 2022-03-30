@@ -1,7 +1,6 @@
 ---
 title: Blockchain Will Cure Cancer
-hide:
-  - navigation
+
 ---
 
 <p style="width: 40%; float: left; margin-right: 1rem;">

@@ -1,7 +1,6 @@
 ---
 title: The Best Methods to Understand Blockchain Technology if You’re Not A Developer
-hide:
-  - navigation
+
 ---
 
 As a non-technical person, it feels like it takes 1.21 gigawatts to keep up with the speed of technology - even Doc Brown himself couldn't have predicted all of the technological advancements with his flux capacitor. Not only are we trying to keep up with technologies like blockchain, machine learning, and AI, but we have an overwhelming amount of information on the web all at the click of a mouse. It's overwhelming to the point that it's difficult to even know where to begin. However, online blockchain educational materials have started to ramp up. As I write this, I'm confident I'll start seeing “ Blockchain for dummies” online course advertisements on my browser (Opt-in, of course, because I'm using Brave). Mind-blowing! Let me help you begin by slowing down in order to speed up effectively.

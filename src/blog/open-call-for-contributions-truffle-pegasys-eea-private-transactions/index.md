@@ -1,7 +1,6 @@
 ---
 title: Open call for contributions by Truffle + PegaSys - EEA private transactions
-hide:
-  - navigation
+
 ---
 
 # Open call for contributions by Truffle + PegaSys: EEA private transactions

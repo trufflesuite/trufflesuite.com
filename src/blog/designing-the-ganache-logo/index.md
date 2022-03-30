@@ -1,7 +1,6 @@
 ---
 title: Designing the Ganache Logo
-hide:
-  - navigation
+
 ---
 
 Last week we released [Ganache](/ganache), a personal blockchain for Ethereum development. Many of you commented on the design of the landing page and logo, but just how did the gooey cube come to be? Let's take a trip through the 30+ iterations that led to our newest confection.

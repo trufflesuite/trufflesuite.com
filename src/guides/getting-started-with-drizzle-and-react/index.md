@@ -1,6 +1,5 @@
 ---
-hide:
-  - navigation
+
 ---
 
 # Getting Started with Drizzle and React
