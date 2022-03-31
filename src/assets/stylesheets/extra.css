@@ -369,6 +369,11 @@ a.link-card:is(:hover, :focus, :focus-visible) > .card {
   /* separate buttons to ensure click targets are easy to hit */
   margin-right:.25em;
   transition: all .1 ease-in-out;
+  /*
+    make sure buttons aren't on top of each other if they wrap.
+    this can happen on the home page buttons on small screens
+  */
+  margin-bottom: .25em;
 }
 .btn:hover {
   /* a darker version of dark-chocolate to increase contrast against the drizzle pink for better accessibility */
