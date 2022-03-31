@@ -38,6 +38,8 @@ $env:LOCAL_BUILD = "true"
 python3 -m mkdocs serve
 ```
 
+Settings `LOCAL_BUILD` to true will limit the number of boxes generated to 6 boxes. To generate more boxes you'll need to add valid `TRUFFLESUITE_COM_GH_API_USERNAME` and `TRUFFLESUITE_COM_GH_API_KEY` values to your environment and then omit the `LOCAL_BUILD` flag.
+
 By default the site will be served over [port 8000](http://127.0.0.1:8000).
 
 ## Dependencies Reference
