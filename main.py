@@ -14,8 +14,8 @@ def define_env(env):
     "Definition of the module"
 
     # boxes page
-    data_file_object = open('src/boxes/data.json', 'rb')
-    boxes  = json.load(data_file_object)
+    with open('src/boxes/data.json', 'rb') as data_file_object:
+        boxes  = json.load(data_file_object)
 
     # dict: repoName -> box
     dicBox = dict(zip(
@@ -23,8 +23,8 @@ def define_env(env):
         boxes
     ))
 
-    boxes_file_object = open('src/data/boxes.json', 'rb')
-    deets = json.load(boxes_file_object)
+    with open('src/data/boxes.json', 'rb') as boxes_file_object:
+        deets = json.load(boxes_file_object)
 
     # merge boxes and deets
     for key in deets.keys():
@@ -38,6 +38,9 @@ def define_env(env):
 
     if os.environ.get("LOCAL_BUILD"):
         env.conf['extra']['boxes'] = env.conf['extra']['boxes'][:6] 
+
+    with open('src/boxes/box.html.jinja2', 'r') as file_:
+        template = Template(file_.read())
 
     site_dir = env.conf['docs_dir']
     username = os.environ.get("TRUFFLESUITE_COM_GH_API_USERNAME")
@@ -54,9 +57,6 @@ def define_env(env):
         response = requests.get("https://api.github.com/repos/" + box['userOrg'] + "/" + box['repoName'] + "/readme", auth=HTTPBasicAuth(username, key))
         json_response = response.json()
 
-        with open('src/boxes/box.html.jinja2', 'r') as file_:
-            template = Template(file_.read())
-
         try:
             markdown = base64.b64decode(json_response['content'])
 
@@ -72,8 +72,8 @@ def on_pre_page_macros(env):
     "Pre-page actions"
 
     # blog posts page
-    blog_file_object = open('src/blog/data.json', 'rb')
-    posts = json.load(blog_file_object)
+    with open('src/blog/data.json', 'rb') as blog_file_object:
+        posts = json.load(blog_file_object)
     publishedposts = []
     for key in posts.keys():
         if posts[key]['published']:
