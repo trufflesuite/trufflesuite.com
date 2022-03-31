@@ -69,7 +69,6 @@
     }
 
     // make the nav bar accessible on narrow-width screens
-    let prevElement;
     document.querySelectorAll("label[for=__drawer],label.md-nav__link").forEach(label => {
       // make the labels tabable
       label.tabIndex = 0;
@@ -88,5 +87,19 @@
         focusTargetLink(target);
       });
     });
+
+    const primaryNav = document.querySelector(".md-sidebar--primary nav");
+    if (primaryNav) {
+      const closeNavViaKeyboardNavigationLink = document.createElement("button");
+      closeNavViaKeyboardNavigationLink.className = ".close-sidebar-link";
+      closeNavViaKeyboardNavigationLink.innerText = "Close Navigation"
+      closeNavViaKeyboardNavigationLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        document.getElementById("__drawer").checked = false;
+        document.querySelector("label.md-header__button").focus();
+      });
+      primaryNav.appendChild(closeNavViaKeyboardNavigationLink);
+    }
   }());
 </script>

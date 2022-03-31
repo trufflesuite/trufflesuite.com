@@ -90,6 +90,17 @@ a.link-card, nav a, .footer-naviation a {
     visibility: visible;
   }  
 }
+/* hide the close navigation link*/
+.md-nav__toggle:not(:checked)~.close-sidebar-link {
+  display: none;
+}
+.close-sidebar-link {
+  visibility: hidden;
+}
+/* show the close navigation link when it is focused */
+.close-sidebar-link:focus {
+  visibility: visible;
+}
 .md-banner {
   text-align: center;
 }
