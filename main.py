@@ -62,8 +62,8 @@ def define_env(env):
 
             outputText = template.render(box=box, readme=markdown.decode('utf-8'))
 
-            with open(file_path, 'w') as f:
-                f.write(outputText)
+            with open(file_path, 'wb') as f:
+                f.write(outputText.encode('utf-8'))
 
         except Exception as ex:
             print('error: ' + repr(ex))
