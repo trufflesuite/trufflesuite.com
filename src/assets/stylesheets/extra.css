@@ -66,6 +66,12 @@ a.link-card, nav a, .footer-naviation a {
   /* the footer links are obviously links, so we don't need the underline signal */
   text-decoration: none;
 }
+.md-typeset a:hover code {
+  /*
+    don't want to change background color of code as we hover over it when it is in a link. it looks bad
+   */
+  background-color: var(--md-code-bg-color);
+}
 
 @media screen and (max-width: 76.1875em) {
   [data-md-toggle=drawer]:not(:checked)~.md-container .md-sidebar--primary {
@@ -393,17 +399,28 @@ a.link-card:is(:hover, :focus, :focus-visible) > .card {
   background-color: var(--mint);
   border-color: var(--mint);
 }
+.md-typeset .alert-info a {
+  color: var(--dark-chocolate);
+}
 
 .alert-warning {
   color: var(--dark-chocolate);
   background-color: var(--ganache);
   border-color: var(--ganache);
 }
+.md-typeset .alert-warning a {
+  color: var(--dark-chocolate);
+  /* increase contrast against the alter-warning background */
+  filter:brightness(.9);
+}
 
 .alert-danger {
   color: var(--milk);
   background-color: var(--drizzle);
   border-color: var(--drizzle);
+}
+.md-typeset .alert-danger a {
+  color: var(--milk);
 }
 
 /* HubSpot Matching */
