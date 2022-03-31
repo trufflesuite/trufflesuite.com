@@ -84,8 +84,8 @@ def on_pre_page_macros(env):
     env.conf['extra']['posts'] = publishedposts
 
     # guide page
-    guide_file_object = open('src/guides/data.json', 'rb')
-    guides = json.load(guide_file_object)
+    with open('src/guides/data.json', 'rb') as guide_file_object:
+        guides = json.load(guide_file_object)
     publishedguides = []
     for key in guides.keys():
         if guides[key]['published']:
@@ -96,15 +96,14 @@ def on_pre_page_macros(env):
     env.conf['extra']['guides'] = publishedguides
 
     # team page
-    team_file_object = open('src/staff/data.json', 'rb')
-    team = json.load(team_file_object)
+    with open('src/staff/data.json', 'rb') as team_file_object:
+        team = json.load(team_file_object)
     env.conf['extra']['team'] = team
 
     # events page
-    events_file_object = open('src/events/data.json', 'rb')
-    events = json.load(events_file_object)
+    with open('src/events/data.json', 'rb') as events_file_object:
+        events = json.load(events_file_object)
     env.conf['extra']['events'] = events
 
 def on_post_build(env):
     "Post-build actions"
-
