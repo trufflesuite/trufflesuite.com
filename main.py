@@ -67,6 +67,7 @@ def define_env(env):
 
         except Exception as ex:
             print('error: ' + repr(ex))
+            print(json_response)
 
 def on_pre_page_macros(env):
     "Pre-page actions"
