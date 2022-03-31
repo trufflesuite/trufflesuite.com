@@ -7,16 +7,9 @@ layout: docs.hbs
 
 Wanna build apps on Filecoin using Truffle? You're in the right place.
 
-## Ganache
-
-Looking to set up Filecoin-flavored Ganache? Head over to the [Ganache-specific documentation](/docs/filecoin/ganache/overview).
-
-## Table of Contents
-
-1. [Getting set up](#getting-set-up)
-1. [Installing Truffle](#installing-truffle)
-1. [Using the Filecoin Truffle Box](#using-the-filecoin-truffle-box)
-1. [Further Resources](#further-resources)
+<p class="alert alert-info m-t-2">
+<i class="far fa-info-circle"></i> <strong>Looking to set up Filecoin-flavored Ganache?</strong> Head over to the <a href="/docs/filecoin/ganache/overview">Ganache-specific documentation</a>.
+</p>
 
 ## Getting Set Up
 
