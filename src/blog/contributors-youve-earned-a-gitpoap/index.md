@@ -1,7 +1,5 @@
 ---
 title: Hey Trufflesuite contributors, you’ve earned a POAP!
-hide:
-  - navigation
 ---
 
 **By Kingsley Arinze**
