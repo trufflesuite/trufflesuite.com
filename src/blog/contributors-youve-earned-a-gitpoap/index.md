@@ -12,7 +12,7 @@ POAPs (Proof Of Attendance Protocol) are badges issued as NFTs (non-fungible tok
 
 ## Who's eligible to claim a GitPOAP?
 
-Great question. Annual contributor POAPs will be issued to those who have contributed at least once all year since the start of the following projects:
+Great question. Annual contributor POAPs will be issued to those who have contributed one or more times since since the start of the following projects:
 
 - [Ganache](https://github.com/trufflesuite/ganache)
 - [Truffle](https://github.com/trufflesuite/truffle)
