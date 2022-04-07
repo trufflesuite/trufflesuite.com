@@ -1,3 +1,7 @@
+---
+title: Impress.js Plugins Documentation
+description: Impress.js Plugins documentation
+---
 Impress.js Plugins documentation
 ================================
 
@@ -8,7 +12,7 @@ A lot of impress.js features are and will be implemented as plugins. Each plugin
 has user documentation in a README.md file in [its own directory](./).
 
 The plugins in this directory are called default plugins, and - unsurprisingly -
-are enabled by default. However, most of them won't do anything by default, 
+are enabled by default. However, most of them won't do anything by default,
 rather require the user to invoke them somehow. For example:
 
 * The *navigation* plugin waits for the user to press some keys, arrows, page
@@ -20,11 +24,11 @@ rather require the user to invoke them somehow. For example:
 Extra addons
 ------------
 
-Yet more features are available in presentations that enable 
-[extra addons](https://github.com/impress/impress-extras). Extra addons are 3rd party plugins 
-that are not part of impress.js, but that we have nevertheless collected together into the 
-impress-extras repo to provide convenient and standardized access to them. To include 
-the extra addons when checking out impress.js, use git clone --recursive. Even then, they 
+Yet more features are available in presentations that enable
+[extra addons](https://github.com/impress/impress-extras). Extra addons are 3rd party plugins
+that are not part of impress.js, but that we have nevertheless collected together into the
+impress-extras repo to provide convenient and standardized access to them. To include
+the extra addons when checking out impress.js, use git clone --recursive. Even then, they
 are not activated by default in a presentation, rather each must be included with their own `<script>` tag.
 
 Note: The enabled extra addons are automatically initialized by the *extras*
@@ -55,7 +59,7 @@ plugins that you may want to use or adapt.
              data-rel-y="1000">
 
           <h1>Slide content</h1>
-          
+
           <ul>
             <li class="substep">Point 1</li>
             <li class="substep">Point 2</li>
@@ -66,7 +70,7 @@ plugins that you may want to use or adapt.
           </div>
         </div>
       </div>
-      
+
       <div id="impress-toolbar"></div>
       <div class="impress-progressbar"><div></div></div>
       <div class="impress-progress"></div>
@@ -90,7 +94,7 @@ plugins that you may want to use or adapt.
         transition: opacity 1s;
     }
     /*
-      Speaker notes allow you to write comments within the steps, that will not 
+      Speaker notes allow you to write comments within the steps, that will not
       be displayed as part of the presentation. However, they will be picked up
       and displayed by impressConsole.js when you press P.
     */
@@ -165,11 +169,11 @@ plugins that you may want to use or adapt.
 
 
 For developers
-==============
+-----------------------
 
 The vision for impress.js is to provide a compact core library doing the
 actual presentations, with a collection of plugins that provide additional
-functionality. A default set of plugins are distributed together with the core 
+functionality. A default set of plugins are distributed together with the core
 impress.js, and are located in this directory. They are called *default plugins*
 because they are distributed and active when users use the [js/impress.js](../../js/impress.js)
 in their presentations.
@@ -177,9 +181,9 @@ in their presentations.
 Building js/impress.js
 -----------------------
 
-The common way to use impress.js is to link to the file 
-[js/impress.js](../../js/impress.js). This is a simple concatenation of the 
-core impress.js and all plugins in this directory. If you edit or add code 
+The common way to use impress.js is to link to the file
+[js/impress.js](../../js/impress.js). This is a simple concatenation of the
+core impress.js and all plugins in this directory. If you edit or add code
 under [src/](../), you can run `node build.js` to recreate the distributable
 `js/impress.js` file. The build script also creates a minified file, but this
 is not included in the git repository.
@@ -250,9 +254,9 @@ The plugin directory should also include tests, which should use the *QUnit* and
 *Syn* libraries under [test/](../../test). You can have as many tests as you like,
 but it is suggested your first and main test file is called `plugina_tests.html`
 and `plugina_tests.js` respectively. You need to add your test `.js` file into
-[/qunit_test_runner.html](../../qunit_test_runner.html), and the `.js` file 
-should start by loading the test `.html` file into the 
-`iframe#presentation-iframe`. See [navigation-ui](navigation-ui) plugin for an 
+[/qunit_test_runner.html](../../qunit_test_runner.html), and the `.js` file
+should start by loading the test `.html` file into the
+`iframe#presentation-iframe`. See [navigation-ui](navigation-ui) plugin for an
 example.
 
 You are allowed to test your plugin whatever way you like, but the general
@@ -285,12 +289,12 @@ standard javascript anonymous function:
 
 ### Init plugins
 
-We categorize plugins into various categories, based on how and when they are 
+We categorize plugins into various categories, based on how and when they are
 called, and what they do.
 
 An init plugin is the simplest kind of plugin. It simply listens for the
 `impress().init()` method to send the `impress:init` event, at which point
-the plugin can initialize itself and start doing whatever it does, for example 
+the plugin can initialize itself and start doing whatever it does, for example
 by calling methods in the public api returned by `impress()`.
 
 The `impress:init` event has the `div#impress` element as its `target` attribute,
@@ -367,7 +371,7 @@ The [Relative Positioning Plugin](rel/rel.js) is an example of a pre-init plugin
 ### Pre-StepLeave plugins
 
 A *pre-stepleave plugin* is called synchronously from impress.js core at the
-beginning of `impress().goto()`. 
+beginning of `impress().goto()`.
 
 To register a plugin, call
 
@@ -376,31 +380,31 @@ To register a plugin, call
 When the plugin function is executed, it will be passed an argument
 that resembles the `event` object from DOM event handlers:
 
-`event.target` contains the current step, which we are about to leave. 
+`event.target` contains the current step, which we are about to leave.
 
 `event.detail.next` contains the element we are about to transition to.
 
 `event.detail.reason` contains a string, one of "next", "prev" or "goto",
 which tells you which API function was called to initiate the transition.
 
-`event.detail.transitionDuration` contains the transitionDuration for the 
+`event.detail.transitionDuration` contains the transitionDuration for the
 upcoming transition.
 
-A pre-stepleave plugin may alter the values in `event.detail` (except for 
+A pre-stepleave plugin may alter the values in `event.detail` (except for
 `reason`), and this can change the behavior of the upcoming transition.
 For example, the `goto` plugin will set the `event.detail.next` to point to
-some other element, causing the presentation to jump to that step instead. 
+some other element, causing the presentation to jump to that step instead.
 
 
 ### GUI plugins
 
 A *GUI plugin* is actually just an init plugin, but is a special category that
 exposes visible widgets or effects in the presentation. For example, it might
-provide clickable buttons to go to the next and previous slide. 
+provide clickable buttons to go to the next and previous slide.
 
 Note that all plugins shipped in the default set **must not** produce any visible
-html elements unless the user asks for it. A recommended best practice is to let 
-the user add a div element, with an id equaling the plugin's namespace, in the 
+html elements unless the user asks for it. A recommended best practice is to let
+the user add a div element, with an id equaling the plugin's namespace, in the
 place where he wants to see whatever visual UI elements the plugin is providing:
 
     <div id="impress-plugina"></div>
@@ -419,8 +423,8 @@ to provide example CSS that can be copypasted :-)
 Dependencies
 ------------
 
-If *pluginB* depends on the existence of *pluginA*, and also *pluginA* must run 
-before *pluginB*, then *pluginB* should not listen to the `impress:init` event, 
+If *pluginB* depends on the existence of *pluginA*, and also *pluginA* must run
+before *pluginB*, then *pluginB* should not listen to the `impress:init` event,
 rather *pluginA* should send its own init event, which *pluginB* listens to.
 
 Example:
@@ -435,7 +439,7 @@ Example:
         event.initCustomEvent("impress:plugina:init', true, true, { "plugina" : "data..." });
         root.dispatchEvent(event);
     }, false);
-    
+
     // pluginB
     document.addEventListener("impress:plugina:init", function (event) {
         // plugin B implementation

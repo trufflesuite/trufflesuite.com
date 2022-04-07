@@ -1,4 +1,4 @@
 ---
 template: policy.html
-title: Truffle Suite
+title: Truffle Policy
 ---

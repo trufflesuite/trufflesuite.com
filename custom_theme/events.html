@@ -41,14 +41,14 @@
 <section class="container p-5">
 
     <h1>Past Events</h1>
-  
+
     <div class="row">
     {% for event in config.extra.events %}
         <div class="col-md-12 mb-3">
 
             <div class="row post-row pb-5">
                 <div class="col-md-3">
-                  <img src="{{ event.image }}" class="img-fluid post-thumbnail" />
+                  <img alt="{{ event.title }}" src="{{ event.image }}" class="img-fluid post-thumbnail" />
                 </div>
                 <div class="col-md-9">
                   <h2>{{ event.title }}</h2>
@@ -59,7 +59,7 @@
                   {% if event.excerpt %}
                     <p>{{ event.excerpt }}</p>
                   {% endif %}
-                  <a class="btn btn-sm btn-truffle" href="{{ event.youtube }}" target="_blank">WATCH  NOW</a>
+                  <a class="btn btn-sm btn-truffle" href="{{ event.youtube }}" target="_blank" rel="noopener noreferrer">WATCH  NOW</a>
                 </div>
               </div>
         </div>

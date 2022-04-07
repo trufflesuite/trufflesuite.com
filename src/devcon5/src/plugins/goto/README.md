@@ -1,7 +1,10 @@
+---
+title: Goto Plugin
+---
 Goto Plugin
 ===========
 
-The goto plugin is a pre-stepleave plugin. It is executed before 
+The goto plugin is a pre-stepleave plugin. It is executed before
 `impress:stepleave` event, and will alter the destination where to transition next.
 
 Example:

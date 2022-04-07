@@ -8,16 +8,7 @@ theme:
   logo: assets/logo.png
   favicon: assets/favicon-32x32.png  
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Dark Chocolate Swirl
-    - media: "(prefers-color-scheme: dark)"
-      scheme: chocolatey
-      toggle:
-        icon: material/toggle-switch
-        name: Vanilla Caramel Supreme
+    scheme: default
   font:
     text: "Open Sans"
     code: "Open Sans"
@@ -26,17 +17,20 @@ theme:
   language: en
 copyright: Copyright &copy; 2016 - 2022 ConsenSys Software Inc.
 extra:
+  analytics:
+    provider: google
+    property: UA-83874933-3
   generator: false
   social:
   - icon: fontawesome/brands/twitter
     link: https://twitter.com/trufflesuite
-    name: Twitter
+    name: Truffle Twitter
   - icon: fontawesome/brands/github
     link: https://github.com/trufflesuite
-    name: Github
+    name: Truffle Github
   - icon: fontawesome/brands/linkedin
     link: https://www.linkedin.com/company/trufflesuite
-    name: LinkedIn
+    name: Truffle LinkedIn
   rebuild: false    
 extra_css:
   - assets/stylesheets/bootstrap.min.css
@@ -48,7 +42,7 @@ markdown_extensions:
   - markdown.extensions.md_in_html
   - toc:
       permalink: true
-use_directory_urls: false
+use_directory_urls: true
 plugins:
   - search
   - awesome-pages

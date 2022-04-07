@@ -14,8 +14,8 @@ def define_env(env):
     "Definition of the module"
 
     # boxes page
-    data_file_object = open('src/boxes/data.json')
-    boxes  = json.load(data_file_object)
+    with open('src/boxes/data.json', 'rb') as data_file_object:
+        boxes  = json.load(data_file_object)
 
     # dict: repoName -> box
     dicBox = dict(zip(
@@ -23,8 +23,8 @@ def define_env(env):
         boxes
     ))
 
-    boxes_file_object = open('src/data/boxes.json')
-    deets = json.load(boxes_file_object)
+    with open('src/data/boxes.json', 'rb') as boxes_file_object:
+        deets = json.load(boxes_file_object)
 
     # merge boxes and deets
     for key in deets.keys():
@@ -38,6 +38,9 @@ def define_env(env):
 
     if os.environ.get("LOCAL_BUILD"):
         env.conf['extra']['boxes'] = env.conf['extra']['boxes'][:6] 
+
+    with open('src/boxes/box.html.jinja2', 'r') as file_:
+        template = Template(file_.read())
 
     site_dir = env.conf['docs_dir']
     username = os.environ.get("TRUFFLESUITE_COM_GH_API_USERNAME")
@@ -57,23 +60,21 @@ def define_env(env):
         try:
             markdown = base64.b64decode(json_response['content'])
 
-            with open('src/boxes/box.html.jinja2') as file_:
-                template = Template(file_.read())
-
             outputText = template.render(box=box, readme=markdown.decode('utf-8'))
 
-            with open(file_path, 'w') as f:
-                f.write(outputText)
+            with open(file_path, 'wb') as f:
+                f.write(outputText.encode('utf-8'))
 
         except Exception as ex:
             print('error: ' + repr(ex))
+            print(json_response)
 
 def on_pre_page_macros(env):
     "Pre-page actions"
 
     # blog posts page
-    blog_file_object = open('src/blog/data.json')
-    posts = json.load(blog_file_object)
+    with open('src/blog/data.json', 'rb') as blog_file_object:
+        posts = json.load(blog_file_object)
     publishedposts = []
     for key in posts.keys():
         if posts[key]['published']:
@@ -84,8 +85,8 @@ def on_pre_page_macros(env):
     env.conf['extra']['posts'] = publishedposts
 
     # guide page
-    guide_file_object = open('src/guides/data.json')
-    guides = json.load(guide_file_object)
+    with open('src/guides/data.json', 'rb') as guide_file_object:
+        guides = json.load(guide_file_object)
     publishedguides = []
     for key in guides.keys():
         if guides[key]['published']:
@@ -96,15 +97,14 @@ def on_pre_page_macros(env):
     env.conf['extra']['guides'] = publishedguides
 
     # team page
-    team_file_object = open('src/staff/data.json')
-    team = json.load(team_file_object)
+    with open('src/staff/data.json', 'rb') as team_file_object:
+        team = json.load(team_file_object)
     env.conf['extra']['team'] = team
 
     # events page
-    events_file_object = open('src/events/data.json')
-    events = json.load(events_file_object)
+    with open('src/events/data.json', 'rb') as events_file_object:
+        events = json.load(events_file_object)
     env.conf['extra']['events'] = events
 
 def on_post_build(env):
     "Post-build actions"
-

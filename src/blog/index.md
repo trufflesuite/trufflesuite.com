@@ -1,4 +1,4 @@
 ---
 template: blog.html
-title: Truffle Suite Blog
+title: Truffle Blog
 ---
