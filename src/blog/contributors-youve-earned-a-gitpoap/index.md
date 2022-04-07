@@ -14,9 +14,9 @@ POAPs (Proof Of Attendance Protocol) are badges issued as NFTs (non-fungible tok
 
 Great question. Annual contributor POAPs will be issued to those who have contributed at least once all year since the start of the following projects:
 
-- Ganache
-- Truffle
-- trufflesuite.com website
+- [Ganache](https://github.com/trufflesuite/ganache)
+- [Truffle](https://github.com/trufflesuite/truffle)
+- [trufflesuite.com website](https://github.com/trufflesuite/trufflesuite.com)
 
 Those of you who have contributed to all three projects can claim all three POAPs! 
 
