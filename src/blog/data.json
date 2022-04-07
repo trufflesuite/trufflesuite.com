@@ -1,4 +1,12 @@
 {
+  "contributors-youve-earned-a-gitpoap": {
+    "title": "Hey Trufflesuite contributors, you’ve earned a POAP!",
+    "date": "2022-04-07",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "Hey Trufflesuite contributors, we’re excited to share that in collaboration with the GitPOAP team, we will be issuing POAPs in appreciation of your awesome contributions over the years.",
+    "image": "/img/blog/thumbnails/gitpoap.png"
+  },
   "introducing-truffle-dashboard": {
     "title": "Introducing Truffle Dashboard",
     "date": "2022-02-19",
