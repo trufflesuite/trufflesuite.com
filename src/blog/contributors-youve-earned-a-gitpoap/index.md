@@ -22,7 +22,7 @@ Great question. Annual contributor POAPs will be issued to those who have contri
 
 Those of you who have contributed to all three projects can claim all three POAPs! 
 
-Here are some POAPs you should expect to receive as a TruffleSuite contributor.
+Here are some POAPs you should expect to receive as a TruffleSuite contributor:
 
 ![gitpoap examples](./poap-examples.png)
 
