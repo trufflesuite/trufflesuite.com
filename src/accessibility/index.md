@@ -5,7 +5,7 @@ title: Accessibility
 
 # Accessibility
 
-Truffle is commited to providing a website that is accessible to the widest possible audience,
+Truffle is committed to providing a website that is accessible to the widest possible audience,
 regardless of technology or ability. We are actively working to increase the accessibility and
 usability of our website and the developer tools we create.
 
