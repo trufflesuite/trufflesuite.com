@@ -30,7 +30,7 @@ Here are some POAPs you should expect to receive as a TruffleSuite contributor:
 
 POAPs will be issued as NFTs, so contributors must authenticate with their GitHub accounts on the [GitPOAP website](https://gitpoap.io/) to claim their POAP.
 
-All POAPs are minted on Gnosis Chain (Formerly xDai). There is no cost to claim your POAP and it can be migrated to the Ethereum mainnet if you pay the gas fee for the transaction. Learn how to do that [here](https://intercom.help/poap/en/articles/5790336-how-do-i-migrate-my-poap-to-mainnet).
+All POAPs are minted on Gnosis Chain (formerly xDai). There is no cost to claim a POAP and it can be migrated to Ethereum Mainnet by sending a transaction. Visit [how do I migrate my POAP to Mainnet](https://intercom.help/poap/en/articles/5790336-how-do-i-migrate-my-poap-to-mainnet) for instructions.
 
 The official start date for claiming is April 7, 2022, so mark your calendars and claim your GitPOAP as soon as possible.
 
