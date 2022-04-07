@@ -20,9 +20,9 @@ Great question. Annual contributor POAPs will be issued to those who have contri
 
 Those of you who have contributed to all three projects can claim all three POAPs! 
 
-Here are some POAPs you should expect to receive as a TruffleSuite contributor:
+Here are some POAPs you should expect to receive as a Trufflesuite contributor:
 
-![gitpoap examples](./poap-examples.png)
+![3 examples of GitPOAPs you could expect to receive as a contributor](./poap-examples.png)
 
 ## How and when can I claim my POAP?
 
