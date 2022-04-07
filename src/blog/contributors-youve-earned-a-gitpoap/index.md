@@ -32,4 +32,4 @@ All POAPs are minted on Gnosis Chain (formerly xDai). There is no cost to claim 
 
 The official start date for claiming is April 7, 2022, so mark your calendars and claim your GitPOAP as soon as possible.
 
-Thanks to the [GitPOAP](https://twitter.com/gitpoap) team for selecting the Trufflesuite of tools as one of the lucky few projects in their launch cohort.
+Thanks to the [GitPOAP](https://twitter.com/gitpoap) team for selecting Truffle as one of the lucky few projects in their launch cohort.
