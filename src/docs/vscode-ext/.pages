@@ -1,0 +1,9 @@
+nav:
+  - Overview: index.md
+  - Installation Guide: installation-guide.md
+  - Quickstart: quickstart.md
+  - Command Palette: command-palette.md
+  - Infura Service Management: infura-blockchain-service-management.md
+  - Contract Management: contract-management.md
+  - Debugging Smart Contracts: debugging-smart-contracts.md
+  - FAQs: faq.md

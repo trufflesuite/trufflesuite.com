@@ -4,4 +4,5 @@ nav:
     - ganache
     - drizzle
     - filecoin
+    - Truffle for VSCode: vscode-ext
     - tezos
