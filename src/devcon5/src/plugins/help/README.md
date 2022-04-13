@@ -1,3 +1,6 @@
+---
+title: Help Screen Plugin
+---
 Help screen plugin
 ===================
 

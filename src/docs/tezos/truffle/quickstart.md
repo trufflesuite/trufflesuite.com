@@ -11,16 +11,6 @@ layout: docs.hbs
 
 Wanna build apps on Tezos using Truffle? You're in the right place.
 
-## Table of Contents
-
-1. [Getting set up](#getting-set-up)
-1. [Installing Truffle](#installing-truffle)
-1. [Using the Tezos Truffle Box](#using-the-tezos-truffle-box)
-1. [Writing Contracts](#writing-contracts)
-1. [Deploying Contracts](#deploying-contracts)
-1. [Testing Contracts](#testing-contracts)
-1. [Further Resources](#further-resources)
-
 ## Getting Set Up
 
 ### Installing Docker

@@ -1,0 +1,16 @@
+{% extends "main.html" %}
+
+{% block content %}
+<style>
+    /*
+        Hide sidebars
+        this makes the content in the middle take the full width of the content area
+    */
+    @media screen and (min-width: 60em) {
+        .md-sidebar {
+            display: none !important;
+        }
+    }
+</style>
+{{ super() }}
+{% endblock %}

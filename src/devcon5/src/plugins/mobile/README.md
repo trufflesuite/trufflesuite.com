@@ -1,3 +1,6 @@
+---
+title: Mobile Devices Support
+---
 Mobile devices support
 ======================
 
@@ -15,14 +18,14 @@ by `present` and `active` CSS classes.
 Example CSS
 -----------
 
-        body.impress-mobile .step { 
+        body.impress-mobile .step {
             display:none;
         }
         body.impress-mobile .step.active,
         body.impress-mobile .step.present,
         body.impress-mobile .step.next,
-        body.impress-mobile .step.prev { 
-            display:block; 
+        body.impress-mobile .step.prev {
+            display:block;
         }
 
 Note

@@ -443,8 +443,8 @@
 			"react",
 			"express"
 		]
-  },
-  "rsk-token-box": {
+	},
+	"rsk-token-box": {
 		"description": "Truffle box with everything you need to start creating a token using Open Zeppelin smart contracts library in Truffle Suite, connected to a RSK network",
 		"stars": "1",
 		"tags": [
@@ -452,8 +452,8 @@
 			"rsk",
 			"token"
 		]
-  },
-  "rsk-plant-box": {
+	},
+	"rsk-plant-box": {
 		"description": "Truffle box is configured to create a complete dApp using Truffle Suite on RSK Blockchain, including a user interface to interact with the smart contract",
 		"stars": "1",
 		"tags": [
@@ -704,15 +704,6 @@
 		"stars": 34,
 		"tags": [
 			"official"
-		]
-	},
-	"zepkit": {
-		"description": "A truffle box containing React, ZeppelinOS & OpenZeppelin",
-		"stars": 40,
-		"tags": [
-			"community",
-			"openzeppelin",
-			"zeppelinos"
 		]
 	},
 	"besu-drizzle-truffle-box": {

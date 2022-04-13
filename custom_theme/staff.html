@@ -37,7 +37,7 @@
 
     <h1>Team</h1>
     <p>Meet the Truffle Team...</p>
-  
+
     <div class="row">
     {% for member in config.extra.team %}
         <div class="col-xs-12 col-md-6 col-lg-3 mb-3">
@@ -52,7 +52,7 @@
             <p>{{ member.position }}</p>
             {% if member.twitter %}
                 <p class="md-typeset mb-0 small">
-                    <a href="https://twitter.com/{{member.twitter}}">
+                    <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/{{member.twitter}}">
                         <span class="twemoji twitter">
                             {% include ".icons/fontawesome/brands/twitter.svg" %}
                         </span>
@@ -62,7 +62,7 @@
             {% endif %}
             {% if member.linkedin %}
                 <p class="md-typeset mb-0 small">
-                    <a href="https://linkedin.com/in/{{member.linkedin}}">
+                    <a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/{{member.linkedin}}">
                         <span class="twemoji linkedin">
                             {% include ".icons/fontawesome/brands/linkedin.svg" %}
                         </span>
@@ -72,7 +72,7 @@
             {% endif %}
             {% if member.github %}
                 <p class="md-typeset mb-0 small">
-                    <a href="https://github.com/{{member.github}}">
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/{{member.github}}">
                         <span class="twemoji github">
                             {% include ".icons/fontawesome/brands/github.svg" %}
                         </span>

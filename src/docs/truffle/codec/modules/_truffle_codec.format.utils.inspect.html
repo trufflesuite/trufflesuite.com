@@ -84,8 +84,15 @@
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-namespace"><a href="../interfaces/_truffle_codec.format.utils.inspect.inspectoptions.html" class="tsd-kind-icon">Inspect<wbr>Options</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.format.utils.inspect.html#nativizeaccesslist" class="tsd-kind-icon">nativize<wbr>Access<wbr>List</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.format.utils.inspect.html#unsafenativize" class="tsd-kind-icon">unsafe<wbr>Nativize</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.format.utils.inspect.html#unsafenativizevariables" class="tsd-kind-icon">unsafe<wbr>Nativize<wbr>Variables</a></li>
 							</ul>
@@ -96,6 +103,37 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="nativizeaccesslist" class="tsd-anchor"></a>
+					<h3>nativize<wbr>Access<wbr>List</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">nativize<wbr>Access<wbr>List<span class="tsd-signature-symbol">(</span>wrappedAccessList<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.format.values.arrayvalue.html" class="tsd-signature-type">ArrayValue</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_truffle_codec.html#accesslist" class="tsd-signature-type">AccessList</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/format/utils/inspect.ts#L662">codec/lib/format/utils/inspect.ts:662</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Turns a wrapped access list into a usable form.
+										Will fail if the input is not a wrapped access list!
+										Note that the storage keys must be given as uint256, not bytes32.
+									Primarily meant for internal use.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>wrappedAccessList: <a href="../interfaces/_truffle_codec.format.values.arrayvalue.html" class="tsd-signature-type">ArrayValue</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_truffle_codec.html#accesslist" class="tsd-signature-type">AccessList</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
 					<a name="unsafenativize" class="tsd-anchor"></a>
 					<h3>unsafe<wbr>Nativize</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
@@ -105,7 +143,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/utils/inspect.ts#L455">codec/lib/format/utils/inspect.ts:455</a></li>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/format/utils/inspect.ts#L473">codec/lib/format/utils/inspect.ts:473</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -151,7 +189,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/format/utils/inspect.ts#L414">codec/lib/format/utils/inspect.ts:414</a></li>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/format/utils/inspect.ts#L432">codec/lib/format/utils/inspect.ts:432</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -196,6 +234,12 @@
 				<ul class="before-current">
 					<li class=" tsd-kind-class tsd-parent-kind-namespace">
 						<a href="../classes/_truffle_codec.format.utils.inspect.resultinspector.html" class="tsd-kind-icon">Result<wbr>Inspector</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-namespace">
+						<a href="../interfaces/_truffle_codec.format.utils.inspect.inspectoptions.html" class="tsd-kind-icon">Inspect<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.format.utils.inspect.html#nativizeaccesslist" class="tsd-kind-icon">nativize<wbr>Access<wbr>List</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace">
 						<a href="_truffle_codec.format.utils.inspect.html#unsafenativize" class="tsd-kind-icon">unsafe<wbr>Nativize</a>

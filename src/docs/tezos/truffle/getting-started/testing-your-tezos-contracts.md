@@ -39,7 +39,7 @@ Truffle provides a clean room environment when running your test files. When run
 
 The above clean room environment is a trade off between speed and test maintainability, but at times can be slow. We originally built Ganache for Ethereum to make running Ethereum-based tests significantly faster, where the test framework can take advantage of testing-specific features. We hope to do the same for Tezos. Please reach out to TQ and let them know you'd like a version of Ganache for Tezos!
 
-# Writing Tests in JavaScript
+## Writing Tests in JavaScript
 
 Truffle uses the [Mocha](https://mochajs.org/) testing framework and [Chai](https://chaijs.com/) for assertions to provide you with a solid framework from which to write your JavaScript tests. Let's dive in and see how Truffle builds on top of Mocha to make testing your contracts a breeze.
 
@@ -89,7 +89,7 @@ contract('SimpleStorage', () => {
       return simpleStorageInstance.storage();
     }).then(function(storedInt) {
       assert.equal(storedInt, 89, "The integer 89 was not stored.");
-    });    
+    });
   });
 });
 ```

@@ -1,3 +1,6 @@
+---
+title: Toolbar Plugin
+---
 Toolbar plugin
 ====================
 
@@ -11,7 +14,7 @@ of different divs.
 To add/activate the toolbar in your presentation, add this div:
 
     <div id="impress-toolbar"></div>
- 
+
 Styling the toolbar is left to presentation author. Here's an example CSS:
 
     .impress-enabled div#impress-toolbar {

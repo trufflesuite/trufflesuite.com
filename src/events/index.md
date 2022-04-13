@@ -1,4 +1,4 @@
 ---
 template: events.html
-title: Truffle Suite
+title: Truffle Events
 ---

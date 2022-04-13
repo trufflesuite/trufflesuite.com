@@ -78,6 +78,7 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.compilations.utils.html#collectuserdefinedtypesandtaggedoutputs" class="tsd-kind-icon">collect<wbr>User<wbr>Defined<wbr>Types<wbr>And<wbr>Tagged<wbr>Outputs</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.compilations.utils.html#findcompilationandcontract" class="tsd-kind-icon">find<wbr>Compilation<wbr>And<wbr>Contract</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.compilations.utils.html#getcontractnode" class="tsd-kind-icon">get<wbr>Contract<wbr>Node</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.compilations.utils.html#infotocompilations" class="tsd-kind-icon">info<wbr>ToCompilations</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-namespace"><a href="_truffle_codec.compilations.utils.html#shimartifacts" class="tsd-kind-icon">shim<wbr>Artifacts</a></li>
@@ -102,7 +103,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/compilations/utils.ts#L471">codec/lib/compilations/utils.ts:471</a></li>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/compilations/utils.ts#L477">codec/lib/compilations/utils.ts:477</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -138,7 +139,44 @@
 								<li class="tsd-parameter">
 									<h5>types<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.format.types.typesbyid.html" class="tsd-signature-type">TypesById</a></h5>
 								</li>
+								<li class="tsd-parameter">
+									<h5>types<wbr>ByCompilation<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.format.types.typesbycompilationandid.html" class="tsd-signature-type">TypesByCompilationAndId</a></h5>
+								</li>
 							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace">
+					<a name="findcompilationandcontract" class="tsd-anchor"></a>
+					<h3>find<wbr>Compilation<wbr>And<wbr>Contract</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace">
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Compilation<wbr>And<wbr>Contract<span class="tsd-signature-symbol">(</span>compilations<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.compilations.compilation.html" class="tsd-signature-type">Compilation</a><span class="tsd-signature-symbol">[]</span>, artifact<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Artifact</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CompilationAndContract</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/compilations/utils.ts#L563">codec/lib/compilations/utils.ts:563</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Given a list of compilations, and an artifact appearing in one
+										of those compilations, finds the compilation and the corresponding
+										contract object
+									(these may be undefined if they can&#39;t be found)</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>compilations: <a href="../interfaces/_truffle_codec.compilations.compilation.html" class="tsd-signature-type">Compilation</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>artifact: <span class="tsd-signature-type">Artifact</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">CompilationAndContract</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -152,7 +190,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/compilations/utils.ts#L253">codec/lib/compilations/utils.ts:253</a></li>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/compilations/utils.ts#L259">codec/lib/compilations/utils.ts:259</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -178,7 +216,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/compilations/utils.ts#L558">codec/lib/compilations/utils.ts:558</a></li>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/compilations/utils.ts#L639">codec/lib/compilations/utils.ts:639</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -201,7 +239,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/compilations/utils.ts#L57">codec/lib/compilations/utils.ts:57</a></li>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/compilations/utils.ts#L58">codec/lib/compilations/utils.ts:58</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -237,7 +275,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/compilations/utils.ts#L37">codec/lib/compilations/utils.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/compilations/utils.ts#L38">codec/lib/compilations/utils.ts:38</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -263,7 +301,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/compilations/utils.ts#L25">codec/lib/compilations/utils.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/compilations/utils.ts#L26">codec/lib/compilations/utils.ts:26</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -289,7 +327,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/compilations/utils.ts#L80">codec/lib/compilations/utils.ts:80</a></li>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/compilations/utils.ts#L86">codec/lib/compilations/utils.ts:86</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -325,7 +363,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/224e5a0de/packages/codec/lib/compilations/utils.ts#L442">codec/lib/compilations/utils.ts:442</a></li>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/codec/lib/compilations/utils.ts#L448">codec/lib/compilations/utils.ts:448</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -359,6 +397,9 @@
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-namespace">
 						<a href="_truffle_codec.compilations.utils.html#collectuserdefinedtypesandtaggedoutputs" class="tsd-kind-icon">collect<wbr>User<wbr>Defined<wbr>Types<wbr>And<wbr>Tagged<wbr>Outputs</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="_truffle_codec.compilations.utils.html#findcompilationandcontract" class="tsd-kind-icon">find<wbr>Compilation<wbr>And<wbr>Contract</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-namespace">
 						<a href="_truffle_codec.compilations.utils.html#getcontractnode" class="tsd-kind-icon">get<wbr>Contract<wbr>Node</a>

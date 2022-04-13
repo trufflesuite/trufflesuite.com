@@ -5,6 +5,8 @@ hide:
 
 # Getting Started with Drizzle and React
 
+<p class="alert alert-warning"><i class="far fa-exclamation-triangle"></i><strong>Archived:</strong> This tutorial has been archived and may not work as expected; versions are out of date, methods and workflows may have changed. We leave these up for historical context and for any universally useful information contained. Use at your own risk!</p>
+
 Drizzle is the newest member of the Truffle Suite and our first front-end development tool. At its core, **Drizzle** takes care of synchronizing your contract data, transaction data and more from the blockchain to a Redux store. There are also higher-level abstractions on top of the base `drizzle` library; tools for React compatibility ([`drizzle-react`](/docs/drizzle/react/react-integration)) and a set of ready-to-use React components ([`drizzle-react-components`](/docs/drizzle/react/react-components)).
 
 We're going to focus on the lower levels today, taking you through setting up a Truffle project with React and Drizzle from scratch. This way we can gain the best understanding of how Drizzle works under the hood. With this knowledge, you can leverage the full power of Drizzle with any front-end framework of your choosing, or use the higher-level React abstractions with confidence.
@@ -748,7 +750,7 @@ Then, we can get the transaction hash (assigned to `txHash`) via `transactionSta
 
 Otherwise, we display a string to show the status of our transaction. Usually, this will either be "pending" or "success".
 
-# The End
+## The End
 
 Congratulations! You have taken a huge step to understanding how Drizzle works. Of course, this is only the beginning, you can use tools like [`drizzle-react`](https://github.com/trufflesuite/drizzle-react) to help you integrate Drizzle into your dapp, reducing the necessary boilerplate that you would have to write.
 

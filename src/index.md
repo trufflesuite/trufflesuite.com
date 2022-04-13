@@ -1,4 +1,5 @@
 ---
 template: home.html
-title: Truffle Suite
+title: Home
+description: The Truffle Suite gets developers from idea to dapp as comfortably as possible.
 ---

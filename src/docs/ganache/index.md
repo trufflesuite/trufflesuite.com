@@ -5,13 +5,6 @@ layout: docs.hbs
 
 <div class="text-center">
   <img style="max-width: 160px;" src="/img/ganache-logo-dark.svg" alt="Ganache Logo" />
-  <div class="docs-badges">
-    <a class="github-button" href="https://github.com/trufflesuite/ganache-ui" data-icon="octicon-star" data-show-count="true" aria-label="Star trufflesuite/ganache on GitHub">Star</a>
-    <a class="github-button" href="https://github.com/trufflesuite/ganache-ui/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork trufflesuite/ganache-ui on GitHub">Fork</a>
-  </div>
-  <a href="https://gitter.im/consensys/truffle?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
-    <img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/consensys/truffle"/>
-  </a>
 </div>
 
 # Overview

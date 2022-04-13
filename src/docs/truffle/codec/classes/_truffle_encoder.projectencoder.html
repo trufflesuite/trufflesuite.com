@@ -1,0 +1,1132 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ProjectEncoder | Truffle Decoding and Encoding</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Truffle Decoding and Encoding</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">Public</span>
+								<ul class="tsd-select-list">
+									<li data-value="public" class="selected">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-only-exported" checked />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/_truffle_encoder.html">@truffle/encoder</a>
+				</li>
+				<li>
+					<a href="_truffle_encoder.projectencoder.html">ProjectEncoder</a>
+				</li>
+			</ul>
+			<h1>Class ProjectEncoder</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The ProjectEncoder class.  Can wrap values; can also encode transactions and
+							resolve overloads if sufficient information is provided.  See below for a
+						method listing.</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">ProjectEncoder</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_truffle_encoder.projectencoder.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_truffle_encoder.projectencoder.html#allocations" class="tsd-kind-icon">allocations</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_truffle_encoder.projectencoder.html#compilations" class="tsd-kind-icon">compilations</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_truffle_encoder.projectencoder.html#contractsandcontexts" class="tsd-kind-icon">contracts<wbr>And<wbr>Contexts</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_truffle_encoder.projectencoder.html#ens" class="tsd-kind-icon">ens</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_truffle_encoder.projectencoder.html#enscache" class="tsd-kind-icon">ens<wbr>Cache</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_truffle_encoder.projectencoder.html#networkid" class="tsd-kind-icon">network<wbr>Id</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_truffle_encoder.projectencoder.html#provider" class="tsd-kind-icon">provider</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_truffle_encoder.projectencoder.html#referencedeclarations" class="tsd-kind-icon">reference<wbr>Declarations</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_truffle_encoder.projectencoder.html#registryaddress" class="tsd-kind-icon">registry<wbr>Address</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_truffle_encoder.projectencoder.html#userdefinedtypes" class="tsd-kind-icon">user<wbr>Defined<wbr>Types</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-private"><a href="_truffle_encoder.projectencoder.html#drivegenerator" class="tsd-kind-icon">drive<wbr>Generator</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="_truffle_encoder.projectencoder.html#encodetransaction" class="tsd-kind-icon">encode<wbr>Transaction</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="_truffle_encoder.projectencoder.html#encodetxnoresolution" class="tsd-kind-icon">encode<wbr>TxNo<wbr>Resolution</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_truffle_encoder.projectencoder.html#foraddress" class="tsd-kind-icon">for<wbr>Address</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_truffle_encoder.projectencoder.html#forartifact" class="tsd-kind-icon">for<wbr>Artifact</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_truffle_encoder.projectencoder.html#forcontract" class="tsd-kind-icon">for<wbr>Contract</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_truffle_encoder.projectencoder.html#forinstance" class="tsd-kind-icon">for<wbr>Instance</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="_truffle_encoder.projectencoder.html#getallocations" class="tsd-kind-icon">get<wbr>Allocations</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="_truffle_encoder.projectencoder.html#getnetworkid" class="tsd-kind-icon">get<wbr>Network<wbr>Id</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="_truffle_encoder.projectencoder.html#getreferencedeclarations" class="tsd-kind-icon">get<wbr>Reference<wbr>Declarations</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="_truffle_encoder.projectencoder.html#getuserdefinedtypes" class="tsd-kind-icon">get<wbr>User<wbr>Defined<wbr>Types</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="_truffle_encoder.projectencoder.html#init" class="tsd-kind-icon">init</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_truffle_encoder.projectencoder.html#recognizeaddress" class="tsd-kind-icon">recognize<wbr>Address</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_truffle_encoder.projectencoder.html#recognizedecimal" class="tsd-kind-icon">recognize<wbr>Decimal</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_truffle_encoder.projectencoder.html#recognizeinteger" class="tsd-kind-icon">recognize<wbr>Integer</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="_truffle_encoder.projectencoder.html#resolveandwrap" class="tsd-kind-icon">resolve<wbr>And<wbr>Wrap</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_truffle_encoder.projectencoder.html#resolveensname" class="tsd-kind-icon">resolveENSName</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_truffle_encoder.projectencoder.html#respond" class="tsd-kind-icon">respond</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_truffle_encoder.projectencoder.html#wrap" class="tsd-kind-icon">wrap</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_truffle_encoder.projectencoder.html#wrapelementaryvalue" class="tsd-kind-icon">wrap<wbr>Elementary<wbr>Value</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="_truffle_encoder.projectencoder.html#wrapfortransaction" class="tsd-kind-icon">wrap<wbr>For<wbr>Transaction</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Project<wbr>Encoder<span class="tsd-signature-symbol">(</span>info<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EncoderInfoInternal</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_truffle_encoder.projectencoder.html" class="tsd-signature-type">ProjectEncoder</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L84">encoder/lib/encoders.ts:84</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>info: <span class="tsd-signature-type">EncoderInfoInternal</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_truffle_encoder.projectencoder.html" class="tsd-signature-type">ProjectEncoder</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="allocations" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> allocations</h3>
+					<div class="tsd-signature tsd-kind-icon">allocations<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.evm.allocationinfo.html" class="tsd-signature-type">AllocationInfo</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L46">encoder/lib/encoders.ts:46</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="compilations" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> compilations</h3>
+					<div class="tsd-signature tsd-kind-icon">compilations<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.compilations.compilation.html" class="tsd-signature-type">Compilation</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L52">encoder/lib/encoders.ts:52</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="contractsandcontexts" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> contracts<wbr>And<wbr>Contexts</h3>
+					<div class="tsd-signature tsd-kind-icon">contracts<wbr>And<wbr>Contexts<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.abidata.allocate.contractandcontexts.html" class="tsd-signature-type">ContractAndContexts</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = ...</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L53">encoder/lib/encoders.ts:53</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="ens" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> ens</h3>
+					<div class="tsd-signature tsd-kind-icon">ens<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L43">encoder/lib/encoders.ts:43</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="enscache" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> ens<wbr>Cache</h3>
+					<div class="tsd-signature tsd-kind-icon">ens<wbr>Cache<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ENSCache</span><span class="tsd-signature-symbol"> = ...</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L45">encoder/lib/encoders.ts:45</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="networkid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> network<wbr>Id</h3>
+					<div class="tsd-signature tsd-kind-icon">network<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L48">encoder/lib/encoders.ts:48</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="provider" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> provider</h3>
+					<div class="tsd-signature tsd-kind-icon">provider<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Provider</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L42">encoder/lib/encoders.ts:42</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="referencedeclarations" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> reference<wbr>Declarations</h3>
+					<div class="tsd-signature tsd-kind-icon">reference<wbr>Declarations<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L49">encoder/lib/encoders.ts:49</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-index-signature">
+								<h5><span class="tsd-signature-symbol">[</span>compilationId: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><a href="../interfaces/_truffle_codec.ast.astnodes.html" class="tsd-signature-type">AstNodes</a></h5>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="registryaddress" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> registry<wbr>Address</h3>
+					<div class="tsd-signature tsd-kind-icon">registry<wbr>Address<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = ...</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L44">encoder/lib/encoders.ts:44</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="userdefinedtypes" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> user<wbr>Defined<wbr>Types</h3>
+					<div class="tsd-signature tsd-kind-icon">user<wbr>Defined<wbr>Types<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_truffle_codec.format.types.typesbyid.html" class="tsd-signature-type">TypesById</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L47">encoder/lib/encoders.ts:47</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-private">
+					<a name="drivegenerator" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> drive<wbr>Generator</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">drive<wbr>Generator&lt;T&gt;<span class="tsd-signature-symbol">(</span>generator<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Generator</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_truffle_codec.html#wraprequest" class="tsd-signature-type">WrapRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><a href="../modules/_truffle_codec.html#wrapresponse" class="tsd-signature-type">WrapResponse</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L243">encoder/lib/encoders.ts:243</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>generator: <span class="tsd-signature-type">Generator</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_truffle_codec.html#wraprequest" class="tsd-signature-type">WrapRequest</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><a href="../modules/_truffle_codec.html#wrapresponse" class="tsd-signature-type">WrapResponse</a><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="encodetransaction" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> encode<wbr>Transaction</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">encode<wbr>Transaction<span class="tsd-signature-symbol">(</span>methods<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.wrap.method.html" class="tsd-signature-type">Method</a><span class="tsd-signature-symbol">[]</span>, inputs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_truffle_encoder.resolveoptions.html" class="tsd-signature-type">ResolveOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_truffle_encoder.txandabi.html" class="tsd-signature-type">TxAndAbi</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L310">encoder/lib/encoders.ts:310</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>methods: <a href="../interfaces/_truffle_codec.wrap.method.html" class="tsd-signature-type">Method</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>inputs: <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>options: <a href="../interfaces/_truffle_encoder.resolveoptions.html" class="tsd-signature-type">ResolveOptions</a><span class="tsd-signature-symbol"> = ...</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_truffle_encoder.txandabi.html" class="tsd-signature-type">TxAndAbi</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="encodetxnoresolution" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> encode<wbr>TxNo<wbr>Resolution</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">encode<wbr>TxNo<wbr>Resolution<span class="tsd-signature-symbol">(</span>method<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.wrap.method.html" class="tsd-signature-type">Method</a>, inputs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_truffle_encoder.resolveoptions.html" class="tsd-signature-type">ResolveOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_truffle_codec.options.html" class="tsd-signature-type">Options</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L280">encoder/lib/encoders.ts:280</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>method: <a href="../interfaces/_truffle_codec.wrap.method.html" class="tsd-signature-type">Method</a></h5>
+								</li>
+								<li>
+									<h5>inputs: <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>options: <a href="../interfaces/_truffle_encoder.resolveoptions.html" class="tsd-signature-type">ResolveOptions</a><span class="tsd-signature-symbol"> = ...</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_truffle_codec.options.html" class="tsd-signature-type">Options</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="foraddress" class="tsd-anchor"></a>
+					<h3>for<wbr>Address</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">for<wbr>Address<span class="tsd-signature-symbol">(</span>address<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, block<span class="tsd-signature-symbol">?: </span><a href="../modules/_truffle_codec.html#blockspecifier" class="tsd-signature-type">BlockSpecifier</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_truffle_encoder.contractinstanceencoder.html" class="tsd-signature-type">ContractInstanceEncoder</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L582">encoder/lib/encoders.ts:582</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><strong>This method is asynchronous.</strong></p>
+								</div>
+								<p>Constructs a contract instance encoder for a given instance of a contract in this
+									project.  Unlike <a href="_truffle_encoder.projectencoder.html#forinstance">forInstance</a>, this method doesn&#39;t require an artifact; it
+									will automatically detect the class of the given contract.  If it&#39;s not in
+								the project, or the encoder can&#39;t identify it, you&#39;ll get an exception.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>address: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The address of the contract instance to encoder for.
+										If an invalid address is provided, this method will throw an exception.</p>
+									</div>
+								</li>
+								<li>
+									<h5>block: <a href="../modules/_truffle_codec.html#blockspecifier" class="tsd-signature-type">BlockSpecifier</a><span class="tsd-signature-symbol"> = &quot;latest&quot;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>You can include this argument to specify that this should be
+											based on the addresses content&#39;s at a specific block (if say the contract
+										has since self-destructed).</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_truffle_encoder.contractinstanceencoder.html" class="tsd-signature-type">ContractInstanceEncoder</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="forartifact" class="tsd-anchor"></a>
+					<h3>for<wbr>Artifact</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">for<wbr>Artifact<span class="tsd-signature-symbol">(</span>artifact<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ContractObject</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_truffle_encoder.contractencoder.html" class="tsd-signature-type">ContractEncoder</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L509">encoder/lib/encoders.ts:509</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><strong>This method is asynchronous.</strong></p>
+								</div>
+								<p>Constructs a contract encoder for a given contract in this project.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>artifact: <span class="tsd-signature-type">ContractObject</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The contract the encoder is for.  If you want to
+											encode contract creation transactions, it must have all of
+										its libraries linked.</p>
+										<p>  Note: The contract must be one that the encoder knows about;
+										otherwise you will have problems.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_truffle_encoder.contractencoder.html" class="tsd-signature-type">ContractEncoder</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="forcontract" class="tsd-anchor"></a>
+					<h3>for<wbr>Contract</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">for<wbr>Contract<span class="tsd-signature-symbol">(</span>contract<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ContractConstructorObject</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_truffle_encoder.contractencoder.html" class="tsd-signature-type">ContractEncoder</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L538">encoder/lib/encoders.ts:538</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><strong>This method is asynchronous.</strong></p>
+								</div>
+								<p>Constructs a contract encoder for a given contract in this project.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>contract: <span class="tsd-signature-type">ContractConstructorObject</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The contract the encoder is for.  If you want to
+											encode contract creation transactions, it must have all of
+										its libraries linked.</p>
+										<p>  Note: The contract must be one that the encoder knows about;
+										otherwise you will have problems.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_truffle_encoder.contractencoder.html" class="tsd-signature-type">ContractEncoder</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="forinstance" class="tsd-anchor"></a>
+					<h3>for<wbr>Instance</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">for<wbr>Instance<span class="tsd-signature-symbol">(</span>artifact<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ContractObject</span>, address<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_truffle_encoder.contractinstanceencoder.html" class="tsd-signature-type">ContractInstanceEncoder</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L561">encoder/lib/encoders.ts:561</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><strong>This method is asynchronous.</strong></p>
+								</div>
+								<p>Constructs a contract instance encoder for a given contract instance.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>artifact: <span class="tsd-signature-type">ContractObject</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The artifact for the contract the encoder is for.  If you
+											want to encode contract creation transactions, it must have all of its
+										libraries linked.</p>
+										<p>  Note: The contract must be one that the encoder knows about;
+										otherwise you will have problems.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> address: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The address of the contract instance.
+											If omitted, but the project encoder has a provider or network ID,
+											it will be autodetected.  If there is no provider or network ID,
+										it must be included.</p>
+										<p>  If an invalid address is provided, this method will throw an exception.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_truffle_encoder.contractinstanceencoder.html" class="tsd-signature-type">ContractInstanceEncoder</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="getallocations" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>Allocations</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Allocations<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.evm.allocationinfo.html" class="tsd-signature-type">AllocationInfo</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L59">encoder/lib/encoders.ts:59</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_truffle_codec.evm.allocationinfo.html" class="tsd-signature-type">AllocationInfo</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="getnetworkid" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>Network<wbr>Id</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Network<wbr>Id<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L73">encoder/lib/encoders.ts:73</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="getreferencedeclarations" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>Reference<wbr>Declarations</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Reference<wbr>Declarations<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L80">encoder/lib/encoders.ts:80</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter-index-signature">
+									<h5><span class="tsd-signature-symbol">[</span>compilationId: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><a href="../interfaces/_truffle_codec.ast.astnodes.html" class="tsd-signature-type">AstNodes</a></h5>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="getuserdefinedtypes" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> get<wbr>User<wbr>Defined<wbr>Types</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>User<wbr>Defined<wbr>Types<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.format.types.typesbyid.html" class="tsd-signature-type">TypesById</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L66">encoder/lib/encoders.ts:66</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_truffle_codec.format.types.typesbyid.html" class="tsd-signature-type">TypesById</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="init" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> init</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">init<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L132">encoder/lib/encoders.ts:132</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="recognizeaddress" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> recognize<wbr>Address</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">recognize<wbr>Address<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_truffle_codec.addresswrapresponse.html" class="tsd-signature-type">AddressWrapResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L422">encoder/lib/encoders.ts:422</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>input: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_truffle_codec.addresswrapresponse.html" class="tsd-signature-type">AddressWrapResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="recognizedecimal" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> recognize<wbr>Decimal</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">recognize<wbr>Decimal<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.decimalwrapresponse.html" class="tsd-signature-type">DecimalWrapResponse</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L388">encoder/lib/encoders.ts:388</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>input: <span class="tsd-signature-type">unknown</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_truffle_codec.decimalwrapresponse.html" class="tsd-signature-type">DecimalWrapResponse</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="recognizeinteger" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> recognize<wbr>Integer</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">recognize<wbr>Integer<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.integerwrapresponse.html" class="tsd-signature-type">IntegerWrapResponse</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L336">encoder/lib/encoders.ts:336</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>input: <span class="tsd-signature-type">unknown</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_truffle_codec.integerwrapresponse.html" class="tsd-signature-type">IntegerWrapResponse</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="resolveandwrap" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> resolve<wbr>And<wbr>Wrap</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">resolve<wbr>And<wbr>Wrap<span class="tsd-signature-symbol">(</span>methods<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.wrap.method.html" class="tsd-signature-type">Method</a><span class="tsd-signature-symbol">[]</span>, inputs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_truffle_encoder.resolveoptions.html" class="tsd-signature-type">ResolveOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_truffle_codec.wrap.resolution.html" class="tsd-signature-type">Resolution</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L230">encoder/lib/encoders.ts:230</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>methods: <a href="../interfaces/_truffle_codec.wrap.method.html" class="tsd-signature-type">Method</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>inputs: <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>options: <a href="../interfaces/_truffle_encoder.resolveoptions.html" class="tsd-signature-type">ResolveOptions</a><span class="tsd-signature-symbol"> = ...</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_truffle_codec.wrap.resolution.html" class="tsd-signature-type">Resolution</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="resolveensname" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> resolveENSName</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">resolveENSName<span class="tsd-signature-symbol">(</span>input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L475">encoder/lib/encoders.ts:475</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>input: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="respond" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> respond</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">respond<span class="tsd-signature-symbol">(</span>request<span class="tsd-signature-symbol">: </span><a href="../modules/_truffle_codec.html#wraprequest" class="tsd-signature-type">WrapRequest</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_truffle_codec.html#wrapresponse" class="tsd-signature-type">WrapResponse</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L264">encoder/lib/encoders.ts:264</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>request: <a href="../modules/_truffle_codec.html#wraprequest" class="tsd-signature-type">WrapRequest</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_truffle_codec.html#wrapresponse" class="tsd-signature-type">WrapResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="wrap" class="tsd-anchor"></a>
+					<h3>wrap</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">wrap<span class="tsd-signature-symbol">(</span>dataType<span class="tsd-signature-symbol">: </span><a href="../modules/_truffle_codec.format.types.html#type" class="tsd-signature-type">Type</a>, input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_truffle_codec.format.values.html#value" class="tsd-signature-type">Value</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L198">encoder/lib/encoders.ts:198</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><strong>This method is asynchronous.</strong></p>
+								</div>
+								<p>This method recognizes user input for a given data type and attempts
+									to interpret it as a value of that type.  It will throw a
+								<a href="_truffle_codec.wrap.typemismatcherror.html">TypeMismatchError</a> if it cannot do this.</p>
+								<p>For documentation of the accepted forms of input, see
+								<a href="_truffle_encoder.contractencoder.html#encodetransaction">ContractEncoder.encodeTransaction</a>.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dataType: <a href="../modules/_truffle_codec.format.types.html#type" class="tsd-signature-type">Type</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The data type that the given value is to be interpreted
+										as.</p>
+									</div>
+								</li>
+								<li>
+									<h5>input: <span class="tsd-signature-type">unknown</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The value to be interpreted.  This can take a number of
+										forms depending on the data type, as documented above.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_truffle_codec.format.values.html#value" class="tsd-signature-type">Value</a><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>The interpreted value wrapped as a <a href="../modules/_truffle_codec.format.values.html#value">Value</a>
+							object.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="wrapelementaryvalue" class="tsd-anchor"></a>
+					<h3>wrap<wbr>Elementary<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">wrap<wbr>Elementary<wbr>Value<span class="tsd-signature-symbol">(</span>dataType<span class="tsd-signature-symbol">: </span><a href="../modules/_truffle_codec.format.types.html#elementarytype" class="tsd-signature-type">ElementaryType</a>, input<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_truffle_codec.format.values.html#elementaryvalue" class="tsd-signature-type">ElementaryValue</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L172">encoder/lib/encoders.ts:172</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p><strong>This method is asynchronous.</strong></p>
+								</div>
+								<p>This is a restricted version of <a href="_truffle_encoder.projectencoder.html#wrap">wrap</a>, which only handles elementary
+									types and values (those that can be used as mapping keys in Solidity);
+									it&#39;s present here for type convenience.  See the <a href="_truffle_encoder.projectencoder.html#wrap">wrap</a> and
+									<a href="_truffle_encoder.contractencoder.html#encodetransaction">ContractEncoder.encodeTransaction</a> documentation
+								for further information.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dataType: <a href="../modules/_truffle_codec.format.types.html#elementarytype" class="tsd-signature-type">ElementaryType</a></h5>
+								</li>
+								<li>
+									<h5>input: <span class="tsd-signature-type">unknown</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/_truffle_codec.format.values.html#elementaryvalue" class="tsd-signature-type">ElementaryValue</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="wrapfortransaction" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> wrap<wbr>For<wbr>Transaction</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">wrap<wbr>For<wbr>Transaction<span class="tsd-signature-symbol">(</span>method<span class="tsd-signature-symbol">: </span><a href="../interfaces/_truffle_codec.wrap.method.html" class="tsd-signature-type">Method</a>, inputs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span>, options<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_truffle_encoder.resolveoptions.html" class="tsd-signature-type">ResolveOptions</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_truffle_codec.wrap.resolution.html" class="tsd-signature-type">Resolution</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/049278560/packages/encoder/lib/encoders.ts#L213">encoder/lib/encoders.ts:213</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>method: <a href="../interfaces/_truffle_codec.wrap.method.html" class="tsd-signature-type">Method</a></h5>
+								</li>
+								<li>
+									<h5>inputs: <span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+								<li>
+									<h5>options: <a href="../interfaces/_truffle_encoder.resolveoptions.html" class="tsd-signature-type">ResolveOptions</a><span class="tsd-signature-symbol"> = ...</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/_truffle_codec.wrap.resolution.html" class="tsd-signature-type">Resolution</a><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Modules</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_truffle_codec.html">@truffle/codec</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/_truffle_decoder.html">@truffle/decoder</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/_truffle_encoder.html">@truffle/encoder</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="_truffle_encoder.contractencoder.html" class="tsd-kind-icon">Contract<wbr>Encoder</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="_truffle_encoder.contractinstanceencoder.html" class="tsd-kind-icon">Contract<wbr>Instance<wbr>Encoder</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="_truffle_encoder.contractnotdeployederror.html" class="tsd-kind-icon">Contract<wbr>Not<wbr>Deployed<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="_truffle_encoder.contractnotfounderror.html" class="tsd-kind-icon">Contract<wbr>Not<wbr>Found<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="_truffle_encoder.invalidaddresserror.html" class="tsd-kind-icon">Invalid<wbr>Address<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-module tsd-is-protected">
+						<a href="_truffle_encoder.nointernalinfoerror.html" class="tsd-kind-icon">No<wbr>Internal<wbr>Info<wbr>Error</a>
+					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-module">
+						<a href="_truffle_encoder.projectencoder.html" class="tsd-kind-icon">Project<wbr>Encoder</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="_truffle_encoder.projectencoder.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_truffle_encoder.projectencoder.html#allocations" class="tsd-kind-icon">allocations</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_truffle_encoder.projectencoder.html#compilations" class="tsd-kind-icon">compilations</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_truffle_encoder.projectencoder.html#contractsandcontexts" class="tsd-kind-icon">contracts<wbr>And<wbr>Contexts</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_truffle_encoder.projectencoder.html#ens" class="tsd-kind-icon">ens</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_truffle_encoder.projectencoder.html#enscache" class="tsd-kind-icon">ens<wbr>Cache</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_truffle_encoder.projectencoder.html#networkid" class="tsd-kind-icon">network<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_truffle_encoder.projectencoder.html#provider" class="tsd-kind-icon">provider</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_truffle_encoder.projectencoder.html#referencedeclarations" class="tsd-kind-icon">reference<wbr>Declarations</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_truffle_encoder.projectencoder.html#registryaddress" class="tsd-kind-icon">registry<wbr>Address</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_truffle_encoder.projectencoder.html#userdefinedtypes" class="tsd-kind-icon">user<wbr>Defined<wbr>Types</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-private">
+								<a href="_truffle_encoder.projectencoder.html#drivegenerator" class="tsd-kind-icon">drive<wbr>Generator</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="_truffle_encoder.projectencoder.html#encodetransaction" class="tsd-kind-icon">encode<wbr>Transaction</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="_truffle_encoder.projectencoder.html#encodetxnoresolution" class="tsd-kind-icon">encode<wbr>TxNo<wbr>Resolution</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_truffle_encoder.projectencoder.html#foraddress" class="tsd-kind-icon">for<wbr>Address</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_truffle_encoder.projectencoder.html#forartifact" class="tsd-kind-icon">for<wbr>Artifact</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_truffle_encoder.projectencoder.html#forcontract" class="tsd-kind-icon">for<wbr>Contract</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_truffle_encoder.projectencoder.html#forinstance" class="tsd-kind-icon">for<wbr>Instance</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="_truffle_encoder.projectencoder.html#getallocations" class="tsd-kind-icon">get<wbr>Allocations</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="_truffle_encoder.projectencoder.html#getnetworkid" class="tsd-kind-icon">get<wbr>Network<wbr>Id</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="_truffle_encoder.projectencoder.html#getreferencedeclarations" class="tsd-kind-icon">get<wbr>Reference<wbr>Declarations</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="_truffle_encoder.projectencoder.html#getuserdefinedtypes" class="tsd-kind-icon">get<wbr>User<wbr>Defined<wbr>Types</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="_truffle_encoder.projectencoder.html#init" class="tsd-kind-icon">init</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_truffle_encoder.projectencoder.html#recognizeaddress" class="tsd-kind-icon">recognize<wbr>Address</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_truffle_encoder.projectencoder.html#recognizedecimal" class="tsd-kind-icon">recognize<wbr>Decimal</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_truffle_encoder.projectencoder.html#recognizeinteger" class="tsd-kind-icon">recognize<wbr>Integer</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="_truffle_encoder.projectencoder.html#resolveandwrap" class="tsd-kind-icon">resolve<wbr>And<wbr>Wrap</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_truffle_encoder.projectencoder.html#resolveensname" class="tsd-kind-icon">resolveENSName</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_truffle_encoder.projectencoder.html#respond" class="tsd-kind-icon">respond</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_truffle_encoder.projectencoder.html#wrap" class="tsd-kind-icon">wrap</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_truffle_encoder.projectencoder.html#wrapelementaryvalue" class="tsd-kind-icon">wrap<wbr>Elementary<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="_truffle_encoder.projectencoder.html#wrapfortransaction" class="tsd-kind-icon">wrap<wbr>For<wbr>Transaction</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="_truffle_encoder.unlinkedcontracterror.html" class="tsd-kind-icon">Unlinked<wbr>Contract<wbr>Error</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_encoder.encodersettings.html" class="tsd-kind-icon">Encoder<wbr>Settings</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_encoder.enssettings.html" class="tsd-kind-icon">Ens<wbr>Settings</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_encoder.resolveoptions.html" class="tsd-kind-icon">Resolve<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/_truffle_encoder.txandabi.html" class="tsd-kind-icon">Tx<wbr>And<wbr>Abi</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_truffle_encoder.html#forartifact" class="tsd-kind-icon">for<wbr>Artifact</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_truffle_encoder.html#forartifactat" class="tsd-kind-icon">for<wbr>Artifact<wbr>At</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_truffle_encoder.html#forcontract" class="tsd-kind-icon">for<wbr>Contract</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_truffle_encoder.html#forcontractat" class="tsd-kind-icon">for<wbr>Contract<wbr>At</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_truffle_encoder.html#forcontractinstance" class="tsd-kind-icon">for<wbr>Contract<wbr>Instance</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_truffle_encoder.html#fordeployedartifact" class="tsd-kind-icon">for<wbr>Deployed<wbr>Artifact</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_truffle_encoder.html#fordeployedcontract" class="tsd-kind-icon">for<wbr>Deployed<wbr>Contract</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module">
+						<a href="../modules/_truffle_encoder.html#forproject" class="tsd-kind-icon">for<wbr>Project</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-protected">
+						<a href="../modules/_truffle_encoder.html#forprojectinternal" class="tsd-kind-icon">for<wbr>Project<wbr>Internal</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

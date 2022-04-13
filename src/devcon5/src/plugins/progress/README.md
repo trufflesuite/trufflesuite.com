@@ -1,3 +1,6 @@
+---
+title: Progress Plugin
+---
 Progress plugin
 ===============
 

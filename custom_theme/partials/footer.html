@@ -16,16 +16,16 @@
             <div class="col-2">
               <img class="truffle-logo pt-3" src="/img/truffle-logo-light.svg" alt="Truffle Logo">
             </div>
-            <div class="col-8">
+            <div class="col-6">
               <ul class="footer-naviation">
-                <li><a class="text-uppercase" href="mailto:inquiry@trufflesuite.com">Contact Us</a></li>
-                <li><a class="text-uppercase" href="/policy">Privacy Policy</a></li>
-                <li><a class="text-uppercase" href="/staff">Staff</a></li>
-                <li><a class="text-uppercase" href="https://github.com/trufflesuite">Github</a></li>
-                <li><a class="text-uppercase" href="/trufflecon2020">TruffleCon 2020</a></li>
+                <li><a class="text-uppercase" href="mailto:inquiry@trufflesuite.com" target="_blank" rel="noopener noreferrer" aria-label="Contact Us">Contact Us</a></li>
+                <li><a class="text-uppercase" href="/accessibility/">Accessibility</a></li>
+                <li><a class="text-uppercase" href="/policy/">Privacy Policy</a></li>
+                <li><a class="text-uppercase" href="/staff/">Staff</a></li>
+                <li><a class="text-uppercase" href="https://github.com/trufflesuite" target="_blank" rel="noopener noreferrer">Github</a></li>
               </ul>
             </div>
-            <div class="col-2">
+            <div class="col-4">
               {% include "partials/social.html" %}
             </div>
           </div>
@@ -34,7 +34,7 @@
           <div class="row">
             <div class="col">
               <div class="md-footer-copyright text-center">
-                {% if config.copyright %}
+                {% if config.copyright %}   
                   <div class="md-footer-copyright__highlight">
                     {{ config.copyright }}
                   </div>
@@ -50,3 +50,56 @@
 <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4795067.js"></script>
 <!-- End of HubSpot Embed Code -->
+
+
+<script>
+  (function() {
+    // handle opening and closing of nav menus
+
+    function focusTargetLink(target){
+      if (target.checked) {
+        let link;
+        if (target.id === "__drawer") {
+          link = document.querySelector("[data-md-toggle=drawer]:checked~.md-container .md-sidebar--primary a");
+        } else {
+          link = target.parentNode.querySelector("label~* a, label~* label[tabindex]");
+        }
+        link && link.focus();
+      }
+    }
+
+    // make the nav bar accessible on narrow-width screens
+    document.querySelectorAll("label[for=__drawer],label.md-nav__link").forEach(label => {
+      // make the labels tabable
+      label.tabIndex = 0;
+      const labelFor = label.getAttribute("for");
+      const target = document.getElementById(labelFor);
+      label.addEventListener("keydown", e => {
+        if (e.key === "Enter") {
+          // toggle checkbox state so nav state updates
+          label.click();
+          focusTargetLink(target);
+        }  
+      });
+      // NVDA hijacks the Enter key on the `label` element and fires the click event directly
+      // because of this we need to listen for the click event and then focus the target
+      target.addEventListener("change", e => {
+        focusTargetLink(target);
+      });
+    });
+
+    const primaryNav = document.querySelector(".md-sidebar--primary nav");
+    if (primaryNav) {
+      const closeNavViaKeyboardNavigationLink = document.createElement("button");
+      closeNavViaKeyboardNavigationLink.className = ".close-sidebar-link";
+      closeNavViaKeyboardNavigationLink.innerText = "Close Navigation"
+      closeNavViaKeyboardNavigationLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        document.getElementById("__drawer").checked = false;
+        document.querySelector("label.md-header__button").focus();
+      });
+      primaryNav.appendChild(closeNavViaKeyboardNavigationLink);
+    }
+  }());
+</script>
