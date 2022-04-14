@@ -45,6 +45,13 @@ markdown_extensions:
 use_directory_urls: true
 plugins:
   - search
+  - exclude-search:
+      exclude:
+        - blog/*
+        - events/*
+        - staff/*
+        - trufflecon2020/*
+      exclude-unreferenced: true
   - awesome-pages
   - macros:
       module_name: main
