@@ -4,17 +4,22 @@ const boxes = {
         const input = document.getElementById('boxes.filter.input');
 
         input.addEventListener('keyup', (e) => {
-            if (e.key === 'Enter') {
-                const filter = document.querySelector('input[name="boxes.filter.radio"]:checked').value;
-                const term = e.target.value;
+            // if (e.key === 'Enter') {
+            //     const filter = document.querySelector('input[name="boxes.filter.radio"]:checked').value;
+            //     const term = e.target.value;
 
-                boxes.search(filter, term);
-            }
+            //     boxes.search(filter, term);
+            // }        
 
             if (e.key === 'Backspace' || e.key === 'Delete') {
                 if (e.target.value.length === 0) {
                     boxes.clear();
                 }
+            } else {
+                const filter = document.querySelector('input[name="boxes.filter.radio"]:checked').value;
+                const term = e.target.value;
+    
+                boxes.search(filter, term);      
             }
 
             e.preventDefault();    
