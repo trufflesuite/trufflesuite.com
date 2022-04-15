@@ -2,7 +2,7 @@
 title: Overview
 ---
 
-Truffle for VSCode simplifies how you create, connect to, build and deploy smart contracts on Ethereum ledgers.
+Truffle for VSCode simplifies how you create, build, debug and deploy smart contracts on Ethereum and EVM-compatible blockchains.
 
 ## System Requirements
 
@@ -10,8 +10,8 @@ For public preview, the current supported system requirements are shown below
 
 - Supported Operating Systems:
     - Windows 10
-    - Mac OSX
-    - Ubuntu 20 (There maybe issues but with initial testing it looks stable)
+    - MacOS
+    - Ubuntu
 - Node 14.0.x
 - Git 2.10.x
 

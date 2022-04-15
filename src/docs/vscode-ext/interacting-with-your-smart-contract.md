@@ -13,7 +13,7 @@ The Truffle for VSCode extension gives developers the ability to generate a simp
 
 ### Local deployment
 
-If a developer has not already connected to an Infura Account or any other type of network, the default option will allow a developer to deploy their contract to an emulated Ethereum network. This local network is powered by [Truffle Ganache](https://truffleframework.com/docs/ganache/overview) ([ganache-cli](https://github.com/trufflesuite/ganache-cli/blob/master/README.md) specifically) and is enabled by default
+If a developer has not already connected to an Infura Account or any other type of network, the default option will allow a developer to deploy their contract to an emulated Ethereum network. This local network is powered by [Truffle Ganache](https://trufflesuite.com/docs/ganache) ([ganache-cli](https://github.com/trufflesuite/ganache#readme) specifically) and is enabled by default
 
 ![Smart contract deployment - local](./images/deployContractSelectDefault.png)
 
