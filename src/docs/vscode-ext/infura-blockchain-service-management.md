@@ -1,4 +1,4 @@
-The Trufflesuite for VSCode Extension, allows users to create a new instance, or connect to an existing instance, of the Infura Service directly from VS Code. This enables developers to remain productive in their IDE, reducing time moving from portal to IDE etc.
+The Truffle for VSCode Extension, allows users to create a new instance, or connect to an existing instance, of the Infura Service directly from VS Code. This enables developers to remain productive in their IDE, reducing time moving from portal to IDE etc.
 
 ## Creating a New Infura Service
 

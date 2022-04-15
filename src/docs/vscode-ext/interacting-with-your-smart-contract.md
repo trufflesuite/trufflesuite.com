@@ -1,6 +1,6 @@
 _Interact with your Smart Contract_
 
-The Trufflesuite for VSCode extension gives developers the ability to generate a simple user interface (UI) to interact with their contract directly from the IDE. This UI can be used for simple testing, debugging or even as the basis for a full UI.
+The Truffle for VSCode extension gives developers the ability to generate a simple user interface (UI) to interact with their contract directly from the IDE. This UI can be used for simple testing, debugging or even as the basis for a full UI.
 
 `Note: Currently the UI components will only work with contracts deployed locally (to a Truffle Ganache instance) and supports only the following data types (address, bool, int and string)`
 

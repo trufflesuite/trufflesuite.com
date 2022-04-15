@@ -1,16 +1,16 @@
 
 ## Prerequisites
 
-1. Install the Visual Studio Code extension [Trufflesuite for VSCode](https://marketplace.visualstudio.com/items?itemName=trufflesuite-csi.trufflesuite-vscode).
-2. Install and dependencies like Node.js and GIT as per the installation guide.
+1. Install the Visual Studio Code extension [Truffle for VSCode](https://marketplace.visualstudio.com/items?itemName=trufflesuite-csi.truffle-vscode).
+2. Install and dependencies like Node.js and Git as per the installation guide.
 
 ## Create a new Solidity Contract
 
-The Trufflesuite for VSCode for Ethereum leverages the [Truffle Suite](https://truffleframework.com/) of tools to help scaffold, build and deploy contracts.
+The Truffle for VSCode for Ethereum leverages the [Truffle Suite](https://truffleframework.com/) of tools to help scaffold, build and deploy contracts.
 
 Developers that are familiar with Truffle Suite may use the Truffle command line `e.g., Truffle Init` directly from the VS Code terminal.
 
-For developers who are not familiar with Truffle, or prefer to use the Command Palette, the Trufflesuite for VSCode can easily scaffold out a project directory using the following steps.
+For developers who are not familiar with Truffle, or prefer to use the Command Palette, the Truffle for VSCode can easily scaffold out a project directory using the following steps.
 
 1. From the [Command Palette](./Command-Palette), type `Truffle: New Solidity Project`
 

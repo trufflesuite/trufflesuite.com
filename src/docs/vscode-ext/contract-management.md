@@ -1,6 +1,6 @@
 ## Create, Build, and Deploy a new Solidity Smart Contact
 
-The Trufflesuite for VSCode extension gives developers a quick way to quickly scaffold out a smart contract directory with a basic smart contract, Truffle directory structure and key files needed to deploy contracts locally (with Truffle Ganache), or to test/main-networks using leveraging accounts from [Infura](https://infura.io/).
+The Truffle for VSCode extension gives developers a quick way to quickly scaffold out a smart contract directory with a basic smart contract, Truffle directory structure and key files needed to deploy contracts locally (with Truffle Ganache), or to test/main-networks using leveraging accounts from [Infura](https://infura.io/).
 
 This document details the smart contract flow from creating a brand new folder structure and sample project, through deploying that contract to local, or various test/main-networks. To jump to a specific section click the link below:
 
@@ -57,7 +57,7 @@ The build artifacts and directory structure leverage the [Truffle Suite](https:/
 
 ## Deploy your smart contract
 
-Once you have built your contract, it's time to deploy it. With the Trufflesuite for VSCode, developers have the option of where to deploy their contract.
+Once you have built your contract, it's time to deploy it. With the Truffle for VSCode, developers have the option of where to deploy their contract.
 
 Deployment parameters are based on the Truffle [migrations](https://truffleframework.com/docs/truffle/getting-started/running-migrations) process which are defined, and managed, in the `truffle-config.js` file
 
@@ -67,7 +67,7 @@ If a developer has not already connected to any other type of network, the defau
 
 ![Smart contract deployment - local](./images/deployContractSelectDefault.png)
 
-Selecting the `development` network from the pick list will deploy your contracts to a local Ganache powered network. Deployment information, such as contract address, transaction hash and other deployment metadata are published in the Trufflesuite for VSCode output channel as shown below
+Selecting the `development` network from the pick list will deploy your contracts to a local Ganache powered network. Deployment information, such as contract address, transaction hash and other deployment metadata are published in the Truffle for VSCode output channel as shown below
 
 ![Deployment Results](./images/deployContractSelectDefaultResult.png)
 
@@ -97,7 +97,7 @@ Finally, for developers who may be testing with several existing keys stored in 
 
 #### Deploy to a test or Mainnet network via Infura
 
-The Trufflesuite for VSCode extension supports developers who are building and deploying contracts to the public Ethereum network. To help simplify developer efforts, the Trufflesuite for VSCode supports connecting to these networks through a service such as [Infura](https://infura.io/)
+The Truffle for VSCode extension supports developers who are building and deploying contracts to the public Ethereum network. To help simplify developer efforts, the Truffle for VSCode supports connecting to these networks through a service such as [Infura](https://infura.io/)
 
 To connect to and deploy a contract through Infura follow these steps.
 
@@ -113,6 +113,6 @@ Once the Infura project is connected, the extension will updated your `truffle-c
 
 **Please note: The mnemonic used in this step must be the same one associated with your Ethereum user account. Please replace the 12-word mnemonic with a valid one and use caution when sharing this project with others to avoid exposing the mnemonic / account information.**
 
-After setting up your `truffle-config.js` with the proper account information, deploying to a testnet, is the same process, you will see the results of your transaction in the Trufflesuite for VSCode output channel, shown below. This channel will provide you with key information such as transaction hash id and contract address on mainnet, or whichever test network you have deployed your contract to.
+After setting up your `truffle-config.js` with the proper account information, deploying to a testnet, is the same process, you will see the results of your transaction in the Truffle for VSCode output channel, shown below. This channel will provide you with key information such as transaction hash id and contract address on mainnet, or whichever test network you have deployed your contract to.
 
 ![Testnet deployment](./images/deployContractSelectTestnetResult.png)

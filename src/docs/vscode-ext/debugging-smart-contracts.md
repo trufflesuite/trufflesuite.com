@@ -1,5 +1,5 @@
 
-The Trufflesuite for VSCode extension gives developers the ability to debug Solidity contracts in a typical VS Code debugging experience.
+The Truffle for VSCode extension gives developers the ability to debug Solidity contracts in a typical VS Code debugging experience.
 
 ## Deploy your contract
 
@@ -31,7 +31,7 @@ After you select the transaction you wish to debug, the VS Code debugger will la
 
 ![Debug Constructor](./images/debugWindowConstructor.png)
 
-To debug the other functions (SendRequest and SendResponse in our HelloBlockchain.sol) you need to exercise those functions and debug those transactions much like the constructor. To exercise a function you can use the [UI interaction](./Interacting-with-your-Smart-Contract) capabilities of the Trufflesuite for VSCode Developer extension
+To debug the other functions (SendRequest and SendResponse in our HelloBlockchain.sol) you need to exercise those functions and debug those transactions much like the constructor. To exercise a function you can use the [UI interaction](./Interacting-with-your-Smart-Contract) capabilities of the Truffle for VSCode Developer extension
 
 For example, let's generate the UI for our `HelloBlockchain.sol` contract and send messages to both the SendRequest and SendResponse functions
 
