@@ -1,20 +1,18 @@
 
 ## Prerequisites
 
-1. Install the Visual Studio Code extension [Trufflesuite for VSCode](https://marketplace.visualstudio.com/items?itemName=trufflesuite-csi.trufflesuite-vscode).
-2. Install and dependencies like Node.js and GIT as per the installation guide.
+1. Install the Visual Studio Code extension [Truffle for VSCode](https://marketplace.visualstudio.com/items?itemName=trufflesuite-csi.truffle-vscode).
+2. Install and dependencies like Node.js and Git as per the installation guide.
 
 ## Create a new Solidity Contract
 
-The Trufflesuite for VSCode for Ethereum leverages the [Truffle Suite](https://truffleframework.com/) of tools to help scaffold, build and deploy contracts.
+The Truffle for VSCode for Ethereum leverages the [Truffle Suite](https://trufflesuite.com/) of tools to help scaffold, build and deploy contracts.
 
 Developers that are familiar with Truffle Suite may use the Truffle command line `e.g., Truffle Init` directly from the VS Code terminal.
 
-For developers who are not familiar with Truffle, or prefer to use the Command Palette, the Trufflesuite for VSCode can easily scaffold out a project directory using the following steps.
+For developers who are not familiar with Truffle, or prefer to use the Command Palette, the Truffle for VSCode can easily scaffold out a project directory using the following steps.
 
 1. From the [Command Palette](./Command-Palette), type `Truffle: New Solidity Project`
-
-   ![Command Palette - New Solidity Project](./images/createNewProject.gif)
 
 2. Select an empty directory to scaffold out your project.
 
@@ -34,13 +32,9 @@ Your newly scaffolded out directory includes a simple contract and all the neces
 
 1. From the [Command Palette](./Command-Palette), type `Truffle: Build Contracts`
 
-   ![Command Palette - Build Contracts](./images/buildContracts.png)
-
 ### Option 2: Right click on your .sol file
 
 1. Select your contract Solidity (.sol) file, right click and choose `Build Contracts`
-
-   ![Right click shortcut - build contracts](./images/buildContractRightClick.gif)
 
 ## Deploy your smart contract to Truffle
 
@@ -50,12 +44,8 @@ Once compiled, you will have your contract, contract metadata (e.g., contract AB
 
 1. From the [Command Palette](./Command-Palette), type `Truffle: Deploy Contracts`
 
-   ![deploy contract](./images/deployContracts.png)
-
 ### Option 2: Right click on your .sol file
 
 1. Select your contract Solidity (.sol) file, right click and choose `Deploy Contracts`
-
-![Right click, deploy](./images/deployContractsRightClick.png)
 
 Once activated through the command palette, or through the right click option on the .sol file, the deployment process gives users the option to deploy a contract to a local Ethereum emulation environment, or various public Ethereum endpoints such as a testnet, or mainnet. Details on this process are highlighted in the [Contract Management](./Contract-Management) section of this wiki.

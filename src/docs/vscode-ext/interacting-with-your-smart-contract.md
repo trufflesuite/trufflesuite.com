@@ -1,6 +1,6 @@
 _Interact with your Smart Contract_
 
-The Trufflesuite for VSCode extension gives developers the ability to generate a simple user interface (UI) to interact with their contract directly from the IDE. This UI can be used for simple testing, debugging or even as the basis for a full UI.
+The Truffle for VSCode extension gives developers the ability to generate a simple user interface (UI) to interact with their contract directly from the IDE. This UI can be used for simple testing, debugging or even as the basis for a full UI.
 
 `Note: Currently the UI components will only work with contracts deployed locally (to a Truffle Ganache instance) and supports only the following data types (address, bool, int and string)`
 
@@ -13,7 +13,7 @@ The Trufflesuite for VSCode extension gives developers the ability to generate a
 
 ### Local deployment
 
-If a developer has not already connected to an Infura Account or any other type of network, the default option will allow a developer to deploy their contract to an emulated Ethereum network. This local network is powered by [Truffle Ganache](https://truffleframework.com/docs/ganache/overview) ([ganache-cli](https://github.com/trufflesuite/ganache-cli/blob/master/README.md) specifically) and is enabled by default
+If a developer has not already connected to an Infura Account or any other type of network, the default option will allow a developer to deploy their contract to an emulated Ethereum network. This local network is powered by [Truffle Ganache](https://trufflesuite.com/docs/ganache) ([ganache-cli](https://github.com/trufflesuite/ganache#readme) specifically) and is enabled by default
 
 ![Smart contract deployment - local](./images/deployContractSelectDefault.png)
 
