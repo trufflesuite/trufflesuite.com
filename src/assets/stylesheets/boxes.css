@@ -24,6 +24,7 @@
 
 #boxes {
     margin-top: 3.5rem;
+    visibility: hidden;
 }
 
 #boxes a {

@@ -38,7 +38,7 @@
   <div id="boxes" class="row g-4">
 
     {% for box in config.extra.boxes %}
-      <div id={{ "box." + box.displayName }} data-type="boxes.container" data-tags="{{ box.deets.tags }}" class="col-xs-12 col-md-6 col-lg-4">
+      <div id={{ box.displayName }} data-type="boxes.container" data-tags="{{ box.deets.tags }}" class="col-xs-12 col-md-6 col-lg-4">
           <a href="{{ box.displayName }}/">
             <div class="card">
                 <img alt="{{ box.displayName }}" src={{ "https://raw.githubusercontent.com/" + box.userOrg + "/" + box.repoName + "/master/box-img-sm.png" }} class="card-img-top" />

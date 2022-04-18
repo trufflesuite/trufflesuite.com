@@ -1,6 +1,11 @@
 const boxes = {
     container: Array.from(document.querySelectorAll('#boxes [data-type="boxes.container"]')),
+    params: null,
     init: () => {
+        boxes.bind();
+        boxes.queryString();
+    },
+    bind: () => {
         const input = document.getElementById('boxes.filter.input');
 
         input.addEventListener('keyup', (e) => {
@@ -27,6 +32,24 @@ const boxes = {
 
         input.focus();
     },
+    queryString: () => {
+        boxes.params = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+        });
+
+        const filter = boxes.params.filter;
+        const term = boxes.params.term;
+
+        if ((filter == "tags" || filter == "name") && term !== '') {
+            document.getElementById('boxes.filter.input').value = term;
+            document.querySelector(`input[name="boxes.filter.radio"][value="${filter}"]`).checked = true;
+
+            boxes.search(filter, term);
+        } else {
+            document.getElementById('boxes').style.visibility = 'visible';
+        }
+
+    },
     search: (filter, term) => {
         switch (filter) {
             case "name":
@@ -45,11 +68,13 @@ const boxes = {
                         item.style.display = 'none';        
                 });
                 break;
-        }        
+        }
+        
+        document.getElementById('boxes').style.visibility = 'visible';
     },
     clear: () => {
         boxes.container.forEach((item) => {
             item.style.display = 'block';        
         }); 
-    }
+    }    
 }
