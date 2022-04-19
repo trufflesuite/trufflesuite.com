@@ -21,7 +21,7 @@ Instead of performing these tasks via the command line, VS Code users can seamle
 
 VS Code remains one of the most popular code editors available today. Created by Microsoft, this code editor is available for free on all major Operating Systems and houses a lot of extensions that help simplify workflows.
 
-Extensions on VS Code are created by Microsoft or independent teams/developers. The Truffle for VS Code extension was originally started by Microsoft as the *Blockchain Development Kit for Ethereum* and through the [partnership](https://consensys.net/blog/press-release/consensys-expands-blockchain-service-capabilities-on-microsoft-azure/), with Truffle, Microsoft transitioned the management of the extension to the Truffle team.
+Extensions on VS Code are created by Microsoft or independent teams/developers. The Truffle for VS Code extension was originally started by Microsoft as the *Blockchain Development Kit for Ethereum* and through the [partnership](https://consensys.net/blog/press-release/consensys-expands-blockchain-service-capabilities-on-microsoft-azure/){target=_blank}, with Truffle, Microsoft transitioned the management of the extension to the Truffle team.
 
 In summary, this extension is designed to help VS Code users build, debug, and deploy smart contracts on the Ethereum blockchain using the Truffle suite of tools.
 
@@ -31,7 +31,7 @@ The easiest way to get started is by browsing the VS Code built-in marketplace t
 
 ![screenshot of the extensions tab in vs code](./install.png)
 
-An alternative way is to visit the [VS Code marketplace](https://marketplace.visualstudio.com/items?itemName=trufflesuite-csi.truffle-vscode) and install directly from the website.
+An alternative way is to visit the [VS Code marketplace](https://marketplace.visualstudio.com/items?itemName=trufflesuite-csi.truffle-vscode){target=_blank} and install directly from the website.
 
 Upon installation, you will get a prompt to download some dependencies or upgrade the versions you already have to newer versions.
 
@@ -102,8 +102,8 @@ That’s it, now you have all you need to start building the right way!
 
 This extension provides a uniform interface for all things smart contracts which we believe can be helpful in onboarding newbies into web3 and improving the workflow for more experienced developers.
 
-Get started with the extension today by visiting the VS Code built-in marketplace and searching for [Truffle for VS Code](https://marketplace.visualstudio.com/items?itemName=trufflesuite-csi.truffle-vscode).
+Get started with the extension today by visiting the VS Code built-in marketplace and searching for [Truffle for VS Code](https://marketplace.visualstudio.com/items?itemName=trufflesuite-csi.truffle-vscode){target=_blank}.
 
 We plan to have a dedicated VS Code tab for the extension in the future to improve the discoverability of libraries and security tools.
 
-We appreciate any feedback you might have concerning the extension. Feel free to shoot us a tweet/dm at [@trufflesuite](https://twitter.com/trufflesuite).
+We appreciate any feedback you might have concerning the extension. Feel free to shoot us a tweet/dm at [@trufflesuite](https://twitter.com/trufflesuite){target=_blank}.
