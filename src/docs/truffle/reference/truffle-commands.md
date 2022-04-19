@@ -19,6 +19,16 @@ Passing no arguments is equivalent to `truffle help`, which will display a list 
 
 ## Available commands
 
+### autocomplete
+
+Outputs completion settings to the console.
+
+```shell
+truffle autocomplete [bash|zsh]
+```
+
+The resulting output can be appended to `.bashrc` or `.zshrc` to enable command-line tab completion for each truffle command and sub-command. The bash and zsh shells are currently supported.
+
 ### build
 
 Execute build pipeline (if configuration present).
