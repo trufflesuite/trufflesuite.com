@@ -47,7 +47,7 @@ plugins:
   - search
   - exclude-search:
       exclude:
-        - blog/*
+        - blog/the-best-things-to-do-in-seattle-during-trufflecon
         - events/*
         - staff/*
         - trufflecon2020/*
