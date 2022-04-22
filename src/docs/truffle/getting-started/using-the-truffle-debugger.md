@@ -28,7 +28,7 @@ Debug transactions involving contracts not in your project that are verified on 
 <i class="far fa-info-circle"></i> <strong>
 New in Truffle v5.4.26: <code>truffle debug --url &lt;provider_url&gt;</code>.
 </strong>
-Debug transactions without needing a Truffle projct or config!
+Debug transactions without needing a Truffle project or config!
 <a href="#debugging-outside-of-a-truffle-project">See below</a>.
 </p>
 
