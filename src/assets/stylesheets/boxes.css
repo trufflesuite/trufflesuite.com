@@ -1,0 +1,64 @@
+/* Remove spacing, as we cannot hide it completely */
+.md-main__inner {
+    margin: 0;
+}
+
+/* Hide main content for now */
+.md-content {
+    display: none;
+}
+
+/* Hide table of contents */
+@media screen and (min-width: 60em) {
+    .md-sidebar--secondary {
+        display: none;
+    }
+}
+
+/* Hide navigation */
+@media screen and (min-width: 76.25em) {
+    .md-sidebar--primary {
+        display: none;
+    }
+}
+
+#boxes {
+    margin-top: 3.5rem;
+    visibility: hidden;
+}
+
+#boxes a {
+    text-decoration: none;
+}
+
+.box-search-container-radio {
+    display: inline-block; 
+    margin-left: 0.5rem;
+} 
+
+.box-search-container-input {
+    display: inline-block;
+}    
+
+.box-search-inner-input {
+    font-size: .9rem;
+    height: 40px;
+    padding: 0 0.3rem 0 2.0rem;
+    position: relative;
+    text-overflow: ellipsis;
+    z-index: 2;
+    border-radius: 0.2rem;
+}  
+
+.box-search-icon {
+    left: 1.65rem;
+    position: relative;
+    top: 0.3rem;
+    z-index: 99999;
+    float: left;
+}
+
+.box-search-filter {
+    float: right;
+    padding-top: 0.3rem;      
+}
