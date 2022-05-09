@@ -18,7 +18,7 @@
             </div>
             <div class="col-6">
               <ul class="footer-naviation">
-                <li><a class="text-uppercase" href="mailto:inquiry@trufflesuite.com" target="_blank" rel="noopener noreferrer" aria-label="Contact Us">Contact Us</a></li>
+                <li><a class="text-uppercase" href="/community/" aria-label="Contact Us">Contact Us</a></li>
                 <li><a class="text-uppercase" href="/accessibility/">Accessibility</a></li>
                 <li><a class="text-uppercase" href="/policy/">Privacy Policy</a></li>
                 <li><a class="text-uppercase" href="/staff/">Staff</a></li>
@@ -34,7 +34,7 @@
           <div class="row">
             <div class="col">
               <div class="md-footer-copyright text-center">
-                {% if config.copyright %}   
+                {% if config.copyright %}
                   <div class="md-footer-copyright__highlight">
                     {{ config.copyright }}
                   </div>
@@ -79,7 +79,7 @@
           // toggle checkbox state so nav state updates
           label.click();
           focusTargetLink(target);
-        }  
+        }
       });
       // NVDA hijacks the Enter key on the `label` element and fires the click event directly
       // because of this we need to listen for the click event and then focus the target
