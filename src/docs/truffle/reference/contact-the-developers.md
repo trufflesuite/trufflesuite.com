@@ -1,8 +1,6 @@
 ---
-
 title: Contact the Developers
 layout: docs.hbs
-
 ---
 
 # Contact the developers
@@ -11,7 +9,7 @@ layout: docs.hbs
   <div class="col">
     <div class="card mt-3">
       <div class="card-body card-zendesk">
-        <h2 class="mt-0">Open a Support Ticket! <span class="badge badge-pill badge-success">NEW</span></h2>
+        <h2 class="mt-0">Open a Support Ticket!</h2>
         <p>Looking for more 1 on 1 guidance on the current issue? Feel free to contact our support team by opening a new ticket. We're happy to help!</p>
         <a href="https://trufflesuite.zendesk.com/hc/en-us/requests/new" class="btn btn-truffle">Open a Support Ticket</a>
       </div>
