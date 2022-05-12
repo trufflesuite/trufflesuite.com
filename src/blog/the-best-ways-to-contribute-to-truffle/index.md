@@ -18,7 +18,6 @@ You’ll see that the contributing guidelines focus on the command flow. This is
 
 Given the lifetime of the project -- over four years! -- Truffle has its share of legacy code. Before Promises became widespread in the Node world, callbacks were used to control the flow of asynchronous code within Truffle. The code was written in a style where a callback function was passed from one method to the next, intended to be executed after everything else had finished running or when an error occurred. Nowadays, many people find this style of code to be abstruse, and hard to understand, and now favor Promises over callbacks. We do too. One of our major tasks over the coming year is to rework our code to favor a Promise-based coding style instead of a callback-based one. We are always interested in receiving PRs that clean up our callbacks and make the code easier to understand for everyone (we love you async/await).
 
-
 ## Start small, and chat with us for larger tasks.
 
 It can be very overwhelming to begin contributing to Truffle with a big feature. Instead, we recommend going after a smaller, more bite-sized change that will not only make you feel more successful, but can also help you get a better understanding of the underlying code. If you find something trivial, like a documentation error, go ahead and fork the repository, make your changes, and submit a pull request. For something bigger, we like to have a discussion first as our tools support many different use cases and platforms. If you have a great idea for a change that will require significant effort, we recommend filing a GitHub issue with a proposal or contacting us using the channels below. We can layout specs, bounce ideas around, and agree on what’s needed before you dive in.
@@ -29,4 +28,4 @@ Many of our users submit issues for things that need to be fixed. Sometimes thes
 
 ## Contact us.
 
-As always, we’d love to hear your feedback and concerns, as well as answer any questions you have when contributing to Truffle. Feel free to reach out to us on our [Spectrum](https://spectrum.chat/trufflesuite) page, or file an issue on [Github](https://github.com/trufflesuite/truffle/issues). We'd love to hear from you. Happy Truffling!
+As always, we’d love to hear your feedback and concerns, as well as answer any questions you have when contributing to Truffle. Feel free to reach out to us and file an issue on [Github](https://github.com/trufflesuite/truffle/issues). We'd love to hear from you. Happy Truffling!

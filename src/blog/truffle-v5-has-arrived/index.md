@@ -9,8 +9,8 @@ holidays! There are SO many exciting things that we would like to mention that
 will make your Truffle experience a rich one. Highlighted below are the new
 exciting things Truffle has to offer.
 
-👯    [Download Truffle v5](/truffle) or check out the
-full [Release Notes](https://github.com/trufflesuite/truffle/releases/tag/v5.0.0).    👯
+👯 [Download Truffle v5](/truffle) or check out the
+full [Release Notes](https://github.com/trufflesuite/truffle/releases/tag/v5.0.0). 👯
 
 - **Bring your own compiler!** You can now choose any solc-js version
   available at solc-bin. Just tell Truffle which version you want to use and it
@@ -43,7 +43,7 @@ full [Release Notes](https://github.com/trufflesuite/truffle/releases/tag/v5.0.0
   whether commands succeed or fail. And of course, it will do so in an anonymous
   fashion.
 
-- **`truffle run <command>`** -  Truffle now gives users the ability to create
+- **`truffle run <command>`** - Truffle now gives users the ability to create
   custom command plugins. This feature is still in its infancy so let us know
   what you think!
 
@@ -61,20 +61,21 @@ full [Release Notes](https://github.com/trufflesuite/truffle/releases/tag/v5.0.0
   Solidity v0.4.xx is still supported and can be used by specifying the version
   you wish to use in your Truffle config.
 
--  **Structured function parameters** - Truffle has been upgraded to use
-   Web3.js v1.0. This has allowed us to include support for passing/returning
-   ‘struct’s in Solidity functions. To use this ability, you need to specify the
-   following at the top of your contracts:
+- **Structured function parameters** - Truffle has been upgraded to use
+  Web3.js v1.0. This has allowed us to include support for passing/returning
+  ‘struct’s in Solidity functions. To use this ability, you need to specify the
+  following at the top of your contracts:
 
-  ```solidity
-  pragma experimental ABIEncoderV2
-  ```
+```solidity
+pragma experimental ABIEncoderV2
+```
 
-  This feature allows you to use complex function arguments and have the values
-  returned so that they can interact with other contracts via truffle-contract’s
-  JS interface.
+This feature allows you to use complex function arguments and have the values
+returned so that they can interact with other contracts via truffle-contract’s
+JS interface.
 
 - **Help system** - Now access Truffle’s built in help system by running:
+
   ```shell
   $ truffle help <command>
   ```
@@ -107,7 +108,6 @@ needs most!
 
 **Thank you to all who have helped make this release of Truffle possible! We
 hope you enjoy this new Truffle release and ask that you let us know if you have
-any suggestions or problems on our community Gitter channel or on our GitHub
-page!**
+any suggestions or problems on our GitHub Discussion or GitHub issues page!**
 
 [Get started with Truffle v5 today!](/truffle)

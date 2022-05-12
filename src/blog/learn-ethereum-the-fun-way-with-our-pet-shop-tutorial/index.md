@@ -8,10 +8,10 @@ Here at Truffle we want to make Ethereum development accessible to developers of
 
 Here's a preview of what's covered:
 
-* Setting up The Development Environment
-* Creating a Truffle Project using a Truffle Box
-* Writing and Testing a Smart Contract
-* Creating a UI to Interact with our Smart Contract
+- Setting up The Development Environment
+- Creating a Truffle Project using a Truffle Box
+- Writing and Testing a Smart Contract
+- Creating a UI to Interact with our Smart Contract
 
 By then end of the tutorial you'll have a shiny new dapp with which you can reserve pets for adoption.
 
@@ -19,7 +19,7 @@ By then end of the tutorial you'll have a shiny new dapp with which you can rese
 
 In the future we'll be building on this tutorial with others such as deploying to live testnets and additional, more advanced functionality. We hope you enjoy and thank everyone for your support!
 
-Got stuck? The fastest way to get help is from our [community Gitter channel](https://github.com/ConsenSys/truffle), where hundreds of your fellow Trufflers congregate to answer your questions.
+Got stuck? The fastest way to get help is from our [community GitHub Discussions channel](https://github.com/trufflesuite/truffle/discussions), where hundreds of your fellow Trufflers congregate to answer your questions.
 
 Love it? Send us your feedback on [Twitter](https://twitter.com/trufflesuite).
 

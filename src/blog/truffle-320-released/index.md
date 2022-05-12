@@ -37,7 +37,7 @@ There's been a lot of bug fixes too. Check out the [release notes on Github](htt
 
 As always, we have to give you all a big thanks for being a part of the community and making Truffle better. This release would not be possible without your continued feedback, bug fixes and pull requests.
 
-If you run into trouble with any of the above, reach out on our [community Gitter channel](https://gitter.im/ConsenSys/truffle) where hundreds of your fellow Trufflers congregate to answer your questions. As well, check us out [on Twitter](https://twitter.com/trufflesuite) and send us a tweet.
+If you run into trouble with any of the above, reach out on our [community GitHub Discussions channel](https://github.com/trufflesuite/truffle/discussions) where hundreds of your fellow Trufflers congregate to answer your questions. As well, check us out [on Twitter](https://twitter.com/trufflesuite) and send us a tweet.
 
 Cheers, and happy coding!
 

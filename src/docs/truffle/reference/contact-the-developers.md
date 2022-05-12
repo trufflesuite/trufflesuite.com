@@ -2,23 +2,25 @@
 title: Contact the Developers
 layout: docs.hbs
 ---
+
 # Contact the developers
 
 <div class="row">
   <div class="col">
     <div class="card mt-3">
       <div class="card-body card-zendesk">
-        <h2 class="mt-0">Open a Support Ticket! <span class="badge badge-pill badge-success">NEW</span></h2>
-        <p>The easiest way to track your conversation and contribute to our knowledge base! Open a support ticket to begin talking to our support staff. Common questions will be added to our knowledge base to assist future Trufflers!</p>
+        <h2 class="mt-0">Open a Support Ticket!</h2>
+        <p>Looking for more 1 on 1 guidance on the current issue? Feel free to contact our support team by opening a new ticket. We're happy to help!</p>
         <a href="https://trufflesuite.zendesk.com/hc/en-us/requests/new" class="btn btn-truffle">Open a Support Ticket</a>
       </div>
     </div>
   </div>
 </div>
 
-## Gitter
+## GitHub Discussion
 
-The fastest way to get help is to reach out on our [community Gitter channel](https://gitter.im/ConsenSys/truffle), where hundreds of your fellow Trufflers congregate to answer your questions.
+If you’re having trouble, want to ask a question, or have a suggestion for Truffle, our community is a great place to post. [Connect on GitHub Discussion](https://github.com/orgs/trufflesuite/discussions)
+and chat with your fellow Trufflers and developers. The answer may be just a quick search away.
 
 ## Issue Tracker
 
