@@ -67,7 +67,7 @@ You'll notice that the beta version installs almost instantly, and no compilatio
 
 As we gain responses from the community about this new version we'll likely make changes to ensure we've sidestepped all the installation issues that have plagued users in the past. Once that's finished we'll make an official release. As well, we'll be performing this same work for the TestRPC in the coming weeks to ensure the TestRPC has the same hassle-free, instant installation that you'll soon come to expect from Truffle.
 
-If you run into issues with the beta version, don't hesitate to [write up an issue](https://github.com/trufflesuite/truffle/issues) in our issue tracker or reach out on the [community Gitter channel](https://gitter.im/ConsenSys/truffle), where hundreds of your fellow Trufflers congregate to answer your questions.
+If you run into issues with the beta version, don't hesitate to [write up an issue](https://github.com/trufflesuite/truffle/issues) in our issue tracker or reach out on the [community GitHub Discussions channel](https://github.com/trufflesuite/truffle/discussions), where hundreds of your fellow Trufflers congregate to answer your questions.
 
 Cheers, and we appreciate your ongoing support and feedback.
 

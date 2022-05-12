@@ -42,7 +42,7 @@ You can also click the Truffle Teams logo in the top left to go back to the home
 
 ## Got Feedback or Questions?
 
-If you aren't aware of our official support channel, head over to [the Truffle Teams channel in Spectrum.chat](https://spectrum.chat/trufflesuite/truffle-teams). Posting a thread there will ping us in our internal Slack workspace and we'll answer you ASAP. You can also submit Truffle Teams feature requests and issues [on GitHub](https://github.com/trufflesuite/truffle-teams/issues).
+You can submit Truffle Teams feature requests and issues [on GitHub](https://github.com/trufflesuite/truffle-teams/issues).
 
 <div class="post-trufflecon-box mt-5 text-center">
   Get started with Truffle Teams, and see the redesign for yourself!

@@ -20,19 +20,17 @@ And yet, these events usually have a focus on the larger ecosystem. What about t
 
 **We want TruffleCon to be the place for people who are doing the building.**
 
-Also, many developers are working in silos, connected to other teams only by GitHub, Gitter, StackExchange, Reddit, or other "[weak ties](https://en.wikipedia.org/wiki/Interpersonal_ties)". **We want to strengthen those connections to bring people together**.
+Also, many developers are working in silos, connected to other teams only by GitHub, StackExchange, Reddit, or other "[weak ties](https://en.wikipedia.org/wiki/Interpersonal_ties)". **We want to strengthen those connections to bring people together**.
 
 We want people to share their ideas, and talk about their successes and challenges. We want people to promote their projects, of course, and professional networking is always a part of these events, but more than anything else, **we want people to be heard**.
-
 
 ## Why now?
 
 We've noticed a shift over the past year or so in the usage of Truffle.
 
-Whereas many of the comments and requests in [our Gitter channel](https://gitter.im/ConsenSys/truffle) and GitHub issues were originally regarding local tests, and in sandboxes, we noticed more and more people deploying their contracts to the public test networks and even the mainnet. While this, of course, was always the intention, it shows that **confidence in our tools and the Ethereum ecosystem is growing**.
+Whereas many of the comments and requests in [our GitHub channel](https://github.com/trufflesuite/truffle/discussions) and GitHub issues were originally regarding local tests, and in sandboxes, we noticed more and more people deploying their contracts to the public test networks and even the mainnet. While this, of course, was always the intention, it shows that **confidence in our tools and the Ethereum ecosystem is growing**.
 
 **We want to help people "go live".** And so we believe that there has never been a better time than now.
-
 
 ## Why Portland?
 
@@ -40,7 +38,7 @@ Portland is a vibrant city full of world-class food and drink, unmatched outdoor
 
 If you've never been, you're missing out. And why not stay awhile once you're here?
 ![TruffleCon 2018](/img/blog/why-were-organizing-trufflecon-2018/portlandskyline.jpg)
-*Photo courtesy of Flickr/sama093. [Large version here](https://flic.kr/p/qg3nwJ).* 
+_Photo courtesy of Flickr/sama093. [Large version here](https://flic.kr/p/qg3nwJ)._
 
 ## See you in October!
 
@@ -56,6 +54,6 @@ We can't wait to see you there. If you have questions, feel free to tweet us at 
   <a href="https://trufflecon2018.eventbrite.com" class="btn btn-eventbrite m-t-1" target="_blank">Buy Tickets!</a>
 </p>
 
------
+---
 
-*Mike Pumphrey is an Enterprise Trainer at ConsenSys working on the Truffle team. With over a dozen years of experience in documentation, support, and training, Mike is passionate about making technical concepts understandable to a wider audience. Mike is also the lead organizer for TruffleCon 2018.*
+_Mike Pumphrey is an Enterprise Trainer at ConsenSys working on the Truffle team. With over a dozen years of experience in documentation, support, and training, Mike is passionate about making technical concepts understandable to a wider audience. Mike is also the lead organizer for TruffleCon 2018._

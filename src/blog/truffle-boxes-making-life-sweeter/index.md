@@ -12,16 +12,15 @@ A Truffle box is an example Ethereum application and/or boilerplate that puts co
 
 **[Click here for a list of all available boxes.](/boxes)** Ensure you've installed the latest version of Truffle before opening your first box.
 
------------------
+---
 
 Today's release comes with three officially-supported boxes, as well as one community-supported box. Our officially-supported boxes are:
 
-* [react](/boxes/react): A box that pairs Truffle with React in an easy to understand structure, meant for a web-based Ethereum application.
-* [react-auth](/boxes/react-auth): Our `react` box with extra goodies for authentication powered by smart contracts.
-* [react-uport](/boxes/react-uport): Like `react-auth`, but authentication is powered by Uport.
+- [react](/boxes/react): A box that pairs Truffle with React in an easy to understand structure, meant for a web-based Ethereum application.
+- [react-auth](/boxes/react-auth): Our `react` box with extra goodies for authentication powered by smart contracts.
+- [react-uport](/boxes/react-uport): Like `react-auth`, but authentication is powered by Uport.
 
 Perhaps the most exciting part of this release -- our _pièce de résistance_ -- is the [Status Truffle box](/boxes/status), our first community-supported box. This box was created by the Status team, and instantly links Truffle and Status together with an example application and all the tools and libraries you need to build your own Status dapp.
-
 
 ## Get Involved: Make Your Own Box
 
@@ -31,7 +30,7 @@ We've released four boxes out of the gate to get you started, but this isn't jus
 
 There's always one more thing. Fair warning, this one's techy. Right now, all the boxes you're seeing are static pages showing off what we and the Status team have built. Soon, however, we'll be taking on the ultimate challenge and will be creating a Truffle box registry, built on top of Ethereum, to help market and promote our community-supported boxes. Of course we'll be using Truffle, which adds a whole new layer of sweetness. Stay tuned for more details about the registry and how you can use the Ethereum blockchain to become a Truffle contributor.
 
-As always, we thank everyone for your support, and would love to hear from you. Don't hesitate to reach out on our [community Gitter channel](https://gitter.im/ConsenSys/truffle) where hundreds of your fellow Trufflers congregate to answer your questions.
+As always, we thank everyone for your support, and would love to hear from you. Don't hesitate to reach out on our [community GitHub Discussions channel](https://github.com/trufflesuite/truffle/discussions) where hundreds of your fellow Trufflers congregate to answer your questions.
 
 Cheers!
 
