@@ -1,4 +1,11 @@
 {
+  "nft-marketplace": {
+    "title": "How to Build a NFT Marketplace on Ethereum and Optimism",
+    "date": "2022-05-17",
+    "author": "Emily Lin",
+    "published": true,
+    "products": ["truffle", "ganache"]
+  },
   "using-infura-custom-provider": {
     "title": "Using Infura (or a custom provider)",
     "date": "2021-01-14",
