@@ -1,5 +1,5 @@
 ---
-title: Ganache | Working With Filecoin
+title: Working With Filecoin
 layout: docs.hbs
 ---
 # Working With Filecoin

@@ -1,5 +1,5 @@
 ---
-title: Truffle | Writing Tezos Contracts | Tezos
+title: Writing Tezos Contracts
 layout: docs.hbs
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Ganache | Deleting Workspaces
+title: Deleting Workspaces
 layout: docs.hbs
 ---
 # Deleting Workspaces

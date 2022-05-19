@@ -1,5 +1,5 @@
 ---
-title: Truffle | Interacting with Your Contracts
+title: Interacting with Your Contracts
 layout: docs.hbs
 ---
 

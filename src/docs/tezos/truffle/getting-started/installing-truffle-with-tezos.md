@@ -1,5 +1,5 @@
 ---
-title: Truffle | Installation | Tezos
+title: Installation
 layout: docs.hbs
 ---
 

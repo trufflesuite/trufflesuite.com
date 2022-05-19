@@ -1,5 +1,5 @@
 ---
-title: Truffle | Configuring Your Project | Tezos
+title: Configuring Your Project
 layout: docs.hbs
 ---
 

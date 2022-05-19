@@ -1,5 +1,5 @@
 ---
-title: Truffle | Testing Your Tezos Contracts
+title: Testing Your Tezos Contracts
 layout: docs.hbs
 ---
 

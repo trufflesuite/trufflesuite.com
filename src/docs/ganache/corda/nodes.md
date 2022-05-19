@@ -1,5 +1,5 @@
 ---
-title: Ganache | Corda Nodes
+title: Corda Nodes
 layout: docs.hbs
 ---
 # Nodes

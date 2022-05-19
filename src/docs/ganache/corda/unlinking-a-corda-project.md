@@ -1,5 +1,5 @@
 ---
-title: Ganache | Unlinking a Corda Project
+title: Unlinking a Corda Project
 layout: docs.hbs
 ---
 # Unlinking a Corda Project

@@ -1,5 +1,5 @@
 ---
-title: Ganache | Linking a Truffle Project
+title: Linking a Truffle Project
 layout: docs.hbs
 ---
 # Linking a Truffle Project

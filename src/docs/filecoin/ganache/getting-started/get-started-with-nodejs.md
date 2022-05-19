@@ -1,5 +1,5 @@
 ---
-title: Ganache | Filecoin-flavored NodeJS Library
+title: Filecoin-flavored NodeJS Library
 layout: docs.hbs
 ---
 # Get Started With using the Filecoin-flavored Ganache as a NodeJS Dependency

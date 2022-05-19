@@ -1,5 +1,5 @@
 ---
-title: Ganache | Corda Shell
+title: Corda Shell
 layout: docs.hbs
 ---
 # Shell

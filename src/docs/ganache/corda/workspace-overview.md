@@ -1,5 +1,5 @@
 ---
-title: Ganache | Corda Workspace Overview
+title: Corda Workspace Overview
 layout: docs.hbs
 ---
 # Corda Workspace Overview

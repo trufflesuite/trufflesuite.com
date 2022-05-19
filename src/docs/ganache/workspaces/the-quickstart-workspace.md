@@ -1,5 +1,5 @@
 ---
-title: Ganache | The Quickstart Workspace
+title: The Quickstart Workspace
 layout: docs.hbs
 ---
 # The Quickstart Workspace

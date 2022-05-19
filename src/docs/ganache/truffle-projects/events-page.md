@@ -1,5 +1,5 @@
 ---
-title: Ganache | Events Page
+title: Events Page
 layout: docs.hbs
 ---
 # Events Page

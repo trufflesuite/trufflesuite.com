@@ -1,5 +1,5 @@
 ---
-title: Truffle | Deploying Tezos Contracts
+title: Deploying Tezos Contracts
 layout: docs.hbs
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Ganache | Ganache Settings
+title: Ganache Settings
 layout: docs.hbs
 ---
 
