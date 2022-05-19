@@ -1,5 +1,5 @@
 ---
-title: Truffle | Compiling LIGO contracts | Tezos
+title: Compiling LIGO contracts
 layout: docs.hbs
 ---
 

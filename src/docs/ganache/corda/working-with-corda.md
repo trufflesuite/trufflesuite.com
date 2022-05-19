@@ -1,5 +1,5 @@
 ---
-title: XYZ
+title: Working with Corda
 layout: docs.hbs
 ---
 # Working With Corda

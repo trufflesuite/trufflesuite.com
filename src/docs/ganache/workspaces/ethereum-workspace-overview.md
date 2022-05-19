@@ -1,5 +1,5 @@
 ---
-title: Ganache | Ethereum Workspace Overview
+title: Ethereum Workspace Overview
 layout: docs.hbs
 ---
 

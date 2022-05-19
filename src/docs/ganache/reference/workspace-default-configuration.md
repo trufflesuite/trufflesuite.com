@@ -1,5 +1,5 @@
 ---
-title: Ganache | Workspace Default Configuration
+title: Workspace Default Configuration
 layout: docs.hbs
 ---
 # Workspace Default Configuration

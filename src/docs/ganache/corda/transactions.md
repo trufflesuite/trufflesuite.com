@@ -1,5 +1,5 @@
 ---
-title: Ganache | Corda Transactions
+title: Corda Transactions
 layout: docs.hbs
 ---
 # Transactions

@@ -1,5 +1,5 @@
 ---
-title: Ganache | Contracts Page
+title: Contracts Page
 layout: docs.hbs
 ---
 # Contracts Page

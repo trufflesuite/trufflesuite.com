@@ -1,5 +1,5 @@
 ---
-title: Ganache | Corda CorDapps
+title: Corda CorDapps
 layout: docs.hbs
 ---
 # CorDapps

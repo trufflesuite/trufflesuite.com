@@ -1,5 +1,5 @@
 ---
-title: Ganache | Linking a CorDapp
+title: Linking a CorDapp
 layout: docs.hbs
 ---
 # Linking a CorDapp Project

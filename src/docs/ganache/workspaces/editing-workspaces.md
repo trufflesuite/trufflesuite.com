@@ -1,5 +1,5 @@
 ---
-title: Ganache | Editing Workspaces
+title: Editing Workspaces
 layout: docs.hbs
 ---
 # Editing Workspaces

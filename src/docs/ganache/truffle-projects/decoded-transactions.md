@@ -1,5 +1,5 @@
 ---
-title: Ganache | Decoded Transactions
+title: Decoded Transactions
 layout: docs.hbs
 ---
 # Decoded Transactions

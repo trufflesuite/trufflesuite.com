@@ -1,5 +1,5 @@
 ---
-title: Truffle | Using Truffle Console | Tezos
+title: Using Truffle Console
 layout: docs.hbs
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Ganache | Filecoin-flavored CLI
+title: Filecoin-flavored CLI
 layout: docs.hbs
 ---
 # Get Started With using the Filecoin-flavored Ganache CLI

@@ -1,5 +1,5 @@
 ---
-title: Ganache | Loading Existing Workspaces
+title: Loading Existing Workspaces
 layout: docs.hbs
 ---
 # Loading Existing Workspaces

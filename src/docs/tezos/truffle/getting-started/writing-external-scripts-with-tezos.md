@@ -1,5 +1,5 @@
 ---
-title: Truffle | Writing External Scripts with Tezos
+title: Writing External Scripts with Tezos
 layout: docs.hbs
 ---
 

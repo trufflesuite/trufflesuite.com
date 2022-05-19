@@ -1,5 +1,5 @@
 ---
-title: Ganache | Filecoin-flavored GUI
+title: Filecoin-flavored GUI
 layout: docs.hbs
 ---
 # Get Started With using Filecoin-flavored Ganache GUI

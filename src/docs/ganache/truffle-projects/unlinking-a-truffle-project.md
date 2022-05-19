@@ -1,5 +1,5 @@
 ---
-title: Ganache | Unlinking a Truffle Project
+title: Unlinking a Truffle Project
 layout: docs.hbs
 ---
 # Unlinking a Truffle Project

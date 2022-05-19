@@ -1,5 +1,5 @@
 ---
-title: Ganache | Switching Workspaces
+title: Switching Workspaces
 layout: docs.hbs
 ---
 # Switching Workspaces
