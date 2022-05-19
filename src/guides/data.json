@@ -1,4 +1,11 @@
 {
+  "starknet-box": {
+    "title": "Building for StarkNet with Truffle",
+    "date": "2022-05-19",
+    "author": "David Killen",
+    "published": true,
+    "producst": ["truffle"]
+  },
   "nft-marketplace": {
     "title": "How to Build a NFT Marketplace on Ethereum and Optimism",
     "date": "2022-05-17",
