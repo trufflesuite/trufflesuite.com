@@ -12,7 +12,7 @@ Written by [David Killen](https://twitter.com/DavidAKillen)
 
 Today, we are going to lead you through deploying, and interacting with, your own ERC20 token on [StarkNet](https://starknet.io/) using Truffle's [StarkNet Box](https://github.com/truffle-box/starknet-box). If your friends and family have been incessently asking you "Wen token?", now's your chance to give it to them. To the moon!
 
-### What is StarkNet
+### What is StarkNet?
 
 StarkNet is a permissionless decentralized Validity-Rollup (ZK-Rollup). StarkNet operates as a Layer 2 network over Ethereum, enabling any dApp to achieve unlimited scale for its computation – without compromising Ethereum’s composability and security.
 
@@ -32,8 +32,19 @@ The StarkNet Box gathers together several tools and resources that are necessary
 
 ### System Requirements
 
+At the very least, you will need the following to use the StarkNet Box:
+
+- [Node.js](https://nodejs.org/) 14.18.2 or later
+- [NPM](https://docs.npmjs.com/cli/) version 6.14.15 or later
+- [Docker](https://docs.docker.com/get-docker/), version 20.10.10 or later
+- Recommended Docker memory allocation of >=8 GB.
+- Windows, MacOS or Linux
+
+**Important Note:** The scripts included in the StarkNet Box rely on Docker being available and running. On Linux you may need to have Docker configured to [run the Docker daemon in 'rootless' mode](https://docs.docker.com/engine/security/rootless/).
+
 ### Docker
 
+The StarkNet Box relies heavily on Docker. All the tools used in developing StarkNet contracts are supplied in two Docker images. For this reason, you must have Docker installed to use the StarkNet Box.
 ## Set Up the Project
 
 ### Unboxing the StarkNet Truffle Box
