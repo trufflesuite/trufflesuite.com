@@ -45,8 +45,8 @@
     <div class="container policy-container">
       <div class="row">
         <div class="col">
-          <p class="c23"><span class="c3 c25 c2 c1">Last Updated:</span><span class="c3 c1 c25">&nbsp;31
-              March</span><span class="c3 c25 c2 c1">, 20</span><span class="c3 c25 c1">22</span></p>
+          <p class="c23"><span class="c3 c25 c2 c1">Last Updated:</span><span class="c3 c1 c25">&nbsp;24
+              May</span><span class="c3 c25 c2 c1">, 20</span><span class="c3 c25 c1">22</span></p>
           <p class="c0"><span class="c5 c2 c7 c1"></span></p>
 
           <p class="c9">To try and obtain more information about how we can improve the Truffle suite of tools (Truffle,
@@ -59,17 +59,23 @@
             Truffle better and have also
             ensured that it doesn't make for a slower experience by sending this information in a background process.
           </p>
-          <p class="c0">To turn this feature, run:
+          <p class="c0">To enable anonymous analytics, run:
           <pre class="bd-milk-chocolate"><code>truffle config --enable-analytics</code></pre>
           </p>
           <p class="c0">If you want to turn the analytics off, run:
           <pre class="bd-milk-chocolate"><code>truffle config --disable-analytics</code></pre>
           </p>
           <p class="c9">You can also enable and disable analytics when using Truffle Dashboard. Click on the settings
-            icon at the bottom right to make that choice.</p>
+            icon at the bottom right to make that choice. See <a
+              href="https://trufflesuite.com/docs/truffle/getting-started/using-the-truffle-dashboard/">here</a>
+            for Truffle Dashboard documentation.</p>
           <p class="c0"><span class="c5 c2 c7 c1"></span></p>
-          <p class="c9">Feel free to go take a peek at the two current places in the code where metrics are
-            gathered: when running a command and to report version and errors. If you go ahead and do a good ol' GitHub
+          <p class="c9">Feel free to go take a peek at the places in the code where metrics are
+            gathered: <a
+              href="https://github.com/trufflesuite/truffle/blob/7545ada4e4479d5e59a7be09d679d86dc5ed3fac/packages/core/lib/command.js#L161">when
+              running a command</a> and <a
+              href="https://github.com/trufflesuite/truffle/blob/1c445dfd70b7aff62bf18a652ccdfa34f8df8156/packages/core/cli.js">to
+              report version and errors.</a> If you go ahead and do a good ol' GitHub
             search for the word analytics you can verify that these are the only places this code gets invoked. 🎉
           </p>
 
