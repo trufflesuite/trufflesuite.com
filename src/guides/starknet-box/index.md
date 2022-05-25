@@ -170,6 +170,8 @@ default: {
 },
 ```
 
+By default, the box's default network is `testnet` which is configured to point to the `alpha-goerli` network.
+
 **Compiler and Devnet**
 
 In this Truffle box, the StarkNet command line compiler is provided in a Docker image which will be pulled from the [Docker Hub](https://hub.docker.com/repository/docker/trufflesuite/cairo-starknet-cli) if it is not present. Likewise, this box uses a Docker image to provide the Devnet development network which is useful for testing your StarkNet contracts during development. The Docker Hub repository and version tags for both are configured as follows:
@@ -191,11 +193,36 @@ In this Truffle box, the StarkNet command line compiler is provided in a Docker 
 
 ## StarkNet Accounts
 
+Externally Owned Accounts on StarkNet differ from those of the Ethereum network. A StarkNet account requires the deployment of an account contract to the StarkNet network. The StarkNet CLI provides a simple method of deploying an account contract for development purposes. This currently uses a modified version of the OpenZeppelin Cairo account contract. The `truffle-config.starknet.js` configuration file defines a location for storing account information for accounts deployed while using the box. By default this is the ./starknet_accounts directory. **You should ensure that this directory is included in your project's .gitignore file to avoid accidentally commiting your account keys to a public source code repository.**
+
+Accounts deployed with this box have their own location and configuration seperate to any other StarkNet accounts that you may have deployed in another StarkNet environment. Currently, this box only supports the deployment of a single default account which will be used for any interactions where an account is necessary or desirable.
+
+**WARNING: never use an account deployed with the StarkNet CLI in production as its private key is stored on your system in plaintext. It can be easily compromised and your funds stolen.**
+
 ### Deploying an Account Contract
 
-### Funding the Account
+First, we want to deploy an account to the StarkNet Alpha Goerli network. We do that with the following command. In a terminal in your project's root directory, type the following:
 
-### StarkNet Wallets
+```bash
+npm run starknet:deploy_account
+```
+
+The output of the `deply_account` command should look very similar to this:
+
+![Deploying an account contract](./img/deploy-account.png)
+
+The account's private keys will be stored in the `./starknet_accounts` directory. You won't need to do anything further to use this account with the box, it is configured to look for your account keys in this location.
+### Funding your Account
+
+Now that you have your account, you need some funds to pay transaction fees. To do so you will need to copy the account contract address from the output of your account deployment. So, don't close your terminal just yet.
+
+First, go to the [StarkNet Alpha Goerli faucet](https://faucet.goerli.starknet.io/), then copy and paste your account address into the space provided, check the box to confirm that you're not a robot and send your request. 
+
+![StarkNet Alpha Goerlie faucet](./img/starknet-faucet.png)
+
+Once a transaction has been initiated a link to the transaction on [StarkNet Voyager](https://goerli.voyager.online/), StarkNet's block explorer, will be displayed to you. You can click on the link to view the transaction if you wish. After a couple of minutes the transaction should complete and a small amount of testnet ETH will be sent to your account. You can do this a few times if you need to.
+
+![ETH sent](./img/eth-sent.png)
 
 ## The ERC20 Contract
 
