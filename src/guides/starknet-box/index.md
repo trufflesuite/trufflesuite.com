@@ -57,8 +57,8 @@ Now that you have all the prerequisites set up, the first thing to do is to crea
 First, create a directory for the project and change to the newly created directory. For example:
 
 ```bash
-mkdir my-project
-cd my-project
+mkdir erc20-example
+cd erc20-example
 ```
 
 Next, unbox the StarkNet Box in the project directory:
@@ -226,7 +226,39 @@ Once a transaction has been initiated a link to the transaction on [StarkNet Voy
 
 ## The ERC20 Contract
 
+Now that we have deployed an account and funded it, it's time to get started on our ERC20 contract. In this guide we are just going to deploy a simple mintable ERC20 contract. To simplify the creation of our ERC20 contract we will use the [OpenZeppelin Contract Wizard for Cairo](https://wizard.openzeppelin.com/cairo).
+
+On the Contract Wizard for Cairo page, make sure that you have selected ERC20 as your contract on the top left. Then, in the Settings section, give your token a name and a symbol. Leave the decimals at 18. For this guide we have called our token `Truffle Token` and given it a symbol of `TRF`. We have also chosen to premint 1000 tokens for an initial recipient. Finally, in the Features section, check the mintable feature. Once you have entered a name, a symbol, a premint amount, and selected the mintable feature, click on the `Copy to Clipboard` button on the top right.
+
+![OpenZeppelin Contract Wizard for Cairo](./img/contract-wizard.png)
+
+In this guide we will use the [Visual Studio Code](https://code.visualstudio.com/) (VSCode) as our source code editor. You can use another if you are more comfortable with it. In your terminal, type the following in your project's root directory.
+
+```bash
+code .
+```
+
+This will open VSCode with your project's files and directories visible in the pane to the left.
+
+The StarkNet Truffle box is configured to look for `.cairo` source code files in the `contracts/starknet` directory of your project. This is where we will create our ERC20 contract. Create a new file in this directory and name it ERC20.cairo and paste the code copied from the OpenZeppelin Contract Wizard into the editor and save it. When you're done, it should look something like this:
+
+![ERC20 contract sourece code](./img/contract-source.png)
+
 ## Compiling the ERC20 Contract
+
+The next step is to compile our contract. In either your terminal or the terminal pane of VSCode, type the following:
+
+```bash
+npm run starknet:compile
+```
+
+This will compile your Cairo contract and save the compilation artifacts to the `build` directory. You should see output similar to the following:
+
+![Compiling the ERC20 contract](./img/contract-compile.png)
+
+You should also notice that the compiled contract and the contract ABI file have been saved to the `build` directory.
+
+![Compiled contract in the build directory](./img/compiled-contract.png)
 
 ## Testing the ERC20 Contract
 
