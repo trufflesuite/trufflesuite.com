@@ -659,22 +659,22 @@ function MyApp({ Component, pageProps }) {
         <p className="text-4xl font-bold">Bored Pet Marketplace</p>
         <div className="flex mt-4">
           <Link href="/">
-            <a className="mr-4 text-pink-500">
+            <a className="mr-4 text-teal-400">
               Home
             </a>
           </Link>
           <Link href="/create-and-list-nft">
-            <a className="mr-6 text-pink-500">
+            <a className="mr-6 text-teal-400">
               Sell a new NFT
             </a>
           </Link>
           <Link href="/my-nfts">
-            <a className="mr-6 text-pink-500">
+            <a className="mr-6 text-teal-400">
               My NFTs
             </a>
           </Link>
           <Link href="/my-listed-nfts">
-            <a className="mr-6 text-pink-500">
+            <a className="mr-6 text-teal-400">
               My Listed NFTs
             </a>
           </Link>
@@ -771,7 +771,7 @@ export default function Home() {
                   </div>
                   <div className="p-4 bg-black">
                     <p className="text-2xl font-bold text-white">{Web3.utils.fromWei(nft.price, "ether")} ETH</p>
-                    <button className="mt-4 w-full bg-pink-500 text-white font-bold py-2 px-12 rounded" onClick={() => buyNft(nft)}>Buy</button>
+                    <button className="mt-4 w-full bg-teal-400 text-white font-bold py-2 px-12 rounded" onClick={() => buyNft(nft)}>Buy</button>
                   </div>
                 </div>
               ))
@@ -896,7 +896,7 @@ export default function CreateItem() {
             <img className="rounded mt-4" width="350" src={fileUrl} />
           )
         }
-        <button onClick={listNFTForSale} className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
+        <button onClick={listNFTForSale} className="font-bold mt-4 bg-teal-400 text-white rounded p-4 shadow-lg">
           Mint and list NFT
         </button>
       </div>
@@ -984,7 +984,7 @@ export default function MyAssets() {
                   </div>
                   <div className="p-4 bg-black">
                     <p className="text-2xl font-bold text-white">Price - {Web3.utils.fromWei(nft.price, "ether")} Eth</p>
-                    <button className="mt-4 w-full bg-pink-500 text-white font-bold py-2 px-12 rounded" onClick={() => listNFT(nft)}>List</button>
+                    <button className="mt-4 w-full bg-teal-400 text-white font-bold py-2 px-12 rounded" onClick={() => listNFT(nft)}>List</button>
                   </div>
                 </div>
               ))
@@ -1059,7 +1059,7 @@ export default function ResellNFT() {
             <img className="rounded mt-4" width="350" src={image} />
           )
         }
-        <button onClick={listNFTForSale} className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
+        <button onClick={listNFTForSale} className="font-bold mt-4 bg-teal-400 text-white rounded p-4 shadow-lg">
           List NFT
         </button>
       </div>
