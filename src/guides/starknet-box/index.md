@@ -262,6 +262,43 @@ You should also notice that the compiled contract and the contract ABI file have
 
 ## Testing the ERC20 Contract
 
+Now that we have compile our contract, it's a good idea to test it before we deploy it. The Docker image used in this box includes the [pytest](https://docs.pytest.org/en/7.1.x/) library to allow you to write and run unit tests in Python. There is a sample test script in the `test` directory. We will replace the contents of this file with code to test the deployment of our ERC20 contract. Open the file named `contract_test.py` in the `test/starknet` directory and replace its contents with the code below.
+
+```python
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+import pytest
+
+from starkware.starknet.testing.starknet import Starknet
+
+# The path to the contract source code.
+CONTRACT_FILE = "contracts/starknet/erc20.cairo"
+
+# The testing library uses python's asyncio. So the following decorator and the 'async' keyword are needed.
+@pytest.mark.asyncio
+async def test_deploy():
+    # Create a new Starknet class that simulates the StarkNet system.
+    starknet = await Starknet.empty()
+
+    # Deploy the contract.
+    contract = await starknet.deploy(
+        source=CONTRACT_FILE,
+        constructor_calldata=[
+            1004231639892309031199397597011962835490457675745477853670294057354032551823,
+            1004231639892309031199397597011962835490457675745477853670294057354032551823
+        ]
+    )
+
+    # Check the result of balanceOf().
+    execution_info = await contract.balanceOf(1004231639892309031199397597011962835490457675745477853670294057354032551823).call()
+    expected_result = ((1000000000000000000000, 0),)
+    assert execution_info.result == expected_result
+```
+
+There are a couple of important things to understand about this script before we run the test. First, this test does not use a StarkNet network to perform its tests. It uses the StarkNet testing library to launch a simulation of a StarkNet system to facilitate testing. Second, you will notice that the values in the `constructor_calldata` array look nothing like the hexadecimal account address that you might be used to. This is because the constructor arguments are of type `field element`, or `felt`. For that reason, you will need to convert the hexadecimal account address to an integer to be passed in to the contract's constructor. It is also worth noting that, at the time of writing, Cairo does not support a `string` type either. As such, short strings are normally represented by a `felt`. Accordingly, you will need to convert strings to integers to be passed to the constructor.
+
+This is a simple test that just tests our deployment and that the premint was successful. Extending the test to test the other contract function is left as an exercise for you. 
+
 ## Deploying the ERC20 Contract
 
 ### Strings in StarkNet Contracts
