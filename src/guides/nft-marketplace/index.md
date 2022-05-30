@@ -149,7 +149,7 @@ We'll need to install [OpenZeppelin](https://www.openzeppelin.com/). First, swit
 cd ..
 npm install @openzeppelin/contracts
 ```
-The smart contract looks like this:
+Now, copy and paste the code below into `BoredPetsNFT.sol`.
 
 ```java
 // SPDX-License-Identifier: MIT
@@ -205,7 +205,7 @@ And finally, we only need to define the `mint` function! It only has one paramet
 
 ## Build the Marketplace Contract
 
-Now, let's add a new contract `Marketplace.sol` under `contracts/ethereum`, which will store all the marketplace functionality. This'll be what it ends up like:
+Now, let's add a new contract `Marketplace.sol` under `contracts/ethereum`, which will store all the marketplace functionality. Copy and paste the code below:
 
 ```java
 // SPDX-License-Identifier: MIT
@@ -366,6 +366,7 @@ contract Marketplace is ReentrancyGuard {
 There's a lot to unpack here! You might notice that the Marketplace contract inherits `ReentrancyGuard`. We do this so that we can defend against reentrancy attacks. You can read more about them [here](https://medium.com/coinmonks/protect-your-solidity-smart-contracts-from-reentrancy-attacks-9972c3af7c21).
 
 First, let's dive into the contract variables:
+
 - `Counters.Counter private _nftsSold` increments when a NFT is sold and decremented when a NFT is relisted.
 - `Counters.Counter private _nftCount` tracks how many NFTs have been listed.
 - `uint256 public LISTING_FEE` is taken from the seller and transferred to the marketplace contract owner whenever an NFT is sold.
@@ -376,6 +377,7 @@ First, let's dive into the contract variables:
 - `event NFTSold` is emitted every time a NFT is sold.
 
 Next, we'll go over the functions that will alter state:
+
 - `listNft` is called when a user first mints and lists their NFT. It transfers ownership from the user over to the Marketplace contract.
 - `resellNft` allows users to sell an NFT that they purchase on the marketplace.
 - `buyNft` is called when a user buys an NFT. The buyer becomes the new owner of the NFT, the token is transferred from the buyer to the seller, and the listing fee is given to the marketplace owner.
