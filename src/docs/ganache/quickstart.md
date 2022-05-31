@@ -34,5 +34,5 @@ When you open Ganache for the first time, you'll see the home screen. On this sc
 
 Now that you've got a workspace created, let's take a look at what you can do:
 
-- **[Ethereum workspace overview](./workspaces/ethereum-workspace-overview)**
-- **[Corda workspace overview](./corda/workspace-overview)**
+- **[Ethereum workspace overview](/docs/ganache/workspaces/ethereum-workspace-overview)**
+- **[Corda workspace overview](/docs/ganache/corda/workspace-overview)**
