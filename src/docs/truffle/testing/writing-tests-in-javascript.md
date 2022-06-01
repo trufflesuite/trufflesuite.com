@@ -2,6 +2,7 @@
 title: Writing Tests in JavaScript
 layout: docs.hbs
 ---
+
 # Writing Tests in JavaScript
 
 Truffle uses the [Mocha](https://mochajs.org/) testing framework and [Chai](http://chaijs.com/) for assertions to provide you with a solid framework from which to write your JavaScript tests. Let's dive in and see how Truffle builds on top of Mocha to make testing your contracts a breeze.
@@ -12,8 +13,8 @@ Note: If you're unfamiliar with writing unit tests in Mocha, please see [Mocha's
 
 Structurally, your tests should remain largely unchanged from that of Mocha: Your tests should exist in the `./test` directory, they should end with a `.js` extension, and they should contain code that Mocha will recognize as an automated test. What makes Truffle tests different from that of Mocha is the `contract()` function: This function works exactly like `describe()` except it enables Truffle's [clean-room features](/docs/truffle/testing/testing-your-contracts#clean-room-environment). It works like this:
 
-* Before each `contract()` function is run, your contracts are redeployed to the running Ethereum client so the tests within it run with a clean contract state.
-* The `contract()` function provides a list of accounts made available by your Ethereum client which you can use to write tests.
+- Before each `contract()` function is run, your contracts are redeployed to the running Ethereum client so the tests within it run with a clean contract state.
+- The `contract()` function provides a list of accounts made available by your Ethereum client which you can use to write tests.
 
 Since Truffle uses Mocha under the hood, you can still use `describe()` to run normal Mocha tests whenever Truffle clean-room features are unnecessary.
 
@@ -33,103 +34,75 @@ A `web3` instance is available in each test file, configured to the correct prov
 
 ## Examples
 
-### Using `.then`
-
-Here's an example test provided in the [MetaCoin Truffle Box](/boxes/metacoin). Note the use of the `contract()` function, the `accounts` array for specifying available Ethereum accounts, and our use of `artifacts.require()` for interacting directly with our contracts.
+Here's an example test provided in the [MetaCoin Truffle Box](/boxes/metacoin) using [async/await](https://javascript.info/async-await) notation. Note the use of the `contract()` function, the `accounts` array for specifying available Ethereum accounts, and our use of `artifacts.require()` for interacting directly with our contracts.
 
 File: `./test/metacoin.js`
 
 ```javascript
 const MetaCoin = artifacts.require("MetaCoin");
 
-contract("MetaCoin", accounts => {
-  it("should put 10000 MetaCoin in the first account", () =>
-    MetaCoin.deployed()
-      .then(instance => instance.getBalance.call(accounts[0]))
-      .then(balance => {
-        assert.equal(
-          balance.valueOf(),
-          10000,
-          "10000 wasn't in the first account"
-        );
-      }));
+contract("MetaCoin", (accounts) => {
+  it("should put 10000 MetaCoin in the first account", async () => {
+    const metaCoinInstance = await MetaCoin.deployed();
+    const balance = await metaCoinInstance.getBalance.call(accounts[0]);
 
-  it("should call a function that depends on a linked library", () => {
-    let meta;
-    let metaCoinBalance;
-    let metaCoinEthBalance;
-
-    return MetaCoin.deployed()
-      .then(instance => {
-        meta = instance;
-        return meta.getBalance.call(accounts[0]);
-      })
-      .then(outCoinBalance => {
-        metaCoinBalance = outCoinBalance.toNumber();
-        return meta.getBalanceInEth.call(accounts[0]);
-      })
-      .then(outCoinBalanceEth => {
-        metaCoinEthBalance = outCoinBalanceEth.toNumber();
-      })
-      .then(() => {
-        assert.equal(
-          metaCoinEthBalance,
-          2 * metaCoinBalance,
-          "Library function returned unexpected function, linkage may be broken"
-        );
-      });
+    assert.equal(balance.valueOf(), 10000, "10000 wasn't in the first account");
   });
+  it("should call a function that depends on a linked library", async () => {
+    const metaCoinInstance = await MetaCoin.deployed();
+    const metaCoinBalance = (
+      await metaCoinInstance.getBalance.call(accounts[0])
+    ).toNumber();
+    const metaCoinEthBalance = (
+      await metaCoinInstance.getBalanceInEth.call(accounts[0])
+    ).toNumber();
 
-  it("should send coin correctly", () => {
-    let meta;
+    assert.equal(
+      metaCoinEthBalance,
+      2 * metaCoinBalance,
+      "Library function returned unexpected function, linkage may be broken"
+    );
+  });
+  it("should send coin correctly", async () => {
+    const metaCoinInstance = await MetaCoin.deployed();
+
+    // Setup 2 accounts.
+    const accountOne = accounts[0];
+    const accountTwo = accounts[1];
 
     // Get initial balances of first and second account.
-    const account_one = accounts[0];
-    const account_two = accounts[1];
+    const accountOneStartingBalance = (
+      await metaCoinInstance.getBalance.call(accountOne)
+    ).toNumber();
+    const accountTwoStartingBalance = (
+      await metaCoinInstance.getBalance.call(accountTwo)
+    ).toNumber();
 
-    let account_one_starting_balance;
-    let account_two_starting_balance;
-    let account_one_ending_balance;
-    let account_two_ending_balance;
-
+    // Make transaction from first account to second.
     const amount = 10;
+    await metaCoinInstance.sendCoin(accountTwo, amount, { from: accountOne });
 
-    return MetaCoin.deployed()
-      .then(instance => {
-        meta = instance;
-        return meta.getBalance.call(account_one);
-      })
-      .then(balance => {
-        account_one_starting_balance = balance.toNumber();
-        return meta.getBalance.call(account_two);
-      })
-      .then(balance => {
-        account_two_starting_balance = balance.toNumber();
-        return meta.sendCoin(account_two, amount, { from: account_one });
-      })
-      .then(() => meta.getBalance.call(account_one))
-      .then(balance => {
-        account_one_ending_balance = balance.toNumber();
-        return meta.getBalance.call(account_two);
-      })
-      .then(balance => {
-        account_two_ending_balance = balance.toNumber();
+    // Get balances of first and second account after the transactions.
+    const accountOneEndingBalance = (
+      await metaCoinInstance.getBalance.call(accountOne)
+    ).toNumber();
+    const accountTwoEndingBalance = (
+      await metaCoinInstance.getBalance.call(accountTwo)
+    ).toNumber();
 
-        assert.equal(
-          account_one_ending_balance,
-          account_one_starting_balance - amount,
-          "Amount wasn't correctly taken from the sender"
-        );
-        assert.equal(
-          account_two_ending_balance,
-          account_two_starting_balance + amount,
-          "Amount wasn't correctly sent to the receiver"
-        );
-      });
+    assert.equal(
+      accountOneEndingBalance,
+      accountOneStartingBalance - amount,
+      "Amount wasn't correctly taken from the sender"
+    );
+    assert.equal(
+      accountTwoEndingBalance,
+      accountTwoStartingBalance + amount,
+      "Amount wasn't correctly sent to the receiver"
+    );
   });
 });
 ```
-
 
 This test will produce the following output:
 
@@ -142,68 +115,6 @@ This test will produce the following output:
 
   3 passing (293ms)
 ```
-
-### Using async/await
-
-Here is a similar example, but using [async/await](https://javascript.info/async-await) notation:
-
-```javascript
-const MetaCoin = artifacts.require("MetaCoin");
-
-contract("2nd MetaCoin test", async accounts => {
-  it("should put 10000 MetaCoin in the first account", async () => {
-    const instance = await MetaCoin.deployed();
-    const balance = await instance.getBalance.call(accounts[0]);
-    assert.equal(balance.valueOf(), 10000);
-  });
-
-  it("should call a function that depends on a linked library", async () => {
-    const meta = await MetaCoin.deployed();
-    const outCoinBalance = await meta.getBalance.call(accounts[0]);
-    const metaCoinBalance = outCoinBalance.toNumber();
-    const outCoinBalanceEth = await meta.getBalanceInEth.call(accounts[0]);
-    const metaCoinEthBalance = outCoinBalanceEth.toNumber();
-    assert.equal(metaCoinEthBalance, 2 * metaCoinBalance);
-  });
-
-  it("should send coin correctly", async () => {
-    // Get initial balances of first and second account.
-    const account_one = accounts[0];
-    const account_two = accounts[1];
-
-    const amount = 10;
-
-    const instance = await MetaCoin.deployed();
-    const meta = instance;
-
-    const balance = await meta.getBalance.call(account_one);
-    const account_one_starting_balance = balance.toNumber();
-
-    balance = await meta.getBalance.call(account_two);
-    const account_two_starting_balance = balance.toNumber();
-    await meta.sendCoin(account_two, amount, { from: account_one });
-
-    balance = await meta.getBalance.call(account_one);
-    const account_one_ending_balance = balance.toNumber();
-
-    balance = await meta.getBalance.call(account_two);
-    const account_two_ending_balance = balance.toNumber();
-
-    assert.equal(
-      account_one_ending_balance,
-      account_one_starting_balance - amount,
-      "Amount wasn't correctly taken from the sender"
-    );
-    assert.equal(
-      account_two_ending_balance,
-      account_two_starting_balance + amount,
-      "Amount wasn't correctly sent to the receiver"
-    );
-  });
-});
-```
-
-This test will produce identical output to the previous example.
 
 ## Specifying tests
 
