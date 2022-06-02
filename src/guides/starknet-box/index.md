@@ -295,25 +295,131 @@ async def test_deploy():
     assert execution_info.result == expected_result
 ```
 
-There are a couple of important things to understand about this script before we run the test. First, this test does not use a StarkNet network to perform its tests. It uses the StarkNet testing library to launch a simulation of a StarkNet system to facilitate testing. Second, you will notice that the values in the `constructor_calldata` array look nothing like the hexadecimal account address that you might be used to. This is because the constructor arguments are of type `field element`, or `felt`. For that reason, you will need to convert the hexadecimal account address to an integer to be passed in to the contract's constructor. It is also worth noting that, at the time of writing, Cairo does not support a `string` type either. As such, short strings are normally represented by a `felt`. Accordingly, you will need to convert strings to integers to be passed to the constructor.
+There are a couple of important things to understand about this script before we run the test. First, this test does not use a StarkNet network to perform its tests. It uses the StarkNet testing library to launch a simulation of a StarkNet system to facilitate testing. Second, you will notice that the values in the `constructor_calldata` array look nothing like the hexadecimal account address that you might be expecting to see. This is because Cairo has only one data type, the `field element`, or `felt`. Practically, a `felt` is best thought of as a unsinged 252-bit integer. You will need to convert the hexadecimal account address to an integer to be passed in to the contract's constructor.
+
+It is also worth noting that, at the time of writing, Cairo does not have a `string` type. As such, short strings of up to 31 ASCII characters can be represented by a `felt`. If your contract constructor (or another function) expects a parameter of type felt that respresents a string, such as a token name, you will need to convert the string to a decimal integer before it is passed as a parameter.
 
 This is a simple test that just tests our deployment and that the premint was successful. Extending the test to test the other contract function is left as an exercise for you. 
 
 ## Deploying the ERC20 Contract
 
-### Strings in StarkNet Contracts
+Now that we've successfully run our unit tests we can deploy our contract. You can now deploy your contract to StarkNet Alpha Goerli with the following command:
 
-### Deploying to StarkNet Devnet
+```bash
+npm run starknet:deploy --contract=erc20 <recipient_address> <owner_address>
+```
 
-### Deploying to StarkNet Alpha Goerli
+where `<recipient_address>` is the account address of the recipient of the inial supply of tokens, and `<owner_address>` is the account address of contract's owner. 
 
-## Interacting with the ERC20 Contract
+**Important note:** To interact with the ERC20 contract with the StarkNet box, you must supply the address of the account that we deployed earlier in this guide as the `<owner_address>` constructor parameter. This isn't necessary if you will only be intereracting with the contract through StarkNet's block explorer, Voyager. However, you will need to have a wallet that supports StarkNet accounts (such as Argent X) installed with an account set up and funded. In that instance, the address of that account should be supplied as the `<owner_address>`.  
+
+In the following example, the `recipient` and `owner` are the same address. As already mentioned, you will notice that the account address of the `recipient` and `owner` are supplied as decimal integers rather than hexadecimal. Nake sure that you save the contract address of the deployed contract. You will need this to interact with the contract.
+
+![Deployimg the ERC20 contract](./img/deploy-contract.png)
 
 ### StarkNet Voyager
 
-### Minting Tokens
+You can use  Voyager to view and interact with your deployed contract. After deploying the contract, you should be able to find the contract on Voyager here: `https://goerli.voyager.online/contract/<contract_address>`. You must replace `<contract_address>` with the address of the contract you've just deployed. For example:
 
+```bash
+https://goerli.voyager.online/contract/0x0477e0e06bfdc84a013405a408cd064a3414baaa17420763c93543f4ab1e58f8
+```
+
+## Interacting with the ERC20 Contract
+
+Now that the contract is deployed we should be able to interact with it.
+
+### Check the Initial Supply
+
+The first thing that we want to do is check that an initial supply of tokens were minted to the recipient by the contract constructor. Remember you saved the address of the contract deployed earlier, this is where you will need it first. As it will be passed as an argument to the command line you do not need to convert it to a decimal integer.
+
+```bash
+npm run starknet:call \
+--contract=erc20 \
+--address=<contract_address> \
+--function=totalSupply
+```
+
+This should return the current value of the totalSupply storage variable, which is represented in the contract as a Uint256. What will be returned are two values that represent the Uint256. The first value represents the low 128 bits and the second value represents the high 128 bits. Given that our contract has an initial mint of `1000000000000000000000` tokens, we should expect the totalSupply function to return the hexadecimal integer `0x3635c9adc5dea00000` in the low 128 bits and a 0 for the high 128 bits.
+
+For example:
+
+![Get the inital total supply](./img/get-total-supply.png)
+
+Now, let's check that the initial supply of tokens were in fact minted to the recipient address. To do that we will call the contract's balanceOf function and pass in the address of the recipient:
+
+```bash
+npm run starknet:call \
+--contract=erc20 \
+--address=<contract_address> \
+--function=balanceOf
+<recipient_address>
+```
+
+Again, you must convert `<recipient_address>` to a decimal integer when being passed to a function with a parameter of type `felt`. For example:
+
+![Get the recipient balance](./img/get-recipient-balance.png)
+
+If the recipient's balance matches the total supply, the contract has been correctly deployed. As an exercise, you could also call the `name` and `symbol` functions to check that the constructor has correctly set the token's name and symbol. The `name` function should return an hexadecimal integer representing the token's name, and the `symbol` function should return a decimal integer representing the token's symbol. These need to be converted to strings to check they are correct.
+
+### Minting Further Tokens
+
+Now that we have the ERC20 contract successfully deployed and an initial supply of tokens minted, let's try minting more. For this exercise, we will just mint some additional tokens for the recipient of the initial mint. But, if you like you can mint them for another address. Because the `mint` function will change the state, we will have to use `invoke` rather than `call`. The following command will mint some tokens:
+
+```bash
+npm run starknet:invoke \
+--contract=erc20 \
+-address=<contract_address> \
+--function=mint \
+<to_address> <amount>
+```
+
+**Important note:** The `mint` function expects to receive a `Uint256` value for the `amount` parameter. Remember, this requires two decimal integer values to be supplied, the low and the high 128 bits. For example, to mint 1000 additional tokens you must pass in the following value for the `<amount>` parameter: `1000000000000000000000 0`. 
+
+For example:
+
+![Minting some tokens](./img/mint-tokens.png)
+
+Now that you have minted some additional tokens, you can `call` the `balanceOf` function again to check the balance of the `to` account.
+
+![Check that the new tokens were minted](./img/check-tokens-minted.png)
+
+The returned hexadecimal integer `0x6c6b935b8bbd400000` is equivalent to `2000000000000000000000`. We have successfully minted 1000 additional tokens. Now let's try and transfer them.
 ### Transferring Tokens
+
+Well, we can now mint tokens. Now it's time to try transferring them to another account. To extend our use of StarkNet and our ERC20 contract, this time we will try using the [Argent X](https://www.argent.xyz/argent-x/) wallet and [Voyager](https://goerli.voyager.online/).
+
+In your browser, open the Argent X site and install Argent X for your browser. The installation process will include the deployment of an account contract. Once your account contract has been deployed, you can fund it with the [StarkNet Alpha Goerli faucet](https://faucet.goerli.starknet.io/). Once you have your account funded, open Voyager in your browser. When Voyager has loaded the drop-down menu at the top right should read `GOERLI TEST`.
+
+Now, copy your ERC20 contract address and paste it into the main Voyager search field. Once your contract is located by Voyager a drop-down should appear with your contract. For example:
+
+![Search for your contract in Voyager](./img/voyager-contract-search.png)
+
+Click on the contract address and you will be taken to your contract's page.
+
+Now, let's transfer some tokens to your new account. To do that we will need to invoke the `transfer` function. The following command will achieve that:
+
+```bash
+npm run starknet:invoke \
+--contract=erc20 \
+--address=<contract_address> \
+--function=transfer \
+<to_address> <amount>
+```
+
+You'll notice that This looks very similar to the mint function. The same considerations regarding the `<to_address>` and `<amount>` apply. Invoking the transfer function should look something like this:
+
+![Transfer tokens](./img/transfer-tokens.png)
+
+Once you have sent your transfer transaction, you can check its status with the `tx_status` command like this:
+
+![Check the status of the transfer transaction](./img/check-transfer-status.png)
+
+If the `tx_status` returned is `ACCEPTED_ON_L2` your transaction is confirmed on StarkNet. To see if the tokens have been transferred to your Argent X account, you will first need to add the token to Argent X. This is done in a very similar way to other wallets. You will need to copy your ERC20 contract's address. This should be easily available on your contract's Voyager page. Click on the Argent X wallet icon on your browser toolbar. Log in to your wallet if you need to, then scroll to the bottim of the token list. Click on `Add token`. On the `Add token` page paste your contract's address into the `Contract address` field. Once you do so the other fields should then be populated. 
+
+![Add the token to your wallet](./img/add-tokens.png){ width=40% }
+
+Click the `Continue` button and your token will be added. You should now find that you have a number of tokens in your account that correspond to the amount of tokens your transferred. 
 
 ## Final Notes
 
