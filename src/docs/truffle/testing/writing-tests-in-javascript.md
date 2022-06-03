@@ -130,6 +130,8 @@ See the full [command reference](/docs/truffle/reference/truffle-commands#test) 
 
 Truffle gives you access to Mocha's configuration so you can change how Mocha behaves. See the [project configuration](/docs/advanced/configuration#mocha) section for more details.
 
+Check out our documentation on [interacting with your contracts](https://trufflesuite.com/docs/truffle/getting-started/interacting-with-your-contracts/) for more tips, tricks and best practices.
+
 ## TypeScript File Support
 
 Truffle supports tests saved as a `.ts` [TypeScript](https://www.typescriptlang.org/) file. Please see the [Writing Tests in JavaScript](#writing-tests-in-javascript) guide for more information.
