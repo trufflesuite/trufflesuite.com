@@ -4,10 +4,9 @@ hide:
   - navigation
 ---
 
-**By [Kingsley Arinze](https://twitter.com/heydamali)**
 ![Homage to Truffle and its local Ethereum simulator](./blog-header-homage-ganache.png)
 
-## An homage to Truffle and its local testnet, Ganache, and what’s next!
+**By [Kingsley Arinze](https://twitter.com/heydamali)**
 
 *Did you know the Truffle local Ethereum blockchain simulator was inspired by the original Ethereum testnet? This story and more as we look back on the history of Truffle.*
 
