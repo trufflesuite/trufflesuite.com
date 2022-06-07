@@ -1,10 +1,10 @@
 {
-  "how-to-use-truffle-to-build-on-ethereum-layer-2-networks": {
-    "title": "How to use Truffle to build on Ethereum Layer 2 networks",
-    "date": "2022-06-09",
-    "author": "Kingsley Arinze",
+  "truffle-devconnect-experience-amsterdam": {
+    "title": "Truffle DevConnect Experience: Amsterdam",
+    "date": "2022-06-08",
+    "author": "Ray Allums, & Kingsley Arinze",
     "published": true,
-    "excerpt": "Layer 2 networks, also commonly referred to as “L2s”, are scaling solutions in the blockchain ecosystem...",
+    "excerpt": "The Truffle team took part in DevConnect week in Amsterdam, and it was easily the highlight of our year...",
     "image": "/img/blog/thumbnails/blog-vscode-ext-thumb.png"
   },
   "build-on-web3-with-truffle-vs-code-extension": {
