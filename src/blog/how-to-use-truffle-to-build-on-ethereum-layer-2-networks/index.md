@@ -14,9 +14,6 @@ An L2 can simply be described as a server or a cluster of servers run by busines
 
 In decentralized networks, the “Scalability Trilemma'' refers to the idea that a network cannot be **decentralized**, **secure**, and **scalable** at the same time. The Trilemma states that for a blockchain network to exist, it would have to make a tradeoff, leaving out one of these three aspects. This is why today, there are a myriad of blockchain layer 1 like Solana and NEAR and layer 2 chains like Arbitrum, Polygon, and Optimism  to choose from. Each promises its own set of advantages and disadvantages, depending on which aspects of the Scalability Trilemma it chooses to solve.
 
-
-
-
 ### Layer 2s and the Ethereum ecosystem
 
 The Ethereum ecosystem has a number of layer 2 solutions available today which can be broadly classified as either “use-case specific” or “generalized” layer 2. These scaling solutions use a different underlying technology to offer scalability for the Ethereum blockchain:
