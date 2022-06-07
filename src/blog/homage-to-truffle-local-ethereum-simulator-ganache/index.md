@@ -8,7 +8,7 @@ hide:
 
 **By [Kingsley Arinze](https://twitter.com/heydamali)**
 
-*Did you know the Truffle local Ethereum blockchain simulator was inspired by the original Ethereum testnet? This story and more as we look back on the history of Truffle.*
+*Did you know the Truffle local Ethereum simulator was inspired by the original Ethereum testnet? This story and more as we look back on the history of Truffle.*
 
 ### Introduction
 
@@ -20,7 +20,7 @@ From the early days of Ethereum, Truffle has established itself as a pioneer in 
 
 With Layer 2 networks like Arbitrum, Polygon, and Optimism on the rise, there's a need for a more robust testing environment for dapp developers building on both layer 1 and layer 2 networks. New concerns arise, such as bridging between a layer 1 and a layer 2 or bridging between two layer 2s.
 
-This blog tells the story of  the early days of the Truffle local test network, Ganache, how it started, who and what contributed to its growth, and how it has evolved into becoming the center of the Ethereum development experience. We’ll also touch on what the future holds for the testnet and Truffle as we seek to support and build a multi-chain future.
+This blog tells the story of  the early days of the Truffle local Ethereum simulator, Ganache, how it started, who and what contributed to its growth, and how it has evolved into becoming the center of the Ethereum development experience. We’ll also touch on what the future holds for the simulator and Truffle as we seek to support and build a multi-chain future.
 
 ### Eth-testRPC - The first Ethereum local simulator
 
