@@ -5,7 +5,7 @@ hide:
 ---
 
 **By [Kingsley Arinze](https://twitter.com/heydamali)**
-[build on web3 with truffle for vs code](./blog-header-homage-ganache.png)
+![Homage to Truffle and its local Ethereum simulator](./blog-header-homage-ganache.png)
 
 ## An homage to Truffle and its local testnet, Ganache, and what’s next!
 
