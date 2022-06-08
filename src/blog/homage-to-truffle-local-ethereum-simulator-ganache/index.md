@@ -66,12 +66,11 @@ The future of web3 is complex, characterized by multiple layer 1s and their corr
 
 At Truffle, we’ve identified these problems and have started making significant strides in solving them. Some of the features we’re most excited to launch/have launched are:
 
-
 1. **A protocol flavored Ganache**: We’ve been speaking to dapp developers over the past year and one recurring request we’ve kept getting is the need for a protocol flavored Ganache - one that would have the rules of these layer 2 protocols baked in. We’ve listened and are hard at work! We’re getting ready to launch the infrastructure for Ganache Plugins.
 
     Ganache plugins would allow dapp developers building on layer 2s to continue using the Ganache experience they know and love. Imagine a world where a user would be able to have an Optimism Ganache, Arbitrum Ganache, and a Starknet Ganache!
 
-1. **Declarative deployments**: Imagine a scenario where you want to deploy contract A to a layer 2 blockchain, and then in the same breath, use the contract address of the deployed contract A to deploy contract B to another layer 2 or a layer 1 blockchain. To achieve this, you’d need to write and maintain potentially complex scripts to manage the process. Given changing requirements, manually maintaining these scripts is a recipe for bugs and a developer’s nightmare.
+1. **Declarative deployment**: Imagine a scenario where you want to deploy contract A to a layer 2 blockchain, and then in the same breath, use the contract address of the deployed contract A to deploy contract B to another layer 2 or a layer 1 blockchain. To achieve this, you’d need to write and maintain potentially complex scripts to manage the process. Given changing requirements, manually maintaining these scripts is a recipe for bugs and a developer’s nightmare.
 
     Our  solution for this multi-chain deployment problem: 
 **Truffle Declarative deployment**. The goal is to tell Truffle what your completed project should look like and then Truffle would take it up from there, deploying your contracts in the order you’ve described and to the chains or layers you’ve specified, all while maintaining state, handling contract dependencies as well as deploying to multiple RPC endpoints.
