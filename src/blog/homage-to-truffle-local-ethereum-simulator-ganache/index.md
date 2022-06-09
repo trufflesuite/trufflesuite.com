@@ -72,7 +72,7 @@ At Truffle, we’ve identified these problems and have started making significan
 
 1. **Declarative deployment**: Imagine a scenario where you want to deploy contract A to a layer 2 blockchain, and then in the same breath, use the contract address of the deployed contract A to deploy contract B to another layer 2 or a layer 1 blockchain. To achieve this, you’d need to write and maintain potentially complex scripts to manage the process. Given changing requirements, manually maintaining these scripts is a recipe for bugs and a developer’s nightmare.
 
-  Our  solution for this multi-chain deployment problem: 
+   Our  solution for this multi-chain deployment problem: 
 **Truffle Declarative deployment**. The goal is to tell Truffle what your completed project should look like and then Truffle would take it up from there, deploying your contracts in the order you’ve described and to the chains or layers you’ve specified, all while maintaining state, handling contract dependencies as well as deploying to multiple RPC endpoints.
 
 1. [**Truffle boxes**](https://trufflesuite.com/boxes/): These are boilerplate code, similar to the Ruby on Rails scaffold, where running a simple command on your CLI will scaffold a new project, including all the directories you need as well as a detailed README with deployment instructions and things to be mindful of. As of now, Truffle has the [Arbitrium box](https://trufflesuite.com/boxes/arbitrum/), the [Optimism box](https://trufflesuite.com/boxes/optimism/), and the [Polygon box](https://trufflesuite.com/boxes/polygon/) all live and available for dapp developers to use. We’re currently working on more advanced use cases for our boxes like the bridge box and starknet box.
