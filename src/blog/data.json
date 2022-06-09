@@ -1,4 +1,12 @@
 {
+  "homage-to-truffle-local-ethereum-simulator-ganache": {
+    "title": "An homage to Truffle and its local Ethereum simulator, Ganache!",
+    "date": "2022-06-09",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "Did you know the Truffle local Ethereum simulator was inspired by the original Ethereum testnet? This story and more as we look back on the history of Truffle.",
+    "image": "/img/blog/thumbnails/ganache-for-blog.jpg"
+  },
   "how-to-use-truffle-to-build-on-ethereum-layer-2-networks": {
     "title": "How to use Truffle to build on Ethereum Layer 2 networks",
     "date": "2022-06-08",
