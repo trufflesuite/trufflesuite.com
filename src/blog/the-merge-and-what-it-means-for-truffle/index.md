@@ -14,9 +14,9 @@ One of the most talked-about events in crypto in 2022 is the Merge. While many W
 
 ## What is the Merge?
 
-The Ethereum blockchain, by initial design, uses a ProofofWork (PoW) consensus mechanism, a system whereby validators also known as miners are required to complete a complex cryptographic puzzle in order to validate transactions and create new blocks. This process requires a lot of computing power and has been criticized by many due to its environmental impact. 
+The Ethereum blockchain, by initial design, uses a Proof of Work (PoW) consensus mechanism, a system whereby validators also known as miners are required to complete a complex cryptographic puzzle in order to validate transactions and create new blocks. This process requires a lot of computing power and has been criticized by many due to its environmental impact. 
 
-The ProofofStake (PoS) consensus mechanism on the other hand is a system where validators are required to stake their digital coins for the right to validate transactions and create new blocks. This mechanism promises to reduce Ethereum’s carbon footprint by about 99.95%.
+The Proof of Stake (PoS) consensus mechanism on the other hand is a system where validators are required to stake their digital coins for the right to validate transactions and create new blocks. This mechanism promises to reduce Ethereum’s carbon footprint by about 99.95%.
 
 The Merge in simple terms refers to the transition of Ethereum from a PoW consensus blockchain into a PoS consensus blockchain. Currently, Ethereum has both a PoW and PoS chain running in parallel and while both chains have validators, only the PoW chain currently processes users’ transactions. Once the Merge is complete, Ethereum will shift to the PoS chain, called the Beacon Chain, making mining on PoW obsolete.
 
@@ -28,7 +28,7 @@ While there’s been some misinformation about the Merge and how it would lower 
 
 ## How does the Merge change Ethereum as we know it today?
 
-The Merge, although designed to only have minimal impact on how Ethereum is operated from the end-user, smart contract, and dapp perspective, there are some minor changes worth noting. 
+The Merge is designed to only have minimal impact on how Ethereum is operated from the end-user, smart contract, and dapp perspective. However, there are some minor changes worth noting.
 
 ### 1. Block structure
 
