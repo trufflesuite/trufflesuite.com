@@ -522,7 +522,7 @@ The front-end doesn't use a build system (webpack, grunt, etc.) to be as easy as
      App.web3Provider = window.ethereum;
      try {
        // Request account access
-       await window.ethereum.request({ method: "eth_requestAccounts" });;
+       await window.ethereum.request({ method: "eth_requestAccounts" });
      } catch (error) {
        // User denied account access...
        console.error("User denied account access")
