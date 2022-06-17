@@ -1,11 +1,19 @@
 {
+    "the-merge-and-what-it-means-for-truffle": {
+      "title": "The Merge and what it means for Truffle",
+      "date": "2022-06-16",
+      "author": "Kingsley Arinze",
+      "published": true,
+      "excerpt": "As the Merge draws closer and closer, teams building for the Web3 ecosystem are reflecting on ways to prepare for this significant milestone in Ethereum’s history...",
+      "image": "/img/blog/thumbnails/the-merge.png"
+  },
   "homage-to-truffle-local-ethereum-simulator-ganache": {
     "title": "An homage to Truffle and its local Ethereum simulator, Ganache!",
     "date": "2022-06-09",
     "author": "Kingsley Arinze",
     "published": true,
-    "excerpt": "Did you know the Truffle local Ethereum simulator was inspired by the original Ethereum testnet? This story and more as we look back on the history of Truffle.",
-    "image": "/img/blog/thumbnails/ganache-for-blog.jpg"
+    "excerpt": "Did you know the Truffle local Ethereum simulator was inspired by the original Ethereum testnet? This story and more as we look back on the history of Truffle...",
+    "image": "/img/blog/thumbnails/homage-to-truffle.png"
   },
   "how-to-use-truffle-to-build-on-ethereum-layer-2-networks": {
     "title": "How to use Truffle to build on Ethereum Layer 2 networks",
@@ -13,7 +21,7 @@
     "author": "Kingsley Arinze",
     "published": true,
     "excerpt": "Layer 2 networks, also commonly referred to as “L2s”, are scaling solutions in the blockchain ecosystem...",
-    "image": "/img/blog/thumbnails/blog-vscode-ext-thumb.png"
+    "image": "/img/blog/thumbnails/build-on-layer-2-with-truffle.png"
   },
   "build-on-web3-with-truffle-vs-code-extension": {
     "title": "Build on Web3 with the Truffle for VS Code extension",
