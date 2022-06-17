@@ -1,11 +1,19 @@
 {
-    "the-merge-and-what-it-means-for-truffle": {
-      "title": "The Merge and what it means for Truffle",
-      "date": "2022-06-16",
-      "author": "Kingsley Arinze",
-      "published": true,
-      "excerpt": "As the Merge draws closer and closer, teams building for the Web3 ecosystem are reflecting on ways to prepare for this significant milestone in Ethereum’s history...",
-      "image": "/img/blog/thumbnails/the-merge.png"
+  "truffle-community-updates-introducing-github-discussions": {
+    "title": "Truffle Community Updates - Introducing Github Discussions!",
+    "date": "2022-06-17",
+    "author": "Emily Lin",
+    "published": true,
+    "excerpt": "At Truffle, our goal is to fuel the growth of Web3 through the expansion, support, and cultivation of the dapp developer community and tooling ecosystem...",
+    "image": "/img/blog/thumbnails/truffle.png"
+  },
+  "the-merge-and-what-it-means-for-truffle": {
+    "title": "The Merge and what it means for Truffle",
+    "date": "2022-06-16",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "As the Merge draws closer and closer, teams building for the Web3 ecosystem are reflecting on ways to prepare for this significant milestone in Ethereum’s history...",
+    "image": "/img/blog/thumbnails/the-merge.png"
   },
   "homage-to-truffle-local-ethereum-simulator-ganache": {
     "title": "An homage to Truffle and its local Ethereum simulator, Ganache!",
