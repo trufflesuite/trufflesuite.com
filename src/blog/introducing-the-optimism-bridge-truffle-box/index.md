@@ -42,7 +42,7 @@ As with every Truffle Box, you need to fulfill the following requirements before
 - Windows, Linux, or macOS
 
 Other important, but optional requirements are:
-- An [Infura](https://infura.io/) account and a Project ID
+- An [Infura](https://blog.infura.io/?utm_source=blog&utm_medium=pressrelease&utm_campaign=2022_Jun_introducing-the-optimism-bridge-truffle-box_acquisition_content) account and a Project ID
 - A [MetaMask](https://metamask.io/) account
 
 Then, you can install this box by simply running the command:
