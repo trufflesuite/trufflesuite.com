@@ -8,28 +8,28 @@ hide:
 
 **By [Kingsley Arinze](https://twitter.com/heydamali)**
 
-The growth of the crypto ecosystem has led to the introduction of multiple layer 1 blockchains and layer 2 scaling solutions, leading blockchain enthusiasts to believe that the future is multi-chain. But with every layer 1 (L1) and 2 (L2) blockchain being built in isolation, there is the need for a means of data exchange between them.  Only then will the full potential of a multi-chain future can be realized.
+The growth of the crypto ecosystem has led to the introduction of multiple Layer 1 (L1) blockchains and Layer 2 (L2) scaling solutions, leading blockchain enthusiasts to believe that the future is multi-chain. However, the full potential of a multi-chain future can only be realized when there is a means of data exchange between the various L1s and L2s.
 
 ## What are bridges 
-Imagine a scenario where a user has only ever interacted with dapps that live on the Ethereum mainnet and all their assets live there. This user stumbles on a new dapp that offers new exciting features but only exists on the Optimism L2 blockchain. For this user to be able to transfer their existing assets from mainnet to the Optimism L2 blockchain, there needs to be a solution that connects the two networks. Bridges are that solution. 
+Imagine a scenario where all of a user's assets live on the Ethereum Mainnet. This user stumbles upon a new dapp that offers new exciting features, but only exists on a L2 such as Optimism. For this user to be able to transfer their existing assets from Mainnet to Optimism, there needs to be a solution that connects the two networks. Bridges are that solution. 
 
-Blockchain bridges are solutions that connect two blockchain networks, allowing for the easy transfer of assets and information. With all the different blockchains that exist today, each with different underlying technologies and consensus mechanisms, the need for blockchain bridges can not be overstated. 
+Blockchain bridges are solutions that allow for the easy transfer of assets and information between various L1s and L2s. With all the different blockchains that exist today, each with different underlying technologies and consensus mechanisms, the need for blockchain bridges can not be overstated.
 
 The benefits of blockchain bridges include: 
 
 - Easy exchange of data between two blockchain networks
 - More options for users as they explore dapps on other networks
-- Encourages collaboration between developers across ecosystems
+- Collaboration between developers across ecosystems
 
 ## What are Truffle boxes
-[Truffle Boxes](https://trufflesuite.com/boxes) are the easiest way to get started building dapps on Ethereum or other L2 blockchains. They are helpful boilerplate code that provides the necessary configuration needed to build, test and, deploy a dapp, allowing developers to focus on the most important part of their dapp: the application logic. 
+[Truffle Boxes](https://trufflesuite.com/boxes) are the easiest way to get started building dapps on Ethereum or other L1s and L2s. They are helpful boilerplate code that provides the necessary configuration needed to build, deploy, and test a dapp, allowing developers to focus on the most important part of their dapp: the application logic.
 
-Truffle boxes come bundled with useful libraries, solidity contracts, and frontend code out of the box. They are built in a non-opinionated way so that developers are not locked into building a certain type of dapp. Truffle currently has 50+ boxes ready for use and you can find out more about them [here](https://trufflesuite.com/boxes).
+Truffle boxes come bundled with useful libraries, solidity contracts, and frontend code out of the box. They are built in a non-opinionated way so that developers are not locked into building a certain type of dapp. Truffle currently has 50+ boxes ready for use, and you can find out more about them [here](https://trufflesuite.com/boxes).
 
 ## The Optimism Bridge Box
-The Truffle Optimism Bridge Box provides you with the setup necessary to start building applications between multiple Ethereum network layers. It contains contracts that interact with the Optimism bridge on L1 and L2, along with a set of migrations for deploying, calling functions and passing messages and values.
+The Truffle Optimism Bridge Box provides you with the setup necessary to start building applications between multiple Ethereum network layers. It contains contracts that interact with the Optimism bridge on L1 and L2, along with a set of migrations for deploying contracts, calling functions, and passing messages and values.
 
-In the past, Truffle boxes only catered to building on some L2 networks without support for bridging, for example these [ Optimism](https://trufflesuite.com/boxes/optimism) and  [Arbitrium](https://trufflesuite.com/boxes/arbitrum) boxes have zero support for bridging. In this new iteration of Truffle Boxes, we’re focusing on providing bridging support for these popular L2 networks and Optimism is the first on our list. 
+Past L2 Truffle Boxes for [Optimism](https://trufflesuite.com/boxes/optimism) and  [Arbitrium](https://trufflesuite.com/boxes/arbitrum) were built without support for bridging in mind. In this new iteration of Truffle Boxes, we’re focusing on demonstrating bridging support for popular L2 networks.
 
 ### Requirements and Installation
 As with every Truffle Box, you need to fulfill the following requirements before you can use them:
@@ -39,13 +39,13 @@ As with every Truffle Box, you need to fulfill the following requirements before
 - [Docker](https://docs.docker.com/get-docker/) 19.03.12 or later
 - [Docker-compose](https://docs.docker.com/compose/install) version 1.27.3 or later
 - Recommended Docker memory allocation of >= 8 GB
-- Window, Linux, or macOS
+- Windows, Linux, or macOS
 
-Other important but optional requirements are:
+Other important, but optional requirements are:
 - An [Infura](https://infura.io/) account and a Project ID
 - A [MetaMask](https://metamask.io/) account
 
-With these requirements you can install this box by simply running the command:
+Then, you can install this box by simply running the command:
 
 ```
 truffle unbox optimism-bridge
@@ -73,6 +73,6 @@ Now that you have installed and configured the Optimism Bridge Box, it’s time 
 5. A [script](https://github.com/truffle-box/optimism-bridge-box/blob/232a6db7784ed9131d5584f0fc16abec92b21a51/scripts/deploy.mjs) to automate the process of compiling contracts and running migrations across each network.
 
 ## Conclusion
-That’s all you need to get started building dapps that bridge between Optimism and Ethereum. We’ve put together a short [demo](https://github.com/truffle-box/optimism-bridge-box/blob/232a6db7784ed9131d5584f0fc16abec92b21a51/README.md#demo) that further expands on how the Optimism Bridge Box can be used to bridge networks. We’re excited and can not wait to see what our developer community builds with this these tools.  
+That’s all you need to get started building dapps that bridge between Optimism and Ethereum. We’ve put together a short [demo](https://github.com/truffle-box/optimism-bridge-box/blob/232a6db7784ed9131d5584f0fc16abec92b21a51/README.md#demo) that further expands on how the Optimism Bridge Box can be used to bridge networks. We’re so excited to see what our developer community builds with this these tools!
 
-To find out more about our suite of developer tools, visit the official [Truffle website](https://trufflesuite.com). If you have questions that you'd like for our team members to answer, concerning the merge and how it impacts our products, feel free to start a discussion on our [Github Discussions](https://github.com/orgs/trufflesuite/discussions) channel. Finally, don't forget to follow us on [Twitter](https://twitter.com/trufflesuite) for live announcements and updates.
+To find out more about our suite of developer tools, visit the official [Truffle website](https://trufflesuite.com). If you have questions that you'd like for our team members to answer, feel free to start a discussion on [Github Discussions](https://github.com/orgs/trufflesuite/discussions). Finally, don't forget to follow us on [Twitter](https://twitter.com/trufflesuite) for live announcements and updates.
