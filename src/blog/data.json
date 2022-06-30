@@ -1,4 +1,12 @@
 {
+  "introducing-the-optimism-bridge-truffle-box": {
+    "title": "Introducing the Optimism bridge Truffle box",
+    "date": "2022-06-29",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "The growth of the crypto ecosystem has led to the introduction of multiple layer 1 blockchains and layer 2 scaling solutions, leading blockchain enthusiasts to believe that the future is multi-chain....",
+    "image": "/img/blog/thumbnails/optimism-bridge-box.png"
+  },
   "truffle-community-updates-improving-developer-engagement": {
     "title": "Truffle Community Updates - Improving Developer Engagement",
     "date": "2022-06-20",
