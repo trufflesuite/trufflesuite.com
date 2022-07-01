@@ -118,9 +118,9 @@ Using MetaMask with Truffle Develop is very similar to that of Ganache. The only
 
 In MetaMask, when entering the "New RPC URL", enter `http://127.0.0.1:9545`.
 
-## Using MetaMask with Ganache CLI
+## Using MetaMask with Ganache v7
 
-Using MetaMask with Ganache CLI is also very similar to that of Ganache. The only difference is that Ganache CLI runs by default on `http://127.0.0.1:8545` so you'll want to edit the above web3 code to say:
+Using MetaMask with Ganache v7 is also very similar to that of Ganache. The only difference is that Ganache v7 runs by default on `http://127.0.0.1:8545` so you'll want to edit the above web3 code to say:
 
   ```javascript
   // Is there is an injected web3 instance?
@@ -128,7 +128,7 @@ Using MetaMask with Ganache CLI is also very similar to that of Ganache. The onl
     App.web3Provider = web3.currentProvider;
     web3 = new Web3(web3.currentProvider);
   } else {
-    // If no injected web3 instance is detected, fallback to Ganache CLI.
+    // If no injected web3 instance is detected, fallback to Ganache.
     App.web3Provider = new web3.providers.HttpProvider('http://127.0.0.1:8545');
     web3 = new Web3(App.web3Provider);
   }
