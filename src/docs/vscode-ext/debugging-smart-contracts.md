@@ -5,7 +5,7 @@ The Truffle for VSCode extension gives developers the ability to debug Solidity 
 
 ### Local deployment
 
-If a developer has not already connected to any other type of network, the default option will allow a developer to deploy their contract to an emulated Ethereum network. This local network is powered by [Truffle Ganache](https://trufflesuite.com/docs/ganache/) ([ganache-cli](https://github.com/trufflesuite/ganache/) specifically) and is enabled by default.
+If a developer has not already connected to any other type of network, the default option will allow a developer to deploy their contract to an emulated Ethereum network. This local network is powered by [Truffle Ganache](https://trufflesuite.com/docs/ganache/) ([Ganache v7](https://github.com/trufflesuite/ganache/) specifically) and is enabled by default.
 
 ## Debug your contract
 
