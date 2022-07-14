@@ -1,4 +1,12 @@
 {
+  "whats-new-on-the-truffle-for-vs-code-extension-version-2.3": {
+    "title": "What’s new on the Truffle for VS Code extension version 2.3",
+    "date": "2022-07-15",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "Earlier this year, we collaborated with Microsoft to release the Truffle for VS Code extension which allowed newbies and experienced web3 developers to code, debug, and deploy their smart contracts without needing to leave VS Code...",
+    "image": "/img/blog/thumbnails/thumbnail_vscode_v2.3.png"
+  },
   "introducing-the-optimism-bridge-truffle-box": {
     "title": "Introducing the Optimism bridge Truffle box",
     "date": "2022-06-29",
