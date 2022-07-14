@@ -19,8 +19,8 @@ Today, we’re excited to announce the release of the [Truffle for VS Code **ver
 Here are some of the features and bug fixes you should be aware of in this new version:
 
 1. **Feature: New Truffle tree view**: This new version introduces a dedicated tree view on the right hand side of VS Code which gives extension users access to their contracts, deployments, and some helpful libraries and links. Prior to these versions, access to these features were only available through the main VS Code explorer (SHIFT + CMD + P) which meant that they weren't easily accessible. Since this feature is still being improved on, some points worth noting are:
-   - Not all of the features of the main explorer (SHIFT + CMD + P) are possible in the new explorer view.
-   - This new explorer view works on the basis of single repositories (not monorepos of multiple truffle projects) so we are going to be releasing fixes for that in the future.
+     - Not all of the features of the main explorer (SHIFT + CMD + P) are possible in the new explorer view.
+     - This new explorer view works on the basis of single repositories (not monorepos of multiple truffle projects) so we are going to be releasing fixes for that in the future.
 
 2. **Feature: Ganache forked instance**: With this new feature, you can now choose to fork a network of your choice when starting Ganache through the VS Code extension. Just like you can with the command line, you can choose a specific block or the latest block to fork from directly in VS Code.
 
