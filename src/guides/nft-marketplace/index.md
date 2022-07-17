@@ -1,15 +1,15 @@
 ---
-title: How to Build a NFT Marketplace DApp on Ethereum and Optimism
+title: How to Build a NFT Marketplace DApp on Ethereum or Optimism
 hide:
   - navigation
 ---
-# How to Build a NFT Marketplace DApp on Ethereum and Optimism
+# How to Build a NFT Marketplace DApp on Ethereum or Optimism
 
 Written by [Emily Lin](https://twitter.com/_emjlin)
 
 ## Overview 
 
-Today, we're gonna build Bored Pets Marketplace, a simple NFT marketplace using [Truffle](https://trufflesuite.com/), [Infura](https://infura.io/), [MetaMask](https://metamask.io/), and [Web3.js](https://web3js.readthedocs.io/)! We'll start off with the basics and first show you how to deploy your ethereum contracts to Truffle's local blockchain, Ganache, and the Kovan testnet. Then, we'll show you how to covert those contracts over to Optimism and deploy on the Optimistic Kovan testnet. Note that this tutorial will not teach you javascript and will only briefly go over some Solidity principles.
+Today, we're gonna build Bored Pets Marketplace, a simple NFT marketplace using [Truffle](https://trufflesuite.com/), [Infura](https://infura.io/), [MetaMask](https://metamask.io/), and [Web3.js](https://web3js.readthedocs.io/)! We'll start off with the basics and first show you how to deploy your ethereum contracts to Truffle's local blockchain, Ganache, and the Goerli testnet. Then, we'll show you how to covert those contracts over to Optimism and deploy on the Optimistic Goerli testnet. Note that this tutorial will not teach you Javascript and will only briefly go over some Solidity principles.
 
 Our marketplace has a core set of functionality:
 1. Minting and listing an NFT
@@ -38,28 +38,34 @@ If you want to run Optimism locally, you'll need these [preqrequisites](https://
 
 To connect your DApp to Ethereum, Optimism, and other networks, you'll need an Infura account. Sign up for an account [here](https://infura.io/register?utm_source=blog&utm_medium=post&utm_campaign=2022_May_truffle-blog-nft-marketplace_acquisition_content).
 
-Once you're signed in, create a project! Let's call it `nft-marketplace`. Since we're deploying to Optimism, go ahead and add the Optimistic Kovan endpoint. It'll take ask you to sign up for a free trial.
+Once you're signed in, create a project! Let's call it `nft-marketplace`. Since we're deploying to Optimism, go ahead and add the Optimistic Goerli endpoint. It'll take ask you to sign up for a free trial.
 
-![GIF of Project Creation](./img/infura_create_project.gif)
+![GIF of Adding Optimistic Goerli](./img/choose_optimistic_goerli.gif)
 
 ### Register for a MetaMask wallet
 
 To interact with your DApp in the browser, you'll need a MetaMask wallet. Sign up for an account [here](https://metamask.io/download/?utm_source=blog&utm_medium=post&utm_campaign=2022_May_truffle-blog-nft-marketplace_acquisition_content).
 
-![Sign up page](./img/metamask_download.png)
-![GIF of Project Creation](./img/metamask_account_creation.gif)
+### Add Optimistic Goerli to your wallet
 
-### Add Optimistic Kovan to your wallet
+Let's add Optimistic Goerli to your list of available networks to your MetaMask wallet! To do so, open up the  MetaMask extension, click on the network, and then click Add Network. Then, fill out the network properties (you can copy your Infura idf from your Infura project):
 
-Let's add Optimistic Kovan to your list of available networks to your MetaMask wallet! To do so, open up the  MetaMask extension, click on the network, and then click Add Network. Then, fill out the network properties (you can copy your Infura idf from your Infura project):
-
-- Network Name: Optimistic Kovan
-- New RPC URL: https://optimism-kovan.infura.io/v3/INFURA_PROJECT_ID
-- Chain ID: 69
+- Network Name: Optimistic Goerli
+- New RPC URL: https://optimism-goerli.infura.io/v3/INFURA_PROJECT_ID
+- Chain ID: 420
 - Currency Symbol: ETH
-- Block Explorer URL: https://kovan-optimistic.etherscan.io/
+- Block Explorer URL: https://blockscout.com/optimism/goerli/
 
-![GIF of Adding Optimistic Kovan](./img/add_optimistic_kovan.gif)
+![GIF of Adding Optimistic Goerli](./img/add_optimistic_goerli.gif)
+
+### Get Optimistic Goerli Eth
+
+To use the Optimistic Goerli testnet, you'll need some test eth. To do so, you'll need to:
+
+1) Get some Goerli Eth. You can use this [faucet](https://faucet.paradigm.xyz/)
+2) Optimism's gateway still doesn't support Goerli, but if you transfer Goerli ETH to [0x636Af16bf2f682dD3109e60102b8E1A089FedAa8](https://goerli.etherscan.io/address/0x636Af16bf2f682dD3109e60102b8E1A089FedAa8), you will get it on Optimistic Goerli.
+
+![GIF of Getting Optimistic Goerli Eth](./img/get_optimistic_goerli_eth.gif)
 
 ### VSCode
 
@@ -570,7 +576,7 @@ Success! If you want to deploy your contracts on a populated blockchain, you can
 
 In this tutorial, we'll take you through how to deploy to a testnet using [Truffle dashboards](https://trufflesuite.com/docs/truffle/getting-started/using-the-truffle-dashboard/), which allows you to sign your transactions using MetaMask. This allows you to keep your private key safe, since you don't have to save it locally. In order to do so, you'll need to get some test eth from a [faucet](https://faucet.paradigm.xyz/).
 
-First, run `truffle dashboard` in a separate terminal window. It should open truffle dashboards at http://127.0.0.1:24012/. Then, you can use your MetaMask wallet to connect to a network of your choice. In this case, we'll select the Kovan network.
+First, run `truffle dashboard` in a separate terminal window. It should open truffle dashboards at http://127.0.0.1:24012/. Then, you can use your MetaMask wallet to connect to a network of your choice. In this case, we'll select the Goerli network.
 
 Next, migrate your contract to dashboards using `truffle migrate --network dashboard`. If you head back to the dashboard tab, you'll see the request to sign using MetaMask. Hit accept, and voila! Head back to the terminal, and you should see the that your contracts were deployed.
 
@@ -586,25 +592,25 @@ If you don't want to use Dashboards, you can modify your Truffle config files to
 MNEMONIC="candy maple cake sugar pudding cream honey rich smooth crumble sweet treat"
 INFURA_KEY="<Your Infura project key>"
 GANACHE_MNEMONIC="<Your Ganache mnemonic>"
-KOVAN_MNEMONIC="<Your Metamask mnemonic>"
+GOERLI_MNEMONIC="<Your Metamask mnemonic>"
 ```
 
 The `.gitignore` already ignores `.env`, but since you're populating your mnemonic/secret key here, PLEASE DO NOT COMMIT THIS ANYWHERE PUBLIC.
 
 Then, just run `truffle migrate --network [NETWORK NAME]` or `npm run migrate:ovm --network=[NETWORK NAME]`
 
-### Deploy to Optimistic Kovan
+### Deploy to Optimistic Goerli
 
 Since Optimism is EVM equivalent with [small exceptions](https://community.optimism.io/docs/developers/build/differences/), we can just copy our contracts from the `contracts/ethereum` over to `contracts/optimism`.
 
-To get Eth for Optimistic Kovan, you can use this [faucet](https://optimismfaucet.xyz/). You'll need to sign up with a Github account older than 1 month and be following at least 5 repos:
+To get Eth for Optimistic Goerli, you can use this [faucet](https://optimismfaucet.xyz/). You'll need to sign up with a Github account older than 1 month and be following at least 5 repos:
 - [trufflesuite](https://github.com/trufflesuite)
 - [truffle-box](https://github.com/truffle-box)
 - [Infura](https://github.com/INFURA)
 - [MetaMask](https://github.com/metamask)
 - [Optimism](https://github.com/ethereum-optimism)
 
-Our box already includes the Optimistic Kovan configuration in `truffle-confg.ovm.js`. Run `npm run migrate:ovm --network=optimistic_kovan` to deploy, and `npm run exec:ovm scripts/run.js --network=optimistic_kovan` to test!
+Our box already includes the Optimistic Goerli configuration in `truffle-confg.ovm.js`. Run `npm run migrate:ovm --network=optimistic_goerli` to deploy, and `npm run exec:ovm scripts/run.js --network=optimistic_goerli` to test!
 
 Since we are using a testnet, connectivity can get a bit flaky. You can try again by running the `migrate` command with `--reset`. Alternatively, you might see occasionally see something like this:
 
@@ -1201,6 +1207,8 @@ And there you have it - a very basic marketplace! There are many ways you can bu
 - Allow useres to delist their NFTs
 - Combining the Marketplace contract and NFT contract into one
 - Bridging the Optimism contracts (Truffle L2 bridge box coming soon!)
+
+If you're interested in actually bridging between Ethereum and Optimism, check out our [Optimism Bridge Box](https://trufflesuite.com/blog/introducing-the-optimism-bridge-truffle-box/)!
 
 Join [Github Discussions](https://github.com/orgs/trufflesuite/discussions) to join the Truffle community to discuss and ask questions!
 
