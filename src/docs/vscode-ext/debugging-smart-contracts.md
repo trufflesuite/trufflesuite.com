@@ -21,10 +21,10 @@ After choosing `Debug Transaction`, you will be asked to pick which transaction 
 
 After you select the transaction you wish to debug, the VS Code debugger will launch and you can use typical debugger functions such as watch windows, view the call stack, step in/out/over etc.
 
-To debug the other functions (SendRequest and SendResponse in our HelloBlockchain.sol) you need to exercise those functions and debug those transactions much like the constructor. To exercise a function you can use the [UI interaction](./Interacting-with-your-Smart-Contract) capabilities of the Truffle for VSCode Developer extension
+To debug the other functions (SendRequest and SendResponse in our HelloBlockchain.sol) you need to exercise those functions and debug those transactions much like the constructor. To exercise a function you can use the truffle console right now in a terminal window. For more information please read the truffle [docs](https://trufflesuite.com/docs/truffle/getting-started/interacting-with-your-contracts/).
 
-For example, let's generate the UI for our `HelloBlockchain.sol` contract and send messages to both the SendRequest and SendResponse functions.
+For example, you can call the functions on the `HelloBlockchain.sol` contract and send messages to both the SendRequest and SendResponse functions from this console.
 
-Now that we have exercised both our functions, when we launch the debugger this time we will see 2 additional transactions that we can debug. Launch the debugger using `f1 or ctrl+shift+p` and you should see something similar to this after selecting `Debug Transactions`.
+Now that we have exercised both our functions, when we launch the debugger this time we will see 2 additional transactions that we can debug. Launch the debugger using `f1 or ctrl+shift+p` and you will see the 2 new transactions available to debug.
 
 Selecting any of the new transactions will start the debugger as before and you may debug each transaction appropriately.
