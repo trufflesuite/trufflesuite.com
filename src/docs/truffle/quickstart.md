@@ -23,6 +23,8 @@ Before you can use Truffle, you will have to install it using npm. Open a termin
   We also recommend against using <code>sudo</code> while installing Truffle as many users report permissions errors after doing so.
   </p>
 
+If you run into issues during installation, feel free to post on our [GitHub Discussions](https://github.com/orgs/trufflesuite/discussions/categories/installation) page!
+
 
 ## Creating a project
 
@@ -56,7 +58,7 @@ Once this operation is completed, you'll now have a project structure with the f
 * `contracts/`: Directory for [Solidity contracts](/docs/truffle/getting-started/interacting-with-your-contracts)
 * `migrations/`: Directory for [scriptable deployment files](/docs/truffle/getting-started/running-migrations#migration-files)
 * `test/`: Directory for test files for [testing your application and contracts](/docs/truffle/testing/testing-your-contracts)
-* `truffle.js`: Truffle [configuration file](/docs/truffle/reference/configuration)
+* `truffle-config.js`: Truffle [configuration file](/docs/truffle/reference/configuration)
 
 ## Exploring the project
 
@@ -66,11 +68,7 @@ Once this operation is completed, you'll now have a project structure with the f
 
 1. Open the `contracts/MetaCoin.sol` file in a text editor. This is a smart contract (written in Solidity) that creates a MetaCoin token. Note that this also references another Solidity file `contracts/ConvertLib.sol` in the same directory.
 
-1. Open the `contracts/Migrations.sol` file. This is a separate Solidity file that manages and updates [the status of your deployed smart contract](/docs/truffle/getting-started/running-migrations). This file comes with every Truffle project, and is usually not edited.
-
-1. Open the `migrations/1_initial_migration.js` file. This file is the migration (deployment) script for the `Migrations` contract found in the `Migrations.sol` file.
-
-1. Open the `migrations/2_deploy_contracts.js` file. This file is the migration script for the `MetaCoin` contract. (Migration scripts are run in order, so the file beginning with `2` will be run after the file beginning with `1`.)
+1. Open the `migrations/1_deploy_contracts.js` file. This file is the migration script for the `MetaCoin` contract.
 
 1. Open the `test/TestMetaCoin.sol` file. This is a [test file written in Solidity](/docs/truffle/testing/writing-tests-in-solidity) which ensures that your contract is working as expected.
 
@@ -79,6 +77,8 @@ Once this operation is completed, you'll now have a project structure with the f
 1. Open the `truffle-config.js` file. This is the Truffle [configuration file](/docs/truffle/reference/configuration), for setting network information and other project-related settings. The file is blank, but this is okay, as we'll be using a Truffle command that has some defaults built-in.
 
 ## Testing
+
+To run all tests against the default `development` network, run `truffle test`. Otherwise, if you want to run tests individually, do the following:
 
 1. In a terminal, run the Solidity test:
 
@@ -145,7 +145,7 @@ Once this operation is completed, you'll now have a project structure with the f
 
 To deploy our smart contracts, we're going to need to connect to a blockchain. Truffle has a built-in personal blockchain that can be used for testing. This blockchain is local to your system and does not interact with the main Ethereum network.
 
-You can create this blockchain and interact with it using [Truffle Develop](/docs/truffle/getting-started/using-truffle-develop-and-the-console#truffle-develop).
+You can create this blockchain and interact with it using [Truffle Develop](/docs/truffle/getting-started/using-truffle-develop-and-the-console#truffle-develop). Note that this will only work if the `development` network is commented out in `truffle-config.js`.
 
 1. Run Truffle Develop:
 
@@ -200,74 +200,59 @@ You can create this blockchain and interact with it using [Truffle Develop](/doc
 
    You will see the following output:
 
-   ```
-   Starting migrations...
-   ======================
-   > Network name:    'develop'
-   > Network id:      4447
-   > Block gas limit: 6721975
+    ```
+    Starting migrations...
+    ======================
+    > Network name:    'development'
+    > Network id:      1658402567991
+    > Block gas limit: 30000000 (0x1c9c380)
 
-   1_initial_migration.js
-   ======================
 
-      Deploying 'Migrations'
-      ----------------------
-      > transaction hash:    0x3fd222279dad48583a3320decd0a2d12e82e728ba9a0f19bdaaff98c72a030a2
-      > Blocks: 0            Seconds: 0
-      > contract address:    0xa0AdaB6E829C818d50c75F17CFCc2e15bfd55a63
-      > account:             0x627306090abab3a6e1400e9345bc60c78a8bef57
-      > balance:             99.99445076
-      > gas used:            277462
-      > gas price:           20 gwei
-      > value sent:          0 ETH
-      > total cost:          0.00554924 ETH
-
-      > Saving migration to chain.
-      > Saving artifacts
-      -------------------------------------
-      > Total cost:          0.00554924 ETH
-
-   2_deploy_contracts.js
-   =====================
+    1_deploy_contracts.js
+    =====================
 
       Deploying 'ConvertLib'
       ----------------------
-      > transaction hash:    0x97e8168f1c05fc40dd8ffc529b9a2bf45cc7c55b07b6b9a5a22173235ee247b6
+      > transaction hash:    0xd8b6156da444b956b47921d13a4bf9ff24194450e7142ccd787cf02095f0ea50
       > Blocks: 0            Seconds: 0
-      > contract address:    0xfb39FeaeF3ac3fd46e2123768e559BCe6bD638d6
-      > account:             0x627306090abab3a6e1400e9345bc60c78a8bef57
-      > balance:             99.9914458
-      > gas used:            108240
-      > gas price:           20 gwei
+      > contract address:    0xDB6AB7B200F9dDA31a9672a30e09Fc39EA953Cf3
+      > block number:        1
+      > block timestamp:     1658402580
+      > account:             0x2C42f79f8565C58855ABADc148eE5c55fa3Fd615
+      > balance:             999.999468208
+      > gas used:            157568 (0x26780)
+      > gas price:           3.375 gwei
       > value sent:          0 ETH
-      > total cost:          0.0021648 ETH
+      > total cost:          0.000531792 ETH
+
 
       Linking
       -------
-      * Contract: MetaCoin <--> Library: ConvertLib (at address: 0xfb39FeaeF3ac3fd46e2123768e559BCe6bD638d6)
+      * Contract: MetaCoin <--> Library: ConvertLib (at address: 0xDB6AB7B200F9dDA31a9672a30e09Fc39EA953Cf3)
 
       Deploying 'MetaCoin'
       --------------------
-      > transaction hash:    0xee4994097c10e7314cc83adf899d67f51f22e08b920e95b6d3f75c5eb498bde4
+      > transaction hash:    0x5a81aae757842a8784a7931e533496e37a6ad238dc76c12fd08c7c5cb540f405
       > Blocks: 0            Seconds: 0
-      > contract address:    0x6891Ac4E2EF3dA9bc88C96fEDbC9eA4d6D88F768
-      > account:             0x627306090abab3a6e1400e9345bc60c78a8bef57
-      > balance:             99.98449716
-      > gas used:            347432
-      > gas price:           20 gwei
+      > contract address:    0x017CA14d13A711f38153a62738B81b527231e44e
+      > block number:        2
+      > block timestamp:     1658402580
+      > account:             0x2C42f79f8565C58855ABADc148eE5c55fa3Fd615
+      > balance:             999.998107328781026412
+      > gas used:            416582 (0x65b46)
+      > gas price:           3.266773934 gwei
       > value sent:          0 ETH
-      > total cost:          0.00694864 ETH
+      > total cost:          0.001360879218973588 ETH
 
-      > Saving migration to chain.
       > Saving artifacts
       -------------------------------------
-      > Total cost:          0.00911344 ETH
+      > Total cost:     0.001892671218973588 ETH
 
-   Summary
-   =======
-   > Total deployments:   3
-   > Final cost:          0.01466268 ETH
-   ```
+    Summary
+    =======
+    > Total deployments:   2
+    > Final cost:          0.001892671218973588 ETH
+    ```
 
    This shows the transaction IDs and addresses of your deployed contracts. It also includes a cost summary and real-time status updates.
 
@@ -282,20 +267,22 @@ You can create this blockchain and interact with it using [Truffle Develop](/doc
 
 ## Alternative: Migrating with Ganache
 
-While Truffle Develop is an all-in-one personal blockchain and console, you can also use [Ganache](/ganache), a desktop application, to launch your personal blockchain. Ganache can be a more easy-to-understand tool for those new to Ethereum and the blockchain, as it displays much more information up-front.
+While Truffle Develop is an all-in-one personal blockchain and console, you can also use [Ganache](/ganache), a desktop application, to launch your personal blockchain. Ganache can be a more easy-to-understand tool for those new to Ethereum and the blockchain, as it displays much more information up-front. 
+
+Note that Ganache can also be started from the CLI. Get started [here](https://github.com/trufflesuite/ganache#getting-started).
 
 The only extra step, aside from running Ganache, is that it requires editing the Truffle configuration file to point to the Ganache instance.
 
 1. Download and install [Ganache](/ganache).
 
-1. Open `truffle-config.js` in a text editor. Replace the content with the following:
+1. Open `truffle-config.js` in a text editor. Uncomment the `development` configuration. Make sure to adjust the port number to whatever port Ganache is running on.
 
    ```javascript
    module.exports = {
      networks: {
        development: {
          host: "127.0.0.1",
-         port: 7545,
+         port: 8545,
          network_id: "*"
        }
      }
@@ -304,7 +291,7 @@ The only extra step, aside from running Ganache, is that it requires editing the
 
    This will allow a connection using Ganache's default connection parameters.
 
-1. Save and close that file.
+1. Save that file.
 
 1. Launch Ganache.
 
@@ -475,6 +462,6 @@ As of Truffle v5, the console supports async/await functions, enabling much simp
   truffle(development)> newBalance.toNumber()
   ```
 
-## Continue learning
+## Continued learning
 
-This quickstart showed you the basics of the Truffle project lifecycle, but there is much more to learn. Please continue on with the rest of our [documentation](/docs) and especially our [guides](/guides) or [tutorial](/tutorial) to learn more.
+This quickstart showed you the basics of the Truffle project lifecycle, but there is much more to learn! Want to get set up as fast as possible? Check out our [Truffle Boxes](https://trufflesuite.com/boxes/). Please continue on with the rest of our [documentation](/docs) and especially our [guides](/guides) or [tutorial](/tutorial) to learn more.
