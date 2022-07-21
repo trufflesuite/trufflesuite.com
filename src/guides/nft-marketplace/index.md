@@ -38,7 +38,7 @@ If you want to run Optimism locally, you'll need these [preqrequisites](https://
 
 To connect your DApp to Ethereum, Optimism, and other networks, you'll need an Infura account. Sign up for an account [here](https://infura.io/register?utm_source=blog&utm_medium=post&utm_campaign=2022_May_truffle-blog-nft-marketplace_acquisition_content).
 
-Once you're signed in, create a project! Let's call it `nft-marketplace`. Since we're deploying to Optimism, go ahead and add the Optimistic Goerli endpoint. It'll take ask you to sign up for a free trial.
+Once you're signed in, create a project! Let's call it `nft-marketplace`. Since we're deploying to Optimism, go ahead and add the Optimistic Goerli endpoint. It'll ask you to sign up for a free trial.
 
 ![GIF of Adding Optimistic Goerli](./img/choose_optimistic_goerli.gif)
 
