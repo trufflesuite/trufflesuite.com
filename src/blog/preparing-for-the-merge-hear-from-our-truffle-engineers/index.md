@@ -1,5 +1,5 @@
 ---
-title: Preparing for the Merge. Hear from our Truffle engineers 
+title: Preparing for the Merge, hear from our Truffle engineers 
 hide:
   - navigation
 ---
@@ -12,7 +12,7 @@ In a previous [blog post](https://trufflesuite.com/blog/the-merge-and-what-it-me
 
 Here, we expand on what the Merge means for us at Truffle and what we're doing to prepare for it. We spoke with our resident L2 experts, [Kevin Weaver](https://twitter.com/kevin_weaver), Senior Blockchain Engineer, and [Faina Shalts](https://twitter.com/bitsplaining), Lead Blockchain Engineer, and our Lead Blockchain Engineer [David Murdoch](https://twitter.com/atdavidmurdoch), who leads the Ganache team at Truffle.
 
-### ​​What is the Merge and how does it change Ethereum?
+## ​​What is the Merge and how does it change Ethereum?
 
 **Kevin Weaver, Senior Blockchain Engineer, Truffle:**
 
@@ -20,13 +20,13 @@ Here, we expand on what the Merge means for us at Truffle and what we're doing t
 
 *Given the majority of new ETH issued by the network goes toward paying miners’ electrical bills, this drop in consumption allows for a similarly massive drop in the new issuance of ETH. The combination of this reduction and the fee burning mechanism introduced by [EIP 1559](https://consensys.net/blog/quorum/what-is-eip-1559-how-will-it-change-ethereum), the result will push ETH into becoming a deflationary asset. Importantly, this change is not being made for reasons of political or monetary idealism, but because the network simply no longer requires subsidizing its security with excessive monetary issuance.”*
 
-### Is there a set date for the Merge to happen?
+## Is there a set date for the Merge to happen?
 
 **Kevin:**
 
 *“The tentative date for the Merge is sometime during the week of Sept. 19, 2022. However, this date is subject to change based on the outcome of the Goerli testnet merge.”*
 
-### What do Truffle users need to know/do ahead of the Merge?
+## What do Truffle users need to know/do ahead of the Merge?
 
 **David Murdoch, Lead Blockchain Engineer, Truffle:**
 
@@ -36,13 +36,13 @@ Here, we expand on what the Merge means for us at Truffle and what we're doing t
 
 *“Trufflers do not need to take any actions to prepare for the Merge. The switch to PoS will involve changes at the level of the consensus mechanism, which underpins the application layer, but not on the application layer itself.”*
 
-### What changes should users expect from Ganache?
+## What changes should users expect from Ganache?
 
 David on possible upgrades to the Ganache local Ethereum simulator:
 
 *“We will need to add a few new block tags. We currently use `"latest"`, `"earliest"`, and `"pending"`. We may add `"safe"`, `"finalized"`, and probably `"unsafe"` to this list, though we aren't yet sure of the significance these will have outside of forking. The `difficulty` field and OPCODE will change, as well as a few other small changes to block headers. Almost everything else will be internal changes, most of which will be in the EVM layer. Some advanced users may care about changes to some OPCODEs, but those users will be few and far between.”*
 
-### How does the Merge affect Layer 2s? 
+## How does the Merge affect Layer 2s? 
 
 **Faina Shalts, Lead Blockchain Engineer, Truffle:**
 
