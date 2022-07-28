@@ -24,7 +24,7 @@ Here, we expand on what the Merge means for us at Truffle and what we're doing t
 
 *“The tentative date for the Merge is sometime during the week of Sept. 19, 2022. However, this date is subject to change based on the outcome of the Goerli testnet merge.”*
 
-### What do Truffle users need to know ahead of the Merge?
+### What do Truffle users need to know/do ahead of the Merge?
 
 **David Murdoch, Lead Blockchain Engineer, Truffle:**
 
@@ -38,7 +38,7 @@ Here, we expand on what the Merge means for us at Truffle and what we're doing t
 
 David on possible upgrades to the Ganache local Ethereum simulator:
 
-*“We' will need to add a few new block tags. We currently use ‘latest’, ‘earliest’ and ‘pending.’, Soon, we may add ‘safe’ ‘finalized’, and maybe ‘unsafe.’ What those mean exactly is TBD).aybe a new block header field and the difficulty field's behavior will change. Almost everything else will be internal changes mostly in the EVM layer. Some advanced users may care about some subtle changes to OPCODE behavior, but those users will be fewand far between.”*
+*“We will need to add a few new block tags. We currently use ‘latest’, ‘earliest’ and ‘pending.’, Soon, we may add ‘safe’ ‘finalized’, and maybe ‘unsafe.’ What those mean exactly is TBD). Maybe a new block header field and the difficulty field's behavior will change. Almost everything else will be internal changes mostly in the EVM layer. Some advanced users may care about some subtle changes to OPCODE behavior, but those users will be few and far between.”*
 
 ### How does the Merge affect Layer 2s? 
 
