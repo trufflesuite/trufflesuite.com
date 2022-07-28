@@ -74,5 +74,5 @@ Visit the [Truffle website](https://trufflesuite.com) today to learn more about 
 
 [Infura weekly workshops](https://blog.infura.io/post/how-to-stay-informed-about-the-merge-with-infura)  
 [The Merge and what it means for Truffle](https://trufflesuite.com/blog/the-merge-and-what-it-means-for-truffle)  
-[The Latest Release of Hyperledger Besu Helps Test The Merge On Any Platform](https://consensys.net/blog/news/the-latest-release-of-besu-helps-test-the-merge-on-any-platfor)  
+[The Latest Release of Hyperledger Besu Helps Test The Merge On Any Platform](https://consensys.net/blog/news/the-latest-release-of-besu-helps-test-the-merge-on-any-platform)  
 [The Ethereum Community Needs You To Test The Merge](https://consensys.net/blog/news/the-ethereum-community-needs-you-to-test-the-merge)  
