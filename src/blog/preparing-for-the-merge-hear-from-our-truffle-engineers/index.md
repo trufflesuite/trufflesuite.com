@@ -38,7 +38,7 @@ Here, we expand on what the Merge means for us at Truffle and what we're doing t
 
 David on possible upgrades to the Ganache local Ethereum simulator:
 
-*“We will need to add a few new block tags. We currently use `"latest"`, `"earliest"`, and `"pending"`. We may add `"safe"`, `"finalized"`, and probably `"unsafe"` to this list, though we aren't yet sure the what significance it will have outside of forking. The "difficulty" field and OPCODE will change, as well as a few other small field changes to block headers. Almost everything else will be internal changes, most of which will be in the EVM layer. Some advanced users may care about changes to some OPCODEs, but those users will be few and far between.”*
+*“We will need to add a few new block tags. We currently use `"latest"`, `"earliest"`, and `"pending"`. We may add `"safe"`, `"finalized"`, and probably `"unsafe"` to this list, though we aren't yet sure of the significance these will have outside of forking. The `difficulty` field and OPCODE will change, as well as a few other small changes to block headers. Almost everything else will be internal changes, most of which will be in the EVM layer. Some advanced users may care about changes to some OPCODEs, but those users will be few and far between.”*
 
 ### How does the Merge affect Layer 2s? 
 
