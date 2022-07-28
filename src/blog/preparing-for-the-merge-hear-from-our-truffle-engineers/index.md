@@ -4,11 +4,13 @@ hide:
   - navigation
 ---
 
+![preparing for the merge - banner](./the-merge-update.png)
+
 **By [Kingsley Arinze](https://twitter.com/heydamali)**
 
 In a previous [blog post](https://trufflesuite.com/blog/the-merge-and-what-it-means-for-truffle), we discussed the Merge in detail, including how it upgrades Ethereum as we know it today. Check out the post to better understand and prepare for the Merge.
 
-Here, we expand on what the Merge means for us at Truffle and what we're doing to prepare for it. We spoke with our resident L2 experts, [Kevin Weaver](https://twitter.com/kevin_weaver), Senior Blockchain Engineer, and [Faina Shalts](https://twitter.com/bitsplaining), Lead Blockchain Engineer, and Lead Blockchain Engineer [David Murdoch](https://twitter.com/atdavidmurdoch), who leads the Ganache team at Truffle.
+Here, we expand on what the Merge means for us at Truffle and what we're doing to prepare for it. We spoke with our resident L2 experts, [Kevin Weaver](https://twitter.com/kevin_weaver), Senior Blockchain Engineer, and [Faina Shalts](https://twitter.com/bitsplaining), Lead Blockchain Engineer, and our Lead Blockchain Engineer [David Murdoch](https://twitter.com/atdavidmurdoch), who leads the Ganache team at Truffle.
 
 ### ​​What is the Merge and how does it change Ethereum?
 
