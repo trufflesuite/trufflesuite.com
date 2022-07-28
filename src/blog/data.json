@@ -1,4 +1,12 @@
 {
+  "preparing-for-the-merge-hear-from-our-truffle-engineers": {
+    "title": "Preparing for the Merge: Hear from our Truffle engineers",
+    "date": "2022-07-28",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "In a previous blog post, we discussed the Merge in detail, including how it upgrades Ethereum as we know it today...",
+    "image": "/img/blog/thumbnails/the-merge.png"
+  },
   "whats-new-on-the-truffle-for-vs-code-extension-version-2.3": {
     "title": "What’s new on the Truffle for VS Code extension version 2.3",
     "date": "2022-07-15",
