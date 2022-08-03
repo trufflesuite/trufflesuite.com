@@ -22,7 +22,7 @@ Here, we expand on what the Merge means for us at Truffle and what we're doing t
 
 ## Is there a set date for the Merge to happen?
 
-**Kevin:**
+**Kevin Weaver, Senior Blockchain Engineer, Truffle:**
 
 *“The tentative date for the Merge is sometime during the week of Sept. 19, 2022. However, this date is subject to change based on the outcome of the Goerli testnet merge.”*
 
@@ -32,7 +32,7 @@ Here, we expand on what the Merge means for us at Truffle and what we're doing t
 
 *“They probably don't need to do anything unless they run a node and/or validator. Everything will continue to work at the dApp layer as it does now. There are some changes, but 99.99% of use cases won't care or notice.”* 
 
-**Kevin:**
+**Kevin Weaver, Senior Blockchain Engineer, Truffle:**
 
 *“Trufflers do not need to take any actions to prepare for the Merge. The switch to PoS will involve changes at the level of the consensus mechanism, which underpins the application layer, but not on the application layer itself.”*
 
@@ -48,7 +48,7 @@ David on possible upgrades to the Ganache local Ethereum simulator:
 
 *“Layer 2 protocols should work pretty seamlessly after the Merge. We are keeping an eye on developments in this area and are ready to make any necessary changes to Truffle as things progress.”*
 
-**Kevin:**
+**Kevin Weaver, Senior Blockchain Engineer, Truffle:**
 
 *“Similarly, since Layer 2 networks interface with Ethereum at the application layer, the Merge will not result in changes for Truffle engineers building on L2s.”*
 
@@ -56,15 +56,15 @@ David on possible upgrades to the Ganache local Ethereum simulator:
 
 We are excited for the Merge and  wanted to hear why our engineers are, too. Here’s what they had to say:
 
-**Kevin:**
+**Kevin Weaver, Senior Blockchain Engineer, Truffle:**
 
 *“The complexity of the upgrade combined with the distributed nature of the core developer teams and a huge efficiency improvement will make the Merge an achievement of engineering different from anything before it. If Ethereum is truly a tool for building human coordination tools, then its first objective should be to do no harm to our habitat. By switching to a cleaner, greener consensus mechanism, Ethereum will become 99.95% more efficient in this mission. I believe the Merge will therefore result in a phase shift toward more positive narratives of NFTs, DeFi, DAOs, web3 and crypto at large”*
 
-**Faina:**
+**Faina Shalts, Lead Blockchain Engineer, Truffle:**
 
 *“The Merge is a really exciting step toward the sustainability and scalability of the Ethereum ecosystem. I love that we work in an industry that values these goals! I can't wait to see the post-Merge world and see the innovative protocols that it leads to.”* 
 
-**David:**
+**David Murdoch, Lead Blockchain Engineer, Truffle:**
 
 *“Getting the whole ecosystem to focus on anything else* 🙂” 
 
@@ -72,9 +72,10 @@ As the Merge draws closer and closer, we plan to keep our users updated with the
 
 Visit the [Truffle website](https://trufflesuite.com) today to learn more about our suite of developer tools. If you have questions that you would like our team members to answer concerning the merge and how it impacts our products, feel free to start a discussion on our [Github Discussions channel](https://github.com/orgs/trufflesuite/discussions). Don't forget to follow us on [Twitter](https://twitter.com/trufflesuite) for live announcements and updates.
 
-### Here are a few more resources on the Merge:
+## Here are a few more resources on the Merge:
 
 [Infura weekly workshops](https://blog.infura.io/post/how-to-stay-informed-about-the-merge-with-infura)  
 [The Merge and what it means for Truffle](https://trufflesuite.com/blog/the-merge-and-what-it-means-for-truffle)  
+[The Merge knowledge base](https://consensys.net/knowledge-base/the-merge)  
 [The Latest Release of Hyperledger Besu Helps Test The Merge On Any Platform](https://consensys.net/blog/news/the-latest-release-of-besu-helps-test-the-merge-on-any-platform)  
 [The Ethereum Community Needs You To Test The Merge](https://consensys.net/blog/news/the-ethereum-community-needs-you-to-test-the-merge)  
