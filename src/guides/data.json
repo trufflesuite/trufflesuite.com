@@ -1,4 +1,11 @@
 {
+  "rentable-nft": {
+    "title": "Web3 Unleashed: Write a Rentable NFT",
+    "date": "2022-08-12",
+    "author": "Emily Lin",
+    "published": true,
+    "products": ["truffle", "ganache"]
+  },
   "nft-royalty": {
     "title": "Web3 Unleashed: Write an NFT Smart Contract with Royalties",
     "date": "2022-08-05",
