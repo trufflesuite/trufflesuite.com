@@ -70,7 +70,7 @@ Options:
 Run a console with contract abstractions and commands available.
 
 ```shell
-truffle console [--network <name>] [--verbose-rpc]
+truffle console [--network <name> | --url <url endpoint>] [--verbose-rpc]
 ```
 
 Spawns an interface to interact with contracts via the command line. Additionally, many Truffle commands are available within the console (without the `truffle` prefix).
@@ -82,6 +82,7 @@ See the [Using Truffle Develop and the Console](/docs/truffle/getting-started/us
 Options:
 
 - `--network <name>`: Specify the network to use. Network name must exist in the configuration.
+- `--url <url endpoint>`: Specify the Ethereum client endpoint to connect to.
 - `--verbose-rpc`: Log communication between Truffle and the Ethereum client.
 
 ### create
