@@ -14,6 +14,15 @@
 			"community"
 		]
 	},
+	"BSC-Truffle-Starter-Box": {
+		"description": "This Truffle BNB Smart Chain box provides you with the boilerplate structure necessary to start coding on the BNB Smart Chain.",
+		"stars": 0,
+		"tags": [
+			"community",
+			"binance",
+			"bsc"
+		]
+	},
 	"angular-truffle-box": {
 		"description": "Truffle Box for Angular is a quick-and-easy way to get your Dapp on the road with Truffle and Angular",
 		"stars": 49,
