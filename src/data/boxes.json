@@ -30,6 +30,15 @@
 			"community"
 		]
 	},
+	"truffle-react-material": {
+		"description": "This box contains everything you need to get started using smart contracts from a Rect app with the Material-ui library.",
+		"stars": 49,
+		"tags": [
+			"community",
+			"react",
+			"material-ui"
+		]
+	},
 	"angulartruffledapp": {
 		"description": "This Trufflebox provides a base for Truffle Suite and Angular ÐAPP. and you can make transactions between accounts",
 		"stars": 0,
