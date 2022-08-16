@@ -52,10 +52,12 @@
       <div class="col-xs-12 col-md-6 col-lg-4">
           <a href="{{ box.displayName }}/">
             <div class="card">
-                <img alt="{{ box.displayName }}" src={{ "https://raw.githubusercontent.com/" + box.userOrg + "/" + box.repoName + "/master/box-img-sm.png" }} class="card-img-top" />
+                <div 
+                  class="card-img-top" 
+                  style="background: url('https://raw.githubusercontent.com/{{ box.userOrg }}/{{ box.repoName }}/master/box-img-sm.png'), url('/img/boxes/loading-banner.png'); background-size: cover; background-repeat: no-repeat; height: 3.2rem;">
+                </div>
                 <div class="card-body">
                     <h5 class="card-title">{{ box.displayName }}</h5>
-                    <p class="card-text">{{ box.deets.stars }}</p>
                     <p class="card-text">{{ box.deets.description }}</p>
                     <p class="card-text">
                       {% for tag in box.deets.tags %}
