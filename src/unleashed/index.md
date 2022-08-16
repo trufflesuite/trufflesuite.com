@@ -25,5 +25,16 @@ hide:
                     <a href="/guides/nft-royalty/" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
                 </div>
             </div>
+            <div class="row mt-5">
+                <div class="col-md-3">
+                    <img src="/img/blog/thumbnails/truffle.png" alt="Web3 Unleashed Session #1" class="rounded-circle img-fluid green" />
+                </div>
+                <div class="col-md-9">
+                    <h2 class="mt-0 font-weight-bold">Episode #2 - Write a Rentable NFT Smart Contract</h2>
+                    <p>8/12/2022&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> Emily Lin</p>
+                        <p>In this guide, we'll be covering what the ERC-4907 rentable NFT standard is and how we can implement one using Truffle!</p>
+                    <a href="/guides/rentable-nft/" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
+                </div>
+            </div>
     </section>
 </div>
