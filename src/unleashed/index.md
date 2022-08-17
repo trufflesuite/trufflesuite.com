@@ -16,7 +16,7 @@ hide:
         <h1>Web3 Unleashed</h1>
             <div class="row">
                 <div class="col-md-3">
-                    <img src="/img/blog/thumbnails/truffle.png" alt="Web3 Unleashed Session #1" class="rounded-circle img-fluid green" />
+                    <img src="/img/unleashed/w3u-ep-1.png" alt="Web3 Unleashed Episode #1" class="rounded-circle img-fluid green" />
                 </div>
                 <div class="col-md-9 font-weight-bold">
                     <h2 class="mt-0">Episode #1 - Write an NFT Smart Contract with Royalties</h2>
@@ -27,13 +27,24 @@ hide:
             </div>
             <div class="row mt-5">
                 <div class="col-md-3">
-                    <img src="/img/blog/thumbnails/truffle.png" alt="Web3 Unleashed Session #1" class="rounded-circle img-fluid green" />
+                    <img src="/img/unleashed/w3u-ep-2.png" alt="Web3 Unleashed Session #2" class="rounded-circle img-fluid green" />
                 </div>
                 <div class="col-md-9">
                     <h2 class="mt-0 font-weight-bold">Episode #2 - Write a Rentable NFT Smart Contract</h2>
                     <p>8/12/2022&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> Emily Lin</p>
                         <p>In this guide, we'll be covering what the ERC-4907 rentable NFT standard is and how we can implement one using Truffle!</p>
                     <a href="/guides/rentable-nft/" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-3">
+                    <img src="/img/unleashed/w3u-ep-3.png" alt="Web3 Unleashed Session #3" class="rounded-circle img-fluid green" />
+                </div>
+                <div class="col-md-9">
+                    <h2 class="mt-0 font-weight-bold">Episode #3 - Should you upgrade your smart contract (featuring OpenZeppelin)</h2>
+                    <p>08/19/2022 9:00AM PDT&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> Emily Lin</p>
+                        <p>In this episode of Web3 Unleashed, we'll be chatting with OpenZeppelin about security tradeoffs when uploading smart contracts</p>
+                    <a href="https://www.youtube.com/watch?v=NEMfVOgGl44" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
                 </div>
             </div>
     </section>
