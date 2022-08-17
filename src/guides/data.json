@@ -80,7 +80,7 @@
     "title": "Ethereum Pet Shop -- Your First Dapp",
     "date": "2017-07-20",
     "author": "Josh Quintal",
-    "published": false,
+    "published": true,
     "products": ["truffle", "ganache"]
   },
   "building-dapps-for-quorum-private-enterprise-blockchains": {
