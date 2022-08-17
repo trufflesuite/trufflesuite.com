@@ -68,3 +68,7 @@ plugins:
       css_files:
           - assets/stylesheets/dashboard.css
           - assets/stylesheets/extra.css
+  - redirects:
+      redirect_maps:
+        'tutorial/index.md': 'guides/pet-shop/index.md'
+        'tutorial/pet-shop/index.md': 'guides/pet-shop/index.md'          
