@@ -72,3 +72,5 @@ plugins:
       redirect_maps:
         'tutorial/index.md': 'guides/pet-shop/index.md'
         'tutorial/pet-shop/index.md': 'guides/pet-shop/index.md'          
+        'tutorials/index.md': 'guides/pet-shop/index.md'
+        'tutorials/pet-shop/index.md': 'guides/pet-shop/index.md'          
