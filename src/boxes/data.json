@@ -1,8 +1,14 @@
 [
   {
     "userOrg": "truffle-box",
-    "displayName": "drizzle",
-    "repoName": "drizzle-box",
+    "displayName": "react",
+    "repoName": "react-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "optimism bridge",
+    "repoName": "optimism-bridge-box",
     "official": true
   },
   {
@@ -19,6 +25,12 @@
   },
   {
     "userOrg": "truffle-box",
+    "displayName": "music album",
+    "repoName": "infura-nft-sdk-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
     "displayName": "drizzle-react-native",
     "repoName": "drizzle-react-native-box",
     "official": true
@@ -31,12 +43,6 @@
   },
   {
     "userOrg": "truffle-box",
-    "displayName": "react",
-    "repoName": "react-box",
-    "official": true
-  },
-  {
-    "userOrg": "truffle-box",
     "displayName": "pet-shop",
     "repoName": "pet-shop-box",
     "official": true
@@ -45,6 +51,12 @@
     "userOrg": "truffle-box",
     "displayName": "tutorialtoken",
     "repoName": "tutorialtoken-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "drizzle",
+    "repoName": "drizzle-box",
     "official": true
   },
   {

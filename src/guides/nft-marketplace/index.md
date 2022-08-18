@@ -80,7 +80,6 @@ To get started, we'll start off by unboxing Truffle's Optimism box. You can do t
 ```shell
 truffle unbox optimism nft-marketplace
 cd nft-marketplace
-npm install
 ```
 ### Create your client folders
 
