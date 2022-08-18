@@ -18,7 +18,7 @@ The OpenZepplin smart contracts library includes secure implementations of stand
 
 To use OpenZeppelin contract into your project follow these steps
 
-1. Follow the setup instructions here: [install OpenZeppelin](https://https://docs.openzeppelin.com/contracts/4.x/#install)
+1. Follow the setup instructions here: [install OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/#install)
 2. Or on your command line in the root of the project run:
 
    ```shell
