@@ -41,10 +41,10 @@ hide:
                     <img src="/img/unleashed/w3u-ep-3.png" alt="Web3 Unleashed Session #3" class="rounded-circle img-fluid green" />
                 </div>
                 <div class="col-md-9">
-                    <h2 class="mt-0 font-weight-bold">Episode #3 - Should you upgrade your smart contract (featuring OpenZeppelin)</h2>
+                    <h2 class="mt-0 font-weight-bold">Episode #3 - Should you upgrade your smart contract and how (ft. OpenZeppelin)</h2>
                     <p>08/19/2022 9:00AM PDT&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> Emily Lin</p>
                         <p>In this episode of Web3 Unleashed, we'll be chatting with OpenZeppelin about security tradeoffs when uploading smart contracts</p>
-                    <a href="https://www.youtube.com/watch?v=NEMfVOgGl44" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
+                    <a href="/guides/upgrading-security" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
                 </div>
             </div>
     </section>
