@@ -4,29 +4,44 @@ layout: docs.hbs
 ---
 # Installation
 
+## Requirements
+
+* [NodeJS v12, or later](#install-nodejs)
+* Windows, Linux, or macOS
+
+## Install NodeJS
+
+### Linux and macOS
+
+NPM recommends [installing Node.js with a version manager (NVM)](https://npm.github.io/installation-setup-docs/installing/using-a-node-version-manager.html)
+to avoid permission errors when installing globally.
+
+**Important**: Truffle requires `node-gyp` for compiling native addon modules for Node.js.  Node-gyp in
+turn has [dependencies](https://github.com/nodejs/node-gyp) which may be missing, causing the Truffle install to fail.
+Truffle recommends installing the following to avoid getting dependency errors:
+
+* macOS only: `xcode-select --install`
+* Linux (Ubuntu) only: `sudo apt install make g++`
+
+### Windows
+
+Truffle recommends using the installer available from the [nodejs site](https://nodejs.org/en/download/).
+
+Ensure you select **Automatically install the necessary tools...** during the install to install the
+required Visual Studio build tools, Python, and Chocolately package manager.
+
+![Architecture](/img/docs/truffle/installation/windows-nodejs.png)
+
+## Install Truffle
+
+In a terminal, use NPM to install Truffle:
+
 ```bash
 npm install -g truffle
 ```
 
-## Requirements
+## Ethereum client
 
-* NodeJS v12 or later
-* Windows, Linux or macOS
-
-### NodeJS
-There are many options for installing nodejs.
-
-For Windows it is recommended to use the installer available from the [nodejs site](https://nodejs.org/en/download/).  Make sure to check "Automatically install the necessary tools" during the install.
-
-For macOS and Linux it is recommended that you use a node version manager as this will ensure there are no permission problems installing packages globally.  See [using a node version manager](https://npm.github.io/installation-setup-docs/installing/using-a-node-version-manager.html).
-
-### Node-gyp
-Truffle depends on node-gyp which is for compiling native addon modules for Node.js.  Node-gyp in turn has [dependencies](https://github.com/nodejs/node-gyp) which may be missing causing the truffle install to fail.  For Windows make sure to check "Automatically install the necessary tools" during the install.  For macOS you will need the command line tools: "xcode-select --install".
-
-### Ethereum client
-
-Truffle also requires that you have a running Ethereum client which supports the standard JSON RPC API (which is nearly all of them). There are many to choose from, and some better than others for development. We'll discuss them in detail in the [Choosing an Ethereum client](/docs/truffle/reference/choosing-an-ethereum-client) section.
-
-## Recommendations for Windows
-
-If you're running Truffle on Windows, you may encounter some naming conflicts that could prevent Truffle from executing properly. Please see [the section on resolving naming conflicts](/docs/truffle/reference/configuration#resolving-naming-conflicts-on-windows) for solutions.
+Truffle requires a running Ethereum client which supports the standard JSON-RPC API.
+There are many to choose from, and some better than others for development. Refer to the
+[Choosing an Ethereum client](../reference/choosing-an-ethereum-client.md) section for more information.
