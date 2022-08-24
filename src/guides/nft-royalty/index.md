@@ -13,7 +13,7 @@ Last updated 8/5/2022
 
 In this chapter of Web3 Unleashed, we're going to briefly go over what an Ethereum Improvement Proposal (EIP) and an Ethereum Request for Comment (ERC) is, how they are used, and implement the ERC-2981, NFT royalty standard, as an example.
 
-Catch our livestream [here](https://www.youtube.com/watch?v=2O6aL6gcaUI&list=PLVGaL7nFtvpBnLGcWnNRQsIAB3Fs-0Exx&index=2)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2O6aL6gcaUI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## What is an EIP?
 
@@ -124,13 +124,13 @@ You'll need to install:
 
 ### Create an Infura account and project
 
-To connect your DApp to Ethereum mainnet and testnets, you'll need an Infura account. Sign up for an account [here](https://infura.io/register).
+To connect your DApp to Ethereum mainnet and testnets, you'll need an Infura account. Sign up for an account [here](https://infura.io/register?utm_source=truffle&utm_medium=webinar&utm_campaign=2022_Aug_unleashed-nft-royalty_tutorial_content).
 
 Once you're signed in, create a project! Let's call it `nft-royalty`, and select Web3 API from the dropdown
 
 ### Register for a MetaMask wallet
 
-To interact with your DApp in the browser, you'll need a MetaMask wallet. Sign up for an account [here](https://metamask.io/download/).
+To interact with your DApp in the browser, you'll need a MetaMask wallet. Sign up for an account [here](https://metamask.io/download/?utm_source=truffle&utm_medium=webinar&utm_campaign=2022_Aug_unleashed-nft-royalty_tutorial_content).
 
 ### Download VS Code
 
@@ -152,20 +152,6 @@ truffle create test TestRoyalties
 ```
 
 Afterwards, your project structure should look something like this:
-
-```shell
-nft-royalty
-├── contracts
-│   ├── Migrations.sol
-│   └── RoyalPets.sol
-├── migrations
-│   └── 1_initial_migration.js
-├── test
-│   └── test_royalties.js
-└── truffle-config.js
-```
-
-`Migrations.sol` is actually an optional component of your Truffle project, so just delete it! And then rename the migration file `1_initial_migration.js` to `1_deploy_contracts.js`. Your project structure should now look this:
 
 ```shell
 nft-royalty

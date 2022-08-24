@@ -479,7 +479,6 @@ Truffle contains a built-in debugger. The command to launch this is `debug <Tran
 
 ### Issue #2: An invalid error check
 
->>>>>>> f596fb87 (Remove merge commit artifacts)
 Smart contracts can use statements like `assert()` to ensure that certain conditions are met. These can conflict with the state of the contract in ways that are irreconcilable.
 
 Here we will introduce such a condition, and then see how the debugger can find it.

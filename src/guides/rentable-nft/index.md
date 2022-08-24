@@ -13,7 +13,9 @@ Last updated 8/12/2022
 
 In this guide, we'll be covering what the ERC-4907 rentable NFT standard is and how we can implement one using Truffle!
 
-Watch our livestream recording with Jesse Luong from [Double Protocol](https://double.one/), the creators of the [ERC-4907](https://eips.ethereum.org/EIPS/eip-4907) standard on [YouTube](https://www.youtube.com/watch?v=aiGVzcX0P6U&list=PLVGaL7nFtvpBnLGcWnNRQsIAB3Fs-0Exx) for a more in-depth explanation and exploration into the standard's impact on GameFi and the metaverse!
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aiGVzcX0P6U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Watch our livestream recording with Jesse Luong from [Double Protocol](https://double.one/), the creators of the [ERC-4907](https://eips.ethereum.org/EIPS/eip-4907) standard on [YouTube](https://www.youtube.com/watch?v=aiGVzcX0P6U) for a more in-depth explanation and exploration into the standard's impact on GameFi and the metaverse!
 
 ## What is the ERC-4907?
 
@@ -75,13 +77,13 @@ You'll need to install:
 
 ### Create an Infura account and project
 
-To connect your DApp to Ethereum mainnet and testnets, you'll need an Infura account. Sign up for an account [here](https://infura.io/register).
+To connect your DApp to Ethereum mainnet and testnets, you'll need an Infura account. Sign up for an account [here](https://infura.io/register?utm_source=truffle&utm_medium=webinar&utm_campaign=2022_Aug_unleashed-rentable-nft_tutorial_content).
 
 Once you're signed in, create a project! Let's call it `rentable-nft`, and select Web3 API from the dropdown
 
 ### Register for a MetaMask wallet
 
-To interact with your DApp in the browser, you'll need a MetaMask wallet. Sign up for an account [here](https://metamask.io/download/).
+To interact with your DApp in the browser, you'll need a MetaMask wallet. Sign up for an account [here](https://metamask.io/download/?utm_source=truffle&utm_medium=webinar&utm_campaign=2022_Aug_unleashed-rentable-nft_tutorial_content).
 
 ### Download VS Code
 
@@ -105,22 +107,6 @@ truffle create test TestRentablePets
 ```
 
 Afterwards, your project structure should look something like this:
-
-```shell
-rentable-nft
-├── contracts
-│   ├── ERC4907.sol
-│   ├── IERC4907.sol
-│   ├── Migrations.sol
-│   └── RentablePets.sol
-├── migrations
-│   └── 1_initial_migration.js
-├── test
-│   └── test_rentable_pets.js
-└── truffle-config.js
-```
-
-`Migrations.sol` is actually an optional component of your Truffle project, so just delete it! And then rename the migration file `1_initial_migration.js` to `1_deploy_contracts.js`. Your project structure should now look this:
 
 ```shell
 rentable-nft

@@ -147,7 +147,7 @@
     "title": "Iterate Faster with Truffle Teams",
     "date": "2021-2-10",
     "author": "Josh Quintal",
-    "published": true,
+    "published": false,
     "excerpt": "Consider the amount of context switching required to develop a dapp: you’re writing Solidity one minute, writing tests another, debugging those results--it’s easy to get lost! I’m happy to inform you Truffle Teams can help reduce context switching and help you or your team iterate faster.",
     "image": "/img/blog/iterate-faster-with-truffle-teams/blog-thumbnail.png"
   },
@@ -163,7 +163,7 @@
     "title": "Debug Quickly and in Context with Truffle Teams New Debugger",
     "date": "2020-11-12",
     "author": "Josh Quintal",
-    "published": true,
+    "published": false,
     "excerpt": "If you’ve used Truffle’s debugger, you know it’s best-in-class. Until now though, it’s been confined to the command line. Today the debugger breaks out of the console to a GUI within Truffle Teams!",
     "image": "/img/blog/debug-quickly-and-in-context-with-truffle-teams-new-debugger/blog-thumbnail.png"
   },
@@ -171,7 +171,7 @@
     "title": "Try New Features First with Truffle Teams Early Access",
     "date": "2020-11-12",
     "author": "Josh Quintal",
-    "published": true,
+    "published": false,
     "excerpt": "Wouldn’t it be nice to take Truffle Teams' new enhancements and features for a test drive? Now you can with early access!",
     "image": "/img/blog/try-new-features-first-with-truffle-teams-early-access/blog-thumbnail.png"
   },
@@ -179,7 +179,7 @@
     "title": "You Decide: Pipeline or Table View in Truffle Teams' Refreshed Deployments Manager",
     "date": "2020-10-8",
     "author": "Josh Quintal",
-    "published": true,
+    "published": false,
     "excerpt": "Truffle Teams new deployments manager now has a table view, deployment cost, and console output.",
     "image": "/img/blog/you-decide-pipeline-or-table-view-in-truffle-teams-deployments-manager/blog-thumbnail.png"
   },
@@ -219,7 +219,7 @@
     "title": "Simulate Live Networks with Forked Sandboxes",
     "date": "2020-6-5",
     "author": "Josh Quintal",
-    "published": true,
+    "published": false,
     "excerpt": "Sandboxes are the easiest way to share a Ganache instance across an entire team. Our newest sandbox feature unlocks the power to run a simulated Mainnet (and other live networks).",
     "image": "/img/blog/sandbox-forking-with-truffle-teams/sandbox-forking-thumb.png"
   },
@@ -235,7 +235,7 @@
     "title": "Bring Your Own CI (BYOCI) with Truffle Teams",
     "date": "2020-4-30",
     "author": "Josh Quintal",
-    "published": true,
+    "published": false,
     "excerpt": "If you remember, back in December we released a beta Corda-flavored Ganache as part of our initial support for the Corda platform. Today, we are excited to share Phase 2 of Corda-flavored Ganache, v2.4.0 with you!",
     "image": "/img/blog/thumbnails/byoci.png"
   },
@@ -259,7 +259,7 @@
     "title": "Truffle Teams Gets a New Look!",
     "date": "2020-03-04",
     "author": "Mike Seese",
-    "published": true,
+    "published": false,
     "excerpt": "The Theobromine design efforts Josh presented at TruffleCon are coming alive in the latest release of Truffle Teams! The application now has a lighter, cleaner feal. We also changed the navigation a little to make your experience smoother.",
     "image": "/img/blog/thumbnails/truffle-teams-gets-a-new-look.png"
   },
@@ -275,7 +275,7 @@
     "title": "Take Control of Your Deployments with Truffle Teams",
     "date": "2019-12-18",
     "author": "Mike Seese",
-    "published": true,
+    "published": false,
     "excerpt": "Truffle Teams now gives you a dead-simple deployment experience. You push a couple of buttons, send transactions with MetaMask, and badabing, your contracts are on a public Ethereum network.",
     "image": "/img/blog/thumbnails/truffle-teams-deployments.png"
   },
@@ -290,7 +290,7 @@
     "title": "Truffle Teams Now Supports Private Repositories",
     "date": "2019-10-16",
     "author": "Josh Quintal and Mike Seese",
-    "published": true,
+    "published": false,
     "excerpt": "We're excited to announce that you can now integrate private repositories with Truffle Teams! This will eventually be a premium feature, but we're releasing it for free while the product is still in beta.",
     "image": "/img/blog/thumbnails/truffle-teams-private.png"
   },
