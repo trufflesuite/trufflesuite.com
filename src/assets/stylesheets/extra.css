@@ -122,7 +122,8 @@ a.link-card, nav a, .footer-naviation a {
   color: var(--cream);
 }
 .md-social{
-  text-align: right;
+  text-align: left;
+  margin-left: 1.25em;
 }
 
 a:hover {
