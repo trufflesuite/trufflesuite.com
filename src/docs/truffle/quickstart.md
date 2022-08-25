@@ -11,17 +11,8 @@ This page will take you through the basics of creating a Truffle project and dep
 
 ## Installing Truffle
 
-Before you can use Truffle, you will have to install it using npm. Open a terminal and use the following to install it globally.
-
-  ```shell
-  npm install -g truffle
-  ```
-
-  <p class="alert alert-info">
-  <i class="far fa-info-circle"></i> <strong>Note</strong>:  We recommend that you use npm with a node version manager like nvm, and this is actually what npm itself recommends. See <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">this article</a> from npm on installing npm with a
-  node version manager.
-  We also recommend against using <code>sudo</code> while installing Truffle as many users report permissions errors after doing so.
-  </p>
+Before you can use Truffle, install it using the `npm` command. Refer to the [Installations instructions](getting-started/installation.md)
+to install Truffle.
 
 
 ## Creating a project
