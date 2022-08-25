@@ -521,15 +521,15 @@ footer .hs-form ul.hs-error-msgs {
 .hs-form-inline .hs-form .hs-form-field {
   display: inline-block;
 }
-.hs-form-inline .hs-form .hs-email {
-  margin-right: 0.5rem;
-}
 .hs-form-inline .hs-form .hs-fieldtype-booleancheckbox {
   display: block;
 }
 .hs-form-inline .hs-form .inputs-list {
   list-style-type: none;
   padding-left: 0;
+}
+.hs-form-booleancheckbox-display {
+  font-size: 0.64rem;
 }
 @media screen and (max-width: 767.98px) {
   .hs-form-inline .hs-form .hs-form-field {
