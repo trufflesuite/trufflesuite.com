@@ -73,6 +73,11 @@ required Visual Studio build tools, Python, and Chocolately package manager.
 
 ## Install Truffle
 
+
+<p class="alert alert-warning">
+<i class="far fa-exclamation-triangle"></i> <strong>Warning</strong>: Avoid using the <code>sudo</code> command when installing Truffle, this can cause permission errors.
+</p>
+
 In a terminal, use NPM to install Truffle:
 
 ```bash
