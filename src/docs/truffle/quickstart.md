@@ -11,7 +11,7 @@ This page will take you through the basics of creating a Truffle project and dep
 
 ## Installing Truffle
 
-Before you can use Truffle, install it using the `npm` command. Refer to the [Installations instructions](getting-started/installation.md)
+Before you can use Truffle, install it using the `npm` command. Refer to the [installation instructions](getting-started/installation.md)
 to install Truffle.
 
 

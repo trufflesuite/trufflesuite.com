@@ -38,9 +38,8 @@ to avoid permission errors when installing globally.
     ```
  
 
-1. Truffle requires `node-gyp` for compiling native addon modules for Node.js.  Node-gyp in
-    turn has [dependencies](https://github.com/nodejs/node-gyp) which may be missing, causing the Truffle install to fail.
-    Truffle recommends installing the following to avoid getting dependency errors:
+1. Truffle requires `node-gyp` for compiling native add-on modules for Node.js. 
+    Truffle recommends installing the following `node-gyp` [dependencies](https://github.com/nodejs/node-gyp) to avoid errors when installing Truffle:
 
     === "macOS"
 
@@ -54,7 +53,7 @@ to avoid permission errors when installing globally.
         sudo apt install make g++
         ```
 
-1. Use `nvm` to install a compatible version of NodeJS. For example, to install NodeJS v15, run:
+1. Use `nvm` to install a compatible version of Node.js. For example, to install Node.js v15, run:
 
     ```bash
     nvm install 15
@@ -64,7 +63,7 @@ to avoid permission errors when installing globally.
 
 ### Windows
 
-Truffle recommends using the installer available from the [nodejs site](https://nodejs.org/en/download/).
+Truffle recommends using the installer available from the [Node.js site](https://nodejs.org/en/download/).
 
 Ensure you select **Automatically install the necessary tools...** during the install to install the
 required Visual Studio build tools, Python, and Chocolately package manager.
@@ -84,7 +83,7 @@ In a terminal, use NPM to install Truffle:
 npm install -g truffle
 ```
 
-You may receive a list of warnings during installation. To confirm that truffle was installed correctly,
+You may receive a list of warnings during installation. To confirm that Truffle was installed correctly,
 run:
 
 ```bash
