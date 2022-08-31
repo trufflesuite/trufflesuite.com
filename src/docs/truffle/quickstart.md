@@ -90,7 +90,7 @@ If you're running into any issues, try out our [Truffle debugger](https://truffl
 
 ## Compiling
 
-If you want to only coompile, you can simply run `truffle compile`.
+If you want to only compile, you can simply run `truffle compile`.
 
 You will see the following output:
 
