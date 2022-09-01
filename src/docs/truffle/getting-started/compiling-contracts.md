@@ -19,7 +19,7 @@ truffle compile
 Upon first run, all contracts will be compiled. Upon subsequent runs, Truffle will compile only the contracts that have been changed since the last compile. If you'd like to override this behavior, run the above command with the `--all` option.
 
 ## Build artifacts
-Artifacts of your compilation will be placed in the `build/contracts/` directory, relative to your project root. (This directory will be created if it does not exist.) The name of the generated artifact `.json` files do **not reflect** the name of the **source file** but of the **name of the contract definition**. This means that changing the contract name string in the `artifacts.require` method to match that of the source file may lead to a `Error: Could not find artifacts for {yourContract} from any sources` if the contained smart contract definition is named differently.
+Artifacts of your compilation will be placed in the `build/contracts/` directory, relative to your project root. (This directory will be created if it does not exist.) The name of the generated artifact `.json` files do **not reflect** the name of the **source file** but the **name of the contract definition**. This means that changing the contract name string in the `artifacts.require` method to match that of the source file may lead to a `Error: Could not find artifacts for {yourContract} from any sources` if the contained smart contract definition is named differently.
 
 These artifacts are integral to the inner workings of Truffle, and they play an important part in the successful deployment of your application. **You should not edit these files** as they'll be overwritten by contract compilation and deployment.
 
