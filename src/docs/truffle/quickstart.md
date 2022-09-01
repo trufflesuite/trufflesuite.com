@@ -90,7 +90,7 @@ If you're running into any issues, try out our [Truffle debugger](https://truffl
 
 ## Compiling
 
-If you want to only coompile, you can simply run `truffle compile`.
+If you want to only compile, you can simply run `truffle compile`.
 
 You will see the following output:
 
@@ -248,7 +248,7 @@ You can create this blockchain and interact with it using [Truffle Develop](/doc
 
 ## Migrating with Truffle Console
 
-While Truffle Develop is an all-in-one personal blockchain and console, it spins up a very basic instance of ganache. You can also use [a desktop application](/ganache), to launch your personal blockchain, which is a easier to understand tool for those new to Ethereum and the blockchain, as it displays much more information up-front. Alternatively, if you want to customize your ganache instance using all the options available to you through the [`ganache` CLI](https://github.com/trufflesuite/ganache#readme)
+While Truffle Develop is an all-in-one personal blockchain and console, it spins up a very basic instance of ganache. You can also use [a desktop application](/ganache), to launch your personal blockchain, which is an easier to understand tool for those new to Ethereum and the blockchain, as it displays much more information up-front. Alternatively, if you want to customize your ganache instance using all the options available to you through the [`ganache` CLI](https://github.com/trufflesuite/ganache#readme)
 
 The only extra step, aside from running Ganache, is that it requires editing the Truffle configuration file to point to the Ganache instance.
 
