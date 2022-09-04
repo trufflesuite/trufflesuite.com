@@ -70,3 +70,10 @@ plugins:
       css_files:
           - assets/stylesheets/dashboard.css
           - assets/stylesheets/extra.css
+  - redirects:
+      redirect_maps:
+        'tutorial/index.md': 'guides/pet-shop/index.md'
+        'tutorial/pet-shop/index.md': 'guides/pet-shop/index.md'          
+        'tutorials/index.md': 'guides/pet-shop/index.md'
+        'tutorials/pet-shop/index.md': 'guides/pet-shop/index.md'
+        'docs/ganache/overview/index.md': 'docs/ganache/index.md'

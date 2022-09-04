@@ -1,7 +1,28 @@
 {
+  "upgrading-security": {
+    "title": "Web3 Unleashed: Upgrading Smart Contracts - Should You Do it and How?",
+    "date": "2022-08-19",
+    "author": "Emily Lin",
+    "published": true,
+    "products": ["truffle", "ganache"]
+  },
+  "rentable-nft": {
+    "title": "Web3 Unleashed: Write a Rentable NFT",
+    "date": "2022-08-12",
+    "author": "Emily Lin",
+    "published": true,
+    "products": ["truffle", "ganache"]
+  },
+  "nft-royalty": {
+    "title": "Web3 Unleashed: Write an NFT Smart Contract with Royalties",
+    "date": "2022-08-05",
+    "author": "Emily Lin",
+    "published": true,
+    "products": ["truffle", "ganache"]
+  },
   "nft-marketplace": {
-    "title": "How to Build a NFT Marketplace on Ethereum and Optimism",
-    "date": "2022-05-17",
+    "title": "How to Build a NFT Marketplace on Ethereum or Optimism",
+    "date": "2022-07-16",
     "author": "Emily Lin",
     "published": true,
     "products": ["truffle", "ganache"]
@@ -66,7 +87,7 @@
     "title": "Ethereum Pet Shop -- Your First Dapp",
     "date": "2017-07-20",
     "author": "Josh Quintal",
-    "published": false,
+    "published": true,
     "products": ["truffle", "ganache"]
   },
   "building-dapps-for-quorum-private-enterprise-blockchains": {

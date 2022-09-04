@@ -1,5 +1,7 @@
 # New trufflesuite.com
 
+[![GitPOAP Badge](https://public-api.gitpoap.io/v1/repo/trufflesuite/trufflesuite.com/badge)](https://www.gitpoap.io/gh/trufflesuite/trufflesuite.com)
+
 A new version (as of **Q4 2021**) of the [trufflesuite.com](https://trufflesuite.com) site, built upon [mkdocs](https://www.mkdocs.org/) and the [material](https://squidfunk.github.io/mkdocs-material/) theme.
 
 The goals of this release have included the following:

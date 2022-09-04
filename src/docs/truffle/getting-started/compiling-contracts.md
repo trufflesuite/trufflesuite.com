@@ -8,8 +8,6 @@ layout: docs.hbs
 
 All of your contracts are located in your project's `contracts/` directory. As contracts are written in [Solidity](https://solidity.readthedocs.io/en/develop/), all files containing contracts will have a file extension of `.sol`. Associated Solidity [libraries](https://solidity.readthedocs.org/en/latest/contracts.html#libraries) will also have a `.sol` extension.
 
-With a bare Truffle [project](/docs/truffle/quickstart) (created through `truffle init`), you're given a single `Migrations.sol` file that helps in the deployment process. If you're using a [Truffle Box](/boxes), you will have multiple files here.
-
 ## Command
 
 To compile a Truffle project, change to the root of the directory where the project is located and then type the following into a terminal:
