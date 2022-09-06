@@ -14,7 +14,7 @@ In addition, with the migration of Ethereum from PoW to PoS and the separation o
 
 The simple answer to this very important question is: although [there are changes to how Ethereum clients will work post-merge](https://consensys.net/blog/ethereum-2-0/the-four-pillars-of-the-merge-to-proof-of-stake-how-ethereum-will-evolve), Ganache users do not need to do anything since these changes to Ethereum will not affect the user and dapp development experience.
 
-In this blog, we’ll touch on 3 new features that have been added to Ganache since the Ganache 7 release in January.
+In this blog, we’ll touch on 3 new features that have been added to Ganache since the Ganache 7 release in January. To be able to use some of these features, you will need to run the latest version of Ganache. You can download it from [here](https://trufflesuite.com/ganache).
 
 ## Zero config mainnet forking now available in the browser
 
@@ -28,36 +28,27 @@ const provider = Ganache.provider(options);
 ```
 Although adding the above lines of code would make the Ganache blockchain simulator available in your browser, features like the zero configuration mainnet forking wasn’t available.
 
-However, with the latest release, Ganache users can now enjoy this feature on their browser by simply specifying additional options during setup as follows:
-
-**Using websocket**
+However, with the latest release, Ganache users can now enjoy this feature in their browser by simply specifying additional options during setup as follows:
 
 ```javascript
 ...
 
-const options = {fork:"mainnet"};
+const options = { fork: { network: "mainnet" } }
 const provider = Ganache.provider(options);
 ```
 
-Using HTTP and your Infura URL
-```javascript
-...
-
-const options = {fork:{url: "<your infura url goes here>"}};
-const provider = Ganache.provider(options);
-```
-
-You can verify that this is working by attempting to debug a mainnet transaction using the debug_traceTraction flag as follows:
+You can verify that this is working by attempting to fetch the latest block using the **eth_getBlockByNumber** flag as follows:
 
 ```javascript
-console.log(await p.request({method:"debug_traceTransaction", params:["0x560900937892cd888a685c836f666804e05e04f3d161e1751ffb5ab7809c55d9"]}));
+const latestBlock = await provider.request({ method: "eth_getBlockByNumber", params: ["latest"] });
+console.log(latestBlock); // will be mainnet's "latest" block
 ```
 
 ## Ability to use console.log from Solidity
 
 If you use the Vyper `print` statement or the Hardhat `console.sol` library contract for printing items to the console, you can now use these tools together with Ganache, as Ganache now understands the Vyper `print` statement, as well as the Hardhat `console.sol` library!
 
-Truffle users aren’t left out either as they can install the console.log library by Ganache with `npm install @ganache/console.log` and use it in their solidity project as follows:
+Truffle users aren’t left out either as they can install Ganache's `console.log` library with `npm install @ganache/console.log` and use it in their solidity project as follows:
 
 ```javascript
 // SPDX-License-Identifier: MIT
