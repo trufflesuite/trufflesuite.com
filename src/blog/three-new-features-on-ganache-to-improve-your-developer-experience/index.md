@@ -1,5 +1,5 @@
 ---
-title: Three new features on Ganache to improve your developer experience
+title: Three new Ganache features to improve your developer experience
 hide:
   - navigation
 ---
@@ -8,27 +8,27 @@ hide:
 
 ![The Merge and what it means for Truffle](./what-is-new-in-ganache.jpg)
 
-Since the release of Ganache 7, we’ve mostly focused our attention on bug fixes and UX improvements. Now with the changes coming to Ethereum in the coming weeks, due to the Merge, we’ve decided to expand our focus to also include new features that not only support the Merge and layer two networks, but set the foundation for subsequent upgrades for Truffle post-merge.
+Since the release of Ganache 7 in January, we’ve mostly focused our attention on bug fixes and UX improvements. Recently, we decided to expand our focus to also include new features that will help improve the developer experience for our users.
 
 In addition, with the migration of Ethereum from PoW to PoS and the separation of the consensus layer from the execution layer, our users have been curious to know how Ganache is impacted and what actions they will need to take. 
 
 The simple answer to this very important question is: although [there are changes to how Ethereum clients will work post-merge](https://consensys.net/blog/ethereum-2-0/the-four-pillars-of-the-merge-to-proof-of-stake-how-ethereum-will-evolve), Ganache users do not need to do anything since these changes to Ethereum will not affect the user and dapp development experience.
 
-In this blog, we’ll touch on 3 new features that have been added to Ganache since the Ganache 7 release in January. To be able to use some of these features, you will need to run the latest version of Ganache. You can download it from [here](https://trufflesuite.com/ganache).
+In this blog, we’ll touch on 3 of those new features that we've added to Ganache since the Ganache 7 release in January.
 
-## Zero config mainnet forking now available in the browser
+## Zero-config mainnet forking now available in the browser
 
-For some time now, it has been possible to run Ganache on the browser by simply including a minimal  javascript code in your HTML and then accessing the Ganache provider as shown below:
+Ganache v7.0 made it possible to run Ganache in the browser, as shown below:
 
-```javascript
+```html
 <script src="https://cdn.jsdelivr.net/npm/ganache@{VERSION}/dist/web/ganache.min.js"></script>
 
 const options = {};
 const provider = Ganache.provider(options);
 ```
-Although adding the above lines of code would make the Ganache blockchain simulator available in your browser, features like the zero configuration mainnet forking wasn’t available.
+Adding the above lines of code would make the Ganache blockchain simulator available in your browser, however, zero-config mainnet forking wasn't available.
 
-However, with the latest release, Ganache users can now enjoy this feature in their browser by simply specifying additional options during setup as follows:
+Since the release of Ganache v7.3.2 users can now utilize this feature in the browser by specifying additional options during setup:
 
 ```javascript
 ...
@@ -37,20 +37,20 @@ const options = { fork: { network: "mainnet" } }
 const provider = Ganache.provider(options);
 ```
 
-You can verify that this is working by attempting to fetch the latest block using the **eth_getBlockByNumber** flag as follows:
+You can verify that this is working by attempting to fetch a mainnet block using the **eth_getBlockByNumber** flag:
 
 ```javascript
-const latestBlock = await provider.request({ method: "eth_getBlockByNumber", params: ["latest"] });
-console.log(latestBlock); // will be mainnet's "latest" block
+const block = await provider.request({ method: "eth_getBlockByNumber", params: ["0xec4eb0"] });
+console.log(block); // will be mainnet's block 15486640
 ```
 
 ## Ability to use console.log from Solidity
 
-If you use the Vyper `print` statement or the Hardhat `console.sol` library contract for printing items to the console, you can now use these tools together with Ganache, as Ganache now understands the Vyper `print` statement, as well as the Hardhat `console.sol` library!
+If you use Vyper's `print` statement or Hardhat's `console.sol` library contract for printing items to the console, you can now use these tools together with Ganache, as Ganache now understands Vyper's `print` statement, as well as Hardhat's `console.sol` library!
 
-Truffle users aren’t left out either as they can install Ganache's `console.log` library with `npm install @ganache/console.log` and use it in their solidity project as follows:
+Development of native `console.log` support in Truffle is currently in progress, but Truffle users don't have to wait to use this feature, as they can install Ganache's `console.log` library with `npm install @ganache/console.log` and use it in their Solidity project:
 
-```javascript
+```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
@@ -77,7 +77,7 @@ contract GanacheCoin {
 
 ## New eth_getProof RPC method
 
-Ganache now supports the **eth_getProof** RPC method which is an important step towards securing layer 2 networks and is specified by [EIP-1186](https://eips.ethereum.org/EIPS/eip-1186). This method returns some useful values, including hashes and proofs associated with the given address and storage keys. This method can be used as shown below:
+Ganache now supports the **eth_getProof** RPC method, as specified by [EIP-1186](https://eips.ethereum.org/EIPS/eip-1186). This method returns some useful values, including hashes and proofs associated with the given address and storage keys. This method can be used as shown below:
 
 ```javascript
 const result = provider.request({
@@ -122,6 +122,6 @@ It should return the following output:
 
 ## Conclusion
 
-At Truffle, we remain committed to improving and simplifying the user experience for dapp developers in the Web3 ecosystem by creating developer tools, resources, and educational materials. With the monumental upgrade coming to Ethereum by mid September, we're even more excited and committed to this course.
+At Truffle, we remain committed to improving and simplifying the user experience for dapp developers in the Web3 ecosystem by creating developer tools, resources, and educational materials. With the monumental upgrade coming to Ethereum by mid-September, we're even more excited and committed to this course.
 
-To find out more about our suite of developer tools, visit the official [Truffle website](https://trufflesuite.com). If you have questions that you'd like for our team members to answer concerning the merge and how it impacts our products, feel free to start a discussion on our [Github Discussions channel](https://github.com/orgs/trufflesuite/discussions). Finally, don't forget to follow us on [Twitter](https://twitter.com/trufflesuite) for live announcements and updates.
+To find out more about our suite of developer tools, visit the official [Truffle website](https://trufflesuite.com). If you have questions about The Merge and how it impacts our products feel free to start a discussion on our [Github Discussions channel](https://github.com/orgs/trufflesuite/discussions). Finally, don't forget to follow us on [Twitter](https://twitter.com/trufflesuite) for live announcements and updates.
