@@ -1,4 +1,13 @@
 {
+  "how-the-merge-impacts-the-application-layer-and-developer-experience": {
+    "title": "How the merge impacts the application layer and developer experience",
+    "date": "2022-09-12",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "The Merge is scheduled to happen between the 13th and 15th of September and once complete, Ethereum would no longer run on PoW, but a PoS consensus mechanism that promises to reduce its carbon footprint by 99.95%....",
+    "image": "/img/blog/thumbnails/the-merge.png"
+  },
+
   "preparing-for-the-merge-hear-from-our-truffle-engineers": {
     "title": "Preparing for the Merge, hear from our Truffle engineers",
     "date": "2022-07-28",
