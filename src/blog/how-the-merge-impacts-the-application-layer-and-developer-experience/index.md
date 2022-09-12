@@ -21,7 +21,7 @@ Smart contract developers usually rely on the 0x44 opcode, known as **DIFFICULTY
 
 With the switch to PoS, this field would no longer return anything meaningful as there is no concept of block difficulty in PoS. In order to provide some form of backward compatibility and prevent smart contracts that use `block.difficulty` from breaking, the value returned by the **DIFFICULTY** opcode will be replaced with the pseudo-random value generated as part of the Beacon Chain and would be renamed **PREVRANDAO**.
 
-It should be noted that although this new **PREVRANDO** value is considered as a source of randomness output of a higher strength than the output provided by the DIFFICULTY opcode in the PoW network, it is still not a true source of randomness the same way `block.difficulty` is not and should be used with care while adhering to the instructions outlined in the [EIP under security considerations](https://eips.ethereum.org/EIPS/eip-4399#security-considerations).
+It should be noted that although this new **PREVRANDAO** value is considered as a source of randomness output of a higher strength than the output provided by the **DIFFICULTY** opcode in the PoW network, it is still not a true source of randomness the same way `block.difficulty` is not and should be used with care while adhering to the instructions outlined in the [EIP under security considerations](https://eips.ethereum.org/EIPS/eip-4399#security-considerations).
 
 ## Testnets
 
@@ -33,7 +33,7 @@ Although these networks have been deprecated and developers are advised not to u
 
 With Rinkeby, Ropsten, and Kiln deprecated, it frees up capacity and time for client developers to focus and provide long-term support for the two long-lived  testnets going forward, Goerli and Sepolia. 
 
-Dapp developers can access these testnets during development via [Truffle Ganache](https://github.com/trufflesuite/ganache#startup-options), including the ability to fork them. These networks are also fully supported by [Infura](https://infura.io), the leading Ethereum node provider, so please check out their [documentation](https://docs.infura.io/infura) to better understand how it works.
+Dapp developers can access these testnets during development via [Truffle Ganache](https://github.com/trufflesuite/ganache#startup-options), including the ability to fork them. These networks are also fully supported by [Infura](https://infura.io), the leading Ethereum node provider, so please check out the [documentation](https://docs.infura.io/infura) to better understand how it works.
 
 ## Seamless transition to PoS
 
@@ -45,4 +45,4 @@ At Truffle, we’re excited about a PoS future for Ethereum and cannot  wait for
 
 As you can see, the Merge does impact the Ethereum application layer, even though in a minimal way. It introduces some opcode changes that dapp developers should be aware of when building on a PoS blockchain. It also introduces some changes to the developer tooling, most notable is the deprecation of popular testnets Rinkeby and Ropsten and the introduction of the new testnet Sepolia.
 
-To stay up to date with the Merge and how we are preparing for it at Truffle, subscribe to the Truffle newsletter by visiting our [website](https://trufflesuite.com) today. We also hold monthly live streamed sessions called, Web Unleashed, where we build, interview folks, and discuss important developments around the ecosystem. Keep an eye on our Twitter for updates on the next session. You can also find past episodes on the [Truffle Youtube channel](https://www.youtube.com/c/TruffleSuite) on the [unleashed section](https://trufflesuite.com/unleashed) of our website if you prefer written materials.
+To stay up to date with the Merge and how we are preparing for it at Truffle, subscribe to the Truffle newsletter by visiting our [website](https://trufflesuite.com) today. We also hold monthly live streamed sessions called **Web Unleashed**, where we build, interview folks, and discuss important developments around the ecosystem. Keep an eye on our Twitter for updates on the next session. You can also find past episodes on the [Truffle Youtube channel](https://www.youtube.com/c/TruffleSuite) and the [unleashed section](https://trufflesuite.com/unleashed) of our website if you prefer written materials.
