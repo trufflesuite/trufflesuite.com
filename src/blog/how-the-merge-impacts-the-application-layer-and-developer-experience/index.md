@@ -4,6 +4,8 @@ hide:
   - navigation
 ---
 
+![How the merge impacts the application layer and developer experience](./the-merge-part3.jpg)
+
 **By Kingsley Arinze**
 
 The Merge is scheduled to happen between the 13th and 15th of September and once complete, Ethereum would no longer run on PoW, but a PoS consensus mechanism that promises to reduce its carbon footprint by 99.95%.
