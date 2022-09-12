@@ -71,51 +71,14 @@ All migrations must export a function via the `module.exports` syntax. The funct
 
 Your migration function can accept other parameters as well. See the examples below.
 
-## Initial migration
-
-Truffle requires you to have a Migrations contract in order to use the Migrations feature. This contract must contain a specific interface, but you're free to edit this contract at will. For most projects, this contract will be deployed initially as the first migration and won't be updated again. You will also receive this contract by default when creating a new project with `truffle init`.
-
-Filename: `contracts/Migrations.sol`
-
-```solidity
-pragma solidity ^0.4.8;
-
-contract Migrations {
-  address public owner;
-
-  // A function with the signature `last_completed_migration()`, returning a uint, is required.
-  uint public last_completed_migration;
-
-  modifier restricted() {
-    if (msg.sender == owner) _;
-  }
-
-  function Migrations() {
-    owner = msg.sender;
-  }
-
-  // A function with the signature `setCompleted(uint)` is required.
-  function setCompleted(uint completed) restricted {
-    last_completed_migration = completed;
-  }
-
-  function upgrade(address new_address) restricted {
-    Migrations upgraded = Migrations(new_address);
-    upgraded.setCompleted(last_completed_migration);
-  }
-}
-```
-
-You must deploy this contract inside your first migration in order to take advantage of the migrations feature.  The following migration is provided by default when creating a new project with `truffle init`:
-
-Filename: `migrations/1_initial_migration.js`
+Filename: `migrations/1_deploy_contracts.js`
 
 ```javascript
-var Migrations = artifacts.require("Migrations");
+var SolidityContract = artifacts.require("SolidityContract");
 
 module.exports = function(deployer) {
-  // Deploy the Migrations contract as our only task
-  deployer.deploy(Migrations);
+  // Deploy the SolidityContract contract as our only task
+  deployer.deploy(SolidityContract);
 };
 ```
 
