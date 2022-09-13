@@ -31,7 +31,7 @@
 		]
 	},
 	"truffle-react-material": {
-		"description": "This box contains everything you need to get started using smart contracts from a Rect app with the Material-ui library.",
+		"description": "This box contains everything you need to get started using smart contracts from a React app with the Material-ui library.",
 		"stars": 49,
 		"tags": [
 			"community",
