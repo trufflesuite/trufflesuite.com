@@ -149,6 +149,11 @@
     "repoName": "scribble-exercise-1",
     "official": false
   },
+  { "userOrg": "rouftom",
+    "displayName": "react-material-ui",
+    "repoName": "truffle-react-material",
+    "official": false
+  },
   {
     "userOrg": "skalenetwork",
     "displayName": "skale-box",
@@ -316,6 +321,12 @@
     "userOrg": "peerism",
     "displayName": "peerai-api",
     "repoName": "peerai-api",
+    "official": false
+  },
+  {
+    "userOrg": "RumeelHussainbnb",
+    "displayName": "BSC-Truffle-Starter-Box",
+    "repoName": "BSC-Truffle-Starter-Box",
     "official": false
   },
   {
