@@ -7,7 +7,7 @@ hide:
 
 Written by [Emily Lin](https://twitter.com/_emjlin)
 
-Last updated 9/08/2022
+Last updated 9/15/2022
 
 ## Overview 
 
@@ -1005,7 +1005,7 @@ truffle migrate --network dashboard
 ```
 
 This should bring up Truffle dashboard on localhost:24012 and prompt you to sign the deployment. After that's been deployed, now let's verify it!
-x
+
 ### Verify RentablePets
 
 Follow these steps (here)[https://github.com/rkalis/truffle-plugin-verify]
