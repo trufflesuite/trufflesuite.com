@@ -52,7 +52,7 @@
     "title": "Drizzle and Contract Events",
     "date": "2019-04-05",
     "author": "Amal Sudama",
-    "published": true,
+    "published": false,
     "products": ["truffle", "ganache", "drizzle"]
   },
   "drizzle-and-react-native": {

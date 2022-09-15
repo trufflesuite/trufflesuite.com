@@ -15,4 +15,4 @@ For public preview, the current supported system requirements are shown below
 - Node 14.0.x
 - Git 2.10.x
 
-Head to the [Installation Guide](./installation-guide.html) to get started!
+Head to the [Installation Guide](./installation-guide.md) to get started!

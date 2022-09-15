@@ -1,12 +1,6 @@
 [
   {
     "userOrg": "truffle-box",
-    "displayName": "drizzle",
-    "repoName": "drizzle-box",
-    "official": true
-  },
-  {
-    "userOrg": "truffle-box",
     "displayName": "optimism",
     "repoName": "optimism-box",
     "official": true
@@ -15,18 +9,6 @@
     "userOrg": "truffle-box",
     "displayName": "arbitrum",
     "repoName": "arbitrum-box",
-    "official": true
-  },
-  {
-    "userOrg": "truffle-box",
-    "displayName": "drizzle-react-native",
-    "repoName": "drizzle-react-native-box",
-    "official": true
-  },
-  {
-    "userOrg": "truffle-box",
-    "displayName": "drizzle-vue-box",
-    "repoName": "vue-box",
     "official": true
   },
   {
@@ -193,12 +175,6 @@
   },
   {
     "userOrg": "kaleido-io",
-    "displayName": "drizzle-kaleido-box",
-    "repoName": "drizzle-kaleido-box",
-    "official": false
-  },
-  {
-    "userOrg": "kaleido-io",
     "displayName": "truffle-kaleido-box",
     "repoName": "truffle-kaleido-box",
     "official": false
@@ -231,18 +207,6 @@
     "userOrg": "CITA-Toys",
     "displayName": "cita-truffle-box",
     "repoName": "cita-truffle-box",
-    "official": false
-  },
-  {
-    "userOrg": "atkinsonholly",
-    "displayName": "drizzle-tutorial-with-react-hooks",
-    "repoName": "drizzle-tutorial-with-react-hooks",
-    "official": false
-  },
-  {
-    "userOrg": "lzhou1110",
-    "displayName": "drizzle-truffle-ganache-docker-box",
-    "repoName": "drizzle-truffle-ganache-docker-box",
     "official": false
   },
   {
@@ -455,12 +419,6 @@
     "userOrg": "kierenh",
     "displayName": "vue-dark-chocolate",
     "repoName": "vue-dark-chocolate",
-    "official": false
-  },
-  {
-    "userOrg": "EmanHerawy",
-    "displayName": "besu-drizzle-truffle-box",
-    "repoName": "besu-drizzle-truffle-box",
     "official": false
   },
   {
