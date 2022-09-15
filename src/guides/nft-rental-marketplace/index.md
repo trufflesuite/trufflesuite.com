@@ -283,9 +283,13 @@ contract Marketplace is ReentrancyGuard {
         require(listing.owner != address(0), "This NFT is not listed");
         require(listing.owner == msg.sender || _marketOwner == msg.sender , "Not approved to unlist NFT");
         // fee to be returned to user if unlisted before rental period is up
-        uint256 refund = ((listing.expires - block.timestamp) / 60 / 60 / 24 + 1) * listing.pricePerDay;
-        require(msg.value >= refund, "Not enough ether to cover refund");
-        payable(listing.user).transfer(refund);
+        // nothing to refund if no renter
+        uint256 refund = 0;
+        if (listing.user != address(0)) {
+            refund = ((listing.expires - block.timestamp) / 60 / 60 / 24 + 1) * listing.pricePerDay;
+            require(msg.value >= refund, "Not enough ether to cover refund");
+            payable(listing.user).transfer(refund);
+        }
         // clean up data
         IERC4907(nftContract).setUser(tokenId, address(0), 0);
         EnumerableSet.remove(_nftContractTokensMap[nftContract], tokenId);
@@ -1114,7 +1118,7 @@ const ERC721_ABI = [
         "type": "function"
     }
 ];
-const NFT_CONTRACT = "[NFT_CONTRACT_ADDRESS]";
+const NFT_CONTRACT = "NFT_CONTRACT_ADDRESS";
 const TOKEN_ID = 1;
 const PRICE = 1;
 const START = TODAY;
@@ -1350,7 +1354,7 @@ We'll be following similar patterns in the following scripts.
 const Marketplace = artifacts.require("Marketplace");
 const TODAY = Math.floor(Date.now()/1000);
 const TOMORROW = TODAY + (24*60*60);
-const NFT_CONTRACT = "[NFT_CONTRACT]";
+const NFT_CONTRACT = "NFT_CONTRACT";
 const TOKEN_ID = 1;
 const EXPIRES = TOMORROW;
 const PRICE = 1;
@@ -1416,7 +1420,7 @@ truffle(goerlidev)>
 
 ```javascript
 const Marketplace = artifacts.require("Marketplace");
-const NFT_CONTRACT = "[NFT_CONTRACT]";
+const NFT_CONTRACT = "NFT_CONTRACT";
 const TOKEN_ID = 1;
 const PRICE = 1;
 const ERC721_ABI = [
@@ -1456,7 +1460,8 @@ const main = async (cb) => {
         const expires = await nftContract.methods.userExpires(TOKEN_ID).call();
         let value = (Math.floor((expires - Date.now()/1000)/60/60/24 + 1)) * PRICE;
         const owner = await nftContract.methods.ownerOf(TOKEN_ID).call();
-        let txn = await marketplace.unlistNFT(NFT_CONTRACT, TOKEN_ID, {from: owner, value: value});
+        let options = value < 0 ? {from: owner} : {from: owner, value: value};
+        let txn = await marketplace.unlistNFT(NFT_CONTRACT, TOKEN_ID, options);
         console.log(txn);
     } catch(err) {
         console.log(err);
@@ -1507,6 +1512,64 @@ Using network 'goerlidev'.
     }
   ]
 }
+```
+
+### Write run.js
+
+Finally, for faster testing, let's just write a script that will run through the whole process from minting to unlisting:
+
+```javascript
+const Marketplace = artifacts.require("Marketplace");
+const NFT_CONTRACT = "NFT_CONTRACT";
+const TOKEN_ID = 1;
+const PRICE = 1;
+const ERC721_ABI = [
+    {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "tokenId",
+            "type": "uint256"
+          }
+        ],
+        "name": "userExpires",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+    },
+    {
+        "inputs": [{"internalType": "uint256", "name": "tokenId", "type": "uint256"}],
+        "name": "ownerOf",
+        "outputs": [{"internalType": "address", "name": "owner", "type": "address"}],
+        "stateMutability": "view",
+        "type": "function"
+    }
+];
+
+const main = async (cb) => {
+    try {
+        const marketplace = await Marketplace.deployed();
+        const nftContract = new web3.eth.Contract(ERC721_ABI, NFT_CONTRACT);
+        const expires = await nftContract.methods.userExpires(TOKEN_ID).call();
+        let value = (Math.floor((expires - Date.now()/1000)/60/60/24 + 1)) * PRICE;
+        const owner = await nftContract.methods.ownerOf(TOKEN_ID).call();
+        let options = value < 0 ? {from: owner} : {from: owner, value: value};
+        let txn = await marketplace.unlistNFT(NFT_CONTRACT, TOKEN_ID, options);
+        console.log(txn);
+    } catch(err) {
+        console.log(err);
+    }
+    cb();
+}
+
+module.exports = main;
 ```
 
 ## BONUS: Write a script to fund your test wallets

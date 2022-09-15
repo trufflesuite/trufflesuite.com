@@ -8,7 +8,7 @@
   },
   "nft-rental-marketplace": {
     "title": "Web3 Unleashed: Build a NFT Rental Marketplace Part 1",
-    "date": "2022-09-08",
+    "date": "2022-09-15",
     "author": "Emily Lin",
     "published": true,
     "products": ["truffle", "ganache"]
