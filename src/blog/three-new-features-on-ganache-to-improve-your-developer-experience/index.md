@@ -10,18 +10,14 @@ hide:
 
 Since the release of Ganache v7.0 in January, we’ve mostly focused our attention on bug fixes and UX improvements. Recently, we decided to expand our focus to also include new features that will help improve the developer experience for our users.
 
-In addition, with the migration of Ethereum from PoW to PoS and the separation of the consensus layer from the execution layer, our users have been curious to know how Ganache is impacted and what actions they will need to take. 
-
-The simple answer to this very important question is: although [there are changes to how Ethereum clients will work post-merge](https://consensys.net/blog/ethereum-2-0/the-four-pillars-of-the-merge-to-proof-of-stake-how-ethereum-will-evolve), Ganache users do not need to do anything since these changes to Ethereum will not affect the user and dapp development experience.
-
-In this blog, we’ll touch on 3 of those new features that we've added to Ganache since the Ganache v7.0 release in January.
+In this post, we’ll touch on 3 of those new features that we've added to Ganache since the Ganache v7.0 release.
 
 ## Zero-config mainnet forking now available in the browser
 
 Ganache v7.0 made it possible to run Ganache in the browser. Simply add this script to your HTML:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/ganache@{VERSION}/dist/web/ganache.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ganache@7/dist/web/ganache.min.js"></script>
 ```
 
 And Ganache is available in your browser for use with:
@@ -35,9 +31,11 @@ Adding the above lines of code would make the Ganache blockchain simulator avail
 
 Since the release of Ganache v7.3.2 users can now utilize this feature in the browser by specifying additional options during setup:
 
-```javascript
-...
+```html
+<script src="https://cdn.jsdelivr.net/npm/ganache@7.3.2/dist/web/ganache.min.js"></script>
+```
 
+```javascript
 const options = { fork: { network: "mainnet" } }
 const provider = Ganache.provider(options);
 ```
