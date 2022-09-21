@@ -1,4 +1,11 @@
 {
+  "livepeer-decentralized-streaming": {
+    "title": "Web3 Unleashed: What is Decentralized Streaming?",
+    "date": "2022-09-22",
+    "author": "Emily Lin",
+    "published": true,
+    "products": ["truffle"]
+  },
   "gelato-smart-contract-automation": {
     "title": "Web3 Unleashed: How to Automate Your Smart Contracts",
     "date": "2022-09-15",
