@@ -1,7 +1,21 @@
 {
+  "livepeer-decentralized-streaming": {
+    "title": "Web3 Unleashed: What is Decentralized Streaming?",
+    "date": "2022-09-22",
+    "author": "Emily Lin",
+    "published": true,
+    "products": ["truffle"]
+  },
+  "gelato-smart-contract-automation": {
+    "title": "Web3 Unleashed: How to Automate Your Smart Contracts",
+    "date": "2022-09-15",
+    "author": "Emily Lin",
+    "published": true,
+    "products": ["truffle", "ganache"]
+  },
   "nft-rental-marketplace": {
     "title": "Web3 Unleashed: Build a NFT Rental Marketplace Part 1",
-    "date": "2022-09-08",
+    "date": "2022-09-15",
     "author": "Emily Lin",
     "published": true,
     "products": ["truffle", "ganache"]
@@ -52,7 +66,7 @@
     "title": "Drizzle and Contract Events",
     "date": "2019-04-05",
     "author": "Amal Sudama",
-    "published": true,
+    "published": false,
     "products": ["truffle", "ganache", "drizzle"]
   },
   "drizzle-and-react-native": {

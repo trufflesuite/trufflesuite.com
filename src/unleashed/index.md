@@ -27,7 +27,7 @@ hide:
             </div>
             <div class="row mt-5">
                 <div class="col-md-3">
-                    <img src="/img/unleashed/w3u-ep-2.png" alt="Web3 Unleashed Session #2" class="rounded-circle img-fluid green" />
+                    <img src="/img/unleashed/w3u-ep-2.png" alt="Web3 Unleashed Episode #2" class="rounded-circle img-fluid green" />
                 </div>
                 <div class="col-md-9">
                     <h2 class="mt-0 font-weight-bold">Episode #2 - Write a Rentable NFT Smart Contract</h2>
@@ -38,7 +38,7 @@ hide:
             </div>
             <div class="row mt-5">
                 <div class="col-md-3">
-                    <img src="/img/unleashed/w3u-ep-3.png" alt="Web3 Unleashed Session #3" class="rounded-circle img-fluid green" />
+                    <img src="/img/unleashed/w3u-ep-3.png" alt="Web3 Unleashed Episode #3" class="rounded-circle img-fluid green" />
                 </div>
                 <div class="col-md-9">
                     <h2 class="mt-0 font-weight-bold">Episode #3 - Should you upgrade your smart contract and how (ft. OpenZeppelin)</h2>
@@ -49,13 +49,35 @@ hide:
             </div>
             <div class="row mt-5">
                 <div class="col-md-3">
-                    <img src="/img/unleashed/W3U-ep-4.png" alt="Web3 Unleashed Session #4" class="rounded-circle img-fluid green" />
+                    <img src="/img/unleashed/W3U-ep-4.png" alt="Web3 Unleashed Episode #4" class="rounded-circle img-fluid green" />
                 </div>
                 <div class="col-md-9">
                     <h2 class="mt-0 font-weight-bold">Episode #4 - Build a NFT Rental Marketplace Part 1</h2>
-                    <p>08/19/2022 9:00AM PDT&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> Emily Lin</p>
+                    <p>09/08/2022 9:00AM PDT&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> Emily Lin</p>
                         <p>In this episode of Web3 Unleashed, we'll be building a rental marketplace smart contract</p>
                     <a href="/guides/nft-rental-marketplace" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-3">
+                    <img src="/img/unleashed/W3U-ep-5.png" alt="Web3 Unleashed Episode #5" class="rounded-circle img-fluid green" />
+                </div>
+                <div class="col-md-9">
+                    <h2 class="mt-0 font-weight-bold">Episode #5 - Automate your Smart Contract</h2>
+                    <p>09/15/2022 4:00 CET&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> Emily Lin</p>
+                        <p>In this episode of Web3 Unleashed, we'll join Hilmar Orth, co-founder of Gelato Network, to talk about the future of smart contract automation and how to do it!</p>
+                    <a href="/guides/gelato-smart-contract-automation" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-3">
+                    <img src="/img/unleashed/W3U-ep-6.png" alt="Web3 Unleashed Episode #6" class="rounded-circle img-fluid green" />
+                </div>
+                <div class="col-md-9">
+                    <h2 class="mt-0 font-weight-bold">Episode #6 - What is Decentralized Streaming</h2>
+                    <p>09/22/2022 9:00 PST&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> Emily Lin</p>
+                        <p>In this episode of Web3 Unleashed, we'll join Yondon Fu, co-founder of Livepeer, to talk about how decentralized livestreaming is changing the way we interact with communication and entertainment!</p>
+                    <a href="/guides/livepeer-decentralized-streaming" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
                 </div>
             </div>
     </section>

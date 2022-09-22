@@ -137,58 +137,6 @@
 			"community"
 		]
 	},
-	"drizzle-box": {
-		"description": "This box comes with everything you need to start using smart contracts from a react app with Drizzle. It includes drizzle, drizzle-react and drizzle-react-components to give you a complete overview of Drizzle's capabilities.",
-		"stars": 161,
-		"tags": [
-			"official",
-			"drizzle",
-			"react",
-			"redux"
-		]
-	},
-	"drizzle-kaleido-box": {
-		"description": "Truffle box to get up and running quickly with Drizzle & Truffle on a Kaleido chain.",
-		"stars": 0,
-		"tags": [
-			"partner",
-			"drizzle",
-			"kaleido",
-			"react",
-			"truffle",
-			"truffle-box"
-		]
-	},
-	"drizzle-react-native-box": {
-		"description": "This box is to help get you started with building dapps with Drizzle on React Native.",
-		"stars": 6,
-		"tags": [
-			"official",
-			"drizzle",
-			"react-native"
-		]
-	},
-	"drizzle-truffle-ganache-docker-box": {
-		"description": "",
-		"stars": 0,
-		"tags": [
-			"community",
-			"docker",
-			"drizzle"
-		]
-	},
-	"drizzle-tutorial-with-react-hooks": {
-		"description": "Drizzle tutorial. Drizzle is a reactive Ethereum datastore for dapp UIs.",
-		"stars": 1,
-		"tags": [
-			"community",
-			"drizzle",
-			"ethereum",
-			"hooks",
-			"react",
-			"redux"
-		]
-	},
 	"eth-vue": {
 		"description": "This Truffle Box provides everything you need to quickly build Ethereum dApps that have authentication features with vue, including configuration for easy deployment to the Ropsten Network. It's also Gravatar-enabled. Connecting to a running Ganache blockchain network from Truffle is also possible -- for fast development and testing purposes. Built on Truffle 4, eth-vue uses vuex for state management, vuex-persist for local storage of app state, and vue-router for routing. Authentication functionalities are handled by Smart Contracts running on the Ethereum blockchain.",
 		"stars": 111,
@@ -722,17 +670,6 @@
 		"stars": 34,
 		"tags": [
 			"official"
-		]
-	},
-	"besu-drizzle-truffle-box": {
-		"description": "Drizzle starter for Hyperledger Besu network",
-		"stars": 1,
-		"tags": [
-			"besu",
-			"community",
-			"docker",
-			"drizzle",
-			"hyperledger"
 		]
 	},
 	"box": {
