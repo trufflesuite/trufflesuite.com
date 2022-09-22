@@ -170,6 +170,8 @@ Open Zeppelin already provides secure, pre-written ERC-2981 and ERC-721 contract
 
 With OpenZeppelin, we have a few ways of identifying that an NFT contract fits the royalty standard. Since our base contract will be an ERC-721, we have the option of inheriting OpenZeppelin's royalty extension `ERC721Royalty`. This contract overrides the `_burn` function to also clear the royalty information for the token.
 
+Important note! Both this function and the `_burn` function from OpenZeppelin do not check for `tokenId` ownership. That means anyone can burn this NFT. If you want to avoid this, add a `require` check checking for that condition.
+
 ```javascript
 function _burn(uint256 tokenId) internal virtual override {
   super._burn(tokenId);
