@@ -1,4 +1,12 @@
 {
+  "we-came-we-saw-we-merged-whats-next-for-ethereum-and-dapp-developer-experience-at-truffle": {
+    "title": "We came, we saw, we Merged! What’s next for Ethereum and dapp developer experience at Truffle",
+    "date": "2022-09-26",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "On the 15th of September 2022, The Merge - Ethereum’s upgrade from PoW to PoS, was successfully completed. This has led to the complete overhaul of Ethereum’s consensus mechanism, an incredible great engineering accomplishmentnot just for the ecosystem, but for the world at large...",
+    "image": "/img/blog/thumbnails/the-merge.png"
+  },
   "how-the-merge-impacts-the-application-layer-and-developer-experience": {
     "title": "How the merge impacts the application layer and developer experience",
     "date": "2022-09-12",
@@ -7,7 +15,6 @@
     "excerpt": "The Merge is scheduled to happen between the 13th and 15th of September and once complete, Ethereum would no longer run on PoW, but a PoS consensus mechanism that promises to reduce its carbon footprint by 99.95%....",
     "image": "/img/blog/thumbnails/the-merge-part3-thumbnail.jpg"
   },
-
   "preparing-for-the-merge-hear-from-our-truffle-engineers": {
     "title": "Preparing for the Merge, hear from our Truffle engineers",
     "date": "2022-07-28",
