@@ -1,13 +1,12 @@
 {
   "three-new-ganache-features-to-improve-your-developer-experience": {
     "title": "Three new Ganache features to improve your developer experience",
-    "date": "2022-09-27",
+    "date": "2022-09-29",
     "author": "Kingsley Arinze",
     "published": true,
     "excerpt": "Since the release of Ganache v7.0 in January, we’ve mostly focused our attention on bug fixes and UX improvements. Recently, we decided to expand our focus to also include new features that will help improve the developer experience for our users...",
     "image": "/img/blog/thumbnails/whats-new-in-ganache-thumbnail.jpg"
   },
-  
   "we-came-we-saw-we-merged-whats-next-for-ethereum-and-the-dapp-developer-experience-at-truffle": {
     "title": "We came, we saw, we Merged! What’s next for Ethereum and the dapp developer experience at Truffle",
     "date": "2022-09-26",
@@ -16,7 +15,6 @@
     "excerpt": "On the 15th of September 2022, The Merge - Ethereum’s upgrade from PoW to PoS, was successfully completed. This has led to the complete overhaul of Ethereum’s consensus mechanism, an incredible great engineering accomplishmentnot just for the ecosystem, but for the world at large...",
     "image": "/img/blog/thumbnails/the-merge.png"
   },
-
   "how-the-merge-impacts-the-application-layer-and-developer-experience": {
     "title": "How the merge impacts the application layer and developer experience",
     "date": "2022-09-12",
