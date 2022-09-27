@@ -140,11 +140,11 @@ The alias `--time` has been deprecated, use `-t` instead.
 Set the hardfork rules for the EVM. Valid options are: `constantinople`, `byzantium`, `petersburg`,
 `istanbul`, `muirGlacier`, `berlin`, `london`, `arrowGlacier`, and `grayGlacier`.
 
-The default is `grayGlacier`.
+The default is `london`.
 
 The alias `--hardfork` has been deprecated, use `-k` instead.
 
-**`--chain.vmErrorsOnRPCResponse`
+**`--chain.vmErrorsOnRPCResponse`**
 
 === "Syntax"
 
@@ -180,7 +180,7 @@ The default is `false`.
 
 Specify a path to a directory to save the chain database.
 
-The aliases `--db` and `--db_path` has been deprecated.
+The aliases `--db` and `--db_path` have been deprecated.
 
 ## `logging`
 
@@ -271,7 +271,7 @@ The alias `--blockTime` has been deprecated, use `-b` instead.
     --miner.defaultGasPrice="0x87369400"
     ```
 
-Set the default gas price in WEI for transactions if not specified. The default is `0x77359400`.
+Set the default gas price in WEI for transactions if not specified. The default is `0x77359400` (2 GWEI).
 The alias `--gasPrice` has been deprecated, use `-g` instead.
 
 **`--miner.blockGasLimit`**, **`l`**
@@ -287,7 +287,7 @@ The alias `--gasPrice` has been deprecated, use `-g` instead.
     --miner.blockGasLimit="0x87369400"
     ```
 
-Set the block gas limit in WEI. The default is `0xb71b00`.
+Set the block gas limit in WEI. The default is `0x1c9c380` (30 million WEI).
 The alias `--gasLimit` has been deprecated, use `-l` instead.
 
 **`--miner.defaultTransactionGasLimit`**
@@ -365,7 +365,7 @@ The default is `eager`.
 === "Example"
 
     ```bash
-    --miner.coinbase="fe3b557e8fb62b89f4916b721be55ceb828dbd73"
+    --miner.coinbase="0xfe3b557e8fb62b89f4916b721be55ceb828dbd73"
     ```
 
 Sets the mining reward address. The default is `0x0000000000000000000000000000000000000000`.
@@ -395,7 +395,7 @@ A hex string representing the 32 bytes included in the extra data field of a min
 === "Example"
 
     ```bash
-    --miner.priceBump="0x444F4E27542050414E4943202120484F444C2C20484F444C2C20484F444C2021"
+    --miner.priceBump="0x1"
     ```
 
 Minimum price bump percentage needed to replace a transaction that already exists in the transaction
@@ -493,7 +493,7 @@ The alias `--seed` has been deprecated, use `-s` instead.
 Use the specified HD wallet mnemonic to generate initial addresses. The default is generated from
 `--wallet.seed`.
 
-The alias `--mnemonic` has been deprecated, use `-d` instead.
+The alias `--mnemonic` has been deprecated, use `-s` instead.
 
 **`--wallet.unlockedAccounts`**, **`-u`**
 
@@ -750,7 +750,7 @@ The User-Agent header sent to the fork on each request.
 Sent as `Api-User-Agent` when used in the browser. Is overridden by a `User-Agent` defined in the `--fork.headers`
 option, if provided.
 
-The default is `Ganache/7.0.0-beta.0 (https://www.trufflesuite.com/ganache; ganache<at>trufflesuite.com)]`
+The default is `Ganache/VERSION (https://www.trufflesuite.com/ganache; ganache<at>trufflesuite.com)`
 
 **`--fork.origin`**
 
@@ -863,7 +863,7 @@ Enable a websocket server. The default is `true`
     --server.wsBinary=false
     ```
 
-Whether or not Websockets should respond with binary data (ArrayBuffers) or strings. Optionas are
+Whether or not Websockets should respond with binary data (ArrayBuffers) or strings. Options are
 `true`, `false`, or `auto`. The default is `auto`.
 
 **`--server.rpcEndpoint`**
