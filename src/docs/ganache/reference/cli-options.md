@@ -144,7 +144,7 @@ The default is `grayGlacier`.
 
 The alias `--hardfork` has been deprecated, use `-k` instead.
 
-**`--chain.vmErrorsOnRPCResponse`
+**`--chain.vmErrorsOnRPCResponse`**
 
 === "Syntax"
 
@@ -351,7 +351,7 @@ Set the transaction gas limit in WEI for `eth_call` and `eth_estimateGas` calls.
 
 Set the `instamine` mode to either `eager` or `strict`. In `eager` mode a transaction is included in a block before its hash
 is returned to the caller. In `strict` mode a transaction's hash is returned to the caller before the transaction is included in a block.
-This value has no effect if `--miner.blockTime` is *not* `0` (the default).`
+This value has no effect if `--miner.blockTime` is *not* `0` (the default).
 
 The default is `eager`.
 
@@ -383,7 +383,7 @@ Sets the mining reward address. The default is `0x000000000000000000000000000000
     --miner.extraData="0x444F4E27542050414E4943202120484F444C2C20484F444C2C20484F444C2021"
     ```
 
-A hex string representing the 32 bytes included in the extra data field of a mined block. The default is `0x`
+A hex string representing the 32 bytes included in the extra data field of a mined block. The default is `0x`.
 
 **`--miner.priceBump`**
 
@@ -726,7 +726,7 @@ If the `--fork.headers` specifies an authorization header, it will be inserted a
     --fork.jwt="eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJwZXJtaXNzaW9ucyI6Iio6KiIsInByaXZhY3lQdWJsaWNLZXkiOiIyVUtIM1ZKVGhrT29Lc2tyTEZwd294Q25uUkFSeW9iVjFiRWRnc2VGSFRzPSIsImV4cCI6IjE2MDA4OTk5OTkwMDIiLCJpYXQiOjE2MzkxNTc2Mjd9.FGf-FmfDQlIPCRDGmNnsHZWlwrUr69d7AIDqQrIrUrSJLiwGpR3NCUhVHIDMpQvDHQYf-sFMZTYvZGrvztYRuBKWMbTfIZKN74onzNJbFIPBVQuUX2HMXmI4VQ3UFB11LShiUJHKLna13qdbqfbgJIO3HetxJhJQxTiwtixfHwyPXl-Nx8HbQy_AWH58lLAUeaoLzN7QIA9kborthBpvfK9C7Sv1lXT1cdCDC4oRKBoiMg2RWFZtGtxFsnWyloangwbhCB6Bc_elqY5nd9WkF4ix95xsP_HgBcouy1sDw6jxn5_LveX53H8owczVWP6S1e6hv6hq2fs6YkSntKMK2g"
     ```
 
-Encoded JSON Web Token (JWT) used for authenticating to servers.
+Encoded [JSON Web Token (JWT)](https://jwt.io) used for authenticating to servers.
 
 The shorthand is `{ headers: { "Authorization": "Bearer {YOUR-ENCODED-JWT}" } }`
 
