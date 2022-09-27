@@ -4,7 +4,7 @@ hide:
   - navigation
 ---
 
-**By [Kingsley Arinze](https://twitter.com/heydamali)**
+**By [Kingsley Arinze](https://www.linkedin.com/in/bruzzy)**
 
 ![Three new Ganache features to improve your developer experience](./what-is-new-in-ganache.jpg)
 
