@@ -527,6 +527,9 @@ footer .hs-form ul.hs-error-msgs {
   list-style-type: none;
   padding-left: 0;
 }
+.md-typeset ul li.hs-form-booleancheckbox, .md-typeset ul.inputs-list {
+  margin-left: 0;
+}
 .hs-form-booleancheckbox-display {
   font-size: 0.64rem;
 }
