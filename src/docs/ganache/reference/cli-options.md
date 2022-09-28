@@ -530,7 +530,7 @@ Use the specified HD wallet mnemonic to generate initial addresses.
 
 The default is generated from `--wallet.seed`.
 
-The alias `--mnemonic` has been deprecated, use `-s` instead.
+The alias `--mnemonic` has been deprecated, use `-m` instead.
 
 **`--wallet.unlockedAccounts`**, **`-u`**
 
