@@ -66,7 +66,9 @@ The default is `false`.
     --chain.asyncRequestProcessing=false
     ```
 
-When set to `false`, only one request is processed at a time. The default is `true`.
+When set to `false`, only one request is processed at a time.
+
+The default is `true`.
 
 **`--chain.chainId`**
 
@@ -82,7 +84,9 @@ When set to `false`, only one request is processed at a time. The default is `tr
     --chain.chainId=10
     ```
 
-Set the Chain ID of the network. The default is `1337`.
+Set the Chain ID of the network.
+
+The default is `1337`.
 
 **`--chain.networkId`**, **`-i`**
 
@@ -100,6 +104,7 @@ Set the Chain ID of the network. The default is `1337`.
 
 Set the network ID that's retrieved when running the [`net_version`](https://ethereum.org/en/developers/docs/apis/json-rpc/#net_version)
 JSON-RPC method.
+
 The default is the system time when the process starts, or network ID of the forked
 blockchain if configured.
 
@@ -198,7 +203,9 @@ The aliases `--db` and `--db_path` have been deprecated.
     --logging.debug=true
     ```
 
-Set to `true` to log EVM opcodes. The default is `false`.
+Set to `true` to log EVM opcodes.
+
+The default is `false`.
 
 **`--logging.quiet`**, **`q`**
 
@@ -214,7 +221,9 @@ Set to `true` to log EVM opcodes. The default is `false`.
     --logging.quiet=true
     ```
 
-Set to `true` to disable logging. The default is `false`.
+Set to `true` to disable logging.
+
+The default is `false`.
 
 The alias `--quiet` has been deprecated, use `-q` instead.
 
@@ -232,7 +241,9 @@ The alias `--quiet` has been deprecated, use `-q` instead.
     --logging.verbose=true
     ```
 
-Set to `true` to log detailed RPC requests. The default is `false`.
+Set to `true` to log detailed RPC requests.
+
+The default is `false`.
 
 The alias `--verbose` has been deprecated, use `-v` instead.
 
@@ -253,7 +264,9 @@ The alias `--verbose` has been deprecated, use `-v` instead.
     ```
 
 Set the block time (in seconds) for automatic mining. A block time of `0` enables `instamine mode`, where
-new executable transactions are mined instantly. The defaults is `0`.
+new executable transactions are mined instantly.
+
+The defaults is `0`.
 
 The alias `--blockTime` has been deprecated, use `-b` instead.
 
@@ -271,7 +284,10 @@ The alias `--blockTime` has been deprecated, use `-b` instead.
     --miner.defaultGasPrice="0x87369400"
     ```
 
-Set the default gas price in WEI for transactions if not specified. The default is `0x77359400` (2 GWEI).
+Set the default gas price in WEI for transactions if not specified.
+
+The default is `0x77359400` (2 GWEI).
+
 The alias `--gasPrice` has been deprecated, use `-g` instead.
 
 **`--miner.blockGasLimit`**, **`l`**
@@ -287,7 +303,10 @@ The alias `--gasPrice` has been deprecated, use `-g` instead.
     --miner.blockGasLimit="0x87369400"
     ```
 
-Set the block gas limit in WEI. The default is `0x1c9c380` (30 million WEI).
+Set the block gas limit in WEI.
+
+The default is `0x1c9c380` (30 million WEI).
+
 The alias `--gasLimit` has been deprecated, use `-l` instead.
 
 **`--miner.defaultTransactionGasLimit`**
@@ -304,6 +323,7 @@ The alias `--gasLimit` has been deprecated, use `-l` instead.
     ```
 
 Set the default transaction gas limit in WEI. Set to `estimate` to use an estimate (slows down transaction execution by 40%+).
+
 The defaults is `0x15f90`.
 
 **`--miner.difficulty`**
@@ -319,7 +339,9 @@ The defaults is `0x15f90`.
     --miner.difficulty="0x2"
     ```
 
-Set the block difficulty. The default is `0x1`.
+Set the block difficulty.
+
+The default is `0x1`.
 
 **`--miner.callGasLimit`**
 
@@ -334,7 +356,9 @@ Set the block difficulty. The default is `0x1`.
     --miner.callGasLimit="0x58af080"
     ```
 
-Set the transaction gas limit in WEI for `eth_call` and `eth_estimateGas` calls. The default is `0x2faf080`.
+Set the transaction gas limit in WEI for `eth_call` and `eth_estimateGas` calls.
+
+The default is `0x2faf080`.
 
 **`--miner.instamine`**
 
@@ -368,7 +392,9 @@ The default is `eager`.
     --miner.coinbase="0xfe3b557e8fb62b89f4916b721be55ceb828dbd73"
     ```
 
-Sets the mining reward address. The default is `0x0000000000000000000000000000000000000000`.
+Sets the mining reward address.
+
+The default is `0x0000000000000000000000000000000000000000`.
 
 **`--miner.extraData`**
 
@@ -383,7 +409,9 @@ Sets the mining reward address. The default is `0x000000000000000000000000000000
     --miner.extraData="0x444F4E27542050414E4943202120484F444C2C20484F444C2C20484F444C2021"
     ```
 
-A hex string representing the 32 bytes included in the extra data field of a mined block. The default is `0x`.
+A hex string representing the 32 bytes included in the extra data field of a mined block.
+
+The default is `0x`.
 
 **`--miner.priceBump`**
 
@@ -399,7 +427,9 @@ A hex string representing the 32 bytes included in the extra data field of a min
     ```
 
 Minimum price bump percentage needed to replace a transaction that already exists in the transaction
-pool. The default is `10`.
+pool.
+
+The default is `10`.
 
 ## `wallet`
 
@@ -439,7 +469,9 @@ The alias `--account` has been deprecated.
     --wallet.totalAccounts=5
     ```
 
-Number of accounts to generate at startup. The default is `10`.
+Number of accounts to generate at startup.
+
+The default is `10`.
 
 The alias `--accounts` has been deprecated, use `-a` instead.
 
@@ -456,7 +488,10 @@ The alias `--accounts` has been deprecated, use `-a` instead.
     --wallet.deterministic=true
     ```
 
-Use a pre-defined, deterministic seed. The default is `false`
+Use a pre-defined, deterministic seed.
+
+The default is `false`.
+
 The alias `--deterministic` has been deprecated, use `-d` instead.
 
 **`--wallet.seed`**, **`-s`**
@@ -472,8 +507,9 @@ The alias `--deterministic` has been deprecated, use `-d` instead.
     --wallet.seed="c0157f7c8240459516f42b518c1cba1da942b9a5fb5e6313a948872fcac2742e28250a8b2faef0924ae5d2d59781d7789c4c960a2fef8283d886198d40cf871f"
     ```
 
-The seed to generate a mnemonic. The default is a random value unless you specify
-`--wallet.deterministic`.
+The seed to generate a mnemonic.
+
+The default is a random value unless you specify `--wallet.deterministic`.
 
 The alias `--seed` has been deprecated, use `-s` instead.
 
@@ -490,8 +526,9 @@ The alias `--seed` has been deprecated, use `-s` instead.
     --wallet.mnemonic="car casual program tourist aerobic broccoli link hamster resemble collect put october"
     ```
 
-Use the specified HD wallet mnemonic to generate initial addresses. The default is generated from
-`--wallet.seed`.
+Use the specified HD wallet mnemonic to generate initial addresses.
+
+The default is generated from `--wallet.seed`.
 
 The alias `--mnemonic` has been deprecated, use `-s` instead.
 
@@ -582,7 +619,9 @@ The aliases `--account_keys_path` and `--acctKeys` have been deprecated.
     --wallet.defaultBalance=120
     ```
 
-Specify the default account balance in ether. The default is `1000`.
+Specify the default account balance in ether.
+
+The default is `1000`.
 
 **`--wallet.hdPath `**
 
@@ -597,7 +636,9 @@ Specify the default account balance in ether. The default is `1000`.
     --wallet.hdPath="m,44',60',160720',0"
     ```
 
-The hierarchical deterministic (HD) path to use when generating accounts. The default is `m,44',60',0',0`.
+The hierarchical deterministic (HD) path to use when generating accounts.
+
+The default is `m,44',60',0',0`.
 
 ## `fork`
 
@@ -750,7 +791,7 @@ The User-Agent header sent to the fork on each request.
 Sent as `Api-User-Agent` when used in the browser. Is overridden by a `User-Agent` defined in the `--fork.headers`
 option, if provided.
 
-The default is `Ganache/VERSION (https://www.trufflesuite.com/ganache; ganache<at>trufflesuite.com)`
+The default is `Ganache/VERSION (https://www.trufflesuite.com/ganache; ganache<at>trufflesuite.com)`.
 
 **`--fork.origin`**
 
@@ -800,8 +841,9 @@ Defaults to `"User-Agent: Ganache/VERSION (https://www.trufflesuite.com/ganache;
     --fork.requestsPerSecond=10
     ```
 
-Restrict the number of requests that are sent per second to the fork provider. The default is `0`, meaning no
-limit is applied.
+Restrict the number of requests that are sent per second to the fork provider.
+
+The default is `0`, meaning no limit is applied.
 
 **`--fork.disableCache`**
 
@@ -816,7 +858,9 @@ limit is applied.
     --fork.disableCache=true
     ```
 
-Disables caching forking requests. The default is `false`.
+Disables caching forking requests.
+
+The default is `false`.
 
 **`--fork.deleteCache`**
 
@@ -831,7 +875,9 @@ Disables caching forking requests. The default is `false`.
     --fork.deleteCache=true
     ```
 
-Deletes the persistent cache before starting. The default is `false`.
+Deletes the persistent cache before starting.
+
+The default is `false`.
 
 ## `server`
 
@@ -848,7 +894,9 @@ Deletes the persistent cache before starting. The default is `false`.
     --server.ws=false
     ```
 
-Enable a websocket server. The default is `true`
+Enable a websocket server.
+
+The default is `true`.
 
 **`--server.wsBinary`**
 
@@ -864,7 +912,9 @@ Enable a websocket server. The default is `true`
     ```
 
 Whether or not Websockets should respond with binary data (ArrayBuffers) or strings. Options are
-`true`, `false`, or `auto`. The default is `auto`.
+`true`, `false`, or `auto`.
+
+The default is `auto`.
 
 **`--server.rpcEndpoint`**
 
@@ -880,6 +930,7 @@ Whether or not Websockets should respond with binary data (ArrayBuffers) or stri
     ```
 
 Defines the endpoint route the HTTP and WebSocket servers listen on.
+
 The default is `/` for Ethereum and `/rpc/v0` for Filecoin.
 
 **`--server.host`**, **`-h`**
@@ -895,7 +946,9 @@ The default is `/` for Ethereum and `/rpc/v0` for Filecoin.
     --server.host="127.0.0.1"
     ```
 
-The hostname to listen on. The default is `127.0.0.1`.
+The hostname to listen on.
+
+The default is `127.0.0.1`.
 
 The aliases `--host` and `--hostname` have been deprecated, use `-h` instead.
 
