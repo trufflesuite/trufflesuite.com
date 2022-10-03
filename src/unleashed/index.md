@@ -91,5 +91,16 @@ hide:
                     <a href="/guides/metamask-api" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
                 </div>
             </div>
+            <div class="row mt-5">
+                <div class="col-md-3">
+                    <img src="/img/unleashed/W3U-ep-8.png" alt="Web3 Unleashed Episode #8" class="rounded-circle img-fluid green" />
+                </div>
+                <div class="col-md-9">
+                    <h2 class="mt-0 font-weight-bold">Episode #8 - Optimistic rollups and bridging with Optimism</h2>
+                    <p>11/03/2022 8:00 PST&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> Emily Lin</p>
+                        <p>In this episode of Web3 Unleashed, we'll join Annie from Optimism to talk about the L2 ecosystem - what it is and how Optimism is planning for the future. At the end, we'll be covering how to incorporate bridging into your Optimism dapp!</p>
+                    <a href="/guides/optimism-bridge-widget" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
+                </div>
+            </div>
     </section>
 </div>
