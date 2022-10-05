@@ -1,0 +1,4 @@
+nav:
+  - Command line options: truffle-commands.md
+  - Configuration file options: configuration.md
+  - Contract abstractions: contract-abstractions.md

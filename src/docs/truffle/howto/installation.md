@@ -94,4 +94,4 @@ truffle version
 
 Truffle requires a running Ethereum client which supports the standard JSON-RPC API.
 There are many to choose from, and some better than others for development. Refer to the
-[Choosing an Ethereum client](../reference/choosing-an-ethereum-client.md) section for more information.
+[Choosing an Ethereum client](../concepts/choosing-an-ethereum-client.md) section for more information.

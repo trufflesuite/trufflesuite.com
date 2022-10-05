@@ -1,9 +1,8 @@
 nav:
-  - Overview: index.md
-  - quickstart.md
-  - getting-started
-  - testing
-  - distributed-ledger-support
-  - advanced
-  - reference
-  - Guides: /guides
+  - What is Truffle?: index.md
+  - Quickstart: quickstart.md
+  - How to: howto
+  - Concepts: concepts
+  - Reference: reference
+  - Tutorials: /guides
+  - Support: contact-the-developers.md

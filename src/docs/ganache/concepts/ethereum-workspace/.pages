@@ -1,0 +1,5 @@
+nav:
+  - Ethereum Workspace overview: ethereum-workspace-overview.md
+  - Transactions: decoded-transactions.md
+  - Contracts: contracts-page.md
+  - Events: events-page.md

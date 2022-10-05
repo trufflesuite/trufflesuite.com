@@ -2,7 +2,10 @@
 title: Corda Workspace Overview
 layout: docs.hbs
 ---
-# Corda Workspace Overview
+# Corda Workspace overview
+
+Ganache supports development with Corda, an Open Source Blockchain Platform for Business. View
+the [Ganache quickstart](../../quickstart.md) for information on creating a Corda personal development blockchain.
 
 <p class="alert alert-info"><i class="far fa-info-circle"></i> <strong>For Corda technical documentation</strong> not related to Ganache head over to <a href="https://docs.corda.net/docs/corda-os/4.4.html">Corda's official documentation</a>.</p>
 
@@ -16,10 +19,10 @@ Once you've created a workspace, the screen will show some details about the nod
 
 There are five pages available:
 
-* [**Nodes**](../corda/nodes) lists the nodes and notaries on the network.
-* [**Transactions**](../corda/transactions) displays a list of all transactions
-* [**CorDapps**](../corda/cordapps) lists all CorDapp jars installed on the network.
-* [**Shell**](../corda/shell) provides Corda CRaSH shell access to each node and notary.
+* [**Nodes**](nodes.md) lists the nodes and notaries on the network.
+* [**Transactions**](transactions.md) displays a list of all transactions
+* [**CorDapps**](cordapps.md) lists all CorDapp jars installed on the network.
+* [**Shell**](shell.md) provides Corda CRaSH shell access to each node and notary.
 * **Logs** shows the logs for the Ganache server, nodes, and notaries, which is useful for debugging.
 
 ## You're Up and Running!

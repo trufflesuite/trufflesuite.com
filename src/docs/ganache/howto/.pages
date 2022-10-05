@@ -1,0 +1,6 @@
+nav:
+  - Manage Workspaces: workspaces
+  - Link a Truffle project: linking-a-truffle-project.md
+  - Unlink a Truffle project: unlinking-a-truffle-project.md
+  - Work with Corda: work-with-corda
+  - Work with Filecoin: work-with-filecoin

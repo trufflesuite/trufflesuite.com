@@ -1,7 +1,6 @@
 nav:
-  - Overview: index.md
+  - What is Ganache?: index.md
   - quickstart.md
-  - corda
-  - reference
-  - truffle-projects
-  - workspaces
+  - How to: howto
+  - Concepts: concepts
+  - Reference: reference
