@@ -14,7 +14,7 @@ The startup options are grouped in the `chain`, `database`, `fork`, `logging`, `
 and should be used as follows on startup:
 
 ```bash
-ganache --<namespace>.<option>="<value>"
+ganache --<namespace>.<option>=<value>
 ```
 
 You can also use an alias for startup options that have them. For example to set the network ID of a
@@ -23,7 +23,7 @@ network use `ganache -i=<NETWORK_ID>` instead of `ganache --chain.networkId=<NET
 When using the startup options programmatically, use the following:
 
 ```javascript
-const options = { <namespace>: { <option>: <"value">}};
+const options = { <namespace>: { <option>: <value>}};
 const provider = ganache.provider(options);
 ```
 
@@ -47,8 +47,8 @@ const provider = ganache.provider(options);
     --chain.allowUnlimitedContractSize=true
     ```
 
-Allows unlimited contract sizes while debugging. Setting this to `true` causes Ganache to behave
-differently than production environments.
+Allows unlimited contract sizes while debugging. When set to `true`, Ganache behaves
+differently than in production environments.
 
 The default is `false`.
 
@@ -84,7 +84,7 @@ The default is `true`.
     --chain.chainId=10
     ```
 
-Set the Chain ID of the network.
+Set the chain ID of the network.
 
 The default is `1337`.
 
@@ -108,7 +108,7 @@ JSON-RPC method.
 The default is the system time when the process starts, or network ID of the forked
 blockchain if configured.
 
-The alias `--networkId` has been deprecated, use `-i` instead.
+The alias `--networkId` is deprecated, use `-i` instead.
 
 **`--chain.time`**, **`-t`**
 
@@ -126,7 +126,7 @@ The alias `--networkId` has been deprecated, use `-i` instead.
 
 Date and time that the first block should start.
 
-The alias `--time` has been deprecated, use `-t` instead.
+The alias `--time` is deprecated, use `-t` instead.
 
 **`--chain.hardfork`**, **`-k`**
 
@@ -266,7 +266,7 @@ The alias `--verbose` has been deprecated, use `-v` instead.
 Set the block time (in seconds) for automatic mining. A block time of `0` enables `instamine mode`, where
 new executable transactions are mined instantly.
 
-The defaults is `0`.
+The default is `0`.
 
 The alias `--blockTime` has been deprecated, use `-b` instead.
 
@@ -447,11 +447,11 @@ The default is `10`.
     ```
 
 
-Account data in the form `<private_key>,<initial_balance>`, Specify the option multiple times
+Account data in the form `<private_key>,<initial_balance>`. Specify the option multiple times
 to add multiple private keys with an initial balance.
 
 Private keys are 64 characters long, and must include the `0x` prefix. The account
-balance can be an integer, or 0x-prefixed hex string with either form specifying the initial
+balance can be an integer, or a `0x`-prefixed hex string with either form specifying the initial
 balance in WEI.
 
 The alias `--account` has been deprecated.
@@ -698,7 +698,7 @@ Use the command `ganache --fork` to automatically fork Mainnet at the latest blo
     --fork.blockNumber=182354
     ```
 
-Block number to fork from. Defaults to the latest block.
+Block number to fork from. The default is the latest block.
 
 **`--fork.preLatestConfirmations`**
 
@@ -732,9 +732,9 @@ The default is `5`.
     ```
 
 Username for basic authentication. Does not require setting `--fork.password`.
-When combined with `--fork.password`, the shorthand is `{ headers: { "Authorization": "Basic {ENCODED-BASIC-HEADER}" } }`
+When combined with `--fork.password`, the shorthand is `{ headers: { "Authorization": "Basic {ENCODED-BASIC-HEADER}" } }`.
 
-If `--fork.headers` specifies an authorization header, it will be inserted after the Basic token.
+If `--fork.headers` specifies an authorization header, the header is inserted after the Basic token.
 
 **`--fork.password`**
 
@@ -750,9 +750,9 @@ If `--fork.headers` specifies an authorization header, it will be inserted after
     ```
 
 Password for basic authentication. Does not require setting `--fork.username`.
-When combined with `--fork.username`, the shorthand is `{ headers: { "Authorization": "Basic {ENCODED-BASIC-HEADER}" } }`
+When combined with `--fork.username`, the shorthand is `{ headers: { "Authorization": "Basic {ENCODED-BASIC-HEADER}" } }`.
 
-If the `--fork.headers` specifies an authorization header, it will be inserted after the Basic token.
+If the `--fork.headers` specifies an authorization header, the header is inserted after the Basic token.
 
 **`--fork.jwt`**
 
@@ -769,9 +769,9 @@ If the `--fork.headers` specifies an authorization header, it will be inserted a
 
 Encoded [JSON Web Token (JWT)](https://jwt.io) used for authenticating to servers.
 
-The shorthand is `{ headers: { "Authorization": "Bearer {YOUR-ENCODED-JWT}" } }`
+The shorthand is `{ headers: { "Authorization": "Bearer {YOUR-ENCODED-JWT}" } }`.
 
-If the `--fork.headers` option specifies an authorization header, it will be inserted after the JWT Bearer token.
+If the `--fork.headers` option specifies an authorization header, the header is inserted after the JWT Bearer token.
 
 **`--fork.userAgent`**
 
@@ -826,7 +826,7 @@ Is overridden by an `Origin` value defined in the `--fork.headers` option, if pr
 Headers to supply on each request to the forked provider.
 Headers set here override headers set by other options, unless otherwise specified.
 
-Defaults to `"User-Agent: Ganache/VERSION (https://www.trufflesuite.com/ganache; ganache<at>trufflesuite.com)"`.
+The default is `"User-Agent: Ganache/VERSION (https://www.trufflesuite.com/ganache; ganache<at>trufflesuite.com)"`.
 
 **`--fork.requestsPerSecond`**
 
@@ -841,7 +841,7 @@ Defaults to `"User-Agent: Ganache/VERSION (https://www.trufflesuite.com/ganache;
     --fork.requestsPerSecond=10
     ```
 
-Restrict the number of requests that are sent per second to the fork provider.
+Restrict the number of requests sent per second to the fork provider.
 
 The default is `0`, meaning no limit is applied.
 
@@ -894,7 +894,7 @@ The default is `false`.
     --server.ws=false
     ```
 
-Enable a websocket server.
+Enables a WebSocket server.
 
 The default is `true`.
 
@@ -911,7 +911,7 @@ The default is `true`.
     --server.wsBinary=false
     ```
 
-Whether or not Websockets should respond with binary data (ArrayBuffers) or strings. Options are
+Indicates whether WebSocket should respond with binary data (ArrayBuffers) or strings. Options are
 `true`, `false`, or `auto`.
 
 The default is `auto`.
