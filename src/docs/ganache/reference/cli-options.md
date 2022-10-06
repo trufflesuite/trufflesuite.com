@@ -125,7 +125,9 @@ The alias `--networkId` is deprecated, use `-i` instead.
     --chain.time=1662596414
     ```
 
-Date and time that the first block should start.
+Date and time that the first block should start. Accepts the date format supported by the
+[JavaScript `Date()` constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Date).
+For example Unix epoch or a string.
 
 The alias `--time` is deprecated, use `-t` instead.
 
