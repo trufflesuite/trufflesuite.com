@@ -47,7 +47,7 @@ const provider = ganache.provider(options);
     --chain.allowUnlimitedContractSize=true
     ```
 
-Allows unlimited contract sizes while debugging. When set to `true`, Ganache behaves
+Indicate whether to allow unlimited contract sizes while debugging. When set to `true`, Ganache behaves
 differently than in production environments.
 
 The default is `false`.
@@ -66,7 +66,8 @@ The default is `false`.
     --chain.asyncRequestProcessing=false
     ```
 
-When set to `false`, only one request is processed at a time.
+Indicate whether to asynchronously process requests. When `false`, only one request is
+processed at a time.
 
 The default is `true`.
 
@@ -84,7 +85,7 @@ The default is `true`.
     --chain.chainId=10
     ```
 
-Set the chain ID of the network.
+The chain ID of the network.
 
 The default is `1337`.
 
@@ -102,7 +103,7 @@ The default is `1337`.
     --chain.networkId=10
     ```
 
-Set the network ID that's retrieved when running the [`net_version`](https://ethereum.org/en/developers/docs/apis/json-rpc/#net_version)
+The network ID that's retrieved when running the [`net_version`](https://ethereum.org/en/developers/docs/apis/json-rpc/#net_version)
 JSON-RPC method.
 
 The default is the system time when the process starts, or network ID of the forked
@@ -142,7 +143,7 @@ The alias `--time` is deprecated, use `-t` instead.
     --chain.hardfork="arrowGlacier"
     ```
 
-Set the hardfork rules for the EVM. Valid options are: `constantinople`, `byzantium`, `petersburg`,
+The hardfork rules for the EVM. Valid options are: `constantinople`, `byzantium`, `petersburg`,
 `istanbul`, `muirGlacier`, `berlin`, `london`, `arrowGlacier`, and `grayGlacier`.
 
 The default is `london`.
@@ -163,7 +164,7 @@ The alias `--hardfork` has been deprecated, use `-k` instead.
     --chain.vmErrorsOnRPCResponse=true
     ```
 
-Whether to report runtime errors from EVM code as RPC errors.
+Indicate whether to report runtime errors from EVM code as RPC errors.
 
 The default is `false`.
 
@@ -183,7 +184,7 @@ The default is `false`.
     --database.dbPath="/User/me/db"
     ```
 
-Specify a path to a directory to save the chain database.
+The path to a directory to save the chain database.
 
 The aliases `--db` and `--db_path` have been deprecated.
 
@@ -203,7 +204,7 @@ The aliases `--db` and `--db_path` have been deprecated.
     --logging.debug=true
     ```
 
-Set to `true` to log EVM opcodes.
+Indicate whether to log debug information. Set to `true` to log EVM opcodes.
 
 The default is `false`.
 
@@ -221,7 +222,7 @@ The default is `false`.
     --logging.quiet=true
     ```
 
-Set to `true` to disable logging.
+Indicate whether to disable logging. Set to `true` to disable logging.
 
 The default is `false`.
 
@@ -241,7 +242,7 @@ The alias `--quiet` has been deprecated, use `-q` instead.
     --logging.verbose=true
     ```
 
-Set to `true` to log detailed RPC requests.
+Indicate whether to log detailed RPC requests.
 
 The default is `false`.
 
@@ -263,12 +264,30 @@ The alias `--verbose` has been deprecated, use `-v` instead.
     --miner.blockTime=10
     ```
 
-Set the block time (in seconds) for automatic mining. A block time of `0` enables `instamine mode`, where
+The block time (in seconds) for automatic mining. A block time of `0` enables `instamine mode`, where
 new executable transactions are mined instantly.
 
 The default is `0`.
 
 The alias `--blockTime` has been deprecated, use `-b` instead.
+
+**`--miner.timestampIncrement`**
+
+=== "Syntax"
+
+    ```bash
+    --miner.timestampIncrement=<NUMBER>
+    ```
+
+=== "Example"
+
+    ```bash
+    --miner.timestampIncrement=5
+    ```
+
+The amount of time (in seconds) to add to the timestamp of each new block header.
+
+The default is `clock`, which uses your system clock time as the timestamp for each new block.
 
 **`--miner.defaultGasPrice`**, **`g`**
 
@@ -284,7 +303,7 @@ The alias `--blockTime` has been deprecated, use `-b` instead.
     --miner.defaultGasPrice="0x87369400"
     ```
 
-Set the default gas price in WEI for transactions if not specified.
+The default gas price in WEI for transactions if not specified.
 
 The default is `0x77359400` (2 GWEI).
 
@@ -303,7 +322,7 @@ The alias `--gasPrice` has been deprecated, use `-g` instead.
     --miner.blockGasLimit="0x87369400"
     ```
 
-Set the block gas limit in WEI.
+The block gas limit in WEI.
 
 The default is `0x1c9c380` (30 million WEI).
 
@@ -322,7 +341,7 @@ The alias `--gasLimit` has been deprecated, use `-l` instead.
     --miner.defaultTransactionGasLimit="16F30"
     ```
 
-Set the default transaction gas limit in WEI. Set to `estimate` to use an estimate (slows down transaction execution by 40%+).
+The default transaction gas limit in WEI. Set to `estimate` to use an estimate (slows down transaction execution by 40%+).
 
 The defaults is `0x15f90`.
 
@@ -339,7 +358,7 @@ The defaults is `0x15f90`.
     --miner.difficulty="0x2"
     ```
 
-Set the block difficulty.
+The block difficulty.
 
 The default is `0x1`.
 
@@ -356,7 +375,7 @@ The default is `0x1`.
     --miner.callGasLimit="0x58af080"
     ```
 
-Set the transaction gas limit in WEI for `eth_call` and `eth_estimateGas` calls.
+The transaction gas limit in WEI for `eth_call` and `eth_estimateGas` calls.
 
 The default is `0x2faf080`.
 
@@ -373,7 +392,7 @@ The default is `0x2faf080`.
     --miner.instamine="strict"
     ```
 
-Set the `instamine` mode to either `eager` or `strict`. In `eager` mode a transaction is included in a block before its hash
+The `instamine` mode which is either `eager` or `strict`. In `eager` mode a transaction is included in a block before its hash
 is returned to the caller. In `strict` mode a transaction's hash is returned to the caller before the transaction is included in a block.
 This value has no effect if `--miner.blockTime` is *not* `0` (the default).
 
@@ -392,7 +411,7 @@ The default is `eager`.
     --miner.coinbase="0xfe3b557e8fb62b89f4916b721be55ceb828dbd73"
     ```
 
-Sets the mining reward address.
+The mining reward address.
 
 The default is `0x0000000000000000000000000000000000000000`.
 
