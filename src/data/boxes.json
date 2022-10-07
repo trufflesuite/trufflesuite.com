@@ -23,7 +23,7 @@
 			"bsc"
 		]
 	},
-	"NFT-Collection-Box": {
+	"nft-box": {
 		"description": "This Truffle box provides you with the boilerplate necessary to create and deploy an NFT Collection",
 		"stars": 0,
 		"tags": [
