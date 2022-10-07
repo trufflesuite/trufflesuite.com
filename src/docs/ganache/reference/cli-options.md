@@ -340,7 +340,7 @@ The alias `--gasLimit` has been deprecated, use `-l` instead.
 === "Example"
 
     ```bash
-    --miner.defaultTransactionGasLimit="16F30"
+    --miner.defaultTransactionGasLimit="0x16F30"
     ```
 
 The default transaction gas limit in WEI. Set to `estimate` to use an estimate (slows down transaction execution by 40%+).
