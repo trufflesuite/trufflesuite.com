@@ -25,6 +25,12 @@
   },
   {
     "userOrg": "truffle-box",
+    "displayName": "nft-box",
+    "repoName": "nft-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
     "displayName": "pet-shop",
     "repoName": "pet-shop-box",
     "official": true
