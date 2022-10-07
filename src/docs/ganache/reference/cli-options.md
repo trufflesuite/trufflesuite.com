@@ -701,8 +701,7 @@ Alternatively, you can use the `--fork.username` and `--fork.password` options.
     --fork.network="goerli"
     ```
 
-The network to fork. Valid options are `mainnet`, `ropsten`, `kovan`, `rinkeby`, `goerli`, `görli`,
-and `sepolia`.
+The network to fork. Valid options are `mainnet`, `goerli`, `görli`, and `sepolia`.
 
 Use the command `ganache --fork` to automatically fork Mainnet at the latest block.
 
