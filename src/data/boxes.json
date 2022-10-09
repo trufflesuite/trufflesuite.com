@@ -23,6 +23,15 @@
 			"bsc"
 		]
 	},
+	"nft-box": {
+		"description": "This Truffle box provides you with the boilerplate necessary to create and deploy an NFT Collection",
+		"stars": 0,
+		"tags": [
+			"collection",
+			"nft",
+			"nfts"
+		]
+	},
 	"angular-truffle-box": {
 		"description": "Truffle Box for Angular is a quick-and-easy way to get your Dapp on the road with Truffle and Angular",
 		"stars": 49,
@@ -271,6 +280,13 @@
 			"optimism"
 		]
 	},
+	"optimism-bridge-box": {
+		"description": "Optimism Bridge Truffle box",
+		"stars": 1,
+		"tags": [
+			"optimism-bridge"
+		]
+	},
 	"polygon-box": {
 		"description": "Polygon Truffle box",
 		"stars": 1,
@@ -468,14 +484,6 @@
 			"parcel",
 			"parcel-bundler",
 			"parceljs"
-		]
-	},
-	"tezos-example-box": {
-		"description": "A box containing all you need to get started with Tezos development on Truffle.",
-		"stars": 9,
-		"tags": [
-			"official",
-			"tezos"
 		]
 	},
 	"thunder-box": {

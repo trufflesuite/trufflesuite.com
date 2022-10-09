@@ -1,5 +1,5 @@
 ---
-title: We came, we saw, we Merged! What’s next for Ethereum and dapp developer experience at Truffle
+title: We came, we saw, we Merged! What’s next for Ethereum and the dapp developer experience at Truffle
 hide:
   - navigation
 ---
