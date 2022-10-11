@@ -1,6 +1,14 @@
 {
-  "we-came-we-saw-we-merged-whats-next-for-ethereum-and-dapp-developer-experience-at-truffle": {
-    "title": "We came, we saw, we Merged! What’s next for Ethereum and dapp developer experience at Truffle",
+  "three-new-ganache-features-to-improve-your-developer-experience": {
+    "title": "Three new Ganache features to improve your developer experience",
+    "date": "2022-09-29",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "Since the release of Ganache v7.0 in January, we’ve mostly focused our attention on bug fixes and UX improvements. Recently, we decided to expand our focus to also include new features that will help improve the developer experience for our users...",
+    "image": "/img/blog/thumbnails/whats-new-in-ganache-thumbnail.jpg"
+  },
+  "we-came-we-saw-we-merged-whats-next-for-ethereum-and-the-dapp-developer-experience-at-truffle": {
+    "title": "We came, we saw, we Merged! What’s next for Ethereum and the dapp developer experience at Truffle",
     "date": "2022-09-26",
     "author": "Kingsley Arinze",
     "published": true,

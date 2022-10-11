@@ -7,6 +7,12 @@
   },
   {
     "userOrg": "truffle-box",
+    "displayName": "optimism-bridge",
+    "repoName": "optimism-bridge-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
     "displayName": "arbitrum",
     "repoName": "arbitrum-box",
     "official": true
@@ -15,6 +21,12 @@
     "userOrg": "truffle-box",
     "displayName": "react",
     "repoName": "react-box",
+    "official": true
+  },
+  {
+    "userOrg": "truffle-box",
+    "displayName": "nft-box",
+    "repoName": "nft-box",
     "official": true
   },
   {
@@ -51,12 +63,6 @@
     "userOrg": "truffle-box",
     "displayName": "vyper-example",
     "repoName": "vyper-example-box",
-    "official": true
-  },
-  {
-    "userOrg": "truffle-box",
-    "displayName": "tezos-example",
-    "repoName": "tezos-example-box",
     "official": true
   },
   {

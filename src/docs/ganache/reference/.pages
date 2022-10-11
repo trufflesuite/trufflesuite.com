@@ -1,3 +1,4 @@
 nav:
+  - CLI options: cli-options.md
   - Ganache settings: ganache-settings.md
-  - Default Workspace configurations: workspace-default-configuration.md
+  - Default Workspace configuration: workspace-default-configuration.md
