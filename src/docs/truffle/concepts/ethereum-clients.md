@@ -1,8 +1,8 @@
 ---
-title: Choosing an Ethereum Client
+title: Ethereum clients
 layout: docs.hbs
 ---
-# Choosing an Ethereum client
+# Ethereum clients
 
 There are many Ethereum clients to choose from. We recommend different clients depending on whether you are developing or deploying.
 

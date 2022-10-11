@@ -1,8 +1,8 @@
 ---
-title: Using the Build Pipeline
+title: Use the Build pipeline
 layout: docs.hbs
 ---
-# Using the Build Pipeline
+# Use the Build pipeline
 
 <p class="alert alert-warning">
 <strong>Alert</strong>: This command is deprecated. Please use third-party build tools like webpack or grunt, or see our <a href="/boxes">Truffle Boxes</a> for an example.

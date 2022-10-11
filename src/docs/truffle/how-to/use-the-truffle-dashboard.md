@@ -1,8 +1,8 @@
 ---
-title: Using the Truffle Dashboard
+title: Use Truffle Dashboard
 layout: docs.hbs
 ---
-# Using the Truffle Dashboard
+# Use Truffle Dashboard
 
 When deploying your smart contracts you need to specify an Ethereum account that has enough funds to cover the transaction fees of the deployment. A popular method of doing this is copy-pasting your mnemonic phrase to a gitignored `.env` file so that it can be used for, e.g., the `@truffle/hdwallet-provider`. However, it is generally a bad practice to copy-paste your keys, especially since we have wallets like MetaMask that can send transactions for us.
 

@@ -1,8 +1,8 @@
 ---
-title: Creating a Project
+title: Create a project
 layout: docs.hbs
 ---
-# Creating a Project
+# Create a project
 
 To use most Truffle commands, you need to run them against an existing Truffle project. So the first step is to create a Truffle project.
 

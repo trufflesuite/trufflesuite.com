@@ -1,8 +1,8 @@
 ---
-title: Using the Truffle Debugger
+title: Use the Truffle debugger
 layout: docs.hbs
 ---
-# Using the Truffle Debugger
+# Use the Truffle debugger
 
 Truffle includes an integrated debugger so that you can debug transactions made against your contracts. This debugger looks and feels like existing command line debuggers available for traditional development environments.
 
@@ -67,9 +67,9 @@ your tests as normal until reaching the operation in question. At this point,
 Truffle will interrupt the normal test flow and start the debugger, allowing
 you to set breakpoints, inspect Solidity variables, etc.
 
-See [Writing tests in JavaScript](writing-tests-in-javascript.md)
+See [Writing tests in JavaScript](write-tests-in-javascript.md)
 for more information on `truffle test`, and see
-[Interacting with your contracts](../contracts/interacting-with-your-contracts.md)
+[Interacting with your contracts](../contracts/interact-with-your-contracts.md)
 to learn about contract operations.
 
 <p class="alert alert-warning">

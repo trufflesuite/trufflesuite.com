@@ -1,8 +1,8 @@
 ---
-title: Linking a CorDapp
+title: Link a CorDapp
 layout: docs.hbs
 ---
-# Linking a CorDapp Project
+# Link a CorDapp project
 
 To link a project, enter the settings by clicking the gear icon in the upper right.
 

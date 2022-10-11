@@ -1,8 +1,8 @@
 ---
-title: Running Migrations
+title: Run Migrations
 layout: docs.hbs
 ---
-# Running Migrations
+# Run Migrations
 
 Migrations are JavaScript files that help you deploy contracts to the Ethereum network. These files are responsible for staging your deployment tasks, and they're written under the assumption that your deployment needs will change over time. As your project evolves, you'll create new migration scripts to further this evolution on the blockchain. A history of previously run migrations is recorded on-chain through a special `Migrations` contract, detailed below.
 

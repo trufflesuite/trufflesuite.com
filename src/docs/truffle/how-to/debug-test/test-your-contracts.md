@@ -1,8 +1,8 @@
 ---
-title: Testing Your Contracts
+title: Test your contracts
 layout: docs.hbs
 ---
-# Testing Your Contracts
+# Test your contracts
 
 ## Framework
 

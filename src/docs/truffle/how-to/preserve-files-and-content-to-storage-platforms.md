@@ -1,8 +1,8 @@
 ---
-title: Preserving Files and Content to Storage Platforms
+title: Preserve files and content to storage platforms
 layout: docs.hbs
 ---
-# Preserving Files and Content to Storage Platforms
+# Preserve files and content to storage platforms
 
 ## Preserving to IPFS, Filecoin or Textile Buckets
 

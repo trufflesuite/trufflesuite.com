@@ -1,8 +1,8 @@
 ---
-title: Compiling Contracts
+title: Compile contracts
 layout: docs.hbs
 ---
-# Compiling contracts
+# Compile contracts
 
 ## Location
 

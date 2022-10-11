@@ -2,10 +2,12 @@
 title: Working With Hyperledger EVM
 layout: docs.hbs
 ---
-# Working With Hyperledger EVM
+# Work with Hyperledger EVM
+
 As of version `5.0.27`, Truffle supports development with Hyperledger Fabric's EVM chaincode, a **permissioned** version of Ethereum.
 
 ## Configuration
+
 To use Fabric EVM, you must modify your network in `truffle-config.js` to include a parameter `type` set to `"fabric-evm"`. See the example below.
 
 ```javascript

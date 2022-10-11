@@ -1,8 +1,8 @@
 ---
-title: Interacting with Your Contracts
+title: Interact with your contracts
 layout: docs.hbs
 ---
-# Interacting with your contracts
+# Interact with your contracts
 
 ## Introduction
 

@@ -1,8 +1,8 @@
 ---
-title: Editing Workspaces
+title: Edite Workspaces
 layout: docs.hbs
 ---
-# Editing Workspaces
+# Edit Workspaces
 
 To edit a workspace without loading it first, from the home screen, hover over the workspace name and click the settings icon on the right hand side. You'll then be able to [reconfigure your existing workspace](/docs/ganache/workspaces/creating-workspaces#workspace-configuration).
 

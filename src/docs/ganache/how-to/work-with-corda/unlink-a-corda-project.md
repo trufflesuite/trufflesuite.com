@@ -1,8 +1,8 @@
 ---
-title: Unlinking a Corda Project
+title: Unlink a Corda project
 layout: docs.hbs
 ---
-# Unlinking a Corda Project
+# Unlink a Corda project
 
 <p class="alert alert-warning"><i class="far fa-exclamation-triangle"></i> <strong>Warning:</strong> Once a Cordapp has been installed on a node, removing it can result in node start-up failure. For this reason, Ganache will _not_ remove installed CorDapps from existing nodes and notaries.</p>
 

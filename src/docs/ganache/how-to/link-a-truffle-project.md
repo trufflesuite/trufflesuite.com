@@ -1,8 +1,8 @@
 ---
-title: Linking a Truffle Project
+title: Link a Truffle project
 layout: docs.hbs
 ---
-# Linking a Truffle Project
+# Link a Truffle Project
 
 To link a project, enter the settings by clicking the gear icon in the upper right.
 

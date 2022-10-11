@@ -1,9 +1,9 @@
 ---
-title: Writing Tests in JavaScript
+title: Write JavaScript tests
 layout: docs.hbs
 ---
 
-# Writing Tests in JavaScript
+# Write JavaScript tests
 
 Truffle uses the [Mocha](https://mochajs.org/) testing framework and [Chai](https://chaijs.com/) for assertions to provide you with a solid framework from which to write your JavaScript tests. Let's dive in and see how Truffle builds on top of Mocha to make testing your contracts a breeze.
 

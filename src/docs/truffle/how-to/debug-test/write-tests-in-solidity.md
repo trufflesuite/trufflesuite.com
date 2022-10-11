@@ -1,8 +1,8 @@
 ---
-title: Writing Tests in Solidity
+title: Write Solidity tests
 layout: docs.hbs
 ---
-# Writing Tests in Solidity
+# Write Solidity tests
 
 Solidity test contracts live alongside Javascript tests as `.sol` files. When `truffle test` is run, they will be included as a separate test suite per test contract. These contracts maintain all the benefits of the Javascript tests: namely a [clean-room environment](/docs/truffle/testing/testing-your-contracts#clean-room-environment) per test suite, direct access to your deployed contracts and the ability to import any contract dependency. In addition to these features, Truffle's Solidity testing framework was built with the following issues in mind:
 

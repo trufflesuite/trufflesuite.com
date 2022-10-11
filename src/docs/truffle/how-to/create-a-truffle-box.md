@@ -2,9 +2,9 @@
 title: Truffle Boxes
 layout: docs.hbs
 ---
-# Creating a Truffle Box
+# Create a Truffle Box
 
-## Creating a box
+## Create a box
 
 To create a Truffle Box you'll need a few things:
 * A GitHub repository

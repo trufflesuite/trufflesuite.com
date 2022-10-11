@@ -1,8 +1,8 @@
 ---
-title: Creating Workspaces
+title: Create Workspaces
 layout: docs.hbs
 ---
-# Creating Workspaces
+# Create Workspaces
 
 The [Quickstart workspace](/docs/ganache/workspaces/the-quickstart-workspace) is great for getting a development blockchain up and running instantly, but for projects already in progress, or users who need custom configurations, we provide two ways to create a full workspace.
 
