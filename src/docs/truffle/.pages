@@ -1,7 +1,7 @@
 nav:
   - What is Truffle?: index.md
   - Quickstart: quickstart.md
-  - How to: howto
+  - How to: how-to
   - Concepts: concepts
   - Reference: reference
   - Tutorials: /guides

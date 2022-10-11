@@ -1,6 +1,6 @@
 nav:
   - What is Ganache?: index.md
   - quickstart.md
-  - How to: howto
+  - How to: how-to
   - Concepts: concepts
   - Reference: reference

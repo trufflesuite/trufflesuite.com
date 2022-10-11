@@ -12,7 +12,7 @@ This page will take you through the basics of creating a Truffle project and dep
 
 ## Installing Truffle
 
-Before you can use Truffle, install it using the `npm` command. Refer to the [installation instructions](howto/installation.md)
+Before you can use Truffle, install it using the `npm` command. Refer to the [installation instructions](how-to/installation.md)
 to install Truffle.
 
 ## Creating a project
@@ -395,7 +395,7 @@ As of Truffle v5, the console supports async/await functions, enabling much simp
 
 ## Deploy to Mainnet, Testnet, and Beyond
 
-If you want to deploy to alternative networks, consider using [Truffle Dashboard](howto/using-the-truffle-dashboard.md). Just call `truffle dashboard` and deploy, test, and run the console using `--network dashboard`.
+If you want to deploy to alternative networks, consider using [Truffle Dashboard](how-to/using-the-truffle-dashboard.md). Just call `truffle dashboard` and deploy, test, and run the console using `--network dashboard`.
 
 ## Continue learning
 

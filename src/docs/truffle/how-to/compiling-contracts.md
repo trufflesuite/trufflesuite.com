@@ -49,4 +49,4 @@ import "somepackage/SomeContract.sol";
 
 Here, `somepackage` represents a package installed via NPM, and `SomeContract.sol` represents a Solidity source file provided by that package.
 
-For more information on how to use Truffle's package management features, please see the Truffle [NPM](../howto/package-management-via-npm.md) documentation.
+For more information on how to use Truffle's package management features, please see the Truffle [NPM](/package-management-via-npm.md) documentation.
