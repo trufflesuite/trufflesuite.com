@@ -1,12 +1,12 @@
 ---
-title: The Truffle NFT Box: All you need to know
+title: The Truffle NFT Box. All you need to know
 hide:
   - navigation
 ---
 
 **By [Kingsley Arinze](https://www.linkedin.com/in/bruzzy)**
 
-![The Truffle NFT Box: All you need to know](./nft-box.jpg)
+![The Truffle NFT Box. All you need to know](./nft-box.jpg)
 
 Infura [announced](https://blog.infura.io/post/introducing-the-infura-nft-api-beta-release) the private beta release of their NFT API a few months ago. Since then, there has been an ecosystem of tools developing around it, making it easier to build with Infura’s NFT API. 
 
