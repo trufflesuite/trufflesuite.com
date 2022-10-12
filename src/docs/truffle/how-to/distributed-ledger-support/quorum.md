@@ -1,5 +1,5 @@
 ---
-title: Working With Quorum
+title: Work with Quorum
 layout: docs.hbs
 ---
 # Working with Quorum

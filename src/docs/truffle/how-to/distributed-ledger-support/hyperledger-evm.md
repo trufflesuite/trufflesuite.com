@@ -1,5 +1,5 @@
 ---
-title: Working With Hyperledger EVM
+title: Work with Hyperledger EVM
 layout: docs.hbs
 ---
 # Work with Hyperledger EVM

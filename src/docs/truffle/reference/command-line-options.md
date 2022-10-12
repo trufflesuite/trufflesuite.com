@@ -1,9 +1,9 @@
 ---
-title: "Truffle Commands"
+title: Command line options
 layout: "docs.hbs"
 ---
 
-# Truffle Commands
+# Command line options
 
 This section will describe every command available in the Truffle application.
 

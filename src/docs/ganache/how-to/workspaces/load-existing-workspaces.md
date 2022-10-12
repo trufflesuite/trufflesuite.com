@@ -1,8 +1,8 @@
 ---
-title: Load existing Workspaces
+title: Load existing workspaces
 layout: docs.hbs
 ---
-# Load existing Workspaces
+# Load an existing workspace
 
 After at least one workspace has been created, the home screen will now have a list of workspaces for you to choose from. You can scroll through the list to find the desired workspace, and then load the workspace by clicking its name.
 

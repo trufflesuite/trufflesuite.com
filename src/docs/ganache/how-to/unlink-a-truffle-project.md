@@ -2,7 +2,7 @@
 title: Unlink a Truffle project
 layout: docs.hbs
 ---
-# Unlink a Truffle Project
+# Unlink a Truffle project
 
 If you no longer want a Truffle project linked to a workspace, go to the `WORKSPACE` settings pane the same way you did when [linking the project](/docs/ganache/truffle-projects/linking-a-truffle-project).
 

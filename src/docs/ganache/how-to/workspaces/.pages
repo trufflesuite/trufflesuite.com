@@ -1,7 +1,7 @@
 nav:
-   - Create a Quickstart Workspace: the-quickstart-workspace.md
-   - Create a Workspace: create-workspaces.md
-   - Delete a Workspace: delete-workspaces.md
-   - Edit a Workspace: edit-workspaces.md
-   - Load a Workspace: load-existing-workspaces.md
-   - Switch Workspaces: switch-workspaces.md
+   - Create a quickstart workspace: the-quickstart-workspace.md
+   - Create a workspace: create-workspaces.md
+   - Delete a workspace: delete-workspaces.md
+   - Edit a workspace: edit-workspaces.md
+   - Load a workspace: load-existing-workspaces.md
+   - Switch workspaces: switch-workspaces.md

@@ -1,5 +1,5 @@
 nav:
-  - Corda Workspace overview: overview.md
+  - Overview: overview.md
   - Nodes: nodes.md
   - Transactions: transactions.md
   - Cordapps: cordapps.md

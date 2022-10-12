@@ -1,8 +1,8 @@
 ---
-title: Events Page
+title: Events
 layout: docs.hbs
 ---
-# Events Page
+# Events
 
 The new events page shows the events that have fired during this chain's life. We'll try to decode the events if possible. A decoded event will show its name, the emitting contract, hash of the transaction it appears in, log index, and block time. Encoded events will not display decoded names (they appear instead with the generic name `Encoded Event`) or contract names.
 

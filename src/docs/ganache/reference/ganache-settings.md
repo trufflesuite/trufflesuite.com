@@ -1,9 +1,9 @@
 ---
-title: Ganache Settings
+title: Ganache settings
 layout: docs.hbs
 ---
 
-# Ganache Settings
+# Ganache settings
 
 You can change some features of the generated blockchain through the **Settings** pages, accessed by the gear icon in the top right corner. You'll also be prompted with the settings screen when created a [New Workspace](/docs/ganache/workspaces/creating-workspaces).
 

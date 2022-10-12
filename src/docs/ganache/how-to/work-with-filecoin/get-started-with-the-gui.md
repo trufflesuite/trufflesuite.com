@@ -2,9 +2,9 @@
 title: Filecoin-flavored GUI
 layout: docs.hbs
 ---
-# Get Started With using Filecoin-flavored Ganache GUI
+# Get started with the Filecoin-flavored Ganache GUI
 
-## Installation
+## Install
 
 Filecoin-flavored Ganache is included in Ganache UI starting in vTODO and later. If you don't have that version, be sure to update it using the in-app updater or [manually install the latest version](/docs/ganache/quickstart#1-install-ganache).
 

@@ -1,8 +1,8 @@
 ---
-title: Working With Filecoin
+title: Overview
 layout: docs.hbs
 ---
-# Working With Filecoin
+# Overview
 
 Ganache supports development with [Filecoin](https://filecoin.io), a decentralized storage network with built-in incentives.
 

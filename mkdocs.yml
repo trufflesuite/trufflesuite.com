@@ -103,7 +103,8 @@ plugins:
         'docs/truffle/advanced/ethereum-name-service.md': 'docs/truffle/concepts/ethereum-name-service.md'
         'docs/truffle/advanced/event-system.md': 'docs/truffle/concepts/event-system.md'
         'docs/truffle/advanced/networks-and-app-deployment.md': 'docs/truffle/concepts/networks-and-app-deployment.md'
-        'docs/truffle/reference/choosing-an-ethereum-client.md': 'docs/truffle/concepts/ethereum-clients.md'
+        'docs/truffle/reference/choosing-an-ethereum-client.md': 'docs/truffle/concepts/ethereum-client-types.md'
+        'docs/truffle/reference/truffle-commands.md': 'docs/truffle/reference/command-line-options.md'
 #       Filecoin docs restructure
         'docs/filecoin/truffle/quickstart.md': 'docs/truffle/concepts/filecoin.md'
         'docs/filecoin/ganache/getting-started/get-started-with-nodejs.md': 'docs/ganache/how-to/work-with-filecoin/get-started-with-nodejs.md'

@@ -2,7 +2,7 @@
 title: Write external scripts
 layout: docs.hbs
 ---
-# Write External Scripts
+# Write external scripts
 
 Often you may want to run external scripts that interact with your contracts. Truffle provides an easy way to do this, bootstrapping your contracts based on your desired network and connecting to your Ethereum client automatically per your [project configuration](/docs/truffle/reference/configuration).
 
@@ -64,7 +64,7 @@ know how we can improve it!
    ```
 
 
-## Creating a custom command plugin
+## Create a custom command plugin
 
 1. Implement the command as a Node module with a function as its default export.
 
@@ -108,7 +108,7 @@ know how we can improve it!
     npm publish
     ```
 
-## Importing Truffle as a module
+## Import Truffle as a module
 
 ```javascript
 const truffle = require("truffle");

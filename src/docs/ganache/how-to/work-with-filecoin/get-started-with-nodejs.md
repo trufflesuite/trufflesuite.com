@@ -1,8 +1,8 @@
 ---
-title: Filecoin-flavored NodeJS Library
+title: Filecoin-flavored NodeJS library
 layout: docs.hbs
 ---
-# Get Started With using the Filecoin-flavored Ganache as a NodeJS Dependency
+# Get started with Filecoin-flavored Ganache as a NodeJS dependency
 
 ## Requirements
 
@@ -14,7 +14,7 @@ You can check your current version by running:
 node --version
 ```
 
-## Installation
+## Install
 
 If you're using Filecoin-flavored Ganache as a NodeJS dependency, you need to make sure you install both the `ganache` package (with the `filecoin` tag) and the `@ganache/filecoin` package.
 

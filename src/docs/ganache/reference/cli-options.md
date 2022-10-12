@@ -1,9 +1,9 @@
 ---
-title: Ganache | CLI options
+title: Ganache CLI options
 layout: docs.hbs
 ---
 
-# Ganache command line
+# Ganache command line options
 
 This reference describes the syntax of the Ganache command line interface (CLI) options for the Ethereum
 network.

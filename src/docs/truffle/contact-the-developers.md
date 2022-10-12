@@ -1,5 +1,5 @@
 ---
-title: Contact the Developers
+title: Contact the developers
 layout: docs.hbs
 ---
 
@@ -22,7 +22,7 @@ layout: docs.hbs
 If you’re having trouble, want to ask a question, or have a suggestion for Truffle, our community is a great place to post. [Connect on GitHub Discussion](https://github.com/orgs/trufflesuite/discussions)
 and chat with your fellow Trufflers and developers. The answer may be just a quick search away.
 
-## Issue Tracker
+## Issue tracker
 
 If you find a bug or want to recommend a new feature, the best way to reach us is by raising an issue on the GitHub project pages for [Truffle](https://github.com/trufflesuite/truffle), [Ganache](https://github.com/trufflesuite/ganache), or [Drizzle](https://github.com/trufflesuite/drizzle). If you're using another one of our tools or libraries, you may want to check out our [full list of GitHub projects](https://github.com/trufflesuite) to be sure you're raising your issue in the best place.
 

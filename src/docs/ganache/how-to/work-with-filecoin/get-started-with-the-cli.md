@@ -2,7 +2,7 @@
 title: Filecoin-flavored CLI
 layout: docs.hbs
 ---
-# Get Started With using the Filecoin-flavored Ganache CLI
+# Get started with the Filecoin-flavored Ganache CLI
 
 ## Requirements
 
@@ -14,7 +14,7 @@ You can check your current version by running:
 node --version
 ```
 
-## Installation
+## Install
 
 1. Install the `ganache` package globally with the `filecoin` tag (note that we're **not** installing the old `ganache-cli` package)
    ```bash

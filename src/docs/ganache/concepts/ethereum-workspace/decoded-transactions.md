@@ -1,8 +1,8 @@
 ---
-title: Decoded Transactions
+title: Transactions
 layout: docs.hbs
 ---
-# Decoded Transactions
+# Transactions
 
 Ganache will now attempt to decode transactions that are contract calls. In addition to listing the events (encoded or not) for the transaction, Ganache will show the function signature of the transaction as well as the values of the arguments.
 

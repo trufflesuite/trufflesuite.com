@@ -1,11 +1,11 @@
 ---
-title: Ethereum Workspace Overview
+title: Ethereum workspace overview
 layout: docs.hbs
 ---
 
-# Ethereum Workspace Overview
+# Ethereum workspace overview
 
-## Main Interface
+## Main interface
 
 Once you've created a workspace, the screen will show some details about the server, and also list out a number of accounts. **Each account is given 100 ether**. Having ether automatically in all accounts allows you to focus on developing your application.
 
@@ -24,6 +24,6 @@ There are six pages available:
 
 Also note that you can search for block numbers or transaction hashes from a search box at the top.
 
-## You're Up and Running!
+## You're up and running!
 
 This guide got you started with a zero-config personal Ethereum development blockchain. If you have an existing Truffle project whose contracts and events you'd like tracked in this workspace, check out the [Linking a Truffle Project documentation](/docs/ganache/truffle-projects/linking-a-truffle-project). If you just need to customize some options and save this workspace for later, check out the [Creating Workspaces documentation](/docs/ganache/workspaces/creating-workspaces#saving-the-current-quickstart-blockchain-as-a-new-workspace).
