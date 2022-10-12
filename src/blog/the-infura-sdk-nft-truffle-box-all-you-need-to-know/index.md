@@ -43,39 +43,58 @@ For a detailed description of how to use the SDK for deploying an NFT, minting a
 
 To further simplify the developer experience for NFT developers and creators using the Infura NFT API and the SDK, Truffle is happy to announce the release of the [Infura NFT SDK Truffle Box](https://github.com/truffle-box/infura-nft-sdk-box), a set of boilerplate code that enables NFT developers, using Truffle, to take their ideas from concept to reality, as quickly as possible, by allowing them to focus on the most important and unique parts of their projects: the application logic, while taking care of all other aspects such as project configuration, deployment, and environment variables.
 
-## Installation and setup
+### Installation and setup
 
 To use the Infura NFT SDK Truffle Box, you have to meet the following requirements: 
 
-- Node.js 10.x or later 
+- Access to the Infura NFT API as it is still in private beta. Join the waitlist [here](https://infura.io/resources/apis/nft-api-beta-signup)
+- Node.js 10.x or later
 - NPM version 5.2 or later 
 - Windows, Linux, or macOS 
-- Helpful, but optional: - An [Infura](https://infura.io) account and Project ID - A [MetaMask](https://metamask.io) account
+- An [Infura](https://infura.io) account and Project ID, together with the Project Secret Key
+- A [MetaMask](https://metamask.io) account
 
 Once these requirements are met, in an empty folder, run the unbox command as shown below: 
 
 ```bash
-npx truffle unbox infura-nft-sdk-box
+npx truffle unbox infura-nft-sdk
 ```
-In the root directory, install the required dependencies by running the `npm install` command. This will install a few things along with Open Zeppelin Contracts.
 
-Run the command `truffle develop` to start the development console. 
+This should download and unbox the Infura NFT SDK box. Feel free to go through the folders and file. Next is to download all project dependecies by running `npm install`.
 
-## Compiling and migrating
-
-To compile and migrate your smart contracts, simply run `compile migrate` on your Truffle development console. Notice that inside the Truffle development console we don't preface commands with the “truffle” keyword. 
-
-To test things out, we’ve included a basic user interface built with React. Switch to the client directory of the box and run `npm install` followed by `npm start`. On your browser, navigate to `http://localhost:3000` to view your application and connect your wallet. Also, note that smart contract changes must be manually recompiled and migrated.
-
-## Deployment
-
-Start by including a `.env` file in the root of your project, then proceed to provide values for the following environment variables:
+With all dependencies successfully installed, proceed to creating a `.env` file in the root of your project, followed by adding values for the following environment variables:
 
 ```bash
 REACT_APP_INFURA_PROJECT_ID=your-project-id
 REACT_APP_INFURA_PROJECT_SECRET=your-project-secret
 REACT_APP_IPFS_GATEWAY=your-ipfs-gateway
 ```
+
+### Start the project
+
+We’ve included a basic user interface that enable you to perform some actions as you will see shortly. Switch to the client directory of the box and run `npm start` to start the project. On your browser, navigate to `http://localhost:3000` to view your application and connect your wallet.
+
+### How it works
+
+Once you've started the application, notice that on the left hand side, there are links to perform actions like deploying an NFT contract, Loading a deployed NFT contract, Minting and setting royalty for an NFT, and viewing your minted NFT collection.
+
+#### 1. Deploy a new NFT contract
+
+Using the **Add New Contract** link, you can deploy a new NFT contract by first choosing a template, which is a way of telling Infura what underlying smart contract to use. At the moment, there is only one option which is an ERC721 contract but as time goes on, more options will be added. 
+
+Once you've selected a template, you'll be prompted to provide the contract name, symbol and URI - link to your NFT metadata hosted on IPFS. With those set, click the deploy button and proceed to approving the transaction on your connected MetaMask wallet. That's it, you've successfully deployed a new NFT contract.
+
+#### 2. Load contract
+
+There's also an option to load a different contract to UI incase you have multiple contracts deployed. Simply click the **Load contract** link, select a template to use and then provide the contract address you want to load. Click the load button and that's it.
+
+#### 3. Interact with you NFT contract
+
+Once you've deployed or loaded your NFT contract, you can navigate to the **Contract** tab and interact with your deployed contract by minting an NFT. You will need to provide the metadata URI for the NFT you want to mint. You can also set royalty by populating the rayalty input field and clicking the "Set Royalties" button.
+
+#### 4. View your NFTs
+
+By clicking the "Album" link, you should be able to see all your minted NFTs on display on the UI.
 
 ## Conclusion
 
