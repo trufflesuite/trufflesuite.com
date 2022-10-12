@@ -1,18 +1,16 @@
 ---
-title: The Infura NFT Truffle Box. All you need to know
+title: The Infura NFT SDK Truffle Box. All you need to know
 hide:
   - navigation
 ---
 
 **By [Kingsley Arinze](https://www.linkedin.com/in/bruzzy)**
 
-![The Infura NFT Truffle Box. All you need to know](./nft-box.jpg)
-
 Infura [announced](https://blog.infura.io/post/introducing-the-infura-nft-api-beta-release) the private beta release of their NFT API a few months ago. Since then, there has been an ecosystem of tools developing around it, making it easier to build with [Infura’s NFT API](https://infura.io/resources/apis/nft-api-beta-signup). 
 
-One such tool is the [Infura NFT Truffle Box](https://github.com/truffle-box/infura-nft-sdk-box), which as you’ll see later in this post, utilizes another tool built on top of the Infura NFT API, the [Infura NFT SDK](https://github.com/consensys/infura-sdk), to make NFT development as stress-free as possible.
+One such tool is the [The Infura NFT SDK Truffle Box](https://github.com/truffle-box/infura-nft-sdk-box), which as you’ll see later in this post, utilizes another tool built on top of the Infura NFT API, the [Infura NFT SDK](https://github.com/consensys/infura-sdk), to make NFT development as stress-free as possible.
 
-In this post, we will discuss the Infura NFT API, as well as the Infura NFT SDK which is available for download as an [NPM package](https://www.npmjs.com/package/@infura/sdk). We’ll then explore the Infura NFT Truffle Box and how it makes NFT development a lot easier by providing the necessary configuration and boilerplate code needed to build a complete NFT project.
+In this post, we will discuss the Infura NFT API, as well as the Infura NFT SDK which is available for download as an [NPM package](https://www.npmjs.com/package/@infura/sdk). We’ll then explore the Infura NFT SDK Truffle Box and how it makes NFT development a lot easier by providing the necessary configuration and boilerplate code needed to build a complete NFT project.
 
 ## Infura NFT API, what is it?
 
@@ -41,13 +39,13 @@ The Infura NFT SDK is basically a wrapper around the Infura NFT API, exposed as 
 
 For a detailed description of how to use the SDK for deploying an NFT, minting and transferring an NFT, and fetching NFT metadata, please refer to the [how-to section](https://docs.infura.io/infura/infura-custom-apis/nft-sdk/how-to) of the Infura NFT API documentation.
 
-## Infura NFT Truffle Box
+## The Infura NFT SDK Truffle Box
 
-To further simplify the developer experience for NFT developers and creators using the Infura NFT API and the SDK, Truffle is happy to announce the release of the [Infura NFT Truffle Box](https://github.com/truffle-box/infura-nft-sdk-box), a set of boilerplate code that enables NFT developers, using Truffle, to take their ideas from concept to reality, as quickly as possible, by allowing them to focus on the most important and unique parts of their projects: the application logic, while taking care of all other aspects such as project configuration, deployment, and environment variables.
+To further simplify the developer experience for NFT developers and creators using the Infura NFT API and the SDK, Truffle is happy to announce the release of the [Infura NFT SDK Truffle Box](https://github.com/truffle-box/infura-nft-sdk-box), a set of boilerplate code that enables NFT developers, using Truffle, to take their ideas from concept to reality, as quickly as possible, by allowing them to focus on the most important and unique parts of their projects: the application logic, while taking care of all other aspects such as project configuration, deployment, and environment variables.
 
 ## Installation and setup
 
-To use the Infura NFT Truffle Box, you have to meet the following requirements: 
+To use the Infura NFT SDK Truffle Box, you have to meet the following requirements: 
 
 - Node.js 10.x or later 
 - NPM version 5.2 or later 
