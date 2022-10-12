@@ -34,4 +34,4 @@ If you do not have an existing Infura Service deployed, you may create one in an
 
 4. The nodes available from Infura are then show in the view.
 
-   ![Infura nodes](./images/infura_nodes.png)
+   ![Infura nodes](../images/infura_nodes.png)

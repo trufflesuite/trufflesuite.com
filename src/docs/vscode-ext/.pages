@@ -1,9 +1,5 @@
 nav:
-  - Overview: index.md
-  - Installation Guide: installation-guide.md
+  - What is Truffle for VSCode?: index.md
   - Quickstart: quickstart.md
-  - Command Palette: command-palette.md
-  - Infura Service Management: infura-blockchain-service-management.md
-  - Contract Management: contract-management.md
-  - Debugging Smart Contracts: debugging-smart-contracts.md
-  - FAQs: faq.md
+  - How to: howto
+  - Reference: reference

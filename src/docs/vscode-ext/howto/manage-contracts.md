@@ -39,11 +39,11 @@ Follow the instructions below to build your basic "HelloBlockchain" contract:
 
 #### Option 1: Command Palette
 
-![Command Palette - build contract](./images/commandpalettebuild.jpg)
+![Command Palette - build contract](../images/commandpalettebuild.jpg)
 
 #### Option 2: Right click on your contract.sol
 
-![Right click contract - build contract](./images/buildContractRightClick.png)
+![Right click contract - build contract](../images/buildContractRightClick.png)
 
 `Note: The build contract action, from either palette or right-click shortcut will build all contracts in your directory automatically.`
 
@@ -61,7 +61,7 @@ Deployment parameters are based on the Truffle [migrations](http://trufflesuite.
 
 If a developer has not already connected to any other type of network, the default option will allow a developer to deploy their contract to an emulated Ethereum network. This local network is powered by [Truffle Ganache](https://trufflesuite.com/docs/ganache/overview) ([ganache](https://github.com/trufflesuite/ganache#readme) specifically) and is enabled by default
 
-![Smart contract deployment - local](./images/deployContractSelectDefault.png)
+![Smart contract deployment - local](../images/deployContractSelectDefault.png)
 
 Selecting the `development` network from the pick list will deploy your contracts to a local Ganache powered network. Deployment information, such as contract address, transaction hash and other deployment metadata are published in the Truffle for VSCode output channel.
 
