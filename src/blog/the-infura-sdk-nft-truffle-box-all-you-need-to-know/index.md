@@ -87,9 +87,9 @@ Once you've started the application, notice that on the left hand side, there ar
 
 2. Load contract: there's also an option to load a different contract to the UI incase you have multiple contracts deployed. Click the **Load contract** link, This will prompt you to select a template to use. Once selected, input the contract address you want to load before clicking the load button.
 
-3. Interact with you NFT contract: once you've deployed or loaded your NFT contract, you can navigate to the **Contract** link and interact with your deployed contract by minting an NFT. You will need to provide the metadata URI for the NFT you want to mint. You can also set royalty by populating the royalty input field and clicking the "Set Royalties" button.
+3. Interact with you NFT contract: once you've deployed or loaded your NFT contract, you can navigate to the **Contract** link and interact with your deployed contract by minting an NFT. You will need to provide the metadata URI for the NFT you want to mint. You can also set royalty by populating the royalty input field and clicking the **Set Royalties** button.
 
-4. View your NFTs: by clicking the "Album" link, you should be able to see all your minted NFTs on display on the UI.
+4. View your NFTs: by clicking the **Album** link, you should be able to see all your minted NFTs on display on the UI.
 
 ## Conclusion
 
