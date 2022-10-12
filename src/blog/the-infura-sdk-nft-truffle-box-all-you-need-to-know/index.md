@@ -41,7 +41,7 @@ For a detailed description of how to use the SDK for deploying an NFT, minting a
 
 ## The Infura NFT SDK Truffle Box
 
-To further simplify the developer experience for NFT developers and creators using the Infura NFT API and the SDK, Truffle is happy to announce the release of the [Infura NFT SDK Truffle Box](https://github.com/truffle-box/infura-nft-sdk-box), a set of boilerplate code that enables NFT developers, using Truffle, to take their ideas from concept to reality, as quickly as possible, by allowing them to focus on the most important and unique parts of their projects: the application logic, while taking care of all other aspects such as project configuration, deployment, and environment variables.
+To further simplify the developer experience for NFT developers and creators using the Infura NFT API and the SDK, Truffle is happy to announce the release of the [Infura NFT SDK Truffle Box](https://github.com/truffle-box/infura-nft-sdk-box), a set of boilerplate code that enables NFT developers, using Truffle, to take their ideas from concept to reality, as quickly as possible, by allowing them to focus on the most important and unique parts of their projects, while taking care of all other aspects such as project configuration and deployment.
 
 ### Installation and setup
 
@@ -51,6 +51,9 @@ To use the Infura NFT SDK Truffle Box, you have to meet the following requiremen
 - Node.js 10.x or later
 - NPM version 5.2 or later 
 - Windows, Linux, or macOS 
+
+Useful but optional
+
 - An [Infura](https://infura.io) account and Project ID, together with the Project Secret Key
 - A [MetaMask](https://metamask.io) account
 
@@ -60,7 +63,7 @@ Once these requirements are met, in an empty folder, run the unbox command as sh
 npx truffle unbox infura-nft-sdk
 ```
 
-This should download and unbox the Infura NFT SDK box. Feel free to go through the folders and file. Next is to download all project dependecies by running `npm install`.
+This should download and unbox the Infura NFT SDK Box. Next download all project dependecies by running `npm install`.
 
 With all dependencies successfully installed, proceed to creating a `.env` file in the root of your project, followed by adding values for the following environment variables:
 
@@ -78,21 +81,21 @@ We’ve included a basic user interface that enable you to perform some actions 
 
 Once you've started the application, notice that on the left hand side, there are links to perform actions like deploying an NFT contract, Loading a deployed NFT contract, Minting and setting royalty for an NFT, and viewing your minted NFT collection.
 
-#### 1. Deploy a new NFT contract
+#### Deploy a new NFT contract
 
 Using the **Add New Contract** link, you can deploy a new NFT contract by first choosing a template, which is a way of telling Infura what underlying smart contract to use. At the moment, there is only one option which is an ERC721 contract but as time goes on, more options will be added. 
 
 Once you've selected a template, you'll be prompted to provide the contract name, symbol and URI - link to your NFT metadata hosted on IPFS. With those set, click the deploy button and proceed to approving the transaction on your connected MetaMask wallet. That's it, you've successfully deployed a new NFT contract.
 
-#### 2. Load contract
+#### Load contract
 
-There's also an option to load a different contract to UI incase you have multiple contracts deployed. Simply click the **Load contract** link, select a template to use and then provide the contract address you want to load. Click the load button and that's it.
+There's also an option to load a different contract to the UI incase you have multiple contracts deployed. Click the **Load contract** link, This will prompt you to select a template to use. Once selected, input the contract address you want to load before clicking the load button.
 
-#### 3. Interact with you NFT contract
+#### Interact with you NFT contract
 
-Once you've deployed or loaded your NFT contract, you can navigate to the **Contract** tab and interact with your deployed contract by minting an NFT. You will need to provide the metadata URI for the NFT you want to mint. You can also set royalty by populating the rayalty input field and clicking the "Set Royalties" button.
+Once you've deployed or loaded your NFT contract, you can navigate to the **Contract** link and interact with your deployed contract by minting an NFT. You will need to provide the metadata URI for the NFT you want to mint. You can also set royalty by populating the royalty input field and clicking the "Set Royalties" button.
 
-#### 4. View your NFTs
+#### View your NFTs
 
 By clicking the "Album" link, you should be able to see all your minted NFTs on display on the UI.
 
