@@ -1,4 +1,12 @@
 {
+  "the-infura-sdk-nft-truffle-box-all-you-need-to-know": {
+    "title": "The Infura NFT SDK Truffle Box. All you need to know",
+    "date": "2022-10-11",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "Infura announced the private beta release of their NFT API a few months ago. Since then, there has been an ecosystem of tools developing around it, making it easier to build with Infura’s NFT API...",
+    "image": "/img/blog/thumbnails/nft-box-thumbnail.jpg"
+  },
   "three-new-ganache-features-to-improve-your-developer-experience": {
     "title": "Three new Ganache features to improve your developer experience",
     "date": "2022-09-29",
