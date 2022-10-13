@@ -51,9 +51,6 @@ To use the Infura NFT SDK Truffle Box, you have to meet the following requiremen
 - Node.js 10.x or later
 - NPM version 5.2 or later 
 - Windows, Linux, or macOS 
-
-Useful but optional
-
 - An [Infura](https://infura.io) account and Project ID, together with the Project Secret Key
 - A [MetaMask](https://metamask.io) account
 
