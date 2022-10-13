@@ -97,12 +97,12 @@ plugins:
         'docs/truffle/getting-started/writing-external-scripts.md': 'docs/truffle/how-to/write-external-scripts.md'
         'docs/truffle/distributed-ledger-support/working-with-hyperledger-evm.md': 'docs/truffle/how-to/distributed-ledger-support/hyperledger-evm.md'
         'docs/truffle/distributed-ledger-support/working-with-quorum.md': 'docs/truffle/how-to/distributed-ledger-support/quorum.md'
-        'docs/truffle/contact-the-developers.md': 'docs/truffle/contact-the-developers.md'
         'docs/truffle/advanced/creating-a-truffle-box.md': 'docs/truffle/how-to/create-a-truffle-box.md'
         'docs/truffle/advanced/build-processes.md': 'docs/truffle/concepts/build-processes.md'
         'docs/truffle/advanced/ethereum-name-service.md': 'docs/truffle/concepts/ethereum-name-service.md'
         'docs/truffle/advanced/event-system.md': 'docs/truffle/concepts/event-system.md'
         'docs/truffle/advanced/networks-and-app-deployment.md': 'docs/truffle/concepts/networks-and-app-deployment.md'
+        'docs/truffle/reference/contact-the-developers.md': 'docs/truffle/contact-the-developers.md'
         'docs/truffle/reference/choosing-an-ethereum-client.md': 'docs/truffle/concepts/ethereum-client-types.md'
         'docs/truffle/reference/truffle-commands.md': 'docs/truffle/reference/command-line-options.md'
 #       Filecoin docs restructure
