@@ -1,5 +1,5 @@
 nav:
-  - Install: install.md
+  - Install dependencies: install-dependencies.md
   - Connect to Infura: connect-to-infura.md
   - Manage contracts: manage-contracts.md
   - Debug a smart contract: debug-smart-contracts.md
