@@ -79,7 +79,7 @@ plugins:
         'docs/ganache/overview/index.md': 'docs/ganache/index.md'
         'docs/vscode-ext/installation-guide.md': 'docs/vscode-ext/how-to/install-dependencies.md'
         'docs/vscode-ext/infura-blockchain-service-management.md': 'docs/vscode-ext/how-to/connect-to-infura.md'
-        'docs/vscode-ext/contract-management.md': 'docs/vscode-ext/how-to/manage-contracts.md'
+        'docs/vscode-ext/contract-management.md': 'docs/vscode-ext/how-to/manage-smart-contracts.md'
         'docs/vscode-ext/debugging-smart-contracts.md': 'docs/vscode-ext/how-to/debug-smart-contracts.md'
         'docs/vscode-ext/faq.md': 'docs/vscode-ext/how-to/troubleshoot.md'
         'docs/vscode-ext/command-palette.md': 'docs/vscode-ext/reference/command-palette.md'

@@ -1,47 +1,65 @@
-# Add a wallet provider to your existing project
+---
+title: Add a walle
+---
 
-If you're using a Truffle box or you've create your own project structure, and you want to use the
+# Add a wallet
+
+If you're using a Truffle box or you've created your own project structure, and you want to use the
 deployment options in the extension, you can add a wallet provider to your project.
 
 ## Steps
 
-1. Update your project to include the required package for the wallet. The underlying requirement is for [truffle-hdwallet-provider](https://github.com/trufflesuite/truffle-hdwallet-provider).
-   If you have an existing package.json as part of your project, you can simply add the following to your dependencies section:
+1. Update your project to include the required package for the wallet.
+    The underlying requirement is for [truffle-hdwallet-provider](https://github.com/trufflesuite/truffle-hdwallet-provider).
+    If you have an existing `package.json` as part of your project, just add the following to
+    your dependencies section:
 
-   ```json
-   "truffle-hdwallet-provider": "1.0.10"
-   ```
+    ```json
+    "truffle-hdwallet-provider": "1.0.10"
+    ```
 
-   If you do **NOT** have an existing package.json as part of your project, you can create one by running the following:
+    If you don't have an existing `package.json` as part of your project, create one by running the
+    following:
 
-   ```shell
-   npm init -y
-   npm install truffle-hdwallet-provider@1.0.10 --save
-   ```
+    ```shell
+    npm init -y
+    npm install truffle-hdwallet-provider@1.0.10 --save
+    ```
 
-2. Update the truffle configuration to include the use of the wallet provider and a native node package to access the file system. This should be added to top of the package.json file.
+1. Update the Truffle configuration to include the wallet provider and a native Node package to
+    access the file system.
+    Add this to the top of `package.json`.
 
-   ```javascript
-   const HDWalletProvider = require('truffle-hdwallet-provider');
-   const fs = require('fs');
-   ```
+    ```javascript
+    const HDWalletProvider = require('truffle-hdwallet-provider');
+    const fs = require('fs');
+    ```
 
-3. To deploy locally to the managed ganache instance inside the extension, the wallet is **NOT** required. What is required to use the deployment is a network section for development. If this is not present in the package.json file, this can be added to the networks section.
+1. To deploy locally, the wallet isn't required, but a network section for development is required.
+    If this isn't present in `package.json`, you can add this to the network section.
 
-   ```json
-   development: {
-     host: "127.0.0.1",     // Localhost (default: none)
-     port: 8545,            // Standard Ethereum port (default: none)
-     network_id: "*",       // Any network (default: none)
-   }
-   ```
+    ```json
+    development: {
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 8545,            // Standard Ethereum port (default: none)
+      network_id: "*",       // Any network (default: none)
+    }
+    ```
 
-4. To deploy to another target, no other configuration is needed. When selecting deploy contracts, the relevant network section will be added dynamnically to the truffle configuration.
+1. To deploy to another target, no other configuration is needed.
+    When selecting deploy contracts, the relevant network section is added dynamically to the Truffle
+    configuration.
 
-5. To deploy to another target, that has been manually added to the truffle configuration, the provider will need to be added manually. Updated the truffle configuration, specific network section to use this provider:
+1. To deploy to another target that has been manually added to the Truffle configuration, the
+    provider must be added manually.
+    Update the network section in the configuraiton to use this provider:
 
-   ```json
-   provider: new HDWalletProvider(fs.readFileSync('<path to a file with a 12 work mnemonic', 'utf-8'), "<uri to rpc endpoint>")
-   ```
+    ```json
+    provider: new HDWalletProvider(fs.readFileSync('<path to a file with a 12 work mnemonic', 'utf-8'), "<uri to rpc endpoint>")
+    ```
 
-`NOTE:` Some older truffle boxes use a truffle configuration file named truffle.js, versus the new one of using truffle-config.js. This is required for Windows based use of the Truffle suite.
+!!! note
+
+    Some older Truffle boxes use a Truffle configuration file named `truffle.js` instead of
+    `truffle-config.js`.
+    This is required on Windows.

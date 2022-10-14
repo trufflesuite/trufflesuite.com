@@ -1,30 +1,27 @@
+---
+title: Debug smart contracts
+---
 
-The Truffle for VSCode extension gives developers the ability to debug Solidity contracts in a typical VS Code debugging experience.
+# Debug smart contracts
 
-## Deploy your contract
+Truffle for VSCode allows you to debug smart contracts using the VSCode debugger.
 
-### Local deployment
+## Use the debugger
 
-If a developer has not already connected to any other type of network, the default option will allow a developer to deploy their contract to an emulated Ethereum network. This local network is powered by [Truffle Ganache](https://trufflesuite.com/docs/ganache/) ([ganache-cli](https://github.com/trufflesuite/ganache/) specifically) and is enabled by default.
+Start the debugger by selecting **Debug Transaction** in the [command palette](../reference/command-palette.md).
+Select the network to debug against.
 
-## Debug your contract
+Then, select the transaction hash to debug.
+The VSCode debugger launches, and you can use typical debugger functions such as watch windows, view
+the call stack, and step in/out/over.
 
-To best illustrate how to use the debugger, we will walk through how to launch the debugger and "debug" a the`HelloBlockchain.sol` example contract that developers can [scaffold out, compile and deploy](./Contract-Management) through the extension.
+When you initially deploy a contract, only constructor functions are executed.
+If you don't execute the other functions prior to starting the debugger, those functions aren't
+yet acted on, and the results aren't added to the ledger.
+Thus, on an initial deployment, only constructor functions are available in the list of transaction
+hashes to debug.
 
-The `HelloBlockchain.sol` contract contains 1 constructor and 2 functions.
-
-When you initially deployed your contract, the constructor function was "executed" as the contract was added/deployed to the ledger. If you have not exercised the other functions prior to launching the debugger, those functions have not yet been acted on and the results added to the ledger. Thus on an initial deployment, only constructor functions are debuggable.
-
-To debug the constructor after initial deployment, start the debugger by accessing the command palette (press `f1` or `ctrl+shift+p`) and choose `Debug Transaction`.
-
-After choosing `Debug Transaction`, you will be asked to pick which transaction you wish to hash. Since this is our first deployment, select the constructor transaction.
-
-After you select the transaction you wish to debug, the VS Code debugger will launch and you can use typical debugger functions such as watch windows, view the call stack, step in/out/over etc.
-
-To debug the other functions (SendRequest and SendResponse in our HelloBlockchain.sol) you need to exercise those functions and debug those transactions much like the constructor. To exercise a function you can use the truffle console right now in a terminal window. For more information please read the truffle [docs](https://trufflesuite.com/docs/truffle/getting-started/interacting-with-your-contracts/).
-
-For example, you can call the functions on the `HelloBlockchain.sol` contract and send messages to both the SendRequest and SendResponse functions from this console.
-
-Now that we have exercised both our functions, when we launch the debugger this time we will see 2 additional transactions that we can debug. Launch the debugger using `f1 or ctrl+shift+p` and you will see the 2 new transactions available to debug.
-
-Selecting any of the new transactions will start the debugger as before and you may debug each transaction appropriately.
+To debug the other functions (for example, `SendRequest` and `SendResponse` in the
+`HelloBlockchain.sol` contract included in the [basic project](manage-smart-contracts.md)), first
+execute those functions by
+[using the Truffle console in a terminal window](../../truffle/getting-started/interacting-with-your-contracts.md).

@@ -36,7 +36,7 @@ directly from the VSCode terminal.
 
 You can also use Truffle for VSCode to scaffold out a project directory using the following steps:
 
-1. From the [command palette](reference/command-palette.md), type `Truffle: New Solidity Project`.
+1. In the [command palette](reference/command-palette.md), type **Truffle: New Solidity Project**.
 1. Select an empty directory to scaffold out your project.
 1. Choose a name for your contract.
 1. Press enter.
@@ -52,8 +52,8 @@ working contract to Truffle.
 
 Build your smart contract by doing one of the following:
 
-- From the [command palette](reference/command-palette.md), type `Truffle: Build Contracts`.
-- Select your contract Solidity (`.sol`) file, right click and select `Build Contracts`.
+- In the [command palette](reference/command-palette.md), type **Truffle: Build Contracts**.
+- Select your contract Solidity (`.sol`) file, right click and select **Build Contracts**.
 
 Once compiled, you have your contract, contract metadata (contract ABI, bytecode, etc.) available in
 the `build` directory.
@@ -63,9 +63,9 @@ the `build` directory.
 Once you have your compiled contract and a local Ganache instance running, deploy your contract by
 doing one of the following:
 
-- From the [command palette](reference/command-palette.md), type `Truffle: Deploy Contracts`.
-- Select your contract Solidity (`.sol`) file, right click and select `Deploy Contracts`.
+- In the [command palette](reference/command-palette.md), type **Truffle: Deploy Contracts**.
+- Select your contract Solidity (`.sol`) file, right click and select **Deploy Contracts**.
 
 Once activated, the deployment process gives users the option to deploy a contract to a local
 Ethereum emulation environment, or various public Ethereum endpoints such as a testnet or mainnet.
-Learn more in [Manage contracts](how-to/manage-contracts.md).
+Learn more in [Manage contracts](how-to/manage-smart-contracts.md).
