@@ -16,12 +16,11 @@ Install the following dependencies if you don't have them already.
 
 1. Download the LTS version of [Node.js](https://nodejs.org/en/).
 1. Install the downloaded `.msi` file in your `Downloads` folder.
+    Check the following box on the **Tools for Native Modules** screen of the installer:
 
-   !!! note
+    ![node tools for native modules screen](https://user-images.githubusercontent.com/951378/157370051-3c7a5fd3-72bd-4896-acef-a723bd20d19a.png)
 
-       Ensure you check the following box on the **Tools for Native Modules** screen of the installer:
-       ![node tools for native modules screen](https://user-images.githubusercontent.com/951378/157370051-3c7a5fd3-72bd-4896-acef-a723bd20d19a.png)
-       If you didn't check the box, [follow these steps](https://github.com/nodejs/node-gyp#on-windows).
+    If you didn't check the box, [follow these steps](https://github.com/nodejs/node-gyp#on-windows).
 
 1. When asked if you want to install the tools at the end of the main installer screen, answer `yes`
    for all.

@@ -14,7 +14,7 @@ If you don't have an existing Infura service deployed, you can create one in any
 access to.
 
 1. Create a new Infura service by doing one of the following:
-   - In the [command palette](../reference/command-palette.md), type **Truffle: Create a new network**.
+   - In the [command palette](../reference/command-palette.md), select **Truffle: Create a new network**.
    - Use the ellipsis menu in the **Truffle - Networks view**.
    - Use the shortcuts in the **Truffle - Networks view**.
 1. A prompt displays to log in to the Infura service, if you haven't already.
@@ -25,7 +25,7 @@ access to.
 ## Connect to existing Infura projects
 
 1. Connect to an existing Infura account/project by doing one of the following:
-   - In the [command palette](../reference/command-palette.md), type **Truffle: Connect to network**.
+   - In the [command palette](../reference/command-palette.md), select **Truffle: Connect to network**.
    - Use the ellipsis menu in the **Truffle - Networks view**.
    - Use the shortcuts in the **Truffle - Networks view**.
 1. A prompt displays to log in to the Infura service, if you haven't already.

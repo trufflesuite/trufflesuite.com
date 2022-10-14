@@ -4,7 +4,7 @@ title: Troubleshoot
 
 # Troubleshoot
 
-This page provides troubleshooting information for some frequent issues.
+This page provides troubleshooting information for common issues.
 
 ## Missing or old version of Python
 
@@ -73,6 +73,4 @@ Open a Powershell shell under administrator rights, and run the following comman
 npm install --global windows-build-tools
 ```
 
-!!! note
-
-   This installation takes a few minutes to install.`
+> **Note**: This installation takes a few minutes to install.`

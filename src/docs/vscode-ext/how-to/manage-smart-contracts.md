@@ -11,7 +11,7 @@ This page provides instructions on creating, building, and deploying smart contr
 
 ## Create a new Solidity project
 
-In the command palette, type **Truffle: New Solidity Project**.
+In the [command palette](../reference/command-palette.md), select **Truffle: New Solidity Project**.
 The extension asks the developer to **Create Basic Project** or **Create Project from Truffle box**.
 
 **Create Basic Project** scaffolds out a simple Truffle-compatible directory structure including
@@ -49,7 +49,7 @@ You can edit this contract to fit your needs.
 
 Build your smart contract by doing one of the following:
 
-- In the [command palette](../reference/command-palette.md), type **Truffle: Build Contracts**.
+- In the [command palette](../reference/command-palette.md), select **Truffle: Build Contracts**.
   ![Command Palette - build contract](../images/commandpalettebuild.jpg)
 - Select your contract Solidity (`.sol`) file, right click and select **Build Contracts**.
   ![Right click contract - build contract](../images/buildContractRightClick.png)
@@ -113,7 +113,7 @@ Truffle for VSCode supports connecting to public Ethereum networks using [Infura
 
 To connect to a public network and deploy a contract:
 
-1. In the command palette, type **Truffle: Sign into Infura account**.
+1. In the [command palette](../reference/command-palette.md), select **Truffle: Sign into Infura account**.
 1. Sign into or create your Infura account.
 1. In the **Blockchain Networks** tab, select the ellipsis in the top right corner and connect to or
    create an Infura project.
@@ -121,11 +121,10 @@ To connect to a public network and deploy a contract:
 The extension updates your `truffle-config.js` to include the connection strings for each destination.
 Deployment of a contract to Ethereum follows the same steps as a [local deployment](#local-deployment).
 
-!!! warning
-
-    The mnemonic used in this step must be the same one associated with your Ethereum user account.
-    Replace the 12-word mnemonic with a valid one and use caution when sharing this project
-    with others to avoid exposing the mnemonic/account information.
+> **Important**: The mnemonic used in this step must be the same one associated with your Ethereum
+user account.
+Replace the 12-word mnemonic with a valid one and use caution when sharing this project with others
+to avoid exposing the mnemonic/account information.
 
 After setting up your `truffle-config.js` with the proper account information and deploying to a
 network, you can see the results of your transaction in the Truffle for VSCode output channel.

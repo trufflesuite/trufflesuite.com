@@ -8,10 +8,11 @@ Truffle for VSCode allows you to debug smart contracts using the VSCode debugger
 
 ## Use the debugger
 
-Start the debugger by selecting **Debug Transaction** in the [command palette](../reference/command-palette.md).
+Start the debugger by selecting **Truffle: Debug Transaction** in the
+[command palette](../reference/command-palette.md).
 Select the network to debug against.
 
-Then, select the transaction hash to debug.
+Then, select the hash of the transaction to debug.
 The VSCode debugger launches, and you can use typical debugger functions such as watch windows, view
 the call stack, and step in/out/over.
 

@@ -1,5 +1,5 @@
 ---
-title: Add a walle
+title: Add a wallet
 ---
 
 # Add a wallet
@@ -52,14 +52,12 @@ deployment options in the extension, you can add a wallet provider to your proje
 
 1. To deploy to another target that has been manually added to the Truffle configuration, the
     provider must be added manually.
-    Update the network section in the configuraiton to use this provider:
+    Update the network section in the configuration to use this provider:
 
     ```json
     provider: new HDWalletProvider(fs.readFileSync('<path to a file with a 12 work mnemonic', 'utf-8'), "<uri to rpc endpoint>")
     ```
 
-!!! note
-
-    Some older Truffle boxes use a Truffle configuration file named `truffle.js` instead of
-    `truffle-config.js`.
-    This is required on Windows.
+> **Note:** Some older Truffle boxes use a Truffle configuration file named `truffle.js` instead of
+`truffle-config.js`.
+This is required on Windows.
