@@ -440,8 +440,8 @@
   },
   {
     "userOrg": "smartcontractkit",
-    "displayName": "box",
-    "repoName": "box",
+    "displayName": "chainlink-box",
+    "repoName": "truffle-starter-kit",
     "official": false
   },
   {
