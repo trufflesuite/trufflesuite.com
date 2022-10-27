@@ -1,0 +1,7 @@
+nav:
+  - Install dependencies: install-dependencies.md
+  - Connect to Infura: connect-to-infura.md
+  - Manage smart contracts: manage-smart-contracts.md
+  - Debug smart contracts: debug-smart-contracts.md
+  - Add a wallet: add-a-wallet.md
+  - Troubleshoot: troubleshoot.md
