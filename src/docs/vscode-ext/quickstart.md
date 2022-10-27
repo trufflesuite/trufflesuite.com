@@ -53,7 +53,7 @@ working contract to Truffle.
 Build your smart contract by doing one of the following:
 
 - In the [command palette](reference/command-palette.md), select **Truffle: Build Contracts**.
-- Select your contract Solidity (`.sol`) file, right click and select **Build Contracts**.
+- Select your contract Solidity (`.sol`) file, right-click and select **Build Contracts**.
 
 Once compiled, you have your contract, contract metadata (contract ABI, bytecode, etc.) available in
 the `build` directory.
@@ -64,7 +64,7 @@ Once you have your compiled contract and a local Ganache instance running, deplo
 doing one of the following:
 
 - In the [command palette](reference/command-palette.md), select **Truffle: Deploy Contracts**.
-- Select your contract Solidity (`.sol`) file, right click and select **Deploy Contracts**.
+- Select your contract Solidity (`.sol`) file, right-click and select **Deploy Contracts**.
 
 Once activated, the deployment process gives users the option to deploy a contract to a local
 Ethereum emulation environment, or various public Ethereum endpoints such as a testnet or mainnet.

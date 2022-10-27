@@ -51,8 +51,8 @@ Build your smart contract by doing one of the following:
 
 - In the [command palette](../reference/command-palette.md), select **Truffle: Build Contracts**.
   ![Command Palette - build contract](../images/commandpalettebuild.jpg)
-- Select your contract Solidity (`.sol`) file, right click and select **Build Contracts**.
-  ![Right click contract - build contract](../images/buildContractRightClick.png)
+- Select your contract Solidity (`.sol`) file, right-click and select **Build Contracts**.
+  ![Right-click contract - build contract](../images/buildContractRightClick.png)
 
 Once compiled, you have your contract, contract metadata (contract ABI, bytecode, etc.) available in
 the `build` directory.

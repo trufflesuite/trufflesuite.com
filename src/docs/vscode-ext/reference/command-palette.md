@@ -8,7 +8,7 @@
 
 Truffle for VSCode provides several commands for interacting with ledgers, and building, compiling,
 and testing your smart contracts.
-These features are enabled through the command palette and several "right-click" shortcut menus.
+These features are enabled through the command palette and several right-click shortcut menus.
 
 To access the command palette, select **View, Command Palette** from the VSCode menu, or press
 `ctrl+shift+p`.
@@ -28,8 +28,8 @@ To access the command palette, select **View, Command Palette** from the VSCode 
 
 | Command name                | Context                                                                  | Description                                                                |
 | --------------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
-| `Copy Access Key`           | Right click on your Blockchain Service Node.                             | Inserts the access key for your node into the copy/paste buffer.           |
-| `Copy Contract ABI`         | Right click on contract `.json` after compiling.                         | Copies the contract ABI into your copy/paste buffer.                       |
-| `Copy Contract Bytecode`    | Right click on contract `.json` after compiling.                         | Copies the contract Bytecode into your copy/paste buffer.                  |
-| `Copy RPC Endpoint Address` | Right click on your Node.                                                | Inserts the RPC endpoint address for your node into the copy/paste buffer. |
-| `Deploy Contracts`          | Right click on your contract `.sol` or contract `.json` after compiling. | Deploys your contract to the selected destination.                         |
+| `Copy Access Key`           | Right-click on your Blockchain Service Node.                             | Inserts the access key for your node into the copy/paste buffer.           |
+| `Copy Contract ABI`         | Right-click on contract `.json` after compiling.                         | Copies the contract ABI into your copy/paste buffer.                       |
+| `Copy Contract Bytecode`    | Right-click on contract `.json` after compiling.                         | Copies the contract Bytecode into your copy/paste buffer.                  |
+| `Copy RPC Endpoint Address` | Right-click on your Node.                                                | Inserts the RPC endpoint address for your node into the copy/paste buffer. |
+| `Deploy Contracts`          | Right-click on your contract `.sol` or contract `.json` after compiling. | Deploys your contract to the selected destination.                         |
