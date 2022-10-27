@@ -50,8 +50,8 @@ deployment options in the extension, you can add a wallet provider to your proje
     When selecting deploy contracts, the relevant network section is added dynamically to the Truffle
     configuration.
 
-1. To deploy to another target that has been manually added to the Truffle configuration, the
-    provider must be added manually.
+1. To deploy to another target that has been manually added to the Truffle configuration, you must add the
+    provider manually.
     Update the network section in the configuration to use this provider:
 
     ```json

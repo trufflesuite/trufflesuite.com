@@ -39,7 +39,7 @@ You can also use Truffle for VSCode to scaffold out a project directory using th
 1. In the [command palette](reference/command-palette.md), select **Truffle: New Solidity Project**.
 1. Select an empty directory to scaffold out your project.
 1. Choose a name for your contract.
-1. Press enter.
+1. Press **enter**.
 
 Once complete, your project directory looks like the following:
 
