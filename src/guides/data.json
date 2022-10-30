@@ -1,4 +1,11 @@
 {
+  "metamask-api": {
+    "title": "Web3 Unleashed: Build a dapp with Next.js and the MetaMask API",
+    "date": "2022-10-12",
+    "author": "Emily Lin",
+    "published": true,
+    "products": ["truffle"]
+  },
   "livepeer-decentralized-streaming": {
     "title": "Web3 Unleashed: What is Decentralized Streaming?",
     "date": "2022-09-22",

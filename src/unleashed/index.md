@@ -80,5 +80,16 @@ hide:
                     <a href="/guides/livepeer-decentralized-streaming" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
                 </div>
             </div>
+            <div class="row mt-5">
+                <div class="col-md-3">
+                    <img src="/img/unleashed/W3U-ep-7.png" alt="Web3 Unleashed Episode #7" class="rounded-circle img-fluid green" />
+                </div>
+                <div class="col-md-9">
+                    <h2 class="mt-0 font-weight-bold">Episode #7 - Build a dapp with Next.js and the MetaMask API</h2>
+                    <p>10/12/2022 9:00 PST&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> Eric Bishard</p>
+                        <p>In this episode of Web3 Unleashed, we talk with Eric Bishard and Guillaume Bibeau-Laviolette about the MetaMask API and how to build with it!</p>
+                    <a href="/guides/metamask-api" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
+                </div>
+            </div>
     </section>
 </div>
