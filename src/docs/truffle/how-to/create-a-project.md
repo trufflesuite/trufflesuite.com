@@ -4,9 +4,12 @@ layout: docs.hbs
 ---
 # Create a project
 
-To use most Truffle commands, you need to run them against an existing Truffle project. So the first step is to create a Truffle project.
+Most Truffle commands require that you run them against an existing Truffle project. So the first step
+is to create a Truffle project.
 
-You can create a bare project template, but for those just getting started, you can use [Truffle Boxes](/boxes), which are example applications and project templates. We'll use the [MetaCoin box](/boxes/metacoin), which creates a token that can be transferred between accounts:
+You can create a bare project, but for those just getting started, you can use [Truffle Boxes](/boxes), which
+are example applications and project templates. We'll use the [MetaCoin box](/boxes/metacoin), which creates
+a token that can be transferred between accounts:
 
 1. Create a new directory for your Truffle project:
 
