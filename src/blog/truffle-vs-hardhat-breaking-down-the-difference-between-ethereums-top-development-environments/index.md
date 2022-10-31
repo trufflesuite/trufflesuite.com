@@ -54,7 +54,7 @@ The Truffle for VS code extension also has built-in support for a growing number
 
 The [Hardhat for VS code extension](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) caters more towards providing language support for Solidity. It offers code completion, Solidity code error detection, code formatting, and code actions. It is similar to the [Solidity extension](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) by Juan Blanco, although the latter has been around since 2015 and has better and more mature features than the former.
 
-**Ganache vs. Hardhat network**
+**Ganache vs. Hardhat Network**
 
 Both [Ganache](https://trufflesuite.com/ganache/) and [Hardhat Network](https://hardhat.org/hardhat-network/docs/overview) have rich lists of features. They are both local Ethereum network nodes capable of instantly mining new blocks. This makes them very fast and useful for testing smart contracts. They can also be configured to mine blocks at intervals. 
 
@@ -120,6 +120,6 @@ At the end of the day, choosing the right development environment largely depend
 
 At Truffle, we remain committed to improving and simplifying the user experience for dapp developers in the Web3 ecosystem by creating developer tools, resources, and educational materials. 
 
-To find out more about our suite of developer tools, visit the official [Truffle website](https://trufflesuite.com/). If you have questions, feel free to start a discussion on our https://github.com/orgs/trufflesuite/discussions. 
+To find out more about our suite of developer tools, visit the official [Truffle website](https://trufflesuite.com/). If you have questions, feel free to start a discussion on our [Github Discussions page](https://github.com/orgs/trufflesuite/discussions). 
 
-We also hold weekly live-streamed sessions called [Web Unleashed](https://trufflesuite.com/unleashed/), where we build, interview folks, and discuss important developments around the ecosystem. Keep an eye on our Twitter for updates on the next session. You can also find past episodes on the [Truffle Youtube channel](https://www.youtube.com/c/TruffleSuite) and the [unleashed section](https://trufflesuite.com/unleashed) of our website if you prefer written materials.
+We also hold weekly live-streamed sessions called [Web Unleashed](https://trufflesuite.com/unleashed/), where we build, interview folks, and discuss important developments around the ecosystem. Keep an eye on our [Twitter](https://twitter.com/trufflesuite) for updates on the next session. You can also find past episodes on the [Truffle Youtube channel](https://www.youtube.com/c/TruffleSuite) and the [unleashed section](https://trufflesuite.com/unleashed) of our website if you prefer written materials.
