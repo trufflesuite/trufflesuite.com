@@ -46,13 +46,13 @@ Hardhat works well with Ethers.js, as an entire plugin and documentation section
 
 It is important to note that despite Truffle and Hardhat having better support for web3.js and Ethers.js respectively, you can still use any of the two, depending on what you’re more comfortable with.
 
-**Truffle for VS code extension vs. Hardhat for VS code extension**
+**Truffle for VS Code Extension vs. Hardhat for VS Code Extension**
 
-These two extensions vary significantly in what they accomplish. [The Truffle for VS Code extension](https://marketplace.visualstudio.com/items?itemName=trufflesuite-csi.truffle-vscode), which Microsoft originally started, is more catered toward developer user experience. It has an interface for managing your development workflows and representing important information visually. 
+These two extensions vary significantly in what they accomplish. [The Truffle for VS Code Extension](https://marketplace.visualstudio.com/items?itemName=trufflesuite-csi.truffle-vscode), which Microsoft originally started, is more catered toward developer user experience. It has an interface for managing your development workflows and representing important information visually. 
 
 The Truffle for VS code extension also has built-in support for a growing number of Web3 tools and services, including [Infura](https://infura.io/), [Truffle debugger](https://trufflesuite.com/docs/truffle/getting-started/using-the-truffle-debugger/), and [Ganache](https://trufflesuite.com/ganache/). This means that with a few clicks,  you can test, debug, and deploy your contracts directly to the Ethereum mainnet and testnets. You can also deploy directly to Ganache and Hyperledger Besu using this extension.
 
-The [Hardhat for VS code extension](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) caters more towards providing language support for Solidity. It offers code completion, Solidity code error detection, code formatting, and code actions. It is similar to the [Solidity extension](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) by Juan Blanco, although the latter has been around since 2015 and has better and more mature features than the former.
+The [Hardhat for VS code Extension](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) caters more towards providing language support for Solidity. It offers code completion, Solidity code error detection, code formatting, and code actions. It is similar to the [Solidity extension](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) by Juan Blanco, although the latter has been around since 2015 and has better and more mature features than the former.
 
 **Ganache vs. Hardhat Network**
 
