@@ -20,13 +20,15 @@ In this blog, our goal is to outline the differences between Hardhat and Truffle
 
 Truffle was the first of the two to be released, and it was initially written in CoffeeScript. It was later rewritten to ES6 JavaScript in 2015. Truffle quickly gained attention as developers could now write and test their smart contracts using ES6 JavaScript without needing to add any custom processors. 
 
-Truffle also introduced the first-ever integrated Solidity debugger. As part of its offering were also tools that enable developers to compile and deploy contracts, perform automated testing, and configure their frontend architecture.
+Truffle also introduced the first-ever **integrated Solidity debugger** and was the first to allow mainnet forking using **Ganache**. As part of its offering were also tools that enable developers to compile and deploy contracts, perform automated testing, and configure their frontend architecture.
+
+
 
 Hardhat on the other hand was initially launched in 2019 as [Buidler](https://github.com/NomicFoundation/hardhat/releases/tag/hardhat-v2.0.0). Hardhat went on to learn from the early days of Truffle and quickly became the top provider. They offered three main components for dapp development: **Hardhat**, the development environment, **Hardhat Runner**, the task runner, and **Hardhat Network**, the EVM development network.
 
 The key value proposition of Hardhat was that it was less opinionated than Truffle, although in recent times, we’re beginning to see Hardhat become more opinionated, which makes sense considering the exponential growth of the Ethereum ecosystem in recent years.
 
-## Truffle vs. Hardhat - An overview of each service
+## Truffle vs. Hardhat - An overview of each tool
 
 **Hardhat and Truffle’s built-in TypeScript support**
 
@@ -52,7 +54,7 @@ These two extensions vary significantly in what they accomplish. [The Truffle fo
 
 The Truffle for VS code extension also has built-in support for a growing number of Web3 tools and services, including [Infura](https://infura.io/), [Truffle debugger](https://trufflesuite.com/docs/truffle/getting-started/using-the-truffle-debugger/), and [Ganache](https://trufflesuite.com/ganache/). This means that with a few clicks,  you can test, debug, and deploy your contracts directly to the Ethereum mainnet and testnets. You can also deploy directly to Ganache and Hyperledger Besu using this extension.
 
-The [Hardhat for VS code Extension](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) caters more towards providing language support for Solidity. It offers code completion, Solidity code error detection, code formatting, and code actions. It is similar to the [Solidity extension](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) by Juan Blanco, although the latter has been around since 2015 and has better and more mature features than the former.
+The [Hardhat for VS code Extension](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) caters more towards providing language support for Solidity. It offers code completion, Solidity code error detection, code formatting, and code actions. It is similar to the [Solidity extension](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) by Juan Blanco, although the latter has been around since 2015 and offers additional features such as code snippets and Nethereum code generation for integration with .NET projects.
 
 **Ganache vs. Hardhat Network**
 
@@ -98,7 +100,7 @@ Truffle, in addition to supporting both JavaScript and TypeScript for writing au
 
 This technique is used to interact with contracts in advanced, bare-to-the-metal scenarios. You can learn more about testing with Solidity in Truffle in this [documentation](https://trufflesuite.com/docs/truffle/testing/writing-tests-in-solidity/).
 
-**Hardhat plugins vs. Truffle boxes**
+**Plugin support**
 
 [Hardhat plugins](https://hardhat.org/hardhat-runner/plugins) are bits of reusable configuration code written and exported for wider use. Their primary function is to extend the Hardhat Runtime environment by defining tasks and overriding existing ones.
 
@@ -106,7 +108,7 @@ Some examples of things you can achieve with a plugin include: running a linter,
 
 There is a rich ecosystem of Hardhat plugins that caters to various needs. You can learn more about them on their [website](https://hardhat.org/hardhat-runner/plugins).
 
-[Truffle boxes](https://trufflesuite.com/boxes/) are a bit different in the sense that they do not only provide reusable configuration files for quickly starting a new dapp project, but they also provide all the necessary boilerplate code needed to code, compile and deploy contracts, all while being as less opinionated as possible.
+Truffle also offers [plugin support](https://github.com/rkalis/truffle-plugin-verify) although this is still in its early stages. [Truffle boxes](https://trufflesuite.com/boxes/) on the other hand are a bit different in the sense that they do not only provide reusable configuration files for quickly starting a new dapp project, but they also provide all the necessary boilerplate code needed to code, compile and deploy contracts, all while being as less opinionated as possible.
 
 The Truffle website has several boxes you can use depending on the type of dapp project you intend to build. There are boxes tailored for developers looking to build on layer 2 networks such as [Optimism](https://trufflesuite.com/boxes/optimism/) and [Arbitrum](https://trufflesuite.com/boxes/arbitrum/). 
 
