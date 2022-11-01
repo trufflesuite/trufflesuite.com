@@ -1,8 +1,8 @@
 ---
-title: Workspace Default Configuration
+title: Default workspace configurationn
 layout: docs.hbs
 ---
-# Workspace Default Configuration
+# Default workspace configuration
 
 Every workspace has its own configuration. Each workspace's configuration is based off the Quickstart configuration at the time of workspace creation. While these can be changed, the `Quickstart` workspace starts with the below options:
 

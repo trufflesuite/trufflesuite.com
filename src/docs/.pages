@@ -3,6 +3,5 @@ nav:
     - truffle
     - ganache
     - drizzle
-    - filecoin
     - Truffle for VSCode: vscode-ext
     - tezos

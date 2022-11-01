@@ -1,0 +1,14 @@
+nav:
+  - Install Truffle: install.md
+  - Create a project: create-a-project.md
+  - Compile a project: compile-contracts.md
+  - Integrate with MetaMask: truffle-with-metamask.md
+  - Work with contracts: contracts
+  - Use Truffle Dashboard: use-the-truffle-dashboard.md
+  - Debug and test: debug-test
+  - Use NPM package manager: package-management-via-npm.md
+  - Use the build pipeline: use-the-build-pipeline.md
+  - Preserve content: preserve-files-and-content-to-storage-platforms.md
+  - Write external scripts: write-external-scripts.md
+  - Configure a distributed ledger: distributed-ledger-support
+  - Create a Truffle Box: create-a-truffle-box.md

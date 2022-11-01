@@ -7,7 +7,7 @@ layout: docs.hbs
   <img style="max-width: 160px;" src="/img/ganache-logo-dark.svg" alt="Ganache Logo" />
 </div>
 
-# Overview
+# What is Ganache?
 
 [Ganache](/ganache) is a personal blockchain for rapid Ethereum and Corda distributed application development. You can use Ganache across the entire development cycle; enabling you to develop, deploy, and test your dApps in a safe and deterministic environment. 
 
