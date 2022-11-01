@@ -1,4 +1,12 @@
 {
+  "truffle-vs-hardhat-breaking-down-the-difference-between-ethereums-top-development-environments": {
+    "title": "Truffle vs. Hardhat - Breaking down the difference between Ethereum’s top development environments",
+    "date": "2022-10-31",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "Every field in software development relies on the availability of the right tools to get the job done effectively. This is especially true for dapp development in Web3, as we’re still in the early stages...",
+    "image": "/img/blog/thumbnails/truffle-vs-hardhat.jpg"
+  },
   "the-infura-sdk-nft-truffle-box-all-you-need-to-know": {
     "title": "The Infura NFT SDK Truffle Box. All you need to know",
     "date": "2022-10-11",
