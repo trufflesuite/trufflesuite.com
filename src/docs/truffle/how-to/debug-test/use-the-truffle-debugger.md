@@ -221,6 +221,10 @@ This command also prints a group of instructions surrounding the current instruc
 
 This command prints source context surrounding the current source line.  By default, it prints 5 lines ahead of and 3 lines behind the current source line. You can configure the number of source lines to be printed with `+` and `-`; e.g., `l +<lines-ahead> -<lines-back>` will make it print `lines-ahead` lines ahead of and `lines-back` lines behind the current line.  The configured numbers are saved and used for printout afterward.
 
+### (e) print recent events
+
+This command prints events recently emitted by the transaction (as of where you are in it).  The event's emitter and decoding will be displayed.  If the event has been reverted between where it was emitted and where you are, there will be an indicator printed to show this.  By default the command prints the 3 most recent events, but you can use `e <number>` to print the specified number, or `e all` to print them all; the number you choose will be remembered and remain as the default until you quit the debugger.
+
 ### (g) turn on generated sources
 
 When using Solidity 0.7.2 or later, you can use this option to allow the debugger to step into the internal assembly routines that Solidity generates.  You can always advance into these with the `;` command, but this option allows the other debugger commands (`n`, `i`, `o`, `u`) to step into these routines as well.
