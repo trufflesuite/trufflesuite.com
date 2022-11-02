@@ -26,9 +26,11 @@ If you would like to follow along with the Web3 Unleashed Episode #7 demo during
 
 ## Clone and Install Dependencies
 
-Clone the [MetaMask API Web3 Unleashed repo](https://github.com/GuiBibeau/web3-unleashed-demo) and once in the directory we want to ensure we are on the main branch and run:
+Clone the [MetaMask API Web3 Unleashed repo](https://github.com/GuiBibeau/Metamask-Nextjs-Starter). Then, to get your project started, change into the directory and install the dependencies:
 
 ```bash
+git clone https://github.com/GuiBibeau/Metamask-Nextjs-Starter.git
+cd Metamask-Nextjs-Starter
 npm i && npm run dev
 ```
 
