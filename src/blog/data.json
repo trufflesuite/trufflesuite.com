@@ -1,4 +1,44 @@
 {
+  "truffle-vs-hardhat-breaking-down-the-difference-between-ethereums-top-development-environments": {
+    "title": "Truffle vs. Hardhat - Breaking down the difference between Ethereum’s top development environments",
+    "date": "2022-10-31",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "Every field in software development relies on the availability of the right tools to get the job done effectively. This is especially true for dapp development in Web3, as we’re still in the early stages...",
+    "image": "/img/blog/thumbnails/truffle-vs-hardhat.jpg"
+  },
+  "the-infura-sdk-nft-truffle-box-all-you-need-to-know": {
+    "title": "The Infura NFT SDK Truffle Box. All you need to know",
+    "date": "2022-10-11",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "Infura announced the private beta release of their NFT API a few months ago. Since then, there has been an ecosystem of tools developing around it, making it easier to build with Infura’s NFT API...",
+    "image": "/img/blog/thumbnails/nft-box-thumbnail.jpg"
+  },
+  "three-new-ganache-features-to-improve-your-developer-experience": {
+    "title": "Three new Ganache features to improve your developer experience",
+    "date": "2022-09-29",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "Since the release of Ganache v7.0 in January, we’ve mostly focused our attention on bug fixes and UX improvements. Recently, we decided to expand our focus to also include new features that will help improve the developer experience for our users...",
+    "image": "/img/blog/thumbnails/whats-new-in-ganache-thumbnail.jpg"
+  },
+  "we-came-we-saw-we-merged-whats-next-for-ethereum-and-the-dapp-developer-experience-at-truffle": {
+    "title": "We came, we saw, we Merged! What’s next for Ethereum and the dapp developer experience at Truffle",
+    "date": "2022-09-26",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "On the 15th of September 2022, The Merge - Ethereum’s upgrade from PoW to PoS, was successfully completed. This has led to the complete overhaul of Ethereum’s consensus mechanism, an incredible great engineering accomplishmentnot just for the ecosystem, but for the world at large...",
+    "image": "/img/blog/thumbnails/the-merge.png"
+  },
+  "how-the-merge-impacts-the-application-layer-and-developer-experience": {
+    "title": "How the merge impacts the application layer and developer experience",
+    "date": "2022-09-12",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "The Merge is scheduled to happen between the 13th and 15th of September and once complete, Ethereum would no longer run on PoW, but a PoS consensus mechanism that promises to reduce its carbon footprint by 99.95%....",
+    "image": "/img/blog/thumbnails/the-merge-part3-thumbnail.jpg"
+  },
   "preparing-for-the-merge-hear-from-our-truffle-engineers": {
     "title": "Preparing for the Merge, hear from our Truffle engineers",
     "date": "2022-07-28",

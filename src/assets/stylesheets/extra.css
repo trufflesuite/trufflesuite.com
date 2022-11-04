@@ -122,7 +122,8 @@ a.link-card, nav a, .footer-naviation a {
   color: var(--cream);
 }
 .md-social{
-  text-align: right;
+  text-align: left;
+  margin-left: 1.25em;
 }
 
 a:hover {
@@ -449,9 +450,8 @@ a.link-card:is(:hover, :focus, :focus-visible) > .card {
 .hs-form input[type="text"], .hs-form input[type="email"] {
   display: block;
   width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
@@ -520,15 +520,18 @@ footer .hs-form ul.hs-error-msgs {
 .hs-form-inline .hs-form .hs-form-field {
   display: inline-block;
 }
-.hs-form-inline .hs-form .hs-email {
-  margin-right: 0.5rem;
-}
 .hs-form-inline .hs-form .hs-fieldtype-booleancheckbox {
   display: block;
 }
 .hs-form-inline .hs-form .inputs-list {
   list-style-type: none;
   padding-left: 0;
+}
+.md-typeset ul li.hs-form-booleancheckbox, .md-typeset ul.inputs-list {
+  margin-left: 0;
+}
+.hs-form-booleancheckbox-display {
+  font-size: 0.64rem;
 }
 @media screen and (max-width: 767.98px) {
   .hs-form-inline .hs-form .hs-form-field {

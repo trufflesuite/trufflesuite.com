@@ -14,11 +14,38 @@
 			"community"
 		]
 	},
+	"BSC-Truffle-Starter-Box": {
+		"description": "This Truffle BNB Smart Chain box provides you with the boilerplate structure necessary to start coding on the BNB Smart Chain.",
+		"stars": 0,
+		"tags": [
+			"community",
+			"binance",
+			"bsc"
+		]
+	},
+	"nft-box": {
+		"description": "This Truffle box provides you with the boilerplate necessary to create and deploy an NFT Collection",
+		"stars": 0,
+		"tags": [
+			"collection",
+			"nft",
+			"nfts"
+		]
+	},
 	"angular-truffle-box": {
 		"description": "Truffle Box for Angular is a quick-and-easy way to get your Dapp on the road with Truffle and Angular",
 		"stars": 49,
 		"tags": [
 			"community"
+		]
+	},
+	"truffle-react-material": {
+		"description": "This box contains everything you need to get started using smart contracts from a React app with the Material-ui library.",
+		"stars": 49,
+		"tags": [
+			"community",
+			"react",
+			"material-ui"
 		]
 	},
 	"angulartruffledapp": {
@@ -117,58 +144,6 @@
 		"stars": 10,
 		"tags": [
 			"community"
-		]
-	},
-	"drizzle-box": {
-		"description": "This box comes with everything you need to start using smart contracts from a react app with Drizzle. It includes drizzle, drizzle-react and drizzle-react-components to give you a complete overview of Drizzle's capabilities.",
-		"stars": 161,
-		"tags": [
-			"official",
-			"drizzle",
-			"react",
-			"redux"
-		]
-	},
-	"drizzle-kaleido-box": {
-		"description": "Truffle box to get up and running quickly with Drizzle & Truffle on a Kaleido chain.",
-		"stars": 0,
-		"tags": [
-			"partner",
-			"drizzle",
-			"kaleido",
-			"react",
-			"truffle",
-			"truffle-box"
-		]
-	},
-	"drizzle-react-native-box": {
-		"description": "This box is to help get you started with building dapps with Drizzle on React Native.",
-		"stars": 6,
-		"tags": [
-			"official",
-			"drizzle",
-			"react-native"
-		]
-	},
-	"drizzle-truffle-ganache-docker-box": {
-		"description": "",
-		"stars": 0,
-		"tags": [
-			"community",
-			"docker",
-			"drizzle"
-		]
-	},
-	"drizzle-tutorial-with-react-hooks": {
-		"description": "Drizzle tutorial. Drizzle is a reactive Ethereum datastore for dapp UIs.",
-		"stars": 1,
-		"tags": [
-			"community",
-			"drizzle",
-			"ethereum",
-			"hooks",
-			"react",
-			"redux"
 		]
 	},
 	"eth-vue": {
@@ -303,6 +278,13 @@
 		"stars": 1,
 		"tags": [
 			"optimism"
+		]
+	},
+	"optimism-bridge-box": {
+		"description": "Optimism Bridge Truffle box",
+		"stars": 1,
+		"tags": [
+			"optimism-bridge"
 		]
 	},
 	"polygon-box": {
@@ -504,14 +486,6 @@
 			"parceljs"
 		]
 	},
-	"tezos-example-box": {
-		"description": "A box containing all you need to get started with Tezos development on Truffle.",
-		"stars": 9,
-		"tags": [
-			"official",
-			"tezos"
-		]
-	},
 	"thunder-box": {
 		"description": "Truffle Dapp boilerplate for ThunderCore",
 		"stars": 0,
@@ -706,18 +680,7 @@
 			"official"
 		]
 	},
-	"besu-drizzle-truffle-box": {
-		"description": "Drizzle starter for Hyperledger Besu network",
-		"stars": 1,
-		"tags": [
-			"besu",
-			"community",
-			"docker",
-			"drizzle",
-			"hyperledger"
-		]
-	},
-	"box": {
+	"truffle-starter-kit": {
 		"description": "An example smart contract utilizing Chainlink",
 		"stars": 12,
 		"tags": [

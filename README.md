@@ -1,4 +1,4 @@
-# New trufflesuite.com
+# trufflesuite.com
 
 [![GitPOAP Badge](https://public-api.gitpoap.io/v1/repo/trufflesuite/trufflesuite.com/badge)](https://www.gitpoap.io/gh/trufflesuite/trufflesuite.com)
 

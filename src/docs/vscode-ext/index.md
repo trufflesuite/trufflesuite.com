@@ -1,18 +1,20 @@
 ---
-title: Overview
+title: What is Truffle for VSCode?
 ---
 
-Truffle for VSCode simplifies how you create, build, debug and deploy smart contracts on Ethereum and EVM-compatible blockchains.
+# What is Truffle for VSCode?
 
-## System Requirements
+[Truffle for VSCode](https://marketplace.visualstudio.com/items?itemName=trufflesuite-csi.truffle-vscode)
+is a Visual Studio Code extension that simplifies how you create, build, debug, and deploy smart
+contracts on Ethereum and EVM-compatible blockchains.
 
-For public preview, the current supported system requirements are shown below
+## System requirements
 
-- Supported Operating Systems:
+- Supported operating systems:
     - Windows 10
     - MacOS
     - Ubuntu
 - Node 14.0.x
 - Git 2.10.x
 
-Head to the [Installation Guide](./installation-guide.html) to get started!
+Get started by [installing the Truffle for VSCode dependencies](how-to/install-dependencies.md).

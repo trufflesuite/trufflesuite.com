@@ -2,7 +2,7 @@
 title: Quickstart
 ---
 
-# Ganache Quickstart
+# Ganache quickstart
 
 This quickstart guide will walk you through installing Ganache and creating a personal development blockchain via a quickstart workspace. If you want to use our full featured `ganache` CLI, see the Ganache README](https://github.com/trufflesuite/ganache#readme) for installation instructions and documentation.
 

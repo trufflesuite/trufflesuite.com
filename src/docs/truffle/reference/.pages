@@ -1,0 +1,4 @@
+nav:
+  - Command line options: command-line-options.md
+  - Configuration file options: configuration.md
+  - Contract abstractions: contract-abstractions.md

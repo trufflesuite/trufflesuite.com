@@ -1,0 +1,5 @@
+nav:
+  - Overview: overview.md
+  - Use the GUI: get-started-with-the-gui.md
+  - Use the command line: get-started-with-the-cli.md
+  - Use the NodeJS library: get-started-with-nodejs.md

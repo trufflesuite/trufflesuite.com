@@ -1,7 +1,8 @@
 ---
-title: Truffle Quickstart
+title: Truffle quickstart
 ---
-# Truffle Quickstart
+
+# Truffle quickstart
 
 This page will take you through the basics of creating a Truffle project and deploying a smart contract to a blockchain.
 
@@ -9,26 +10,12 @@ This page will take you through the basics of creating a Truffle project and dep
 <i class="far fa-info-circle"></i> <strong>Note</strong>: Before you begin, make sure that you read our <a href="/guides/ethereum-overview">Ethereum Overview</a> page.
 </p>
 
-## Installing Truffle
+## Install Truffle
 
-Before you can use Truffle, you will have to install it using npm. First, ensure you have these prerequisites:
+Before you can use Truffle, install it using the `npm` command. Refer to the [installation instructions](how-to/install.md)
+to install Truffle.
 
-- Node.js v12 - v16
-- Windows, Linux, or macOS
-
-  <p class="alert alert-info">
-  <i class="far fa-info-circle"></i> <strong>Note</strong>:  We recommend that you use npm with a node version manager like nvm, and this is actually what npm itself recommends. See <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">this article</a> from npm on installing npm with a
-  node version manager.
-  We also recommend against using <code>sudo</code> while installing Truffle as many users report permissions errors after doing so.
-  </p>
-
-Then, open a terminal and use the following to install it globally.
-
-  ```shell
-  npm install -g truffle
-  ```
-
-## Creating a project
+## Create a project
 
 To use most Truffle commands, you need to run them against an existing Truffle project. So the first step is to create a Truffle project.
 
@@ -47,7 +34,7 @@ Once this operation is completed, you'll now have a project structure with the f
 * `test/`: Directory for test files for [testing your application and contracts](/docs/truffle/testing/testing-your-contracts)
 * `truffle.js`: Truffle [configuration file](/docs/truffle/reference/configuration)
 
-## Exploring the project
+## Explore the project
 
 <p class="alert alert-info">
 <i class="far fa-info-circle"></i> <strong>Note</strong>: This page is just a quickstart, so we're not going to go into much detail here. We'll be going over building a truffle project from the command line. All of these commands can be executed through our VS Code extension as well!
@@ -63,7 +50,7 @@ Once this operation is completed, you'll now have a project structure with the f
 
 5. Open the `truffle-config.js` file. This is the Truffle [configuration file](/docs/truffle/reference/configuration), for setting network information and other project-related settings. The file is blank, but this is okay, as we'll be using a Truffle command that has some defaults built-in.
 
-## Testing
+## Test
 
 To run all tests, you can simply run `truffle test`. Because `development` is commented out in `truffle-config.js`, `truffle test` will spin up and tear down a local test instance (`ganache`). If you want to use more of [ganache's features](https://github.com/trufflesuite/ganache#readme), you can spin up a separate instance and specify the port number in the `truffle-config`.
 
@@ -88,9 +75,9 @@ These two tests were run against the contract, with descriptions displayed on wh
 
 If you're running into any issues, try out our [Truffle debugger](https://trufflesuite.com/docs/truffle/getting-started/using-the-truffle-debugger/)!
 
-## Compiling
+## Compile
 
-If you want to only coompile, you can simply run `truffle compile`.
+If you want to only compile, you can simply run `truffle compile`.
 
 You will see the following output:
 
@@ -104,7 +91,7 @@ Compiling your contracts...
 - solc: 0.8.13+commit.abaa5c0e.Emscripten.clang
 ```
 
-### Migrating with Truffle Develop
+## Migrate with Truffle Develop
 
 <p class="alert alert-info">
 <i class="far fa-info-circle"></i> <strong>Note</strong>: To use a separate <a href="/ganache">Ganache</a> instance, please skip to the next section.
@@ -246,9 +233,9 @@ You can create this blockchain and interact with it using [Truffle Develop](/doc
 <i class="far fa-info-circle"></i> <strong>Note</strong>: To see how to interact with the contract, please skip to the next section.
 </p>
 
-## Migrating with Truffle Console
+## Migrate with Truffle Console
 
-While Truffle Develop is an all-in-one personal blockchain and console, it spins up a very basic instance of ganache. You can also use [a desktop application](/ganache), to launch your personal blockchain, which is a easier to understand tool for those new to Ethereum and the blockchain, as it displays much more information up-front. Alternatively, if you want to customize your ganache instance using all the options available to you through the [`ganache` CLI](https://github.com/trufflesuite/ganache#readme)
+While Truffle Develop is an all-in-one personal blockchain and console, it spins up a very basic instance of ganache. You can also use [a desktop application](/ganache), to launch your personal blockchain, which is an easier to understand tool for those new to Ethereum and the blockchain, as it displays much more information up-front. Alternatively, if you want to customize your ganache instance using all the options available to you through the [`ganache` CLI](https://github.com/trufflesuite/ganache#readme)
 
 The only extra step, aside from running Ganache, is that it requires editing the Truffle configuration file to point to the Ganache instance.
 
@@ -355,7 +342,7 @@ The only extra step, aside from running Ganache, is that it requires editing the
    truffle(development)>
    ```
 
-## Interacting with the contract
+## Interact with the contract
 
 Interact with the contract using the console in the following ways:
 
@@ -408,7 +395,7 @@ As of Truffle v5, the console supports async/await functions, enabling much simp
 
 ## Deploy to Mainnet, Testnet, and Beyond
 
-If you want to deploy to alternative networks, consider using [Truffle Dashboard](https://trufflesuite.com/docs/truffle/getting-started/using-the-truffle-dashboard/). Just call `truffle dashboard` and deploy, test, and run the console using `--network dashboard`.
+If you want to deploy to alternative networks, consider using [Truffle Dashboard](how-to/use-the-truffle-dashboard.md). Just call `truffle dashboard` and deploy, test, and run the console using `--network dashboard`.
 
 ## Continue learning
 
