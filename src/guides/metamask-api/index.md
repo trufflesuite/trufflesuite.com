@@ -26,11 +26,11 @@ If you would like to follow along with the Web3 Unleashed Episode #7 demo during
 
 ## Clone and Install Dependencies
 
-Clone the [MetaMask API Web3 Unleashed repo](https://github.com/GuiBibeau/Metamask-Nextjs-Starter). Then, to get your project started, change into the directory and install the dependencies:
+Clone the [MetaMask API Web3 Unleashed repo](https://github.com/metamask/nextjs-starter). Then, to get your project started, change into the directory and install the dependencies:
 
 ```bash
-git clone https://github.com/GuiBibeau/Metamask-Nextjs-Starter.git
-cd Metamask-Nextjs-Starter
+git clone https://github.com/metamask/nextjs-starter.git
+cd nextjs-starter
 npm i && npm run dev
 ```
 
@@ -259,7 +259,7 @@ Two things are happening now:
 
 > We are not yet hiding the button once connected or displaying any wallet information. As well, you will notice in MetaMask that you are connected to the dapp. To test the Install link you can go into your extension manager and disable MetaMask temporarily.
 
-[Checkout the Diff to see what changed](https://github.com/GuiBibeau/Metamask-Nextjs-Starter/pull/1/files)
+[Checkout the Diff to see what changed](https://github.com/metamask/nextjs-starter/pull/1/files)
 
 ### Use the MetaMask API to get User Info
 
@@ -1054,7 +1054,7 @@ This also required a slight update to our JSX/HTML to display our buttons more n
 
 We have one final change we want to make to ensure that we stop listening to changes once the user has disconnected their wallet.
 
-We will update the `` and `` files. This will make TypeScript definitions file aware of the `removeAllListeners()` method we will be using, as well add necessary code to the `disconnect` case inside the `metamaskReducer`.
+We will update the `` and `` files. This will make the TypeScript definitions file aware of the `removeAllListeners()` method we will be using, as well add necessary code to the `disconnect` case inside the `metamaskReducer`.
 
 Update `types.d.ts` file:
 
@@ -1087,9 +1087,11 @@ Update the case statement in the `useMetamask.tsx` file to:
 
 Again, here we have ensured that all listeners added after connecting the wallet stop listening once the user is disconnected.
 
+You can always switch to the [final](https://github.com/metamask/nextjs-starter/tree/final) branch of this repo to get to the completed state of this demo.
+
 This concludes the demo! But you're just getting started; for a challenge, try updating the UI, try to add functionality to switch chains, and overall, have fun. If you have any questions or need help with MetaMask, reach out to our DevRel team on Twitter. You can contact [Gui Bibeau](https://twitter.com/guibibeau) and [Eric Bishard](https://twitter.com/httpjunkie) with any questions or feedback.
 
-> One final note, Gui has a great resource and blog called [web3-fullstack](https://www.web3-fullstack.com/) where he waxes poetically about Web3, full stack development, and UX which is a great resource for Web2 developers getting into Web3, as well as seasoned veterans of the space!
+> One final note, Gui has a great resource and blog called [frontend-devops](https://www.frontend-devops.com/) where he waxes poetically about web, full stack development, and UX which. A great resource for Web2 developers getting into Web3 and seasoned developers alike!
 
 ## Connect with us
 
