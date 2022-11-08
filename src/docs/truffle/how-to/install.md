@@ -6,72 +6,26 @@ layout: docs.hbs
 
 ## Requirements
 
-* [Node.js v12 - v16](#install-nodejs)
+* [Node.js v14 - v18](#install-nodejs)
 * Windows, Linux, or macOS
 
 ## Install Node.js
 
-### Linux and macOS
+Note: to install the latest version of `npm`, run `npm i -g npm`
 
-Node Package Manager (NPM) recommends [installing Node.js with Node Version Manager (`nvm`)](https://node.dev/post/installing-node-js-tutorial-using-nvm-on-mac-os-x-and-ubuntu)
-to avoid permission errors when installing globally.
+Node Package Manager (NPM) recommends installing `Node.js` and `npm` with a Node version manager to avoid permission errors when installing globally. To do so, follow the instructions for your operating system [here](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#using-a-node-version-manager-to-install-nodejs-and-npm).
 
-1. Use `curl` or `wget` to install `nvm`:
+1. Truffle requires `node-gyp` for compiling native add-on modules for Node.js. Truffle recommends installing the following `node-gyp` to avoid errors when installing Truffle. Follow the installation instructions [here](https://github.com/nodejs/node-gyp#installation).
 
-    === "curl"
-
-        ```bash
-        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-        ```
-
-    === "wget"
-
-        ```bash
-        wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-        ```
-
-1. Confirm that `nvm` installed correctly. You may need to reload the terminal for
-    the command to work:
+1. Use `nvm` to install a compatible version of Node.js. For example, to install Node.js v18 on OSX or Linux, run:
 
     ```bash
-    nvm --version
-    ```
- 
-
-1. Truffle requires `node-gyp` for compiling native add-on modules for Node.js. 
-    Truffle recommends installing the following `node-gyp` [dependencies](https://github.com/nodejs/node-gyp) to avoid errors when installing Truffle:
-
-    === "macOS"
-
-        ```bash
-        xcode-select --install
-        ```
-
-    === "Linux (Ubuntu)"
-
-        ```bash
-        sudo apt install make g++
-        ```
-
-1. Use `nvm` to install a compatible version of Node.js. For example, to install Node.js v15, run:
-
-    ```bash
-    nvm install 15
+    nvm install 18
     ```
 
 1. Confirm that Node.js has been installed correctly by running `node --version`.
 
-### Windows
-
-Truffle recommends using the installer available from the [Node.js site](https://nodejs.org/en/download/).
-
-Ensure you select **Automatically install the necessary tools...** during the install to install the
-required Visual Studio build tools, Python, and Chocolately package manager.
-
-![Architecture](/img/docs/truffle/installation/windows-nodejs.png)
-
 ## Install Truffle
-
 
 <p class="alert alert-warning">
 <i class="far fa-exclamation-triangle"></i> <strong>Warning</strong>: Avoid using the <code>sudo</code> command when installing Truffle, this can cause permission errors.
