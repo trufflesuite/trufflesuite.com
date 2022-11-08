@@ -14,7 +14,7 @@ If this isn't your first time using Ganache, or you already know you'll need cus
 
 ## 1. Install Ganache
 
-[Download](https://github.com/trufflesuite/ganache/releases) the appropriate version for your OS:
+[Download Ganache](https://trufflesuite.com/ganache/) by clicking the Download button, or browse all [Ganache Releases](https://github.com/trufflesuite/ganache-ui/releases) to choose the version and appropriate binary for your OS:
 
 - Windows: `Ganache-*.appx`
 - Mac: `Ganache-*.dmg`
