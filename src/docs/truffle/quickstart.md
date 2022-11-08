@@ -7,7 +7,8 @@ title: Truffle quickstart
 This page will take you through the basics of creating a Truffle project and deploying a smart contract to a blockchain.
 
 <p class="alert alert-info">
-<i class="far fa-info-circle"></i> <strong>Note</strong>: Before you begin, make sure that you read our <a href="/guides/ethereum-overview">Ethereum Overview</a> page.
+<i class="far fa-info-circle"></i> <strong>Note</strong>: Before you begin, ensure that you've read the
+<a href="https://ethereum.org/en/what-is-ethereum/">official Ethereum documentation</a>.
 </p>
 
 ## Install Truffle
@@ -17,9 +18,12 @@ to install Truffle.
 
 ## Create a project
 
-To use most Truffle commands, you need to run them against an existing Truffle project. So the first step is to create a Truffle project.
+You need to run most Truffle commands against an existing Truffle project. So the first step is to create a Truffle project.
 
-You can create a bare project template using `truffle init`, but for those just getting started, you can use [Truffle Boxes](/boxes), which are example applications and project templates. We'll use the [MetaCoin box](/boxes/metacoin), which creates a token that can be transferred between accounts. Note that this is NOT ERC-20 compatible.
+You can create a bare project without smart contracts using `truffle init`, but for those
+getting started, you can use [Truffle Boxes](/boxes), which are example applications and project templates. We'll use the
+[MetaCoin box](/boxes/metacoin), which creates a token that can be transferred between accounts. Note
+that this is **not** ERC-20 compatible.
 
 1. Download ("unbox") the MetaCoin box:
 
