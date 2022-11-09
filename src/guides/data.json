@@ -118,13 +118,6 @@
     "published": false,
     "products": ["truffle"]
   },
-  "ethereum-overview": {
-    "title": "Ethereum Overview",
-    "date": "2017-06-20",
-    "author": "Josh Quintal",
-    "published": true,
-    "products": []
-  },
   "building-testing-frontend-app-truffle-3": {
     "title": "Building & Testing a Frontend App with Truffle 3.0",
     "date": "2017-02-14",
