@@ -62,11 +62,22 @@ compatible with any Truffle automation or scripts that depend on that framework.
 
 ## Deploy a smart contract
 
-Once you've built your contract, you can deploy it [locally](#local-deployment) or
-[to an Ethereum network](#deploy-to-an-ethereum-network).
+Once you've built your contract, you can activate the deployment process manually by doing one of
+the following:
+
+- In the [command palette](../reference/command-palette.md), select **Truffle: Deploy Contracts**.
+- Select your contract Solidity (`.sol`) file, right-click and select **Deploy Contracts**.
+
+Alternatively, you can automatically activate the deployment process upon saving your contract by
+turning on **Contract Auto Deploy** on the blue status bar at the bottom of the screen.
+
+![Auto-deploy on save](../images/auto-deploy.gif)
+
+Once activated, the deployment process gives users the option to deploy a contract
+[locally](#local-deployment) or [to an Ethereum network](#deploy-to-an-ethereum-network).
 
 Deployment parameters are based on the Truffle
-[migrations](../../truffle/getting-started/running-migrations.md) process, and are defined and
+[migrations](../../truffle/how-to/contracts/run-migrations.md) process, and are defined and
 managed in the `truffle-config.js` file.
 
 ### Local deployment
