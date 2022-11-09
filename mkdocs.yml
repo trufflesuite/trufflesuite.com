@@ -138,3 +138,4 @@ plugins:
         'docs/vscode-ext/debugging-smart-contracts.md': 'docs/vscode-ext/how-to/debug-smart-contracts.md'
         'docs/vscode-ext/faq.md': 'docs/vscode-ext/how-to/troubleshoot.md'
         'docs/vscode-ext/command-palette.md': 'docs/vscode-ext/reference/command-palette.md'
+        'guides/ethereum-overview/index.md': 'guides/index.md'
