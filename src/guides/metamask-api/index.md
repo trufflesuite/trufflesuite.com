@@ -1054,7 +1054,7 @@ This also required a slight update to our JSX/HTML to display our buttons more n
 
 We have one final change we want to make to ensure that we stop listening to changes once the user has disconnected their wallet.
 
-We will update the `` and `` files. This will make the TypeScript definitions file aware of the `removeAllListeners()` method we will be using, as well add necessary code to the `disconnect` case inside the `metamaskReducer`.
+We will update the `` and `` files. This will make the TypeScript definitions file aware of the `removeAllListeners()` method we will be using, as well as adding the necessary code to the `disconnect` case inside the `metamaskReducer`.
 
 Update `types.d.ts` file:
 
