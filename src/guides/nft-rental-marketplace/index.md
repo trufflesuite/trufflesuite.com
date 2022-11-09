@@ -27,13 +27,13 @@ In this guide, we'll create a rental marketplace that will allow users to list a
 
 Watch the livestream on [YouTube](https://youtu.be/LJGCkYC2ZCE) for a more in-depth walkthrough with advanced debugging examples!
 
-The completed code lives [here](https://github.com/trufflesuite/unleashed_rentable_nft).
+The completed code lives [here](https://github.com/trufflesuite/unleashed_nft_rental_marketplace).
 
 ## Download System Requirements
 
 You'll need to install:
 
-- [Node.js](https://nodejs.org/en/), v12 or higher
+- [Node.js](https://nodejs.org/en/), v14 or higher
 - [truffle](https://trufflesuite.com/docs/truffle/getting-started/installation/?utm_source=blog&utm_medium=post&utm_campaign=2022_May_truffle-blog-nft-marketplace_acquisition_content)
 - [ganache CLI](https://github.com/trufflesuite/ganache)
 

@@ -102,5 +102,16 @@ hide:
                     <a href="/guides/optimism-bridge-widget" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
                 </div>
             </div>
+            <div class="row mt-5">
+                <div class="col-md-3">
+                    <img src="/img/unleashed/W3U-ep-9.png" alt="Web3 Unleashed Episode #9" class="rounded-circle img-fluid green" />
+                </div>
+                <div class="col-md-9">
+                    <h2 class="mt-0 font-weight-bold">Episode #9 - Build a NFT Rental Marketplace Part 1</h2>
+                    <p>11/10/2022 9:00 PST&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> Emily Lin</p>
+                        <p>We'll be building the last piece of our NFT Rental Marketplace: the frontend! This marketplace will leverage Infura's NFT API and IPFS gateways to mint and display NFTs!</p>
+                    <a href="/guides/nft-rental-marketplace-2" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
+                </div>
+            </div>
     </section>
 </div>

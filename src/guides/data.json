@@ -1,4 +1,11 @@
 {
+  "nft-rental-marketplace-2": {
+    "title": "Web3 Unleashed: Build a NFT Rental Marketplace Part 2",
+    "date": "2022-11-15",
+    "author": "Emily Lin",
+    "published": true,
+    "products": ["truffle", "ganache"]
+  },
   "optimism-bridge-widget": {
     "title": "Web3 Unleashed: Optimistic rollups and bridging with Optimism",
     "date": "2022-11-03",
