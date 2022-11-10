@@ -1,10 +1,10 @@
 ---
-title: From Idea to Minimal Viable Dapp - Truffle Command Line Interface Part 1
+title: From Idea to Minimum Viable Dapp - Truffle Command Line Interface Part 1
 hide:
   - navigation
 ---
 
-![Blog banner - From idea to Minimal viable dapp - Truffle CLI part 1](./from-idea-to-dapp-truffle-cli.png)
+![Blog banner - From idea to minimum viable dapp - Truffle CLI part 1](./from-idea-to-dapp-truffle-cli.png)
 
 **By [Kingsley Arinze](https://www.linkedin.com/in/bruzzy)**
 
