@@ -1,4 +1,12 @@
 {
+  "from-idea-to-minimum-viable-dapp-truffle-command-line-interface-part-1": {
+    "title": "From Idea to Minimum Viable Dapp - Truffle Command Line Interface Part 1",
+    "date": "2022-11-10",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "Every software engineer has a series of tools they default to when building applications from the ground up. In the traditional software industry, there are a lot of options for tooling to choose from that interoperate for end-to-end development. In Web3, an emergent industry, not as many tools are built with interoperability in mind...",
+    "image": "/img/blog/thumbnails/from-idea-to-dapp-truffle-thumbnail.png"
+  },
   "truffle-vs-hardhat-breaking-down-the-difference-between-ethereums-top-development-environments": {
     "title": "Truffle vs. Hardhat - Breaking down the difference between Ethereum’s top development environments",
     "date": "2022-10-31",
