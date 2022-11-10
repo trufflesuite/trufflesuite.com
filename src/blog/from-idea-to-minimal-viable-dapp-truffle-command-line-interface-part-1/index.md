@@ -10,9 +10,9 @@ hide:
 
 Every software engineer has a series of tools they default to when building applications from the ground up. In the traditional software industry, there are a lot of options for tooling to choose from that interoperate for end-to-end development. In Web3, an emergent industry, not as many tools are built with interoperability in mind.  
 
-This is the problem Truffle solves for developers. By creating as many tools that are compatible with each other and work together to simplify the dapp creation process for developers.
+This is the problem Truffle solves for developers. Truffle simplifies the developer experience by creating tools and features within Truffle suite that are compatible with other tooling in Web3.
 
-This is the first part of a new Truffle content series, where we outline the steps to go from  an idea to a minimum-viable-dapp, showcasing the cool features and tools available within Truffle suite for smart contract developers across different experience levels.
+This is the first part of a new Truffle content series, where we outline the steps to go from  an idea to a minimum-viable-dapp, showcasing the cool features and tools available within Truffle suite for smart contract developers at any level of experience.
 
 In part one we’ll be focusing on [Truffle CLI](https://trufflesuite.com/docs/truffle) and showcase all that is possible with the Truffle CLI by creating a smart contract project, writing smart contract code, compiling, migrating and interacting with this smart contract all within the Truffle CLI.
 
