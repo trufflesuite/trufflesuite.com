@@ -589,7 +589,6 @@ After changing the account number, you can execute the script again to test: `tr
 If you don't want to use Dashboards, you can modify your Truffle config files to use environment variables you set up. Create a `.env` file with the following code:
 
 ```shell
-MNEMONIC="candy maple cake sugar pudding cream honey rich smooth crumble sweet treat"
 INFURA_KEY="<Your Infura project key>"
 GANACHE_MNEMONIC="<Your Ganache mnemonic>"
 GOERLI_MNEMONIC="<Your Metamask mnemonic>"
@@ -637,6 +636,16 @@ npm run installLocalOptimism
 npm run startLocalOptimism
 ```
 
+## Create an Infura IPFS project
+
+You'll need Infura IPFS account and dedicated gateway to upload your NFT metadata. To create a IPFS project, select create IPFS project.
+
+![create IPFS Project](./img/ipfs_project.png)
+
+Then, you'll need to create a unique gateway name. In this project, we'll call it `optimism-demo`. You will need to give your own dedicated gateway with its own unique name.
+
+![create dedicated gateway](./img/dedicated_gateway.png)
+
 ## Create Your Front End
 
 First, we need to install some packages to get our client up and running:
@@ -654,6 +663,7 @@ Then, we need to create or edit 6 files that sit under `client/pages`:
 ### `_app.js`
 
 This file organizes the link routing
+
 ```javascript
 import '../styles/globals.css'
 import Link from 'next/link'
@@ -698,7 +708,7 @@ export default MyApp
 
 Thie file is the Home tab, where a user can see and buy all of the listed NFTs.
 
-```typescript
+```javascript
 import Web3 from 'web3';
 import Web3Modal from 'web3modal';
 import { useEffect, useState } from 'react';
@@ -790,20 +800,53 @@ export default function Home() {
 }
 ```
 
-### `create-and-list-nft.js`
-This is the Sell tab, where a user can create and list an NFT.
+This is the Sell tab, where a user can create and list an NFT. Make sure you replace <DEDICATED_GATEWAY> with the dedicated gateway name you create in your IPFS project on Infura. You'll also need to add in your IPFS API and Secret to create our IPFS client. To do so, create `.env.local` in your `client` folder. Then, populate it with these values:
+
+```shell
+NEXT_PUBLIC_IPFS_SECRET=
+NEXT_PUBLIC_IPFS_KEY=
+```
+
+Then, copy paste this code:
 
 ```javascript
 import { useState } from 'react'
 import Web3 from 'web3'
 import Web3Modal from 'web3modal'
-import { create as ipfsHttpClient } from 'ipfs-http-client'
 import { useRouter } from 'next/router'
-
-const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
-
+import { create as ipfsHttpClient } from 'ipfs-http-client'
 import Marketplace from '../contracts/optimism-contracts/Marketplace.json'
 import BoredPetsNFT from '../contracts/optimism-contracts/BoredPetsNFT.json'
+
+
+const projectId = process.env["NEXT_PUBLIC_IPFS_KEY"];
+const projectSecret = process.env["NEXT_PUBLIC_IPFS_SECRET"];
+const auth =
+    'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
+
+const client = ipfsHttpClient({
+    host: 'ipfs.infura.io',
+    port: 5001,
+    protocol: 'https',
+    headers: {
+        authorization: auth,
+    },
+});
+
+
+const projectId = process.env["NEXT_PUBLIC_INFURA_KEY"];
+const projectSecret = process.env["NEXT_PUBLIC_INFURA_SECRET"];
+const auth =
+    'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
+
+const client = ipfsHttpClient({
+    host: 'ipfs.infura.io',
+    port: 5001,
+    protocol: 'https',
+    headers: {
+        authorization: auth,
+    },
+});
 
 export default function CreateItem() {
   const [fileUrl, setFileUrl] = useState(null)
@@ -820,7 +863,7 @@ export default function CreateItem() {
           progress: (prog) => console.log(`received: ${prog}`)
         }
       )
-      const url = `https://ipfs.infura.io/ipfs/${added.path}`
+      const url = `https://<DEDICATED_GATEWAY>.infura-ipfs.io/ipfs/${added.path}`
       setFileUrl(url)
     } catch (error) {
       console.log('Error uploading file: ', error)
@@ -838,7 +881,8 @@ export default function CreateItem() {
       })
       try {
         const added = await client.add(data)
-        const url = `https://ipfs.infura.io/ipfs/${added.path}`
+        console.log('added: ', added)
+        const url = `https://<DEDICATED_GATEWAY>.infura-ipfs.io/ipfs/${added.path}`
         // after metadata is uploaded to IPFS, return the URL to use it in the transaction
         return url
       } catch (error) {
@@ -853,7 +897,7 @@ export default function CreateItem() {
     const web3 = new Web3(provider)
     const url = await uploadToIPFS()
     const networkId = await web3.eth.net.getId()
-    
+
     // Mint the NFT
     const boredPetsContractAddress = BoredPetsNFT.networks[networkId].address
     const boredPetsContract = new web3.eth.Contract(BoredPetsNFT.abi, boredPetsContractAddress)
