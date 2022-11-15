@@ -7,7 +7,7 @@ hide:
 
 Written by [Emily Lin](https://twitter.com/_emjlin) and Leandro Faria
 
-Last updated 8/12/2022
+Last updated 11/15/2022
 
 ## Overview 
 
@@ -159,7 +159,13 @@ Once you've created this file you shouldn't need to touch it again.
 
 ### Write the ERC-4907 Smart Contract
 
-Now, let's write an `ERC-4907` smart contract that extends OpenZeppelin's `ERC-721URIStorage` contract. The basics of an ERC-721 are covered in this [Infura blog](https://blog.infura.io/post/comparing-nft-standards-erc-721-vs-erc-721a-vs-erc-1155#creating-an-erc-721-compliant-smart-contract). We choose to use `ERC721URIStorage` so that we don't have to use a static metadata file to populate the `tokenURI`. To do this, import the interface we created and OpenZeppelin's `ERC721URIStorage` implementation and have our `ERC4907` smart contract inherit their properties as follows:
+Now, let's write an `ERC-4907` smart contract that extends OpenZeppelin's `ERC-721URIStorage` contract. First, install OpenZeppelin's contracts:
+
+```shell
+npm i @openzeppelin/contracts@4.8.0
+```
+
+The basics of an ERC-721 are covered in this [Infura blog](https://blog.infura.io/post/comparing-nft-standards-erc-721-vs-erc-721a-vs-erc-1155#creating-an-erc-721-compliant-smart-contract). We choose to use `ERC721URIStorage` so that we don't have to use a static metadata file to populate the `tokenURI`. To do this, import the interface we created and OpenZeppelin's `ERC721URIStorage` implementation and have our `ERC4907` smart contract inherit their properties as follows:
 
 ```javascript
 // SPDX-License-Identifier: MIT
@@ -186,7 +192,7 @@ contract ERC4907 is ERC721, IERC4907 {
 Before we start implementing the functions defined in `IERC4907`, let's set up two state variables `UserInfo` and `_users` to help define and store the concept of `user`.
 
 ```javascript
-contract ERC4907 is ERC721, IERC4907 {
+contract ERC4907 is ERC721URIStorage, IERC4907 {
   struct UserInfo {
     address user; // address of user role
     uint64 expires; // unix timestamp, user expires
@@ -210,7 +216,7 @@ This function can only be called by the `owner` of the NFT. It allows the owner 
 /// Throws if `tokenId` is not valid NFT
 /// @param user  The new user of the NFT
 /// @param expires  UNIX timestamp, The new user could use the NFT before expires
-function setUser(uint256 tokenId, address user, uint64 expires) public virtual {
+function setUser(uint256 tokenId, address user, uint64 expires) public virtual override {
   require(_isApprovedOrOwner(msg.sender, tokenId),"ERC721: transfer caller is not owner nor approved");
   UserInfo storage info = _users[tokenId];
   info.user = user;
@@ -290,9 +296,10 @@ This is the final function we will implement! When the token is transferred (i.e
 function _beforeTokenTransfer(
   address from,
   address to,
-  uint256 tokenId
-) internal virtual override{
-  super._beforeTokenTransfer(from, to, tokenId);
+  uint256 tokenId,
+  uint256 batchSize
+) internal virtual override {
+  super._beforeTokenTransfer(from, to, tokenId, batchSize);
 
   if (from != to && _users[tokenId].user != address(0)) {
     delete _users[tokenId];
@@ -421,7 +428,7 @@ contract RentablePets is ERC4907 {
   using Counters for Counters.Counter;
   Counters.Counter private _tokenIds;
 
-  constructor() ERC721("RentablePets", "RP") {}
+  constructor() ERC4907("RentablePets", "RP") {}
 
   function mint(string memory _tokenURI) public {
     _tokenIds.increment();
