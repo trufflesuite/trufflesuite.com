@@ -273,6 +273,14 @@
 			"arbitrum"
 		]
 	},
+	"snap-box": {
+		"description": "Metamask Snap box",
+		"stars": 4,
+		"tags": [
+			"metamask",
+			"snap"
+		]
+	},
 	"optimism-box": {
 		"description": "Optimism Truffle box",
 		"stars": 1,

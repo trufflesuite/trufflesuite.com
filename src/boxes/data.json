@@ -1,5 +1,11 @@
 [
   {
+    "userOrg": "metamask",
+    "displayName": "metamask-snap-box",
+    "repoName": "snap-box",
+    "official": true
+  },
+  {
     "userOrg": "truffle-box",
     "displayName": "optimism",
     "repoName": "optimism-box",
