@@ -131,6 +131,24 @@ For each network, you can specify `host` / `port`, `url`, or `provider`, but not
 - https://sandbox.truffleteams.com/yoursandboxid
 - wss://sandbox.truffleteams.com/yoursandboxid
 
+#### Special networks: `test` and `develop`
+
+The networks `test` and `develop` are special, in that they can be used to specify the settings for the Ganache instance started by `truffle test` and `truffle develop`, respectively.  These options are simply included like any other network options.  The supported options are:
+
+* `network_id`: The network ID to use.  Defaults to 5777.
+* `total_accounts`: The number of unlocked accounts Ganache should provide.  Defaults to 10.  Alias: `accounts`.
+* `default_balance_ether`: The default amount of ether to seed unlockd accounts with, specified in ether.  Defaults to 100 ether.  Alias: `defaultEtherBalance`.
+* `blockTime`: If specified, the number of seconds inbetween mining blocks (as opposed to automatically mining on each transaction sent).  Defaults to 0 (i.e., automine).
+* `fork`: If specified, the URL of a provider that Ganache should fork from.
+* `hardfork`: Allows specifying the hardfork (EVM version) that Ganache should use.
+* `gasLimit`: The block gas limit.  Defaults to 6721975.
+* `gasPrice`: The gas price, specified in wei.  Defaults to 2000000000 wei.
+* `genesis_time`: The genesis time.  Alias: `time`.
+* `host`: The hostname to listen on.  Only applies to `truffle develop`, not `truffle test`.  Defaults to `"127.0.0.1"`.
+* `port`: The port to listen on.  Only applies to `truffle develop`, not `truffle test`.  Defaults to 9545.
+
+Note: In the case of `truffle test`, these options will only be applied if no `host`, `port`, `url`, or `provider` is set; if one of these is set, then the `test` network will not be treated specially and no instance of Ganache will be started.
+
 ### console
 
 Use this option to configure the console environment. This is the environment you get when using `truffle console` or `truffle develop`.
