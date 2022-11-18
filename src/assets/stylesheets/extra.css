@@ -348,6 +348,13 @@ a.link-card:hover {
 
 /* bootstrap overrides */
 
+.md-typeset h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0em;
+  margin: 1em 0;
+}
+
 input:focus {
   /* an outline is required for accessibility */
   outline: solid 2px var(--mint);
