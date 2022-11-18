@@ -137,7 +137,7 @@ The networks `test` and `develop` are special, in that they can be used to speci
 
 * `network_id`: The network ID to use.  Defaults to 5777.
 * `total_accounts`: The number of unlocked accounts Ganache should provide.  Defaults to 10.  Alias: `accounts`.
-* `default_balance_ether`: The default amount of ether to seed unlockd accounts with, specified in ether.  Defaults to 100 ether.  Alias: `defaultEtherBalance`.
+* `default_balance_ether`: The default amount of ether to seed unlocked accounts with, specified in ether.  Defaults to 100 ether.  Alias: `defaultEtherBalance`.
 * `blockTime`: If specified, the number of seconds inbetween mining blocks (as opposed to automatically mining on each transaction sent).  Defaults to 0 (i.e., automine).
 * `fork`: If specified, the URL of a provider that Ganache should fork from.
 * `hardfork`: Allows specifying the hardfork (EVM version) that Ganache should use.
