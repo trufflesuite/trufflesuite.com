@@ -125,6 +125,7 @@ For each network, if unspecified, transaction options will default to the follow
 Note that it is perfectly fine to set `disableConfirmationListener` while also setting a value for `confirmations`; this will not cause hangs during deployment.
 
 For each network, you can specify `host` / `port`, `url`, or `provider`, but not more than one. If you need an HTTP provider, we recommend using `host` and `port`, or `url`, while if you need a custom provider such as `HDWalletProvider`, you must use `provider`.  The `url` option also supports WebSockets and SSL. `url` should include the full url; see the examples below:
+
 - http://127.0.0.1:8545
 - ws://127.0.0.1:8545
 - https://sandbox.truffleteams.com/yoursandboxid
