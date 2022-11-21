@@ -8,7 +8,7 @@ hide:
 
 ![Blog banner for 4 DeFi projects who remain strong in the bear market](./blog-banner.jpg)
 
-Over the past few weeks, the crypto industry has faced many challenges that have caused some to question the principles upon which Web3 was founded. We’re currently in a builders (bear) market that has lasted longer than others have in the past.
+Over the past few weeks, the crypto industry has faced many challenges that have caused some to question the principles upon which Web3 was founded.
 
 The events surrounding the FTX exchange that continue to unfold have made the difference between DeFi and CeFi more clear than ever. In case you’ve not been following, FTX, which at its peak was the second-largest crypto exchange by volume, crashed on [November 8](https://twitter.com/SBF_FTX/status/1590012124864348160) owning up to [reports](https://www.coindesk.com/business/2022/11/02/divisions-in-sam-bankman-frieds-crypto-empire-blur-on-his-trading-titan-alamedas-balance-sheet) of being insolvent.
 
