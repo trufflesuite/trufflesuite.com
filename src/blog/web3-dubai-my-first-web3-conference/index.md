@@ -18,7 +18,7 @@ You can imagine my excitement when my teammate [Megan Dias](https://twitter.com/
 
 She was attending the conference so it would be a good opportunity to meet for the first time. It was a no-brainer! I reached out to [Eric Bishard](https://twitter.com/httpJunkie) who happened to be one of the organizers and he offered me one of the remaining team tickets.
 
-![picture of web3Dubai hall entrance](./hall_entrance.jpg)
+![picture of web3Dubai hall entrance](./hall_entrance_50.jpeg)
 
 ## Preaching the gospel of MetaMask Snaps, aka booth duty
 
@@ -28,7 +28,7 @@ Snaps allow users to safely expand the capabilities of MetaMask by adding new AP
 
 If you’re interested in building with MetaMask Snaps when it goes public, you can check out this cool new [MetaMask Snap Truffle box](https://trufflesuite.com/boxes/metamask-snap-box) we’ve built to help you get started quickly. You can learn more about MetaMask snaps and how to get started by checking out the [Snaps documentation](https://docs.metamask.io/guide/snaps.html#what-is-snaps).
 
-![picture of MetaMask booth at web3 Dubai](./MM_Booth.jpg)
+![picture of MetaMask booth at web3 Dubai](./MM_Booth_50.jpeg)
 
 ## Sharing updates on Truffle Suite
 
@@ -56,9 +56,9 @@ Web3 Dubai was filled with so many great talks, and workshops that I couldn’t 
 
 There were a lot of other interesting talks I wasn’t opportune to experience in person at the conference. However, I plan to watch a recap once they are available on Youtube in a digestible format.
 
-![picture of Manbir on stage](./Manbir.jpg)
-![picture of Jyoti on stage](./jyoti.jpg)
-![picture of Francesco on stage](./francesco.jpg)
+![picture of Manbir on stage](./Manbir_50.jpeg)
+![picture of Jyoti on stage](./jyoti_50.jpeg)
+![picture of Francesco on stage](./francesco_1_50.jpeg)
 
 ## Dinner and networking
 
