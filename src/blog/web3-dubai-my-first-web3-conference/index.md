@@ -16,9 +16,9 @@ I was excited and happy, but honestly, I didn’t know if I’d be able to make 
 
 You can imagine my excitement when my teammate [Megan Dias](https://twitter.com/mycomeg) reached out to me about a web3 conference in Dubai. Megan had been helpful with tips about settling in Dubai since she’d spent some time there visiting family. 
 
-She was attending the conference so it would be a good opportunity to meet for the first time. It was a no-brainer! I reached out to [Eric Bishard](https://twitter.com/httpJunkie) one of the organizers, who offered me one of the remaining team tickets.
+She was attending the conference so it would be a good opportunity to meet for the first time. It was a no-brainer! I reached out to [Eric Bishard](https://twitter.com/httpJunkie) who happened to be one of the organizers and he offered me one of the remaining team tickets.
 
-![picture of web3Dubai hall entrance](./Hall%20entrance.png)
+![picture of web3Dubai hall entrance](./hall_entrance.jpg)
 
 ## Preaching the gospel of MetaMask Snaps, aka booth duty
 
@@ -28,7 +28,7 @@ Snaps allow users to safely expand the capabilities of MetaMask by adding new AP
 
 If you’re interested in building with MetaMask Snaps when it goes public, you can check out this cool new [MetaMask Snap Truffle box](https://trufflesuite.com/boxes/metamask-snap-box) we’ve built to help you get started quickly. You can learn more about MetaMask snaps and how to get started by checking out the [Snaps documentation](https://docs.metamask.io/guide/snaps.html#what-is-snaps).
 
-![picture of MetaMask booth at web3 Dubai](./MM_Booth.png)
+![picture of MetaMask booth at web3 Dubai](./MM_Booth.jpg)
 
 ## Sharing updates on Truffle Suite
 
