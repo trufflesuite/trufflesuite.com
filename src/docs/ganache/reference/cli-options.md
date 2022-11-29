@@ -314,7 +314,9 @@ The alias `--gasPrice` has been deprecated, use `-g` instead.
 **`--miner.blockGasLimit`**, **`l`**
 
 === "Syntax"
-`bash --miner.blockGasLimit=<STRING> `
+    ```bash
+    --miner.blockGasLimit=<STRING>
+    ```
 
 === "Example"
 
@@ -331,7 +333,9 @@ The alias `--gasLimit` has been deprecated, use `-l` instead.
 **`--miner.defaultTransactionGasLimit`**
 
 === "Syntax"
-`bash --miner.defaultTransactionGasLimit=<STRING> `
+    ```bash
+    --miner.defaultTransactionGasLimit=<STRING>
+    ```
 
 === "Example"
 
@@ -346,7 +350,9 @@ The defaults is `0x15f90`.
 **`--miner.difficulty`**
 
 === "Syntax"
-`bash --miner.difficulty=<STRING> `
+    ```bash
+    --miner.difficulty=<STRING>
+    ```
 
 === "Example"
 
@@ -361,7 +367,9 @@ The default is `0x1`.
 **`--miner.callGasLimit`**
 
 === "Syntax"
-`bash --miner.callGasLimit=<STRING> `
+    ```bash
+    --miner.callGasLimit=<STRING>
+    ```
 
 === "Example"
 
@@ -376,7 +384,9 @@ The default is `0x2faf080`.
 **`--miner.instamine`**
 
 === "Syntax"
-`bash --miner.instamine=<STRING> `
+    ```bash
+    --miner.instamine=<STRING>
+    ```
 
 === "Example"
 
@@ -386,14 +396,16 @@ The default is `0x2faf080`.
 
 The `instamine` mode which is either `eager` or `strict`. In `eager` mode a transaction is included in a block before its hash
 is returned to the caller. In `strict` mode a transaction's hash is returned to the caller before the transaction is included in a block.
-This value has no effect if `--miner.blockTime` is _not_ `0` (the default).
+This value has no effect if `--miner.blockTime` is *not* `0` (the default).
 
 The default is `eager`.
 
 **`--miner.coinbase`**
 
 === "Syntax"
-`bash --miner.coinbase=<STRING> `
+    ```bash
+    --miner.coinbase=<STRING>
+    ```
 
 === "Example"
 
@@ -408,7 +420,9 @@ The default is `0x0000000000000000000000000000000000000000`.
 **`--miner.extraData`**
 
 === "Syntax"
-`bash --miner.extraData=<STRING> `
+    ```bash
+    --miner.extraData=<STRING>
+    ```
 
 === "Example"
 
@@ -423,7 +437,9 @@ The default is `0x`.
 **`--miner.priceBump`**
 
 === "Syntax"
-`bash --miner.priceBump=<STRING> `
+    ```bash
+    --miner.priceBump=<STRING>
+    ```
 
 === "Example"
 
@@ -441,13 +457,16 @@ The default is `10`.
 **`--wallet.accounts`**
 
 === "Syntax"
-`bash --wallet.accounts=<STRING>,<STRING> `
+    ```bash
+    --wallet.accounts=<STRING>,<STRING>
+    ```
 
 === "Example"
 
     ```bash
     --wallet.accounts="0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63","0X56BC75E2D63100000"
     ```
+
 
 Account data in the form `<private_key>,<initial_balance>`. Specify the option multiple times
 to add multiple private keys with an initial balance.
@@ -461,7 +480,9 @@ The alias `--account` has been deprecated.
 **`--wallet.totalAccounts`**, **`-a`**
 
 === "Syntax"
-`bash --wallet.totalAccounts=<NUMBER> `
+    ```bash
+    --wallet.totalAccounts=<NUMBER>
+    ```
 
 === "Example"
 
@@ -478,7 +499,9 @@ The alias `--accounts` has been deprecated, use `-a` instead.
 **`--wallet.deterministic`**, **`-d`**
 
 === "Syntax"
-`bash --wallet.deterministic=<BOOLEAN> `
+    ```bash
+    --wallet.deterministic=<BOOLEAN>
+    ```
 
 === "Example"
 
@@ -495,7 +518,9 @@ The alias `--deterministic` has been deprecated, use `-d` instead.
 **`--wallet.seed`**, **`-s`**
 
 === "Syntax"
-`bash --wallet.seed=<STRING> `
+    ```bash
+    --wallet.seed=<STRING>
+    ```
 
 === "Example"
 
@@ -512,7 +537,9 @@ The alias `--seed` has been deprecated, use `-s` instead.
 **`--wallet.mnemonic`**, **`-m`**
 
 === "Syntax"
-`bash --wallet.mnemonic=<STRING> `
+    ```bash
+    --wallet.mnemonic=<STRING>
+    ```
 
 === "Example"
 
@@ -529,7 +556,9 @@ The alias `--mnemonic` has been deprecated, use `-m` instead.
 **`--wallet.unlockedAccounts`**, **`-u`**
 
 === "Syntax"
-`bash --wallet.unlockedAccounts=<STRING> `
+    ```bash
+    --wallet.unlockedAccounts=<STRING>
+    ```
 
 === "Example using an address"
 
@@ -551,7 +580,9 @@ The alias `--unlock` has been deprecated, use `-u` instead.
 **`--wallet.lock`**, **`-n`**
 
 === "Syntax"
-`bash --wallet.lock=<BOOLEAN> `
+    ```bash
+    --wallet.lock=<BOOLEAN>
+    ```
 
 === "Example"
 
@@ -566,7 +597,9 @@ The `--secure` and `--lock` aliases have been deprecated, use `-n` instead.
 **`--wallet.passphrase`**
 
 === "Syntax"
-`bash --wallet.passphrase=<STRING> `
+    ```bash
+    --wallet.passphrase=<STRING>
+    ```
 
 === "Example"
 
@@ -581,7 +614,9 @@ The alias `--passphrase` has been deprecated.
 **`--wallet.accountKeysPath`**
 
 === "Syntax"
-`bash --wallet.accountKeysPath=<STRING> `
+    ```bash
+    --wallet.accountKeysPath=<STRING>
+    ```
 
 === "Example"
 
@@ -595,7 +630,9 @@ The aliases `--account_keys_path` and `--acctKeys` have been deprecated.
 **`--wallet.defaultBalance`**, **`-e`**
 
 === "Syntax"
-`bash --wallet.defaultBalance=<NUMBER> `
+    ```bash
+    --wallet.defaultBalance=<NUMBER>
+    ```
 
 === "Example"
 
@@ -610,7 +647,9 @@ The default is `1000`.
 **`--wallet.hdPath `**
 
 === "Syntax"
-`bash --wallet.hdPath=<STRING> `
+    ```bash
+    --wallet.hdPath=<STRING>
+    ```
 
 === "Example"
 
@@ -627,7 +666,9 @@ The default is `m,44',60',0',0`.
 **`--fork.url`**, **`-f`**
 
 === "Syntax"
-`bash --fork.url=<STRING> `
+    ```bash
+    --fork.url=<STRING>
+    ```
 
 === "Example"
 
@@ -650,7 +691,9 @@ Alternatively, you can use the `--fork.username` and `--fork.password` options.
 **`--fork.network`**
 
 === "Syntax"
-`bash --fork.network=<STRING> `
+    ```bash
+    --fork.network=<STRING>
+    ```
 
 === "Example"
 
@@ -665,7 +708,9 @@ Use the command `ganache --fork` to automatically fork Mainnet at the latest blo
 **`--fork.blockNumber`**
 
 === "Syntax"
-`bash --fork.blockNumber=<NUMBER> `
+    ```bash
+    --fork.blockNumber=<NUMBER>
+    ```
 
 === "Example"
 
@@ -678,7 +723,9 @@ Block number to fork from. The default is the latest block.
 **`--fork.preLatestConfirmations`**
 
 === "Syntax"
-`bash --fork.preLatestConfirmations=<NUMBER> `
+    ```bash
+    --fork.preLatestConfirmations=<NUMBER>
+    ```
 
 === "Example"
 
@@ -694,7 +741,9 @@ The default is `5`.
 **`--fork.username`**
 
 === "Syntax"
-`bash --fork.username=<STRING> `
+    ```bash
+    --fork.username=<STRING>
+    ```
 
 === "Example"
 
@@ -710,7 +759,9 @@ If `--fork.headers` specifies an authorization header, the header is inserted af
 **`--fork.password`**
 
 === "Syntax"
-`bash --fork.password=<STRING> `
+    ```bash
+    --fork.password=<STRING>
+    ```
 
 === "Example"
 
@@ -726,7 +777,9 @@ If the `--fork.headers` specifies an authorization header, the header is inserte
 **`--fork.jwt`**
 
 === "Syntax"
-`bash --fork.jwt=<STRING> `
+    ```bash
+    --fork.jwt=<STRING>
+    ```
 
 === "Example"
 
@@ -743,7 +796,9 @@ If the `--fork.headers` option specifies an authorization header, the header is 
 **`--fork.userAgent`**
 
 === "Syntax"
-`bash --fork.userAgent=<STRING> `
+    ```bash
+    --fork.userAgent=<STRING>
+    ```
 
 === "Example"
 
@@ -761,7 +816,9 @@ The default is `Ganache/VERSION (https://www.trufflesuite.com/ganache; ganache<a
 **`--fork.origin`**
 
 === "Syntax"
-`bash --fork.origin=<STRING> `
+    ```bash
+    --fork.origin=<STRING>
+    ```
 
 === "Example"
 
@@ -776,7 +833,9 @@ Is overridden by an `Origin` value defined in the `--fork.headers` option, if pr
 **`--fork.headers`**
 
 === "Syntax"
-`bash --fork.headers=<STRING> `
+    ```bash
+    --fork.headers=<STRING>
+    ```
 
 === "Example"
 
@@ -792,7 +851,9 @@ The default is `"User-Agent: Ganache/VERSION (https://www.trufflesuite.com/ganac
 **`--fork.requestsPerSecond`**
 
 === "Syntax"
-`bash --fork.requestsPerSecond=<NUMBER> `
+    ```bash
+    --fork.requestsPerSecond=<NUMBER>
+    ```
 
 === "Example"
 
@@ -807,7 +868,9 @@ The default is `0`, meaning no limit is applied.
 **`--fork.disableCache`**
 
 === "Syntax"
-`bash --fork.disableCache=<BOOLEAN> `
+    ```bash
+    --fork.disableCache=<BOOLEAN>
+    ```
 
 === "Example"
 
@@ -822,7 +885,9 @@ The default is `false`.
 **`--fork.deleteCache`**
 
 === "Syntax"
-`bash --fork.deleteCache=<BOOLEAN> `
+    ```bash
+    --fork.deleteCache=<BOOLEAN>
+    ```
 
 === "Example"
 
@@ -839,7 +904,9 @@ The default is `false`.
 **`--server.ws`**
 
 === "Syntax"
-`bash --server.ws=<BOOLEAN> `
+    ```bash
+    --server.ws=<BOOLEAN>
+    ```
 
 === "Example"
 
@@ -854,7 +921,9 @@ The default is `true`.
 **`--server.wsBinary`**
 
 === "Syntax"
-`bash --server.wsBinary=<BOOLEAN> `
+    ```bash
+    --server.wsBinary=<BOOLEAN>
+    ```
 
 === "Example"
 
@@ -870,7 +939,9 @@ The default is `auto`.
 **`--server.rpcEndpoint`**
 
 === "Syntax"
-`bash --server.rpcEndpoint=<STRING> `
+    ```bash
+    --server.rpcEndpoint=<STRING>
+    ```
 
 === "Example"
 
@@ -885,7 +956,9 @@ The default is `/` for Ethereum and `/rpc/v0` for Filecoin.
 **`--server.host`**, **`-h`**
 
 === "Syntax"
-`bash --server.host=<STRING> `
+    ```bash
+    --server.host=<STRING>
+    ```
 
 === "Example"
 
@@ -902,7 +975,9 @@ The aliases `--host` and `--hostname` have been deprecated, use `-h` instead.
 **`--server.port`**, **`-p`**
 
 === "Syntax"
-`bash --server.port=<NUMBER> `
+    ```bash
+    --server.port=<NUMBER>
+    ```
 
 === "Example"
 
