@@ -994,7 +994,8 @@ The alias `--port` has been deprecated, use `-p` instead.
 Ganache can be started as a background process by passing the `--detach` option, along with any valid combination of start-up options.
 
 **`--detach`**, **`-D`**, **`--😈`**
-This will start Ganache, and output a friendly name that can be used to reference the instance when managing the instance via the `ganache instances` command.
+
+Runs Ganache as a background process, outputting a friendly name that can be used to reference the instance when managing the instance via the `ganache instances` command.
 
 Ganache will only return to the command line once it is ready to receive requests, making it handy for scripting - for example, you can start Ganache, execute a series of tests, and teardown the instance when complete with a one-liner:
 
