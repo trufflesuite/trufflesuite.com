@@ -1,6 +1,6 @@
 nav:
 - Use the Truffle debugger: use-the-truffle-debugger.md
-- Use Truffle Debugger and Console: use-truffle-develop-and-the-console.md
+- Use Truffle Develop and the Console: use-truffle-develop-and-the-console.md
 - Run automated tests: test-your-contracts.md
 - Write tests with JavaScript: write-tests-in-javascript.md
 - Write tests with Solidity: write-tests-in-solidity.md
