@@ -1,4 +1,11 @@
-{
+{"from-idea-to-minimum-viable-dapp-truffle-command-line-interface-part-2": {
+  "title": "From Idea to Minimum Viable Dapp - Truffle Command Line Interface Part 2",
+  "date": "2022-12-07",
+  "author": "Kingsley Arinze",
+  "published": true,
+  "excerpt": "In the first part of From Idea to Minimum Viable Dapp series, we created a new smart contract project, wrote some smart contract code, compiled and deployed the smart contract, and interacted with the deployed contract, all while using the Truffle CLI...",
+  "image": "/img/blog/thumbnails/thumbnail-idea-to-dapp-part2.jpg"
+},
   "web3-dubai-my-first-web3-conference": {
     "title": "Web3 Dubai - My first web3 conference",
     "date": "2022-11-23",
