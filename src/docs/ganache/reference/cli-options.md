@@ -10,7 +10,7 @@ network.
 
 ## Specify options
 
-The startup options are grouped in the `chain`, `database`, `fork`, `logging`, `miner`, and `wallet` namespaces,
+With the exception of [detach mode](#detach-mode), the startup options are grouped in the `chain`, `database`, `logging`, `miner`, `wallet`, `fork`, and `server` namespaces,
 and should be used as follows on startup:
 
 ```bash
@@ -988,3 +988,68 @@ The aliases `--host` and `--hostname` have been deprecated, use `-h` instead.
 The port to listen on. The default is `8545`.
 
 The alias `--port` has been deprecated, use `-p` instead.
+
+## Detach mode
+
+Ganache can be started as a background process by passing the `--detach` option, along with any valid combination of start-up options.
+
+**`--detach`**, **`-D`**, **`--😈`**
+
+Runs Ganache as a background process, outputting a friendly name that can be used to reference the instance when managing the instance via the `ganache instances` command.
+
+Ganache will only return to the command line once it is ready to receive requests, making it handy for scripting - for example, you can start Ganache, execute a series of tests, and teardown the instance when complete with a one-liner:
+
+```bash
+GANACHE=$(ganache --detach) && npm run test; ganache instances stop $GANACHE
+```
+
+Or if you are running PowerShell, you can do:
+
+```PowerShell
+$GANACHE=ganache --detach; npm run test; ganache instances stop $GANACHE; Remove-Variable GANACHE
+```
+
+## Manage detached instances
+
+The `ganache instances <sub-command>` can be used to manage instances of Ganache running in detach mode.
+
+### `list`
+
+Output the list of instances running in detach mode.
+
+**`instances list`**
+
+=== "Syntax"
+
+    ```bash
+    ganache instances list
+    ```
+
+=== "Example"
+
+    ```bash
+    $ ganache instances list
+    ┌───────┬────────────────────────┬──────────┬─────────┬────────────────┬────────┐
+    │   PID │ Name                   │ Flavor   │ Version │ Host           │ Uptime │
+    ├───────┼────────────────────────┼──────────┼─────────┼────────────────┼────────┤
+    │ 12182 │ salted_caramel_ganache │ ethereum │ 7.6.0   │ 127.0.0.1:8545 │    36s │
+    └───────┴────────────────────────┴──────────┴─────────┴────────────────┴────────┘
+    ```
+
+### `stop`
+
+Stop an instance of ganache running in detach mode.
+
+**`instances stop`**
+
+=== "Syntax"
+
+    ```bash
+    ganache instances stop <name>
+    ```
+
+=== "Example"
+
+    ```bash
+    ganache instances stop salted_caramel_ganache
+    ```
