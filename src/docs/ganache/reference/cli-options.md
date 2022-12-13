@@ -10,7 +10,7 @@ network.
 
 ## Specify options
 
-With the exception of [detach mode](#detach-mode), the startup options are grouped in the `chain`, `database`, `fork`, `logging`, `miner`, and `wallet` namespaces,
+With the exception of [detach mode](#detach-mode), the startup options are grouped in the `chain`, `database`, `logging`, `miner`, `wallet`, `fork`, and `server` namespaces,
 and should be used as follows on startup:
 
 ```bash
@@ -1003,7 +1003,7 @@ Ganache will only return to the command line once it is ready to receive request
 GANACHE=$(ganache --detach) && npm run test; ganache instances stop $GANACHE
 ```
 
-Or if you are running PowerShell on Windows, you can do:
+Or if you are running PowerShell, you can do:
 
 ```PowerShell
 $GANACHE=ganache --detach; npm run test; ganache instances stop $GANACHE; Remove-Variable GANACHE
