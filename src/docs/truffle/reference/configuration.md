@@ -53,11 +53,13 @@ Any of the following solutions will remedy this issue:
 
 ### SolidityLog
 
-Like JavaScript's `console.log`, you can utilize the same concept to print state
-of your contract during execution. This log will appear when you use `truffle
-test` or `truffle develop`. To use it you would import `truffle/console.sol`
-into your Solidity contract and use it like you would in JavaScript. See the 
-[Ganache documentation](https://github.com/trufflesuite/ganache/tree/develop/src/chains/ethereum/console.log#ganacheconsolelog) for details.
+Like JavaScript's `console.log`, you can utilize the same concept to print
+state of your contract during execution. This log will appear when you use
+`truffle test` or `truffle develop`. To use it you would import
+`truffle/console.sol` into your Solidity contract and use it like you would in
+JavaScript. See the [Nodejs' util.format()
+documentation](https://nodejs.org/api/util.html#utilformatformat-args) for
+usage details.
 
 <details><summary>Consider this solidity contract</summary>
 
