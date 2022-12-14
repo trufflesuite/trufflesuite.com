@@ -53,7 +53,7 @@ Any of the following solutions will remedy this issue:
 
 ### SolidityLog
 
-Like javascript's console.log, you can utilize the same concept to print state
+Like JavaScript's `console.log`, you can utilize the same concept to print state
 of your contract during execution. This log will appear when you use `truffle
 test` or `truffle develop`. To use it you would import `truffle/console.sol`
 into your solidity contract and use it like you would in JavaScript. See the 
