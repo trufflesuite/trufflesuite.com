@@ -51,7 +51,7 @@ Any of the following solutions will remedy this issue:
 
 ## General options
 
-### SolidityLog
+### solidityLog
 
 Like JavaScript's `console.log`, you can utilize the same concept to print
 state of your contract during execution. This log will appear when you use
