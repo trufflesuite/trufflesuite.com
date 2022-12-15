@@ -1,4 +1,11 @@
 {
+  "metamask-snap": {
+    "title": "Web3 Unleashed: How to build a MetaMask snap",
+    "date": "2022-12-15",
+    "author": "Emily Lin",
+    "published": true,
+    "products": ["truffle", "ganache"]
+  },
   "nft-rental-marketplace-2": {
     "title": "Web3 Unleashed: Build a NFT Rental Marketplace Part 2",
     "date": "2022-11-15",
