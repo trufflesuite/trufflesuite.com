@@ -132,7 +132,7 @@ is useful when you want to differentiate consoleLog in the terminal.
 
 For example:
 
-```console
+```javascript
 module.exports = {
   ...
   solidityLog: {
