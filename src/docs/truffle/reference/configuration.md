@@ -127,8 +127,9 @@ contract("Telephone", function(/* accounts */) {
 
 #### displayPrefix
 
-You can set the `displayPrefix` string to decorate `consoleLog`'s output. This
-is useful when you want to differentiate consoleLog in the terminal.
+You can set the `displayPrefix` string to decorate `console.log`'s output. This
+is useful when you want to differentiate console.log from verbose output in the
+terminal.
 
 For example:
 
