@@ -73,7 +73,7 @@ contract Telephone {
     uint public secret;
 
     constructor(uint _secret) payable { 
-        console.log("CSTR::Telephone\n\tsecret: %o", _secret); 
+        console.log("Telephone::constructor\n\tsecret: %o", _secret); 
         secret = _secret;
     }
 
@@ -98,27 +98,27 @@ const getRnd = function() {
 }
 
 contract("Telephone", function(/* accounts */) {
-  let subj;
+  let subject;
   describe("Works with new deployment", function() {
     let newSecret;
     before(async function() {
       newSecret = getRnd();
-      subj = await Telephone.new(newSecret);
+      subject = await Telephone.new(newSecret);
     });
     
     it("Should have a deployed contract", async function() {
-      return assert.isTrue(subj !== undefined);
+      return assert.isTrue(subject !== undefined);
     });
     
     it("has the secret", async function() {
-      const best = await subj.secret();
-      assert.strictEqual(best, newSecret);
+      const secret = await subject.secret();
+      assert.strictEqual(secret, newSecret);
     });
     
     it("has the derived Secret", async function() {
-      const best = await subj.derivedSecret();
+      const derivedSecret = await subject.derivedSecret();
       const expected = 100 * newSecret + 1;
-      assert.strictEqual(best, expected);
+      assert.strictEqual(derivedSecret, expected);
     });
   });
 });
@@ -155,7 +155,7 @@ Compiling your contracts...
 
   Contract: Telephone
     Works with new deployment
-  : CSTR::Telephone
+  : Telephone::constructor
   :     secret: 786n
       ✔ Should have a deployed contract
       ✔ has the secret
