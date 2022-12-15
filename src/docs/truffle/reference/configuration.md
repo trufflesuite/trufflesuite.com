@@ -168,7 +168,7 @@ Compiling your contracts...
 
 #### preventConsoleLogMigration
 
-Because it's hard to exactly reason about gas usage when a console.log is is
+Because it's hard to exactly reason about gas usage when a console.log is
 deployed to mainnet, you can opt-in to guarding your project. With
 `solidityLog.preventConsoleLogMigration` is true, `truffle migrate` will stop
 migration on mainnet.
