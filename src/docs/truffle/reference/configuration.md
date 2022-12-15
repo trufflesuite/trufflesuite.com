@@ -173,7 +173,7 @@ deployed to mainnet, you can opt-in to guarding your project. With
 `solidityLog.preventConsoleLogMigration` is true, `truffle migrate` will stop
 migration on mainnet.
 
-```console
+```javascript
 module.exports = {
   ...
   solidityLog: {
