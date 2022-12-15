@@ -118,7 +118,7 @@ contract("Telephone", function(/* accounts */) {
     it("has the derived Secret", async function() {
       const best = await subj.derivedSecret();
       const expected = 100 * newSecret + 1;
-      return assert.equal(expected, best);
+      assert.strictEqual(best, expected);
     });
   });
 });
