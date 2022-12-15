@@ -112,7 +112,7 @@ contract("Telephone", function(/* accounts */) {
     
     it("has the secret", async function() {
       const best = await subj.secret();
-      return assert.equal(newSecret, best);
+      assert.strictEqual(best, newSecret);
     });
     
     it("has the derived Secret", async function() {
