@@ -22131,7 +22131,7 @@
 							var downloads2 = response.data.downloads;
 							_axios2.default.get(item+"-core").then(function (response) {
 								var downloads3 = response.data.downloads;
-								callback(null, memo.concat(downloads + downloads2 + downloads3));
+								callback(null, memo.concat(downloads, downloads2, downloads3));
 							});
 						});
 					} else {
