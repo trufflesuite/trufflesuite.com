@@ -139,3 +139,4 @@ plugins:
         'docs/vscode-ext/faq.md': 'docs/vscode-ext/how-to/troubleshoot.md'
         'docs/vscode-ext/command-palette.md': 'docs/vscode-ext/reference/command-palette.md'
         'guides/ethereum-overview/index.md': 'guides/index.md'
+        'dashboard': 'docs/truffle/how-to/use-the-truffle-dashboard.md'
