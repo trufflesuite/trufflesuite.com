@@ -22150,7 +22150,9 @@
 									}
 									all[i].push(entry);
 								});
-								callback(null, memo.concat(all));
+								callback(null, memo.concat(all).sort((a, b) => {
+									return new Date(a.day) - new Date(b.day);
+								}));
 							});
 						});
 					} else {

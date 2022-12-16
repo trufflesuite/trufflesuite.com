@@ -22131,7 +22131,28 @@
 							var downloads2 = response.data.downloads;
 							_axios2.default.get(item+"-core").then(function (response) {
 								var downloads3 = response.data.downloads;
-								callback(null, memo.concat(downloads, downloads2, downloads3));
+								const all = downloads;
+								downloads2.forEach(entry => {
+									for (let i = 0; i < all.length; i++) {
+										if (all[i].day === entry.day) {
+											all[i].downloads += entry.downloads;
+											return;
+										}
+									}
+									all[i].push(entry);
+								});
+								downloads3.forEach(entry => {
+									for (let i = 0; i < all.length; i++) {
+										if (all[i].day === entry.day) {
+											all[i].downloads += entry.downloads;
+											return;
+										}
+									}
+									all[i].push(entry);
+								});
+								callback(null, memo.concat(all).sort((a, b) => {
+									return new Date(a.day) - new Date(b.day);
+								}));
 							});
 						});
 					} else {
