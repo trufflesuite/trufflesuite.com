@@ -115,7 +115,7 @@
 	          _react2.default.createElement(
 	            "h3",
 	            null,
-	            "GANACHE (ganache-cli)"
+	            "GANACHE (ganache)"
 	          ),
 	          _react2.default.createElement(
 	            "div",
@@ -123,7 +123,7 @@
 	            _react2.default.createElement(
 	              "div",
 	              { className: "tile is-12" },
-	              _react2.default.createElement(_downloads2.default, { colorclassName: "is-ganache", packageName: "ganache-cli", startDate: "2017-10-01" })
+	              _react2.default.createElement(_downloads2.default, { colorclassName: "is-ganache", packageName: "ganache", startDate: "2017-10-01" })
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -22125,8 +22125,19 @@
 
 	    (0, _reduce2.default)(requests, [], function (memo, item, callback) {
 	      _axios2.default.get(item).then(function (response) {
-	        var downloads = response.data.downloads;
-	        callback(null, memo.concat(downloads));
+					var downloads = response.data.downloads;
+					if (item.endsWith("ganache")){
+						_axios2.default.get(item+"-cli").then(function (response) {
+							var downloads2 = response.data.downloads;
+							_axios2.default.get(item+"-core").then(function (response) {
+								var downloads3 = response.data.downloads;
+								callback(null, memo.concat(downloads + downloads2 + downloads3));
+							});
+						});
+					} else {
+						var downloads = response.data.downloads;
+						callback(null, memo.concat(downloads));
+					}
 	      }).catch(callback);
 	    }, function (err, downloads) {
 
