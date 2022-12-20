@@ -113,5 +113,16 @@ hide:
                     <a href="/guides/nft-rental-marketplace-2" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
                 </div>
             </div>
+            <div class="row mt-5">
+                <div class="col-md-3">
+                    <img src="/img/unleashed/W3U-ep-10.png" alt="Web3 Unleashed Episode #10" class="rounded-circle img-fluid green" />
+                </div>
+                <div class="col-md-9">
+                    <h2 class="mt-0 font-weight-bold">Episode #10 - How to build a MetaMask snap</h2>
+                    <p>12/15/2022 9:00 PST&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> Emily Lin</p>
+                        <p>In this episode, we'll be joined by Christian Montoya and Guillaume Roux to talk about extending the functionality of your MetaMask wallet using MetaMask Snaps!</p>
+                    <a href="/guides/metamask-snap" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
+                </div>
+            </div>
     </section>
 </div>
