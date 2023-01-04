@@ -61,7 +61,16 @@ JavaScript. See the [Nodejs' util.format()
 documentation](https://nodejs.org/api/util.html#utilformatformat-args) for
 usage details.
 
-<details><summary>Consider this solidity contract</summary>
+Here's how to import truffle/console.sol contract. Expand the code block to see
+the full usage example.
+
+```solidity
+pragma solidity >=0.4.25 <0.9.0;
+import "truffle/console.sol";
+```
+<details><summary>
+Click to see full sample files.
+</summary>
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -85,9 +94,6 @@ contract Telephone {
     }
 }
 ```
-</details>
-
-<details><summary>and this JavaScript test file</summary>
 
 ```javascript
 const Telephone = artifacts.require("Telephone");
