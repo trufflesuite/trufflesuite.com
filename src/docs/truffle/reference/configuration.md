@@ -61,7 +61,7 @@ JavaScript. See the [Nodejs' util.format()
 documentation](https://nodejs.org/api/util.html#utilformatformat-args) for
 usage details.
 
-Here's how to import truffle/console.sol contract. Expand the code block to see
+Here's how to import the `truffle/console.sol` contract. Expand the code block to see
 the full usage example.
 
 ```solidity
