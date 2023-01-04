@@ -107,7 +107,7 @@ hide:
                     <img src="/img/unleashed/W3U-ep-9.png" alt="Web3 Unleashed Episode #9" class="rounded-circle img-fluid green" />
                 </div>
                 <div class="col-md-9">
-                    <h2 class="mt-0 font-weight-bold">Episode #9 - Build a NFT Rental Marketplace Part 1</h2>
+                    <h2 class="mt-0 font-weight-bold">Episode #9 - Build a NFT Rental Marketplace Part 2</h2>
                     <p>11/10/2022 9:00 PST&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> Emily Lin</p>
                         <p>We'll be building the last piece of our NFT Rental Marketplace: the frontend! This marketplace will leverage Infura's NFT API and IPFS gateways to mint and display NFTs!</p>
                     <a href="/guides/nft-rental-marketplace-2" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
@@ -121,6 +121,28 @@ hide:
                     <h2 class="mt-0 font-weight-bold">Episode #10 - How to build a MetaMask snap</h2>
                     <p>12/15/2022 9:00 PST&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> Emily Lin</p>
                         <p>In this episode, we'll be joined by Christian Montoya and Guillaume Roux to talk about extending the functionality of your MetaMask wallet using MetaMask Snaps!</p>
+                    <a href="/guides/metamask-snap" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-3">
+                    <img src="/img/unleashed/W3U-ep-11.png" alt="Web3 Unleashed Episode #11" class="rounded-circle img-fluid green" />
+                </div>
+                <div class="col-md-9">
+                    <h2 class="mt-0 font-weight-bold">Episode #11 - How to Add Notifications to Your Dapp</h2>
+                    <p>1/05/2023 9:00 PST&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> Emily Lin</p>
+                        <p>In this episode, we'll be joined by core developer Fabio to learn about and build with Push Protocol!</p>
+                    <a href="/guides/metamask-snap" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-3">
+                    <img src="/img/unleashed/W3U-ep-12.png" alt="Web3 Unleashed Episode #12" class="rounded-circle img-fluid green" />
+                </div>
+                <div class="col-md-9">
+                    <h2 class="mt-0 font-weight-bold">Episode #12 - Decentralized social media with Lens</h2>
+                    <p>1/26/2023 9:00 PST&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> Emily Lin</p>
+                        <p>Learn from Nader Dabit about how decentralized social media is onboarding the next million users into Web3 and how to get started building with Lens!</p>
                     <a href="/guides/metamask-snap" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
                 </div>
             </div>
