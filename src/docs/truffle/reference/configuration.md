@@ -68,9 +68,7 @@ the full usage example.
 pragma solidity >=0.4.25 <0.9.0;
 import "truffle/console.sol";
 ```
-<details><summary>
-Click to see full sample files.
-</summary>
+<details><summary> Example: </summary>
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -134,7 +132,7 @@ contract("Telephone", function(/* accounts */) {
 #### displayPrefix
 
 You can set the `displayPrefix` string to decorate `console.log`'s output. This
-is useful when you want to differentiate console.log from verbose output in the
+is useful when you want to differentiate `console.log` from verbose output in the
 terminal.
 
 For example:
@@ -175,10 +173,10 @@ Compiling your contracts...
 
 #### preventConsoleLogMigration
 
-Because it's hard to exactly reason about gas usage when a console.log is
-deployed to mainnet, you can opt in to guarding your project. When
-`solidityLog.preventConsoleLogMigration` is true, `truffle migrate` will stop
-migration on mainnet.
+Because it's hard to exactly reason about gas usage when a
+`truffle/console.sol` is deployed to mainnet, you can opt in to guarding your
+project. When `solidityLog.preventConsoleLogMigration` is true, `truffle
+migrate` will stop migration on mainnet.
 
 ```javascript
 module.exports = {
