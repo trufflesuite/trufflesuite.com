@@ -51,6 +51,142 @@ Any of the following solutions will remedy this issue:
 
 ## General options
 
+### solidityLog
+
+Like JavaScript's `console.log`, you can utilize the same concept to print
+state of your contract during execution. This log will appear when you use
+`truffle test` or `truffle develop`. To use it, import
+`truffle/console.sol` into your Solidity contract and use it like you would in
+JavaScript. See the [Nodejs' util.format()
+documentation](https://nodejs.org/api/util.html#utilformatformat-args) for
+usage details.
+
+Here's how to import the `truffle/console.sol` contract. Expand the code block to see
+the full usage example.
+
+```solidity
+pragma solidity >=0.4.25 <0.9.0;
+import "truffle/console.sol";
+```
+<details><summary> Example: </summary>
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.4.25 <0.9.0;
+
+import "truffle/console.sol";
+
+contract Telephone {
+    uint public secret;
+
+    constructor(uint _secret) payable { 
+        console.log("Telephone::constructor\n\tsecret: %o", _secret); 
+        secret = _secret;
+    }
+
+    function derivedSecret() public view returns (uint256) {
+        uint256 telephoneSecret = 100 * secret + 1;
+        console.log("The passphrase is: %o", secret);
+        console.log("Leak it a hundred times, plus one: %o", telephoneSecret);
+        return telephoneSecret; 
+    }
+}
+```
+
+```javascript
+const Telephone = artifacts.require("Telephone");
+
+const getRnd = function() {
+  const [min, max] = [13, 1013];
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+contract("Telephone", function(/* accounts */) {
+  let subject;
+  describe("Works with new deployment", function() {
+    let newSecret;
+    before(async function() {
+      newSecret = getRnd();
+      subject = await Telephone.new(newSecret);
+    });
+    
+    it("Should have a deployed contract", async function() {
+      return assert.isTrue(subject !== undefined);
+    });
+    
+    it("has the secret", async function() {
+      const secret = await subject.secret();
+      assert.strictEqual(secret, newSecret);
+    });
+    
+    it("has the derived Secret", async function() {
+      const derivedSecret = await subject.derivedSecret();
+      const expected = 100 * newSecret + 1;
+      assert.strictEqual(derivedSecret, expected);
+    });
+  });
+});
+```
+</details>
+
+#### displayPrefix
+
+You can set the `displayPrefix` string to decorate `console.log`'s output. This
+is useful when you want to differentiate `console.log` from verbose output in the
+terminal.
+
+For example:
+
+```javascript
+module.exports = {
+  ...
+  solidityLog: {
+    displayPrefix: " :";
+  }
+}
+```
+
+Would produce the following `truffle test` output
+
+```console
+$ truffle test
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/Telephone.sol
+> Artifacts written to /tmp/test--19090-s3Aobp6MBrr3
+> Compiled successfully using:
+   - solc: 0.8.17+commit.8df45f5f.Emscripten.clang
+
+  Contract: Telephone
+    Works with new deployment
+  : Telephone::constructor
+  :     secret: 786n
+      ✔ Should have a deployed contract
+      ✔ has the secret
+  : The passphrase is: 786n
+  : Leak it a hundred times, plus one: 78601n
+      ✔ has the derived Secret
+
+  3 passing (161ms)
+```
+
+#### preventConsoleLogMigration
+
+Because it's hard to exactly reason about gas usage when a
+`truffle/console.sol` is deployed to mainnet, you can opt in to guarding your
+project. When `solidityLog.preventConsoleLogMigration` is true, `truffle
+migrate` will stop migration on mainnet.
+
+```javascript
+module.exports = {
+  ...
+  solidityLog: {
+    preventConsoleLogMigration: true; // default is false
+  }
+}
+```
+
 ### build
 
 Build configuration of your application, if your application requires tight integration with Truffle. Most users likely will not need to configure this option. See the [Build Processes](/docs/truffle/advanced/build-processes) section for more details.

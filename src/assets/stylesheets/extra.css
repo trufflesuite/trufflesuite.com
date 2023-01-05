@@ -7,6 +7,19 @@ html {
   scroll-behavior: auto;
 }
 
+.md-typeset :is(.admonition,details) {
+  border-color: var(--mint);
+}
+
+.md-typeset :is(.admonition-title,summary) {
+  border-color: var(--mint);
+  background-color: var(--md-primary-fg-color);
+}
+
+.md-typeset :is(.admonition-title,summary):before {
+  background-color: var(--mint);
+}
+
 :root {
   --milk: #F6F5EF;
   /* mint, but transparent*/
