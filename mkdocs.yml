@@ -36,6 +36,7 @@ extra_css:
   - assets/stylesheets/bootstrap.min.css
   - assets/stylesheets/extra.css
 markdown_extensions:
+  - admonition
   - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.tabbed:
