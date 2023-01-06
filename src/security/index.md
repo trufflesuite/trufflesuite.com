@@ -2,8 +2,6 @@
 
 ![truffle+security logo](./truffle-plus-security-sm.jpeg)
 
-## Welcome
-
 Welcome to Truffle + Security, our living guide to helping individuals and teams building on web3 get, and stay, secure. Contained within, you’ll find a range of best practices on securing individuals, teams, environments and code.
 
 We’ve built this guide to breadth-focused (which was something we felt lacking in the ecosystem), with the goal being a holistic appreciation of all aspects of web3 security. It’s also designed for technical and non-technical users alike, with clear labels specifying the audience a given section is intended for.
@@ -14,7 +12,7 @@ Lastly, as stated, this is very much intended to be a “living guide” and we�
 
 ## Manifesto on Web3 Security
 
-!!! quote
+!!! quote "Manifesto on Web3 Security"
 
     Dear web3 builder,
 
@@ -22,7 +20,7 @@ Lastly, as stated, this is very much intended to be a “living guide” and we�
 
     These factors have included, although are by no means limited to, the following:
     
-    - **More at stak** - projects (and their underlying contracts) are storing larger amounts of value making them [increasingly attractive targets](https://www.theverge.com/2022/7/7/23199148/web3-lost-2-billion-hacks-flash-loan-certik-cryptocurrency)
+    - **More at stake** - projects (and their underlying contracts) are storing larger amounts of value making them [increasingly attractive targets](https://www.theverge.com/2022/7/7/23199148/web3-lost-2-billion-hacks-flash-loan-certik-cryptocurrency)
     - **More hacks** - sadly it’s often feels like hardly a day goes by without a hack or exploit [making the headlines](https://rekt.news/)
     - **More developers** - while this is an undeniably positive trend, it also means there’s new people entering the ecosystem with minimal experience with securing their projects
     - **More complexity** - increased complexity (scaling solutions, bridges, etc) is resulting in more attack vectors 
@@ -42,19 +40,16 @@ Lastly, as stated, this is very much intended to be a “living guide” and we�
 
 ## Sections
 
-### Securing You and Your Project
+### Securing Yourself and Your Project
 
 - [Secure Thyself (aka The Basics)](./secure-thyself)
-- Security Harden ALL The Things
+- [Security Harden ALL The Things](harden-all-the-things)
 
-### What Could Go Wrong?
+### Understanding the Risks
 
-- Understanding the Pitfalls
+- [What Could Go Wrong](./what-could-go-wrong)
 
 ### Hands-on
 
-- Web3 Security Starter Box
-
-### Tools
-
-- Tools & Resources
+- [Web3 Security Starter Box](./hands-on)
+- [Tools & Resources](./tools-and-resources)

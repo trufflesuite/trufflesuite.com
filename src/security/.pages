@@ -1,0 +1,7 @@
+nav:
+    - Home: index.md
+    - Secure Thyself: secure-thyself.md
+    - harden-all-the-things.md
+    - what-could-go-wrong.md
+    - hands-on.md
+    - tools-and-resources.md
