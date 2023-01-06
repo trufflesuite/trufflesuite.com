@@ -44,7 +44,7 @@ Lastly, as stated, this is very much intended to be a “living guide” and we�
 
 ### Securing You and Your Project
 
-- Secure Thyself (aka The Basics)
+- [Secure Thyself (aka The Basics)](./secure-thyself)
 - Security Harden ALL The Things
 
 ### What Could Go Wrong?
