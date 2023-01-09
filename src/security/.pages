@@ -1,7 +1,7 @@
 nav:
     - Home: index.md
     - Secure Thyself: secure-thyself.md
-    - harden-all-the-things.md
-    - what-could-go-wrong.md
-    - hands-on.md
-    - tools-and-resources.md
+    - Security Harden ALL The Things: harden-all-the-things.md
+    - What Could Go Wrong?: what-could-go-wrong.md
+    - Hands On: hands-on.md
+    - Tools & Resources: tools-and-resources.md

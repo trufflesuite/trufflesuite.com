@@ -2,7 +2,7 @@
 
 There are many things that can go wrong in software development and dapps are no different. If anything, given the public nature of the blockchain networks and the amounts of value at stake, the risks are often higher than with previous computing paradigms. So the short answer to #WCGW is a LOT.
 
-Mitigating the risks starts with understanding what they are so let’s dive right in. Thematically we’ve broken them down into the following five areas:
+Mitigating the risks starts with understanding what they are so let’s dive right in. Thematically we’ve broken them down into the following areas:
 
 - Interface considerations 💻
 - Smart Contract vulnerabilities 🔐
