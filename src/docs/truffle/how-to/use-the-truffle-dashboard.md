@@ -76,6 +76,34 @@ module.exports = {
 ```
 
 
+## Decode requests
+
+Truffle Dashboard supports decoding requests for certain RPC calls, allowing you to view a more human-friendly
+representation of the messaging between your computer and the Ethereum network.
+
+<p class="alert alert-warning">
+<i class="far fa-exclamation-triangle"></i> <strong>Warning</strong>: The decode functionality is available
+for the following methods: <code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_signTypedData_v3</code>, and
+<code>eth_signTypedData_v4</code>.
+</p>
+
+Each time you run `truffle compile`, Truffle shares information about your contracts with Truffle Dashboard.
+Later, when you call a method, Truffle Dashboard consults its repository of this compilation
+information, and asks `@truffle/decoder` to translate the request into a human readable format.
+
+For example, assume you have a contract that allows you to mint 5 tokens and send it to a
+user (`myaccount.eth` in this example), the low-level form would look something like:
+
+```
+0xa0e9439c000000000000000000000000efef50ebacd8da3c13932ac204361b704eb8292c0000000000000000000000000000000000000000000000000000000000000005
+```
+
+Truffle Dashboard can display the this in a more human-readable format, for example:
+
+```
+mint(myaccount.eth, 5)
+```
+
 ## Usage with non-Truffle tooling
 
 We know that not everyone uses Truffle for their smart contract development, but we believe that the Truffle Dashboard should be accessible to everyone. This is why we developed the Truffle Dashboard to be agnostic about the tools you're using, so it can also be used with other tools such as Hardhat.
@@ -101,4 +129,3 @@ From there, it can be used with any Hardhat task or tools like hardhat-deploy.
 ```
 hardhat deploy --network truffle-dashboard
 ```
-
