@@ -81,10 +81,10 @@ module.exports = {
 Truffle Dashboard supports decoding requests for certain RPC calls, allowing you to view a more human-friendly
 representation of the messaging between your computer and the Ethereum network.
 
-<p class="alert alert-warning">
-<i class="far fa-exclamation-triangle"></i> <strong>Warning</strong>: The decode functionality is available
+<p class="alert alert-info">
+<i class="far fa-info-circle"></i> <strong>Information</strong>: The decode functionality is available
 in Truffle projects for the following methods: <code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_signTypedData_v3</code>, and
-<code>eth_signTypedData_v4</code>. Support for non-Truffle tooling such as Hardhat may be added in the future.
+<code>eth_signTypedData_v4</code>. We plan to support non-Truffle tooling such as Hardhat in the future.
 </p>
 
 Each time you run `truffle compile`, Truffle shares information about your contracts with Truffle Dashboard.
@@ -98,7 +98,7 @@ user (`myaccount.eth` in this example), the low-level form would look something 
 0xa0e9439c000000000000000000000000627306090abab3a6e1400e9345bc60c78a8bef570000000000000000000000000000000000000000000000000000000000000005
 ```
 
-Truffle Dashboard can display the this in a more human-readable format, for example:
+Truffle Dashboard can display this in a more human-readable format, for example:
 
 ```
 mint(myaccount.eth, 5)
@@ -106,13 +106,12 @@ mint(myaccount.eth, 5)
 
 ## Usage with non-Truffle tooling
 
-We know that not everyone uses Truffle for their smart contract development, but we believe that the
-Truffle Dashboard should be accessible to everyone. This is why we developed the Truffle Dashboard to
-be agnostic about the tools you're using, so it can also be used with other tools such as Hardhat.
+To make the Truffle Dashboard accessible to everyone, we developed it to be agnostic about the tools
+you're using. You can use the Truffle Dashboard with non-Truffle tools such as Hardhat.
 
 <p class="alert alert-info">
 <i class="far fa-info-circle"></i> <strong>Information</strong>: Truffle Dashboard cannot decode requests
-when using non-Truffle tooling. Support for tools such as Hardhat may be added in the future.
+when using tools other than Truffle; we plan to add support for other tools in the future.
 </p>
 
 When using the Truffle Dashboard with Hardhat, you need to create a network configuration inside your `hardhat.config.js` file that specifies the Truffle Dashboard's RPC URL.
