@@ -112,7 +112,7 @@ be agnostic about the tools you're using, so it can also be used with other tool
 
 <p class="alert alert-info">
 <i class="far fa-info-circle"></i> <strong>Information</strong>: Truffle Dashboard cannot decode requests
-when using non-ruffle tooling. Support for tools such as Hardhat may be added in the future.
+when using non-Truffle tooling. Support for tools such as Hardhat may be added in the future.
 </p>
 
 When using the Truffle Dashboard with Hardhat, you need to create a network configuration inside your `hardhat.config.js` file that specifies the Truffle Dashboard's RPC URL.
