@@ -1,5 +1,5 @@
 ---
-title: Truffle now supports console.log in Solidity smart contract
+title: Truffle now supports console.log in Solidity smart contracts
 hide:
   - navigation
 ---
@@ -8,19 +8,19 @@ hide:
 
 **By Kingsley Arinze**
 
-If you used a popular programming language like JavaScript before Solidity, then maybe you had a hard time debugging your Solidity smart contract as a newbie. You must have ran into bugs in your code where a simple console.log() would have solved, but since Solidity has no built-in way of doing this, you had to find alternative ways to fixing your bug.
+If you used the popular programming language, JavaScript before Solidity, it’s possible you’ve had a hard time debugging your Solidity smart contracts. You might have encountered bugs in your code that a simple console.log() would have solved, but since Solidity has no built-in way of doing this, you had to find alternative ways to fix the bug.
 
-To get around this problem for Ganache users, we released the [console.sol library](https://www.npmjs.com/package/@ganache/console.log) and updated Ganache to be able to parse and automatically log calls to console.sol to standard output just like JavaScript's console.log, more details [here](https://github.com/trufflesuite/ganache/tree/develop/src/chains/ethereum/console.log).
+To get around this problem for Ganache users, we’ve released the [console.sol library](https://www.npmjs.com/package/@ganache/console.log) and updated Ganache to be able to parse and automatically log calls to console.sol, to standardize outputs just like [JavaScript's console.log](https://github.com/trufflesuite/ganache/tree/develop/src/chains/ethereum/console.log).
 
-However, to use this together with Truffle during development and testing, you must start a standalone Ganache instance and connect Truffle to it. This also means that logging output from your smart contract are sent to the Ganache terminal.
+To use Ganache’s [console.sol](https://www.npmjs.com/package/@ganache/console.log) together with Truffle during development and testing, you must start a standalone Ganache instance and connect Truffle. This also means that logging outputs from your smart contracts are sent to the Ganache terminal.
 
 Since Truffle has its own built-in Ganache instance that you can easily access when you run `truffle develop`, we decided to take this a step further by implementing Ganache’s console.log support into Truffle directly.
 
-This means you no longer have to manually install any package or run a separate Ganache instance to get the logging feature. Logging outputs are also sent to the Truffle terminal. See the [Usage section]() for more information.
+You no longer have to manually install any package or run a separate Ganache instance to get the logging feature. Logging outputs are also sent to the Truffle terminal.
 
 ## Installation
 
-To follow with the content of this post, you will need to have the following requirements:
+To follow the content of this post, you will need to have the following requirements:
 
 [Node.js](https://nodejs.org/en)
 
