@@ -4,11 +4,11 @@ hide:
   - navigation
 ---
 
-<!-- ![Blog banner for Truffle now supports console.log in Solidity smart contract](./header-web3-dubai.jpg) -->
+![Blog banner for Truffle now supports console.log in Solidity smart contract](./console_log_banner.jpg)
 
 **By Kingsley Arinze**
 
-If you used the popular programming language, JavaScript before Solidity, it’s possible you’ve had a hard time debugging your Solidity smart contracts. You might have encountered bugs in your code that a simple console.log() would have solved, but since Solidity has no built-in way of doing this, you had to find alternative ways to fix the bug.
+If you used the popular programming language, JavaScript before Solidity it’s possible you’ve had a hard time debugging your Solidity smart contracts. You might have encountered bugs in your code that a simple console.log() would have solved, but since Solidity has no built-in way of doing this, you had to find alternative ways to fix the bug.
 
 To get around this problem for Ganache users, we’ve released the [console.sol library](https://www.npmjs.com/package/@ganache/console.log) and updated Ganache to be able to parse and automatically log calls to console.sol, to standardize outputs just like [JavaScript's console.log](https://github.com/trufflesuite/ganache/tree/develop/src/chains/ethereum/console.log).
 
