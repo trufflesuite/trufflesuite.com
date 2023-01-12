@@ -1,4 +1,13 @@
-{"from-idea-to-minimum-viable-dapp-truffle-command-line-interface-part-2": {
+{
+  "truffle-now-supports-console-logging-in-solidity-smart-contract": {
+    "title": "Truffle now supports console.log in Solidity smart contracts",
+    "date": "2023-01-11",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "If you used a popular programming language like JavaScript before Solidity, then maybe you had a hard time debugging your Solidity smart contract as a newbie...",
+    "image": "/img/blog/thumbnails/console_log_thumb.jpg"
+  },
+  "from-idea-to-minimum-viable-dapp-truffle-command-line-interface-part-2": {
   "title": "From Idea to Minimum Viable Dapp - Truffle Command Line Interface Part 2",
   "date": "2022-12-07",
   "author": "Kingsley Arinze",
