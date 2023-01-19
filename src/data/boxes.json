@@ -1,4 +1,13 @@
 {
+	"ERC4907Box": {
+		"description": "ERC4907 Box is a Truffle box that will get you quickly up and running deploying an ERC4907 smart contract",
+		"stars": 0,
+		"tags": [
+			"community",
+			"emojidao",
+			"erc4907"
+		]
+	},
 	"harmony-box": {
 		"description": "Harmony Box is a Truffle box that will get you quickly up and running deploying smart contracts on Harmony using Truffle & native Ethereum tooling.",
 		"stars": 0,
