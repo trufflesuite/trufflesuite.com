@@ -1,5 +1,11 @@
 [
   {
+    "userOrg": "emojidao",
+    "displayName": "ERC4907 Box",
+    "repoName": "ERC4907Box",
+    "official": false
+  },
+  {
     "userOrg": "metamask",
     "displayName": "metamask-snap-box",
     "repoName": "snap-box",
