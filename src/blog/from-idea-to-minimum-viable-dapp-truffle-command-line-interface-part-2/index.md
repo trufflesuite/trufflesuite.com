@@ -10,7 +10,7 @@ hide:
 
 In the first part of [From Idea to Minimum Viable Dapp](https://trufflesuite.com/blog/from-idea-to-minimum-viable-dapp-truffle-command-line-interface-part-1) series, we created a new smart contract project, wrote some smart contract code, compiled and deployed the smart contract, and interacted with the deployed contract, all while using the Truffle CLI.
 
-In this episode, we’ll explore writing and running automated unit tests for smart contracts, leveraging the cool features that Truffle CLI provides developers. To be able to follow through with this guide, you should start by checking out [part one](https://trufflesuite.com/blog/from-idea-to-minimum-viable-dapp-truffle-command-line-interface-part-1) as it is a prerequisite for this post. 
+In this episode, we’ll explore writing and running automated unit tests for smart contracts, leveraging the cool features that Truffle CLI provides developers. To be able to follow through with this guide, you should start by checking out [part one](https://trufflesuite.com/blog/from-idea-to-minimum-viable-dapp-truffle-command-line-interface-part-1) as it is a prerequisite for this post.
 
 Truffle comes bundled with an automated testing framework to make testing your contracts easy. Automated tests can be written in both JavaScript/TypeScript and Solidity, with both having their respective advantages and disadvantages.
 
@@ -20,7 +20,7 @@ All test files will be located in the `./test` directory. Truffle will only run 
 
 Now go ahead and create a test file inside the `./test` directory and call it `auction.js`.
 
-To help us with asserting reverts and checking if certain events were emitted during our test, we’ll need to install the `truffle-assertions` library from NPM by running the command `npm install -d truffle-assertions`. 
+To help us with asserting reverts and checking if certain events were emitted during our test, we’ll need to install the `truffle-assertions` library from NPM by running the command `npm install -d truffle-assertions`.
 
 We’ll also need some helper functions to help with things like getting the latest block timestamp and advancing the current time forward. To do that, let us create a file on the root of our project (outside the ./test directory) and call it `helpers.js`.
 
@@ -53,7 +53,6 @@ const advanceTimeTo = async (timestampInSecs) => {
   return mineBlock();
 };
 
-
 const getLatestBlockTimestamp = async () => {
   const block = await rpcPromise({
     method: "eth_getBlockByNumber",
@@ -66,7 +65,7 @@ const getLatestBlockTimestamp = async () => {
 
 module.exports = {
   advanceTimeTo,
-  getLatestBlockTimestamp
+  getLatestBlockTimestamp,
 };
 ```
 
@@ -86,7 +85,7 @@ const {
 Now some actual test cases
 
 ```javascript
-... 
+...
 
 contract("Auction", (accounts) => {
   // Before auction start
@@ -180,7 +179,8 @@ contract("Auction", (accounts) => {
   });
 });
 ```
-The test case descriptions are self-explanatory so it’s clear what we’re doing in each. 
+
+The test case descriptions are self-explanatory so it’s clear what we’re doing in each.
 
 If you’ve ever written unit tests for a JavaScript project with Mocha, you will notice how similar the structure of our test cases are to a Mocha test, and this is because Truffle uses Mocha under the hood with a few tweaks like using `contract()` instead of the `describe()` keyword.
 
@@ -188,7 +188,7 @@ Besides the difference in choice of keywords, both `contract()` and `describe()`
 
 ## Running your tests
 
-Since we’re not using the standalone Ganache yet (will be covered in a later post ), we’ll have to rely on the internal, somewhat basic Ganache that comes bundled with the Truffle CLI. To spin it up, simply run the `truffle develop` command. 
+Since we’re not using the standalone Ganache yet (will be covered in a later post ), we’ll have to rely on the internal, somewhat basic Ganache that comes bundled with the Truffle CLI. To spin it up, simply run the `truffle develop` command.
 
 There are a number of ways to run your tests in Truffle, one way is to run all tests together with the command `test`, and another way is to specify the test file to run like so `test ./test/<FILENAME>`, e.g `test ./test/auction.js`. For more information on additional options you can pass in while running the test, see the [command reference documentation](https://trufflesuite.com/docs/truffle/reference/command-line-options/#test).
 
@@ -202,6 +202,6 @@ That’s it for writing and running automated unit tests for your smart contract
 
 If you’re curious enough and willing to dig deeper into testing with Truffle, try out creating some more test cases for your smart contract but this time in Solidity. It’s mostly the same concepts, check out the [Truffle documentation of writing tests in Solidity](https://trufflesuite.com/docs/truffle/how-to/debug-test/write-tests-in-solidity) to get started.
 
-In part three,  we’ll explore ways in which you can debug your smart contract code, using the Truffle debugger and console.log feature. Until then, keep an eye on [Truffle's Twitter](https://twitter.com/trufflesuite) and our [GitHub Discussions page](https://github.com/orgs/trufflesuite/discussions) for more updates.
+In part three, we’ll explore ways in which adding Ganache to our workflow can improve our productivity by providing some form of visibility of what happens under the hood. Until then, keep an eye on [Truffle's Twitter](https://twitter.com/trufflesuite) and our [GitHub Discussions page](https://github.com/orgs/trufflesuite/discussions) for more updates.
 
 We also hold weekly live-streamed sessions called Web3 Unleashed, where we build, interview developers in the web3 community, and discuss important developments across the ecosystem. You can find past episodes on the [Truffle Youtube channel](https://www.youtube.com/c/TruffleSuite) and the [unleashed section](https://trufflesuite.com/unleashed) of our website if you prefer written materials.

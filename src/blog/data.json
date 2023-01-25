@@ -1,4 +1,13 @@
 {
+  "from-idea-to-minimum-viable-dapp-how-to-use-ganache-to-enhance-your-auction-dapp": {
+    "title": "From Idea to Minimum Viable Dapp - How to use Ganache to enhance your auction dapp",
+    "date": "2023-01-25",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "Welcome to the third post of the Truffle series: From idea to minimum viable dapp, where we showcase how to build a dapp from scratch with the Truffle suite. In this post, we’re going to cover how to enhance your auction dapp using Ganache...",
+    "image": "/img/blog/thumbnails/thumbnail-idea-to-dapp-part3.png"
+  },
+
   "truffle-now-supports-console-logging-in-solidity-smart-contract": {
     "title": "Truffle now supports console.log in Solidity smart contracts",
     "date": "2023-01-11",
