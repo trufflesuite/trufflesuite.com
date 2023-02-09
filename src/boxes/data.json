@@ -1,5 +1,11 @@
 [
   {
+    "userOrg": "truffle-box",
+    "displayName": "Lens Box",
+    "repoName": "lens-box",
+    "official": true
+  },
+  {
     "userOrg": "emojidao",
     "displayName": "ERC4907 Box",
     "repoName": "ERC4907Box",

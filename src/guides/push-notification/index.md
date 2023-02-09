@@ -13,13 +13,13 @@ Last updated 1/05/2023
 
 Our full-stack NFT rental marketplace is done! We created a [rentable NFT](https://trufflesuite.com/guides/rentable-nft/), wrote a [rental marketplace smart contract](https://trufflesuite.com/guides/nft-rental-marketplace/), and built a [frontend](https://trufflesuite.com/guides/nft-rental-marketplace-2/) to tie it all together. 
 
-In this guide, we'll be adding some details to improve the user expriecnce: using Push to send decentralized notifications whenever a user's rental has expired. Additionally, we'll be using `ganache` forking to test our contracts and interact with the Push contracts locally before deploying to an actual testnet or mainnet.
+In this guide, we'll be adding some details to improve the user experience: using Push to send decentralized notifications whenever a user's rental has expired. Additionally, we'll be using `ganache` forking to test our contracts and interact with the Push contracts locally before deploying to an actual testnet or mainnet.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oevGLIvWDTc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KX4eVQzKBmY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Watch the livestream on [YouTube](https://youtu.be/oevGLIvWDTc) for a more in-depth walkthrough and to hear from core dev, Fabio, about how Push is changing up Web3 communication!
+Watch the livestream on [YouTube](https://www.youtube.com/live/KX4eVQzKBmY) for a more in-depth walkthrough and to hear from core dev, Fabio, about how Push is changing up Web3 communication!
 
-The completed code lives [here](https://github.com/trufflesuite/unleashed_nft_rental_marketplace/tree/push).
+The completed code lives [here](https://github.com/trufflesuite/unleashed_nft_rental_marketplace/tree/push-notification).
 
 NOTE: We are only interacting with the smart contracts, so you can ignore the `client` folder.
 
@@ -188,7 +188,7 @@ function unlistNFT(address nftContract, uint256 tokenId) public payable nonReent
 }
 ```
 
-## Deploy the Marketplace contract and add it as delegate
+## Deploy the Marketplace contract and add it as a delegate
 
 In order for the contract address to send a notification, it needs to be set as a delegate by Push. To do so, follow the instructions [here](https://docs.push.org/developers/developer-guides/create-your-notif-channel/adding-delegates-for-channel).
 

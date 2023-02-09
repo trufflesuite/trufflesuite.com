@@ -17,7 +17,7 @@ Watch the livestream on [YouTube](https://youtu.be/I-KOWTctSZk) to hear from Nad
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/I-KOWTctSZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-The Lens box code lives [here](https://github.com/emilyJLin95/lens-box).
+The Lens box code lives [here](https://github.com/truffle-box/lens-box).
 
 ## Download System Requirements
 
@@ -48,7 +48,7 @@ In order to deploy to the public testnets, you'll need some test Eth to cover yo
 First, let's examine the contents of the Truffle Lens box. Start off by unboxing it:
 
 ```shell
-truffle unbox emilyjlin95/lens-box <DIRECTORY_NAME>
+truffle unbox lens <DIRECTORY_NAME>
 ```
 
 In this box, we have two folders: `lens-app` and `truffle`. Let's dive into what's in each folder and how you might edit the contents to create your own social dapp!
@@ -104,9 +104,9 @@ export const client = new ApolloClient({
 })
 ```
 
-Do note that we are getting our authenticated token from `localStorage`.
+Do note that we are getting our authenticated token from `localStorage`, which we write to in `index.tsx`. You can read more about it in the section below.
 
-The remaining code in this file represent different GraphQL queries that get the information we want from Lens. The `challenge` and `authenticate` queries are specifically used for authentication, while `exploreProfiles`, `getProfile`, and `getPublications` for reading data from Lens. 
+The remaining code in this file represent different GraphQL queries that get the information we want from Lens. The `challenge` and `authenticate` queries are specifically used for authentication, while `exploreProfiles`, `getProfile`, and `getPublications` are for reading data from Lens. 
 
 ### `lens-app/pages/index.tsx`
 
@@ -140,7 +140,7 @@ To do the authentication, the important functions to highlight are:
     }
     ```
 
-    If the user has not yet connected account, this function will allow them to do so by using the MetaMask Provider API `await window.ethereum.send('eth_requestAccounts')`.
+    If the user has not yet connected their account, this function will allow them to do so by using the MetaMask Provider API `await window.ethereum.send('eth_requestAccounts')`.
 
 3. `login`
 
@@ -176,35 +176,35 @@ To do the authentication, the important functions to highlight are:
 
     Finally, to get our token, we need to issue a challenge and get the user to sign it using their wallet. To do so, we'll be using the `challenge` and `authenticate` queries we created in `api.js`. Once we get the token, we save it to `localStorage`. Note that we call `setToken(window.localStorage.getItem('your-storage-key'))` in the `useEffect` so that we don't have to re-authenticate every time we refresh the page.
 
-Once the user is logged in, we display the top Lens profiles! Getting that information is as simple as calling the `exploreProfiles` query we defined in `api.js`:
+4. Once the user is logged in, we display the top Lens profiles! Getting that information is as simple as calling the `exploreProfiles` query we defined in `api.js`:
 
-```javascript
-async function fetchProfiles() {
-  try {
-    /* fetch profiles from Lens API */
-    let response = await client.query({ query: exploreProfiles })
-    /* loop over profiles, create properly formatted ipfs image links */
-    let profileData = await Promise.all(response.data.exploreProfiles.items.map(async profileInfo => {
-      let profile = { ...profileInfo }
-      let picture = profile.picture
-      if (picture && picture.original && picture.original.url) {
-        if (picture.original.url.startsWith('ipfs://')) {
-          let result = picture.original.url.substring(7, picture.original.url.length)
-          profile.avatarUrl = `http://lens.infura-ipfs.io/ipfs/${result}`
-        } else {
-          profile.avatarUrl = picture.original.url
-        }
+    ```javascript
+    async function fetchProfiles() {
+      try {
+        /* fetch profiles from Lens API */
+        let response = await client.query({ query: exploreProfiles })
+        /* loop over profiles, create properly formatted ipfs image links */
+        let profileData = await Promise.all(response.data.exploreProfiles.items.map(async profileInfo => {
+          let profile = { ...profileInfo }
+          let picture = profile.picture
+          if (picture && picture.original && picture.original.url) {
+            if (picture.original.url.startsWith('ipfs://')) {
+              let result = picture.original.url.substring(7, picture.original.url.length)
+              profile.avatarUrl = `http://lens.infura-ipfs.io/ipfs/${result}`
+            } else {
+              profile.avatarUrl = picture.original.url
+            }
+          }
+          return profile
+        }))
+
+        /* update the local state with the profiles array */
+        setProfiles(profileData)
+      } catch (err) {
+        console.log({ err })
       }
-      return profile
-    }))
-
-    /* update the local state with the profiles array */
-    setProfiles(profileData)
-  } catch (err) {
-    console.log({ err })
-  }
-}
-```
+    }
+    ```
 
 ### `lens-app/pages/profile/[handle].js`
 
@@ -254,7 +254,7 @@ const proxyAdminAddress = deployerAddress;
 const profileCreatorAddress = deployerAddress;
 ```
 
-Lens Protocol contracts are upgradeable contracts, which you can learn more about in our [3rd episode](https://trufflesuite.com/guides/upgrading-security/) about upgradeble contracts with OpenZeppelin. Because upgradeable contracts are proxy contracts, we deploy it specifying who the admin is, who has the authority to upgrade the implementation contracts:
+Lens Protocol contracts are upgradeable contracts, which you can learn more about in our [3rd episode](https://trufflesuite.com/guides/upgrading-security/) about upgradeble contracts with OpenZeppelin. Because upgradeable contracts are proxy contracts, we must provide an admin, who has the authority to upgrade the contracts should the need arise:
 
 ```javascript
 await deployer.deploy(TransparentUpgradeableProxy, lensHubImpl.address, proxyAdminAddress, data, { nonce: deployerNonce++ });
@@ -335,7 +335,7 @@ You cannot deploy contracts that are greater than 24.77 kib in size. In order to
     },
     ```
 
-    You can read more about optimizers [here](https://docs.soliditylang.org/en/v0.8.10/internals/optimizer.html). In short, the optimizer attempts to simplify complex code, with the tradeoff being deployment cost against execution cost. If this is off, this contract will fail to deploy!
+You can read more about optimizers [here](https://docs.soliditylang.org/en/v0.8.10/internals/optimizer.html). In short, the optimizer attempts to simplify complex code, with the tradeoff being deployment cost against execution cost. If this is off, this contract will fail to deploy!
 
 The last piece that is interesting about this deployment is that we write all the relevant contract addresses to a file named `addresses.json`. This will be used later in our scripts when interacting with the Lens smart contracts.
 
@@ -343,7 +343,7 @@ The last piece that is interesting about this deployment is that we write all th
 
 This folder contains scripts that interact with the Lens protocol. 
 
-In `utils.js`, we create some functions that help us easily retrieve common information. Note that `getAddrs` will read from the file we created in our migration script. Because it calls into the relative file path `./addresses.json`, you have to execute scripts from the root `truffle` folder. Otherwise, the script will fail because it can't find `./addreses.json`.
+In `utils.js`, we create some functions that help us easily retrieve common information. Note that `getAddrs` will read from the file we created in our migration script. Because it calls into the relative file path `./addresses.json`, you have to execute scripts from the root `truffle` folder. Otherwise, the script will fail because it can't find `./addresses.json`.
 
 You can only interact with it when it is unpaused, which you can do by calling `truffle exec scripts/unpause.js` after you've deployed the Lens contracts.
 
@@ -390,7 +390,7 @@ Because there are so many contracts, compilation will take some time. Do note th
 
 Now, we'll demonstrate how to create a custom module using the Truffle box. In this case, we'll only be working within the `truffle` folder.
 
-The completed code for the module lives [here](https://github.com/emilyJLin95/lens-box/tree/secretFollowModule).
+The completed code for the module lives [here](https://github.com/truffle-box/lens-box/tree/secretFollowModule).
 
 ### Write the module smart contract
 
@@ -633,6 +633,8 @@ Follow NFT owner of ID 1: 0xA9A3b27098f4446a1019F75e1164F4ca1980727e, user addre
 
 The first failure is expected because we intentionally input the wrong password!
 
-## Join our community
+## Future extensions
+
+So there you have it! We've gone over how to incorporate the Lens API into your dapp frontends and how to customize the Lens functionality by modifying their smart contracts using modules. There are a variety of ways to extend this content, such as creating a more fully fleshed dapp like Twitter or gating Lens actions through NFT ownership. Let us know how you utilized the Lens box by joining our community!
 
 If you want to talk about this content, join our [Discord](https://discord.com/invite/hYpHRjK)! If you need help coding, start a discussion [here](https://github.com/orgs/trufflesuite/discussions/). Lastly, don't forget to follow us on [Twitter](https://twitter.com/trufflesuite) for the latest updates on all things Truffle.

@@ -132,7 +132,7 @@ hide:
                     <h2 class="mt-0 font-weight-bold">Episode #11 - How to Add Notifications to Your Dapp</h2>
                     <p>1/05/2023 9:00 PST&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> Emily Lin</p>
                         <p>In this episode, we'll be joined by core developer Fabio to learn about and build with Push Protocol!</p>
-                    <a href="/guides/metamask-snap" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
+                    <a href="/guides/push-notification" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
                 </div>
             </div>
             <div class="row mt-5">
@@ -143,7 +143,7 @@ hide:
                     <h2 class="mt-0 font-weight-bold">Episode #12 - Decentralized social media with Lens</h2>
                     <p>1/26/2023 9:00 PST&nbsp;&nbsp;&nbsp;<i class="far fa-user"></i> Emily Lin</p>
                         <p>Learn from Nader Dabit about how decentralized social media is onboarding the next million users into Web3 and how to get started building with Lens!</p>
-                    <a href="/guides/metamask-snap" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
+                    <a href="/guides/lens-protocol" class="btn btn-truffle text-decoration-none">DISCOVER MORE</a>
                 </div>
             </div>
     </section>
