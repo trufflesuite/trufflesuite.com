@@ -77,13 +77,13 @@ Once activated, the deployment process gives users the option to deploy a contra
 [locally](#local-deployment) or [to an Ethereum network](#deploy-to-an-ethereum-network).
 
 Deployment parameters are based on the Truffle
-[migrations](../../truffle/how-to/contracts/run-migrations.md) process, and are defined and
+[migrations](/docs/truffle/how-to/contracts/run-migrations) process, and are defined and
 managed in the `truffle-config.js` file.
 
 ### Local deployment
 
 If you haven't already connected to any other network, the default option allows you to deploy your
-contract to an emulated Ethereum network powered by [Ganache](../../ganache/index.md).
+contract to an emulated Ethereum network powered by [Ganache](/ganache).
 
 ![Smart contract deployment - local](../images/deployContractSelectDefault.png)
 
