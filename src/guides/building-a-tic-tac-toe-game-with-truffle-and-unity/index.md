@@ -16,6 +16,8 @@ Unity is a powerful game engine.
 Truffle is a powerful smart contract framework.
 Let's combine both to make something cool!
 
+![Unity Screenshot](./img/ttt1.png)
+
 This tutorial focuses on using Truffle and Unity together while assuming you have a basic knowledge of both tools. For getting started materials with Truffle and Unity, [see here](#).
 
 <aside class="alert alert-info"><strong>Want to skip to the finished game?</strong> Use our Truffle Box by running `truffle unbox tic-tac-toe` and opening the created directory in Unity.</aside>
