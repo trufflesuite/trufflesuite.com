@@ -141,7 +141,7 @@ For example:
 module.exports = {
   ...
   solidityLog: {
-    displayPrefix: " :";
+    displayPrefix: " :"
   }
 }
 ```
@@ -182,7 +182,7 @@ migrate` will stop migration on mainnet.
 module.exports = {
   ...
   solidityLog: {
-    preventConsoleLogMigration: true; // default is false
+    preventConsoleLogMigration: true // default is false,
   }
 }
 ```
