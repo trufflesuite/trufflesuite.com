@@ -62,10 +62,8 @@ Let's add Optimistic Goerli to your list of available networks to your MetaMask 
 
 To use the Optimistic Goerli testnet, you'll need some test eth. To do so, you'll need to:
 
-1) Get some Goerli Eth. You can use this [faucet](https://faucet.paradigm.xyz/)
-2) Optimism's gateway still doesn't support Goerli, but if you transfer Goerli ETH to [0x636Af16bf2f682dD3109e60102b8E1A089FedAa8](https://goerli.etherscan.io/address/0x636Af16bf2f682dD3109e60102b8E1A089FedAa8), you will get it on Optimistic Goerli.
-
-![GIF of Getting Optimistic Goerli Eth](./img/get_optimistic_goerli_eth.gif)
+1. Get some Goerli Eth. You can use this [faucet](https://faucet.paradigm.xyz/), which will also give some Optimistic Goerli Eth
+2. Get some Optimstic Goerli Eth by bridging through their app: https://app.optimism.io/bridge/deposit
 
 ### VSCode
 
@@ -80,21 +78,20 @@ To get started, we'll start off by unboxing Truffle's Optimism box. You can do t
 ```shell
 truffle unbox optimism nft-marketplace
 cd nft-marketplace
-npm install
 ```
 ### Create your client folders
 
 We'll also be using [Next.js](https://nextjs.org/) and [Tailwind CSS](https://tailwindcss.com/) for our client. So, to get that set up, we'll use Next's [create-next-app](https://nextjs.org/docs/api-reference/create-next-app) utility. 
 
 ```shell
-npx create-next-app@latest client
+npx create-next-app client
 ```
 
 Then, we'll download the Tailwind dependencies and populate its config.
 
 ```shell
 cd client
-npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 ```
 Edit `tailwind.config.js`
@@ -261,7 +258,7 @@ contract Marketplace is ReentrancyGuard {
     require(msg.value == LISTING_FEE, "Not enough ether for listing fee");
 
     IERC721(_nftContract).transferFrom(msg.sender, address(this), _tokenId);
-
+    _marketOwner.transfer(LISTING_FEE);
     _nftCount.increment();
 
     _idToNFT[_tokenId] = NFT(
@@ -284,7 +281,6 @@ contract Marketplace is ReentrancyGuard {
     address payable buyer = payable(msg.sender);
     payable(nft.seller).transfer(msg.value);
     IERC721(_nftContract).transferFrom(address(this), buyer, nft.tokenId);
-    _marketOwner.transfer(LISTING_FEE);
     nft.owner = buyer;
     nft.listed = false;
 
@@ -307,10 +303,6 @@ contract Marketplace is ReentrancyGuard {
 
     _nftsSold.decrement();
     emit NFTListed(_nftContract, _tokenId, msg.sender, address(this), _price);
-  }
-
-  function getListingFee() public view returns (uint256) {
-    return LISTING_FEE;
   }
 
   function getListedNfts() public view returns (NFT[] memory) {
@@ -388,7 +380,6 @@ Next, we'll go over the functions that will alter state:
 
 Finally, the query functions are relatively straightforward:
 
-- `getListingFee` returns the listing fee. This is entirely optional. When you deploy a smart contract, a LISTING_FEE() function is actually created for you, but we created a getter function for code cleanliness.
 - `getListedNfts` retrieves the NFTs that are currently listed for sale.
 - `getMyNfts` retrieves the NFTs the user has bought.
 - `getMyListedNfts` retrieves the NFTs the user has listed for sale.
@@ -409,13 +400,14 @@ module.exports = async function(deployer) {
   await deployer.deploy(BoredPetsNFT, marketplace.address);
 }
 ```
+
 There are a variety of ways to get your local Ganache instance up: through the VS Code extension, Ganache CLI, and the Ganche graphical user interface. Each has its own advantages, and you can check out v7's coolest features [here](https://trufflesuite.com/blog/introducing-ganache-7/).
 
 In this example, we'll be using the GUI. Open it up, create a workspace, and hit save!
 
 ![GIF of creating Ganache workspace](./img/open_ganache_workspace.gif)
 
-This creates a running Ganache instance at HTTP://127.0.0.1:7545. Now, just run `truffle migrate --network development` in the CLI from the `nft-marketplace` folder. This will compile and deploy your contracts. You should see output similar to this:
+This creates a running Ganache instance at HTTP://127.0.0.1:7545. You'll need to edit the `development` network in your `truffle-config.js` to match the port number. Now, just run `truffle migrate` in the CLI from the `nft-marketplace` folder, which will default to the `development` network. This will compile and deploy your contracts. You should see output similar to this:
 
 ```shell
 Compiling your contracts...
@@ -490,19 +482,23 @@ Summary
 
 You should be able to find your compiled contracts under `./client/contracts/ethereum-contracts`
 
-## Test Your Smart Contracts
+## Write a script
 
-In order to quickly test our smart contracts, we'll take advantage of `truffle exec` to run scripts to automate common tasks. Let's write a script that will execute all of our different functions. First, create a new file under a new `scripts` folder called `run.js`.
+To perform common actions, we'll take advantage of `truffle exec` to run scripts to automate common tasks. Let's write a script that will execute all of our different functions. First, create a new file under a new `scripts` folder called `run.js`.
 
 ```javascript
 var BoredPetsNFT = artifacts.require("BoredPetsNFT");
 var Marketplace = artifacts.require("Marketplace");
 
 async function logNftLists(marketplace) {
-    let listedNfts = await marketplace.getListedNfts.call()
-    const accountAddress = 'FIRST_ACCOUNT_ADDRESS'
-    let myNfts = await marketplace.getMyNfts.call({from: accountAddress})
-    let myListedNfts = await marketplace.getMyListedNfts.call({from: accountAddress})
+    let listedNfts = await marketplace.getListedNfts()
+    const accounts = await web3.currentProvider.request({
+      method: 'eth_accounts',
+      params: [],
+    });
+    const accountAddress = accounts[0];
+    let myNfts = await marketplace.getMyNfts({from: accountAddress})
+    let myListedNfts = await marketplace.getMyListedNfts({from: accountAddress})
     console.log(`listedNfts: ${listedNfts.length}`)
     console.log(`myNfts: ${myNfts.length}`)
     console.log(`myListedNfts ${myListedNfts.length}\n`)
@@ -514,7 +510,7 @@ const main = async (cb) => {
     const marketplace = await Marketplace.deployed()
 
     console.log('MINT AND LIST 3 NFTs')
-    let listingFee = await marketplace.getListingFee()
+    let listingFee = await marketplace.LISTING_FEE()
     listingFee = listingFee.toString()
     let txn1 = await boredPets.mint("URI1")
     let tokenId1 = txn1.logs[2].args[0].toNumber()
@@ -547,11 +543,8 @@ const main = async (cb) => {
 
 module.exports = main;
 ```
+
 In this script, you can use [`artifacts.require`](https://trufflesuite.com/docs/truffle/getting-started/running-migrations/#artifactsrequire) to gain access to the contract abstractions. Then, we interact with the contracts using the [`@truffle/contracts`](https://github.com/trufflesuite/truffle/blob/master/packages/contract/README.md) convenience library. You can use this functionality to [write unit tests](https://trufflesuite.com/docs/truffle/testing/testing-your-contracts/) in Truffle in javasacript or typescript. Note that if you use typescript, you'll need to create a `tsconfig.json` file and use `tsc` to compile down to javascript. You can read more about `tsc` [here](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html).
-
-To run this script, you'll need to fill in `FIRST_ACCOUNT_ADDRESS` to query the listed NFTs. By default, Truffle uses the first account available to execute functions. You can get this address by heading over to your Ganache GUI and copy/pasting the first account address.
-
-![first account key](./img/ganache_account_key.png)
 
 Run `truffle exec scripts/run.js`, and your output should look what's below:
 
@@ -570,6 +563,174 @@ myNfts: 1
 myListedNfts 1
 ```
 Success! If you want to deploy your contracts on a populated blockchain, you can use Ganache to [fork mainnet with zero config](https://trufflesuite.com/blog/introducing-ganache-7/#new-ganache-7-features).
+
+## Test your smart contracts
+
+Let's test our Marketplace contract! To do so, call:
+
+```shell
+truffle create test Marketplace
+```
+
+Then, add this code:
+
+```javascript
+require("@openzeppelin/test-helpers/configure")({
+  provider: web3.currentProvider,
+  singletons: {
+    abstraction: "truffle",
+  },
+});
+
+const { balance, ether, expectRevert, expectEvent } = require('@openzeppelin/test-helpers');
+const Marketplace = artifacts.require("Marketplace");
+const BoredPetsNFT = artifacts.require("BoredPetsNFT");
+
+function assertListing(actual, expected) {
+  assert.equal(actual.nftContract, expected.nftContract, "NFT contract is not correct");
+  assert.equal(actual.tokenId, expected.tokenId, "TokenId is not correct");
+  assert.equal(actual.owner, expected.owner, "Owner is not correct");
+  assert.equal(actual.seller, expected.seller, "Seller is not correct");
+  assert.equal(actual.price, expected.price, "Price is not correct");
+  assert.equal(actual.listed, expected.listed, "Listed is not correct")
+}
+
+function getListing(listings, tokenId) {
+  let listing = {};
+  listings.every((_listing) => {
+    if (_listing.tokenId == tokenId) {
+      listing = _listing;
+      return false;
+    } else {
+      return true;
+    }
+  });
+  return listing
+}
+
+function listingToString(listing) {
+  let listingCopy = {...listing};
+  listingCopy.tokenId = listing.tokenId.toString();
+  listingCopy.price = listing.price.toString();
+  if (listing.listed) {
+    listingCopy.listed = listing.listed.toString();
+  }
+  return listingCopy;
+}
+
+async function mintNft(nftContract, tokenOwner) {
+  return (await nftContract.mint("fakeURI", {from: tokenOwner})).logs[0].args.tokenId.toNumber()
+}
+
+contract("Marketplace", function (accounts) {
+  const MARKETPLACE_OWNER = accounts[0];
+  const TOKEN_OWNER = accounts[1];
+  const BUYER = accounts[2];
+  let marketplace;
+  let boredPetsNFT;
+  let nftContract;
+  let listingFee;
+
+  before('should reuse variables', async () => {
+    marketplace = await Marketplace.deployed();
+    boredPetsNFT = await BoredPetsNFT.deployed();
+    nftContract = boredPetsNFT.address;
+    listingFee = (await marketplace.LISTING_FEE()).toString();
+    console.log("marketplace %s", marketplace.address)
+    console.log("token_owner %s", TOKEN_OWNER)
+    console.log("buyer %s", BUYER)
+  });
+  it("should validate before listing", async function () {
+    await expectRevert(
+      marketplace.listNft(nftContract, 1, ether(".005"), {from: TOKEN_OWNER}),
+      "Not enough ether for listing fee"
+    );
+    await expectRevert(
+      marketplace.listNft(nftContract, 1, 0, {from: TOKEN_OWNER, value: listingFee}),
+      "Price must be at least 1 wei"
+    );
+  });
+  it("should list nft", async function () {
+    let tokenID = await mintNft(boredPetsNFT, TOKEN_OWNER);
+    let tracker = await balance.tracker(MARKETPLACE_OWNER);
+    await tracker.get();
+    let txn = await marketplace.listNft(nftContract, tokenID, ether(".005"), {from: TOKEN_OWNER, value: listingFee});
+    assert.equal(await tracker.delta(), listingFee, "Listing fee not transferred");
+    let expectedListing = {
+      nftContract: nftContract,
+      tokenId: tokenID,
+      seller: TOKEN_OWNER,
+      owner: marketplace.address,
+      price: ether(".005"),
+      listed: true
+    };
+    assertListing(getListing(await marketplace.getListedNfts(), tokenID), expectedListing);
+    assertListing(getListing(await marketplace.getMyListedNfts({from: TOKEN_OWNER}), tokenID), expectedListing);
+    delete expectedListing.listed;
+    expectEvent(txn, "NFTListed", listingToString(expectedListing));
+  });
+  it("should validate before buying", async function () {
+    await expectRevert(
+      marketplace.buyNft(nftContract, 1, {from: BUYER}),
+      "Not enough ether to cover asking price"
+    );
+  });
+  it("should modify listings when nft is bought", async function () {
+    let tokenID = await mintNft(boredPetsNFT, TOKEN_OWNER);
+    await marketplace.listNft(nftContract, tokenID, ether(".005"), {from: TOKEN_OWNER, value: listingFee});
+    let expectedListing = {
+      nftContract: nftContract,
+      tokenId: tokenID,
+      seller: TOKEN_OWNER,
+      owner: marketplace.address,
+      price: ether(".005"),
+      listed: true
+    };
+    assertListing(getListing(await marketplace.getListedNfts(), tokenID), expectedListing);
+    let tracker = await balance.tracker(TOKEN_OWNER);
+    let txn = await marketplace.buyNft(nftContract, tokenID, {from: BUYER, value: ether(".005")});
+    expectedListing.owner = BUYER;
+    expectedListing.listed = false;
+    assert.equal((await tracker.delta()).toString(), ether(".005").toString(), "Price not paid to seller");
+    assertListing(getListing(await marketplace.getMyNfts({from: BUYER}), tokenID), expectedListing);
+    delete expectedListing.listed;
+    expectEvent(txn, "NFTSold", listingToString(expectedListing));
+  });
+  it("should validate reselling", async function () {
+    await expectRevert(
+      marketplace.resellNft(nftContract, 1, 0, {from: BUYER, value: listingFee}),
+      "Price must be at least 1 wei"
+    );
+    await expectRevert(
+      marketplace.resellNft(nftContract, 1, ether(".005"), {from: BUYER}),
+      "Not enough ether for listing fee"
+    );
+  });
+  it("should resell nft", async function () {
+    let tokenID = await mintNft(boredPetsNFT, TOKEN_OWNER);
+    await marketplace.listNft(nftContract, tokenID, ether(".005"), {from: TOKEN_OWNER, value: listingFee});
+    await marketplace.buyNft(nftContract, tokenID, {from: BUYER, value: ether(".005")});
+    let expectedListing = {
+      nftContract: nftContract,
+      tokenId: tokenID,
+      seller: TOKEN_OWNER,
+      owner: BUYER,
+      price: ether(".005"),
+      listed: false
+    };
+    assertListing(getListing(await marketplace.getMyNfts({from: BUYER}), tokenID), expectedListing);
+    await boredPetsNFT.approve(marketplace.address, tokenID, {from: BUYER});
+    let txn = await marketplace.resellNft(nftContract, tokenID, ether(".005"), {from: BUYER, value: listingFee});
+    expectedListing.seller = BUYER;
+    expectedListing.owner = marketplace.address;
+    expectedListing.listed = true;
+    assertListing(getListing(await marketplace.getListedNfts(), tokenID), expectedListing);
+    assertListing(getListing(await marketplace.getMyListedNfts({from: BUYER}), tokenID), expectedListing);
+    delete expectedListing.listed;
+    expectEvent(txn, "NFTListed", listingToString(expectedListing));
+  });
+});
+```
 
 ## Other Ways to Deploy
 ### Deploy to Truffle Dashboards
@@ -674,25 +835,17 @@ function MyApp({ Component, pageProps }) {
       <nav className="border-b p-6">
         <p className="text-4xl font-bold">Bored Pet Marketplace</p>
         <div className="flex mt-4">
-          <Link href="/">
-            <a className="mr-4 text-teal-400">
+          <Link href="/" className="mr-4 text-teal-400">
               Home
-            </a>
           </Link>
-          <Link href="/create-and-list-nft">
-            <a className="mr-6 text-teal-400">
+          <Link href="/create-and-list-nft" className="mr-6 text-teal-400">
               Sell a new NFT
-            </a>
           </Link>
-          <Link href="/my-nfts">
-            <a className="mr-6 text-teal-400">
+          <Link href="/my-nfts" className="mr-6 text-teal-400">
               My NFTs
-            </a>
           </Link>
-          <Link href="/my-listed-nfts">
-            <a className="mr-6 text-teal-400">
+          <Link href="/my-listed-nfts" className="mr-6 text-teal-400">
               My Listed NFTs
-            </a>
           </Link>
         </div>
       </nav>
@@ -799,12 +952,13 @@ export default function Home() {
   }
 }
 ```
+### `create-and-list-nft.js`
 
 This is the Sell tab, where a user can create and list an NFT. Make sure you replace <DEDICATED_GATEWAY> with the dedicated gateway name you create in your IPFS project on Infura. You'll also need to add in your IPFS API and Secret to create our IPFS client. To do so, create `.env.local` in your `client` folder. Then, populate it with these values:
 
 ```shell
 NEXT_PUBLIC_IPFS_SECRET=
-NEXT_PUBLIC_IPFS_KEY=
+NEXT_PUBLIC_IPFS_PROJECT_ID=
 ```
 
 Then, copy paste this code:
@@ -820,22 +974,7 @@ import BoredPetsNFT from '../contracts/optimism-contracts/BoredPetsNFT.json'
 
 
 const projectId = process.env["NEXT_PUBLIC_IPFS_KEY"];
-const projectSecret = process.env["NEXT_PUBLIC_IPFS_SECRET"];
-const auth =
-    'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
-
-const client = ipfsHttpClient({
-    host: 'ipfs.infura.io',
-    port: 5001,
-    protocol: 'https',
-    headers: {
-        authorization: auth,
-    },
-});
-
-
-const projectId = process.env["NEXT_PUBLIC_INFURA_KEY"];
-const projectSecret = process.env["NEXT_PUBLIC_INFURA_SECRET"];
+const projectSecret = process.env["NEXT_PUBLIC_IPFS_PROJECT_ID"];
 const auth =
     'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
 
@@ -903,7 +1042,7 @@ export default function CreateItem() {
     const boredPetsContract = new web3.eth.Contract(BoredPetsNFT.abi, boredPetsContractAddress)
     const accounts = await web3.eth.getAccounts()
     const marketPlaceContract = new web3.eth.Contract(Marketplace.abi, Marketplace.networks[networkId].address)
-    let listingFee = await marketPlaceContract.methods.getListingFee().call()
+    let listingFee = await marketPlaceContract.methods.LISTING_FEE().call()
     listingFee = listingFee.toString()
     boredPetsContract.methods.mint(url).send({ from: accounts[0] }).on('receipt', function (receipt) {
         console.log('minted');
@@ -956,6 +1095,7 @@ export default function CreateItem() {
 ```
 
 ### `my-nfts.js`
+
 This is the My NFTs tab, where the user can see the NFTs they own and choose to resell.
 
 ```javascript
@@ -1048,6 +1188,7 @@ export default function MyAssets() {
 ```
 
 ### `resell-nft.js`
+
 This is the page the user is directed to to resell their NFTs.
 
 ```javascript
@@ -1086,7 +1227,7 @@ export default function ResellNFT() {
         const web3 = new Web3(provider)
         const networkId = await web3.eth.net.getId()
         const marketPlaceContract = new web3.eth.Contract(Marketplace.abi, Marketplace.networks[networkId].address)
-        let listingFee = await marketPlaceContract.methods.getListingFee().call()
+        let listingFee = await marketPlaceContract.methods.LISTING_FEE().call()
         listingFee = listingFee.toString()
         const accounts = await web3.eth.getAccounts()
         marketPlaceContract.methods.resellNft(BoredPetsNFT.networks[networkId].address, id, Web3.utils.toWei(formInput.price, "ether"))
@@ -1119,6 +1260,7 @@ export default function ResellNFT() {
 ```
 
 ### `my-listed-nfts.js`
+
 This is the My Listed NFTs tab, where users can see what NFTs they have listed for sale.
 
 ```javascript

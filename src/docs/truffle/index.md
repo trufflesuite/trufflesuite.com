@@ -12,8 +12,9 @@ layout: docs.hbs
 A world class development environment, testing framework and asset pipeline for blockchains using the Ethereum Virtual Machine (EVM), aiming to make life as a developer easier. With Truffle, you get:
 
 * Built-in smart contract compilation, linking, deployment and binary management.
-* Advanced debugging with breakpoints, variable analysis, and step functionality.
-* Deployments and transactions through MetaMask to protect your mnemonic.
+* [Advanced debugging](../how-to/debug-test/use-the-truffle-debugger.md) with breakpoints, variable analysis, and step functionality.
+* Use [console.log](https://trufflesuite.com/docs/truffle/reference/configuration/#soliditylog) in your smart contracts
+* Deployments and transactions through MetaMask with [Truffle Dashboard](../how-to/use-the-truffle-dashboard.md) to protect your mnemonic.
 * External script runner that executes scripts within a Truffle environment.
 * Interactive console for direct contract communication.
 * Automated contract testing for rapid development.
