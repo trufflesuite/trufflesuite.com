@@ -1,11 +1,4 @@
 {
-  "building-a-tic-tac-toe-game-with-truffle-and-unity": {
-    "title": "Building a Tic Tac Toe Game with Truffle and Unity",
-    "date": "2022-2-15",
-    "author": "Josh Quintal",
-    "published": true,
-    "products": ["truffle", "ganache"]
-  },
   "metamask-snap": {
     "title": "Web3 Unleashed: How to build a MetaMask snap",
     "date": "2022-12-15",
