@@ -11,7 +11,7 @@ layout: docs.hbs
 
 [Ganache](/ganache) is a personal blockchain for rapid Ethereum and Corda distributed application development. You can use Ganache across the entire development cycle; enabling you to develop, deploy, and test your dApps in a safe and deterministic environment. 
 
-Ganache comes in two flavors: a UI and CLI. Ganache UI is a desktop application supporting both Ethereum and Corda technology. Our more robust command-line tool, [ganache](https://github.com/trufflesuite/ganache), is available for Ethereum development. It offers:
+Ganache comes in two flavors: a UI and CLI. Ganache UI is a desktop application supporting Ethereum and Filecoin technology. Our more robust command-line tool, [ganache](https://github.com/trufflesuite/ganache), is available for Ethereum development. It offers:
 
 * `console.log` in Solidity
 * Zero-config Mainnet and testnet forking
@@ -26,6 +26,8 @@ Ganache comes in two flavors: a UI and CLI. Ganache UI is a desktop application 
 * Pending Transactions
 
 Prefer using the command-line? This documentation will focus only on the UI flavor of Ganache. Please see the [Ganache README](https://github.com/trufflesuite/ganache#readme) for command-line documentation.
+
+You can also check out our [interactive documentation](https://ganache.dev) if you'd like to 'understand how dapps communicate to nodes at the JSON-RPC level (the level at which web3.js and ethers.js communicate with Ethereum nodes).
 
 All versions of Ganache are available for Windows, Mac, and Linux.
 
