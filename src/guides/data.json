@@ -1,4 +1,18 @@
 {
+  "building-a-tic-tac-toe-game-with-truffle-and-unity": {
+    "title": "Build a Tic Tac Toe game with Truffle and Unity",
+    "date": "2023-4-4",
+    "author": "Josh Quintal, Emily Lin",
+    "published": true,
+    "products": ["truffle"]
+  },
+  "web3-gaming-development-with-truffle-and-unity": {
+    "title": "Web3 Gaming Development with Truffle and Unity",
+    "date": "2023-4-4",
+    "author": "Josh Quintal",
+    "published": true,
+    "products": ["truffle"]
+  },
   "lens-protocol": {
     "title": "Web3 Unleashed: Decentralized social media with Lens",
     "date": "2022-01-31",

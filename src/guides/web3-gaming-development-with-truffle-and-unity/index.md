@@ -10,14 +10,12 @@ hide:
 We're so excited you're taking your first steps into developing web3 games with Unity and the Truffle Suite. There are only a few tools you need to get started:
 
 - [Unity](https://unity.com/download): To create the game itself, we're going to need a game engine. There are many out there, but for full-length 3D games the 2 main engines are Unity and Unreal Engine. We'll be using Unity here since it's easier to pick up and supports C#, which already has an Ethereum library, NEthereum.
-- [Truffle CLI](https://www.npmjs.com/package/truffle): Truffle CLI manages the lifecycle of our smart contracts. It handles compiling our Solidity and producing artifact files, JSON files which contain the function signatures for a given contract (among other things). We'll injest these artifacts using the MetaMask SDK and NEtherem so we can interact with our smart contracts.
+- [Truffle CLI](https://www.npmjs.com/package/truffle): Truffle CLI manages the lifecycle of our smart contracts. It handles compiling our Solidity and producing artifact files, JSON files which contain the function signatures for a given contract (among other things). We'll ingest these artifacts using the MetaMask SDK and NEtherem so we can interact with our smart contracts.
 - [NEthereum](https://nethereum.com/): NEthereum allows us to interact with the Ethereum blockchain more conveniently than making raw RPC calls. NEthereum, combined with the MetaMask SDK, will let our users interact with the smart contracts powering our game.
 
-Consensys has a number of tools in the Unity asset store that will help you create any web3 gaming experience you can imagine. Another one you may want to check out is the [Infura Unity SDK](https://docs.infura.io/infura/infura-custom-apis/nft-sdk). This allows you to qucickly work with NFTs; querying collections, minting new NFTs, transferring them and more, without doing any smart contract development!
+Consensys has a number of tools in the Unity asset store that will help you create any web3 gaming experience you can imagine. Another one you may want to check out is the [Infura Unity SDK](https://docs.infura.io/infura/infura-custom-apis/nft-sdk). This allows you to quickly work with NFTs; querying collections, minting new NFTs, transferring them and more, without doing any smart contract development!
 
-<!-- Step 1: Check out the [Tutorial - Building a Tic Tac Toe Game with Truffle and Unity](/guides/building-a-tic-tac-toe-game-with-truffle-and-unity) -->
-
-<!-- Step 2: Read our “How to” guides to: -->
+If you want to see a full walkthrough of building a Tic Tac Toe game, see our [Truffle x Unity tutorial](../building-a-tic-tac-toe-game-with-truffle-and-unity/)!
 
 ## Guides
 
