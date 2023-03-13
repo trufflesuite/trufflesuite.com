@@ -111,7 +111,7 @@ you're using. You can use the Truffle Dashboard with non-Truffle tools such as H
 
 <p class="alert alert-info">
 <i class="far fa-info-circle"></i> <strong>Information</strong>: Truffle Dashboard cannot decode requests
-when using tools other than Truffle or Hardhat (with the plugin outlined below); we plan to add continue adding support for other tools in the future.
+when using tools other than Truffle or Hardhat (with the plugin outlined below); we plan on continue adding support for other tools in the future.
 </p>
 
 ### Using Truffle Dashboard with the Hardhat plugin
