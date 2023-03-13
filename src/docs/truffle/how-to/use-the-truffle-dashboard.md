@@ -111,8 +111,12 @@ you're using. You can use the Truffle Dashboard with non-Truffle tools such as H
 
 <p class="alert alert-info">
 <i class="far fa-info-circle"></i> <strong>Information</strong>: Truffle Dashboard cannot decode requests
-when using tools other than Truffle; we plan to add support for other tools in the future.
+when using tools other than Truffle or Hardhat (with the plugin outlined below); we plan to add continue adding support for other tools in the future.
 </p>
+
+### Using Truffle Dashboard with the Hardhat plugin
+
+The plugin brings the complete Truffle Dashboard experience, including decoded transaction information, to your Hardhat projects. See the [Installation](https://github.com/trufflesuite/truffle/tree/develop/packages/dashboard-hardhat-plugin#installation) steps to get it setup for your project. It extends `npx hardhat compile` by sending the compiled artifacts to Truffle Dashboard, enabling seemless integrate with your existing workflow.
 
 When using the Truffle Dashboard with Hardhat, you need to create a network configuration inside your `hardhat.config.js` file that specifies the Truffle Dashboard's RPC URL.
 
@@ -130,7 +134,7 @@ module.exports = {
 };
 ```
 
-From there, it can be used with any Hardhat task or tools like hardhat-deploy.
+From there, it can be used with any Hardhat task or tools like [hardhat-deploy](https://github.com/wighawag/hardhat-deploy).
 
 ```
 hardhat deploy --network truffle-dashboard
