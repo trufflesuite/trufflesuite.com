@@ -27,7 +27,7 @@ Ganache comes in two flavors: a UI and CLI. Ganache UI is a desktop application 
 
 Prefer using the command-line? This documentation will focus only on the UI flavor of Ganache. Please see the [Ganache README](https://github.com/trufflesuite/ganache#readme) for command-line documentation.
 
-You can also check out our [interactive documentation](https://ganache.dev) if you'd like to 'understand how dapps communicate to nodes at the JSON-RPC level (the level at which web3.js and ethers.js communicate with Ethereum nodes).
+You can also check out our [interactive documentation](https://ganache.dev) if you'd like to understand how dapps communicate to nodes at the JSON-RPC level (the level at which web3.js and ethers.js communicate with Ethereum nodes).
 
 All versions of Ganache are available for Windows, Mac, and Linux.
 
