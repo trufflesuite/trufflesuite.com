@@ -10,7 +10,7 @@ hide:
 
 The integrated Solidity debugger in Truffle is a powerful tool for inspecting your contracts.
 
-When initially released, the debugger had the ability to to step through Solidity code, but that was it.
+When initially released, the debugger had the ability to step through Solidity code, but that was it.
 
 But development has continued apace, and new functionality has been added to make your contract inspection more powerful. Specifically, **you now have the ability to perform variable inspection on your contracts**. With this, you can know exactly the state of your variables at every given point in the instruction list, giving you a much greater ability to truly inhabit the current state of your contracts, and making debugging a breeze.
 
@@ -26,7 +26,7 @@ The Fibonacci sequence is an integer sequence where each successive number in th
 
 With the first two numbers set to 1, you can determine every number in the sequence through iteration.
 
-The Fibonacci sequence is related to the "golden ratio", which is found in certain areas of nature, such as governing the the arrangement of leaves on branches and petals on flowers.
+The Fibonacci sequence is related to the "golden ratio", which is found in certain areas of nature, such as governing the arrangement of leaves on branches and petals on flowers.
 
 ![Golden ratio](/img/tutorials/debugger-variable/flower-golden-ratio.jpg)
 
@@ -299,7 +299,7 @@ You can debug a transaction in the Truffle console by typing `debug <transaction
    debug(development:0xf47f01da...)>
    ```
 
-   Here we see one empty array. The arry `fibseries` will have the `n` numbers in the Fibonacci sequence.
+   Here we see one empty array. The array `fibseries` will have the `n` numbers in the Fibonacci sequence.
 
 1. Press `Enter` to repeat the last command, and step next to the next instruction:
 

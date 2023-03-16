@@ -506,7 +506,7 @@ Let's add it into our snap `src` folder. Modify the `contracts_build_directory` 
 contracts_build_directory: '../snap/src/contracts',
 ```
 
-Now, we want to actuall deploy these contracts! Call:
+Now, we want to actually deploy these contracts! Call:
 
 ```shell
 truffle migrate
@@ -1322,4 +1322,4 @@ function normalize4ByteValue(value: unknown): unknown {
 
 There's a lot of really cool stuff you can do with encoding and decoding! Check out Truffle's [decoder and encoder libraries](https://trufflesuite.com/docs/truffle/codec/) for more complex use cases.
 
-If you want to talk about this content, make suggestions for what you'd like to see or ask questions about the series, start a discussion [here](https://github.com/orgs/trufflesuite/discussions/categories/web3-unleashed). If you want to show off what you built or hang with the Unleashed community in general, join our [Discord](https://discord.com/invite/hYpHRjK)! You can ask Snaps related questions in the the #Snaps-dev channel there. Lastly, don't forget to follow us on [Twitter](https://twitter.com/trufflesuite) for the latest updates on all things Truffle.
+If you want to talk about this content, make suggestions for what you'd like to see or ask questions about the series, start a discussion [here](https://github.com/orgs/trufflesuite/discussions/categories/web3-unleashed). If you want to show off what you built or hang with the Unleashed community in general, join our [Discord](https://discord.com/invite/hYpHRjK)! You can ask Snaps related questions in the #Snaps-dev channel there. Lastly, don't forget to follow us on [Twitter](https://twitter.com/trufflesuite) for the latest updates on all things Truffle.
