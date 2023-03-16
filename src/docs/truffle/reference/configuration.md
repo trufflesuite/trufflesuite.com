@@ -79,8 +79,8 @@ import "truffle/console.sol";
 contract Telephone {
     uint public secret;
 
-    constructor(uint _secret) payable { 
-        console.log("Telephone::constructor\n\tsecret: %o", _secret); 
+    constructor(uint _secret) payable {
+        console.log("Telephone::constructor\n\tsecret: %o", _secret);
         secret = _secret;
     }
 
@@ -88,7 +88,7 @@ contract Telephone {
         uint256 telephoneSecret = 100 * secret + 1;
         console.log("The passphrase is: %o", secret);
         console.log("Leak it a hundred times, plus one: %o", telephoneSecret);
-        return telephoneSecret; 
+        return telephoneSecret;
     }
 }
 ```
@@ -109,16 +109,16 @@ contract("Telephone", function(/* accounts */) {
       newSecret = getRnd();
       subject = await Telephone.new(newSecret);
     });
-    
+
     it("Should have a deployed contract", async function() {
       return assert.isTrue(subject !== undefined);
     });
-    
+
     it("has the secret", async function() {
       const secret = await subject.secret();
       assert.strictEqual(secret, newSecret);
     });
-    
+
     it("has the derived Secret", async function() {
       const derivedSecret = await subject.derivedSecret();
       const expected = 100 * newSecret + 1;
@@ -439,9 +439,11 @@ Example:
 
 ```javascript
 module.exports = {
-  port: 24012,
-  host: "localhost",
-  verbose: false,
+  dashboard: {
+    port: 24012,
+    host: "localhost",
+    verbose: false,
+  }
 };
 ```
 
