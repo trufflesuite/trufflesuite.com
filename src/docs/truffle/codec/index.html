@@ -1,0 +1,133 @@
+<!DOCTYPE html><html class="default"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Truffle Decoding and Encoding</title><meta name="description" content="Documentation for Truffle Decoding and Encoding"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem("tsd-theme") || "os")</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">Truffle Decoding and Encoding</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1> Truffle Decoding and Encoding </h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<a href="#truffle-decoding-and-encoding" id="truffle-decoding-and-encoding" style="color: inherit; text-decoration: none;">
+  <h1>Truffle Decoding and Encoding</h1>
+</a>
+<p>This documentation provides information and complete interface listings for two
+packages: <strong>@truffle/decoder</strong>, a high-level library for decoding, and
+<strong>@truffle/codec</strong>, a low-level package for encoding, decoding, and data
+representation.</p>
+
+<a href="#contents" id="contents" style="color: inherit; text-decoration: none;">
+  <h2>Contents</h2>
+</a>
+
+<a href="#high-level-interface-for-common-use" id="high-level-interface-for-common-use" style="color: inherit; text-decoration: none;">
+  <h3>High-level interface (for common use)</h3>
+</a>
+<p><a href="modules/_truffle_decoder.html">@truffle/decoder</a> provides a high-level interface for <strong>decoding
+transactions, events, and state variables for Ethereum smart contracts.</strong> This
+package accepts Truffle&#39;s
+<a href="https://www.trufflesuite.com/docs/truffle/reference/contract-abstractions">contract abstractions</a>
+as input (or Truffle&#39;s artifact files and a provider) and connects to the
+blockchain to retrieve raw values for decoding.</p>
+
+<a href="#low-level-interface-for-special-case-purposes" id="low-level-interface-for-special-case-purposes" style="color: inherit; text-decoration: none;">
+  <h3>Low-level interface (for special-case purposes)</h3>
+</a>
+<p><a href="modules/_truffle_codec.html">@truffle/codec</a> provides the underlying low-level interfaces for performing
+this decoding, as well as interfaces for encoding these values and for decoding
+of local Solidity variables and other data observable in a debugging trace.</p>
+<p>This library is meant to be <strong>self-contained</strong>, makes <strong>no network connections</strong>
+of its own, and <strong>seeks to restrict its dependencies</strong> to those which provide
+data structures for high-precision numbers and other special-purpose data
+utilities.</p>
+<p><em>Although most use cases will not require invoking the codec directly, a few key
+parts of this library are directly relevant to decoder use. See notes below.</em></p>
+
+<a href="#ℹ️-important-notes" id="ℹ️-important-notes" style="color: inherit; text-decoration: none;">
+  <h2>ℹ️ Important notes</h2>
+</a>
+
+<a href="#output-format" id="output-format" style="color: inherit; text-decoration: none;">
+  <h3>Output format</h3>
+</a>
+<p>Both the decoder and the codec return results as objects containing both type
+information and either high-precision values or accurate errors in place of
+values. We recommend familiarizing yourself with the <a href="modules/_truffle_codec.Format.html">Format</a> documentation in
+order to use these packages.</p>
+
+<a href="#decoding-modes" id="decoding-modes" style="color: inherit; text-decoration: none;">
+  <h3>Decoding modes</h3>
+</a>
+<p>The decoder operates in either of two modes:</p>
+<ol>
+<li>Full mode (<code>&quot;decodingMode&quot;: &quot;full&quot;</code>), which uses source code information to
+return types and values to match the original Solidity.</li>
+<li>ABI mode (<code>&quot;decodingMode&quot;: &quot;abi&quot;</code>), which uses only information from the
+contract ABI and returns less information, e.g. returning
+<a href="modules/_truffle_codec.Format.Values.html#UintResult"><code>UintResult</code></a>s in place of
+<a href="modules/_truffle_codec.Format.Values.html#EnumResult"><code>EnumResult</code></a>s and
+<a href="modules/_truffle_codec.Format.Values.html#AddressResult"><code>AddressResult</code></a>s instead of
+<a href="modules/_truffle_codec.Format.Values.html#ContractResult"><code>ContractResult</code></a>s</li>
+</ol>
+<p>By default, the decoder uses <strong>full mode</strong>, but for technical reasons, this may
+not be reliable. If decoding fails in full mode, it <strong>falls back to ABI mode.</strong></p>
+<p>Returned decodings (i.e. <a href="modules/_truffle_codec.html#CalldataDecoding">CalldataDecoding</a> and <a href="modules/_truffle_codec.html#LogDecoding">LogDecoding</a>) indicate
+which mode was used via the <code>&quot;decodingMode&quot;</code> field.</p>
+<p>To ensure full mode works:</p>
+<ul>
+<li>Use Solidity v0.4.12 or higher;</li>
+<li>Ensure all contracts in your projects have distinct names;</li>
+<li>Compile all your contracts at the same time;</li>
+<li>Ensure all custom data types are declared in a file with at least one
+contract.</li>
+</ul>
+<p>(Our apologies for these technical limitations, but we are working to address
+these last three problems.)</p>
+<p>If you can&#39;t use full mode or don&#39;t want to deal with the distinction, the
+decoder provides
+<a href="classes/_truffle_decoder.ProjectDecoder.html#abifyCalldataDecoding"><code>decoder.abifyCalldataDecoding</code></a> and
+<a href="classes/_truffle_decoder.ProjectDecoder.html#abifyLogDecoding"><code>decoder.abifyLogDecoding</code></a> methods, which
+accept decodings in either mode and always return ABI mode.</p>
+
+<a href="#additional-notes-on-decoding-modes" id="additional-notes-on-decoding-modes" style="color: inherit; text-decoration: none;">
+  <h4>Additional notes on decoding modes</h4>
+</a>
+<ul>
+<li><p>Full mode may reject certain decodings (e.g. out of range enums) that are fine
+in ABI mode.</p>
+</li>
+<li><p>ABI-fied full mode decodings may contain extra information that regular ABI
+mode results do not.</p>
+</li>
+<li><p>Decoding mode applies to the entire decoding, but objects that contain
+multiple decodings (e.g. <a href="interfaces/_truffle_decoder.DecodedLog.html">DecodedLog</a>) may contain decodings in different
+modes.</p>
+</li>
+<li><p>You can only decode state variables in full mode. If full mode fails while
+decoding a state variable, it will throw an exception.</p>
+</li>
+<li><p>If a contract <code>Base</code> declares an event <code>Event</code> and a contract <code>Derived</code>
+inheriting from <code>Base</code> overrides <code>Event</code>, if <code>Derived</code> then emits
+<code>Base.Event</code>, ABI mode may not be able to decode it.</p>
+</li>
+</ul>
+
+<a href="#additional-notes-on-decoding-state-variables" id="additional-notes-on-decoding-state-variables" style="color: inherit; text-decoration: none;">
+  <h4>Additional notes on decoding state variables</h4>
+</a>
+<ul>
+<li><p>While internal function pointers can only be decoded in full mode, full mode
+still may not be able to determine all the information about them. Thus, for
+internal function pointers, you may get a bare-bones decoding, or you may get
+a decoding with more information.</p>
+</li>
+<li><p>Solidity 0.6.5 contains a bug that may cause some state variables to decode
+incorrectly if there is an immutable state variable which is written to but
+never read from.</p>
+</li>
+<li><p>In any version of Solidity, it is impossible to decode an immutable state
+variable which is written to but never read from; these will decode to an
+error.</p>
+</li>
+<li><p>Not all constant state variables can presently be decoded; some of these may
+simply decode to an error.</p>
+</li>
+</ul>
+<hr>
+<p align="center">
+⚡
+</p>
+
+<hr>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Modules</a></li><li class=" tsd-kind-module"><a href="modules/_truffle_codec.html">@truffle/codec</a></li><li class=" tsd-kind-module"><a href="modules/_truffle_decoder.html">@truffle/decoder</a></li><li class=" tsd-kind-module"><a href="modules/_truffle_encoder.html">@truffle/encoder</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li><li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li><li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>
