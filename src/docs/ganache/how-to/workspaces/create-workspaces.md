@@ -2,12 +2,13 @@
 title: Create Workspaces
 layout: docs.hbs
 ---
+
 # Create a workspace
 
 The [Quickstart workspace](/docs/ganache/workspaces/the-quickstart-workspace) is great for getting a development blockchain up and running instantly, but for projects already in progress, or users who need custom configurations, we provide two ways to create a full workspace.
 
-* See [Saving the Current Quickstart Blockchain as a New Workspace](#saving-the-current-quickstart-blockchain-as-a-new-workspace) if you've already created a quickstart workspace and are ready to add projects or make customizations.
-* If you're starting fresh check out [Creating a Workspace from Scratch](#creating-a-workspace-from-scratch).
+- See [Saving the Current Quickstart Blockchain as a New Workspace](#saving-the-current-quickstart-blockchain-as-a-new-workspace) if you've already created a quickstart workspace and are ready to add projects or make customizations.
+- If you're starting fresh check out [Creating a Workspace from Scratch](#creating-a-workspace-from-scratch).
 
 ## Save the current quickstart blockchain as a new workspace
 
@@ -19,7 +20,7 @@ To accomplish this, click the `SAVE` button near the upper right of the screen w
 
 ## Create a workspace from scratch
 
-You can also create a workspace from the home screen. Selecting either Ethereum or Corda from the `NEW WORKSPACE` dropdown then clicking the `NEW WORKSPACE` button on the home screen will take us to the [options screen to configure your workspace](#workspace-configuration).
+You can also create a workspace from the home screen. Selecting either Ethereum or Filecoin from the `NEW WORKSPACE` dropdown then clicking the `NEW WORKSPACE` button on the home screen will take us to the [options screen to configure your workspace](#workspace-configuration).
 
 ![New Workspace Button](/img/docs/ganache/v2-shared-seese/home-new-workspace.png)
 
