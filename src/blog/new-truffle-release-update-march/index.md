@@ -16,9 +16,9 @@ In this product release update, we'll delve into [ganache.dev](http://ganache.de
 
 ## ganache.dev, An interactive JSON-RPC documentation for Ganache
 
-We’re happy to share with the world this project we’ve been hard at work on for the past year or so, [ganache.dev](http://ganache.dev). [ganache.dev](http://ganache.dev) is an interactive JSON-RPC documentation for Ganache that allows you to quickly try out various RPC methods on the browser, without having to run a Ganache instance.
+We’re happy to share with the world this project we’ve been hard at work on recently, [ganache.dev](http://ganache.dev). [ganache.dev](http://ganache.dev) is interactive JSON-RPC documentation for Ganache that allows you to quickly try out various RPC methods on the browser, without having to run a Ganache instance.
 
-It contains code samples for each RPC method and all code samples are powered by [Ganache in the Browser](https://github.com/trufflesuite/ganache/#browser-use) and demonstrate using Ganache programmatically as an [EIP-1193 provider](https://github.com/trufflesuite/ganache/#as-an-eip-1193-provider-only).
+It contains code samples for each RPC method and is powered by [Ganache in the Browser](https://github.com/trufflesuite/ganache/#browser-use), demonstrating using Ganache programmatically as an [EIP-1193 provider](https://github.com/trufflesuite/ganache/#as-an-eip-1193-provider-only).
 
 With each example on this interactive documentation, the editor can be changed to further test other Ganache features or combine a couple of features together as you would in a code editor. For example in this blog, we will be editing an example to include and test out the [zero-config mainnet forking](https://trufflesuite.com/blog/three-new-ganache-features-to-improve-your-developer-experience/#zero-config-mainnet-forking-now-available-in-the-browser) feature.
 
@@ -54,7 +54,7 @@ If you study the output, you should be able to see that it matches exactly with 
 
 ![Image of etherscan](./etherscan.png)
 
-Feel free to play around with this amazing interactive documentation and if you find any bugs, do not hesitate to [open an issue](https://github.com/trufflesuite/ganache/issues/new).
+Feel free to play around with this interactive documentation and if you find any bugs, do not hesitate to [open an issue](https://github.com/trufflesuite/ganache/issues/new).
 
 ## What is Truffle Dashboard Hardhat Plugin
 
@@ -62,13 +62,13 @@ Our focus for Truffle going forward is to improve its interoperability with othe
 
 This is why we’re excited to introduce the [Truffle Dashboard Hardhat Plugin](https://www.npmjs.com/package/@truffle/dashboard-hardhat-plugin), a plugin that extends the Truffle Dashboard’s functionality to allow HardHat users to decode transaction information including the function signature and the values of any arguments passed.
 
-With this plugin, whenever you run “npx hardhat compile”, the compiled artifacts from your Hardhat project are sent to the Truffle Dashboard, which in turn uses [@truffle/decoder](https://trufflesuite.com/docs/truffle/codec/modules/_truffle_decoder.html) to decode, providing more context before you go on to sign a transaction.
+With this plugin, whenever you run `npx hardhat compile`, the compiled artifacts from your Hardhat project are sent to the Truffle Dashboard, which in turn uses [@truffle/decoder](https://trufflesuite.com/docs/truffle/codec/modules/_truffle_decoder.html) to decode, providing more context before you go on to sign a transaction.
 
 ### How to get started with Truffle Dashboard Hardhat Plugin
 
-The first step is to make sure you have access to [Truffle](https://trufflesuite.com/truffle/) either by downloading it on your local machine using “npm install -g truffle” or by fetching and running the Truffle dashboard remotely using “npx truffle dashboard”
+The first step is to make sure you have access to [Truffle](https://trufflesuite.com/truffle/) either by downloading it to your local machine using `npm install -g truffle` or by fetching and running the Truffle dashboard remotely using `npx truffle dashboard`.
 
-The next step is to install this plugin in your local Hardhat project with the command “npm install @truffle/dashboard-hardhat-plugin -D” and import it into your hardhat.config.js file like so:
+The next step is to install this plugin in your local Hardhat project with the command `npm install @truffle/dashboard-hardhat-plugin -D` and import it into your hardhat.config.js file like so:
 
 ```javascript
 import "@truffle/dashboard-hardhat-plugin";
@@ -89,7 +89,7 @@ const config: HardhatUserConfig = {
 
 ### How to use Truffle Dashboard Hardhat Plugin
 
-Usage is very simple, all calls to “npx hardhat compile” will send the compiled artifacts to Truffle Dashboard.
+Usage is very simple, all calls to `npx hardhat compile` will send the compiled artifacts to Truffle Dashboard.
 
 Also, any deployments or transactions via scripts that target the dashboard network will be sent to Truffle Dashboard for signing via your browser-based wallet.
 
