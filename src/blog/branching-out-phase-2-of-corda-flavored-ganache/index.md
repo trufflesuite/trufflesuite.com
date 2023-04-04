@@ -4,6 +4,10 @@ hide:
   - navigation
 ---
 
+!!! important
+
+    The Corda flavor is deprecated and has been removed from Ganache UI in v2.7.0. See the [release notes](https://github.com/trufflesuite/ganache-ui/releases/tag/v2.7.0) for details.
+
 ![Branching out to Corda-flavored Ganache](/img/blog/branching-out-phase-2-of-corda-flavored-ganache/chameleon-corda-truffle-blog-header.png)
 
 April has been a big month for Truffle Suite! Earlier this month we branched out and announced Tezos integration into the Truffle command line tool. If you remember, back in December we released a beta [Corda-flavored Ganache](/blog/unwrap-the-corda-flavored-ganache-beta) as part of our initial support for the Corda platform. Today, we are excited to share [Phase 2 of Corda-flavored Ganache, v2.4.0](https://github.com/trufflesuite/ganache/releases) with you! Phase 2 includes more robust features for Corda including Corda CRaSH Shell, network map visualization, and a version picker.
@@ -12,12 +16,12 @@ We're thrilled to release Phase 2 of Ganache for Corda, an open source blockchai
 
 Features Include:
 
-* One-click Corda network configuration and initialization, so you can focus on what matters most: your application.
-* Multiple workspaces for all of your Corda projects including a Corda network map, notaries, nodes, transactions, accounts, and ledgers.
-* Simple testing for interoperability with the Version Picker node.
-* Easy access to all your application's data, including network map, notaries, nodes, transactions, and states.
-* Visualizations of node connections with the Corda network map graph
-* Embedded Corda CRaSH Shell to provide control over your nodes and project data
+- One-click Corda network configuration and initialization, so you can focus on what matters most: your application.
+- Multiple workspaces for all of your Corda projects including a Corda network map, notaries, nodes, transactions, accounts, and ledgers.
+- Simple testing for interoperability with the Version Picker node.
+- Easy access to all your application's data, including network map, notaries, nodes, transactions, and states.
+- Visualizations of node connections with the Corda network map graph
+- Embedded Corda CRaSH Shell to provide control over your nodes and project data
 
 As always, this release is compatible with the latest versions of Windows ⊞, Mac OS 🍎, and Linux 🐧. You can now run and interact with a Corda network without installing prerequisites like Java, PostgreSQL, Corda binaries, docker, etc!
 
