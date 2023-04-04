@@ -8,7 +8,7 @@ hide:
 
 **By [Kingsley Arinze](https://twitter.com/heydamali)**
 
-*Did you know the Truffle local Ethereum simulator was inspired by the original Ethereum testnet? This story and more as we look back on the history of Truffle.*
+_Did you know the Truffle local Ethereum simulator was inspired by the original Ethereum testnet? This story and more as we look back on the history of Truffle._
 
 ### Introduction
 
@@ -20,23 +20,23 @@ From the early days of Ethereum, Truffle has established itself as a pioneer in 
 
 With Layer 2 networks like Arbitrum, Polygon, and Optimism on the rise, there's a need for a more robust testing environment for dapp developers building on both layer 1 and layer 2 networks. New concerns arise, such as bridging between a layer 1 and a layer 2 or bridging between two layer 2s.
 
-This blog tells the story of  the early days of the Truffle local Ethereum simulator, Ganache, how it started, who and what contributed to its growth, and how it has evolved into becoming the center of the Ethereum development experience. We’ll also touch on what the future holds for the simulator and Truffle as we seek to support and build a multi-chain future.
+This blog tells the story of the early days of the Truffle local Ethereum simulator, Ganache, how it started, who and what contributed to its growth, and how it has evolved into becoming the center of the Ethereum development experience. We’ll also touch on what the future holds for the simulator and Truffle as we seek to support and build a multi-chain future.
 
 ### Eth-testRPC - The first Ethereum local simulator
 
 The first Ethereum local simulator was created by Truffle’s founder, Tim Coulter. It was derived from original Python scripts that were written by the CTO and Founder of Gnosis, Stefan D George, during the early days of ConsenSys - days that Tim refers to as “the days of throwing cupcakes at the wall to see which could stick.” Eth-testRPC stuck!
 
-Eth-testRPC was first introduced to the world by Tim at DevCon1 in January 2016. At the conference, Tim presented Dappstore, a before its time marketplace for dapps, and revealed how the Eth-testRPC had helped make it possible. 
+Eth-testRPC was first introduced to the world by Tim at DevCon1 in January 2016. At the conference, Tim presented Dappstore, a before its time marketplace for dapps, and revealed how the Eth-testRPC had helped make it possible.
 
 But this was only some days before Tim was about to give up on his Dappstore due to issues with the local simulator not responding to requests. It was around this time that Tim discovered an alternative, which although responded to RPC requests, required a lot of rewrites and fixes for it to work as intended. This local simulator was Etherism.
 
-### Etherism and the EthereumJS community  - The entrance of Ethereum into the Javascript ecosystem
+### Etherism and the EthereumJS community - The entrance of Ethereum into the Javascript ecosystem
 
-Etherism was created in September 2015 by Luris Matias and became Tim’s new obsession.  Tim needed additional features and RPC methods to support his Dappstore, but since his custom-built simulator wasn’t working as intended, he immediately started contributing to the [EtherSim repository](https://github.com/iurimatias/EtherSim).
+Etherism was created in September 2015 by Luris Matias and became Tim’s new obsession. Tim needed additional features and RPC methods to support his Dappstore, but since his custom-built simulator wasn’t working as intended, he immediately started contributing to the [EtherSim repository](https://github.com/iurimatias/EtherSim).
 
-About the same time, EthereumJS, a new community of Javascript developers and Ethereum enthusiasts, began to form. 
+About the same time, EthereumJS, a new community of Javascript developers and Ethereum enthusiasts, began to form.
 
-EthereumJS quickly became the entry point and home for new Javascript developers entering the Ethereum ecosystem. Tim saw this and took advantage of it by porting over his version of EtherSim, which, at this point, had diverged significantly from the master branch, to the EthereumJS community under the name EthereumJS-testRPC. 
+EthereumJS quickly became the entry point and home for new Javascript developers entering the Ethereum ecosystem. Tim saw this and took advantage of it by porting over his version of EtherSim, which, at this point, had diverged significantly from the master branch, to the EthereumJS community under the name EthereumJS-testRPC.
 
 ### 2016 through 2017 - Mainnet forking
 
@@ -56,9 +56,13 @@ Eventually, the Truffle team released a standalone [GUI application](http://truf
 
 Truffle, which includes Ganache, has since grown to become one of the dominant tools in the blockchain ecosystem, amassing over 10 million downloads combined.
 
-As the multi-chain world had just started to take shape, the Truffle team, again acting as pioneers, began experimenting with  simulating other chains, including Tezos, Corda, and Filecoin. This is a testament to the vision of the team, who, at the time, could see that we were headed towards a multi-chain future.
+As the multi-chain world had just started to take shape, the Truffle team, again acting as pioneers, began experimenting with simulating other chains, including Tezos, Corda, and Filecoin. This is a testament to the vision of the team, who, at the time, could see that we were headed towards a multi-chain future.
 
 Tezos, Corda, and Filecoin represent Truffle’s early experiments to see whether or not Ganache could become a generic framework for blockchain simulators.
+
+!!! important
+
+    The Corda flavor is deprecated and has been removed from Ganache UI in v2.7.0. See the [release notes](https://github.com/trufflesuite/ganache-ui/releases/tag/v2.7.0) for details.
 
 ### What does the future hold for Truffle and its local blockchain simulator?
 
@@ -66,19 +70,20 @@ The future of web3 is complex, characterized by multiple layer 1s and their corr
 
 At Truffle, we’ve identified these problems and have started making significant strides in solving them. Some of the features we’re most excited to launch/have launched are:
 
-1. **A protocol flavored Ganache**: We’ve been speaking to dapp developers over the past year and one recurring request we’ve kept getting is the need for a protocol flavored Ganache - one that would have the rules of these layer 2 protocols baked in. We’ve listened and are hard at work! We’re getting ready to launch the infrastructure for Ganache Plugins.
+1.  **A protocol flavored Ganache**: We’ve been speaking to dapp developers over the past year and one recurring request we’ve kept getting is the need for a protocol flavored Ganache - one that would have the rules of these layer 2 protocols baked in. We’ve listened and are hard at work! We’re getting ready to launch the infrastructure for Ganache Plugins.
 
     Ganache plugins would allow dapp developers building on layer 2s to continue using the Ganache experience they know and love. Imagine a world where a user would be able to have an Optimism Ganache, Arbitrum Ganache, and a Starknet Ganache!
 
-1. **Declarative deployment**: Imagine a scenario where you want to deploy contract A to a layer 2 blockchain, and then in the same breath, use the contract address of the deployed contract A to deploy contract B to another layer 2 or a layer 1 blockchain. To achieve this, you’d need to write and maintain potentially complex scripts to manage the process. Given changing requirements, manually maintaining these scripts is a recipe for bugs and a developer’s nightmare.
+1.  **Declarative deployment**: Imagine a scenario where you want to deploy contract A to a layer 2 blockchain, and then in the same breath, use the contract address of the deployed contract A to deploy contract B to another layer 2 or a layer 1 blockchain. To achieve this, you’d need to write and maintain potentially complex scripts to manage the process. Given changing requirements, manually maintaining these scripts is a recipe for bugs and a developer’s nightmare.
 
-    Our  solution for this multi-chain deployment problem: 
-**Truffle Declarative deployment**. The goal is to tell Truffle what your completed project should look like and then Truffle would take it up from there, deploying your contracts in the order you’ve described and to the chains or layers you’ve specified, all while maintaining state, handling contract dependencies as well as deploying to multiple RPC endpoints.
+        Our  solution for this multi-chain deployment problem:
 
-1. [**Truffle boxes**](https://trufflesuite.com/boxes/): These are boilerplate code, similar to the Ruby on Rails scaffold, where running a simple command on your CLI will scaffold a new project, including all the directories you need as well as a detailed README with deployment instructions and things to be mindful of. As of now, Truffle has the [Arbitrium box](https://trufflesuite.com/boxes/arbitrum/), the [Optimism box](https://trufflesuite.com/boxes/optimism/), and the [Polygon box](https://trufflesuite.com/boxes/polygon/) all live and available for dapp developers to use. We’re currently working on more advanced use cases for our boxes like the bridge box and starknet box.
+    **Truffle Declarative deployment**. The goal is to tell Truffle what your completed project should look like and then Truffle would take it up from there, deploying your contracts in the order you’ve described and to the chains or layers you’ve specified, all while maintaining state, handling contract dependencies as well as deploying to multiple RPC endpoints.
 
-1. [**Truffle dashboard**](https://trufflesuite.com/docs/truffle/getting-started/using-the-truffle-dashboard/): This is a tool that removes the need to copy/paste your private keys into regular files during contract deployment. With Truffle dashboard running, you can connect through the UI and deploy contracts via [MetaMask](https://metamask.io/) or Wallet connect. This was released in January, and we’re working on implementing our multi-network approach to the Truffle Dashboard as well.
+1.  [**Truffle boxes**](https://trufflesuite.com/boxes/): These are boilerplate code, similar to the Ruby on Rails scaffold, where running a simple command on your CLI will scaffold a new project, including all the directories you need as well as a detailed README with deployment instructions and things to be mindful of. As of now, Truffle has the [Arbitrium box](https://trufflesuite.com/boxes/arbitrum/), the [Optimism box](https://trufflesuite.com/boxes/optimism/), and the [Polygon box](https://trufflesuite.com/boxes/polygon/) all live and available for dapp developers to use. We’re currently working on more advanced use cases for our boxes like the bridge box and starknet box.
 
-1. [**Truffle for VS Code extension**](https://marketplace.visualstudio.com/items?itemName=trufflesuite-csi.truffle-vscode): This is a tool that allows you to perform all the actions you would perform with Truffle, but all within VS Code. It allows you to compile, debug, and deploy your contracts. This was released a few weeks ago, and we’re working on making VS Code extension incorporate all these new layer 2 support tools.
+1.  [**Truffle dashboard**](https://trufflesuite.com/docs/truffle/getting-started/using-the-truffle-dashboard/): This is a tool that removes the need to copy/paste your private keys into regular files during contract deployment. With Truffle dashboard running, you can connect through the UI and deploy contracts via [MetaMask](https://metamask.io/) or Wallet connect. This was released in January, and we’re working on implementing our multi-network approach to the Truffle Dashboard as well.
+
+1.  [**Truffle for VS Code extension**](https://marketplace.visualstudio.com/items?itemName=trufflesuite-csi.truffle-vscode): This is a tool that allows you to perform all the actions you would perform with Truffle, but all within VS Code. It allows you to compile, debug, and deploy your contracts. This was released a few weeks ago, and we’re working on making VS Code extension incorporate all these new layer 2 support tools.
 
 If you haven’t already, you should definitely check out Truffle’s local Ethereum blockchain simulator, [Ganache](https://trufflesuite.com/docs/ganache/), today, as well as the [Truffle suite of tools](https://trufflesuite.com/docs/) that are available for dapp developers. You can get started by first visiting the [Truffle website](https://trufflesuite.com/) and [documentation](https://trufflesuite.com/docs/).
