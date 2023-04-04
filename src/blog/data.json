@@ -1,13 +1,4 @@
 {
-  "new-truffle-release-update-march": {
-    "title": "New Truffle Releases Update - Ganache.dev + Hardhat plugin",
-    "date": "2023-04-03",
-    "author": "Kingsley Arinze",
-    "published": true,
-    "excerpt": "If you’ve ever wondered what RPC methods Ganache support or what arguments to pass in when calling these RPC methods, including the type of response to expect, then we’re happy to introduce you to ganache.dev, an interactive JSON-RPC documentation for Ganache...",
-    "image": "/img/blog/thumbnails/what-is-new-in-truffle-thumbnail.png"
-  },
-
   "from-idea-to-minimum-viable-dapp-how-to-use-ganache-to-enhance-your-auction-dapp": {
     "title": "From Idea to Minimum Viable Dapp - How to use Ganache to enhance your auction dapp",
     "date": "2023-01-25",
