@@ -1,0 +1,233 @@
+{% extends "main.html" %}
+
+<!-- Render hero under tabs -->
+{% block tabs %} {{ super() }}
+
+<!-- Additional styles for landing page -->
+<style>
+  /* Remove spacing, as we cannot hide it completely */
+  .md-main__inner {
+    margin: 0;
+  }
+
+  /* Hide main content for now */
+  .md-content {
+    display: none;
+  }
+
+  /* Hide table of contents */
+  @media screen and (min-width: 60em) {
+    .md-sidebar--secondary {
+      display: none;
+    }
+  }
+
+  .card-img-top {
+    display: inline-block;
+    margin: 0 0.5em 0 0;
+    width: 2.5rem;
+    max-height: 2.5rem;
+  }
+</style>
+
+<section class="container p-5">
+  <h1>Documentation</h1>
+
+  <p class="mt-4">
+    Learn how to use the full <strong>Truffle Suite</strong> with Ethereum,
+    Quorum, Hyperledger EVM, and other EVM-based chains
+  </p>
+
+  <hr />
+
+  <div class="row">
+    <div class="col-md-6">
+      <a class="link-card" href="truffle/">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title mt-0 text-truffle">
+              <img
+                class="card-img-top"
+                src="../img/truffle-logomark.svg"
+                alt="Truffle Logo"
+              /><span class="narrow">T</span>RUFFLE
+            </h5>
+            <hr />
+            <p class="mb-0">
+              <strong>SMART CONTRACTS MADE SWEETER</strong> Compile, test, debug
+              and deploy with the most popular smart contract development tool.
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-6">
+      <a class="link-card" href="ganache/">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title mt-0 text-ganache">
+              <img
+                class="card-img-top"
+                src="../img/ganache-logomark.svg"
+                alt="Ganache Logo"
+              />Ganache
+            </h5>
+            <hr />
+            <p class="mb-0">
+              <strong>ONE CLICK BLOCKCHAIN</strong> Fast, easy, local
+              development blockchain in UI and CLI flavors. Introspection of
+              contract data and events.
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-6">
+      <a class="link-card" href="drizzle/">
+        <div class="card docs-drizzle-card mb-3">
+          <div class="card-body">
+            <h5 class="card-title mt-0 text-drizzle">
+              <img
+                class="card-img-top"
+                src="../img/drizzle-logomark.svg"
+                alt="Drizzle Logo"
+              />dri<span class="drizzle-z-skew-1">z</span
+              ><span class="drizzle-z-skew-2">z</span>le
+            </h5>
+            <hr />
+            <p class="mb-0">
+              <strong>FRESH CHAIN-DATA FOR FRONT-ENDS</strong>
+              Standards-compliant wallet connection, account and contract state
+              management. Turn-key React component library.
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-6">
+      <a class="link-card" href="vscode-ext/">
+        <div class="card docs-drizzle-card mb-3">
+          <div class="card-body">
+            <h5 class="card-title mt-0 text-truffle">
+              <img
+                class="card-img-top"
+                src="../img/vscode-logo.svg"
+                alt="Truffle for VSCode Logo"
+              />Truffle for VSCode
+            </h5>
+            <hr />
+            <p class="mb-0">
+              <strong>DAPP DEVELOPMENT SIMPLIFIED</strong> Truffle for VSCode
+              simplifies how you create, connect to, build and deploy smart
+              contracts on an EVM-based blockchain.
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <p class="mt-4">See documentation for <strong>select blockchains</strong></p>
+
+  <hr />
+
+  <div class="row docs-home">
+    <div class="col-md-6">
+      <a class="link-card" href="truffle/quickstart/">
+        <div class="card docs-blockchain-card mb-3">
+          <div class="card-body">
+            <h5 class="card-title mt-0">
+              <img
+                class="card-img-top"
+                src="../img/blockchains/ethereum.svg"
+                alt="Ethereum Logo"
+              />Ethereum
+            </h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-6">
+      <a
+        class="link-card"
+        href="truffle/distributed-ledger-support/working-with-quorum/"
+      >
+        <div class="card docs-blockchain-card mb-3">
+          <div class="card-body">
+            <h5 class="card-title mt-0">
+              <img
+                class="card-img-top"
+                src="../img/blockchains/quorum.png"
+                alt="Quroum Logo"
+              />Quorum
+            </h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-6">
+      <a class="link-card" href="tezos/truffle/quickstart/">
+        <div class="card docs-blockchain-card mb-3">
+          <div class="card-body">
+            <h5 class="card-title mt-0">
+              <img
+                class="card-img-top"
+                src="../img/blockchains/tezos.svg"
+                alt="Tezos Logo"
+              />Tezos
+            </h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-6">
+      <a
+        class="link-card"
+        href="truffle/distributed-ledger-support/working-with-hyperledger-evm/"
+      >
+        <div class="card docs-blockchain-card mb-3">
+          <div class="card-body">
+            <h5 class="card-title mt-0">
+              <img
+                class="card-img-top"
+                src="../img/blockchains/hyperledger.png"
+                alt="Fabric Logo"
+              />Hyperledger Fabric (EVM)
+            </h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-6">
+      <a class="link-card" href="filecoin/truffle/quickstart/">
+        <div class="card docs-blockchain-card mb-3">
+          <div class="card-body">
+            <h5 class="card-title mt-0">
+              <img
+                class="card-img-top"
+                src="../img/blockchains/filecoin.svg"
+                alt="Filecoin Logo"
+              />Filecoin
+            </h5>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->
+
+{% block footer %} {% include "partials/footer.html" %} {% endblock %}
