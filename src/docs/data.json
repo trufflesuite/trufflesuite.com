@@ -106,16 +106,7 @@
       "Events Page",
       "Decoded Transactions"
     ],
-    "Corda": [
-      "Working with Corda",
-      "Workspace Overview",
-      "Linking a Corda Project",
-      "Unlinking a Corda Project",
-      "Nodes",
-      "Transactions",
-      "CorDapps",
-      "Shell"
-    ],
+
     "Reference": ["Ganache Settings", "Workspace Default Configuration"]
   },
   "drizzle": {

@@ -20,10 +20,10 @@ This year was a busy one for Truffle, but the biggest news squeaked in just in t
 
 It was also a big year for Truffle Teams. We’ve added new features and enhanced existing ones to complete the core workflow Truffle Teams offers (I summarize this in our final Dapp Lifecycle webinar episode here). Big highlights include the release of:
 
-* **Dashboard** ([Blog](/blog/get-a-birds-eye-view-with-truffle-teams-new-dashboard) | [Docs](/docs/teams/dashboard/dashboard-overview)): More incoming data begets a greater need to gain insights and properly segment that data to prevent overload. Truffle Teams new dashboard provides an overview of your application, along with ways to drill down and get further context on more narrow slices.
-* **Debugger** ([Blog](/blog/debug-quickly-and-in-context-with-truffle-teams-new-debugger) | [Docs](/docs/teams/debugger/debugger-overview)): This is a huge workflow enhancement--allowing us to debug transactions in the places we're already viewing--via the deployment details screen or while monitoring individual contracts.
-* **Early Access** ([Blog](/blog/try-new-features-first-with-truffle-teams-early-access)): Truffle Teams is constantly evolving. Between adding new features, polishing, and refining the app there's so much we'd love to share with the world in a faster way. Wouldn't it be nice to take those new enhancements and features for a test drive? Now you can with early access!
-* **Deployment and Monitoring Improvements** ([Blog](/blog/you-decide-pipeline-or-table-view-in-truffle-teams-deployments-manager) | [Docs](/docs/teams/deployments/deployments-overview)): We’ve added a table view and a deployment details page. We're also offering more insight into each deployment, by providing the cost and console output.
+- **Dashboard** ([Blog](/blog/get-a-birds-eye-view-with-truffle-teams-new-dashboard) | [Docs](/docs/teams/dashboard/dashboard-overview)): More incoming data begets a greater need to gain insights and properly segment that data to prevent overload. Truffle Teams new dashboard provides an overview of your application, along with ways to drill down and get further context on more narrow slices.
+- **Debugger** ([Blog](/blog/debug-quickly-and-in-context-with-truffle-teams-new-debugger) | [Docs](/docs/teams/debugger/debugger-overview)): This is a huge workflow enhancement--allowing us to debug transactions in the places we're already viewing--via the deployment details screen or while monitoring individual contracts.
+- **Early Access** ([Blog](/blog/try-new-features-first-with-truffle-teams-early-access)): Truffle Teams is constantly evolving. Between adding new features, polishing, and refining the app there's so much we'd love to share with the world in a faster way. Wouldn't it be nice to take those new enhancements and features for a test drive? Now you can with early access!
+- **Deployment and Monitoring Improvements** ([Blog](/blog/you-decide-pipeline-or-table-view-in-truffle-teams-deployments-manager) | [Docs](/docs/teams/deployments/deployments-overview)): We’ve added a table view and a deployment details page. We're also offering more insight into each deployment, by providing the cost and console output.
 
 Before the end of this year, we’ll be releasing the Contract Manager to Early Access, completing the workflow and allowing teams to build, deploy, monitor, and debug conveniently in one place.
 
@@ -43,9 +43,13 @@ Since the summer of 2020 saw DeFi reach a whole new level of usage, more and mor
 
 2020 was a year of partnerships for Truffle, seeing us make good on the vision to become a multi-blockchain toolset.
 
-* **Tezos** ([Blog](/blog/branching-out-announcing-tezos-support-in-truffle) | [Docs](/docs/tezos/truffle/quickstart)): Tezos is supported in Truffle! Many of the commands you’re used to are still here: compile, deploy, test, and console!
-* **Corda** ([Blog](/blog/branching-out-phase-2-of-corda-flavored-ganache) | [Docs](/docs/ganache/corda/working-with-corda)): Ganache UI supports creating Corda networks! Easily create and introspect into a local Corada development network with a familiar UI.
-* **Filecoin** ([Blog](/blog/announcing-collaboration-with-filecoin)): Truffle Preserve allows you to easily preserve files on IPFS and/or Filecoin.
+- **Tezos** ([Blog](/blog/branching-out-announcing-tezos-support-in-truffle) | [Docs](/docs/tezos/truffle/quickstart)): Tezos is supported in Truffle! Many of the commands you’re used to are still here: compile, deploy, test, and console!
+- **Corda** ([Blog](/blog/branching-out-phase-2-of-corda-flavored-ganache) | [Docs](/docs/ganache/corda/working-with-corda)): Ganache UI supports creating Corda networks! Easily create and introspect into a local Corada development network with a familiar UI.
+- **Filecoin** ([Blog](/blog/announcing-collaboration-with-filecoin)): Truffle Preserve allows you to easily preserve files on IPFS and/or Filecoin.
+
+!!! important
+
+    The Corda flavor is deprecated and has been removed from Ganache UI in v2.7.0. See the [release notes](https://github.com/trufflesuite/ganache-ui/releases/tag/v2.7.0) for details.
 
 ## A Look Forward
 
@@ -53,11 +57,11 @@ Since the summer of 2020 saw DeFi reach a whole new level of usage, more and mor
 
 Truffle Teams will continue to be enhanced throughout 2021, with useful additions such as:
 
-* **Monitoring enhancements**: receive alerts when we observe contract anomalies, such as a sudden spike in failed transactions or a drop in balance. Set up your own custom triggers for things like an event firing or a certain address interacting with your contracts.
-* **Debugging public transactions**: The debugger only works for sandboxes currently, but we want to bring it to feature parity with the CLI debugger by also supporting public networks.
-* **Custom Network Support**: Deploy via your own infrastructure by supplying the RPC URL. Put your DappNode to good use!
-* **Continuous (Automated) Deployment**: You can already deploy manually via Truffle Team’s deployment wizard, but there may be times you know you’ll be continuously deploying your changes. For example iterating on a new feature in a sandbox.
-* **Better Dashboard**: The dashboard today provides a good overview of your deployment, but we’re going to expand it to provide better drill down functionality and greater context.
+- **Monitoring enhancements**: receive alerts when we observe contract anomalies, such as a sudden spike in failed transactions or a drop in balance. Set up your own custom triggers for things like an event firing or a certain address interacting with your contracts.
+- **Debugging public transactions**: The debugger only works for sandboxes currently, but we want to bring it to feature parity with the CLI debugger by also supporting public networks.
+- **Custom Network Support**: Deploy via your own infrastructure by supplying the RPC URL. Put your DappNode to good use!
+- **Continuous (Automated) Deployment**: You can already deploy manually via Truffle Team’s deployment wizard, but there may be times you know you’ll be continuously deploying your changes. For example iterating on a new feature in a sandbox.
+- **Better Dashboard**: The dashboard today provides a good overview of your deployment, but we’re going to expand it to provide better drill down functionality and greater context.
 
 ### Advanced Analysis
 
@@ -75,12 +79,12 @@ Ganache is getting a tune-up! This means faster execution of your test suites--*
 
 As mentioned above, now that we’re a part of ConsenSys Software Inc, Truffle's going to have many opportunities to collaborate with other groups. We’d love to hear what this sparks in you! Check out our Slack group below and let us know your thoughts. Here are some links to CSI’s groups so you know what they’re about:
 
-* [Infura](https://infura.io/)
-* [MythX](https://mythx.io/)
-* [ConsenSys Diligence](https://consensys.net/diligence/)
-* [MetaMask](https://metamask.io/)
-* [CodeFi](https://codefi.consensys.net/)
-* [ConsenSys Quorum](https://consensys.net/quorum/)
+- [Infura](https://infura.io/)
+- [MythX](https://mythx.io/)
+- [ConsenSys Diligence](https://consensys.net/diligence/)
+- [MetaMask](https://metamask.io/)
+- [CodeFi](https://codefi.consensys.net/)
+- [ConsenSys Quorum](https://consensys.net/quorum/)
 
 ## Catch us on Slack
 

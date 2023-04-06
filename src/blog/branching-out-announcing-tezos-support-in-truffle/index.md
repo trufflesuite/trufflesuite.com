@@ -8,6 +8,10 @@ hide:
 
 If you've been following Truffle's development, you'll notice that our tools already support a handful of exciting platforms: [Ethereum](https://ethereum.org/), [Quorum](https://www.goquorum.com/), [Axoni](https://axoni.com/technology/), Hyperledger [Fabric-EVM](https://github.com/hyperledger/fabric-chaincode-evm), Hyperledger [Sawtooth](https://www.hyperledger.org/projects/sawtooth), and Hyperledger [Burrow](https://www.hyperledger.org/projects/hyperledger-burrow). What's common amongst these chains is that they all use the Ethereum Virtual Machine under the hood. Ethereum is very near and dear to our hearts -- it's where we got our start, and where we are the most competent. But we're branching out, in large part due to market demand. In December we released a beta [Corda-flavored Ganache](/blog/unwrap-the-corda-flavored-ganache-beta) as part of our initial support for the [Corda platform](https://www.r3.com/corda-platform/). And today, we branch out even further.
 
+!!! important
+
+    The Corda flavor is deprecated and has been removed from Ganache UI in v2.7.0. See the [release notes](https://github.com/trufflesuite/ganache-ui/releases/tag/v2.7.0) for details.
+
 **I'm excited to announce Tezos integration into the Truffle command line tool.**
 
 Right now, at this very moment, you can [download a Tezos-specific version of Truffle](/docs/tezos/truffle/quickstart) and start building smart contracts on Tezos networks using the time-tested tooling you know and love. And if you're a Tezos native who got your start building on top of the Tezos platform, then this means professional-grade tooling has finally arrived.

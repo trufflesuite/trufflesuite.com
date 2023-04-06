@@ -4,6 +4,10 @@ hide:
   - navigation
 ---
 
+!!! important
+
+    The Corda flavor is deprecated and has been removed from Ganache UI in v2.7.0. See the [release notes](https://github.com/trufflesuite/ganache-ui/releases/tag/v2.7.0) for details.
+
 ![Truffle Teams Deployments Banner](/img/blog/unwrap-the-corda-flavored-ganache-beta/corda-ganache-beta-blog-banner.png)
 
 Earlier this year at TruffleCon [we announced our partnership with Corda to develop a Corda Flavored Ganache](https://youtu.be/MtOaXVt1yOE?t=697). Then, at CordaCon in London [we shared more details around the integration](https://www.r3.com/videos/truffle-and-corda/).
@@ -21,9 +25,9 @@ We're thrilled to release Ganache for the Corda Blockchain, as this lowers the b
 
 With the Beta version, Corda Flavored Ganache brings you:
 
-* **One-click** Corda network configuration and initialization, so you can focus on what matters most: your application.
-* **Easy access** to all your application's data, including network map, notaries, nodes, transactions, and states.
-* **Multiple workspaces** for all of your Corda projects; workspaces contain configurations of a Corda network map, notaries, nodes, transactions, accounts, and ledgers.
+- **One-click** Corda network configuration and initialization, so you can focus on what matters most: your application.
+- **Easy access** to all your application's data, including network map, notaries, nodes, transactions, and states.
+- **Multiple workspaces** for all of your Corda projects; workspaces contain configurations of a Corda network map, notaries, nodes, transactions, accounts, and ledgers.
 
 As always, Truffle's tools come standard on Windows, macOS, and Linux.
 
@@ -31,7 +35,7 @@ We are excited to share this with the Corda community and **we also need to your
 
 <a href="https://share.hsforms.com/1jbMAfLzGSj6HWx_-na9Bew34pbp">✉️ Sign up for the Corda Flavored Ganache mailing list here</a> to get the latest updates on all things Ganache + Corda.
 
-If you don't hear from us immediately, know that our team is taking some much needed time off starting today. We'll be back January 6th, 2020 ready to dive into your feedback! 
+If you don't hear from us immediately, know that our team is taking some much needed time off starting today. We'll be back January 6th, 2020 ready to dive into your feedback!
 
 If you see them around the net, make sure to give a _**HUGE thank you**_ to [David Murdoch and Nick Paterno](/staff). Their hard work made this all possible and we're a very fortunate organization to have them aboard! 💖
 
