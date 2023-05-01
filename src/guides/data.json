@@ -1,4 +1,11 @@
 {
+  "ultimate-guide-to-truffle-the-gateway-to-full-stack-blockchain-development": {
+    "title": "Ultimate Guide to Truffle: The Gateway to Full Stack Blockchain Development",
+    "date": "2023-04-02",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "products": ["truffle", "ganache"]
+  },
   "building-a-tic-tac-toe-game-with-truffle-and-unity": {
     "title": "Build a Tic Tac Toe game with Truffle and Unity",
     "date": "2023-4-4",
