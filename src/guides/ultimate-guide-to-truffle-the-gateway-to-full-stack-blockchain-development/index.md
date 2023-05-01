@@ -22,13 +22,20 @@ First, the guide covers Truffle's library-first approach, touching on the fundam
 
 Finally, the guide covers the tools within the Truffle suite, how each helps improve your development experience, and how to get started using them.
 
-Index:\
-Part 1: What is Truffle?\
-Part 2: The benefits of building with Truffle \
-Part 3: Truffle Suite Core Features & Tooling \
-Part 4: Truffle Command Line Interface \
-Part 5: Truffle Dashboard \
-Part 6: Ganache \
+Index:
+
+Part 1: What is Truffle?
+
+Part 2: The benefits of building with Truffle
+
+Part 3: Truffle Suite Core Features & Tooling
+
+Part 4: Truffle Command Line Interface
+
+Part 5: Truffle Dashboard
+
+Part 6: Ganache
+
 Part 7: Truffle for VS Code Extension
 
 ## Part one: What is Truffle?
