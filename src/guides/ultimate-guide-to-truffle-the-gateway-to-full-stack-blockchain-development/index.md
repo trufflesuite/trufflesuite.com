@@ -22,21 +22,14 @@ First, the guide covers Truffle's library-first approach, touching on the fundam
 
 Finally, the guide covers the tools within the Truffle suite, how each helps improve your development experience, and how to get started using them.
 
-Index:
-
-Part 1: What is Truffle?
-
-Part 2: The benefits of building with Truffle
-
-Part 3: Truffle Suite Core Features & Tooling
-
-Part 4: Truffle Command Line Interface
-
-Part 5: Truffle Dashboard
-
-Part 6: Ganache
-
-Part 7: Truffle for VS Code Extension
+Index:  
+[Part 1: What is Truffle?](#part-one-what-is-truffle)  
+[Part 2: The benefits of building with Truffle](#part-two-the-benefits-of-building-with-truffle)  
+[Part 3: Truffle Suite Core Features and Tooling](#part-three-truffle-suite-core-features-and-tooling)  
+[Part 4: Truffle Command Line Interface](#part-four-truffle-command-line-interface)  
+[Part 5: Truffle Dashboard](#part-five-truffle-dashboard)  
+[Part 6: Ganache](#part-six-ganache)  
+[Part 7: Truffle for VS Code Extension ](#part-seven-truffle-for-vs-code-extension)
 
 ## Part one: What is Truffle?
 
@@ -61,7 +54,7 @@ Truffle allows developers to code, test, debug, and deploy smart contracts to Et
 
 5. **Applicable at all stages of development:** Regardless of whether your project began with Truffle CLI or another framework, Truffle can provide tooling and insights. We also support a number of different protocols and offer the ability to easily add support for new ones.
 
-## Part three: Truffle Suite Core Features & Tooling
+## Part three: Truffle Suite Core Features and Tooling
 
 As mentioned earlier, Truffle isn’t a single tool, but a suite of tools that come together to create a smooth development experience. These tools include Truffle CLI, Truffle Dashboard, Ganache, and Truffle for VS code.
 
