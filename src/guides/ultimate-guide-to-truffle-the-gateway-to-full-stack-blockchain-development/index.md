@@ -216,7 +216,7 @@ If you have the Truffle CLI installed, accessing the Truffle Dashboard is made p
 
 Running `truffle dashboard` in a separate terminal window starts Truffle Dashboard at http://localhost:24012 and automatically opens a new tab in your browser.
 
-    truffle dashboard [--port &lt;number>] [--host &lt;string>] [--verbose]
+    truffle dashboard [--port <number>] [--host <string>] [--verbose]
 
     Truffle Dashboard running at [http://localhost:24012](http://localhost:24012)
     DashboardProvider RPC endpoint running at [http://localhost:24012/rpc](http://localhost:24012/rpc)
@@ -243,7 +243,7 @@ The port and host can be configured through command line options, or by configur
 
 1.  On the command line:
 
-        truffle dashboard --port &lt;port of choice> --host &lt;host of choice>`
+        truffle dashboard --port <port of choice> --host <host of choice>`
 
 2.  In your Truffle configuration (truffle-config.js) file:
 
@@ -378,7 +378,7 @@ Ganache exposes two RPC methods for manipulating time during testing:
 
 Ganache can be used in the browser with this line of code:
 
-    <script src="[https://cdn.jsdelivr.net/npm/ganache@](https://cdn.jsdelivr.net/npm/ganache@)>VERSION NUMBER>/dist/web/ganache.min.js">&lt;/script>
+    <script src="[https://cdn.jsdelivr.net/npm/ganache@](https://cdn.jsdelivr.net/npm/ganache@)>VERSION NUMBER>/dist/web/ganache.min.js"></script>
 
 If you specify the version number 7.3.2 or greater, you also get the zero-config mainnet forking feature. The latest version as of the time of writing is 7.8.0. You can try this out with the below code sample.
 
