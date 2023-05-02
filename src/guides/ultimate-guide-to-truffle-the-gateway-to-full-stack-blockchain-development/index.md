@@ -16,13 +16,11 @@ _The Ultimate Guide to Truffle showcases everything developers need to get start
 
 ## Overview
 
-The Ultimate Guide to Truffle introduces all the components of Truffle to get started building fullstack blockchain applications.
+The Ultimate Guide to Truffle introduces all the components of Truffle to get started building full stack blockchain applications.
 
 Truffle is a suite of development environment tooling for web3 developers to simplify the development lifecycle for EVM-based applications. It was the first development environment software created for Ethereum and has existed since 2015.
 
-This guide covers Truffle's library-first approach, touching on the fundamental building blocks of Truffle and how it's composed for building blockchain applications. The benefits of building with the Truffle Suite are outlined and ways to use Truffle together with other tools.
-
-Finally, the guide covers the tools within the Truffle Suite, how each functions to improve your development process, and how to get started using them.
+This guide covers Truffle's library-first approach, touching on the fundamental building blocks of Truffle and how it's composed for building blockchain applications. The benefits of building with the Truffle Suite are outlined and ways to use Truffle together with other tools. Finally, the guide covers the tools within the Truffle Suite, how each functions to improve your development process, and how to get started using them.
 
 Index:  
 [Part 1: What is Truffle?](#part-one-what-is-truffle)  
