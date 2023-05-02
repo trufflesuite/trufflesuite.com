@@ -10,7 +10,7 @@ Written by [Kingsley Arinze](https://www.linkedin.com/in/bruzzy)
 
 Last updated 04/02/2023
 
-![Blog banner](./banner.jpg)
+![Blog banner](./blog-feature-image.jpg)
 
 _The Ultimate Guide to Truffle showcases everything developers need to get started using Truffle for blockchain development, providing an overview of core features such as Truffle Dashboard, Command Line Interface, VS Code, and Ganache._
 
