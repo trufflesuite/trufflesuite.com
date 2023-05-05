@@ -688,6 +688,39 @@ module.exports = {
 }
 ```
 
+## ENS configuration
+
+Configuration for Truffle's [Ethereum Name Service support](/docs/truffle/concepts/ethereum-name-service) can be done either globally or per-network.  However, either way, it must be enabled globally to be used.
+
+```js
+module.exports = {
+  /* ... rest of truffle-config */
+
+  ens: {
+    enabled: true //turns on ENS support -- must be set to use ENS features!
+    registry: {
+      address: '0x0123456789012345678901234567890123456789' //allows specifying a custom registry address
+    }
+  },
+
+  networks: {
+    /* ... other networks */
+    myNetwork: {
+      /* ...rest of network config */
+      ens: {
+        registry: {
+          address: '0x9876543210987654321098765432109876543210' //specify a custom registry address for this network only
+        }
+      }
+    }
+  }
+}
+```
+
+A registry address for a particular network will, for that network, override the global setting.  Also, if you explicitly set the registry address to `null` for a particular network, this will turn off the custom registry address for that network (this is useful if, for instance, you want to use the deployer's development registry).
+
+A global registry address can alternately be set in `config.ens.registryAddress` instead of `config.ens.registry.address`; please don't set both of these.  Likewise, a registry address for a specific network can alternately be set in `config.networks.<network_name>.registry.address` or `config.networks.<network_name>.registryAddress` instead of `config.networks.<network_name>.ens.registry.address`; again, please don't set more than one of these.
+
 ## EthPM configuration
 
 This configuration applies to the optional `ethpm.json` file that exists alongside your `truffle.js` configuration file.
