@@ -30,7 +30,7 @@ npm install @truffle/hdwallet-provider
 
 ## Register with Infura and create a new project
 
-Before you can use Infura, you need to [register](https://infura.io/signup?&utm_source=truffle&utm_medium=referral&utm_campaign=tutorials&utm_content=truffleinfuraguide). Upon registration, [this guide](https://blog.infura.io/getting-started-with-infura-28e41844cc89/?&utm_source=truffle&utm_medium=referral&utm_campaign=tutorials&utm_content=truffleinfuraguide) will walk you through creating a new project, authenticating with your new Project ID and Secret, securely copying your keys and selecting the appropriate network endpoint.
+Before you can use Infura, you need to [register](https://app.infura.io/register). Upon registration, [this guide](https://blog.infura.io/getting-started-with-infura-28e41844cc89/?&utm_source=truffle&utm_medium=referral&utm_campaign=tutorials&utm_content=truffleinfuraguide) will walk you through creating a new project, authenticating with your new Web3 API Key, securely copying your keys and selecting the appropriate network endpoint.
 
 ## Configure your Truffle project
 
@@ -79,7 +79,7 @@ The next step is to edit your `truffle-config.js` file to use `HDWalletProvider`
   <img class="figure-shadow mb-2 w-100" src="/img/tutorials/infura/infura-project-details.png" alt="Infura Project Details">
 </figure>
 
-   * Make sure to replace `<INFURA_WEB3_API_KEY>` with your Infura Project ID.
+   * Make sure to replace `<INFURA_WEB3_API_KEY>` with your Infura Web3 API Key.
 
    * The `provider` value is wrapped in a function, which ensures that it won't get initialized until it's needed. This is especially important if connecting to multiple networks. (See the [Networks configuration](/docs/truffle/reference/configuration#networks) section of the documentation for more on this topic.)
 
