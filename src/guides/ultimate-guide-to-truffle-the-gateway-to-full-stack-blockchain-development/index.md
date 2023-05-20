@@ -405,14 +405,16 @@ Here’s a sample HTML code that puts it all together:
     </head>
     <body>
     	<h1>Ganache Example</h1>
-    	<script src="https://cdn.jsdelivr.net/npm/ganache@7.8.0/dist/web/ganache.min.js"></script
+    	<script src="https://cdn.jsdelivr.net/npm/ganache@7.8.0/dist/web/ganache.min.js"></script>
 
 
     	<script>
-    		const options = { fork: { network: "mainnet" } }
-            const provider = Ganache.provider(options);
-    		const block = await provider.request({ method:       "eth_getBlockByNumber", params: ["0xec4eb0"] });
-            console.log(block); // will be mainnet's block 15486640
+            (async function() {
+                const options = { fork: { network: "mainnet" } }
+                const provider = Ganache.provider(options);
+                const block = await provider.request({ method:       "eth_getBlockByNumber", params: ["0xec4eb0"] });
+                console.log(block); // will be mainnet's block 15486640
+            })()
     	</script>
     </body>
     </html>
