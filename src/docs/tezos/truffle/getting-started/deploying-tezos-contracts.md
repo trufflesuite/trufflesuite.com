@@ -50,7 +50,7 @@ Note that the filename is prefixed with a number and is suffixed by a descriptio
 
 ### artifacts.require()
 
-At the beginning of the migration, we tell Truffle which contracts we'd like to interact with via the `artifacts.require()` method. This method is similar to Node's `require`, but in our case it specifically returns a contract abstraction that we can use within the rest of our deployment script. The name specified should match the naem of the source file, without the `.ligo` extension.
+At the beginning of the migration, we tell Truffle which contracts we'd like to interact with via the `artifacts.require()` method. This method is similar to Node's `require`, but in our case it specifically returns a contract abstraction that we can use within the rest of our deployment script. The name specified should match the name of the source file, without the `.ligo` extension.
 
 Consider this example where two contracts are specified within the same source file:
 
@@ -74,7 +74,7 @@ Your migration function can accept other parameters as well. See the examples be
 
 ### Handling default values
 
-A full migration script using `SimpleStorage` would look like the example below. Note that a default value (`3`) is passed to the deployer's `deploy()` function in order to set the contract's initial state. Note that the type of this second parameter must represent the type of state held in the contract, and should be represented in a form that is convertable from Javascript. More details on this below.   
+A full migration script using `SimpleStorage` would look like the example below. Note that a default value (`3`) is passed to the deployer's `deploy()` function in order to set the contract's initial state. Note that the type of this second parameter must represent the type of state held in the contract, and should be represented in a form that is convertible from Javascript. More details on this below.   
 
 <p class="alert alert-warning">
 <strong>Coming from Ethereum?</strong> You'll notice that LIGO contracts lack constructors. Passing in default values as part of deployment is the only way to set the initial state of a contract. Constructors may be added to LIGO at a later date.
@@ -175,7 +175,7 @@ deployer.deploy(A, {overwrite: false});
 // Don't redeploy if the contract object represents an already-deployed dependency.
 // If it has already been deployed to our target network, we can skip deploying it.
 // This is useful for cases where we _do_ want to deploy that dependency for testing
-// and development networks, but we don't want to replace it in production.
+// and development networks, but we don't want to replace them in production.
 deployer.deploy(SomeDependency, {overwrite: false});
 ```
 
@@ -188,7 +188,7 @@ Example:
 ```javascript
 var a, b;
 deployer.then(function() {
-  // Create a new version of A programatically, with 3 as the initial state.
+  // Create a new version of A programmatically, with 3 as the initial state.
   return A.new(3);
 }).then(function(instance) {
   a = instance;
