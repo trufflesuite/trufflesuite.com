@@ -384,7 +384,7 @@ If you want to deploy to other networks, you can run:
 truffle migrate --network <NETWORK_NAME>
 ```
 
-Because there are so many contracts, compilation will take some time. Do note that every time you run the migration, it will overwrite what contract addreses have been written to `addresses.json`.
+Because there are so many contracts, compilation will take some time. Do note that every time you run the migration, it will overwrite what contract addresses have been written to `addresses.json`.
 
 ## Build your own module
 

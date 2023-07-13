@@ -308,7 +308,7 @@ function _beforeTokenTransfer(
 }
 ```
 
-In order to delete the `UserInfo` from the mapping, we want to make sure there was actually a transfer of ownership and there was UserInfo on it in teh first place. Once verified, we can delete and emit an event that the UserInfo was updated!
+In order to delete the `UserInfo` from the mapping, we want to make sure there was actually a transfer of ownership and there was UserInfo on it in the first place. Once verified, we can delete and emit an event that the UserInfo was updated!
 
 Note that it is up to you, the contract writer, to decide if this is how you expect token transfers and burns to behave. You might choose to ignore this and say that rentees maintain their user status even when ownership changes!
 
