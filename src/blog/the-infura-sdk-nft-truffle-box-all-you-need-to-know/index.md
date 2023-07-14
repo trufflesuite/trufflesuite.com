@@ -60,7 +60,7 @@ Once these requirements are met, in an empty folder, run the unbox command as sh
 npx truffle unbox infura-nft-sdk
 ```
 
-This should download and unbox the Infura NFT SDK Box. Next download all project dependecies by running `npm install`.
+This should download and unbox the Infura NFT SDK Box. Next download all project dependencies by running `npm install`.
 
 With all dependencies successfully installed, proceed to creating a `.env` file in the root of your project, followed by adding values for the following environment variables:
 

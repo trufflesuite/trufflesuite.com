@@ -131,7 +131,7 @@ curl -d '{"jsonrpc":"2.0","method":"eth_sendTransaction","params": [{"from":"0x0
 ```
 
 ### Synchronizing Accounts Between Metamask And Testrpc
-If you want to use testrpc/Metamask combination for development purposes, another route to get the accounts in Metamask to be useful with testrpc is to use the HD wallet generation that both support. If you start testrpc it creates 10 different addresses that can be recovered by the supplied mnemonic. The ``testrpc` output show the 10 inital accounts, the 10 private keys for the accounts and the mnemonic to recreate those accounts.
+If you want to use testrpc/Metamask combination for development purposes, another route to get the accounts in Metamask to be useful with testrpc is to use the HD wallet generation that both support. If you start testrpc it creates 10 different addresses that can be recovered by the supplied mnemonic. The ``testrpc` output show the 10 initial accounts, the 10 private keys for the accounts and the mnemonic to recreate those accounts.
 
 ```
 Available Accounts
