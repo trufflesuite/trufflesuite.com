@@ -4,7 +4,6 @@ nav:
   - Compile a project: compile-contracts.md
   - Integrate with MetaMask: truffle-with-metamask.md
   - Work with contracts: contracts
-  - Use Truffle Dashboard: use-the-truffle-dashboard.md
   - Debug and test: debug-test
   - Use NPM package manager: package-management-via-npm.md
   - Use the build pipeline: use-the-build-pipeline.md

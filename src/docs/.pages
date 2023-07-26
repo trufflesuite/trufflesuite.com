@@ -1,7 +1,7 @@
 nav:
-    - All Docs: index.md
-    - truffle
-    - ganache
-    - drizzle
-    - Truffle for VSCode: vscode-ext
-    - tezos
+  - All Docs: index.md
+  - truffle
+  - Truffle Dashboard: truffle-dashboard
+  - ganache
+  - drizzle
+  - Truffle for VSCode: vscode-ext

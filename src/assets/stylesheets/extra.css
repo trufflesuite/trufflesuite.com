@@ -1,45 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 html {
   scroll-behavior: auto;
 }
 
-.md-typeset :is(.admonition,details) {
+.md-typeset :is(.admonition, details) {
   border-color: var(--mint);
 }
 
-.md-typeset :is(.admonition-title,summary) {
+.md-typeset :is(.admonition-title, summary) {
   border-color: var(--mint);
   background-color: var(--md-primary-fg-color);
 }
 
-.md-typeset :is(.admonition-title,summary):before {
+.md-typeset :is(.admonition-title, summary):before {
   background-color: var(--mint);
 }
 
 :root {
-  --milk: #F6F5EF;
+  --milk: #f6f5ef;
   /* mint, but transparent*/
   --transparent-mint: #3fe0c533;
-  --dark-mint: #0C5A4E;
-  --cream: #F2EDE7;
+  --dark-mint: #0c5a4e;
+  --cream: #f2ede7;
   --foil: #6d6d6d;
   --light-chocolate: #5e464d;
-  --dark-chocolate: #33262A;
+  --dark-chocolate: #33262a;
   --mint: #3fe0c5;
   --ganache: #e4a663;
   --drizzle: #e911bd;
 
-  --md-accent-fg-color:        var(--dark-mint);
-  --md-primary-fg-color:        var(--milk);
+  --md-accent-fg-color: var(--dark-mint);
+  --md-primary-fg-color: var(--milk);
   --md-default-fg-color--light: var(--dark-chocolate);
   --md-primary-fg-color--light: var(--light-chocolate);
-  --md-default-fg-color--lightest: var(--light-chocolate);  
-  --md-primary-fg-color--dark:  var(--light-chocolate);
-  --md-primary-bg-color:        var(--dark-chocolate);
+  --md-default-fg-color--lightest: var(--light-chocolate);
+  --md-primary-fg-color--dark: var(--light-chocolate);
+  --md-primary-bg-color: var(--dark-chocolate);
   --md-accent-fg-color--transparent: var(--transparent-mint);
   --md-typeset-a-color: var(--dark-chocolate);
 
@@ -47,26 +48,28 @@ html {
   --bs-body-bg: var(--cream);
   --bs-dark: var(--dark-chocolate);
   --bs-body-font-size: 0.8rem;
-  --bs-dark-rgb: 51,38,42;
+  --bs-dark-rgb: 51, 38, 42;
 }
 
 [data-md-color-scheme="chocolatey"] {
-  --md-primary-fg-color:        var(--light-chocolate);
+  --md-primary-fg-color: var(--light-chocolate);
   --md-primary-fg-color--light: var(--cream);
   --md-default-fg-color--light: var(--foil);
-  --md-default-fg-color--lightest: var(--milk);    
-  --md-primary-fg-color--dark:  var(--foil);
-  --md-primary-bg-color:        var(--milk);
+  --md-default-fg-color--lightest: var(--milk);
+  --md-primary-fg-color--dark: var(--foil);
+  --md-primary-bg-color: var(--milk);
 
   --md-typeset-a-color: var(--cream);
 
   --bs-body-color: var(--milk);
   --bs-body-bg: var(--dark-chocolate);
   --bs-dark: var(--dark-chocolate);
-  --bs-dark-rgb: 51,38,42;
+  --bs-dark-rgb: 51, 38, 42;
 }
 
-a, .md-typeset a, .md-typeset .alert a {
+a,
+.md-typeset a,
+.md-typeset .alert a {
   /*
     it would be nice if we could use one of our primary brand colors (truffle, ganache, drizzle), or even
     the "light-chocolate" color, but these are all too lights against our cream background. So we underline
@@ -75,7 +78,9 @@ a, .md-typeset a, .md-typeset .alert a {
   text-decoration: underline;
   color: var(--md-accent-fg-color);
 }
-a.link-card, nav a, .footer-naviation a {
+a.link-card,
+nav a,
+.footer-naviation a {
   /* the footer links are obviously links, so we don't need the underline signal */
   text-decoration: none;
 }
@@ -87,24 +92,24 @@ a.link-card, nav a, .footer-naviation a {
 }
 
 @media screen and (max-width: 76.1875em) {
-  [data-md-toggle=drawer]:not(:checked)~.md-container .md-sidebar--primary {
+  [data-md-toggle="drawer"]:not(:checked) ~ .md-container .md-sidebar--primary {
     display: none;
   }
-  [data-md-toggle=drawer]:checked~.md-container .md-sidebar--primary {
+  [data-md-toggle="drawer"]:checked ~ .md-container .md-sidebar--primary {
     display: block;
   }
   /*
   make the nav keyboard navigatable. without this hidden parts of the nav drawer are focusable, but invisible.
   */
-  .md-nav__toggle~.md-nav{
+  .md-nav__toggle ~ .md-nav {
     visibility: hidden;
   }
-  .md-nav__toggle:checked~.md-nav{
+  .md-nav__toggle:checked ~ .md-nav {
     visibility: visible;
-  }  
+  }
 }
 /* hide the close navigation link*/
-.md-nav__toggle:not(:checked)~.close-sidebar-link {
+.md-nav__toggle:not(:checked) ~ .close-sidebar-link {
   display: none;
 }
 .close-sidebar-link {
@@ -117,7 +122,8 @@ a.link-card, nav a, .footer-naviation a {
 .md-banner {
   text-align: center;
 }
-.md-banner a:hover, .md-banner a:focus {
+.md-banner a:hover,
+.md-banner a:focus {
   color: var(--mint);
 }
 .md-header__button {
@@ -134,7 +140,7 @@ a.link-card, nav a, .footer-naviation a {
 .md-announce__inner a {
   color: var(--cream);
 }
-.md-social{
+.md-social {
   text-align: left;
   margin-left: 1.25em;
 }
@@ -155,8 +161,7 @@ pre {
 
 @media screen and (max-width: 76.1875em) {
   .md-nav--primary .md-nav__title,
-  .md-nav--primary .md-nav__title~.md-nav__list
-  {
+  .md-nav--primary .md-nav__title ~ .md-nav__list {
     background-color: var(--bs-body-bg);
   }
 
@@ -171,8 +176,9 @@ pre {
   }
 }
 
-.md-nav__link, .md-nav__item .md-nav__link--active,
-.md-nav--primary .md-nav__item--active>.md-nav__link {
+.md-nav__link,
+.md-nav__item .md-nav__link--active,
+.md-nav--primary .md-nav__item--active > .md-nav__link {
   color: var(--md-primary-fg-color--light);
 }
 .md-nav--primary .md-nav__link {
@@ -184,9 +190,10 @@ pre {
 
 /* material overrides */
 
-.md-ellipsis, .md-nav__title {
+.md-ellipsis,
+.md-nav__title {
   text-transform: uppercase;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 400 !important;
 }
 
@@ -194,7 +201,7 @@ pre {
   font-weight: 400;
 }
 
-[dir=ltr] .md-header__title {
+[dir="ltr"] .md-header__title {
   margin-left: 0rem;
 }
 
@@ -209,17 +216,17 @@ pre {
 .mdx-hero__content {
   margin: 2rem 0;
   text-align: center;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 .md-tabs__link {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   /* ensure there is enough contrast to improve legibility */
-  opacity: .85;
-  color:var(--md-primary-fg-color--light);
+  opacity: 0.85;
+  color: var(--md-primary-fg-color--light);
 }
-.md-tabs__link--active{
+.md-tabs__link--active {
   opacity: 1;
 }
 
@@ -242,11 +249,13 @@ pre {
   color: var(--md-primary-fg-color--light);
 }
 
-.md-search-result__item, .md-search-result__meta, .md-search-result__link {
+.md-search-result__item,
+.md-search-result__meta,
+.md-search-result__link {
   background-color: var(--bs-body-bg);
   color: var(--md-primary-fg-color--light);
 }
-.md-search-result__more summary:is(:focus,:hover),
+.md-search-result__more summary:is(:focus, :hover),
 .md-search-result__link:hover {
   color: var(--md-primary-bg-color);
 }
@@ -262,7 +271,7 @@ pre {
 
 .md-search__input::placeholder {
   /* make sure contrast is high enough */
-  color: #2B2B2B;
+  color: #2b2b2b;
 }
 
 .md-search__form:focus-within {
@@ -270,7 +279,8 @@ pre {
 }
 
 @media screen and (min-width: 60em) {
-  .md-search__form:hover, .md-search__input {
+  .md-search__form:hover,
+  .md-search__input {
     color: var(--md-primary-fg-color--dark);
   }
   .md-search__input:hover:not(:focus) {
@@ -279,23 +289,23 @@ pre {
       clickable elements with no discernible end make for a bad experience.
       without this line the background of the input form matches the background of the page.
     */
-    background-color: rgba(0,0,0,.1) !important;
+    background-color: rgba(0, 0, 0, 0.1) !important;
   }
   .md-search__input:hover::-webkit-input-placeholder {
-      color: var(--md-primary-bg-color);
+    color: var(--md-primary-bg-color);
   }
   /* Firefox < 19 */
   .md-search__input:hover:-moz-placeholder {
-      color: var(--md-primary-bg-color);
-  } 
+    color: var(--md-primary-bg-color);
+  }
   /* Firefox > 19 */
   .md-search__input:hover::-moz-placeholder {
-      color: var(--md-primary-bg-color);
-  } 
+    color: var(--md-primary-bg-color);
+  }
   /* Internet Explorer 10 */
   .md-search__input:hover:-ms-input-placeholder {
-      color: var(--md-primary-bg-color);
-  } 
+    color: var(--md-primary-bg-color);
+  }
 }
 
 .md-footer {
@@ -327,32 +337,41 @@ a.link-card:hover {
 }
 
 .text-ganache {
-  font-family: 'Grand Hotel', serif;
+  font-family: "Grand Hotel", serif;
   text-transform: none;
 }
 
 .text-truffle {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   font-weight: 600;
-  letter-spacing: .125em;
+  letter-spacing: 0.125em;
   text-transform: uppercase;
 }
 
+.text-truffle-dashboard {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+}
+
+.text-truffle-dashboard span {
+  display: inline-block;
+  transform: translateY(0.125em);
+}
+
 .text-drizzle {
-  font-family: 'Varela Round', sans-serif;
+  font-family: "Varela Round", sans-serif;
   text-transform: lowercase;
 }
 
 .drizzle-z-skew-1 {
   display: inline-block;
-  transform: skewY(-20deg) translateX(.06em);
+  transform: skewY(-20deg) translateX(0.06em);
 }
 
 .drizzle-z-skew-2 {
   display: inline-block;
-  transform: skewY(-20deg) translate(-.06em, .26em);
+  transform: skewY(-20deg) translate(-0.06em, 0.26em);
 }
-
 
 .bd-milk-chocolate {
   background-color: var(--light-chocolate);
@@ -381,26 +400,26 @@ a.link-card:is(:hover, :focus, :focus-visible) {
 }
 a.link-card:is(:hover, :focus, :focus-visible) > .card {
   outline: 2px solid var(--mint);
-  box-shadow:0 0 5px rgba(0,0,0,.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .btn {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   /* separate buttons to ensure click targets are easy to hit */
-  margin-right:.25em;
-  transition: all .1 ease-in-out;
+  margin-right: 0.25em;
+  transition: all 0.1 ease-in-out;
   /*
     make sure buttons aren't on top of each other if they wrap.
     this can happen on the home page buttons on small screens
   */
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 .btn:hover {
   /* a darker version of dark-chocolate to increase contrast against the drizzle pink for better accessibility */
-  color: #1A1416;
+  color: #1a1416;
   filter: brightness(110%);
-  box-shadow: 0 3px 3px rgba(0,0,0,.2);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
 
 .btn-truffle {
@@ -408,14 +427,14 @@ a.link-card:is(:hover, :focus, :focus-visible) > .card {
   background-color: var(--mint);
   border-color: var(--mint);
 }
-.btn:focus{
-  box-shadow: 0 0 0 .25rem var(--mint);
+.btn:focus {
+  box-shadow: 0 0 0 0.25rem var(--mint);
 }
 .btn-truffle:focus {
-  box-shadow: 0 0 0 .25rem var(--drizzle);
+  box-shadow: 0 0 0 0.25rem var(--drizzle);
 }
 .btn-drizzle:focus {
-  box-shadow: 0 0 0 .25rem var(--ganache);
+  box-shadow: 0 0 0 0.25rem var(--ganache);
 }
 
 .btn-ganache {
@@ -426,9 +445,9 @@ a.link-card:is(:hover, :focus, :focus-visible) > .card {
 
 .btn-drizzle {
   /* a darker version of dark-chocolate to increase contrast against the drizzle pink for better accessibility */
-  color: #1A1416;
+  color: #1a1416;
   background-color: var(--drizzle);
-  border-color: var(--drizzle);;
+  border-color: var(--drizzle);
 }
 
 .alert-info {
@@ -448,7 +467,7 @@ a.link-card:is(:hover, :focus, :focus-visible) > .card {
 .md-typeset .alert-warning a {
   color: var(--dark-chocolate);
   /* increase contrast against the alter-warning background */
-  filter:brightness(.9);
+  filter: brightness(0.9);
 }
 
 .alert-danger {
@@ -467,7 +486,8 @@ a.link-card:is(:hover, :focus, :focus-visible) > .card {
 .hs-form label .hs-form-required {
   color: #d80b0b;
 }
-.hs-form input[type="text"], .hs-form input[type="email"] {
+.hs-form input[type="text"],
+.hs-form input[type="email"] {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
@@ -482,7 +502,8 @@ a.link-card:is(:hover, :focus, :focus-visible) > .card {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   margin-bottom: 1rem;
 }
-.hs-form input[type="text"]:focus, .hs-form input[type="email"]:focus {
+.hs-form input[type="text"]:focus,
+.hs-form input[type="email"]:focus {
   color: #495057;
   background-color: #fff;
   border-color: #3fe0c5;
@@ -500,7 +521,7 @@ a.link-card:is(:hover, :focus, :focus-visible) > .card {
   vertical-align: middle;
   user-select: none;
   border: none;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
@@ -510,7 +531,7 @@ a.link-card:is(:hover, :focus, :focus-visible) > .card {
 }
 .hs-form input[type="submit"]:hover {
   filter: brightness(110%);
-  box-shadow: 0 3px 3px rgba(0,0,0,.2);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
 .hs-form input[type="submit"]:focus {
   outline: solid 2px var(--drizzle);
@@ -522,10 +543,10 @@ a.link-card:is(:hover, :focus, :focus-visible) > .card {
   margin-top: -1rem;
   color: #d80b0b;
   position: absolute;
-  font-size: .8em;
+  font-size: 0.8em;
 }
-.hjs-form ul.hs_error_rollup.hs-error-msgs{
-  position:relative;
+.hjs-form ul.hs_error_rollup.hs-error-msgs {
+  position: relative;
 }
 footer .hs-form label {
   margin-bottom: 0.25rem;
@@ -547,7 +568,8 @@ footer .hs-form ul.hs-error-msgs {
   list-style-type: none;
   padding-left: 0;
 }
-.md-typeset ul li.hs-form-booleancheckbox, .md-typeset ul.inputs-list {
+.md-typeset ul li.hs-form-booleancheckbox,
+.md-typeset ul.inputs-list {
   margin-left: 0;
 }
 .hs-form-booleancheckbox-display {
@@ -556,9 +578,10 @@ footer .hs-form ul.hs-error-msgs {
 @media screen and (max-width: 767.98px) {
   .hs-form-inline .hs-form .hs-form-field {
     display: block;
- }
+  }
 }
-.hs-form-docs input[type="text"], .hs-form-docs input[type="email"] {
+.hs-form-docs input[type="text"],
+.hs-form-docs input[type="email"] {
   background-color: #f8f5f0;
   color: #495057;
 }
@@ -577,7 +600,7 @@ footer .hs-form ul.hs-error-msgs {
   .truffle-feature-row img {
     max-height: 260px;
     margin-bottom: 2rem;
- }
+  }
 }
 
 /* custom */
@@ -623,7 +646,17 @@ footer .hs-form ul.hs-error-msgs {
 @media screen and (max-width: 76.1875em) {
   /* show the nav section when elemtn within nav is focused */
   .md-nav:focus-within {
-    opacity:1;
+    opacity: 1;
     transform: translateX(0);
   }
+}
+
+/* Docs */
+
+.docs-row-cards [class^="col-md-"] {
+  margin-bottom: 1rem;
+}
+
+.docs-row-cards .card {
+  height: 100%;
 }

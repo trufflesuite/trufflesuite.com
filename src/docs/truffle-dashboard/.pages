@@ -1,0 +1,4 @@
+nav:
+  - What is Truffle Dashboard?: index.md
+  - Quickstart: quickstart.md
+  - Debugger: truffle-dashboard-debugger.md
