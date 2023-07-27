@@ -97,11 +97,6 @@ module.exports = {
 To make the Truffle Dashboard accessible to everyone, we developed it to be agnostic about the tools
 you're using. You can use the Truffle Dashboard with non-Truffle tools such as Hardhat.
 
-<p class="alert alert-info">
-<i class="far fa-info-circle"></i> <strong>Information</strong>: Truffle Dashboard cannot decode requests
-when using tools other than Truffle; we plan to add support for other tools in the future.
-</p>
-
 ### Configuration
 
 When using the Truffle Dashboard with Hardhat, you need to create a network configuration inside your `hardhat.config.js` file that specifies the Truffle Dashboard's RPC URL.
@@ -126,32 +121,4 @@ Once you've added Truffle Dashboard as a network in your `hardhat.config.js`, it
 
 ```
 hardhat deploy --network truffle-dashboard
-```
-
-## Decode requests
-
-Truffle Dashboard supports decoding requests for certain RPC calls, allowing you to view a more human-friendly
-representation of the messaging between your computer and the Ethereum network.
-
-<p class="alert alert-info">
-<i class="far fa-info-circle"></i> <strong>Information</strong>: The decode functionality is available
-in Truffle projects for the following methods: <code>eth_sendTransaction</code>, <code>personal_sign</code>, <code>eth_signTypedData_v3</code>, and
-<code>eth_signTypedData_v4</code>. We plan to support non-Truffle tooling such as Hardhat in the future.
-</p>
-
-Each time you run `truffle compile`, Truffle shares information about your contracts with Truffle Dashboard.
-Later, when you call a method, Truffle Dashboard consults its repository of this compilation
-information, and asks `@truffle/decoder` to translate the request into a human readable format.
-
-For example, if you have a contract that allows you to mint 5 tokens and send it to a
-user (`myaccount.eth` in this example), the low-level form would look something like:
-
-```
-0xa0e9439c000000000000000000000000627306090abab3a6e1400e9345bc60c78a8bef570000000000000000000000000000000000000000000000000000000000000005
-```
-
-Truffle Dashboard can display this in a more human-readable format, for example:
-
-```
-mint(myaccount.eth, 5)
 ```
