@@ -54,7 +54,7 @@ You may need to swap Truffle's native web3 for Hardhat's [Web3.js](https://hardh
 [ethers.js](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-ethers) plugins to deploy your contract. Refer to
 [the Hardhat documentation](https://hardhat.org/hardhat-runner/docs/guides/deploying) for more information on deploying contracts.
 
-The process to compile, test, and deploy your contracts on Hardhat is:
+Use the following steps to compile, test, and deploy your contracts on Hardhat:
 
 1. Install dependencies listed in your project's `package.json` file:
 
