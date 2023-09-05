@@ -6,7 +6,7 @@ layout: docs.hbs
 # Migrate to Hardhat
 
 Like Truffle, Hardhat is a development environment for Ethereum software. It consists of different components for
-editing, compiling, debugging and deploying smart contracts and dapps.
+editing, compiling, debugging, and deploying smart contracts and dapps.
 
 This topic provides some general steps you need to perform to migrate an existing Truffle project to Hardhat.
 
