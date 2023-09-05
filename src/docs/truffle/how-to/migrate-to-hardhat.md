@@ -98,7 +98,7 @@ To run a local Ethereum test network that exposes a JSON-RPC interface to Hardha
 npx hardhat node
 ```
 
-You configure Hardhat Network in the `hardhat.config.js` file. For example, [this configuration file](https://github.com/Consensys/migrate-truffle-to-hardhat/blob/070bed3ea8438ad6e0a896bef0e27b3950cbbfca/contracts/hardhat/hardhat.config.ts) has configured a network named `quickstart`.
+You can configure Hardhat Network in the `hardhat.config.js` file. For example, [this configuration file](https://github.com/Consensys/migrate-truffle-to-hardhat/blob/070bed3ea8438ad6e0a896bef0e27b3950cbbfca/contracts/hardhat/hardhat.config.ts) defines a network named `quickstart`.
 You can then deploy your contract to the configured network using a command similar to:
 
 ```bash
