@@ -92,7 +92,7 @@ npx hardhat run --network <your-network> scripts/deploy.js
 Testing locally is different because Ganache is not available as a local Ethereum network node. Hardhat uses
 [Hardhat Network](https://hardhat.org/hardhat-network/docs/overview#hardhat-network) as its local Ethereum network node.
 
-To run a local Ethereum test network, that exposes a JSON-RPC interface to Hardhat Network, run:
+To run a local Ethereum test network that exposes a JSON-RPC interface to Hardhat Network, run:
 
 ```bash
 npx hardhat node
