@@ -23,7 +23,8 @@ npm install --save-dev hardhat
 Update the Truffle folder structure as follows:
 
 * Rename the `migrations` directory to `scripts`
-* Rename `truffle-config.js` to `hardhat.config.js`
+* Create a `hardhat.config.js` file with your network details and Solidity settings. Refer to
+    [the Hardhat documentation](https://hardhat.org/hardhat-runner/docs/config) for advanced parameters.
 
 The standard folder structure for Truffle  and Hardhat is as follows:
 
@@ -48,6 +49,10 @@ The standard folder structure for Truffle  and Hardhat is as follows:
     ```
 
 ## Compile, test, and deploy contracts
+
+You may need to swap Truffle's native web3 for Hardhat's [Web3.js](https://hardhat.org/hardhat-runner/plugins/nomiclabs-hardhat-web3) or
+[ethers.js](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-ethers) plugins to deploy your contract. Refer to
+[the Hardhat documentation](https://hardhat.org/hardhat-runner/docs/guides/deploying) for more information on deploying contracts.
 
 The process to compile, test, and deploy your contracts on Hardhat is:
 
@@ -124,7 +129,7 @@ module.exports = {
 };
 ```
 
-You can also load accounts that you can access using the [`Signer`](https://docs.ethers.org/v6/api/providers/#Signer)
+You can also load accounts that you can access using the Ethers [`Signer`](https://docs.ethers.org/v6/api/providers/#Signer)
 interface
 
 ```javascript
