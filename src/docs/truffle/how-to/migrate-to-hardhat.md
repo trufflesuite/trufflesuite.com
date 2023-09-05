@@ -22,7 +22,7 @@ npm install --save-dev hardhat
 
 Update the Truffle folder structure as follows:
 
-* Rename the `migrations` directory to `scripts`
+* Rename the `migrations` directory to `scripts`.
 * Create a `hardhat.config.js` file with your network details and Solidity settings. Refer to
     [the Hardhat documentation](https://hardhat.org/hardhat-runner/docs/config) for advanced parameters.
 
