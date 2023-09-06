@@ -1,4 +1,5 @@
 nav:
+  - Migrate to Hardhat: migrate-to-hardhat.md
   - Install Truffle: install.md
   - Create a project: create-a-project.md
   - Compile a project: compile-contracts.md
