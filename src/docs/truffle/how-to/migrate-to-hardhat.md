@@ -8,9 +8,23 @@ layout: docs.hbs
 Like Truffle, Hardhat is a development environment for Ethereum software. It consists of different components for
 editing, compiling, debugging, and deploying smart contracts and dapps.
 
-This topic provides some general steps you need to perform to migrate an existing Truffle project to Hardhat.
+We'll provide two methods for migrating to Hardhat:
 
-## Install Hardhat
+1. [**Use the Hardhat plugin**](#use-the-hardhat-plugin): Use the Hardhat plugin to integrate with your Truffle files.
+    This is essentially a partial migration that allows you to run tests and scripts written for Truffle using Hardhat.
+1. [**Perform a full migration**](#perform-a-full-migration): Configure Hardhat and migrate your scripts and tests to
+    run natively in Hardhat Runner.
+
+## Use the Hardhat plugin
+
+Use the `hardhat-truffle` plugin to use Truffle contracts in a Hardhat environment. The plugin provides a bridge between
+the Truffle and Hardhat environments, allowing developers to use Truffle contracts and libraries within a Hardhat project.
+
+The following steps outline the process for using the Hardhat plugins. Refer to the
+[Hardhat instructions](https://hardhat.org/hardhat-runner/docs/other-guides/truffle-migration) for more information about
+using the plugin.
+
+### Install Hardhat and required plugins
 
 Install Hardhat using the following command:
 
@@ -18,7 +32,82 @@ Install Hardhat using the following command:
 npm install --save-dev hardhat
 ```
 
-## Update the folder structure
+Install the required plugins:
+
+```bash
+npm install --save-dev @nomiclabs/hardhat-truffle5 @nomiclabs/hardhat-web3 'web3@^1.0.0-beta.36'
+```
+
+### Create a Hardhat configuration file
+
+Create a `hardhat.config.js` (or `hardhat.config.ts` if using Typescript) file that matches your Truffle configuration file
+settings. Refer to [the Hardhat documentation](https://hardhat.org/hardhat-runner/docs/config) for advanced parameters.
+
+Add the following statement to your configuration file:
+
+=== "Javascript"
+
+    ```javascript
+    require("@nomiclabs/hardhat-truffle5");
+    ```
+
+=== "Typescript"
+
+    ```typescript
+    import "@nomiclabs/hardhat-truffle5";
+    ```
+
+### Create the hardhat-truffle fixure
+
+If your project uses [Truffle migrations](contracts/run-migrations.md) to initialize your testing environment
+(your tests call `Contract.deployed()`), then you need to adapt your migrations to become a hardhat-truffle fixture. 
+
+Create a `test/truffle-fixture.js` file that deploys your contracts and calls the `setAsDeployed()` method on each contract
+abstractions you want to test.
+
+For example, the following file in the Truffle `migrations` folder:
+
+```javascript
+const Greeter = artifacts.require("Greeter");
+
+module.exports = function (deployer) {
+  deployer.deploy(Greeter);
+};
+```
+
+Must be converted to the following in the `test/truffle-fixture.js` file:
+
+```javascript
+const Greeter = artifacts.require("Greeter");
+
+module.exports = async () => {
+  const greeter = await Greeter.new();
+  Greeter.setAsDeployed(greeter);
+};
+```
+
+Refer to the [Hardhat fixtures documentation](https://hardhat.org/hardhat-runner/docs/other-guides/truffle-migration#migrations-and-hardhat-truffle-fixtures)
+for more information.
+
+You can now compile, test, and deploy your contracts. 
+
+## Perform a full migration
+
+You can perform a full migration of your Truffle project to Hardhat. The process involves installing and configuring Hardhat, then
+updating your tests and scripts. Alternatively, use the [Hardhat plugins](#use-the-hardhat-plugin) to use Truffle contracts
+in a Hardhat environment.
+
+This section provides some general steps you need to perform to fully migrate an existing Truffle project to Hardhat.
+
+### Install Hardhat
+
+Install Hardhat using the following command:
+
+```bash
+npm install --save-dev hardhat
+```
+
+### Update the folder structure
 
 Update the Truffle folder structure as follows:
 
@@ -48,7 +137,7 @@ The standard folder structure for Truffle  and Hardhat is as follows:
     ├── test                    // contract tests
     ```
 
-## Compile, test, and deploy contracts
+### Compile, test, and deploy contracts
 
 You may need to swap Truffle's native web3 for Hardhat's [Web3.js](https://hardhat.org/hardhat-runner/plugins/nomiclabs-hardhat-web3) or
 [ethers.js](https://hardhat.org/hardhat-runner/plugins/nomicfoundation-hardhat-ethers) plugins to deploy your contract. Refer to
@@ -87,7 +176,7 @@ you can specify a network configured in the `hardhat.config.js` file, with the `
 npx hardhat run --network <your-network> scripts/deploy.js
 ```
 
-## Run a local Ethereum network node
+### Run a local Ethereum network node
 
 Testing locally is different because Ganache is not available as a local Ethereum network node. Hardhat uses
 [Hardhat Network](https://hardhat.org/hardhat-network/docs/overview#hardhat-network) as its local Ethereum network node.
@@ -105,7 +194,7 @@ You can then deploy your contract to the configured network using a command simi
 npx hardhat run --network quickstart scripts/deploy.js
 ```
 
-## Configure your wallet
+### Configure your wallet
 
 To [use a hierarchical deterministic (HD)](https://hardhat.org/hardhat-runner/docs/config#hd-wallet-config) wallet with
 Hardhat, set the `accounts` field in the `hardhat.config.js` file.
@@ -159,7 +248,7 @@ You can access the first 2 accounts using the following code:
 const [owner, otherAccount] = await ethers.getSigners();
 ```
 
-### Generate the wallet from a mnemonic phrase
+#### Generate the wallet from a mnemonic phrase
 
 In your code, generate the wallet from a mnemonic phrase defined in your `hardhat.config.js` file as follows:
 
@@ -169,7 +258,7 @@ import { HDNodeWallet } from 'ethers';
 let node = ethers.HDNodeWallet.fromMnemonic(words)
 ```
 
-### Connect with MetaMask
+#### Connect with MetaMask
 
 To connect to your HardHat Network using your MetaMask wallet, use the following:
 
@@ -177,7 +266,7 @@ To connect to your HardHat Network using your MetaMask wallet, use the following
 const provider = new ethers.BrowserProvider(window.ethereum)
 ```
 
-### Load a wallet from an existing private key
+#### Load a wallet from an existing private key
 
 You can load a wallet from an existing private key on your specified network, using the following code:
 
