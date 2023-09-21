@@ -22,9 +22,8 @@ For developers currently using Truffle and Ganache, we’re proud to be partneri
 
 1. **Migration Path**: In collaboration with HardHat, we'll provide documentation outlining the migration process from Truffle to HardHat. We will also provide guidance and support to devs interested in using other popular ecosystem tools, like Foundry.
 2. **Product Support**: Truffle and Ganache support will be available for the next 90 days through [Zendesk](https://trufflesuite.zendesk.com/hc/en-us/requests/new), Truffle G[itHub discussions](https://github.com/orgs/trufflesuite/discussions), [Ganache GitHub discussions](https://github.com/trufflesuite/ganache/discussions), and [Consensys Discord](https://discord.com/channels/697535391594446898/799049410738520105).
-3. **Migration Support:** In parallel, HardHat's support will be ready to assist on their Discord channel: [#migrating-to-hardhat](https://discord.com/channels/750408878008827925/768892114087444491).
-4. **Codebase's Future**: Starting on December 20, 2023, Truffle and Ganache codebases will remain available as public archives. This gives developers around 90 days to migrate to HardHat and other solutions.
-5. **Community Q+A**: Join us on September 27th for an open community Q&A session. Submit your questions [here](https://github.com/orgs/trufflesuite/discussions) in advance.
+3. **Codebase's Future**: Starting on December 20, 2023, Truffle and Ganache codebases will remain available as public archives. This gives developers around 90 days to migrate to HardHat and other solutions.
+4. **Community Q+A**: Join us on September 27th for an open community Q&A session. Submit your questions [here](https://github.com/orgs/trufflesuite/discussions) in advance.
 
 ## Forever grateful to Truffle and Ganache
 
