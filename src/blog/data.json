@@ -1,4 +1,12 @@
 {
+  "consensys-announces-the-sunset-of-truffle-and-ganache-and-new-hardhat-partnership": {
+    "title": "Consensys Announces the Sunset of Truffle and Ganache and New HardHat Partnership",
+    "date": "2023-09-21",
+    "author": "Kingsley Arinze",
+    "published": true,
+    "excerpt": "Today, Consensys announces the sunsetting of web3 pioneering dev tools, Truffle and Ganache, and welcomes new support for developers with a HardHat partnership...",
+    "image": "/img/blog/thumbnails/truffle.png"
+  },
   "from-idea-to-minimum-viable-dapp-how-to-use-ganache-to-enhance-your-auction-dapp": {
     "title": "From Idea to Minimum Viable Dapp - How to use Ganache to enhance your auction dapp",
     "date": "2023-01-25",
@@ -7,7 +15,6 @@
     "excerpt": "Welcome to the third post of the Truffle series: From idea to minimum viable dapp, where we showcase how to build a dapp from scratch with the Truffle suite. In this post, we’re going to cover how to enhance your auction dapp using Ganache...",
     "image": "/img/blog/thumbnails/thumbnail-idea-to-dapp-part3.png"
   },
-
   "truffle-now-supports-console-logging-in-solidity-smart-contract": {
     "title": "Truffle now supports console.log in Solidity smart contracts",
     "date": "2023-01-11",
