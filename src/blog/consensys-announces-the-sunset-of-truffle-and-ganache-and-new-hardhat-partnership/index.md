@@ -33,20 +33,26 @@ Truffle and Ganache fueled a wave of web3 advancements, enabling teams across th
 
 ## FAQ
 
-**Why sunset Truffle and Ganache?**\
+**Why sunset Truffle and Ganache?**
+
 Consensys is constantly evaluating how it can best support web3 builders and has seen incredible growth in demand and potential for our Infura, MetaMask Snaps, and SDK offerings. Consensys is shifting the Truffle team to focus on scaling those offerings and helping developers build with and for MetaMask. To support projects currently using Truffle and Ganache, Consensys is collaborating with Hardhat to migrate Truffle and Ganache users and move the codebases to a public archive.
 
-**What migration support is available?**\
+**What migration support is available?**
+
 Consensys recommends migrating from using Truffle and Ganache within the 3-month deprecation period to ensure the tooling being used is actively maintained and dependencies being updated. A full migration guide has been published [here](https://trufflesuite.com/docs/truffle/how-to/migrate-to-hardhat/) with step-by-step instructions on how to migrate your project to Hardhat. Consensys will maintain the Truffle documentation pages, archiving them along with the codebase for future reference and will be available in support channels ([Zendesk](https://trufflesuite.zendesk.com/hc/en-us/requests/new), GitHub[ discussions](https://github.com/orgs/trufflesuite/discussions), and [Consensys Discord](https://discord.com/channels/697535391594446898/799049410738520105)). to answer questions related to migrating. HardHat's support will also be ready to assist on their [#migrating-to-hardhat](https://discord.com/channels/750408878008827925/768892114087444491) Discord channel.
 
-**How long will current Truffle users receive support?**\
-Nothing will change for the next 90 days and we are committed to working with our partners at Hardhat to support users as they migrate. For users who do not plan to migrate, the current codebases and documentation will remain available as public archives indefinitely. Ganache will not be upgraded to support the next hard fork that is currently planned for November.
+**How long will current Truffle users receive support?**
 
-**How will Consensys continue to support developers?**\
+Nothing will change for the next 90 days and we are committed to working with our partners at Hardhat to support users as they migrate. For users who do not plan to migrate, the current codebases and documentation will remain available as public archives indefinitely. Ganache will not be upgraded to support the next hard fork that is currently planned for December.
+
+**How will Consensys continue to support developers?**
+
 Consensys is constantly evaluating how we can uniquely serve and empower developers. With a constellation of developer tools emerging in our ecosystem, including leaders like Hardhat, builders have never had more options for writing, testing and deploying smart contracts. Sunsetting Truffle and Ganache allow us to focus our teams on building out MetaMask as a platform and empowering developers around the world to build impactful dapps using the MetaMask SDK, Snaps, and our library of APIs and Infura endpoints.
 
-**What will happen to the Truffle team?**\
+**What will happen to the Truffle team?**
+
 The engineering and product teams have moved internally to developer-focused offerings within MetaMask and Infura, where they will continue their work enabling web3 builders.
 
-**Where can I learn more?** \
+**Where can I learn more?**
+
 We are hosting a community AMA on September 27, and you can submit your questions [here](https://truffle.deform.cc/community-ama/). You can also ask questions in the interim on [GitHub discussions](https://github.com/orgs/trufflesuite/discussions).
