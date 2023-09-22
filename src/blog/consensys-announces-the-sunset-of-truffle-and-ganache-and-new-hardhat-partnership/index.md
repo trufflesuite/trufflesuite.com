@@ -43,7 +43,7 @@ Consensys recommends migrating from using Truffle and Ganache within the 3-month
 
 **How long will current Truffle users receive support?**
 
-Nothing will change for the next 90 days and we are committed to working with our partners at Hardhat to support users as they migrate. For users who do not plan to migrate, the current codebases and documentation will remain available as public archives indefinitely. Ganache will not be upgraded to support the next hard fork that is currently planned for November.
+Nothing will change for the next 90 days and we are committed to working with our partners at Hardhat to support users as they migrate. For users who do not plan to migrate, the current codebases and documentation will remain available as public archives indefinitely. Ganache will not be upgraded to support the next hard fork that is currently planned for December.
 
 **How will Consensys continue to support developers?**
 
