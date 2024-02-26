@@ -1,0 +1,24 @@
+#ganache {
+    z-index: 10;
+}
+#ganache ul {
+    width: 60%;
+    margin-top: 2em;
+    font-size: 1.25em;
+
+}
+#ganache-ui {
+    z-index: 9;
+}
+.ganache-ui {
+    width: 83vw;
+    margin-top: 5vw;
+    height: 40vh;
+    overflow: visible;
+    position: relative;
+}
+.ganache-ui iframe {
+    width: 100%;
+    height: 55vw;
+    position: absolute;
+}

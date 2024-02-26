@@ -1,0 +1,124 @@
+[
+  {
+    "title": "Truffle Webinar Series - Explore the full life cycle of developing and deploying a Dapp (Episode 5 Finale)",
+    "start": "Wednesday, December 16th, 2020, 1:30",
+    "end": "2:30 PM PDT",
+    "location": "Live Stream Webinar",
+    "image2": "/img/live-stream3.png",
+    "excerpt": "In the series finale we explore all the new chocolatey goodness in the Truffle Suite, including the latest features in Truffle Teams, the CLI, and beyond. Attendees will get hands-on with features such as the Teams Contract Manager, Debugger Enhancements, TruffleDB, and our recent FileCoin integration.",
+    "youtube": "https://www.youtube.com/watch?v=jvMFS6HcBIM",
+    "image": "/img/events/events page-tws_episode5.png",
+    "past": "true"
+  },
+  {
+    "title": "Truffle Webinar Series - Explore the full life cycle of developing and deploying a Dapp (Episode 4)",
+    "start": "Thursday, November 14th, 2020, 1:00 PM",
+    "end": "2:00 PM PDT",
+    "location": "Live Stream Webinar",
+    "image2": "/img/live-stream3.png",
+    "excerpt": "In this episode we continue our exploration of Truffle Teams and get hands on with some of its more advanced features, including visually deploying a project to a public network. Attendees will get further hands-on exposure to Truffle Teams, particular with how it adds value to the DevOps phases of a project.",
+    "youtube": "https://www.youtube.com/watch?v=obQdKE_KDrw",
+    "image": "/img/events/events-page-TWS-episode4.png",
+    "past": "true"
+  },
+  {
+    "title": "TruffleCon2020",
+    "start": "Friday, November 6th, 2020, 9:00 AM PST",
+    "end": "Saturday, November 7th, 2020, 5:00 PM PST",
+    "location": "Virtual Conference",
+    "excerpt": "A conference for those who want to build world-changing applications powered by decentralized technologies. Catch all the talks in our TruffleCon 2020 YouTube playlist ",
+    "youtube": "https://www.youtube.com/playlist?list=PLVGaL7nFtvpBSgB_EJNZlgonByturk4hl",
+    "image": "/img/events/trufflecon-2020-2.jpg",
+    "past": "true"
+  },
+  {
+    "title": "Truffle Webinar Series - Explore the full life cycle of developing and deploying a Dapp (Episode 3)",
+    "start": "Thursday, October 29th, 2020, 1:00 PM",
+    "end": "2:00 PM PDT",
+    "location": "Live Stream Webinar",
+    "image2": "/img/live-stream3.png",
+    "excerpt": "Join Trufflers, Kevin Bluer and Amal Sudama, in Episode 3 of the Truffle FREE webinar series exploring the full life cycle of developing and deploying a Dapp with confidence. In this episode we explore Truffle Teams and its role in the DApp development lifecycle, including CI/CD, Deployment, Monitoring, and Debugging. We will deep dive into smart contract deployment and you will get hands-on with Truffle Teams in the context of a ERC721!",
+    "youtube": "https://www.youtube.com/watch?v=hdvDQj7cQJs",
+    "image": "/img/events/events page-TWS-episode3.png",
+    "past": "true"
+  },
+  {
+    "title": "Truffle Webinar Series - Explore the full life cycle of developing and deploying a Dapp (Episode 2)",
+    "start": "Thursday, October 8th, 2020, 1:00 PM",
+    "location": "Live Stream Webinar",
+    "image2": "/img/live-stream3.png",
+    "excerpt": "Continue the blockchain journey, with our very own, Kevin Bluer and Amal Sudama, in this FREE Truffle webinar series exploring the full life cycle of developing and deploying a Dapp. In episode 2, you will be delving deeper into the development workflow taking a look at Ganache, both running locally (CLI and UI) and in a shared sandbox environment. Kevin and Amal will also give you a first look at Truffle Teams, the newest dev ops edition to the Truffle Suite! After this episode, you should have a solid understanding of all things Ganache, a deeper understanding of the development workflow, and an introduction to Truffle Teams.",
+    "youtube": "https://www.youtube.com/watch?v=nMoh-wP_KH8",
+    "image": "/img/webinar_social_eps2.jpg",
+    "past": "true"
+  },
+  {
+    "title": "Truffle Webinar Series - Explore the full life cycle of developing and deploying a Dapp",
+    "start": "Thursday, September 17th, 2020, 12:00 PM",
+    "location": "Live Stream Webinar",
+    "excerpt": "Join Trufflers, Kevin Bluer and Amal Sudama, in this premiere Truffle webinar series exploring the full life cycle of developing and deploying a Dapp. Kevin and Amal will walk you through the 101s of developing a Dapp, highlighting popular Ethereum development tooling used, as well as demonstrating the power of the Truffle Suite, including Truffle Teams, in this process.",
+    "youtube": "https://www.youtube.com/watch?v=90Don4J1JQQ",
+    "image": "/img/events/webinar-livestream2.jpg",
+    "past": "true"
+  },
+  {
+    "title": "Kaleido Technical Tuesday",
+    "start": "Tuesday, July 21, 2020, 8:00 AM PST",
+    "location": "Webinar",
+    "excerpt": "Learn about developer tools and smart contract capabilities available on Kaleido's full-stack platform. Featuring a live demo of Truffle's smart contract management suite.",
+    "youtube": "https://www.youtube.com/watch?v=boa5F5phZxo",
+    "image": "/img/kaleido-tech-tuesday.png",
+    "past": "true"
+  },
+  {
+    "title": "Filecoin Virtual Community July Meetup",
+    "start": "Tuesday, July 14, 2020, 1:00 ",
+    "end": "2:00 PM PDT",
+    "location": "Meetup",
+    "excerpt": "Join us in a free virtual meetup where we team up w/ Filecoin to show you how to create a truly decentralized app! Register now & come with your questions - learn the power of Filecoin & Truffle combined!",
+    "youtube": "https://www.youtube.com/watch?v=VHmw_akBxkI",
+    "image": "/img/filecoin_meetup-banner-truffle.png",
+    "past": "true"
+  },
+  {
+    "title": "An Introduction to Truffle Suite and Solidity (Spanish)",
+    "start": "Wednesday, July 8, 2020, 5:00 PM PST",
+    "location": "Webinar",
+    "excerpt": "Join Ernesto García, Full Stack & Blockchain Developer, on a live Youtube broadcast walking through developing a Dapp using Truffle + Solidity. This live webinar is in Spanish.",
+    "youtube": "https://www.youtube.com/watch?v=1fWLW1lD660",
+    "image": "/img/blockchain-academy-mexico-event2.jpg",
+    "past": "true"
+  },
+  {
+    "title": "Truffle Suite is Branching Out to R3's Corda",
+    "start": "Wednesday, May 6th, 2020, 9:00",
+    "end": "9:45 AM PST",
+    "location": "Webinar",
+    "excerpt": "Join Truffle Suite & R3 on May 6th at 9:00 am PDT for a free webinar and learn how to develop, test, and deploy CorDapps to a personal Corda Network using Ganache.",
+    "youtube": "https://youtu.be/DAsMMqGVXj4",
+    "image": "/img/webinar-c-g-cham-event16x9.png",
+    "past": "true"
+  },
+
+  {
+    "title": "Future of Blockchain Solution Development",
+    "start": "Tuesday, January 14th, 2020, 9:00",
+    "end": "9:45 AM PST",
+    "location": "Webinar",
+    "excerpt": "Kevin Bluer & Tim Coulter discuss trends in blockchain development.",
+    "youtube": "https://www.youtube.com/watch?v=KpIAwY-_YPY",
+    "image": "/img/future-solutions-truffle.png",
+    "past": "true"
+  },
+
+  {
+    "title": "Truffle Teams Overview",
+    "start": "Thursday, December 11th, 2019, 9:00",
+    "end": "9:45 AM PST",
+    "location": "Webinar",
+    "excerpt": "Truffle's very own Mike Seese walks us through the features available in Truffle Teams.",
+    "youtube": "https://youtu.be/OnAiw2fkMdM?t=389",
+    "image": "/img/webinar-12-11-19-seese-teams16x9a.png",
+    "past": "true"
+  }
+]

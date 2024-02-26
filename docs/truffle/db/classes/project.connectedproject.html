@@ -1,0 +1,542 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ConnectedProject | @truffle/db</title>
+	<meta name="description" content="Documentation for @truffle/db">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">@truffle/db</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../index.html">@truffle/db</a>
+				</li>
+				<li>
+					<a href="../modules/project.html">Project</a>
+				</li>
+				<li>
+					<a href="project.connectedproject.html">ConnectedProject</a>
+				</li>
+			</ul>
+			<h1>Class ConnectedProject</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<a href="project.project-1.html" class="tsd-signature-type" data-tsd-kind="Class">Project</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">ConnectedProject</span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section">
+							<h3>Constructor</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="project.connectedproject.html#connect" class="tsd-kind-icon">connect</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section">
+							<h3>Truffle-specific</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="project.connectedproject.html#loadcompile" class="tsd-kind-icon">load<wbr>Compile</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="project.connectedproject.html#loadmigrate" class="tsd-kind-icon">load<wbr>Migrate</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section">
+							<h3>Other</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="project.connectedproject.html#id" class="tsd-kind-icon">id</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="project.connectedproject.html#assignnames" class="tsd-kind-icon">assign<wbr>Names</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-private"><a href="project.connectedproject.html#populatenetworks" class="tsd-kind-icon">populate<wbr>Networks</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section">
+							<h3>Processor</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited"><a href="project.connectedproject.html#run" class="tsd-kind-icon">run</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructor</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="connect" class="tsd-anchor"></a>
+					<h3>connect</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">connect<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>provider<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Provider</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="project.connectedproject.html" class="tsd-signature-type" data-tsd-kind="Class">ConnectedProject</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="project.project-1.html">Project</a>.<a href="project.project-1.html#connect">connect</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/project/index.ts#L165">packages/db/src/project/index.ts:165</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Accept a provider to enable workflows that require communicating with the
+									underlying blockchain network.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <span class="tsd-signature-symbol">{ </span>provider<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Provider</span><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>provider<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Provider</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="project.connectedproject.html" class="tsd-signature-type" data-tsd-kind="Class">ConnectedProject</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Truffle-specific</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="loadcompile" class="tsd-anchor"></a>
+					<h3>load<wbr>Compile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Compile<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>result<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WorkflowCompileResult</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>compilations<span class="tsd-signature-symbol">: </span><a href="../modules/project.loadcompile.html#compilation" class="tsd-signature-type" data-tsd-kind="Type alias">Compilation</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>contracts<span class="tsd-signature-symbol">: </span><a href="../modules/project.loadcompile.html#contract" class="tsd-signature-type" data-tsd-kind="Type alias">Contract</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="project.project-1.html">Project</a>.<a href="project.project-1.html#loadcompile">loadCompile</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/project/index.ts#L92">packages/db/src/project/index.ts:92</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Accept a compilation result and process it to save all relevant resources
+										(<a href="../interfaces/datamodel.source.html">Source</a>, <a href="../interfaces/datamodel.bytecode.html">Bytecode</a>,
+										<a href="../interfaces/datamodel.compilation.html">Compilation</a>,
+									<a href="../interfaces/datamodel.contract.html">Contract</a>)</p>
+								</div>
+								<p>This returns the same WorkflowCompileResult but with additional
+								references to each of the added resources.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <span class="tsd-signature-symbol">{ </span>result<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WorkflowCompileResult</span><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>result<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WorkflowCompileResult</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>compilations<span class="tsd-signature-symbol">: </span><a href="../modules/project.loadcompile.html#compilation" class="tsd-signature-type" data-tsd-kind="Type alias">Compilation</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>contracts<span class="tsd-signature-symbol">: </span><a href="../modules/project.loadcompile.html#contract" class="tsd-signature-type" data-tsd-kind="Type alias">Contract</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="loadmigrate" class="tsd-anchor"></a>
+					<h3>load<wbr>Migrate</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">load<wbr>Migrate<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>artifacts<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">ContractObject</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>db<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>callBytecode<span class="tsd-signature-symbol">: </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/datamodel.bytecode.html" class="tsd-signature-type" data-tsd-kind="Interface">Bytecode</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>contract<span class="tsd-signature-symbol">: </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;contracts&quot;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/datamodel.contract.html" class="tsd-signature-type" data-tsd-kind="Interface">Contract</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;contracts&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;contracts&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>createBytecode<span class="tsd-signature-symbol">: </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/datamodel.bytecode.html" class="tsd-signature-type" data-tsd-kind="Interface">Bytecode</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/datamodel.networkinput.html" class="tsd-signature-type" data-tsd-kind="Interface">NetworkInput</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;name&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>artifacts<span class="tsd-signature-symbol">: </span><a href="../modules/project.loadmigrate.html#artifact" class="tsd-signature-type" data-tsd-kind="Type alias">Artifact</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>network<span class="tsd-signature-symbol">: </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;networks&quot;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/datamodel.network.html" class="tsd-signature-type" data-tsd-kind="Interface">Network</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;networks&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;networks&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/project/index.ts#L245">packages/db/src/project/index.ts:245</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Process artifacts after a migration. Uses provider to determine most
+										relevant network information directly, but still requires
+									project-specific information about the network (i.e., name)</p>
+								</div>
+								<p>This adds potentially multiple <a href="../interfaces/datamodel.network.html">Network</a> resources
+									to @truffle/db, creating individual networks for the historic blocks in
+									which each <a href="../interfaces/datamodel.contractinstance.html">ContractInstance</a> was first
+								created on-chain.</p>
+								<p>This saves <a href="../interfaces/datamodel.network.html">Network</a> and
+									<a href="../interfaces/datamodel.contractinstance.html">ContractInstance</a> resources to
+								@truffle/db.</p>
+								<p>Returns <code>artifacts</code> with network objects populated with IDs for each
+									<a href="../interfaces/datamodel.contractinstance.html">ContractInstance</a>, along with a
+									<code>network</code> object containing the ID of whichever
+								<a href="../interfaces/datamodel.network.html">Network</a> was added with the highest block height.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <span class="tsd-signature-symbol">{ </span>artifacts<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">ContractObject</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>db<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>callBytecode<span class="tsd-signature-symbol">: </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/datamodel.bytecode.html" class="tsd-signature-type" data-tsd-kind="Interface">Bytecode</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>contract<span class="tsd-signature-symbol">: </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;contracts&quot;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/datamodel.contract.html" class="tsd-signature-type" data-tsd-kind="Interface">Contract</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;contracts&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;contracts&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>createBytecode<span class="tsd-signature-symbol">: </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/datamodel.bytecode.html" class="tsd-signature-type" data-tsd-kind="Interface">Bytecode</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/datamodel.networkinput.html" class="tsd-signature-type" data-tsd-kind="Interface">NetworkInput</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;name&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>artifacts<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">ContractObject</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>db<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>callBytecode<span class="tsd-signature-symbol">: </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/datamodel.bytecode.html" class="tsd-signature-type" data-tsd-kind="Interface">Bytecode</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>contract<span class="tsd-signature-symbol">: </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;contracts&quot;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/datamodel.contract.html" class="tsd-signature-type" data-tsd-kind="Interface">Contract</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;contracts&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;contracts&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>createBytecode<span class="tsd-signature-symbol">: </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/datamodel.bytecode.html" class="tsd-signature-type" data-tsd-kind="Interface">Bytecode</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>network<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/datamodel.networkinput.html" class="tsd-signature-type" data-tsd-kind="Interface">NetworkInput</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;name&quot;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>artifacts<span class="tsd-signature-symbol">: </span><a href="../modules/project.loadmigrate.html#artifact" class="tsd-signature-type" data-tsd-kind="Type alias">Artifact</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>network<span class="tsd-signature-symbol">: </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;networks&quot;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/datamodel.network.html" class="tsd-signature-type" data-tsd-kind="Interface">Network</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;networks&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;networks&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Other</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+					<a name="id" class="tsd-anchor"></a>
+					<h3>id</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> id<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/project/index.ts#L77">packages/db/src/project/index.ts:77</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+					<a name="assignnames" class="tsd-anchor"></a>
+					<h3>assign<wbr>Names</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">assign<wbr>Names&lt;N&gt;<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>assignments<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{</span><span class="tsd-signature-symbol">[ </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol"> in </span><span class="tsd-signature-type">FilteredCollectionName</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>is<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;named&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">CollectionProperty</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">&quot;resource&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>assignments<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{</span><span class="tsd-signature-symbol">[ </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol"> in </span><span class="tsd-signature-type">FilteredCollectionName</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>is<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;named&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;nameRecords&quot;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/datamodel.namerecord.html" class="tsd-signature-type" data-tsd-kind="Interface">NameRecord</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;nameRecords&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;nameRecords&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="project.project-1.html">Project</a>.<a href="project.project-1.html#assignnames">assignNames</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/project/index.ts#L137">packages/db/src/project/index.ts:137</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Update name pointers for this project. Currently affords name-keeping for
+										<a href="../interfaces/datamodel.network.html">Network</a> and <a href="../interfaces/datamodel.contract.html">Contract</a>
+										resources (e.g., naming <a href="../interfaces/datamodel.contractinstance.html">ContractInstance</a>
+									resources is not supported directly)</p>
+								</div>
+								<p>This saves <a href="../interfaces/datamodel.namerecord.html">NameRecord</a> and
+								<a href="../interfaces/datamodel.projectname.html">ProjectName</a> resources to @truffle/db.</p>
+								<p>Returns a list of NameRecord resources for completeness, although these
+									may be regarded as an internal concern. ProjectName resources are not
+									returned because they are mutable; returned representations would be
+								impermanent.</p>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><pre><code class="language-typescript"><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">project</span><span style="color: #000000">.</span><span style="color: #795E26">assignNames</span><span style="color: #000000">({</span>
+<span style="color: #000000">  </span><span style="color: #001080">assignments:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #001080">contracts:</span><span style="color: #000000"> [</span>
+<span style="color: #000000">      { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;&lt;contract1-id&gt;&quot;</span><span style="color: #000000"> },</span>
+<span style="color: #000000">      { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;&lt;contract2-id&gt;&quot;</span><span style="color: #000000"> },</span>
+<span style="color: #000000">      </span><span style="color: #008000">// ...</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">});</span>
+</code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>N<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">FilteredCollectionName</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>is<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;named&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									<div class="tsd-comment tsd-typography">
+										<p>Either <code>&quot;contracts&quot;</code>, <code>&quot;networks&quot;</code>, or <code>&quot;contracts&quot; | &quot;networks&quot;</code>.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <span class="tsd-signature-symbol">{ </span>assignments<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{</span><span class="tsd-signature-symbol">[ </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol"> in </span><span class="tsd-signature-type">FilteredCollectionName</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>is<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;named&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">CollectionProperty</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">&quot;resource&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>assignments<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{</span><span class="tsd-signature-symbol">[ </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol"> in </span><span class="tsd-signature-type">FilteredCollectionName</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>is<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;named&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">CollectionProperty</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">&quot;resource&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>Object whose keys belong to the set of named collection names and whose
+												values are <a href="../modules/resources.html#idobject">IdObjects</a> for resources of that collection.</p>
+											</div>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{ </span>assignments<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{</span><span class="tsd-signature-symbol">[ </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol"> in </span><span class="tsd-signature-type">FilteredCollectionName</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{ </span>is<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;named&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;nameRecords&quot;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/datamodel.namerecord.html" class="tsd-signature-type" data-tsd-kind="Interface">NameRecord</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;nameRecords&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;nameRecords&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-private">
+					<a name="populatenetworks" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> populate<wbr>Networks</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">populate<wbr>Networks&lt;Artifact&gt;<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>artifacts<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Artifact</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>knownLatest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/datamodel.network.html" class="tsd-signature-type" data-tsd-kind="Interface">Network</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;id&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;networkId&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>networks<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;networks&quot;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/datamodel.network.html" class="tsd-signature-type" data-tsd-kind="Interface">Network</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;networks&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;networks&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">Artifact</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>networks<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/project/index.ts#L294">packages/db/src/project/index.ts:294</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>Artifact<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ContractObject</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>db<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>callBytecode<span class="tsd-signature-symbol">: </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/datamodel.bytecode.html" class="tsd-signature-type" data-tsd-kind="Interface">Bytecode</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>contract<span class="tsd-signature-symbol">: </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;contracts&quot;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/datamodel.contract.html" class="tsd-signature-type" data-tsd-kind="Interface">Contract</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;contracts&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;contracts&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>createBytecode<span class="tsd-signature-symbol">: </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/datamodel.bytecode.html" class="tsd-signature-type" data-tsd-kind="Interface">Bytecode</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> }</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>options: <span class="tsd-signature-symbol">{ </span>artifacts<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Artifact</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">; </span>knownLatest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/datamodel.network.html" class="tsd-signature-type" data-tsd-kind="Interface">Network</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;id&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;networkId&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>networks<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;networks&quot;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/datamodel.network.html" class="tsd-signature-type" data-tsd-kind="Interface">Network</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;networks&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;networks&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>artifacts<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Artifact</span><span class="tsd-signature-symbol">[]</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>known<wbr>Latest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/datamodel.network.html" class="tsd-signature-type" data-tsd-kind="Interface">Network</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;id&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;networkId&quot;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>networks<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;networks&quot;</span><span class="tsd-signature-symbol">, </span><a href="../interfaces/datamodel.network.html" class="tsd-signature-type" data-tsd-kind="Interface">Network</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="../modules/meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;networks&quot;</span><span class="tsd-signature-symbol">, </span><a href="../modules/meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;networks&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">Artifact</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span>networks<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Processor</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+					<a name="run" class="tsd-anchor"></a>
+					<h3>run</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">run&lt;A, T, R&gt;<span class="tsd-signature-symbol">(</span>processor<span class="tsd-signature-symbol">: </span><a href="../modules/meta.process.html#processor" class="tsd-signature-type" data-tsd-kind="Type alias">Processor</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="project.project-1.html">Project</a>.<a href="project.project-1.html#run">run</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/project/index.ts#L183">packages/db/src/project/index.ts:183</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Run a given <a href="../modules/meta.process.html#processor">Processor</a> with specified arguments.</p>
+								</div>
+								<p>This method is a <a href="../modules/meta.process.html#processorrunner">ProcessorRunner</a> and
+									can be used to <code>await</code> (e.g.) the processors defined by
+								<a href="../modules/process.html#resources">Process&#39;s <code>resources</code></a>.</p>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>A<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">[]</span></h4>
+								</li>
+								<li>
+									<h4>T = <span class="tsd-signature-type">any</span></h4>
+								</li>
+								<li>
+									<h4>R<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">GraphQlRequestType</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Web3RequestType</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span> = <span class="tsd-signature-type">undefined</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>processor: <a href="../modules/meta.process.html#processor" class="tsd-signature-type" data-tsd-kind="Type alias">Processor</a><span class="tsd-signature-symbol">&lt;</span><a href="../modules/resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">A</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">A</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../index.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/datamodel.html">Data<wbr>Model</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/graph.html">Graph</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/meta.html">Meta</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/network.html">Network</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/pouch.html">Pouch</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/process.html">Process</a>
+					</li>
+					<li class="current tsd-kind-namespace">
+						<a href="../modules/project.html">Project</a>
+						<ul>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/project.assignnames.html">Assign<wbr>Names</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/project.batch.html">Batch</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/project.initialize.html">Initialize</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/project.loadcompile.html">Load<wbr>Compile</a>
+							</li>
+							<li class=" tsd-kind-namespace tsd-parent-kind-namespace">
+								<a href="../modules/project.loadmigrate.html">Load<wbr>Migrate</a>
+							</li>
+						</ul>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="../modules/resources.html">Resources</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-namespace">
+						<a href="project.connectedproject.html" class="tsd-kind-icon">Connected<wbr>Project</a>
+						<ul>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+								<a href="project.connectedproject.html#id" class="tsd-kind-icon">id</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="project.connectedproject.html#assignnames" class="tsd-kind-icon">assign<wbr>Names</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="project.connectedproject.html#connect" class="tsd-kind-icon">connect</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="project.connectedproject.html#loadcompile" class="tsd-kind-icon">load<wbr>Compile</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="project.connectedproject.html#loadmigrate" class="tsd-kind-icon">load<wbr>Migrate</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-private">
+								<a href="project.connectedproject.html#populatenetworks" class="tsd-kind-icon">populate<wbr>Networks</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter tsd-is-inherited">
+								<a href="project.connectedproject.html#run" class="tsd-kind-icon">run</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-class tsd-parent-kind-namespace">
+						<a href="project.project-1.html" class="tsd-kind-icon">Project</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="../modules/project.html#initializeoptions" class="tsd-kind-icon">Initialize<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace">
+						<a href="../modules/project.html#initialize-1" class="tsd-kind-icon">initialize</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

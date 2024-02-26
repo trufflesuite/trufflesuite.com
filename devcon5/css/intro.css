@@ -1,0 +1,98 @@
+#intro .title {
+    padding-top: calc(.02 * var(--width));
+    width: 55%;
+    margin: 0 auto;
+    text-align: center;
+}
+#intro h1 {
+    font-size: calc(.1 * var(--width));
+}
+#intro .subtext {
+    transform: translateY(-45%);
+    text-align: right;
+    font-family: 'Grand Hotel';
+    color: var(--very-light-porsche);
+    margin: 0 calc(.0125 * var(--width));
+    position: relative;
+    transform: translate3d(0, -90px, 55px) scale(.95);
+}
+#intro .with {
+    font-style: italic;
+    font-size: calc(.07 * var(--width));
+    position: absolute;
+    transform: translate(-115%, -7%);
+    opacity: .8;
+    text-shadow: 0 1px 0 rgba(0,0,0,.2), 0 -1px 0 rgba(255,255,255,.9), 0 4px 15px rgba(0,0,0,.35);
+}
+#intro .ganache {
+    font-size: calc(.1 * var(--width));
+    text-shadow: 0 1px 0 rgba(0,0,0,.3), 0 6px 25px rgba(0,0,0,.35);
+    opacity: .92;
+}
+#intro .footer {
+    width: 90%;
+    text-align: right;
+    font-style: italic;
+    margin: 0 5%;
+    /* transform: translateY(calc(-0.0275 * var(--width))); */
+    transform: translate3d(0, -60px, 20px) scale(.95);
+}
+#intro .footer .group {
+    display: inline-block;
+    height:calc(.05 * var(--width));
+    vertical-align: text-bottom;
+    text-shadow: 0 -1px rgba(0,0,0,.9),  0 1px rgba(255,255,255,.3);
+    line-height: 1.1;
+}
+#intro .footer .group .small{
+    font-size:.85em;
+}
+#intro .footer .names {
+    font-weight: 300;
+    font-size: calc(.0175 * var(--width));
+    color: var(--very-light-porsche);
+}
+#intro .footer .location {
+    font-family: Oswald;
+    font-weight: 200;
+    font-size: calc(.0192 * var(--width));
+    color: var(--dark-porsche);
+}
+#intro .footer a {
+    text-decoration: none;
+    color: inherit;
+}
+#intro .footer a:hover, #intro .footer a:focus {
+    color: var(--porsche);
+}
+
+#intro .footer .icon {
+    display: inline-block;
+    margin-left: calc(.015 * var(--width))
+}
+#intro .footer .icon svg {
+    width: calc(.05 * var(--width));
+    filter: drop-shadow(0 3px 8px rgba(0,0,0,.2));
+}
+
+.impress-enabled #intro.step {
+    opacity: 1;
+}
+.impress-enabled #intro.step .footer > div,
+.impress-enabled #intro.step .ratio,
+.impress-enabled #intro.step h1,
+.impress-enabled #intro.step .subtext span {
+    opacity: 0;
+    transition: opacity 1s;
+}
+.impress-enabled #intro.step.active .footer > div,
+.impress-enabled #intro.step.active .ratio,
+.impress-enabled #intro.step.active h1 {
+    opacity: 1;
+}
+.impress-enabled #intro.step.active .subtext .with{
+    opacity: .8;
+}
+.impress-enabled #intro.step.active .subtext .ganache{
+    opacity: .92;
+}
