@@ -68,9 +68,11 @@ plugins:
       htmlmin_opts:
           remove_comments: true
       js_files:
+          - assets/js/boxes.js
           - assets/js/dashboard.js
           - assets/js/os-detector.js
       css_files:
+          - assets/stylesheets/boxes.css
           - assets/stylesheets/dashboard.css
           - assets/stylesheets/extra.css
   - redirects:
