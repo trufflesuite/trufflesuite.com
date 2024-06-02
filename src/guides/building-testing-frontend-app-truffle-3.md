@@ -1,5 +1,5 @@
 ---
-title: Truffle Suite
+title: Building & Testing a Frontend App with Truffle 3.0
 hide:
   - navigation
 ---
